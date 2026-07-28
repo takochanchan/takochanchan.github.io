@@ -841,7 +841,7 @@ select {
 
 .policy-nav__inner {
   display: grid;
-  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   overflow-x: auto;
 }
 
@@ -931,45 +931,6 @@ select {
   width: 7px;
   height: 7px;
   background: var(--rust);
-}
-
-.work-list {
-  margin: 34px 0 0;
-  border-top: 1px solid var(--ink);
-  padding: 0;
-  list-style: none;
-  counter-reset: work;
-}
-
-.work-list li {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.7fr) minmax(0, 1.3fr);
-  gap: 20px 34px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line);
-  counter-increment: work;
-}
-
-.work-list span {
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 750;
-  line-height: 1.7;
-}
-
-.work-list span::before {
-  content: counter(work, decimal-leading-zero);
-  margin-right: 14px;
-  color: var(--rust);
-  font-family: Georgia, serif;
-  font-size: 11px;
-}
-
-.work-list cite {
-  color: #314144;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px;
-  line-height: 1.7;
 }
 
 .policy-section--notice {
@@ -1497,11 +1458,6 @@ select {
 
   .review-list {
     grid-template-columns: 1fr;
-  }
-
-  .work-list li {
-    grid-template-columns: 1fr;
-    gap: 7px;
   }
 
   .hero__lead {
