@@ -74,8 +74,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
-  assert.match(html, /\/archive\.js\?v=20260729-about-policy/);
+  assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
+  assert.match(html, /\/archive\.js\?v=20260729-about-policy-v2/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -112,21 +112,9 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /専門研究者による外部査読を意味しません/);
   assert.match(html, /全文を逐語的に人手校閲したことを意味しません/);
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
-  assert.match(
-    html,
-    /Colección de documentos inéditos relativos á la Iglesia de Chiapas/,
-  );
-  assert.match(html, /Auf alten Wegen in Mexiko und Guatemala/);
-  assert.match(
-    html,
-    /Memoria histórica de la provincia de Chiapa, una de las de Guatemala/,
-  );
-  assert.match(
-    html,
-    /Descripción geográfica del Departamento de Chiapas y Soconusco/,
-  );
+  assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
+  assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -174,8 +162,8 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
-    assert.match(html, /\/archive\.js\?v=20260729-about-policy/);
+    assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
+    assert.match(html, /\/archive\.js\?v=20260729-about-policy-v2/);
     for (const label of [
       "底本",
       "公開元",
