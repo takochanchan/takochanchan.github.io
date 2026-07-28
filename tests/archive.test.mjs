@@ -74,8 +74,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260728-detail-actions/);
-  assert.match(html, /\/archive\.js\?v=20260728-detail-actions/);
+  assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
+  assert.match(html, /\/archive\.js\?v=20260729-about-policy/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -89,6 +89,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /公開版総ページ数/);
   assert.match(html, /海外の記録を、/);
   assert.match(html, /PDFとリフロー型EPUB/);
+  assert.match(html, /href="\/about\/">翻訳・編集・レビュー方針を読む/);
+  assert.doesNotMatch(html, /生成AIの余剰リソース/);
   assert.match(
     html,
     /PDF・EPUB本体はGitHub Releasesで配布しています/,
@@ -97,6 +99,34 @@ test("home page contains scalable archive controls", async () => {
     (html.match(/class="record-card"/g) || []).length,
     publications.length,
   );
+});
+
+test("about page explains the editorial workflow and its limits", async () => {
+  const html = await readFile(path.join(dist, "about", "index.html"), "utf8");
+  assert.match(html, /翻訳・編集・/);
+  assert.match(html, /底本と翻訳/);
+  assert.match(html, /独立レビュー/);
+  assert.match(html, /組版と公開前確認/);
+  assert.match(html, /利用上の注意/);
+  assert.match(html, /原文から日本語へ翻訳します/);
+  assert.match(html, /専門研究者による外部査読を意味しません/);
+  assert.match(html, /全文を逐語的に人手校閲したことを意味しません/);
+  assert.match(html, /最終PDFの確認と承認を受けるまでは/);
+  assert.match(
+    html,
+    /Colección de documentos inéditos relativos á la Iglesia de Chiapas/,
+  );
+  assert.match(html, /Auf alten Wegen in Mexiko und Guatemala/);
+  assert.match(
+    html,
+    /Memoria histórica de la provincia de Chiapa, una de las de Guatemala/,
+  );
+  assert.match(
+    html,
+    /Descripción geográfica del Departamento de Chiapas y Soconusco/,
+  );
+  assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
+  assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -113,6 +143,7 @@ test("catalogue search stays within publication metadata", async () => {
 
 test("sitemap exposes every same-origin detail page", async () => {
   const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
+  assert.match(sitemap, /https:\/\/takochanchan\.github\.io\/about\//);
   for (const item of publications) {
     assert.match(
       sitemap,
@@ -143,8 +174,8 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260728-detail-actions/);
-    assert.match(html, /\/archive\.js\?v=20260728-detail-actions/);
+    assert.match(html, /\/archive\.css\?v=20260729-about-policy/);
+    assert.match(html, /\/archive\.js\?v=20260729-about-policy/);
     for (const label of [
       "底本",
       "公開元",
@@ -243,6 +274,7 @@ test("repository source contains covers but no PDF, EPUB, or split parts", async
 test("rendered public site does not expose the previous identifying host", async () => {
   const textFiles = [
     "index.html",
+    "about/index.html",
     "404.html",
     "archive.css",
     "archive.js",
