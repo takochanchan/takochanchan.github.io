@@ -160,6 +160,7 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.match(html, /PDFを読み込む（\d+(?:\.\d+)? (?:KB|MB)）/);
     assert.match(html, /PDFを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
     assert.match(html, /EPUBを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
+    assert.doesNotMatch(html, /PDFを開く|別画面で開く/);
     const iframeTags = html.match(/<iframe\b[^>]*>/g) || [];
     assert.equal(iframeTags.length, 1, `${item.slug}: iframe count`);
     assert.doesNotMatch(iframeTags[0], /\ssrc=/, `${item.slug}: eager PDF`);

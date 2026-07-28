@@ -357,7 +357,6 @@ ${header({ detail: true })}
           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
           <div class="publication-actions">
-            <a class="button button--primary" href="${escapeHtml(item.pdfUrl)}">PDFを開く（${escapeHtml(item.pdfSize)}）</a>
             <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDFを保存（${escapeHtml(item.pdfSize)}）</a>
             <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
               type="application/epub+zip" download>リフロー型EPUBを保存（${escapeHtml(item.epubSize)}）</a>
@@ -417,9 +416,6 @@ ${header({ detail: true })}
             <p class="eyebrow">DOCUMENT READER</p>
             <h2>日本語翻訳版 PDF</h2>
           </div>
-          <a class="reader-open" href="${escapeHtml(item.pdfUrl)}" target="_blank" rel="noopener">
-            別画面で開く（${escapeHtml(item.pdfSize)}）↗
-          </a>
         </div>
         <div class="pdf-frame" data-pdf-reader>
           <div class="pdf-placeholder" data-pdf-placeholder>
@@ -429,13 +425,12 @@ ${header({ detail: true })}
               aria-controls="pdf-reader-frame">
               PDFを読み込む（${escapeHtml(item.pdfSize)}）
             </button>
-            <a href="${escapeHtml(item.pdfUrl)}" target="_blank" rel="noopener">別画面で開く ↗</a>
           </div>
           <iframe id="pdf-reader-frame" data-pdf-frame hidden
             title="${escapeHtml(item.title)} 日本語翻訳版PDF"></iframe>
           <noscript>
             <p class="pdf-noscript">
-              JavaScriptが無効です。<a href="${escapeHtml(item.pdfUrl)}">PDFを別画面で開いてください</a>。
+              JavaScriptが無効です。<a href="${escapeHtml(item.pdfUrl)}" download>PDFを保存してください</a>。
             </p>
           </noscript>
         </div>
