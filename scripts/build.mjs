@@ -20,7 +20,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260729-about-policy";
+const assetVersion = "20260729-about-policy-v2";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -347,46 +347,12 @@ ${header({ detail: true })}
 
   <nav class="policy-nav" aria-label="このページの目次">
     <div class="policy-nav__inner">
-      <a href="#in-progress"><span>01</span>現在翻訳中</a>
-      <a href="#translation"><span>02</span>底本と翻訳</a>
-      <a href="#review"><span>03</span>独立レビュー</a>
-      <a href="#production"><span>04</span>組版と公開前確認</a>
-      <a href="#notice"><span>05</span>利用上の注意</a>
+      <a href="#translation"><span>01</span>底本と翻訳</a>
+      <a href="#review"><span>02</span>独立レビュー</a>
+      <a href="#production"><span>03</span>組版と公開前確認</a>
+      <a href="#notice"><span>04</span>利用上の注意</a>
     </div>
   </nav>
-
-  <section class="policy-section" id="in-progress" aria-labelledby="in-progress-heading">
-    <div class="policy-section__inner">
-      <div class="policy-section__heading">
-        <p class="eyebrow">WORK IN PROGRESS</p>
-        <h2 id="in-progress-heading">現在翻訳中</h2>
-      </div>
-      <div class="policy-copy">
-        <p>
-          既刊資料に加えて、現在は次の4点を翻訳・編集しています。
-          作業状況により、公開順は変更する場合があります。
-        </p>
-        <ol class="work-list">
-          <li>
-            <span>ヒメネス</span>
-            <cite lang="es">Colección de documentos inéditos relativos á la Iglesia de Chiapas</cite>
-          </li>
-          <li>
-            <span>ゼーラー＝ザックス</span>
-            <cite lang="de">Auf alten Wegen in Mexiko und Guatemala</cite>
-          </li>
-          <li>
-            <span>マリアノ・ロブレス・ドミンゲス・デ・マサリエゴス</span>
-            <cite lang="es">Memoria histórica de la provincia de Chiapa, una de las de Guatemala</cite>
-          </li>
-          <li>
-            <span>エメテリオ・ピネダ</span>
-            <cite lang="es">Descripción geográfica del Departamento de Chiapas y Soconusco</cite>
-          </li>
-        </ol>
-      </div>
-    </div>
-  </section>
 
   <section class="policy-section" id="translation" aria-labelledby="translation-heading">
     <div class="policy-section__inner">
