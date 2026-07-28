@@ -20,7 +20,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260728-detail-actions";
+const assetVersion = "20260729-about-policy";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -124,7 +124,7 @@ const header = ({ detail = false } = {}) => `
         ? `<a class="back-link" href="/#publications">← 資料一覧へ戻る</a>`
         : `<nav class="site-nav" aria-label="主要メニュー">
             <a href="#publications">資料を探す</a>
-            <a href="#about">このアーカイブについて</a>
+            <a href="/about/">このアーカイブについて</a>
           </nav>`
     }
   </header>`;
@@ -282,9 +282,10 @@ ${header()}
           史料としての構成を保ちながら、画面幅や文字サイズに合わせて読める版も用意しています。
         </p>
         <p class="note">
-          翻訳資料は生成AIの余剰リソースを用いて趣味的に作成しています。各資料の底本、収録範囲、
-          図版点数は個別ページの書誌情報をご確認ください。
+          翻訳には生成AIを用い、別工程のAIレビューと、公開前の人による版面確認を行っています。
+          このレビューは専門研究者による外部査読ではありません。
         </p>
+        <a class="about__link" href="/about/">翻訳・編集・レビュー方針を読む →</a>
       </div>
     </div>
   </section>
@@ -293,6 +294,203 @@ ${footer()}`,
   scripts: `
 <script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
 <script src="/archive.js?v=${assetVersion}" defer></script>`,
+});
+
+const aboutPage = documentShell({
+  title: `翻訳・編集・レビュー方針｜${site.shortName}`,
+  description:
+    "中部アメリカ歴史資料 日本語翻訳アーカイブの底本選定、生成AIによる翻訳、独立レビュー、組版、公開前確認の方針。",
+  canonical: `${site.url}/about/`,
+  body: `
+${header({ detail: true })}
+<main id="main">
+  <section class="about-page-hero">
+    <div class="about-page-hero__inner">
+      <div>
+        <p class="eyebrow">ABOUT &amp; EDITORIAL POLICY</p>
+        <h1>翻訳・編集・<br>レビュー方針</h1>
+        <p class="about-page-hero__lead">
+          生成AIを用いた翻訳資料について、何を底本とし、どの工程で点検し、
+          どの段階で人が承認して公開するかを明示します。
+        </p>
+      </div>
+      <dl class="responsibility-grid" aria-label="制作工程の役割分担">
+        <div>
+          <dt>翻訳</dt>
+          <dd><strong>生成AI</strong><span>原文から直接翻訳</span></dd>
+        </div>
+        <div>
+          <dt>レビュー</dt>
+          <dd><strong>別工程の生成AI</strong><span>重大な誤訳と構造欠落を照合</span></dd>
+        </div>
+        <div>
+          <dt>公開承認</dt>
+          <dd><strong>人</strong><span>最終PDFの収録内容と版面を確認</span></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="workflow" aria-labelledby="workflow-heading">
+    <div class="workflow__inner">
+      <p class="eyebrow">WORKFLOW</p>
+      <h2 id="workflow-heading">公開までの流れ</h2>
+      <ol class="workflow__steps">
+        <li><span>01</span>底本・権利確認</li>
+        <li><span>02</span>原文から翻訳</li>
+        <li><span>03</span>独立レビュー</li>
+        <li><span>04</span>組版・ファイル検証</li>
+        <li><span>05</span>人による最終承認</li>
+      </ol>
+    </div>
+  </section>
+
+  <nav class="policy-nav" aria-label="このページの目次">
+    <div class="policy-nav__inner">
+      <a href="#in-progress"><span>01</span>現在翻訳中</a>
+      <a href="#translation"><span>02</span>底本と翻訳</a>
+      <a href="#review"><span>03</span>独立レビュー</a>
+      <a href="#production"><span>04</span>組版と公開前確認</a>
+      <a href="#notice"><span>05</span>利用上の注意</a>
+    </div>
+  </nav>
+
+  <section class="policy-section" id="in-progress" aria-labelledby="in-progress-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">WORK IN PROGRESS</p>
+        <h2 id="in-progress-heading">現在翻訳中</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          既刊資料に加えて、現在は次の4点を翻訳・編集しています。
+          作業状況により、公開順は変更する場合があります。
+        </p>
+        <ol class="work-list">
+          <li>
+            <span>ヒメネス</span>
+            <cite lang="es">Colección de documentos inéditos relativos á la Iglesia de Chiapas</cite>
+          </li>
+          <li>
+            <span>ゼーラー＝ザックス</span>
+            <cite lang="de">Auf alten Wegen in Mexiko und Guatemala</cite>
+          </li>
+          <li>
+            <span>マリアノ・ロブレス・ドミンゲス・デ・マサリエゴス</span>
+            <cite lang="es">Memoria histórica de la provincia de Chiapa, una de las de Guatemala</cite>
+          </li>
+          <li>
+            <span>エメテリオ・ピネダ</span>
+            <cite lang="es">Descripción geográfica del Departamento de Chiapas y Soconusco</cite>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="translation" aria-labelledby="translation-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">SOURCE &amp; TRANSLATION</p>
+        <h2 id="translation-heading">底本と翻訳</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          翻訳に着手する前に、原著者、刊行年、収録範囲、著作権、公開条件を確認し、
+          利用可能な原刊・原資料の中から最も適切な底本を選定します。現代の編者による解説や注釈など、
+          権利が残る可能性のある部分は翻訳対象に含めません。
+        </p>
+        <p>
+          翻訳には生成AIを使用しますが、外部翻訳サービス、ブラウザの自動翻訳、
+          ローカル翻訳モデルは使用しません。原刊画像または信頼できる原文転写を直接読み、
+          原文から日本語へ翻訳します。OCRや同版の別個体は判読困難箇所の確認と照合に限って使用し、
+          既存の翻訳文を訳文として流用しません。
+        </p>
+        <p>
+          原刊の見出し、段落、原刊頁、脚注、表、図版、キャプション、付録、索引などは、
+          可能な限り原構成に対応させます。判読や解釈に確信を持てない箇所は推測で埋めず、
+          必要に応じて注記または確認対象として扱います。
+        </p>
+        <p>
+          翻訳・編集の正本はMarkdown形式で保存し、PDFとリフロー型EPUBは同じ正本から生成します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="review" aria-labelledby="review-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">INDEPENDENT REVIEW</p>
+        <h2 id="review-heading">独立レビュー</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          翻訳後の訳文は、翻訳を生成した工程とは分離した生成AIによる独立レビューにかけます。
+          ここでいう「独立」は工程を分離したAIレビューを指し、専門研究者による外部査読を意味しません。
+        </p>
+        <p>レビューでは、次の項目を優先して原文と照合します。</p>
+        <ul class="review-list">
+          <li>訳文の脱落、重複、順序の誤り</li>
+          <li>文意を大きく変える誤訳</li>
+          <li>人名、地名、民族名、組織名などの固有名詞</li>
+          <li>年代、数量、距離、頁番号などの数値</li>
+          <li>脚注、表、図版、キャプションと本文との対応</li>
+          <li>章立て、付録、索引など収録構成の欠落</li>
+        </ul>
+        <p>
+          独立レビューは、訳文全体を別の文章へ作り直す再翻訳ではありません。
+          同じ範囲を複数回にわたって逐語的に読み直すことも原則として行いません。
+          意味や収録範囲に関わる重大な問題の発見を主目的とし、
+          軽微な表現差や文体上の選択は必要以上に修正しない方針です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="production" aria-labelledby="production-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">PRODUCTION &amp; APPROVAL</p>
+        <h2 id="production-heading">組版と公開前確認</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          レビュー後、訳文を所定の書式で組版し、PDFとリフロー型EPUBを生成します。
+          原刊頁表示、注、表、図版、改頁、目次、内部リンク、文字化け、ファイル構造などを確認し、
+          必要な修正を反映します。
+        </p>
+        <p>
+          公開前には、人が最終PDFを閲覧し、表紙、標題紙、本文、原刊頁表示、図版、文字化け、
+          欠落、版面の崩れなどを確認します。この確認は主として収録内容と組版を対象とするものであり、
+          全文を逐語的に人手校閲したことを意味しません。最終PDFの確認と承認を受けるまでは、
+          公開処理を行いません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section policy-section--notice" id="notice" aria-labelledby="notice-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">NOTICE</p>
+        <h2 id="notice-heading">利用上の注意</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          本アーカイブの翻訳は、生成AIを用いて作成し、独立したAIレビューと
+          公開前の人による版面確認を経た日本語読書版です。専門家による批判校訂版ではなく、
+          誤読や訳語上の問題が残る可能性があります。
+        </p>
+        <p>
+          研究や論文で利用する場合は、各資料に示した底本と原刊頁を併せて確認してください。
+          公開後に判明した誤りは、原刊との照合に基づいて随時修正します。
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+${footer()}`,
 });
 
 const scoreRelated = (current, candidate) => {
@@ -483,8 +681,10 @@ ${footer()}`,
 
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
+await mkdir(path.join(dist, "about"), { recursive: true });
 await Promise.all([
   writeFile(path.join(dist, "index.html"), home),
+  writeFile(path.join(dist, "about", "index.html"), aboutPage),
   cp(path.join(projectRoot, "src", "styles.css"), path.join(dist, "archive.css")),
   cp(path.join(projectRoot, "src", "archive.js"), path.join(dist, "archive.js")),
   writeFile(path.join(dist, "404.html"), notFound),
@@ -509,6 +709,7 @@ await Promise.all(
 
 const sitemapEntries = [
   `${site.url}/`,
+  `${site.url}/about/`,
   ...publications.map(
     (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
   ),
@@ -530,5 +731,5 @@ if (localAssets) {
 }
 
 console.log(
-  `Built ${publications.length + 1} pages in ${path.relative(projectRoot, dist)}`,
+  `Built ${publications.length + 2} pages in ${path.relative(projectRoot, dist)}`,
 );
