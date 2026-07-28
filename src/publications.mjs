@@ -855,6 +855,40 @@ const publicationRecords = [
       "原刊図版",
     ],
   },
+  {
+    slug: "tozzer-mayas-lacandones-1907",
+    title: "マヤ人とラカンドン人の比較研究",
+    originalTitle: "A Comparative Study of the Mayas and the Lacandones",
+    subtitle: "1907年初版・原刊前付、本文、原注、図版、参考文献 日本語全訳",
+    author: "アルフレッド・M・トッザー",
+    series: "A COMPARATIVE STUDY · 1907",
+    originalPublication: "ニューヨーク、1907年",
+    year: 1907,
+    extent:
+      "PDF 301頁・原刊前付v–xx頁・本文1–195頁・本文挿図49点・別丁図版29点",
+    description:
+      "アルフレッド・M・トッザーが、20世紀初頭のユカタン・マヤ人とチアパスのラカンドン人を、歴史、居住環境、社会、技術、芸術、宗教の諸面から比較した民族誌。1907年初版の原刊前付、本文1–195頁、原注、表、参考文献を全訳し、本文挿図1–49と別丁図版I–XXIXを収録しています。",
+    cover: "publications/tozzer-mayas-lacandones-1907/cover.jpg",
+    pdf:
+      "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
+    pageCount: 301,
+    figureCount: 49,
+    plateCount: 29,
+    types: ["民族誌", "考古学研究", "比較研究"],
+    regions: ["ユカタン", "チアパス", "ラカンドン"],
+    languages: ["英語"],
+    tags: [
+      "マヤ人",
+      "ラカンドン人",
+      "民族学",
+      "宗教",
+      "物質文化",
+      "原刊図版",
+      "20世紀初頭",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1139,6 +1173,17 @@ const publicationMetadata = {
     sourceProvider:
       "Getty Research Institute所蔵本を収めるInternet Archive公開画像（全524画像）。",
     sourceUrl: "https://archive.org/details/gri_33125012643553",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "tozzer-mayas-lacandones-1907": {
+    sourceEdition:
+      "Alfred M. Tozzer『A Comparative Study of the Mayas and the Lacandones』（New York: The Macmillan Company for the Archaeological Institute of America、1907年初版）。",
+    sourceProvider:
+      "University of California Libraries所蔵本を収めるInternet Archive公開画像（主底本）。Getty Research Institute、Harvard University、Claremont School of Theology各所蔵本を判読・頁構成の照合に使用。",
+    sourceUrl:
+      "https://archive.org/details/comparativestudy00tozzrich",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

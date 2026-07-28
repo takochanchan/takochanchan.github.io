@@ -470,6 +470,24 @@
       "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
     },
     {
+      "path": "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
+      "size": 47371701,
+      "sha256": "18b4802ec2418742999e1bfb2dfcb7d2c56ca2639ca4bfad36110df39794fdb3"
+    },
+    {
+      "path": "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.pdf",
+      "size": 14524459,
+      "sha256": "9a79c14e4ccc3d68e412159f99bc9baa0a11fa2caf4dd3547f40fc187d933d47"
+    },
+    {
+      "path": "publications/tozzer-mayas-lacandones-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tozzer-mayas-lacandones-1907/cover.jpg",
+      "size": 31383,
+      "sha256": "8c7c0568328ec2ea16b7d0f31f14eb5f177cd88b44dcf1eabefd8b2791679fb9"
+    },
+    {
       "path": "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
       "size": 27428352,
