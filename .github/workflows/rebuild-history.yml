@@ -1,0 +1,122 @@
+name: Rebuild repository history
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/rebuild-history.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repository-history-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: publications-current
+    steps:
+      - name: Check out exact triggering revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Stop on the rebuilt root run
+        id: root-check
+        shell: bash
+        run: |
+          set -euo pipefail
+          field_count="$(git rev-list --parents -n 1 "$GITHUB_SHA" | wc -w)"
+          if [ "$field_count" -eq 1 ]; then
+            echo "is_root=true" >> "$GITHUB_OUTPUT"
+            echo "History is already rebuilt; no further ref changes are needed."
+          else
+            echo "is_root=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate current site and release
+        if: steps.root-check.outputs.is_root == 'false'
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+          npm test
+
+          asset_count="$(gh release view "$RELEASE_TAG" --json assets --jq '.assets | length')"
+          test "$asset_count" -eq 59
+          gh release view "$RELEASE_TAG" --json assets --jq '.assets[].name' | sort > /tmp/release-assets.txt
+          test "$(grep -cE '\.(pdf|epub)$' /tmp/release-assets.txt)" -eq 58
+          grep -Fxq SHA256SUMS.txt /tmp/release-assets.txt
+
+      - name: Rebuild root and update refs safely
+        if: steps.root-check.outputs.is_root == 'false'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          remote_main="$(git ls-remote --heads origin refs/heads/main | awk '{print $1}')"
+          if [ "$remote_main" != "$GITHUB_SHA" ]; then
+            echo "main advanced after this workflow started; refusing to overwrite $remote_main" >&2
+            exit 1
+          fi
+
+          stale_branches=(
+            "agent/pdf-full-text-search"
+            "agent/publish-bourbourg-translation"
+            "codex/archive-review-20260727"
+          )
+          stale_heads=(
+            "f6f0976a0ae0854b9d4ff9f7ecf959409e5bf304"
+            "d271351867ea1a8713b1602510648d6fb36f65ea"
+            "691dddc38d2f60286e2bd5a1a365eba91fbb7d72"
+          )
+          deletable=()
+
+          for index in "${!stale_branches[@]}"; do
+            branch="${stale_branches[$index]}"
+            expected="${stale_heads[$index]}"
+            current="$(git ls-remote --heads origin "refs/heads/$branch" | awk '{print $1}')"
+            if [ -z "$current" ]; then
+              echo "$branch is already absent"
+              continue
+            fi
+            if [ "$current" != "$expected" ]; then
+              echo "$branch advanced to $current; preserving it"
+              continue
+            fi
+            git fetch --no-tags origin "$current"
+            if ! git merge-base --is-ancestor "$current" "$GITHUB_SHA"; then
+              echo "$branch is not contained in main; preserving it"
+              continue
+            fi
+            deletable+=("$branch")
+          done
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tree_sha="$(git rev-parse "${GITHUB_SHA}^{tree}")"
+          new_sha="$(printf '%s\n' 'Rebuild repository history after moving publication assets to GitHub Release' | git commit-tree "$tree_sha")"
+          test "$(git rev-list --parents -n 1 "$new_sha" | wc -w)" -eq 1
+          test "$(git rev-parse "${new_sha}^{tree}")" = "$tree_sha"
+
+          git tag -f "$RELEASE_TAG" "$new_sha"
+          git push origin "+refs/tags/$RELEASE_TAG:refs/tags/$RELEASE_TAG"
+          test "$(gh release view "$RELEASE_TAG" --json assets --jq '.assets | length')" -eq 59
+
+          remote_main="$(git ls-remote --heads origin refs/heads/main | awk '{print $1}')"
+          if [ "$remote_main" != "$GITHUB_SHA" ]; then
+            echo "main advanced before the final update; refusing to overwrite $remote_main" >&2
+            exit 1
+          fi
+          git push origin "+$new_sha:refs/heads/main"
+
+          for branch in "${deletable[@]}"; do
+            git push origin --delete "$branch"
+          done
+
+          echo "Rebuilt main at $new_sha"
+          printf 'Deleted stale branch: %s\n' "${deletable[@]}"

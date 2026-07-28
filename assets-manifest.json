@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/arthes_peten_1893_ja.epub",
+      "size": 96542,
+      "sha256": "68edafe33711537b645c038f1537e5e4c8c0a2b0d456d5311d9bac8b0f1f0f2c"
+    },
+    {
+      "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/arthes_peten_1893_ja.pdf",
+      "size": 645309,
+      "sha256": "da85e893df3567dae69857225548c6ee344ffbc3f697265adc2b742141390333"
+    },
+    {
+      "path": "publications/arthes-peten-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arthes-peten-1893/cover.jpg",
+      "size": 86978,
+      "sha256": "669e4898e6562665a8e25b7098e2b0801c9a15f8c6ed66164855ded1d67d2e8e"
+    },
+    {
+      "path": "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
+      "size": 2414303,
+      "sha256": "7d2ff1ae1eac401e595d329c00ea640cbd33486e6553f9d6f62969b503673532"
+    },
+    {
+      "path": "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.pdf",
+      "size": 2000105,
+      "sha256": "abfcf57758c8dfc33b31aea8db78b102fda31b5da9419d0ac1ff200bbf45588a"
+    },
+    {
+      "path": "publications/bandelier-yucatan-central-america-1881/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bandelier-yucatan-central-america-1881/cover.jpg",
+      "size": 31863,
+      "sha256": "ea89bd28d02bf883602fc6c0080905a7bc302d316f5dabad01076d6ddc0661db"
+    },
+    {
+      "path": "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
+      "size": 41132122,
+      "sha256": "0b19bcba97b0de5af459bb3486d6149df13ce41c84d1df8e3406a972e6384bbf"
+    },
+    {
+      "path": "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bourbourg_Palenque_Complete_Japanese_Translation.pdf",
+      "size": 95561127,
+      "sha256": "719504d0681b317d1e6f4a5a687322d0a2b25798c642e6f8e868d9237b4aa274"
+    },
+    {
+      "path": "publications/bourbourg-palenque-1866/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bourbourg-palenque-1866/cover.jpg",
+      "size": 44514,
+      "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
+    },
+    {
+      "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
+      "size": 2587197,
+      "sha256": "6fc19d5b9bb08baf1bd7e1587f537d515302ed9a95aa39f7e07e8a9ebc79050f"
+    },
+    {
+      "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.pdf",
+      "size": 4285113,
+      "sha256": "0f55cf71b8685d48b8c3d6d6e8c5599204d05912ffbe21d2f0d5fad43f4b8a32"
+    },
+    {
+      "path": "publications/chambon-mexique/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/chambon-mexique/cover.jpg",
+      "size": 52372,
+      "sha256": "801aca8feeef95d22dee83fbfd2a7d23a093e5c49b5081fe524d466868f0ee70"
+    },
+    {
+      "path": "publications/charencey-votan-1871/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.epub",
+      "size": 3880852,
+      "sha256": "2e302521d73597250909b6256aaf619d213a09764181eca74537f4bf0562f363"
+    },
+    {
+      "path": "publications/charencey-votan-1871/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.pdf",
+      "size": 2475702,
+      "sha256": "10898f364d0fc8cbe32b501a04b554df7739eb77879fd6c54862b4067d69bfa0"
+    },
+    {
+      "path": "publications/charencey-votan-1871/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/charencey-votan-1871/cover.jpg",
+      "size": 26044,
+      "sha256": "919e1f781d3008bb21c5e31b1c8d560c80c1a5d95395205980f4542ccad38f22"
+    },
+    {
+      "path": "publications/charnay-cites-et-ruines-americaines-1863/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.epub",
+      "size": 47893685,
+      "sha256": "72910c5476c106c61a396cd76224800913396988408c653896de9032506386bd"
+    },
+    {
+      "path": "publications/charnay-cites-et-ruines-americaines-1863/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.pdf",
+      "size": 48961031,
+      "sha256": "cbf7a16302084b80cfe3537f1cf5668c4df5e9433d482f58cff83d2f2ec6c04a"
+    },
+    {
+      "path": "publications/charnay-cites-et-ruines-americaines-1863/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/charnay-cites-et-ruines-americaines-1863/cover.jpg",
+      "size": 63735,
+      "sha256": "3e0d5725290fe5a3e946196a833e30b8b83952fd3feade16046ea4e054da7bb3"
+    },
+    {
+      "path": "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
+      "size": 18345877,
+      "sha256": "8539cccdfe5dbe057dc03bd493d51a82e277523f2b2416331b167ff51e79f385"
+    },
+    {
+      "path": "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.pdf",
+      "size": 11052981,
+      "sha256": "a82576a8a73ce576c1b4f52e7c3a3c4032cda24b526e60c8784a39b796c6069a"
+    },
+    {
+      "path": "publications/cogolludo-yucatan-1688/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cogolludo-yucatan-1688/cover.jpg",
+      "size": 30976,
+      "sha256": "0b00385e92bb1bc9cb5b22a6ee9f79cb0a1edebb96ce9d4541077b3b51bf0b69"
+    },
+    {
+      "path": "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
+      "size": 13107101,
+      "sha256": "3b2dbfc9b1e55e8647492237e3faa26f4f90c8dcf63fb410ce7e54e2a3600e8a"
+    },
+    {
+      "path": "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.pdf",
+      "size": 15826369,
+      "sha256": "78d654478d2e7d2e32f8a56396f91194fdc61f857be4f233b796b1ff4fa60fc2"
+    },
+    {
+      "path": "publications/del-rio-palenque/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/del-rio-palenque/cover.jpg",
+      "size": 125211,
+      "sha256": "feb4ac0de3efe993033dd0a31605a5425fee15b1a3e80fc4472c4640c6b22a26"
+    },
+    {
+      "path": "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
+      "size": 3432879,
+      "sha256": "d66273cc4454cdc60f5d8235e945a639306dedde71986afdffb41fdc2fc8cbf2"
+    },
+    {
+      "path": "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.pdf",
+      "size": 4411911,
+      "sha256": "88e791372593ad8ec0c3b1918ed0fae2eaa96f566e86a963506d444213fc440e"
+    },
+    {
+      "path": "publications/dunlop-central-america-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dunlop-central-america-1847/cover.jpg",
+      "size": 31431,
+      "sha256": "828572890659ebb47470960033c0dd91c24e8cc945934b13d5334433580bfbd5"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
+      "size": 83873010,
+      "sha256": "4102d85ba3dcd6752d34480875f7c23f87e57dc1d40fdf4fefd6bc9813638434"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf",
+      "size": 175052249,
+      "sha256": "722fe6eef2c07f1899d7b22261c5ef7ccad8729e1c270839aa8c749e87e9d7e5"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
+      "size": 71193,
+      "sha256": "67d10f5c58913a03cf63b55944faf90484012f088d5a84da89164d8aaae3066a"
+    },
+    {
+      "path": "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.epub",
+      "size": 49041411,
+      "sha256": "ad4212a60be03d3fc8690bd02d013be411c44d84ff43609821df81e69192e168"
+    },
+    {
+      "path": "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.pdf",
+      "size": 75490752,
+      "sha256": "94e694590e8b598480ecffe061b0be21d5ed675ac5705c9b6ea8d2884f80f102"
+    },
+    {
+      "path": "publications/egan-wyer-1930/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/egan-wyer-1930/cover.jpg",
+      "size": 46346,
+      "sha256": "8a3b1b11132ffec2c8cab7331f3bca8e4246550869064fa228e1d87088a4b85a"
+    },
+    {
+      "path": "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
+      "size": 72935,
+      "sha256": "a0b354d268dde736cb317267dfaf1b18c82493a1f32189513bce2e965fdb4ac5"
+    },
+    {
+      "path": "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.pdf",
+      "size": 432672,
+      "sha256": "3340592c45ad2232fc59cfd7effdbafc69759de7f91e115645d4102ca10c6538"
+    },
+    {
+      "path": "publications/esquinca-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/esquinca-usumacinta/cover.jpg",
+      "size": 56453,
+      "sha256": "1c53390d1fa6c20fa63342a1deec2723d7b7f005a89819cba2a251db4e64a613"
+    },
+    {
+      "path": "publications/fancourt-history-yucatan-1854/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.epub",
+      "size": 1420737,
+      "sha256": "332de5026cab3f794624e636731d4aed0585f8d814c9092096cab30e22b8598d"
+    },
+    {
+      "path": "publications/fancourt-history-yucatan-1854/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.pdf",
+      "size": 5631141,
+      "sha256": "6474ac3f4ccb39f7a8ae9190ee43a26e9c27d9b902c81a887fa104c73e5a67d2"
+    },
+    {
+      "path": "publications/fancourt-history-yucatan-1854/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/fancourt-history-yucatan-1854/cover.jpg",
+      "size": 33987,
+      "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
+    },
+    {
+      "path": "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
+      "size": 101627,
+      "sha256": "48818afa423fac0dd04b23878f8a7452a2b196eb003ff11ab26ef88177812804"
+    },
+    {
+      "path": "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.pdf",
+      "size": 534994,
+      "sha256": "fb2ad86ffe805bd6c52eb3aae24047ba545341a120dd643d54766ca697342ed7"
+    },
+    {
+      "path": "publications/friedrichsthal-yucatan-1841/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/friedrichsthal-yucatan-1841/cover.jpg",
+      "size": 31677,
+      "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
+    },
+    {
+      "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
+      "size": 472147,
+      "sha256": "3ee9ddb263609e917a8c77aabade03b5f8f455a133fbf0d64cb3ee539920ddc3"
+    },
+    {
+      "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.pdf",
+      "size": 1206650,
+      "sha256": "439441a96efbcc8c46001de9a96c20be63bf723269847ce7f76da199e2822fee"
+    },
+    {
+      "path": "publications/galindo-palenque-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-palenque-1832/cover.jpg",
+      "size": 72911,
+      "sha256": "9aecf061a49a9ef562a0da1a9398fda566d1faedb57185409af2af5e3999a157"
+    },
+    {
+      "path": "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",
+      "size": 2213718,
+      "sha256": "d6628897bc1110a63b882adc25c7b3556952629d94bd7ddfa885154889ba78c5"
+    },
+    {
+      "path": "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.pdf",
+      "size": 3377730,
+      "sha256": "b1809c61a5a7c1b98ff201a4bc9bf2c26330e2f8710dfaf8586e337560b1f204"
+    },
+    {
+      "path": "publications/galindo-usumacinta-1833/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-usumacinta-1833/cover.jpg",
+      "size": 68713,
+      "sha256": "086bfd6b53e95882cfb14a666fc4370349c3a508f7f012fe78d49555b17de00a"
+    },
+    {
+      "path": "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
+      "size": 47715556,
+      "sha256": "2f6e3ecf0425b36ecb320a43cd4c484001e89c4f59cb4343ea16e396d30fd38e"
+    },
+    {
+      "path": "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.pdf",
+      "size": 8532874,
+      "sha256": "438d7f24f0b7662050157a29fa1b532cdbe2acc66030d8a809abacc037f57087"
+    },
+    {
+      "path": "publications/le-plongeon-yucatan-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/le-plongeon-yucatan-1889/cover.jpg",
+      "size": 35536,
+      "sha256": "31a8294698a780df6a55394e0da901f804fd1b6daedb7c776f852c60640f21e5"
+    },
+    {
+      "path": "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
+      "size": 10458014,
+      "sha256": "227991bad7d49ed192ddd96d5997d0f752d5b0ba7c1db9204b1a263bab67b408"
+    },
+    {
+      "path": "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.pdf",
+      "size": 10707436,
+      "sha256": "aa65097b6898108b803494dd44552666a6484fb37c81aa7b12137e5f1ce866f0"
+    },
+    {
+      "path": "publications/maler-upper-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maler-upper-usumacinta/cover.jpg",
+      "size": 111245,
+      "sha256": "971ebccb9ecd4b03d52d3a2b82b1fb0b59b8de8bb5dfcb26149ad412d56cbbe5"
+    },
+    {
+      "path": "publications/maler-usumacinta/Maler_Usumacinta_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Usumacinta_Japanese_Translation.epub",
+      "size": 45744471,
+      "sha256": "ddabfde1049c10fe6ce89a0a9aea91b0398041d27f851685e464c2545dd5a8d3"
+    },
+    {
+      "path": "publications/maler-usumacinta/Maler_Usumacinta_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Usumacinta_Japanese_Translation.pdf",
+      "size": 11919245,
+      "sha256": "4b029b645ff60447814f53d8473bebe4e7d6aa522d9d64c0ced37daf42825acb"
+    },
+    {
+      "path": "publications/maler-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maler-usumacinta/cover.jpg",
+      "size": 48305,
+      "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
+    },
+    {
+      "path": "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.epub",
+      "size": 6698085,
+      "sha256": "c5f5d21883adddeaba32f46cb50b533efb1decf8ce0f5503f565cd2414de5a97"
+    },
+    {
+      "path": "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.pdf",
+      "size": 5897756,
+      "sha256": "ece6c1d047c9cb0ee7c1ff2137e8cc44b52a62bbc2695fc2faabd2d424cc99a6"
+    },
+    {
+      "path": "publications/means-yucatan-itzas-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/means-yucatan-itzas-1917/cover.jpg",
+      "size": 48469,
+      "sha256": "eb737266765c4586fcc641bdb5e9eb90954fe3856f295986d99a1c0f4c5d9f42"
+    },
+    {
+      "path": "publications/morelet-1857/Morelet_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_1857_Japanese_Complete_Translation.epub",
+      "size": 21529698,
+      "sha256": "60207abb5bc6c26ad58886a35ca5e5a448019ac79e91f5d019fc112218e872ad"
+    },
+    {
+      "path": "publications/morelet-1857/Morelet_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_1857_Japanese_Complete_Translation.pdf",
+      "size": 23466016,
+      "sha256": "8918fa8e3af102aed4889529c443694642108c86ade06720b6f313c15da58934"
+    },
+    {
+      "path": "publications/morelet-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morelet-1857/cover.jpg",
+      "size": 64847,
+      "sha256": "3bf3263753190c93ecd60da127c345ecbfbbe889b10372d1c5cc3305ed865a51"
+    },
+    {
+      "path": "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
+      "size": 11743016,
+      "sha256": "a80fb3099f43790ab95a2979f1b1e31d3f1518b66e98f677c47484208d57efc9"
+    },
+    {
+      "path": "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.pdf",
+      "size": 2995027,
+      "sha256": "d73286e24d37802403949c8340617c90998eebb7f2757317c470c429fa1e3ba6"
+    },
+    {
+      "path": "publications/ordonez-creation-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ordonez-creation-1907/cover.jpg",
+      "size": 42506,
+      "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
+    },
+    {
+      "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
+      "size": 17224938,
+      "sha256": "390be06ec6b2d94fc6a91059c76e2840829354aca2bb40ecf0a66a21194f60e4"
+    },
+    {
+      "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.pdf",
+      "size": 8423007,
+      "sha256": "a0775fd1082a47bd982148473c07356d9f1e191335ea67d608260e6c967f777a"
+    },
+    {
+      "path": "publications/rau-palenque-tablet-1879/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rau-palenque-tablet-1879/cover.jpg",
+      "size": 32451,
+      "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
+    },
+    {
+      "path": "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
+      "size": 117465,
+      "sha256": "89592d005876ba74b585ebac1e8e93fb76f273a0c2042728d608e9b6928c7330"
+    },
+    {
+      "path": "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rockstroh_Ukes_1881_Extant_Japanese_Translation.pdf",
+      "size": 1085328,
+      "sha256": "58c2a5054e88cb5948f49033cb68c7463183d47d7b7d148b353fe707c4941df7"
+    },
+    {
+      "path": "publications/rockstroh-ukes/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rockstroh-ukes/cover.jpg",
+      "size": 81167,
+      "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
+    },
+    {
+      "path": "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
+      "size": 2441886,
+      "sha256": "427858718f4c5e73f7bdf631c6c8df02ca9e952522818bb329806f8cf5bd44c3"
+    },
+    {
+      "path": "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.pdf",
+      "size": 1672245,
+      "sha256": "68ee95ec2de078d96b0ed3b19232573f4242270befc211f987fc76e158027853"
+    },
+    {
+      "path": "publications/sapper-eastern-lacandons-1891/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-eastern-lacandons-1891/cover.jpg",
+      "size": 24586,
+      "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
+      "size": 27428352,
+      "sha256": "8ef4e1ba6f5097d50873cf0cbfd637fc945a47190c9f18fc8a253bee9e28e7c1"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.pdf",
+      "size": 30572762,
+      "sha256": "5b37e9793393de9e23ccc1734c4d2f41a47b52cac61207aec9336332139a878d"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-1/cover.jpg",
+      "size": 65701,
+      "sha256": "b7b0f6ecc9914fea87891ba409c49369b44b64cedf8f2c2b5255160d143b753c"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-2/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.epub",
+      "size": 23868714,
+      "sha256": "49b16c02bac7153d4eb507f856f673af4e54c90a706d7a861f46cfca223e55e3"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-2/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.pdf",
+      "size": 31246474,
+      "sha256": "5fa0017f350b23f7ad93c7ef46cbef4074ac57a5c0f079716b0ef57abfad7f34"
+    },
+    {
+      "path": "publications/tribes-and-temples-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-2/cover.jpg",
+      "size": 66002,
+      "sha256": "703cc359fe9cb58c7c6b50a4ffcc2fa98150af06f05727a47a46af3cabb4700f"
+    },
+    {
+      "path": "publications/valenzuela-lacandon-chol-1695/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/valenzuela-lacandon-chol-1695/cover.jpg",
+      "size": 58661,
+      "sha256": "1521321a064f24a1b8efee09690aecacb3df5e74839f25e6155e8f788cbf1a87"
+    },
+    {
+      "path": "publications/valenzuela-lacandon-chol-1695/valenzuela_lacandon_chol_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/valenzuela_lacandon_chol_ja.epub",
+      "size": 487915,
+      "sha256": "91f20cb970c13f567afa1136a11c397061458a1475e8e9904007ffa4f4eb1008"
+    },
+    {
+      "path": "publications/valenzuela-lacandon-chol-1695/valenzuela_lacandon_chol_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/valenzuela_lacandon_chol_ja.pdf",
+      "size": 5069029,
+      "sha256": "ccbf33bf0a1d10e8d44d8c413ad05b92e91c7628daf1fbd2a976eaa60f278fee"
+    },
+    {
+      "path": "publications/villagutierre-itza-1701/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/villagutierre-itza-1701/cover.jpg",
+      "size": 78804,
+      "sha256": "9c9b5a6c585a5941e638bb11ebaf642ed3a75b67be0c66e668cce6823ab3db49"
+    },
+    {
+      "path": "publications/villagutierre-itza-1701/villagutierre_itza_1701_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.epub",
+      "size": 2255080,
+      "sha256": "7f1120ae406399f0e3a53c84e08075a31d523bfbfabdb622df1fde4d0f9e42b1"
+    },
+    {
+      "path": "publications/villagutierre-itza-1701/villagutierre_itza_1701_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.pdf",
+      "size": 9129550,
+      "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
+    }
+  ]
+}
