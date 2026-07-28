@@ -74,8 +74,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260728-release/);
-  assert.match(html, /\/archive\.js\?v=20260728-release/);
+  assert.match(html, /\/archive\.css\?v=20260728-detail-actions/);
+  assert.match(html, /\/archive\.js\?v=20260728-detail-actions/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -143,8 +143,8 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260728-release/);
-    assert.match(html, /\/archive\.js\?v=20260728-release/);
+    assert.match(html, /\/archive\.css\?v=20260728-detail-actions/);
+    assert.match(html, /\/archive\.js\?v=20260728-detail-actions/);
     for (const label of [
       "底本",
       "公開元",
@@ -178,6 +178,18 @@ test("every publication has a detail page, local cover, and release links", asyn
 test("auxiliary text no longer uses 7–10px font sizes", async () => {
   const css = await readFile(path.join(dist, "archive.css"), "utf8");
   assert.doesNotMatch(css, /font-size:\s*(?:7|8|9|10)px/);
+});
+
+test("detail PDF and EPUB controls stay in a two-column row", async () => {
+  const css = await readFile(path.join(dist, "archive.css"), "utf8");
+  assert.match(
+    css,
+    /\.publication-actions\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*1fr 1fr;[^}]*gap:\s*8px;[^}]*\}/s,
+  );
+  assert.doesNotMatch(
+    css,
+    /\.publication-actions \.button\s*\{[^}]*min-width:\s*170px;/s,
+  );
 });
 
 test("local covers and release assets match the recorded manifest", async () => {
