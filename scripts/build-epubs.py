@@ -83,6 +83,15 @@ DOCX_SOURCES = {
     "humboldt-vues-cordilleres-1810-1813": SOURCES
     / "翻訳サイト"
     / "Humboldt_Vues_des_Cordilleres_1810_1813_ja_review.docx",
+    "frias-mexico-guatemala-boundary-1883": SOURCES
+    / "翻訳サイト"
+    / "frias_cuestion_limites_1883_ja.docx",
+    "pastrana-mexico-guatemala-boundary-1897": SOURCES
+    / "翻訳サイト"
+    / "pastrana_informe_1897_ja.docx",
+    "urrutia-guatemala-mexico-boundary-1900": SOURCES
+    / "翻訳サイト"
+    / "urrutia_limites_1900_ja.docx",
 }
 
 TAGGED_PDF_SOURCES = {

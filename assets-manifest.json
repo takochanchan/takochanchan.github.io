@@ -236,6 +236,24 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
+      "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
+      "size": 897600,
+      "sha256": "54c7a0e5a9e2dd894bf27a3dc055f97a20e0c6559f269267615e5f05695aecc6"
+    },
+    {
+      "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.pdf",
+      "size": 1392195,
+      "sha256": "d920df07075e85dc8dcd5f934c196a02541213d4e910691f21a16944cc5e3b26"
+    },
+    {
+      "path": "publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
+      "size": 32685,
+      "sha256": "e4d637936a5e13b42838e9f8f95b650fa1409cb7cd8b85816246e0fecc7bade2"
+    },
+    {
       "path": "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
       "size": 101627,
@@ -416,6 +434,24 @@
       "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
     },
     {
+      "path": "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
+      "size": 116109,
+      "sha256": "a03b22072095b635ddd0cc9aaafc00b71d0f464b70264c1cd3843dcc340fdf1b"
+    },
+    {
+      "path": "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.pdf",
+      "size": 2040488,
+      "sha256": "8df483f9e0b2d58b415192fc1903a1b215350b07c8da89972def73e7006fa348"
+    },
+    {
+      "path": "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
+      "size": 40864,
+      "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
+    },
+    {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "size": 17224938,
@@ -522,6 +558,24 @@
       "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-2/cover.jpg",
       "size": 66002,
       "sha256": "703cc359fe9cb58c7c6b50a4ffcc2fa98150af06f05727a47a46af3cabb4700f"
+    },
+    {
+      "path": "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.epub",
+      "size": 298655,
+      "sha256": "183f2c4508809457e9830d0881d1669d09cfae48fc9edb3516e3355b9b2f5669"
+    },
+    {
+      "path": "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.pdf",
+      "size": 4819327,
+      "sha256": "fb1d80c4da4214505d56966f448c2519532084d866b3e306766457aa6c05af0e"
+    },
+    {
+      "path": "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
+      "size": 47083,
+      "sha256": "feab73fdd9c59a0505d6f322d198612c2a7cb0c85640e33ff1bc214a0b15231d"
     },
     {
       "path": "publications/valenzuela-lacandon-chol-1695/cover.jpg",

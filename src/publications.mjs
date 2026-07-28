@@ -889,6 +889,109 @@ const publicationRecords = [
       "20世紀初頭",
     ],
   },
+  {
+    slug: "frias-mexico-guatemala-boundary-1883",
+    title: "メキシコとグアテマラの国境問題",
+    originalTitle: "Cuestión de límites entre México y Guatemala",
+    subtitle: "1883年特別版・原刊本文、1882年条約、折込地図、肖像2点 日本語全訳",
+    author: "イラリオン・フリアス・イ・ソト",
+    series: "BOUNDARY QUESTION · 1883",
+    originalPublication: "メキシコ、1883年",
+    year: 1883,
+    extent: "PDF 32頁・原刊本文3–40頁・折込地図1点・肖像2点",
+    description:
+      "イラリオン・フリアス・イ・ソトが、メキシコとグアテマラの国境問題、その交渉経過と1882年9月27日条約を論じ、後半にメキシコ外務長官イグナシオ・マリスカルの略伝を収めた著作。1883年特別版の本文、条約全文、署名を全訳し、折込地図と肖像2点を原刊位置に収録しています。",
+    cover: "publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
+    pdf:
+      "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
+    pageCount: 32,
+    figureCount: 1,
+    plateCount: 2,
+    types: ["国境史料", "条約史料", "外交史"],
+    regions: ["メキシコ", "グアテマラ", "チアパス"],
+    languages: ["スペイン語"],
+    tags: [
+      "国境問題",
+      "1882年条約",
+      "イグナシオ・マリスカル",
+      "フスト・ルフィノ・バリオス",
+      "折込地図",
+      "肖像",
+      "19世紀",
+    ],
+  },
+  {
+    slug: "pastrana-mexico-guatemala-boundary-1897",
+    title: "グアテマラとの国境画定メキシコ委員会委員長報告書",
+    originalTitle:
+      "Informe que el jefe de la Comisión mexicana de límites con Guatemala…",
+    subtitle: "1897年初版・原刊表紙、標題紙、本文、書簡、表、付録3–103頁 日本語全訳",
+    author: "マヌエル・E・パストラーナ",
+    series: "MEXICAN BOUNDARY COMMISSION · 1897",
+    originalPublication: "メキシコ、1897年",
+    year: 1897,
+    extent: "PDF 88頁・原刊表紙・標題紙・本文3–103頁・表および付録",
+    description:
+      "グアテマラとの国境画定メキシコ委員会委員長マヌエル・E・パストラーナが、技師アルベルト・アマドールの科学作業に関する批判へ回答した開発省提出報告書。1897年初版の標題紙、本文、書簡、原注、数式、表、付録を全訳しています。",
+    cover:
+      "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
+    pdf:
+      "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
+    pageCount: 88,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["国境史料", "委員会報告", "測量史料"],
+    regions: ["メキシコ", "グアテマラ", "チアパス"],
+    languages: ["スペイン語"],
+    tags: [
+      "国境画定",
+      "メキシコ国境委員会",
+      "アルベルト・アマドール",
+      "測量",
+      "天文観測",
+      "計算表",
+      "19世紀末",
+    ],
+  },
+  {
+    slug: "urrutia-guatemala-mexico-boundary-1900",
+    title: "グアテマラとメキシコの国境問題に関する報告書",
+    originalTitle: "Memoria sobre la cuestión de límites entre Guatemala y México",
+    subtitle: "1900年初版・原刊略標題紙、標題紙、本文・付録3–325頁 日本語全訳",
+    author: "グアテマラ・メキシコ国境委員会／クラウディオ・ウルティア",
+    series: "BOUNDARY COMMISSION REPORT · 1900",
+    originalPublication: "グアテマラ、1900年",
+    year: 1900,
+    extent:
+      "PDF 328頁・原刊略標題紙・標題紙・本文および付録3–325頁・表17点",
+    description:
+      "グアテマラ・メキシコ国境委員会委員長クラウディオ・ウルティアが、16年にわたる国境画定事業の沿革、交渉、測量成果と付録資料を外務大臣へ報告した大部の委員会史料。1900年初版の本文、書簡、条約、署名、原注、表、目録、付録を全訳しています。",
+    cover:
+      "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
+    pdf:
+      "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.epub",
+    pageCount: 328,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["国境史料", "委員会報告", "外交史"],
+    regions: ["グアテマラ", "メキシコ", "チアパス"],
+    languages: ["スペイン語"],
+    tags: [
+      "国境画定",
+      "グアテマラ国境委員会",
+      "1882年条約",
+      "測量",
+      "ソコヌスコ",
+      "チアパス",
+      "19世紀末",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1184,6 +1287,36 @@ const publicationMetadata = {
       "University of California Libraries所蔵本を収めるInternet Archive公開画像（主底本）。Getty Research Institute、Harvard University、Claremont School of Theology各所蔵本を判読・頁構成の照合に使用。",
     sourceUrl:
       "https://archive.org/details/comparativestudy00tozzrich",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "frias-mexico-guatemala-boundary-1883": {
+    sourceEdition:
+      "Hilarión Frías y Soto『Cuestión de límites entre México y Guatemala: edición especial tomada del tomo VI de El Anuario Universal』（México: Tipografía Literaria de Filomeno Mata、1883年）。",
+    sourceProvider:
+      "メキシコ国立図書館所蔵初版本を収めるBiblioteca Nacional Digital de México（UNAM）公開複製、システム番号000279871。",
+    sourceUrl: "https://repositorio.unam.mx/3687",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "pastrana-mexico-guatemala-boundary-1897": {
+    sourceEdition:
+      "Manuel E. Pastrana『Informe que el jefe de la Comisión mexicana de límites con Guatemala, C. Manuel E. Pastrana, rinde á la Secretaría de Fomento, sobre los puntos que tocó el ingeniero Alberto Amador en sus “Apuntes críticos acerca de algunas de las operaciones científicas de la Comisión mexicana de límites con Guatemala”』（México: Oficina Tipográfica de la Secretaría de Fomento、1897年）。",
+    sourceProvider:
+      "Harvard Law Library所蔵初版本を収めるGoogle Books公開複製、識別子F98KAAAAYAAJ。",
+    sourceUrl: "https://books.google.com/books?id=F98KAAAAYAAJ",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "urrutia-guatemala-mexico-boundary-1900": {
+    sourceEdition:
+      "Claudio Urrutia『Memoria sobre la cuestión de límites entre Guatemala y México: presentada al señor Ministro de Relaciones Exteriores por el jefe de la Comisión Guatemalteca』（Guatemala: Tipografía Nacional、1900年）。",
+    sourceProvider:
+      "University of Texas所蔵初版本を収めるGoogle Books公開複製、識別子5nFVAAAAMAAJ。",
+    sourceUrl: "https://books.google.com/books?id=5nFVAAAAMAAJ",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
