@@ -819,6 +819,42 @@ const publicationRecords = [
       "折込地図",
     ],
   },
+  {
+    slug: "humboldt-vues-cordilleres-1810-1813",
+    title: "コルディレラ山系の景観とアメリカ先住諸民族の記念物",
+    originalTitle:
+      "Vues des Cordillères, et monumens des peuples indigènes de l’Amérique",
+    subtitle: "1810／1813年刊・序文、本文、図版、索引・正誤表 日本語全訳",
+    author: "アレクサンダー・フォン・フンボルト",
+    series: "VUES DES CORDILLÈRES · 1810／1813",
+    originalPublication: "パリ、1810／1813年",
+    year: 1810,
+    extent:
+      "PDF 477頁・序文I–XVI頁・本文1–350頁・図版I–LXIX（68葉）・本文挿図1点・索引・正誤表",
+    description:
+      "アレクサンダー・フォン・フンボルトが、メキシコ、アンデスほかの景観と、アステカ、インカ、ムイスカなどアメリカ先住諸民族の建築・彫刻・絵文書・暦を比較考察した図版大著。1810／1813年原刊の序文I–XVI頁、本文1–350頁、原注、索引、正誤表を全訳し、図版I–LXIXの68葉（VIII・IXは同一葉）と本文挿図1点を原刊順に収録しています。",
+    cover:
+      "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
+    pdf:
+      "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf",
+    epub:
+      "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
+    pageCount: 477,
+    figureCount: 1,
+    plateCount: 68,
+    types: ["考古学研究", "図版集", "旅行記", "民族誌"],
+    regions: ["メキシコ", "中央アメリカ", "アンデス", "南アメリカ"],
+    languages: ["フランス語"],
+    tags: [
+      "アステカ文明",
+      "インカ文明",
+      "ムイスカ",
+      "コルディレラ",
+      "絵文書",
+      "比較考古学",
+      "原刊図版",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1096,6 +1132,16 @@ const publicationMetadata = {
     rights: publicDomainRights,
     publishedDate: "2026-07-28",
     updatedDate: "2026-07-28",
+  },
+  "humboldt-vues-cordilleres-1810-1813": {
+    sourceEdition:
+      "Alexander von Humboldt『Vues des Cordillères, et monumens des peuples indigènes de l’Amérique』（Paris: F. Schoell、1810／1813年）。",
+    sourceProvider:
+      "Getty Research Institute所蔵本を収めるInternet Archive公開画像（全524画像）。",
+    sourceUrl: "https://archive.org/details/gri_33125012643553",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
   },
 };
 

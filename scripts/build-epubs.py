@@ -80,6 +80,9 @@ DOCX_SOURCES = {
     / "Bourbourg_Palenque_Complete_Japanese_Translation.docx",
     "esquinca-usumacinta": SOURCES
     / "Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.docx",
+    "humboldt-vues-cordilleres-1810-1813": SOURCES
+    / "翻訳サイト"
+    / "Humboldt_Vues_des_Cordilleres_1810_1813_ja_review.docx",
 }
 
 TAGGED_PDF_SOURCES = {
@@ -528,6 +531,8 @@ def validate_epub(epub: Path) -> None:
             )
             if resolved not in names:
                 raise ValueError(f"{epub}: missing manifest resource {resolved}")
+            if archive.getinfo(resolved).file_size == 0:
+                raise ValueError(f"{epub}: empty manifest resource {resolved}")
             manifest_ids[item_id] = resolved
             properties = set(item.attrib.get("properties", "").split())
             has_navigation = has_navigation or "nav" in properties

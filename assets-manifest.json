@@ -290,6 +290,24 @@
       "sha256": "086bfd6b53e95882cfb14a666fc4370349c3a508f7f012fe78d49555b17de00a"
     },
     {
+      "path": "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
+      "size": 35762170,
+      "sha256": "9cc0bc4e1c77486798182bdfb6811bca2037058386543c178d180fb466c37858"
+    },
+    {
+      "path": "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf",
+      "size": 38627388,
+      "sha256": "7819c76019baf258b45ef222cfc21404e70102c5895e7456000f4b40171923ff"
+    },
+    {
+      "path": "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
+      "size": 35858,
+      "sha256": "1de0a62cc2ca58f498dd97a4b1791e1bab444fc729ef5c569d76ccc440dfc83f"
+    },
+    {
       "path": "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
       "size": 47715556,

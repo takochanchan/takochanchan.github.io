@@ -1,0 +1,59 @@
+name: Publish Humboldt release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-humboldt-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "69cb2520dce64aa8249c973c800273032f636d9d 997353c0f6d2ae8f5348a7e8872bac43b7e4dec6 68705ccd34156c0219a9633ec6a67fe08fbd9dc8 9c0dfba75b8d3a00302ad48c8e8063c19ccfc143 ee8601afbda0ff35a83df285450c95f3dac251c9 b7f9dc314253a36b8acfd0e22dc8078f04286d4d 79a9aa006e642aae5d4c2bc0d1aa9425cd67d44a 528e65720efa44b18e55d31d2c1bf7d7c590dc3a 674c6f927917a303890f4edba1b5433b8e706775 3b731de70067b850a12cee62a7d153680a2327e2 4ae1cebf3b7a7904df100057012a9947010727e8 6eac136e45eaf4e13914bd0241198fad9a2ab7b5 0b20e30a40675cd4b68534e9e6de0f1ddad03bda a5f5aad3a3356f2e61258d3eb3751a6dd70d67d9 b12bfb204844459d8df30d6d337d2b4c403e1538 e2263aa9b85719889ee0d39d2cacbd9a6bc90067 dd4edd3acb44584fe14a0662ce550a6e6b6f54df 301fc9871cc0f2c8f2d04f5fc21410c390601d6e 601cbdedd74a7bc96f9612fd23f0339add44ff9d c53741fc17875c7030f29bb73dcb6adeaaea21fc 28d853a57a39e2da326564db477783a5c0e3a27c aefadc90cf3fe887e7220a9da8c41e0a5e9a1446 8689d9768bd42093b92358a343ce5f48947204aa 40d110b6461e075bb08a9a51003c5dab516c765b 77b9640722850195ca4e0803545de2aa743a46a3 cf5fc74b6231bb4e466b1bd17b54519387061cd6 5d7445e47099dcf8a5c98d55029a47ef02c2216b 76183ea1f4f4f9835355b0aec119993fb291ad4f 65eb29bfab18334a9725230b05c55ab207c4c8a4 4e692e571a1176ac62b3c676da5caa4cff9f19b7 6a30374621d27a9b2a83ccc5d7cb421dd0773640 a2dd793841bd12918359d66cdb75c92fb000258b e01b5b47e3ad65e84d1d7370fe41570889940f4b f4e9514626067ad9013b1617f6cbcf925b50ab29 000c88124e09c1b31b4ec8e940ebc7c4cc9d9f8e 1318c398a587a2701a3b1444b5402f90eda1ead2 689dd4e4382a2c844905bbe95d82b1ad18acd14a 12a121b9da18b6e6d0becd5e19dc7785bb2a957d d4112f240e7665625358e4fc8e7f5c006d21af51 e517f5cdebe02d2a05ee60bc98d1bd128502fdc8 3191fac7433921f4abce2fd87a0160d079852669 ac5e4cabaee65c8c0ba671482d70f715db3102ff 39703266b8b9d3b36bcb9d99f46f37fea2a357dd 8f6ebe083f5a5704a6b17a5c4d3ff4d01f4c5a85 7cfc9f321d59f2e2b40f4b214c5d4bb09cd20915 0e4d153144f710df81952e9083a0d7d856e14b73 2c66a8ebaf33419b91e6f0b888ff2a8c6c66df67 4507885a6b4621c91f8cee47703f2508da087b62 b9a76e0ce89de386f667c504e6839a978b04ce6f 58863fceefcfd63d0b99833015eb1201ba3cf923 178c1bc10254c4a86fcd525a24a6b2516e84c943 3f7c2cde7a53f2f59ba46c01bc8f7343a618f2cb 469c440ce9eb28a6af46c5aee417c85bbc24a29a 74bde36248007c4cd4b56ae823c3961697bca54d 2f19debb80e5dc3c4f602070caac97989b9abd25 8586936417962a7d4144666ddb5087f6e73b878e d7a6ca2874d92723f8cc45be698c552edc283f6a 460088d0823e644fa8c20528af4d74834caac957 675cf9fd39b5a85445b1635b110dd5bb08638da0 fa744af4759b0c186327f01d76b29fd9c302585b"
+          EPUB_CHUNKS: "67affc7fdf5834c2fdbe23e1c8d2980221459330 d71d8372a5eb5facce66b27a9a9ee7e0fb001d07 a1dd0c8ef4f4e4a190f7b30d60c40ceab5c19e75 b0b901b89069dec84daf7577a7112d16c457feb8 0177db1798bdbcb9786b1fa1744507a9fb3051c5 4e6fe3c8c58b2ec8e0b9026f45a644709968be71 e5719e573411d0f870b3d9c3db5307350e04908f 73e09cd5973a47db15ee1a7dfa415f57cc2f141e bdd8860806891e7f5eff4928de7e3a7159075217 ae3b5c89717ccbc35c8b726c6de24823bf4767bb ef31960d624585f43b9135cf4f1394c0d1d96f1a 6026ddb70e885b8ee49815c62aedf3516d0d56a7 d20804435b1f0b6814a050f61f48ec1423eff354 cdbfb773c41077c5fbf9efb0a6d53de9c0a913f7 a299b4329a2b57a90531ee2eaa2261903efd79dd 4aae809b3fd8b4609a7a2d3e9ea4455738c65cce 10e06e69d0f4ae4f238c61a1a30e80fb2c935f7b aa98554b962fa6a35029387ccd88413e85c1dca5 95760b662e3a7a192833bf649bbc28fbe1fe74e3 84115ede1eea1b84696ffed4db23049a9e0bde09 436cd02f495a7d5c5d1ecfbda4f43b0a6d1eb15b dbf359c13dd50616debb4af6d67c27d77417e0e8 24297df6423aa88a49dad2cb572a2f253347101e 3205a50220b70b03518cd69fc4260065d64db30a a67ccb77f76cb54752926ad8b17dda9062ae3eba 9d9cd675d3b0ac8d9c831a9dedeea8a9bc43110a 72793451c76fca83f135a350d7af843eaa8bd3a4 aafcdd4eada6437b197b598eb1f4417f9a7af916 e4d496174b7b81e31b17dbe53a5c9b3e7d07b50d 03e378519caf7445f48881efe7ec2111fb555812 387f6bacc75f5378bd89f31ee3262ab2bdab2e03 4f17749bfd5f344159185624343ceb223f19deb8 d5fcdd4c4443556b3494cb6869e2c02465f14b58 1dd7204d31d4180179c80caa553f816d5ff7ef42 dce129a1431934fe95643e4cc00f3a983b7eb190 14797ed91f5d63573deafe564a059eb806596a8d d23ef5668641422b2b7a937d56db62ff7bad4a3b f15d8b551c805f62bfaf1857bb76039a863ba14c a89386c0cd74d58ffee4915c7aa3deb10e37ba60 0bf7d4be2843f1b2403872a41eefe945b4894229 b63a63f5df9f4b7ecf023eff6a9cd9c074846808 65521c1d6c9aa2096eaa8868a6fff7f63d86acd1 d3a4e3364651309587ad86929966b06503957a64 bcbd62668d32bb647d94f22a19fe458db21eab66 50c1838cd9dd0cbbff5b607936bdeaa4453c8734 173627965533d42c403776c07b586ed67e54ca9e 2ec600c1ec9ab2c833e5d06e89be3816fa42ddbf 8810bb31f5b23cbc9df6c974cb7e6abf3ec4d8bc 0e1144f850cde48c06c9324fe760a5b3c88904b3 5c3fa3bc19a5386904ed2320f59513a52420dfb6 bf18185b1c003a7a35b5756011161f8e98d5c89f 102bb21f69d896c7030b4283e8a79a0866584b74 1bdc610da389a65544da46f54c59b2884024d9a8 4aa1f282f8f6a00ae22d834d112826dd8bccc8fc 38cd18955ac0f2a44795fcb7d899f894221180c1 fe7061e408826dfc71398cb49e7af68d6141c83f"
+        run: |
+          set -euo pipefail
+          pdf=Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf
+          epub=Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "7819c76019baf258b45ef222cfc21404e70102c5895e7456000f4b40171923ff  $pdf" | sha256sum -c -
+          echo "9cc0bc4e1c77486798182bdfb6811bca2037058386543c178d180fb466c37858  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 38627388
+          test "$(stat -c %s "$epub")" = 35762170
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf \
+            Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub \
+            --clobber
+
+      - name: Remove one-time workflow
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm .github/workflows/publish-humboldt-release.yml
+          git commit -m "Remove one-time Humboldt release workflow"
+          git push origin HEAD:main
+

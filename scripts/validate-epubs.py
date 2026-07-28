@@ -104,6 +104,9 @@ def validate_epub(item: dict) -> tuple[int, int]:
             assert resolved in members, (
                 f"{item['slug']}: manifest member is missing: {resolved}"
             )
+            assert archive.getinfo(resolved).file_size > 0, (
+                f"{item['slug']}: manifest member is empty: {resolved}"
+            )
             manifest[entry_id] = (resolved, media_type, properties)
 
         navigation_entries = [
@@ -229,7 +232,7 @@ def validate_epub(item: dict) -> tuple[int, int]:
 
 def main() -> None:
     items = catalogue()
-    assert len(items) == 29, f"expected 29 publications, found {len(items)}"
+    assert len(items) == 30, f"expected 30 publications, found {len(items)}"
     for item in items:
         characters, images = validate_epub(item)
         print(
