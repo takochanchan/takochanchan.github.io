@@ -56,6 +56,24 @@
       "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
     },
     {
+      "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
+      "size": 35544632,
+      "sha256": "2d2a801840c66ee0683d0fda9807560ebc7c98b1d996a31ca8ebc290e07db678"
+    },
+    {
+      "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.pdf",
+      "size": 24551598,
+      "sha256": "ee8011f85efd60eaaf7ab0436c5dbf0912a97a1be0e0edf2be732c53f2ab537c"
+    },
+    {
+      "path": "publications/byam-chiapas-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/byam-chiapas-1897/cover.jpg",
+      "size": 25919,
+      "sha256": "f185aade4635409a2162efbc701d2d1a68a002353469b7e61acc0cab35fcacc0"
+    },
+    {
       "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "size": 2587197,

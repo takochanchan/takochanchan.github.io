@@ -92,6 +92,9 @@ DOCX_SOURCES = {
     "urrutia-guatemala-mexico-boundary-1900": SOURCES
     / "翻訳サイト"
     / "urrutia_limites_1900_ja.docx",
+    "byam-chiapas-1897": SOURCES
+    / "翻訳サイト"
+    / "Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

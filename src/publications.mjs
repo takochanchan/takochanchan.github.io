@@ -1029,6 +1029,41 @@ const publicationRecords = [
       "19世紀末",
     ],
   },
+  {
+    slug: "byam-chiapas-1897",
+    title: "メキシコ・チアパス州概説",
+    originalTitle: "A Sketch of the State of Chiapas, Mexico",
+    subtitle: "1897年初版・原刊外装表紙、前付、本文、図版、地図 日本語全訳",
+    author: "ウィリアム・W・バイアム",
+    series: "A SKETCH OF THE STATE OF CHIAPAS · 1897",
+    originalPublication: "ロサンゼルス、1897年",
+    year: 1897,
+    extent:
+      "PDF 110頁・原刊外装表紙・前付・本文7–78頁・図版68点・地図3点",
+    description:
+      "ウィリアム・W・バイアムが、19世紀末のチアパス州について、歴史、地理、住民、産業、各県、パレンケの自然と遺跡、コーヒー栽培、米国からの移住・投資を概説した地誌。1897年初版の外装表紙、前付、本文7–78頁、表を全訳し、図版68点と地図3点を原刊位置に対応させて収録しています。",
+    cover: "publications/byam-chiapas-1897/cover.jpg",
+    pdf:
+      "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
+    pageCount: 110,
+    figureCount: 68,
+    plateCount: 3,
+    types: ["地理報告", "旅行記", "博物誌"],
+    regions: ["チアパス", "メキシコ", "パレンケ", "タバスコ"],
+    languages: ["英語"],
+    tags: [
+      "チアパス州",
+      "パレンケ",
+      "コーヒー栽培",
+      "植民",
+      "投資案内",
+      "19世紀末",
+      "原刊図版",
+      "地図",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1365,6 +1400,16 @@ const publicationMetadata = {
       "Getty Research Institute所蔵本を収めるInternet Archive公開画像（主底本）。主底本で欠落する原刊本文321頁のみ、Harvard University所蔵初版本の公開画像で補完。",
     sourceUrl:
       "https://archive.org/details/aufaltenwegeninm00sele",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "byam-chiapas-1897": {
+    sourceEdition:
+      "William W. Byam『A Sketch of the State of Chiapas, Mexico』（Los Angeles: Press of G. Rice & Sons, Incorporated、1897年初版）。",
+    sourceProvider:
+      "Library of Congress所蔵初版本を収めるInternet Archive公開画像（主底本）。同じ所蔵本のWikimedia Commons公開PDFを閲覧・頁照合に使用。",
+    sourceUrl: "https://archive.org/details/sketchofstateofc00byam",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
