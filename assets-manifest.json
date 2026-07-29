@@ -846,6 +846,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.pdf",
       "size": 14963453,
       "sha256": "171b94b46f1529e9cd70f4fda7a1c501d5b74c1a1216ee0352f8ed3b01eb6b59"
+    },
+    {
+      "path": "publications/juarros-compendio-guatemala-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/juarros-compendio-guatemala-1857/cover.jpg",
+      "size": 50590,
+      "sha256": "57044c53a8ee77c407e613404c013a1754d4d592c176b8402ff983cb7570a335"
+    },
+    {
+      "path": "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
+      "size": 3705326,
+      "sha256": "9c41d2513659bc4e7c0e45f3cf745a3d4a8ce6fddb5327f84334e949d92cea73"
+    },
+    {
+      "path": "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
+      "size": 14453720,
+      "sha256": "003d086cb48fdc84653b915289c40ddfb43abb774fe644c8cb2ecde65cef30e5"
     }
   ]
 }

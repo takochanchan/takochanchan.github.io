@@ -1481,6 +1481,50 @@ const publicationRecords = [
       "20世紀前半",
     ],
   },
+  {
+    slug: "juarros-compendio-guatemala-1857",
+    title: "グアテマラ市史要覧",
+    originalTitle: "Compendio de la historia de la ciudad de Guatemala",
+    subtitle:
+      "1857年版・全2巻、全7論、付録、原注、目次、購読者名簿 日本語全訳",
+    author: "ドミンゴ・フアロス",
+    series: "HISTORICAL COMPENDIUM · 1857",
+    originalPublication: "グアテマラ、1857年",
+    year: 1857,
+    extent:
+      "PDF 697頁・原刊第1巻5–376頁、第2巻5–384頁・原刊画像4点・表53点・原注100件",
+    description:
+      "ドミンゴ・フアロスによるグアテマラ王国・首都の地理、教会制度、植民地史、征服史、地方史を集成した1857年版全2巻の日本語全訳。原刊の前付、全7論、付録、原注、表、索引、巻末目次、購読者名簿を収録しています。",
+    cover:
+      "publications/juarros-compendio-guatemala-1857/cover.jpg",
+    pdf:
+      "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
+    pageCount: 697,
+    figureCount: 0,
+    plateCount: 4,
+    types: ["歴史書", "地誌", "植民地史", "教会史"],
+    regions: [
+      "グアテマラ",
+      "中央アメリカ",
+      "チアパス",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "グアテマラ王国",
+      "グアテマラ市",
+      "地理",
+      "教会制度",
+      "征服史",
+      "地方史",
+      "購読者名簿",
+      "19世紀中葉",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1948,6 +1992,18 @@ const publicationMetadata = {
       "https://archive.org/details/discoveriesadven0000thom",
     rights:
       "1928年初版は米国、英国および日本でパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "juarros-compendio-guatemala-1857": {
+    sourceEdition:
+      "Domingo Juarros『Compendio de la historia de la ciudad de Guatemala』全2巻（Edición del Museo Guatemalteco, Guatemala: Imprenta de Luna, Calle de la Providencia núm. 2、1857年）。",
+    sourceProvider:
+      "Biblioteca Ludwig von Mises（Universidad Francisco Marroquín）所蔵1857年版を主底本とし、Harvard University所蔵本のGoogle Books／Internet Archiveデジタル複製（識別子compendiodelahi00juargoog）を全巻の構成、原刊頁、数値および難読箇所の照合に用いた。",
+    sourceUrl:
+      "https://biblioteca.ufm.edu/opac/record/1072319",
+    rights:
+      "1857年原刊は著作権保護期間を満了しています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },
