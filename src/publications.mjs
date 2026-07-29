@@ -1100,6 +1100,43 @@ const publicationRecords = [
       "19世紀初頭",
     ],
   },
+  {
+    slug: "brinton-nagualism-1894",
+    title: "ナグアリズム",
+    originalTitle:
+      "Nagualism: A Study in Native American Folk-lore and History",
+    subtitle:
+      "アメリカ先住民の民間伝承と歴史に関する研究・1894年初版 日本語全訳",
+    author: "ダニエル・G・ブリントン",
+    series: "AMERICAN FOLK-LORE AND HISTORY · 1894",
+    originalPublication: "フィラデルフィア、1894年",
+    year: 1894,
+    extent:
+      "PDF 108頁・原刊標題紙・本文全42節・原注・索引352項目",
+    description:
+      "ダニエル・G・ブリントンが、メキシコと中央アメリカにおけるナグアル、守護霊、変身信仰、秘密結社、先住民反乱、火・緑石・樹木・十字などの象徴、語源と旧世界との比較を論じた1894年の民俗学・宗教史研究。独立抜刷の標題紙、目次、本文全42節、引用、原注、索引352項目を全訳しています。内容のない原刊2頁は省略しています。",
+    cover: "publications/brinton-nagualism-1894/cover.jpg",
+    pdf:
+      "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
+    pageCount: 108,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["民俗学研究", "宗教史", "民族誌"],
+    regions: ["メキシコ", "チアパス", "グアテマラ", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "ナグアル",
+      "ナグアリズム",
+      "ナワトル語",
+      "先住民宗教",
+      "民間伝承",
+      "秘密結社",
+      "呪術",
+      "19世紀末",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1457,6 +1494,16 @@ const publicationMetadata = {
       "Universitat de València, Biblioteca Històrica所蔵本BH Var. 325(06)のデジタル複製（全74画像）。Biblioteca Virtual Miguel de Cervantesの書誌記録および刊本の折丁記述と照合。",
     sourceUrl:
       "https://www.cervantesvirtual.com/obra/memoria-historica-de-la-provincia-de-chiapa-una-de-las-de-guatemala/",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "brinton-nagualism-1894": {
+    sourceEdition:
+      "Daniel G. Brinton『Nagualism: A Study in Native American Folk-lore and History』（Philadelphia: MacCalla & Company, Printers、1894年）。『Proceedings of the American Philosophical Society』第33巻から作成された独立抜刷。",
+    sourceProvider:
+      "Cornell University Library所蔵の1894年独立抜刷を収めるInternet Archive公開画像（全78画像）。Project Gutenberg eBook No. 26426は頁境界、綴字、原注の照合に限って使用。",
+    sourceUrl: "https://archive.org/details/cu31924020427542",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

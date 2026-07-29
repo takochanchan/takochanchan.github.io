@@ -56,6 +56,24 @@
       "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
     },
     {
+      "path": "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
+      "size": 269918,
+      "sha256": "ca48ff9dc7506c173126808efc297c9ed2e6040a4384bcafc1266bd747ee323b"
+    },
+    {
+      "path": "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
+      "size": 1916781,
+      "sha256": "49fbd019cc65e881ee2d8479a6ebab129b7cb5fb727db06535094879a6ebdda9"
+    },
+    {
+      "path": "publications/brinton-nagualism-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-nagualism-1894/cover.jpg",
+      "size": 25800,
+      "sha256": "239ec2e086d45147f52a885cf456679a1f0779cf9e44e708c479c3c9cea76652"
+    },
+    {
       "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "size": 35544632,

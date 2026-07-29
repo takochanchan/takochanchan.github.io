@@ -1,0 +1,65 @@
+name: Publish Brinton release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-brinton-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "d23a76b96ea880a291c34ae1c1877a1e5c579be1 b4dd31d47474b4e469495b23fd75fd481b7b7276 93ccb901434eeb3328fdfdba974f9027d57e4359 e7912776fdf494d7042e956e73c5254c2aca9473 1c5b72c6e25eb968ca0463fb505ec38ebc4bcc12 b091f79bb7c6c78229d229d677efe9f52329c95d 73aa182e5c1d3dd474ced566e95be87cc62de6f2 59ace5a849d97fc91d42566fc4c44ea91c6d3b91"
+          EPUB_CHUNKS: "22b288d39d61e8ae8e73a84f020a839ba77775da da196dbe8d0c7590f1ad9cdd9f4a70d2b92a0f30"
+        run: |
+          set -euo pipefail
+          pdf=Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf
+          epub=Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "49fbd019cc65e881ee2d8479a6ebab129b7cb5fb727db06535094879a6ebdda9  $pdf" | sha256sum -c -
+          echo "ca48ff9dc7506c173126808efc297c9ed2e6040a4384bcafc1266bd747ee323b  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 1916781
+          test "$(stat -c %s "$epub")" = 269918
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf \
+            Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-brinton-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Brinton release workflow" \
+            -f sha="$sha" \
+            -f branch=main
