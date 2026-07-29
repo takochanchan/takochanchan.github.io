@@ -792,6 +792,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.pdf",
       "size": 9129550,
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
+    },
+    {
+      "path": "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub",
+      "size": 533373,
+      "sha256": "a65304fa1633229b26d93ae53af04ebdd2c3ce7993192c21c9769499b5d4c000"
+    },
+    {
+      "path": "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf",
+      "size": 913970,
+      "sha256": "d162f5b338bf53ffdff91845fd0b7a8559c0796d66665fd047c16fd108097886"
+    },
+    {
+      "path": "publications/cook-balise-merida-1769/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cook-balise-merida-1769/cover.jpg",
+      "size": 60473,
+      "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
+    },
+    {
+      "path": "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
+      "size": 298182,
+      "sha256": "ab9935899eeaca19c1a070197414329a66b8f07b8056fe344e1e3791285b6538"
+    },
+    {
+      "path": "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf",
+      "size": 1779872,
+      "sha256": "282334d29f1fd0724f1feb656213154a785233365673312b1996a7bda9ee0c1a"
+    },
+    {
+      "path": "publications/swett-british-honduras-san-pedro-1868/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/swett-british-honduras-san-pedro-1868/cover.jpg",
+      "size": 62025,
+      "sha256": "a0ebc12d144ab4da9a775ec09ec2edd19197a1f98e0736dd89fa1b4c2a23e7cd"
     }
   ]
 }

@@ -98,10 +98,19 @@ DOCX_SOURCES = {
 }
 
 TAGGED_PDF_SOURCES = {
+    "cook-balise-merida-1769",
     "galindo-palenque-1832",
     "galindo-usumacinta-1833",
+    "swett-british-honduras-san-pedro-1868",
     "tribes-and-temples-vol-1",
     "tribes-and-temples-vol-2",
+}
+
+TAGGED_PDF_FIGURE_ALTS = {
+    "cook-balise-merida-1769": [
+        "1769年初版の原刊標題紙",
+        "原刊1頁の装飾見出し",
+    ],
 }
 
 SAPPER_SLUG = "sapper-eastern-lacandons-1891"
@@ -1142,6 +1151,19 @@ def render_tagged_pdf_html(pdf: Path, item: dict[str, Any], directory: Path) -> 
     media = directory / "media"
     pdf_renderer = TaggedPdfRenderer(pdf, media)
     figures = tagged_figure_sequence(pdf_renderer)
+    fallback_alts = TAGGED_PDF_FIGURE_ALTS.get(item["slug"], [])
+    figures = [
+        (
+            filename,
+            alt
+            or (
+                fallback_alts[index]
+                if index < len(fallback_alts)
+                else ""
+            ),
+        )
+        for index, (filename, alt) in enumerate(figures)
+    ]
     structured = run(["pdfinfo", "-struct-text", str(pdf)])
     root = parse_poppler_structure(structured.stdout)
     renderer = PopplerStructRenderer(root, figures)

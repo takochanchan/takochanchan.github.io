@@ -1,0 +1,116 @@
+name: Publish Cook and Swett release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-cook-swett-release.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COOK_EPUB_CHUNKS: "36f21af5c711ab3456f5b8d362afa79da96be4c5 dc7ac9b9021a05c1ec800dd94473b19f298d7575 5ec607e42b7247e76982fa89ea56dad35f2230df"
+          COOK_PDF_CHUNKS: "1d9d2e97093e0c502a2f00a7f2be0fd61e0c911d db3cdb0b1f6a84a6fa9c4234bd65fbd1c72243aa 0aaa7b64963853885978e68b1a6038453821195b 4463ddc63a0c1ab02fde25c189ffff77a8c27fd0"
+          SWETT_EPUB_BLOB: "861cde3d3c25f229a179ca9e64c80f7f63da9f0d"
+          SWETT_PDF_CHUNKS: "c5cb9ff7be3d73bd125980197d9836ac7253dd3a a8079790caf86a0e9ffc511dfdfdfa152f0059b5 0480c936426b013409e4ec55f3a47382b986e557 d4d3326409161acf613148d74a3fc45120dcade3 3093aa58d390222d84f5871b759ae51d170c8613 e17c5006886b7eb04dfa25ba5bcfd5287a77d393 c6c1ae704b33a9c9d0fb774ee5cccdcef3496b26 60f8e6fc1683a966e0398222d80ec2b60ff5d440"
+        run: |
+          set -euo pipefail
+          cook_epub=Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub
+          cook_pdf=Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf
+          swett_epub=Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub
+          swett_pdf=Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf
+          : > "$cook_epub"
+          : > "$cook_pdf"
+          : > "$swett_epub"
+          : > "$swett_pdf"
+          for blob in $COOK_EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob" --jq .content |
+              tr -d '\n' | base64 --decode >> "$cook_epub"
+          done
+          for blob in $COOK_PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob" --jq .content |
+              tr -d '\n' | base64 --decode >> "$cook_pdf"
+          done
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$SWETT_EPUB_BLOB" --jq .content |
+            tr -d '\n' | base64 --decode >> "$swett_epub"
+          for blob in $SWETT_PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob" --jq .content |
+              tr -d '\n' | base64 --decode >> "$swett_pdf"
+          done
+          echo "a65304fa1633229b26d93ae53af04ebdd2c3ce7993192c21c9769499b5d4c000  $cook_epub" | sha256sum -c -
+          echo "d162f5b338bf53ffdff91845fd0b7a8559c0796d66665fd047c16fd108097886  $cook_pdf" | sha256sum -c -
+          echo "ab9935899eeaca19c1a070197414329a66b8f07b8056fe344e1e3791285b6538  $swett_epub" | sha256sum -c -
+          echo "282334d29f1fd0724f1feb656213154a785233365673312b1996a7bda9ee0c1a  $swett_pdf" | sha256sum -c -
+          test "$(stat -c %s "$cook_epub")" = 533373
+          test "$(stat -c %s "$cook_pdf")" = 913970
+          test "$(stat -c %s "$swett_epub")" = 298182
+          test "$(stat -c %s "$swett_pdf")" = 1779872
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub \
+            Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf \
+            Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub \
+            Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Merge checksum list
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          sleep 30
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+          awk '
+            $2 != "Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub" &&
+            $2 != "Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf" &&
+            $2 != "Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub" &&
+            $2 != "Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf"
+          ' SHA256SUMS.txt > SHA256SUMS.updated
+          {
+            cat SHA256SUMS.updated
+            echo "a65304fa1633229b26d93ae53af04ebdd2c3ce7993192c21c9769499b5d4c000  Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub"
+            echo "d162f5b338bf53ffdff91845fd0b7a8559c0796d66665fd047c16fd108097886  Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf"
+            echo "ab9935899eeaca19c1a070197414329a66b8f07b8056fe344e1e3791285b6538  Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub"
+            echo "282334d29f1fd0724f1feb656213154a785233365673312b1996a7bda9ee0c1a  Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf"
+          } | LC_ALL=C sort -k2,2 > SHA256SUMS.txt
+          gh release upload publications-current SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-cook-swett-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Cook and Swett release workflow" \
+            -f sha="$sha" \
+            -f branch=main

@@ -1365,6 +1365,85 @@ const publicationRecords = [
       "18世紀前半",
     ],
   },
+  {
+    slug: "cook-balise-merida-1769",
+    title: "ベリーズ川からメリダまでの通行に関する所見",
+    originalTitle:
+      "Remarks on a Passage from the River Balise, in the Bay of Honduras, to Merida: the Capital of the Province of Jucatan, in the Spanish West Indies",
+    subtitle:
+      "1769年初版・原刊標題紙、本文全34頁、原注 日本語全訳",
+    author: "ジェームズ・クック中尉",
+    series: "TRAVEL REPORT · 1769",
+    originalPublication: "ロンドン、1769年",
+    year: 1769,
+    extent:
+      "PDF 17頁・原刊標題紙1点・本文1–34頁・原注1点・原刊装飾1点",
+    description:
+      "ジャマイカ駐在のウィリアム・バーナビー海軍少将の命を受けたジェームズ・クック中尉が、1765年2月から3月にホンジュラス湾のベリーズ川からバカラルを経てユカタン州都メリダへ公文書を運んだ旅程記。沿道の水路、地理、軍備、住民、交易、統治を記し、原刊標題紙、本文全34頁、原注、終止表示を収録しています。",
+    cover: "publications/cook-balise-merida-1769/cover.jpg",
+    pdf:
+      "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub",
+    pageCount: 17,
+    figureCount: 1,
+    plateCount: 1,
+    types: ["旅行記", "地理報告", "植民地史"],
+    regions: ["英領ホンジュラス", "ベリーズ", "ユカタン", "バカラル", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "旅程",
+      "ベリーズ川",
+      "バカラル",
+      "メリダ",
+      "ログウッド",
+      "植民地行政",
+      "18世紀後半",
+    ],
+  },
+  {
+    slug: "swett-british-honduras-san-pedro-1868",
+    title: "英領ホンジュラスおよびホンジュラス共和国サン・ペドロへの旅",
+    originalTitle:
+      "A Trip to British Honduras, and to San Pedro, Republic of Honduras",
+    subtitle:
+      "1868年初版・原刊印刷表紙、標題紙、序文、本文3–125頁 日本語全訳",
+    author: "チャールズ・スウェット",
+    series: "TRAVEL ACCOUNT · 1868",
+    originalPublication: "ニューオーリンズ、1868年",
+    year: 1868,
+    extent:
+      "PDF 110頁・原刊印刷表紙1点・標題紙1点・序文・本文3–125頁",
+    description:
+      "南北戦争後の1867年末から1868年春にかけて、ミシシッピ州出身のチャールズ・スウェットが移住候補地を調査するため英領ホンジュラスとホンジュラス共和国を旅した記録。ベリーズ、沿岸河川、オモア、サン・ペドロなどの土地、社会、産業、統治、移民政策を記し、原刊印刷表紙、標題紙、序文、本文3–125頁を収録しています。",
+    cover:
+      "publications/swett-british-honduras-san-pedro-1868/cover.jpg",
+    pdf:
+      "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
+    pageCount: 110,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["旅行記", "地理報告", "移民論"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "ホンジュラス",
+      "サン・ペドロ・スーラ",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "移住調査",
+      "南北戦争",
+      "ベリーズ",
+      "オモア",
+      "サン・ペドロ",
+      "植民地行政",
+      "19世紀後半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1798,6 +1877,28 @@ const publicationMetadata = {
     sourceUrl: "https://archive.org/details/voyagestravelsof0000urin",
     rights:
       "1726年原著は著作権保護期間を満了しています。1928年版は米国でパブリックドメインであり、オーストラリア国立図書館も当該版を「Edition Out of Copyright」と表示しています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "cook-balise-merida-1769": {
+    sourceEdition:
+      "Lieutenant Cook『Remarks on a Passage from the River Balise, in the Bay of Honduras, to Merida; the Capital of the Province of Jucatan, in the Spanish West Indies』（London: Printed for C. Parker, 1769年初版）。",
+    sourceProvider:
+      "John Carter Brown Library所蔵初版本のInternet Archive高精細デジタル複製（識別子remarksonpassage00cook）を主底本とした。Project Gutenberg eBook No. 74378の転写は検索、頁区分、判読の補助に限って参照し、本文確定には原刊画像を用いた。",
+    sourceUrl:
+      "https://archive.org/details/remarksonpassage00cook",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "swett-british-honduras-san-pedro-1868": {
+    sourceEdition:
+      "Charles Swett『A Trip to British Honduras, and to San Pedro, Republic of Honduras』（New Orleans: Price Current Print, 1868年初版）。",
+    sourceProvider:
+      "Library of Congress所蔵初版本のInternet Archiveデジタル複製（識別子triptobritishhon00swet）を主底本とした。同本で欠ける「序説」冒頭の無ノンブル頁（書誌上の原刊3頁）は、Harvard University所蔵本（識別子atriptobritishh01swetgoog）で補完した。",
+    sourceUrl:
+      "https://archive.org/details/triptobritishhon00swet",
+    rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
   },
