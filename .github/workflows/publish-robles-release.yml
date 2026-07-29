@@ -44,7 +44,8 @@ jobs:
           gh release upload publications-current \
             Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf \
             Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub \
-            --clobber
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
 
       - name: Remove one-time workflow
         env:
