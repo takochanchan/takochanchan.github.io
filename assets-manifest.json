@@ -506,6 +506,24 @@
       "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
     },
     {
+      "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
+      "size": 54531859,
+      "sha256": "2483eefb99c4c859397c66aea11cb99334db5c47a2b8090c2b0baba73d0b86da"
+    },
+    {
+      "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.pdf",
+      "size": 55452637,
+      "sha256": "f490086a1160d72a8d19a6e3a29ffd2d712024053ff1d7f2ac8160f5fed7b175"
+    },
+    {
+      "path": "publications/seler-sachs-auf-alten-wegen-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/seler-sachs-auf-alten-wegen-1900/cover.jpg",
+      "size": 71714,
+      "sha256": "48f36c12f70bebe8c4745e08167683ff655523b3d5ebf1d762f34732df34cda8"
+    },
+    {
       "path": "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
       "size": 47371701,

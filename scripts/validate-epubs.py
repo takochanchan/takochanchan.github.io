@@ -232,7 +232,7 @@ def validate_epub(item: dict) -> tuple[int, int]:
 
 def main() -> None:
     items = catalogue()
-    assert len(items) == 34, f"expected 34 publications, found {len(items)}"
+    assert len(items) == 35, f"expected 35 publications, found {len(items)}"
     for item in items:
         characters, images = validate_epub(item)
         print(

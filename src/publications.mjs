@@ -992,6 +992,43 @@ const publicationRecords = [
       "19世紀末",
     ],
   },
+  {
+    slug: "seler-sachs-auf-alten-wegen-1900",
+    title: "メキシコとグアテマラの古道をゆく",
+    originalTitle:
+      "Auf alten Wegen in Mexiko und Guatemala: Reiseerinnerungen und Eindrücke aus den Jahren 1895-1897",
+    subtitle: "1895-1897年の旅の思い出と印象・1900年初版 日本語全訳",
+    author: "ツェツィーリエ・ゼーラー＝ザックス",
+    series: "HISTORICAL TRAVEL NARRATIVE · 1900",
+    originalPublication: "ベルリン、1900年",
+    year: 1900,
+    extent:
+      "PDF 628頁・原刊前付VII–XXIV頁・本文1–363頁・光沢版図版65点・本文挿図260点・折込地図1点",
+    description:
+      "ツェツィーリエ・ゼーラー＝ザックスが、1895年から1897年にかけてメキシコとグアテマラを横断した旅の経過、各地の生活・民族・景観・考古遺物を記した旅行記。1900年初版の外装、前付、本文1–363頁、原注、図題を全訳し、光沢版図版65点、本文挿図260点、折込地図を収録しています。",
+    cover:
+      "publications/seler-sachs-auf-alten-wegen-1900/cover.jpg",
+    pdf:
+      "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
+    pageCount: 628,
+    figureCount: 260,
+    plateCount: 65,
+    types: ["旅行記", "民族誌", "考古学研究"],
+    regions: ["メキシコ", "オアハカ", "チアパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "パツクアロ",
+      "テワンテペク",
+      "トニナ",
+      "コミタン",
+      "キリグア",
+      "コパン",
+      "原刊図版",
+      "19世紀末",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1317,6 +1354,17 @@ const publicationMetadata = {
     sourceProvider:
       "University of Texas所蔵初版本を収めるGoogle Books公開複製、識別子5nFVAAAAMAAJ。",
     sourceUrl: "https://books.google.com/books?id=5nFVAAAAMAAJ",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "seler-sachs-auf-alten-wegen-1900": {
+    sourceEdition:
+      "Caecilie Seler『Auf alten Wegen in Mexiko und Guatemala: Reiseerinnerungen und Eindrücke aus den Jahren 1895-1897』（Berlin: Dietrich Reimer (Ernst Vohsen)、1900年初版）。",
+    sourceProvider:
+      "Getty Research Institute所蔵本を収めるInternet Archive公開画像（主底本）。主底本で欠落する原刊本文321頁のみ、Harvard University所蔵初版本の公開画像で補完。",
+    sourceUrl:
+      "https://archive.org/details/aufaltenwegeninm00sele",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
