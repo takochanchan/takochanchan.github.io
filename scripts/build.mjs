@@ -20,7 +20,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260729-about-policy-v2";
+const assetVersion = "20260729-reuse-policy-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -285,7 +285,7 @@ ${header()}
           翻訳には生成AIを用い、別工程のAIレビューと、公開前の人による版面確認を行っています。
           このレビューは専門研究者による外部査読ではありません。
         </p>
-        <a class="about__link" href="/about/">翻訳・編集・レビュー方針を読む →</a>
+        <a class="about__link" href="/about/">翻訳・編集・レビュー・再利用方針を読む →</a>
       </div>
     </div>
   </section>
@@ -297,9 +297,9 @@ ${footer()}`,
 });
 
 const aboutPage = documentShell({
-  title: `翻訳・編集・レビュー方針｜${site.shortName}`,
+  title: `翻訳・編集・レビュー・再利用方針｜${site.shortName}`,
   description:
-    "中部アメリカ歴史資料 日本語翻訳アーカイブの底本選定、生成AIによる翻訳、独立レビュー、組版、公開前確認の方針。",
+    "中部アメリカ歴史資料 日本語翻訳アーカイブの底本選定、生成AIによる翻訳、独立レビュー、組版、公開前確認、再利用とライセンスの方針。",
   canonical: `${site.url}/about/`,
   body: `
 ${header({ detail: true })}
@@ -308,10 +308,10 @@ ${header({ detail: true })}
     <div class="about-page-hero__inner">
       <div>
         <p class="eyebrow">ABOUT &amp; EDITORIAL POLICY</p>
-        <h1>翻訳・編集・<br>レビュー方針</h1>
+        <h1>翻訳・編集・<br>利用方針</h1>
         <p class="about-page-hero__lead">
-          生成AIを用いた翻訳資料について、何を底本とし、どの工程で点検し、
-          どの段階で人が承認して公開するかを明示します。
+          生成AIを用いた翻訳資料について、底本、点検工程、公開承認に加え、
+          訳文と資料の再利用条件を明示します。
         </p>
       </div>
       <dl class="responsibility-grid" aria-label="制作工程の役割分担">
@@ -350,7 +350,8 @@ ${header({ detail: true })}
       <a href="#translation"><span>01</span>底本と翻訳</a>
       <a href="#review"><span>02</span>独立レビュー</a>
       <a href="#production"><span>03</span>組版と公開前確認</a>
-      <a href="#notice"><span>04</span>利用上の注意</a>
+      <a href="#reuse"><span>04</span>再利用とライセンス</a>
+      <a href="#notice"><span>05</span>利用上の注意</a>
     </div>
   </nav>
 
@@ -431,6 +432,59 @@ ${header({ detail: true })}
           欠落、版面の崩れなどを確認します。この確認は主として収録内容と組版を対象とするものであり、
           全文を逐語的に人手校閲したことを意味しません。最終PDFの確認と承認を受けるまでは、
           公開処理を行いません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="policy-section" id="reuse" aria-labelledby="reuse-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">REUSE &amp; LICENSING</p>
+        <h2 id="reuse-heading">再利用とライセンス</h2>
+      </div>
+      <div class="policy-copy">
+        <p>
+          本アーカイブは、パブリックドメイン資料および適切なオープンライセンスで公開された資料を、
+          日本語で利用しやすい形にすることを目的としています。翻訳物を排他的に囲い込むことではなく、
+          原資料への到達可能性を高め、研究、教育、読書に役立てることを重視します。
+        </p>
+        <p>
+          パブリックドメインの原著に基づく通常の翻訳について、本アーカイブは訳文の排他的な利用を求めず、
+          転載、引用、改変、再配布その他の利用を妨げる意図はありません。
+        </p>
+        <p>
+          利用に際しては、法的な独占を目的とする条件ではなく、訳文の来歴、改訂状況および
+          誤訳等の責任の所在を明確にするため、次の事項の表示をお願いします。
+        </p>
+        <ul class="review-list">
+          <li>原著者および原著書名</li>
+          <li>本アーカイブの日本語訳を利用したこと</li>
+          <li>参照した版または公開日</li>
+          <li>当該作品の公開ページ</li>
+          <li>訳文を修正または改変した場合は、その旨と変更者</li>
+        </ul>
+        <p>
+          出典表示は、再利用者に原訳の誤訳や解釈上の問題を負わせないためでもあります。
+          本アーカイブの訳文に由来する誤りが、再利用者自身による翻訳と誤認されないよう、
+          訳文の出所を明示してください。
+        </p>
+        <p>
+          底本、校訂本文、図版、写真その他の資料にCreative Commonsライセンスが適用されている場合は、
+          当該ライセンスの条件を作品または素材ごとに継承します。BY、SA、NCなどの条件は省略せず、
+          原著者、原資料、提供機関または権利者、ライセンス、日本語への翻訳や組版等の変更を明記します。
+          翻案物にSAまたはNCが適用される場合は、その条件を明確に継承します。
+        </p>
+        <p>
+          ライセンスは作品単位または対象素材単位で表示します。ある一冊にCCライセンスが適用されても、
+          その条件が本アーカイブの他の独立した翻訳やサイト全体に自動的に適用されるものではありません。
+          一つの刊行物にパブリックドメインの本文、CCライセンスの図版、独自の解説等が含まれる場合は、
+          それぞれの権利状態を可能な限り区別して表示します。
+        </p>
+        <p>
+          原著本文がパブリックドメインであっても、底本のページ画像、現代の校訂、解説、写真、地図、
+          図版等には別の権利が存在する場合があります。各作品の書誌ページおよび刊行物内の権利表示を確認し、
+          第三者資料を再利用する場合は、当該資料に付された条件を優先してください。
         </p>
       </div>
     </div>
