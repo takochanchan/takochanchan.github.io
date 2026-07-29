@@ -1064,6 +1064,42 @@ const publicationRecords = [
       "地図",
     ],
   },
+  {
+    slug: "robles-memoria-historica-chiapa-1813",
+    title: "グアテマラ諸州の一つ、チアパ州の歴史覚書",
+    originalTitle:
+      "Memoria histórica de la provincia de Chiapa, una de las de Guatemala",
+    subtitle: "1813年初版・原刊標題紙、本文3–71頁、原注 日本語全訳",
+    author: "マリアノ・ロブレス・ドミンゲス・デ・マサリエゴス",
+    series: "HISTORICAL MEMOIR · 1813",
+    originalPublication: "カディス、1813年",
+    year: 1813,
+    extent: "PDF 33頁・原刊標題紙・本文3–71頁・原注10点・表",
+    description:
+      "チアパ州選出コルテス代議員マリアノ・ロブレス・ドミンゲス・デ・マサリエゴスが、征服史、州都シウダ・レアルの建設、地理・住民・産物・交通・行政・教育の状況を記し、州参事会、大学、港湾、運河など8項目を議会へ提案した1813年の政治・地誌史料。1813年初版の標題紙、本文3–71頁、段落番号、原注10点、表、署名を全訳しています。",
+    cover:
+      "publications/robles-memoria-historica-chiapa-1813/cover.jpg",
+    pdf:
+      "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
+    pageCount: 33,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["歴史書", "地理報告", "一次史料"],
+    regions: ["チアパス", "パレンケ", "グアテマラ"],
+    languages: ["スペイン語"],
+    tags: [
+      "シウダ・レアル",
+      "ソコヌスコ",
+      "コルテス",
+      "州参事会",
+      "パレンケ",
+      "ラカンドン",
+      "1812年憲法",
+      "19世紀初頭",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1410,6 +1446,17 @@ const publicationMetadata = {
     sourceProvider:
       "Library of Congress所蔵初版本を収めるInternet Archive公開画像（主底本）。同じ所蔵本のWikimedia Commons公開PDFを閲覧・頁照合に使用。",
     sourceUrl: "https://archive.org/details/sketchofstateofc00byam",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "robles-memoria-historica-chiapa-1813": {
+    sourceEdition:
+      "Mariano Robles Domínguez de Mazariegos『Memoria histórica de la provincia de Chiapa, una de las de Guatemala』（Cádiz: Imprenta Tormentaria, a cargo de D. J. D. Villegas、1813年初版）。",
+    sourceProvider:
+      "Universitat de València, Biblioteca Històrica所蔵本BH Var. 325(06)のデジタル複製（全74画像）。Biblioteca Virtual Miguel de Cervantesの書誌記録および刊本の折丁記述と照合。",
+    sourceUrl:
+      "https://www.cervantesvirtual.com/obra/memoria-historica-de-la-provincia-de-chiapa-una-de-las-de-guatemala/",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

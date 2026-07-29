@@ -1,0 +1,64 @@
+name: Publish Robles release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-robles-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "ffab7ac4d8e54e0000aa6c23adada3e56ed3ac14 7c9ba59fd12bd32536500fcf311185ab817c9c29 3252abb9b9b43cd5912359f8ee1075520ce2070f f41edc0595ca04f24cb67521726619bac2fedc40 7327a1c2c1a8e990d85f24a95a2aafb66c034c75 dc5ccf3d22946a26918ad3a5a9cd50fc34de6e89 ad0e21a307030484360093cf2966c4ad5247ebd8 6bf9add97142823ea915176375786b5887f0e477 47103b7d583405112b8558307ea55cdcfb4c8c0d fca41746e948731276f316e28583f60d222bea70 90aac989888563ae5dfe3bf3a8644d3d02e53b29"
+          EPUB_CHUNKS: "6ac00d188fdc0a042b46aff78390f816f5bbd4a9"
+        run: |
+          set -euo pipefail
+          pdf=Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf
+          epub=Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "2c4f5dc5fb8423b6b1d6df927a8da642dc891fb31b64a810747c8c9c9ceb19db  $pdf" | sha256sum -c -
+          echo "2cb9bb0117296145f38d86a8c22de6fcbeba2f6a629fc0ef5d61ce92d777f3de  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 5615918
+          test "$(stat -c %s "$epub")" = 32437
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf \
+            Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub \
+            --clobber
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-robles-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Robles release workflow" \
+            -f sha="$sha" \
+            -f branch=main

@@ -488,6 +488,24 @@
       "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
     },
     {
+      "path": "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
+      "size": 32437,
+      "sha256": "2cb9bb0117296145f38d86a8c22de6fcbeba2f6a629fc0ef5d61ce92d777f3de"
+    },
+    {
+      "path": "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf",
+      "size": 5615918,
+      "sha256": "2c4f5dc5fb8423b6b1d6df927a8da642dc891fb31b64a810747c8c9c9ceb19db"
+    },
+    {
+      "path": "publications/robles-memoria-historica-chiapa-1813/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/robles-memoria-historica-chiapa-1813/cover.jpg",
+      "size": 31288,
+      "sha256": "94e08b3e177a224962649aed2453f130fc4f67d06eb5658a9817db619c949b18"
+    },
+    {
       "path": "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
       "size": 117465,
