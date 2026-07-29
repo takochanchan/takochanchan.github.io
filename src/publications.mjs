@@ -1420,10 +1420,12 @@ const publicationMetadata = {
       "T. Egan-Wyer, Topographical Map and Accompanying Documents（1930–1931年）。Penn Museum Archives, PU-Mu.1105, Box 1, Folder 6。",
     sourceProvider:
       "University of Pennsylvania Museum of Archaeology and Anthropology, Penn Museum Archives。",
+    sourceUrl:
+      "https://collections.penn.museum/collections/archives/findingaid/552866",
     rights:
-      "未刊アーカイブ資料とデジタル画像の権利・複製条件は Penn Museum の表示に従います。日本語翻訳版には再利用ライセンスを設定していません。",
+      "Penn Museumウェブサイトの公開アーカイブ文書スキャンを、同館の利用条件に基づき、非営利の研究・教育目的で使用しています。日本語翻訳・組版・注記は本アーカイブによる変更です。本版の商用利用は禁止し、再利用はPenn Museumの利用条件の範囲に限ります。PU-Mu.1105, Box 1, Folder 6. Courtesy of the Penn Museum.",
     publishedDate: "2026-07-25",
-    updatedDate: "2026-07-26",
+    updatedDate: "2026-07-29",
   },
   "sapper-eastern-lacandons-1891": {
     sourceEdition:
