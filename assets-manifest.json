@@ -344,6 +344,24 @@
       "sha256": "b1809c61a5a7c1b98ff201a4bc9bf2c26330e2f8710dfaf8586e337560b1f204"
     },
     {
+      "path": "publications/henderson-british-honduras-1811/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
+      "size": 69499,
+      "sha256": "0b3d822f2f9f64ddd985e0ef79a948d3eb6cf34217b4668a95588214c5ffd3fb"
+    },
+    {
+      "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
+      "size": 475891,
+      "sha256": "fe99b5e73669d6da6226508f32ac4a695b3577929fc7e68934750061549b288f"
+    },
+    {
+      "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf",
+      "size": 2718930,
+      "sha256": "76d178bda0be52bd0d83d7c46a68b3fc147f9ffea3f866f7bd62cdfc9ad76850"
+    },
+    {
       "path": "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
       "url": "https://takochanchan.github.io/publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
       "size": 35858,

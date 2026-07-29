@@ -1,0 +1,74 @@
+name: Publish Henderson release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-henderson-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "3419eb18f6b26b53995d438029596e2c388565fd 4555fd211d60d452d81f8233e2a70dca99c30436 9723a3346b4cb198dbc953a37dcd895f4e1c46c7 3bd17c2b4f6a812bdc49e853b3c71d4fc91f5c1d fa3cf1dbb1b6d0556b8a845aab241257a9001676 97427d10debead2d8b156b8b809e91db9ee83cfb e1e0349576d74ae968b859ec3dd5d038e6049833 b5256e832d233f0a82051fd055e4a8232e4f160c 78fa9919c519e9dc871004a0fb88f86ae5bebefb 734d8bd81fb6ff9c0ea3d91f742f560a1f11604f"
+          EPUB_CHUNKS: "4129333bfb275beb3191c4b47c9dd2468b80cb09 280f298ad3cdc5590605eb82ba9295b82db6ea1d"
+          SUMS_CHUNKS: "a9c5fdae091678f632d7c7b99e1d9e094d081138"
+        run: |
+          set -euo pipefail
+          pdf=Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf
+          epub=Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "76d178bda0be52bd0d83d7c46a68b3fc147f9ffea3f866f7bd62cdfc9ad76850  $pdf" | sha256sum -c -
+          echo "fe99b5e73669d6da6226508f32ac4a695b3577929fc7e68934750061549b288f  $epub" | sha256sum -c -
+          echo "bb26ebdbca2abd052a83404691622bdc08c15dd0bb65d319314564eeea86ffb4  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 2718930
+          test "$(stat -c %s "$epub")" = 475891
+          test "$(stat -c %s "$sums")" = 11946
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf \
+            Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-henderson-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Henderson release workflow" \
+            -f sha="$sha" \
+            -f branch=main

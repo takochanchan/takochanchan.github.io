@@ -1247,6 +1247,43 @@ const publicationRecords = [
       "19世紀後半",
     ],
   },
+  {
+    slug: "henderson-british-honduras-1811",
+    title: "英領ホンジュラス植民地誌",
+    originalTitle:
+      "An Account of the British Settlement of Honduras; Being a View of Its Commercial and Agricultural Resources, Soil, Climate, Natural History, &c. To Which Are Added, Sketches of the Manners and Customs of the Mosquito Indians, Preceded by the Journal of a Voyage to the Mosquito Shore. Illustrated by a Map",
+    subtitle:
+      "1811年増補第2版・原刊前付、本文全237頁、航海日誌、語彙集、気象表 日本語全訳",
+    author: "ジョージ・ヘンダーソン",
+    series: "BRITISH HONDURAS · 1811",
+    originalPublication: "ロンドン、1811年",
+    year: 1811,
+    extent:
+      "PDF 131頁・原刊前付v–xi頁・本文1–237頁・原刊標題紙1点・折込地図1点",
+    description:
+      "ジョージ・ヘンダーソン大尉が英領ホンジュラス植民地の政治史、商業、農業、住民、自然誌を概説した1811年増補第2版。モスキート海岸への航海日誌、モスキート・インディアンの風俗習慣素描、語彙集、1806年の気象表を併録し、原刊標題紙、献辞、序文、第2版広告、目次、折込地図、本文全237頁、巻末印記まで収録しています。",
+    cover: "publications/henderson-british-honduras-1811/cover.jpg",
+    pdf:
+      "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
+    pageCount: 131,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["地理誌", "植民地史", "旅行記", "民族誌"],
+    regions: ["英領ホンジュラス", "ベリーズ", "モスキート海岸", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "植民地行政",
+      "マホガニー",
+      "ログウッド",
+      "博物誌",
+      "モスキート人",
+      "航海日誌",
+      "気象観測",
+      "19世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1646,6 +1683,17 @@ const publicationMetadata = {
     sourceProvider:
       "New York Botanical Garden LuEsther T. Mertz Library所蔵初版本のInternet Archiveデジタル複製（識別子colonybritishho00morr）を底本とし、University of Toronto Robarts Library所蔵本（識別子colonyofbritishh00morruoft）を照合に用いた。Biodiversity Heritage Libraryは本書をパブリックドメインと表示している。",
     sourceUrl: "https://archive.org/details/colonybritishho00morr",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "henderson-british-honduras-1811": {
+    sourceEdition:
+      "George Henderson『An Account of the British Settlement of Honduras』（Second Edition, Enlarged, London: Printed for R. Baldwin, Paternoster Row、1811年）。",
+    sourceProvider:
+      "Harvard University所蔵本のInternet Archiveデジタル複製（識別子anaccountbritis00hendgoog）を主底本とし、New York Public Library所蔵本（識別子anaccountbritis01hendgoog）を照合に用いた。原刊標題紙、献辞、序文、第2版広告、目次、折込地図、本文1–237頁、巻末印記を収録。",
+    sourceUrl:
+      "https://archive.org/details/anaccountbritis00hendgoog",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
