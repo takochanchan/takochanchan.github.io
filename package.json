@@ -4,11 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "npm run verify:masters && node scripts/build.mjs",
     "build:local": "node scripts/build.mjs --assets /workspace/sites/maler-usumacinta-ja/public",
     "fetch:assets": "node scripts/fetch-assets.mjs",
     "manifest": "node scripts/make-manifest.mjs",
-    "test": "node --test tests/archive.test.mjs",
-    "test:epub": "python3 scripts/validate-epubs.py dist"
+    "test": "npm run verify:masters && node --test tests/archive.test.mjs",
+    "test:epub": "python3 scripts/validate-epubs.py dist",
+    "verify:masters": "node scripts/verify-master-archive.mjs"
   }
 }
