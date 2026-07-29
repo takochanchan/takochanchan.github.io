@@ -74,8 +74,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
-  assert.match(html, /\/archive\.js\?v=20260729-about-policy-v2/);
+  assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
+  assert.match(html, /\/archive\.js\?v=20260729-reuse-policy-v1/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -89,7 +89,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /公開版総ページ数/);
   assert.match(html, /海外の記録を、/);
   assert.match(html, /PDFとリフロー型EPUB/);
-  assert.match(html, /href="\/about\/">翻訳・編集・レビュー方針を読む/);
+  assert.match(html, /href="\/about\/">翻訳・編集・レビュー・再利用方針を読む/);
   assert.doesNotMatch(html, /生成AIの余剰リソース/);
   assert.match(
     html,
@@ -107,6 +107,9 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /底本と翻訳/);
   assert.match(html, /独立レビュー/);
   assert.match(html, /組版と公開前確認/);
+  assert.match(html, /再利用とライセンス/);
+  assert.match(html, /パブリックドメインの原著に基づく通常の翻訳/);
+  assert.match(html, /BY、SA、NCなどの条件は省略せず/);
   assert.match(html, /利用上の注意/);
   assert.match(html, /原文から日本語へ翻訳します/);
   assert.match(html, /専門研究者による外部査読を意味しません/);
@@ -114,7 +117,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
+  assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -162,8 +165,8 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260729-about-policy-v2/);
-    assert.match(html, /\/archive\.js\?v=20260729-about-policy-v2/);
+    assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
+    assert.match(html, /\/archive\.js\?v=20260729-reuse-policy-v1/);
     for (const label of [
       "底本",
       "公開元",
