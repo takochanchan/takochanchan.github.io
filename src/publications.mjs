@@ -1174,6 +1174,42 @@ const publicationRecords = [
       "19世紀中葉",
     ],
   },
+  {
+    slug: "paniagua-catecismo-chiapas-1876",
+    title: "チアパス歴史・統計初等問答",
+    originalTitle: "Catecismo elemental de historia y estadística de Chiapas",
+    subtitle:
+      "1876年初版・原刊前付、本文全108頁、索引、正誤表 日本語全訳",
+    author: "フラビオ・アントニオ・パニアグア",
+    series: "HISTORY AND STATISTICS · 1876",
+    originalPublication: "サン・クリストバル・ラス・カサス、1876年",
+    year: 1876,
+    extent:
+      "PDF 157頁・原刊前付・本文1–108頁・索引・正誤表・原刊標題紙画像1点",
+    description:
+      "チアパスの歴史、地理、住民、言語、宗教、統治、人口、財政、司法、教育、農業、産業などを問答形式でまとめた1876年刊の初等教育用歴史・統計書。初版の標題紙、参照著者一覧、序言、献辞、本文全108頁、索引、正誤表を省略なく収録しています。",
+    cover: "publications/paniagua-catecismo-chiapas-1876/cover.jpg",
+    pdf:
+      "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
+    pageCount: 157,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "地理誌", "統計資料", "教育書"],
+    regions: ["チアパス", "メキシコ", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "チアパス史",
+      "人口統計",
+      "行政区画",
+      "公教育",
+      "農業",
+      "産業",
+      "問答書",
+      "19世紀後半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1551,6 +1587,16 @@ const publicationMetadata = {
     sourceProvider:
       "University of Minnesota所蔵本のGoogle Books／HathiTrustデジタル複製（全155画像、識別子UusxAQAAMAAJ／umn.31951p00340248y）。折り畳まれたまま撮影された2表は、1854年『メキシコ地理統計学会報』再録版の展開済み表を初版の可読部分と照合して補完。",
     sourceUrl: "https://books.google.com/books?id=UusxAQAAMAAJ",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "paniagua-catecismo-chiapas-1876": {
+    sourceEdition:
+      "Flavio Antonio Paniagua『Catecismo elemental de historia y estadística de Chiapas』（San Cristóbal Las-Casas: Imprenta del “Porvenir” a cargo de Manuel M. Trujillo、1876年初版）。",
+    sourceProvider:
+      "University of Michigan所蔵初版本のGoogle Booksデジタル複製（全123画像、識別子w7w3AAAAMAAJ）。原刊標題紙、参照著者一覧、序言、献辞、本文1–108頁、索引、正誤表を底本とした。",
+    sourceUrl: "https://books.google.com/books?id=w7w3AAAAMAAJ",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

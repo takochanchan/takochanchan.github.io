@@ -1,0 +1,65 @@
+name: Publish Paniagua release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-paniagua-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "e1d5aded6de0975bb95605133b296ffb56fbb813 c3e0fc7ec14d213ceaf471f8f970792dc3c58e73 2cc26f1a0b3940916c6cbd4f9a0a5615d24b2b6f 3b340aa10ad2e9702e598621871021759469b564 3476a5ee8673dc2888f6d0af828c72a9b5c21665 24ab32c7d6b18f3b5990fff5dab0a95e830078e8 9f5d0ec239002d500a20c356ad2101145fcf1e8d 3187ed5bb1920742a815a9853920ff8fcf5f0c86 d0536faed27bc88cdbe6427b49690b9465a26212 b4038e9a430bd470d633c5165ba61d5d40f7e025 324c23afe4b9389c0140088ac13cc6384b2f4e90 a0851353d0b05c8ffc1f30bbc87aef520a22e364 5d92f127f1c1f5ddbf96db4dd38f3930862dc1c5"
+          EPUB_CHUNKS: "f066f0159bba7d00af27cf5f74a60cbf97c6d011"
+        run: |
+          set -euo pipefail
+          pdf=Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf
+          epub=Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "321d0f639893ba4ee665dc1fc00a311ca12da3d146dadd64c679352f290f8eaa  $pdf" | sha256sum -c -
+          echo "25ee5d489b4f16526f0c6f7ae83dec7c0d2d1a29f8f0cd88107dad73cb09145c  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 3014977
+          test "$(stat -c %s "$epub")" = 168236
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf \
+            Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-paniagua-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Paniagua release workflow" \
+            -f sha="$sha" \
+            -f branch=main

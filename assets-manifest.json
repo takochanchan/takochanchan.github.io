@@ -470,6 +470,24 @@
       "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
     },
     {
+      "path": "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
+      "size": 168236,
+      "sha256": "25ee5d489b4f16526f0c6f7ae83dec7c0d2d1a29f8f0cd88107dad73cb09145c"
+    },
+    {
+      "path": "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf",
+      "size": 3014977,
+      "sha256": "321d0f639893ba4ee665dc1fc00a311ca12da3d146dadd64c679352f290f8eaa"
+    },
+    {
+      "path": "publications/paniagua-catecismo-chiapas-1876/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/paniagua-catecismo-chiapas-1876/cover.jpg",
+      "size": 30382,
+      "sha256": "307fca89e40922979c293c98983ebb44b2cf48ed5fe16d13c8b3bc70cab60921"
+    },
+    {
       "path": "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
       "size": 116109,
