@@ -1284,6 +1284,43 @@ const publicationRecords = [
       "19世紀前半",
     ],
   },
+  {
+    slug: "gann-maya-indians-1918",
+    title: "南ユカタンおよび北部英領ホンジュラスのマヤ人",
+    originalTitle:
+      "The Maya Indians of Southern Yucatan and Northern British Honduras",
+    subtitle:
+      "1918年初版・原刊前付、本文全146頁、図版28点、本文挿図84点、引用文献、索引 日本語全訳",
+    author: "トーマス・W・F・ガン",
+    series: "BUREAU OF AMERICAN ETHNOLOGY · BULLETIN 64 · 1918",
+    originalPublication: "ワシントン、1918年",
+    year: 1918,
+    extent:
+      "PDF 210頁・原刊1–146頁・本文挿図84点・別丁図版28点・原注62件",
+    description:
+      "トーマス・W・F・ガンが南ユカタンと北部英領ホンジュラスのマヤ人の身体的特徴、生業、社会生活、医療、遊戯、宗教儀礼を記録し、後半で東部マヤ地域の墳丘41基を中心とする発掘成果を報告した1918年刊行書。装丁表紙、標題紙、送付状、目次、図版目録、マヤ語発音表、本文、原注62件、表、本文挿図84点、図版28点、引用文献、索引を収録しています。",
+    cover: "publications/gann-maya-indians-1918/cover.jpg",
+    pdf:
+      "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub",
+    pageCount: 210,
+    figureCount: 84,
+    plateCount: 28,
+    types: ["民族誌", "考古学研究", "発掘報告"],
+    regions: ["ユカタン", "英領ホンジュラス", "ベリーズ", "グアテマラ"],
+    languages: ["英語"],
+    tags: [
+      "マヤ人",
+      "民族学",
+      "宗教儀礼",
+      "物質文化",
+      "墳丘発掘",
+      "サンタ・リタ",
+      "原刊図版",
+      "20世紀初頭",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1694,6 +1731,17 @@ const publicationMetadata = {
       "Harvard University所蔵本のInternet Archiveデジタル複製（識別子anaccountbritis00hendgoog）を主底本とし、New York Public Library所蔵本（識別子anaccountbritis01hendgoog）を照合に用いた。原刊標題紙、献辞、序文、第2版広告、目次、折込地図、本文1–237頁、巻末印記を収録。",
     sourceUrl:
       "https://archive.org/details/anaccountbritis00hendgoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "gann-maya-indians-1918": {
+    sourceEdition:
+      "Thomas W. F. Gann『The Maya Indians of Southern Yucatan and Northern British Honduras』（Smithsonian Institution, Bureau of American Ethnology, Bulletin 64, Washington: Government Printing Office、1918年初版）。",
+    sourceProvider:
+      "米国議会図書館ジェイ・I・キスラック参考コレクション所蔵本を収めるInternet Archive公開画像（識別子mayaindiansofsou00gann）を主底本とした。Project Gutenberg eBook No. 46973は構成、検索、頁境界および公開画像ファイルの照合に限って使用。",
+    sourceUrl:
+      "https://archive.org/details/mayaindiansofsou00gann",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

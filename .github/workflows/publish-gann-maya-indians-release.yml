@@ -1,0 +1,74 @@
+name: Publish Gann Maya Indians release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-gann-maya-indians-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "c430eb9b15407fd0538d35a7689062375cb5c384 1f228392164322e9c54ebc93f81b52cb5303292d cb4577dcbe4c6260e3e31f4134a3342f0028557d 5814f0056b4a182d177f82a542092dbb974e6654 60fd686e0b9f09baf409e82ec19a0e1d3a91536a 2e83f984860bddf81eac39e08d63f9cbf003fb22 be5dee7dca74d8b5cdcd83930720f22744f70d42 c1ed181f434281a4a9c5a6e156243a28f235b2d2 7c8ef15c273b5d32570c81619d7a81604d5ef02f 5eb91781d8139f1289cb19ee8134ff2b8a6cac07 342ccb520cef40eba4f2b2c6e91673de527d05e2 32c42cec0c5de0adbdaa1f0477f81729de35605d 043c544640d25eda872b88efeb63367fa5b06263 31225180576be86520e4fa879c3e7e2e1ac60d59 2b03b496a4d7067842ae09d86b936d9ab36a96a9 90694dd71e3ae231de51ac57c3c48fc728f2922a aa08d2b330e2e0b29f9723a4bc26e77a8db78e09 88e18365dba9584b15ddcd6ac0dd1b7ea0700829 b417ae55ecc75b213d4b59df53d455b15bb58c14 a9ce4869e787e64e1846ffb674315178e6423ff4 468b407e4e85478ca10d37cba1fd5bed849377a1 9166ee1a0ef26425510f10ba5e970ae15ba299a4 76f486d9a19794e4affc173417ca62fe7f7b1c4d e2699abe6afce66fd5d77bfc38dde4ca33b5ef3f 1a76ee2726e2eeb8167c6ec2fd9763ed0281653c c724b746e656437709cbb0fcc41434a0cff3b3de d4360dcd17d24788ed37ba205ad5c8819a3c666c ce91ac2c6fb54bd85e1cdd083b1e3506831f00a1 183f3ba192d42912e80160257f006b4bcde5d46d d58ea0036c9d1e9f929d1cf016c21c159d87c693 fb64f4ec019d5125f96b0908de0beb796a4c16b4"
+          EPUB_CHUNKS: "e8775b4a3e8e333db1f9b5ef7c94836e201176c5 159d0e3b3a7eb9980bf8a72b3b471eba376171b5 c1c4767a260876d361df05702eaa6cecb00cc3be cfab40852bbabd17d5344b83fee88ad334e1e3ad c022a36f36f3def41d89d81bdc4db8c31e4fe70a 462926826ca3872904d1ab62845bd6749e2cd094 bacd9ce2f56448126732f368a86b3f4d3ed9aa5c 84a9f301cb7d2e7135067f2e5229aa8fd8253729 6e50b93e01662aecf24dd822ba3519c9ab74cbf3 a1217e0e15fd5c92627150dcf16643328fac19e1 84c831733f845c743a387884231f21d39581e7c2 d95e5ff814816d03caa973de0b9073cfce50dba4 d032b885c34c063b5bab855f522d03ee018e3ab2 9787d058f6e160a88c51f7b6f3f9dd7fff61a5fa 888d9fd3dba92fbf7bc09e3a33cc737c67c78a60 8f94c894a61d1044955326baa79908ee407d3541 b62c8ddff42b7998c1457e64d0813053f3469b1f 34422f78135623d2af7a4b08d4986c6fab98abce e2716797afd310f1642cbe97bc1e3cf5183865a9 9edac025b13ae5c5ea6b16e30ef088694cdc0553 f29ef8a3b452ba641e9a3efffa15b155e1647d4f 82d0c0fcd429b45741bc3b744733662e19eb5dbb a1b2157b31834f5754bbf0b4ceeb8d7c275b8a33 565f61bd58d5dae2a3da29a1580192fce40a16be f64a1edc317dae102859946b7f4c5a5da03d07b1 8bcf9af6871c7aea62cab2d39bd1eea34827dc32 14b4bc22ec4f36df0784b5e7e77e032cd152a45d 8ff61cb67fee1f78d70bdfb4ed8dfe6d03e5b7ac 72f3628535ceab02c4d2d1e35b92630797153f22"
+          SUMS_CHUNKS: "3f145547890171fed398f23621d4f3e0d6d94984"
+        run: |
+          set -euo pipefail
+          pdf=Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf
+          epub=Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "06beda238ce8bde0905e6a402beccc722b1606daf552ad312184c6aee1f4f473  $pdf" | sha256sum -c -
+          echo "edcb1e83af9d27f045f7c29197de1f022645c28c82ace6f661243688564c53fe  $epub" | sha256sum -c -
+          echo "5f044416f040daea6c21f621cb30ee870eacff7526d1022fb4cfaf712e6aaae0  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 8093193
+          test "$(stat -c %s "$epub")" = 7412316
+          test "$(stat -c %s "$sums")" = 12301
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf \
+            Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-gann-maya-indians-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Gann release workflow" \
+            -f sha="$sha" \
+            -f branch=main

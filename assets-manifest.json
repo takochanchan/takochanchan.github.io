@@ -344,6 +344,24 @@
       "sha256": "b1809c61a5a7c1b98ff201a4bc9bf2c26330e2f8710dfaf8586e337560b1f204"
     },
     {
+      "path": "publications/gann-maya-indians-1918/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gann-maya-indians-1918/cover.jpg",
+      "size": 67001,
+      "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
+    },
+    {
+      "path": "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub",
+      "size": 7412316,
+      "sha256": "edcb1e83af9d27f045f7c29197de1f022645c28c82ace6f661243688564c53fe"
+    },
+    {
+      "path": "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf",
+      "size": 8093193,
+      "sha256": "06beda238ce8bde0905e6a402beccc722b1606daf552ad312184c6aee1f4f473"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/cover.jpg",
       "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
       "size": 69499,
