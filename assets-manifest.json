@@ -722,6 +722,24 @@
       "sha256": "5fa0017f350b23f7ad93c7ef46cbef4074ac57a5c0f079716b0ef57abfad7f34"
     },
     {
+      "path": "publications/uring-voyages-travels-1928/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/uring-voyages-travels-1928/cover.jpg",
+      "size": 46043,
+      "sha256": "88e06b59640b4392c0741bf479b771dace5434eefbb2027d325157adfb2b73fb"
+    },
+    {
+      "path": "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.epub",
+      "size": 3882891,
+      "sha256": "50dc7f7457ebd79568fcbf13967d6f1d41d918a9ffcd7eaab7e85576f4ec1d58"
+    },
+    {
+      "path": "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.pdf",
+      "size": 8266282,
+      "sha256": "b7e642bf2ec46e563410084684b5803dacfa1d01336d4ec18cb5a71c8b25f295"
+    },
+    {
       "path": "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
       "url": "https://takochanchan.github.io/publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
       "size": 47083,

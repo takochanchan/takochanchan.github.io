@@ -1321,6 +1321,50 @@ const publicationRecords = [
       "20世紀初頭",
     ],
   },
+  {
+    slug: "uring-voyages-travels-1928",
+    title: "ナサニエル・ユーリング船長の航海と旅行",
+    originalTitle:
+      "The Voyages and Travels of Captain Nathaniel Uring",
+    subtitle:
+      "1928年「船乗り叢書」版・デュワー序説・注、本文全248頁、索引 日本語全訳",
+    author: "ナサニエル・ユーリング",
+    series: "THE SEAFARERS' LIBRARY · 1928",
+    originalPublication: "ロンドン、1928年",
+    year: 1928,
+    extent:
+      "PDF 350頁・原刊前付v–vii、ix–xxxiii頁・本文1–248頁・索引249–253頁・略標題紙、標題紙各1点・図版8葉",
+    description:
+      "ナサニエル・ユーリングが17世紀末から18世紀初頭に経験した大西洋、バルト海、西アフリカ、西インド諸島、北米、地中海への航海と旅行の記録。英領ホンジュラス、モスキート海岸、カンペチェ湾への航海と難破を含む1726年初版本文に、アルフレッド・デュワーの序説・注、索引を加えた1928年版を全訳し、同版所収の図版8葉を収録しています。",
+    cover: "publications/uring-voyages-travels-1928/cover.jpg",
+    pdf:
+      "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.epub",
+    pageCount: 350,
+    figureCount: 0,
+    plateCount: 10,
+    types: ["旅行記", "航海記", "植民地史", "民族誌"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "モスキート海岸",
+      "中央アメリカ",
+      "カリブ海",
+      "西アフリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "航海史",
+      "大西洋世界",
+      "西インド諸島",
+      "奴隷貿易",
+      "郵便船",
+      "難破",
+      "ホンジュラス湾",
+      "18世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1743,6 +1787,17 @@ const publicationMetadata = {
     sourceUrl:
       "https://archive.org/details/mayaindiansofsou00gann",
     rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "uring-voyages-travels-1928": {
+    sourceEdition:
+      "Nathaniel Uring『The Voyages and Travels of Captain Nathaniel Uring』Captain Alfred Dewar, O.B.E., R.N., B.Litt. (Oxon.) 序説・注（The Seafarers' Library, London: Cassell and Company Ltd.、1928年）。1726年初版本文の逐字再刊に序説、注、索引、半調写真図版8葉を加えた版。",
+    sourceProvider:
+      "Trent University所蔵本のInternet Archiveデジタル複製（識別子voyagestravelsof0000urin、全312画像）。1928年版に含まれない1726年初版の図版は補わず、同版所収の刊行物本文と図版を収録。",
+    sourceUrl: "https://archive.org/details/voyagestravelsof0000urin",
+    rights:
+      "1726年原著は著作権保護期間を満了しています。1928年版は米国でパブリックドメインであり、オーストラリア国立図書館も当該版を「Edition Out of Copyright」と表示しています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
   },
