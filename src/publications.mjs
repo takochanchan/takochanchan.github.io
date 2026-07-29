@@ -1444,6 +1444,43 @@ const publicationRecords = [
       "19世紀後半",
     ],
   },
+  {
+    slug: "gann-discoveries-central-america-1928",
+    title: "中央アメリカにおける発見と冒険",
+    originalTitle: "Discoveries and Adventures in Central America",
+    subtitle:
+      "1928年初版・ジョイス序文、本文全18章、全図版、索引 日本語全訳",
+    author: "トーマス・W・F・ガン",
+    series: "DISCOVERIES AND ADVENTURES · 1928",
+    originalPublication: "ロンドン、1928年",
+    year: 1928,
+    extent:
+      "PDF 296頁・原刊前付5–17頁・本文19–256頁・索引257–261頁・原刊画像35点・表2点",
+    description:
+      "トーマス・W・F・ガンが英領ホンジュラスで行った旅行、洞窟調査、マヤ遺跡の踏査・発掘を、自然誌・民族誌的観察とともに記した1928年刊行書。略標題紙、口絵、標題紙、目次、図版目録、トーマス・A・ジョイスによる序文、本文全18章、原刊画像35点、表2点、索引を収録しています。",
+    cover:
+      "publications/gann-discoveries-central-america-1928/cover.jpg",
+    pdf:
+      "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
+    pageCount: 296,
+    figureCount: 0,
+    plateCount: 35,
+    types: ["探検記", "考古学研究", "旅行記"],
+    regions: ["英領ホンジュラス", "ベリーズ", "マヤ地域", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "マヤ考古学",
+      "洞窟調査",
+      "チュムチャ",
+      "石碑",
+      "英領ホンジュラス",
+      "大英博物館",
+      "原刊図版",
+      "20世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1901,6 +1938,18 @@ const publicationMetadata = {
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
+  },
+  "gann-discoveries-central-america-1928": {
+    sourceEdition:
+      "Thomas Gann『Discoveries and Adventures in Central America』（London: Duckworth、1928年初版）。トーマス・A・ジョイスによる序文を含む。",
+    sourceProvider:
+      "Internet Archive公開画像（識別子discoveriesadven0000thom）を主底本とした。原刊画像を直接読み、同所のOCRは検索、頁分割、難読箇所の位置確認にのみ使用。HathiTrustの書誌および1929年Charles Scribner's Sons版は構成と難読箇所の照合に限って参照した。",
+    sourceUrl:
+      "https://archive.org/details/discoveriesadven0000thom",
+    rights:
+      "1928年初版は米国、英国および日本でパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
   },
 };
 

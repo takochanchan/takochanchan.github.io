@@ -828,6 +828,24 @@
       "url": "https://takochanchan.github.io/publications/swett-british-honduras-san-pedro-1868/cover.jpg",
       "size": 62025,
       "sha256": "a0ebc12d144ab4da9a775ec09ec2edd19197a1f98e0736dd89fa1b4c2a23e7cd"
+    },
+    {
+      "path": "publications/gann-discoveries-central-america-1928/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gann-discoveries-central-america-1928/cover.jpg",
+      "size": 48072,
+      "sha256": "9aab02f94ca6811bd62430ff20c5cc23221d0068504c6bffbb063505c8f97641"
+    },
+    {
+      "path": "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
+      "size": 13544296,
+      "sha256": "7663c5ded8923ad351d17c12d241fd08091eb2a40b312acc1ccbd94e62a38a79"
+    },
+    {
+      "path": "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.pdf",
+      "size": 14963453,
+      "sha256": "171b94b46f1529e9cd70f4fda7a1c501d5b74c1a1216ee0352f8ed3b01eb6b59"
     }
   ]
 }

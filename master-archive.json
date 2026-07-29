@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "84eb5ddb2f975fc1ce55d35e2ec1108b891ec4a9",
+  "archive_commit": "2a8d052e541d748f94f7068a9306156067c7481d",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -48,6 +48,7 @@
     "gann-maya-indians-1918": "publications/gann-maya-indians-1918/master.docx",
     "uring-voyages-travels-1928": "publications/uring-voyages-travels-1928/master.docx",
     "cook-balise-merida-1769": "publications/cook-balise-merida-1769/master.docx",
-    "swett-british-honduras-san-pedro-1868": "publications/swett-british-honduras-san-pedro-1868/master.docx"
+    "swett-british-honduras-san-pedro-1868": "publications/swett-british-honduras-san-pedro-1868/master.docx",
+    "gann-discoveries-central-america-1928": "publications/gann-discoveries-central-america-1928/master.docx"
   }
 }
