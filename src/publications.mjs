@@ -1137,6 +1137,43 @@ const publicationRecords = [
       "19世紀末",
     ],
   },
+  {
+    slug: "pineda-chiapas-soconusco-1845",
+    title: "チアパスおよびソコヌスコ県地理誌",
+    originalTitle:
+      "Descripción geográfica del Departamento de Chiapas y Soconusco",
+    subtitle:
+      "1845年初版・原刊標題紙、序文、本文、諸表、末尾付載文書 日本語全訳",
+    author: "エメテリオ・ピネダ",
+    series: "GEOGRAPHICAL DESCRIPTION · 1845",
+    originalPublication: "メキシコ、1845年",
+    year: 1845,
+    extent:
+      "PDF 133頁・原刊標題紙・原刊III–IV頁、5–150頁・折込表2点・末尾付載文書",
+    description:
+      "チアパス高等司法裁判所判事エメテリオ・ピネダが、チアパスとソコヌスコの歴史、地理、自然、住民、行政区画、人口、教育、農業、産業、商業、財政、民族誌、司法・軍事を体系的に記述した1845年の地理・統計史料。1845年初版の標題紙、序文、本文5–150頁、人口比較表と歳入・支出表、末尾の地図批評を全訳しています。",
+    cover: "publications/pineda-chiapas-soconusco-1845/cover.jpg",
+    pdf:
+      "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
+    pageCount: 133,
+    figureCount: 3,
+    plateCount: 0,
+    types: ["地理誌", "統計資料", "一次史料"],
+    regions: ["チアパス", "ソコヌスコ", "メキシコ", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "人口統計",
+      "行政区画",
+      "自然誌",
+      "農業",
+      "商業",
+      "民族誌",
+      "司法統計",
+      "19世紀中葉",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1504,6 +1541,16 @@ const publicationMetadata = {
     sourceProvider:
       "Cornell University Library所蔵の1894年独立抜刷を収めるInternet Archive公開画像（全78画像）。Project Gutenberg eBook No. 26426は頁境界、綴字、原注の照合に限って使用。",
     sourceUrl: "https://archive.org/details/cu31924020427542",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "pineda-chiapas-soconusco-1845": {
+    sourceEdition:
+      "Emeterio Pineda『Descripción geográfica del Departamento de Chiapas y Soconusco』（México: Imprenta de Ignacio Cumplido, Calle de los Rebeldes núm. 2、1845年初版）。",
+    sourceProvider:
+      "University of Minnesota所蔵本のGoogle Books／HathiTrustデジタル複製（全155画像、識別子UusxAQAAMAAJ／umn.31951p00340248y）。折り畳まれたまま撮影された2表は、1854年『メキシコ地理統計学会報』再録版の展開済み表を初版の可読部分と照合して補完。",
+    sourceUrl: "https://books.google.com/books?id=UusxAQAAMAAJ",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",

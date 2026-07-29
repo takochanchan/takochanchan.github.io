@@ -488,6 +488,24 @@
       "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
     },
     {
+      "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
+      "size": 344089,
+      "sha256": "610390368c5fa56cc0fac6249ddd951fb8f946f396e8b02d08b14788644ffff6"
+    },
+    {
+      "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf",
+      "size": 3286267,
+      "sha256": "2dbbaa339f4022e09f77e8fb632e58acb5886f4acd6bed14d798a5a632b1435c"
+    },
+    {
+      "path": "publications/pineda-chiapas-soconusco-1845/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pineda-chiapas-soconusco-1845/cover.jpg",
+      "size": 27611,
+      "sha256": "e5154ef677889e87a4d0c297e8b25cc3927a6db580ed5afbf45a2afe473efacb"
+    },
+    {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "size": 17224938,

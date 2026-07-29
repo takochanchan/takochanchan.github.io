@@ -1,0 +1,65 @@
+name: Publish Pineda release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-pineda-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "bfb72710fce29ab5bfeddd5b90bdb64790e1f996 254df9e17ac50b9e64b56f4aa86ebf05dc195262 74a7eb208331abe9d1e99211b0ca986f6e15f4fc e86816a285270fd9b7d03c2da03977e8a023138a 3dd344d8c8ef22c4151eaecc3b43ead731c522ad 219868317a5b8fc8e3ce9a3d77a2aea7e567c445 08d665d0c753f843598286b505ca2516088a0a21 ca206662fd70583c77e4c4b613f04e9991815a58 2afa8f221dcc0cdd41cbe48c55af9b72a0bb78a3 d2d07fb85346944478cc69a4a8bbc3b5794200af 65d75702e6c4dd86869368aca7dbb0977ad12ea6 bb707cb13216e2cc60788f4ead0d61df8bcd579a ea8581223343da2df411b66bad83a95c97cf2e4a"
+          EPUB_CHUNKS: "b449285e33c9e3ec25a7043903627c9309e1b451 e53a2f15ff26bc5dbd20367c9b463680cd7fe38c"
+        run: |
+          set -euo pipefail
+          pdf=Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf
+          epub=Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "2dbbaa339f4022e09f77e8fb632e58acb5886f4acd6bed14d798a5a632b1435c  $pdf" | sha256sum -c -
+          echo "610390368c5fa56cc0fac6249ddd951fb8f946f396e8b02d08b14788644ffff6  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 3286267
+          test "$(stat -c %s "$epub")" = 344089
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf \
+            Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-pineda-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Pineda release workflow" \
+            -f sha="$sha" \
+            -f branch=main
