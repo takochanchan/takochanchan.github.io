@@ -1,0 +1,65 @@
+name: Publish Morris release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-morris-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "1c00332da3104ed103090e1a226b8c2e6c388e03 564ab8bcdc740a03d51031ae0b8ff3cd2c220746 21e2c9886da9c17e61e27aba48edff86cbb8f286 8714b1e318c742ffa9ae734a12f28a41252326b9 c3d456ffa4367a87d0d3e6f1fd21f7b2d3cbc0e9 3b38e23607259282eaf4e195b462a441523a1cab a1eebdd3d33121d9fd9773e8e4504c2aa6a95368 fbe8cdd7f908c5ed153cb5e1264ac896514bf565 cccbc9d2fa6f65077a1dd544b8692d57b8ec123b ed3737f92cd56fdf159aa56d69c7fe2a9faf656b cec2a57bf4435ecca0fed9372756113ce0cfb420 d0bc24c08351cd4bd9b6e0ea4a8f198cc6ae80af 5ed7eafa8ef5a9769b4d71952e01a0bffd29c249 ac8a8b98a32628ea1322c0cd0468d6ccf5895e9c"
+          EPUB_CHUNKS: "4d9ac42267facf4f9f5ec94f0a6333fcf3f2e575 9f9421e0275c15b23cc8429e1a13199eb76551ee ea64bd05162e1fec399d81330040a2b098b61692 11134a7ea7bc8248abf0955b1ae443a1a2ec1b1a aa5a4fca70c48ed432405f5be1a47dbecab641ad 69a2c328b1af58cc716333077a50b4efc33fc587 a839ab2146dd3beda99e7d896ccafd802284bea8 0a70e6b7579443bfee1e44f6e02fd77b2ac3a07f b179c9c3c3bb564158623d683c9bbcf493418e4c 25abcebbc5801c11b71af2a93e4ad210f6403b6c b63cafd3ee66e3bcb7fb8a5cf39da88d2ce19e09 252fef7f6fb535e5d1d1a0f87574fa767cf1000b 528c487dde434a79e6b63e320cda0e57135fab2c 88ffc0e1a48222a33d8d92779aa3563fb7ac978b fdc2da4e437c5c3f4a2c47b0e6087b30bf5474c4"
+        run: |
+          set -euo pipefail
+          pdf=Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.pdf
+          epub=Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub
+          : > "$pdf"
+          : > "$epub"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          echo "4c5192463124bc053defcb91f63bf267ab479f4796ad9a30aef76f06d9a4157d  $pdf" | sha256sum -c -
+          echo "44adec2b79a20b0cbb4fa20152b3c0982928685201b15a0895ef20e861ec4285  $epub" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 5348741
+          test "$(stat -c %s "$epub")" = 5863082
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.pdf \
+            Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-morris-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Morris release workflow" \
+            -f sha="$sha" \
+            -f branch=main

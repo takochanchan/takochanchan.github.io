@@ -1210,6 +1210,43 @@ const publicationRecords = [
       "19世紀後半",
     ],
   },
+  {
+    slug: "morris-colony-british-honduras-1883",
+    title: "英領ホンジュラス植民地",
+    originalTitle:
+      "The Colony of British Honduras: Its Resources and Prospects; with Particular Reference to Its Indigenous Plants and Economic Productions",
+    subtitle:
+      "1883年初版・原刊前付、本文全152頁、付録、索引 日本語全訳",
+    author: "ダニエル・モリス",
+    series: "THE COLONY OF BRITISH HONDURAS · 1883",
+    originalPublication: "ロンドン、1883年",
+    year: 1883,
+    extent:
+      "PDF 160頁・原刊前付xiii頁・本文1–152頁・折込彩色地図1点・図版2葉・本文挿図1点",
+    description:
+      "植物学者ダニエル・モリスが英領ホンジュラスの地理、歴史、行政、交通、住民、森林資源、経済植物、農業、労働、土地制度、気候を調査し、植民地の資源と将来性を論じた1883年刊行書。原刊前付、全8章、原注、表、付録、文献一覧、索引を全訳し、装丁、略標題紙、折込彩色地図、標題紙、図版2葉、本文挿図を収録しています。",
+    cover: "publications/morris-colony-british-honduras-1883/cover.jpg",
+    pdf:
+      "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub",
+    pageCount: 160,
+    figureCount: 1,
+    plateCount: 3,
+    types: ["地理報告", "博物誌", "経済調査", "旅行記"],
+    regions: ["英領ホンジュラス", "ベリーズ", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "植物誌",
+      "経済植物",
+      "マホガニー",
+      "ログウッド",
+      "植民地行政",
+      "農業",
+      "折込地図",
+      "19世紀後半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -1597,6 +1634,16 @@ const publicationMetadata = {
     sourceProvider:
       "University of Michigan所蔵初版本のGoogle Booksデジタル複製（全123画像、識別子w7w3AAAAMAAJ）。原刊標題紙、参照著者一覧、序言、献辞、本文1–108頁、索引、正誤表を底本とした。",
     sourceUrl: "https://books.google.com/books?id=w7w3AAAAMAAJ",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-29",
+    updatedDate: "2026-07-29",
+  },
+  "morris-colony-british-honduras-1883": {
+    sourceEdition:
+      "Daniel Morris『The Colony of British Honduras: Its Resources and Prospects; with Particular Reference to Its Indigenous Plants and Economic Productions』（London: Edward Stanford、1883年初版）。",
+    sourceProvider:
+      "New York Botanical Garden LuEsther T. Mertz Library所蔵初版本のInternet Archiveデジタル複製（識別子colonybritishho00morr）を底本とし、University of Toronto Robarts Library所蔵本（識別子colonyofbritishh00morruoft）を照合に用いた。Biodiversity Heritage Libraryは本書をパブリックドメインと表示している。",
+    sourceUrl: "https://archive.org/details/colonybritishho00morr",
     rights: publicDomainRights,
     publishedDate: "2026-07-29",
     updatedDate: "2026-07-29",
