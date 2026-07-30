@@ -1,0 +1,83 @@
+name: Publish García Peláez release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-garcia-pelaez-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "72549f8982117bfd82ed90eeb99464a52acd222c 780d6434fc6d351f4efe5463a67c9db85917cd6c b2117557756d3a41c7c238e30d63267e1cd1f1ba 2ace5d86e15b0d5d55505fb7bdb2cd293c5686a1 8aeaa1a3204acefba0ebdae69921934af69a10f7 12d2ba04777bfb12eee299b6d3c2d1079644fbe2 d4148f95652e6f8a71f24bb6e9738c3d9c3b2fa3 ee8cbdabda73393719d6ba88501ecd9c4abed4a6 d0233c7329f99655017199d6a1ca75a0484cc5f5 d2b726061344d6bc3f5b53bb30c8018adfa5f9a1 52b1b5b7043991c949ca17fbdf339a38b82cdbec e6febd771aec24d666a5d0837e8e9686575e0f60 fff00f0b62d30e87da4f328b45c8f5b6204db9e7 d5c34041d16e8b8962ad57a53fb4597acd7d4de9 a8adf6237a2e77bdd50dfdc667eef06cad7e5c47 7155bdb42647881355b542832ae00c2c6d8ed73c a86cb8a69faf09b556f7b0235bddba6037a38eea 09393bb3d187ee706cca43e1c9a851f907912cb3 93bc1588651f5333e791cf332cc783cc0c9e17d3 e7d1af83cc1efc930407d3f3a106da2795d9d3f9 141f0b2c41d673dbdf725cb5d1f427a24e62b1f1 d4ee1dd0c83c038992d4592bb1d543baddd3c593 d86eae1c7d5ffa90c40a4d5dc70816c494ef5c40 d6595d2b94e77822ede078f76f2c66d44dc4e1e4 6460b55fe04518de139483ce60051f8a0a3fc0f1 f08e765f2db00b4a181a9bc6d5a786b15869e213 a2ec64e6a2a56324df822f0f5c8fdedba42c07d0 91ba9028f316056f72801de9a26afc9d3a57e15f b94999e34e4a1e17bb05f8e810eef2a50693a8c4 7f194a4ee2d36e91ecfb024d075993d74913e0fa 7d539c8fe07faff7628a1f62060cbc6326846df9 bfb68445c11fab105149149f05fea56b46d50c28 32aea48d3abd5fe270b2dd69496fac9efa219a60 364de14a258e64c4dc54b9ab4973a93ca069bac4 a74021f086f714dc1d717d94d3c87034ec46ffe0 4c9df0ab25e2f1770a1d53fe613610e7e1e62007 648d27f81e0301f11dfb88f7b86fb564ca168a21 db2bbd53930e4420fafe9ad48f9d563458ea50b0 e0f472e0a5cb3c92ece4647689230e0086b4a0ce 2b2c478467f4ceb86274a2bb88c5431d69b50c9a 668b20c73890cbd92f6ac944fc1395e1642ca1e1 81528561cb4112f784df91db1575e8006e9c3427 eddca28cc6e8f7321df8a0359d05c722b545a6b5 12efa900b0be150d4e37ea3d1fbcd1afc5795433 cb7b8d452b71137ac2d7a91723c6a39f66932085 d014dfcbad2d51cf468b28c5270a6ad955b36bb2 3d0b2fe84453eb7a3282394a437a40d807e21ca8 b193c5635c1cb96d857bd3896fa5ec0b57b261b7 95c7b91b8da744645ae66d507074273a1ba953f4 156f2757894ee7fa82dee3eee3d977a3cd0e290c 87856c0f0cebe30a56c9020b0230f0fa8272c9ff 811135b324aa036bc7cf18119bdb61b127760470 f077d463855de68f52fc83054688190d3808b673 42dd07d5afba89be3df6838a05b0b6f157bf16d8 dee5a2dbeeb56df7d67ff8726bc4cbb371940cfd c16af0468cfcc60fd0913c8cec389d165508e64d c19195cd3bbdc65565dbec8d1ebeed95da3ed84a 9b7292719e36e6d3daf9bc767692069a81fef288 1273fdf3bc99b6f11ca58b1d7b7b1a3a30f0562c 6085d6e4c2d9c2a22875d36dbc37b9b25d539818 b0db4b244c6d71895e5bba127789b9f15f928169 ecdc73c0d476ffab6248488959b51a954023ea80 50176cc0958a1b102d57b2e644afd8fa4e420b5d 0364a536ef98b9392e96d8a29e631b88d037d935 25bc6b8adcde749494807e158a8e3869af4dec28 be2a4fef2d8904a5483c0565b9f0bf963f4e3237 18542936eed91ab71d0fdc4f54e248adcc6017e5 bcaddab25732c0eec420f6c72e1e2ce371ef68b7 2cbddd969c01e22a7cbd7f8752ba9f1c2e633538 2fc62c161e7712953847503b9f2f5f737f1b9996 0bc537ee2a5f943e60899d30d2d7dfb5779d1603 545013a7582ec93e88867480aeb2ff9f75d599dd b1867a6538d962beae9cbb15f984885d80cf93d1 befb4b5764eef3b5c3cde79efe18e61b15eaad95 0bb32253a7e80e0aeaec0b31ae75ccb2f877b906 4bdd43479690e91f85e9ae9aa9ac88329515ec49 d3785933ea231a0ae3b62769487db870a7946da1 b5e469cfbf3c2ad321d937dd98c0a53429a426bb 43e2f247e0a0e98846e460e8220ab6f4910e8aee 8096310a882fa1b0d1f0fdbf3483f2caf2737f1d"
+          EPUB_CHUNKS: "14bb27349f56848a67144bc3293011a8d21e2db3 056d628dbe3bead162d7595f49ff0b0bdcff24b7 737500ed6fc78addb8b8cf808df29263d9136a9f ee99bd8d96744a1666146a1ffe316b603d3a76de 7c6fe306ca76fe84c95f867f99f20bc3ceabc2e9 8f129f05bc84da0f08d13143f20cd77c0b2f74ca 36df08db231673723f9e374000e098fc2e24cbde bb643a45eaac7f5b23a8ac4561f5805a3ecd6412"
+          SUMS_CHUNKS: "ecb01b5ac7569b800630b5f6f90af5c8d53896c7"
+        run: |
+          set -euo pipefail
+          pdf=Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf
+          epub=Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "1ebeb06de8789a6dcca8eebf0d6b7b352172d5ec079d8091b83c4d6ceafa26c2  $pdf" | sha256sum -c -
+          echo "691dcefc3611af0c95c06ef50935c2e376142675869437d58dc404337938cc4d  $epub" | sha256sum -c -
+          echo "6ce81774c9c8877bd0b0e3dc2205ed16908f12d6ba73e1a1a3a19bc6e4bc1be5  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 12792058
+          test "$(stat -c %s "$epub")" = 1164384
+          test "$(stat -c %s "$sums")" = 14994
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf \
+            Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-garcia-pelaez-memorias-1851-1852-9e83877e"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-garcia-pelaez-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time García Peláez release workflow" \
+            -f sha="$sha" \
+            -f branch=main

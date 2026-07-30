@@ -1653,6 +1653,52 @@ const publicationRecords = [
       "19世紀後半",
     ],
   },
+  {
+    slug: "garcia-pelaez-memorias-guatemala-1851-1852",
+    title: "グアテマラ旧王国史のための覚書",
+    originalTitle: "Memorias para la historia del antiguo reyno de Guatemala",
+    subtitle:
+      "初版全3巻・標題紙・目次・本文・注・表・総索引・正誤表・購読者名簿 日本語全訳",
+    author: "フランシスコ・デ・パウラ・ガルシア・ペラエス",
+    series: "HISTORICAL MEMOIRS · 1851–1852",
+    originalPublication: "グアテマラ、1851–1852年",
+    year: 1851,
+    extent: "PDF 1,143頁・初版全3巻・表21点",
+    description:
+      "グアテマラの先住民社会、征服、植民統治、教会制度、交易、都市、教育・学芸を、著者が収集した年代記・公文書・刊行物を用いて叙述した19世紀の三巻本。初版の標題紙、目次、本文、注、表、総索引、正誤表、購読者名簿まで収録しています。",
+    cover:
+      "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
+    pdf:
+      "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
+    pageCount: 1143,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["歴史書", "植民地史", "教会史"],
+    regions: [
+      "グアテマラ",
+      "チアパス",
+      "ペテン",
+      "ホンジュラス",
+      "エルサルバドル",
+      "コスタリカ",
+      "中央アメリカ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "マヤ人",
+      "ラカンドン人",
+      "チョル人",
+      "グアテマラ総督領",
+      "アウディエンシア",
+      "征服",
+      "植民統治",
+      "教会史",
+      "交易",
+      "19世紀中頃",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2165,6 +2211,17 @@ const publicationMetadata = {
       "Smithsonian Libraries所蔵本の原刊画像（同館デジタルライブラリ）を主底本とし、Internet Archive公開複製を原刊頁、原注、固有名詞、数値および難読箇所の照合に用いた。",
     sourceUrl:
       "https://library.si.edu/digital-library/book/annualreportofbo1867smit",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "garcia-pelaez-memorias-guatemala-1851-1852": {
+    sourceEdition:
+      "Francisco de Paula García Peláez, Memorias para la historia del antiguo reyno de Guatemala, tomo primero, Guatemala: Establecimiento tipográfico de L. Luna, 1851; tomos segundo y tercero, Guatemala: Establecimiento tipográfico de L. Luna, 1852.",
+    sourceProvider:
+      "第1巻・第2巻はInternet Archive公開の初版スキャン、第3巻はGoogle Books公開の初版スキャンを底本とした。第1巻の主底本に欠ける原刊274–275頁は、同じ1851年初版のWikimedia Commons公開複製で前後を照合して補完した。",
+    sourceUrl:
+      "https://archive.org/details/memoriasparalah00pelgoog",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",

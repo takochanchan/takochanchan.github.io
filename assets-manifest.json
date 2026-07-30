@@ -416,6 +416,24 @@
       "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
     },
     {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
+      "size": 1164384,
+      "sha256": "691dcefc3611af0c95c06ef50935c2e376142675869437d58dc404337938cc4d"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf",
+      "size": 12792058,
+      "sha256": "1ebeb06de8789a6dcca8eebf0d6b7b352172d5ec079d8091b83c4d6ceafa26c2"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
+      "size": 67174,
+      "sha256": "d36d441238b044068b44d7d90a32daacde61de04f21dc9a3d6548e8fc98eedbd"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "size": 475891,
