@@ -1608,6 +1608,51 @@ const publicationRecords = [
       "20世紀前半",
     ],
   },
+  {
+    slug: "berendt-central-america-explorations-1867",
+    title: "中央アメリカ探査報告",
+    originalTitle: "Report of Explorations in Central America",
+    subtitle:
+      "1867年年報所収・原刊420–426頁、原注5件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "SMITHSONIAN ANNUAL REPORT · 1867",
+    originalPublication: "ワシントン、1868年（1867年年報）",
+    year: 1867,
+    extent: "PDF 14頁・原刊420–426頁・原注5件",
+    description:
+      "ベリーズ、ペテン、タバスコにおける1865年から1867年までの探査を報告し、自然史標本の採集、地理、ユカタン・マヤの政治状況、ラカンドン人、言語、考古学上の観察を記したスミソニアン協会年報所収報告。原刊420–426頁の本文全文と原注5件を収録しています。",
+    cover:
+      "publications/berendt-central-america-explorations-1867/cover.jpg",
+    pdf:
+      "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.epub",
+    pageCount: 14,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["探査報告", "地理報告", "民族誌", "自然史"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "ペテン",
+      "グアテマラ",
+      "タバスコ",
+      "チアパス",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "マヤ人",
+      "ラカンドン人",
+      "クルソオブ",
+      "ペテン・イツァ湖",
+      "ベリーズ川",
+      "ウスマシンタ川",
+      "パレンケ",
+      "自然史採集",
+      "19世紀後半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2110,6 +2155,17 @@ const publicationMetadata = {
     sourceUrl: "https://doi.org/10.5962/bhl.title.3491",
     rights:
       "原著のデジタル公開版は、権利者Field Museum of Natural Historyの許諾により、Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported（CC BY-NC-SA 3.0）で提供されています。本日本語版は原著の翻案物として同一のCC BY-NC-SA 3.0で提供します。利用には原著者・原題・原刊情報・権利者・底本の表示、非営利利用、改変物への同一ライセンスの継承が必要です。追加の制限は設けません。本翻訳・編集はField Museum of Natural HistoryまたはBiodiversity Heritage Libraryの承認を意味しません。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "berendt-central-america-explorations-1867": {
+    sourceEdition:
+      "Carl Hermann Berendt, “Report of Explorations in Central America,” Annual Report of the Board of Regents of the Smithsonian Institution, Showing the Operations, Expenditures, and Condition of the Institution for the Year 1867, Washington: Government Printing Office, 1868, pp. 420–426.",
+    sourceProvider:
+      "Smithsonian Libraries所蔵本の原刊画像（同館デジタルライブラリ）を主底本とし、Internet Archive公開複製を原刊頁、原注、固有名詞、数値および難読箇所の照合に用いた。",
+    sourceUrl:
+      "https://library.si.edu/digital-library/book/annualreportofbo1867smit",
+    rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },

@@ -38,6 +38,24 @@
       "sha256": "ea89bd28d02bf883602fc6c0080905a7bc302d316f5dabad01076d6ddc0661db"
     },
     {
+      "path": "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.epub",
+      "size": 34657,
+      "sha256": "1c80e8ce174ed01585be6a7e6efae202e6978fdaa623aadde248bff967f58c82"
+    },
+    {
+      "path": "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.pdf",
+      "size": 491863,
+      "sha256": "45f97da2006ea5e41d16b7667c3f843170b0928ef4a8cc42dbd03c6eb8c6faa6"
+    },
+    {
+      "path": "publications/berendt-central-america-explorations-1867/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/berendt-central-america-explorations-1867/cover.jpg",
+      "size": 16133,
+      "sha256": "030a7d1ed0c63771ece6c236f56a250679d7271047eb6856332fc7e90b270580"
+    },
+    {
       "path": "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
       "size": 41132122,
