@@ -1746,6 +1746,51 @@ const publicationRecords = [
       "19世紀末",
     ],
   },
+  {
+    slug: "dunn-guatimala-central-america-1828",
+    title: "グアテマラ、または1827–28年の中央アメリカ連合州",
+    originalTitle:
+      "Guatimala, or, The United Provinces of Central America in 1827–8",
+    subtitle:
+      "同共和国に十二か月滞在した間に作成した見聞記および覚書・1828年初版 日本語全訳",
+    author: "ヘンリー・ダン",
+    series: "GUATIMALA · 1828",
+    originalPublication: "ニューヨーク、1828年",
+    year: 1828,
+    extent:
+      "PDF 204頁・原刊前付・本文9–318頁・全4部21章・表18点・原注20件・原刊標題紙1点・巻末訂正",
+    description:
+      "ヘンリー・ダンが中央アメリカ連合州に十二か月滞在した際の見聞をまとめた1828年刊行書。ホンジュラス湾からグアテマラ市への旅、同市の社会・宗教・生活、独立革命後の政治、交易、自然誌、先住民、太平洋岸への旅行を記し、標題紙、著作権登録、目次、序文、全4部21章、原注、諸表、巻末訂正を収録しています。",
+    cover:
+      "publications/dunn-guatimala-central-america-1828/cover.jpg",
+    pdf:
+      "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
+    pageCount: 204,
+    figureCount: 0,
+    plateCount: 1,
+    types: ["旅行記", "地理誌", "政治史", "民族誌"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "英領ホンジュラス",
+      "ベリーズ",
+      "ホンジュラス",
+      "エルサルバドル",
+    ],
+    languages: ["英語"],
+    tags: [
+      "中央アメリカ連合州",
+      "独立",
+      "グアテマラ市",
+      "ホンジュラス湾",
+      "交易",
+      "博物誌",
+      "先住民",
+      "19世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2280,6 +2325,17 @@ const publicationMetadata = {
       "Internet Archive公開の1899年初版スキャン（識別子 glimpseatguatema00maud）を主底本とし、Project Gutenberg eBook No. 47693の校訂済み転写を検索、頁区分、難読箇所の照合に用いた。",
     sourceUrl:
       "https://archive.org/details/glimpseatguatema00maud",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "dunn-guatimala-central-america-1828": {
+    sourceEdition:
+      "Henry Dunn『Guatimala, or, The United Provinces of Central America, in 1827–8; Being Sketches and Memorandums Made during a Twelve Months' Residence in That Republic』（New York: G. & C. Carvill、1828年初版）。",
+    sourceProvider:
+      "English Wikisource公開の1828年初版スキャンおよび校訂済み転写。原刊画像を本文確定の基準とし、転写は検索、頁境界、難読箇所の照合に用いた。標題紙、著作権登録、目次、序文、本文9–318頁、巻末訂正を収録。",
+    sourceUrl:
+      "https://en.wikisource.org/wiki/Index:Guatimala_or_the_United_Provinces_of_Central_America_in_1827-8.pdf",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",

@@ -1,0 +1,83 @@
+name: Publish Dunn release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-dunn-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "d9698b404c63100351c433fdb92cdb266d3b2d3c 10fdfd4a34deafd1cc52ffa80c7ca6021f49ca49 2c1630363a1611352272564b7cfbe03a13fd59e8 141325dec9742d5a9d0f70f98ebedd4ea3d52a40 14329ab8f025b52c88711959d643c9749791caea"
+          EPUB_CHUNKS: "72951e31f9d9943a9b2a45e40657c6b72415986a"
+          SUMS_CHUNKS: "bad1ccf00bc4953cff59792fb1b0cfea9a3c7b8d"
+        run: |
+          set -euo pipefail
+          pdf=Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf
+          epub=Dunn_Guatimala_1828_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "eec0c3338916db64621a5d91032b2a182767fa8c34c7f8fe93068f0e112901ef  $pdf" | sha256sum -c -
+          echo "1a0a64eba93585fed0a6e753ca45408289ba1af26ae2b0fbbc7aea8d41d46888  $epub" | sha256sum -c -
+          echo "7bb7d693b5eb42fcc5907dcba9ca1dcfc3f1930aba38634d2abbbfe5073cb7e0  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 2466966
+          test "$(stat -c %s "$epub")" = 290871
+          test "$(stat -c %s "$sums")" = 15542
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf \
+            Dunn_Guatimala_1828_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-dunn-guatimala-central-america-1828-969dd6e8"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-dunn-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Dunn release workflow" \
+            -f sha="$sha" \
+            -f branch=main

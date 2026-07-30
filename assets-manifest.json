@@ -954,6 +954,24 @@
       "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
       "size": 67266,
       "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
+    },
+    {
+      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
+      "size": 290871,
+      "sha256": "1a0a64eba93585fed0a6e753ca45408289ba1af26ae2b0fbbc7aea8d41d46888"
+    },
+    {
+      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
+      "size": 2466966,
+      "sha256": "eec0c3338916db64621a5d91032b2a182767fa8c34c7f8fe93068f0e112901ef"
+    },
+    {
+      "path": "publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "size": 67786,
+      "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
     }
   ]
 }
