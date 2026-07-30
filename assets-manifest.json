@@ -236,6 +236,24 @@
       "sha256": "828572890659ebb47470960033c0dd91c24e8cc945934b13d5334433580bfbd5"
     },
     {
+      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
+      "size": 290871,
+      "sha256": "1a0a64eba93585fed0a6e753ca45408289ba1af26ae2b0fbbc7aea8d41d46888"
+    },
+    {
+      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
+      "size": 2466966,
+      "sha256": "eec0c3338916db64621a5d91032b2a182767fa8c34c7f8fe93068f0e112901ef"
+    },
+    {
+      "path": "publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "size": 67786,
+      "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
+    },
+    {
       "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
       "size": 83873010,
@@ -434,6 +452,24 @@
       "sha256": "d36d441238b044068b44d7d90a32daacde61de04f21dc9a3d6548e8fc98eedbd"
     },
     {
+      "path": "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
+      "size": 1193212,
+      "sha256": "687c513f97d36a25e4105dcabc47bccd0ae3dee73ce626cf9934fa7f529758ed"
+    },
+    {
+      "path": "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf",
+      "size": 3546962,
+      "sha256": "fa7b574f978acd145bf905a248708f97b7a7a85195900dfbd3350342aa3ef2ae"
+    },
+    {
+      "path": "publications/gibbs-british-honduras-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gibbs-british-honduras-1883/cover.jpg",
+      "size": 80111,
+      "sha256": "21a29af6c88a0477183c45eed81b6f88e1ecf3c7d1576d45c8b5bdd6395d11f2"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "size": 475891,
@@ -540,6 +576,24 @@
       "url": "https://takochanchan.github.io/publications/maler-usumacinta/cover.jpg",
       "size": 48305,
       "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
+      "size": 9418821,
+      "sha256": "146db8d3519858736855bf59ccab19d62cd7070eb9d87b643b3607cb445d60ec"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
+      "size": 15453556,
+      "sha256": "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "size": 67266,
+      "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
     },
     {
       "path": "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.epub",
@@ -936,42 +990,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.pdf",
       "size": 9129550,
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
-    },
-    {
-      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
-      "size": 9418821,
-      "sha256": "146db8d3519858736855bf59ccab19d62cd7070eb9d87b643b3607cb445d60ec"
-    },
-    {
-      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
-      "size": 15453556,
-      "sha256": "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897"
-    },
-    {
-      "path": "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
-      "size": 67266,
-      "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
-    },
-    {
-      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
-      "size": 290871,
-      "sha256": "1a0a64eba93585fed0a6e753ca45408289ba1af26ae2b0fbbc7aea8d41d46888"
-    },
-    {
-      "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
-      "size": 2466966,
-      "sha256": "eec0c3338916db64621a5d91032b2a182767fa8c34c7f8fe93068f0e112901ef"
-    },
-    {
-      "path": "publications/dunn-guatimala-central-america-1828/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/dunn-guatimala-central-america-1828/cover.jpg",
-      "size": 67786,
-      "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
     }
   ]
 }

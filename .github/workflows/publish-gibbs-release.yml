@@ -1,0 +1,83 @@
+name: Publish Gibbs release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-gibbs-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "02901160dc5f0f7ae9e1ffe4a29d49e87960af6a 398583895bfe53bce2bdd7caf077d0443bb6ddb5 573cbfda4eee67c2260f2ca93955b6755b1a0ac9 07496796ed6146986ccda226e74f65a996667147 38430ef443dbd6f7d66080283f84117fc5ee2323 e2dc14737ab6ff6c6a20bd9a48674b1759f0c312 f33616c06215503a3e48a8be1ee7fd5e73d754a6 9b78d8237cc1a0d55b74caaf4800126745ad2264"
+          EPUB_CHUNKS: "624101fdf8b8f5aeb445a85e0119460da5ed57e8 a2cc11a460270914efbe90357a8f9abcdc16c62d a0d3fb181151d1a1a4e0e03b460de2c650e99ddc"
+          SUMS_CHUNKS: "1c9c179555159db65559a6f112e4f8ca27b5e57b"
+        run: |
+          set -euo pipefail
+          pdf=Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf
+          epub=Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "fa7b574f978acd145bf905a248708f97b7a7a85195900dfbd3350342aa3ef2ae  $pdf" | sha256sum -c -
+          echo "687c513f97d36a25e4105dcabc47bccd0ae3dee73ce626cf9934fa7f529758ed  $epub" | sha256sum -c -
+          echo "9c658002cebbb35355ab95c72a07f305f6c2ded9d6c6aed9a7229277b90f56b1  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 3546962
+          test "$(stat -c %s "$epub")" = 1193212
+          test "$(stat -c %s "$sums")" = 15839
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf \
+            Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-gibbs-british-honduras-1883-bcfbcc52"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-gibbs-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Gibbs release workflow" \
+            -f sha="$sha" \
+            -f branch=main

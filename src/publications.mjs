@@ -1791,6 +1791,45 @@ const publicationRecords = [
       "19世紀前半",
     ],
   },
+  {
+    slug: "gibbs-british-honduras-1883",
+    title: "英領ホンジュラス",
+    originalTitle:
+      "British Honduras: An Historical and Descriptive Account of the Colony from Its Settlement, 1670",
+    subtitle:
+      "1670年の入植以来の歴史と概況・1883年初版 日本語全訳",
+    author: "アーチボルド・ロバートソン・ギブズ",
+    series: "BRITISH HONDURAS · 1883",
+    originalPublication: "ロンドン、1883年",
+    year: 1883,
+    extent:
+      "PDF 238頁・原刊前付・本文1–198頁・全15章・付録2編・表25点・原注47件・原刊半標題および標題紙各1点・付載広告32頁",
+    description:
+      "英領ホンジュラスの入植史、行政制度、マホガニー・木材貿易、地理、人口、労働、気候、産物、植物相・動物相をまとめた1883年刊行書。原刊前付、全15章、付録2編、諸表、原注に加え、底本に合綴されたサンプソン・ロウ社の刊行書目広告32頁も収録しています。",
+    cover:
+      "publications/gibbs-british-honduras-1883/cover.jpg",
+    pdf:
+      "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
+    pageCount: 238,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["歴史書", "地理誌", "民族誌"],
+    regions: ["英領ホンジュラス", "ベリーズ", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "植民地史",
+      "ベイマン",
+      "マホガニー",
+      "木材貿易",
+      "行政",
+      "人口",
+      "労働",
+      "博物誌",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2336,6 +2375,17 @@ const publicationMetadata = {
       "English Wikisource公開の1828年初版スキャンおよび校訂済み転写。原刊画像を本文確定の基準とし、転写は検索、頁境界、難読箇所の照合に用いた。標題紙、著作権登録、目次、序文、本文9–318頁、巻末訂正を収録。",
     sourceUrl:
       "https://en.wikisource.org/wiki/Index:Guatimala_or_the_United_Provinces_of_Central_America_in_1827-8.pdf",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "gibbs-british-honduras-1883": {
+    sourceEdition:
+      "Archibald Robertson Gibbs『British Honduras: An Historical and Descriptive Account of the Colony from Its Settlement, 1670』（London: Sampson Low, Marston, Searle, & Rivington、1883年初版）。",
+    sourceProvider:
+      "トロント大学図書館所蔵本のInternet Archiveデジタル複製（識別子britishhondurash00gibbuoft、全248画像）を底本とした。原刊前付、本文1–198頁、全15章、付録2編、および同本に合綴されたサンプソン・ロウ社刊行書目広告32頁を収録。",
+    sourceUrl:
+      "https://archive.org/details/britishhondurash00gibbuoft",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
