@@ -578,6 +578,24 @@
       "sha256": "31a8294698a780df6a55394e0da901f804fd1b6daedb7c776f852c60640f21e5"
     },
     {
+      "path": "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
+      "size": 29895104,
+      "sha256": "0de1e68fbef071e7cc79c3058527603863458031412fddc2e7741bdb23e20c05"
+    },
+    {
+      "path": "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.pdf",
+      "size": 36957248,
+      "sha256": "15e90fab1f8bc178be7fd711d7d41f0872d6483389ab85ce7984956cafd7f040"
+    },
+    {
+      "path": "publications/lundell-vegetation-peten-1937/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lundell-vegetation-peten-1937/cover.jpg",
+      "size": 163539,
+      "sha256": "64e3f5dd93505059f6fb6b0c185974e6bd990fca106bf5122564fd8f96afd0e5"
+    },
+    {
       "path": "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
       "size": 10458014,

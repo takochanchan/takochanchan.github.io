@@ -110,6 +110,8 @@ DOCX_SOURCES = {
     "defence-settlers-honduras-1824": SOURCES
     / "翻訳サイト"
     / "The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.docx",
+    "lundell-vegetation-peten-1937": SOURCES
+    / "Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

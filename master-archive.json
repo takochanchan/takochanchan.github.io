@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "fc2f75b75ede8ae3815b60eec198612f5a5cae4b",
+  "archive_commit": "0cfb7271852fbd7155d55620d349a503fe1aad47",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -61,6 +61,7 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "sapper-mittelamerikanische-reisen-studien-1902": "publications/sapper-mittelamerikanische-reisen-studien-1902/master.docx",
     "honduras-slaves-correspondence-1823": "publications/honduras-slaves-correspondence-1823/master.docx",
-    "defence-settlers-honduras-1824": "publications/defence-settlers-honduras-1824/master.docx"
+    "defence-settlers-honduras-1824": "publications/defence-settlers-honduras-1824/master.docx",
+    "lundell-vegetation-peten-1937": "publications/lundell-vegetation-peten-1937/master.docx"
   }
 }

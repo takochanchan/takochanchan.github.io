@@ -2003,6 +2003,51 @@ const publicationRecords = [
       "19世紀前半",
     ],
   },
+  {
+    slug: "lundell-vegetation-peten-1937",
+    title: "ペテンの植生",
+    originalTitle:
+      "The Vegetation of Petén: With an Appendix, Studies of Mexican and Central American Plants—I",
+    subtitle:
+      "付録「メキシコおよび中央アメリカ植物研究—Ⅰ」・1937年初版 日本語全訳",
+    author: "C・ロングワース・ランデル",
+    series: "THE VEGETATION OF PETÉN · 1937",
+    originalPublication: "ワシントンD.C.、1937年",
+    year: 1937,
+    extent:
+      "PDF 578頁・原刊前付i–ix頁・本文1–221頁・図版39点（うち背面ポケット図3点は底本未収録）・本文図3点・表3点・索引223–244頁",
+    description:
+      "ペテン北部・中部サバナ地帯・南部の地形、気候、土壌、火災、マヤ居住史と植生遷移を総合した1937年の植物地理学的研究。各地域の植生型と注釈付き植物目録、植物相の関係、付録「メキシコおよび中央アメリカ植物研究—Ⅰ」、図版、索引を収録しています。底本に含まれない背面ポケット図版3点は欠落を明示しました。",
+    cover:
+      "publications/lundell-vegetation-peten-1937/cover.jpg",
+    pdf:
+      "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
+    pageCount: 578,
+    figureCount: 3,
+    plateCount: 39,
+    types: ["植物誌", "植物地理学", "生態学", "植物分類学"],
+    regions: [
+      "ペテン",
+      "グアテマラ",
+      "カンペチェ",
+      "メキシコ",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "植生",
+      "植物相",
+      "植生遷移",
+      "サバナ",
+      "森林",
+      "マヤ居住史",
+      "注釈付き植物目録",
+      "植物分類",
+      "20世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2603,6 +2648,17 @@ const publicationMetadata = {
       "Harvard University所蔵の1824年ロンドン再刊版を収めるGoogle Booksデジタル複製（識別子 wsP68VpPgfUC）を底本とした。原刊標題紙、目次、本文、脚注、付録、署名者一覧、および1798年のスペイン軍来襲記録を収録。",
     sourceUrl: "https://books.google.com/books?id=wsP68VpPgfUC",
     rights: publicDomainRights,
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "lundell-vegetation-peten-1937": {
+    sourceEdition:
+      "Cyrus Longworth Lundell『The Vegetation of Petén: With an Appendix, Studies of Mexican and Central American Plants—I』（Carnegie Institution of Washington Publication No. 478, Washington, D.C.、1937年初版）。",
+    sourceProvider:
+      "Smithsonian Libraries and Archives所蔵本をBiodiversity Heritage Libraryが公開する全310画像のデジタル複製（BHL item 333361、Internet Archive識別子 vegetationpetey00lund）を底本とした。BHLは本資料を「In Copyright. Digitized with the permission of the rights holder」と表示している。底本に収録されていない背面ポケット図版10・14・26は補作せず、原位置に欠落を明示した。",
+    sourceUrl: "https://www.biodiversitylibrary.org/item/333361",
+    rights:
+      "原著・底本画像は、Biodiversity Heritage Libraryが権利者Carnegie Institution for Scienceの許諾により、Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供しています。本日本語版は翻案物として同一のCC BY-NC-SA 4.0で提供します。利用には原著者・原題・原刊情報・権利者・底本の表示、非営利利用、改変物への同一ライセンスの継承が必要です。追加の制限は設けません。本翻訳・編集はCarnegie Institution for Science、Smithsonian Libraries and ArchivesまたはBiodiversity Heritage Libraryの承認を意味しません。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },
