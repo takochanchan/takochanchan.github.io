@@ -812,6 +812,24 @@
       "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
     },
     {
+      "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.epub",
+      "size": 29920939,
+      "sha256": "5972498d7eb3bbb82bb8e2d3ceca8fbc9e8478cefa71c9c948a786100d51d901"
+    },
+    {
+      "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.pdf",
+      "size": 27471822,
+      "sha256": "8615748979be2c9077279e5232a8ae9971a3964972f3d8b9f7c0c6101f377431"
+    },
+    {
+      "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
+      "size": 54198,
+      "sha256": "a803e5c87f58f62f3904c00c1015156e12675ad4c988b67eb51217249b7c6d62"
+    },
+    {
       "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
       "size": 54531859,

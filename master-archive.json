@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "1cbda0e61eb06dbc05610c9f96946b857dafc29f",
+  "archive_commit": "078f556200a0106a56227314aece18b1accddc81",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -58,6 +58,7 @@
     "maudslay-glimpse-guatemala-1899": "publications/maudslay-glimpse-guatemala-1899/master.docx",
     "dunn-guatimala-central-america-1828": "publications/dunn-guatimala-central-america-1828/master.docx",
     "gibbs-british-honduras-1883": "publications/gibbs-british-honduras-1883/master.docx",
-    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx"
+    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
+    "sapper-mittelamerikanische-reisen-studien-1902": "publications/sapper-mittelamerikanische-reisen-studien-1902/master.docx"
   }
 }

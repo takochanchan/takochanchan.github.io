@@ -101,6 +101,9 @@ DOCX_SOURCES = {
     "young-black-charaibs-st-vincent-1795": SOURCES
     / "翻訳サイト"
     / "Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.docx",
+    "sapper-mittelamerikanische-reisen-studien-1902": SOURCES
+    / "翻訳サイト"
+    / "Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

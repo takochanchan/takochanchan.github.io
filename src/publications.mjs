@@ -1868,6 +1868,54 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  {
+    slug: "sapper-mittelamerikanische-reisen-studien-1902",
+    title: "中央アメリカ旅行と研究 1888–1900年",
+    originalTitle:
+      "Mittelamerikanische Reisen und Studien aus den Jahren 1888 bis 1900",
+    subtitle:
+      "1902年初版・原刊前付、本文全426頁、統計付録 日本語全訳",
+    author: "カール・ザッパー",
+    series: "MITTELAMERIKANISCHE REISEN UND STUDIEN · 1902",
+    originalPublication: "ブラウンシュヴァイク、1902年",
+    year: 1902,
+    extent:
+      "PDF 467頁・原刊前付・本文1–426頁・標題図1点・本文図60点・折込地図4点・統計付録",
+    description:
+      "1888年から1900年にかけて中央アメリカ各地を踏査したカール・ザッパーの旅行・地理研究。グアテマラ、英領ホンジュラス、ホンジュラス、ニカラグア、コスタリカ、パナマの紀行と民族誌的観察に加え、自然地理、生産、貿易、通貨、運河、農園経営を論じた総括部、統計付録を収録しています。原刊前付、本文全426頁、原注、諸表、標題図、本文図60点、折込地図4点を収めています。",
+    cover:
+      "publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
+    pdf:
+      "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.epub",
+    pageCount: 467,
+    figureCount: 60,
+    plateCount: 5,
+    types: ["旅行記", "地理誌", "民族誌", "博物誌"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "英領ホンジュラス",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+      "パナマ",
+    ],
+    languages: ["ドイツ語"],
+    tags: [
+      "火山",
+      "地震",
+      "先住民",
+      "農園",
+      "コーヒー",
+      "貿易",
+      "運河",
+      "統計",
+      "折込地図",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2435,6 +2483,17 @@ const publicationMetadata = {
       "John Carter Brown Library所蔵本のInternet Archiveデジタル複製（識別子 accountofblackch00youn、全144画像）を底本とした。原刊標題紙の「1779」は1773年の誤植であるため、原題表記は保持し、書誌説明および訳文で実際の締結年を明示した。",
     sourceUrl:
       "https://archive.org/details/accountofblackch00youn",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "sapper-mittelamerikanische-reisen-studien-1902": {
+    sourceEdition:
+      "Karl Sapper『Mittelamerikanische Reisen und Studien aus den Jahren 1888 bis 1900』（Braunschweig: Druck und Verlag von Friedrich Vieweg und Sohn、1902年初版）。",
+    sourceProvider:
+      "University of Toronto Robarts Library旧蔵本のInternet Archiveデジタル複製（識別子 mittelamerikanis00sapp）を主底本とした。同個体で欠ける原刊347頁は、同版別個体の公開画像で補完した。",
+    sourceUrl:
+      "https://archive.org/details/mittelamerikanis00sapp",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
