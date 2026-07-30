@@ -46,6 +46,14 @@ local style_classes = {
   ["Plate Japanese"] = {"plate-japanese"},
 }
 
+function Str(element)
+  -- PDF-oriented DOCX masters may contain U+2060 word joiners to protect
+  -- Latin names and numbers from line breaking. They are unnecessary in a
+  -- reflowable EPUB and otherwise split searchable words and page numbers.
+  element.text = element.text:gsub("\226\129\160", "")
+  return element
+end
+
 local function add_class(element, class_name)
   for _, existing in ipairs(element.classes) do
     if existing == class_name then

@@ -990,6 +990,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.pdf",
       "size": 9129550,
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
+    },
+    {
+      "path": "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
+      "size": 3479421,
+      "sha256": "8ed99b2538cf9875185576622efcb43f6c975fd301e9337f7ae3d85c6793bcd5"
+    },
+    {
+      "path": "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
+      "size": 2342992,
+      "sha256": "434f04ca39cab581e1375fdd7503266dacaf1de6c29e819a51c15f4d225ef09c"
+    },
+    {
+      "path": "publications/young-black-charaibs-st-vincent-1795/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
+      "size": 74503,
+      "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
     }
   ]
 }

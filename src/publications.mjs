@@ -1830,6 +1830,44 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "young-black-charaibs-st-vincent-1795",
+    title: "セント・ヴィンセント島の黒カリブ人に関する報告",
+    originalTitle:
+      "An Account of the Black Charaibs in the Island of St. Vincent’s; with the Charaib Treaty of 1779, and Other Original Documents",
+    subtitle:
+      "1773年のカリブ条約およびその他の原文書を付す・1795年初版 日本語全訳",
+    author: "サー・ウィリアム・ヤング（編）",
+    series: "AN ACCOUNT OF THE BLACK CHARAIBS · 1795",
+    originalPublication: "ロンドン、1795年",
+    year: 1795,
+    extent:
+      "PDF 70頁・原刊標題紙・献辞・本文1–125頁・1773年条約24条・原注4件・折込付録表1点・巻末付録表1点",
+    description:
+      "セント・ヴィンセント島の黒カリブ人（ガリフナ）の来歴、土地権、英国植民地政府との抗争、1773年条約、その後の戦争を、故サー・ウィリアム・ヤングの公文書から同名の息子が編纂した1795年刊行書。標題紙、献辞、本文、条約24条、宣誓文、署名者名簿、原注、折込および巻末の兵力表を収録しています。",
+    cover:
+      "publications/young-black-charaibs-st-vincent-1795/cover.jpg",
+    pdf:
+      "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
+    pageCount: 70,
+    figureCount: 0,
+    plateCount: 3,
+    types: ["歴史書", "一次史料", "条約史料", "民族誌", "植民地史"],
+    regions: ["セント・ヴィンセント", "小アンティル諸島", "カリブ海"],
+    languages: ["英語"],
+    tags: [
+      "黒カリブ人",
+      "ガリフナ",
+      "カリブ戦争",
+      "1773年条約",
+      "土地権",
+      "植民地政策",
+      "西インド諸島",
+      "18世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2386,6 +2424,17 @@ const publicationMetadata = {
       "トロント大学図書館所蔵本のInternet Archiveデジタル複製（識別子britishhondurash00gibbuoft、全248画像）を底本とした。原刊前付、本文1–198頁、全15章、付録2編、および同本に合綴されたサンプソン・ロウ社刊行書目広告32頁を収録。",
     sourceUrl:
       "https://archive.org/details/britishhondurash00gibbuoft",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "young-black-charaibs-st-vincent-1795": {
+    sourceEdition:
+      "Sir William Young（編）『An Account of the Black Charaibs in the Island of St. Vincent’s; with the Charaib Treaty of 1779, and Other Original Documents. Compiled from the Papers of the Late Sir William Young, Bart.』（London: Printed for J. Sewell; and Knight and Triphook、1795年初版）。",
+    sourceProvider:
+      "John Carter Brown Library所蔵本のInternet Archiveデジタル複製（識別子 accountofblackch00youn、全144画像）を底本とした。原刊標題紙の「1779」は1773年の誤植であるため、原題表記は保持し、書誌説明および訳文で実際の締結年を明示した。",
+    sourceUrl:
+      "https://archive.org/details/accountofblackch00youn",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",

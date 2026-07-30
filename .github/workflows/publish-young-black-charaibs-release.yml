@@ -1,0 +1,83 @@
+name: Publish Young Black Charaibs release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-young-black-charaibs-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "e12ee57ea684102fe815314b7127c98da814e53c 16f01196bb4e595b6551f99a29bbd958e1d6ee79 ecbf0dc22dd98cfe74f8ff96c696c5eb0dd50884 cd124ee8295fb132d0994066478ac2e084667a57 4550daa8b619a3da4652ec0d07db65d706f3da26 77f09f8d9d7583a5a9e611fc6ba6f1bb0a41ba0f 2872efec409fabcd53c57ba74b89f4ffc3d7cb96"
+          EPUB_CHUNKS: "eb41b597c8a2effe4d0e570e7b8e29e5bee9ab64 bb507e1503426c75378c6f75f058ae1add4082f9 4468abdca42d8b39d893b5ada753ab5c497c02aa ddb6e136813a77c1f9075f788d301536c2569e53 2caaba081065e49c58426f2188fee681ff1385bb 1f9280cde40707c2ec00b875e1baf9032813f437 67bb4258e08c552a1ba2a70e50e1729e042ad87b 120714633e833e929b7b2b3749b21b36142b5f08 be6e51a529f2d540cacef96b938c2db7c7ca2740 0e97eb74a0fe9df9aea6d115b03413b7a82e3242"
+          SUMS_CHUNKS: "1d7ab60657d4aab0fd93c137da6c8b2c2bf539f2"
+        run: |
+          set -euo pipefail
+          pdf=Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf
+          epub=Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "434f04ca39cab581e1375fdd7503266dacaf1de6c29e819a51c15f4d225ef09c  $pdf" | sha256sum -c -
+          echo "8ed99b2538cf9875185576622efcb43f6c975fd301e9337f7ae3d85c6793bcd5  $epub" | sha256sum -c -
+          echo "ab9a4c70f7f267fe47cd3ffd53778e1fec0fbad2f4e9e6db424be0bbd740f458  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 2342992
+          test "$(stat -c %s "$epub")" = 3479421
+          test "$(stat -c %s "$sums")" = 16084
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf \
+            Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-young-black-charaibs-st-vincent-1795-11b9d5fd"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-young-black-charaibs-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Young Black Charaibs release workflow" \
+            -f sha="$sha" \
+            -f branch=main

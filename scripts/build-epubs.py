@@ -98,6 +98,9 @@ DOCX_SOURCES = {
     "thompson-ethnology-mayas-1930": SOURCES
     / "翻訳サイト"
     / "J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.docx",
+    "young-black-charaibs-st-vincent-1795": SOURCES
+    / "翻訳サイト"
+    / "Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {
