@@ -936,6 +936,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/villagutierre_itza_1701_ja.pdf",
       "size": 9129550,
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
+      "size": 9418821,
+      "sha256": "146db8d3519858736855bf59ccab19d62cd7070eb9d87b643b3607cb445d60ec"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
+      "size": 15453556,
+      "sha256": "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897"
+    },
+    {
+      "path": "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "size": 67266,
+      "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
     }
   ]
 }

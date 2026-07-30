@@ -1699,6 +1699,53 @@ const publicationRecords = [
       "19世紀中頃",
     ],
   },
+  {
+    slug: "maudslay-glimpse-guatemala-1899",
+    title: "グアテマラ紀行",
+    originalTitle:
+      "A Glimpse at Guatemala, and Some Notes on the Ancient Monuments of Central America",
+    subtitle:
+      "1899年初版・全26章、原注、索引、原刊画像137点 日本語全訳",
+    author:
+      "アン・ケアリー・モーズレー／アルフレッド・パーシヴァル・モーズレー",
+    series: "A GLIMPSE AT GUATEMALA · 1899",
+    originalPublication: "ロンドン、1899年",
+    year: 1899,
+    extent:
+      "PDF 466頁・原刊前付・本文1–289頁・全26章・原刊画像137点・表27点",
+    description:
+      "アン・ケアリー・モーズレーとアルフレッド・パーシヴァル・モーズレーが、グアテマラ各地の旅行と中央アメリカ古代遺跡の調査をまとめた1899年刊行書。前付、本文全26章、原注、索引、写真、地図、平面図、暦表など原刊画像137点を収録しています。",
+    cover:
+      "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+    pdf:
+      "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
+    pageCount: 466,
+    figureCount: 137,
+    plateCount: 0,
+    types: ["旅行記", "考古学研究", "探検記"],
+    regions: [
+      "グアテマラ",
+      "中央アメリカ",
+      "ホンジュラス",
+      "ベリーズ",
+      "ユカタン",
+      "ペテン",
+    ],
+    languages: ["英語"],
+    tags: [
+      "マヤ考古学",
+      "コパン",
+      "キリグア",
+      "チチェン・イツァ",
+      "ティカル",
+      "写真図版",
+      "地図",
+      "暦",
+      "19世紀末",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2222,6 +2269,17 @@ const publicationMetadata = {
       "第1巻・第2巻はInternet Archive公開の初版スキャン、第3巻はGoogle Books公開の初版スキャンを底本とした。第1巻の主底本に欠ける原刊274–275頁は、同じ1851年初版のWikimedia Commons公開複製で前後を照合して補完した。",
     sourceUrl:
       "https://archive.org/details/memoriasparalah00pelgoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "maudslay-glimpse-guatemala-1899": {
+    sourceEdition:
+      "Anne Cary Maudslay and Alfred Percival Maudslay, A Glimpse at Guatemala, and Some Notes on the Ancient Monuments of Central America, London: John Murray, 1899.",
+    sourceProvider:
+      "Internet Archive公開の1899年初版スキャン（識別子 glimpseatguatema00maud）を主底本とし、Project Gutenberg eBook No. 47693の校訂済み転写を検索、頁区分、難読箇所の照合に用いた。",
+    sourceUrl:
+      "https://archive.org/details/glimpseatguatema00maud",
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",

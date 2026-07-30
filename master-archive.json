@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "4ce5e1b1ebcf430424f1f2b9ccc0f864b550b7c9",
+  "archive_commit": "0e64bd5cc09747f9b30f1ea1d045cabe5b1acd98",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -54,6 +54,7 @@
     "moran-cholti-1695": "publications/moran-cholti-1695/master.docx",
     "thompson-ethnology-mayas-1930": "publications/thompson-ethnology-mayas-1930/master.docx",
     "berendt-central-america-explorations-1867": "publications/berendt-central-america-explorations-1867/master.md",
-    "garcia-pelaez-memorias-guatemala-1851-1852": "publications/garcia-pelaez-memorias-guatemala-1851-1852/master.md"
+    "garcia-pelaez-memorias-guatemala-1851-1852": "publications/garcia-pelaez-memorias-guatemala-1851-1852/master.md",
+    "maudslay-glimpse-guatemala-1899": "publications/maudslay-glimpse-guatemala-1899/master.docx"
   }
 }

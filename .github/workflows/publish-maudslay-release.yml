@@ -1,0 +1,83 @@
+name: Publish Maudslay release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-maudslay-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "149d857871881b536d99761dd7aa2c818d55f941 a20fb3963d383ec000fffe1e28a909068a1ad448 94896f6194dadf12a61e72ea130883f06b1ea706 7dafc3a73ea640e91e3b117d8ecc3dd28525c03d e43670b12baa3278d4d1665d828e39632fc26693 ce1837e97b27a054a380cabf3ddef98f7c6769ac b1f9fc23870ce206c1f56f27e8483645cf02fb2c ac2bcc4a417a6fcaee6dea25e4d780a35b910061 643b54070724e07fad2f5856f4fd95175b392bb3 c6eb78c4f781609c33f951857e1333a66739249a 43309a08124465365d8cc67f5e22e5a12cdcdf49 03e3ec58bbb61f2c8d26181a640dbc35dae50932 be510aa22b06ea2ffff4bb3baa1480ecd9fc2eb3 dd75062c285b4fc45d1d89e46cd4f2575715dd15 3eef739a44bee88d7d064c3e8e361a62cc57fa1e 68fec515863333d3e88359828ec673c63c9e3f66 6f552c14927a6e190d8f0b2791d9a564605d0d24 487bc1249b1ccc04aba4a6c172cc3e7ac6ff52a9 3201a376c81806456092d5356eb0d63e8229d358 3d5e1125e6fbf0ed710fda8f37c357696e86cb96 0a0fb00119c4500704368572ced4ce3bc4bd8e05 a5216dc70a67beb5c745a573207811a8241e333d 95f3972002d1fdd8c6946f25344d14bceb3c6eed 7dd7dddb386ffba143ede7740404afcdec377cff bb519ca022f2146e11a519e26103898513c98318 6db6dae1ede7dfce028a79e9a0f6f40166211206 04fcf5b2a0eb3d48b862919569257423368a7809 913941d9df48d3c428e17907ce4cdd8bcf1332be cdc1c1504c23871a286400fe1138cc0798e92ddb fcc2dec918bffd54633eff950e8339caa68e5ba7"
+          EPUB_CHUNKS: "471e94ad78f06f89ba35a184d0b55d26e21eab5e cf38d77f5c1deb9945e2cebd29d9cba5d0cdd019 6512a37682e989ae1761357612db6c4a469e2cf2 0c0bc9f998b83a9b1f01bc8bed90c45d2d6b2f2c 78b7d99d9bb81fa2da9e4dd66644b2f200aa7494 314d44149746a2e379cbdfc190a5949304272031 ea35b41d0119e8670be5b6c66662de3fe3279f26 1dd4b99dad71583b12fb6dcc72ac0a1cfd86dc8c 56b6798a8d708a3a8ead08de9823b91f4a8beb61 60b161ca95f5731656eebc9f913a03e493f49a0e a925c1fd410b7575d2b68b4398b2c70102cd8f3d 4375556821253dac86657a057e4550853964a938 7a935e9538743ec06f00935ce157059e54415496 2e797f31b59d7b6ea3c816a877a4f5efb3034710 e1181c5739b6313b4f462f656978ca097b07f62e 2150a605409f7416ed44b5bb910a34d2e41554e6 61c4e5dc0b4f18838aded05732b8bb7beee89254 eb208dd180cb070d24dda567f23b16a5ef3dcff3"
+          SUMS_CHUNKS: "5a38768dbafd15bb381a109be0ab0f001e02e43e"
+        run: |
+          set -euo pipefail
+          pdf=Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf
+          epub=Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897  $pdf" | sha256sum -c -
+          echo "146db8d3519858736855bf59ccab19d62cd7070eb9d87b643b3607cb445d60ec  $epub" | sha256sum -c -
+          echo "987d1c5576331598c9fbaaba6f16ddf356d33c12dee3f3604726c84019aa4e8b  $sums" | sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 15453556
+          test "$(stat -c %s "$epub")" = 9418821
+          test "$(stat -c %s "$sums")" = 15269
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf \
+            Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-maudslay-glimpse-guatemala-1899-969dd6e8"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-maudslay-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Maudslay release workflow" \
+            -f sha="$sha" \
+            -f branch=main
