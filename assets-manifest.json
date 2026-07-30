@@ -864,6 +864,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
       "size": 14453720,
       "sha256": "003d086cb48fdc84653b915289c40ddfb43abb774fe644c8cb2ecde65cef30e5"
+    },
+    {
+      "path": "publications/moran-cholti-1695/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/moran-cholti-1695/cover.jpg",
+      "size": 49874,
+      "sha256": "13c3389a9792d662494b91b751c4af223d8f3e599969dff5ae1f2fab3fc38ed0"
+    },
+    {
+      "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
+      "size": 2352148,
+      "sha256": "8fd7fac86e891a21fab0e71cd43bb52be20c48fcbb27ddd98676643465422de9"
+    },
+    {
+      "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.pdf",
+      "size": 7063088,
+      "sha256": "b4d7b35e654c2b14259d91eb0b1faff700133d3b1c196d5c0c79edd8039f4a56"
     }
   ]
 }

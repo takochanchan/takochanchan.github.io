@@ -1525,6 +1525,42 @@ const publicationRecords = [
       "19世紀中葉",
     ],
   },
+  {
+    slug: "moran-cholti-1695",
+    title: "チョルティ語文法・語彙集",
+    originalTitle:
+      "Arte y vocabulario de la lengua Choltí que quiere decir lengua de milperos",
+    subtitle:
+      "1695年写本・文法2稿、宗教文、告解問答、チョルティ語語彙 日本語全訳",
+    author: "フランシスコ・モラン",
+    series: "ARTE Y VOCABULARIO CHOLTÍ · 1695",
+    originalPublication: "グアテマラ、1685–1695年（写本）",
+    year: 1695,
+    extent:
+      "PDF 147頁・原写本1–182頁・無番号挿入葉2枚・bis頁2頁・写本図版7点",
+    description:
+      "17世紀末のチョルティ語を記録した文法書・宗教文・語彙集。ベレン宣教地の創設記事、文法2稿、宗教問答、ロザリオ、告解問答、スペイン語見出しによるチョルティ語語彙A–Z、数の体系、奥書を日本語化し、原写本頁、空白頁、欠葉、重ね書きのある作業葉を記録しています。",
+    cover: "publications/moran-cholti-1695/cover.jpg",
+    pdf:
+      "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
+    pageCount: 147,
+    figureCount: 7,
+    plateCount: 0,
+    types: ["言語資料", "文法書", "語彙集", "宣教史料"],
+    regions: ["グアテマラ", "ペテン", "ベリーズ"],
+    languages: ["スペイン語", "チョルティ語", "ラテン語"],
+    tags: [
+      "マヤ諸語",
+      "チョルティ語",
+      "ドミニコ会",
+      "植民地期",
+      "宗教問答",
+      "告解問答",
+      "17世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2004,6 +2040,18 @@ const publicationMetadata = {
       "https://biblioteca.ufm.edu/opac/record/1072319",
     rights:
       "1857年原刊は著作権保護期間を満了しています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "moran-cholti-1695": {
+    sourceEdition:
+      "Francisco Morán『Arte en lengua Cholti que quiere decir lengua de milperos』（1685–1695年写本）、William Gates papers, MSS 279 Series 8 Subseries 2 Subseries 5, box 42, folder 1。",
+    sourceProvider:
+      "Brigham Young University, L. Tom Perry Special Collections所蔵写本の全182頁・188画像デジタル複製（item 53990）を主底本とした。同館の文法タイプ稿（item 52917）・語彙転記（item 54344）およびUniversity of Pennsylvania所蔵C. Hermann Berendt写本（Ms. Coll. 700 Item 84）を頁対応と難読箇所の照合に用いた。",
+    sourceUrl:
+      "https://contentdm.lib.byu.edu/digital/collection/p15999coll16/id/53990/",
+    rights:
+      "1695年写本は著作権保護期間を満了しており、Brigham Young Universityの書誌でも「Public domain」と表示されています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },
