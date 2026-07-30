@@ -1561,6 +1561,53 @@ const publicationRecords = [
       "17世紀",
     ],
   },
+  {
+    slug: "thompson-ethnology-mayas-1930",
+    title: "南部および中部英領ホンジュラスのマヤ人の民族誌",
+    originalTitle:
+      "Ethnology of the Mayas of Southern and Central British Honduras",
+    subtitle:
+      "1930年原刊・全9章、付録2篇、参考文献、索引、地図1葉・写真図版24葉 日本語全訳",
+    author: "J・エリック・S・トンプソン",
+    series: "FIELD MUSEUM ANTHROPOLOGICAL SERIES · 1930",
+    originalPublication: "シカゴ、1930年",
+    year: 1930,
+    extent:
+      "PDF 284頁・原刊27–213頁・地図1葉・写真図版24葉",
+    description:
+      "英領ホンジュラスのサン・アントニオ、ソコツ、コロサル地区を中心に、居住環境、農耕、宗教と呪術、社会生活、生業と工芸、民間伝承、言語、栽培植物を記録した民族誌。原刊全9章、付録2篇、参考文献、マヤ語索引、一般索引、地図1葉、写真図版24葉を収録しています。",
+    cover:
+      "publications/thompson-ethnology-mayas-1930/cover.jpg",
+    pdf:
+      "publications/thompson-ethnology-mayas-1930/J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/thompson-ethnology-mayas-1930/J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.epub",
+    pageCount: 284,
+    figureCount: 1,
+    plateCount: 24,
+    types: ["民族誌", "民間伝承", "言語資料", "植民地史"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "トレド地区",
+      "カヨ地区",
+      "コロサル地区",
+      "中央アメリカ",
+    ],
+    languages: ["英語", "マヤ諸語"],
+    tags: [
+      "マヤ人",
+      "サン・アントニオ",
+      "ソコツ",
+      "農耕",
+      "宗教儀礼",
+      "呪術",
+      "民間伝承",
+      "物質文化",
+      "原刊図版",
+      "20世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2052,6 +2099,17 @@ const publicationMetadata = {
       "https://contentdm.lib.byu.edu/digital/collection/p15999coll16/id/53990/",
     rights:
       "1695年写本は著作権保護期間を満了しており、Brigham Young Universityの書誌でも「Public domain」と表示されています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-30",
+    updatedDate: "2026-07-30",
+  },
+  "thompson-ethnology-mayas-1930": {
+    sourceEdition:
+      "J. Eric S. Thompson『Ethnology of the Mayas of Southern and Central British Honduras』（Field Museum of Natural History, Publication 274, Anthropological Series, Vol. XVII, No. 2, Chicago: Field Museum Press、1930年）。原刊27–213頁、地図1葉、写真図版24葉。",
+    sourceProvider:
+      "Biodiversity Heritage Library／Field Museum of Natural History LibraryのInternet Archiveデジタル複製（識別子ethnologyofmayas172thom）を主底本とした。同複製に欠ける原刊図版XVは、University of Texas所蔵本のGoogle Booksデジタル複製（volume ID NV1qAAAAMAAJ）から補完した。",
+    sourceUrl: "https://doi.org/10.5962/bhl.title.3491",
+    rights:
+      "原著のデジタル公開版は、権利者Field Museum of Natural Historyの許諾により、Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported（CC BY-NC-SA 3.0）で提供されています。本日本語版は原著の翻案物として同一のCC BY-NC-SA 3.0で提供します。利用には原著者・原題・原刊情報・権利者・底本の表示、非営利利用、改変物への同一ライセンスの継承が必要です。追加の制限は設けません。本翻訳・編集はField Museum of Natural HistoryまたはBiodiversity Heritage Libraryの承認を意味しません。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/3.0/",
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },

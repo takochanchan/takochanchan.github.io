@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "4044af221d725bb16919c18cdde8038657294069",
+  "archive_commit": "1fb770446e9bb7e2a024abc242dfb8ab9f699958",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -51,6 +51,7 @@
     "swett-british-honduras-san-pedro-1868": "publications/swett-british-honduras-san-pedro-1868/master.docx",
     "gann-discoveries-central-america-1928": "publications/gann-discoveries-central-america-1928/master.docx",
     "juarros-compendio-guatemala-1857": "publications/juarros-compendio-guatemala-1857/master.docx",
-    "moran-cholti-1695": "publications/moran-cholti-1695/master.docx"
+    "moran-cholti-1695": "publications/moran-cholti-1695/master.docx",
+    "thompson-ethnology-mayas-1930": "publications/thompson-ethnology-mayas-1930/master.docx"
   }
 }

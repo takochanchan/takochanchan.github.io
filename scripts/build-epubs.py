@@ -95,6 +95,9 @@ DOCX_SOURCES = {
     "byam-chiapas-1897": SOURCES
     / "翻訳サイト"
     / "Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.docx",
+    "thompson-ethnology-mayas-1930": SOURCES
+    / "翻訳サイト"
+    / "J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {
@@ -173,6 +176,7 @@ def metadata_args(item: dict[str, Any]) -> list[str]:
         f"--metadata=identifier:{canonical}",
         f"--metadata=source:{item['originalTitle']}",
         f"--metadata=description:{item['description']}",
+        f"--metadata=rights:{item['rights']}",
     ]
 
 
