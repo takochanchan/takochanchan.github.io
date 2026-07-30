@@ -1,0 +1,101 @@
+name: Publish Honduras slavery documents release assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-honduras-slavery-documents-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CORRESPONDENCE_PDF_CHUNKS: "f20e9e6bcfa0b022a57a14f8c7d660cf6f414a37 4da9642647cd520278b8862c75670a2396972fa1 76e7b41793569d69f209a2fa1489fcf3d87cf63a f5cba5bad955dfa1288b7db36ba1656f4505be4d 4ad866243e993926ecb834f8f5ffbd9d2933ce15 edf055b2ee4c0a76374e795045f1734d64b1a78e dacbe2d1ce819376fc255469331dfbfd8f6b4b50 0e73579f0f03ba6b1c6d3aac7d0f9eb2ea609283 76bbaa01b723ef4276d375e080321dcb0c07d705 ae8c622571d1e858927dc308192c18c11bfb0a66 8fae1dcb618f39fd66b380f728e1cdddf3450cd3 80f23c8c8db9dbf17fff0d1660bcabdce89f48c2 f928b9e58f753f9e78a4e37b4617d619fe4f5562 3e6a654a619d5e87bcdacc0e52ef8a21405358eb 4be27fda2ef23223018504aca943e998374656ba 4b3bfcedd49526c842e2ffc8a99211c797633a30"
+          CORRESPONDENCE_EPUB_CHUNKS: "e8c0d7c3a426b5e2f22da4243fd352e56a7a2fbe"
+          DEFENCE_PDF_CHUNKS: "9796fcf4c94f12f5a58e8debc7f306af9a1fd1a1 e9b1047d583cebcdaa4035cbd1aec8c2543fadef c8f17732cf13db866ad1da0c8524c7c207b58ac6 cd9eb443805c5a1a350f02fc854273c850ad25c1 6413abf4878aa802ccd69c6f2ba1e80da7ec794b ef1cd973df57b745819f7176fc0c8eacf3ccaac1 956fc0890354ed8119d593a7412990b878e38d0a 0864fa8cf93324fbaaffb7c4592effbe3124be2a 5ad363cacb801e394b27be679832a3ea22df41fb 3ace4f3b0ce9169e7b80becc2b102e2fa642be58"
+          DEFENCE_EPUB_CHUNKS: "0a06ebbf965b8795889814f08c1207294a7551a5"
+          SUMS_CHUNKS: "3f2617ce77858fd795ce443d11aa1424ce653f3f"
+        run: |
+          set -euo pipefail
+          correspondence_pdf=Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf
+          correspondence_epub=Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub
+          defence_pdf=The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf
+          defence_epub=The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$correspondence_pdf"
+          : > "$correspondence_epub"
+          : > "$defence_pdf"
+          : > "$defence_epub"
+          : > "$sums"
+          for chunk in $CORRESPONDENCE_PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$correspondence_pdf"
+          done
+          for chunk in $CORRESPONDENCE_EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$correspondence_epub"
+          done
+          for chunk in $DEFENCE_PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$defence_pdf"
+          done
+          for chunk in $DEFENCE_EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$defence_epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content | tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "f4a4e284a012cd31269c58940f7d6964c4fc6e682f08c77567974ea9fe033c01  $correspondence_pdf" | sha256sum -c -
+          echo "f879f48e39b10b9a05fd3da5bdcb1e7e57864d449522d9a16fd0059011fddbd6  $correspondence_epub" | sha256sum -c -
+          echo "a0288b7aa6b9af548c083ff6e869a90f1abe6de4eefdcb8eb6b84af0cfd3d635  $defence_pdf" | sha256sum -c -
+          echo "b3b015aa8f23a83e692c516fc7924e2a6ed6c4cd476ee2110a46b6155c78d08f  $defence_epub" | sha256sum -c -
+          echo "4f1dd30195221a024af565f08e0e68834cc030ed5bff10ac56aae176b0c6acaa  $sums" | sha256sum -c -
+          test "$(stat -c %s "$correspondence_pdf")" = 3775498
+          test "$(stat -c %s "$correspondence_epub")" = 131326
+          test "$(stat -c %s "$defence_pdf")" = 2223346
+          test "$(stat -c %s "$defence_epub")" = 129576
+          test "$(stat -c %s "$sums")" = 16999
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf \
+            Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub \
+            The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf \
+            The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-honduras-slavery-20260731-f4a4e284"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-honduras-slavery-documents-release.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Honduras slavery documents release workflow" \
+            -f sha="$sha" \
+            -f branch=main

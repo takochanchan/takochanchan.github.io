@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "078f556200a0106a56227314aece18b1accddc81",
+  "archive_commit": "fc2f75b75ede8ae3815b60eec198612f5a5cae4b",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -59,6 +59,8 @@
     "dunn-guatimala-central-america-1828": "publications/dunn-guatimala-central-america-1828/master.docx",
     "gibbs-british-honduras-1883": "publications/gibbs-british-honduras-1883/master.docx",
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
-    "sapper-mittelamerikanische-reisen-studien-1902": "publications/sapper-mittelamerikanische-reisen-studien-1902/master.docx"
+    "sapper-mittelamerikanische-reisen-studien-1902": "publications/sapper-mittelamerikanische-reisen-studien-1902/master.docx",
+    "honduras-slaves-correspondence-1823": "publications/honduras-slaves-correspondence-1823/master.docx",
+    "defence-settlers-honduras-1824": "publications/defence-settlers-honduras-1824/master.docx"
   }
 }

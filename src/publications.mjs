@@ -1916,6 +1916,93 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "honduras-slaves-correspondence-1823",
+    title: "ホンジュラスにおける奴隷の状態と待遇に関する往復書簡",
+    originalTitle:
+      "Slaves at Honduras. Correspondence Relative to the Condition and Treatment of Slaves at Honduras: 1820–1823",
+    subtitle: "1823年下院文書第457号・本文3–100頁 日本語全訳",
+    author: "イギリス議会下院",
+    series: "HOUSE OF COMMONS PAPER 457 · 1823",
+    originalPublication: "ロンドン、1823年",
+    year: 1823,
+    extent:
+      "PDF 228頁・原刊標題紙・下院要求答申・目次・本文3–100頁・付属文書・宣誓供述・諸表・系譜",
+    description:
+      "イギリス植民地省が、英領ホンジュラス監督官ジョージ・アーサーおよびコッド少将との1820年から1823年までの往復書簡を下院へ提出した議会文書。奴隷への処罰、司法制度、逃亡、モスキート海岸に由来するインディアンとその子孫の自由身分請求をめぐる書簡、証言、審理記録、法令、登録簿、系譜、証書を収録しています。",
+    cover:
+      "publications/honduras-slaves-correspondence-1823/cover.jpg",
+    pdf:
+      "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub",
+    pageCount: 228,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["議会文書", "一次史料", "奴隷制史", "植民地史"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "モスキート海岸",
+      "ジャマイカ",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "ジョージ・アーサー",
+      "奴隷制",
+      "奴隷人口",
+      "インディアン奴隷",
+      "自由身分請求",
+      "司法制度",
+      "モスキート海岸",
+      "19世紀前半",
+    ],
+  },
+  {
+    slug: "defence-settlers-honduras-1824",
+    title: "ホンジュラス植民者の弁護",
+    originalTitle:
+      "The Defence of the Settlers of Honduras Against the Unjust and Unfounded Representations of Colonel George Arthur, Late Superintendent of That Settlement",
+    subtitle:
+      "アーサー大佐の申立てに対する反駁・1824年ロンドン再刊版 日本語全訳",
+    author: "ホンジュラス住民（編者名不詳）",
+    series: "THE DEFENCE OF THE SETTLERS OF HONDURAS · 1824",
+    originalPublication: "ロンドン、1824年（A. J. Valpy再刊）",
+    year: 1824,
+    extent:
+      "PDF 168頁・原刊標題紙・目次・本文1–59頁・付録60–93頁・1798年スペイン軍来襲記録94–102頁",
+    description:
+      "1823年に下院の命で印刷された『ホンジュラスにおける奴隷の状態と待遇に関する往復書簡』に対し、ホンジュラス住民側から刊行された反駁書。アーサーの統治、奴隷の待遇、インディアンとその子孫の身分・財産、モスキート海岸の法令を論じる全5部、付録、署名者一覧、および1798年のスペイン軍来襲記録を収録しています。",
+    cover:
+      "publications/defence-settlers-honduras-1824/cover.jpg",
+    pdf:
+      "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
+    pageCount: 168,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["論争書", "一次史料", "奴隷制史", "植民地史"],
+    regions: [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "モスキート海岸",
+      "ジャマイカ",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "ジョージ・アーサー",
+      "奴隷制",
+      "植民者",
+      "インディアン",
+      "財産権",
+      "モスキート海岸",
+      "1798年スペイン軍来襲",
+      "19世紀前半",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2497,6 +2584,27 @@ const publicationMetadata = {
     rights: publicDomainRights,
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
+  },
+  "honduras-slaves-correspondence-1823": {
+    sourceEdition:
+      "Great Britain, House of Commons, Slaves. Population. Correspondence Relative to the Condition and Treatment of Slaves at Honduras, 1820–1823, House of Commons Paper 457, ordered to be printed 16 June 1823.",
+    sourceProvider:
+      "Center for Research Libraries（CRL）が原刊から作成したデジタル複製（Scans 001–100、識別子 c0567b14-208d-4656-9559-464ae5bb5726）を底本とした。公開元の利用条件に従いスキャン画像は転載せず、標題紙、表および系譜は本文情報から活字で再構成した。",
+    sourceUrl: "https://www.crl.edu/",
+    rights:
+      "1823年原刊本文はパブリックドメインです。CRLのデジタル画像には同館の利用条件が適用され、本版には画像を転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "defence-settlers-honduras-1824": {
+    sourceEdition:
+      "The Defence of the Settlers of Honduras Against the Unjust and Unfounded Representations of Colonel George Arthur, Late Superintendent of That Settlement: Principally Contained in His Correspondence Relative to the Condition and Treatment of the Slaves at Honduras, 1820–1823, and Printed by Order of the House of Commons, 16th June, 1823, London: A. J. Valpy, 1824.",
+    sourceProvider:
+      "Harvard University所蔵の1824年ロンドン再刊版を収めるGoogle Booksデジタル複製（識別子 wsP68VpPgfUC）を底本とした。原刊標題紙、目次、本文、脚注、付録、署名者一覧、および1798年のスペイン軍来襲記録を収録。",
+    sourceUrl: "https://books.google.com/books?id=wsP68VpPgfUC",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
   },
 };
 

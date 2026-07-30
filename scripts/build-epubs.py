@@ -104,6 +104,12 @@ DOCX_SOURCES = {
     "sapper-mittelamerikanische-reisen-studien-1902": SOURCES
     / "翻訳サイト"
     / "Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.docx",
+    "honduras-slaves-correspondence-1823": SOURCES
+    / "翻訳サイト"
+    / "Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.docx",
+    "defence-settlers-honduras-1824": SOURCES
+    / "翻訳サイト"
+    / "The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

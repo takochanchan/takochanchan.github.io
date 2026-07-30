@@ -200,6 +200,24 @@
       "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
     },
     {
+      "path": "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
+      "size": 129576,
+      "sha256": "b3b015aa8f23a83e692c516fc7924e2a6ed6c4cd476ee2110a46b6155c78d08f"
+    },
+    {
+      "path": "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf",
+      "size": 2223346,
+      "sha256": "a0288b7aa6b9af548c083ff6e869a90f1abe6de4eefdcb8eb6b84af0cfd3d635"
+    },
+    {
+      "path": "publications/defence-settlers-honduras-1824/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/defence-settlers-honduras-1824/cover.jpg",
+      "size": 55448,
+      "sha256": "ee173f66d320146f7935d20f7b3c2b0202e2dc3e3151bad86947294ef14ba288"
+    },
+    {
       "path": "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
       "size": 13107101,
@@ -486,6 +504,24 @@
       "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
       "size": 69499,
       "sha256": "0b3d822f2f9f64ddd985e0ef79a948d3eb6cf34217b4668a95588214c5ffd3fb"
+    },
+    {
+      "path": "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub",
+      "size": 131326,
+      "sha256": "f879f48e39b10b9a05fd3da5bdcb1e7e57864d449522d9a16fd0059011fddbd6"
+    },
+    {
+      "path": "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf",
+      "size": 3775498,
+      "sha256": "f4a4e284a012cd31269c58940f7d6964c4fc6e682f08c77567974ea9fe033c01"
+    },
+    {
+      "path": "publications/honduras-slaves-correspondence-1823/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/honduras-slaves-correspondence-1823/cover.jpg",
+      "size": 59624,
+      "sha256": "e61ce186642545c07dd7ef5d83967c588af69cb0807681d51e8e3170b0c04817"
     },
     {
       "path": "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
