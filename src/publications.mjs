@@ -2048,6 +2048,45 @@ const publicationRecords = [
       "20世紀前半",
     ],
   },
+  {
+    slug: "sapper-alta-verapaz-1901",
+    title: "アルタ・ベラパス（グアテマラ）",
+    originalTitle:
+      "Die Alta Verapaz (Guatemala): Eine landeskundliche Skizze mit 5 Originalkarten",
+    subtitle:
+      "原図5枚を付した地誌的概説・1901年学会誌所収版 日本語全訳",
+    author: "カール・サッパー",
+    series: "DIE ALTA VERAPAZ · 1901",
+    originalPublication:
+      "ハンブルク、1901年（『ハンブルク地理学会報』第17巻）",
+    year: 1901,
+    extent:
+      "PDF 193頁・原刊78–224頁・表22点・原表画像12点・所有地一覧321件・原図5枚",
+    description:
+      "グアテマラのアルタ・ベラパスについて、地質、地勢、気候、植生、土壌、人口と居住、生産と交通、コーヒー農園、歴史的事件による住民構成の変化、人間活動による自然改変を総合したカール・サッパーの地誌。原刊78–224頁、諸表、原注、所有地一覧321件、および所有分布・高度帯・地質・植生・言語と民族集団を示す原図5枚を収録しています。",
+    cover: "publications/sapper-alta-verapaz-1901/cover.jpg",
+    pdf:
+      "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
+    pageCount: 193,
+    figureCount: 12,
+    plateCount: 5,
+    types: ["地理誌", "地質学", "民族誌", "経済史"],
+    regions: ["アルタ・ベラパス", "グアテマラ", "中央アメリカ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "地質",
+      "気候",
+      "植生",
+      "ケクチ人",
+      "コーヒー農園",
+      "ドイツ人移民",
+      "土地所有",
+      "折込地図",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2659,6 +2698,17 @@ const publicationMetadata = {
     sourceUrl: "https://www.biodiversitylibrary.org/item/333361",
     rights:
       "原著・底本画像は、Biodiversity Heritage Libraryが権利者Carnegie Institution for Scienceの許諾により、Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供しています。本日本語版は翻案物として同一のCC BY-NC-SA 4.0で提供します。利用には原著者・原題・原刊情報・権利者・底本の表示、非営利利用、改変物への同一ライセンスの継承が必要です。追加の制限は設けません。本翻訳・編集はCarnegie Institution for Science、Smithsonian Libraries and ArchivesまたはBiodiversity Heritage Libraryの承認を意味しません。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "sapper-alta-verapaz-1901": {
+    sourceEdition:
+      "Karl Sapper, “Die Alta Verapaz (Guatemala). Eine landeskundliche Skizze mit 5 Originalkarten,” Mittheilungen der Geographischen Gesellschaft in Hamburg, Bd. XVII, Hamburg: L. Friederichsen & Co., 1901, S. 78–224.",
+    sourceProvider:
+      "HathiTrust公開のPrinceton University所蔵『Mitteilungen der Geographischen Gesellschaft in Hamburg』第15–17巻合本（識別子 njp.32101077281143）に収められた第17巻所収本文を主底本とした。本文照合には同巻のGoogle Books別個体および1902年別刷を補助的に用いた。原図5枚は、Biblioteca Ludwig von Mises（Universidad Francisco Marroquín）所蔵単葉資料とAmerican Geographical Society Library（University of Wisconsin–Milwaukee）所蔵の1901年地質図を同版の標題・縮尺・刊記と照合して収録した。",
+    sourceUrl:
+      "https://babel.hathitrust.org/cgi/pt?id=njp.32101077281143",
+    rights: publicDomainRights,
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

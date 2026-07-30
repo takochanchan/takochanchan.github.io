@@ -848,6 +848,24 @@
       "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
     },
     {
+      "path": "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
+      "size": 15443787,
+      "sha256": "7de5369e296b8c553c5eaf028bb6eea79a7f413122694e7ec0ef71ab1661ce8f"
+    },
+    {
+      "path": "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf",
+      "size": 6752873,
+      "sha256": "ea4cf98f7dfffb66b9fefbd206281c5e5d6eb996f4fb267e3977ae92981d8ea8"
+    },
+    {
+      "path": "publications/sapper-alta-verapaz-1901/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-alta-verapaz-1901/cover.jpg",
+      "size": 50944,
+      "sha256": "c79936f6492210ca77855e43fc3e804f3313cb6fd56f1b0aea9da4619b3d17bb"
+    },
+    {
       "path": "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
       "size": 2441886,
