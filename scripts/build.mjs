@@ -312,6 +312,8 @@ ${header({ detail: true })}
         <p class="about-page-hero__lead">
           生成AIを用いた翻訳資料について、底本、点検工程、公開承認に加え、
           訳文と資料の再利用条件を明示します。
+          本サイトは、GPT‑5.6とChatGPT Workによって長編史料の全訳・照合・組版・公開を
+          継続的に扱える可能性に着目し、その実践として2026年7月24日に開設しました。
         </p>
       </div>
       <dl class="responsibility-grid" aria-label="制作工程の役割分担">
