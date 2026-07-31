@@ -1,0 +1,238 @@
+name: Publish verified Brinton Fancourt-mother layout
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-brinton-verified-fancourt.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      PDF_NAME: Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "2158382"
+      PDF_SHA: 5dd87285de177c1148bba3ec53d1af9ca4e10257ea36f8f5717c3d388eb2c031
+      COVER_SIZE: "62610"
+      COVER_SHA: b594a1810ab7eed3797dc27ea80ff1e7a1d9609c0453567580b160248457e9fd
+      MANIFEST_BLOB: 9954d9c8f2d1888e97c584cd4f22501ed265d814
+      ARCHIVE_COMMIT: 2b00a4fcfab9b6c8ebd1ffa2b4c8ce4a7ee7de17
+
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Reassemble and verify corrected assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          manifest=/tmp/brinton-release-manifest.tsv
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$MANIFEST_BLOB" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > "$manifest"
+          test "$(wc -l < "$manifest")" = 2
+
+          while IFS=$'\t' read -r asset_name expected_size expected_sha blob_list; do
+            test -n "$asset_name"
+            : > "/tmp/$asset_name"
+            for blob_sha in $blob_list; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content |
+                tr -d '\n' |
+                base64 --decode >> "/tmp/$asset_name"
+            done
+            echo "$expected_sha  /tmp/$asset_name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/$asset_name")" = "$expected_size"
+          done < "$manifest"
+          pdfinfo "/tmp/$PDF_NAME" | grep -F "Pages:           20"
+          pdfinfo "/tmp/$PDF_NAME" | grep -F "Page size:       612 x 792 pts (letter)"
+          pdffonts "/tmp/$PDF_NAME" | awk 'NR > 2 { if ($4 != "yes") exit 1; seen=1 } END { exit !seen }'
+          identify /tmp/cover.jpg | grep -F "1224x1584"
+
+      - name: Prepare catalogue, cover, and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cover_path=static/publications/brinton-chilan-balam-1882/cover.jpg
+          cp /tmp/cover.jpg "$cover_path"
+
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          pdf_name = os.environ["PDF_NAME"]
+          pdf_size = int(os.environ["PDF_SIZE"])
+          pdf_sha = os.environ["PDF_SHA"]
+          cover_size = int(os.environ["COVER_SIZE"])
+          cover_sha = os.environ["COVER_SHA"]
+          archive_commit = os.environ["ARCHIVE_COMMIT"]
+
+          checksum_path = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = checksum_path.read_text(encoding="utf-8").splitlines()
+          suffix = "  " + pdf_name
+          matches = [index for index, line in enumerate(lines) if line.endswith(suffix)]
+          assert len(matches) == 1, matches
+          lines[matches[0]] = pdf_sha + suffix
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n", encoding="utf-8"
+          )
+
+          manifest_path = Path("assets-manifest.json")
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          pdf_path = "publications/brinton-chilan-balam-1882/" + pdf_name
+          cover_path = "publications/brinton-chilan-balam-1882/cover.jpg"
+          seen = set()
+          for asset in manifest["assets"]:
+              if asset["path"] == pdf_path:
+                  asset["size"] = pdf_size
+                  asset["sha256"] = pdf_sha
+                  seen.add("pdf")
+              elif asset["path"] == cover_path:
+                  asset["size"] = cover_size
+                  asset["sha256"] = cover_sha
+                  seen.add("cover")
+          assert seen == {"pdf", "cover"}, seen
+          manifest_path.write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          archive_path = Path("master-archive.json")
+          archive = json.loads(archive_path.read_text(encoding="utf-8"))
+          archive["archive_commit"] = archive_commit
+          archive_path.write_text(
+              json.dumps(archive, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+
+          publications_path = Path("src/publications.mjs")
+          text = publications_path.read_text(encoding="utf-8")
+          marker = 'slug: "brinton-chilan-balam-1882",'
+          start = text.index(marker)
+          end = text.index("\n  },\n  {", start)
+          block = text[start:end]
+          block, extent_count = re.subn(r"PDF \d+頁", "PDF 20頁", block, count=1)
+          block, page_count = re.subn(
+              r"pageCount: \d+,", "pageCount: 20,", block, count=1
+          )
+          assert extent_count == 1, extent_count
+          assert page_count == 1, page_count
+          text = text[:start] + block + text[end:]
+          publications_path.write_text(text, encoding="utf-8")
+          PY
+
+          echo "$PDF_SHA  /tmp/$PDF_NAME" | sha256sum -c -
+          echo "$COVER_SHA  $cover_path" | sha256sum -c -
+
+      - name: Validate site changes
+        run: |
+          set -euo pipefail
+          python -m json.tool assets-manifest.json >/dev/null
+          python -m json.tool master-archive.json >/dev/null
+          node --check src/publications.mjs
+          npm ci --no-audit --no-fund
+          npm test
+
+      - name: Upload and verify release files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            "/tmp/$PDF_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          echo "$PDF_SHA  /tmp/verified-release/$PDF_NAME" | sha256sum -c -
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Commit catalogue and cover
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            assets-manifest.json \
+            master-archive.json \
+            src/publications.mjs \
+            static/publications/brinton-chilan-balam-1882/cover.jpg
+          git commit -m "Publish verified Brinton Fancourt layout"
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          test "$pushed" = true
+
+      - name: Verify published repository state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=static/publications/brinton-chilan-balam-1882/cover.jpg
+          gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-cover.jpg
+          echo "$COVER_SHA  /tmp/remote-cover.jpg" | sha256sum -c -
+          gh api "repos/$GITHUB_REPOSITORY/contents/assets-manifest.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "$PDF_SHA"
+          gh api "repos/$GITHUB_REPOSITORY/contents/master-archive.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "$ARCHIVE_COMMIT"
+          gh api "repos/$GITHUB_REPOSITORY/contents/src/publications.mjs?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "pageCount: 20,"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-brinton-verified-fancourt.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed verified Brinton publishing workflow" \
+            -f sha="$sha" \
+            -f branch=main
