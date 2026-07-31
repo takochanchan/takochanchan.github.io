@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "8e18205c100dec5c5f5e2e5e5a89db99fb6bd75c",
+  "archive_commit": "6ca35aa06d6f174ffd9070b23430c3ca5109863c",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -73,6 +73,7 @@
     "roys-chilam-balam-chumayel-1933": "publications/roys-chilam-balam-chumayel-1933/master.docx",
     "elorza-conquista-ytza-1714": "publications/elorza-conquista-ytza-1714/master.docx",
     "chonay-totonicapan-title-1886": "publications/chonay-totonicapan-title-1886/master.docx",
-    "saville-reports-maya-yucatan-1921": "publications/saville-reports-maya-yucatan-1921/master.docx"
+    "saville-reports-maya-yucatan-1921": "publications/saville-reports-maya-yucatan-1921/master.docx",
+    "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx"
   }
 }

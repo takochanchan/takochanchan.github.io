@@ -2459,6 +2459,46 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "santibanez-geografia-regional-chiapas-1907",
+    title: "チアパス地方地理",
+    originalTitle: "Geografía regional de Chiapas",
+    subtitle:
+      "地勢・地質・河川・人口・行政・各県概説・1907年版 日本語全訳・校訂版",
+    author: "エンリケ・サンティバニェス",
+    series: "GEOGRAFÍA REGIONAL DE CHIAPAS · 1907",
+    originalPublication:
+      "トゥストラ・グティエレス、州政府印刷所（フェリクス・サンタエリャ管理）、1907年",
+    year: 1907,
+    extent:
+      "PDF 42頁・標題紙・献辞・序文V–VII頁・本文9–66頁・全21節・表7点・索引",
+    description:
+      "エンリケ・サンティバニェスが1907年時点のチアパス州を体系的にまとめた地方地理誌。地理的位置、地質・山系、海岸、河川、湖沼、気候、住民、人口、言語、宗教、行政区分、教育、交通、財政を扱い、12県の概況と県都の座標・高度を収録しています。標題紙、献辞、序文、本文全21節、人口・財政・高度などの表、索引を省略せず収録しています。",
+    cover:
+      "publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
+    pdf:
+      "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
+    pageCount: 42,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["地理誌", "統計資料", "行政資料"],
+    regions: ["チアパス", "メキシコ", "マヤ地域"],
+    languages: ["スペイン語"],
+    tags: [
+      "地形",
+      "地質",
+      "河川",
+      "人口",
+      "行政区分",
+      "教育",
+      "交通",
+      "財政",
+      "各県概説",
+      "20世紀初頭",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3199,6 +3239,18 @@ const publicationMetadata = {
       "https://archive.org/details/grammairedelalan02bras",
     rights:
       "1862年原刊本文および原刊の標題紙・楽譜は著作権保護期間を満了しています。Internet Archiveに掲載されたJohn Carter Brown Library所蔵本およびGoogle Books公開画像には、各公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "santibanez-geografia-regional-chiapas-1907": {
+    sourceEdition:
+      "Enrique Santibáñez『Geografía regional de Chiapas』（Tuxtla Gutiérrez: Imprenta del Gobierno del Estado, dirigida por Félix Santaella、1907年）。",
+    sourceProvider:
+      "Stanford University Libraries所蔵本を収めるGoogle Booksデジタル複製（識別子 Uny3p53UERMC、全90画像）を底本とした。デジタル版で重複撮影された前付と本文9頁は一度だけ収録し、標題紙、献辞、序文V–VII頁、本文9–66頁、全表、索引を訳出した。",
+    sourceUrl:
+      "https://books.google.com/books?id=Uny3p53UERMC",
+    rights:
+      "1907年原刊本文は著作権保護期間を満了しています。Google Booksに掲載されたStanford University Libraries所蔵本のデジタル画像には、公開元の利用条件が適用されます。本日本語訳はCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供します。利用には原著者・原題・原刊情報の表示、非営利利用、改変物への同一ライセンスの継承が必要です。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

@@ -136,6 +136,9 @@ DOCX_SOURCES = {
     "brasseur-rabinal-achi-1862": SOURCES
     / "翻訳サイト"
     / "Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.docx",
+    "santibanez-geografia-regional-chiapas-1907": SOURCES
+    / "翻訳サイト"
+    / "Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

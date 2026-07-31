@@ -974,6 +974,24 @@
       "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
     },
     {
+      "path": "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
+      "size": 139534,
+      "sha256": "b9a26aae5077d1be286e6c6b9adfa1007d4e67794e29ea90419a7248b089853e"
+    },
+    {
+      "path": "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.pdf",
+      "size": 875500,
+      "sha256": "63f26d3a047f933c9d7b89a60623118336b22a04f084ae3af3703449929e51ec"
+    },
+    {
+      "path": "publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
+      "size": 37926,
+      "sha256": "207d16cc63b6259d20e795a26f3ca5c27f5d977c8687a74b343a7ca8c4e9bfdc"
+    },
+    {
       "path": "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
       "size": 30460825,
