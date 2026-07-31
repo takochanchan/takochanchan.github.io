@@ -974,6 +974,24 @@
       "sha256": "48f36c12f70bebe8c4745e08167683ff655523b3d5ebf1d762f34732df34cda8"
     },
     {
+      "path": "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.epub",
+      "size": 35531009,
+      "sha256": "da434cafb3846d20e9e30158e14a657f8954d549eeecc75391a06a81f7bc05f1"
+    },
+    {
+      "path": "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.pdf",
+      "size": 12090415,
+      "sha256": "726bd528d462fc94917c0be6090e1f9a28c0c9013d81dccea47154003d29bf3d"
+    },
+    {
+      "path": "publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
+      "size": 28453,
+      "sha256": "c98c7aa12e383758b9f6345e34ebe1a14a834d830f634eebada35fe07cd6966b"
+    },
+    {
       "path": "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
       "size": 298182,

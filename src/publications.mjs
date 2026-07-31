@@ -2198,6 +2198,43 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "stoll-guatemala-reisen-schilderungen-1886",
+    title: "グアテマラ――1878–1883年の旅行と描写",
+    originalTitle:
+      "Guatemala: Reisen und Schilderungen aus den Jahren 1878–1883",
+    subtitle:
+      "1886年初版・前付、本文全518頁、付録、索引、正誤表、全挿図・地図 日本語全訳",
+    author: "オットー・シュトル",
+    series: "GUATEMALA · REISEN UND SCHILDERUNGEN · 1886",
+    originalPublication: "ライプツィヒ、F. A. Brockhaus、1886年",
+    year: 1886,
+    extent:
+      "PDF 553頁・原刊前付V–XII頁・本文1–518頁・挿図12点・折込気象表1点・地図2点・付録・索引・正誤表",
+    description:
+      "スイスの医師・民族学者オットー・シュトルが1878年から1883年のグアテマラ滞在と旅行をもとに、地理、交通、気候、動植物、都市、農業と経済、先住民社会、諸言語、歴史、考古遺跡をまとめた1886年刊の旅行・地誌。原刊前付、本文全518頁、付録、索引、正誤表、挿図、折込気象表、政治地図、民族誌図を収録しています。",
+    cover:
+      "publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
+    pdf:
+      "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.epub",
+    pageCount: 553,
+    figureCount: 12,
+    plateCount: 2,
+    types: ["旅行記", "地理誌", "民族誌", "博物誌"],
+    regions: ["グアテマラ", "中央アメリカ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "先住民",
+      "マヤ諸語",
+      "コーヒー栽培",
+      "気象観測",
+      "民族誌図",
+      "折込地図",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2854,6 +2891,18 @@ const publicationMetadata = {
       "https://archive.org/details/guatemalalandofq00brigiala",
     rights:
       "1887年原刊および原刊の図版・地図は著作権保護期間を満了しています。デジタル画像にはInternet Archiveおよび所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "stoll-guatemala-reisen-schilderungen-1886": {
+    sourceEdition:
+      "Otto Stoll『Guatemala: Reisen und Schilderungen aus den Jahren 1878–1883』（Leipzig: F. A. Brockhaus、1886年初版）。",
+    sourceProvider:
+      "Wellcome Library所蔵の1886年初版本を収めるInternet Archive公開画像（識別子 b24883268、ark:/13960/t11p2wz5r）を底本とした。原刊前付V–XII頁、本文1–518頁、付録、索引、正誤表、挿図12点、折込気象表、政治地図・民族誌図を収録。",
+    sourceUrl:
+      "https://archive.org/details/b24883268",
+    rights:
+      "1886年原刊および原刊の図版・地図は著作権保護期間を満了しています。Internet Archiveに掲載されたWellcome Library所蔵本はPublic Domain Mark表示です。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

@@ -115,6 +115,9 @@ DOCX_SOURCES = {
     "brigham-guatemala-quetzal-1887": SOURCES
     / "翻訳サイト"
     / "William_Tufts_Brigham_Guatemala_Japanese_review_v12.docx",
+    "stoll-guatemala-reisen-schilderungen-1886": SOURCES
+    / "翻訳サイト"
+    / "Otto_Stoll_Guatemala_Japanese_review_v13.docx",
 }
 
 TAGGED_PDF_SOURCES = {
