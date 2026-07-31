@@ -902,6 +902,24 @@
       "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
     },
     {
+      "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
+      "size": 33720843,
+      "sha256": "6410d8505b097f496cb4efe1a62520457da25ec8773a536b78bbd264032b2626"
+    },
+    {
+      "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.pdf",
+      "size": 40036033,
+      "sha256": "8b30c74bc285f303f98c15922497431d6f0fdaf539d563d1f171cd991b493925"
+    },
+    {
+      "path": "publications/roys-chilam-balam-chumayel-1933/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/roys-chilam-balam-chumayel-1933/cover.jpg",
+      "size": 51550,
+      "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
+    },
+    {
       "path": "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
       "size": 30460825,

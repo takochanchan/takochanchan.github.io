@@ -2272,6 +2272,44 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "roys-chilam-balam-chumayel-1933",
+    title: "チュマイェルのチラム・バラムの書",
+    originalTitle: "The Book of Chilam Balam of Chumayel",
+    subtitle:
+      "1933年カーネギー研究所版・序文、序論、校訂マヤ語本文、英訳全24章、全注、付録A–H、参考文献、原刊索引、本文図48点、図版2点 日本語全訳・校訂版",
+    author: "ラルフ・L・ロイズ",
+    series: "CARNEGIE INSTITUTION OF WASHINGTON · PUBLICATION NO. 438 · 1933",
+    originalPublication:
+      "ワシントン、Carnegie Institution of Washington、1933年",
+    year: 1933,
+    extent:
+      "PDF 428頁・校訂マヤ語本文48頁・英訳全24章・脚注976件・付録A–H・参考文献・原刊索引15頁・本文図48点・図版2点",
+    description:
+      "ラルフ・L・ロイズが『チュマイェルのチラム・バラムの書』のマヤ語本文を校訂し、英訳・注解を付して刊行した1933年版。天地創造、儀礼、暦、年代記、カトゥン予言、植民地期の宗教的表現などを収めます。序文、序論、校訂マヤ語本文、英訳全24章、全注、付録A–H、参考文献、原刊索引、本文図48点、図版2点を収録しています。",
+    cover: "publications/roys-chilam-balam-chumayel-1933/cover.jpg",
+    pdf:
+      "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
+    pageCount: 428,
+    figureCount: 48,
+    plateCount: 2,
+    types: ["一次史料", "民間伝承", "年代記", "宗教史"],
+    regions: ["ユカタン", "メキシコ", "マヤ地域"],
+    languages: ["マヤ諸語", "英語"],
+    tags: [
+      "チラム・バラム",
+      "チュマイェル",
+      "マヤ語",
+      "先住民文学",
+      "神話",
+      "予言",
+      "カトゥン",
+      "暦",
+      "植民地期",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2952,6 +2990,18 @@ const publicationMetadata = {
       "https://archive.org/details/booksofchilanbal00brin",
     rights:
       "1882年原刊および原刊の図版は、米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載されたLibrary of Congress所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "roys-chilam-balam-chumayel-1933": {
+    sourceEdition:
+      "Ralph L. Roys, The Book of Chilam Balam of Chumayel, Carnegie Institution of Washington, Publication No. 438（Washington: Carnegie Institution of Washington、1933年初版）。",
+    sourceProvider:
+      "University of Michigan所蔵本を撮影したHathiTrustデジタル複製（識別子 mdp.39015010391277、書籍本体258コマ。底本PDFはCC0証明頁を加えた全259頁）を主底本とした。英訳部の公開転写は検索、頁対応、難読箇所の照合に限って使用し、校訂マヤ語本文、原刊索引、図版を含む本文確定は原刊画像に基づいた。底本で折り畳まれたまま撮影された図版2の北部ユカタン地図は、同じ1933年版の公開画像を照合して補った。",
+    sourceUrl:
+      "https://babel.hathitrust.org/cgi/pt?id=mdp.39015010391277",
+    rights:
+      "1933年原刊について、米国の当時の制度では刊行後28年目の更新登録が必要であり、Roys、書名その他の異表記で米国著作権更新記録を調査しましたが、該当登録を確認できなかったため、本公開では米国におけるパブリックドメイン資料として扱っています。日本では、著作権法第58条（保護期間の相互主義）により原産国の保護期間を超えないものとして、本公開では原著本文を保護対象外として扱っています。底本PDFにはHathiTrustのCC0表示があります。この表示はデジタル画像に関する表示であり、原著本文の権利状態とは区別しています。1967年University of Oklahoma Press版は使用していません。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

@@ -121,6 +121,9 @@ DOCX_SOURCES = {
     "brinton-chilan-balam-1882": SOURCES
     / "翻訳サイト"
     / "Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.docx",
+    "roys-chilam-balam-chumayel-1933": SOURCES
+    / "翻訳サイト"
+    / "Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {
