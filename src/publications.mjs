@@ -2235,6 +2235,43 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "brinton-chilan-balam-1882",
+    title: "チラン・バラムの諸書",
+    originalTitle:
+      "The Books of Chilan Balam: The Prophetic and Historic Records of the Mayas of Yucatan",
+    subtitle:
+      "ユカタン・マヤの予言と歴史の記録・1882年初版 日本語全訳",
+    author: "ダニエル・G・ブリントン",
+    series: "THE BOOKS OF CHILAN BALAM · 1882",
+    originalPublication: "フィラデルフィア、Edward Stern & Co.、1882年",
+    year: 1882,
+    extent:
+      "PDF 19頁・原刊標題紙・はしがき・本文5–19頁・原注13件・暦および日名記号図3点",
+    description:
+      "ダニエル・G・ブリントンが、ユカタン各地に伝わる『チラン・バラムの書』群を、予言、編年と歴史、医療、キリスト教教説の四群から検討し、マヤ暦、アハウ・カトゥン、象形文字、数表、先住民医療の史料的価値を論じた1882年の初期研究。原刊標題紙、はしがき、本文5–19頁、原注13件、月名・日名記号図を収録しています。",
+    cover: "publications/brinton-chilan-balam-1882/cover.jpg",
+    pdf:
+      "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
+    pageCount: 19,
+    figureCount: 3,
+    plateCount: 0,
+    types: ["歴史論考", "言語資料", "考古学研究"],
+    regions: ["ユカタン", "マヤ地域"],
+    languages: ["英語"],
+    tags: [
+      "チラン・バラム",
+      "マヤ文字",
+      "マヤ暦",
+      "予言",
+      "マヤ史",
+      "トロアノ絵文書",
+      "原刊図版",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2903,6 +2940,18 @@ const publicationMetadata = {
       "https://archive.org/details/b24883268",
     rights:
       "1886年原刊および原刊の図版・地図は著作権保護期間を満了しています。Internet Archiveに掲載されたWellcome Library所蔵本はPublic Domain Mark表示です。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "brinton-chilan-balam-1882": {
+    sourceEdition:
+      "Daniel G. Brinton『The Books of Chilan Balam: The Prophetic and Historic Records of the Mayas of Yucatan』（Philadelphia: Edward Stern & Co.、1882年初版）。",
+    sourceProvider:
+      "Library of Congress所蔵の1882年初版本を収めるInternet Archive公開画像（識別子 booksofchilanbal00brin、全24画像）を底本とした。原刊標題紙、はしがき、本文5–19頁、原注13件、月名記号2図および日名記号1図（2頁）を収録。",
+    sourceUrl:
+      "https://archive.org/details/booksofchilanbal00brin",
+    rights:
+      "1882年原刊および原刊の図版は、米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載されたLibrary of Congress所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

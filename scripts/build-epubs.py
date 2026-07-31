@@ -118,6 +118,9 @@ DOCX_SOURCES = {
     "stoll-guatemala-reisen-schilderungen-1886": SOURCES
     / "翻訳サイト"
     / "Otto_Stoll_Guatemala_Japanese_review_v13.docx",
+    "brinton-chilan-balam-1882": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

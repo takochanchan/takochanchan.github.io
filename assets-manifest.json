@@ -92,6 +92,24 @@
       "sha256": "69d45b17d34885119e2c0acfe49dd4563348809f7ff9f13205e15ad3cd7261dd"
     },
     {
+      "path": "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
+      "size": 2518627,
+      "sha256": "717ed770ed3c051af92e29ed67833caa6e47c59dfd39c1d5a7d10f531cc93e13"
+    },
+    {
+      "path": "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf",
+      "size": 2810560,
+      "sha256": "0ed4b8aff98516e8dbc3769ce6dcf44f78e649bc798c61fdf21efe7e55e5f0c2"
+    },
+    {
+      "path": "publications/brinton-chilan-balam-1882/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-chilan-balam-1882/cover.jpg",
+      "size": 76186,
+      "sha256": "c0d7eb728f06d262e1c4f5f9cba68bf2ae9a9e46a0850f8adb8bd791bba8a2ec"
+    },
+    {
       "path": "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
       "size": 269918,
