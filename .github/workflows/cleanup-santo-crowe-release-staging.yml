@@ -1,0 +1,38 @@
+name: Clean Santo Tomas and Crowe release staging
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/cleanup-santo-crowe-release-staging.yml
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/release-assets-santo-crowe-20260731-c9e4"
+
+      - name: Remove one-time cleanup workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/cleanup-santo-crowe-release-staging.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed Santo Tomas and Crowe staging cleanup" \
+            -f sha="$sha" \
+            -f branch=main
