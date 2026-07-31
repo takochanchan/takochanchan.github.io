@@ -1,0 +1,36 @@
+name: Clean up Pineda traslado staging branch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/cleanup-pineda-traslado-staging.yml
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent/pineda-traslado-1892-stage"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/cleanup-pineda-traslado-staging.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed Pineda traslado staging cleanup" \
+            -f sha="$sha" \
+            -f branch=main
