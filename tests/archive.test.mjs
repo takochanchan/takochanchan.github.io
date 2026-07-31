@@ -56,6 +56,16 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
+test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "sapper-alta-verapaz-1901",
+  );
+  assert.ok(item);
+  assert.equal(item.author, "カール・ザッパー");
+  assert.match(item.description, /カール・ザッパー/);
+  assert.doesNotMatch(`${item.author}\n${item.description}`, /カール・サッパー/);
+});
+
 test("home page contains scalable archive controls", async () => {
   const html = await readFile(path.join(dist, "index.html"), "utf8");
   for (const id of [

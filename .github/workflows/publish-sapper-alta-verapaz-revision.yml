@@ -1,0 +1,116 @@
+name: Publish corrected Sapper Alta Verapaz assets
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-sapper-alta-verapaz-revision.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reassemble and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PDF_CHUNKS: "1ec34721e739549e1cffac99ef6000b6a2781931 6ec70b006e121563a3bd62c25d228385f0f145af fd15b91675d8e315aaaac1c427e0f7f48949999c 3ddfc03dabb0df41a4517fa5fef700ecfa7a81cf 8b5220d421b233fd9f334300b95345b6964ddfdc f88a951b5f93fcf33b7635f9eb88c82cdf285908 f6f088feba64238b6e5d1a0ae13e691212588ba7 c1f17fb31606d6c09dd6587f1ce36084383b6e20 85728d87ccf3d46b068904fe796092351ecaaaee"
+          EPUB_CHUNKS: "97af0376c2fa8aa4031ff5766a3ccdb69835d29a 614be3dd1a71813ee4993700093aba40f733aa4f b000f678d7ff6ba972653225bbe65aedeb71beba 4c29b20bdb80431203f54224c6348c725dcfaf20 ebe28af565ebbd617c47667fc56cfa703fe29573 12ef195ad1376e89bba6e376155d3fb879c06d78 5633d0e520645a8b1783749eebf45533519722ab 3ae96a2d4a3aa27e713fa1e0d57ba4af650f47fc fbc9a8b79ddf57af3df8c747d195f8fc8aca65a5 a98c07f2f5855a82b0b50241d5e1af1158858fcd 407360d28d857f775b6d4130b108289f6890bd3f f2266845e22b0f90f3e9949f26c78bf4569982bf 2590aed71446ede42a4c5babdb0e0255b83ca2a9 d4f52ab22384b02eb44eff5faa1b3aac93c5d151 ad30521a4a2841e2ea78e81e5a60ddac62cd8610 8d60c94af5187b22254dade8bd7bf2c0627e3ac7 8e1daf6b7803d25394e7e0b3997e009f6c26f801 27c5309ad82471dba416576e1cc47cba32093d12 f015787e4d8e094c7d262b7c51f5b571f082f772 b933c6af1cc71cb9060cee06cf52a12381150257"
+          SUMS_CHUNKS: "d41a8999c1aa1c11d69323c5ce852fd139c0dbca"
+        run: |
+          set -euo pipefail
+          pdf=Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf
+          epub=Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          : > "$pdf"
+          : > "$epub"
+          : > "$sums"
+          for chunk in $PDF_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content |
+              tr -d '\n' | base64 --decode >> "$pdf"
+          done
+          for chunk in $EPUB_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content |
+              tr -d '\n' | base64 --decode >> "$epub"
+          done
+          for chunk in $SUMS_CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$chunk" --jq .content |
+              tr -d '\n' | base64 --decode >> "$sums"
+          done
+          echo "2b1569244b28bd8c3ed9dedf0e23f313fae625168ae371f1ae2c0ed6c744b700  $pdf" |
+            sha256sum -c -
+          echo "29d5c3b3d2c97072701f115ce453f1927f5efdbe75d078f3f4de628636efab8e  $epub" |
+            sha256sum -c -
+          echo "3209c8c3a4001632ed2aba03b957c98bc64c9f9ed473efa3db4bbc2182437199  $sums" |
+            sha256sum -c -
+          test "$(stat -c %s "$pdf")" = 6754355
+          test "$(stat -c %s "$epub")" = 15523382
+          test "$(stat -c %s "$sums")" = 17595
+          grep -Fx "2b1569244b28bd8c3ed9dedf0e23f313fae625168ae371f1ae2c0ed6c744b700  $pdf" "$sums"
+          grep -Fx "29d5c3b3d2c97072701f115ce453f1927f5efdbe75d078f3f4de628636efab8e  $epub" "$sums"
+
+      - name: Replace release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf \
+            Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub \
+            SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+      - name: Verify stored release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          pdf=Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf
+          epub=Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub
+          sums=SHA256SUMS.txt
+          mkdir verified
+          gh release download publications-current \
+            --pattern "$pdf" \
+            --pattern "$epub" \
+            --pattern "$sums" \
+            --dir verified \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+          echo "2b1569244b28bd8c3ed9dedf0e23f313fae625168ae371f1ae2c0ed6c744b700  verified/$pdf" |
+            sha256sum -c -
+          echo "29d5c3b3d2c97072701f115ce453f1927f5efdbe75d078f3f4de628636efab8e  verified/$epub" |
+            sha256sum -c -
+          echo "3209c8c3a4001632ed2aba03b957c98bc64c9f9ed473efa3db4bbc2182437199  verified/$sums" |
+            sha256sum -c -
+
+      - name: Remove release staging branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          branch=agent/release-upload-sapper-alta-verapaz-1901-revision-bb261292
+          encoded="${branch//\//%2F}"
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded"
+
+      - name: Remove one-time workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-sapper-alta-verapaz-revision.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null || true)"
+          if test -z "$sha"; then
+            exit 0
+          fi
+          gh api \
+            --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove one-time Sapper Alta Verapaz revision workflow" \
+            -f sha="$sha" \
+            -f branch=main

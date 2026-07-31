@@ -2055,7 +2055,7 @@ const publicationRecords = [
       "Die Alta Verapaz (Guatemala): Eine landeskundliche Skizze mit 5 Originalkarten",
     subtitle:
       "原図5枚を付した地誌的概説・1901年学会誌所収版 日本語全訳",
-    author: "カール・サッパー",
+    author: "カール・ザッパー",
     series: "DIE ALTA VERAPAZ · 1901",
     originalPublication:
       "ハンブルク、1901年（『ハンブルク地理学会報』第17巻）",
@@ -2063,7 +2063,7 @@ const publicationRecords = [
     extent:
       "PDF 193頁・原刊78–224頁・表22点・原表画像12点・所有地一覧321件・原図5枚",
     description:
-      "グアテマラのアルタ・ベラパスについて、地質、地勢、気候、植生、土壌、人口と居住、生産と交通、コーヒー農園、歴史的事件による住民構成の変化、人間活動による自然改変を総合したカール・サッパーの地誌。原刊78–224頁、諸表、原注、所有地一覧321件、および所有分布・高度帯・地質・植生・言語と民族集団を示す原図5枚を収録しています。",
+      "グアテマラのアルタ・ベラパスについて、地質、地勢、気候、植生、土壌、人口と居住、生産と交通、コーヒー農園、歴史的事件による住民構成の変化、人間活動による自然改変を総合したカール・ザッパーの地誌。原刊78–224頁、諸表、原注、所有地一覧321件、および所有分布・高度帯・地質・植生・言語と民族集団を示す原図5枚を収録しています。",
     cover: "publications/sapper-alta-verapaz-1901/cover.jpg",
     pdf:
       "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf",
