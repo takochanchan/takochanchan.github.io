@@ -200,6 +200,24 @@
       "sha256": "3e0d5725290fe5a3e946196a833e30b8b83952fd3feade16046ea4e054da7bb3"
     },
     {
+      "path": "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
+      "size": 608102,
+      "sha256": "f52525539fdc5e646061b93285574e23d009794eed53d432208ed9793154913c"
+    },
+    {
+      "path": "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.pdf",
+      "size": 829059,
+      "sha256": "be2ca8663bcf0250afb0b12c38c7f96abcfeabe0e8a333c8d044c27f417769d2"
+    },
+    {
+      "path": "publications/chonay-totonicapan-title-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/chonay-totonicapan-title-1886/cover.jpg",
+      "size": 56664,
+      "sha256": "054affa42e646310d3de457548fe2716d3dcd28555bc87f8aa7aed1ff1dd7118"
+    },
+    {
       "path": "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
       "size": 18345877,
@@ -1008,6 +1026,24 @@
       "url": "https://takochanchan.github.io/publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
       "size": 54198,
       "sha256": "a803e5c87f58f62f3904c00c1015156e12675ad4c988b67eb51217249b7c6d62"
+    },
+    {
+      "path": "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub",
+      "size": 403927,
+      "sha256": "d3c33930c1c5b68ce90d8d1d3f3528599c1af8478de5609d913980fbb394f9ef"
+    },
+    {
+      "path": "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf",
+      "size": 1043411,
+      "sha256": "5e0f3505ac18955a07c3882777fb0700f9e85325686a46b9c5dc4bd4a6160e46"
+    },
+    {
+      "path": "publications/saville-reports-maya-yucatan-1921/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/saville-reports-maya-yucatan-1921/cover.jpg",
+      "size": 63823,
+      "sha256": "c662bf240ff2e08e3c222b6b21c46b74a7bfc67d8f6828111ef677b60e4b0aba"
     },
     {
       "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",

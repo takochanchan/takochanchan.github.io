@@ -2346,6 +2346,79 @@ const publicationRecords = [
       "植民地期",
     ],
   },
+  {
+    slug: "chonay-totonicapan-title-1886",
+    title: "トトニカパン領主文書",
+    originalTitle:
+      "Título de los señores de Totonicapán, escrito en lengua quiché el año de 1554, y traducido a la castellana el de 1834",
+    subtitle:
+      "1554年キチェ語文書の1834年スペイン語訳・1886年版 日本語全訳",
+    author: "ディオニシオ・ホセ・チョナイ",
+    series: "TÍTULO DE LOS SEÑORES DE TOTONICAPÁN · 1886",
+    originalPublication:
+      "マドリード、『Boletín de la Sociedad Geográfica de Madrid』、1886年",
+    year: 1886,
+    extent:
+      "PDF 33頁・セサレオ・フェルナンデス＝ドゥロの紹介・本文全7章・1834年証明文書・原刊149–171頁",
+    description:
+      "1554年にキチェ語で記されたトトニカパンの領主文書を、先住民司祭ディオニシオ・ホセ・チョナイが1834年にスペイン語へ訳し、1886年にセサレオ・フェルナンデス＝ドゥロの紹介とともに公刊した史料。キチェ諸集団の移住、王統、領域、スペイン征服期までの伝承を伝えます。紹介、本文全7章、1834年の証明文書を収録しています。",
+    cover: "publications/chonay-totonicapan-title-1886/cover.jpg",
+    pdf:
+      "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
+    pageCount: 33,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["一次史料", "年代記", "先住民文書"],
+    regions: ["トトニカパン", "グアテマラ", "マヤ地域"],
+    languages: ["スペイン語", "マヤ諸語"],
+    tags: [
+      "キチェ",
+      "系譜",
+      "移住伝承",
+      "領域",
+      "1554年",
+      "1834年",
+      "19世紀",
+    ],
+  },
+  {
+    slug: "saville-reports-maya-yucatan-1921",
+    title: "ユカタンのマヤ先住民に関する報告",
+    originalTitle: "Reports on the Maya Indians of Yucatan",
+    subtitle:
+      "1545年・1639年・1861年の記録・1921年版 日本語全訳",
+    author: "マーシャル・H・サヴィル編",
+    series: "INDIAN NOTES AND MONOGRAPHS · VOL. IX · NO. 3 · 1921",
+    originalPublication:
+      "ニューヨーク、Museum of the American Indian, Heye Foundation、1921年",
+    year: 1921,
+    extent:
+      "PDF 51頁・原刊137–226頁・報告3編・用語集・参考文献・注22件",
+    description:
+      "マーシャル・H・サヴィルが編集した、ユカタンのマヤ先住民に関する三時代の記録集。サンティアゴ・メンデスの1861年報告、ペドロ・サンチェス・デ・アギラルの1639年覚書、フランシスコ・エルナンデスの1545年報告に、アントニオ・ガルシア・イ・クバスの注記、用語集、参考文献、編者注を収録しています。",
+    cover: "publications/saville-reports-maya-yucatan-1921/cover.jpg",
+    pdf:
+      "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub",
+    pageCount: 51,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["民族誌", "一次史料", "宗教史"],
+    regions: ["ユカタン", "メキシコ", "マヤ地域"],
+    languages: ["英語", "スペイン語"],
+    tags: [
+      "マヤ",
+      "習俗",
+      "信仰",
+      "サンティアゴ・メンデス",
+      "サンチェス・デ・アギラル",
+      "フランシスコ・エルナンデス",
+      "植民地期",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3050,6 +3123,30 @@ const publicationMetadata = {
       "https://liburutegibiltegi.bizkaia.eus/handle/20.500.11938/74590",
     rights:
       "1714年原刊本文は著作権保護期間を満了しています。Biblioteca Foral de Bizkaiaの当該デジタル複製にはPublic Domain Markが表示されています。1930年ミーンズ版は判読・校合にのみ用い、その画像は本版に転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "chonay-totonicapan-title-1886": {
+    sourceEdition:
+      "Dionisio José Chonay, “Título de los señores de Totonicapán, escrito en lengua quiché el año de 1554, y traducido a la castellana el de 1834,” 『Boletín de la Sociedad Geográfica de Madrid』（Madrid、1886年）pp. 149–171。",
+    sourceProvider:
+      "Trent University, Thomas J. Bata Library所蔵本のInternet Archiveデジタル複製（識別子 titulodelossenor0000unse）を底本とした。Internet Archiveの書誌年は1885年だが、収録本文は1886年号であることを原刊本文と会務記録で確認し、本作に当たる原刊149–171頁のみを収録した。",
+    sourceUrl:
+      "https://archive.org/details/titulodelossenor0000unse",
+    rights:
+      "1554年原文書、1834年スペイン語訳および1886年刊行本文は、著作権保護期間を満了しています。Internet Archiveに掲載されたTrent University所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "saville-reports-maya-yucatan-1921": {
+    sourceEdition:
+      "Marshall H. Saville, ed., Reports on the Maya Indians of Yucatan, Indian Notes and Monographs, Vol. IX, No. 3（New York: Museum of the American Indian, Heye Foundation、1921年）。",
+    sourceProvider:
+      "Smithsonian Libraries所蔵本のInternet Archiveデジタル複製（識別子 reportsonmayaind93savi）を底本とした。表紙、叢書説明、標題紙、目次、序文、原刊137–226頁の本文、用語集、参考文献、注を収録し、原刊の白紙頁も位置を明示した。",
+    sourceUrl:
+      "https://archive.org/details/reportsonmayaind93savi",
+    rights:
+      "1545年・1639年・1861年の原記録および1921年刊行本文は、著作権保護期間を満了しています。Internet Archiveに掲載されたSmithsonian Libraries所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

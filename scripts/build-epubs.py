@@ -127,6 +127,12 @@ DOCX_SOURCES = {
     "elorza-conquista-ytza-1714": SOURCES
     / "翻訳サイト"
     / "Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.docx",
+    "chonay-totonicapan-title-1886": SOURCES
+    / "翻訳サイト"
+    / "Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.docx",
+    "saville-reports-maya-yucatan-1921": SOURCES
+    / "翻訳サイト"
+    / "Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {
