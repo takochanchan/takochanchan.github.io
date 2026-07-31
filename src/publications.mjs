@@ -2419,6 +2419,46 @@ const publicationRecords = [
       "植民地期",
     ],
   },
+  {
+    slug: "brasseur-rabinal-achi-1862",
+    title: "キチェ語文法・語彙と『ラビナル・アチ』",
+    originalTitle:
+      "Grammaire de la langue quichée, suivie d’un vocabulaire et du drame de Rabinal-Achi",
+    subtitle:
+      "1862年刊・文法、語彙、三言語比較、古代詩劇論、キチェ語原文付き戯曲、全注・楽譜 日本語全訳・校訂版",
+    author: "シャルル＝エティエンヌ・ブラッスール・ド・ブールブール",
+    series: "COLLECTION DE DOCUMENTS DANS LES LANGUES INDIGÈNES · TOME II · 1862",
+    originalPublication:
+      "パリ、Arthus Bertrand／ロンドン、Trübner and Co.、1862年",
+    year: 1862,
+    extent:
+      "PDF 427頁・前付i–xvii頁・第一部1–246頁・第二部5–122頁・文法全21章・語彙・戯曲全43発言・楽譜10葉",
+    description:
+      "ブラッスール・ド・ブールブールが、キチェ語文法と語彙、カクチケル語・ツトゥヒル語との比較、征服以前の詩・音楽・舞踊・演劇論、先住民舞踊劇『ラビナル・アチ』を一冊にまとめた1862年刊本。半標題、標題紙、献辞、小教理書、序言、文法全21章、数詞体系、三言語比較、語根語彙、歴史序説、登場人物、キチェ語原文と日本語訳による戯曲全43発言、著者注、目次、原曲楽譜を収録しています。",
+    cover: "publications/brasseur-rabinal-achi-1862/cover.jpg",
+    pdf:
+      "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
+    pageCount: 427,
+    figureCount: 0,
+    plateCount: 10,
+    types: ["言語資料", "一次史料", "演劇", "民族誌"],
+    regions: ["ラビナル", "グアテマラ", "マヤ地域"],
+    languages: ["フランス語", "スペイン語", "マヤ諸語"],
+    tags: [
+      "キチェ語",
+      "カクチケル語",
+      "ツトゥヒル語",
+      "ラビナル・アチ",
+      "先住民演劇",
+      "舞踊劇",
+      "音楽",
+      "楽譜",
+      "比較言語学",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3147,6 +3187,18 @@ const publicationMetadata = {
       "https://archive.org/details/reportsonmayaind93savi",
     rights:
       "1545年・1639年・1861年の原記録および1921年刊行本文は、著作権保護期間を満了しています。Internet Archiveに掲載されたSmithsonian Libraries所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "brasseur-rabinal-achi-1862": {
+    sourceEdition:
+      "Charles-Étienne Brasseur de Bourbourg『Grammaire de la langue quichée, espagnole-française, mise en parallèle avec ses deux dialectes, cakchiquel et tzutuhil … servant d’introduction au Rabinal-Achi, drame indigène avec sa musique originale, texte quiché et traduction française en regard』（Paris: Arthus Bertrand／London: Trübner and Co.、1862年、Collection de documents dans les langues indigènes, tome II）。",
+    sourceProvider:
+      "John Carter Brown Library所蔵本のInternet Archiveデジタル複製（識別子 grammairedelalan02bras、全416画像）を主底本とし、Google Books公開の1862年版（識別子 DkHYREskWsUC）を頁対応と難読箇所の照合に用いた。明白なOCR誤認は原刊画像を基準に訂正し、第一部と第二部で頁番号が再び1から始まる構成、キチェ語・カクチケル語・ツトゥヒル語の語形、戯曲の反復、注、舞台指示、楽譜を保持した。",
+    sourceUrl:
+      "https://archive.org/details/grammairedelalan02bras",
+    rights:
+      "1862年原刊本文および原刊の標題紙・楽譜は著作権保護期間を満了しています。Internet Archiveに掲載されたJohn Carter Brown Library所蔵本およびGoogle Books公開画像には、各公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

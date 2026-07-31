@@ -133,6 +133,9 @@ DOCX_SOURCES = {
     "saville-reports-maya-yucatan-1921": SOURCES
     / "翻訳サイト"
     / "Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.docx",
+    "brasseur-rabinal-achi-1862": SOURCES
+    / "翻訳サイト"
+    / "Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

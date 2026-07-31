@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "faa08e2b41e2a5abdb2856d888b7ce86bc44af29",
+  "archive_commit": "138071fcc113cb37ce565ce73f591232602904f7",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -16,6 +16,7 @@
     "arthes-peten-1893": "publications/arthes-peten-1893/master.md",
     "del-rio-palenque": "publications/del-rio-palenque/master.docx",
     "bourbourg-palenque-1866": "publications/bourbourg-palenque-1866/master.docx",
+    "brasseur-rabinal-achi-1862": "publications/brasseur-rabinal-achi-1862/master.docx",
     "esquinca-usumacinta": "publications/esquinca-usumacinta/master.md",
     "galindo-palenque-1832": "publications/galindo-palenque-1832/master.docx",
     "galindo-usumacinta-1833": "publications/galindo-usumacinta-1833/master.docx",

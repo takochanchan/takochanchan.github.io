@@ -74,6 +74,24 @@
       "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
     },
     {
+      "path": "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
+      "size": 1680399,
+      "sha256": "010ae061e53af81793faec864c0aaa2dd26b520bb23e548ea3db94bf525d94ad"
+    },
+    {
+      "path": "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.pdf",
+      "size": 7917993,
+      "sha256": "f0ea3a4350ebefe536d535a9949c116b6d76e0fa8b0769c3fc23fff0b40d7c32"
+    },
+    {
+      "path": "publications/brasseur-rabinal-achi-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-rabinal-achi-1862/cover.jpg",
+      "size": 76992,
+      "sha256": "0963f7fe4252b3ffb506711dbcbe226d3448bf2d168ffc68a203e48deecb5010"
+    },
+    {
       "path": "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
       "size": 9712496,
