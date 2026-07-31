@@ -2541,6 +2541,53 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "gage-new-survey-west-indias-1655",
+    title: "西インド諸島新調査",
+    originalTitle: "A New Survey of the West-Indias",
+    subtitle:
+      "1655年増補第二版・献辞・全22章・ポコンチ語／ポコマン語小文法・巻末詳細目次・地図4葉 日本語全訳",
+    author: "トマス・ゲージ",
+    series: "A NEW SURVEY OF THE WEST-INDIAS · 1655",
+    originalPublication:
+      "ロンドン、E. Cotes for John Sweeting、1655年（増補第二版）",
+    year: 1655,
+    extent:
+      "PDF 670頁・原刊標題紙・献辞・推薦詩・全22章・原刊本文1–220頁・ポコンチ語／ポコマン語小文法・巻末詳細目次12葉・地図4葉",
+    description:
+      "イングランド人聖職者トマス・ゲージが、1625年の渡航からメキシコ、チアパス、グアテマラ、ベラパス、ホンジュラス、ニカラグア、パナマ、カリブ海を経た帰国までを記した旅行・地誌。1655年増補第二版の標題紙、献辞、推薦詩、全22章、ポコンチ語／ポコマン語小文法、巻末詳細目次を全訳し、原刊の地図4葉を綴じ位置に従って収録しています。",
+    cover: "publications/gage-new-survey-west-indias-1655/cover.jpg",
+    pdf:
+      "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
+    pageCount: 670,
+    figureCount: 0,
+    plateCount: 4,
+    types: ["旅行記", "地誌", "一次史料", "言語資料"],
+    regions: [
+      "メキシコ",
+      "チアパス",
+      "グアテマラ",
+      "ベラパス",
+      "ホンジュラス",
+      "中央アメリカ",
+      "カリブ海",
+    ],
+    languages: ["英語", "ラテン語", "マヤ諸語"],
+    tags: [
+      "17世紀",
+      "植民地期",
+      "メキシコ市",
+      "チアパス",
+      "グアテマラ",
+      "ベラパス",
+      "ポコンチ語",
+      "ポコマン語",
+      "チョコレート",
+      "原刊地図",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3305,6 +3352,17 @@ const publicationMetadata = {
       "https://www.scielo.org.mx/scielo.php?pid=S1665-80272006000200109&script=sci_arttext",
     rights:
       "1892年原刊本文は著作権保護期間を満了しています。SciELO掲載ページの現行表示はCreative Commons Attribution-NonCommercial 4.0 International（CC BY-NC 4.0）です。本日本語訳はCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供します。利用には原著者・原題・原刊情報の表示、非営利利用、改変物への同一ライセンスの継承が必要です。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "gage-new-survey-west-indias-1655": {
+    sourceEdition:
+      "Thomas Gage『A New Survey of the West-Indias: The English American His Travail by Sea and Land』（London: E. Cotes for John Sweeting、1655年、著者増補第二版）。",
+    sourceProvider:
+      "米国議会図書館ジェイ・I・キスラック・コレクション所蔵本のデジタル複製（書誌番号02004661、全259画像）を底本とした。前付、本文1–220頁、ポコンチ語／ポコマン語小文法、巻末詳細目次12葉、銅版地図4葉を収録し、地図は原刊の綴じ位置に従った。",
+    sourceUrl: "https://www.loc.gov/item/02004661/",
+    rights:
+      "1655年原刊本文および原刊地図は、米国・日本ともに著作権保護期間を満了しています。米国議会図書館はジェイ・I・キスラック・コレクションの当該デジタル画像をパブリックドメインとして公開し、自由な利用と再利用を認めています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

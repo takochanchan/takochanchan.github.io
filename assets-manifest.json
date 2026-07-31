@@ -488,6 +488,24 @@
       "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
     },
     {
+      "path": "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
+      "size": 17785119,
+      "sha256": "d90c80ae2a0267b5167811ba9a47fb6197d7a94e7e5ad4b70d3a0bc9a974e9d9"
+    },
+    {
+      "path": "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.pdf",
+      "size": 9444036,
+      "sha256": "4f447e593769658c8feef65d40f8a7d50c1cff40764b459b2b8310d657ac5437"
+    },
+    {
+      "path": "publications/gage-new-survey-west-indias-1655/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gage-new-survey-west-indias-1655/cover.jpg",
+      "size": 86269,
+      "sha256": "cd26266cd86b98dd001b166a04e3dab980de7e0a0d52ad507841af54d7884936"
+    },
+    {
       "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
       "size": 472147,
