@@ -1,0 +1,358 @@
+name: Publish Thomas Gage New Survey once
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - ready_for_review
+      - synchronize
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.head_ref == 'agent/trigger-gage-publication-20260731'
+    runs-on: ubuntu-latest
+    env:
+      BASE_SITE_COMMIT: 7a09057ee0d58753ae91e29e2ea2b7d48d2141f6
+      ARCHIVE_COMMIT: f7b44eff2c0b7939605146c93fbda0aa2f144fd2
+      MANIFEST_BLOB: 65e8cf4faf808b43ba6690b9efd47f9919f35882
+      PDF_NAME: Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "9444036"
+      PDF_SHA: 4f447e593769658c8feef65d40f8a7d50c1cff40764b459b2b8310d657ac5437
+      EPUB_NAME: Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub
+      EPUB_SIZE: "17785119"
+      EPUB_SHA: d90c80ae2a0267b5167811ba9a47fb6197d7a94e7e5ad4b70d3a0bc9a974e9d9
+      COVER_SIZE: "86269"
+      COVER_SHA: cd26266cd86b98dd001b166a04e3dab980de7e0a0d52ad507841af54d7884936
+
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Reassemble and verify staged files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          manifest=/tmp/gage-release-manifest.tsv
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$MANIFEST_BLOB" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > "$manifest"
+          test "$(wc -l < "$manifest")" = 3
+
+          while IFS=$'\t' read -r asset_name expected_size expected_sha blob_list; do
+            test -n "$asset_name"
+            : > "/tmp/$asset_name"
+            for blob_sha in $blob_list; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content |
+                tr -d '\n' |
+                base64 --decode >> "/tmp/$asset_name"
+            done
+            echo "$expected_sha  /tmp/$asset_name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/$asset_name")" = "$expected_size"
+          done < "$manifest"
+
+          pdfinfo "/tmp/$PDF_NAME" | grep -F "Pages:           670"
+          pdfinfo "/tmp/$PDF_NAME" | grep -F "Page size:       612 x 792 pts (letter)"
+          pdffonts "/tmp/$PDF_NAME" |
+            awk 'NR > 2 { seen=1; if ($4 != "yes") bad=1 } END { exit (!seen || bad) }'
+          test "$(pdfimages -list "/tmp/$PDF_NAME" | awk 'NR > 2 && $3 == "image" { count++ } END { print count+0 }')" = 5
+          pdftotext "/tmp/$PDF_NAME" /tmp/gage-pdf.txt
+          grep -F "西インド諸島新調査" /tmp/gage-pdf.txt
+          grep -F "第二十二章" /tmp/gage-pdf.txt
+          grep -F "ポコンチ" /tmp/gage-pdf.txt
+          grep -F "本書の諸章および各章における最も注目すべき出来事の目次" /tmp/gage-pdf.txt
+
+          python3 - "/tmp/$EPUB_NAME" <<'PY'
+          import posixpath
+          import re
+          import sys
+          import zipfile
+          from urllib.parse import unquote
+          from xml.etree import ElementTree as ET
+
+          path = sys.argv[1]
+          container_ns = {"c": "urn:oasis:names:tc:opendocument:xmlns:container"}
+          opf_ns = {
+              "opf": "http://www.idpf.org/2007/opf",
+              "dc": "http://purl.org/dc/elements/1.1/",
+          }
+          xhtml_ns = "http://www.w3.org/1999/xhtml"
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == "mimetype"
+              assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+              assert archive.read("mimetype") == b"application/epub+zip"
+              container = ET.fromstring(archive.read("META-INF/container.xml"))
+              rootfile = container.find(".//c:rootfile", container_ns)
+              assert rootfile is not None
+              opf_path = rootfile.attrib["full-path"]
+              opf = ET.fromstring(archive.read(opf_path))
+              assert opf.attrib.get("version", "").startswith("3")
+              assert "西インド諸島新調査" in "".join(opf.find(".//dc:title", opf_ns).itertext())
+              base = posixpath.dirname(opf_path)
+              manifest = {}
+              for item in opf.findall(".//opf:manifest/opf:item", opf_ns):
+                  resolved = posixpath.normpath(
+                      posixpath.join(base, unquote(item.attrib["href"]))
+                  )
+                  assert resolved in names
+                  manifest[item.attrib["id"]] = (
+                      resolved,
+                      item.attrib.get("media-type", ""),
+                      set(item.attrib.get("properties", "").split()),
+                  )
+              assert sum("nav" in item[2] for item in manifest.values()) == 1
+              assert sum("cover-image" in item[2] for item in manifest.values()) == 1
+              spine = opf.findall(".//opf:spine/opf:itemref", opf_ns)
+              assert spine and all(item.attrib["idref"] in manifest for item in spine)
+              japanese = 0
+              images = 0
+              missing_alt = []
+              for resolved, media_type, _properties in manifest.values():
+                  if media_type != "application/xhtml+xml":
+                      continue
+                  document = ET.fromstring(archive.read(resolved))
+                  japanese += len(
+                      re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", "".join(document.itertext()))
+                  )
+                  for image in document.iter(f"{{{xhtml_ns}}}img"):
+                      images += 1
+                      if not image.attrib.get("alt", "").strip():
+                          missing_alt.append(resolved)
+              assert japanese >= 350_000, japanese
+              assert images >= 5, images
+              assert not missing_alt, missing_alt
+              print(f"EPUB OK: {japanese} Japanese characters, {images} images")
+          PY
+
+      - name: Apply and verify site source
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor "$BASE_SITE_COMMIT" HEAD
+          git diff --quiet "$BASE_SITE_COMMIT"...HEAD -- \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/gage-new-survey-west-indias-1655/cover.jpg
+
+          mkdir -p /tmp/gage-site-source
+          python3 - /tmp/gage-site-source <<'PY'
+          import sys
+          import tarfile
+          from pathlib import PurePosixPath
+
+          destination = sys.argv[1]
+          expected = {
+              "assets-manifest.json",
+              "master-archive.json",
+              "scripts/validate-epubs.py",
+              "src/publications.mjs",
+              "tests/archive.test.mjs",
+              "static/publications/gage-new-survey-west-indias-1655/cover.jpg",
+          }
+          with tarfile.open("/tmp/gage-site-source.tar.gz", "r:gz") as archive:
+              members = archive.getmembers()
+              files = {member.name for member in members if member.isfile()}
+              assert files == expected, (files, expected)
+              for member in members:
+                  path = PurePosixPath(member.name)
+                  assert not path.is_absolute() and ".." not in path.parts
+                  assert not (member.issym() or member.islnk() or member.isdev())
+              archive.extractall(destination, members=members, filter="data")
+          PY
+
+          cp /tmp/gage-site-source/assets-manifest.json assets-manifest.json
+          cp /tmp/gage-site-source/master-archive.json master-archive.json
+          cp /tmp/gage-site-source/scripts/validate-epubs.py scripts/validate-epubs.py
+          cp /tmp/gage-site-source/src/publications.mjs src/publications.mjs
+          cp /tmp/gage-site-source/tests/archive.test.mjs tests/archive.test.mjs
+          mkdir -p static/publications/gage-new-survey-west-indias-1655
+          cp /tmp/gage-site-source/static/publications/gage-new-survey-west-indias-1655/cover.jpg \
+            static/publications/gage-new-survey-west-indias-1655/cover.jpg
+
+          echo "$COVER_SHA  static/publications/gage-new-survey-west-indias-1655/cover.jpg" | sha256sum -c -
+          test "$(stat -c %s static/publications/gage-new-survey-west-indias-1655/cover.jpg)" = "$COVER_SIZE"
+          identify static/publications/gage-new-survey-west-indias-1655/cover.jpg |
+            grep -F "1224x1584"
+          grep -F "$ARCHIVE_COMMIT" master-archive.json
+          grep -F 'slug: "gage-new-survey-west-indias-1655"' src/publications.mjs
+          grep -F 'assert.equal(publications.length, 74)' tests/archive.test.mjs
+          python3 -m json.tool assets-manifest.json >/dev/null
+          python3 -m json.tool master-archive.json >/dev/null
+          node --check src/publications.mjs
+          npm run build
+          npm test
+
+      - name: Prepare release checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = path.read_text(encoding="utf-8").splitlines()
+          assert len(lines) == 146, len(lines)
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          pdf_name = os.environ["PDF_NAME"]
+          epub_name = os.environ["EPUB_NAME"]
+          assert pdf_name not in entries and epub_name not in entries
+          lines.extend([
+              f"{os.environ['PDF_SHA']}  {pdf_name}",
+              f"{os.environ['EPUB_SHA']}  {epub_name}",
+          ])
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n", encoding="utf-8"
+          )
+          PY
+          test "$(wc -l < /tmp/SHA256SUMS.txt)" = 148
+          echo "$PDF_SHA  /tmp/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  /tmp/$EPUB_NAME" | sha256sum -c -
+
+      - name: Upload and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            "/tmp/$PDF_NAME" \
+            "/tmp/$EPUB_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          echo "$PDF_SHA  /tmp/verified-release/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  /tmp/verified-release/$EPUB_NAME" | sha256sum -c -
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Commit and push catalogue
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/gage-new-survey-west-indias-1655/cover.jpg
+          git diff --cached --check
+          git commit -m "Publish Thomas Gage New Survey"
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            npm run build
+            npm test
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          test "$pushed" = true
+
+      - name: Verify remote repository state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/contents/master-archive.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "$ARCHIVE_COMMIT"
+          gh api "repos/$GITHUB_REPOSITORY/contents/src/publications.mjs?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F 'slug: "gage-new-survey-west-indias-1655"'
+          gh api "repos/$GITHUB_REPOSITORY/contents/assets-manifest.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-assets-manifest.json
+          grep -F "$PDF_SHA" /tmp/remote-assets-manifest.json
+          grep -F "$EPUB_SHA" /tmp/remote-assets-manifest.json
+
+      - name: Remove one-time workflow and temporary refs
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-gage-1655.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed Gage publishing workflow" \
+            -f sha="$sha" \
+            -f branch=main
+          gh pr close "${{ github.event.pull_request.number }}" \
+            --repo "$GITHUB_REPOSITORY" --delete-branch || true
+          for branch in \
+            agent/release-upload-gage-1655-20260731 \
+            agent/trigger-gage-publication-20260731; do
+            encoded="${branch//\//%2F}"
+            gh api --method DELETE \
+              "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded" \
+              >/dev/null 2>&1 || true
+          done
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Gage publication workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/gage-publication-error.txt
+          content="$(base64 -w0 /tmp/gage-publication-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/gage-new-survey-west-indias-1655-20260731.txt" \
+            -f message="Record Gage publication failure" \
+            -f content="$content" \
+            -f branch=main
