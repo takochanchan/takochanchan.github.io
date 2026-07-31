@@ -149,6 +149,7 @@ jobs:
           python -m json.tool master-archive.json >/dev/null
           node --check src/publications.mjs
           npm install --no-audit --no-fund
+          npm run build
           npm test
 
       - name: Upload and verify release files
