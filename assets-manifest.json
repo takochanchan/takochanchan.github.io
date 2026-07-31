@@ -902,6 +902,24 @@
       "sha256": "e5154ef677889e87a4d0c297e8b25cc3927a6db580ed5afbf45a2afe473efacb"
     },
     {
+      "path": "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.epub",
+      "size": 78982,
+      "sha256": "f80b84793d7c307e3d63f1f1620659c7379c00e5bc7e6f734d1cfa90dee1dc50"
+    },
+    {
+      "path": "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.pdf",
+      "size": 530161,
+      "sha256": "3ba8b86255f8194c72dd9ea4baf5608592709ff0f0a2c749323ba70b660ea054"
+    },
+    {
+      "path": "publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
+      "size": 45523,
+      "sha256": "1fc1181510449a7ec7ec149affa209dfe48b11f0c7af2b13a6196876ee1e2acf"
+    },
+    {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "size": 17224938,

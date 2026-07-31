@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "6ca35aa06d6f174ffd9070b23430c3ca5109863c",
+  "archive_commit": "e1c1096bca565373ddba148635fb96861b49244b",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -74,6 +74,7 @@
     "elorza-conquista-ytza-1714": "publications/elorza-conquista-ytza-1714/master.docx",
     "chonay-totonicapan-title-1886": "publications/chonay-totonicapan-title-1886/master.docx",
     "saville-reports-maya-yucatan-1921": "publications/saville-reports-maya-yucatan-1921/master.docx",
-    "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx"
+    "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
+    "pineda-traslado-poderes-chiapas-1892": "publications/pineda-traslado-poderes-chiapas-1892/master.docx"
   }
 }

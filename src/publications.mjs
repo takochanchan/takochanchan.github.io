@@ -2499,6 +2499,48 @@ const publicationRecords = [
       "20世紀初頭",
     ],
   },
+  {
+    slug: "pineda-traslado-poderes-chiapas-1892",
+    title: "チアパス州政庁の移転",
+    originalTitle:
+      "Chiapas. Traslado de los poderes públicos del Estado de San Cristóbal Las Casas a la Ciudad de Tuxtla Gutiérrez",
+    subtitle:
+      "サン・クリストバル・ラス・カサスからトゥストラ・グティエレスへ・1892年刊 日本語全訳・校訂版",
+    author: "ビセンテ・ピネダ",
+    series: "CHIAPAS. TRASLADO DE LOS PODERES PÚBLICOS · 1892",
+    originalPublication:
+      "印刷地不詳、チアパス自由人印刷所（セルソ・コスタ管理）、1892年",
+    year: 1892,
+    extent:
+      "PDF 28頁・全6章・『LiminaR』再録誌面115–128頁・末尾の訴え・注記・署名",
+    description:
+      "1892年にチアパス州の政庁がサン・クリストバル・ラス・カサスからトゥストラ・グティエレスへ移された際、ビセンテ・ピネダが移転に反対して刊行した全6章の政治文書。サン・クリストバルの歴史、地理的位置、教育・宗教施設、先住民諸集落との関係、州法上の論拠を挙げ、州都としての地位を主張しています。『LiminaR』に再録された1892年刊本文、末尾の訴え、注記、署名を省略せず収録しています。",
+    cover:
+      "publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
+    pdf:
+      "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.epub",
+    pageCount: 28,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["政治文書", "地方史", "行政資料"],
+    regions: [
+      "チアパス",
+      "サン・クリストバル・ラス・カサス",
+      "トゥストラ・グティエレス",
+      "メキシコ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "州都移転",
+      "政庁移転",
+      "エミリオ・ラバサ",
+      "地域政治",
+      "都市史",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3251,6 +3293,18 @@ const publicationMetadata = {
       "https://books.google.com/books?id=Uny3p53UERMC",
     rights:
       "1907年原刊本文は著作権保護期間を満了しています。Google Booksに掲載されたStanford University Libraries所蔵本のデジタル画像には、公開元の利用条件が適用されます。本日本語訳はCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供します。利用には原著者・原題・原刊情報の表示、非営利利用、改変物への同一ライセンスの継承が必要です。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "pineda-traslado-poderes-chiapas-1892": {
+    sourceEdition:
+      "Vicente Pineda『Chiapas. Traslado de los poderes públicos del Estado de San Cristóbal Las Casas a la Ciudad de Tuxtla Gutiérrez』（Imprenta de los Chiapanecos Libres de la Frontera, a cargo de Celso Costa、印刷地不詳、1892年）。",
+    sourceProvider:
+      "SciELO Mexico掲載のVíctor Manuel Esponda Jimeno「La traslación de poderes del Estado en 1892 vista por el licenciado Vicente Pineda」『LiminaR. Estudios sociales y humanísticos』第4巻第2号（2006年）109–129頁のうち、全文再録されたPineda本文（115–128頁）を底本とした。Espondaによる前説・伝記・作品目録・論文注は収録していない。再録に原刊頁が示されていないため、本文には再録誌面の頁境を明記した。",
+    sourceUrl:
+      "https://www.scielo.org.mx/scielo.php?pid=S1665-80272006000200109&script=sci_arttext",
+    rights:
+      "1892年原刊本文は著作権保護期間を満了しています。SciELO掲載ページの現行表示はCreative Commons Attribution-NonCommercial 4.0 International（CC BY-NC 4.0）です。本日本語訳はCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供します。利用には原著者・原題・原刊情報の表示、非営利利用、改変物への同一ライセンスの継承が必要です。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

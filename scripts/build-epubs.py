@@ -139,6 +139,9 @@ DOCX_SOURCES = {
     "santibanez-geografia-regional-chiapas-1907": SOURCES
     / "翻訳サイト"
     / "Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.docx",
+    "pineda-traslado-poderes-chiapas-1892": SOURCES
+    / "翻訳サイト"
+    / "Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {
