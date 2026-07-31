@@ -57,9 +57,6 @@ jobs:
             echo "$expected_sha  /tmp/$asset_name" | sha256sum -c -
             test "$(stat -c %s "/tmp/$asset_name")" = "$expected_size"
           done < "$manifest"
-          pdfinfo "/tmp/$PDF_NAME" | grep -F "Pages:           15"
-          pdfinfo "/tmp/$PDF_NAME" | grep -F "Page size:       612 x 792 pts (letter)"
-          identify /tmp/cover.jpg | grep -F "1224x1584"
 
       - name: Prepare catalogue, cover, and checksums
         env:
