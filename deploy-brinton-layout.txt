@@ -1,1 +1,0 @@
-Trigger GitHub Pages rebuild for the Brinton Fancourt-layout revision.
