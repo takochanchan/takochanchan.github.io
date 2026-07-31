@@ -20,7 +20,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260729-reuse-policy-v1";
+const assetVersion = "20260801-catalogue-pagination-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -260,9 +260,20 @@ ${header()}
         </div>
       </form>
 
-      <div class="archive-status" aria-live="polite">
+      <div class="archive-status">
         <div class="active-filters" id="active-filters"></div>
-        <p class="archive-status__result" id="archive-results"></p>
+        <div class="archive-status__summary">
+          <p class="archive-status__result" id="archive-results" aria-live="polite"></p>
+          <label class="page-size" for="archive-per-page">
+            <span>表示件数</span>
+            <select id="archive-per-page">
+              <option value="6">6件</option>
+              <option value="12" selected>12件</option>
+              <option value="24">24件</option>
+              <option value="all">すべて</option>
+            </select>
+          </label>
+        </div>
       </div>
       <div class="archive-grid" data-archive>${staticCatalogue}</div>
       <nav class="pagination" id="archive-pagination" aria-label="資料一覧のページ"></nav>
