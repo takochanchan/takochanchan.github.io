@@ -106,7 +106,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /action="https:\/\/www\.google\.com\/search"/);
   assert.match(html, />資料検索</);
   assert.match(html, /元資料を読もう/);
-  assert.match(html, /17世紀末から20世紀初頭/);
+  assert.match(html, /中部アメリカとその周辺に関する年代記、行政文書/);\n  assert.match(html, /生成AIで全訳し、原刊の図版とともに公開しています/);
   assert.match(html, /公開版総ページ数/);
   assert.match(html, /海外の記録を、/);
   assert.match(html, /PDFとリフロー型EPUB/);
