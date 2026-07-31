@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f7b44eff2c0b7939605146c93fbda0aa2f144fd2",
+  "archive_commit": "02cd64c1a92721b5c00ef417b1e40e2df7e0776b",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -76,6 +76,7 @@
     "saville-reports-maya-yucatan-1921": "publications/saville-reports-maya-yucatan-1921/master.docx",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
     "pineda-traslado-poderes-chiapas-1892": "publications/pineda-traslado-poderes-chiapas-1892/master.docx",
-    "gage-new-survey-west-indias-1655": "publications/gage-new-survey-west-indias-1655/master.docx"
+    "gage-new-survey-west-indias-1655": "publications/gage-new-survey-west-indias-1655/master.docx",
+    "marure-bosquejo-revoluciones-centro-america-1837-1878": "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/master.docx"
   }
 }

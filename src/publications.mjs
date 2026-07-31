@@ -2588,6 +2588,56 @@ const publicationRecords = [
       "原刊地図",
     ],
   },
+  {
+    slug: "marure-bosquejo-revoluciones-centro-america-1837-1878",
+    title: "中央アメリカ革命史概説",
+    originalTitle:
+      "Bosquejo histórico de las revoluciones de Centro-América desde 1811 hasta 1834",
+    subtitle:
+      "第1巻1837年初版・第2巻1878年再版本・本文・文書・索引 日本語全訳",
+    author: "アレハンドロ・マルレ",
+    series:
+      "BOSQUEJO HISTÓRICO DE LAS REVOLUCIONES DE CENTRO-AMÉRICA · 1837 / 1878",
+    originalPublication:
+      "第1巻：グアテマラ、Imprenta de la N. Academia de Estudios、1837年初版／第2巻：グアテマラ、Tipografía de «El Progreso»、1878年再版",
+    year: 1837,
+    extent:
+      "PDF 474頁・全二巻・第1巻本文1–295頁／文書I–LXVI頁・第2巻本文5–143頁／文書III–LIX頁・両巻索引・正誤表・折込図版2面",
+    description:
+      "アレハンドロ・マルレが、1811年の反乱から独立、メキシコ帝国への併合、中央アメリカ連邦の成立と内戦へ至る政治過程を、同時代文書と自らの観察に基づいて叙述した歴史書。第1巻1837年初版と第2巻1878年再版本の本文、著者注、付録文書、索引、正誤表を全訳し、底本自体が中断する第2巻第13章は現存箇所までを収録しています。",
+    cover:
+      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/cover.jpg",
+    pdf:
+      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
+    pageCount: 474,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["歴史書", "政治史", "一次史料", "文書集"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "エルサルバドル",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+      "チアパス",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "19世紀",
+      "中米独立",
+      "メキシコ帝国併合",
+      "中央アメリカ連邦",
+      "自由派",
+      "保守派",
+      "1826–1829年内戦",
+      "チアパス帰属問題",
+      "公文書",
+      "未完",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3365,6 +3415,18 @@ const publicationMetadata = {
       "1655年原刊本文および原刊地図は、米国・日本ともに著作権保護期間を満了しています。米国議会図書館はジェイ・I・キスラック・コレクションの当該デジタル画像をパブリックドメインとして公開し、自由な利用と再利用を認めています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
+  },
+  "marure-bosquejo-revoluciones-centro-america-1837-1878": {
+    sourceEdition:
+      "Alejandro Marure『Bosquejo histórico de las revoluciones de Centro-América desde 1811 hasta 1834』第1巻（Guatemala: Imprenta de la N. Academia de Estudios、1837年初版）および第2巻（Guatemala: Tipografía de «El Progreso»、1878年再版）。",
+    sourceProvider:
+      "第1巻はフランシスコ・マロキン大学所蔵本のInternet Archiveデジタル複製（識別子 bosquejohistri00maruguat）を底本とした。第2巻は同大学所蔵の1878年再版本（識別子 bosquejohistri02alej）を主底本とし、同版別個体（識別子 bosquejohist00alejguat）を欠損・難読箇所の照合に用いた。第1巻の前付、本文1–295頁、文書I–LXVI頁、索引、正誤表および折込図版、第2巻の標題紙、本文5–143頁、文書III–LIX頁、索引、正誤表を収録した。第2巻第13章は底本自体が143頁途中で中断しているため、後代の著作から補作していない。",
+    sourceUrl:
+      "https://archive.org/details/bosquejohistri00maruguat",
+    rights:
+      "アレハンドロ・マルレは1851年に没しており、1837年初版および1878年再版の本文は著作権保護期間を満了しています。Internet Archiveに掲載されたフランシスコ・マロキン大学所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
   },
 };
 
