@@ -66,6 +66,17 @@ test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
   assert.doesNotMatch(`${item.author}\n${item.description}`, /カール・サッパー/);
 });
 
+test("Lundell bibliography uses the Japanese translation cover", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "lundell-vegetation-peten-1937",
+  );
+  assert.ok(item);
+  assert.equal(
+    item.cover,
+    "publications/lundell-vegetation-peten-1937/japanese-cover.jpg",
+  );
+});
+
 test("home page contains scalable archive controls", async () => {
   const html = await readFile(path.join(dist, "index.html"), "utf8");
   for (const id of [

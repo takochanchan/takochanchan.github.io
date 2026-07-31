@@ -608,10 +608,10 @@
       "sha256": "15e90fab1f8bc178be7fd711d7d41f0872d6483389ab85ce7984956cafd7f040"
     },
     {
-      "path": "publications/lundell-vegetation-peten-1937/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/lundell-vegetation-peten-1937/cover.jpg",
-      "size": 163539,
-      "sha256": "64e3f5dd93505059f6fb6b0c185974e6bd990fca106bf5122564fd8f96afd0e5"
+      "path": "publications/lundell-vegetation-peten-1937/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lundell-vegetation-peten-1937/japanese-cover.jpg",
+      "size": 102653,
+      "sha256": "e4dda5c5cd301e1fc062f5c168ba3c62373e2914539b8cd713ef550206e3a48a"
     },
     {
       "path": "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",

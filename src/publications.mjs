@@ -2019,7 +2019,7 @@ const publicationRecords = [
     description:
       "ペテン北部・中部サバナ地帯・南部の地形、気候、土壌、火災、マヤ居住史と植生遷移を総合した1937年の植物地理学的研究。各地域の植生型と注釈付き植物目録、植物相の関係、付録「メキシコおよび中央アメリカ植物研究—Ⅰ」、図版、索引を収録しています。底本に含まれない背面ポケット図版3点は欠落を明示しました。",
     cover:
-      "publications/lundell-vegetation-peten-1937/cover.jpg",
+      "publications/lundell-vegetation-peten-1937/japanese-cover.jpg",
     pdf:
       "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.pdf",
     epub:
