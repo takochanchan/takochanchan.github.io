@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "7c91b42d39e767739c97d76dacce7b2ed8db0b6c",
+  "archive_commit": "ddc3ccf69d10862c394d13a1691cb75a4db5b826",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -63,6 +63,8 @@
     "honduras-slaves-correspondence-1823": "publications/honduras-slaves-correspondence-1823/master.docx",
     "defence-settlers-honduras-1824": "publications/defence-settlers-honduras-1824/master.docx",
     "lundell-vegetation-peten-1937": "publications/lundell-vegetation-peten-1937/master.docx",
-    "sapper-alta-verapaz-1901": "publications/sapper-alta-verapaz-1901/master.docx"
+    "sapper-alta-verapaz-1901": "publications/sapper-alta-verapaz-1901/master.docx",
+    "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
+    "crowe-gospel-central-america-1850": "publications/crowe-gospel-central-america-1850/master.docx"
   }
 }

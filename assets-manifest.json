@@ -200,6 +200,24 @@
       "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
     },
     {
+      "path": "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
+      "size": 4439120,
+      "sha256": "c38803f461d6a0533c6f409c0aabdd7f7d1cb112ea2331af76c37b365f5850bd"
+    },
+    {
+      "path": "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.pdf",
+      "size": 7997554,
+      "sha256": "961f2da51d07049c32ddc8e642cc484dae79e7f05f71cc69557228ab9089a46a"
+    },
+    {
+      "path": "publications/crowe-gospel-central-america-1850/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/crowe-gospel-central-america-1850/cover.jpg",
+      "size": 85441,
+      "sha256": "2a7304b07ec751b5dcb9a5cb2acbd78375a9bb6c462491b220a8d0767b883131"
+    },
+    {
       "path": "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
       "size": 129576,
@@ -846,6 +864,24 @@
       "url": "https://takochanchan.github.io/publications/rockstroh-ukes/cover.jpg",
       "size": 81167,
       "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
+    },
+    {
+      "path": "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
+      "size": 30460825,
+      "sha256": "700d6c195dcc90fb45e172ec761eda825572675c98d29e81bcd977a8569bd3e4"
+    },
+    {
+      "path": "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santo_Thomas_1844_Japanese_Complete_Translation.pdf",
+      "size": 10891269,
+      "sha256": "0fdc012d691be334ca31e71376b17d259d291057ea61ff3410bc849cbcc591bd"
+    },
+    {
+      "path": "publications/santo-thomas-colonisation-1844/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santo-thomas-colonisation-1844/cover.jpg",
+      "size": 80593,
+      "sha256": "780d4726f9f51d8838a63af5a8237476ae648644ddfe45d4efc3f243a2f27c23"
     },
     {
       "path": "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",

@@ -2087,6 +2087,81 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "santo-thomas-colonisation-1844",
+    title: "サント・トマス管区の植民",
+    originalTitle:
+      "Amérique Centrale. Colonisation du district de Santo-Thomas de Guatemala",
+    subtitle:
+      "ベルギー植民会社資料集・1844年原刊全4部 日本語全訳",
+    author: "ベルギー植民会社",
+    series: "AMÉRIQUE CENTRALE · 1844",
+    originalPublication: "パリ、Rignoux、1844年",
+    year: 1844,
+    extent:
+      "PDF 568頁・年表・全4部・原注55件・表49点・地図5点・景観図4点・証券見本3点",
+    description:
+      "ベルギー植民会社がサント・トマス管区で進めた植民事業について、会社関係文書、探検報告、中央アメリカ関係文献の抜粋、ベルギーおよびフランス各紙の論評を四部にまとめた資料集。年表、本文、原注、諸表、各部目次、地図5点、景観図4点、証券見本3点を収録しています。",
+    cover:
+      "publications/santo-thomas-colonisation-1844/cover.jpg",
+    pdf:
+      "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
+    pageCount: 568,
+    figureCount: 8,
+    plateCount: 5,
+    types: ["植民史", "地理誌", "探検記", "一次史料"],
+    regions: ["イサバル", "グアテマラ", "中央アメリカ"],
+    languages: ["フランス語"],
+    tags: [
+      "サント・トマス",
+      "ベルギー植民会社",
+      "植民計画",
+      "探検報告",
+      "通商",
+      "新聞資料",
+      "折込地図",
+      "19世紀",
+    ],
+  },
+  {
+    slug: "crowe-gospel-central-america-1850",
+    title: "中央アメリカの福音",
+    originalTitle: "The Gospel in Central America",
+    subtitle:
+      "国土概説・英領ホンジュラス伝道史・グアテマラへの聖書導入 日本語全訳",
+    author: "フレデリック・クロウ",
+    series: "THE GOSPEL IN CENTRAL AMERICA · 1850",
+    originalPublication: "ロンドン、Charles Gilpin、1850年",
+    year: 1850,
+    extent:
+      "PDF 818頁・巻頭書目24頁・前付・本文1–588頁・全3部・原注319件・折込地図1点",
+    description:
+      "中央アメリカの地理・歴史・政治・社会・宗教を概説し、英領ホンジュラスにおけるバプテスト伝道と、著者自身によるグアテマラへの聖書導入を記録した全三部の著作。原刊に綴じ込まれた出版社書目、前付、本文、原注、正誤表、目次、末尾の折込地図を収録しています。",
+    cover:
+      "publications/crowe-gospel-central-america-1850/cover.jpg",
+    pdf:
+      "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
+    pageCount: 818,
+    figureCount: 1,
+    plateCount: 1,
+    types: ["地理誌", "政治史", "伝道史", "回想録"],
+    regions: ["ベリーズ", "グアテマラ", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "英領ホンジュラス",
+      "バプテスト伝道",
+      "聖書頒布",
+      "宗教史",
+      "植民地史",
+      "出版社書目",
+      "折込地図",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2708,6 +2783,28 @@ const publicationMetadata = {
       "HathiTrust公開のPrinceton University所蔵『Mitteilungen der Geographischen Gesellschaft in Hamburg』第15–17巻合本（識別子 njp.32101077281143）に収められた第17巻所収本文を主底本とした。本文照合には同巻のGoogle Books別個体および1902年別刷を補助的に用いた。原図5枚は、Biblioteca Ludwig von Mises（Universidad Francisco Marroquín）所蔵単葉資料とAmerican Geographical Society Library（University of Wisconsin–Milwaukee）所蔵の1901年地質図を同版の標題・縮尺・刊記と照合して収録した。",
     sourceUrl:
       "https://babel.hathitrust.org/cgi/pt?id=njp.32101077281143",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "santo-thomas-colonisation-1844": {
+    sourceEdition:
+      "Compagnie belge de colonisation, Amérique Centrale. Colonisation du district de Santo-Thomas de Guatemala, par la Communauté de l’Union, fondée par la Compagnie belge de colonisation. Collection de renseignements publiés ou recueillis par la Compagnie, Paris: Rignoux, 1844.",
+    sourceProvider:
+      "HathiTrustが公開するイリノイ大学アーバナ・シャンペーン校所蔵本の全398画像（識別子 uiuo.ark:/13960/t3fz72q63）を主底本とした。底本所蔵本で欠ける第三部原刊3頁は、同版別個体の公開OCR本文を前後頁と照合して補完した。",
+    sourceUrl:
+      "https://babel.hathitrust.org/cgi/pt?id=uiuo.ark%3A%2F13960%2Ft3fz72q63",
+    rights: publicDomainRights,
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "crowe-gospel-central-america-1850": {
+    sourceEdition:
+      "Frederick Crowe, The Gospel in Central America; Containing a Sketch of the Country, Physical and Geographical—Historical and Political—Moral and Religious; a History of the Baptist Mission in British Honduras, and of the Introduction of the Bible into the Spanish American Republic of Guatemala, London: Charles Gilpin, 1850.",
+    sourceProvider:
+      "HathiTrustが公開するノースカロライナ大学チャペルヒル校所蔵本の全634画像（識別子 nc01.ark:/13960/t83j6hq0b）を底本とした。綴じ込まれたチャールズ・ギルピン社刊行書目、前付、本文全三部、原注、正誤表、目次、末尾の折込地図を収録した。",
+    sourceUrl:
+      "https://babel.hathitrust.org/cgi/pt?id=nc01.ark%3A%2F13960%2Ft83j6hq0b",
     rights: publicDomainRights,
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
