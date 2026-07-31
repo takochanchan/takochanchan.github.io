@@ -20,7 +20,17 @@
   if (!root || !Array.isArray(window.ARCHIVE_PUBLICATIONS)) return;
 
   const publications = window.ARCHIVE_PUBLICATIONS;
-  const perPage = 6;
+  const pageSizeOptions = new Set(["6", "12", "24", "all"]);
+  const defaultPageSize = "12";
+  const pageSizeStorageKey = "takochan-catalogue-page-size";
+  const paginationMedia = window.matchMedia("(max-width: 680px)");
+  const storedPageSize = (() => {
+    try {
+      return localStorage.getItem(pageSizeStorageKey);
+    } catch {
+      return null;
+    }
+  })();
   const controls = {
     googleForm: document.querySelector("#google-site-search"),
     googleInput: document.querySelector("#google-search-query"),
@@ -31,6 +41,7 @@
     language: document.querySelector("#filter-language"),
     era: document.querySelector("#filter-era"),
     sort: document.querySelector("#archive-sort"),
+    perPage: document.querySelector("#archive-per-page"),
     reset: document.querySelector("#archive-reset"),
     results: document.querySelector("#archive-results"),
     pagination: document.querySelector("#archive-pagination"),
@@ -38,6 +49,7 @@
   };
 
   const params = new URLSearchParams(location.search);
+  const requestedPageSize = params.get("perPage") || storedPageSize;
   const state = {
     q: params.get("q") || "",
     type: params.get("type") || "",
@@ -45,6 +57,9 @@
     language: params.get("language") || "",
     era: params.get("era") || "",
     sort: params.get("sort") || "year-asc",
+    perPage: pageSizeOptions.has(requestedPageSize)
+      ? requestedPageSize
+      : defaultPageSize,
     page: Math.max(1, Number(params.get("page")) || 1),
   };
 
@@ -91,6 +106,7 @@
     controls.language.value = state.language;
     controls.era.value = state.era;
     controls.sort.value = state.sort;
+    controls.perPage.value = state.perPage;
   };
 
   const updateUrl = () => {
@@ -101,6 +117,7 @@
     if (state.language) next.set("language", state.language);
     if (state.era) next.set("era", state.era);
     if (state.sort !== "year-asc") next.set("sort", state.sort);
+    if (state.perPage !== defaultPageSize) next.set("perPage", state.perPage);
     if (state.page > 1) next.set("page", String(state.page));
     const query = next.toString();
     history.replaceState(null, "", query ? `?${query}` : location.pathname);
@@ -150,17 +167,64 @@
       : "<span class=\"active-filters__empty\">条件指定なし</span>";
   };
 
+  const paginationItems = (pages) => {
+    const visible = new Set([1, pages, state.page]);
+    const siblingCount = paginationMedia.matches ? 0 : 1;
+
+    for (let offset = 1; offset <= siblingCount; offset += 1) {
+      visible.add(state.page - offset);
+      visible.add(state.page + offset);
+    }
+    if (paginationMedia.matches && pages > 1) {
+      if (state.page === 1) visible.add(2);
+      if (state.page === pages) visible.add(pages - 1);
+    }
+
+    const ordered = [...visible]
+      .filter((page) => page >= 1 && page <= pages)
+      .sort((a, b) => a - b);
+    const items = [];
+    ordered.forEach((page, index) => {
+      const previous = ordered[index - 1];
+      if (index > 0 && page - previous === 2) {
+        items.push(previous + 1);
+      } else if (index > 0 && page - previous > 2) {
+        items.push("ellipsis");
+      }
+      items.push(page);
+    });
+    return items;
+  };
+
   const renderPagination = (pages) => {
     if (pages <= 1) {
       controls.pagination.innerHTML = "";
       return;
     }
-    controls.pagination.innerHTML = Array.from({ length: pages }, (_, index) => {
-      const page = index + 1;
-      return `<button type="button" data-page="${page}" ${
-        page === state.page ? 'aria-current="page"' : ""
-      }>${page}</button>`;
-    }).join("");
+
+    const previousPage = Math.max(1, state.page - 1);
+    const nextPage = Math.min(pages, state.page + 1);
+    const pageButtons = paginationItems(pages)
+      .map((item) =>
+        item === "ellipsis"
+          ? '<span class="pagination__ellipsis" aria-hidden="true">…</span>'
+          : `<button type="button" data-page="${item}" aria-label="${item}ページ目" ${
+              item === state.page ? 'aria-current="page"' : ""
+            }>${item}</button>`,
+      )
+      .join("");
+
+    controls.pagination.innerHTML = `
+      <button class="pagination__nav" type="button" data-page="${previousPage}"
+        aria-label="前のページ" ${state.page === 1 ? "disabled" : ""}>
+        <span aria-hidden="true">‹</span><span class="pagination__nav-label">前へ</span>
+      </button>
+      ${pageButtons}
+      <button class="pagination__nav" type="button" data-page="${nextPage}"
+        aria-label="次のページ" ${state.page === pages ? "disabled" : ""}>
+        <span class="pagination__nav-label">次へ</span><span aria-hidden="true">›</span>
+      </button>`;
+
     controls.pagination.querySelectorAll("[data-page]").forEach((button) => {
       button.addEventListener("click", () => {
         state.page = Number(button.dataset.page);
@@ -188,6 +252,10 @@
       return a.year - b.year;
     });
 
+    const perPage =
+      state.perPage === "all"
+        ? Math.max(filtered.length, 1)
+        : Number(state.perPage);
     const pages = Math.max(1, Math.ceil(filtered.length / perPage));
     state.page = Math.min(state.page, pages);
     const start = (state.page - 1) * perPage;
@@ -230,6 +298,17 @@
     });
   });
 
+  controls.perPage.addEventListener("change", () => {
+    state.perPage = controls.perPage.value;
+    state.page = 1;
+    try {
+      localStorage.setItem(pageSizeStorageKey, state.perPage);
+    } catch {
+      // The URL still preserves the selection when storage is unavailable.
+    }
+    render();
+  });
+
   controls.reset.addEventListener("click", () => {
     Object.assign(state, {
       q: "",
@@ -244,6 +323,12 @@
     render();
     controls.search.focus();
   });
+
+  if (typeof paginationMedia.addEventListener === "function") {
+    paginationMedia.addEventListener("change", render);
+  } else if (typeof paginationMedia.addListener === "function") {
+    paginationMedia.addListener(render);
+  }
 
   syncInputs();
   render();
