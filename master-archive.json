@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ddc3ccf69d10862c394d13a1691cb75a4db5b826",
+  "archive_commit": "315246f0a815a0f94204bcb2b880718378af63a5",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -65,6 +65,7 @@
     "lundell-vegetation-peten-1937": "publications/lundell-vegetation-peten-1937/master.docx",
     "sapper-alta-verapaz-1901": "publications/sapper-alta-verapaz-1901/master.docx",
     "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
-    "crowe-gospel-central-america-1850": "publications/crowe-gospel-central-america-1850/master.docx"
+    "crowe-gospel-central-america-1850": "publications/crowe-gospel-central-america-1850/master.docx",
+    "brigham-guatemala-quetzal-1887": "publications/brigham-guatemala-quetzal-1887/master.docx"
   }
 }

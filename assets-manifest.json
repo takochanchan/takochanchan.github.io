@@ -74,6 +74,24 @@
       "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
     },
     {
+      "path": "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
+      "size": 9712496,
+      "sha256": "ee2af5ada09af968bbba4021c6e09bf318719fd5dfb661785587a514e9746d5b"
+    },
+    {
+      "path": "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.pdf",
+      "size": 15296576,
+      "sha256": "670f3bfb433134efc7ce34acf79a0dcdd7fd21c18a25802bdd445ad53591ff10"
+    },
+    {
+      "path": "publications/brigham-guatemala-quetzal-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brigham-guatemala-quetzal-1887/cover.jpg",
+      "size": 75030,
+      "sha256": "69d45b17d34885119e2c0acfe49dd4563348809f7ff9f13205e15ad3cd7261dd"
+    },
+    {
       "path": "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
       "size": 269918,

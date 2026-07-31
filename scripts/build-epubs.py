@@ -112,6 +112,9 @@ DOCX_SOURCES = {
     / "The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.docx",
     "lundell-vegetation-peten-1937": SOURCES
     / "Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.docx",
+    "brigham-guatemala-quetzal-1887": SOURCES
+    / "翻訳サイト"
+    / "William_Tufts_Brigham_Guatemala_Japanese_review_v12.docx",
 }
 
 TAGGED_PDF_SOURCES = {

@@ -2162,6 +2162,42 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "brigham-guatemala-quetzal-1887",
+    title: "グアテマラ――ケツァールの国",
+    originalTitle: "Guatemala: The Land of the Quetzal; A Sketch",
+    subtitle:
+      "1887年初版・前付、本文全453頁、付録、索引、全図版・地図・付載広告 日本語全訳",
+    author: "ウィリアム・タフツ・ブリガム",
+    series: "GUATEMALA · THE LAND OF THE QUETZAL · 1887",
+    originalPublication: "ニューヨーク、Charles Scribner’s Sons、1887年",
+    year: 1887,
+    extent:
+      "PDF 513頁・原刊前付i–xv頁・本文1–453頁・挿図・図版111点・地図5点・付録・索引・付載広告",
+    description:
+      "ウィリアム・タフツ・ブリガムが三度のグアテマラ・ホンジュラス旅行をもとに、地理、交通、自然、植物、火山、各地の町村、先住民社会、歴史、政治経済、考古遺跡をまとめた1887年刊の旅行・地誌。原刊前付、本文全453頁、付録、索引、挿図、地図、出版社広告を収録しています。",
+    cover: "publications/brigham-guatemala-quetzal-1887/cover.jpg",
+    pdf:
+      "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
+    pageCount: 513,
+    figureCount: 111,
+    plateCount: 5,
+    types: ["旅行記", "地理誌", "民族誌", "博物誌"],
+    regions: ["グアテマラ", "ホンジュラス", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "ケツァール",
+      "火山",
+      "先住民",
+      "キリグア",
+      "コバン",
+      "アティトラン湖",
+      "原刊図版",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -2806,6 +2842,18 @@ const publicationMetadata = {
     sourceUrl:
       "https://babel.hathitrust.org/cgi/pt?id=nc01.ark%3A%2F13960%2Ft83j6hq0b",
     rights: publicDomainRights,
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "brigham-guatemala-quetzal-1887": {
+    sourceEdition:
+      "William Tufts Brigham『Guatemala: The Land of the Quetzal; A Sketch』（New York: Charles Scribner’s Sons、1887年初版）。",
+    sourceProvider:
+      "Getty Research Institute所蔵の1887年初版本を収めるInternet Archive公開画像（識別子 guatemalalandofq00brigiala）を底本とした。前付、本文1–453頁、付録、索引、全図版・地図、および巻末のスクリブナー社付載広告を収録。",
+    sourceUrl:
+      "https://archive.org/details/guatemalalandofq00brigiala",
+    rights:
+      "1887年原刊および原刊の図版・地図は著作権保護期間を満了しています。デジタル画像にはInternet Archiveおよび所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },
