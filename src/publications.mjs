@@ -2247,7 +2247,7 @@ const publicationRecords = [
     originalPublication: "フィラデルフィア、Edward Stern & Co.、1882年",
     year: 1882,
     extent:
-      "PDF 19頁・原刊標題紙・はしがき・本文5–19頁・原注13件・暦および日名記号図3点",
+      "PDF 16頁・原刊標題紙・はしがき・本文5–19頁・原注13件・暦および日名記号図3点",
     description:
       "ダニエル・G・ブリントンが、ユカタン各地に伝わる『チラン・バラムの書』群を、予言、編年と歴史、医療、キリスト教教説の四群から検討し、マヤ暦、アハウ・カトゥン、象形文字、数表、先住民医療の史料的価値を論じた1882年の初期研究。原刊標題紙、はしがき、本文5–19頁、原注13件、月名・日名記号図を収録しています。",
     cover: "publications/brinton-chilan-balam-1882/cover.jpg",
@@ -2255,7 +2255,7 @@ const publicationRecords = [
       "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf",
     epub:
       "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
-    pageCount: 19,
+    pageCount: 16,
     figureCount: 3,
     plateCount: 0,
     types: ["歴史論考", "言語資料", "考古学研究"],
