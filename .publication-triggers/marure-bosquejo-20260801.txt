@@ -1,0 +1,4 @@
+Marure publication trigger
+archive=02cd64c1a92721b5c00ef417b1e40e2df7e0776b
+pdf=8ca3c5fc50f5cf6e0e7e05bcd8c9c6619a728d85907e8c4b18cb8346aff3d594
+epub=e19d2dcdadcf59af7c666f6b07cc6e733bf58e231f27ef74cffd125672438ace
