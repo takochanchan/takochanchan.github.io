@@ -397,6 +397,12 @@ select {
   padding: 17px 0;
 }
 
+.archive-status__summary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .archive-status__result {
   margin: 0;
   color: var(--muted);
@@ -404,6 +410,28 @@ select {
   font-weight: 750;
   letter-spacing: 0.08em;
   white-space: nowrap;
+}
+
+.page-size {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.page-size select {
+  min-width: 82px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 0 28px 0 10px;
+  background: var(--paper-bright);
+  font-size: 12px;
+  font-weight: 650;
 }
 
 .active-filters,
@@ -645,6 +673,8 @@ select {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 8px;
   min-height: 42px;
@@ -656,16 +686,45 @@ select {
   height: 42px;
   border: 1px solid var(--ink);
   border-radius: 0;
+  padding: 0 10px;
   background: transparent;
   cursor: pointer;
   font-family: Georgia, serif;
   font-size: 14px;
 }
 
-.pagination button:hover,
+.pagination .pagination__nav {
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.pagination__nav > span[aria-hidden="true"] {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.pagination__ellipsis {
+  width: 22px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.pagination button:not(:disabled):hover,
 .pagination button[aria-current="page"] {
   background: var(--ink);
   color: #fff;
+}
+
+.pagination button:disabled {
+  cursor: default;
+  opacity: 0.35;
 }
 
 .about {
@@ -1532,6 +1591,31 @@ select {
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .archive-status__summary {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .pagination {
+    gap: 5px;
+  }
+
+  .pagination button,
+  .pagination .pagination__nav {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    padding: 0;
+  }
+
+  .pagination__nav-label {
+    display: none;
+  }
+
+  .pagination__ellipsis {
+    width: 16px;
   }
 
   .archive-grid,

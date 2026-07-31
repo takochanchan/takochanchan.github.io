@@ -86,6 +86,7 @@ test("home page contains scalable archive controls", async () => {
     "filter-language",
     "filter-era",
     "archive-sort",
+    "archive-per-page",
     "archive-reset",
     "archive-pagination",
     "google-site-search",
@@ -95,8 +96,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
-  assert.match(html, /\/archive\.js\?v=20260729-reuse-policy-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
+  assert.match(html, /\/archive\.js\?v=20260801-catalogue-pagination-v1/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -105,6 +106,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /Googleサイト内検索/);
   assert.match(html, /action="https:\/\/www\.google\.com\/search"/);
   assert.match(html, />資料検索</);
+  assert.match(html, /<option value="12" selected>12件<\/option>/);
+  assert.match(html, /<option value="all">すべて<\/option>/);
   assert.match(html, /元資料を読もう/);
   assert.match(html, /中部アメリカとその周辺に関する年代記/);
   assert.match(html, /公開版総ページ数/);
@@ -138,7 +141,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -151,6 +154,10 @@ test("catalogue search stays within publication metadata", async () => {
     /site:github\.com\/takochanchan\/takochanchan\.github\.io\/releases/,
   );
   assert.match(script, /frame\.src = button\.dataset\.pdfSrc/);
+  assert.match(script, /const defaultPageSize = "12"/);
+  assert.match(script, /const paginationItems = \(pages\) =>/);
+  assert.match(script, /localStorage\.setItem\(pageSizeStorageKey, state\.perPage\)/);
+  assert.doesNotMatch(script, /const perPage = 6/);
 });
 
 test("sitemap exposes every same-origin detail page", async () => {
@@ -186,8 +193,8 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260729-reuse-policy-v1/);
-    assert.match(html, /\/archive\.js\?v=20260729-reuse-policy-v1/);
+    assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
+    assert.match(html, /\/archive\.js\?v=20260801-catalogue-pagination-v1/);
     for (const label of [
       "底本",
       "公開元",
