@@ -21,7 +21,7 @@ jobs:
       - name: Reassemble and verify release assets
         env:
           GH_TOKEN: ${{ github.token }}
-          MANIFEST_BLOB: 6896c6c2e5c3150d350c6f65878790c2a15164a9
+          MANIFEST_BLOB: 649d09d43018176cc46cf48a355afdd538f815d8
         run: |
           set -euo pipefail
           manifest=release-manifest.tsv
@@ -60,7 +60,7 @@ jobs:
             -e "  Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf" \
             -e "  Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub" \
             SHA256SUMS.txt > expected-current-SHA256SUMS.txt
-          test "$(wc -l < expected-current-SHA256SUMS.txt)" = 134
+          test "$(wc -l < expected-current-SHA256SUMS.txt)" = 136
           cmp expected-current-SHA256SUMS.txt current-release/SHA256SUMS.txt
 
       - name: Upload release assets
