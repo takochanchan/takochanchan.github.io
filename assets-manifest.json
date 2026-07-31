@@ -362,6 +362,24 @@
       "sha256": "8a3b1b11132ffec2c8cab7331f3bca8e4246550869064fa228e1d87088a4b85a"
     },
     {
+      "path": "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.epub",
+      "size": 181653,
+      "sha256": "210021c24435b7ab904b43b3d50176893813938b47a9e348cb30b865639abc3d"
+    },
+    {
+      "path": "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.pdf",
+      "size": 820043,
+      "sha256": "4bf3c044c2c10607054f242e9ba0b533460035e4d0ba303e608cf4a3300769ba"
+    },
+    {
+      "path": "publications/elorza-conquista-ytza-1714/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/elorza-conquista-ytza-1714/cover.jpg",
+      "size": 49521,
+      "sha256": "8e7db6ba8033cb7c81966b1e9bd89b1e0b9f5d1b0b14d900f27936f58d0456ae"
+    },
+    {
       "path": "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
       "size": 72935,

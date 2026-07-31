@@ -2310,6 +2310,42 @@ const publicationRecords = [
       "植民地期",
     ],
   },
+  {
+    slug: "elorza-conquista-ytza-1714",
+    title: "ヌエバ・エスパーニャにおけるイツァ州の征服",
+    originalTitle:
+      "Conquista de la provincia del Ytza, en la Nueva España, por el Conde de Lizarraga Vengoa",
+    subtitle:
+      "『バルドルバ谷貴族譜』所収・原刊207–279頁・全25章 日本語全訳・校訂版",
+    author: "フランシスコ・デ・エロルサ・イ・ラダ",
+    series: "NOBILIARIO DE EL VALLE DE LA VALDORBA · 1714",
+    originalPublication:
+      "パンプローナ、フランシスコ・アントニオ・デ・ネイラ、1714年",
+    year: 1714,
+    extent:
+      "PDF 49頁・原刊207–279頁・全25章・紋章図1点・校合注5点",
+    description:
+      "フランシスコ・デ・エロルサ・イ・ラダが『バルドルバ谷貴族譜』に収めた、マルティン・デ・ウルスアによる1697年のイツァ征服記。国王への請願、勅令、カネクへの書簡、軍議、タヤサル攻略、捕虜移送までを扱う全25章を、原刊頁位置と紋章図を保って収録しています。",
+    cover: "publications/elorza-conquista-ytza-1714/cover.jpg",
+    pdf:
+      "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.epub",
+    pageCount: 49,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["一次史料", "征服史", "伝記"],
+    regions: ["ペテン", "ユカタン", "グアテマラ", "メキシコ"],
+    languages: ["スペイン語"],
+    tags: [
+      "イツァ",
+      "タヤサル",
+      "マルティン・デ・ウルスア",
+      "カネク",
+      "1697年",
+      "植民地期",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3002,6 +3038,18 @@ const publicationMetadata = {
       "https://babel.hathitrust.org/cgi/pt?id=mdp.39015010391277",
     rights:
       "1933年原刊について、米国の当時の制度では刊行後28年目の更新登録が必要であり、Roys、書名その他の異表記で米国著作権更新記録を調査しましたが、該当登録を確認できなかったため、本公開では米国におけるパブリックドメイン資料として扱っています。日本では、著作権法第58条（保護期間の相互主義）により原産国の保護期間を超えないものとして、本公開では原著本文を保護対象外として扱っています。底本PDFにはHathiTrustのCC0表示があります。この表示はデジタル画像に関する表示であり、原著本文の権利状態とは区別しています。1967年University of Oklahoma Press版は使用していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-07-31",
+    updatedDate: "2026-07-31",
+  },
+  "elorza-conquista-ytza-1714": {
+    sourceEdition:
+      "Francisco de Elorza y Rada『Nobiliario de el Valle de la Valdorba』（Pamplona: Francisco Antonio de Neyra、1714年初版）所収「Conquista de la provincia del Ytza, en la Nueva España, por el Conde de Lizarraga Vengoa」、原刊207–279頁。",
+    sourceProvider:
+      "Biblioteca Foral de Bizkaiaのデジタル複製（識別子 20.500.11938/74590）を主底本とした。判読、固有名詞、構文の照合にはPhilip Ainsworth Means『A Narrative of the Conquest of the Province of the Ytzas in New Spain』（Paris: Genet、1930年）の英訳および同書所収影印を用いたが、本文確定、頁境界、綴り、文書構成は1714年刊本を基準とした。",
+    sourceUrl:
+      "https://liburutegibiltegi.bizkaia.eus/handle/20.500.11938/74590",
+    rights:
+      "1714年原刊本文は著作権保護期間を満了しています。Biblioteca Foral de Bizkaiaの当該デジタル複製にはPublic Domain Markが表示されています。1930年ミーンズ版は判読・校合にのみ用い、その画像は本版に転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },

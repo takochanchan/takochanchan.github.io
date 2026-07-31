@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "32c61a6ea0ae58a2e8b40bee4d2c213955bf6990",
+  "archive_commit": "faa08e2b41e2a5abdb2856d888b7ce86bc44af29",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -69,6 +69,7 @@
     "brigham-guatemala-quetzal-1887": "publications/brigham-guatemala-quetzal-1887/master.docx",
     "stoll-guatemala-reisen-schilderungen-1886": "publications/stoll-guatemala-reisen-schilderungen-1886/master.docx",
     "brinton-chilan-balam-1882": "publications/brinton-chilan-balam-1882/master.docx",
-    "roys-chilam-balam-chumayel-1933": "publications/roys-chilam-balam-chumayel-1933/master.docx"
+    "roys-chilam-balam-chumayel-1933": "publications/roys-chilam-balam-chumayel-1933/master.docx",
+    "elorza-conquista-ytza-1714": "publications/elorza-conquista-ytza-1714/master.docx"
   }
 }
