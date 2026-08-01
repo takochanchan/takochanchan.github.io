@@ -1,0 +1,113 @@
+name: Publish Molina release assets once
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-molina-release-20260802.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PDF_NAME: Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "1377884"
+      PDF_SHA256: e7587d55042d28f43181d27f4498c102dd4fcc18164c697b8fed28572fd26ea2
+      PDF_BLOBS: "7cbebed6e4402feedd7791eb2c8865254335d5fe f9e88100eaa98a52f2fc0b77427767b725829f10 66fb83c476a6e58a977c02cd4f99e38db34d7a97 8ed5e4d0189e5ce64ea15cd53a8f6a7ebb0351eb 1abd6feef3549e3223b7bd25cbdcc1b0e058e904 bb50975d0289595929277d8cc05b247db0a63f4e 9a128747b3ccdf4953077b60d1a9926dff6460e9 1f3b93712733e4651fb84e5c5f75fbb6f5899240 777d09f2fd04d9cfdc90e5a751207a4aaa1e7b34 66f2c6945a7b859e6e6a49897d895d698a57d00e 1754f2cf6b2e1b55861e5b0e6c42543feb26dc6b"
+      EPUB_NAME: Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub
+      EPUB_SIZE: "3026853"
+      EPUB_SHA256: a4b1438618669b40450e6ad96abef200ba7667f3f1afae276f82507393b873ee
+      EPUB_BLOBS: "c9f61c557b15ba6cd5e7002e999d9c11ad01f3d8 a66e82fd80e8e607f5f51a9501683275f4fde4cf 8720d715d32162977c6b988d69f6ce5100ee8c3b 349c3cedd04f3d60fd6be729af5b04c5eb7e0ea4 22578d17fbc8dee9b1c152ae6a3e76de34f3b586 ddcea2597228f92522783276241310c4712a4285 deecaab6e38f6058b803a775a124c434c3134640 c4b19b44b9d972d901662d41d6dfc024a8991c1f fedfb23f7612f9d9e50968bb692903ede06b99cc 0dd86f8dabeeebec820bf4f7734f21b54c383416 d881338dbec64ac0cd5c45149b6ed8179ee11446 4aebf8bd06b76d0f0f47bc6f4a78174513de255e 062ed575db739c6b1b98e15b10e8b749bcc1177b da35225083c2939c62c32bfc770e6ee1e762100b 0ba8a2e962cac13dbee2a58b9055de413c5d27fd 9597532c1e93d68fe34900f9339e03074bf92845 4f471a2d1645d77981b99a8fbd00cd6de2d9ef0a 4ad9d690beef80bee895b9c9eb4b763883fe0239 507f44458c8826c47640703f30029d87e6f8a58e 9e680ea6ff54d77ba1d7fbbea33464d8464022c2 3e7caf53c0ee03fb0d6e536c9f64b82c2555170c cb3a539dd1792fdc3afbf1cda317d6ea36ac7faa 92c187b630e8b1f8aaf2e0b8a66664d17c2c5bed 11c68d0c137c4b43378592c52c67b21e37b1c12f"
+    steps:
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and verify approved assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/molina-assets
+          for kind in PDF EPUB; do
+            name_var="${kind}_NAME"
+            size_var="${kind}_SIZE"
+            digest_var="${kind}_SHA256"
+            blobs_var="${kind}_BLOBS"
+            name="${!name_var}"
+            target="/tmp/molina-assets/$name"
+            : > "$target"
+            for blob in ${!blobs_var}; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob" --jq .content |
+                tr -d '\n' | base64 --decode >> "$target"
+            done
+            echo "${!digest_var}  $target" | sha256sum -c -
+            test "$(stat -c %s "$target")" = "${!size_var}"
+          done
+          test "$(pdfinfo "/tmp/molina-assets/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = 59
+          pdftotext -layout "/tmp/molina-assets/$PDF_NAME" /tmp/molina.txt
+          grep -F "コスタリカとヌエバ・グラナダ" /tmp/molina.txt
+          grep -F "ガリンド大佐" /tmp/molina.txt
+          python3 - <<'PY'
+          import os, zipfile
+          path='/tmp/molina-assets/' + os.environ['EPUB_NAME']
+          with zipfile.ZipFile(path) as z:
+              assert z.testzip() is None
+              names=z.namelist()
+              assert 'mimetype' in names
+              text=''.join(
+                  z.read(n).decode('utf-8')
+                  for n in names
+                  if n.endswith(('.xhtml','.html','.opf','.ncx'))
+              )
+          assert 'コスタリカとヌエバ・グラナダ' in text
+          assert 'ガリンド大佐' in text
+          PY
+
+      - name: Update shared checksums and upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+          grep -v -F "  $PDF_NAME" /tmp/current/SHA256SUMS.txt |
+            grep -v -F "  $EPUB_NAME" > /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
+          gh release upload publications-current
+            "/tmp/molina-assets/$PDF_NAME"
+            "/tmp/molina-assets/$EPUB_NAME"
+            /tmp/SHA256SUMS.txt
+            --clobber --repo "$GITHUB_REPOSITORY"
+          for kind in PDF EPUB; do
+            name_var="${kind}_NAME"
+            digest_var="${kind}_SHA256"
+            size_var="${kind}_SIZE"
+            name="${!name_var}"
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+            echo "${!digest_var}  /tmp/verified/$name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/verified/$name")" = "${!size_var}"
+          done
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-molina-release-20260802.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$path"
+            -f message="Remove completed Molina release workflow"
+            -f sha="$sha"
+            -f branch=main
