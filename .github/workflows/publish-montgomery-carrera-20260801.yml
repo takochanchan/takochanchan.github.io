@@ -1,0 +1,456 @@
+name: Publish Montgomery and Carrera once
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - ready_for_review
+      - synchronize
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.head_ref == 'agent/publish-montgomery-carrera-20260801'
+    runs-on: ubuntu-latest
+    env:
+      BASE_SITE_COMMIT: 3b0ef8dab205785da911ad86031f42e3313633a7
+      ARCHIVE_COMMIT: 49f5532c18d48ef59fcd546f9a53688abcf6fd5c
+      MANIFEST_BLOB: d98e9560990ceb45c69bb054085676da3c9a6854
+      MONT_PDF_NAME: George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf
+      MONT_PDF_SIZE: "2249288"
+      MONT_PDF_SHA: db8946eb04afdbed01c4e1e33c53761c024d66fa037149f01ca16da85181c914
+      MONT_EPUB_NAME: George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub
+      MONT_EPUB_SIZE: "1655991"
+      MONT_EPUB_SHA: f514649fa353deae7b49581ee8ca8b911a2c75c73b414ab60131514bf2a7b4a5
+      CARR_PDF_NAME: Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf
+      CARR_PDF_SIZE: "1464051"
+      CARR_PDF_SHA: 1f1bdc97e6f8fde54ba22c12bd4b08c56bf74b13e5495a8fcfea0b6da30c44c2
+      CARR_EPUB_NAME: Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub
+      CARR_EPUB_SIZE: "1080152"
+      CARR_EPUB_SHA: e3203da731dbd415749d08f9749e8fde2f9b44a1980e85e970b029c035c2a836
+      MONT_COVER_SIZE: "50457"
+      MONT_COVER_SHA: 2cff39778da82c088a6cd2199580172bf43233aa068cdd68c9448a2d3afa9616
+      CARR_COVER_SIZE: "52758"
+      CARR_COVER_SHA: 096646557257fc18407215307761754da66e974a3edaab9dd1054504c58994bc
+
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Reassemble and verify staged files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          manifest=/tmp/montgomery-carrera-release-manifest.tsv
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$MANIFEST_BLOB" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > "$manifest"
+          test "$(wc -l < "$manifest")" = 5
+
+          while IFS=$'\t' read -r asset_name expected_size expected_sha blob_list; do
+            test -n "$asset_name"
+            : > "/tmp/$asset_name"
+            for blob_sha in $blob_list; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content |
+                tr -d '\n' |
+                base64 --decode >> "/tmp/$asset_name"
+            done
+            echo "$expected_sha  /tmp/$asset_name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/$asset_name")" = "$expected_size"
+          done < "$manifest"
+
+      - name: Validate publication PDFs
+        run: |
+          set -euo pipefail
+          verify_pdf() {
+            file="$1"
+            pages="$2"
+            images="$3"
+            shift 3
+            pdfinfo "$file" | grep -F "Pages:           $pages"
+            pdfinfo "$file" | grep -F "Page size:       612 x 792 pts (letter)"
+            pdffonts "$file" |
+              awk 'NR > 2 { seen=1; if ($4 != "yes") bad=1 } END { exit (!seen || bad) }'
+            test "$(pdfimages -list "$file" | awk 'NR > 2 && $3 == "image" { count++ } END { print count+0 }')" = "$images"
+            pdftotext "$file" "$file.txt"
+            for phrase in "$@"; do
+              grep -F "$phrase" "$file.txt"
+            done
+            if grep -F -e "校閲用" -e "未公開" -e "Review" "$file.txt"; then
+              exit 1
+            fi
+          }
+          verify_pdf "/tmp/$MONT_PDF_NAME" 174 1 \
+            "グアテマラ旅行記" \
+            "ジョージ・ワシントン・モンゴメリー" \
+            "第XXIV章" \
+            "コシグイナ" \
+            "ボルティモア"
+          verify_pdf "/tmp/$CARR_PDF_NAME" 80 2 \
+            "カレーラ将軍回想録" \
+            "ラファエル・カレーラ" \
+            "第VII章" \
+            "ロス・アルトス" \
+            "マリアノ・ノリエガ"
+
+      - name: Validate reflowable EPUB editions
+        run: |
+          set -euo pipefail
+          python3 - "/tmp/$MONT_EPUB_NAME" "/tmp/$CARR_EPUB_NAME" <<'PY'
+          import collections
+          import posixpath
+          import re
+          import sys
+          import zipfile
+          from urllib.parse import unquote
+          from xml.etree import ElementTree as ET
+
+          CONTAINER_NS = {"c": "urn:oasis:names:tc:opendocument:xmlns:container"}
+          OPF_NS = {
+              "opf": "http://www.idpf.org/2007/opf",
+              "dc": "http://purl.org/dc/elements/1.1/",
+          }
+          XHTML_NS = "http://www.w3.org/1999/xhtml"
+          checks = [
+              {
+                  "path": sys.argv[1],
+                  "title": "グアテマラ旅行記",
+                  "pages": range(9, 196),
+                  "tables": 4,
+                  "body_images": 1,
+                  "manifest_images": 2,
+                  "minimum_japanese": 100_000,
+                  "phrases": ("第XXIV章", "コシグイナ", "ボルティモア"),
+              },
+              {
+                  "path": sys.argv[2],
+                  "title": "カレーラ将軍回想録",
+                  "pages": range(3, 92),
+                  "tables": 0,
+                  "body_images": 2,
+                  "manifest_images": 3,
+                  "minimum_japanese": 50_000,
+                  "phrases": ("第VII章", "ロス・アルトス", "マリアノ・ノリエガ"),
+              },
+          ]
+
+          for check in checks:
+              with zipfile.ZipFile(check["path"]) as archive:
+                  assert archive.testzip() is None
+                  names = archive.namelist()
+                  assert names[0] == "mimetype"
+                  assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                  assert archive.read("mimetype") == b"application/epub+zip"
+                  container = ET.fromstring(archive.read("META-INF/container.xml"))
+                  rootfile = container.find(".//c:rootfile", CONTAINER_NS)
+                  assert rootfile is not None
+                  opf_path = rootfile.attrib["full-path"]
+                  opf = ET.fromstring(archive.read(opf_path))
+                  assert opf.attrib.get("version", "").startswith("3")
+                  title = opf.find(".//dc:title", OPF_NS)
+                  language = opf.find(".//dc:language", OPF_NS)
+                  identifier = opf.find(".//dc:identifier", OPF_NS)
+                  assert title is not None and check["title"] == "".join(title.itertext())
+                  assert language is not None and "".join(language.itertext()) == "ja"
+                  assert identifier is not None and "".join(identifier.itertext()).strip()
+
+                  base = posixpath.dirname(opf_path)
+                  manifest = {}
+                  for item in opf.findall(".//opf:manifest/opf:item", OPF_NS):
+                      resolved = posixpath.normpath(
+                          posixpath.join(base, unquote(item.attrib["href"].split("#", 1)[0]))
+                      )
+                      assert resolved in names
+                      manifest[item.attrib["id"]] = (
+                          resolved,
+                          item.attrib.get("media-type", ""),
+                          set(item.attrib.get("properties", "").split()),
+                      )
+                  assert sum("nav" in item[2] for item in manifest.values()) == 1
+                  assert sum("cover-image" in item[2] for item in manifest.values()) == 1
+                  assert sum(item[1].startswith("image/") for item in manifest.values()) == check["manifest_images"]
+                  spine = opf.findall(".//opf:spine/opf:itemref", OPF_NS)
+                  assert spine and all(item.attrib["idref"] in manifest for item in spine)
+
+                  documents = []
+                  for resolved, media_type, _properties in manifest.values():
+                      if media_type == "application/xhtml+xml":
+                          documents.append(ET.fromstring(archive.read(resolved)))
+                  text = " ".join(" ".join(document.itertext()) for document in documents)
+                  images = [
+                      image
+                      for document in documents
+                      for image in document.iter(f"{{{XHTML_NS}}}img")
+                  ]
+                  tables = [
+                      table
+                      for document in documents
+                      for table in document.iter(f"{{{XHTML_NS}}}table")
+                  ]
+                  assert len(images) == check["body_images"]
+                  assert all(image.attrib.get("alt", "").strip() for image in images)
+                  assert len(tables) == check["tables"]
+                  assert all(phrase in text for phrase in check["phrases"])
+                  assert not any(phrase in text for phrase in ("校閲用", "未公開", "Review"))
+                  markers = [
+                      int(value)
+                      for value in re.findall(r"〔原刊\s+p\.\s*([0-9]+)〕", text)
+                  ]
+                  expected = list(check["pages"])
+                  assert sorted(markers) == expected
+                  assert all(count == 1 for count in collections.Counter(markers).values())
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= check["minimum_japanese"], japanese
+                  print(
+                      f"{check['title']}: EPUB 3 OK, "
+                      f"{japanese} Japanese characters, "
+                      f"{len(markers)} source-page markers"
+                  )
+          PY
+
+      - name: Apply and verify site source
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor "$BASE_SITE_COMMIT" HEAD
+          git diff --quiet "$BASE_SITE_COMMIT"...HEAD -- \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/build-epubs.py \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/montgomery-journey-guatemala-1839/cover.jpg \
+            static/publications/carrera-memorias-1837-1840-1906/cover.jpg
+
+          mkdir -p /tmp/montgomery-carrera-site-source
+          python3 - /tmp/montgomery-carrera-site-source <<'PY'
+          import sys
+          import tarfile
+          from pathlib import PurePosixPath
+
+          destination = sys.argv[1]
+          expected = {
+              "assets-manifest.json",
+              "master-archive.json",
+              "scripts/build-epubs.py",
+              "scripts/validate-epubs.py",
+              "src/publications.mjs",
+              "tests/archive.test.mjs",
+              "static/publications/montgomery-journey-guatemala-1839/cover.jpg",
+              "static/publications/carrera-memorias-1837-1840-1906/cover.jpg",
+          }
+          with tarfile.open("/tmp/site-source.tar.gz", "r:gz") as archive:
+              members = archive.getmembers()
+              files = {member.name for member in members if member.isfile()}
+              assert files == expected, (files, expected)
+              for member in members:
+                  path = PurePosixPath(member.name)
+                  assert not path.is_absolute() and ".." not in path.parts
+                  assert not (member.issym() or member.islnk() or member.isdev())
+              archive.extractall(destination, members=members, filter="data")
+          PY
+          cp -a /tmp/montgomery-carrera-site-source/. .
+
+          echo "$MONT_COVER_SHA  static/publications/montgomery-journey-guatemala-1839/cover.jpg" | sha256sum -c -
+          echo "$CARR_COVER_SHA  static/publications/carrera-memorias-1837-1840-1906/cover.jpg" | sha256sum -c -
+          test "$(stat -c %s static/publications/montgomery-journey-guatemala-1839/cover.jpg)" = "$MONT_COVER_SIZE"
+          test "$(stat -c %s static/publications/carrera-memorias-1837-1840-1906/cover.jpg)" = "$CARR_COVER_SIZE"
+          identify static/publications/montgomery-journey-guatemala-1839/cover.jpg | grep -F "1224x1584"
+          identify static/publications/carrera-memorias-1837-1840-1906/cover.jpg | grep -F "1224x1584"
+          grep -F "$ARCHIVE_COMMIT" master-archive.json
+          grep -F 'slug: "montgomery-journey-guatemala-1839"' src/publications.mjs
+          grep -F 'slug: "carrera-memorias-1837-1840-1906"' src/publications.mjs
+          grep -F 'assert.equal(publications.length, 77)' tests/archive.test.mjs
+          python3 -m json.tool assets-manifest.json >/dev/null
+          python3 -m json.tool master-archive.json >/dev/null
+          node --check src/publications.mjs
+          npm run build
+          npm test
+
+      - name: Prepare release checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = path.read_text(encoding="utf-8").splitlines()
+          assert len(lines) >= 150 and len(lines) % 2 == 0, len(lines)
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          additions = [
+              (os.environ["MONT_PDF_NAME"], os.environ["MONT_PDF_SHA"]),
+              (os.environ["MONT_EPUB_NAME"], os.environ["MONT_EPUB_SHA"]),
+              (os.environ["CARR_PDF_NAME"], os.environ["CARR_PDF_SHA"]),
+              (os.environ["CARR_EPUB_NAME"], os.environ["CARR_EPUB_SHA"]),
+          ]
+          for name, digest in additions:
+              if name in entries:
+                  assert entries[name] == digest, (name, entries[name], digest)
+              else:
+                  entries[name] = digest
+                  lines.append(f"{digest}  {name}")
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n", encoding="utf-8"
+          )
+          PY
+          echo "$MONT_PDF_SHA  /tmp/$MONT_PDF_NAME" | sha256sum -c -
+          echo "$MONT_EPUB_SHA  /tmp/$MONT_EPUB_NAME" | sha256sum -c -
+          echo "$CARR_PDF_SHA  /tmp/$CARR_PDF_NAME" | sha256sum -c -
+          echo "$CARR_EPUB_SHA  /tmp/$CARR_EPUB_NAME" | sha256sum -c -
+
+      - name: Upload and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            "/tmp/$MONT_PDF_NAME" \
+            "/tmp/$MONT_EPUB_NAME" \
+            "/tmp/$CARR_PDF_NAME" \
+            "/tmp/$CARR_EPUB_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          gh release download publications-current \
+            --pattern "$MONT_PDF_NAME" \
+            --pattern "$MONT_EPUB_NAME" \
+            --pattern "$CARR_PDF_NAME" \
+            --pattern "$CARR_EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          echo "$MONT_PDF_SHA  /tmp/verified-release/$MONT_PDF_NAME" | sha256sum -c -
+          echo "$MONT_EPUB_SHA  /tmp/verified-release/$MONT_EPUB_NAME" | sha256sum -c -
+          echo "$CARR_PDF_SHA  /tmp/verified-release/$CARR_PDF_NAME" | sha256sum -c -
+          echo "$CARR_EPUB_SHA  /tmp/verified-release/$CARR_EPUB_NAME" | sha256sum -c -
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Commit and push catalogue
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/build-epubs.py \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/montgomery-journey-guatemala-1839/cover.jpg \
+            static/publications/carrera-memorias-1837-1840-1906/cover.jpg
+          git diff --cached --check
+          git commit -m "Publish Montgomery and Carrera translations"
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            npm run build
+            npm test
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          test "$pushed" = true
+
+      - name: Verify remote repository state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/contents/master-archive.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "$ARCHIVE_COMMIT"
+          gh api "repos/$GITHUB_REPOSITORY/contents/src/publications.mjs?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-publications.mjs
+          grep -F 'slug: "montgomery-journey-guatemala-1839"' /tmp/remote-publications.mjs
+          grep -F 'slug: "carrera-memorias-1837-1840-1906"' /tmp/remote-publications.mjs
+          gh api "repos/$GITHUB_REPOSITORY/contents/assets-manifest.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-assets-manifest.json
+          grep -F "$MONT_PDF_SHA" /tmp/remote-assets-manifest.json
+          grep -F "$MONT_EPUB_SHA" /tmp/remote-assets-manifest.json
+          grep -F "$CARR_PDF_SHA" /tmp/remote-assets-manifest.json
+          grep -F "$CARR_EPUB_SHA" /tmp/remote-assets-manifest.json
+
+      - name: Remove one-time workflow and temporary refs
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-montgomery-carrera-20260801.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed Montgomery and Carrera publishing workflow" \
+            -f sha="$sha" \
+            -f branch=main
+          gh pr close "${{ github.event.pull_request.number }}" \
+            --repo "$GITHUB_REPOSITORY" --delete-branch || true
+          for branch in \
+            agent/release-upload-montgomery-carrera-20260801 \
+            agent/publish-montgomery-carrera-20260801; do
+            encoded="${branch//\//%2F}"
+            gh api --method DELETE \
+              "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded" \
+              >/dev/null 2>&1 || true
+          done
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Montgomery and Carrera publication workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/montgomery-carrera-publication-error.txt
+          content="$(base64 -w0 /tmp/montgomery-carrera-publication-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/montgomery-carrera-${GITHUB_RUN_ID}.txt" \
+            -f message="Record Montgomery and Carrera publication failure" \
+            -f content="$content" \
+            -f branch=main
