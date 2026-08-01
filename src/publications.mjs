@@ -2638,6 +2638,94 @@ const publicationRecords = [
       "未完",
     ],
   },
+  {
+    slug: "montgomery-journey-guatemala-1839",
+    title: "グアテマラ旅行記",
+    originalTitle:
+      "Narrative of a Journey to Guatemala, in Central America, in 1838",
+    subtitle:
+      "1839年初版・献辞・目次・全24章・原注 日本語全訳・校訂版",
+    author: "ジョージ・ワシントン・モンゴメリー",
+    series: "NARRATIVE OF A JOURNEY TO GUATEMALA · 1839",
+    originalPublication: "ニューヨーク、Wiley & Putnam、1839年",
+    year: 1839,
+    extent:
+      "PDF 174頁・原刊標題紙・著作権表示・献辞・目次・本文全24章・原刊9–195頁・原注・表4点",
+    description:
+      "アメリカ合衆国政府の任務で中央アメリカへ赴いたジョージ・ワシントン・モンゴメリーが、1838年の旅を記した旅行記。ニューヨークからハバナ、トルヒーリョ、ベリーズ、イサバル、サン・サルバドルを経てグアテマラ市へ至り、ベラパス経由で帰国する旅程に加え、中央アメリカの地理、人口、交易、政治情勢、カレーラ蜂起を叙述しています。献辞、目次、本文全24章、原注、諸表を収録しています。",
+    cover: "publications/montgomery-journey-guatemala-1839/cover.jpg",
+    pdf:
+      "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
+    pageCount: 174,
+    figureCount: 0,
+    plateCount: 1,
+    types: ["旅行記", "地誌", "政治史", "一次史料"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "エルサルバドル",
+      "ホンジュラス",
+      "英領ホンジュラス",
+      "ベリーズ",
+      "キューバ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "1838年",
+      "19世紀前半",
+      "中央アメリカ連邦",
+      "カレーラ",
+      "グアテマラ市",
+      "サン・サルバドル",
+      "ベリーズ",
+      "コシグイナ火山",
+    ],
+  },
+  {
+    slug: "carrera-memorias-1837-1840-1906",
+    title: "カレーラ将軍回想録",
+    originalTitle: "Memorias del General Carrera, 1837 á 1840",
+    subtitle:
+      "1906年初版・編者刊行趣意・真正性序論・全7章・編注 日本語全訳・校訂版",
+    author: "ラファエル・カレーラ（口述）／イグナシオ・ソリス（編）",
+    series: "MEMORIAS DEL GENERAL CARRERA · 1906",
+    originalPublication:
+      "グアテマラ、Tipografía Sánchez & de Guise、1906年",
+    year: 1906,
+    extent:
+      "PDF 80頁・原刊表紙・標題紙・編者刊行趣意・カレーラ略歴・真正性序論・本文全7章・原刊3–91頁・編注",
+    description:
+      "イグナシオ・ソリスがラファエル・カレーラ本人の口述記録として刊行した、1837年から1840年までの回想録。グアテマラ東部の蜂起、政府軍・モラサン軍との戦闘、首都占領、ロス・アルトスをめぐる軍事行動を、カレーラ側の視点から叙述しています。編者の刊行趣意、カレーラ略歴、記録の真正性を論じる序論、本文全7章、史料を引く編注を収録しています。",
+    cover: "publications/carrera-memorias-1837-1840-1906/cover.jpg",
+    pdf:
+      "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
+    pageCount: 80,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["回想録", "政治史", "一次史料", "伝記"],
+    regions: [
+      "グアテマラ",
+      "中央アメリカ",
+      "ロス・アルトス",
+      "エルサルバドル",
+      "ホンジュラス",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "ラファエル・カレーラ",
+      "1837–1840年",
+      "保守派",
+      "自由派",
+      "モラサン",
+      "グアテマラ内戦",
+      "ロス・アルトス",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3425,6 +3513,30 @@ const publicationMetadata = {
       "https://archive.org/details/bosquejohistri00maruguat",
     rights:
       "アレハンドロ・マルレは1851年に没しており、1837年初版および1878年再版の本文は著作権保護期間を満了しています。Internet Archiveに掲載されたフランシスコ・マロキン大学所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "montgomery-journey-guatemala-1839": {
+    sourceEdition:
+      "George Washington Montgomery『Narrative of a Journey to Guatemala, in Central America, in 1838』（New York: Wiley & Putnam、1839年初版）。",
+    sourceProvider:
+      "Smithsonian Libraries所蔵の1839年初版本を収めるBiodiversity Heritage Library／Internet Archiveデジタル複製（識別子 narrativeofjour00mont、全208画像）を底本とした。原刊標題紙、著作権表示、献辞、目次、本文9–195頁、原注、諸表を収録。OCRは検索と照合の補助に限り、本文確定と頁境界は原刊画像に基づいた。",
+    sourceUrl:
+      "https://archive.org/details/narrativeofjour00mont",
+    rights:
+      "1839年原刊本文は米国・日本ともに著作権保護期間を満了しています。Biodiversity Heritage Libraryは当該資料を「Not in copyright」と表示しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "carrera-memorias-1837-1840-1906": {
+    sourceEdition:
+      "Rafael Carrera（口述）／Ignacio Solís（編）『Memorias del General Carrera, 1837 á 1840』（Guatemala: Tipografía Sánchez & de Guise、1906年初版）。",
+    sourceProvider:
+      "Universidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵の1906年初版本を収めるInternet Archiveデジタル複製（識別子 memoriasdelgener00ignaguat、全96画像）を底本とした。原刊表紙、標題紙、編者刊行趣意、カレーラ略歴、真正性序論、本文3–91頁、編注を収録し、原刊頁の欠落がないことを全画像で確認した。",
+    sourceUrl:
+      "https://archive.org/details/memoriasdelgener00ignaguat",
+    rights:
+      "1906年原刊本文は著作権保護期間を満了しており、Internet Archiveの当該資料も「Not in copyright」と表示されています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },

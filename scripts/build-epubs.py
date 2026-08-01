@@ -142,6 +142,12 @@ DOCX_SOURCES = {
     "pineda-traslado-poderes-chiapas-1892": SOURCES
     / "翻訳サイト"
     / "Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.docx",
+    "montgomery-journey-guatemala-1839": SOURCES
+    / "翻訳サイト"
+    / "George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.docx",
+    "carrera-memorias-1837-1840-1906": SOURCES
+    / "翻訳サイト"
+    / "Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

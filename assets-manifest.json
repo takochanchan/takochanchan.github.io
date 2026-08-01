@@ -164,6 +164,24 @@
       "sha256": "f185aade4635409a2162efbc701d2d1a68a002353469b7e61acc0cab35fcacc0"
     },
     {
+      "path": "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
+      "size": 1080152,
+      "sha256": "e3203da731dbd415749d08f9749e8fde2f9b44a1980e85e970b029c035c2a836"
+    },
+    {
+      "path": "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf",
+      "size": 1464051,
+      "sha256": "1f1bdc97e6f8fde54ba22c12bd4b08c56bf74b13e5495a8fcfea0b6da30c44c2"
+    },
+    {
+      "path": "publications/carrera-memorias-1837-1840-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/carrera-memorias-1837-1840-1906/cover.jpg",
+      "size": 52758,
+      "sha256": "096646557257fc18407215307761754da66e974a3edaab9dd1054504c58994bc"
+    },
+    {
       "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "size": 2587197,
@@ -810,6 +828,24 @@
       "url": "https://takochanchan.github.io/publications/means-yucatan-itzas-1917/cover.jpg",
       "size": 48469,
       "sha256": "eb737266765c4586fcc641bdb5e9eb90954fe3856f295986d99a1c0f4c5d9f42"
+    },
+    {
+      "path": "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
+      "size": 1655991,
+      "sha256": "f514649fa353deae7b49581ee8ca8b911a2c75c73b414ab60131514bf2a7b4a5"
+    },
+    {
+      "path": "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf",
+      "size": 2249288,
+      "sha256": "db8946eb04afdbed01c4e1e33c53761c024d66fa037149f01ca16da85181c914"
+    },
+    {
+      "path": "publications/montgomery-journey-guatemala-1839/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montgomery-journey-guatemala-1839/cover.jpg",
+      "size": 50457,
+      "sha256": "2cff39778da82c088a6cd2199580172bf43233aa068cdd68c9448a2d3afa9616"
     },
     {
       "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
