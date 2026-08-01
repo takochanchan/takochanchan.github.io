@@ -102,7 +102,8 @@ jobs:
           test "$(pdfimages -list "$pdf" | awk 'NR > 2 && $3 == "image" { count++ } END { print count+0 }')" = 0
           pdftotext -layout "$pdf" /tmp/committee-report-pdf.txt
           for phrase in \
-            "中央アメリカの地理および古物に関する懸賞についての報告" \
+            "中央アメリカの地理および古物に関する" \
+            "懸賞についての報告" \
             "フランス地理学会委員会" \
             "ド・ラ・ルノーディエール" \
             "de La Renaudière" \
@@ -293,6 +294,7 @@ jobs:
               archive.extractall(destination, members=members, filter="data")
           PY
           cp -a /tmp/committee-report-site-source/. .
+          rm -f .release-upload-errors/societe-geographie-*.txt
 
           cover=static/publications/societe-geographie-central-america-report-1836/cover.jpg
           echo "$REPORT_COVER_SHA  $cover" | sha256sum -c -
@@ -389,6 +391,7 @@ jobs:
             src/publications.mjs \
             tests/archive.test.mjs \
             static/publications/societe-geographie-central-america-report-1836/cover.jpg
+          git add -A .release-upload-errors
           git diff --cached --check
           git commit -m "Publish 1836 geographical committee report"
           pushed=false
