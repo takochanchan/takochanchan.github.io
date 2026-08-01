@@ -151,6 +151,9 @@ DOCX_SOURCES = {
     "valle-anexion-centro-america-mexico-1924-1949": SOURCES
     / "翻訳サイト"
     / "Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.docx",
+    "montufar-memorias-revolucion-centro-america-1832": SOURCES
+    / "翻訳サイト"
+    / "Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

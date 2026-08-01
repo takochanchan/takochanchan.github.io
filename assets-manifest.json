@@ -848,6 +848,24 @@
       "sha256": "2cff39778da82c088a6cd2199580172bf43233aa068cdd68c9448a2d3afa9616"
     },
     {
+      "path": "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.epub",
+      "size": 810496,
+      "sha256": "2db0914f2b4066fa384cd89f17d07b2a32cefcab78c8008f21dca455ea658031"
+    },
+    {
+      "path": "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.pdf",
+      "size": 3048031,
+      "sha256": "8efe000f65c35509237b5ffce39b3fbdc0f5e5fc8fed98e969657cfac8f37d1c"
+    },
+    {
+      "path": "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
+      "size": 57860,
+      "sha256": "06c4a70a14e9664aa7de246646533e42f01a70c46676a6e2fd5ac3939d7cb9ab"
+    },
+    {
       "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
       "size": 2352148,

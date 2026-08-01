@@ -2774,6 +2774,53 @@ const publicationRecords = [
       "全巻索引",
     ],
   },
+  {
+    slug: "montufar-memorias-revolucion-centro-america-1832",
+    title: "中央アメリカ革命史のための回想録",
+    originalTitle:
+      "Memorias para la historia de la revolución de Centro-América",
+    subtitle:
+      "「ハラパ回想録」・1832年初版・前付・全5章・証拠文書 日本語全訳",
+    author: "マヌエル・モントゥファル・イ・コロナード",
+    series: "MEMORIAS DE JALAPA · 1832",
+    originalPublication: "ハラパ、政府印刷局、1832年",
+    year: 1832,
+    extent:
+      "PDF 267頁・原刊前付I–XXXII頁・本文および証拠文書1–257頁・全5章・脚注35件・原刊標題紙1点",
+    description:
+      "旧グアテマラ王国末期から独立、メキシコ帝国への併合と分離、中央アメリカ連邦の成立、1826–1829年内戦とグアテマラ占領までを、同時代の政治家マヌエル・モントゥファルが叙述した回想録。1832年初版は「あるグアテマラ人による」として匿名刊行され、一般に「ハラパ回想録」と呼ばれています。中央アメリカ概説、全5章、証拠文書第1–5号、脚注を省略なく収録しています。",
+    cover:
+      "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
+    pdf:
+      "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.epub",
+    pageCount: 267,
+    figureCount: 0,
+    plateCount: 1,
+    types: ["回想録", "政治史", "一次史料", "歴史書"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "エルサルバドル",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+      "チアパス",
+      "メキシコ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "ハラパ回想録",
+      "中米独立",
+      "中央アメリカ連邦",
+      "1826–1829年内戦",
+      "マヌエル・ホセ・アルセ",
+      "フランシスコ・モラサン",
+      "保守派",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3596,6 +3643,18 @@ const publicationMetadata = {
     sourceUrl: "https://simurg.csic.es/view/990000524000204201",
     rights:
       "Simurg掲載のデジタル複製はCreative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）で提供されています。本日本語翻訳・編集版も同ライセンスで提供します。利用には原著者・原題・原刊情報・所蔵館およびSimurgの表示、変更の表示、改変物への同一ライセンスの継承が必要です。原資料および第三者素材の権利状態には影響しません。ライセンス本文：https://creativecommons.org/licenses/by-sa/4.0/",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "montufar-memorias-revolucion-centro-america-1832": {
+    sourceEdition:
+      "Manuel Montúfar y Coronado［匿名刊行］『Memorias para la historia de la revolución de Centro-América, por un guatemalteco』（Jalapa: Impreso por Aburto y Blanco, en la Oficina del Gobierno、1832年初版）。",
+    sourceProvider:
+      "米国議会図書館所蔵の1832年初版本を収めるInternet Archiveデジタル複製（識別子 memoriasparalahi00mont、全302画像）を底本とした。原刊標題紙、著者の「注意」、前付I–XXXII頁の中央アメリカ概説、本文全5章、証拠文書第1–5号、原注を収録し、原刊本文および証拠文書1–257頁の頁境を保持した。",
+    sourceUrl:
+      "https://archive.org/details/memoriasparalahi00mont",
+    rights:
+      "マヌエル・モントゥファル・イ・コロナードは1844年に没しており、1832年原刊本文は米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載された米国議会図書館所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
