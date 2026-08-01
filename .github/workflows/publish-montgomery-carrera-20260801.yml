@@ -103,13 +103,13 @@ jobs:
           verify_pdf "/tmp/$MONT_PDF_NAME" 174 1 \
             "グアテマラ旅行記" \
             "ジョージ・ワシントン・モンゴメリー" \
-            "第XXIV章" \
+            "第 XXIV 章" \
             "コシグイナ" \
             "ボルティモア"
           verify_pdf "/tmp/$CARR_PDF_NAME" 80 2 \
             "カレーラ将軍回想録" \
             "ラファエル・カレーラ" \
-            "第VII章" \
+            "第 VII 章" \
             "ロス・アルトス" \
             "マリアノ・ノリエガ"
 
@@ -365,6 +365,9 @@ jobs:
           set -euo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          if test -f .release-upload-errors/montgomery-carrera-30677180214.txt; then
+            git rm .release-upload-errors/montgomery-carrera-30677180214.txt
+          fi
           git add \
             assets-manifest.json \
             master-archive.json \
