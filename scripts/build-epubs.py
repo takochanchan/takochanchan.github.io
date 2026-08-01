@@ -118,6 +118,14 @@ DOCX_SOURCES = {
     "stoll-guatemala-reisen-schilderungen-1886": SOURCES
     / "翻訳サイト"
     / "Otto_Stoll_Guatemala_Japanese_review_v13.docx",
+    "galindo-caribs-central-america-1833": SOURCES
+    / "Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.docx",
+    "galindo-antiquities-peten-1834": SOURCES
+    / "Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.docx",
+    "galindo-copan-literary-gazette-1835": SOURCES
+    / "Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.docx",
+    "galindo-ruins-copan-aas-1836": SOURCES
+    / "Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.docx",
     "brinton-chilan-balam-1882": SOURCES
     / "翻訳サイト"
     / "Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.docx",

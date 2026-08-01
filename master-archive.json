@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "774e4acd2316b6f93e89315c8b3c38a1095d84b6",
+  "archive_commit": "a442ba9c030b02e3880a5b70fe17d9a91c2f0d11",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -83,6 +83,10 @@
     "valle-anexion-centro-america-mexico-1924-1949": "publications/valle-anexion-centro-america-mexico-1924-1949/master.docx",
     "montufar-memorias-revolucion-centro-america-1832": "publications/montufar-memorias-revolucion-centro-america-1832/master.docx",
     "societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx",
-    "ximenez-escolios-ayer-ms-1515": "publications/ximenez-escolios-ayer-ms-1515/master.docx"
+    "ximenez-escolios-ayer-ms-1515": "publications/ximenez-escolios-ayer-ms-1515/master.docx",
+    "galindo-caribs-central-america-1833": "publications/galindo-caribs-central-america-1833/master.docx",
+    "galindo-antiquities-peten-1834": "publications/galindo-antiquities-peten-1834/master.docx",
+    "galindo-copan-literary-gazette-1835": "publications/galindo-copan-literary-gazette-1835/master.docx",
+    "galindo-ruins-copan-aas-1836": "publications/galindo-ruins-copan-aas-1836/master.docx"
   }
 }

@@ -425,6 +425,120 @@ const publicationRecords = [
     tags: ["地理学協会", "河川地理", "全面地図", "一次史料"],
   },
   {
+    slug: "galindo-caribs-central-america-1833",
+    title: "中央アメリカのカリブ人についての報告",
+    originalTitle: "Notice of the Caribs in Central America",
+    subtitle: "1833年刊・原刊290–291頁・本文・語彙／数詞表 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "NOTICE OF THE CARIBS IN CENTRAL AMERICA · 1833",
+    originalPublication:
+      "ロンドン、『王立地理学協会誌』第3巻、1833年、290–291頁",
+    year: 1833,
+    extent: "PDF 3頁・原刊290–291頁・カリブ語彙18項目・数詞I–X",
+    description:
+      "トルヒージョを中心とする中央アメリカのカリブ人について、移住、居住地、言語を記した短報。原刊290–291頁の本文を省略なく訳し、末尾のカリブ語彙18項目と数詞I–Xを表形式で収録しています。",
+    cover: "publications/galindo-caribs-central-america-1833/cover.jpg",
+    pdf:
+      "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["民族誌", "言語資料", "報告"],
+    regions: ["中央アメリカ", "ホンジュラス", "ベリーズ", "カリブ海"],
+    languages: ["英語", "カリブ語"],
+    tags: ["ガリフナ", "カリブ人", "語彙", "数詞", "一次史料"],
+  },
+  {
+    slug: "galindo-antiquities-peten-1834",
+    title: "中央アメリカ、ペテン管区で発見された若干の古物についての短報",
+    originalTitle:
+      "A short Account of some Antiquities discovered in the District of Peten, in Central America",
+    subtitle:
+      "1834年刊・1831年書簡・原刊570–571頁＋図版LIX–LX 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "ANTIQUITIES DISCOVERED IN PETEN · 1834",
+    originalPublication:
+      "ロンドン、『Archaeologia』第25巻、1834年、570–571頁",
+    year: 1834,
+    extent: "PDF 5頁・原刊570–571頁・図版2葉（LIX–LX）",
+    description:
+      "1831年10月28日付でガリンドがロンドン古物協会へ送った書簡。ペテン管区で収集したパレンケの漆喰浮彫と、ヤショー湖（原刊 Yashaw）の島の遺構・遺物を記述します。本文、宛先・署名、図版LIX・LXの標題と注記を省略なく訳し、図版二葉を収録しています。",
+    cover: "publications/galindo-antiquities-peten-1834/cover.jpg",
+    pdf:
+      "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub",
+    pageCount: 5,
+    figureCount: 0,
+    plateCount: 2,
+    types: ["考古学報告", "書簡", "図版資料"],
+    regions: ["ペテン", "パレンケ", "ヤショー湖"],
+    languages: ["英語"],
+    tags: [
+      "マヤ考古学",
+      "イツァ",
+      "パレンケ",
+      "ヤショー湖",
+      "原刊図版",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "galindo-copan-literary-gazette-1835",
+    title: "中央アメリカ――コパン遺跡通信",
+    originalTitle: "Central America",
+    subtitle: "1835年刊・原刊456–457頁・編集部注・本文・署名 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "CENTRAL AMERICA · THE LITERARY GAZETTE · 1835",
+    originalPublication:
+      "ロンドン、『The Literary Gazette』第965号、1835年7月18日、456–457頁",
+    year: 1835,
+    extent: "PDF 7頁・原刊456–457頁・図版なし",
+    description:
+      "コパン遺跡から1834年6月19日付で送られ、『リテラリー・ガゼット』の「原通信」欄に掲載された書簡。遺跡の位置、建築、発掘、石碑、ガリンド自身の文明史観を記した本文と、末尾の編集部注を省略なく訳しています。",
+    cover: "publications/galindo-copan-literary-gazette-1835/cover.jpg",
+    pdf:
+      "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["遺跡報告", "書簡", "新聞記事"],
+    regions: ["コパン", "ホンジュラス", "中央アメリカ"],
+    languages: ["英語"],
+    tags: ["マヤ考古学", "コパン遺跡", "リテラリー・ガゼット", "一次史料"],
+  },
+  {
+    slug: "galindo-ruins-copan-aas-1836",
+    title: "中央アメリカのコパン遺跡",
+    originalTitle: "The Ruins of Copan, in Central America",
+    subtitle:
+      "1836年刊・原刊543–550頁・刊行委員会注・書簡本文 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "THE RUINS OF COPAN · ARCHAEOLOGIA AMERICANA · 1836",
+    originalPublication:
+      "ケンブリッジ（マサチューセッツ）、『Archaeologia Americana』第2巻、1836年、543–550頁",
+    year: 1836,
+    extent: "PDF 9頁・原刊543–550頁・原刊冒頭画像1点",
+    description:
+      "アメリカ古物協会紀要に掲載されたコパン遺跡報告。1835年6月19日付書簡の本文、刊行委員会注、宛先、署名・肩書を省略なく訳し、原刊543頁の論文標題画像を収録しています。1834年に政府へ提出されたスペイン語・フランス語の完全報告とは別個の英語短報です。",
+    cover: "publications/galindo-ruins-copan-aas-1836/cover.jpg",
+    pdf:
+      "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.epub",
+    pageCount: 9,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["遺跡報告", "書簡", "学会紀要"],
+    regions: ["コパン", "ホンジュラス", "中央アメリカ"],
+    languages: ["英語"],
+    tags: ["マヤ考古学", "コパン遺跡", "アメリカ古物協会", "一次史料"],
+  },
+  {
     slug: "societe-geographie-central-america-report-1836",
     title: "中央アメリカの地理および古物に関する懸賞についての報告",
     originalTitle:
@@ -3053,6 +3167,47 @@ const publicationMetadata = {
     publishedDate: "2026-07-24",
     updatedDate: "2026-07-26",
   },
+  "galindo-caribs-central-america-1833": {
+    sourceEdition:
+      "Juan Galindo「Notice of the Caribs in Central America」『The Journal of the Royal Geographical Society of London』vol. 3（1833年）pp. 290–291。",
+    sourceProvider:
+      "王立地理学協会誌第3巻の公開原刊画像を主底本とし、JSTOR単独版で本文と頁範囲を照合した。原刊本文二頁、カリブ語彙、数詞表を収録した。",
+    sourceUrl: "https://www.jstor.org/stable/1797617",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "galindo-antiquities-peten-1834": {
+    sourceEdition:
+      "Juan Galindo「A short Account of some Antiquities discovered in the District of Peten, in Central America」『Archaeologia』vol. 25（1834年）pp. 570–571、plates LIX–LX。1831年10月28日付、1832年6月7日朗読。",
+    sourceProvider:
+      "Internet Archive／Wikimedia Commons公開の図版入り全巻版を主底本とし、Cambridge Core単独論文版で本文を照合した。本文、宛先・署名、図版LIX・LXを収録した。",
+    sourceUrl: "https://archive.org/details/s2id13276840",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "galindo-copan-literary-gazette-1835": {
+    sourceEdition:
+      "Juan Galindo「Central America」『The Literary Gazette; and Journal of the Belles Lettres, Arts, Sciences, &c.』no. 965（1835年7月18日）pp. 456–457。1834年6月19日付。",
+    sourceProvider:
+      "Internet Archive公開の第965号原刊画像を底本とした。編集部注、書簡本文、署名を収録した。",
+    sourceUrl:
+      "https://archive.org/details/sim_literary-gazette_1835-07-18_965",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "galindo-ruins-copan-aas-1836": {
+    sourceEdition:
+      "Juan Galindo「The Ruins of Copan, in Central America」『Archaeologia Americana: Transactions and Collections of the American Antiquarian Society』vol. 2（Cambridge, Massachusetts、1836年）pp. 543–550。1835年6月19日付。",
+    sourceProvider:
+      "Internet Archive公開のアメリカ古物協会紀要第2巻を底本とした。刊行委員会注、書簡本文、宛先、署名・肩書を収録した。",
+    sourceUrl: "https://archive.org/details/archaeologiaamer2183amer",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
   "societe-geographie-central-america-report-1836": {
     sourceEdition:
       "Baron Walckenaer、de La Renaudière、Jomard（報告者）「Rapport sur le concours relatif à la géographie et aux antiquités de l’Amérique centrale」『Bulletin de la Société de géographie』第2シリーズ第5巻（Paris: Arthus-Bertrand、1836年4月）253–291頁。",
@@ -3772,6 +3927,10 @@ const shortWorkAuthorBySlug = {
   "sapper-eastern-lacandons-1891": "karl-sapper",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
   "galindo-usumacinta-1833": "juan-galindo",
+  "galindo-caribs-central-america-1833": "juan-galindo",
+  "galindo-antiquities-peten-1834": "juan-galindo",
+  "galindo-copan-literary-gazette-1835": "juan-galindo",
+  "galindo-ruins-copan-aas-1836": "juan-galindo",
   "friedrichsthal-yucatan-1841": "emanuel-von-friedrichsthal",
   "galindo-palenque-1832": "juan-galindo",
   "societe-geographie-central-america-report-1836":

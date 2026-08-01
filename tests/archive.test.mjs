@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 81);
+  assert.equal(publications.length, 85);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 71);
-  assert.equal(shortPublications.length, 10);
+  assert.equal(shortPublications.length, 14);
   assert.equal(shortPublicationAuthors.length, 9);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -73,6 +73,10 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "sapper-eastern-lacandons-1891",
       "berendt-central-america-explorations-1867",
       "galindo-usumacinta-1833",
+      "galindo-caribs-central-america-1833",
+      "galindo-antiquities-peten-1834",
+      "galindo-copan-literary-gazette-1835",
+      "galindo-ruins-copan-aas-1836",
       "friedrichsthal-yucatan-1841",
       "galindo-palenque-1832",
       "arthes-peten-1893",
@@ -88,7 +92,14 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.equal(galindo.name, "フアン・ガリンド");
   assert.deepEqual(
     galindo.publications.map((item) => item.slug),
-    ["galindo-palenque-1832", "galindo-usumacinta-1833"],
+    [
+      "galindo-palenque-1832",
+      "galindo-usumacinta-1833",
+      "galindo-caribs-central-america-1833",
+      "galindo-antiquities-peten-1834",
+      "galindo-copan-literary-gazette-1835",
+      "galindo-ruins-copan-aas-1836",
+    ],
   );
   const committee = shortPublicationAuthors.find(
     (author) => author.key === "societe-de-geographie-committee",
@@ -150,6 +161,28 @@ test("Ximenez Escolios is catalogued as the complete six-leaf short work", () =>
   assert.deepEqual(item.languages, ["スペイン語", "キチェ語", "ラテン語"]);
 });
 
+test("approved Galindo short-paper batch remains individually catalogued", () => {
+  const expectedPages = new Map([
+    ["galindo-caribs-central-america-1833", 3],
+    ["galindo-antiquities-peten-1834", 5],
+    ["galindo-copan-literary-gazette-1835", 7],
+    ["galindo-ruins-copan-aas-1836", 9],
+  ]);
+  for (const [slug, pageCount] of expectedPages) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, "juan-galindo", slug);
+    assert.equal(item.pageCount, pageCount, slug);
+    assert.equal(item.publishedDate, "2026-08-01", slug);
+  }
+  const peten = publications.find(
+    (publication) => publication.slug === "galindo-antiquities-peten-1834",
+  );
+  assert.match(peten.description, /ヤショー湖（原刊 Yashaw）/);
+  assert.doesNotMatch(peten.description, /ヤシャ湖|Yaxh/u);
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
@@ -208,7 +241,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">71<\/strong>件/);
-  assert.match(html, /id="paper-match-count">10<\/strong>件/);
+  assert.match(html, /id="paper-match-count">14<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');
@@ -260,7 +293,7 @@ test("home page contains scalable archive controls", async () => {
   );
   assert.match(html, /id="author-juan-galindo"/);
   assert.match(html, /フアン・ガリンド/);
-  assert.match(html, />2篇</);
+  assert.match(html, />6篇</);
 });
 
 test("about page explains the editorial workflow and its limits", async () => {

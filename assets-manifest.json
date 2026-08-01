@@ -524,6 +524,60 @@
       "sha256": "cd26266cd86b98dd001b166a04e3dab980de7e0a0d52ad507841af54d7884936"
     },
     {
+      "path": "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub",
+      "size": 4822700,
+      "sha256": "b0aae14b04ac7eda5ef8fd2d0673e1e74f2d7a68050228ee2f0a258089a2c29a"
+    },
+    {
+      "path": "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.pdf",
+      "size": 1056760,
+      "sha256": "c121db1f2ce8d8b648917fbecc0aa8c5c9b191e1b83cd99c2fd409d99cd2b46e"
+    },
+    {
+      "path": "publications/galindo-antiquities-peten-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-antiquities-peten-1834/cover.jpg",
+      "size": 153285,
+      "sha256": "46767292cdd6cefb6a97fa060fe098687eff8cc8d7af06e87681ff01db10a3fc"
+    },
+    {
+      "path": "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.epub",
+      "size": 100811,
+      "sha256": "643a16adda06c8198b64bd70878a8477e6d2195fe6d18ea2a74441072d0c1a32"
+    },
+    {
+      "path": "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.pdf",
+      "size": 187824,
+      "sha256": "ccdc09a9eb92bda2dbb161c14cbd47d603921d7976e0ed2b974ce6f74f8f1da1"
+    },
+    {
+      "path": "publications/galindo-caribs-central-america-1833/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-caribs-central-america-1833/cover.jpg",
+      "size": 119611,
+      "sha256": "d41ae725a2e725a366330f36702bf9b7a3f865ebe22d62673cb755081ee7b40c"
+    },
+    {
+      "path": "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
+      "size": 103949,
+      "sha256": "0d8615d8c32f6c9f8d047c79895e842c92a6cc8fd5aef604175753476f453637"
+    },
+    {
+      "path": "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.pdf",
+      "size": 267414,
+      "sha256": "47038d5752f061fc5be969baa4b55d73640c9e5e4c93803d286444b882f48cee"
+    },
+    {
+      "path": "publications/galindo-copan-literary-gazette-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-copan-literary-gazette-1835/cover.jpg",
+      "size": 118461,
+      "sha256": "c6ff653a692d3093fcf9002d2f74612cc97edb00dd0f3f3042652be6fbb0514d"
+    },
+    {
       "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
       "size": 224590,
@@ -540,6 +594,24 @@
       "url": "https://takochanchan.github.io/publications/galindo-palenque-1832/cover.jpg",
       "size": 72911,
       "sha256": "9aecf061a49a9ef562a0da1a9398fda566d1faedb57185409af2af5e3999a157"
+    },
+    {
+      "path": "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.epub",
+      "size": 196884,
+      "sha256": "592eebad494de23e6267fb614362aca8e93db06ae09c66f8dba59048dbe976ee"
+    },
+    {
+      "path": "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.pdf",
+      "size": 321043,
+      "sha256": "e22938c9ca4a0970a9ddd9313df8efe5d5b92f3cc3f79ea1b598f79c6827fb82"
+    },
+    {
+      "path": "publications/galindo-ruins-copan-aas-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-ruins-copan-aas-1836/cover.jpg",
+      "size": 128714,
+      "sha256": "15cb67c8b0159e4da125e5b775986444754c032727929c90e9f95e6483680b53"
     },
     {
       "path": "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",
