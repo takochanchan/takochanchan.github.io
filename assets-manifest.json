@@ -1622,6 +1622,24 @@
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
     },
     {
+      "path": "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
+      "size": 1707365,
+      "sha256": "457ac54e64d54de4cc55df94ecec0f003b80513afcd212ed252a6e54ad97fd09"
+    },
+    {
+      "path": "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.pdf",
+      "size": 5701507,
+      "sha256": "14433b99cb5654cda5388ff54d73c3e81f680025b3fcf1b4a701510772ba181f"
+    },
+    {
+      "path": "publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
+      "size": 64513,
+      "sha256": "f631e8a5223b28396b10e927df2c2af206b3680f162b247d373580cff7bf6ed8"
+    },
+    {
       "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "size": 7311140,

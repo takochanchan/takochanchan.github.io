@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "a5c2890080393dd8c2aacc4df5c089be5056c514",
+  "archive_commit": "ff94dc6ef5cc7610d74b85a6c663a0ca236e2e6f",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -94,6 +94,7 @@
     "galindo-eruption-cosiguina-1835": "publications/galindo-eruption-cosiguina-1835/master.docx",
     "galindo-on-central-america-1836": "publications/galindo-on-central-america-1836/master.docx",
     "squier-notes-central-america-1855": "publications/squier-notes-central-america-1855/master.docx",
-    "molina-costa-rica-new-granada-1853": "publications/molina-costa-rica-new-granada-1853/master.md"
+    "molina-costa-rica-new-granada-1853": "publications/molina-costa-rica-new-granada-1853/master.docx",
+    "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx"
   }
 }

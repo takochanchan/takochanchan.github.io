@@ -1,5 +1,42 @@
 const publicationRecords = [
   {
+    slug: "williams-anglo-american-isthmian-diplomacy-1916",
+    title: "中米地峡をめぐる英米外交",
+    originalTitle: "Anglo-American Isthmian Diplomacy, 1815–1915",
+    subtitle: "1916年刊・全11章、参考文献、索引 日本語全訳",
+    author: "メアリー・ウィルヘルミン・ウィリアムズ",
+    series: "ANGLO-AMERICAN ISTHMIAN DIPLOMACY · 1916",
+    originalPublication:
+      "ワシントン、American Historical Association／ロンドン、Oxford University Press、1916年",
+    year: 1916,
+    extent:
+      "PDF 318頁・原刊前付vii–xiii頁・本文1–330頁・参考文献331–345頁・索引347–356頁・折込地図1点",
+    description:
+      "英国と米国が中央アメリカの地峡交通、ベリーズ、ベイ諸島、モスキート海岸、ニカラグア運河、パナマ運河をめぐって展開した1815年から1915年までの外交史。前付、全11章、原注、参考文献、索引を省略なく訳し、原刊198頁直後の色刷折込地図を収録しています。",
+    cover:
+      "publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
+    pdf:
+      "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
+    pageCount: 318,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["外交史", "国際関係史", "運河史", "歴史研究"],
+    regions: ["中央アメリカ", "ベリーズ", "ニカラグア", "パナマ"],
+    languages: ["英語"],
+    tags: [
+      "クレイトン＝ブルワー条約",
+      "モスキート海岸",
+      "英領ホンジュラス",
+      "ニカラグア運河",
+      "パナマ運河",
+      "モンロー主義",
+      "ガリンド",
+      "19世紀",
+    ],
+  },
+  {
     slug: "molina-costa-rica-new-granada-1853",
     title: "コスタリカとヌエバ・グラナダ",
     originalTitle:
@@ -3252,6 +3289,18 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "williams-anglo-american-isthmian-diplomacy-1916": {
+    sourceEdition:
+      "Mary Wilhelmine Williams, Anglo-American Isthmian Diplomacy, 1815–1915（Washington: American Historical Association; London: Humphrey Milford, Oxford University Press、1916年）。",
+    sourceProvider:
+      "カリフォルニア大学旧蔵本をデジタル化したInternet Archive公開の全384画像を主底本とした。前付、本文1–330頁、参考文献331–345頁、索引347–356頁、原刊198頁直後の色刷折込地図を完備する。本文校合にはトロント大学本およびCornell大学本を用いた。",
+    sourceUrl:
+      "https://archive.org/details/angloamericanist00willrich",
+    rights:
+      "1916年原刊本文は米国でパブリックドメインです。著者メアリー・ウィルヘルミン・ウィリアムズは1944年に没しており、日本でも著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-02",
+    updatedDate: "2026-08-02",
+  },
   "valenzuela-lacandon-chol-1695": {
     sourceEdition:
       "Götz Freiherr von Houwald 編『Nicolás de Valenzuela: Conquista del Lacandón y Conquista del Chol』Tomo I: Texto（Colloquium Verlag、1979年）。ベルリン写本 Y 796 [4°] の本文転写。",
