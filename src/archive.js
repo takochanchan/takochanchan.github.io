@@ -120,7 +120,8 @@
     if (state.perPage !== defaultPageSize) next.set("perPage", state.perPage);
     if (state.page > 1) next.set("page", String(state.page));
     const query = next.toString();
-    history.replaceState(null, "", query ? `?${query}` : location.pathname);
+    const target = query ? `?${query}` : location.pathname;
+    history.replaceState(null, "", `${target}${location.hash}`);
   };
 
   const card = (item) => `
