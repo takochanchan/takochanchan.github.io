@@ -1,0 +1,2 @@
+Galindo Palenque revision workflow failed. Inspect this run before retrying.
+Run: https://github.com/takochanchan/takochanchan.github.io/actions/runs/30694171740
