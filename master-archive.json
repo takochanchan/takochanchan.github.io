@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "49f5532c18d48ef59fcd546f9a53688abcf6fd5c",
+  "archive_commit": "1e722820311943746a7997c425f674e8c54bea57",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -79,6 +79,7 @@
     "gage-new-survey-west-indias-1655": "publications/gage-new-survey-west-indias-1655/master.docx",
     "marure-bosquejo-revoluciones-centro-america-1837-1878": "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/master.docx",
     "montgomery-journey-guatemala-1839": "publications/montgomery-journey-guatemala-1839/master.docx",
-    "carrera-memorias-1837-1840-1906": "publications/carrera-memorias-1837-1840-1906/master.docx"
+    "carrera-memorias-1837-1840-1906": "publications/carrera-memorias-1837-1840-1906/master.docx",
+    "valle-anexion-centro-america-mexico-1924-1949": "publications/valle-anexion-centro-america-mexico-1924-1949/master.docx"
   }
 }

@@ -148,6 +148,9 @@ DOCX_SOURCES = {
     "carrera-memorias-1837-1840-1906": SOURCES
     / "翻訳サイト"
     / "Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.docx",
+    "valle-anexion-centro-america-mexico-1924-1949": SOURCES
+    / "翻訳サイト"
+    / "Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

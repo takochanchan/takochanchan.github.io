@@ -2726,6 +2726,54 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "valle-anexion-centro-america-mexico-1924-1949",
+    title: "中央アメリカのメキシコ併合",
+    originalTitle: "La anexión de Centro América a México",
+    subtitle:
+      "全6巻（1924–1949年刊）・1821–1828年文書集 日本語全訳・合冊版",
+    author: "ラファエル・エリオドロ・バジェ（編）",
+    series: "ARCHIVO HISTÓRICO DIPLOMÁTICO MEXICANO · TOMOS I–VI",
+    originalPublication: "メキシコ、外務省、1924–1949年",
+    year: 1924,
+    extent:
+      "PDF 2,257頁・全6巻・収録文書1,045件・巻別文書索引・全巻総合固有名索引49頁",
+    description:
+      "中央アメリカ諸州がスペインから独立し、イトゥルビデのメキシコ帝国へ併合されたのち、帝国崩壊を経て分離するまでの1821–1828年文書集。グアテマラ、チアパス、エルサルバドル、ホンジュラス、ニカラグア、コスタリカをめぐる布告、議会審議、外交書簡、軍政文書、論説を収める全6巻1,045文書を全訳し、巻別文書索引と全巻総合固有名索引を収録しています。",
+    cover:
+      "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
+    pdf:
+      "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
+    pageCount: 2257,
+    figureCount: 0,
+    plateCount: 50,
+    types: ["文書集", "外交史", "政治史", "一次史料"],
+    regions: [
+      "中央アメリカ",
+      "メキシコ",
+      "グアテマラ",
+      "チアパス",
+      "エルサルバドル",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "1821–1828年",
+      "中米独立",
+      "メキシコ帝国併合",
+      "アグスティン・デ・イトゥルビデ",
+      "ビセンテ・フィリソラ",
+      "チアパス帰属問題",
+      "中央アメリカ連邦",
+      "外交文書",
+      "議会審議",
+      "全巻索引",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -3537,6 +3585,17 @@ const publicationMetadata = {
       "https://archive.org/details/memoriasdelgener00ignaguat",
     rights:
       "1906年原刊本文は著作権保護期間を満了しており、Internet Archiveの当該資料も「Not in copyright」と表示されています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "valle-anexion-centro-america-mexico-1924-1949": {
+    sourceEdition:
+      "Rafael Heliodoro Valle（編）『La anexión de Centro América a México』全6巻（México: Secretaría de Relaciones Exteriores、1924・1927・1936・1945・1946・1949年）。",
+    sourceProvider:
+      "Consejo Superior de Investigaciones Científicas（CSIC）、Biblioteca Americanista de Sevilla所蔵本をSimurgで公開した全6巻デジタル複製を底本とした。第V巻の複製で欠ける原刊11頁のみ、University of California所蔵同版のGoogle Books画像を照合して補った。本文、注、文書索引を全巻収録し、第VI巻末の全巻総合固有名索引49頁は綴り・巻頁参照を保持したファクシミリとして収録した。",
+    sourceUrl: "https://simurg.csic.es/view/990000524000204201",
+    rights:
+      "Simurg掲載のデジタル複製はCreative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）で提供されています。本日本語翻訳・編集版も同ライセンスで提供します。利用には原著者・原題・原刊情報・所蔵館およびSimurgの表示、変更の表示、改変物への同一ライセンスの継承が必要です。原資料および第三者素材の権利状態には影響しません。ライセンス本文：https://creativecommons.org/licenses/by-sa/4.0/",
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },

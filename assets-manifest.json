@@ -1352,6 +1352,24 @@
       "sha256": "ccbf33bf0a1d10e8d44d8c413ad05b92e91c7628daf1fbd2a976eaa60f278fee"
     },
     {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
+      "size": 19318192,
+      "sha256": "b6675c725f504b74c813693596d4cda1e5d6d948bee9520703eef257681ebaae"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
+      "size": 52057780,
+      "sha256": "93c3b23efe9ead190d357fd73d5a6c64ad401f8f1931f6972b07bb0952bd1504"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
+      "size": 50376,
+      "sha256": "0c55184b97b7f95f370eb160114adaeba977d9e7b2cd8125e97c66f2b5211748"
+    },
+    {
       "path": "publications/villagutierre-itza-1701/cover.jpg",
       "url": "https://takochanchan.github.io/publications/villagutierre-itza-1701/cover.jpg",
       "size": 78804,
