@@ -1,1 +1,2 @@
 Trigger the validated Galindo Palenque revision publication.
+Registered after the one-time workflow became active.
