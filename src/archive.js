@@ -85,7 +85,9 @@
     window.addEventListener("hashchange", () => {
       activateCollection(panelForAnchor());
       requestAnimationFrame(() => {
-        document.getElementById(location.hash.slice(1))?.scrollIntoView();
+        const target = document.getElementById(location.hash.slice(1));
+        if (target?.matches("details.short-author")) target.open = true;
+        target?.scrollIntoView();
       });
     });
     activateCollection(panelForAnchor());
@@ -245,15 +247,11 @@
         <span>${escapeHtml(String(item.pageCount))}頁</span>
       </div>
       <div class="short-work-card__body">
-        <p class="short-work-card__series">${escapeHtml(item.series)}</p>
         <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h4>
         <p class="short-work-card__original-title"><cite>${escapeHtml(item.originalTitle)}</cite></p>
         <p class="short-work-card__publication">${escapeHtml(item.originalPublication)}</p>
         <div class="short-work-card__actions">
           <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
-          <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF（${escapeHtml(item.pdfSize)}）</a>
-          <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
-            type="application/epub+zip" download>EPUB（${escapeHtml(item.epubSize)}）</a>
         </div>
       </div>
     </article>`;
@@ -276,17 +274,19 @@
         const authorPublications = [...author.publications].sort(
           (a, b) => a.year - b.year || a.title.localeCompare(b.title, "ja"),
         );
+        const authorId = `author-${author.key}`;
+        const open = location.hash.slice(1) === authorId ? " open" : "";
         return `
-          <section class="short-author" aria-labelledby="author-${escapeHtml(author.key)}">
-            <header class="short-author__heading">
-              <p>AUTHOR</p>
-              <h3 id="author-${escapeHtml(author.key)}">${escapeHtml(author.name)}</h3>
-              <span>${authorPublications.length}篇</span>
-            </header>
+          <details class="short-author" id="${escapeHtml(authorId)}"${open}>
+            <summary class="short-author__heading">
+              <span class="short-author__name" role="heading" aria-level="3">${escapeHtml(author.name)}</span>
+              <span class="short-author__count">${authorPublications.length}篇</span>
+              <span class="short-author__toggle" aria-hidden="true"></span>
+            </summary>
             <div class="short-author__works">
               ${authorPublications.map(shortCard).join("")}
             </div>
-          </section>`;
+          </details>`;
       })
       .join("");
   };
@@ -493,7 +493,9 @@
   render();
   if (initialAnchor) {
     requestAnimationFrame(() => {
-      document.getElementById(initialAnchor)?.scrollIntoView();
+      const target = document.getElementById(initialAnchor);
+      if (target?.matches("details.short-author")) target.open = true;
+      target?.scrollIntoView();
     });
   }
 })();

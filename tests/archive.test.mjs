@@ -258,8 +258,8 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260801-unified-search-v1/);
-  assert.match(html, /\/archive\.js\?v=20260801-unified-search-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
+  assert.match(html, /\/archive\.js\?v=20260801-paper-fold-v1/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -321,9 +321,21 @@ test("home page contains scalable archive controls", async () => {
     (html.match(/class="short-author"/g) || []).length,
     shortPublicationAuthors.length,
   );
+  assert.equal(
+    (html.match(/<details class="short-author"/g) || []).length,
+    shortPublicationAuthors.length,
+  );
+  assert.doesNotMatch(html, /<details class="short-author"[^>]*\sopen(?:\s|>)/);
   assert.match(html, /id="author-juan-galindo"/);
   assert.match(html, /フアン・ガリンド/);
   assert.match(html, />11篇</);
+  const shortPanel = html.slice(
+    html.indexOf('id="short-works" role="tabpanel"'),
+    html.indexOf('<section class="about" id="about">'),
+  );
+  assert.doesNotMatch(shortPanel, /short-work-card__series/);
+  assert.doesNotMatch(shortPanel, />PDF（|>EPUB（/);
+  assert.match(shortPanel, />書誌・本文<\/a>/);
 });
 
 test("about page explains the editorial workflow and its limits", async () => {
@@ -342,7 +354,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260801-unified-search-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -353,6 +365,9 @@ test("catalogue search stays within publication metadata", async () => {
   assert.match(script, /item\.recordClass === "major-work"/);
   assert.match(script, /item\.recordClass === "short-work"/);
   assert.match(script, /shortCatalogue\(filteredShort\)/);
+  assert.match(script, /<details class="short-author"/);
+  assert.match(script, /target\?\.matches\("details\.short-author"\)/);
+  assert.doesNotMatch(script, /short-work-card__series/);
   assert.match(script, /controls\.bookMatch\.textContent = String\(filtered\.length\)/);
   assert.match(script, /controls\.paperMatch\.textContent = String\(filteredShort\.length\)/);
   assert.match(script, /site:\$\{location\.hostname\} OR/);
@@ -368,7 +383,8 @@ test("catalogue search stays within publication metadata", async () => {
   assert.match(script, /\[data-collection-tab\]/);
   assert.match(script, /window\.addEventListener\("hashchange"/);
   assert.match(script, /history\.pushState\(null, "", nextUrl\)/);
-  assert.match(script, /document\.getElementById\(initialAnchor\)\?\.scrollIntoView\(\)/);
+  assert.match(script, /const target = document\.getElementById\(initialAnchor\)/);
+  assert.match(script, /target\?\.scrollIntoView\(\)/);
   assert.doesNotMatch(script, /const perPage = 6/);
 });
 
@@ -405,17 +421,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260801-unified-search-v1/);
-    assert.match(html, /\/archive\.js\?v=20260801-unified-search-v1/);
+    assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
+    assert.match(html, /\/archive\.js\?v=20260801-paper-fold-v1/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260801-unified-search-v1#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260801-paper-fold-v1#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260801-unified-search-v1#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260801-paper-fold-v1#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

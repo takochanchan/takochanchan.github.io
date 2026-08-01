@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-unified-search-v1";
+const assetVersion = "20260801-paper-fold-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -136,15 +136,11 @@ const shortWorkCard = (item) => `
       <span>${escapeHtml(String(item.pageCount))}頁</span>
     </div>
     <div class="short-work-card__body">
-      <p class="short-work-card__series">${escapeHtml(item.series)}</p>
       <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h4>
       <p class="short-work-card__original-title"><cite>${escapeHtml(item.originalTitle)}</cite></p>
       <p class="short-work-card__publication">${escapeHtml(item.originalPublication)}</p>
       <div class="short-work-card__actions">
         <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
-        <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF（${escapeHtml(item.pdfSize)}）</a>
-        <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
-          type="application/epub+zip" download>EPUB（${escapeHtml(item.epubSize)}）</a>
       </div>
     </div>
   </article>`;
@@ -152,16 +148,16 @@ const shortWorkCard = (item) => `
 const shortWorkCatalogue = shortPublicationAuthors
   .map(
     (author) => `
-      <section class="short-author" aria-labelledby="author-${escapeHtml(author.key)}">
-        <header class="short-author__heading">
-          <p>AUTHOR</p>
-          <h3 id="author-${escapeHtml(author.key)}">${escapeHtml(author.name)}</h3>
-          <span>${author.publications.length}篇</span>
-        </header>
+      <details class="short-author" id="author-${escapeHtml(author.key)}">
+        <summary class="short-author__heading">
+          <span class="short-author__name" role="heading" aria-level="3">${escapeHtml(author.name)}</span>
+          <span class="short-author__count">${author.publications.length}篇</span>
+          <span class="short-author__toggle" aria-hidden="true"></span>
+        </summary>
         <div class="short-author__works">
           ${author.publications.map(shortWorkCard).join("")}
         </div>
-      </section>`,
+      </details>`,
   )
   .join("");
 
@@ -380,7 +376,7 @@ ${header()}
         <h2>論文</h2>
         <p>
           雑誌、年報、新聞などに掲載された論文・報告と、短い原史料を著者ごとにまとめています。
-          同じ著者の資料はこの欄に刊行年順で積み上がります。各篇の書誌情報と原刊頁は個別ページに保持しています。
+          著者名を開くと、各篇が刊行年順に表示されます。書誌情報、原刊頁、PDF・EPUBは個別ページに保持しています。
         </p>
       </div>
       <p class="short-results" id="short-results" aria-live="polite">論文 ${shortPublications.length}件</p>
