@@ -1,0 +1,474 @@
+name: Publish 1836 geographical committee report once
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - ready_for_review
+      - synchronize
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.head_ref == 'agent/publish-societe-geographie-20260801'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      BASE_SITE_COMMIT: fe66b620fa702358b179f9fbffd9f9b802a82506
+      ARCHIVE_COMMIT: 910f014ad5553e595891f74f2775c2882e099184
+      MANIFEST_BLOB: 18d3fe53e99cb98ea18ea252645f55e2bc7b66a1
+      REPORT_PDF_NAME: Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.pdf
+      REPORT_PDF_SIZE: "626432"
+      REPORT_PDF_SHA: 3a1904f838287be30ad665229680bc7ad1c3098c53f6ebfd44de209f4e65698a
+      REPORT_EPUB_NAME: Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.epub
+      REPORT_EPUB_SIZE: "168056"
+      REPORT_EPUB_SHA: 6f6cd05af289ef5f1ac9048e2177c6d2f5d43ec5590d61d34717e3dd517b6508
+      SITE_SOURCE_SIZE: "217209"
+      SITE_SOURCE_SHA: d9773f85275764842af485cb42e548ca5f600dcf6133ba75263c560fc1867e45
+      REPORT_COVER_SIZE: "143432"
+      REPORT_COVER_SHA: 206c716ba50a6cb485dbc8e35eea0e67878e6be3d56a9461557d8db3c551aacd
+
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install publication inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils imagemagick
+
+      - name: Reassemble and verify staged files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          manifest=/tmp/committee-report-release-manifest.tsv
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$MANIFEST_BLOB" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > "$manifest"
+          test "$(wc -l < "$manifest")" = 3
+
+          while IFS=$'\t' read -r asset_name expected_size expected_sha blob_list; do
+            test -n "$asset_name"
+            : > "/tmp/$asset_name"
+            for blob_sha in $blob_list; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content |
+                tr -d '\n' |
+                base64 --decode >> "/tmp/$asset_name"
+            done
+            echo "$expected_sha  /tmp/$asset_name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/$asset_name")" = "$expected_size"
+          done < "$manifest"
+
+      - name: Validate publication PDF
+        run: |
+          set -euo pipefail
+          pdf="/tmp/$REPORT_PDF_NAME"
+          pdfinfo "$pdf" | grep -F "Pages:           31"
+          pdfinfo "$pdf" | grep -F "Page size:       612 x 792 pts (letter)"
+          pdfinfo "$pdf" | grep -F "Tagged:          yes"
+          pdffonts "$pdf" > /tmp/committee-report-fonts.txt
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          lines = Path("/tmp/committee-report-fonts.txt").read_text(
+              encoding="utf-8"
+          ).splitlines()[2:]
+          assert lines
+          for line in lines:
+              match = re.match(
+                  r"^(.+?)\s{2,}(.+?)\s{2,}(.+?)\s{2,}"
+                  r"(yes|no)\s+(yes|no)\s+(yes|no)\s+\d+\s+\d+$",
+                  line.strip(),
+              )
+              assert match is not None, line
+              assert match.group(4) == "yes", line
+          PY
+          test "$(pdfimages -list "$pdf" | awk 'NR > 2 && $3 == "image" { count++ } END { print count+0 }')" = 0
+          pdftotext -layout "$pdf" /tmp/committee-report-pdf.txt
+          for phrase in \
+            "中央アメリカの地理および古物に関する懸賞についての報告" \
+            "フランス地理学会委員会" \
+            "ド・ラ・ルノーディエール" \
+            "de La Renaudière" \
+            "ラ・ルノーディエール" \
+            "結論"; do
+            grep -F -q "$phrase" /tmp/committee-report-pdf.txt
+          done
+          if grep -F \
+            -e "ド・ラルノーディエール" \
+            -e "de Larenaudière" \
+            -e "ラルノーディエール" \
+            -e "確認用校正刷り" \
+            -e "校閲用" \
+            -e "未公開" \
+            -e "Proof" \
+            -e "Unpublished" \
+            /tmp/committee-report-pdf.txt; then
+            exit 1
+          fi
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          text = Path("/tmp/committee-report-pdf.txt").read_text(encoding="utf-8")
+          markers = [int(value) for value in re.findall(r"〔原刊 p\. (\d+)〕", text)]
+          assert markers == list(range(253, 292)), markers
+          for number in range(1, 6):
+              assert re.search(rf"^\s*{number}\.\s", text, re.MULTILINE), number
+          japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+          assert japanese >= 20_000, japanese
+          print(f"PDF OK: {japanese:,} Japanese characters, 39 source-page markers")
+          PY
+
+      - name: Validate reflowable EPUB edition
+        run: |
+          set -euo pipefail
+          python3 - "/tmp/$REPORT_EPUB_NAME" <<'PY'
+          import posixpath
+          import re
+          import sys
+          import zipfile
+          from pathlib import PurePosixPath
+          from urllib.parse import unquote
+          from xml.etree import ElementTree as ET
+
+          path = sys.argv[1]
+          container_ns = {
+              "c": "urn:oasis:names:tc:opendocument:xmlns:container"
+          }
+          opf_ns = {
+              "opf": "http://www.idpf.org/2007/opf",
+              "dc": "http://purl.org/dc/elements/1.1/",
+          }
+          xhtml_ns = "http://www.w3.org/1999/xhtml"
+
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == "mimetype"
+              assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+              assert archive.read("mimetype") == b"application/epub+zip"
+
+              container = ET.fromstring(archive.read("META-INF/container.xml"))
+              rootfile = container.find(".//c:rootfile", container_ns)
+              assert rootfile is not None
+              opf_path = rootfile.attrib["full-path"]
+              opf = ET.fromstring(archive.read(opf_path))
+              assert opf.attrib.get("version", "").startswith("3")
+
+              def dc_text(name):
+                  element = opf.find(f".//dc:{name}", opf_ns)
+                  assert element is not None, name
+                  return "".join(element.itertext())
+
+              assert dc_text("title") == "中央アメリカの地理および古物に関する懸賞についての報告"
+              assert dc_text("creator") == "フランス地理学会委員会"
+              assert dc_text("language").lower().startswith("ja")
+              assert "societe-geographie-central-america-report-1836" in dc_text("identifier")
+
+              base = posixpath.dirname(opf_path)
+              manifest = {}
+              for item in opf.findall(".//opf:manifest/opf:item", opf_ns):
+                  resolved = posixpath.normpath(
+                      posixpath.join(base, unquote(item.attrib["href"].split("#", 1)[0]))
+                  )
+                  assert resolved in names
+                  assert archive.getinfo(resolved).file_size > 0
+                  manifest[item.attrib["id"]] = (
+                      resolved,
+                      item.attrib.get("media-type", ""),
+                      set(item.attrib.get("properties", "").split()),
+                  )
+              assert sum("nav" in item[2] for item in manifest.values()) == 1
+              assert sum("cover-image" in item[2] for item in manifest.values()) == 1
+
+              spine = opf.findall(".//opf:spine/opf:itemref", opf_ns)
+              assert spine
+              assert all(item.attrib["idref"] in manifest for item in spine)
+              spine_paths = [manifest[item.attrib["idref"]][0] for item in spine]
+              assert PurePosixPath(spine_paths[0]).name == "ch001.xhtml", spine_paths
+              excluded = {"cover.xhtml", "title_page.xhtml", "nav.xhtml"}
+              assert not any(PurePosixPath(item).name in excluded for item in spine_paths)
+
+              text_parts = []
+              for resolved, media_type, _properties in manifest.values():
+                  if media_type != "application/xhtml+xml":
+                      continue
+                  document = ET.fromstring(archive.read(resolved))
+                  text_parts.extend(document.itertext())
+                  for viewport in document.findall(
+                      f".//{{{xhtml_ns}}}meta[@name='viewport']"
+                  ):
+                      assert not re.search(
+                          r"\bwidth\s*=\s*\d+",
+                          viewport.attrib.get("content", ""),
+                      )
+
+              text = " ".join(text_parts)
+              japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+              assert japanese >= 20_000, japanese
+              for phrase in (
+                  "中央アメリカの地理および古物に関する懸賞についての報告",
+                  "フランス地理学会委員会",
+                  "ド・ラ・ルノーディエール",
+                  "de La Renaudière",
+                  "ラ・ルノーディエール",
+                  "結論",
+              ):
+                  assert phrase in text, phrase
+              for phrase in (
+                  "ド・ラルノーディエール",
+                  "de Larenaudière",
+                  "ラルノーディエール",
+                  "確認用校正刷り",
+                  "校閲用",
+                  "未公開",
+                  "Proof",
+                  "Unpublished",
+              ):
+                  assert phrase not in text, phrase
+              markers = [
+                  int(value)
+                  for value in re.findall(r"〔原刊 p\.\s*(\d+)〕", text)
+              ]
+              assert markers == list(range(253, 292)), markers
+              print(
+                  f"EPUB 3 OK: {japanese:,} Japanese characters, "
+                  f"{len(spine_paths)} reading-order documents"
+              )
+          PY
+
+      - name: Apply and verify site source
+        run: |
+          set -euo pipefail
+          git merge-base --is-ancestor "$BASE_SITE_COMMIT" HEAD
+          git diff --quiet "$BASE_SITE_COMMIT"...HEAD -- \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/societe-geographie-central-america-report-1836/cover.jpg
+
+          mkdir -p /tmp/committee-report-site-source
+          python3 - /tmp/committee-report-site-source <<'PY'
+          import sys
+          import tarfile
+          from pathlib import PurePosixPath
+
+          destination = sys.argv[1]
+          expected = {
+              "assets-manifest.json",
+              "master-archive.json",
+              "scripts/validate-epubs.py",
+              "src/publications.mjs",
+              "tests/archive.test.mjs",
+              "static/publications/societe-geographie-central-america-report-1836/cover.jpg",
+          }
+          with tarfile.open("/tmp/site-source.tar.gz", "r:gz") as archive:
+              members = archive.getmembers()
+              files = {member.name for member in members if member.isfile()}
+              assert files == expected, (files, expected)
+              for member in members:
+                  path = PurePosixPath(member.name)
+                  assert not path.is_absolute()
+                  assert ".." not in path.parts
+                  assert not (member.issym() or member.islnk() or member.isdev())
+              archive.extractall(destination, members=members, filter="data")
+          PY
+          cp -a /tmp/committee-report-site-source/. .
+
+          cover=static/publications/societe-geographie-central-america-report-1836/cover.jpg
+          echo "$REPORT_COVER_SHA  $cover" | sha256sum -c -
+          test "$(stat -c %s "$cover")" = "$REPORT_COVER_SIZE"
+          identify "$cover" | grep -F "1224x1584"
+          grep -F "$ARCHIVE_COMMIT" master-archive.json
+          grep -F '"societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx"' master-archive.json
+          grep -F 'slug: "societe-geographie-central-america-report-1836"' src/publications.mjs
+          grep -F '"societe-de-geographie-committee"' src/publications.mjs
+          grep -F 'assert.equal(publications.length, 80)' tests/archive.test.mjs
+          python3 -m json.tool assets-manifest.json >/dev/null
+          python3 -m json.tool master-archive.json >/dev/null
+          node --check src/publications.mjs
+          npm run build
+          npm test
+          grep -F 'フランス地理学会委員会' dist/index.html
+          grep -F 'id="paper-match-count">9</strong>件' dist/index.html
+
+      - name: Prepare release checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = path.read_text(encoding="utf-8").splitlines()
+          assert len(lines) >= 158
+          assert len(lines) % 2 == 0
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          additions = [
+              (os.environ["REPORT_PDF_NAME"], os.environ["REPORT_PDF_SHA"]),
+              (os.environ["REPORT_EPUB_NAME"], os.environ["REPORT_EPUB_SHA"]),
+          ]
+          for name, digest in additions:
+              if name in entries:
+                  assert entries[name] == digest
+              else:
+                  entries[name] = digest
+                  lines.append(f"{digest}  {name}")
+          assert len(entries) >= 160
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n",
+              encoding="utf-8",
+          )
+          PY
+          echo "$REPORT_PDF_SHA  /tmp/$REPORT_PDF_NAME" | sha256sum -c -
+          echo "$REPORT_EPUB_SHA  /tmp/$REPORT_EPUB_NAME" | sha256sum -c -
+
+      - name: Upload and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            "/tmp/$REPORT_PDF_NAME" \
+            "/tmp/$REPORT_EPUB_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          gh release download publications-current \
+            --pattern "$REPORT_PDF_NAME" \
+            --pattern "$REPORT_EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          echo "$REPORT_PDF_SHA  /tmp/verified-release/$REPORT_PDF_NAME" | sha256sum -c -
+          echo "$REPORT_EPUB_SHA  /tmp/verified-release/$REPORT_EPUB_NAME" | sha256sum -c -
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Commit and push catalogue
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add \
+            assets-manifest.json \
+            master-archive.json \
+            scripts/validate-epubs.py \
+            src/publications.mjs \
+            tests/archive.test.mjs \
+            static/publications/societe-geographie-central-america-report-1836/cover.jpg
+          git diff --cached --check
+          git commit -m "Publish 1836 geographical committee report"
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main
+            npm run build
+            npm test
+            if git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            sleep 3
+          done
+          test "$pushed" = true
+
+      - name: Verify remote repository state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/contents/master-archive.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode |
+            grep -F "$ARCHIVE_COMMIT"
+          gh api "repos/$GITHUB_REPOSITORY/contents/src/publications.mjs?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-publications.mjs
+          grep -F 'slug: "societe-geographie-central-america-report-1836"' /tmp/remote-publications.mjs
+          grep -F '"societe-de-geographie-committee"' /tmp/remote-publications.mjs
+          gh api "repos/$GITHUB_REPOSITORY/contents/assets-manifest.json?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-assets-manifest.json
+          grep -F "$REPORT_PDF_SHA" /tmp/remote-assets-manifest.json
+          grep -F "$REPORT_EPUB_SHA" /tmp/remote-assets-manifest.json
+          gh api "repos/$GITHUB_REPOSITORY/contents/static/publications/societe-geographie-central-america-report-1836/cover.jpg?ref=main" \
+            --jq .content |
+            tr -d '\n' |
+            base64 --decode > /tmp/remote-cover.jpg
+          echo "$REPORT_COVER_SHA  /tmp/remote-cover.jpg" | sha256sum -c -
+
+      - name: Remove one-time workflow and temporary refs
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-societe-geographie-20260801.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$path" \
+            -f message="Remove completed committee-report publishing workflow" \
+            -f sha="$sha" \
+            -f branch=main
+          gh pr close "${{ github.event.pull_request.number }}" \
+            --repo "$GITHUB_REPOSITORY" --delete-branch || true
+          for branch in \
+            agent/release-upload-societe-geographie-20260801 \
+            agent/publish-societe-geographie-20260801; do
+            encoded="${branch//\//%2F}"
+            gh api --method DELETE \
+              "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded" \
+              >/dev/null 2>&1 || true
+          done
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Committee-report publication workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/committee-report-publication-error.txt
+          content="$(base64 -w0 /tmp/committee-report-publication-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/societe-geographie-${GITHUB_RUN_ID}.txt" \
+            -f message="Record committee-report publication failure" \
+            -f content="$content" \
+            -f branch=main
