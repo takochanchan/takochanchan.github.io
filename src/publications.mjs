@@ -377,6 +377,69 @@ const publicationRecords = [
     tags: ["日誌", "史料校訂", "公刊部分"],
   },
   {
+    slug: "galindo-ruins-palenque-literary-gazette-1831",
+    title: "パレンケ遺跡",
+    originalTitle: "Ruins of Palenque",
+    subtitle:
+      "1831年刊・原刊665–666頁＋翌号683頁・本文・二図・編集部追補 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "RUINS OF PALENQUE · THE LITERARY GAZETTE · 1831",
+    originalPublication:
+      "ロンドン、『The Literary Gazette』第769号・第770号、1831年10月15日・22日",
+    year: 1831,
+    extent:
+      "PDF 13頁・原刊665–666頁＋翌号683頁・原刊誌面2頁・本文内図2点",
+    description:
+      "ガリンドが1831年4月26日付で送ったパレンケ遺跡書簡。第769号665–666頁の本文、原刊誌面、本文内二図、編集部注を省略なく訳し、第770号683頁の訂正・補足記事とその注も別項として収録しています。1832年のフランス語版とは構成と内容の異なる独立した英語紙版です。",
+    cover:
+      "publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
+    pdf:
+      "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.epub",
+    pageCount: 13,
+    figureCount: 2,
+    plateCount: 2,
+    types: ["遺跡報告", "書簡", "新聞記事"],
+    regions: ["パレンケ", "チアパス", "ペテン"],
+    languages: ["英語"],
+    tags: [
+      "マヤ考古学",
+      "パレンケ遺跡",
+      "リテラリー・ガゼット",
+      "原刊誌面",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "galindo-noticias-peten-1831",
+    title: "ペテンに関する報告",
+    originalTitle:
+      "Noticias del Petén recogidas por su comandante, el C. J. Galindo",
+    subtitle:
+      "1831年刊・原刊257–260頁・本文・旅程表・人口表 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "NOTICIAS DEL PETÉN · GACETA FEDERAL · 1831",
+    originalPublication:
+      "グアテマラ、『Gaceta Federal』第35号、1831年9月29日、257–260頁",
+    year: 1831,
+    extent: "PDF 9頁・原刊257–260頁・原刊冒頭画像1点・表2点",
+    description:
+      "ガリンドがペテンの地理、境界、河川・湖沼、交通路、人口、交易、征服史をまとめた四頁の報告。原刊本文、グアテマラ―ベリーズ間の旅程表、人口表を省略なく訳し、フランス国立図書館所蔵の原刊切抜き257頁画像を収録しています。",
+    cover: "publications/galindo-noticias-peten-1831/cover.jpg",
+    pdf:
+      "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.epub",
+    pageCount: 9,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["地理報告", "統計資料", "新聞記事"],
+    regions: ["ペテン", "グアテマラ", "ベリーズ", "ウスマシンタ川流域"],
+    languages: ["スペイン語"],
+    tags: ["ペテン史", "交通路", "人口表", "ガセタ・フェデラル", "一次史料"],
+  },
+  {
     slug: "galindo-palenque-1832",
     title: "パレンケ遺跡に関する覚書",
     originalTitle:
@@ -486,6 +549,42 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "galindo-copan-full-report-1834",
+    title: "コパン古代遺跡調査報告（1834年）",
+    originalTitle:
+      "Informe de la comisión científica formada para el reconocimiento de las antigüedades de Copán / Rapport sur les ruines de Copan et le pays voisin",
+    subtitle:
+      "スペイン語刊本＋BnFフランス語稿＋図版13面・異同表 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "INFORME SOBRE LAS ANTIGÜEDADES DE COPÁN · 1834",
+    originalPublication:
+      "コパン、1834年6月19日／スペイン語本文1945年刊・フランス語稿1834年",
+    year: 1834,
+    extent:
+      "PDF 44頁・スペイン語刊本217–228頁・BnF稿f101–f136・図版13面・異同表",
+    description:
+      "1834年1月のグアテマラ州政府命令に基づきガリンドが実施したコパン遺跡調査の完全報告。1945年刊スペイン語本文と、BnF所蔵のフランス語稿を相互に統合せず別本文として全訳し、地図、平面図、水彩全景、図1–26を含む図版13面と、両系統の主要異同表を収録しています。モーリー1920年英訳は異同照合にのみ用いています。",
+    cover: "publications/galindo-copan-full-report-1834/cover.jpg",
+    pdf:
+      "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.epub",
+    pageCount: 44,
+    figureCount: 0,
+    plateCount: 13,
+    types: ["遺跡報告", "政府報告", "写本資料", "図版資料"],
+    regions: ["コパン", "ホンジュラス", "グアテマラ", "中央アメリカ"],
+    languages: ["スペイン語", "フランス語", "チョルティ語"],
+    tags: [
+      "マヤ考古学",
+      "コパン遺跡",
+      "フランス国立図書館",
+      "原稿図版",
+      "異同表",
+      "一次史料",
+    ],
+  },
+  {
     slug: "galindo-copan-literary-gazette-1835",
     title: "中央アメリカ――コパン遺跡通信",
     originalTitle: "Central America",
@@ -510,6 +609,33 @@ const publicationRecords = [
     regions: ["コパン", "ホンジュラス", "中央アメリカ"],
     languages: ["英語"],
     tags: ["マヤ考古学", "コパン遺跡", "リテラリー・ガゼット", "一次史料"],
+  },
+  {
+    slug: "galindo-eruption-cosiguina-1835",
+    title: "ニカラグア、コシグイナ火山の噴火について――1835年1月17日",
+    originalTitle:
+      "On the Eruption of the Volcano of Cosigüina, in Nicaragua, 17th January, 1835",
+    subtitle: "1835年刊・原刊387–392頁・本文・原注 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "ERUPTION OF THE VOLCANO OF COSIGÜINA · 1835",
+    originalPublication:
+      "ロンドン、『王立地理学協会誌』第5巻、1835年、387–392頁",
+    year: 1835,
+    extent: "PDF 8頁・原刊387–392頁・原刊冒頭画像1点",
+    description:
+      "1835年1月のコシグイナ火山大噴火について、ガリンド自身の観測書簡、レオンの公式報告、ラ・ウニオン司令官の報告、各地の降灰・暗闇・地震の記録をまとめた論文。原刊387–392頁と原注を省略なく訳し、論文冒頭の原刊画像を収録しています。",
+    cover: "publications/galindo-eruption-cosiguina-1835/cover.jpg",
+    pdf:
+      "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.epub",
+    pageCount: 8,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["火山報告", "自然災害記録", "地理学協会誌"],
+    regions: ["コシグイナ火山", "ニカラグア", "中央アメリカ"],
+    languages: ["英語"],
+    tags: ["火山噴火", "降灰", "地震", "王立地理学協会", "一次史料"],
   },
   {
     slug: "galindo-ruins-copan-aas-1836",
@@ -537,6 +663,39 @@ const publicationRecords = [
     regions: ["コパン", "ホンジュラス", "中央アメリカ"],
     languages: ["英語"],
     tags: ["マヤ考古学", "コパン遺跡", "アメリカ古物協会", "一次史料"],
+  },
+  {
+    slug: "galindo-on-central-america-1836",
+    title: "中央アメリカについて",
+    originalTitle: "On Central America",
+    subtitle:
+      "1836年刊・原刊119–135頁・統計表・行政区画表・地図二葉 日本語全訳",
+    author: "フアン・ガリンド",
+    series: "ON CENTRAL AMERICA · 1836",
+    originalPublication:
+      "ロンドン、『王立地理学協会誌』第6巻、1836年、119–135頁",
+    year: 1836,
+    extent: "PDF 25頁・原刊119–135頁・原刊冒頭画像1点・地図2葉・表4点",
+    description:
+      "王立地理学協会誌に掲載された中央アメリカの地理・政治・人口・交通・産業の総説とコスタリカ各論。編集部前書き・注、ガリンド本文、統計表・行政区画表を省略なく訳し、原刊付図『中央アメリカのコスタリカ国略図』二葉を収録しています。",
+    cover: "publications/galindo-on-central-america-1836/cover.jpg",
+    pdf:
+      "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.epub",
+    pageCount: 25,
+    figureCount: 1,
+    plateCount: 2,
+    types: ["地理報告", "統計資料", "地図資料"],
+    regions: ["中央アメリカ", "コスタリカ", "ニカラグア", "グアテマラ"],
+    languages: ["英語"],
+    tags: [
+      "中央アメリカ地理",
+      "コスタリカ",
+      "統計表",
+      "原刊地図",
+      "王立地理学協会",
+    ],
   },
   {
     slug: "societe-geographie-central-america-report-1836",
@@ -3150,6 +3309,27 @@ const publicationMetadata = {
     publishedDate: "2026-07-24",
     updatedDate: "2026-07-26",
   },
+  "galindo-ruins-palenque-literary-gazette-1831": {
+    sourceEdition:
+      "Juan Galindo「Ruins of Palenque」『The Literary Gazette; and Journal of the Belles Lettres, Arts, Sciences, &c.』no. 769（1831年10月15日）pp. 665–666、および編集部追補「Palenque」no. 770（1831年10月22日）p. 683。1831年4月26日付。",
+    sourceProvider:
+      "Internet Archive公開の第769号・第770号原刊画像を底本とした。第769号の書簡本文、編集部注、本文内二図、原刊誌面二頁、および第770号の訂正・補足記事とその注を収録した。",
+    sourceUrl:
+      "https://archive.org/details/sim_literary-gazette_1831-10-15_769",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "galindo-noticias-peten-1831": {
+    sourceEdition:
+      "Juan Galindo「Noticias del Petén recogidas por su comandante, el C. J. Galindo」『Gaceta Federal』no. 35（Guatemala、1831年9月29日）pp. 257–260。",
+    sourceProvider:
+      "Bibliothèque nationale de France, Société de géographie, SG MS4-8 (1111)所蔵の原刊切抜き（Gallica f79–f82）を底本とした。原刊四頁の本文、旅程表、人口表を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b525153172/f79.item",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
   "galindo-palenque-1832": {
     sourceEdition:
       "Juan Galindo「Mémoire … sur les ruines de Palenque」『Bulletin de la Société de géographie』tome XVIII, no 114（1832年10月）pp. 198–214＋別葉図版、およびPerfecto Baezo「Vocabulario de las lenguas castellana y maia」pp. 215–217。",
@@ -3187,6 +3367,16 @@ const publicationMetadata = {
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
+  "galindo-copan-full-report-1834": {
+    sourceEdition:
+      "Juan Galindo「Informe de la comisión científica formada para el reconocimiento de las antigüedades de Copán」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo XX, no. 3（1945年9月）pp. 217–228、および「Rapport sur les ruines de Copan et le pays voisin」Bibliothèque nationale de France, Société de géographie, SG MS4-8 (1111), document 4, f101–f136＋図面f137–f161。1834年6月19日付。",
+    sourceProvider:
+      "Internet Archive公開の1945年刊スペイン語本文と、BnF Gallica公開のフランス語稿・地図・平面図・水彩全景・図1–26を主底本とした。両本文を独立して全訳し、BnF図版13面を収録した。Sylvanus G. Morley『The Inscriptions at Copan』（1920年）付録XIは異同照合にのみ用いた。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b525153172",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
   "galindo-copan-literary-gazette-1835": {
     sourceEdition:
       "Juan Galindo「Central America」『The Literary Gazette; and Journal of the Belles Lettres, Arts, Sciences, &c.』no. 965（1835年7月18日）pp. 456–457。1834年6月19日付。",
@@ -3198,12 +3388,32 @@ const publicationMetadata = {
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
+  "galindo-eruption-cosiguina-1835": {
+    sourceEdition:
+      "Juan Galindo「On the Eruption of the Volcano of Cosigüina, in Nicaragua, 17th January, 1835」『The Journal of the Royal Geographical Society of London』vol. 5（1835年）pp. 387–392。",
+    sourceProvider:
+      "王立地理学協会誌第5巻の公開原刊画像を主底本とし、JSTOR単独版で本文と頁範囲を照合した。原刊387–392頁の本文、公式報告、書簡、原注を収録した。",
+    sourceUrl: "https://www.jstor.org/stable/1797892",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
   "galindo-ruins-copan-aas-1836": {
     sourceEdition:
       "Juan Galindo「The Ruins of Copan, in Central America」『Archaeologia Americana: Transactions and Collections of the American Antiquarian Society』vol. 2（Cambridge, Massachusetts、1836年）pp. 543–550。1835年6月19日付。",
     sourceProvider:
       "Internet Archive公開のアメリカ古物協会紀要第2巻を底本とした。刊行委員会注、書簡本文、宛先、署名・肩書を収録した。",
     sourceUrl: "https://archive.org/details/archaeologiaamer2183amer",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "galindo-on-central-america-1836": {
+    sourceEdition:
+      "Juan Galindo「On Central America」『The Journal of the Royal Geographical Society of London』vol. 6（1836年）pp. 119–135＋二葉地図「Sketch of the State of Costarrica in Central America」。1836年5月9日朗読。",
+    sourceProvider:
+      "王立地理学協会誌第6巻の公開原刊画像を主底本とし、JSTOR単独版で本文、原刊頁範囲、地図二葉を照合した。編集部前書き・注、本文、表、地図を収録した。",
+    sourceUrl: "https://www.jstor.org/stable/1797561",
     rights: publicDomainRights,
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
@@ -3926,11 +4136,16 @@ const shortWorkAuthorBySlug = {
   "esquinca-usumacinta": "jose-maria-esquinca",
   "sapper-eastern-lacandons-1891": "karl-sapper",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
+  "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
+  "galindo-noticias-peten-1831": "juan-galindo",
   "galindo-usumacinta-1833": "juan-galindo",
   "galindo-caribs-central-america-1833": "juan-galindo",
   "galindo-antiquities-peten-1834": "juan-galindo",
+  "galindo-copan-full-report-1834": "juan-galindo",
   "galindo-copan-literary-gazette-1835": "juan-galindo",
+  "galindo-eruption-cosiguina-1835": "juan-galindo",
   "galindo-ruins-copan-aas-1836": "juan-galindo",
+  "galindo-on-central-america-1836": "juan-galindo",
   "friedrichsthal-yucatan-1841": "emanuel-von-friedrichsthal",
   "galindo-palenque-1832": "juan-galindo",
   "societe-geographie-central-america-report-1836":

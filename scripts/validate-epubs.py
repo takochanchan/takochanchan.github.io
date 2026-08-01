@@ -3,11 +3,11 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import posixpath
 import re
 import subprocess
-import sys
 import zipfile
 from pathlib import Path
 from urllib.parse import unquote
@@ -15,7 +15,7 @@ from xml.etree import ElementTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_ROOT = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else ROOT / "dist"
+PUBLIC_ROOT = ROOT / "dist"
 CONTAINER_NS = {"c": "urn:oasis:names:tc:opendocument:xmlns:container"}
 OPF_NS = {
     "opf": "http://www.idpf.org/2007/opf",
@@ -231,8 +231,32 @@ def validate_epub(item: dict) -> tuple[int, int]:
 
 
 def main() -> None:
+    global PUBLIC_ROOT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "public_root",
+        nargs="?",
+        type=Path,
+        default=ROOT / "dist",
+        help="built public root containing publication assets (default: dist)",
+    )
+    parser.add_argument(
+        "--slug",
+        action="append",
+        dest="slugs",
+        help="validate only this publication slug (repeatable)",
+    )
+    args = parser.parse_args()
+    PUBLIC_ROOT = args.public_root.resolve()
+
     items = catalogue()
-    assert len(items) == 85, f"expected 85 publications, found {len(items)}"
+    assert len(items) == 90, f"expected 90 publications, found {len(items)}"
+    if args.slugs:
+        selected = set(args.slugs)
+        known = {item["slug"] for item in items}
+        missing = sorted(selected - known)
+        assert not missing, f"unknown publication slugs: {', '.join(missing)}"
+        items = [item for item in items if item["slug"] in selected]
     for item in items:
         characters, images = validate_epub(item)
         print(

@@ -169,7 +169,12 @@ DOCX_SOURCES = {
 
 TAGGED_PDF_SOURCES = {
     "cook-balise-merida-1769",
+    "galindo-copan-full-report-1834",
+    "galindo-eruption-cosiguina-1835",
+    "galindo-noticias-peten-1831",
+    "galindo-on-central-america-1836",
     "galindo-palenque-1832",
+    "galindo-ruins-palenque-literary-gazette-1831",
     "galindo-usumacinta-1833",
     "swett-british-honduras-san-pedro-1868",
     "tribes-and-temples-vol-1",
@@ -184,6 +189,38 @@ TAGGED_PDF_FIGURE_ALTS = {
     "galindo-palenque-1832": [
         "原刊別葉図版（図1–12、全紙葉）",
         "原刊206頁の壁孔模式図",
+    ],
+    "galindo-ruins-palenque-literary-gazette-1831": [
+        "『リテラリー・ガゼット』第769号原刊665頁",
+        "『リテラリー・ガゼット』第769号原刊666頁",
+        "原刊665頁本文内図（方形区画の模式図）",
+        "原刊665頁本文内図（窓と壁体の模式図）",
+    ],
+    "galindo-eruption-cosiguina-1835": [
+        "王立地理学協会誌第5巻原刊387頁の論文冒頭",
+    ],
+    "galindo-on-central-america-1836": [
+        "王立地理学協会誌第6巻原刊119頁の論文冒頭",
+        "原刊付図『中央アメリカのコスタリカ国略図』西半",
+        "原刊付図『中央アメリカのコスタリカ国略図』東半",
+    ],
+    "galindo-noticias-peten-1831": [
+        "『ガセタ・フェデラル』第35号原刊257頁の論文冒頭",
+    ],
+    "galindo-copan-full-report-1834": [
+        "BnF f137――コパンと周辺の地図",
+        "BnF f139――ラス・ベンタナス平面図",
+        "BnF f141――ラス・ベンタナス水彩全景",
+        "BnF f143――図1–3",
+        "BnF f145――図4–6",
+        "BnF f147――図7–9",
+        "BnF f149――図10–12",
+        "BnF f151――図13–15",
+        "BnF f153――一部図の補助・比較図版",
+        "BnF f155――図16–18",
+        "BnF f157――一部図の補助・比較図版",
+        "BnF f159――図19–23",
+        "BnF f161――図24–26",
     ],
 }
 

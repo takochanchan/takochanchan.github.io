@@ -560,6 +560,24 @@
       "sha256": "d41ae725a2e725a366330f36702bf9b7a3f865ebe22d62673cb755081ee7b40c"
     },
     {
+      "path": "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.epub",
+      "size": 6837016,
+      "sha256": "ec1db879cdfc947e99d8a6337d6da2f6941915495553fab91e23c6bbefdf6313"
+    },
+    {
+      "path": "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.pdf",
+      "size": 7637530,
+      "sha256": "02d667117ae30f9311cd74b4838fbcf5f35a09fb685fc2ce7c42be1659616e86"
+    },
+    {
+      "path": "publications/galindo-copan-full-report-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-copan-full-report-1834/cover.jpg",
+      "size": 176320,
+      "sha256": "79d893b330f9a164dbd3731222ed3e5b709da3ab832bbbd8c98a1d7cb218dbfd"
+    },
+    {
       "path": "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
       "size": 103949,
@@ -576,6 +594,60 @@
       "url": "https://takochanchan.github.io/publications/galindo-copan-literary-gazette-1835/cover.jpg",
       "size": 118461,
       "sha256": "c6ff653a692d3093fcf9002d2f74612cc97edb00dd0f3f3042652be6fbb0514d"
+    },
+    {
+      "path": "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.epub",
+      "size": 132474,
+      "sha256": "9afb6502050f74265ba1a8428b8de4b001d8b2f182fab4abb8644aa1bba38eea"
+    },
+    {
+      "path": "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.pdf",
+      "size": 334311,
+      "sha256": "bd6279eb2afbc67f1aa94db5dcc944fccb70d57cbf31322b1b11cbe14f1261cd"
+    },
+    {
+      "path": "publications/galindo-eruption-cosiguina-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-eruption-cosiguina-1835/cover.jpg",
+      "size": 105096,
+      "sha256": "6176caff5634a6400ca39ce7bc2e7a39d91f24700d48f0bbf116b1e73ddd1f44"
+    },
+    {
+      "path": "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.epub",
+      "size": 977356,
+      "sha256": "df298088004f7921b3f0cb63144786c853f5932659bdfb9fc3137ef214b09545"
+    },
+    {
+      "path": "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.pdf",
+      "size": 1217155,
+      "sha256": "1d993b7ee8d9c81bc4633f3c545d12d5c3b68eebb48c012aed4798138b60babb"
+    },
+    {
+      "path": "publications/galindo-noticias-peten-1831/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-noticias-peten-1831/cover.jpg",
+      "size": 108896,
+      "sha256": "09d3b9bb5cb954acd900c0b14f07547f0c7a67d537ba239cb1d498aac96f4786"
+    },
+    {
+      "path": "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_On_Central_America_1836_Japanese_Complete_Translation.epub",
+      "size": 1253776,
+      "sha256": "4d6526d11112e5baed0ace28b8ed4345c17f3bdac6babe069b669903018b6b92"
+    },
+    {
+      "path": "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_On_Central_America_1836_Japanese_Complete_Translation.pdf",
+      "size": 1632085,
+      "sha256": "41847c4654e626aac34eac8b4b841f74383e2890012d3bfcc5338c3679dcd0ee"
+    },
+    {
+      "path": "publications/galindo-on-central-america-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-on-central-america-1836/cover.jpg",
+      "size": 101609,
+      "sha256": "055643afc7f47030802e47ce568eface2d9c28b05f1b4088a5ac4e09f03b26b3"
     },
     {
       "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
@@ -612,6 +684,24 @@
       "url": "https://takochanchan.github.io/publications/galindo-ruins-copan-aas-1836/cover.jpg",
       "size": 128714,
       "sha256": "15cb67c8b0159e4da125e5b775986444754c032727929c90e9f95e6483680b53"
+    },
+    {
+      "path": "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.epub",
+      "size": 1477760,
+      "sha256": "180a1846d49e0d66fcd9f223af4c5c78908e0b0e3c15ce78cfb7326b26add8d6"
+    },
+    {
+      "path": "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.pdf",
+      "size": 1727776,
+      "sha256": "23eb2d0c67c612edcfd71c9b5a2f0ce2ed7ac2026a9cb9eafc02b4f306f0294b"
+    },
+    {
+      "path": "publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
+      "size": 95490,
+      "sha256": "b590e3aaa7cac24ea94a4a9e45b796239048569cb049fe4188546a9ad64b86af"
     },
     {
       "path": "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",

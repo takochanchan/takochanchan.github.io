@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "a442ba9c030b02e3880a5b70fe17d9a91c2f0d11",
+  "archive_commit": "43f3f7818adcf19ea5964c5d82e405df8d39c249",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -87,6 +87,11 @@
     "galindo-caribs-central-america-1833": "publications/galindo-caribs-central-america-1833/master.docx",
     "galindo-antiquities-peten-1834": "publications/galindo-antiquities-peten-1834/master.docx",
     "galindo-copan-literary-gazette-1835": "publications/galindo-copan-literary-gazette-1835/master.docx",
-    "galindo-ruins-copan-aas-1836": "publications/galindo-ruins-copan-aas-1836/master.docx"
+    "galindo-ruins-copan-aas-1836": "publications/galindo-ruins-copan-aas-1836/master.docx",
+    "galindo-ruins-palenque-literary-gazette-1831": "publications/galindo-ruins-palenque-literary-gazette-1831/master.docx",
+    "galindo-noticias-peten-1831": "publications/galindo-noticias-peten-1831/master.docx",
+    "galindo-copan-full-report-1834": "publications/galindo-copan-full-report-1834/master.docx",
+    "galindo-eruption-cosiguina-1835": "publications/galindo-eruption-cosiguina-1835/master.docx",
+    "galindo-on-central-america-1836": "publications/galindo-on-central-america-1836/master.docx"
   }
 }
