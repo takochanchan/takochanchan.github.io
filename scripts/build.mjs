@@ -24,7 +24,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-short-works-v2";
+const assetVersion = "20260801-short-works-v3";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -166,7 +166,7 @@ const shortWorkCatalogue = shortPublicationAuthors
 
 const header = ({
   detail = false,
-  backHref = "/#publications",
+  backHref = `/?v=${assetVersion}#publications`,
   backLabel = "資料一覧へ戻る",
 } = {}) => `
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -643,7 +643,9 @@ const detailPage = (item) => {
     body: `
 ${header({
   detail: true,
-  backHref: isShortWork ? "/#short-works" : "/#publications",
+  backHref: isShortWork
+    ? `/?v=${assetVersion}#short-works`
+    : `/?v=${assetVersion}#publications`,
   backLabel: `${recordClassLabel}へ戻る`,
 })}
 <main id="main">
