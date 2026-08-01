@@ -23,6 +23,11 @@ jobs:
           asset|Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub|4822726|3ff446e8f840f904bbc8a9bcb82b33728a40c540870338b920cad00c18f7747f|b95e9204e681da46311c223a828936fb5ea2aa8f cb51085db5c2743461073a0589c969bd1978e350 2f8143cd89a7fb4bb125f5dcf899710daf727971 0f268ef75df85c5f7dd0cbd686bcb3dd5ce10f43 593e01e98636f3abdc04a302227398f543d69668 dfec90f20df02d5ede872b70bf8eceaaff1a7103 beae2ebb427ed5306aca15cd798b7a8a6a1a78ff 8605813fd0cdab2093f1ee0163db9f3a5cb38937 df6604721d419f458f5568720c2d467e5653034a a8206c8c20fff24fa545cf77a69953dc7120d17d f6b619b3a26b6f8bcec43c049cf2f47845a1aa48
 
     steps:
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
       - name: Reassemble and verify corrected assets
         env:
           GH_TOKEN: ${{ github.token }}
@@ -106,4 +111,3 @@ jobs:
           path=.github/workflows/replace-galindo-peten-locality-20260801.yml
           sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
           gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$path" -f message="Remove completed Galindo Peten correction workflow" -f sha="$sha" -f branch=main
-
