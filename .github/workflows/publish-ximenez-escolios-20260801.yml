@@ -1,0 +1,312 @@
+name: Publish Ximenez Escolios release assets once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-ximenez-escolios-20260801.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PDF_NAME: Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "9482611"
+      PDF_SHA: 74f9d180244331883d54e01b0cb0226f7dc04b64230b2ec2341c034e98b732de
+      PDF_BLOBS: "3a81ab2e630157ace6ee5088f39ba68b12a3dd95 51972d6ece3e12d8a32884fbb0b2119f83aa47ab 21121db01095adeb5de25e87fe5cbc98285db424 0bf50501ac6ec8c73d0998b8a1e67903dd4e1872 f672d43775d0ae041980d99aacb364a3a189d072 3af8320877903fa56c403bf8bf83a3975ea68b5f 9e71a3cad5f63b8798cc314b29a67b5b98955d25 2e2bef8c2b3d39981d57fcbf8b3d3abccc6ed4d3 d773360385e3d6f06c241785c41be60e3194ecff 0a518f2580778ba1d8dec74bd5994b1fa1cbb3b4 31998d80516d9646b822b48fcc27c1771fc2c4e0 575d98a7cd7c73682e13a7ac0d01021f73a7053e 6b77b2b897a92c36fe4af0e987d1b93b945ec592 5eccb68c9edbf698c2ed854aacf62f6aa07a94e1 1ffdc9678e5cf21ff891c6caa03eb2c70b423476 3404fda78acebd8e1fb4b7f7f16c6a83a2b2c2c9 1b4c75a146c8a624b7e0ff6d522042f7a77f77e5 7cdf76fa6dc017e3a5c05000f33590773b5639f8 353e6f8f2fd22972a8d50261bb1aae355e22a084"
+      EPUB_NAME: Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub
+      EPUB_SIZE: "7311140"
+      EPUB_SHA: bbfe7567227f88c8f447c96a7b0854bd466c387ee70c0e87a3ba528a4c90e842
+      EPUB_BLOBS: "144eb8f48cd8aae033aff8af65524005cc92d3c3 c2e747beed9372d65732f3ce22d31e922495be76 294ca0ff4551c391e1c966d421ca4473907579f2 7cfe6ac97085b6c1a7007beeb31ef0f44545f7b4 ea0a7e2d61075f3d0c174f62e2d522d4c72353b2 16f572a1b833d0bd84cae540995f637a4b8d082a dfc61114f9bec7789c3f400a19bae81578375241 b87e24f6a2a820c0a79007f20f38974abaab2f48 b2ceacc51672fc634299d71030cc631509526933 6eab032a7f4c13d61bdaf825dde572d47a416d9d 2b3c1d68afb54d603fd55032b6642620247d146a 6d0c9e1808b2b08b5eca27c395204b8c32fa5c94 10817f001a62962fe911a8252ca913d771f5afe3 0b1577d3fd8941b060c8c8f1377f9e33fa0a15ba"
+
+    steps:
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and verify staged assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          : > "/tmp/$PDF_NAME"
+          for blob_sha in $PDF_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+              --jq .content | tr -d '\n' | base64 --decode >> "/tmp/$PDF_NAME"
+          done
+          : > "/tmp/$EPUB_NAME"
+          for blob_sha in $EPUB_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+              --jq .content | tr -d '\n' | base64 --decode >> "/tmp/$EPUB_NAME"
+          done
+          echo "$PDF_SHA  /tmp/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  /tmp/$EPUB_NAME" | sha256sum -c -
+          test "$(stat -c %s "/tmp/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "/tmp/$EPUB_NAME")" = "$EPUB_SIZE"
+
+      - name: Validate publication PDF
+        run: |
+          set -euo pipefail
+          pdf="/tmp/$PDF_NAME"
+          pdfinfo "$pdf" | grep -F "Pages:           28"
+          pdfinfo "$pdf" | grep -F "Page size:       612 x 792 pts (letter)"
+          pdfinfo "$pdf" | grep -F "Tagged:          yes"
+          pdffonts "$pdf" > /tmp/ximenez-fonts.txt
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          lines = Path("/tmp/ximenez-fonts.txt").read_text(
+              encoding="utf-8"
+          ).splitlines()[2:]
+          assert lines
+          for line in lines:
+              match = re.match(
+                  r"^(.+?)\s{2,}(.+?)\s{2,}(.+?)\s{2,}"
+                  r"(yes|no)\s+(yes|no)\s+(yes|no)\s+\d+\s+\d+$",
+                  line.strip(),
+              )
+              assert match is not None, line
+              assert match.group(4) == "yes", line
+          PY
+          test "$(pdfimages -list "$pdf" | awk 'NR > 2 && $3 == "image" { count++ } END { print count+0 }')" = 12
+          pdftotext -layout "$pdf" /tmp/ximenez-pdf.txt
+          python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          text = Path("/tmp/ximenez-pdf.txt").read_text(encoding="utf-8")
+          compact = re.sub(r"\s+", "", text)
+          for phrase in (
+              "『インディオの起源の物語』への注解",
+              "フランシスコ・ヒメネス",
+              "宇宙誌学者",
+              "1734年8月14日",
+              "エチャーベ",
+              "第6葉表",
+              "シバルバ",
+          ):
+              assert phrase in compact, phrase
+          for phrase in ("地理・天文学者", "確認用", "校閲用", "未公開", "Proof"):
+              assert phrase not in compact, phrase
+          japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+          assert japanese >= 13_000, japanese
+          assert compact.count("宇宙誌学者") == 1
+          print(f"PDF OK: {japanese:,} Japanese characters, 12 manuscript images")
+          PY
+
+      - name: Validate reflowable EPUB edition
+        run: |
+          set -euo pipefail
+          python3 - "/tmp/$EPUB_NAME" <<'PY'
+          import posixpath
+          import re
+          import sys
+          import zipfile
+          from urllib.parse import unquote
+          from xml.etree import ElementTree as ET
+
+          path = sys.argv[1]
+          container_ns = {
+              "c": "urn:oasis:names:tc:opendocument:xmlns:container"
+          }
+          opf_ns = {
+              "opf": "http://www.idpf.org/2007/opf",
+              "dc": "http://purl.org/dc/elements/1.1/",
+          }
+          xhtml_ns = "http://www.w3.org/1999/xhtml"
+
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == "mimetype"
+              assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+              assert archive.read("mimetype") == b"application/epub+zip"
+
+              container = ET.fromstring(archive.read("META-INF/container.xml"))
+              rootfile = container.find(".//c:rootfile", container_ns)
+              assert rootfile is not None
+              opf_path = rootfile.attrib["full-path"]
+              opf = ET.fromstring(archive.read(opf_path))
+              assert opf.attrib.get("version", "").startswith("3")
+
+              def dc_text(name):
+                  element = opf.find(f".//dc:{name}", opf_ns)
+                  assert element is not None, name
+                  return "".join(element.itertext())
+
+              assert dc_text("title") == "『インディオの起源の物語』への注解"
+              assert dc_text("creator") == "フランシスコ・ヒメネス"
+              assert dc_text("language").lower().startswith("ja")
+              assert "ximenez-escolios-ayer-ms-1515" in dc_text("identifier")
+
+              base = posixpath.dirname(opf_path)
+              manifest = {}
+              for item in opf.findall(".//opf:manifest/opf:item", opf_ns):
+                  resolved = posixpath.normpath(
+                      posixpath.join(
+                          base,
+                          unquote(item.attrib["href"].split("#", 1)[0]),
+                      )
+                  )
+                  assert resolved in names
+                  assert archive.getinfo(resolved).file_size > 0
+                  manifest[item.attrib["id"]] = (
+                      resolved,
+                      item.attrib.get("media-type", ""),
+                      set(item.attrib.get("properties", "").split()),
+                  )
+              assert sum("nav" in item[2] for item in manifest.values()) == 1
+              assert sum("cover-image" in item[2] for item in manifest.values()) == 1
+
+              spine = opf.findall(".//opf:spine/opf:itemref", opf_ns)
+              assert spine
+              assert all(item.attrib["idref"] in manifest for item in spine)
+
+              text_parts = []
+              images = []
+              for resolved, media_type, _properties in manifest.values():
+                  if media_type != "application/xhtml+xml":
+                      continue
+                  document = ET.fromstring(archive.read(resolved))
+                  text_parts.extend(document.itertext())
+                  images.extend(document.iter(f"{{{xhtml_ns}}}img"))
+                  for viewport in document.findall(
+                      f".//{{{xhtml_ns}}}meta[@name='viewport']"
+                  ):
+                      assert not re.search(
+                          r"\bwidth\s*=\s*\d+",
+                          viewport.attrib.get("content", ""),
+                      )
+
+              text = " ".join(text_parts)
+              compact = re.sub(r"\s+", "", text)
+              japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+              assert japanese >= 13_000, japanese
+              assert len(images) == 12
+              assert all(image.attrib.get("alt", "").strip() for image in images)
+              assert sum(
+                  "Ayer MS 1515 第" in image.attrib.get("alt", "")
+                  for image in images
+              ) == 12
+              for phrase in (
+                  "宇宙誌学者",
+                  "1734年8月14日",
+                  "エチャーベ",
+                  "第6葉表",
+                  "シバルバ",
+              ):
+                  assert phrase in compact, phrase
+              for phrase in ("地理・天文学者", "確認用", "校閲用", "未公開", "Proof"):
+                  assert phrase not in compact, phrase
+              assert compact.count("宇宙誌学者") == 1
+              print(
+                  f"EPUB 3 OK: {japanese:,} Japanese characters, "
+                  f"{len(images)} manuscript images"
+              )
+          PY
+
+      - name: Prepare shared checksum file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          current = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = current.read_text(encoding="utf-8").splitlines()
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          for name, digest in (
+              (os.environ["PDF_NAME"], os.environ["PDF_SHA"]),
+              (os.environ["EPUB_NAME"], os.environ["EPUB_SHA"]),
+          ):
+              if name in entries:
+                  assert entries[name] == digest
+              else:
+                  entries[name] = digest
+                  lines.append(f"{digest}  {name}")
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh release upload publications-current \
+            "/tmp/$PDF_NAME" \
+            "/tmp/$EPUB_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          echo "$PDF_SHA  /tmp/verified-release/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  /tmp/verified-release/$EPUB_NAME" | sha256sum -c -
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Remove one-time workflow and staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-ximenez-escolios-20260801.yml
+          if sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha 2>/dev/null)"; then
+            gh api --method DELETE \
+              "repos/$GITHUB_REPOSITORY/contents/$path" \
+              -f message="Remove completed Ximenez Escolios release workflow" \
+              -f sha="$sha" \
+              -f branch=main
+          fi
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Frelease-upload-ximenez-escolios-20260801" \
+            >/dev/null 2>&1 || true
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Ximenez Escolios release workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/ximenez-escolios-release-error.txt
+          content="$(base64 -w0 /tmp/ximenez-escolios-release-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/ximenez-escolios-${GITHUB_RUN_ID}.txt" \
+            -f message="Record Ximenez Escolios release failure" \
+            -f content="$content" \
+            -f branch=main
