@@ -16,6 +16,81 @@
     );
   });
 
+  const initialAnchor = location.hash.slice(1);
+  const collectionTabs = [
+    ...document.querySelectorAll("[data-collection-tab]"),
+  ];
+  const collectionPanels = [
+    ...document.querySelectorAll("[data-collection-panel]"),
+  ];
+
+  if (collectionTabs.length && collectionPanels.length) {
+    const panelIds = new Set(
+      collectionPanels.map((panel) => panel.dataset.collectionPanel),
+    );
+    const panelForAnchor = () => {
+      const anchor = location.hash.slice(1);
+      if (anchor === "short-works" || anchor.startsWith("author-")) {
+        return "short-works";
+      }
+      return panelIds.has(anchor) ? anchor : "publications";
+    };
+    const activateCollection = (panelId, { focus = false } = {}) => {
+      const activeId = panelIds.has(panelId) ? panelId : "publications";
+      collectionTabs.forEach((tab) => {
+        const active = tab.dataset.collectionTab === activeId;
+        tab.setAttribute("aria-selected", String(active));
+        tab.tabIndex = active ? 0 : -1;
+        if (active && focus) tab.focus();
+      });
+      collectionPanels.forEach((panel) => {
+        panel.hidden = panel.dataset.collectionPanel !== activeId;
+      });
+    };
+    const openCollection = (panelId, { focus = false } = {}) => {
+      const nextUrl = new URL(location.href);
+      nextUrl.hash = panelId;
+      history.pushState(null, "", nextUrl);
+      activateCollection(panelId, { focus });
+      document.getElementById(panelId)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    };
+
+    collectionTabs.forEach((tab, index) => {
+      tab.addEventListener("click", (event) => {
+        event.preventDefault();
+        openCollection(tab.dataset.collectionTab);
+      });
+      tab.addEventListener("keydown", (event) => {
+        let nextIndex = null;
+        if (event.key === "ArrowRight") {
+          nextIndex = (index + 1) % collectionTabs.length;
+        } else if (event.key === "ArrowLeft") {
+          nextIndex = (index - 1 + collectionTabs.length) % collectionTabs.length;
+        } else if (event.key === "Home") {
+          nextIndex = 0;
+        } else if (event.key === "End") {
+          nextIndex = collectionTabs.length - 1;
+        }
+        if (nextIndex === null) return;
+        event.preventDefault();
+        openCollection(collectionTabs[nextIndex].dataset.collectionTab, {
+          focus: true,
+        });
+      });
+    });
+
+    window.addEventListener("hashchange", () => {
+      activateCollection(panelForAnchor());
+      requestAnimationFrame(() => {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView();
+      });
+    });
+    activateCollection(panelForAnchor());
+  }
+
   const root = document.querySelector("[data-archive]");
   if (!root || !Array.isArray(window.ARCHIVE_PUBLICATIONS)) return;
 
@@ -49,7 +124,6 @@
   };
 
   const params = new URLSearchParams(location.search);
-  const initialAnchor = location.hash.slice(1);
   const requestedPageSize = params.get("perPage") || storedPageSize;
   const state = {
     q: params.get("q") || "",
@@ -265,7 +339,7 @@
 
     root.innerHTML = visible.length
       ? visible.map(card).join("")
-      : `<div class="archive-empty"><strong>該当する刊本・大部論文はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
+      : `<div class="archive-empty"><strong>該当する書籍はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
     controls.results.textContent = `${filtered.length}件中 ${
       filtered.length ? start + 1 : 0
     }–${Math.min(start + perPage, filtered.length)}件`;

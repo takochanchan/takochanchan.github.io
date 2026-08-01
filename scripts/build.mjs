@@ -5,6 +5,7 @@ import {
   majorPublications,
   publications,
   shortPublicationAuthors,
+  shortPublications,
 } from "../src/publications.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -24,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-short-works-v4";
+const assetVersion = "20260801-collection-tabs-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -179,8 +180,8 @@ const header = ({
       detail
         ? `<a class="back-link" href="${escapeHtml(backHref)}">← ${escapeHtml(backLabel)}</a>`
         : `<nav class="site-nav" aria-label="主要メニュー">
-            <a href="#publications">刊本・大部論文</a>
-            <a href="#short-works">短篇論文・報告</a>
+            <a href="#publications">書籍</a>
+            <a href="#short-works">論文・報告</a>
             <a href="/about/">このアーカイブについて</a>
           </nav>`
     }
@@ -211,6 +212,7 @@ const documentShell = ({
   <meta property="og:url" content="${escapeHtml(canonical)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <link rel="stylesheet" href="/archive.css?v=${assetVersion}">
+  <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
   <title>${escapeHtml(title)}</title>
 </head>
 <body>
@@ -242,21 +244,42 @@ ${header()}
         </p>
       </div>
       <div class="hero__index" aria-label="収録統計">
-        <div><strong>${publications.length}</strong><span>PUBLICATIONS</span></div>
+        <div><strong>${majorPublications.length}冊</strong><span>書籍</span></div>
+        <div><strong>${shortPublications.length}篇</strong><span>論文・報告</span></div>
         <div><strong>${totalPages.toLocaleString("ja-JP")}</strong><span>公開版総ページ数</span></div>
         <div><strong>${totalVisuals}</strong><span>FIGURES &amp; PLATES</span></div>
       </div>
     </div>
   </section>
 
-  <section class="catalog" id="publications">
+  <nav class="collection-switcher" aria-label="資料区分">
+    <div class="collection-switcher__inner">
+      <div class="collection-tabs" role="tablist" aria-label="収録資料">
+        <a class="collection-tab" id="tab-publications" href="#publications"
+          role="tab" aria-selected="true" aria-controls="publications"
+          data-collection-tab="publications">
+          <span class="collection-tab__label">書籍</span>
+          <span class="collection-tab__count"><strong>${majorPublications.length}</strong><span>冊</span></span>
+        </a>
+        <a class="collection-tab" id="tab-short-works" href="#short-works"
+          role="tab" aria-selected="false" aria-controls="short-works" tabindex="-1"
+          data-collection-tab="short-works">
+          <span class="collection-tab__label">論文・報告</span>
+          <span class="collection-tab__count"><strong>${shortPublications.length}</strong><span>篇</span></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="catalog collection-panel" id="publications" role="tabpanel"
+    aria-labelledby="tab-publications" data-collection-panel="publications">
     <div class="catalog__inner">
       <div class="section-heading">
-        <p class="eyebrow">BOOKS &amp; MAJOR PAPERS</p>
-        <h2>刊本・大部論文</h2>
+        <p class="eyebrow">BOOKS</p>
+        <h2>書籍</h2>
         <p>
-          単行本、報告書、大部の論文を収録しています。下の一覧は書名・著者・地名・タグのほか、
-          資料種別、地域、原刊言語、年代で絞り込めます。短篇論文・報告は次の節に著者別でまとめています。
+          単行本、報告書、長編資料を収録しています。下の一覧は書名・著者・地名・タグのほか、
+          資料種別、地域、原刊言語、年代で絞り込めます。論文・報告は別タブに著者別でまとめています。
         </p>
       </div>
 
@@ -338,13 +361,14 @@ ${header()}
     </div>
   </section>
 
-  <section class="short-works" id="short-works">
+  <section class="short-works collection-panel" id="short-works" role="tabpanel"
+    aria-labelledby="tab-short-works" data-collection-panel="short-works" hidden>
     <div class="short-works__inner">
       <div class="section-heading">
-        <p class="eyebrow">SHORTER WORKS</p>
-        <h2>短篇論文・報告</h2>
+        <p class="eyebrow">PAPERS &amp; REPORTS</p>
+        <h2>論文・報告</h2>
         <p>
-          雑誌、年報、新聞などに掲載された短い論文・報告と、短い原史料を著者ごとにまとめています。
+          雑誌、年報、新聞などに掲載された論文・報告と、短い原史料を著者ごとにまとめています。
           同じ著者の資料はこの欄に刊行年順で積み上がります。各篇の書誌情報と原刊頁は個別ページに保持しています。
         </p>
       </div>
@@ -627,7 +651,7 @@ const detailPage = (item) => {
   const related = relatedFor(item);
   const visualTotal = item.figureCount + item.plateCount;
   const isShortWork = item.recordClass === "short-work";
-  const recordClassLabel = isShortWork ? "短篇論文・報告" : "刊本・大部論文";
+  const recordClassLabel = isShortWork ? "論文・報告" : "書籍";
   const pdfViewerUrl =
     `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(item.pdfUrl)}`;
   const sourceProvider = item.sourceUrl
