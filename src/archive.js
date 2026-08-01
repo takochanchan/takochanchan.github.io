@@ -49,6 +49,7 @@
   };
 
   const params = new URLSearchParams(location.search);
+  const initialAnchor = location.hash.slice(1);
   const requestedPageSize = params.get("perPage") || storedPageSize;
   const state = {
     q: params.get("q") || "",
@@ -333,4 +334,9 @@
 
   syncInputs();
   render();
+  if (initialAnchor) {
+    requestAnimationFrame(() => {
+      document.getElementById(initialAnchor)?.scrollIntoView();
+    });
+  }
 })();
