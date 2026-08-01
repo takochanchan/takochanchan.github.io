@@ -1,5 +1,40 @@
 const publicationRecords = [
   {
+    slug: "squier-notes-central-america-1855",
+    title: "中央アメリカ覚書",
+    originalTitle:
+      "Notes on Central America; Particularly the States of Honduras and San Salvador",
+    subtitle: "1855年初版・全16章、雑録A–E、文献目録、索引 日本語全訳",
+    author: "E・G・スクワイア",
+    series: "NOTES ON CENTRAL AMERICA · 1855",
+    originalPublication: "ニューヨーク、1855年",
+    year: 1855,
+    extent: "PDF 338頁・全16章・雑録A–E・文献目録・索引・図版／地図18点・表44点",
+    description:
+      "ホンジュラスとサンサルバドルを中心に、中部アメリカの地理・地形・気候・人口・資源・産業・先住民社会・古代遺跡をまとめ、計画中のホンジュラス大洋間鉄道を詳述した1855年刊行書。前付、全16章、雑録A–E、文献目録、索引、原注、全44表を省略なく訳し、本文図版、折込図、地図を収録しています。",
+    cover: "publications/squier-notes-central-america-1855/cover.svg",
+    pdf:
+      "publications/squier-notes-central-america-1855/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/squier-notes-central-america-1855/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.epub",
+    pageCount: 338,
+    figureCount: 18,
+    plateCount: 0,
+    types: ["地誌", "地理書", "交通史", "民族誌"],
+    regions: ["中央アメリカ", "ホンジュラス", "エルサルバドル", "ニカラグア"],
+    languages: ["英語"],
+    tags: [
+      "ホンジュラス大洋間鉄道",
+      "フォンセカ湾",
+      "サンサルバドル",
+      "テグシガルパ",
+      "人口統計",
+      "先住民",
+      "古代遺跡",
+      "19世紀",
+    ],
+  },
+  {
     slug: "valenzuela-lacandon-chol-1695",
     title: "ラカンドン征服およびチョル征服",
     originalTitle: "Conquista del Lacandón y Conquista del Chol",
@@ -4123,6 +4158,17 @@ const publicationMetadata = {
     sourceUrl: "https://www.loc.gov/item/2021668226/",
     rights:
       "18世紀写本の本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
+  "squier-notes-central-america-1855": {
+    sourceEdition:
+      "E. G. Squier『Notes on Central America; Particularly the States of Honduras and San Salvador』（New York、1855年初版）。",
+    sourceProvider:
+      "Internet Archive掲載のLincoln Financial Foundation Collection本を本文・頁の主底本とし、米国議会図書館本で図版・折込図を照合。欠落していた標題紙対向の総図はBibliothèque nationale de France, Gallica所蔵の1854年原図で補完した。",
+    sourceUrl: "https://archive.org/details/notesoncentralam00squi",
+    rights:
+      "E・G・スクワイアは1888年に没しており、1855年初版および1854年補完地図は著作権保護期間を満了したパブリックドメイン資料です。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
