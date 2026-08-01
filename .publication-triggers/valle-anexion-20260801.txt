@@ -1,0 +1,5 @@
+Valle annexation omnibus publication trigger
+archive=1e722820311943746a7997c425f674e8c54bea57
+pdf=93c3b23efe9ead190d357fd73d5a6c64ad401f8f1931f6972b07bb0952bd1504
+epub=b6675c725f504b74c813693596d4cda1e5d6d948bee9520703eef257681ebaae
+scope=omnibus-only
