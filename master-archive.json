@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "0c83ad5c0c0bf275fcce1c1f9b0a0bc904a883f5",
+  "archive_commit": "774e4acd2316b6f93e89315c8b3c38a1095d84b6",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -82,6 +82,7 @@
     "carrera-memorias-1837-1840-1906": "publications/carrera-memorias-1837-1840-1906/master.docx",
     "valle-anexion-centro-america-mexico-1924-1949": "publications/valle-anexion-centro-america-mexico-1924-1949/master.docx",
     "montufar-memorias-revolucion-centro-america-1832": "publications/montufar-memorias-revolucion-centro-america-1832/master.docx",
-    "societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx"
+    "societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx",
+    "ximenez-escolios-ayer-ms-1515": "publications/ximenez-escolios-ayer-ms-1515/master.docx"
   }
 }

@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 80);
+  assert.equal(publications.length, 81);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,8 +64,8 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 71);
-  assert.equal(shortPublications.length, 9);
-  assert.equal(shortPublicationAuthors.length, 8);
+  assert.equal(shortPublications.length, 10);
+  assert.equal(shortPublicationAuthors.length, 9);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -78,6 +78,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "arthes-peten-1893",
       "chonay-totonicapan-title-1886",
       "societe-geographie-central-america-report-1836",
+      "ximenez-escolios-ayer-ms-1515",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -97,6 +98,15 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     committee.publications.map((item) => item.slug),
     ["societe-geographie-central-america-report-1836"],
+  );
+  const ximenez = shortPublicationAuthors.find(
+    (author) => author.key === "francisco-ximenez",
+  );
+  assert.ok(ximenez);
+  assert.equal(ximenez.name, "フランシスコ・ヒメネス");
+  assert.deepEqual(
+    ximenez.publications.map((item) => item.slug),
+    ["ximenez-escolios-ayer-ms-1515"],
   );
   assert.equal(
     publications.find((item) => item.slug === "cook-balise-merida-1769")
@@ -125,6 +135,19 @@ test("revised Galindo Palenque record includes the Baezo appendix", () => {
   assert.match(item.description, /ペルフェクト・バエソ/);
   assert.deepEqual(item.languages, ["フランス語", "スペイン語", "マヤ語"]);
   assert.equal(item.updatedDate, "2026-08-01");
+});
+
+test("Ximenez Escolios is catalogued as the complete six-leaf short work", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "ximenez-escolios-ayer-ms-1515",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "short-work");
+  assert.equal(item.pageCount, 28);
+  assert.equal(item.plateCount, 12);
+  assert.match(item.subtitle, /第2巻末尾・全6葉/);
+  assert.match(item.description, /1734年のエチャーベ署名文/);
+  assert.deepEqual(item.languages, ["スペイン語", "キチェ語", "ラテン語"]);
 });
 
 test("Lundell bibliography uses the Japanese translation cover", () => {
@@ -185,7 +208,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">71<\/strong>件/);
-  assert.match(html, /id="paper-match-count">9<\/strong>件/);
+  assert.match(html, /id="paper-match-count">10<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');

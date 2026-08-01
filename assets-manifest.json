@@ -1424,6 +1424,24 @@
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
     },
     {
+      "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
+      "size": 7311140,
+      "sha256": "bbfe7567227f88c8f447c96a7b0854bd466c387ee70c0e87a3ba528a4c90e842"
+    },
+    {
+      "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf",
+      "size": 9482611,
+      "sha256": "74f9d180244331883d54e01b0cb0226f7dc04b64230b2ec2341c034e98b732de"
+    },
+    {
+      "path": "publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
+      "size": 290298,
+      "sha256": "29c3dd6bf60abb93c0f02bae298cba2b6ba1747948c5c1cb0c65e394dc80f836"
+    },
+    {
       "path": "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
       "size": 3479421,
