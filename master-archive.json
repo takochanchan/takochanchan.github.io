@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ff94dc6ef5cc7610d74b85a6c663a0ca236e2e6f",
+  "archive_commit": "9f3be8474401cc4df95c9d887e91e3c397473ea0",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -95,6 +95,7 @@
     "galindo-on-central-america-1836": "publications/galindo-on-central-america-1836/master.docx",
     "squier-notes-central-america-1855": "publications/squier-notes-central-america-1855/master.docx",
     "molina-costa-rica-new-granada-1853": "publications/molina-costa-rica-new-granada-1853/master.docx",
-    "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx"
+    "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx",
+    "us-senate-central-america-correspondence-1853": "publications/us-senate-central-america-correspondence-1853/master.md"
   }
 }

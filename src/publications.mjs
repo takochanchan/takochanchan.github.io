@@ -1,5 +1,53 @@
 const publicationRecords = [
   {
+    slug: "us-senate-central-america-correspondence-1853",
+    title: "第32議会第2会期上院行政文書第27号",
+    originalTitle:
+      "Message from the President of the United States, Communicating, in Compliance with a Resolution of the Senate, Certain Correspondence in Relation to Central America",
+    subtitle: "中央アメリカに関する往復書簡",
+    author: "アメリカ合衆国国務省（編）",
+    series: "SENATE EXECUTIVE DOCUMENT NO. 27 · 1853",
+    originalPublication:
+      "ワシントン、第32議会第2会期、上院行政文書第27号、1853年",
+    year: 1853,
+    extent:
+      "PDF 118頁・原刊全106頁・大統領教書・国務長官報告・付属文書41件・比較表2点",
+    description:
+      "1853年、フィルモア大統領が上院決議に応じて提出した中央アメリカ関係外交文書集。1834年から1851年までの付属文書41件を収め、フアン・ガリンドの外交資格と任務、ベリーズ境界問題、モスキート海岸、ニカラグア運河と大洋間交通、クレイトン＝ブルワー条約をめぐる英米交渉を記録しています。大統領教書、国務長官報告、付属文書一覧、原刊本文を省略なく訳しました。",
+    cover:
+      "publications/us-senate-central-america-correspondence-1853/cover.jpg",
+    pdf:
+      "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
+    pageCount: 118,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["文書集", "外交史", "政治史", "一次史料"],
+    regions: [
+      "中央アメリカ",
+      "ベリーズ",
+      "ホンジュラス",
+      "ニカラグア",
+      "グアテマラ",
+      "エルサルバドル",
+      "コスタリカ",
+      "ユカタン",
+    ],
+    languages: ["英語"],
+    tags: [
+      "フアン・ガリンド",
+      "ベリーズ境界問題",
+      "モスキート海岸",
+      "ニカラグア運河",
+      "大洋間交通",
+      "クレイトン＝ブルワー条約",
+      "英米関係",
+      "米国議会文書",
+      "19世紀",
+    ],
+  },
+  {
     slug: "williams-anglo-american-isthmian-diplomacy-1916",
     title: "中米地峡をめぐる英米外交",
     originalTitle: "Anglo-American Isthmian Diplomacy, 1815–1915",
@@ -4245,6 +4293,18 @@ const publicationMetadata = {
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
+  "us-senate-central-america-correspondence-1853": {
+    sourceEdition:
+      "Message from the President of the United States, communicating, in compliance with a resolution of the Senate, certain correspondence in relation to Central America, 32d Congress, 2d Session, Senate Executive Document No. 27, United States Congressional Serial Set, no. 660（Washington、1853年、全106頁）。",
+    sourceProvider:
+      "U.S. Government Publishing Office（GovInfo）が公開する米国議会図書館法律図書館所蔵本の全106頁デジタル画像を主底本とした。OCRは検索と転記の補助に限り、本文、固有名詞、数値、原刊頁境界はページ画像によって確定した。",
+    sourceUrl:
+      "https://www.govinfo.gov/app/details/SERIALSET-00660_00_00-025-0027-0000",
+    rights:
+      "1853年刊の米国政府刊行物であり、原刊本文はパブリックドメインです。GovInfoのデジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-02",
+    updatedDate: "2026-08-02",
+  },
   "molina-costa-rica-new-granada-1853": {
     sourceEdition:
       "Felipe Molina『Costa Rica and New Granada: An Inquiry into the Question of Boundaries, which is Pending between the Two Republics Aforesaid; with a Map for the Better Understanding of the Subject, and Documentary Evidence in Support of the Ancient Titles of Costa Rica; to which an Appendix has been Added, Containing a Brief Account of the Question between Costa Rica and Nicaragua』（Washington: R. A. Waters, Printer、1853年）。",
@@ -4294,6 +4354,8 @@ const shortWorkAuthorBySlug = {
   "arthes-peten-1893": "federico-guillermo-arthes",
   "chonay-totonicapan-title-1886": "dionisio-jose-chonay",
   "ximenez-escolios-ayer-ms-1515": "francisco-ximenez",
+  "us-senate-central-america-correspondence-1853":
+    "united-states-department-of-state",
 };
 
 export const publicationReleaseTag = "publications-current";

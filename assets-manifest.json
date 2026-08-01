@@ -1568,6 +1568,24 @@
       "sha256": "feab73fdd9c59a0505d6f322d198612c2a7cb0c85640e33ff1bc214a0b15231d"
     },
     {
+      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
+      "size": 361661,
+      "sha256": "1a2f003b522066def638d9ccd65d83fdb488312059536716ffb43895fb9775b6"
+    },
+    {
+      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
+      "size": 1592953,
+      "sha256": "28a8ee41eb098095d0a390e96f3f1eacd34225888be61357c01000592e09f1c9"
+    },
+    {
+      "path": "publications/us-senate-central-america-correspondence-1853/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/us-senate-central-america-correspondence-1853/cover.jpg",
+      "size": 255191,
+      "sha256": "8ac4ea162f22be5abef7ad3482b160ae12624908ef013bdd09556a43ede125f8"
+    },
+    {
       "path": "publications/valenzuela-lacandon-chol-1695/cover.jpg",
       "url": "https://takochanchan.github.io/publications/valenzuela-lacandon-chol-1695/cover.jpg",
       "size": 58661,

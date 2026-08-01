@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 93);
+  assert.equal(publications.length, 94);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,14 +64,15 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 74);
-  assert.equal(shortPublications.length, 19);
-  assert.equal(shortPublicationAuthors.length, 9);
+  assert.equal(shortPublications.length, 20);
+  assert.equal(shortPublicationAuthors.length, 10);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
       "esquinca-usumacinta",
       "sapper-eastern-lacandons-1891",
       "berendt-central-america-explorations-1867",
+      "us-senate-central-america-correspondence-1853",
       "galindo-ruins-palenque-literary-gazette-1831",
       "galindo-noticias-peten-1831",
       "galindo-usumacinta-1833",
@@ -128,6 +129,15 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     ximenez.publications.map((item) => item.slug),
     ["ximenez-escolios-ayer-ms-1515"],
+  );
+  const stateDepartment = shortPublicationAuthors.find(
+    (author) => author.key === "united-states-department-of-state",
+  );
+  assert.ok(stateDepartment);
+  assert.equal(stateDepartment.name, "アメリカ合衆国国務省（編）");
+  assert.deepEqual(
+    stateDepartment.publications.map((item) => item.slug),
+    ["us-senate-central-america-correspondence-1853"],
   );
   assert.equal(
     publications.find((item) => item.slug === "cook-balise-merida-1769")
@@ -271,7 +281,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">74<\/strong>件/);
-  assert.match(html, /id="paper-match-count">19<\/strong>件/);
+  assert.match(html, /id="paper-match-count">20<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');
