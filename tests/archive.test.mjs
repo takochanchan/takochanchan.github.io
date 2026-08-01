@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 90);
+  assert.equal(publications.length, 91);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -482,7 +482,9 @@ test("local covers and release assets match the recorded manifest", async () => 
       [item.epub, item.epubUrl],
     ]),
   );
-  for (const asset of manifest.assets.filter((item) => item.path.endsWith("cover.jpg"))) {
+  for (const asset of manifest.assets.filter((item) =>
+    /cover\.(?:jpg|svg)$/.test(item.path)
+  )) {
     const file = path.join(dist, asset.path);
     const info = await stat(file);
     const bytes = await readFile(file);
@@ -493,7 +495,9 @@ test("local covers and release assets match the recorded manifest", async () => 
       asset.path,
     );
   }
-  for (const asset of manifest.assets.filter((item) => !item.path.endsWith("cover.jpg"))) {
+  for (const asset of manifest.assets.filter((item) =>
+    !/cover\.(?:jpg|svg)$/.test(item.path)
+  )) {
     assert.equal(asset.url, publicationByPath.get(asset.path), asset.path);
     assert.match(
       asset.url,
