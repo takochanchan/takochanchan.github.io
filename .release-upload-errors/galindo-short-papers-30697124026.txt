@@ -1,0 +1,2 @@
+Galindo short-paper release workflow failed. Inspect this run before retrying.
+Run: https://github.com/takochanchan/takochanchan.github.io/actions/runs/30697124026
