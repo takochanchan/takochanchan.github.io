@@ -42,7 +42,7 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/galindo-assets
           while IFS='|' read -r key name size digest blobs; do
-            test -n "$name"
+            test -n "$name" || continue
             target="/tmp/galindo-assets/$name"
             : > "$target"
             for blob_sha in $blobs; do
@@ -319,6 +319,7 @@ jobs:
           set -euo pipefail
           upload_args=()
           while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
             upload_args+=("/tmp/galindo-assets/$name")
           done <<< "$ASSETS"
           gh release upload publications-current \
@@ -329,6 +330,7 @@ jobs:
 
           mkdir -p /tmp/verified-release
           while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
             gh release download publications-current \
               --pattern "$name" \
               --dir /tmp/verified-release \
@@ -359,6 +361,29 @@ jobs:
           gh api --method DELETE \
             "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Frelease-upload-galindo-short-papers-20260801" \
             >/dev/null 2>&1 || true
+          if gh api "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors?ref=main" \
+              >/tmp/galindo-release-errors.json 2>/dev/null; then
+            python3 - <<'PY' >/tmp/galindo-release-error-paths.txt
+          import json
+          from pathlib import Path
+
+          entries = json.loads(
+              Path("/tmp/galindo-release-errors.json").read_text(encoding="utf-8")
+          )
+          for entry in entries:
+              if entry["name"].startswith("galindo-short-papers-"):
+                  print(entry["path"])
+          PY
+            while IFS= read -r error_path; do
+              test -n "$error_path" || continue
+              error_sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$error_path?ref=main" --jq .sha)"
+              gh api --method DELETE \
+                "repos/$GITHUB_REPOSITORY/contents/$error_path" \
+                -f message="Remove resolved Galindo short-paper release diagnostic" \
+                -f sha="$error_sha" \
+                -f branch=main
+            done </tmp/galindo-release-error-paths.txt
+          fi
 
       - name: Record public diagnostic on failure
         if: failure()
