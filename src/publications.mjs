@@ -166,7 +166,7 @@ const publicationRecords = [
     plateCount: 80,
     types: ["調査報告", "遺跡踏査"],
     regions: ["ウスマシンタ川流域", "メキシコ", "グアテマラ"],
-    languages: ["英語刊本"],
+    languages: ["英語"],
     tags: ["マヤ考古学", "ピエドラス・ネグラス", "ヤシュチラン", "写真図版"],
   },
   {
@@ -191,7 +191,7 @@ const publicationRecords = [
     plateCount: 13,
     types: ["調査報告", "遺跡踏査"],
     regions: ["ウスマシンタ川流域", "ペテン", "グアテマラ"],
-    languages: ["英語刊本"],
+    languages: ["英語"],
     tags: ["マヤ考古学", "セイバル", "カンクエン", "写真図版"],
   },
   {
