@@ -1,1 +1,1 @@
-Trigger the one-time publication of the 1836 French Geographical Society committee report.\nWorkflow registration refresh.\n
+Trigger the one-time publication of the 1836 French Geographical Society committee report.\nWorkflow registration refresh.\nValidation retry after title-line correction.\n
