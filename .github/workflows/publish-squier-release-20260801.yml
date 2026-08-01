@@ -1,0 +1,58 @@
+name: Publish Squier release assets once
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-squier-release-20260801.yml
+permissions:
+  contents: write
+concurrency:
+  group: publish-squier-release-20260801
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch staged assets
+        uses: actions/checkout@v4
+        with:
+          ref: agent/publish-squier-assets
+      - name: Reassemble and verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .release-upload/squier/chunk-* > /tmp/squier-release-bundle.tar.gz
+          echo "17f9aac3f545cf1a3d3a1a17a1c35e85a9effe5901c1ff845c0a0ab849c28a41  /tmp/squier-release-bundle.tar.gz" | sha256sum -c -
+          mkdir -p /tmp/squier-release
+          tar -xzf /tmp/squier-release-bundle.tar.gz -C /tmp/squier-release
+          echo "7e40ace9ffed013bdbe199e7c0395168001ebe3e68b74641434e55d7cadd1e2f  /tmp/squier-release/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.pdf" | sha256sum -c -
+          echo "31746b71267e50d5476811bbe44276091410cf7800cc36ed40aab4fadbc4136e  /tmp/squier-release/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.epub" | sha256sum -c -
+      - name: Update shared checksums and upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current
+          gh release download publications-current -p SHA256SUMS.txt -D /tmp/current --repo "$GITHUB_REPOSITORY"
+          pdf=Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.pdf
+          epub=Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.epub
+          grep -v -F "  $pdf" /tmp/current/SHA256SUMS.txt | grep -v -F "  $epub" > /tmp/sums
+          printf '%s  %s\n' 7e40ace9ffed013bdbe199e7c0395168001ebe3e68b74641434e55d7cadd1e2f "$pdf" >> /tmp/sums
+          printf '%s  %s\n' 31746b71267e50d5476811bbe44276091410cf7800cc36ed40aab4fadbc4136e "$epub" >> /tmp/sums
+          mv /tmp/sums /tmp/squier-release/SHA256SUMS.txt
+          gh release upload publications-current             "/tmp/squier-release/$pdf"             "/tmp/squier-release/$epub"             /tmp/squier-release/SHA256SUMS.txt             --clobber --repo "$GITHUB_REPOSITORY"
+      - name: Clean one-time workflow and staging branches
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          path=.github/workflows/publish-squier-release-20260801.yml
+          sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$path"             -f message="Remove completed Squier release workflow" -f sha="$sha" -f branch=main
+          for branch in agent/publish-squier-assets agent/release-upload-squier-20260801; do
+            encoded="${branch//\//%2F}"
+            gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded" >/dev/null 2>&1 || true
+          done
