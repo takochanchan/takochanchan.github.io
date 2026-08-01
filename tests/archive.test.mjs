@@ -4,7 +4,13 @@ import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
-import { publications, taxonomy } from "../src/publications.mjs";
+import {
+  majorPublications,
+  publications,
+  shortPublicationAuthors,
+  shortPublications,
+  taxonomy,
+} from "../src/publications.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
@@ -56,6 +62,39 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
+test("short works use explicit author groups instead of page-count rules", () => {
+  assert.equal(majorPublications.length, 71);
+  assert.equal(shortPublications.length, 8);
+  assert.equal(shortPublicationAuthors.length, 7);
+  assert.deepEqual(
+    new Set(shortPublications.map((item) => item.slug)),
+    new Set([
+      "esquinca-usumacinta",
+      "sapper-eastern-lacandons-1891",
+      "berendt-central-america-explorations-1867",
+      "galindo-usumacinta-1833",
+      "friedrichsthal-yucatan-1841",
+      "galindo-palenque-1832",
+      "arthes-peten-1893",
+      "chonay-totonicapan-title-1886",
+    ]),
+  );
+  const galindo = shortPublicationAuthors.find(
+    (author) => author.key === "juan-galindo",
+  );
+  assert.ok(galindo);
+  assert.equal(galindo.name, "フアン・ガリンド");
+  assert.deepEqual(
+    galindo.publications.map((item) => item.slug),
+    ["galindo-palenque-1832", "galindo-usumacinta-1833"],
+  );
+  assert.equal(
+    publications.find((item) => item.slug === "cook-balise-merida-1769")
+      .recordClass,
+    "major-work",
+  );
+});
+
 test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
   const item = publications.find(
     (publication) => publication.slug === "sapper-alta-verapaz-1901",
@@ -96,8 +135,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
-  assert.match(html, /\/archive\.js\?v=20260801-catalogue-pagination-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-short-works-v1/);
+  assert.match(html, /\/archive\.js\?v=20260801-short-works-v1/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -105,7 +144,9 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /書名・著者・地名・キーワード/);
   assert.match(html, /Googleサイト内検索/);
   assert.match(html, /action="https:\/\/www\.google\.com\/search"/);
-  assert.match(html, />資料検索</);
+  assert.match(html, />一覧内検索</);
+  assert.match(html, />刊本・大部論文</);
+  assert.match(html, />短篇論文・報告</);
   assert.match(html, /<option value="12" selected>12件<\/option>/);
   assert.match(html, /<option value="all">すべて<\/option>/);
   assert.match(html, /元資料を読もう/);
@@ -121,8 +162,19 @@ test("home page contains scalable archive controls", async () => {
   );
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
-    publications.length,
+    majorPublications.length,
   );
+  assert.equal(
+    (html.match(/class="short-work-card"/g) || []).length,
+    shortPublications.length,
+  );
+  assert.equal(
+    (html.match(/class="short-author"/g) || []).length,
+    shortPublicationAuthors.length,
+  );
+  assert.match(html, /id="author-juan-galindo"/);
+  assert.match(html, /フアン・ガリンド/);
+  assert.match(html, />2篇</);
 });
 
 test("about page explains the editorial workflow and its limits", async () => {
@@ -141,7 +193,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-short-works-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -193,8 +245,13 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260801-catalogue-pagination-v1/);
-    assert.match(html, /\/archive\.js\?v=20260801-catalogue-pagination-v1/);
+    assert.match(html, /\/archive\.css\?v=20260801-short-works-v1/);
+    assert.match(html, /\/archive\.js\?v=20260801-short-works-v1/);
+    if (item.recordClass === "short-work") {
+      assert.match(html, /href="\/#short-works">← 短篇論文・報告へ戻る<\/a>/);
+    } else {
+      assert.match(html, /href="\/#publications">← 刊本・大部論文へ戻る<\/a>/);
+    }
     for (const label of [
       "底本",
       "公開元",

@@ -3660,6 +3660,21 @@ const publicationMetadata = {
   },
 };
 
+// Short works are assigned editorially from their original publication form.
+// Page count is deliberately not used: short standalone books remain in the
+// main catalogue, while concise journal, annual-report, newspaper, and source
+// excerpts can be accumulated under a stable author key here.
+const shortWorkAuthorBySlug = {
+  "esquinca-usumacinta": "jose-maria-esquinca",
+  "sapper-eastern-lacandons-1891": "karl-sapper",
+  "berendt-central-america-explorations-1867": "carl-hermann-berendt",
+  "galindo-usumacinta-1833": "juan-galindo",
+  "friedrichsthal-yucatan-1841": "emanuel-von-friedrichsthal",
+  "galindo-palenque-1832": "juan-galindo",
+  "arthes-peten-1893": "federico-guillermo-arthes",
+  "chonay-totonicapan-title-1886": "dionisio-jose-chonay",
+};
+
 export const publicationReleaseTag = "publications-current";
 export const publicationReleaseUrl =
   `https://github.com/takochanchan/takochanchan.github.io/releases/download/${publicationReleaseTag}`;
@@ -3674,13 +3689,49 @@ export const publications = publicationRecords.map((item) => {
   if (!metadata) {
     throw new Error(`Missing publication metadata: ${item.slug}`);
   }
+  const shortWorkAuthorKey = shortWorkAuthorBySlug[item.slug] ?? null;
   return {
     ...item,
     ...metadata,
+    recordClass: shortWorkAuthorKey ? "short-work" : "major-work",
+    authorKey: shortWorkAuthorKey,
     pdfUrl: releaseAssetUrl(item.pdf),
     epubUrl: releaseAssetUrl(item.epub),
   };
 });
+
+export const majorPublications = publications.filter(
+  (item) => item.recordClass === "major-work",
+);
+
+export const shortPublications = publications.filter(
+  (item) => item.recordClass === "short-work",
+);
+
+export const shortPublicationAuthors = [
+  ...shortPublications.reduce((groups, item) => {
+    const group = groups.get(item.authorKey) ?? {
+      key: item.authorKey,
+      name: item.author,
+      publications: [],
+    };
+    if (group.name !== item.author) {
+      throw new Error(
+        `Inconsistent author label for ${item.authorKey}: ${group.name} / ${item.author}`,
+      );
+    }
+    group.publications.push(item);
+    groups.set(item.authorKey, group);
+    return groups;
+  }, new Map()).values(),
+]
+  .map((group) => ({
+    ...group,
+    publications: group.publications.sort(
+      (a, b) => a.year - b.year || a.title.localeCompare(b.title, "ja"),
+    ),
+  }))
+  .sort((a, b) => a.name.localeCompare(b.name, "ja"));
 
 export const taxonomy = {
   types: [...new Set(publications.flatMap((item) => item.types))].sort((a, b) =>

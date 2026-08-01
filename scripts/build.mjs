@@ -1,7 +1,11 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { publications, taxonomy } from "../src/publications.mjs";
+import {
+  majorPublications,
+  publications,
+  shortPublicationAuthors,
+} from "../src/publications.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(here, "..");
@@ -20,7 +24,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-catalogue-pagination-v1";
+const assetVersion = "20260801-short-works-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -71,6 +75,18 @@ const options = (values, label) =>
     )
     .join("");
 
+const catalogueTaxonomy = {
+  types: [...new Set(majorPublications.flatMap((item) => item.types))].sort(
+    (a, b) => a.localeCompare(b, "ja"),
+  ),
+  regions: [
+    ...new Set(majorPublications.flatMap((item) => item.regions)),
+  ].sort((a, b) => a.localeCompare(b, "ja")),
+  languages: [
+    ...new Set(majorPublications.flatMap((item) => item.languages)),
+  ].sort((a, b) => a.localeCompare(b, "ja")),
+};
+
 const formatDate = (value) => {
   const [year, month, day] = value.split("-");
   return `${year}年${Number(month)}月${Number(day)}日`;
@@ -107,12 +123,52 @@ const publicationCard = (item) => `
     </div>
   </article>`;
 
-const staticCatalogue = [...publications]
+const staticCatalogue = [...majorPublications]
   .sort((a, b) => a.year - b.year)
   .map(publicationCard)
   .join("");
 
-const header = ({ detail = false } = {}) => `
+const shortWorkCard = (item) => `
+  <article class="short-work-card">
+    <div class="short-work-card__meta">
+      <time datetime="${escapeHtml(String(item.year))}">${escapeHtml(String(item.year))}</time>
+      <span>${escapeHtml(String(item.pageCount))}頁</span>
+    </div>
+    <div class="short-work-card__body">
+      <p class="short-work-card__series">${escapeHtml(item.series)}</p>
+      <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h4>
+      <p class="short-work-card__original-title"><cite>${escapeHtml(item.originalTitle)}</cite></p>
+      <p class="short-work-card__publication">${escapeHtml(item.originalPublication)}</p>
+      <div class="short-work-card__actions">
+        <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
+        <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF（${escapeHtml(item.pdfSize)}）</a>
+        <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+          type="application/epub+zip" download>EPUB（${escapeHtml(item.epubSize)}）</a>
+      </div>
+    </div>
+  </article>`;
+
+const shortWorkCatalogue = shortPublicationAuthors
+  .map(
+    (author) => `
+      <section class="short-author" aria-labelledby="author-${escapeHtml(author.key)}">
+        <header class="short-author__heading">
+          <p>AUTHOR</p>
+          <h3 id="author-${escapeHtml(author.key)}">${escapeHtml(author.name)}</h3>
+          <span>${author.publications.length}篇</span>
+        </header>
+        <div class="short-author__works">
+          ${author.publications.map(shortWorkCard).join("")}
+        </div>
+      </section>`,
+  )
+  .join("");
+
+const header = ({
+  detail = false,
+  backHref = "/#publications",
+  backLabel = "資料一覧へ戻る",
+} = {}) => `
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header">
     <a class="archive-mark" href="/">
@@ -121,9 +177,10 @@ const header = ({ detail = false } = {}) => `
     </a>
     ${
       detail
-        ? `<a class="back-link" href="/#publications">← 資料一覧へ戻る</a>`
+        ? `<a class="back-link" href="${escapeHtml(backHref)}">← ${escapeHtml(backLabel)}</a>`
         : `<nav class="site-nav" aria-label="主要メニュー">
-            <a href="#publications">資料を探す</a>
+            <a href="#publications">刊本・大部論文</a>
+            <a href="#short-works">短篇論文・報告</a>
             <a href="/about/">このアーカイブについて</a>
           </nav>`
     }
@@ -195,11 +252,11 @@ ${header()}
   <section class="catalog" id="publications">
     <div class="catalog__inner">
       <div class="section-heading">
-        <p class="eyebrow">CATALOGUE</p>
-        <h2>資料を探す</h2>
+        <p class="eyebrow">BOOKS &amp; MAJOR PAPERS</p>
+        <h2>刊本・大部論文</h2>
         <p>
-          書名・著者・地名・タグは一覧内で絞り込めます。サイト本文とGitHub Releases上のPDFは
-          Googleで検索できます。資料種別、地域、原刊言語、年代による絞り込みにも対応しています。
+          単行本、報告書、大部の論文を収録しています。下の一覧は書名・著者・地名・タグのほか、
+          資料種別、地域、原刊言語、年代で絞り込めます。短篇論文・報告は次の節に著者別でまとめています。
         </p>
       </div>
 
@@ -213,28 +270,29 @@ ${header()}
         <button type="submit">Googleで検索</button>
       </form>
       <p class="google-search__note">
+        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
         PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
         公開直後の資料やPDF本文が検索結果に表示されない場合があります。
       </p>
 
       <form class="archive-tools" role="search" onsubmit="return false">
         <div class="archive-search">
-          <label for="archive-search">資料検索</label>
+          <label for="archive-search">一覧内検索</label>
           <input id="archive-search" type="search"
             placeholder="書名・著者・地名・キーワード" autocomplete="off">
         </div>
         <div class="archive-filters">
           <div class="field">
             <label for="filter-type">資料種別</label>
-            <select id="filter-type">${options(taxonomy.types, "種別")}</select>
+            <select id="filter-type">${options(catalogueTaxonomy.types, "種別")}</select>
           </div>
           <div class="field">
             <label for="filter-region">地域</label>
-            <select id="filter-region">${options(taxonomy.regions, "地域")}</select>
+            <select id="filter-region">${options(catalogueTaxonomy.regions, "地域")}</select>
           </div>
           <div class="field">
             <label for="filter-language">原刊言語</label>
-            <select id="filter-language">${options(taxonomy.languages, "言語")}</select>
+            <select id="filter-language">${options(catalogueTaxonomy.languages, "言語")}</select>
           </div>
           <div class="field">
             <label for="filter-era">年代</label>
@@ -280,6 +338,20 @@ ${header()}
     </div>
   </section>
 
+  <section class="short-works" id="short-works">
+    <div class="short-works__inner">
+      <div class="section-heading">
+        <p class="eyebrow">SHORTER WORKS</p>
+        <h2>短篇論文・報告</h2>
+        <p>
+          雑誌、年報、新聞などに掲載された短い論文・報告と、短い原史料を著者ごとにまとめています。
+          同じ著者の資料はこの欄に刊行年順で積み上がります。各篇の書誌情報と原刊頁は個別ページに保持しています。
+        </p>
+      </div>
+      <div class="short-author-list">${shortWorkCatalogue}</div>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <div class="about__inner">
       <div>
@@ -303,7 +375,7 @@ ${header()}
 </main>
 ${footer()}`,
   scripts: `
-<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
+<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(majorPublications)};</script>
 <script src="/archive.js?v=${assetVersion}" defer></script>`,
 });
 
@@ -554,6 +626,8 @@ const tagList = (item) =>
 const detailPage = (item) => {
   const related = relatedFor(item);
   const visualTotal = item.figureCount + item.plateCount;
+  const isShortWork = item.recordClass === "short-work";
+  const recordClassLabel = isShortWork ? "短篇論文・報告" : "刊本・大部論文";
   const pdfViewerUrl =
     `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(item.pdfUrl)}`;
   const sourceProvider = item.sourceUrl
@@ -567,7 +641,11 @@ const detailPage = (item) => {
     description: item.description,
     canonical: `${site.url}/publications/${item.slug}/`,
     body: `
-${header({ detail: true })}
+${header({
+  detail: true,
+  backHref: isShortWork ? "/#short-works" : "/#publications",
+  backLabel: `${recordClassLabel}へ戻る`,
+})}
 <main id="main">
   <article>
     <section class="publication-hero">
@@ -577,6 +655,7 @@ ${header({ detail: true })}
             alt="${escapeHtml(item.title)}の表紙">
         </div>
         <div>
+          <p class="publication-hero__record-class">${escapeHtml(recordClassLabel)}</p>
           <p class="eyebrow">${escapeHtml(item.series)}</p>
           <h1>${escapeHtml(item.title)}</h1>
           <p class="publication-hero__original-title">

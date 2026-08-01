@@ -187,6 +187,7 @@ select {
 }
 
 .catalog,
+.short-works,
 .about,
 .about-page-hero,
 .workflow,
@@ -198,6 +199,7 @@ select {
 }
 
 .catalog__inner,
+.short-works__inner,
 .about__inner,
 .about-page-hero__inner,
 .workflow__inner,
@@ -727,6 +729,139 @@ select {
   opacity: 0.35;
 }
 
+.short-works {
+  border-top: 1px solid var(--line);
+  background: #eceee9;
+}
+
+.short-author-list {
+  border-top: 2px solid var(--ink);
+}
+
+.short-author {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(0, 2.28fr);
+  gap: clamp(28px, 5vw, 72px);
+  padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.short-author__heading {
+  align-self: start;
+}
+
+.short-author__heading p {
+  margin: 0 0 10px;
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.short-author__heading h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.45;
+}
+
+.short-author__heading span {
+  display: inline-block;
+  margin-top: 13px;
+  color: var(--muted);
+  font-family: Georgia, var(--serif);
+  font-size: 13px;
+}
+
+.short-author__works {
+  display: grid;
+  gap: 14px;
+}
+
+.short-work-card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  border: 1px solid var(--ink);
+  background: var(--paper-bright);
+}
+
+.short-work-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-right: 1px solid var(--line);
+  padding: 18px 10px;
+  color: var(--muted);
+}
+
+.short-work-card__meta time {
+  color: var(--ink);
+  font-family: Georgia, var(--serif);
+  font-size: 22px;
+}
+
+.short-work-card__meta span {
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.short-work-card__body {
+  min-width: 0;
+  padding: 20px 22px;
+}
+
+.short-work-card__series {
+  margin: 0 0 7px;
+  color: var(--rust);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.55;
+}
+
+.short-work-card h4 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(20px, 1.9vw, 27px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.48;
+}
+
+.short-work-card h4 a:hover {
+  color: var(--teal);
+}
+
+.short-work-card__original-title {
+  margin: 7px 0 0;
+  color: #465558;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.short-work-card__original-title cite {
+  font-style: italic;
+}
+
+.short-work-card__publication {
+  margin: 10px 0 16px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.short-work-card__actions {
+  display: grid;
+  grid-template-columns: minmax(130px, 1.2fr) 1fr 1fr;
+  gap: 8px;
+}
+
 .about {
   background: var(--dark);
   color: #fff;
@@ -1079,6 +1214,17 @@ select {
   font-weight: 750;
 }
 
+.publication-hero__record-class {
+  display: inline-block;
+  margin: 0 0 14px;
+  border: 1px solid var(--line);
+  padding: 6px 9px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
 .publication-hero__description {
   max-width: 740px;
   margin: 0 0 23px;
@@ -1400,6 +1546,10 @@ select {
     grid-template-columns: 1fr;
   }
 
+  .short-author {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     min-height: auto;
   }
@@ -1475,6 +1625,7 @@ select {
 
   .hero,
   .catalog,
+  .short-works,
   .about,
   .about-page-hero,
   .workflow,
@@ -1621,6 +1772,30 @@ select {
   .archive-grid,
   .related-grid {
     grid-template-columns: 1fr;
+  }
+
+  .short-work-card {
+    grid-template-columns: 1fr;
+  }
+
+  .short-work-card__meta {
+    flex-direction: row;
+    justify-content: flex-start;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 16px;
+  }
+
+  .short-work-card__meta time {
+    font-size: 19px;
+  }
+
+  .short-work-card__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .short-work-card__actions .button--primary {
+    grid-column: 1 / -1;
   }
 
   .record-card__cover {

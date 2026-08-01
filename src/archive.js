@@ -263,7 +263,7 @@
 
     root.innerHTML = visible.length
       ? visible.map(card).join("")
-      : `<div class="archive-empty"><strong>該当する刊行物はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
+      : `<div class="archive-empty"><strong>該当する刊本・大部論文はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
     controls.results.textContent = `${filtered.length}件中 ${
       filtered.length ? start + 1 : 0
     }–${Math.min(start + perPage, filtered.length)}件`;
