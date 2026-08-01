@@ -381,23 +381,24 @@ const publicationRecords = [
     title: "パレンケ遺跡に関する覚書",
     originalTitle:
       "Mémoire de M. Galindo, officier supérieur de la république de l’Amérique centrale, adressé à M. le secrétaire de la Société de géographie de Paris",
-    subtitle: "1832年刊・原刊198–214頁＋別葉図版 日本語全訳",
+    subtitle: "1832年刊・原刊198–217頁＋別葉図版 日本語全訳",
     author: "フアン・ガリンド",
     series: "MÉMOIRE SUR LES RUINES DE PALENQUE · 1832",
     originalPublication: "1832年",
     year: 1832,
-    extent: "20頁・本文内模式図1点・別葉図版1葉（図1–12）",
+    extent:
+      "PDF 25頁・ガリンド本文198–214頁・バエソ付録215–217頁・本文内模式図1点・別葉図版1葉（図1–12）",
     description:
-      "ガリンドがパリ地理学協会へ送ったパレンケ遺跡報告。原刊本文41段落、編集部脚注5件、祈祷文・語彙・数詞を省略なく訳し、本文内模式図と図1–12を含む別葉図版を外枠ごと無裁断で収録しています。",
+      "ガリンドがパリ地理学協会へ送ったパレンケ遺跡報告。原刊198–214頁の本文・編集部脚注・祈祷文・語彙・数詞を省略なく訳し、本文内模式図と図1–12を含む別葉図版を外枠ごと無裁断で収録しています。原刊215–217頁のペルフェクト・バエソによるカスティーリャ語・マヤ語語彙表も、別著者の刊本付録として併載しています。",
     cover: "publications/galindo-palenque-1832/cover.jpg",
     pdf: "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.pdf",
     epub: "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
-    pageCount: 20,
+    pageCount: 25,
     figureCount: 1,
     plateCount: 1,
     types: ["遺跡報告", "覚書"],
     regions: ["パレンケ", "チアパス", "メキシコ"],
-    languages: ["フランス語"],
+    languages: ["フランス語", "スペイン語", "マヤ語"],
     tags: ["マヤ考古学", "地理学協会", "別葉図版", "一次史料"],
   },
   {
@@ -3002,12 +3003,12 @@ const publicationMetadata = {
   },
   "galindo-palenque-1832": {
     sourceEdition:
-      "Juan Galindo「Mémoire … sur les ruines de Palenque」『Bulletin de la Société de géographie』tome XVIII, no 114（1832年10月）pp. 198–214＋別葉図版。",
+      "Juan Galindo「Mémoire … sur les ruines de Palenque」『Bulletin de la Société de géographie』tome XVIII, no 114（1832年10月）pp. 198–214＋別葉図版、およびPerfecto Baezo「Vocabulario de las lenguas castellana y maia」pp. 215–217。",
     sourceProvider:
-      "Internet Archive（原冊子）、Bibliothèque nationale de France, Gallica。",
+      "Internet Archive公開の原刊冊子を主底本とし、Bibliothèque nationale de France, Gallica公開のガリンド関係稿本を判読照合に用いた。ガリンド本文、編集部脚注、本文内模式図、別葉図版、および直後に掲載されたバエソの語彙表を収録した。",
     rights: publicDomainRights,
     publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
+    updatedDate: "2026-08-01",
   },
   "galindo-usumacinta-1833": {
     sourceEdition:

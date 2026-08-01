@@ -27,7 +27,7 @@ import unicodedata
 import zipfile
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 from urllib.parse import unquote, urldefrag
 from xml.etree import ElementTree as ET
@@ -169,6 +169,10 @@ TAGGED_PDF_FIGURE_ALTS = {
     "cook-balise-merida-1769": [
         "1769年初版の原刊標題紙",
         "原刊1頁の装飾見出し",
+    ],
+    "galindo-palenque-1832": [
+        "原刊別葉図版（図1–12、全紙葉）",
+        "原刊206頁の壁孔模式図",
     ],
 }
 
@@ -537,6 +541,54 @@ def optimize_epub(raw_epub: Path, final_epub: Path, max_image_px: int = 2400) ->
 
         repair_epub_navigation(directory)
         package_epub(directory, final_epub)
+
+
+def remove_book_front_matter_from_short_work_spine(epub: Path) -> None:
+    """Keep cover metadata but start journal-paper reading order at the article."""
+    with tempfile.TemporaryDirectory(prefix="archive-short-work-spine-") as tmp:
+        directory = Path(tmp)
+        with zipfile.ZipFile(epub) as archive:
+            archive.extractall(directory)
+
+        opf_path = epub_package_path(directory)
+        tree = ET.parse(opf_path)
+        package_root = tree.getroot()
+        manifest = {
+            item.attrib["id"]: item.attrib["href"]
+            for item in package_root.findall(
+                f".//{{{OPF_NS}}}manifest/{{{OPF_NS}}}item"
+            )
+        }
+        spine = package_root.find(f".//{{{OPF_NS}}}spine")
+        if spine is None:
+            raise ValueError("EPUB package has no spine")
+
+        excluded = {"cover.xhtml", "title_page.xhtml", "nav.xhtml"}
+        for itemref in list(spine):
+            href = manifest.get(itemref.attrib.get("idref", ""), "")
+            if PurePosixPath(href).name in excluded:
+                spine.remove(itemref)
+
+        remaining = [manifest[item.attrib["idref"]] for item in spine]
+        if not remaining or PurePosixPath(remaining[0]).name != "ch001.xhtml":
+            raise ValueError(
+                f"Unexpected short-work reading-order start: {remaining[:1]}"
+            )
+
+        ET.register_namespace("", OPF_NS)
+        tree.write(opf_path, encoding="utf-8", xml_declaration=True)
+        with tempfile.NamedTemporaryFile(
+            prefix=f".{epub.name}.",
+            suffix=".tmp",
+            dir=epub.parent,
+            delete=False,
+        ) as temporary:
+            replacement = Path(temporary.name)
+        try:
+            package_epub(directory, replacement)
+            replacement.replace(epub)
+        finally:
+            replacement.unlink(missing_ok=True)
 
 
 def repair_existing_epub(epub: Path) -> None:
@@ -1491,6 +1543,8 @@ def build_one(
             candidate = Path(handle.name)
         try:
             optimize_epub(raw_epub, candidate)
+            if item.get("recordClass") == "short-work":
+                remove_book_front_matter_from_short_work_spine(candidate)
             validate_epub(candidate)
             candidate.replace(destination)
         finally:

@@ -115,6 +115,18 @@ test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
   assert.doesNotMatch(`${item.author}\n${item.description}`, /カール・サッパー/);
 });
 
+test("revised Galindo Palenque record includes the Baezo appendix", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "galindo-palenque-1832",
+  );
+  assert.ok(item);
+  assert.equal(item.pageCount, 25);
+  assert.match(item.subtitle, /198–217頁/);
+  assert.match(item.description, /ペルフェクト・バエソ/);
+  assert.deepEqual(item.languages, ["フランス語", "スペイン語", "マヤ語"]);
+  assert.equal(item.updatedDate, "2026-08-01");
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
