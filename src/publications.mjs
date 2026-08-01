@@ -1,5 +1,40 @@
 const publicationRecords = [
   {
+    slug: "molina-costa-rica-new-granada-1853",
+    title: "コスタリカとヌエバ・グラナダ",
+    originalTitle:
+      "Costa Rica and New Granada: An Inquiry into the Question of Boundaries",
+    subtitle: "1853年初版・全5章、文書2点、付録 日本語全訳",
+    author: "フェリペ・モリーナ",
+    series: "COSTA RICA · 1853",
+    originalPublication: "ワシントン、1853年",
+    year: 1853,
+    extent:
+      "PDF 59頁・前付・本文7–54頁・全5章・文書2点・付録・原刊標題紙・折込地図1点",
+    description:
+      "コスタリカ外交官フェリペ・モリーナが、ヌエバ・グラナダとのボカ・トロ・チリキ境界問題と、ニカラグアとの国境・運河問題を論じた1853年の外交小冊子。前付、正誤表、索引、全5章、王室文書2点、付録、原注を省略なく訳し、原刊標題紙と折込地図を収録しています。",
+    cover: "publications/molina-costa-rica-new-granada-1853/cover.svg",
+    pdf:
+      "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
+    pageCount: 59,
+    figureCount: 0,
+    plateCount: 1,
+    types: ["外交史", "国境史", "政治論", "一次史料"],
+    regions: ["コスタリカ", "パナマ", "ニカラグア", "中央アメリカ"],
+    languages: ["英語"],
+    tags: [
+      "国境問題",
+      "ボカ・トロ",
+      "チリキ",
+      "モスキート海岸",
+      "大洋間交通",
+      "コロンビア＝中央アメリカ条約",
+      "19世紀",
+    ],
+  },
+  {
     slug: "squier-notes-central-america-1855",
     title: "中央アメリカ覚書",
     originalTitle:
@@ -4160,6 +4195,17 @@ const publicationMetadata = {
       "18世紀写本の本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
+  },
+  "molina-costa-rica-new-granada-1853": {
+    sourceEdition:
+      "Felipe Molina『Costa Rica and New Granada: An Inquiry into the Question of Boundaries, which is Pending between the Two Republics Aforesaid; with a Map for the Better Understanding of the Subject, and Documentary Evidence in Support of the Ancient Titles of Costa Rica; to which an Appendix has been Added, Containing a Brief Account of the Question between Costa Rica and Nicaragua』（Washington: R. A. Waters, Printer、1853年）。",
+    sourceProvider:
+      "米国議会図書館所蔵本をInternet Archiveがデジタル化した全74画像を本文・頁の主底本とし、ミシガン大学所蔵本のGoogle Books画像で文字を照合した。主底本画像で欠落する折込地図は、ブラウン大学ジョン・ヘイ図書館所蔵本をDaniel Gutiérrez Ardila（2012年）が掲載した画像で補完した。",
+    sourceUrl: "https://archive.org/details/costaricanewgran00moli",
+    rights:
+      "フェリペ・モリーナは1855年に没しており、1853年初版の本文および原刊地図は著作権保護期間を満了したパブリックドメイン資料です。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-02",
+    updatedDate: "2026-08-02",
   },
   "squier-notes-central-america-1855": {
     sourceEdition:

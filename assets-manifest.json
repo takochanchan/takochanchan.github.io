@@ -92,12 +92,6 @@
       "sha256": "0963f7fe4252b3ffb506711dbcbe226d3448bf2d168ffc68a203e48deecb5010"
     },
     {
-      "path": "publications/brigham-guatemala-quetzal-1887/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brigham-guatemala-quetzal-1887/cover.jpg",
-      "size": 75030,
-      "sha256": "69d45b17d34885119e2c0acfe49dd4563348809f7ff9f13205e15ad3cd7261dd"
-    },
-    {
       "path": "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
       "size": 9712496,
@@ -110,10 +104,10 @@
       "sha256": "670f3bfb433134efc7ce34acf79a0dcdd7fd21c18a25802bdd445ad53591ff10"
     },
     {
-      "path": "publications/brinton-chilan-balam-1882/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brinton-chilan-balam-1882/cover.jpg",
-      "size": 62610,
-      "sha256": "b594a1810ab7eed3797dc27ea80ff1e7a1d9609c0453567580b160248457e9fd"
+      "path": "publications/brigham-guatemala-quetzal-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brigham-guatemala-quetzal-1887/cover.jpg",
+      "size": 75030,
+      "sha256": "69d45b17d34885119e2c0acfe49dd4563348809f7ff9f13205e15ad3cd7261dd"
     },
     {
       "path": "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
@@ -128,10 +122,10 @@
       "sha256": "5dd87285de177c1148bba3ec53d1af9ca4e10257ea36f8f5717c3d388eb2c031"
     },
     {
-      "path": "publications/brinton-nagualism-1894/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brinton-nagualism-1894/cover.jpg",
-      "size": 25800,
-      "sha256": "239ec2e086d45147f52a885cf456679a1f0779cf9e44e708c479c3c9cea76652"
+      "path": "publications/brinton-chilan-balam-1882/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-chilan-balam-1882/cover.jpg",
+      "size": 62610,
+      "sha256": "b594a1810ab7eed3797dc27ea80ff1e7a1d9609c0453567580b160248457e9fd"
     },
     {
       "path": "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
@@ -144,6 +138,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
       "size": 1916781,
       "sha256": "49fbd019cc65e881ee2d8479a6ebab129b7cb5fb727db06535094879a6ebdda9"
+    },
+    {
+      "path": "publications/brinton-nagualism-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-nagualism-1894/cover.jpg",
+      "size": 25800,
+      "sha256": "239ec2e086d45147f52a885cf456679a1f0779cf9e44e708c479c3c9cea76652"
     },
     {
       "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
@@ -164,12 +164,6 @@
       "sha256": "f185aade4635409a2162efbc701d2d1a68a002353469b7e61acc0cab35fcacc0"
     },
     {
-      "path": "publications/carrera-memorias-1837-1840-1906/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/carrera-memorias-1837-1840-1906/cover.jpg",
-      "size": 52758,
-      "sha256": "096646557257fc18407215307761754da66e974a3edaab9dd1054504c58994bc"
-    },
-    {
       "path": "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
       "size": 1080152,
@@ -180,6 +174,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf",
       "size": 1464051,
       "sha256": "1f1bdc97e6f8fde54ba22c12bd4b08c56bf74b13e5495a8fcfea0b6da30c44c2"
+    },
+    {
+      "path": "publications/carrera-memorias-1837-1840-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/carrera-memorias-1837-1840-1906/cover.jpg",
+      "size": 52758,
+      "sha256": "096646557257fc18407215307761754da66e974a3edaab9dd1054504c58994bc"
     },
     {
       "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
@@ -200,12 +200,6 @@
       "sha256": "801aca8feeef95d22dee83fbfd2a7d23a093e5c49b5081fe524d466868f0ee70"
     },
     {
-      "path": "publications/charencey-votan-1871/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/charencey-votan-1871/cover.jpg",
-      "size": 26044,
-      "sha256": "919e1f781d3008bb21c5e31b1c8d560c80c1a5d95395205980f4542ccad38f22"
-    },
-    {
       "path": "publications/charencey-votan-1871/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.epub",
       "size": 3880852,
@@ -216,6 +210,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.pdf",
       "size": 2475702,
       "sha256": "10898f364d0fc8cbe32b501a04b554df7739eb77879fd6c54862b4067d69bfa0"
+    },
+    {
+      "path": "publications/charencey-votan-1871/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/charencey-votan-1871/cover.jpg",
+      "size": 26044,
+      "sha256": "919e1f781d3008bb21c5e31b1c8d560c80c1a5d95395205980f4542ccad38f22"
     },
     {
       "path": "publications/charnay-cites-et-ruines-americaines-1863/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.epub",
@@ -236,12 +236,6 @@
       "sha256": "3e0d5725290fe5a3e946196a833e30b8b83952fd3feade16046ea4e054da7bb3"
     },
     {
-      "path": "publications/chonay-totonicapan-title-1886/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/chonay-totonicapan-title-1886/cover.jpg",
-      "size": 56664,
-      "sha256": "054affa42e646310d3de457548fe2716d3dcd28555bc87f8aa7aed1ff1dd7118"
-    },
-    {
       "path": "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
       "size": 608102,
@@ -252,6 +246,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.pdf",
       "size": 829059,
       "sha256": "be2ca8663bcf0250afb0b12c38c7f96abcfeabe0e8a333c8d044c27f417769d2"
+    },
+    {
+      "path": "publications/chonay-totonicapan-title-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/chonay-totonicapan-title-1886/cover.jpg",
+      "size": 56664,
+      "sha256": "054affa42e646310d3de457548fe2716d3dcd28555bc87f8aa7aed1ff1dd7118"
     },
     {
       "path": "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
@@ -290,12 +290,6 @@
       "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
     },
     {
-      "path": "publications/crowe-gospel-central-america-1850/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/crowe-gospel-central-america-1850/cover.jpg",
-      "size": 85441,
-      "sha256": "2a7304b07ec751b5dcb9a5cb2acbd78375a9bb6c462491b220a8d0767b883131"
-    },
-    {
       "path": "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
       "size": 4439120,
@@ -308,10 +302,10 @@
       "sha256": "961f2da51d07049c32ddc8e642cc484dae79e7f05f71cc69557228ab9089a46a"
     },
     {
-      "path": "publications/defence-settlers-honduras-1824/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/defence-settlers-honduras-1824/cover.jpg",
-      "size": 55448,
-      "sha256": "ee173f66d320146f7935d20f7b3c2b0202e2dc3e3151bad86947294ef14ba288"
+      "path": "publications/crowe-gospel-central-america-1850/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/crowe-gospel-central-america-1850/cover.jpg",
+      "size": 85441,
+      "sha256": "2a7304b07ec751b5dcb9a5cb2acbd78375a9bb6c462491b220a8d0767b883131"
     },
     {
       "path": "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
@@ -326,10 +320,10 @@
       "sha256": "a0288b7aa6b9af548c083ff6e869a90f1abe6de4eefdcb8eb6b84af0cfd3d635"
     },
     {
-      "path": "publications/del-rio-palenque/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/del-rio-palenque/cover.jpg",
-      "size": 125211,
-      "sha256": "feb4ac0de3efe993033dd0a31605a5425fee15b1a3e80fc4472c4640c6b22a26"
+      "path": "publications/defence-settlers-honduras-1824/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/defence-settlers-honduras-1824/cover.jpg",
+      "size": 55448,
+      "sha256": "ee173f66d320146f7935d20f7b3c2b0202e2dc3e3151bad86947294ef14ba288"
     },
     {
       "path": "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
@@ -344,10 +338,10 @@
       "sha256": "78d654478d2e7d2e32f8a56396f91194fdc61f857be4f233b796b1ff4fa60fc2"
     },
     {
-      "path": "publications/dunlop-central-america-1847/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/dunlop-central-america-1847/cover.jpg",
-      "size": 31431,
-      "sha256": "828572890659ebb47470960033c0dd91c24e8cc945934b13d5334433580bfbd5"
+      "path": "publications/del-rio-palenque/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/del-rio-palenque/cover.jpg",
+      "size": 125211,
+      "sha256": "feb4ac0de3efe993033dd0a31605a5425fee15b1a3e80fc4472c4640c6b22a26"
     },
     {
       "path": "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
@@ -362,10 +356,10 @@
       "sha256": "88e791372593ad8ec0c3b1918ed0fae2eaa96f566e86a963506d444213fc440e"
     },
     {
-      "path": "publications/dunn-guatimala-central-america-1828/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/dunn-guatimala-central-america-1828/cover.jpg",
-      "size": 67786,
-      "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
+      "path": "publications/dunlop-central-america-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dunlop-central-america-1847/cover.jpg",
+      "size": 31431,
+      "sha256": "828572890659ebb47470960033c0dd91c24e8cc945934b13d5334433580bfbd5"
     },
     {
       "path": "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
@@ -380,10 +374,10 @@
       "sha256": "eec0c3338916db64621a5d91032b2a182767fa8c34c7f8fe93068f0e112901ef"
     },
     {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
-      "size": 71193,
-      "sha256": "67d10f5c58913a03cf63b55944faf90484012f088d5a84da89164d8aaae3066a"
+      "path": "publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dunn-guatimala-central-america-1828/cover.jpg",
+      "size": 67786,
+      "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
     },
     {
       "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
@@ -398,10 +392,10 @@
       "sha256": "722fe6eef2c07f1899d7b22261c5ef7ccad8729e1c270839aa8c749e87e9d7e5"
     },
     {
-      "path": "publications/egan-wyer-1930/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/egan-wyer-1930/cover.jpg",
-      "size": 46346,
-      "sha256": "8a3b1b11132ffec2c8cab7331f3bca8e4246550869064fa228e1d87088a4b85a"
+      "path": "publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
+      "size": 71193,
+      "sha256": "67d10f5c58913a03cf63b55944faf90484012f088d5a84da89164d8aaae3066a"
     },
     {
       "path": "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.epub",
@@ -416,10 +410,10 @@
       "sha256": "94e694590e8b598480ecffe061b0be21d5ed675ac5705c9b6ea8d2884f80f102"
     },
     {
-      "path": "publications/elorza-conquista-ytza-1714/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/elorza-conquista-ytza-1714/cover.jpg",
-      "size": 49521,
-      "sha256": "8e7db6ba8033cb7c81966b1e9bd89b1e0b9f5d1b0b14d900f27936f58d0456ae"
+      "path": "publications/egan-wyer-1930/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/egan-wyer-1930/cover.jpg",
+      "size": 46346,
+      "sha256": "8a3b1b11132ffec2c8cab7331f3bca8e4246550869064fa228e1d87088a4b85a"
     },
     {
       "path": "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.epub",
@@ -434,10 +428,10 @@
       "sha256": "4bf3c044c2c10607054f242e9ba0b533460035e4d0ba303e608cf4a3300769ba"
     },
     {
-      "path": "publications/esquinca-usumacinta/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/esquinca-usumacinta/cover.jpg",
-      "size": 56453,
-      "sha256": "1c53390d1fa6c20fa63342a1deec2723d7b7f005a89819cba2a251db4e64a613"
+      "path": "publications/elorza-conquista-ytza-1714/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/elorza-conquista-ytza-1714/cover.jpg",
+      "size": 49521,
+      "sha256": "8e7db6ba8033cb7c81966b1e9bd89b1e0b9f5d1b0b14d900f27936f58d0456ae"
     },
     {
       "path": "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
@@ -450,6 +444,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.pdf",
       "size": 432672,
       "sha256": "3340592c45ad2232fc59cfd7effdbafc69759de7f91e115645d4102ca10c6538"
+    },
+    {
+      "path": "publications/esquinca-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/esquinca-usumacinta/cover.jpg",
+      "size": 56453,
+      "sha256": "1c53390d1fa6c20fa63342a1deec2723d7b7f005a89819cba2a251db4e64a613"
     },
     {
       "path": "publications/fancourt-history-yucatan-1854/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.epub",
@@ -470,12 +470,6 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
-      "path": "publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
-      "size": 32685,
-      "sha256": "e4d637936a5e13b42838e9f8f95b650fa1409cb7cd8b85816246e0fecc7bade2"
-    },
-    {
       "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "size": 897600,
@@ -488,10 +482,10 @@
       "sha256": "d920df07075e85dc8dcd5f934c196a02541213d4e910691f21a16944cc5e3b26"
     },
     {
-      "path": "publications/friedrichsthal-yucatan-1841/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/friedrichsthal-yucatan-1841/cover.jpg",
-      "size": 31677,
-      "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
+      "path": "publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
+      "size": 32685,
+      "sha256": "e4d637936a5e13b42838e9f8f95b650fa1409cb7cd8b85816246e0fecc7bade2"
     },
     {
       "path": "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
@@ -506,10 +500,10 @@
       "sha256": "fb2ad86ffe805bd6c52eb3aae24047ba545341a120dd643d54766ca697342ed7"
     },
     {
-      "path": "publications/gage-new-survey-west-indias-1655/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/gage-new-survey-west-indias-1655/cover.jpg",
-      "size": 86269,
-      "sha256": "cd26266cd86b98dd001b166a04e3dab980de7e0a0d52ad507841af54d7884936"
+      "path": "publications/friedrichsthal-yucatan-1841/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/friedrichsthal-yucatan-1841/cover.jpg",
+      "size": 31677,
+      "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
     },
     {
       "path": "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
@@ -524,10 +518,10 @@
       "sha256": "4f447e593769658c8feef65d40f8a7d50c1cff40764b459b2b8310d657ac5437"
     },
     {
-      "path": "publications/galindo-antiquities-peten-1834/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-antiquities-peten-1834/cover.jpg",
-      "size": 145820,
-      "sha256": "b41a37647108e819e50a5ff9854adc4753011a8e5f5bca2c3feb612e21622e77"
+      "path": "publications/gage-new-survey-west-indias-1655/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gage-new-survey-west-indias-1655/cover.jpg",
+      "size": 86269,
+      "sha256": "cd26266cd86b98dd001b166a04e3dab980de7e0a0d52ad507841af54d7884936"
     },
     {
       "path": "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub",
@@ -542,10 +536,10 @@
       "sha256": "f8fcb3523b22f5e4120008de0d6d486a6b52a6e908face5bd285893d6ccda489"
     },
     {
-      "path": "publications/galindo-caribs-central-america-1833/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-caribs-central-america-1833/cover.jpg",
-      "size": 119611,
-      "sha256": "d41ae725a2e725a366330f36702bf9b7a3f865ebe22d62673cb755081ee7b40c"
+      "path": "publications/galindo-antiquities-peten-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-antiquities-peten-1834/cover.jpg",
+      "size": 145820,
+      "sha256": "b41a37647108e819e50a5ff9854adc4753011a8e5f5bca2c3feb612e21622e77"
     },
     {
       "path": "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.epub",
@@ -560,10 +554,10 @@
       "sha256": "ccdc09a9eb92bda2dbb161c14cbd47d603921d7976e0ed2b974ce6f74f8f1da1"
     },
     {
-      "path": "publications/galindo-copan-full-report-1834/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-copan-full-report-1834/cover.jpg",
-      "size": 176320,
-      "sha256": "79d893b330f9a164dbd3731222ed3e5b709da3ab832bbbd8c98a1d7cb218dbfd"
+      "path": "publications/galindo-caribs-central-america-1833/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-caribs-central-america-1833/cover.jpg",
+      "size": 119611,
+      "sha256": "d41ae725a2e725a366330f36702bf9b7a3f865ebe22d62673cb755081ee7b40c"
     },
     {
       "path": "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.epub",
@@ -578,10 +572,10 @@
       "sha256": "02d667117ae30f9311cd74b4838fbcf5f35a09fb685fc2ce7c42be1659616e86"
     },
     {
-      "path": "publications/galindo-copan-literary-gazette-1835/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-copan-literary-gazette-1835/cover.jpg",
-      "size": 118461,
-      "sha256": "c6ff653a692d3093fcf9002d2f74612cc97edb00dd0f3f3042652be6fbb0514d"
+      "path": "publications/galindo-copan-full-report-1834/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-copan-full-report-1834/cover.jpg",
+      "size": 176320,
+      "sha256": "79d893b330f9a164dbd3731222ed3e5b709da3ab832bbbd8c98a1d7cb218dbfd"
     },
     {
       "path": "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
@@ -596,10 +590,10 @@
       "sha256": "47038d5752f061fc5be969baa4b55d73640c9e5e4c93803d286444b882f48cee"
     },
     {
-      "path": "publications/galindo-eruption-cosiguina-1835/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-eruption-cosiguina-1835/cover.jpg",
-      "size": 105096,
-      "sha256": "6176caff5634a6400ca39ce7bc2e7a39d91f24700d48f0bbf116b1e73ddd1f44"
+      "path": "publications/galindo-copan-literary-gazette-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-copan-literary-gazette-1835/cover.jpg",
+      "size": 118461,
+      "sha256": "c6ff653a692d3093fcf9002d2f74612cc97edb00dd0f3f3042652be6fbb0514d"
     },
     {
       "path": "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.epub",
@@ -614,10 +608,10 @@
       "sha256": "bd6279eb2afbc67f1aa94db5dcc944fccb70d57cbf31322b1b11cbe14f1261cd"
     },
     {
-      "path": "publications/galindo-noticias-peten-1831/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-noticias-peten-1831/cover.jpg",
-      "size": 108896,
-      "sha256": "09d3b9bb5cb954acd900c0b14f07547f0c7a67d537ba239cb1d498aac96f4786"
+      "path": "publications/galindo-eruption-cosiguina-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-eruption-cosiguina-1835/cover.jpg",
+      "size": 105096,
+      "sha256": "6176caff5634a6400ca39ce7bc2e7a39d91f24700d48f0bbf116b1e73ddd1f44"
     },
     {
       "path": "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.epub",
@@ -632,10 +626,10 @@
       "sha256": "1d993b7ee8d9c81bc4633f3c545d12d5c3b68eebb48c012aed4798138b60babb"
     },
     {
-      "path": "publications/galindo-on-central-america-1836/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-on-central-america-1836/cover.jpg",
-      "size": 101609,
-      "sha256": "055643afc7f47030802e47ce568eface2d9c28b05f1b4088a5ac4e09f03b26b3"
+      "path": "publications/galindo-noticias-peten-1831/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-noticias-peten-1831/cover.jpg",
+      "size": 108896,
+      "sha256": "09d3b9bb5cb954acd900c0b14f07547f0c7a67d537ba239cb1d498aac96f4786"
     },
     {
       "path": "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.epub",
@@ -650,10 +644,10 @@
       "sha256": "41847c4654e626aac34eac8b4b841f74383e2890012d3bfcc5338c3679dcd0ee"
     },
     {
-      "path": "publications/galindo-palenque-1832/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-palenque-1832/cover.jpg",
-      "size": 72911,
-      "sha256": "9aecf061a49a9ef562a0da1a9398fda566d1faedb57185409af2af5e3999a157"
+      "path": "publications/galindo-on-central-america-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-on-central-america-1836/cover.jpg",
+      "size": 101609,
+      "sha256": "055643afc7f47030802e47ce568eface2d9c28b05f1b4088a5ac4e09f03b26b3"
     },
     {
       "path": "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
@@ -668,10 +662,10 @@
       "sha256": "1a7d6f6d6fd7a1ed1606c21d5d7c7d4ed4c0b7668cbf2ca9fd0468471c3ba619"
     },
     {
-      "path": "publications/galindo-ruins-copan-aas-1836/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-ruins-copan-aas-1836/cover.jpg",
-      "size": 128714,
-      "sha256": "15cb67c8b0159e4da125e5b775986444754c032727929c90e9f95e6483680b53"
+      "path": "publications/galindo-palenque-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-palenque-1832/cover.jpg",
+      "size": 72911,
+      "sha256": "9aecf061a49a9ef562a0da1a9398fda566d1faedb57185409af2af5e3999a157"
     },
     {
       "path": "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.epub",
@@ -686,10 +680,10 @@
       "sha256": "e22938c9ca4a0970a9ddd9313df8efe5d5b92f3cc3f79ea1b598f79c6827fb82"
     },
     {
-      "path": "publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
-      "size": 95490,
-      "sha256": "b590e3aaa7cac24ea94a4a9e45b796239048569cb049fe4188546a9ad64b86af"
+      "path": "publications/galindo-ruins-copan-aas-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-ruins-copan-aas-1836/cover.jpg",
+      "size": 128714,
+      "sha256": "15cb67c8b0159e4da125e5b775986444754c032727929c90e9f95e6483680b53"
     },
     {
       "path": "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.epub",
@@ -704,10 +698,10 @@
       "sha256": "23eb2d0c67c612edcfd71c9b5a2f0ce2ed7ac2026a9cb9eafc02b4f306f0294b"
     },
     {
-      "path": "publications/galindo-usumacinta-1833/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/galindo-usumacinta-1833/cover.jpg",
-      "size": 68713,
-      "sha256": "086bfd6b53e95882cfb14a666fc4370349c3a508f7f012fe78d49555b17de00a"
+      "path": "publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
+      "size": 95490,
+      "sha256": "b590e3aaa7cac24ea94a4a9e45b796239048569cb049fe4188546a9ad64b86af"
     },
     {
       "path": "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",
@@ -722,10 +716,10 @@
       "sha256": "b1809c61a5a7c1b98ff201a4bc9bf2c26330e2f8710dfaf8586e337560b1f204"
     },
     {
-      "path": "publications/gann-discoveries-central-america-1928/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/gann-discoveries-central-america-1928/cover.jpg",
-      "size": 48072,
-      "sha256": "9aab02f94ca6811bd62430ff20c5cc23221d0068504c6bffbb063505c8f97641"
+      "path": "publications/galindo-usumacinta-1833/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galindo-usumacinta-1833/cover.jpg",
+      "size": 68713,
+      "sha256": "086bfd6b53e95882cfb14a666fc4370349c3a508f7f012fe78d49555b17de00a"
     },
     {
       "path": "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
@@ -740,10 +734,10 @@
       "sha256": "171b94b46f1529e9cd70f4fda7a1c501d5b74c1a1216ee0352f8ed3b01eb6b59"
     },
     {
-      "path": "publications/gann-maya-indians-1918/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/gann-maya-indians-1918/cover.jpg",
-      "size": 67001,
-      "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
+      "path": "publications/gann-discoveries-central-america-1928/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gann-discoveries-central-america-1928/cover.jpg",
+      "size": 48072,
+      "sha256": "9aab02f94ca6811bd62430ff20c5cc23221d0068504c6bffbb063505c8f97641"
     },
     {
       "path": "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub",
@@ -758,10 +752,10 @@
       "sha256": "06beda238ce8bde0905e6a402beccc722b1606daf552ad312184c6aee1f4f473"
     },
     {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
-      "size": 67174,
-      "sha256": "d36d441238b044068b44d7d90a32daacde61de04f21dc9a3d6548e8fc98eedbd"
+      "path": "publications/gann-maya-indians-1918/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gann-maya-indians-1918/cover.jpg",
+      "size": 67001,
+      "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
     },
     {
       "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
@@ -774,6 +768,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf",
       "size": 12792058,
       "sha256": "1ebeb06de8789a6dcca8eebf0d6b7b352172d5ec079d8091b83c4d6ceafa26c2"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
+      "size": 67174,
+      "sha256": "d36d441238b044068b44d7d90a32daacde61de04f21dc9a3d6548e8fc98eedbd"
     },
     {
       "path": "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
@@ -794,12 +794,6 @@
       "sha256": "21a29af6c88a0477183c45eed81b6f88e1ecf3c7d1576d45c8b5bdd6395d11f2"
     },
     {
-      "path": "publications/henderson-british-honduras-1811/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
-      "size": 69499,
-      "sha256": "0b3d822f2f9f64ddd985e0ef79a948d3eb6cf34217b4668a95588214c5ffd3fb"
-    },
-    {
       "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "size": 475891,
@@ -812,10 +806,10 @@
       "sha256": "76d178bda0be52bd0d83d7c46a68b3fc147f9ffea3f866f7bd62cdfc9ad76850"
     },
     {
-      "path": "publications/honduras-slaves-correspondence-1823/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/honduras-slaves-correspondence-1823/cover.jpg",
-      "size": 59624,
-      "sha256": "e61ce186642545c07dd7ef5d83967c588af69cb0807681d51e8e3170b0c04817"
+      "path": "publications/henderson-british-honduras-1811/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
+      "size": 69499,
+      "sha256": "0b3d822f2f9f64ddd985e0ef79a948d3eb6cf34217b4668a95588214c5ffd3fb"
     },
     {
       "path": "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub",
@@ -830,10 +824,10 @@
       "sha256": "f4a4e284a012cd31269c58940f7d6964c4fc6e682f08c77567974ea9fe033c01"
     },
     {
-      "path": "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
-      "size": 35858,
-      "sha256": "1de0a62cc2ca58f498dd97a4b1791e1bab444fc729ef5c569d76ccc440dfc83f"
+      "path": "publications/honduras-slaves-correspondence-1823/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/honduras-slaves-correspondence-1823/cover.jpg",
+      "size": 59624,
+      "sha256": "e61ce186642545c07dd7ef5d83967c588af69cb0807681d51e8e3170b0c04817"
     },
     {
       "path": "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
@@ -848,10 +842,10 @@
       "sha256": "7819c76019baf258b45ef222cfc21404e70102c5895e7456000f4b40171923ff"
     },
     {
-      "path": "publications/juarros-compendio-guatemala-1857/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/juarros-compendio-guatemala-1857/cover.jpg",
-      "size": 50590,
-      "sha256": "57044c53a8ee77c407e613404c013a1754d4d592c176b8402ff983cb7570a335"
+      "path": "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
+      "size": 35858,
+      "sha256": "1de0a62cc2ca58f498dd97a4b1791e1bab444fc729ef5c569d76ccc440dfc83f"
     },
     {
       "path": "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
@@ -864,6 +858,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
       "size": 14453720,
       "sha256": "003d086cb48fdc84653b915289c40ddfb43abb774fe644c8cb2ecde65cef30e5"
+    },
+    {
+      "path": "publications/juarros-compendio-guatemala-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/juarros-compendio-guatemala-1857/cover.jpg",
+      "size": 50590,
+      "sha256": "57044c53a8ee77c407e613404c013a1754d4d592c176b8402ff983cb7570a335"
     },
     {
       "path": "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
@@ -902,12 +902,6 @@
       "sha256": "e4dda5c5cd301e1fc062f5c168ba3c62373e2914539b8cd713ef550206e3a48a"
     },
     {
-      "path": "publications/maler-upper-usumacinta/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maler-upper-usumacinta/cover.jpg",
-      "size": 111245,
-      "sha256": "971ebccb9ecd4b03d52d3a2b82b1fb0b59b8de8bb5dfcb26149ad412d56cbbe5"
-    },
-    {
       "path": "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
       "size": 10458014,
@@ -920,10 +914,10 @@
       "sha256": "aa65097b6898108b803494dd44552666a6484fb37c81aa7b12137e5f1ce866f0"
     },
     {
-      "path": "publications/maler-usumacinta/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maler-usumacinta/cover.jpg",
-      "size": 48305,
-      "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
+      "path": "publications/maler-upper-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maler-upper-usumacinta/cover.jpg",
+      "size": 111245,
+      "sha256": "971ebccb9ecd4b03d52d3a2b82b1fb0b59b8de8bb5dfcb26149ad412d56cbbe5"
     },
     {
       "path": "publications/maler-usumacinta/Maler_Usumacinta_Japanese_Translation.epub",
@@ -936,6 +930,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maler_Usumacinta_Japanese_Translation.pdf",
       "size": 11919245,
       "sha256": "4b029b645ff60447814f53d8473bebe4e7d6aa522d9d64c0ced37daf42825acb"
+    },
+    {
+      "path": "publications/maler-usumacinta/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maler-usumacinta/cover.jpg",
+      "size": 48305,
+      "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
     },
     {
       "path": "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
@@ -956,12 +956,6 @@
       "sha256": "6d926dd5a3a89f014593e9d6e220e7d6d00ac92e3133f1b0cef61ccd84aee139"
     },
     {
-      "path": "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
-      "size": 67266,
-      "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
-    },
-    {
       "path": "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
       "size": 9418821,
@@ -974,10 +968,10 @@
       "sha256": "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897"
     },
     {
-      "path": "publications/means-yucatan-itzas-1917/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/means-yucatan-itzas-1917/cover.jpg",
-      "size": 48469,
-      "sha256": "eb737266765c4586fcc641bdb5e9eb90954fe3856f295986d99a1c0f4c5d9f42"
+      "path": "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maudslay-glimpse-guatemala-1899/cover.jpg",
+      "size": 67266,
+      "sha256": "4cc648942eeed1c31b2ca7c26679d34ba3e3af7aa06ca0ffd5232a95cd996d26"
     },
     {
       "path": "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.epub",
@@ -992,10 +986,28 @@
       "sha256": "ece6c1d047c9cb0ee7c1ff2137e8cc44b52a62bbc2695fc2faabd2d424cc99a6"
     },
     {
-      "path": "publications/montgomery-journey-guatemala-1839/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/montgomery-journey-guatemala-1839/cover.jpg",
-      "size": 50457,
-      "sha256": "2cff39778da82c088a6cd2199580172bf43233aa068cdd68c9448a2d3afa9616"
+      "path": "publications/means-yucatan-itzas-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/means-yucatan-itzas-1917/cover.jpg",
+      "size": 48469,
+      "sha256": "eb737266765c4586fcc641bdb5e9eb90954fe3856f295986d99a1c0f4c5d9f42"
+    },
+    {
+      "path": "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
+      "size": 3026853,
+      "sha256": "a4b1438618669b40450e6ad96abef200ba7667f3f1afae276f82507393b873ee"
+    },
+    {
+      "path": "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.pdf",
+      "size": 1377884,
+      "sha256": "e7587d55042d28f43181d27f4498c102dd4fcc18164c697b8fed28572fd26ea2"
+    },
+    {
+      "path": "publications/molina-costa-rica-new-granada-1853/cover.svg",
+      "url": "https://takochanchan.github.io/publications/molina-costa-rica-new-granada-1853/cover.svg",
+      "size": 78617,
+      "sha256": "aff1ebbc435633154c3605114148f1ffd039bc936139ba379042f41781c05ef5"
     },
     {
       "path": "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
@@ -1010,10 +1022,10 @@
       "sha256": "db8946eb04afdbed01c4e1e33c53761c024d66fa037149f01ca16da85181c914"
     },
     {
-      "path": "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
-      "size": 57860,
-      "sha256": "06c4a70a14e9664aa7de246646533e42f01a70c46676a6e2fd5ac3939d7cb9ab"
+      "path": "publications/montgomery-journey-guatemala-1839/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montgomery-journey-guatemala-1839/cover.jpg",
+      "size": 50457,
+      "sha256": "2cff39778da82c088a6cd2199580172bf43233aa068cdd68c9448a2d3afa9616"
     },
     {
       "path": "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.epub",
@@ -1028,10 +1040,10 @@
       "sha256": "8efe000f65c35509237b5ffce39b3fbdc0f5e5fc8fed98e969657cfac8f37d1c"
     },
     {
-      "path": "publications/moran-cholti-1695/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/moran-cholti-1695/cover.jpg",
-      "size": 49874,
-      "sha256": "13c3389a9792d662494b91b751c4af223d8f3e599969dff5ae1f2fab3fc38ed0"
+      "path": "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
+      "size": 57860,
+      "sha256": "06c4a70a14e9664aa7de246646533e42f01a70c46676a6e2fd5ac3939d7cb9ab"
     },
     {
       "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
@@ -1046,10 +1058,10 @@
       "sha256": "b4d7b35e654c2b14259d91eb0b1faff700133d3b1c196d5c0c79edd8039f4a56"
     },
     {
-      "path": "publications/morelet-1857/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/morelet-1857/cover.jpg",
-      "size": 64847,
-      "sha256": "3bf3263753190c93ecd60da127c345ecbfbbe889b10372d1c5cc3305ed865a51"
+      "path": "publications/moran-cholti-1695/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/moran-cholti-1695/cover.jpg",
+      "size": 49874,
+      "sha256": "13c3389a9792d662494b91b751c4af223d8f3e599969dff5ae1f2fab3fc38ed0"
     },
     {
       "path": "publications/morelet-1857/Morelet_1857_Japanese_Complete_Translation.epub",
@@ -1064,10 +1076,10 @@
       "sha256": "8918fa8e3af102aed4889529c443694642108c86ade06720b6f313c15da58934"
     },
     {
-      "path": "publications/morris-colony-british-honduras-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/morris-colony-british-honduras-1883/cover.jpg",
-      "size": 57910,
-      "sha256": "d0d500d53bf618e5681f254073d7ed7b086156c51671f1399c34cdfb4991263d"
+      "path": "publications/morelet-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morelet-1857/cover.jpg",
+      "size": 64847,
+      "sha256": "3bf3263753190c93ecd60da127c345ecbfbbe889b10372d1c5cc3305ed865a51"
     },
     {
       "path": "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub",
@@ -1082,10 +1094,10 @@
       "sha256": "4c5192463124bc053defcb91f63bf267ab479f4796ad9a30aef76f06d9a4157d"
     },
     {
-      "path": "publications/ordonez-creation-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/ordonez-creation-1907/cover.jpg",
-      "size": 42506,
-      "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
+      "path": "publications/morris-colony-british-honduras-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morris-colony-british-honduras-1883/cover.jpg",
+      "size": 57910,
+      "sha256": "d0d500d53bf618e5681f254073d7ed7b086156c51671f1399c34cdfb4991263d"
     },
     {
       "path": "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
@@ -1100,10 +1112,10 @@
       "sha256": "d73286e24d37802403949c8340617c90998eebb7f2757317c470c429fa1e3ba6"
     },
     {
-      "path": "publications/paniagua-catecismo-chiapas-1876/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/paniagua-catecismo-chiapas-1876/cover.jpg",
-      "size": 30382,
-      "sha256": "307fca89e40922979c293c98983ebb44b2cf48ed5fe16d13c8b3bc70cab60921"
+      "path": "publications/ordonez-creation-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ordonez-creation-1907/cover.jpg",
+      "size": 42506,
+      "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
     },
     {
       "path": "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
@@ -1118,10 +1130,10 @@
       "sha256": "321d0f639893ba4ee665dc1fc00a311ca12da3d146dadd64c679352f290f8eaa"
     },
     {
-      "path": "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
-      "size": 40864,
-      "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
+      "path": "publications/paniagua-catecismo-chiapas-1876/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/paniagua-catecismo-chiapas-1876/cover.jpg",
+      "size": 30382,
+      "sha256": "307fca89e40922979c293c98983ebb44b2cf48ed5fe16d13c8b3bc70cab60921"
     },
     {
       "path": "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
@@ -1136,10 +1148,10 @@
       "sha256": "8df483f9e0b2d58b415192fc1903a1b215350b07c8da89972def73e7006fa348"
     },
     {
-      "path": "publications/pineda-chiapas-soconusco-1845/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pineda-chiapas-soconusco-1845/cover.jpg",
-      "size": 27611,
-      "sha256": "e5154ef677889e87a4d0c297e8b25cc3927a6db580ed5afbf45a2afe473efacb"
+      "path": "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
+      "size": 40864,
+      "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
     },
     {
       "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
@@ -1154,10 +1166,10 @@
       "sha256": "2dbbaa339f4022e09f77e8fb632e58acb5886f4acd6bed14d798a5a632b1435c"
     },
     {
-      "path": "publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
-      "size": 45523,
-      "sha256": "1fc1181510449a7ec7ec149affa209dfe48b11f0c7af2b13a6196876ee1e2acf"
+      "path": "publications/pineda-chiapas-soconusco-1845/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pineda-chiapas-soconusco-1845/cover.jpg",
+      "size": 27611,
+      "sha256": "e5154ef677889e87a4d0c297e8b25cc3927a6db580ed5afbf45a2afe473efacb"
     },
     {
       "path": "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.epub",
@@ -1170,6 +1182,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.pdf",
       "size": 530161,
       "sha256": "3ba8b86255f8194c72dd9ea4baf5608592709ff0f0a2c749323ba70b660ea054"
+    },
+    {
+      "path": "publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
+      "size": 45523,
+      "sha256": "1fc1181510449a7ec7ec149affa209dfe48b11f0c7af2b13a6196876ee1e2acf"
     },
     {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
@@ -1190,12 +1208,6 @@
       "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
     },
     {
-      "path": "publications/robles-memoria-historica-chiapa-1813/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/robles-memoria-historica-chiapa-1813/cover.jpg",
-      "size": 31288,
-      "sha256": "94e08b3e177a224962649aed2453f130fc4f67d06eb5658a9817db619c949b18"
-    },
-    {
       "path": "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
       "size": 32437,
@@ -1208,10 +1220,10 @@
       "sha256": "2c4f5dc5fb8423b6b1d6df927a8da642dc891fb31b64a810747c8c9c9ceb19db"
     },
     {
-      "path": "publications/rockstroh-ukes/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/rockstroh-ukes/cover.jpg",
-      "size": 81167,
-      "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
+      "path": "publications/robles-memoria-historica-chiapa-1813/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/robles-memoria-historica-chiapa-1813/cover.jpg",
+      "size": 31288,
+      "sha256": "94e08b3e177a224962649aed2453f130fc4f67d06eb5658a9817db619c949b18"
     },
     {
       "path": "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
@@ -1226,10 +1238,10 @@
       "sha256": "58c2a5054e88cb5948f49033cb68c7463183d47d7b7d148b353fe707c4941df7"
     },
     {
-      "path": "publications/roys-chilam-balam-chumayel-1933/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/roys-chilam-balam-chumayel-1933/cover.jpg",
-      "size": 51550,
-      "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
+      "path": "publications/rockstroh-ukes/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rockstroh-ukes/cover.jpg",
+      "size": 81167,
+      "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
     },
     {
       "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
@@ -1244,10 +1256,10 @@
       "sha256": "8b30c74bc285f303f98c15922497431d6f0fdaf539d563d1f171cd991b493925"
     },
     {
-      "path": "publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
-      "size": 37926,
-      "sha256": "207d16cc63b6259d20e795a26f3ca5c27f5d977c8687a74b343a7ca8c4e9bfdc"
+      "path": "publications/roys-chilam-balam-chumayel-1933/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/roys-chilam-balam-chumayel-1933/cover.jpg",
+      "size": 51550,
+      "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
     },
     {
       "path": "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
@@ -1262,10 +1274,10 @@
       "sha256": "63f26d3a047f933c9d7b89a60623118336b22a04f084ae3af3703449929e51ec"
     },
     {
-      "path": "publications/santo-thomas-colonisation-1844/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/santo-thomas-colonisation-1844/cover.jpg",
-      "size": 80593,
-      "sha256": "780d4726f9f51d8838a63af5a8237476ae648644ddfe45d4efc3f243a2f27c23"
+      "path": "publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
+      "size": 37926,
+      "sha256": "207d16cc63b6259d20e795a26f3ca5c27f5d977c8687a74b343a7ca8c4e9bfdc"
     },
     {
       "path": "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
@@ -1280,10 +1292,10 @@
       "sha256": "0fdc012d691be334ca31e71376b17d259d291057ea61ff3410bc849cbcc591bd"
     },
     {
-      "path": "publications/sapper-alta-verapaz-1901/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/sapper-alta-verapaz-1901/cover.jpg",
-      "size": 50944,
-      "sha256": "c79936f6492210ca77855e43fc3e804f3313cb6fd56f1b0aea9da4619b3d17bb"
+      "path": "publications/santo-thomas-colonisation-1844/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santo-thomas-colonisation-1844/cover.jpg",
+      "size": 80593,
+      "sha256": "780d4726f9f51d8838a63af5a8237476ae648644ddfe45d4efc3f243a2f27c23"
     },
     {
       "path": "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
@@ -1298,10 +1310,10 @@
       "sha256": "2b1569244b28bd8c3ed9dedf0e23f313fae625168ae371f1ae2c0ed6c744b700"
     },
     {
-      "path": "publications/sapper-eastern-lacandons-1891/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/sapper-eastern-lacandons-1891/cover.jpg",
-      "size": 24586,
-      "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
+      "path": "publications/sapper-alta-verapaz-1901/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-alta-verapaz-1901/cover.jpg",
+      "size": 50944,
+      "sha256": "c79936f6492210ca77855e43fc3e804f3313cb6fd56f1b0aea9da4619b3d17bb"
     },
     {
       "path": "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
@@ -1316,10 +1328,10 @@
       "sha256": "68ee95ec2de078d96b0ed3b19232573f4242270befc211f987fc76e158027853"
     },
     {
-      "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
-      "size": 54198,
-      "sha256": "a803e5c87f58f62f3904c00c1015156e12675ad4c988b67eb51217249b7c6d62"
+      "path": "publications/sapper-eastern-lacandons-1891/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-eastern-lacandons-1891/cover.jpg",
+      "size": 24586,
+      "sha256": "e399d3ae0dd73094bfa739ceb0f5c68805856566715e0ac30b5bea980bd073c7"
     },
     {
       "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.epub",
@@ -1334,10 +1346,10 @@
       "sha256": "8615748979be2c9077279e5232a8ae9971a3964972f3d8b9f7c0c6101f377431"
     },
     {
-      "path": "publications/saville-reports-maya-yucatan-1921/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/saville-reports-maya-yucatan-1921/cover.jpg",
-      "size": 63823,
-      "sha256": "c662bf240ff2e08e3c222b6b21c46b74a7bfc67d8f6828111ef677b60e4b0aba"
+      "path": "publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
+      "size": 54198,
+      "sha256": "a803e5c87f58f62f3904c00c1015156e12675ad4c988b67eb51217249b7c6d62"
     },
     {
       "path": "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub",
@@ -1350,6 +1362,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf",
       "size": 1043411,
       "sha256": "5e0f3505ac18955a07c3882777fb0700f9e85325686a46b9c5dc4bd4a6160e46"
+    },
+    {
+      "path": "publications/saville-reports-maya-yucatan-1921/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/saville-reports-maya-yucatan-1921/cover.jpg",
+      "size": 63823,
+      "sha256": "c662bf240ff2e08e3c222b6b21c46b74a7bfc67d8f6828111ef677b60e4b0aba"
     },
     {
       "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
@@ -1370,12 +1388,6 @@
       "sha256": "48f36c12f70bebe8c4745e08167683ff655523b3d5ebf1d762f34732df34cda8"
     },
     {
-      "path": "publications/societe-geographie-central-america-report-1836/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/societe-geographie-central-america-report-1836/cover.jpg",
-      "size": 143432,
-      "sha256": "206c716ba50a6cb485dbc8e35eea0e67878e6be3d56a9461557d8db3c551aacd"
-    },
-    {
       "path": "publications/societe-geographie-central-america-report-1836/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.epub",
       "size": 168056,
@@ -1388,10 +1400,10 @@
       "sha256": "3a1904f838287be30ad665229680bc7ad1c3098c53f6ebfd44de209f4e65698a"
     },
     {
-      "path": "publications/squier-notes-central-america-1855/cover.svg",
-      "url": "https://takochanchan.github.io/publications/squier-notes-central-america-1855/cover.svg",
-      "size": 76036,
-      "sha256": "ffc851af7744565ac65b3fb8b67fa94904b669f3aa537cfb876616af0a7433ab"
+      "path": "publications/societe-geographie-central-america-report-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/societe-geographie-central-america-report-1836/cover.jpg",
+      "size": 143432,
+      "sha256": "206c716ba50a6cb485dbc8e35eea0e67878e6be3d56a9461557d8db3c551aacd"
     },
     {
       "path": "publications/squier-notes-central-america-1855/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.epub",
@@ -1406,10 +1418,10 @@
       "sha256": "7e40ace9ffed013bdbe199e7c0395168001ebe3e68b74641434e55d7cadd1e2f"
     },
     {
-      "path": "publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
-      "size": 28453,
-      "sha256": "c98c7aa12e383758b9f6345e34ebe1a14a834d830f634eebada35fe07cd6966b"
+      "path": "publications/squier-notes-central-america-1855/cover.svg",
+      "url": "https://takochanchan.github.io/publications/squier-notes-central-america-1855/cover.svg",
+      "size": 76036,
+      "sha256": "ffc851af7744565ac65b3fb8b67fa94904b669f3aa537cfb876616af0a7433ab"
     },
     {
       "path": "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.epub",
@@ -1424,10 +1436,10 @@
       "sha256": "726bd528d462fc94917c0be6090e1f9a28c0c9013d81dccea47154003d29bf3d"
     },
     {
-      "path": "publications/swett-british-honduras-san-pedro-1868/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/swett-british-honduras-san-pedro-1868/cover.jpg",
-      "size": 62025,
-      "sha256": "a0ebc12d144ab4da9a775ec09ec2edd19197a1f98e0736dd89fa1b4c2a23e7cd"
+      "path": "publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
+      "size": 28453,
+      "sha256": "c98c7aa12e383758b9f6345e34ebe1a14a834d830f634eebada35fe07cd6966b"
     },
     {
       "path": "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
@@ -1442,10 +1454,10 @@
       "sha256": "282334d29f1fd0724f1feb656213154a785233365673312b1996a7bda9ee0c1a"
     },
     {
-      "path": "publications/thompson-ethnology-mayas-1930/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/thompson-ethnology-mayas-1930/cover.jpg",
-      "size": 60961,
-      "sha256": "46cd70177488feaa3a027f0670b45c2634833cea85a1e19609e10a53e1a6233c"
+      "path": "publications/swett-british-honduras-san-pedro-1868/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/swett-british-honduras-san-pedro-1868/cover.jpg",
+      "size": 62025,
+      "sha256": "a0ebc12d144ab4da9a775ec09ec2edd19197a1f98e0736dd89fa1b4c2a23e7cd"
     },
     {
       "path": "publications/thompson-ethnology-mayas-1930/J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.epub",
@@ -1460,10 +1472,10 @@
       "sha256": "bd035c3a2dfe7e71f8bfc67559193b4507f07bb00e76eb63cdc44636f0d98236"
     },
     {
-      "path": "publications/tozzer-mayas-lacandones-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/tozzer-mayas-lacandones-1907/cover.jpg",
-      "size": 31383,
-      "sha256": "8c7c0568328ec2ea16b7d0f31f14eb5f177cd88b44dcf1eabefd8b2791679fb9"
+      "path": "publications/thompson-ethnology-mayas-1930/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/thompson-ethnology-mayas-1930/cover.jpg",
+      "size": 60961,
+      "sha256": "46cd70177488feaa3a027f0670b45c2634833cea85a1e19609e10a53e1a6233c"
     },
     {
       "path": "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
@@ -1478,10 +1490,10 @@
       "sha256": "9a79c14e4ccc3d68e412159f99bc9baa0a11fa2caf4dd3547f40fc187d933d47"
     },
     {
-      "path": "publications/tribes-and-temples-vol-1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-1/cover.jpg",
-      "size": 65701,
-      "sha256": "b7b0f6ecc9914fea87891ba409c49369b44b64cedf8f2c2b5255160d143b753c"
+      "path": "publications/tozzer-mayas-lacandones-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tozzer-mayas-lacandones-1907/cover.jpg",
+      "size": 31383,
+      "sha256": "8c7c0568328ec2ea16b7d0f31f14eb5f177cd88b44dcf1eabefd8b2791679fb9"
     },
     {
       "path": "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
@@ -1496,10 +1508,10 @@
       "sha256": "5b37e9793393de9e23ccc1734c4d2f41a47b52cac61207aec9336332139a878d"
     },
     {
-      "path": "publications/tribes-and-temples-vol-2/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-2/cover.jpg",
-      "size": 66002,
-      "sha256": "703cc359fe9cb58c7c6b50a4ffcc2fa98150af06f05727a47a46af3cabb4700f"
+      "path": "publications/tribes-and-temples-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-1/cover.jpg",
+      "size": 65701,
+      "sha256": "b7b0f6ecc9914fea87891ba409c49369b44b64cedf8f2c2b5255160d143b753c"
     },
     {
       "path": "publications/tribes-and-temples-vol-2/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.epub",
@@ -1514,10 +1526,10 @@
       "sha256": "5fa0017f350b23f7ad93c7ef46cbef4074ac57a5c0f079716b0ef57abfad7f34"
     },
     {
-      "path": "publications/uring-voyages-travels-1928/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/uring-voyages-travels-1928/cover.jpg",
-      "size": 46043,
-      "sha256": "88e06b59640b4392c0741bf479b771dace5434eefbb2027d325157adfb2b73fb"
+      "path": "publications/tribes-and-temples-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/tribes-and-temples-vol-2/cover.jpg",
+      "size": 66002,
+      "sha256": "703cc359fe9cb58c7c6b50a4ffcc2fa98150af06f05727a47a46af3cabb4700f"
     },
     {
       "path": "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.epub",
@@ -1532,10 +1544,10 @@
       "sha256": "b7e642bf2ec46e563410084684b5803dacfa1d01336d4ec18cb5a71c8b25f295"
     },
     {
-      "path": "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
-      "size": 47083,
-      "sha256": "feab73fdd9c59a0505d6f322d198612c2a7cb0c85640e33ff1bc214a0b15231d"
+      "path": "publications/uring-voyages-travels-1928/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/uring-voyages-travels-1928/cover.jpg",
+      "size": 46043,
+      "sha256": "88e06b59640b4392c0741bf479b771dace5434eefbb2027d325157adfb2b73fb"
     },
     {
       "path": "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.epub",
@@ -1548,6 +1560,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.pdf",
       "size": 4819327,
       "sha256": "fb1d80c4da4214505d56966f448c2519532084d866b3e306766457aa6c05af0e"
+    },
+    {
+      "path": "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
+      "size": 47083,
+      "sha256": "feab73fdd9c59a0505d6f322d198612c2a7cb0c85640e33ff1bc214a0b15231d"
     },
     {
       "path": "publications/valenzuela-lacandon-chol-1695/cover.jpg",
@@ -1568,12 +1586,6 @@
       "sha256": "ccbf33bf0a1d10e8d44d8c413ad05b92e91c7628daf1fbd2a976eaa60f278fee"
     },
     {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
-      "size": 50376,
-      "sha256": "0c55184b97b7f95f370eb160114adaeba977d9e7b2cd8125e97c66f2b5211748"
-    },
-    {
       "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
       "size": 19318192,
@@ -1584,6 +1596,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
       "size": 52057780,
       "sha256": "93c3b23efe9ead190d357fd73d5a6c64ad401f8f1931f6972b07bb0952bd1504"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
+      "size": 50376,
+      "sha256": "0c55184b97b7f95f370eb160114adaeba977d9e7b2cd8125e97c66f2b5211748"
     },
     {
       "path": "publications/villagutierre-itza-1701/cover.jpg",
@@ -1604,12 +1622,6 @@
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
     },
     {
-      "path": "publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
-      "size": 290298,
-      "sha256": "29c3dd6bf60abb93c0f02bae298cba2b6ba1747948c5c1cb0c65e394dc80f836"
-    },
-    {
       "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "size": 7311140,
@@ -1622,10 +1634,10 @@
       "sha256": "74f9d180244331883d54e01b0cb0226f7dc04b64230b2ec2341c034e98b732de"
     },
     {
-      "path": "publications/young-black-charaibs-st-vincent-1795/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
-      "size": 74503,
-      "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
+      "path": "publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
+      "size": 290298,
+      "sha256": "29c3dd6bf60abb93c0f02bae298cba2b6ba1747948c5c1cb0c65e394dc80f836"
     },
     {
       "path": "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
@@ -1638,6 +1650,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
       "size": 2342992,
       "sha256": "434f04ca39cab581e1375fdd7503266dacaf1de6c29e819a51c15f4d225ef09c"
+    },
+    {
+      "path": "publications/young-black-charaibs-st-vincent-1795/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
+      "size": 74503,
+      "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
     }
   ]
 }

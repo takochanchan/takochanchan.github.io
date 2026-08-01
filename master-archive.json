@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "b8a850d94ac4e05ff63e6647ed16451350589932",
+  "archive_commit": "a5c2890080393dd8c2aacc4df5c089be5056c514",
   "publications": {
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
@@ -93,6 +93,7 @@
     "galindo-copan-full-report-1834": "publications/galindo-copan-full-report-1834/master.docx",
     "galindo-eruption-cosiguina-1835": "publications/galindo-eruption-cosiguina-1835/master.docx",
     "galindo-on-central-america-1836": "publications/galindo-on-central-america-1836/master.docx",
-    "squier-notes-central-america-1855": "publications/squier-notes-central-america-1855/master.docx"
+    "squier-notes-central-america-1855": "publications/squier-notes-central-america-1855/master.docx",
+    "molina-costa-rica-new-granada-1853": "publications/molina-costa-rica-new-granada-1853/master.md"
   }
 }
