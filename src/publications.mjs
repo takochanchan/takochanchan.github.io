@@ -424,6 +424,52 @@ const publicationRecords = [
     tags: ["地理学協会", "河川地理", "全面地図", "一次史料"],
   },
   {
+    slug: "societe-geographie-central-america-report-1836",
+    title: "中央アメリカの地理および古物に関する懸賞についての報告",
+    originalTitle:
+      "Rapport sur le concours relatif à la géographie et aux antiquités de l’Amérique centrale",
+    subtitle:
+      "1836年4月・原刊253–291頁・本文・脚注・結論五項 日本語全訳",
+    author: "フランス地理学会委員会",
+    series: "RAPPORT SUR LE CONCOURS · 1836",
+    originalPublication:
+      "パリ、『フランス地理学会紀要』第2シリーズ第5巻、1836年4月、253–291頁",
+    year: 1836,
+    extent: "PDF 31頁・原刊253–291頁・原刊頁表示39件・結論5項・図版なし",
+    description:
+      "フランス地理学会が1825年に設定した中央アメリカの地理・古物懸賞について、既往の探検・刊行物と応募資料を検討した1836年の委員会報告。フンボルト、デル・リオ、ウォルデック、デュペ、ガリンドらの調査、地図・図面を比較し、懸賞の判断と今後の調査方針を結論五項にまとめています。フアン・ガリンド本人の著作ではなく、委員会による独立した同時代資料です。",
+    cover:
+      "publications/societe-geographie-central-america-report-1836/cover.jpg",
+    pdf:
+      "publications/societe-geographie-central-america-report-1836/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/societe-geographie-central-america-report-1836/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.epub",
+    pageCount: 31,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["委員会報告", "考古学史", "地理学史"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "チアパス",
+      "ユカタン",
+      "ペテン",
+      "ホンジュラス",
+      "メキシコ",
+    ],
+    languages: ["フランス語"],
+    tags: [
+      "地理学会",
+      "懸賞",
+      "パレンケ",
+      "コパン",
+      "フアン・ガリンド",
+      "フレデリック・ウォルデック",
+      "ギヨーム・デュペ",
+      "19世紀",
+    ],
+  },
+  {
     slug: "tribes-and-temples-vol-1",
     title: "部族と神殿　第I巻",
     originalTitle:
@@ -2971,6 +3017,16 @@ const publicationMetadata = {
     publishedDate: "2026-07-24",
     updatedDate: "2026-07-26",
   },
+  "societe-geographie-central-america-report-1836": {
+    sourceEdition:
+      "Baron Walckenaer、de La Renaudière、Jomard（報告者）「Rapport sur le concours relatif à la géographie et aux antiquités de l’Amérique centrale」『Bulletin de la Société de géographie』第2シリーズ第5巻（Paris: Arthus-Bertrand、1836年4月）253–291頁。",
+    sourceProvider:
+      "フランス国立図書館（BnF）およびInternet Archiveで公開されている原刊画像を底本とした。報告標題、本文、脚注、結論五項、委員署名を収録し、原刊253–291頁の頁境を保持した。",
+    rights:
+      "1836年原刊本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-01",
+    updatedDate: "2026-08-01",
+  },
   "tribes-and-temples-vol-1": {
     sourceEdition:
       "Frans Blom／Oliver La Farge『Tribes and Temples』Volume I（Tulane University of Louisiana、1926年）。",
@@ -3671,6 +3727,8 @@ const shortWorkAuthorBySlug = {
   "galindo-usumacinta-1833": "juan-galindo",
   "friedrichsthal-yucatan-1841": "emanuel-von-friedrichsthal",
   "galindo-palenque-1832": "juan-galindo",
+  "societe-geographie-central-america-report-1836":
+    "societe-de-geographie-committee",
   "arthes-peten-1893": "federico-guillermo-arthes",
   "chonay-totonicapan-title-1886": "dionisio-jose-chonay",
 };
