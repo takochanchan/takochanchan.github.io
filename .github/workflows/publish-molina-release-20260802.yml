@@ -84,11 +84,7 @@ jobs:
             grep -v -F "  $EPUB_NAME" > /tmp/SHA256SUMS.txt
           printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
           printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
-          gh release upload publications-current
-            "/tmp/molina-assets/$PDF_NAME"
-            "/tmp/molina-assets/$EPUB_NAME"
-            /tmp/SHA256SUMS.txt
-            --clobber --repo "$GITHUB_REPOSITORY"
+          gh release upload publications-current "/tmp/molina-assets/$PDF_NAME" "/tmp/molina-assets/$EPUB_NAME" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
           for kind in PDF EPUB; do
             name_var="${kind}_NAME"
             digest_var="${kind}_SHA256"
@@ -107,7 +103,4 @@ jobs:
           set -euo pipefail
           path=.github/workflows/publish-molina-release-20260802.yml
           sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$path?ref=main" --jq .sha)"
-          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$path"
-            -f message="Remove completed Molina release workflow"
-            -f sha="$sha"
-            -f branch=main
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$path" -f message="Remove completed Molina release workflow" -f sha="$sha" -f branch=main
