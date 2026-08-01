@@ -146,6 +146,14 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /action="https:\/\/www\.google\.com\/search"/);
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
+  const googleSearchPosition = html.indexOf('id="google-site-search"');
+  const collectionTabsPosition = html.indexOf('class="collection-tabs"');
+  const booksPanelPosition = html.indexOf('id="publications" role="tabpanel"');
+  assert.ok(
+    googleSearchPosition < collectionTabsPosition &&
+      collectionTabsPosition < booksPanelPosition,
+    "Google site search must be followed by the book and paper tabs",
+  );
   assert.match(
     html,
     /id="tab-publications"[\s\S]*?aria-selected="true"[\s\S]*?>書籍<[\s\S]*?<strong>71<\/strong><span>冊<\/span>/,

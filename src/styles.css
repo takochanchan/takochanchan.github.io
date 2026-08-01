@@ -186,15 +186,21 @@ select {
   letter-spacing: 0.15em;
 }
 
+.site-search {
+  padding: clamp(36px, 5vw, 58px) clamp(24px, 7vw, 108px) clamp(28px, 4vw, 44px);
+  background: var(--paper);
+}
+
+.site-search__inner,
+.collection-switcher__inner {
+  max-width: var(--page);
+  margin: 0 auto;
+}
+
 .collection-switcher {
   padding: 0 clamp(24px, 7vw, 108px);
   border-bottom: 1px solid var(--line);
   background: var(--paper-bright);
-}
-
-.collection-switcher__inner {
-  max-width: var(--page);
-  margin: 0 auto;
 }
 
 .collection-tabs {
@@ -374,7 +380,7 @@ select {
 }
 
 .google-search__note {
-  margin: -2px 0 18px;
+  margin: -2px 0 0;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.7;
@@ -1691,6 +1697,7 @@ select {
   }
 
   .hero,
+  .site-search,
   .collection-switcher,
   .catalog,
   .short-works,

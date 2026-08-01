@@ -252,6 +252,25 @@ ${header()}
     </div>
   </section>
 
+  <section class="site-search" aria-label="サイト内検索">
+    <div class="site-search__inner">
+      <form class="google-search" id="google-site-search"
+        action="https://www.google.com/search" method="get" target="_blank"
+        rel="noopener" role="search">
+        <label for="google-search-query">Googleサイト内検索</label>
+        <input id="google-search-query" type="search"
+          placeholder="PDF本文を含む語句" autocomplete="off" required>
+        <input id="google-search-value" name="q" type="hidden">
+        <button type="submit">Googleで検索</button>
+      </form>
+      <p class="google-search__note">
+        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
+        PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
+        公開直後の資料やPDF本文が検索結果に表示されない場合があります。
+      </p>
+    </div>
+  </section>
+
   <nav class="collection-switcher" aria-label="資料区分">
     <div class="collection-switcher__inner">
       <div class="collection-tabs" role="tablist" aria-label="収録資料">
@@ -282,21 +301,6 @@ ${header()}
           資料種別、地域、原刊言語、年代で絞り込めます。論文は別タブに著者別でまとめています。
         </p>
       </div>
-
-      <form class="google-search" id="google-site-search"
-        action="https://www.google.com/search" method="get" target="_blank"
-        rel="noopener" role="search">
-        <label for="google-search-query">Googleサイト内検索</label>
-        <input id="google-search-query" type="search"
-          placeholder="PDF本文を含む語句" autocomplete="off" required>
-        <input id="google-search-value" name="q" type="hidden">
-        <button type="submit">Googleで検索</button>
-      </form>
-      <p class="google-search__note">
-        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
-        PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
-        公開直後の資料やPDF本文が検索結果に表示されない場合があります。
-      </p>
 
       <form class="archive-tools" role="search" onsubmit="return false">
         <div class="archive-search">
