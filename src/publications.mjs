@@ -515,7 +515,7 @@ const publicationRecords = [
   },
   {
     slug: "galindo-antiquities-peten-1834",
-    title: "中央アメリカ、ペテン管区で発見された若干の古物についての短報",
+    title: "中央アメリカ、ペテン地方で発見された若干の古物についての短報",
     originalTitle:
       "A short Account of some Antiquities discovered in the District of Peten, in Central America",
     subtitle:
@@ -527,7 +527,7 @@ const publicationRecords = [
     year: 1834,
     extent: "PDF 5頁・原刊570–571頁・図版2葉（LIX–LX）",
     description:
-      "1831年10月28日付でガリンドがロンドン古物協会へ送った書簡。ペテン管区で収集したパレンケの漆喰浮彫と、ヤショー湖（原刊 Yashaw）の島の遺構・遺物を記述します。本文、宛先・署名、図版LIX・LXの標題と注記を省略なく訳し、図版二葉を収録しています。",
+      "1831年10月28日付でガリンドがロンドン古物協会へ送った書簡。ペテン地方で収集したパレンケの漆喰浮彫と、ヤショー湖（原刊 Yashaw）の島の遺構・遺物を記述します。本文、宛先・署名、図版LIX・LXの標題と注記を省略なく訳し、図版二葉を収録しています。",
     cover: "publications/galindo-antiquities-peten-1834/cover.jpg",
     pdf:
       "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.pdf",
