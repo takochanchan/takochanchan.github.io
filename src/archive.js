@@ -92,7 +92,12 @@
   }
 
   const root = document.querySelector("[data-archive]");
-  if (!root || !Array.isArray(window.ARCHIVE_PUBLICATIONS)) return;
+  const shortRoot = document.querySelector("[data-short-archive]");
+  if (
+    !root ||
+    !shortRoot ||
+    !Array.isArray(window.ARCHIVE_PUBLICATIONS)
+  ) return;
 
   const publications = window.ARCHIVE_PUBLICATIONS;
   const pageSizeOptions = new Set(["6", "12", "24", "all"]);
@@ -121,6 +126,9 @@
     results: document.querySelector("#archive-results"),
     pagination: document.querySelector("#archive-pagination"),
     active: document.querySelector("#active-filters"),
+    bookMatch: document.querySelector("#book-match-count"),
+    paperMatch: document.querySelector("#paper-match-count"),
+    shortResults: document.querySelector("#short-results"),
   };
 
   const params = new URLSearchParams(location.search);
@@ -230,6 +238,59 @@
       </div>
     </article>`;
 
+  const shortCard = (item) => `
+    <article class="short-work-card">
+      <div class="short-work-card__meta">
+        <time datetime="${escapeHtml(String(item.year))}">${escapeHtml(String(item.year))}</time>
+        <span>${escapeHtml(String(item.pageCount))}頁</span>
+      </div>
+      <div class="short-work-card__body">
+        <p class="short-work-card__series">${escapeHtml(item.series)}</p>
+        <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h4>
+        <p class="short-work-card__original-title"><cite>${escapeHtml(item.originalTitle)}</cite></p>
+        <p class="short-work-card__publication">${escapeHtml(item.originalPublication)}</p>
+        <div class="short-work-card__actions">
+          <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
+          <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF（${escapeHtml(item.pdfSize)}）</a>
+          <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+            type="application/epub+zip" download>EPUB（${escapeHtml(item.epubSize)}）</a>
+        </div>
+      </div>
+    </article>`;
+
+  const shortCatalogue = (items) => {
+    const groups = new Map();
+    items.forEach((item) => {
+      const group = groups.get(item.authorKey) ?? {
+        key: item.authorKey,
+        name: item.author,
+        publications: [],
+      };
+      group.publications.push(item);
+      groups.set(item.authorKey, group);
+    });
+
+    return [...groups.values()]
+      .sort((a, b) => a.name.localeCompare(b.name, "ja"))
+      .map((author) => {
+        const authorPublications = [...author.publications].sort(
+          (a, b) => a.year - b.year || a.title.localeCompare(b.title, "ja"),
+        );
+        return `
+          <section class="short-author" aria-labelledby="author-${escapeHtml(author.key)}">
+            <header class="short-author__heading">
+              <p>AUTHOR</p>
+              <h3 id="author-${escapeHtml(author.key)}">${escapeHtml(author.name)}</h3>
+              <span>${authorPublications.length}篇</span>
+            </header>
+            <div class="short-author__works">
+              ${authorPublications.map(shortCard).join("")}
+            </div>
+          </section>`;
+      })
+      .join("");
+  };
+
   const renderActive = () => {
     const labels = [
       state.type,
@@ -312,13 +373,20 @@
 
   const render = () => {
     const query = state.q.trim().toLocaleLowerCase("ja");
-    let filtered = publications.filter(
+    const matching = publications.filter(
       (item) =>
         (!query || item.__search.includes(query)) &&
         (!state.type || item.types.includes(state.type)) &&
         (!state.region || item.regions.includes(state.region)) &&
         (!state.language || item.languages.includes(state.language)) &&
         (!state.era || eraFor(item.year) === state.era),
+    );
+
+    let filtered = matching.filter(
+      (item) => item.recordClass === "major-work",
+    );
+    const filteredShort = matching.filter(
+      (item) => item.recordClass === "short-work",
     );
 
     filtered = [...filtered].sort((a, b) => {
@@ -340,9 +408,24 @@
     root.innerHTML = visible.length
       ? visible.map(card).join("")
       : `<div class="archive-empty"><strong>該当する書籍はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
-    controls.results.textContent = `${filtered.length}件中 ${
+    shortRoot.innerHTML = filteredShort.length
+      ? shortCatalogue(filteredShort)
+      : `<div class="archive-empty"><strong>該当する論文はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
+
+    controls.results.textContent = `書籍 ${filtered.length}件中 ${
       filtered.length ? start + 1 : 0
     }–${Math.min(start + perPage, filtered.length)}件`;
+    controls.shortResults.textContent = `論文 ${filteredShort.length}件`;
+    controls.bookMatch.textContent = String(filtered.length);
+    controls.paperMatch.textContent = String(filteredShort.length);
+    collectionTabs.forEach((tab) => {
+      const isBooks = tab.dataset.collectionTab === "publications";
+      const count = isBooks ? filtered.length : filteredShort.length;
+      tab.setAttribute(
+        "aria-label",
+        `${isBooks ? "書籍" : "論文"}（${count}件）`,
+      );
+    });
     renderPagination(pages);
     renderActive();
     updateUrl();

@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-collection-tabs-v4";
+const assetVersion = "20260801-unified-search-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -77,15 +77,15 @@ const options = (values, label) =>
     .join("");
 
 const catalogueTaxonomy = {
-  types: [...new Set(majorPublications.flatMap((item) => item.types))].sort(
+  types: [...new Set(publications.flatMap((item) => item.types))].sort(
     (a, b) => a.localeCompare(b, "ja"),
   ),
-  regions: [
-    ...new Set(majorPublications.flatMap((item) => item.regions)),
-  ].sort((a, b) => a.localeCompare(b, "ja")),
-  languages: [
-    ...new Set(majorPublications.flatMap((item) => item.languages)),
-  ].sort((a, b) => a.localeCompare(b, "ja")),
+  regions: [...new Set(publications.flatMap((item) => item.regions))].sort(
+    (a, b) => a.localeCompare(b, "ja"),
+  ),
+  languages: [...new Set(publications.flatMap((item) => item.languages))].sort(
+    (a, b) => a.localeCompare(b, "ja"),
+  ),
 };
 
 const formatDate = (value) => {
@@ -252,56 +252,8 @@ ${header()}
     </div>
   </section>
 
-  <section class="site-search" aria-label="サイト内検索">
+  <section class="site-search" aria-label="資料検索">
     <div class="site-search__inner">
-      <form class="google-search" id="google-site-search"
-        action="https://www.google.com/search" method="get" target="_blank"
-        rel="noopener" role="search">
-        <label for="google-search-query">Googleサイト内検索</label>
-        <input id="google-search-query" type="search"
-          placeholder="PDF本文を含む語句" autocomplete="off" required>
-        <input id="google-search-value" name="q" type="hidden">
-        <button type="submit">Googleで検索</button>
-      </form>
-      <p class="google-search__note">
-        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
-        PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
-        公開直後の資料やPDF本文が検索結果に表示されない場合があります。
-      </p>
-    </div>
-  </section>
-
-  <nav class="collection-switcher" aria-label="資料区分">
-    <div class="collection-switcher__inner">
-      <div class="collection-tabs" role="tablist" aria-label="収録資料">
-        <a class="collection-tab" id="tab-publications" href="#publications"
-          role="tab" aria-selected="true" aria-controls="publications"
-          data-collection-tab="publications">
-          <span class="collection-tab__label">書籍</span>
-          <span class="collection-tab__count"><strong>${majorPublications.length}</strong><span>冊</span></span>
-        </a>
-        <a class="collection-tab" id="tab-short-works" href="#short-works"
-          role="tab" aria-selected="false" aria-controls="short-works" tabindex="-1"
-          data-collection-tab="short-works">
-          <span class="collection-tab__label">論文</span>
-          <span class="collection-tab__count"><strong>${shortPublications.length}</strong><span>篇</span></span>
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <section class="catalog collection-panel" id="publications" role="tabpanel"
-    aria-labelledby="tab-publications" data-collection-panel="publications">
-    <div class="catalog__inner">
-      <div class="section-heading">
-        <p class="eyebrow">BOOKS</p>
-        <h2>書籍</h2>
-        <p>
-          単行本、報告書、長編資料を収録しています。下の一覧は書名・著者・地名・タグのほか、
-          資料種別、地域、原刊言語、年代で絞り込めます。論文は別タブに著者別でまとめています。
-        </p>
-      </div>
-
       <form class="archive-tools" role="search" onsubmit="return false">
         <div class="archive-search">
           <label for="archive-search">一覧内検索</label>
@@ -332,23 +284,78 @@ ${header()}
               <option value="20世紀初頭">20世紀初頭</option>
             </select>
           </div>
-          <div class="field">
-            <label for="archive-sort">並べ替え</label>
+          <button class="reset-button" id="archive-reset" type="button">条件を解除</button>
+        </div>
+      </form>
+
+      <div class="active-filters" id="active-filters"></div>
+
+      <div class="google-search-block">
+      <form class="google-search" id="google-site-search"
+        action="https://www.google.com/search" method="get" target="_blank"
+        rel="noopener" role="search">
+        <label for="google-search-query">Googleサイト内検索</label>
+        <input id="google-search-query" type="search"
+          placeholder="PDF本文を含む語句" autocomplete="off" required>
+        <input id="google-search-value" name="q" type="hidden">
+        <button type="submit">Googleで検索</button>
+      </form>
+      <p class="google-search__note">
+        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
+        PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
+        公開直後の資料やPDF本文が検索結果に表示されない場合があります。
+      </p>
+      </div>
+
+      <p class="collection-match-summary" id="collection-match-summary" aria-live="polite">
+        <span>書籍 <strong id="book-match-count">${majorPublications.length}</strong>件</span>
+        <span>論文 <strong id="paper-match-count">${shortPublications.length}</strong>件</span>
+        <span>が該当</span>
+      </p>
+    </div>
+  </section>
+
+  <nav class="collection-switcher" aria-label="資料区分">
+    <div class="collection-switcher__inner">
+      <div class="collection-tabs" role="tablist" aria-label="収録資料">
+        <a class="collection-tab" id="tab-publications" href="#publications"
+          role="tab" aria-selected="true" aria-controls="publications"
+          data-collection-tab="publications">
+          <span class="collection-tab__label">書籍</span>
+        </a>
+        <a class="collection-tab" id="tab-short-works" href="#short-works"
+          role="tab" aria-selected="false" aria-controls="short-works" tabindex="-1"
+          data-collection-tab="short-works">
+          <span class="collection-tab__label">論文</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="catalog collection-panel" id="publications" role="tabpanel"
+    aria-labelledby="tab-publications" data-collection-panel="publications">
+    <div class="catalog__inner">
+      <div class="section-heading">
+        <p class="eyebrow">BOOKS</p>
+        <h2>書籍</h2>
+        <p>
+          単行本、報告書、長編資料を収録しています。下の一覧は書名・著者・地名・タグのほか、
+          資料種別、地域、原刊言語、年代で絞り込めます。論文は別タブに著者別でまとめています。
+        </p>
+      </div>
+
+      <div class="archive-status">
+        <p class="archive-status__result" id="archive-results" aria-live="polite"></p>
+        <div class="archive-status__summary">
+          <label class="page-size sort-control" for="archive-sort">
+            <span>並べ替え</span>
             <select id="archive-sort">
               <option value="year-asc">原刊年・古い順</option>
               <option value="year-desc">原刊年・新しい順</option>
               <option value="title">書名順</option>
               <option value="author">著者順</option>
             </select>
-          </div>
-          <button class="reset-button" id="archive-reset" type="button">条件を解除</button>
-        </div>
-      </form>
-
-      <div class="archive-status">
-        <div class="active-filters" id="active-filters"></div>
-        <div class="archive-status__summary">
-          <p class="archive-status__result" id="archive-results" aria-live="polite"></p>
+          </label>
           <label class="page-size" for="archive-per-page">
             <span>表示件数</span>
             <select id="archive-per-page">
@@ -376,7 +383,8 @@ ${header()}
           同じ著者の資料はこの欄に刊行年順で積み上がります。各篇の書誌情報と原刊頁は個別ページに保持しています。
         </p>
       </div>
-      <div class="short-author-list">${shortWorkCatalogue}</div>
+      <p class="short-results" id="short-results" aria-live="polite">論文 ${shortPublications.length}件</p>
+      <div class="short-author-list" data-short-archive>${shortWorkCatalogue}</div>
     </div>
   </section>
 
@@ -403,7 +411,7 @@ ${header()}
 </main>
 ${footer()}`,
   scripts: `
-<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(majorPublications)};</script>
+<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
 <script src="/archive.js?v=${assetVersion}" defer></script>`,
 });
 
