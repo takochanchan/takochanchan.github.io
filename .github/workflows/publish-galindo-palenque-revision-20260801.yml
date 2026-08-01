@@ -305,7 +305,7 @@ jobs:
           npm run build
           npm test
           grep -F 'ペルフェクト・バエソ' dist/publications/galindo-palenque-1832/index.html
-          grep -F 'PDF 25頁' dist/publications/galindo-palenque-1832/index.html
+          grep -F '<dt>翻訳版</dt><dd>25頁</dd>' dist/publications/galindo-palenque-1832/index.html
 
       - name: Prepare release checksums
         env:
@@ -461,4 +461,3 @@ jobs:
             -f message="Record Galindo Palenque revision failure" \
             -f content="$content" \
             -f branch=main
-
