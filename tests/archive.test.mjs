@@ -135,8 +135,8 @@ test("home page contains scalable archive controls", async () => {
     assert.match(html, new RegExp(`id="${id}"`));
   }
   assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
-  assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v1/);
-  assert.match(html, /\/archive\.js\?v=20260801-collection-tabs-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v2/);
+  assert.match(html, /\/archive\.js\?v=20260801-collection-tabs-v2/);
   assert.match(
     html,
     /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
@@ -203,7 +203,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v1/);
+  assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v2/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -260,17 +260,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v1/);
-    assert.match(html, /\/archive\.js\?v=20260801-collection-tabs-v1/);
+    assert.match(html, /\/archive\.css\?v=20260801-collection-tabs-v2/);
+    assert.match(html, /\/archive\.js\?v=20260801-collection-tabs-v2/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260801-collection-tabs-v1#short-works">← 論文・報告へ戻る<\/a>/,
+        /href="\/\?v=20260801-collection-tabs-v2#short-works">← 論文・報告へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260801-collection-tabs-v1#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260801-collection-tabs-v2#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
