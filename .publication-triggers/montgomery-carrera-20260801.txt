@@ -1,3 +1,4 @@
 Publish the approved Montgomery and Carrera Japanese complete translations.
 Base site: 3b0ef8dab205785da911ad86031f42e3313633a7
 Private archive: 49f5532c18d48ef59fcd546f9a53688abcf6fd5c
+Retry: accept the exact spaced Roman-numeral headings emitted by pdftotext.
