@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 94);
+  assert.equal(publications.length, 95);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,7 +63,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 74);
+  assert.equal(majorPublications.length, 75);
   assert.equal(shortPublications.length, 20);
   assert.equal(shortPublicationAuthors.length, 10);
   assert.deepEqual(
@@ -181,6 +181,26 @@ test("Ximenez Escolios is catalogued as the complete six-leaf short work", () =>
   assert.deepEqual(item.languages, ["スペイン語", "キチェ語", "ラテン語"]);
 });
 
+test("Ximenez Ayer MS 1515 volume 1 is catalogued as the complete combined volume", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "ximenez-ayer-ms-1515-volume-1",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 619);
+  assert.equal(item.plateCount, 240);
+  assert.match(item.subtitle, /第1巻・全240葉面/);
+  assert.match(item.description, /比較文法/);
+  assert.match(item.description, /司牧手引/);
+  assert.deepEqual(item.languages, [
+    "スペイン語",
+    "カクチケル語",
+    "キチェ語",
+    "ツトゥヒル語",
+    "ラテン語",
+  ]);
+});
+
 test("approved Galindo short-paper batch remains individually catalogued", () => {
   const expectedPages = new Map([
     ["galindo-caribs-central-america-1833", 3],
@@ -280,7 +300,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">74<\/strong>件/);
+  assert.match(html, /id="book-match-count">75<\/strong>件/);
   assert.match(html, /id="paper-match-count">20<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

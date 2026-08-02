@@ -3297,6 +3297,49 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "ximenez-ayer-ms-1515-volume-1",
+    title: "三言語文法・第二論考",
+    originalTitle:
+      "Arte de las tres lenguas cakchiquel, quiché y tzutuhil; Tratado segundo de todo lo que debe saber un ministro para la buena administración de estos naturales",
+    subtitle: "Ayer MS 1515 第1巻・全240葉面 日本語全訳",
+    author: "フランシスコ・ヒメネス",
+    series: "ARTE DE LAS TRES LENGUAS · AYER MS 1515 · VOLUME I",
+    originalPublication: "チチカステナンゴ、1700–1703年頃（写本）",
+    year: 1700,
+    extent: "PDF 619頁・翻訳対象全240葉面・底本画像240点",
+    description:
+      "ニューベリー図書館所蔵 Ayer MS 1515 第1巻の日本語全訳。冒頭の未丁付4葉と第1–93葉のカクチケル語・キチェ語・ツトゥヒル語比較文法を第一部、第94–119葉の聖職者用司牧手引を第二部として写本順に収録し、翻訳対象全240葉面の底本画像を併載しています。",
+    cover: "publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
+    pdf:
+      "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.epub",
+    pageCount: 619,
+    figureCount: 0,
+    plateCount: 240,
+    types: ["文法書", "司牧手引", "写本", "一次史料"],
+    regions: ["グアテマラ", "チチカステナンゴ", "キチェ高地"],
+    languages: [
+      "スペイン語",
+      "カクチケル語",
+      "キチェ語",
+      "ツトゥヒル語",
+      "ラテン語",
+    ],
+    tags: [
+      "Ayer MS 1515",
+      "カクチケル語",
+      "キチェ語",
+      "ツトゥヒル語",
+      "ドミニコ会",
+      "告解",
+      "教理問答",
+      "植民地期",
+      "写本画像",
+      "18世紀",
+    ],
+  },
+  {
     slug: "ximenez-escolios-ayer-ms-1515",
     title: "『インディオの起源の物語』への注解",
     originalTitle: "Escolios a las historias de el origen de los indios",
@@ -3337,6 +3380,17 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "ximenez-ayer-ms-1515-volume-1": {
+    sourceEdition:
+      "Francisco Ximénez『Arte de las tres lenguas cakchiquel, quiché y tzutuhil; Tratado segundo de todo lo que debe saber un ministro para la buena administración de estos naturales』Newberry Library, Edward E. Ayer Collection, Vault Ayer MS 1515, vol. 1, 未丁付4葉および第1葉表–第119葉裏。",
+    sourceProvider:
+      "ニューベリー図書館所蔵写本の公開画像を底本とし、米国議会図書館が旧World Digital Library資料19996として公開する画像1–240を使用した。『三言語文法』の判読照合にはRosa Helena Chinchilla Mazariegos編の1993年翻刻版を補助的に参照した。",
+    sourceUrl: "https://hdl.loc.gov/loc.wdl/wdl.19996",
+    rights:
+      "18世紀写本の本文は米国・日本ともに著作権保護期間を満了しています。米国議会図書館はWorld Digital Libraryコレクションについて把握する著作権その他の制限はないと案内しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-02",
+    updatedDate: "2026-08-02",
+  },
   "williams-anglo-american-isthmian-diplomacy-1916": {
     sourceEdition:
       "Mary Wilhelmine Williams, Anglo-American Isthmian Diplomacy, 1815–1915（Washington: American Historical Association; London: Humphrey Milford, Oxford University Press、1916年）。",

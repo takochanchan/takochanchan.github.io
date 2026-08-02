@@ -1658,6 +1658,24 @@
       "sha256": "f631e8a5223b28396b10e927df2c2af206b3680f162b247d373580cff7bf6ed8"
     },
     {
+      "path": "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.epub",
+      "size": 74163164,
+      "sha256": "a20a4b2b5850723df460a7ca7acf466d64a596669c58737e21964fc4e3cb8bdc"
+    },
+    {
+      "path": "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.pdf",
+      "size": 96065095,
+      "sha256": "25b52ae1d3b8f4202cbe13b100435c0df75b39012907cc74b6dda473c0b4b2a2"
+    },
+    {
+      "path": "publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
+      "size": 69631,
+      "sha256": "daa415f7e9b278e0a8d423ffdf45f21a9559bad11bb1fa0e30c9adbbeccbb145"
+    },
+    {
       "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
       "size": 7311140,
