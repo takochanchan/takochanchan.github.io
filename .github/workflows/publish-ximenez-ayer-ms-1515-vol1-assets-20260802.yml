@@ -1,4 +1,4 @@
-name: Verify Ximenez Ayer MS 1515 volume 1 release assets
+name: Publish Ximenez Ayer MS 1515 volume 1 release assets
 
 on:
   push:
@@ -14,17 +14,259 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  verify:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     env:
       WORKFLOW_PATH: .github/workflows/publish-ximenez-ayer-ms-1515-vol1-assets-20260802.yml
+      PREVIOUS_FAILURE_PATH: .github/publication-failures/ximenez-ayer-ms-1515-vol1-30729192187.txt
       PDF_NAME: Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.pdf
       PDF_SIZE: "96065095"
       PDF_SHA256: 25b52ae1d3b8f4202cbe13b100435c0df75b39012907cc74b6dda473c0b4b2a2
+      PDF_BLOBS: >-
+        6ac71dc64a27188e388bba4a9fef0c063823d322
+        3f76c3c6aab7c30e26e710f8c89fd3845237a73a
+        3b2b054cba2d14bc023eeff647d5e20736d236a5
+        1c72f63bd24a9b4f5291e8f74d72979dc126481c
+        b428bfc5641f631d0ae9e6bd86ceb5753c5da455
+        8066ef80f92949eb598cc44c29ed82d2c33be60e
+        bb02c3d9d5746cc29e2b94235012cfc28d796785
+        a217b2191426216cb6948cd14e60b6e2211cf4c1
+        a45f20e7ebc2d0c5868ce9ff57a34a4981e50785
+        634f10f906d062e9372a351f017ec0cadba6b0bb
+        9386b330df0e9346beca448b9347d33f4b68780d
+        4fc6e2af8f6d2370cde482ac86c79d231cb42ddf
+        0bc0a9e311bc2ef5c5cc7375029f5bb29df7dbb2
+        dbc0b548a0e6764921cddf5ff191e2c6f19b9b82
+        e57228fcc71faf954804e0d135ab355fd85d7209
+        e7152e8b0eccdb21abc1c8970fc9d536a664595f
+        43a1ac78e7659ec67b638d7632f48b901cfac28c
+        6dd2c0831995d1dce67dfaa534da77dd421bc726
+        78909ad8fc96d8b1addda06780cc9ccb3f322d59
+        1e748c2b9e968ab4cd51267d9e89e74da5dd1578
+        b4260fca88d7abce6ad372b2a305f2c29516a4ac
+        9299975562baf9344609faa1c5600b3e6204bfb9
+        2ea69c425870dd9b9d1da38ffd32d52cbf0d7820
+        1c7bc0b7efb86c1d36f57650c30116f94f6b4958
+        49d3c50b615e0c4f91528cb6ce1f7cabdce9ff42
+        832680aa8e109115fc658d6969c999d17ec03a83
+        4d589eaeae6b8feb8b736682fbef760ac4a7bbbc
+        e7b64a96667c913534d316ca8c1c4cc2f8cdae04
+        01e4cf299779ce08653c4b2af872eabfd7dfa670
+        049a7b75e45dcf1eaaa79ae74945302e68c2e928
+        ecd1ecc8ec924af01aefe3a6cf957c3ac8eda434
+        fce383060d8ebf449521996ca9991439b2cb942d
+        657aacdd78f5b62626a2eec15fd18dec726edbf5
+        7307640c50d9f894027e789c602c13104d06ea57
+        3e6d4dfff16e44bfae787748a05966d3d873faf1
+        d6fff3e3fe88ecb0de6084900171e9b0f475bc02
+        a729221501be4ddef9b182ddccd5236065ec90f0
+        c1f7a212693dcdfe65400cb627a0328994262833
+        eddccfa9260ca1765430502431e8d1093f479b35
+        cd55ac5a665f40cdded5025a493e84ae87ab5950
+        68519150ccf595a91595882ae895b35bca96d0d6
+        6374676e78cba470d871fa453d3fb203c426e307
+        0fa91a0ff7ec5c14208e3814eaaa320b0891cb70
+        bc3864dbd99aa05689520831341003f95d51ddc5
+        4b443c452e95ba246b1aca5d22df576688444407
+        b56aa1006d0f0eaa84e28aa57f8d410f5cb6dff1
+        21eb5472ff5791949488b91e1856aaebe4984b8d
+        0f1fb7e5fa6203a56b1463bb52b5224465493f76
+        5a11f6ba29d529ee3747f8244274fd2d1453d8da
+        dcb3ff894e16c1278254d22f696112b556bda078
+        3b2cec151516992915cdf1bdef35061c6d869992
+        9cf3bfde81e8b356a0165afe068a0091ad40d614
+        59431b35cf69cca146231099114a398896f42607
+        c9e2ce941659de12eee03842b9908918966d2128
+        6a363301c6029601b835ea8f3f12619a35be0b1b
+        74c7d4d54993f8083662fdc6406d233109b882b5
+        1ed9f7799c233c824e01c94109e2c60512dc9138
+        46a81d2ac3addf98047fbb26ded3981e07508df0
+        d765253d074f991515f38db2e030425888be0073
+        007ece592b9a93cb4a135aef147af4749b5bf269
+        fdc2b7fd7b3d084f719d6391edb4ef969838f721
+        49d249056b3aab396df79e0ba4f19e581407fc37
+        9e542673bed73f4bd8ddcf8665e2924cf133889f
+        bf6f9b1809c799ccaf8733d0d2254ad6e1f36bab
+        b9fd39605a4f49ccf4c66f296d4ae54c63d614b3
+        1d6538c3e9244cb745941545803cc9444da0f134
+        8757d58ab764ade626ea47098b9ee8b3063fd6d5
+        cbed400c8c42fc65b20a5e58c319c8832a8472aa
+        c1c609eade542e713c372a588e0f4d0e5edf23b9
+        1941f4b5fcc1424f4ac97184abd8471c208dc6ed
+        2b957f85c51905bca810311a6328788a050302d6
+        b1173fcd24d608c0be64fbc3078dc287911954b4
+        6e8b42230b6c83be73d86b94292bd08de77d1719
+        bd0223313345b57689793c26e1b8b28168814fa7
+        1f39bfb037d31fe5f34685b263789adb855d2793
+        e29093e74566b2adf7ea6e9ba97fee04b7bd7aae
+        1a5d3f522252aed31c086f70f815ce00434b9d60
+        06c4b332c1451e050b3d34bf72ee727216a1e199
+        c6d9acc36fceaf24a10bb6c869c2814cb62a6d95
+        8e61621f4ec66c59b752aaf9aeaf94068df85a4a
+        d563ae43e4fad2d7a9cdd4207c388159c51f88e3
+        b2a082fae3c9bd0454e4458c8049dfe1d0e03556
+        26bd02233f4067c5a370f7486bd33df915778ab7
+        866b2e610af962ddc7917275bf561a7014cd608f
+        ee39b23d2c6c5c3278c28f90401178048fcbc9ce
+        cc65fb642b80d6a42dd668f3124b28085cdaf9e3
+        07737fd1dfef9cfca7163729959fd2875d2f392b
+        75a9f7c0adc383fbe6e97a6dccfb611aca813f7e
+        d64baa9efc9b6394ffa9521bb209bd7050ebf595
+        d8606bd04946437f493568d1a9ea1164eff5b87d
+        499d6ef388cd2ec6a7a7f3a8486fe2e4700ca948
+        ef930e8272a4e41c453c31fd51a5016c7d0a77d2
+        fac962b3018f614873735535bbfa0c42b7222d9d
+        2bf3c608e51d2515662ba1ce4f2aff2367293cfe
+        2cf9e68ff06ba718e200b8fdb0491cf1aa32743b
+        ae8858409ee052c0f4190690521df38ff284d4d8
+        5401af08ac3e20fee9b855a1528270aeee6ddb49
+        d715395a9d4f71f946f5909816d40ffd1fefb277
+        ffb85095181d8bc066a16f752e2375ff78065e1a
+        e44d337ff4216f9f44ae0b7162bd9c7c395b5a8f
+        974f87c79a2f229a857cd98840286de78776eb67
+        949cfd7721f0b37f58437e7ef4f2f75b4bb10d5f
+        375a4e6ec736d60cdf15af4782d40d5132c7b243
+        e92e1b20bc28346c126531972123374088bf6272
+        2ff41e380cb059cd15e28118ec5011dd49be54ad
+        5f350987d0d8ec68cad308d6391a2ff04a11208b
+        a019eb686307eb6dd3b3f4b7a044739cc23cc2af
+        4b8814f4e77348778ee870710443062e40981010
+        abc58c97d58ff4f5049ebfd360ca8fe9349befa0
+        165bfdbd4e6a02f5ac210214bce36edceef1ff6e
+        eff0425219758c80f145395452e120f9f31ac550
+        53a650fb1db0ed144c6b611bdbff1108cc6e2fe5
+        638d7a8fd0be735f6e9b05c4600283d8e145ad5f
+        20f12ac733e160584321bed66073130af6140d9e
+        f4aaac5696d90d829420a78d0fab2159e06c6590
+        1d904b7eed8afc243fb260ef04567d5fd19d4693
+        91e73f8116f4d10aa1366cbb7658a0914caf12a4
+        7716e02e0130a425780fcecea198a0096e4b9e92
+        c86b1c7beb1e20e4ee1879dcae49dd4ca1693c6a
+        6ad7c1eaeec84bc56df3a697525757fe7e671faf
+        37089b44034043db3cfb214a26fe93bb81437c85
+        6ea46e23628f93057763fda019f89b9bfb9081fa
+        eb8422ac78ab1185cf55231c58b08d7cb4e88243
+        fb774ae991b08c50a1bbb0346278cfb76a590dea
+        d3924bd3213b4ca15b5bd8ec9e6c0e10c6b96378
+        2c7522c5ac6a38acce3c9b14366b4ea18bc31d94
+        6a46616b4a941d1b17a89539d3b2caa69f16fb76
+        bf5b4e37adde4fa645c53a5f966903f9d361a289
+        3b2c12accc5b88799e2f37c0b104da7b227bb37c
+        90d9c73dcf9db7798b52e226b79902a7186ae49f
+        6dc54614f2a94121882e4b50bb8528263429d258
+        49746709625333f1a1741f06233b97ff55559c83
+        f004f832f92554c4d8844789cdf162ee2f9e49d4
+        badab7d78d1cdabfada1501ebfba85d705853635
+        9d578a422ff166b58eb9528316a1f3c0f364bad6
       EPUB_NAME: Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.epub
       EPUB_SIZE: "74163164"
       EPUB_SHA256: a20a4b2b5850723df460a7ca7acf466d64a596669c58737e21964fc4e3cb8bdc
+      EPUB_BLOBS: >-
+        83fc9b3f19a483981edf9ceba71a6c82313f5076
+        3dc8e516175cdf91a085c4d54717841e94f5a65b
+        d36adf79ecae28c1c2cfc71a00724029ec284720
+        01011037ba0b7d14067d41d3a8a909267e15d485
+        1710d4de8f4f07fbb9c46d27bff53f1d6e2f101c
+        483bcb067b0c37e91bec740ce4602ead1a7f8069
+        1ceb8d18eb8d5a1748f338f4a6ca94a088ef221b
+        f67a41dac192d73614f84b7ed83be5f11c76e8b6
+        8f86e9ac4c8f5830e782b1b650cddd89b01f67c4
+        758b4b87860b68ff02562630c49a1d37e91b3f2e
+        b67221c48d3a9f77512230b9f1b0187b14b9420b
+        057565d572942529cb64e485a0875454719b8a53
+        7da244f5e5a93c6e9c1cad70457ff3adc8530c17
+        6681d089e5f45971fa0dd423ac10b368101883c7
+        a0f1304bd7c9a044d1cf1b1052b42e3167dfcd99
+        69d58134d85d0206c0ce80dcff05fa2694930535
+        45a45cb3da96768aa7a238ba965e1fe1df88427e
+        4c8c05f6bc1dfb131a4cd63ff59021693a32a870
+        9ac0e7d928f198f47307a20cd181b53b475ad348
+        afa4dff23cfa39668efec869e61ec0ad94b53731
+        f19abe420a21a56d622345840056627e529c1d8d
+        02e415e555c152f820823d7ca7fc1d13ce7afbca
+        12dcf82a32b913af61af341cb7235a035110b84d
+        e964be2331b83904a78dc6b47a8dbcfc4ff3e75c
+        ea7a3fc2829f3b0628b0030d8676ca56fc9045f0
+        c2da7614f7f7144fb5928bb95258216360570ff7
+        50c1c34ba26dc3b56589dc7077bac81d793b6b5c
+        28b4849c224fd1ae8e3d56f0fbb5eb5b03d3befa
+        1bd3511eabe50a0c6d4985976142bff176c2782d
+        de332d30d01fa202fe642ddb4751f0447538320c
+        1c4b508ec53351b5074a6f3f51e8cb9c13784cc7
+        889137a8ef4550194a516211b359ab832e2a468e
+        97b408dd22d46136c768b2d7e6a0279ef3ce7c85
+        7f2b8bc7f1a24af3ff78ed082f8e8193c4d61acf
+        d2b32ea3a922c24542fab21575cb74e20161d3d1
+        d2df8ad5d72227e3591c234a2c978e3aa1f0f526
+        0e79add77523d7877c0f6734cefadc1d5ba38c5f
+        c51355407c27383a08a25e66b4ddbf99a4426c81
+        0127152e1318363975165284ba6d2537eb7e6cc8
+        e83db0a1eeefe5c00828d70e7f1192db7ff9f776
+        f4e93ce0c9f3864b7dbbedc3d8ae78eb51c71fe8
+        7f8db35b431e093e85fc4b55cdc10f42067ce245
+        34c4a9a0a63e9b4865e2f57b6fc10c8024932713
+        589159d552a6faded17dfd3058f7480b9ca44127
+        a5869c42f036c91a86c62a5a332a2c3d3e953725
+        44a6dd323608a0bd103c2e753ca684298ae34f32
+        7e491d692aa81893cf347d5a8522dfcc288ca294
+        6e567462dd36412b1f098336f87a0d2c4e308d70
+        c3f5b04e5bd445ee807e8fbd3ff76ff3a98e4262
+        82f34e972df0c2b830fcee4b4b1b007c59909fe9
+        ed62585f285ea389a50f2cc5e22aea071b543f77
+        0a364e4df178f6c95864608b1884cec41bd03b11
+        29f586536f6bbe96041efbfd1e95ef1bd03a414e
+        dbb79e3ea7944de3ed06d83c104324abb71a7b9f
+        19fb7d82c6f427cd10905d0eaa2ff9f7e7a2a948
+        413169b37cfdc2a63132f0144d65503325527940
+        547b503f2bcb067911bcc68e4e861aff6d867d03
+        d5272d847bf762b3cf5faefe5755814387c3f47b
+        14a925eed11dacc1dab86bfef1249abc41507198
+        def6e4eb593dcda160ed884b3eda3a70622a6ab0
+        c53e604e3317371c52216c336b89b3ddd0e2a832
+        a7f6a6347990aacb7e99b142c3b451bff5c30c18
+        3b73c974fe9274fb64ca295e0b48b8921a780c3a
+        0871a7680ca89a2b978bd54c4817e4e383cbaffc
+        34295c1cdf5992a6f7d10964cac31aceacb5cb28
+        0f0da950f8a5f18f3a47d2298f3c12ea85f6413b
+        4b1f7af4bf392121ae99ffdf87ccf195deb559ab
+        75dbd6b4b3f2ac007c66c82cdde88c4216d51628
+        1334e42580d0c7c6aebf2f8dcf6ada298cd6fdf3
+        a147f593d8ba931ca7034eb4c08f61548d0d0c68
+        35db8640c70208b2e671da2082002c25fc5aae8e
+        7e5f35e97c33e0081de950c92035497e2491363b
+        00ca7b043b3170625f32b06bc7a482df431673fa
+        1d98bb1ba2acacd39b30689a87fc2d639b76f71b
+        13060a0372001930af318f15d0d2995577f41aa9
+        bbb9e9fc6b275996914fbd06c074a58c38f26644
+        469ac946dd9d72adbf7aa41dfaf2c5656e73ec97
+        e6f89af4147b2dcb0d24094b3c418b72a877d8a0
+        e0d15054391d90b54a9129bdf36362909fd5e50f
+        6469ec461dc1dc3c83705d5f14c9241509d0a9c2
+        e0c757d68a66d0e3bd2e899e805a6d98a98322d4
+        14162ee865ab45f0017724c4e0bfb64a285b0777
+        586b1b66d9d524f5556ad92e7821c33277a9e5e3
+        58cebd8b75b2886733316d818c0b518c272fe402
+        0fa644a7e87698015e905d38bf1e649e251b2cdc
+        af51a358c32f484ab6a6eb5a9f4e627854562712
+        3425cd423e26b08269c80035e276f44113e75c61
+        3aa5ae427b82487fbfd03d2ff480a89311a784ce
+        018104b38c7f4d5822a3e142b9bcc1bb2531ee72
+        babee7cdaa57ca1265c484e8ee283bd13300ea6e
+        eab477dd8c2e15169f1e8d034ef5e9127da6c4e3
+        91071cafbd34cc9b61dacacb186fc7af7ac2ae61
+        341a234fd88fc83a6c5d926522fa1d2544bdcc5c
+        bb9b035620540b3c4b386e88d43902ac4e58b9a7
+        238874219f7752b75ea31bbbbf811d8d69e836c0
+        f4e89061b919268733138698f9ab4ebcfc442740
+        e52dc8f85b944f1d2e825dc797bbbc81c9ca7f18
+        7a8d2a77370fc558857ca46d9e2d297351b31159
+        7c2cb46bcbf064f47f685279eef1f1d67faf0d37
+        bcd2e97510146fef64be02bce56c57448b8a0620
+        1d62ce96c94f77d00173c7ebf4517dadf9b24ecb
+        bdac15ba83bfa8dbbd4fee96182e7167622c970e
+        090fbf76c8b8db8cb69fcae804affec3bc8da020
+        badfc29bec793183c7e02081e0be1eba33507631
 
     steps:
       - uses: actions/checkout@v4
@@ -36,25 +278,39 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y poppler-utils
 
-      - name: Download and verify published release assets
+      - name: Reassemble and validate release assets
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          mkdir -p /tmp/verified
-          gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
-          gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
-          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          mkdir -p /tmp/ximenez-assets
+          pdf="/tmp/ximenez-assets/$PDF_NAME"
+          epub="/tmp/ximenez-assets/$EPUB_NAME"
 
-          test "$(stat -c %s "/tmp/verified/$PDF_NAME")" = "$PDF_SIZE"
-          test "$(stat -c %s "/tmp/verified/$EPUB_NAME")" = "$EPUB_SIZE"
-          test "$(sha256sum "/tmp/verified/$PDF_NAME" | awk '{print $1}')" = "$PDF_SHA256"
-          test "$(sha256sum "/tmp/verified/$EPUB_NAME" | awk '{print $1}')" = "$EPUB_SHA256"
-          grep -Fx "$PDF_SHA256  $PDF_NAME" /tmp/verified/SHA256SUMS.txt
-          grep -Fx "$EPUB_SHA256  $EPUB_NAME" /tmp/verified/SHA256SUMS.txt
+          fetch_blob() {
+            local sha="$1"
+            local out="$2"
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq '.content' |
+              tr -d '\n' |
+              base64 --decode >> "$out"
+          }
 
-          test "$(pdfinfo "/tmp/verified/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = 619
-          pdftotext -layout "/tmp/verified/$PDF_NAME" /tmp/ximenez.txt
+          : > "$pdf"
+          for blob in $PDF_BLOBS; do
+            fetch_blob "$blob" "$pdf"
+          done
+          : > "$epub"
+          for blob in $EPUB_BLOBS; do
+            fetch_blob "$blob" "$epub"
+          done
+
+          test "$(stat -c %s "$pdf")" = "$PDF_SIZE"
+          test "$(stat -c %s "$epub")" = "$EPUB_SIZE"
+          test "$(sha256sum "$pdf" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "$epub" | awk '{print $1}')" = "$EPUB_SHA256"
+
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = 619
+          pdftotext -layout "$pdf" /tmp/ximenez.txt
           grep -F "三言語文法" /tmp/ximenez.txt
           grep -F "第二論考" /tmp/ximenez.txt
           grep -F "AYER MS 1515" /tmp/ximenez.txt
@@ -65,7 +321,7 @@ jobs:
 
           python3 - <<'PY'
           import os, re, zipfile
-          path = '/tmp/verified/' + os.environ['EPUB_NAME']
+          path = '/tmp/ximenez-assets/' + os.environ['EPUB_NAME']
           with zipfile.ZipFile(path) as z:
               assert z.testzip() is None
               names = z.namelist()
@@ -84,7 +340,30 @@ jobs:
               assert forbidden not in text
           PY
 
-      - name: Remove one-time workflow
+      - name: Replace release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+          awk -v pdf="$PDF_NAME" -v epub="$EPUB_NAME" '$2 != pdf && $2 != epub' /tmp/current/SHA256SUMS.txt > /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
+
+          gh release upload publications-current             "/tmp/ximenez-assets/$PDF_NAME"             "/tmp/ximenez-assets/$EPUB_NAME"             /tmp/SHA256SUMS.txt             --clobber --repo "$GITHUB_REPOSITORY"
+
+          gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          test "$(stat -c %s "/tmp/verified/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "/tmp/verified/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "/tmp/verified/$PDF_NAME" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "/tmp/verified/$EPUB_NAME" | awk '{print $1}')" = "$EPUB_SHA256"
+          grep -Fx "$PDF_SHA256  $PDF_NAME" /tmp/verified/SHA256SUMS.txt
+          grep -Fx "$EPUB_SHA256  $EPUB_NAME" /tmp/verified/SHA256SUMS.txt
+
+      - name: Remove one-time workflow and resolved failure record
         if: success()
         run: |
           set -euo pipefail
@@ -93,11 +372,16 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git checkout -B cleanup origin/main
-            if [ ! -f "$WORKFLOW_PATH" ]; then
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if [ -f "$PREVIOUS_FAILURE_PATH" ]; then
+              git rm "$PREVIOUS_FAILURE_PATH"
+            fi
+            if git diff --cached --quiet; then
               exit 0
             fi
-            git rm "$WORKFLOW_PATH"
-            git commit -m "Remove completed Ximenez Ayer MS 1515 volume 1 release workflow"
+            git commit -m "Remove completed Ximenez Ayer MS 1515 release workflow"
             if git push origin HEAD:main; then
               exit 0
             fi
@@ -117,7 +401,7 @@ jobs:
             mkdir -p "$(dirname "$failure_path")"
             printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
             git add "$failure_path"
-            git commit -m "Record failed Ximenez Ayer MS 1515 volume 1 release verification"
+            git commit -m "Record failed Ximenez Ayer MS 1515 release workflow"
             if git push origin HEAD:main; then
               exit 0
             fi
