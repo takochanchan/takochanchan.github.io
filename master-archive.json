@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "c6750cdabb4c95e4fc8b259e56d750abf2ce246f",
+  "archive_commit": "6762f57ab547a72d95d821d30d781d61623c75b5",
   "publications": {
+    "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",

@@ -956,6 +956,24 @@
       "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
     },
     {
+      "path": "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.epub",
+      "size": 118632,
+      "sha256": "eda94345374e2eccd3220cdb6a5e9866652546fc11f461a2d30a6c1c74c0ba54"
+    },
+    {
+      "path": "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.pdf",
+      "size": 184146,
+      "sha256": "60ea68db906b4330eeb6d14c919a9536f6f7cb3d2541fb08352b8891c7597d61"
+    },
+    {
+      "path": "publications/marimon-lacandones-1695/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/marimon-lacandones-1695/cover.jpg",
+      "size": 131410,
+      "sha256": "ec63f9373a571952d657e1cc84c4b4809a757d4c37b4e5e3357605a091ea96d1"
+    },
+    {
       "path": "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
       "size": 4235486,

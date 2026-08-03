@@ -1,5 +1,39 @@
 const publicationRecords = [
   {
+    slug: "marimon-lacandones-1695",
+    title: "アントニオ・マルヒル修道士のラカンドン人報告（1695年）",
+    originalTitle: "Fray Antonio Margil über die Lacandones, 1695",
+    subtitle:
+      "1882年刊・原刊130–132頁・導入・書簡抄訳・原注 日本語全訳",
+    author: "セバスティアン・マリモン・イ・トゥドー",
+    series: "ZEITSCHRIFT FÜR ETHNOLOGIE · 1882",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第14巻、1882年、130–132頁",
+    year: 1882,
+    extent: "PDF 3頁・原刊130–132頁・原注2件・図版なし",
+    description:
+      "セビーリャのインディアス総文書館で確認された1695年7月9日付書簡を紹介する短報。ラカンドン人の宗教儀礼、新火、供献、カシケの役割を記す導入・ドイツ語抄訳・原注を省略なく訳しています。",
+    cover: "publications/marimon-lacandones-1695/cover.jpg",
+    pdf:
+      "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["民族誌", "史料紹介", "短報"],
+    regions: ["ラカンドン地方", "チアパス", "ペテン", "グアテマラ"],
+    languages: ["ドイツ語", "スペイン語"],
+    tags: [
+      "ラカンドン人",
+      "チョル人",
+      "アントニオ・マルヒル",
+      "宗教儀礼",
+      "新火",
+      "一次史料",
+    ],
+  },
+  {
     slug: "figueroa-color-notebooks",
     title: "フィゲロア手稿ノート",
     originalTitle:
@@ -3417,6 +3451,18 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "marimon-lacandones-1695": {
+    sourceEdition:
+      "Sebastian Marimon y Tudó「Fray Antonio Margil über die Lacandones, 1695」『Zeitschrift für Ethnologie』Bd. 14（Berlin、1882年）pp. 130–132。",
+    sourceProvider:
+      "ベルリン国立博物館群Digi-Hub公開の原誌画像を主底本とし、Internet Archive公開複本のOCRを検索・照合の補助に用いた。表題、著者の導入、書簡抄訳、署名、原注2件を収録した。",
+    sourceUrl:
+      "https://www.digi-hub.de/viewer/fullscreen/1604511489407/367/",
+    rights:
+      "1882年原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-03",
+    updatedDate: "2026-08-03",
+  },
   "figueroa-color-notebooks": {
     sourceEdition:
       "Junta Administrativa del Archivo Nacional『El Cuaderno Rojo』『El Cuaderno Verde』『El Cuaderno Azul』『El Cuaderno Café: José María Figueroa Oreamuno』（San José: Archivo Nacional de Costa Rica、2023年）。",
@@ -4437,6 +4483,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "marimon-lacandones-1695": "sebastian-marimon-y-tudo",
   "esquinca-usumacinta": "jose-maria-esquinca",
   "sapper-eastern-lacandons-1891": "karl-sapper",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
