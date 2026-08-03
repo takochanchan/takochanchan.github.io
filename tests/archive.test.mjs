@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 95);
+  assert.equal(publications.length, 96);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,7 +63,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 75);
+  assert.equal(majorPublications.length, 76);
   assert.equal(shortPublications.length, 20);
   assert.equal(shortPublicationAuthors.length, 10);
   assert.deepEqual(
@@ -254,6 +254,19 @@ test("Lundell bibliography uses the Japanese translation cover", () => {
   );
 });
 
+test("Figueroa color notebooks identify Japanese annotations and rights", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "figueroa-color-notebooks",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 1142);
+  assert.equal(item.plateCount, 466);
+  assert.match(item.subtitle, /日本語訳注/);
+  assert.match(item.rights, /CC BY-SA 4\.0/);
+  assert.equal(item.publishedDate, "2026-08-03");
+});
+
 test("home page contains scalable archive controls", async () => {
   const html = await readFile(path.join(dist, "index.html"), "utf8");
   for (const id of [
@@ -300,7 +313,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">75<\/strong>件/);
+  assert.match(html, /id="book-match-count">76<\/strong>件/);
   assert.match(html, /id="paper-match-count">20<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

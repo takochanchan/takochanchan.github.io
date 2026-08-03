@@ -470,6 +470,24 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
+      "path": "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
+      "size": 65034880,
+      "sha256": "c2084b228d3aae6ef6641df38e8b05fcf9905b646d54062d31582c12da63211e"
+    },
+    {
+      "path": "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.pdf",
+      "size": 52925311,
+      "sha256": "3f340cc99e0aa26d398ae1008957a56d67596610bff214b6de0e12107f352e90"
+    },
+    {
+      "path": "publications/figueroa-color-notebooks/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/figueroa-color-notebooks/cover.jpg",
+      "size": 38352,
+      "sha256": "bffa45e106a1ddf60a4547d4798f0ba4ecac495ae420694c3badadd8bbad7158"
+    },
+    {
       "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "size": 897600,

@@ -1,5 +1,42 @@
 const publicationRecords = [
   {
+    slug: "figueroa-color-notebooks",
+    title: "フィゲロア手稿ノート",
+    originalTitle:
+      "Colección Cuadernos de Colores de José María Figueroa Oreamuno",
+    subtitle:
+      "赤・緑・青・茶ノート・原資料画像466点 日本語訳・日本語訳注・影印版",
+    author: "ホセ・マリア・フィゲロア・オレアムーノ",
+    series: "CUADERNOS DE COLORES · 1870–1890",
+    originalPublication:
+      "サン・ホセ、コスタリカ国立公文書館運営委員会、2023年デジタル版（原手稿、19世紀後半）",
+    year: 1870,
+    extent: "公開用PDF 1,142頁・原資料画像466点・公式PDF4冊490頁",
+    description:
+      "コスタリカの風刺画家・系譜研究者・探検家ホセ・マリア・フィゲロアが残した彩色手稿ノートのうち、国立公文書館が2023年に公開した赤・緑・青・茶ノート全466画像を収録する日本語訳・影印版。公式前付、原資料画像、判読不能箇所を明示した日本語訳、日本語版側の編集注である日本語訳注を収めています。",
+    cover: "publications/figueroa-color-notebooks/cover.jpg",
+    pdf:
+      "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
+    pageCount: 1142,
+    figureCount: 0,
+    plateCount: 466,
+    types: ["手稿", "風刺画集", "歴史資料", "一次史料"],
+    regions: ["コスタリカ", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "ホセ・マリア・フィゲロア",
+      "彩色ノート",
+      "政治風刺",
+      "風刺画",
+      "詩歌",
+      "系譜",
+      "原資料画像",
+      "19世紀",
+    ],
+  },
+  {
     slug: "us-senate-central-america-correspondence-1853",
     title: "第32議会第2会期上院行政文書第27号",
     originalTitle:
@@ -3380,6 +3417,18 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "figueroa-color-notebooks": {
+    sourceEdition:
+      "Junta Administrativa del Archivo Nacional『El Cuaderno Rojo』『El Cuaderno Verde』『El Cuaderno Azul』『El Cuaderno Café: José María Figueroa Oreamuno』（San José: Archivo Nacional de Costa Rica、2023年）。",
+    sourceProvider:
+      "Dirección General del Archivo Nacional de Costa Ricaが公式公開する2023年版PDF四冊を底本とした。原資料部分は赤270画像・緑106画像・青64画像・茶26画像、計466画像。個々の人物・事件・作品の新たな同定は行わず、判読不能箇所を明示した。",
+    sourceUrl:
+      "https://www.archivonacional.go.cr/index.php/component/quix/page/114",
+    rights:
+      "ホセ・マリア・フィゲロア・オレアムーノの原作品は著作権保護期間を満了しています。国立公文書館のデジタル化画像および2023年版の現代前付・解説・目録記述には、同館公式サイトのCreative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）表示を適用します。本版の日本語訳・日本語訳注・編集・組版上の寄与もCC BY-SA 4.0で提供します。",
+    publishedDate: "2026-08-03",
+    updatedDate: "2026-08-03",
+  },
   "ximenez-ayer-ms-1515-volume-1": {
     sourceEdition:
       "Francisco Ximénez『Arte de las tres lenguas cakchiquel, quiché y tzutuhil; Tratado segundo de todo lo que debe saber un ministro para la buena administración de estos naturales』Newberry Library, Edward E. Ayer Collection, Vault Ayer MS 1515, vol. 1, 未丁付4葉および第1葉表–第119葉裏。",
