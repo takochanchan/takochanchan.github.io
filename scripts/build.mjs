@@ -833,6 +833,10 @@ await Promise.all([
   writeFile(path.join(dist, "about", "index.html"), aboutPage),
   cp(path.join(projectRoot, "src", "styles.css"), path.join(dist, "archive.css")),
   cp(path.join(projectRoot, "src", "archive.js"), path.join(dist, "archive.js")),
+  cp(
+    path.join(projectRoot, "google6a6ff1ca39cd5a62.html"),
+    path.join(dist, "google6a6ff1ca39cd5a62.html"),
+  ),
   writeFile(path.join(dist, "404.html"), notFound),
   writeFile(path.join(dist, ".nojekyll"), ""),
   writeFile(
