@@ -1,0 +1,198 @@
+name: Publish Atkins release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-atkins-assets-20260808.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-atkins-assets-20260808.yml
+      STAGING_BRANCH: agent/publish-atkins-assets-20260808
+      PDF_NAME: John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "3046926"
+      PDF_SHA256: e210db00c2ed72bccf389b5f1823c860e4a7799f99365a127d3adcbb097d24af
+      PDF_BLOBS: >-
+        533a8ab2d660327f1812af8fbcee75259bf4eeda
+        187c88b133e5469b2ae4bb892ae31bcb4f2f6130
+        ca0a9464f080446309a1b6cd0c05f677c9cdf5cd
+        7ac44a7442a66dd4f6d1944276a574bb585ceb2c
+        75ef38b637813fe1b354decb20e7da312f4707f5
+        adcc2359517ecc151bdfe1d0268690434fe12bf6
+      EPUB_NAME: John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.epub
+      EPUB_SIZE: "8332112"
+      EPUB_SHA256: 894f936d3995d3db7facec742dc2ae5d4633649346e750bb0109fc6a54c53aa7
+      EPUB_BLOBS: >-
+        f7d69435d060003c85fdb7a277bcfb5d7bd24cf6
+        3690f86ece8d44096c0b253056265fded56f554c
+        0f21b2d5f3de95b53760418860786f06619d4853
+        069b425be0e645c279632afec24c10fc61733c33
+        a1dad5752dd934ca0234a29272bd98783b980369
+        d1dbe9d3ff42b64adcaf512debd6eaf20fe2136a
+        32428dd91f33f34b76cb46361640715f161d1919
+        89a7fd6a4a469d1474635becc977a369c670b292
+        d52869ab243376062736402d5ffc9933649a7141
+        67af893b32f3e64d1293251a037f7a474f3bf52b
+        e7690d8f113a70b7088706d02a0e60c3f010cb4a
+        51bc07167502889ff65aa06ae2915692f0bd373e
+        91c97624dfe497897b05f587b86654db63054327
+        83ce9047ee2812e81826aed41987b362d349a0d6
+        436634ccd8ae3b5407982e01e671bc6be0b8c400
+        f09fe6d83d0aebc19afba6a41f71bc540059a10d
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/atkins-assets
+          pdf="/tmp/atkins-assets/$PDF_NAME"
+          epub="/tmp/atkins-assets/$EPUB_NAME"
+
+          fetch_blob() {
+            local sha="$1"
+            local out="$2"
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq '.content' |
+              tr -d '\n' |
+              base64 --decode >> "$out"
+          }
+
+          : > "$pdf"
+          for blob in $PDF_BLOBS; do
+            fetch_blob "$blob" "$pdf"
+          done
+          : > "$epub"
+          for blob in $EPUB_BLOBS; do
+            fetch_blob "$blob" "$epub"
+          done
+
+          test "$(stat -c %s "$pdf")" = "$PDF_SIZE"
+          test "$(stat -c %s "$epub")" = "$EPUB_SIZE"
+          test "$(sha256sum "$pdf" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "$epub" | awk '{print $1}')" = "$EPUB_SHA256"
+
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = 207
+          pdftotext -layout "$pdf" /tmp/atkins.txt
+          grep -F "ギニア、ブラジル、西インド諸島への航海" /tmp/atkins.txt
+          grep -F "〔原刊 p. 265〕" /tmp/atkins.txt
+          grep -F "原刊正誤表" /tmp/atkins.txt
+          grep -F "原刊巻末広告" /tmp/atkins.txt
+          if grep -E "GPT|ChatGPT|Markdown|生成AI|制作工程|Proof|公開前校閲用|独立レビュー" /tmp/atkins.txt; then
+            echo "Forbidden production wording found in PDF" >&2
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import os, re, zipfile
+          path = '/tmp/atkins-assets/' + os.environ['EPUB_NAME']
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == 'mimetype'
+              assert archive.getinfo('mimetype').compress_type == zipfile.ZIP_STORED
+              opf_name = next(name for name in names if name.endswith('.opf'))
+              opf = archive.read(opf_name).decode('utf-8')
+              assert re.search(r'properties="[^"]*cover-image[^"]*"', opf)
+              text = ''.join(
+                  archive.read(name).decode('utf-8')
+                  for name in names
+                  if name.endswith(('.xhtml', '.html', '.opf', '.ncx'))
+              ).replace('\xa0', ' ')
+          for required in ('ギニア、ブラジル、西インド諸島への航海', '原刊正誤表', '原刊巻末広告'):
+              assert required in text
+          for forbidden in ('GPT', 'ChatGPT', 'Markdown', '生成AI', '制作工程', 'Proof', '公開前校閲用', '独立レビュー'):
+              assert forbidden not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+          awk -v pdf="$PDF_NAME" -v epub="$EPUB_NAME" '$2 != pdf && $2 != epub' /tmp/current/SHA256SUMS.txt > /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
+
+          gh release upload publications-current \
+            "/tmp/atkins-assets/$PDF_NAME" \
+            "/tmp/atkins-assets/$EPUB_NAME" \
+            /tmp/SHA256SUMS.txt \
+            --clobber --repo "$GITHUB_REPOSITORY"
+
+          gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          test "$(stat -c %s "/tmp/verified/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "/tmp/verified/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "/tmp/verified/$PDF_NAME" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "/tmp/verified/$EPUB_NAME" | awk '{print $1}')" = "$EPUB_SHA256"
+          grep -Fx "$PDF_SHA256  $PDF_NAME" /tmp/verified/SHA256SUMS.txt
+          grep -Fx "$EPUB_SHA256  $EPUB_NAME" /tmp/verified/SHA256SUMS.txt
+
+      - name: Remove one-time workflow and staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git push origin --delete "$STAGING_BRANCH" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Atkins release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/atkins-release-${GITHUB_RUN_ID}.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Atkins release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
