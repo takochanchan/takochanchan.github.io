@@ -1262,6 +1262,24 @@
       "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
     },
     {
+      "path": "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
+      "size": 11395673,
+      "sha256": "dd0c7555ea3fa6fa966a75dc53b7816c738593a5c4d3012c78bf27760bbc527a"
+    },
+    {
+      "path": "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.pdf",
+      "size": 16655237,
+      "sha256": "932c290dedada4d0a86719be7410a5605a668982c00275ed10a20353c8616f48"
+    },
+    {
+      "path": "publications/remesal-historia-general-1619/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/remesal-historia-general-1619/cover.jpg",
+      "size": 37000,
+      "sha256": "645a838c7bfedeac9986b96c26cb551f6f09b5dc840223263501a4cb75db9cfe"
+    },
+    {
       "path": "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
       "size": 32437,

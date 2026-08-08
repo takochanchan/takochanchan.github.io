@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "e80a061d74d53d6f2915ec3d5454a86d71e16cf6",
+  "archive_commit": "05510ae0f9bd2791a6196926ea1e3a428bb119a9",
   "publications": {
+    "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",

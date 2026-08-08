@@ -1,5 +1,48 @@
 const publicationRecords = [
   {
+    slug: "remesal-historia-general-1619",
+    title: "西インド総史",
+    originalTitle:
+      "Historia general de las Indias Occidentales y particular de la gobernación de Chiapa y Guatemala",
+    subtitle:
+      "1619年初版・前付、全11巻、巻末審査、章題表 日本語全訳",
+    author: "アントニオ・デ・レメサル",
+    series: "HISTORIA GENERAL · 1619",
+    originalPublication: "マドリード、フランシスコ・デ・アングロ、1619年",
+    year: 1619,
+    extent:
+      "PDF 2,130頁・原刊本文752頁・全11巻242章・前付・正誤表・巻末審査・章題表32頁・原刊標題紙1点",
+    description:
+      "ドミニコ会聖ビセンテ・デ・チアパおよびグアテマラ管区の成立と活動、チアパ・グアテマラ統治領の政治・社会・征服・宣教を叙述した1619年刊の大著。許可、特許、定価証明、正誤表、献辞、著者序、全11巻242章、欄外注、勅書・書簡などの引用文書、巻末審査、章題表を収録し、1619年初版の印刷頁標識と原刊固有の欠番・重複・逆行を保持しています。",
+    cover: "publications/remesal-historia-general-1619/cover.jpg",
+    pdf:
+      "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
+    pageCount: 2130,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "教会史", "一次史料"],
+    regions: [
+      "グアテマラ",
+      "チアパス",
+      "ベラパス",
+      "中部アメリカ",
+      "メキシコ",
+    ],
+    languages: ["スペイン語", "ラテン語"],
+    tags: [
+      "ドミニコ会",
+      "ラス・カサス",
+      "チアパ",
+      "グアテマラ",
+      "ベラパス",
+      "植民地史",
+      "宣教史",
+      "17世紀",
+    ],
+  },
+  {
     slug: "atkins-voyage-guinea-1735",
     title: "ギニア、ブラジル、西インド諸島への航海",
     originalTitle:
@@ -3496,6 +3539,17 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "remesal-historia-general-1619": {
+    sourceEdition:
+      "Antonio de Remesal『Historia de la Provincia de S. Vicente de Chiapa y Guatemala de la Orden de nro. glorioso Padre Sancto Domingo: escríbense juntamente los principios de las demás provincias de esta religión de las Indias Occidentales, y lo secular de la gobernación de Guatemala』（Madrid: Francisco de Angulo、1619年初版）。",
+    sourceProvider:
+      "Biblioteca Ludwig von Mises, Universidad Francisco Marroquín所蔵本を収めるInternet Archive公開画像（識別子 historiadelaprov00reme、784印刷頁）を主底本とした。1932年刊の二巻本は文字判読と照合の補助に限って用い、その編集者序文・編集注・付録は訳文へ混入させていない。",
+    sourceUrl: "https://archive.org/details/historiadelaprov00reme",
+    rights:
+      "1619年原刊本文は著作権保護期間を満了しています。Internet Archiveに掲載された所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-09",
+    updatedDate: "2026-08-09",
+  },
   "atkins-voyage-guinea-1735": {
     sourceEdition:
       "John Atkins『A Voyage to Guinea, Brasil, and the West-Indies; in His Majesty's Ships, the Swallow and Weymouth』（London: printed for Caesar Ward and Richard Chandler、1735年初版）。",
