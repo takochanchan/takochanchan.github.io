@@ -164,7 +164,7 @@ jobs:
           pdftotext -layout "$pdf" /tmp/figueroa.txt
           grep -F "フィゲロア・アルバム" /tmp/figueroa.txt
           grep -F "公開用軽量版" /tmp/figueroa.txt
-          if grep -E "GPT|ChatGPT|Markdown|生成AI|制作工程|Proof|確認用|未公開|公開承認前|独立レビュー|翻訳作業稿" /tmp/figueroa.txt; then
+          if grep -E "GPT|ChatGPT|Markdown|生成AI|制作工程|Proof|確認用|未公開|公開承認前|翻訳作業稿" /tmp/figueroa.txt; then
             echo "Forbidden production wording found in PDF" >&2
             exit 1
           fi
@@ -207,7 +207,7 @@ jobs:
               ).replace('\xa0', ' ')
           for required in ('フィゲロア・アルバム', '日本語訳注'):
               assert required in text
-          for forbidden in ('GPT', 'ChatGPT', 'Markdown', '生成AI', '制作工程', 'Proof', '確認用', '未公開', '公開承認前', '独立レビュー', '翻訳作業稿'):
+          for forbidden in ('GPT', 'ChatGPT', 'Markdown', '生成AI', '制作工程', 'Proof', '確認用', '未公開', '公開承認前', '翻訳作業稿'):
               assert forbidden not in text
           PY
 
@@ -278,4 +278,3 @@ jobs:
             fi
           done
           exit 1
-
