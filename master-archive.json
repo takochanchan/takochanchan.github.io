@@ -1,8 +1,9 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f25b8b8be8f71337e869e34b42b363f34e60f4dc",
+  "archive_commit": "e80a061d74d53d6f2915ec3d5454a86d71e16cf6",
   "publications": {
+    "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",

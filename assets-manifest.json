@@ -20,6 +20,24 @@
       "sha256": "669e4898e6562665a8e25b7098e2b0801c9a15f8c6ed66164855ded1d67d2e8e"
     },
     {
+      "path": "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.epub",
+      "size": 8332112,
+      "sha256": "894f936d3995d3db7facec742dc2ae5d4633649346e750bb0109fc6a54c53aa7"
+    },
+    {
+      "path": "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.pdf",
+      "size": 3046926,
+      "sha256": "e210db00c2ed72bccf389b5f1823c860e4a7799f99365a127d3adcbb097d24af"
+    },
+    {
+      "path": "publications/atkins-voyage-guinea-1735/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/atkins-voyage-guinea-1735/cover.jpg",
+      "size": 83506,
+      "sha256": "4357a0d3e1b793cd8f2d936ae4e8f833def91f11441a02069b495b5082baf3fb"
+    },
+    {
       "path": "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
       "size": 2414303,

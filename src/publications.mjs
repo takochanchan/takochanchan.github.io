@@ -1,5 +1,50 @@
 const publicationRecords = [
   {
+    slug: "atkins-voyage-guinea-1735",
+    title: "ギニア、ブラジル、西インド諸島への航海",
+    originalTitle:
+      "A Voyage to Guinea, Brasil, and the West-Indies; in His Majesty's Ships, the Swallow and Weymouth",
+    subtitle:
+      "1735年初版・序文、本文、原注、正誤表、巻末広告 日本語全訳",
+    author: "ジョン・アトキンズ",
+    series: "A VOYAGE TO GUINEA · 1735",
+    originalPublication: "ロンドン、1735年",
+    year: 1735,
+    extent:
+      "PDF 207頁・原刊冒頭広告1頁・序文i–xxv頁・本文1–2頁、19–265頁・原注39件・表17点・正誤表・巻末広告6頁・原刊図像2点",
+    description:
+      "王立海軍外科医ジョン・アトキンズが、軍艦スワロー号・ウェイマス号による1721–1723年の航海を記した1735年刊行書。マデイラ、カナリア諸島、カーボベルデ、ギニア海岸、ブラジル、西インド諸島をめぐる航海、各地の社会・交易・自然・疾病に関する観察を収めます。冒頭広告、標題紙、序文、本文、原注、表、正誤表、巻末広告を省略なく訳し、原刊の標題紙と船図を収録しています。",
+    cover: "publications/atkins-voyage-guinea-1735/cover.jpg",
+    pdf:
+      "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.epub",
+    pageCount: 207,
+    figureCount: 2,
+    plateCount: 0,
+    types: ["航海記", "旅行記", "植民地史", "民族誌"],
+    regions: [
+      "西アフリカ",
+      "ギニア湾",
+      "ブラジル",
+      "カリブ海",
+      "西インド諸島",
+      "バルバドス",
+      "ジャマイカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "大西洋世界",
+      "奴隷貿易",
+      "王立海軍",
+      "航海史",
+      "ギニア海岸",
+      "ブラジル",
+      "西インド諸島",
+      "18世紀",
+    ],
+  },
+  {
     slug: "marimon-lacandones-1695",
     title: "アントニオ・マルヒル修道士のラカンドン人報告（1695年）",
     originalTitle: "Fray Antonio Margil über die Lacandones, 1695",
@@ -3451,6 +3496,17 @@ const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
 const publicationMetadata = {
+  "atkins-voyage-guinea-1735": {
+    sourceEdition:
+      "John Atkins『A Voyage to Guinea, Brasil, and the West-Indies; in His Majesty's Ships, the Swallow and Weymouth』（London: printed for Caesar Ward and Richard Chandler、1735年初版）。",
+    sourceProvider:
+      "ハーバード大学フランシス・A・カウントウェイ医学図書館所蔵の1735年初版完本を収めるInternet Archiveデジタル複製（識別子 voyagetoguineabr00atki）を主底本とした。同版のInternet Archive OCRとProject Gutenberg eBook No. 72102の校訂転写を検索・転記の補助に用い、本文、固有名詞、数値、正誤表、広告、原刊頁境界は初版画像で確定した。",
+    sourceUrl: "https://archive.org/details/voyagetoguineabr00atki",
+    rights:
+      "1735年原刊の著者ジョン・アトキンズは1757年に没しており、原刊本文および原刊図像は米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載された所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-08",
+    updatedDate: "2026-08-08",
+  },
   "marimon-lacandones-1695": {
     sourceEdition:
       "Sebastian Marimon y Tudó「Fray Antonio Margil über die Lacandones, 1695」『Zeitschrift für Ethnologie』Bd. 14（Berlin、1882年）pp. 130–132。",
