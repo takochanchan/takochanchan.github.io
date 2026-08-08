@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 99);
+  assert.equal(publications.length, 100);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,7 +63,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 78);
+  assert.equal(majorPublications.length, 79);
   assert.equal(shortPublications.length, 21);
   assert.equal(shortPublicationAuthors.length, 11);
   assert.deepEqual(
@@ -277,6 +277,21 @@ test("Figueroa color notebooks identify Japanese annotations and rights", () => 
   assert.equal(item.publishedDate, "2026-08-03");
 });
 
+test("Figueroa Album is catalogued under its approved title and lightweight edition", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "figueroa-album",
+  );
+  assert.ok(item);
+  assert.equal(item.title, "フィゲロア・アルバム");
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 1034);
+  assert.equal(item.plateCount, 345);
+  assert.match(item.extent, /公開用軽量PDF/);
+  assert.match(item.subtitle, /日本語訳注/);
+  assert.match(item.rights, /CC BY-SA 4\.0/);
+  assert.equal(item.publishedDate, "2026-08-09");
+});
+
 test("home page contains scalable archive controls", async () => {
   const html = await readFile(path.join(dist, "index.html"), "utf8");
   for (const id of [
@@ -323,7 +338,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">78<\/strong>件/);
+  assert.match(html, /id="book-match-count">79<\/strong>件/);
   assert.match(html, /id="paper-match-count">21<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

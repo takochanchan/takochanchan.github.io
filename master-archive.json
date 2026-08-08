@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "05510ae0f9bd2791a6196926ea1e3a428bb119a9",
+  "archive_commit": "0f462a6895595203f34cb6b7e832e84a6c10a3af",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
+    "figueroa-album": "publications/figueroa-album/master.docx",
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "charnay-cites-et-ruines-americaines-1863": "publications/charnay-cites-et-ruines-americaines-1863/master.docx",
     "dupaix-antiquites-mexicaines-1834": "publications/dupaix-antiquites-mexicaines-1834/master.docx",

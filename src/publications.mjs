@@ -159,6 +159,42 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "figueroa-album",
+    title: "フィゲロア・アルバム",
+    originalTitle:
+      "El polifacético Figueroa. Biografía y catálogo completo del Álbum",
+    subtitle: "原資料307件・影印345画像頁 日本語全訳・日本語訳注",
+    author: "ホセ・マリア・フィゲロア・オレアムーノ",
+    series: "ÁLBUM DE FIGUEROA · 19世紀後半",
+    originalPublication:
+      "サン・ホセ、コスタリカ国立公文書館運営委員会、2021年デジタル版（原手稿、19世紀後半）",
+    year: 1870,
+    extent: "公開用軽量PDF 1,034頁・原資料307件・影印345画像頁",
+    description:
+      "コスタリカの探検家・系譜研究者・風刺画家ホセ・マリア・フィゲロアが編んだ《アルバム》の日本語全訳・影印版。地図、旅行記、歴史覚書、新聞切抜き、肖像、系譜図など、公式公開の原資料307件と、PDFを展開した影印345画像頁を収録。判読不能箇所を明示した日本語訳と、日本語版側の編集注である日本語訳注を収めています。",
+    cover: "publications/figueroa-album/cover.jpg",
+    pdf:
+      "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
+    pageCount: 1034,
+    figureCount: 0,
+    plateCount: 345,
+    types: ["手稿", "地図集", "系譜資料", "歴史資料", "一次史料"],
+    regions: ["コスタリカ", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "ホセ・マリア・フィゲロア",
+      "フィゲロア・アルバム",
+      "地図",
+      "旅行記",
+      "系譜",
+      "風刺画",
+      "原資料画像",
+      "19世紀",
+    ],
+  },
+  {
     slug: "us-senate-central-america-correspondence-1853",
     title: "第32議会第2会期上院行政文書第27号",
     originalTitle:
@@ -3584,6 +3620,18 @@ const publicationMetadata = {
       "ホセ・マリア・フィゲロア・オレアムーノの原作品は著作権保護期間を満了しています。国立公文書館のデジタル化画像および2023年版の現代前付・解説・目録記述には、同館公式サイトのCreative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）表示を適用します。本版の日本語訳・日本語訳注・編集・組版上の寄与もCC BY-SA 4.0で提供します。",
     publishedDate: "2026-08-03",
     updatedDate: "2026-08-03",
+  },
+  "figueroa-album": {
+    sourceEdition:
+      "Junta Administrativa del Archivo Nacional『El polifacético Figueroa. Biografía y catálogo completo del Álbum』（San José: Archivo Nacional de Costa Rica、2021年、ISBN 978-9968-690-12-6）。",
+    sourceProvider:
+      "Dirección General del Archivo Nacional de Costa Ricaが公式公開するA001–A293、S001–S008、P001–P006の計307件を底本とした。PDFを展開した影印は345画像頁。個々の人物・事件・作品の新たな同定は行わず、判読不能箇所を明示した。",
+    sourceUrl:
+      "https://www.archivonacional.go.cr/index.php/component/quix/page/114",
+    rights:
+      "ホセ・マリア・フィゲロア・オレアムーノの原作品は著作権保護期間を満了しています。国立公文書館のデジタル化画像および2021年版の現代前付・解説・目録記述には、同館公式サイトのCreative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）表示を適用します。本版の日本語訳・日本語訳注・編集・組版上の寄与もCC BY-SA 4.0で提供します。",
+    publishedDate: "2026-08-09",
+    updatedDate: "2026-08-09",
   },
   "ximenez-ayer-ms-1515-volume-1": {
     sourceEdition:

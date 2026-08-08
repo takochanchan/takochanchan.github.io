@@ -488,6 +488,24 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
+      "path": "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
+      "size": 29617527,
+      "sha256": "2f8029b1ef4f3e3a36cf0a8a98a3c17cc0de094600da7bea156665b4b00025da"
+    },
+    {
+      "path": "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.pdf",
+      "size": 39648541,
+      "sha256": "71df0ab3e49b1b6dd8d1e6dbfb6cdfd32f06b4f24d5c0e223fb6bd05c8cc9976"
+    },
+    {
+      "path": "publications/figueroa-album/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/figueroa-album/cover.jpg",
+      "size": 20913,
+      "sha256": "9ff2a54a100cfd8d465bf9a8455cd288afed778e514999eace620730ebe56abb"
+    },
+    {
       "path": "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
       "size": 65035183,
