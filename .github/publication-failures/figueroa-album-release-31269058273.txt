@@ -1,2 +1,0 @@
-run_id=31269058273
-run_url=https://github.com/takochanchan/takochanchan.github.io/actions/runs/31269058273
