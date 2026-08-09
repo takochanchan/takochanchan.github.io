@@ -1,0 +1,211 @@
+name: Publish Peniche release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-peniche-assets-20260809.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-peniche-assets-20260809.yml
+      STAGING_BRANCH: agent/publish-peniche-assets-20260809
+      PDF_NAME: Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.pdf
+      PDF_SIZE: "1359820"
+      PDF_SHA256: 952dbaf63f6baea0dbf9356c5f42e12eef6260febc2731a7fad7f0c29b420f93
+      PDF_BLOBS: >-
+        1d2b3081e81fe87317c4e2e0864cccfd660170e7
+        de088ccdb65233d5950c8519260a04b63bfefbab
+        7dabac63fe04dc97164e805312263aafb06516ee
+      EPUB_NAME: Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub
+      EPUB_SIZE: "193088"
+      EPUB_SHA256: bfee6259a38e36abf993ac3c3f6152b9f6aff81262aee984b28cef0cb4d3023f
+      EPUB_BLOBS: >-
+        03b92a2600221d650dde015a9696544cb3f7f7c2
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/peniche-assets
+          pdf="/tmp/peniche-assets/$PDF_NAME"
+          epub="/tmp/peniche-assets/$EPUB_NAME"
+
+          fetch_blob() {
+            local sha="$1"
+            local out="$2"
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq '.content' |
+              tr -d '\n' |
+              base64 --decode >> "$out"
+          }
+
+          : > "$pdf"
+          for blob in $PDF_BLOBS; do
+            fetch_blob "$blob" "$pdf"
+          done
+          : > "$epub"
+          for blob in $EPUB_BLOBS; do
+            fetch_blob "$blob" "$epub"
+          done
+
+          test "$(stat -c %s "$pdf")" = "$PDF_SIZE"
+          test "$(stat -c %s "$epub")" = "$EPUB_SIZE"
+          test "$(sha256sum "$pdf" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "$epub" | awk '{print $1}')" = "$EPUB_SHA256"
+
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = 79
+          pdftotext -layout "$pdf" /tmp/peniche.txt
+          grep -F "ベリーズ植民地をめぐる関係史" /tmp/peniche.txt
+          grep -F "原注 46 件" /tmp/peniche.txt
+          grep -F "HathiTrust の利用方針" /tmp/peniche.txt
+          pdftotext -f 3 -l 3 -layout "$pdf" /tmp/peniche-page-3.txt
+          grep -F "第一部" /tmp/peniche-page-3.txt
+          if grep -E '^[[:space:]]*日本語全訳[[:space:]]*$' /tmp/peniche-page-3.txt; then
+            echo "Removed heading remains at the beginning of printed page 2" >&2
+            exit 1
+          fi
+          if grep -E "GPT|ChatGPT|Markdown|制作工程|Proof|確認用|未公開|公開承認前|翻訳作業稿" /tmp/peniche.txt; then
+            echo "Forbidden production wording found in PDF" >&2
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import os, posixpath, re, zipfile
+          from xml.etree import ElementTree as ET
+
+          path = '/tmp/peniche-assets/' + os.environ['EPUB_NAME']
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == 'mimetype'
+              assert archive.getinfo('mimetype').compress_type == zipfile.ZIP_STORED
+              assert archive.read('mimetype') == b'application/epub+zip'
+              assert 'EPUB/media/file0.jpg' not in names
+              opf_name = next(name for name in names if name.endswith('.opf'))
+              opf_root = ET.fromstring(archive.read(opf_name))
+              ns = {
+                  'opf': 'http://www.idpf.org/2007/opf',
+                  'dc': 'http://purl.org/dc/elements/1.1/',
+              }
+              title = opf_root.find('opf:metadata/dc:title', ns)
+              assert title is not None and 'ベリーズ植民地をめぐる関係史' in title.text
+              manifest = opf_root.find('opf:manifest', ns)
+              spine = opf_root.find('opf:spine', ns)
+              assert manifest is not None and spine is not None
+              items = manifest.findall('opf:item', ns)
+              assert sum('cover-image' in item.get('properties', '').split() for item in items) == 1
+              assert sum('nav' in item.get('properties', '').split() for item in items) == 1
+              assert sum(item.get('media-type', '').startswith('image/') for item in items) == 1
+              nav_item = next(item for item in items if 'nav' in item.get('properties', '').split())
+              nav_path = posixpath.normpath(posixpath.join(posixpath.dirname(opf_name), nav_item.get('href')))
+              nav = archive.read(nav_path).decode('utf-8')
+              assert 'href="text/ch003.xhtml#第一部"' in nav
+              assert '<li id="toc-li-3"><a href="text/ch001.xhtml">' not in nav
+              for item in items:
+                  href = item.get('href', '').split('#', 1)[0]
+                  if href and not re.match(r'^[a-z][a-z0-9+.-]*:', href, re.I):
+                      resolved = posixpath.normpath(posixpath.join(posixpath.dirname(opf_name), href))
+                      assert resolved in names, resolved
+              text = ''.join(
+                  archive.read(name).decode('utf-8')
+                  for name in names
+                  if name.endswith(('.xhtml', '.html', '.opf', '.ncx'))
+              ).replace('\xa0', ' ')
+          for required in (
+              '本訳について',
+              '原刊折込地図',
+              '画像を転載しない',
+              '第一部',
+          ):
+              assert required in text
+          assert len(re.findall(r'[\u3040-\u30ff\u3400-\u9fff]', text)) >= 80000
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+          awk -v pdf="$PDF_NAME" -v epub="$EPUB_NAME" '$2 != pdf && $2 != epub' /tmp/current/SHA256SUMS.txt > /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
+
+          gh release upload publications-current +            "/tmp/peniche-assets/$PDF_NAME" +            "/tmp/peniche-assets/$EPUB_NAME" +            /tmp/SHA256SUMS.txt +            --clobber --repo "$GITHUB_REPOSITORY"
+
+          gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          test "$(stat -c %s "/tmp/verified/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "/tmp/verified/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "/tmp/verified/$PDF_NAME" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "/tmp/verified/$EPUB_NAME" | awk '{print $1}')" = "$EPUB_SHA256"
+          grep -Fx "$PDF_SHA256  $PDF_NAME" /tmp/verified/SHA256SUMS.txt
+          grep -Fx "$EPUB_SHA256  $EPUB_NAME" /tmp/verified/SHA256SUMS.txt
+
+      - name: Remove one-time workflow and staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git push origin --delete "$STAGING_BRANCH" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Peniche release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/peniche-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Peniche release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
