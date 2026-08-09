@@ -3617,6 +3617,54 @@ const publicationRecords = [
       "18世紀条約",
     ],
   },
+  {
+    slug: "southey-chronological-history-west-indies-1827",
+    title: "西インド諸島年代史",
+    originalTitle: "Chronological History of the West Indies",
+    subtitle:
+      "1827年初版・全3巻・前付、本文、原注、付録 日本語全訳",
+    author: "トーマス・サウジー",
+    series: "CHRONOLOGICAL HISTORY OF THE WEST INDIES · 1827",
+    originalPublication:
+      "ロンドン、Longman, Rees, Orme, Brown, and Green、1827年、全3巻",
+    year: 1827,
+    extent:
+      "PDF 2,039頁・全3巻・原刊本文計1,508頁（336＋552＋620頁）・原注249件・表63点・原刊図像6点",
+    description:
+      "1492年のコロンブス航海から1816年まで、西インド諸島と周辺海域の出来事を年代順に編んだ1827年刊全3巻の歴史書。スペイン・イギリス・フランス・オランダなどの植民地支配、海賊・私掠、戦争、奴隷制と奴隷貿易、ハイチ革命、各島の政治・社会・交易を記録しています。全3巻の前付、本文、原注249件、表63点、原刊図像6点、第3巻付録を省略なく訳し、各巻の原刊頁標識を保持しています。",
+    cover:
+      "publications/southey-chronological-history-west-indies-1827/cover.jpg",
+    pdf:
+      "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.pdf",
+    epub:
+      "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.epub",
+    pageCount: 2039,
+    figureCount: 6,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "植民地史", "一次史料"],
+    regions: [
+      "西インド諸島",
+      "カリブ海",
+      "ジャマイカ",
+      "ハイチ",
+      "バハマ",
+      "英領ホンジュラス",
+      "中央アメリカ",
+    ],
+    languages: ["英語"],
+    tags: [
+      "西インド諸島",
+      "カリブ海",
+      "植民地史",
+      "海賊",
+      "私掠",
+      "奴隷制",
+      "奴隷貿易",
+      "ハイチ革命",
+      "英仏戦争",
+      "18世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -4693,6 +4741,18 @@ const publicationMetadata = {
       "1869年原刊本文および原刊折込地図は著作権保護期間を満了したパブリックドメイン資料です。HathiTrustのPublic Domain表示は原著の権利状態を示すもので、Googleデジタル化画像へのCreative Commonsライセンス付与を意味しません。本版にはHathiTrustおよびUNAMの画像・OCRを転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-09",
     updatedDate: "2026-08-09",
+  },
+  "southey-chronological-history-west-indies-1827": {
+    sourceEdition:
+      "Thomas Southey『Chronological History of the West Indies』全3巻（London: Longman, Rees, Orme, Brown, and Green、1827年初版）。",
+    sourceProvider:
+      "University of California Libraries所蔵本をInternet Archiveが公開した全3巻のデジタル複製（識別子 chronologicalhis01sout、chronologicalhis02sout、chronologicalhis03sout）を主底本とした。第2巻の主底本で欠ける原刊384–385頁は、Digital Library of India由来のInternet Archive公開本（識別子 in.ernet.dli.2015.47207）で補った。OCRは検索と照合の補助に限り、本文・数値・原刊頁境界は原刊画像によって確定した。",
+    sourceUrl:
+      "https://archive.org/details/chronologicalhis01sout",
+    rights:
+      "1827年原刊本文および原刊図像は著作権保護期間を満了しています。Internet Archiveの主底本はNot in Copyrightと表示されています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
   },
 };
 

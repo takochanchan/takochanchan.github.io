@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "de8f10eb9ff618114bd1e833cd93a921b1603b31",
+  "archive_commit": "c4d0c4161a5facdca5573144187d8dc49606ffc9",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -103,6 +103,7 @@
     "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx",
     "us-senate-central-america-correspondence-1853": "publications/us-senate-central-america-correspondence-1853/master.md",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
-    "peniche-relaciones-belice-1869": "publications/peniche-relaciones-belice-1869/master.docx"
+    "peniche-relaciones-belice-1869": "publications/peniche-relaciones-belice-1869/master.docx",
+    "southey-chronological-history-west-indies-1827": "publications/southey-chronological-history-west-indies-1827/master.docx"
   }
 }

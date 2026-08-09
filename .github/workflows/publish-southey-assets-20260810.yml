@@ -1,0 +1,230 @@
+name: Publish Southey combined release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-southey-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-southey-assets-20260810.yml
+      STAGING_BRANCH: agent/publish-southey-assets-20260810
+      PDF_NAME: Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.pdf
+      PDF_SIZE: "7342115"
+      PDF_SHA256: 70892db36f7f348019b545d1525ed2da3e73f9b834c80c82d490fc78325d3fa6
+      PDF_BLOBS: >-
+        d72c92fc18043eabe532cb332fc1375ae5690229
+        f40521606bfa8ced78815603bc5959dda91678b8
+        b15bf3faebca2651cd2121fdad4775baa7e75eb7
+        79913c92e7a9022784387a16b12db1b9941e9227
+        28e39ed6b44dd7e1485a19fdb5e04cbf360c8034
+        8dd2a6fcbb6d4c540cb2c5a808c8251854cf2e14
+        97c931a14437f33c54632c42a92fac3206afa744
+        0202048754df6138ecd635d80738225356bc08df
+        45f89f2efc7066cb8dc4b5b71f1c9d903ae56d38
+        6c094709940ad3b5df68ac7269cc07c2428cc369
+      EPUB_NAME: Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.epub
+      EPUB_SIZE: "3915951"
+      EPUB_SHA256: 29d62d0124cccdafc3f35d54f0ac4d3c215e6c491eed564a136b5a4f8a12e295
+      EPUB_BLOBS: >-
+        861726098df3372ff61a9860a2cb8aac00e35bfe
+        4866f0adfc6f7b36cdd39c178cc3d21b64fc0384
+        ac8cc68efc523b35efe9d1118602f6f3dead7e42
+        cef9ee013f612b8fcec1a2adf9a7b1e66b9759f6
+        d698e46bc13990686037756a4ce332f68297100f
+        3f7053e9be3070e24f4d59c0ee8656af3ecdafe7
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate combined release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/southey-assets
+          pdf="/tmp/southey-assets/$PDF_NAME"
+          epub="/tmp/southey-assets/$EPUB_NAME"
+
+          fetch_blob() {
+            local sha="$1"
+            local out="$2"
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq '.content' |
+              tr -d '\n' |
+              base64 --decode >> "$out"
+          }
+
+          : > "$pdf"
+          for blob in $PDF_BLOBS; do
+            fetch_blob "$blob" "$pdf"
+          done
+          : > "$epub"
+          for blob in $EPUB_BLOBS; do
+            fetch_blob "$blob" "$epub"
+          done
+
+          test "$(stat -c %s "$pdf")" = "$PDF_SIZE"
+          test "$(stat -c %s "$epub")" = "$EPUB_SIZE"
+          test "$(sha256sum "$pdf" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "$epub" | awk '{print $1}')" = "$EPUB_SHA256"
+
+          test "$(pdfinfo "$pdf" | awk '/^Pages:/ {print $2}')" = 2039
+          pdftotext -layout "$pdf" /tmp/southey.txt
+          grep -F "西インド諸島年代史" /tmp/southey.txt
+          grep -F "トーマス・サウジー" /tmp/southey.txt
+          grep -F "〔原刊 p. 620〕" /tmp/southey.txt
+          grep -Fx "終" /tmp/southey.txt
+          if grep -E "GPT|ChatGPT|Markdown|制作工程|Proof|確認用|未公開|公開承認前|翻訳作業稿" /tmp/southey.txt; then
+            echo "Forbidden production wording found in PDF" >&2
+            exit 1
+          fi
+
+          python3 - <<'PY'
+          import os, posixpath, re, zipfile
+          from xml.etree import ElementTree as ET
+
+          pdf_text = open('/tmp/southey.txt', encoding='utf-8').read()
+          markers = [int(value) for value in re.findall(r'〔原刊 p\.\s*(\d+)〕', pdf_text)]
+          expected = list(range(1, 337)) + list(range(1, 553)) + list(range(1, 621))
+          assert markers == expected
+          assert len(re.findall(r'〔原刊 無頁・序文\s*\d+〕', pdf_text)) == 2
+          assert '\ufffd' not in pdf_text and '\x00' not in pdf_text
+
+          path = '/tmp/southey-assets/' + os.environ['EPUB_NAME']
+          with zipfile.ZipFile(path) as archive:
+              assert archive.testzip() is None
+              names = archive.namelist()
+              assert names[0] == 'mimetype'
+              assert archive.getinfo('mimetype').compress_type == zipfile.ZIP_STORED
+              assert archive.read('mimetype') == b'application/epub+zip'
+              opf_name = next(name for name in names if name.endswith('.opf'))
+              opf_root = ET.fromstring(archive.read(opf_name))
+              ns = {
+                  'opf': 'http://www.idpf.org/2007/opf',
+                  'dc': 'http://purl.org/dc/elements/1.1/',
+              }
+              title = opf_root.find('opf:metadata/dc:title', ns)
+              language = opf_root.find('opf:metadata/dc:language', ns)
+              assert title is not None and '西インド諸島年代史' in (title.text or '')
+              assert language is not None and (language.text or '').lower().startswith('ja')
+              manifest = opf_root.find('opf:manifest', ns)
+              spine = opf_root.find('opf:spine', ns)
+              assert manifest is not None and spine is not None
+              items = manifest.findall('opf:item', ns)
+              assert sum('cover-image' in item.get('properties', '').split() for item in items) == 1
+              assert sum('nav' in item.get('properties', '').split() for item in items) == 1
+              assert sum(item.get('media-type', '').startswith('image/') for item in items) == 7
+              for item in items:
+                  href = item.get('href', '').split('#', 1)[0]
+                  if href and not re.match(r'^[a-z][a-z0-9+.-]*:', href, re.I):
+                      resolved = posixpath.normpath(posixpath.join(posixpath.dirname(opf_name), href))
+                      assert resolved in names, resolved
+              documents = [
+                  ET.fromstring(archive.read(name))
+                  for name in names
+                  if name.endswith(('.xhtml', '.html'))
+              ]
+              text = '\n'.join(''.join(document.itertext()) for document in documents)
+              footnotes = sum(
+                  len(document.findall('.//{http://www.w3.org/1999/xhtml}aside'))
+                  for document in documents
+              )
+              tables = sum(
+                  len(document.findall('.//{http://www.w3.org/1999/xhtml}table'))
+                  for document in documents
+              )
+          epub_markers = [int(value) for value in re.findall(r'〔原刊 p\.\s*(\d+)〕', text)]
+          assert epub_markers == expected
+          assert footnotes == 249
+          assert tables >= 63
+          assert len(re.findall(r'[\u3040-\u30ff\u3400-\u9fff]', text)) >= 1300000
+          for required in ('第1巻', '第2巻', '第3巻', '付録', '終'):
+              assert required in text
+          assert '\ufffd' not in text and '\x00' not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+          awk -v pdf="$PDF_NAME" -v epub="$EPUB_NAME" '$2 != pdf && $2 != epub' /tmp/current/SHA256SUMS.txt > /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
+
+          gh release upload publications-current "/tmp/southey-assets/$PDF_NAME" "/tmp/southey-assets/$EPUB_NAME" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          test "$(stat -c %s "/tmp/verified/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "/tmp/verified/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "/tmp/verified/$PDF_NAME" | awk '{print $1}')" = "$PDF_SHA256"
+          test "$(sha256sum "/tmp/verified/$EPUB_NAME" | awk '{print $1}')" = "$EPUB_SHA256"
+          grep -Fx "$PDF_SHA256  $PDF_NAME" /tmp/verified/SHA256SUMS.txt
+          grep -Fx "$EPUB_SHA256  $EPUB_NAME" /tmp/verified/SHA256SUMS.txt
+
+      - name: Remove one-time workflow and staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git push origin --delete "$STAGING_BRANCH" || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Southey release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/southey-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Southey release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
