@@ -1226,6 +1226,24 @@
       "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
     },
     {
+      "path": "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub",
+      "size": 193088,
+      "sha256": "bfee6259a38e36abf993ac3c3f6152b9f6aff81262aee984b28cef0cb4d3023f"
+    },
+    {
+      "path": "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.pdf",
+      "size": 1359820,
+      "sha256": "952dbaf63f6baea0dbf9356c5f42e12eef6260febc2731a7fad7f0c29b420f93"
+    },
+    {
+      "path": "publications/peniche-relaciones-belice-1869/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/peniche-relaciones-belice-1869/cover.jpg",
+      "size": 37703,
+      "sha256": "69da7049f7e89e17fa3f08de2e63d76c9f298b16acacf9b39ce3525dc710c809"
+    },
+    {
       "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
       "size": 344089,

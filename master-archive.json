@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "0f462a6895595203f34cb6b7e832e84a6c10a3af",
+  "archive_commit": "de8f10eb9ff618114bd1e833cd93a921b1603b31",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -102,6 +102,7 @@
     "molina-costa-rica-new-granada-1853": "publications/molina-costa-rica-new-granada-1853/master.docx",
     "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx",
     "us-senate-central-america-correspondence-1853": "publications/us-senate-central-america-correspondence-1853/master.md",
-    "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx"
+    "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
+    "peniche-relaciones-belice-1869": "publications/peniche-relaciones-belice-1869/master.docx"
   }
 }

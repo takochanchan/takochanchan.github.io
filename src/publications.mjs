@@ -3569,6 +3569,54 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  {
+    slug: "peniche-relaciones-belice-1869",
+    title:
+      "スペインおよびメキシコとイギリスとの、ベリーズ植民地をめぐる関係史",
+    originalTitle:
+      "Historia de las relaciones de España y México con Inglaterra, sobre el establecimiento de Belice",
+    subtitle:
+      "1869年刊・原刊掲載本文第一部全67頁・原注・表・折込地図表記対訳 日本語全訳",
+    author: "マヌエル・ペニチェ",
+    series:
+      "BOLETÍN DE LA SOCIEDAD MEXICANA DE GEOGRAFÍA Y ESTADÍSTICA · 1869",
+    originalPublication:
+      "メキシコ、『Boletín de la Sociedad Mexicana de Geografía y Estadística』第二期第1巻、1869年、217–256・377–403頁",
+    year: 1869,
+    extent:
+      "PDF 79頁・原刊掲載本文第一部全67頁・原注46件・表1点・原刊折込地図の表記対訳",
+    description:
+      "スペインおよびメキシコとイギリスとの間で、ベリーズのイギリス人入植地をめぐって生じた関係を、17世紀のバッカニアから18世紀の条約・外交交渉までたどる歴史論文。1869年に『メキシコ地理統計学会紀要』へ掲載された第一部全67頁、原注46件、表1点を省略なく訳し、転載していない原刊折込地図について題名・説明文・主要表記の対訳を収録しています。",
+    cover: "publications/peniche-relaciones-belice-1869/cover.jpg",
+    pdf:
+      "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub",
+    pageCount: 79,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["外交史", "植民地史", "歴史論文", "一次史料"],
+    regions: [
+      "ベリーズ",
+      "英領ホンジュラス",
+      "メキシコ",
+      "ユカタン",
+      "ホンジュラス湾",
+      "スペイン",
+      "イギリス",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "ベリーズ",
+      "英領ホンジュラス",
+      "カンペチェ木",
+      "バッカニア",
+      "イギリス外交",
+      "スペイン帝国",
+      "メキシコ外交",
+      "18世紀条約",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -4634,6 +4682,18 @@ const publicationMetadata = {
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
+  "peniche-relaciones-belice-1869": {
+    sourceEdition:
+      "Manuel Peniche「Historia de las relaciones de España y México con Inglaterra, sobre el establecimiento de Belice」『Boletín de la Sociedad Mexicana de Geografía y Estadística』segunda época, tomo I（México: Imprenta del Gobierno, en Palacio, a cargo de José María Sandoval、1869年）pp. 217–256, 377–403。",
+    sourceProvider:
+      "HathiTrust Digital Libraryが全文公開するニューヨーク公共図書館所蔵1869年本（識別子 nyp.33433001036700、書誌レコード 008606547）を採用底本とした。UNAM歴史研究所公開のInstituto de Geografía Fondo Reservado所蔵本三分冊は頁順・難読箇所・折込地図表記の補助照合に限って用いた。いずれの頁画像・地図画像・OCRも本版に転載していない。",
+    sourceUrl:
+      "https://babel.hathitrust.org/cgi/pt?id=nyp.33433001036700",
+    rights:
+      "1869年原刊本文および原刊折込地図は著作権保護期間を満了したパブリックドメイン資料です。HathiTrustのPublic Domain表示は原著の権利状態を示すもので、Googleデジタル化画像へのCreative Commonsライセンス付与を意味しません。本版にはHathiTrustおよびUNAMの画像・OCRを転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-09",
+    updatedDate: "2026-08-09",
+  },
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -4641,6 +4701,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "peniche-relaciones-belice-1869": "manuel-peniche",
   "marimon-lacandones-1695": "sebastian-marimon-y-tudo",
   "esquinca-usumacinta": "jose-maria-esquinca",
   "sapper-eastern-lacandons-1891": "karl-sapper",
