@@ -153,7 +153,7 @@ jobs:
           printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> /tmp/SHA256SUMS.txt
           printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> /tmp/SHA256SUMS.txt
 
-          gh release upload publications-current +            "/tmp/peniche-assets/$PDF_NAME" +            "/tmp/peniche-assets/$EPUB_NAME" +            /tmp/SHA256SUMS.txt +            --clobber --repo "$GITHUB_REPOSITORY"
+          gh release upload publications-current "/tmp/peniche-assets/$PDF_NAME" "/tmp/peniche-assets/$EPUB_NAME" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
 
           gh release download publications-current --pattern "$PDF_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
           gh release download publications-current --pattern "$EPUB_NAME" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
