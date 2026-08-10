@@ -177,6 +177,8 @@ DOCX_SOURCES = {
     / "Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.docx",
     "dieseldorff-tolteken-1896": SOURCES
     / "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.docx",
+    "cortes-y-larraz-descripcion-geografico-moral-1771": SOURCES
+    / "Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

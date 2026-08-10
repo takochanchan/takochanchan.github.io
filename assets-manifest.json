@@ -308,6 +308,24 @@
       "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
     },
     {
+      "path": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
+      "size": 68902340,
+      "sha256": "d053c52d74d13dc012c90bdbef0a495fa667fa7baf2a5803e9a306b2529c2f29"
+    },
+    {
+      "path": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.pdf",
+      "size": 65572904,
+      "sha256": "8ef5229e8ba7ae6301dcb7ff9a7d9e6cafe207ad5745029f7a7c5a817aed45ba"
+    },
+    {
+      "path": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
+      "size": 73957,
+      "sha256": "fdf4256587c9a982f2968646599e66f233cc32fbca565be177a982be0cd8dc5c"
+    },
+    {
       "path": "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
       "size": 4439120,
