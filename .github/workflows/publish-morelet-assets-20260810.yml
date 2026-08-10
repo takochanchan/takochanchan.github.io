@@ -1,0 +1,449 @@
+name: Publish three Morelet editions once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-morelet-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ASSETS: |
+        exploration_epub|Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub|192555|774fd6e0d83e6d04a26a9004ef1a1ffa8461023cc55bc5c8d2ccce6c386224cd|029f7e974e8063e8f5ceffe269d8f783cd8ec0d8
+        exploration_pdf|Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf|250419|bf64fb7e98d635bd4393817e96756f973799ada9fe05fbed2c33a58751ec8b4a|08dac3996a530baa5b2c35843165ff139326a9a5
+        pars_i_epub|Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub|201815|44878fd86ac90834a5167ebf27c3854a4f261c9e8fff775b1e7570a8c65ad6f3|a76ae8903b9e65920eea6b99be9246467ce18103
+        pars_i_pdf|Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf|441191|f330afd7b02c02f5cfc5dc59d77855ac498ebb40ef655b1a83f4d80aa15d7670|1e68bf70a93cc054d4303c7d3a7e273b6b31c491
+        pars_ii_epub|Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub|211963|f4548dc3b7b7e9321e448cad96b64d4cc641d61bf33f42f11d17bb9bf0b90ce8|bde71c66e6669c41c7e120df193659dc95faed87
+        pars_ii_pdf|Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf|492002|2c21be227048b8b4d6549c783920aeeaddda500f4c076eba679f5d09b6369936|8eb38b1ca5ba3ba345d366a67edaf4a3adf5907e
+      SITE_FILES: |
+        assets-manifest.json|139793|3d76d69e774d8b861e806b8b4efbf35142e161cb9071fc5b30609f3a715e5be8|0471a9e31eddd388a06c9f8f0f2be24d13e7fa68
+        master-archive.json|11570|7e9db80359c3762665941070633abb02b8b6b0623951ed8e42c19143887645f3|4dd571c8d861a262f7b86454eefd9ac52c93372a
+        scripts/build-epubs.py|66701|535c99f77ac5be350cac2684fc99addb8ed82177b891f015d8440ce9a807aba5|dcb6e65b04173e6647e59f84d13ba79d886fd7c6
+        scripts/validate-epubs.py|10646|f069069a7e4a51824497225cdb1b27edb8b28d457ee7c22cef690ba58f2582cd|e6c1dcdc0e678f495423bf61ad7d1d155c0b8dd4
+        src/publications.mjs|321816|cf74f0215af73feb9bed2c1702c1c44627d1999dae5d85d4bd90a9745884a9e2|040e444fe36476899b4fa6471d9679a5f6c105bc
+        tests/archive.test.mjs|27795|7330455c3d9c9a210c051b895515f7a7ef25073ba2f41d163512284212d13aa9|151a86b9a70e2a5424c2a1d71436603dd47723b8
+        static/publications/morelet-exploration-guatemala-1850/cover.jpg|188113|ae9df65cc426e99db6fa86ec23cafc8e284667d6590592cdedcc4e5d4e9cfa83|8c7d27b95421c83e005e5035252a1b318d0de722
+        static/publications/morelet-testacea-novissima-pars-i-1849/cover.jpg|170571|084a586caf18fcd27f0904354111d3731254abbb03f0e084ff826958b22d1ba2|4bb8b706f16a9f97fedd978b390e7a7041cb0bcd
+        static/publications/morelet-testacea-novissima-pars-ii-1851/cover.jpg|176369|1cfd08dd6c3096acff58a4fef8436677525c53d26a3b61f3b5630f794fa8a673|dc5baaffaa7efcbf81d6e01efaf561125e3d6519
+
+    steps:
+      - name: Check out the publication site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and verify staged assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/morelet-assets
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            target="/tmp/morelet-assets/$name"
+            : > "$target"
+            for blob_sha in $blobs; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content | tr -d '\n' | base64 --decode >> "$target"
+            done
+            echo "$digest  $target" | sha256sum -c -
+            test "$(stat -c %s "$target")" = "$size"
+          done <<< "$ASSETS"
+
+      - name: Validate three publication PDFs
+        run: |
+          set -euo pipefail
+          validate_pdf() {
+            local name="$1" pages="$2" minimum="$3" title="$4" markers="$5" start="$6" end="$7" provider="$8"
+            local pdf="/tmp/morelet-assets/$name"
+            local stem="/tmp/${name%.pdf}"
+            pdfinfo "$pdf" > "${stem}-info.txt"
+            grep -E '^Creator:[[:space:]]+Writer$' "${stem}-info.txt"
+            grep -E '^Producer:[[:space:]]+LibreOffice' "${stem}-info.txt"
+            grep -E '^Tagged:[[:space:]]+yes$' "${stem}-info.txt"
+            grep -E "^Pages:[[:space:]]+$pages$" "${stem}-info.txt"
+            grep -F 'Page size:       612 x 792 pts (letter)' "${stem}-info.txt"
+            pdffonts "$pdf" > "${stem}-fonts.txt"
+            python3 - "${stem}-fonts.txt" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          lines = Path(sys.argv[1]).read_text(encoding="utf-8").splitlines()[2:]
+          assert lines
+          for line in lines:
+              match = re.match(
+                  r"^(.+?)\s{2,}(.+?)\s{2,}(.+?)\s{2,}"
+                  r"(yes|no)\s+(yes|no)\s+(yes|no)\s+\d+\s+\d+$",
+                  line.strip(),
+              )
+              assert match is not None, line
+              assert match.group(4) == "yes", line
+              assert "Noto" in match.group(1), line
+          PY
+            pdftotext -layout "$pdf" "${stem}.txt"
+            python3 - "${stem}.txt" "$minimum" "$title" "$markers" "$start" "$end" "$provider" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          text = Path(sys.argv[1]).read_text(encoding="utf-8")
+          minimum = int(sys.argv[2])
+          title = sys.argv[3]
+          markers = [int(value) for value in sys.argv[4].split(",")]
+          start = int(sys.argv[5])
+          end = int(sys.argv[6])
+          provider = sys.argv[7]
+          compact = re.sub(r"\s+", "", text)
+          assert title in compact, title
+          assert "アルテュール・モルレ" in compact
+          for marker in markers:
+              expected = f"〔原刊p.{marker}〕"
+              assert expected in compact, expected
+          if start:
+              headings = []
+              for match in re.finditer(r"(?m)^\s*(\d{1,3})\.\s+", text):
+                  value = int(match.group(1))
+                  if start <= value <= end and value not in headings:
+                      headings.append(value)
+              assert headings == list(range(start, end + 1)), headings
+          assert re.sub(r"\s+", "", provider) in compact, provider
+          for phrase in ("NOT_IN_COPYRIGHT", "License:NotApplicable", "Reuse:Yes"):
+              assert phrase in compact, phrase
+          for phrase in (
+              "確認用", "校閲用", "未公開", "Proof",
+              "日本語翻訳版には再利用ライセンス",
+          ):
+              assert phrase not in compact, phrase
+          japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+          assert japanese >= minimum, (japanese, minimum)
+          print(f"{Path(sys.argv[1]).name}: {japanese:,} Japanese characters")
+          PY
+          }
+
+          validate_pdf \
+            Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf \
+            5 3200 "グアテマラ探検" "430,431,432,433" 0 0 \
+            "Natural History Museum Library, London"
+          validate_pdf \
+            Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf \
+            23 12000 "キューバ島および中央アメリカの新貝類（第I部）" "5,31" 1 85 \
+            "Smithsonian Libraries and Archives"
+          validate_pdf \
+            Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf \
+            21 10000 "キューバ島および中央アメリカの新貝類（第II部）" "5,6,7,27,29,30" 86 150 \
+            "Smithsonian Libraries and Archives"
+          grep -F "第 I 部訂正表" /tmp/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.txt
+          grep -F "索引" /tmp/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.txt
+
+      - name: Validate three reflowable EPUB editions
+        run: |
+          set -euo pipefail
+          python3 - /tmp/morelet-assets <<'PY'
+          import posixpath
+          import re
+          import sys
+          import zipfile
+          from pathlib import Path
+          from urllib.parse import unquote
+          from xml.etree import ElementTree as ET
+
+          root = Path(sys.argv[1])
+          specs = {
+              "Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub": {
+                  "title": "グアテマラ探検",
+                  "creator": "ピエール＝マリー＝アルテュール・モルレ／アシル・ヴァランシエンヌ",
+                  "slug": "morelet-exploration-guatemala-1850",
+                  "docs": 5,
+                  "minimum": 3200,
+                  "markers": (430, 431, 432, 433),
+                  "provider": "Natural History Museum Library, London",
+              },
+              "Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub": {
+                  "title": "キューバ島および中央アメリカの新貝類（第I部）",
+                  "creator": "ピエール＝マリー＝アルテュール・モルレ",
+                  "slug": "morelet-testacea-novissima-pars-i-1849",
+                  "docs": 24,
+                  "minimum": 12000,
+                  "markers": (5, 31),
+                  "provider": "Smithsonian Libraries and Archives",
+                  "species": (1, 85),
+              },
+              "Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub": {
+                  "title": "キューバ島および中央アメリカの新貝類（第II部）",
+                  "creator": "ピエール＝マリー＝アルテュール・モルレ",
+                  "slug": "morelet-testacea-novissima-pars-ii-1851",
+                  "docs": 31,
+                  "minimum": 10000,
+                  "markers": (5, 6, 7, 27, 29, 30),
+                  "provider": "Smithsonian Libraries and Archives",
+                  "species": (86, 150),
+                  "must": ("第I部訂正表", "索引"),
+              },
+          }
+          container_ns = {
+              "c": "urn:oasis:names:tc:opendocument:xmlns:container"
+          }
+          opf_ns = {
+              "opf": "http://www.idpf.org/2007/opf",
+              "dc": "http://purl.org/dc/elements/1.1/",
+          }
+          xhtml_ns = "http://www.w3.org/1999/xhtml"
+
+          for filename, spec in specs.items():
+              path = root / filename
+              with zipfile.ZipFile(path) as archive:
+                  assert archive.testzip() is None
+                  names = archive.namelist()
+                  assert names[0] == "mimetype"
+                  assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                  assert archive.read("mimetype") == b"application/epub+zip"
+
+                  container = ET.fromstring(archive.read("META-INF/container.xml"))
+                  rootfile = container.find(".//c:rootfile", container_ns)
+                  assert rootfile is not None
+                  opf_path = rootfile.attrib["full-path"]
+                  opf = ET.fromstring(archive.read(opf_path))
+                  assert opf.attrib.get("version", "").startswith("3")
+
+                  def dc_text(name):
+                      element = opf.find(f".//dc:{name}", opf_ns)
+                      assert element is not None, name
+                      return "".join(element.itertext())
+
+                  assert dc_text("title") == spec["title"]
+                  assert dc_text("creator") == spec["creator"]
+                  assert dc_text("language").lower().startswith("ja")
+                  assert spec["slug"] in dc_text("identifier")
+
+                  base = posixpath.dirname(opf_path)
+                  manifest = {}
+                  for item in opf.findall(".//opf:manifest/opf:item", opf_ns):
+                      resolved = posixpath.normpath(
+                          posixpath.join(
+                              base,
+                              unquote(item.attrib["href"].split("#", 1)[0]),
+                          )
+                      )
+                      assert resolved in names
+                      assert archive.getinfo(resolved).file_size > 0
+                      manifest[item.attrib["id"]] = (
+                          resolved,
+                          item.attrib.get("media-type", ""),
+                          set(item.attrib.get("properties", "").split()),
+                      )
+                  assert sum("nav" in item[2] for item in manifest.values()) == 1
+                  assert sum("cover-image" in item[2] for item in manifest.values()) == 1
+
+                  spine = [
+                      manifest[item.attrib["idref"]]
+                      for item in opf.findall(".//opf:spine/opf:itemref", opf_ns)
+                  ]
+                  assert len(spine) == spec["docs"], (filename, len(spine))
+                  text_parts = []
+                  heading_numbers = []
+                  for resolved, media_type, _properties in spine:
+                      assert media_type == "application/xhtml+xml"
+                      document = ET.fromstring(archive.read(resolved))
+                      text_parts.extend(document.itertext())
+                      for level in range(1, 7):
+                          for heading in document.findall(
+                              f".//{{{xhtml_ns}}}h{level}"
+                          ):
+                              value = "".join(heading.itertext()).strip()
+                              match = re.match(r"^(\d{1,3})\.\s+", value)
+                              if match:
+                                  heading_numbers.append(int(match.group(1)))
+                      for viewport in document.findall(
+                          f".//{{{xhtml_ns}}}meta[@name='viewport']"
+                      ):
+                          assert not re.search(
+                              r"\bwidth\s*=\s*\d+",
+                              viewport.attrib.get("content", ""),
+                          )
+
+                  text = " ".join(text_parts)
+                  compact = re.sub(r"\s+", "", text)
+                  japanese = len(
+                      re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text)
+                  )
+                  assert japanese >= spec["minimum"], (filename, japanese)
+                  for marker in spec["markers"]:
+                      expected = f"〔原刊p.{marker}〕"
+                      assert expected in compact, (filename, expected)
+                  if "species" in spec:
+                      start, end = spec["species"]
+                      assert heading_numbers == list(range(start, end + 1)), heading_numbers
+                  assert re.sub(r"\s+", "", spec["provider"]) in compact
+                  for phrase in (
+                      "NOT_IN_COPYRIGHT", "License:NotApplicable", "Reuse:Yes",
+                  ):
+                      assert phrase in compact, (filename, phrase)
+                  for phrase in spec.get("must", ()):
+                      assert phrase in text, (filename, phrase)
+                  for phrase in (
+                      "確認用", "校閲用", "未公開", "Proof",
+                      "日本語翻訳版には再利用ライセンス",
+                  ):
+                      assert phrase not in compact, (filename, phrase)
+                  print(
+                      f"{filename}: EPUB 3 OK; {japanese:,} Japanese characters"
+                  )
+          PY
+
+      - name: Prepare shared checksum file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          current = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = current.read_text(encoding="utf-8").splitlines()
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          assert len(entries) >= 228 and len(entries) % 2 == 0, len(entries)
+
+          added = 0
+          for record in os.environ["ASSETS"].splitlines():
+              if not record.strip():
+                  continue
+              _key, name, _size, digest, _blobs = record.split("|", 4)
+              assert name not in entries, name
+              entries[name] = digest
+              lines.append(f"{digest}  {name}")
+              added += 1
+          assert added == 6
+          assert len(lines) == len(entries)
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload and verify six release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          upload_args=()
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            upload_args+=("/tmp/morelet-assets/$name")
+          done <<< "$ASSETS"
+          gh release upload publications-current \
+            "${upload_args[@]}" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            gh release download publications-current \
+              --pattern "$name" \
+              --dir /tmp/verified-release \
+              --repo "$GITHUB_REPOSITORY"
+            echo "$digest  /tmp/verified-release/$name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/verified-release/$name")" = "$size"
+          done <<< "$ASSETS"
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Reassemble and verify site files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/morelet-site
+          while IFS='|' read -r path size digest blobs; do
+            test -n "$path" || continue
+            target="/tmp/morelet-site/$path"
+            mkdir -p "$(dirname "$target")"
+            : > "$target"
+            for blob_sha in $blobs; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content | tr -d '\n' | base64 --decode >> "$target"
+            done
+            echo "$digest  $target" | sha256sum -c -
+            test "$(stat -c %s "$target")" = "$size"
+          done <<< "$SITE_FILES"
+
+      - name: Validate and publish the site
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          while IFS='|' read -r path _size _digest _blobs; do
+            test -n "$path" || continue
+            mkdir -p "$(dirname "$path")"
+            cp "/tmp/morelet-site/$path" "$path"
+            git add -- "$path"
+          done <<< "$SITE_FILES"
+
+          workflow=.github/workflows/publish-morelet-assets-20260810.yml
+          git rm -- "$workflow"
+          git diff --cached --check
+          npm ci
+          npm run build
+          npm test
+
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git commit -m "Publish three Morelet translations"
+          git push origin HEAD:main
+
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Frelease-upload-morelet-papers-20260810" \
+            >/dev/null 2>&1 || true
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Morelet release workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/morelet-release-error.txt
+          content="$(base64 -w0 /tmp/morelet-release-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/morelet-papers-${GITHUB_RUN_ID}.txt" \
+            -f message="Record Morelet release failure" \
+            -f content="$content" \
+            -f branch=main
