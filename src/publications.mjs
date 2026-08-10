@@ -4900,6 +4900,184 @@ const publicationRecords = [
       "一次史料",
     ],
   },
+  {
+    slug: "perigny-lettre-costa-rica-1910",
+    title: "コスタリカからの書簡",
+    originalTitle: "Lettre de Costa Rica",
+    subtitle: "1910年刊・原刊39–40頁・本文・統計表 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "LETTRE DE COSTA RICA · BULLETIN DE LA SOCIÉTÉ DE GÉOGRAPHIE COMMERCIALE DE PARIS · 1910",
+    originalPublication:
+      "パリ、『Bulletin de la Société de Géographie Commerciale de Paris』第32巻第1号、1910年1月、39–40頁",
+    year: 1910,
+    extent: "PDF 3頁・原刊39–40頁・統計表1点",
+    description:
+      "ペリニーがコスタリカの輸入・輸出構造とフランス商業の位置を報告した書簡。アメリカ・イギリス・ドイツとの競争、ワイン・医薬品・織物の輸入、バナナとコーヒーの輸出を扱う本文、原刊頁境界、貿易額表、署名を省略なく訳しています。",
+    cover: "publications/perigny-lettre-costa-rica-1910/cover.jpg",
+    pdf:
+      "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["経済地理", "貿易報告", "学会誌記事"],
+    regions: ["コスタリカ", "中央アメリカ"],
+    languages: ["フランス語"],
+    tags: [
+      "コスタリカ経済",
+      "貿易",
+      "コーヒー",
+      "バナナ",
+      "フランス商業",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-costa-rica-pays-habitants-ressources-1910",
+    title: "コスタリカ——国土、住民、資源",
+    originalTitle: "Costa-Rica. Le pays, ses habitants et ses ressources",
+    subtitle: "1910年刊・原刊693–714頁・本文・統計表 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "COSTA-RICA · BULLETIN DE LA SOCIÉTÉ DE GÉOGRAPHIE COMMERCIALE DE PARIS · 1910",
+    originalPublication:
+      "パリ、『Bulletin de la Société de Géographie Commerciale de Paris』第32巻第10号、1910年11月、693–714頁",
+    year: 1910,
+    extent: "PDF 17頁・原刊693–714頁・統計表",
+    description:
+      "ペリニーがコスタリカの地形・気候・人口・交通・農業・鉱業・財政・貿易を体系的に概説した地誌。首都サン・ホセ、鉄道と港湾、コーヒー・バナナ生産、移民と労働、輸出入統計を扱う本文、原刊頁境界、統計表を省略なく訳しています。",
+    cover:
+      "publications/perigny-costa-rica-pays-habitants-ressources-1910/cover.jpg",
+    pdf:
+      "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.epub",
+    pageCount: 17,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["地誌", "経済地理", "学会誌論文"],
+    regions: ["コスタリカ", "中央アメリカ"],
+    languages: ["フランス語"],
+    tags: [
+      "コスタリカ地誌",
+      "人口",
+      "鉄道",
+      "コーヒー",
+      "バナナ",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-ruines-nakcun-1911",
+    title: "ナクン遺跡",
+    originalTitle: "Les ruines de Nakcun",
+    subtitle: "1911年刊・原刊4–22頁・本文・原注・図版6点 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "LES RUINES DE NAKCUN · JOURNAL DE LA SOCIÉTÉ DES AMÉRICANISTES · 1911",
+    originalPublication:
+      "パリ、『Journal de la Société des Américanistes de Paris』第8巻、1911年、4–22頁",
+    year: 1911,
+    extent: "PDF 21頁・原刊4–22頁・図版I–III・行程図・平面図・壁画図",
+    description:
+      "ペリニーが1909–1910年に再訪したナクン（現ナクム）遺跡の本格的調査報告。グアテマラ市からコバン、カアボン、サン・ルイスを経てペテンへ入る行程、遺跡の伐開、建築群、石碑、壁画を扱う本文と原注、図版I–III、行程図、平面図、壁画図、全キャプションを省略なく訳しています。",
+    cover: "publications/perigny-ruines-nakcun-1911/cover.jpg",
+    pdf:
+      "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.epub",
+    pageCount: 21,
+    figureCount: 3,
+    plateCount: 3,
+    types: ["考古学報告", "遺跡報告", "学術誌論文"],
+    regions: ["ナクム", "ペテン", "グアテマラ", "アルタ・ベラパス"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "ナクム遺跡",
+      "ペテン探検",
+      "マヤ建築",
+      "壁画",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-costa-rica-nantes-1911",
+    title: "コスタリカ",
+    originalTitle: "Costa-Rica",
+    subtitle: "1911年刊・原刊18–35頁・地理学会講演・統計表 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "COSTA-RICA · SOCIÉTÉ DE GÉOGRAPHIE COMMERCIALE DE NANTES · 1911",
+    originalPublication:
+      "ナント、『Bulletin trimestriel de la Société de Géographie Commerciale de Nantes』第29年、1911年第1四半期、18–35頁",
+    year: 1911,
+    extent: "PDF 12頁・原刊18–35頁・1911年1月14日講演・統計表",
+    description:
+      "ペリニーがナント地理学会で行ったコスタリカ講演の記録。国土と気候、住民、サン・ホセ、鉄道・港湾、コーヒー・バナナ・カカオなどの産業、財政と外国貿易を扱う本文、原刊頁境界、統計表、閉会部を省略なく訳しています。",
+    cover: "publications/perigny-costa-rica-nantes-1911/cover.jpg",
+    pdf:
+      "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.epub",
+    pageCount: 12,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["地誌", "経済地理", "講演記録"],
+    regions: ["コスタリカ", "中央アメリカ"],
+    languages: ["フランス語"],
+    tags: [
+      "コスタリカ地誌",
+      "地理学会",
+      "鉄道",
+      "コーヒー",
+      "バナナ",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-amerique-centrale-1911",
+    title: "中央アメリカ",
+    originalTitle: "L’Amérique centrale",
+    subtitle:
+      "1911年刊・三回連載・原刊297–307・357–363・407–413頁・地図・統計表 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "L’AMÉRIQUE CENTRALE · QUESTIONS DIPLOMATIQUES ET COLONIALES · 1911",
+    originalPublication:
+      "パリ、『Questions diplomatiques et coloniales』第15年・第31巻、1911年3月1日・3月16日・4月1日、297–307・357–363・407–413頁",
+    year: 1911,
+    extent: "PDF 23頁・三回連載25頁・折込地図1点・統計表",
+    description:
+      "ペリニーがコスタリカ、ニカラグア、ホンジュラス、グアテマラ、サルバドルの政治・人口・交通・農業・財政・貿易を比較した三回連載。各共和国の地誌と経済統計、鉄道・運河構想、外国資本とフランス商業を扱う本文、連載区分、原刊頁境界、統計表、中央アメリカ地図を省略なく収録しています。",
+    cover: "publications/perigny-amerique-centrale-1911/cover.jpg",
+    pdf:
+      "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
+    pageCount: 23,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["地域研究", "経済地理", "外交・植民地問題誌記事"],
+    regions: [
+      "コスタリカ",
+      "ニカラグア",
+      "ホンジュラス",
+      "グアテマラ",
+      "サルバドル",
+    ],
+    languages: ["フランス語"],
+    tags: [
+      "中央アメリカ地誌",
+      "国際関係",
+      "鉄道",
+      "農業",
+      "貿易",
+      "一次史料",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -6427,6 +6605,57 @@ const publicationMetadata = {
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
+  "perigny-lettre-costa-rica-1910": {
+    sourceEdition:
+      "Maurice de Périgny「Lettre de Costa Rica」『Bulletin de la Société de Géographie Commerciale de Paris』tome XXXII, no 1（Paris、1910年1月）pp. 39–40。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のモーリス・ド・ペリニー文書所収原刊切抜き（ark:/12148/btv1b10891635r、f1–f2）を底本とした。原刊39–40頁の本文と統計表を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b10891635r",
+    rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "perigny-costa-rica-pays-habitants-ressources-1910": {
+    sourceEdition:
+      "Maurice de Périgny「Costa-Rica. Le pays, ses habitants et ses ressources」『Bulletin de la Société de Géographie Commerciale de Paris』tome XXXII, no 10（Paris、1910年11月）pp. 693–714。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のモーリス・ド・ペリニー文書所収原刊切抜き（ark:/12148/btv1b108916383、f1–f11）を底本とした。原刊693–714頁の本文と統計表を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b108916383",
+    rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "perigny-ruines-nakcun-1911": {
+    sourceEdition:
+      "Maurice de Périgny「Les ruines de Nakcun」『Journal de la Société des Américanistes de Paris』tome 8（Paris、1911年）pp. 4–22。DOI: 10.3406/jsa.1911.3724。",
+    sourceProvider:
+      "Persée公開の『Journal de la Société des Américanistes de Paris』原刊画像を底本とした。原刊4–22頁の本文、原注、図版I–III、行程図、平面図、壁画図と全キャプションを収録した。",
+    sourceUrl:
+      "https://www.persee.fr/doc/jsa_0037-9174_1911_num_8_1_3724",
+    rights: perseePublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "perigny-costa-rica-nantes-1911": {
+    sourceEdition:
+      "Maurice de Périgny「Costa-Rica」『Bulletin trimestriel de la Société de Géographie Commerciale de Nantes』29e année, 1er trimestre（Nantes、1911年、1911年1月14日講演）pp. 18–35。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開の原刊巻（ark:/12148/bpt6k107671r、f22–f39）を底本とした。原刊18–35頁の講演本文と統計表を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/bpt6k107671r",
+    rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "perigny-amerique-centrale-1911": {
+    sourceEdition:
+      "Maurice de Périgny「L’Amérique centrale」『Questions diplomatiques et coloniales』15e année, tome XXXI（Paris、1911年3月1日・3月16日・4月1日）pp. 297–307, 357–363, 407–413。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のモーリス・ド・ペリニー文書所収原刊切抜き（ark:/12148/btv1b10891637n、f1–f12）を底本とした。三回連載の本文、統計表、原刊300–301頁の折込地図を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b10891637n",
+    rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
   "romero-bosquejo-chiapas-soconusco-1877": {
     sourceEdition:
       "Matías Romero『Bosquejo histórico de la agregación á México de Chiapas y Soconusco y de las negociaciones sobre límites entabladas por México con Centro-América y Guatemala』Tomo I（México: Imprenta del Gobierno, en Palacio, a cargo de Filomeno Mata、1877年）。",
@@ -6512,6 +6741,12 @@ const shortWorkAuthorBySlug = {
   "perigny-yucatan-inconnu-geographie-1908": "maurice-de-perigny",
   "perigny-villes-mortes-amerique-centrale-1909": "maurice-de-perigny",
   "perigny-ruines-rio-bec-1909": "maurice-de-perigny",
+  "perigny-lettre-costa-rica-1910": "maurice-de-perigny",
+  "perigny-costa-rica-pays-habitants-ressources-1910":
+    "maurice-de-perigny",
+  "perigny-ruines-nakcun-1911": "maurice-de-perigny",
+  "perigny-costa-rica-nantes-1911": "maurice-de-perigny",
+  "perigny-amerique-centrale-1911": "maurice-de-perigny",
 };
 
 export const publicationReleaseTag = "publications-current";

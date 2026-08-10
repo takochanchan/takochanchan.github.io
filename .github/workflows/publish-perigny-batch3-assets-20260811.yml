@@ -1,0 +1,413 @@
+name: Publish Perigny batch 3 release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-perigny-batch3-assets-20260811.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-perigny-batch3-assets-20260811.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "slug": "perigny-lettre-costa-rica-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.pdf",
+              "title": "コスタリカからの書簡",
+              "author": "モーリス・ド・ペリニー",
+              "marker": "〔原刊 p. 39〕",
+              "pages": 3,
+              "imageCount": 0,
+              "size": 158006,
+              "sha256": "57cd8ff4ed1b3ce7bbd5c217eeac727af839d3e074bcd7daffff05355519198b",
+              "blobs": [
+                "aaeacc99db7ab813e14d6232994e0b47104bac72"
+              ]
+            },
+            {
+              "slug": "perigny-lettre-costa-rica-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.epub",
+              "title": "コスタリカからの書簡",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 1500,
+              "imageRefs": 0,
+              "size": 111467,
+              "sha256": "d6c0e2e51b7d8c83f665c2b77861f2122a80ee4c402206f3bcf387ba43d7631d",
+              "blobs": [
+                "0f5ba5a846cd3c149bb4830f45b5d41a6d8d5467"
+              ]
+            },
+            {
+              "slug": "perigny-ruines-nakcun-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.pdf",
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "marker": "〔原刊 p. 5〕",
+              "pages": 21,
+              "imageCount": 6,
+              "size": 2406207,
+              "sha256": "88d3575685d7f1d7d19ec931cc164f7a9dd54759f9ed5e9c3f837dfdbbf7781e",
+              "blobs": [
+                "f7bfd8ae6a716b20c3051a93902da45aa3688533",
+                "360ce58f261ac70b311d82d4ee47c4b14615498d",
+                "93735e677cfc05aa6ecba758b19a3eb4a63cd4e3",
+                "b6942418e26f6c16808e92c20a1722eee8ef93b4",
+                "733c673343a4cb8ba6f1a2e7d5e68919db83f980"
+              ]
+            },
+            {
+              "slug": "perigny-ruines-nakcun-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.epub",
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 12000,
+              "imageRefs": 6,
+              "size": 3431467,
+              "sha256": "16368e2e8d5267a719205af4b510c4618b6e3cd6fd00e2ebc524645c04cc79b4",
+              "blobs": [
+                "7588649d2cbc86d6a1aa1b840a2f2428f1a60850",
+                "4e2c4228f82ec606ae230bd47fdba4dfb0f18fa0",
+                "bd80e643feda62cde6629c0e522fbcc3d6c1f378",
+                "8c9b00b9bb1f7fc3e17932a680cee15603010afc",
+                "7a576eba46bcf523bd1c08b41d1cdbbb911b2b7c",
+                "6ab8076e14081fec553c8044e482688df6b1305e",
+                "7a5e6ef58285ca55770037fb4681abfa0f9e59d8"
+              ]
+            },
+            {
+              "slug": "perigny-costa-rica-pays-habitants-ressources-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.pdf",
+              "title": "コスタリカ——国土、住民、資源",
+              "author": "モーリス・ド・ペリニー",
+              "marker": "〔原刊 p. 693〕",
+              "pages": 17,
+              "imageCount": 0,
+              "size": 535238,
+              "sha256": "1bcc0535562ed94a180ca553a7e4c5ea9a25019d0176655fa33e3d26c8c4c063",
+              "blobs": [
+                "fe31df68184d31207ef5a62610b74a60005ed2c2",
+                "da8c52694faced797d2d8aa2b9a3f2e3ceb629a9"
+              ]
+            },
+            {
+              "slug": "perigny-costa-rica-pays-habitants-ressources-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.epub",
+              "title": "コスタリカ——国土、住民、資源",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 13000,
+              "imageRefs": 0,
+              "size": 153200,
+              "sha256": "d783d37bc96912c4abac4d1cd0c7391c6e65f3433ab6d03f16e70b696ef2d123",
+              "blobs": [
+                "a0952ce9fb1d843447901729d1a987760525b927"
+              ]
+            },
+            {
+              "slug": "perigny-costa-rica-nantes-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.pdf",
+              "title": "コスタリカ",
+              "author": "モーリス・ド・ペリニー",
+              "marker": "〔原刊 p. 18〕",
+              "pages": 12,
+              "imageCount": 0,
+              "size": 418465,
+              "sha256": "81f83b1dad5025d1fb2bcff1a0f33d8e2678bac57b9bae821ce022b088528922",
+              "blobs": [
+                "fed5501818f5ecc1c909b3b2d98ac9318d4d5665"
+              ]
+            },
+            {
+              "slug": "perigny-costa-rica-nantes-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.epub",
+              "title": "コスタリカ",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 8500,
+              "imageRefs": 0,
+              "size": 133860,
+              "sha256": "09e4347d8870d9147dec2fdf2949ccd9bbcf9c98bf1b63b89e1c9977c9957ba5",
+              "blobs": [
+                "decedcfcea36e4d0decac02eba27adf6af9a851b"
+              ]
+            },
+            {
+              "slug": "perigny-amerique-centrale-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
+              "title": "中央アメリカ",
+              "author": "モーリス・ド・ペリニー",
+              "marker": "〔原刊 p. 297〕",
+              "pages": 23,
+              "imageCount": 1,
+              "size": 1756338,
+              "sha256": "c8224cb72c2fc77f1e974ff6cae746886cc9b72fca2887b95d5825bf5679b06c",
+              "blobs": [
+                "d9eb3c637e18f2c33b4df889d8ec33dc3969e54d",
+                "47bb44b7eae3e9a8ad9984792fd6321e2298d3e2",
+                "20b2d2b5aaf9ca21a451f96143920cacc35a037b",
+                "f6c4562392e38b682b47e601891853d35e043a6b"
+              ]
+            },
+            {
+              "slug": "perigny-amerique-centrale-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
+              "title": "中央アメリカ",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 13000,
+              "imageRefs": 1,
+              "size": 7428748,
+              "sha256": "7fed4b26c08ad87562168190612829ae18170345ffb302a1e20569412f1d1006",
+              "blobs": [
+                "4e4dd00d5ffd498154536fb641df22e4a54a0791",
+                "c0e6af29713f6293dd595eed8c821f1318973cd8",
+                "85c7cfe6ab4eb8c19fdfa828b49eff88392b5f39",
+                "6499d4da7b7528336cfa815f3ac508a7c4efe8c1",
+                "c17680f3795dab86aba35bfff5c1e576fcfabad5",
+                "9a1115222aa41387bdbc55ad71ccf5a4302bc1fb",
+                "857564ea6fba436e20d15f0f3d2c8e77c4d02bd4",
+                "ec5d16142db84113ceb0d2d3033836c61dde5d19",
+                "dcbddfcc3d55feef532928f89f2d1d751d919151",
+                "b74d1f29c6c0ae86e997baffe3714398a64d95a6",
+                "c02f9da0a80be2cd39d60704df6439968d6d74c9",
+                "eec86084745434c3970254392db7c60e02735198",
+                "a4efb93641d0b93759d57ba3213b1a0b3d2ce6b8",
+                "38cb28716c528c06ac6aedebf13b724b8340bd2d",
+                "45982991397fa7ccf9b981ab25c43a5b6af3be55"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/perigny-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/perigny-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert asset["marker"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/perigny-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Perigny batch 3 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/perigny-batch3-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Perigny batch 3 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1

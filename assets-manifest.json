@@ -1730,6 +1730,60 @@
       "sha256": "69da7049f7e89e17fa3f08de2e63d76c9f298b16acacf9b39ce3525dc710c809"
     },
     {
+      "path": "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
+      "size": 7428748,
+      "sha256": "7fed4b26c08ad87562168190612829ae18170345ffb302a1e20569412f1d1006"
+    },
+    {
+      "path": "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
+      "size": 1756338,
+      "sha256": "c8224cb72c2fc77f1e974ff6cae746886cc9b72fca2887b95d5825bf5679b06c"
+    },
+    {
+      "path": "publications/perigny-amerique-centrale-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-amerique-centrale-1911/cover.jpg",
+      "size": 112220,
+      "sha256": "3d3b751100fed0cd4e55aaa9730a85ef13eb663d75a42f75f17bdadfcaf55b39"
+    },
+    {
+      "path": "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.epub",
+      "size": 133860,
+      "sha256": "09e4347d8870d9147dec2fdf2949ccd9bbcf9c98bf1b63b89e1c9977c9957ba5"
+    },
+    {
+      "path": "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.pdf",
+      "size": 418465,
+      "sha256": "81f83b1dad5025d1fb2bcff1a0f33d8e2678bac57b9bae821ce022b088528922"
+    },
+    {
+      "path": "publications/perigny-costa-rica-nantes-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-costa-rica-nantes-1911/cover.jpg",
+      "size": 110034,
+      "sha256": "71a9d9a034464c2f380bc343bdbcd2dfdd4b757cd6ba2ae52d36df6835a64635"
+    },
+    {
+      "path": "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.epub",
+      "size": 153200,
+      "sha256": "d783d37bc96912c4abac4d1cd0c7391c6e65f3433ab6d03f16e70b696ef2d123"
+    },
+    {
+      "path": "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.pdf",
+      "size": 535238,
+      "sha256": "1bcc0535562ed94a180ca553a7e4c5ea9a25019d0176655fa33e3d26c8c4c063"
+    },
+    {
+      "path": "publications/perigny-costa-rica-pays-habitants-ressources-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-costa-rica-pays-habitants-ressources-1910/cover.jpg",
+      "size": 118097,
+      "sha256": "36c346cc460a88b265edab328b7882359541654d823fda9220db29514649aa04"
+    },
+    {
       "path": "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
       "size": 88321,
@@ -1746,6 +1800,24 @@
       "url": "https://takochanchan.github.io/publications/perigny-exploration-yucatan-1906/cover.jpg",
       "size": 88910,
       "sha256": "8036aacf88c06dbf1e1afb3df00205c95c9a890dea0cff6cfa3f197bbf2d315e"
+    },
+    {
+      "path": "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.epub",
+      "size": 111467,
+      "sha256": "d6c0e2e51b7d8c83f665c2b77861f2122a80ee4c402206f3bcf387ba43d7631d"
+    },
+    {
+      "path": "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.pdf",
+      "size": 158006,
+      "sha256": "57cd8ff4ed1b3ce7bbd5c217eeac727af839d3e074bcd7daffff05355519198b"
+    },
+    {
+      "path": "publications/perigny-lettre-costa-rica-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-lettre-costa-rica-1910/cover.jpg",
+      "size": 110550,
+      "sha256": "40c7a28ffb356b6dcd59a5ad5df433d12defedbb50d9d084c4b2a036f7473f9b"
     },
     {
       "path": "publications/perigny-maler-discoveries-yucatan-1908/Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.epub",
@@ -1818,6 +1890,24 @@
       "url": "https://takochanchan.github.io/publications/perigny-ruines-nacun-1906/cover.jpg",
       "size": 83771,
       "sha256": "e7461d7c5e577e0af436504cf73fd4898659fc4a840a45aa4a942a8b809545c2"
+    },
+    {
+      "path": "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.epub",
+      "size": 3431467,
+      "sha256": "16368e2e8d5267a719205af4b510c4618b6e3cd6fd00e2ebc524645c04cc79b4"
+    },
+    {
+      "path": "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.pdf",
+      "size": 2406207,
+      "sha256": "88d3575685d7f1d7d19ec931cc164f7a9dd54759f9ed5e9c3f837dfdbbf7781e"
+    },
+    {
+      "path": "publications/perigny-ruines-nakcun-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-ruines-nakcun-1911/cover.jpg",
+      "size": 103092,
+      "sha256": "6ba809656bf62027d25ddb6b1e4430d7157bb4122844a59bbb5b2b4390f8e221"
     },
     {
       "path": "publications/perigny-ruines-rio-bec-1909/Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.epub",
