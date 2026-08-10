@@ -80,7 +80,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npm ci
           npm run build
           npm test
           published="dist/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg"
