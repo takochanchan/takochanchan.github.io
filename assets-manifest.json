@@ -1622,6 +1622,24 @@
       "sha256": "a9f9021f8cd2b0b90e6ea55b1570446004249c70b5e02da43c38103b10b2d2f9"
     },
     {
+      "path": "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
+      "size": 1288223,
+      "sha256": "cf0700fa5bee80024790698cd4f5940928718a5e1e286e3347f545c29fd403f9"
+    },
+    {
+      "path": "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
+      "size": 16738916,
+      "sha256": "92380a3dc5b761365e719f5a1657568a9758f08a9003785afc717886791c50f3"
+    },
+    {
+      "path": "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+      "size": 86485,
+      "sha256": "580b845125da70db19cd2557d5aa61d5af5382f779b2dd1537dcdd11fb0fd42e"
+    },
+    {
       "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
       "size": 33720843,

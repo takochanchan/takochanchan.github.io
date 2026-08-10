@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ec964ef51977bd37a9bd89e1ad0ade8581d3686b",
+  "archive_commit": "e6b943321ade1ae5932e6ef1e75511a479606874",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -119,6 +119,7 @@
     "perigny-exploration-yucatan-1906": "publications/perigny-exploration-yucatan-1906/master.docx",
     "lemoine-travers-peten-yucatan-1906": "publications/lemoine-travers-peten-yucatan-1906/master.docx",
     "perigny-peten-1907": "publications/perigny-peten-1907/master.docx",
-    "perigny-maya-ruins-quintana-roo-1907": "publications/perigny-maya-ruins-quintana-roo-1907/master.docx"
+    "perigny-maya-ruins-quintana-roo-1907": "publications/perigny-maya-ruins-quintana-roo-1907/master.docx",
+    "romero-bosquejo-chiapas-soconusco-1877": "publications/romero-bosquejo-chiapas-soconusco-1877/master.docx"
   }
 }

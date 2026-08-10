@@ -4194,6 +4194,49 @@ const publicationRecords = [
       "一次史料",
     ],
   },
+  {
+    slug: "romero-bosquejo-chiapas-soconusco-1877",
+    title:
+      "チアパスおよびソコヌスコのメキシコ編入史概説：メキシコと中央アメリカ・グアテマラとの国境交渉",
+    originalTitle:
+      "Bosquejo histórico de la agregación á México de Chiapas y Soconusco y de las negociaciones sobre límites entabladas por México con Centro-América y Guatemala",
+    subtitle:
+      "1877年初版第I巻（1821–1831年）・公式文書集・正誤表 日本語全訳",
+    author: "マティアス・ロメロ",
+    series: "BOSQUEJO HISTÓRICO · TOMO I · 1877",
+    originalPublication:
+      "メキシコ、Imprenta del Gobierno, en Palacio, a cargo de Filomeno Mata、1877年",
+    year: 1877,
+    extent:
+      "PDF 1,568頁・原刊前付i–xxiv頁・本文3–798頁・全3部43章・表10点・原刊標題紙1点・正誤表",
+    description:
+      "チアパスおよびソコヌスコのメキシコ編入と、メキシコ・中央アメリカ・グアテマラ間の国境交渉を、1821年から1831年までの公文書・議事録・外交往復文書によって検証したマティアス・ロメロの大部な史料集。1877年刊第I巻の前付、本文全3部43章、原注、人口表・投票表、正誤表を省略なく訳しています。",
+    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+    pdf:
+      "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
+    pageCount: 1568,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "外交史", "国境史", "公式文書集", "一次史料"],
+    regions: [
+      "チアパス",
+      "ソコヌスコ",
+      "メキシコ",
+      "グアテマラ",
+      "中央アメリカ",
+    ],
+    languages: ["スペイン語"],
+    tags: [
+      "メキシコ編入",
+      "国境交渉",
+      "中央アメリカ連邦",
+      "マティアス・ロメロ",
+      "アンドレス・ダルドン",
+      "19世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -5448,6 +5491,17 @@ const publicationMetadata = {
     rights: publicDomainRights,
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
+  },
+  "romero-bosquejo-chiapas-soconusco-1877": {
+    sourceEdition:
+      "Matías Romero『Bosquejo histórico de la agregación á México de Chiapas y Soconusco y de las negociaciones sobre límites entabladas por México con Centro-América y Guatemala』Tomo I（México: Imprenta del Gobierno, en Palacio, a cargo de Filomeno Mata、1877年）。",
+    sourceProvider:
+      "Columbia University Libraries所蔵本をGoogle Booksがデジタル化した公開複製（volume ID: xuJEAAAAYAAJ）を主底本とした。内蔵OCRは検索と転記の補助に限り、原刊前付i–xxiv頁、本文3–798頁、表、原注、正誤表は原刊画像で確定した。",
+    sourceUrl: "https://books.google.com/books?id=xuJEAAAAYAAJ",
+    rights:
+      "1877年原刊本文はパブリックドメインです。底本提供機関はColumbia University Libraries。底本PDFはGoogle Booksによりパブリックドメインと表示され、同PDFの利用ガイドラインに従ってGoogleの表示を保持した原刊標題紙画像を収録しています。Columbia University Librariesの公開方針では、著作権保護のない資料は制限なく利用でき、学術研究に伴う刊行には通常条件を課さないとされています。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
   },
 };
 
