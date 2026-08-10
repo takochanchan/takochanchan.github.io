@@ -569,6 +569,128 @@ const publicationRecords = [
     tags: ["民族誌", "自然誌", "折込地図", "楽譜"],
   },
   {
+    slug: "morelet-exploration-guatemala-1850",
+    title: "グアテマラ探検",
+    originalTitle: "Voyage scientifique. Exploration du Guatemala",
+    subtitle:
+      "1850年刊・アカデミー委員会報告・原刊430–433頁 日本語全訳",
+    author:
+      "ピエール＝マリー＝アルテュール・モルレ／アシル・ヴァランシエンヌ",
+    series: "EXPLORATION DU GUATEMALA · ACADÉMIE DES SCIENCES · 1850",
+    originalPublication:
+      "パリ、『Comptes rendus hebdomadaires des séances de l’Académie des sciences』第30巻、1850年、430–433頁（ディジョン刊独立抜刷6頁）",
+    year: 1850,
+    extent: "PDF 5頁・原刊430–433頁・委員会報告・図版なし",
+    description:
+      "モルレの中央アメリカ旅行で採集された地質・動物・植物標本と図画を、フランス科学アカデミー委員会が審査した報告。ヴァランシエンヌが報告者を務めた1850年2月25日会合の本文、委員名、数値、分類群名を省略なく訳しています。",
+    cover: "publications/morelet-exploration-guatemala-1850/cover.jpg",
+    pdf:
+      "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub",
+    pageCount: 5,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["自然史報告", "探検報告", "学会報告"],
+    regions: ["中央アメリカ", "グアテマラ", "ペテン", "キューバ", "ユカタン"],
+    languages: ["フランス語"],
+    tags: [
+      "アルテュール・モルレ",
+      "アシル・ヴァランシエンヌ",
+      "フランス科学アカデミー",
+      "自然史",
+      "標本",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "morelet-testacea-novissima-pars-i-1849",
+    title: "キューバ島および中央アメリカの新貝類（第I部）",
+    originalTitle:
+      "Testacea novissima insulae Cubanae et Americae Centralis. Pars I",
+    subtitle: "1849年刊・標題・序文・第1–85番 日本語全訳",
+    author: "ピエール＝マリー＝アルテュール・モルレ",
+    series: "TESTACEA NOVISSIMA · PARS I · 1849",
+    originalPublication:
+      "パリ、J.-B. Baillière／ロンドン、H. Baillière、1849年（ディジョン、Imprimerie Loireau-Feuchot）",
+    year: 1849,
+    extent: "PDF 23頁・原刊5–31頁・貝類85種・図版なし",
+    description:
+      "モルレがキューバ島、ユカタン、グアテマラなどで採集した陸産・淡水産貝類85種を記載した第I部。標題、序文、属見出し、全85種の形態記載、寸法、産地、比較注、終記を省略なく訳しています。",
+    cover:
+      "publications/morelet-testacea-novissima-pars-i-1849/cover.jpg",
+    pdf:
+      "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub",
+    pageCount: 23,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["貝類学", "自然史", "分類学", "学術刊行物"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "ベラパス",
+      "ペテン",
+      "キューバ",
+      "ユカタン",
+    ],
+    languages: ["フランス語", "ラテン語"],
+    tags: [
+      "軟体動物",
+      "陸産貝類",
+      "淡水産貝類",
+      "新種記載",
+      "自然史標本",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "morelet-testacea-novissima-pars-ii-1851",
+    title: "キューバ島および中央アメリカの新貝類（第II部）",
+    originalTitle:
+      "Testacea novissima insulae Cubanae et Americae Centralis. Pars II",
+    subtitle:
+      "1851年刊・序文・第86–150番・訂正表・総索引 日本語全訳",
+    author: "ピエール＝マリー＝アルテュール・モルレ",
+    series: "TESTACEA NOVISSIMA · PARS II · 1851",
+    originalPublication:
+      "パリ、J.-B. Baillière／ロンドン、H. Baillière、1851年（ディジョン、Imprimerie Loireau-Feuchot）",
+    year: 1851,
+    extent:
+      "PDF 21頁・原刊5–30頁・貝類65種・第I部訂正表・全150種索引・図版なし",
+    description:
+      "モルレの新貝類記載を完結する第II部。序文、属見出し、第86–150番の65種の形態記載、寸法、産地、比較注、第I部訂正表、全150種索引を省略なく訳しています。",
+    cover:
+      "publications/morelet-testacea-novissima-pars-ii-1851/cover.jpg",
+    pdf:
+      "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub",
+    pageCount: 21,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["貝類学", "自然史", "分類学", "学術刊行物"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "ベラパス",
+      "ペテン",
+      "キューバ",
+      "ユカタン",
+    ],
+    languages: ["フランス語", "ラテン語"],
+    tags: [
+      "軟体動物",
+      "陸産貝類",
+      "淡水産貝類",
+      "新種記載",
+      "訂正表",
+      "総索引",
+      "一次史料",
+    ],
+  },
+  {
     slug: "rockstroh-ukes",
     title: "ウケ一族の地への旅",
     originalTitle: "Viaje al país de los ukes",
@@ -4229,6 +4351,42 @@ const publicationMetadata = {
     publishedDate: "2026-07-24",
     updatedDate: "2026-07-26",
   },
+  "morelet-exploration-guatemala-1850": {
+    sourceEdition:
+      "Arthur Morelet『Voyage scientifique. Exploration du Guatemala』（Dijon: Imprimerie de Loireau-Feuchot、1850年、6頁）と同文の委員会報告「Rapport sur les travaux et les recherches d’histoire naturelle faits par M. Morelet pendant son voyage dans l’Amérique centrale」『Comptes rendus hebdomadaires des séances de l’Académie des sciences』tome XXX（1850年）pp. 430–433。",
+    sourceProvider:
+      "Natural History Museum Library, London所蔵の『Comptes rendus』第30巻をBiodiversity Heritage Library／Internet Archiveが公開したデジタル複製（識別子 comptesrendusheb30acad）を主底本とした。BnFの独立抜刷書誌（ark:/12148/cb30979025w）で題名・刊行事項を照合した。",
+    sourceUrl:
+      "https://archive.org/details/comptesrendusheb30acad",
+    rights:
+      "原著および1850年刊行本文はパブリックドメインです。底本提供機関はNatural History Museum Library, London。Biodiversity Heritage Library（BHL）公開巻の機関表示はCopyright Status: NOT_IN_COPYRIGHT、License: Not Applicable、Reuse: Yesであり、BHLおよび提供機関は当該パブリックドメイン資料のデジタルファイルに権利を主張していません。",
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "morelet-testacea-novissima-pars-i-1849": {
+    sourceEdition:
+      "Arthur Morelet『Testacea novissima insulae Cubanae et Americae Centralis. Pars I』（Paris: J.-B. Baillière／London: H. Baillière、1849年、Dijon: Imprimerie Loireau-Feuchot）。",
+    sourceProvider:
+      "Smithsonian Libraries and Archives所蔵、第I・II部合綴本をBiodiversity Heritage Library／Internet Archiveが公開したデジタル複製（識別子 testaceanovissim00more）を底本とした。標題紙、序文、原刊5–31頁の第1–85番を収録した。",
+    sourceUrl:
+      "https://archive.org/details/testaceanovissim00more",
+    rights:
+      "原著および1849年刊行本文はパブリックドメインです。底本提供機関はSmithsonian Libraries and Archives。Biodiversity Heritage Library（BHL）公開本の機関表示はCopyright Status: NOT_IN_COPYRIGHT、License: Not Applicable、Reuse: Yesであり、BHLおよび提供機関は当該パブリックドメイン資料のデジタルファイルに権利を主張していません。",
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "morelet-testacea-novissima-pars-ii-1851": {
+    sourceEdition:
+      "Arthur Morelet『Testacea novissima insulae Cubanae et Americae Centralis. Pars II』（Paris: J.-B. Baillière／London: H. Baillière、1851年、Dijon: Imprimerie Loireau-Feuchot）。",
+    sourceProvider:
+      "Smithsonian Libraries and Archives所蔵、第I・II部合綴本をBiodiversity Heritage Library／Internet Archiveが公開したデジタル複製（識別子 testaceanovissim00more）を底本とした。序文、原刊5–30頁の第86–150番、第I部訂正表、全150種索引を収録した。",
+    sourceUrl:
+      "https://archive.org/details/testaceanovissim00more",
+    rights:
+      "原著および1851年刊行本文はパブリックドメインです。底本提供機関はSmithsonian Libraries and Archives。Biodiversity Heritage Library（BHL）公開本の機関表示はCopyright Status: NOT_IN_COPYRIGHT、License: Not Applicable、Reuse: Yesであり、BHLおよび提供機関は当該パブリックドメイン資料のデジタルファイルに権利を主張していません。",
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
   "rockstroh-ukes": {
     sourceEdition:
       "Jan de Vos 編『Viajes al desierto de la soledad: un retrato hablado de la Selva Lacandona』（CIESAS／Miguel Ángel Porrúa、2003年）pp. 90–129。",
@@ -5298,6 +5456,8 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "morelet-exploration-guatemala-1850":
+    "arthur-morelet-achille-valenciennes",
   "peniche-relaciones-belice-1869": "manuel-peniche",
   "marimon-lacandones-1695": "sebastian-marimon-y-tudo",
   "esquinca-usumacinta": "jose-maria-esquinca",

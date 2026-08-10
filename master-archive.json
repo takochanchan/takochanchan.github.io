@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "224bc10c7c0f6d53cdf840c73fc3ee07c32ae945",
+  "archive_commit": "ec964ef51977bd37a9bd89e1ad0ade8581d3686b",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -16,6 +16,9 @@
     "maler-usumacinta": "publications/maler-usumacinta/master.docx",
     "maler-upper-usumacinta": "publications/maler-upper-usumacinta/master.docx",
     "morelet-1857": "publications/morelet-1857/master.docx",
+    "morelet-exploration-guatemala-1850": "publications/morelet-exploration-guatemala-1850/master.md",
+    "morelet-testacea-novissima-pars-i-1849": "publications/morelet-testacea-novissima-pars-i-1849/master.md",
+    "morelet-testacea-novissima-pars-ii-1851": "publications/morelet-testacea-novissima-pars-ii-1851/master.md",
     "rockstroh-ukes": "publications/rockstroh-ukes/master.md",
     "chambon-mexique": "publications/chambon-mexique/master.docx",
     "arthes-peten-1893": "publications/arthes-peten-1893/master.md",

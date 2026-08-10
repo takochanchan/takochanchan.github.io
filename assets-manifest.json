@@ -1298,6 +1298,60 @@
       "sha256": "3bf3263753190c93ecd60da127c345ecbfbbe889b10372d1c5cc3305ed865a51"
     },
     {
+      "path": "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub",
+      "size": 192555,
+      "sha256": "774fd6e0d83e6d04a26a9004ef1a1ffa8461023cc55bc5c8d2ccce6c386224cd"
+    },
+    {
+      "path": "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf",
+      "size": 250419,
+      "sha256": "bf64fb7e98d635bd4393817e96756f973799ada9fe05fbed2c33a58751ec8b4a"
+    },
+    {
+      "path": "publications/morelet-exploration-guatemala-1850/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morelet-exploration-guatemala-1850/cover.jpg",
+      "size": 188113,
+      "sha256": "ae9df65cc426e99db6fa86ec23cafc8e284667d6590592cdedcc4e5d4e9cfa83"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub",
+      "size": 201815,
+      "sha256": "44878fd86ac90834a5167ebf27c3854a4f261c9e8fff775b1e7570a8c65ad6f3"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf",
+      "size": 441191,
+      "sha256": "f330afd7b02c02f5cfc5dc59d77855ac498ebb40ef655b1a83f4d80aa15d7670"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-i-1849/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morelet-testacea-novissima-pars-i-1849/cover.jpg",
+      "size": 170571,
+      "sha256": "084a586caf18fcd27f0904354111d3731254abbb03f0e084ff826958b22d1ba2"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub",
+      "size": 211963,
+      "sha256": "f4548dc3b7b7e9321e448cad96b64d4cc641d61bf33f42f11d17bb9bf0b90ce8"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf",
+      "size": 492002,
+      "sha256": "2c21be227048b8b4d6549c783920aeeaddda500f4c076eba679f5d09b6369936"
+    },
+    {
+      "path": "publications/morelet-testacea-novissima-pars-ii-1851/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/morelet-testacea-novissima-pars-ii-1851/cover.jpg",
+      "size": 176369,
+      "sha256": "1cfd08dd6c3096acff58a4fef8436677525c53d26a3b61f3b5630f794fa8a673"
+    },
+    {
       "path": "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub",
       "size": 5863082,

@@ -191,6 +191,15 @@ DOCX_SOURCES = {
     / "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.docx",
 }
 
+MARKDOWN_SOURCES = {
+    "morelet-exploration-guatemala-1850": SOURCES
+    / "Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.md",
+    "morelet-testacea-novissima-pars-i-1849": SOURCES
+    / "Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.md",
+    "morelet-testacea-novissima-pars-ii-1851": SOURCES
+    / "Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.md",
+}
+
 TAGGED_PDF_SOURCES = {
     "cook-balise-merida-1769",
     "galindo-copan-full-report-1834",
@@ -1571,6 +1580,19 @@ def build_one(
             if not source.exists():
                 raise FileNotFoundError(f"Missing DOCX source for {slug}: {source}")
             pandoc_to_epub(source, raw_epub, item, from_format="docx+styles")
+        elif slug in MARKDOWN_SOURCES:
+            source = MARKDOWN_SOURCES[slug]
+            if not source.exists():
+                raise FileNotFoundError(
+                    f"Missing Markdown source for {slug}: {source}"
+                )
+            pandoc_to_epub(
+                source,
+                raw_epub,
+                item,
+                from_format="markdown+raw_html+east_asian_line_breaks",
+                resource_path=source.parent,
+            )
         elif slug in TAGGED_PDF_SOURCES:
             source = render_tagged_pdf_html(pdf_path(item), item, directory)
             pandoc_to_epub(

@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 114);
+  assert.equal(publications.length, 117);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,9 +63,9 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 81);
-  assert.equal(shortPublications.length, 33);
-  assert.equal(shortPublicationAuthors.length, 15);
+  assert.equal(majorPublications.length, 83);
+  assert.equal(shortPublications.length, 34);
+  assert.equal(shortPublicationAuthors.length, 16);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -102,6 +102,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "lemoine-travers-peten-yucatan-1906",
       "perigny-peten-1907",
       "perigny-maya-ruins-quintana-roo-1907",
+      "morelet-exploration-guatemala-1850",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -124,6 +125,18 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "galindo-on-central-america-1836",
       "galindo-ruins-copan-aas-1836",
     ],
+  );
+  const moreletCommittee = shortPublicationAuthors.find(
+    (author) => author.key === "arthur-morelet-achille-valenciennes",
+  );
+  assert.ok(moreletCommittee);
+  assert.equal(
+    moreletCommittee.name,
+    "ピエール＝マリー＝アルテュール・モルレ／アシル・ヴァランシエンヌ",
+  );
+  assert.deepEqual(
+    moreletCommittee.publications.map((item) => item.slug),
+    ["morelet-exploration-guatemala-1850"],
   );
   const committee = shortPublicationAuthors.find(
     (author) => author.key === "societe-de-geographie-committee",
@@ -297,6 +310,32 @@ test("second approved Galindo batch remains individually catalogued", () => {
   }
 });
 
+test("Morelet natural-history publications retain their approved scope and provider terms", () => {
+  const expected = new Map([
+    ["morelet-exploration-guatemala-1850", [5, "short-work"]],
+    ["morelet-testacea-novissima-pars-i-1849", [23, "major-work"]],
+    ["morelet-testacea-novissima-pars-ii-1851", [21, "major-work"]],
+  ]);
+  for (const [slug, [pageCount, recordClass]] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.pageCount, pageCount, slug);
+    assert.equal(item.recordClass, recordClass, slug);
+    assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+    assert.match(item.rights, /License: Not Applicable/);
+    assert.match(item.rights, /Reuse: Yes/);
+    assert.doesNotMatch(item.rights, /日本語翻訳版には再利用ライセンス/);
+    assert.equal(item.publishedDate, "2026-08-10");
+  }
+  const parsII = publications.find(
+    (publication) =>
+      publication.slug === "morelet-testacea-novissima-pars-ii-1851",
+  );
+  assert.match(parsII.subtitle, /第86–150番/);
+  assert.match(parsII.subtitle, /訂正表・総索引/);
+  assert.match(parsII.extent, /全150種索引/);
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
@@ -382,8 +421,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">81<\/strong>件/);
-  assert.match(html, /id="paper-match-count">33<\/strong>件/);
+  assert.match(html, /id="book-match-count">83<\/strong>件/);
+  assert.match(html, /id="paper-match-count">34<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');
