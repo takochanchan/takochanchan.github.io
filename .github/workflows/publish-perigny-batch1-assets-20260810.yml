@@ -1,0 +1,375 @@
+name: Publish Perigny batch 1 release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-perigny-batch1-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-perigny-batch1-assets-20260810.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "kind": "pdf",
+              "pages": 7,
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 360〕",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.pdf",
+              "size": 412437,
+              "sha256": "8cf0d5ca7aa8bc1e06caaf2bdf649272c438a2562e4daca429e8d630b93deba5",
+              "blobs": [
+                "b9ff8d4c08d4d02c96b3f015eb4cbf1ce3926ae9",
+                "39df4083f5708cb0bae367e216b93b2d7b20ef99"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 1900,
+              "imageRefs": 3,
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.epub",
+              "size": 281566,
+              "sha256": "ea0ea237b6a6b0367038987f3eafedf08a172a81fca38306c4b4e1b74c025c0e",
+              "blobs": [
+                "d1e15f57e3133c182bc1c728ce2246e6f4e949bc",
+                "2f835fbc275d8892c294232e69d628bf440582a5"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 3,
+              "title": "ユカタン探検",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 340〕",
+              "name": "Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
+              "size": 146616,
+              "sha256": "2fe9b0592218afc3e5166fd2f5bcb7f1a276b39b2ee972989207257579431352",
+              "blobs": [
+                "de42038d90532d7ecbce360b18e1ab8654ee0385"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 1200,
+              "imageRefs": 0,
+              "title": "ユカタン探検",
+              "author": "モーリス・ド・ペリニー",
+              "name": "Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
+              "size": 88321,
+              "sha256": "4be7559016c58f2d625550a83c78c4fd853ec0a99af85e506c5a2a8115339ac0",
+              "blobs": [
+                "82de4633aab5b8f875cc82e6d4aef26642c3157d"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 8,
+              "title": "ペテンとユカタンを横断して",
+              "author": "フレデリック・ルモワーヌ",
+              "marker": "〔原刊 p. 482〕",
+              "name": "Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.pdf",
+              "size": 596178,
+              "sha256": "8f6fbdb72d6801f9f530e5ad48b35dbba0a2e41904aa60af16b8bd45bcae892e",
+              "blobs": [
+                "b373ae12a2ce5734e5ef5dc29b0b4afdcceeb317",
+                "357a8b7e3743d8a41a99106474b9bdc770499eaf",
+                "a571a3ed55d3415d24481ab05ad2b5a2acac3d33"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 3500,
+              "imageRefs": 1,
+              "title": "ペテンとユカタンを横断して",
+              "author": "フレデリック・ルモワーヌ",
+              "name": "Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.epub",
+              "size": 404016,
+              "sha256": "7ee76e2f712682f17970c42c9bd70318027e40aab1fd1705bd61b19b5d5da7d6",
+              "blobs": [
+                "15d847b840cc898db736b61e43f277a02aff1486",
+                "67814e966ef738b3ff03eaf766d0ee8ea747aa3d"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 6,
+              "title": "ペテン",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 287〕",
+              "name": "Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.pdf",
+              "size": 235759,
+              "sha256": "4884cbeec1e67ed3914facc9bf9e99ee060d72bdb7c396c2d5e34432b20e40a2",
+              "blobs": [
+                "f49b02c3befe7cbcb27ce62999287b8515c54a8c"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 3500,
+              "imageRefs": 0,
+              "title": "ペテン",
+              "author": "モーリス・ド・ペリニー",
+              "name": "Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.epub",
+              "size": 78463,
+              "sha256": "7d58153ef44a4a71fce196c76c6f47a48f633f103d7b1c6b819bab4be497097b",
+              "blobs": [
+                "3017ae91e5b24461155e2bf45a1aacf72f36c941"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 6,
+              "title": "キンタナ・ローのマヤ遺跡",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 232〕",
+              "name": "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
+              "size": 227134,
+              "sha256": "feb5eb69f614d30590e0b3a72ec167dee3805797ad46d70c866b4d017f45fb8d",
+              "blobs": [
+                "26e9c148a21f64350d10e17bd58a84f6ee2cbc89"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 3000,
+              "imageRefs": 0,
+              "title": "キンタナ・ローのマヤ遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "name": "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
+              "size": 115127,
+              "sha256": "c751b6bce25d17de8725bda2bf64b0ca42e962107a389d63da42366a4edec671",
+              "blobs": [
+                "438b7d8c97e9ac0ef9f98ba98295db163894f706"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/perigny-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/perigny-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert asset["marker"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/perigny-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Perigny batch 1 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/perigny-batch1-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Perigny batch 1 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
