@@ -5116,6 +5116,42 @@ const publicationRecords = [
       "一次史料",
     ],
   },
+  {
+    slug: "coronel-arte-maya-1620",
+    title: "マヤ語文法",
+    originalTitle: "Arte en lengua de Maya",
+    subtitle:
+      "1620年初版・原刊標題紙・四活用・小辞・数詞・人体部位語彙 日本語全訳",
+    author: "フアン・コロネル",
+    series: "ARTE EN LENGUA DE MAYA · 1620",
+    originalPublication:
+      "メキシコ、ディエゴ・ガリード印刷所、アドリアノ・セサル印刷、1620年",
+    year: 1620,
+    extent:
+      "PDF 82頁・原刊旧付番2–56頁・活用表21点・原刊標題紙1点・人体部位語彙",
+    description:
+      "フランシスコ会士フアン・コロネルが、ユカテコ・マヤ語の代名詞、四活用、動詞形成、支配、小辞、数詞、語形成、人体部位語彙を体系化した1620年刊文法書。BYU公開の1620年初版写真複製を底本とし、原刊標題紙、本文全52節、活用表21点、語彙、原刊旧付番、欠葉表示を省略なく収録しています。",
+    cover: "publications/coronel-arte-maya-1620/cover.jpg",
+    pdf:
+      "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.epub",
+    pageCount: 82,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["言語資料", "文法書", "語彙集", "宣教史料"],
+    regions: ["ユカタン", "メキシコ", "マヤ地域"],
+    languages: ["スペイン語", "ユカテコ・マヤ語", "ラテン語"],
+    tags: [
+      "ユカテコ・マヤ語",
+      "フランシスコ会",
+      "植民地期",
+      "活用",
+      "小辞",
+      "語彙",
+      "17世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -6702,6 +6738,18 @@ const publicationMetadata = {
       "フランス国立図書館Gallica公開のモーリス・ド・ペリニー文書所収原刊切抜き（ark:/12148/btv1b10891637n、f1–f12）を底本とした。三回連載の本文、統計表、原刊300–301頁の折込地図を収録した。",
     sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b10891637n",
     rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "coronel-arte-maya-1620": {
+    sourceEdition:
+      "Juan Coronel『Arte en lengua de Maya, recopilado y enmendado por el P. F. Ioan Coronel de la Orden de S. Francisco, Guardia del Conuento de Tikax』（México: Imprenta de Diego Garrido, por Adriano César、1620年初版）。",
+    sourceProvider:
+      "Brigham Young University, L. Tom Perry Special Collections公開の1620年初版写真複製（William Gates papers, MSS 279 Series 8 Subseries 2 Subseries 13 Item 1, box 46, folder 2、CONTENTdm親レコード57684、46画像）を底本とした。同レコードは原資料を「Ms. (photocopy, negative).」と記す。判読と配列確認には同じWilliam Gates papersの旧転写稿（Item 2、親レコード136730）を補助として用い、語形、異同、欠葉および配列は1620年版画像へ戻して確定した。",
+    sourceUrl:
+      "https://contentdm.lib.byu.edu/digital/collection/p15999coll16/id/57684/",
+    rights:
+      "1620年原著は著作権保護期間を満了したパブリックドメイン資料です。BYU Digital Collections親レコード57684はデジタル底本を「Copyright Status: Public domain」と表示しており、これはCreative Commonsライセンスではなく公開機関によるパブリックドメイン表示です。BYUのDigital Collections Copyrightは、著作権保護期間を満了した資料を許諾または制限なく自由に利用できると案内しています。所蔵・公開機関表記：Original held in L. Tom Perry Special Collections, Harold B. Lee Library, Brigham Young University, Provo, UT 84602.",
     publishedDate: "2026-08-11",
     updatedDate: "2026-08-11",
   },

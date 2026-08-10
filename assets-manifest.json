@@ -308,6 +308,24 @@
       "sha256": "157ae33356cf84ad901e1974896622b7a0a29931598dc099451d330dd881ef83"
     },
     {
+      "path": "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.epub",
+      "size": 119750,
+      "sha256": "00e8f554db1f46c582fef28753ab8ca4138c85b438dbf8eab7a2b24a2b619d0e"
+    },
+    {
+      "path": "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.pdf",
+      "size": 1948839,
+      "sha256": "ecfca166d7ed0c4860af9e890dae0a9940ef6495a8bb601d6643ed09d826146f"
+    },
+    {
+      "path": "publications/coronel-arte-maya-1620/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/coronel-arte-maya-1620/cover.jpg",
+      "size": 45876,
+      "sha256": "f8629fc309147780f8d0c614875899c7f27b529f177b88e97ac0b85f86998ae5"
+    },
+    {
       "path": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
       "size": 68902340,
