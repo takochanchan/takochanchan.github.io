@@ -4211,7 +4211,7 @@ const publicationRecords = [
       "PDF 1,568頁・原刊前付i–xxiv頁・本文3–798頁・全3部43章・表10点・原刊標題紙1点・正誤表",
     description:
       "チアパスおよびソコヌスコのメキシコ編入と、メキシコ・中央アメリカ・グアテマラ間の国境交渉を、1821年から1831年までの公文書・議事録・外交往復文書によって検証したマティアス・ロメロの大部な史料集。1877年刊第I巻の前付、本文全3部43章、原注、人口表・投票表、正誤表を省略なく訳しています。",
-    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",
     pdf:
       "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
     epub:
