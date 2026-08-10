@@ -1,0 +1,106 @@
+name: Validate and publish Romero cover once
+
+on:
+  push:
+    branches:
+      - agent/fix-romero-cover-20260811-v2
+    paths:
+      - .github/workflows/fix-romero-cover-20260811-v2.yml
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: fix-romero-cover-20260811-v2
+  cancel-in-progress: false
+
+jobs:
+  verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      EXPECTED_MAIN: 9a15e74f5070a2443e5f35505594383b6c737771
+      WORKFLOW_PATH: .github/workflows/fix-romero-cover-20260811-v2.yml
+      OLD_COVER: static/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg
+      NEW_COVER: static/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg
+      COVER_SIZE: "73293"
+      COVER_SHA256: 0990b68da9b3c5ac2ae60cf75152985d80a1a12683bc09ccd3f2c3aa9989d715
+
+    steps:
+      - name: Check out verified holding branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/fix-romero-cover-20260811-v2
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify corrected Japanese cover
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -e "$OLD_COVER"
+          test "$(stat -c %s "$NEW_COVER")" = "$COVER_SIZE"
+          echo "$COVER_SHA256  $NEW_COVER" | sha256sum -c -
+          python3 - <<'PY'
+          from pathlib import Path
+          data = Path("static/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg").read_bytes()
+          assert data[:2] == b"\xff\xd8"
+          i = 2
+          size = None
+          sof = {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}
+          while i + 9 <= len(data):
+              if data[i] != 0xFF:
+                  i += 1
+                  continue
+              while i < len(data) and data[i] == 0xFF:
+                  i += 1
+              marker = data[i]
+              i += 1
+              if marker in (0xD8, 0xD9):
+                  continue
+              length = int.from_bytes(data[i:i+2], "big")
+              if marker in sof:
+                  height = int.from_bytes(data[i+3:i+5], "big")
+                  width = int.from_bytes(data[i+5:i+7], "big")
+                  size = (width, height)
+                  break
+              i += length
+          assert size == (1275, 1650), size
+          PY
+          grep -F 'cover: "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",' src/publications.mjs
+          test "$(grep -Fc 'publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg' assets-manifest.json)" = 2
+          test "$(grep -Fc '0990b68da9b3c5ac2ae60cf75152985d80a1a12683bc09ccd3f2c3aa9989d715' assets-manifest.json)" = 1
+
+      - name: Build and test complete site
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+          npm test
+          published="dist/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg"
+          test "$(stat -c %s "$published")" = "$COVER_SIZE"
+          echo "$COVER_SHA256  $published" | sha256sum -c -
+          test ! -e dist/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg
+          grep -F '/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg' dist/publications/romero-bosquejo-chiapas-soconusco-1877/index.html
+
+      - name: Publish verified correction to main
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$EXPECTED_MAIN"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm -- "$WORKFLOW_PATH"
+          git commit -m "Fix Romero Japanese cover on published site"
+          git push origin HEAD:main
+          gh workflow run pages.yml --ref main --repo "$GITHUB_REPOSITORY"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Ffix-romero-cover-20260811-v2" >/dev/null 2>&1 || true
