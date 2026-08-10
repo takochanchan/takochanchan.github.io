@@ -1,0 +1,111 @@
+name: Version Romero cover asset once
+
+on:
+  push:
+    branches:
+      - agent/version-romero-cover-20260811
+    paths:
+      - .github/workflows/version-romero-cover-20260811.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: version-romero-cover-20260811
+  cancel-in-progress: false
+
+jobs:
+  version-cover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OLD_COVER: static/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg
+      NEW_COVER: static/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg
+      EXPECTED_MAIN: 22789a2af9565d742602cbe5328ebbfc73ff3543
+      COVER_SIZE: "73293"
+      COVER_SHA256: 0990b68da9b3c5ac2ae60cf75152985d80a1a12683bc09ccd3f2c3aa9989d715
+
+    steps:
+      - name: Check out holding branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/version-romero-cover-20260811
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Version the corrected cover and update references
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(stat -c %s "$OLD_COVER")" = "$COVER_SIZE"
+          echo "$COVER_SHA256  $OLD_COVER" | sha256sum -c -
+          git mv -- "$OLD_COVER" "$NEW_COVER"
+          node <<'NODE'
+          const fs = require("node:fs");
+          const sourcePath = "src/publications.mjs";
+          let source = fs.readFileSync(sourcePath, "utf8");
+          const oldRef =
+            'cover: "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",';
+          const newRef =
+            'cover: "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",';
+          if (source.split(oldRef).length !== 2)
+            throw new Error("Romero cover reference is missing or duplicated");
+          source = source.replace(oldRef, newRef);
+          fs.writeFileSync(sourcePath, source);
+
+          const manifestPath = "assets-manifest.json";
+          const data = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+          const oldPath =
+            "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg";
+          const newPath =
+            "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg";
+          const hits = data.assets.filter((item) => item.path === oldPath);
+          if (hits.length !== 1) throw new Error(`cover entries: ${hits.length}`);
+          const item = hits[0];
+          if (item.size !== Number(process.env.COVER_SIZE))
+            throw new Error(`unexpected size: ${item.size}`);
+          if (item.sha256 !== process.env.COVER_SHA256)
+            throw new Error(`unexpected SHA256: ${item.sha256}`);
+          item.path = newPath;
+          item.url =
+            "https://takochanchan.github.io/publications/" +
+            "romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg";
+          fs.writeFileSync(manifestPath, JSON.stringify(data, null, 2) + "\n");
+          NODE
+
+      - name: Build and validate the complete site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          npm run build
+          npm test
+          published="dist/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg"
+          test "$(stat -c %s "$published")" = "$COVER_SIZE"
+          echo "$COVER_SHA256  $published" | sha256sum -c -
+          test ! -e dist/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg
+
+      - name: Commit the verified cache-safe correction to main
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$EXPECTED_MAIN"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -- assets-manifest.json src/publications.mjs "$NEW_COVER"
+          git rm -- .github/workflows/version-romero-cover-20260811.yml
+          expected=$'.github/workflows/version-romero-cover-20260811.yml\nassets-manifest.json\nsrc/publications.mjs\nstatic/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg\nstatic/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg'
+          actual="$(git diff --cached --name-only | sort)"
+          test "$actual" = "$expected"
+          git commit -m "Version Romero cover asset"
+          git push origin HEAD:main
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Fversion-romero-cover-20260811" \
+            >/dev/null 2>&1 || true
