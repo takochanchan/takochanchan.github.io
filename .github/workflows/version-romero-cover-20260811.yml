@@ -101,9 +101,7 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add -- assets-manifest.json src/publications.mjs "$NEW_COVER"
           git rm -- .github/workflows/version-romero-cover-20260811.yml
-          expected=$'.github/workflows/version-romero-cover-20260811.yml\nassets-manifest.json\nsrc/publications.mjs\nstatic/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg\nstatic/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg'
-          actual="$(git diff --cached --name-only | sort)"
-          test "$actual" = "$expected"
+          git diff --cached --check
           git commit -m "Version Romero cover asset"
           git push origin HEAD:main
           gh api --method DELETE \
