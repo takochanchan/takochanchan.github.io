@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 123);
+  assert.equal(publications.length, 141);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,9 +63,9 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 82);
-  assert.equal(shortPublications.length, 41);
-  assert.equal(shortPublicationAuthors.length, 17);
+  assert.equal(majorPublications.length, 86);
+  assert.equal(shortPublications.length, 55);
+  assert.equal(shortPublicationAuthors.length, 22);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -97,6 +97,22 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "dieseldorff-reliefbild-chipolem-1895",
       "dieseldorff-cuculcan-1895",
       "dieseldorff-tolteken-1896",
+      "dieseldorff-gegenstaende-guatemala-1893",
+      "dieseldorff-bemaltes-thongefaess-chama-1894",
+      "dieseldorff-vampyrkoepfige-gottheit-1894",
+      "dieseldorff-neue-ausgrabungen-chajcar-1895",
+      "dieseldorff-two-vases-chama-1904",
+      "dieseldorff-jadeit-schmuck-1905",
+      "dieseldorff-klassifizierung-funde-1909",
+      "dieseldorff-tzultaca-mam-1926",
+      "dieseldorff-kekchi-will-1583-1932",
+      "dieseldorff-cauac-thunderbolt-signs-1932",
+      "dieseldorff-arqueologia-alta-verapaz-1936",
+      "dieseldorff-calendario-maya-quirigua-1936",
+      "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
+      "dieseldorff-causa-calendario-quirigua-1940",
+      "schellhas-virchow-deformierter-schaedel-ulpan-1894",
+      "virchow-graeberschaedel-guatemala-1897",
       "perigny-ruines-nacun-1906",
       "perigny-exploration-yucatan-1906",
       "lemoine-travers-peten-yucatan-1906",
@@ -108,8 +124,6 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "perigny-ruines-rio-bec-1909",
       "perigny-villes-mortes-amerique-centrale-1909",
       "morelet-exploration-guatemala-1850",
-      "morelet-testacea-novissima-pars-i-1849",
-      "morelet-testacea-novissima-pars-ii-1851",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -144,18 +158,6 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     moreletCommittee.publications.map((item) => item.slug),
     ["morelet-exploration-guatemala-1850"],
-  );
-  const morelet = shortPublicationAuthors.find(
-    (author) => author.key === "arthur-morelet",
-  );
-  assert.ok(morelet);
-  assert.equal(morelet.name, "ピエール＝マリー＝アルテュール・モルレ");
-  assert.deepEqual(
-    morelet.publications.map((item) => item.slug),
-    [
-      "morelet-testacea-novissima-pars-i-1849",
-      "morelet-testacea-novissima-pars-ii-1851",
-    ],
   );
   const committee = shortPublicationAuthors.find(
     (author) => author.key === "societe-de-geographie-committee",
@@ -337,8 +339,8 @@ test("second approved Galindo batch remains individually catalogued", () => {
 test("Morelet natural-history publications retain their approved scope and provider terms", () => {
   const expected = new Map([
     ["morelet-exploration-guatemala-1850", [5, "short-work"]],
-    ["morelet-testacea-novissima-pars-i-1849", [23, "short-work"]],
-    ["morelet-testacea-novissima-pars-ii-1851", [21, "short-work"]],
+    ["morelet-testacea-novissima-pars-i-1849", [23, "major-work"]],
+    ["morelet-testacea-novissima-pars-ii-1851", [21, "major-work"]],
   ]);
   for (const [slug, [pageCount, recordClass]] of expected) {
     const item = publications.find((publication) => publication.slug === slug);
@@ -445,8 +447,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">82<\/strong>件/);
-  assert.match(html, /id="paper-match-count">41<\/strong>件/);
+  assert.match(html, /id="book-match-count">86<\/strong>件/);
+  assert.match(html, /id="paper-match-count">55<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');
@@ -504,9 +506,6 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /id="author-juan-galindo"/);
   assert.match(html, /フアン・ガリンド/);
   assert.match(html, />11篇</);
-  assert.match(html, /id="author-arthur-morelet"/);
-  assert.match(html, /ピエール＝マリー＝アルテュール・モルレ/);
-  assert.match(html, />2篇</);
   const shortPanel = html.slice(
     html.indexOf('id="short-works" role="tabpanel"'),
     html.indexOf('<section class="about" id="about">'),

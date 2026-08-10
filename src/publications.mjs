@@ -4195,6 +4195,502 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "dieseldorff-gegenstaende-guatemala-1893",
+    title: "グアテマラの資料",
+    originalTitle: "Gegenstände aus Guatemala",
+    subtitle: "1893年刊・原刊275–277頁・編集部導入・図1 日本語全訳",
+    author:
+      "エドゥアルト・ゼーラー（E・P・ディースルドルフ／K・ザッパー収集資料）",
+    series: "GEGENSTÄNDE AUS GUATEMALA · ZEITSCHRIFT FÜR ETHNOLOGIE · 1893",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第25巻、1893年、275–277頁",
+    year: 1893,
+    extent: "PDF 5頁・原刊275–277頁・図1点",
+    description:
+      "ディースルドルフとカール・ザッパーがコバン周辺で収集・発掘した考古資料を、エドゥアルト・ゼーラーがベルリン人類学会で紹介した短報。編集部導入、資料記載、供献鉢の挿図と図注を省略なく訳しています。",
+    cover: "publications/dieseldorff-gegenstaende-guatemala-1893/cover.jpg",
+    pdf:
+      "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.epub",
+    pageCount: 5,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["考古学報告", "資料紹介", "学会会報"],
+    regions: ["コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "収集資料", "供献鉢", "カール・ザッパー", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-bemaltes-thongefaess-chama-1894",
+    title: "チャマの墓から出た人物図像入り彩色土器",
+    originalTitle:
+      "Ein bemaltes Thongefäss mit figürlichen Darstellungen aus einem Grabe von Chamá",
+    subtitle:
+      "1894年刊・原刊372–377頁・図1–15・図版VIII・シェルハス付言 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series:
+      "EIN BEMALTES THONGEFÄSS AUS CHAMÁ · ZEITSCHRIFT FÜR ETHNOLOGIE · 1894",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第26巻、1894年、372–377頁、図版VIII",
+    year: 1894,
+    extent: "PDF 10頁・原刊372–377頁・本文図15点・図版1葉",
+    description:
+      "チャマの墓から出土した人物場面入り彩色土器を記載し、衣装、供犠、神格、ヒエログリフを比較した考古学論文。編集部導入、本文、図1–15、図版VIII、パウル・シェルハスの付加発言を省略なく訳しています。",
+    cover:
+      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/cover.jpg",
+    pdf:
+      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.epub",
+    pageCount: 10,
+    figureCount: 15,
+    plateCount: 1,
+    types: ["考古学論文", "図像研究", "学会会報"],
+    regions: ["チャマ", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "彩色土器", "人物図像", "ヒエログリフ", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-vampyrkoepfige-gottheit-1894",
+    title: "吸血鬼頭の神を描いた土器",
+    originalTitle:
+      "Ein Thongefäss mit Darstellung einer vampyrköpfigen Gottheit",
+    subtitle: "1894年刊・原刊576–577頁・本文・図版XIII 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series:
+      "VAMPYRKÖPFIGE GOTTHEIT · ZEITSCHRIFT FÜR ETHNOLOGIE · 1894",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第26巻、1894年、576–577頁、図版XIII",
+    year: 1894,
+    extent: "PDF 3頁・原刊576–577頁・図版1葉",
+    description:
+      "チャマの神殿丘で副葬品として発見された円筒形土器の吸血鬼神図像を、衣装、死神、コウモリ神、文字標識から検討した短篇。編集部導入、報告本文、図版XIIIを収録しています。",
+    cover:
+      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/cover.jpg",
+    pdf:
+      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 1,
+    types: ["考古学論文", "図像研究", "学会会報"],
+    regions: ["チャマ", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "彩色土器", "コウモリ神", "神格図像", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-neue-ausgrabungen-chajcar-1895",
+    title: "グアテマラ、チャフカルにおけるディースルドルフ氏の新発掘",
+    originalTitle:
+      "Neue Ausgrabungen des Hrn. Dieseldorff in Chajcar, Guatemala",
+    subtitle: "1895年刊・原刊320–323頁・発掘報告・付加発言 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ／パウル・シェルハス",
+    series:
+      "NEUE AUSGRABUNGEN IN CHAJCAR · ZEITSCHRIFT FÜR ETHNOLOGIE · 1895",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第27巻、1895年、320–323頁",
+    year: 1895,
+    extent: "PDF 5頁・原刊320–323頁・図版なし",
+    description:
+      "チャフカルでの墳丘墓発掘、埋葬姿勢、副葬土器、石器、顔料を記録したディースルドルフの報告を、パウル・シェルハスが学会へ紹介した会議録項目。導入、発掘報告、付加発言を省略なく訳しています。",
+    cover:
+      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/cover.jpg",
+    pdf:
+      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.epub",
+    pageCount: 5,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["発掘報告", "考古学報告", "学会会報"],
+    regions: ["チャフカル", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "墳丘墓", "副葬品", "パウル・シェルハス", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-two-vases-chama-1904",
+    title: "チャマ出土の二つの土器",
+    originalTitle: "Two Vases from Chama",
+    subtitle:
+      "1904年刊・原刊635–666頁・本文図130–134・図版XLVIII–XLIX 日本語全訳",
+    author:
+      "E・P・ディースルドルフ、エドゥアルト・ゼーラー、エルンスト・フェルステマン",
+    series: "TWO VASES FROM CHAMA · BAE BULLETIN 28 · 1904",
+    originalPublication:
+      "ワシントン、Bureau of American Ethnology Bulletin 28、1904年、635–666頁、図版XLVIII–XLIX",
+    year: 1904,
+    extent: "PDF 31頁・原刊635–666頁・本文図5点・図版2葉",
+    description:
+      "チャマ出土の二つの彩色土器をめぐるディースルドルフの二報、シェルハスの付記、フェルステマンとゼーラーの暦・文字・図像研究をまとめた英訳篇。標題、目次、本文、図130–134、図版XLVIII–XLIXを収録しています。",
+    cover: "publications/dieseldorff-two-vases-chama-1904/cover.jpg",
+    pdf:
+      "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.epub",
+    pageCount: 31,
+    figureCount: 5,
+    plateCount: 2,
+    types: ["考古学論文", "図像研究", "論文集所収篇"],
+    regions: ["チャマ", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["英語"],
+    tags: ["マヤ考古学", "彩色土器", "マヤ文字", "暦", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-jadeit-schmuck-1905",
+    title: "マヤ諸民族の翡翠輝石その他の装身具",
+    originalTitle: "Jadeit- und anderer Schmuck der Mayavölker",
+    subtitle: "1905年刊・原刊408–411頁・本文図12点 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series:
+      "JADEIT- UND ANDERER SCHMUCK · ZEITSCHRIFT FÜR ETHNOLOGIE · 1905",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第37巻、1905年、408–411頁",
+    year: 1905,
+    extent: "PDF 6頁・原刊408–411頁・本文図12点",
+    description:
+      "マヤ地域の翡翠輝石、石製・貝製・骨製装身具を形態と用途から整理し、耳飾り、鼻飾り、胸飾りなどを比較した短報。カール・フォン・デン・シュタイネンの導入、本文、図12点と図注を収録しています。",
+    cover: "publications/dieseldorff-jadeit-schmuck-1905/cover.jpg",
+    pdf:
+      "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 12,
+    plateCount: 0,
+    types: ["考古学論文", "遺物研究", "学会会報"],
+    regions: ["アルタ・ベラパス", "グアテマラ", "マヤ地域"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "翡翠輝石", "装身具", "石製品", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-klassifizierung-funde-1909",
+    title: "グアテマラ北部における考古学的発見の分類",
+    originalTitle:
+      "Klassifizierung seiner archäologischen Funde im nördlichen Guatemala",
+    subtitle: "1909年刊・原刊862–874頁・資料写真1–99 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series:
+      "KLASSIFIZIERUNG ARCHÄOLOGISCHER FUNDE · ZEITSCHRIFT FÜR ETHNOLOGIE · 1909",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第41巻、1909年、862–874頁",
+    year: 1909,
+    extent: "PDF 15頁・原刊862–874頁・資料写真99点",
+    description:
+      "グアテマラ北部で得た土器・石器・彫像・装身具を地域、様式、技法、推定年代から分類した講演論文。講演本文、資料写真1–99、図注を収録し、歴史的な文化段階論も原著の言説として保持しています。",
+    cover: "publications/dieseldorff-klassifizierung-funde-1909/cover.jpg",
+    pdf:
+      "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.epub",
+    pageCount: 15,
+    figureCount: 99,
+    plateCount: 0,
+    types: ["考古学論文", "遺物分類", "学会会報"],
+    regions: ["グアテマラ北部", "アルタ・ベラパス", "ペテン", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ考古学", "遺物分類", "土器", "石器", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-tzultaca-mam-1926",
+    title: "ツルタカとマム――マヤ宗教の主要神",
+    originalTitle:
+      "El Tzultacá y el Mam, los dioses prominentes de la religión Maya",
+    subtitle: "1926年刊・原刊378–386頁・講演本文・写真3点 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "EL TZULTACÁ Y EL MAM · ANALES DE GUATEMALA · 1926",
+    originalPublication:
+      "グアテマラ、『Anales de la Sociedad de Geografía e Historia de Guatemala』第2巻第4号、1926年、378–386頁",
+    year: 1926,
+    extent: "PDF 11頁・原刊378–386頁・写真3点",
+    description:
+      "ケクチの山谷神ツルタカとマムを、同時代の儀礼、口承、土器・石碑図像から論じた1925年講演の刊行版。講演本文、写真3点、原図注を省略なく訳しています。",
+    cover: "publications/dieseldorff-tzultaca-mam-1926/cover.jpg",
+    pdf:
+      "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.epub",
+    pageCount: 11,
+    figureCount: 3,
+    plateCount: 0,
+    types: ["宗教研究", "民族誌", "講演記録"],
+    regions: ["アルタ・ベラパス", "グアテマラ", "マヤ地域"],
+    languages: ["スペイン語"],
+    tags: ["ツルタカ", "マム", "ケクチ", "マヤ宗教", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-kunst-religion-band-i-1926",
+    title: "古代および現代中央アメリカのマヤ諸民族の芸術と宗教",
+    originalTitle:
+      "Kunst und Religion der Mayavölker im alten und heutigen Mittelamerika",
+    subtitle: "1926年単行本初版・本文45頁・図239点・図版53葉 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "KUNST UND RELIGION DER MAYAVÖLKER · BAND I · 1926",
+    originalPublication: "ベルリン、Julius Springer、1926年",
+    year: 1926,
+    extent: "PDF 106頁・原刊本文45頁・図239点・図版53葉",
+    description:
+      "古代の土器・彫刻・絵文書と、近現代ケクチ社会の宗教実践を比較し、マヤの神格、儀礼、暦、病因観、芸術表現を総合的に論じた単行本。献辞、本文、注、図239点、図版53葉、図注を省略なく収録しています。",
+    cover:
+      "publications/dieseldorff-kunst-religion-band-i-1926/cover.jpg",
+    pdf:
+      "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
+    pageCount: 106,
+    figureCount: 239,
+    plateCount: 53,
+    types: ["考古学書", "宗教研究", "図像研究", "民族誌"],
+    regions: ["中央アメリカ", "マヤ地域", "グアテマラ", "アルタ・ベラパス"],
+    languages: ["ドイツ語"],
+    tags: ["マヤ芸術", "マヤ宗教", "ケクチ", "図像学", "暦", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-kunst-religion-band-ii-1931",
+    title: "マヤ諸民族の芸術と宗教 II――コパンの記念物",
+    originalTitle: "Kunst und Religion der Mayavölker II: Die Copaner Denkmäler",
+    subtitle: "1931年単行本初版・本文46頁・本文図11点・図版24葉 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "KUNST UND RELIGION DER MAYAVÖLKER · BAND II · 1931",
+    originalPublication: "ベルリン、Julius Springer、1931年",
+    year: 1931,
+    extent: "PDF 83頁・原刊本文46頁・図38点・図版24葉",
+    description:
+      "コパンの石碑・祭壇・神殿彫刻を、暦、天文学、神格、方位、王権表象から体系的に解釈した第二巻。表紙、標題紙、献辞、本文、訂正、本文図11点、図版24葉上の図27点、図注を収録しています。",
+    cover:
+      "publications/dieseldorff-kunst-religion-band-ii-1931/cover.jpg",
+    pdf:
+      "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.epub",
+    pageCount: 83,
+    figureCount: 38,
+    plateCount: 24,
+    types: ["考古学書", "記念物研究", "図像研究", "暦研究"],
+    regions: ["コパン", "ホンジュラス", "マヤ地域", "中央アメリカ"],
+    languages: ["ドイツ語"],
+    tags: ["コパン遺跡", "マヤ文字", "マヤ暦", "天文学", "石碑", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-kekchi-will-1583-1932",
+    title: "1583年のケクチ語遺言書",
+    originalTitle: "A Kekchi Will of 1583",
+    subtitle:
+      "1932年刊・原刊65–68頁・1583年写本・現代ケクチ語・英訳・編者注 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "A KEKCHI WILL OF 1583 · THE MAYA SOCIETY QUARTERLY · 1932",
+    originalPublication:
+      "『The Maya Society Quarterly』第1巻第2号、1932年3月、65–68頁",
+    year: 1932,
+    extent: "PDF 6頁・原刊65–68頁・図版なし",
+    description:
+      "1583年のケクチ語遺言書を、原綴りの翻刻、当時の現代ケクチ語による書き換え、英訳、解説とともに刊行した史料紹介。特殊字形と異綴りを保持し、W・Gの編者注まで収録しています。",
+    cover: "publications/dieseldorff-kekchi-will-1583-1932/cover.jpg",
+    pdf:
+      "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["言語資料", "遺言書", "史料紹介"],
+    regions: ["アルタ・ベラパス", "グアテマラ"],
+    languages: ["英語", "ケクチ語"],
+    tags: ["ケクチ語", "1583年", "遺言書", "植民地期文書", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-cauac-thunderbolt-signs-1932",
+    title: "カウアクと雷電記号についての補足資料",
+    originalTitle:
+      "Further Data on the Cauac and Thunderbolt Signs（“Glyph Studies” 所収）",
+    subtitle: "1932年刊・原刊68–70頁・編集者導入・書簡抄・論評 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ（書簡）／W・ゲイツ（編集・論評）",
+    series: "CAUAC AND THUNDERBOLT SIGNS · THE MAYA SOCIETY QUARTERLY · 1932",
+    originalPublication:
+      "『The Maya Society Quarterly』第1巻第2号、1932年3月、68–70頁",
+    year: 1932,
+    extent: "PDF 4頁・原刊68–70頁・図版なし",
+    description:
+      "ディースルドルフがコバンから送った書簡のうち、カウアク、雷電記号、ケクチ暦に関する二箇所を、W・ゲイツが導入と論評を添えて掲載した文字研究資料。編集者の挿入評を含む収録範囲を全訳しています。",
+    cover:
+      "publications/dieseldorff-cauac-thunderbolt-signs-1932/cover.jpg",
+    pdf:
+      "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.epub",
+    pageCount: 4,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["文字研究", "書簡", "編集論評"],
+    regions: ["コバン", "アルタ・ベラパス", "グアテマラ", "マヤ地域"],
+    languages: ["英語"],
+    tags: ["マヤ文字", "カウアク", "雷電記号", "ケクチ暦", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-arqueologia-alta-verapaz-1936",
+    title: "アルタ・ベラパスの考古学とマヤ研究の諸問題",
+    originalTitle:
+      "La arqueología de la Alta Verapaz y los problemas de los estudios mayas",
+    subtitle: "1936年刊・原刊183–191頁・本文・写真5点・原注 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "ARQUEOLOGÍA DE LA ALTA VERAPAZ · ANALES DE GUATEMALA · 1936",
+    originalPublication:
+      "グアテマラ、『Anales de la Sociedad de Geografía e Historia de Guatemala』第13巻第2号、1936年、183–191頁",
+    year: 1936,
+    extent: "PDF 12頁・原刊183–191頁・写真5点",
+    description:
+      "アルタ・ベラパスの地理的位置と出土資料を手掛かりに、マヤ文化の地域関係、年代、暦相関、考古資料保存を論じた研究。本文、写真5点、図注、原注を省略なく収録しています。",
+    cover:
+      "publications/dieseldorff-arqueologia-alta-verapaz-1936/cover.jpg",
+    pdf:
+      "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.epub",
+    pageCount: 12,
+    figureCount: 5,
+    plateCount: 0,
+    types: ["考古学論文", "地域研究", "学会誌記事"],
+    regions: ["アルタ・ベラパス", "コバン", "グアテマラ", "マヤ地域"],
+    languages: ["スペイン語"],
+    tags: ["マヤ考古学", "文化編年", "暦相関", "文化財保存", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-calendario-maya-quirigua-1936",
+    title: "キリグアのマヤ暦",
+    originalTitle: "El Calendario Maya de Quiriguá",
+    subtitle: "1936年刊・原刊272–277頁・講演本文・計算一覧 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "EL CALENDARIO MAYA DE QUIRIGUÁ · ANALES DE GUATEMALA · 1936",
+    originalPublication:
+      "グアテマラ、『Anales de la Sociedad de Geografía e Historia de Guatemala』第12巻第3号、1936年、272–277頁",
+    year: 1936,
+    extent: "PDF 7頁・原刊272–277頁・計算一覧・図版なし",
+    description:
+      "キリグア記念物の長期暦日付と天文周期を比較し、マヤ暦の起点と相関を論じた1935年公開講演の刊行版。講演本文と末尾の計算一覧を省略なく収録しています。",
+    cover:
+      "publications/dieseldorff-calendario-maya-quirigua-1936/cover.jpg",
+    pdf:
+      "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["暦研究", "講演記録", "学会誌記事"],
+    regions: ["キリグア", "イサバル", "グアテマラ", "マヤ地域"],
+    languages: ["スペイン語"],
+    tags: ["マヤ暦", "キリグア遺跡", "長期暦", "天文学", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
+    title: "アルタ・ベラパス県の薬用植物",
+    originalTitle: "Las plantas medicinales del departamento de Alta Verapaz",
+    subtitle: "1939–1940年刊・原刊2回連載・植物図48点 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "PLANTAS MEDICINALES DE ALTA VERAPAZ · ANALES DE GUATEMALA · 1939–1940",
+    originalPublication:
+      "グアテマラ、『Anales de la Sociedad de Geografía e Historia de Guatemala』第16巻第2–3号、1939–1940年、92–105頁・192–206頁",
+    year: 1939,
+    extent: "PDF 33頁・原刊計29頁・植物図48点",
+    description:
+      "アルタ・ベラパスで用いられた薬用植物を、現地名、学名、形態、採取法、調製法、用途とともに記録した二回連載。第一部・続篇・結篇、パブロ・ヴィルジングらによる植物図48点、図注を収録しています。",
+    cover:
+      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/cover.jpg",
+    pdf:
+      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.epub",
+    pageCount: 33,
+    figureCount: 48,
+    plateCount: 0,
+    types: ["民族植物学", "薬用植物誌", "学会誌記事"],
+    regions: ["アルタ・ベラパス", "グアテマラ"],
+    languages: ["スペイン語"],
+    tags: ["薬用植物", "民族植物学", "ケクチ", "民間療法", "植物図", "一次史料"],
+  },
+  {
+    slug: "dieseldorff-causa-calendario-quirigua-1940",
+    title: "キリグアのマヤ人が紀元前3373年9月22日に暦を開始した理由",
+    originalTitle:
+      "La causa por la cual los Mayas de Quiriguá comenzaron su calendario en 22 de septiembre del año 3373 A. J. C.",
+    subtitle: "1940年刊・原刊271–279頁・講演本文・ヒエログリフ図A1–E7 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "CAUSA DEL CALENDARIO DE QUIRIGUÁ · ANALES DE GUATEMALA · 1940",
+    originalPublication:
+      "グアテマラ、『Anales de la Sociedad de Geografía e Historia de Guatemala』第16巻第4号、1940年、271–279頁",
+    year: 1940,
+    extent: "PDF 11頁・原刊271–279頁・ヒエログリフ図A1–E7",
+    description:
+      "キリグアのマヤ暦起点を紀元前3373年9月22日とする著者の相関説を、長期暦、太陽・月周期、ヒエログリフ配置から説明した講演論文。本文、計算、複合図A1–E7と図注を収録しています。",
+    cover:
+      "publications/dieseldorff-causa-calendario-quirigua-1940/cover.jpg",
+    pdf:
+      "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.epub",
+    pageCount: 11,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["暦研究", "文字研究", "講演記録"],
+    regions: ["キリグア", "イサバル", "グアテマラ", "マヤ地域"],
+    languages: ["スペイン語"],
+    tags: ["マヤ暦", "キリグア遺跡", "マヤ文字", "天文学", "一次史料"],
+  },
+  {
+    slug: "schellhas-virchow-deformierter-schaedel-ulpan-1894",
+    title: "グアテマラ、コバン近郊ウルパンの変形頭蓋",
+    originalTitle: "Deformirter Schädel von Ulpan bei Coban, Guatemala",
+    subtitle: "1894年刊・原刊424–425頁・シェルハス導入・ヴィルヒョウ報告 日本語全訳",
+    author: "パウル・シェルハス、ルドルフ・ヴィルヒョウ",
+    series: "DEFORMIRTER SCHÄDEL VON ULPAN · ZEITSCHRIFT FÜR ETHNOLOGIE · 1894",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第26巻、1894年、424–425頁",
+    year: 1894,
+    extent: "PDF 3頁・原刊424–425頁・図版なし",
+    description:
+      "ディースルドルフがウルパンで発掘した頭蓋について、パウル・シェルハスが来歴を紹介し、ルドルフ・ヴィルヒョウが変形と形態所見を報告した会議録項目。導入と報告を省略なく収録しています。",
+    cover:
+      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/cover.jpg",
+    pdf:
+      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["形質人類学", "資料報告", "学会会報"],
+    regions: ["ウルパン", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["変形頭蓋", "ルドルフ・ヴィルヒョウ", "パウル・シェルハス", "発掘資料", "一次史料"],
+  },
+  {
+    slug: "virchow-graeberschaedel-guatemala-1897",
+    title: "グアテマラの墓葬頭蓋",
+    originalTitle: "Gräberschädel von Guatemala",
+    subtitle: "1897年刊・原刊324–328頁・計測資料・本文図1–2 日本語全訳",
+    author: "ルドルフ・ヴィルヒョウ",
+    series: "GRÄBERSCHÄDEL VON GUATEMALA · ZEITSCHRIFT FÜR ETHNOLOGIE · 1897",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第29巻、1897年、324–328頁",
+    year: 1897,
+    extent: "PDF 8頁・原刊324–328頁・本文図2点",
+    description:
+      "ディースルドルフがコバン近郊の墳丘墓から採集した複数の頭蓋を、復元状態、人工変形、縫合、計測値から記載したヴィルヒョウの資料報告。会議録本文、列挙資料、図1–2と図注を収録しています。",
+    cover: "publications/virchow-graeberschaedel-guatemala-1897/cover.jpg",
+    pdf:
+      "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.epub",
+    pageCount: 8,
+    figureCount: 2,
+    plateCount: 0,
+    types: ["形質人類学", "資料報告", "学会会報"],
+    regions: ["コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: ["変形頭蓋", "ルドルフ・ヴィルヒョウ", "人骨計測", "墳丘墓", "一次史料"],
+  },
+  {
     slug: "romero-bosquejo-chiapas-soconusco-1877",
     title:
       "チアパスおよびソコヌスコのメキシコ編入史概説：メキシコと中央アメリカ・グアテマラとの国境交渉",
@@ -4211,7 +4707,7 @@ const publicationRecords = [
       "PDF 1,568頁・原刊前付i–xxiv頁・本文3–798頁・全3部43章・表10点・原刊標題紙1点・正誤表",
     description:
       "チアパスおよびソコヌスコのメキシコ編入と、メキシコ・中央アメリカ・グアテマラ間の国境交渉を、1821年から1831年までの公文書・議事録・外交往復文書によって検証したマティアス・ロメロの大部な史料集。1877年刊第I巻の前付、本文全3部43章、原注、人口表・投票表、正誤表を省略なく訳しています。",
-    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",
+    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
     pdf:
       "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
     epub:
@@ -4409,6 +4905,23 @@ const publicationRecords = [
 const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
 
+const gettyArchiveRights =
+  "原刊本文はパブリックドメインです。Getty Libraryは、項目別のUse Restrictionsの確認、非パブリックドメイン画像の個人研究・非商用利用または米国法上のフェアユース以外の公開利用に対する申請、必要な第三者許諾の確認を利用者に求めています。当該Internet Archive項目に個別ライセンスまたはUse Restrictions表示はありません。閲覧可能であることを底本画像の転載・改変許諾とは扱いません。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const robartsArchiveRights =
+  "原刊本文はパブリックドメインです。当該Internet Archive項目には、Robarts LibraryまたはUniversity of Toronto Librariesによる個別の再利用条件、Creative Commonsライセンス、その他の転載・改変許諾が表示されていません。閲覧・ダウンロードできることを底本画像の包括的な再利用許諾とは扱いません。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const googleArchiveRights =
+  "原刊本文はパブリックドメインです。Googleがデジタル複製に付した利用指針は、個人的・非商業的利用、自動照会の回避、Google表示の保持、利用地での適法性確認を求めています。当該Internet Archive項目に追加の個別ライセンスは表示されていません。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const newberryArchiveRights =
+  "原刊本文はパブリックドメインです。Newberry LibraryのOpen Access Policyは、合法な目的であれば商用・非商用を問わず同館への許諾料・ライセンス料なしで所蔵資料の複製を利用可能とする一方、パブリックドメイン、著作権、フェアユースその他の制限の確認と利用責任を利用者に課しています。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const iaCcByNcNdRights =
+  "原刊本文はパブリックドメインです。Internet Archiveの当該底本項目にはCC BY-NC-ND 4.0が表示され、クレジット表示、非商用、改変物の配布禁止が条件とされています。この項目表示と原著そのものの権利状態は区別して記録しています。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const springerArchiveRights =
+  "著者エルヴィン・P・ディースルドルフは1940年没であり、原著の保護状況は利用地域によって異なりえます。Springer Nature Linkは電子版を購読コンテンツのプレビューとして提供し、全体へのアクセスに機関契約・ログインまたは購入を案内し、再利用はReprints and Permissions手続で確認する方式です。公開機関の表示条件と原著そのものの権利状態を区別して記録しています。日本語翻訳版には再利用ライセンスを設定していません。";
 const JapaneseEditionNoReuseRights =
   "日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。";
 
@@ -5694,6 +6207,194 @@ const publicationMetadata = {
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
+  "dieseldorff-gegenstaende-guatemala-1893": {
+    sourceEdition:
+      "Eduard Seler「Gegenstände aus Guatemala」『Zeitschrift für Ethnologie』Bd. 25（Berlin、1893年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 275–277。E. P. DieseldorffおよびKarl Sapperの収集・発掘資料を扱う。",
+    sourceProvider:
+      "Getty Research Institute（Getty Library）所蔵本をInternet Archiveが公開した第25巻スキャン（identifier: zeitschriftfuret2518unse）を底本とし、原刊275–277頁と供献鉢の挿図を誌面画像・OCRで照合した。GettyのReproductions & Permissionsは項目別のUse Restrictionsと必要な第三者許諾の確認を利用者に求め、当該項目には個別ライセンス表示がない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfuret2518unse",
+    rights: gettyArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-bemaltes-thongefaess-chama-1894": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Ein bemaltes Thongefäss mit figürlichen Darstellungen aus einem Grabe von Chamá」『Zeitschrift für Ethnologie』Bd. 26（Berlin、1894年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 372–377, Tafel VIII。Paul Schellhasの付加発言を伴う。",
+    sourceProvider:
+      "Robarts Library（University of Toronto Libraries）所蔵本をInternet Archiveが公開した第26巻スキャン（identifier: zeitschriftfre26berluoft）を底本とし、原刊372–377頁、本文図1–15、図版VIIIを照合した。当該項目には同館による個別の再利用条件やCreative Commonsライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfre26berluoft",
+    rights: robartsArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-vampyrkoepfige-gottheit-1894": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Ein Thongefäss mit Darstellung einer vampyrköpfigen Gottheit」『Zeitschrift für Ethnologie』Bd. 26（Berlin、1894年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 576–577, Tafel XIII。",
+    sourceProvider:
+      "Robarts Library（University of Toronto Libraries）所蔵本をInternet Archiveが公開した第26巻スキャン（identifier: zeitschriftfre26berluoft）を底本とし、原刊576–577頁と図版XIIIを照合した。当該項目には同館による個別の再利用条件やCreative Commonsライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfre26berluoft",
+    rights: robartsArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-neue-ausgrabungen-chajcar-1895": {
+    sourceEdition:
+      "Paul Schellhas「Neue Ausgrabungen des Hrn. Dieseldorff in Chajcar, Guatemala」Erwin P. Dieseldorffの発掘報告を収録、『Zeitschrift für Ethnologie』Bd. 27（Berlin、1895年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 320–323。",
+    sourceProvider:
+      "Google Booksが図書館蔵書をデジタル化し、Internet Archiveが公開した第27巻スキャン（identifier: zeitschriftfure25urgegoog）を底本とした。Googleの利用指針は個人的・非商業的利用、Google表示の保持、利用地での適法性確認を求め、当該Internet Archive項目に追加ライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfure25urgegoog",
+    rights: googleArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-two-vases-chama-1904": {
+    sourceEdition:
+      "E. P. Dieseldorff, Eduard Seler, Ernst Förstemann「Two Vases from Chama」Charles P. Bowditch編『Mexican and Central American Antiquities, Calendar Systems, and History: Twenty-four Papers』Bureau of American Ethnology, Bulletin 28（Washington: Government Printing Office、1904年）pp. 635–666, pls. XLVIII–XLIX。英訳者Selma Wesselhoeft、Alberta M. Parker。",
+    sourceProvider:
+      "Library of Congress Jay I. Kislak Reference Collection所蔵本をInternet Archiveが公開したスキャン（identifier: mexicancentralam00bowd）を底本とし、標題・目次、本文、図130–134、図版XLVIII–XLIXを照合した。Library of Congressはサイト閲覧とサイト外再利用を区別し、Rights and Access、Rights Advisory、適用法の確認を利用者の責任としている。当該項目に個別ライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/mexicancentralam00bowd",
+    rights:
+      "1904年原著および英訳はパブリックドメインです。Library of Congressは通常、掲載資料の著作権を所有せず利用許可を与えられないため、項目別の権利表示と適用法の確認を利用者に求めています。当該Internet Archive項目に個別ライセンスはありません。閲覧可能であることを底本画像の転載・改変許諾とは扱いません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-jadeit-schmuck-1905": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Jadeit- und anderer Schmuck der Mayavölker」『Zeitschrift für Ethnologie』Bd. 37（Berlin、1905年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 408–411, 12 Textfiguren。Karl von den Steinenが通信を紹介した報告。",
+    sourceProvider:
+      "Getty Research Institute（Getty Library）所蔵本をInternet Archiveが公開した第37巻スキャン（identifier: zeitschriftfuret3719unse）を底本とし、原刊408–411頁と図12点を照合した。GettyのReproductions & Permissionsは項目別のUse Restrictionsと必要な第三者許諾の確認を利用者に求め、当該項目には個別ライセンス表示がない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfuret3719unse",
+    rights: gettyArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-klassifizierung-funde-1909": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Klassifizierung seiner archäologischen Funde im nördlichen Guatemala」『Zeitschrift für Ethnologie』Bd. 41（Berlin、1909年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 862–874, figs. 1–99。",
+    sourceProvider:
+      "Internet Archiveがマイクロフィルム複製として公開する第41巻（identifier: zeitschrift-fuer-ethnologie_1909_41）を底本とし、原刊862–874頁、資料写真1–99を照合した。項目メタデータはcontributorをInternet Archiveとするのみで所蔵・提供図書館を特定せず、個別の再利用ライセンスも表示していない。",
+    sourceUrl:
+      "https://archive.org/details/zeitschrift-fuer-ethnologie_1909_41",
+    rights:
+      "1909年原刊本文はパブリックドメインです。当該Internet Archive項目は所蔵・提供図書館を特定せず、個別の再利用ライセンスを表示していません。公開閲覧・ダウンロードできることを底本画像の包括的な再利用許諾とは扱いません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-tzultaca-mam-1926": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「El Tzultacá y el Mam, los dioses prominentes de la religión Maya」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo II, año II, núm. 4（julio de 1926）pp. 378–386。1925年11月23日の講演。",
+    sourceProvider:
+      "Academia de Geografía e Historia de Guatemala（当時Sociedad de Geografía e Historia de Guatemala）刊行号をInternet Archiveが公開したスキャン（identifier: tomo-ii-anyo-ii-no-4-julio-1926）を底本とし、原刊378–386頁と写真3点を照合した。項目には別の所蔵・提供機関や個別再利用ライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/tomo-ii-anyo-ii-no-4-julio-1926",
+    rights:
+      "1926年原刊本文はパブリックドメインです。当該Internet Archive項目には別の所蔵・提供機関、Creative Commonsライセンス、その他の個別再利用条件が表示されていません。公開閲覧・ダウンロードできることを底本画像の包括的な再利用許諾とは扱いません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-kunst-religion-band-i-1926": {
+    sourceEdition:
+      "E. P. Dieseldorff『Kunst und Religion der Mayavölker im alten und heutigen Mittelamerika』（Berlin: Julius Springer、1926年）。本文45頁、図239点・図版53葉。初出『Zeitschrift für Ethnologie』Bd. 57（1925年）Heft 1/2, pp. 1–45。",
+    sourceProvider:
+      "Springer NatureのSpringer Book Archives所収電子版（DOI: 10.1007/978-3-642-94351-5）を単行本初版の底本とし、雑誌初出本文とも照合した。Springer Nature Linkは購読コンテンツのプレビューと表示し、全文アクセスに機関契約・ログインまたは購入、再利用にReprints and Permissions手続を案内し、書誌上の権利表示を© 1926 Julius Springer, Berlinとしている。",
+    sourceUrl: "https://doi.org/10.1007/978-3-642-94351-5",
+    rights: springerArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-kunst-religion-band-ii-1931": {
+    sourceEdition:
+      "E. P. Dieseldorff『Kunst und Religion der Mayavölker II: Die Copaner Denkmäler』（Berlin: Julius Springer、1931年）。本文46頁、本文図11点、図版24葉上の図27点。初出『Zeitschrift für Ethnologie』Bd. 62（1930年）Heft 1/6, pp. 1–46。",
+    sourceProvider:
+      "Springer NatureのSpringer Book Archives所収電子版（DOI: 10.1007/978-3-642-51329-9）を単行本初版の底本とした。Springer Nature Linkは購読プレビューを表示し、全体へのアクセスに機関契約・ログインまたは購入、再利用にReprints and Permissions手続を案内し、電子版にCopyright 1931 by Julius Springer, Berlinと表示する。",
+    sourceUrl: "https://doi.org/10.1007/978-3-642-51329-9",
+    rights: springerArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-kekchi-will-1583-1932": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「A Kekchi Will of 1583」『The Maya Society Quarterly』vol. I, no. 2（March 1932）pp. 65–67、編者注p. 68。",
+    sourceProvider:
+      "Newberry Library所蔵合冊本をInternet Archiveが公開したスキャン（identifier: Ayer_1_M2）を底本とし、原刊65–68頁を照合した。NewberryのOpen Access Policyは、合法な目的であれば商用・非商用を問わず許諾料・ライセンス料なしで所蔵資料の複製を利用可能とし、権利・フェアユース等の確認を利用者の責任としている。",
+    sourceUrl: "https://archive.org/details/Ayer_1_M2",
+    rights: newberryArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-cauac-thunderbolt-signs-1932": {
+    sourceEdition:
+      "E. P. Dieseldorff書簡抄、W. Gates導入・論評「Glyph Studies」所収『The Maya Society Quarterly』vol. I, no. 2（March 1932）pp. 68–70。",
+    sourceProvider:
+      "Newberry Library Edward E. Ayer Collection所蔵合冊本をInternet Archiveが公開したスキャン（identifier: Ayer_1_M2）を底本とし、書簡資料に属する導入、引用、挿入評、後続論評を照合した。NewberryのOpen Access Policyは、合法な目的であれば商用・非商用を問わず許諾料・ライセンス料なしで所蔵資料の複製を利用可能とし、権利・フェアユース等の確認を利用者の責任としている。",
+    sourceUrl: "https://archive.org/details/Ayer_1_M2",
+    rights: newberryArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-arqueologia-alta-verapaz-1936": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「La arqueología de la Alta Verapaz y los problemas de los estudios mayas」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo XIII, año XIII, núm. 2（diciembre de 1936）pp. 183–191。",
+    sourceProvider:
+      "Internet Archive公開の同号スキャン（identifier: AnalesAGHGTomoXIIIAnyoXIIINo2Diciembre1936）を底本とし、原刊183–191頁、写真5点、原注を照合した。当該項目の公開記録はCC BY-NC-ND 4.0を表示している。",
+    sourceUrl:
+      "https://archive.org/details/AnalesAGHGTomoXIIIAnyoXIIINo2Diciembre1936",
+    rights: iaCcByNcNdRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-calendario-maya-quirigua-1936": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「El Calendario Maya de Quiriguá」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo XII, año XII, núm. 3（marzo de 1936）pp. 272–277。1935年12月14日の公開例会講演。",
+    sourceProvider:
+      "Internet Archive公開の同号スキャン（identifier: AnalesAGHGTomoXIIAnyoXIINo3Marzo1936）を底本とし、原刊272–277頁を照合した。当該項目の公開記録はCC BY-NC-ND 4.0を表示している。",
+    sourceUrl:
+      "https://archive.org/details/AnalesAGHGTomoXIIAnyoXIINo3Marzo1936",
+    rights: iaCcByNcNdRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Las plantas medicinales del departamento de Alta Verapaz」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo XVI, año XVI, núm. 2（diciembre de 1939）pp. 92–105、続篇・結篇núm. 3（marzo de 1940）pp. 192–206。",
+    sourceProvider:
+      "Internet Archive公開の両号スキャン（identifiers: AnalesAGHGTomoXVIAnyoXVINo2Diciembre1939、AnalesAGHGTomoXVIAnyoXVINo3Marzo1940）を底本とし、両部本文と植物図48点を照合した。両項目の公開記録はCC BY-NC-ND 4.0を表示している。",
+    sourceUrl:
+      "https://archive.org/details/AnalesAGHGTomoXVIAnyoXVINo2Diciembre1939",
+    rights: iaCcByNcNdRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "dieseldorff-causa-calendario-quirigua-1940": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「La causa por la cual los Mayas de Quiriguá comenzaron su calendario en 22 de septiembre del año 3373 A. J. C.」『Anales de la Sociedad de Geografía e Historia de Guatemala』tomo XVI, año XVI, núm. 4（junio de 1940）pp. 271–279。1939年7月31日の講演。",
+    sourceProvider:
+      "Internet Archive公開の同号スキャン（identifier: AnalesAGHGTomoXVIAnyoXVINo4Junio1940）を底本とし、原刊271–279頁とヒエログリフ図A1–E7を照合した。当該項目の公開記録はCC BY-NC-ND 4.0を表示している。",
+    sourceUrl:
+      "https://archive.org/details/AnalesAGHGTomoXVIAnyoXVINo4Junio1940",
+    rights: iaCcByNcNdRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "schellhas-virchow-deformierter-schaedel-ulpan-1894": {
+    sourceEdition:
+      "Paul Schellhas, Rudolf Virchow「Deformirter Schädel von Ulpan bei Coban, Guatemala」『Zeitschrift für Ethnologie』Bd. 26（Berlin、1894年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 424–425。E. P. Dieseldorffが発掘した頭蓋を扱う。",
+    sourceProvider:
+      "Robarts Library（University of Toronto Libraries）所蔵本をInternet Archiveが公開した第26巻スキャン（identifier: zeitschriftfre26berluoft）を底本とし、原刊424–425頁を照合した。当該項目には同館による個別の再利用条件やCreative Commonsライセンスは表示されていない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfre26berluoft",
+    rights: robartsArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "virchow-graeberschaedel-guatemala-1897": {
+    sourceEdition:
+      "Rudolf Virchow「Gräberschädel von Guatemala」『Zeitschrift für Ethnologie』Bd. 29（Berlin、1897年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 324–328, figs. 1–2。E. P. Dieseldorffがコバン近郊で採集した頭蓋資料を扱う。",
+    sourceProvider:
+      "Getty Research Institute（Getty Library）所蔵本をInternet Archiveが公開した第29巻スキャン（identifier: zeitschriftfre29berl）を底本とし、原刊324–328頁と本文図1–2を照合した。GettyのReproductions & Permissionsは項目別のUse Restrictionsと必要な第三者許諾の確認を利用者に求め、当該項目には個別ライセンス表示がない。",
+    sourceUrl: "https://archive.org/details/zeitschriftfre29berl",
+    rights: gettyArchiveRights,
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
   "perigny-yucatan-inconnu-geographie-1908": {
     sourceEdition:
       "Maurice de Périgny「Le Yucatan inconnu」『La Géographie』tome 18（Paris、1908年）pp. 227–238。",
@@ -5744,8 +6445,6 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
-  "morelet-testacea-novissima-pars-i-1849": "arthur-morelet",
-  "morelet-testacea-novissima-pars-ii-1851": "arthur-morelet",
   "morelet-exploration-guatemala-1850":
     "arthur-morelet-achille-valenciennes",
   "peniche-relaciones-belice-1869": "manuel-peniche",
@@ -5784,6 +6483,28 @@ const shortWorkAuthorBySlug = {
   "lemoine-travers-peten-yucatan-1906": "frederic-lemoine",
   "perigny-peten-1907": "maurice-de-perigny",
   "perigny-maya-ruins-quintana-roo-1907": "maurice-de-perigny",
+  "dieseldorff-gegenstaende-guatemala-1893":
+    "eduard-seler-dieseldorff-sapper",
+  "dieseldorff-bemaltes-thongefaess-chama-1894": "erwin-p-dieseldorff",
+  "dieseldorff-vampyrkoepfige-gottheit-1894": "erwin-p-dieseldorff",
+  "dieseldorff-neue-ausgrabungen-chajcar-1895":
+    "erwin-dieseldorff-paul-schellhas",
+  "dieseldorff-two-vases-chama-1904":
+    "dieseldorff-seler-foerstemann",
+  "dieseldorff-jadeit-schmuck-1905": "erwin-p-dieseldorff",
+  "dieseldorff-klassifizierung-funde-1909": "erwin-p-dieseldorff",
+  "dieseldorff-tzultaca-mam-1926": "erwin-p-dieseldorff",
+  "dieseldorff-kekchi-will-1583-1932": "erwin-p-dieseldorff",
+  "dieseldorff-cauac-thunderbolt-signs-1932":
+    "dieseldorff-w-gates",
+  "dieseldorff-arqueologia-alta-verapaz-1936": "erwin-p-dieseldorff",
+  "dieseldorff-calendario-maya-quirigua-1936": "erwin-p-dieseldorff",
+  "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940":
+    "erwin-p-dieseldorff",
+  "dieseldorff-causa-calendario-quirigua-1940": "erwin-p-dieseldorff",
+  "schellhas-virchow-deformierter-schaedel-ulpan-1894":
+    "paul-schellhas-rudolf-virchow",
+  "virchow-graeberschaedel-guatemala-1897": "rudolf-virchow",
   "perigny-yucatan-inconnu-1908": "maurice-de-perigny",
   "perigny-maler-discoveries-yucatan-1908": "maurice-de-perigny",
   "perigny-yucatan-inconnu-geographie-1908": "maurice-de-perigny",

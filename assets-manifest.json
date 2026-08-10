@@ -398,6 +398,24 @@
       "sha256": "163963e0eb46b9dd215ecee78b6fad93817dc07f3be76949306b1bf599c07af1"
     },
     {
+      "path": "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.epub",
+      "size": 1720239,
+      "sha256": "59cd9795a62dc196ba4cdd9946791354c59aaafab8cfe692ddc58d2ce983b72b"
+    },
+    {
+      "path": "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.pdf",
+      "size": 1207292,
+      "sha256": "9a92464c09c047ae8f4ef87754012d952d7e7bb18dba4b645b45ee1917fafc89"
+    },
+    {
+      "path": "publications/dieseldorff-arqueologia-alta-verapaz-1936/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-arqueologia-alta-verapaz-1936/cover.jpg",
+      "size": 228817,
+      "sha256": "445962f36a7d15ed4e653f8adf5ade422325404154e479d3ec94c9c01f881d19"
+    },
+    {
       "path": "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
       "size": 1504682,
@@ -414,6 +432,78 @@
       "url": "https://takochanchan.github.io/publications/dieseldorff-ausgrabungen-coban-1893/cover.jpg",
       "size": 171391,
       "sha256": "785d0be7216adb9bc1f5dabf8241ff6d964afc981c37bdc97e269216d35a375d"
+    },
+    {
+      "path": "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.epub",
+      "size": 2829635,
+      "sha256": "4f02cdfa719dff7223cf9014c3afc486ac52bcb1228277ed007dd9b735fefc1a"
+    },
+    {
+      "path": "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.pdf",
+      "size": 967267,
+      "sha256": "e02fc5cb97c0af953a5b0c079f496e1072ce84af57acfc2681870f513feaadda"
+    },
+    {
+      "path": "publications/dieseldorff-bemaltes-thongefaess-chama-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-bemaltes-thongefaess-chama-1894/cover.jpg",
+      "size": 233147,
+      "sha256": "e132adfc8a3f20ffea0cdf027e5e4eb1fd306becb93716e486082d94f9beed92"
+    },
+    {
+      "path": "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.epub",
+      "size": 201341,
+      "sha256": "f84f67b921d4b0d8ec8e18fef98487952761472b43451ee643fc9f74f321df08"
+    },
+    {
+      "path": "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.pdf",
+      "size": 277585,
+      "sha256": "cbcfe02ba71ab3ab5fb92633dfcf2d199f0f62ab6c3d8dd3b93f6fb8db361e33"
+    },
+    {
+      "path": "publications/dieseldorff-calendario-maya-quirigua-1936/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-calendario-maya-quirigua-1936/cover.jpg",
+      "size": 211604,
+      "sha256": "a5cd7b06276b1eb2172fa08b48dc01700f75debb446be374fa94852e7a5475d9"
+    },
+    {
+      "path": "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.epub",
+      "size": 243235,
+      "sha256": "7021fd304e8d84dba1e2fc997abf31876585f077fb6d1d3d8b9a1a43a88a784f"
+    },
+    {
+      "path": "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.pdf",
+      "size": 235791,
+      "sha256": "af9331b928dfc83fa28b34d1281d1475efcd6c82bde712e476b7da20e091ce1c"
+    },
+    {
+      "path": "publications/dieseldorff-cauac-thunderbolt-signs-1932/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-cauac-thunderbolt-signs-1932/cover.jpg",
+      "size": 255119,
+      "sha256": "8c4e66e21d1800bebe9ba52826959c2ac03d724387dfac3d6fa4e073b33d8162"
+    },
+    {
+      "path": "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.epub",
+      "size": 737137,
+      "sha256": "c5a5ed1ad35c91116b36a54df25968135dd4222603e9ded4b5e8130c23a39a9c"
+    },
+    {
+      "path": "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.pdf",
+      "size": 737686,
+      "sha256": "54763346750798409782078c2f568f158ff6d702f9ca07c2bbe05dd63167887d"
+    },
+    {
+      "path": "publications/dieseldorff-causa-calendario-quirigua-1940/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-causa-calendario-quirigua-1940/cover.jpg",
+      "size": 221761,
+      "sha256": "4d224ad2aa404659d1caee1436c3953212467870d9f0763d8065f3be1f6e6792"
     },
     {
       "path": "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
@@ -452,6 +542,150 @@
       "sha256": "2424e1d84e200ae7699928f21925e865a1e15430c7b3917187a4fbb1de10a446"
     },
     {
+      "path": "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.epub",
+      "size": 447678,
+      "sha256": "634d9d58f4915943c1d3fcb008d7dbc7a33199e82baa76f32e68282e7368fe3e"
+    },
+    {
+      "path": "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.pdf",
+      "size": 301230,
+      "sha256": "082b9ec898eaa221826d74e06791c8b6ce23982aacc2135c2a1ffe1687c7f140"
+    },
+    {
+      "path": "publications/dieseldorff-gegenstaende-guatemala-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-gegenstaende-guatemala-1893/cover.jpg",
+      "size": 224211,
+      "sha256": "ee71c6044df3a436c41ad6fa28d1af5c9e625d5fc869d69cd63e0bc67e32ad2e"
+    },
+    {
+      "path": "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.epub",
+      "size": 2345733,
+      "sha256": "19c44b1a8325855aa3171a16905c3832569360f7b08324600df7aea28ac4c115"
+    },
+    {
+      "path": "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.pdf",
+      "size": 794134,
+      "sha256": "2c6826d2d0b13c52f7bcdbc70c66cf0f2a5ff7bbd72ebf743c4957a72003dd3f"
+    },
+    {
+      "path": "publications/dieseldorff-jadeit-schmuck-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-jadeit-schmuck-1905/cover.jpg",
+      "size": 231047,
+      "sha256": "d7715bba1e9d54975a3268f2fddab290d4abd55cbfb5d9b17f3858e14bc69993"
+    },
+    {
+      "path": "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.epub",
+      "size": 225975,
+      "sha256": "9870aaf84f623424687260f507970591bdf3ebd7d16c8c087e50fd425dadae5c"
+    },
+    {
+      "path": "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.pdf",
+      "size": 244941,
+      "sha256": "ae0bc791ac5f7e9754dd884a300fa43f38430f4952d79aa3c1c59ce1faaf8b01"
+    },
+    {
+      "path": "publications/dieseldorff-kekchi-will-1583-1932/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-kekchi-will-1583-1932/cover.jpg",
+      "size": 234416,
+      "sha256": "a24baf9f409b565af1480008c9e62096220918a075b770076115829e40cc526a"
+    },
+    {
+      "path": "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.epub",
+      "size": 2236665,
+      "sha256": "7740a46dd704b013abda577487d310fe8ff28992ca01294f949ebf76203dad7e"
+    },
+    {
+      "path": "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.pdf",
+      "size": 848520,
+      "sha256": "db4fa1e4158af5c6c1cc47be731ba6e3130becabb3ff5c1f77d37184e8588f14"
+    },
+    {
+      "path": "publications/dieseldorff-klassifizierung-funde-1909/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-klassifizierung-funde-1909/cover.jpg",
+      "size": 248446,
+      "sha256": "b4fd8efbdd50b2e853232a54883af35c6b30a60003aae442b7cad05d06cce5de"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
+      "size": 17512694,
+      "sha256": "2b17a8e44c4e3e68e4bc265523122a7c63554c039dc09ca64d9829d76c4f1c16"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
+      "size": 12129367,
+      "sha256": "cb029954ba577b216f69e0f9b502012c0558ab3ed4b6d6a2d15db7cf6d570aba"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-i-1926/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-kunst-religion-band-i-1926/cover.jpg",
+      "size": 245221,
+      "sha256": "3990bdc621fdffbcf11da969a6e4a869adb1eb787a1f652024e3fee19a108537"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.epub",
+      "size": 11078954,
+      "sha256": "58cee39f98404412c377c9f14e1e03639bfe6798a72b38e696c297639b262b2b"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.pdf",
+      "size": 7688127,
+      "sha256": "4c5284e5bd807cc798122cbc45fb306e7121c74f5f166fc482114abec6aa93a2"
+    },
+    {
+      "path": "publications/dieseldorff-kunst-religion-band-ii-1931/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-kunst-religion-band-ii-1931/cover.jpg",
+      "size": 255105,
+      "sha256": "802c351cdb510a71d2f7d2abadb4a798e398628f18d7b70119484007c0ef0786"
+    },
+    {
+      "path": "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.epub",
+      "size": 199554,
+      "sha256": "f243d2f798a800167f335fb962ab13b20f716f281d85bd13e7a919702c85c918"
+    },
+    {
+      "path": "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.pdf",
+      "size": 223717,
+      "sha256": "cfff717e1ef3a43addb099f1298cffe448ae20cbbd86d997d6ebb4627792e59f"
+    },
+    {
+      "path": "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-neue-ausgrabungen-chajcar-1895/cover.jpg",
+      "size": 212752,
+      "sha256": "4ae31e439aa34ba2299c1af38cae985a332b0ec99acbdb5781356381ded4b63f"
+    },
+    {
+      "path": "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.epub",
+      "size": 3884962,
+      "sha256": "e962b75cf9c035937bbc016ea0f0bbb20a369ac95fd0e206b17e443c355a432c"
+    },
+    {
+      "path": "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.pdf",
+      "size": 3322046,
+      "sha256": "736f02cc39417c17c044fe29f19797d86280fb032d34b13e2267011291540dd5"
+    },
+    {
+      "path": "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/cover.jpg",
+      "size": 219492,
+      "sha256": "239454c092b1f19f83cecd5c0076681d90fd3f6602e502c0c06cb5ce51d1a8d3"
+    },
+    {
       "path": "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
       "size": 472444,
@@ -486,6 +720,60 @@
       "url": "https://takochanchan.github.io/publications/dieseldorff-tolteken-1896/cover.jpg",
       "size": 142448,
       "sha256": "2b3af1944e98854361f8d47859002c930eac37af46a494ac516ce17dffc92ab2"
+    },
+    {
+      "path": "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.epub",
+      "size": 2354613,
+      "sha256": "a0e666ed5b4823d9688070e825312125b5b5e5a559792f4f32f6c42b2da9fa52"
+    },
+    {
+      "path": "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.pdf",
+      "size": 2265523,
+      "sha256": "b638439bae1814f2883684fa21e75b09d45d0900703d6a6b407185405a97351f"
+    },
+    {
+      "path": "publications/dieseldorff-two-vases-chama-1904/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-two-vases-chama-1904/cover.jpg",
+      "size": 227744,
+      "sha256": "ae73dc657a67a08c3611060a1c72c1fc2103f7c1b403e465e5a4078978df496f"
+    },
+    {
+      "path": "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.epub",
+      "size": 1116451,
+      "sha256": "a3e7a4cd4534652349e9396ba4d3ea74b25a9f4c37ff4857d8f9ac8a31e486ff"
+    },
+    {
+      "path": "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.pdf",
+      "size": 790665,
+      "sha256": "ad7bc496889171199527dcf851022354188d2f1f0436fc18bfe55326f38085fc"
+    },
+    {
+      "path": "publications/dieseldorff-tzultaca-mam-1926/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-tzultaca-mam-1926/cover.jpg",
+      "size": 234436,
+      "sha256": "e39f8cad5a0a4ce287e47e66cc350f3c05b82bc7a0d0be485a47c6865233ae7c"
+    },
+    {
+      "path": "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.epub",
+      "size": 1554698,
+      "sha256": "1818f91d7101ad80ddb7a6aec3c89c59b93c63f084a761da5fb9f21b46931e33"
+    },
+    {
+      "path": "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.pdf",
+      "size": 521882,
+      "sha256": "834fd90c8c41bca2e881ea16b3ffa8416abc034cee0fc4a1b5524e5c1c4a6e09"
+    },
+    {
+      "path": "publications/dieseldorff-vampyrkoepfige-gottheit-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-vampyrkoepfige-gottheit-1894/cover.jpg",
+      "size": 233909,
+      "sha256": "026b7aa81fc6331dc7c8b62a5320bf2563248ebbe33d7dd5d12294c3608ed15d"
     },
     {
       "path": "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
@@ -1724,10 +2012,10 @@
       "sha256": "92380a3dc5b761365e719f5a1657568a9758f08a9003785afc717886791c50f3"
     },
     {
-      "path": "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",
-      "url": "https://takochanchan.github.io/publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",
-      "size": 73293,
-      "sha256": "0990b68da9b3c5ac2ae60cf75152985d80a1a12683bc09ccd3f2c3aa9989d715"
+      "path": "publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg",
+      "size": 86485,
+      "sha256": "580b845125da70db19cd2557d5aa61d5af5382f779b2dd1537dcdd11fb0fd42e"
     },
     {
       "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
@@ -1854,6 +2142,24 @@
       "url": "https://takochanchan.github.io/publications/saville-reports-maya-yucatan-1921/cover.jpg",
       "size": 63823,
       "sha256": "c662bf240ff2e08e3c222b6b21c46b74a7bfc67d8f6828111ef677b60e4b0aba"
+    },
+    {
+      "path": "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.epub",
+      "size": 239902,
+      "sha256": "69e891d5102f90be2c38546ca9fe5d2d2cbbcfcebfde201015651ec80c5d7489"
+    },
+    {
+      "path": "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.pdf",
+      "size": 159813,
+      "sha256": "9445d9ed1a40d5e30818c6ba3bbe852ec07cf772d2484b9f46db3a1678648e94"
+    },
+    {
+      "path": "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/cover.jpg",
+      "size": 252644,
+      "sha256": "43d6ac4f1439f016b98bef57108b7db6bf00c79f32f6b40fbd0e325c026b8679"
     },
     {
       "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
@@ -2144,6 +2450,24 @@
       "sha256": "2bae34b8212ae2ef040536169597e0db6f176775976da45e5c19bd9f07dc8383"
     },
     {
+      "path": "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.epub",
+      "size": 374760,
+      "sha256": "c5c579d5cb42d1daf8e5d06c06d7bf0ebcd6527700659d81d36a6f9a188d47c2"
+    },
+    {
+      "path": "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.pdf",
+      "size": 383987,
+      "sha256": "40e002c41b2207bcf11bd477400372f767309aabae7e3382291cf792be20d461"
+    },
+    {
+      "path": "publications/virchow-graeberschaedel-guatemala-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/virchow-graeberschaedel-guatemala-1897/cover.jpg",
+      "size": 240947,
+      "sha256": "a2dfa68b854c398c190314acc5ffb78fdbb92b2f19ac4f2f91203bb81526fe04"
+    },
+    {
       "path": "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
       "size": 1707365,
@@ -2217,3 +2541,4 @@
     }
   ]
 }
+

@@ -177,6 +177,42 @@ DOCX_SOURCES = {
     / "Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.docx",
     "dieseldorff-tolteken-1896": SOURCES
     / "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.docx",
+    "dieseldorff-gegenstaende-guatemala-1893": SOURCES
+    / "Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.docx",
+    "dieseldorff-bemaltes-thongefaess-chama-1894": SOURCES
+    / "Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.docx",
+    "dieseldorff-vampyrkoepfige-gottheit-1894": SOURCES
+    / "Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.docx",
+    "dieseldorff-neue-ausgrabungen-chajcar-1895": SOURCES
+    / "Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.docx",
+    "dieseldorff-two-vases-chama-1904": SOURCES
+    / "Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.docx",
+    "dieseldorff-jadeit-schmuck-1905": SOURCES
+    / "Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.docx",
+    "dieseldorff-klassifizierung-funde-1909": SOURCES
+    / "Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.docx",
+    "dieseldorff-tzultaca-mam-1926": SOURCES
+    / "Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.docx",
+    "dieseldorff-kunst-religion-band-i-1926": SOURCES
+    / "Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.docx",
+    "dieseldorff-kunst-religion-band-ii-1931": SOURCES
+    / "Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.docx",
+    "dieseldorff-kekchi-will-1583-1932": SOURCES
+    / "Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.docx",
+    "dieseldorff-cauac-thunderbolt-signs-1932": SOURCES
+    / "Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.docx",
+    "dieseldorff-arqueologia-alta-verapaz-1936": SOURCES
+    / "Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.docx",
+    "dieseldorff-calendario-maya-quirigua-1936": SOURCES
+    / "Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.docx",
+    "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940": SOURCES
+    / "Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.docx",
+    "dieseldorff-causa-calendario-quirigua-1940": SOURCES
+    / "Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.docx",
+    "schellhas-virchow-deformierter-schaedel-ulpan-1894": SOURCES
+    / "Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.docx",
+    "virchow-graeberschaedel-guatemala-1897": SOURCES
+    / "Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.docx",
     "cortes-y-larraz-descripcion-geografico-moral-1771": SOURCES
     / "Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.docx",
     "perigny-ruines-nacun-1906": SOURCES
@@ -1696,3 +1732,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

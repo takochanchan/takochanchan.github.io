@@ -1,0 +1,873 @@
+name: Publish Dieseldorff release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-dieseldorff-assets-20260811.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-dieseldorff-assets-20260811.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "slug": "dieseldorff-gegenstaende-guatemala-1893",
+              "kind": "pdf",
+              "name": "Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラの資料",
+              "author": "エドゥアルト・ゼーラー（E・P・ディースルドルフ／K・ザッパー収集資料）",
+              "marker": "〔原刊 p. 275〕",
+              "pages": 5,
+              "imageCount": 1,
+              "size": 301230,
+              "sha256": "082b9ec898eaa221826d74e06791c8b6ce23982aacc2135c2a1ffe1687c7f140",
+              "blobs": [
+                "22859b3123e98223c0cb02c0eb931fbb172cf4a1"
+              ]
+            },
+            {
+              "slug": "dieseldorff-gegenstaende-guatemala-1893",
+              "kind": "epub",
+              "name": "Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.epub",
+              "title": "グアテマラの資料",
+              "author": "エドゥアルト・ゼーラー（E・P・ディースルドルフ／K・ザッパー収集資料）",
+              "minJapanese": 2500,
+              "imageRefs": 1,
+              "size": 447678,
+              "sha256": "634d9d58f4915943c1d3fcb008d7dbc7a33199e82baa76f32e68282e7368fe3e",
+              "blobs": [
+                "3c4680d979e31fdc7ee3ab93af3a6aa8dbdc1045"
+              ]
+            },
+            {
+              "slug": "dieseldorff-bemaltes-thongefaess-chama-1894",
+              "kind": "pdf",
+              "name": "Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.pdf",
+              "title": "チャマの墓から出た人物図像入り彩色土器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 372〕",
+              "pages": 10,
+              "imageCount": 5,
+              "size": 967267,
+              "sha256": "e02fc5cb97c0af953a5b0c079f496e1072ce84af57acfc2681870f513feaadda",
+              "blobs": [
+                "d43067e1479185402b23ae771a79c4f8f9fca1cb",
+                "733bd4ec0a164927ce3d0d9f326fcd37c0d40611"
+              ]
+            },
+            {
+              "slug": "dieseldorff-bemaltes-thongefaess-chama-1894",
+              "kind": "epub",
+              "name": "Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.epub",
+              "title": "チャマの墓から出た人物図像入り彩色土器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 4800,
+              "imageRefs": 4,
+              "size": 2829635,
+              "sha256": "4f02cdfa719dff7223cf9014c3afc486ac52bcb1228277ed007dd9b735fefc1a",
+              "blobs": [
+                "f4d11b156efa238a0ba6668e2567e51d51ed1548",
+                "bab574b703d1ad8ea30d7fdb6774cdf4c039adb7",
+                "f24951802a749e1d62edd7cd6735a2d323202f7c",
+                "5ee0fc42fb7214995394c900b7bcc77fe37cfbd7"
+              ]
+            },
+            {
+              "slug": "dieseldorff-vampyrkoepfige-gottheit-1894",
+              "kind": "pdf",
+              "name": "Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.pdf",
+              "title": "吸血鬼頭の神を描いた土器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 576〕",
+              "pages": 3,
+              "imageCount": 2,
+              "size": 521882,
+              "sha256": "834fd90c8c41bca2e881ea16b3ffa8416abc034cee0fc4a1b5524e5c1c4a6e09",
+              "blobs": [
+                "9feb91e03e924f9ac4bd746f52f9ab33ca1194bf"
+              ]
+            },
+            {
+              "slug": "dieseldorff-vampyrkoepfige-gottheit-1894",
+              "kind": "epub",
+              "name": "Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.epub",
+              "title": "吸血鬼頭の神を描いた土器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 1400,
+              "imageRefs": 1,
+              "size": 1554698,
+              "sha256": "1818f91d7101ad80ddb7a6aec3c89c59b93c63f084a761da5fb9f21b46931e33",
+              "blobs": [
+                "e3aaaa72b5bc5779701502e4ea13db899d534e81",
+                "18e0245dbb9e4a10f9c00577261df8404f291539",
+                "0cc02cfa0938f4f2b2c7f4e9b4029e34c74f79b6"
+              ]
+            },
+            {
+              "slug": "dieseldorff-neue-ausgrabungen-chajcar-1895",
+              "kind": "pdf",
+              "name": "Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラ、チャフカルにおけるディースルドルフ氏の新発掘",
+              "author": "エルヴィン・P・ディースルドルフ／パウル・シェルハス",
+              "marker": "〔原刊 p. 320〕",
+              "pages": 5,
+              "imageCount": 0,
+              "size": 223717,
+              "sha256": "cfff717e1ef3a43addb099f1298cffe448ae20cbbd86d997d6ebb4627792e59f",
+              "blobs": [
+                "fec8150ff43a47fce0961a8461308c5a139375f7"
+              ]
+            },
+            {
+              "slug": "dieseldorff-neue-ausgrabungen-chajcar-1895",
+              "kind": "epub",
+              "name": "Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.epub",
+              "title": "グアテマラ、チャフカルにおけるディースルドルフ氏の新発掘",
+              "author": "エルヴィン・P・ディースルドルフ／パウル・シェルハス",
+              "minJapanese": 2600,
+              "imageRefs": 0,
+              "size": 199554,
+              "sha256": "f243d2f798a800167f335fb962ab13b20f716f281d85bd13e7a919702c85c918",
+              "blobs": [
+                "ba0171ffd4f1d7fea20cf7fb390255e1f67f276d"
+              ]
+            },
+            {
+              "slug": "dieseldorff-two-vases-chama-1904",
+              "kind": "pdf",
+              "name": "Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.pdf",
+              "title": "チャマ出土の二つの土器",
+              "author": "E・P・ディースルドルフ、エドゥアルト・ゼーラー、エルンスト・フェルステマン",
+              "marker": "〔原刊 p. 635〕",
+              "pages": 31,
+              "imageCount": 7,
+              "size": 2265523,
+              "sha256": "b638439bae1814f2883684fa21e75b09d45d0900703d6a6b407185405a97351f",
+              "blobs": [
+                "c5a72d0f8ad9e4e4f38450f301e4ddcbda3170d4",
+                "2bd75c60aedce048b11c5e7f82eb39647bd4cc59",
+                "4177794088558f39e030986ccfbe7be2ce862edb",
+                "28bd957bc76d251c3b70b570e576aca8b848c81c"
+              ]
+            },
+            {
+              "slug": "dieseldorff-two-vases-chama-1904",
+              "kind": "epub",
+              "name": "Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.epub",
+              "title": "チャマ出土の二つの土器",
+              "author": "E・P・ディースルドルフ、エドゥアルト・ゼーラー、エルンスト・フェルステマン",
+              "minJapanese": 16700,
+              "imageRefs": 6,
+              "size": 2354613,
+              "sha256": "a0e666ed5b4823d9688070e825312125b5b5e5a559792f4f32f6c42b2da9fa52",
+              "blobs": [
+                "d63acc11e10aae2004967005316c4f20050c8c9b",
+                "cfd4f79224693101c375327626b9abb18de0ba81",
+                "60516a211b55423a55b6d7564ab327be4af2c89d",
+                "41af24292a120ca8220addf5facc1d04fdea2d75"
+              ]
+            },
+            {
+              "slug": "dieseldorff-jadeit-schmuck-1905",
+              "kind": "pdf",
+              "name": "Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.pdf",
+              "title": "マヤ諸民族の翡翠輝石その他の装身具",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 408〕",
+              "pages": 6,
+              "imageCount": 4,
+              "size": 794134,
+              "sha256": "2c6826d2d0b13c52f7bcdbc70c66cf0f2a5ff7bbd72ebf743c4957a72003dd3f",
+              "blobs": [
+                "68e0d3109cb2774234842e5f9a5598bc05f9cbca",
+                "e9932e0b9a80820ebaa7b3a833112b0ec220ef5d"
+              ]
+            },
+            {
+              "slug": "dieseldorff-jadeit-schmuck-1905",
+              "kind": "epub",
+              "name": "Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.epub",
+              "title": "マヤ諸民族の翡翠輝石その他の装身具",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 2500,
+              "imageRefs": 3,
+              "size": 2345733,
+              "sha256": "19c44b1a8325855aa3171a16905c3832569360f7b08324600df7aea28ac4c115",
+              "blobs": [
+                "91847587b6a9c112b70463a87d8ab40307d8e3da",
+                "8e360ce7dae20d46f14f4c8ddf520b4eeec34b1d",
+                "1eeeeb971f07f908611853bd8292c731a6867439",
+                "64dbc3c191e65541d75c0483c00b48ef1c17a74a"
+              ]
+            },
+            {
+              "slug": "dieseldorff-klassifizierung-funde-1909",
+              "kind": "pdf",
+              "name": "Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラ北部における考古学的発見の分類",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 862〕",
+              "pages": 15,
+              "imageCount": 5,
+              "size": 848520,
+              "sha256": "db4fa1e4158af5c6c1cc47be731ba6e3130becabb3ff5c1f77d37184e8588f14",
+              "blobs": [
+                "85620fd33e371c1acc6472cc23d903034d4a4282",
+                "34f9250df5d508a7fb681d45b5a5fb27fb80dc84"
+              ]
+            },
+            {
+              "slug": "dieseldorff-klassifizierung-funde-1909",
+              "kind": "epub",
+              "name": "Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.epub",
+              "title": "グアテマラ北部における考古学的発見の分類",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 7700,
+              "imageRefs": 5,
+              "size": 2236665,
+              "sha256": "7740a46dd704b013abda577487d310fe8ff28992ca01294f949ebf76203dad7e",
+              "blobs": [
+                "00e9f83b3c1dd8f22cf1e325ab7b3e74787b6f39",
+                "5f1ea7ee3c4df8b5345c35103e342263164e7e03",
+                "96e1c0d6f3017c866c22b1866071a53caa1d60af",
+                "a6b5777b1392b1f8c314d94c00243c2c89a166d0"
+              ]
+            },
+            {
+              "slug": "dieseldorff-tzultaca-mam-1926",
+              "kind": "pdf",
+              "name": "Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.pdf",
+              "title": "ツルタカとマム――マヤ宗教の主要神",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 378〕",
+              "pages": 11,
+              "imageCount": 3,
+              "size": 790665,
+              "sha256": "ad7bc496889171199527dcf851022354188d2f1f0436fc18bfe55326f38085fc",
+              "blobs": [
+                "022c7aa3d8c5553473621a30eac78e2f0ad77e4a",
+                "d2263e62d1f1ccf2645179bf732aa466eeafd07a"
+              ]
+            },
+            {
+              "slug": "dieseldorff-tzultaca-mam-1926",
+              "kind": "epub",
+              "name": "Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.epub",
+              "title": "ツルタカとマム――マヤ宗教の主要神",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 6700,
+              "imageRefs": 3,
+              "size": 1116451,
+              "sha256": "a3e7a4cd4534652349e9396ba4d3ea74b25a9f4c37ff4857d8f9ac8a31e486ff",
+              "blobs": [
+                "8e09151ef55d03a69c9da75c8ba24f09d57f99d2",
+                "eea303e856359847366e2b6506c5feea4a3267f7"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kunst-religion-band-i-1926",
+              "kind": "pdf",
+              "name": "Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
+              "title": "古代および現代中央アメリカのマヤ諸民族の芸術と宗教",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 1〕",
+              "pages": 106,
+              "imageCount": 58,
+              "size": 12129367,
+              "sha256": "cb029954ba577b216f69e0f9b502012c0558ab3ed4b6d6a2d15db7cf6d570aba",
+              "blobs": [
+                "8b004b43ea082d6d65d8b7828c2695bbf5e15520",
+                "be33c0a4e55eda8dcb34803bca5f484ffb58132f",
+                "72e8a07c645c5664ec842a9395ec7d39ebeef13c",
+                "14731022114eba85fb64c1798202a2a6db67f66e",
+                "2f710552d92b770802911961746b56d40b3633ae",
+                "518a8a6c643f624edadf643084b74a85fcc88b09",
+                "b5d89fcae583565e1639ddd5baf4aea7e28eaf1a",
+                "079b85a98b16fc60729bf5443994b19bf8f39edf",
+                "1cf09c761719d71568a68a57a64de7ca7427ba9e",
+                "b8c67063e752fbc225fdebcd55e872b18bc4b7ed",
+                "1473d9ff309ac77fb90d82fe976802dccb992bc9",
+                "16a28c59803430562ad936a8c82c52ff8b06bec8",
+                "5dab97f5ff2d70e61fed6de21f43006989345f06",
+                "b967c0239bad15cb4eaf4c3ea2823ac8bebf0350",
+                "a7b814b6d43b10ee4e343fee13224d4cdf5242a3",
+                "0ffbe7346acf23b5242a1c2d75fc3468a3790fd5",
+                "82b66ff62bfef56be7ec903f7387d2c4eed986f3"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kunst-religion-band-i-1926",
+              "kind": "epub",
+              "name": "Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
+              "title": "古代および現代中央アメリカのマヤ諸民族の芸術と宗教",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 44700,
+              "imageRefs": 58,
+              "size": 17512694,
+              "sha256": "2b17a8e44c4e3e68e4bc265523122a7c63554c039dc09ca64d9829d76c4f1c16",
+              "blobs": [
+                "d9486ad3111f49d82c4bfc8b3381ad0e8d5895c1",
+                "0d1fe4cad5beac0ef96d177f637f267f635cca12",
+                "278a07276de73f5a67567cd4b474ec512bc788e4",
+                "4dcff160dafa305d04a33e21c5c76bc50950bb26",
+                "caef20803bd5fba922e76ff78f5dd8cc8d0b85e6",
+                "24a8472a5443456c5e2e35793986716e1f1ae177",
+                "f361b3d195efe0b2c380b189c1feef2ac54e6f62",
+                "f6e21e985748b00c4945af3736977f6e4f1c8a07",
+                "782688bf786c72efb028556e182af4c6fbdcc29b",
+                "cb240de28f3bf4dc91a210f0e0ce116a89852a89",
+                "38ad81cb35d183a853a26552726272d09f68ba8b",
+                "fc78a7028c2aa0d2ab12499060528c56c7a19bc3",
+                "689ceef8d226bd18d56be0aa144b4ad47c05f69b",
+                "e0697bf1a827f1f2c831f2bb37a7bdd64afdb749",
+                "98b581e0a3d132692ad457503170229452d6a188",
+                "96fde43684e82c3a08aa6e972ea4f23d9918ea81",
+                "8af1868408e42133154c60cee1d4b7b65b91fcfa",
+                "44c423e3e55a126b082754e9c714ed965ed83a2f",
+                "66cbf6bf13ab980c30b2e330f8b1046b7fc53468",
+                "505b324ca19cc2c07cbf7824225de45b71430c1d",
+                "3eeede51a472e9e6db8d54d0fee9303e1a3d6290",
+                "ca8e8a4b3db27bf2de3b9e1ebd8e4d4702818e46",
+                "6455c7f727aaf9c7414992d9d23c27b7f15e9b44",
+                "9772977c3c24675534c40cfa4b8d7cab75a79c79",
+                "94ec22cd4c786fbe176fad78ff21abed576d3fa2"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kunst-religion-band-ii-1931",
+              "kind": "pdf",
+              "name": "Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.pdf",
+              "title": "マヤ諸民族の芸術と宗教 II――コパンの記念物",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 1〕",
+              "pages": 83,
+              "imageCount": 58,
+              "size": 7688127,
+              "sha256": "4c5284e5bd807cc798122cbc45fb306e7121c74f5f166fc482114abec6aa93a2",
+              "blobs": [
+                "422e262d448cd91e96a4dd7e2966bfa7a98ec2e7",
+                "0bcb37c66381c4133ea39a4f670eacc6a6f3b5a1",
+                "584924dec2fc5dc66f5661f6f77213a1558e8dc2",
+                "27159e47e94d5074b997982578abe91e4e92fe22",
+                "300ad69493d1c6bbbaac1cf67490e32977d17ea9",
+                "ea569aec3f79345003b73e4d515446aa2312b81b",
+                "148fc4d2649ed23d3fe003b2c3e042b2bbc21d42",
+                "78f27a44169c43b866b240590be73b100de62272",
+                "7c84c1e75f73190e0882cab1e33198f15ea75dd6",
+                "72871096a22a3cce01f9c9f16b9a9a3ab2ebb8fe",
+                "6b843561dce408850ecbca8399aafba64c7bcd3b"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kunst-religion-band-ii-1931",
+              "kind": "epub",
+              "name": "Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.epub",
+              "title": "マヤ諸民族の芸術と宗教 II――コパンの記念物",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 34300,
+              "imageRefs": 34,
+              "size": 11078954,
+              "sha256": "58cee39f98404412c377c9f14e1e03639bfe6798a72b38e696c297639b262b2b",
+              "blobs": [
+                "2737ed0cd01d817df7de8c880e224538a97508f7",
+                "37ed6efd45df2b009cd58577ecf324a98fab06eb",
+                "36b825e57abd618baac71f7eeb00689bcd9a5081",
+                "7df749e459220699b34275a0c8bf9e7b6a962baa",
+                "7e3d342f93e2231434acf0ad7304e4f756a7c525",
+                "e3c28b1acfd832d8642fecc913551f091584c11d",
+                "78baef2f223dc612375872163afd4c2200e44afa",
+                "8d0b440356c35b89078c3e90f07ba5ec4f3f474f",
+                "1ed7efc6074227246d395e1cc44959b11213bc10",
+                "4eb6b9d3231955a050c71ef90b761a4654eb5078",
+                "3c9212bdc6b79acee5583a7bdbd6758c063175d6",
+                "c6893a932083da836d61df9d10a0999c8c65d3de",
+                "432d6c07a4bff40be3925facfe096d99059550d8",
+                "3ddd1774692e92b754abcc057dbe1bb8f6433e36",
+                "64f1e67e1c671f2c334e54ce1ddf03db4afadbd3",
+                "b40693aa8cf8d36e2bfb2a062757d8d66b6d04c9"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kekchi-will-1583-1932",
+              "kind": "pdf",
+              "name": "Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.pdf",
+              "title": "1583年のケクチ語遺言書",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 65〕",
+              "pages": 6,
+              "imageCount": 0,
+              "size": 244941,
+              "sha256": "ae0bc791ac5f7e9754dd884a300fa43f38430f4952d79aa3c1c59ce1faaf8b01",
+              "blobs": [
+                "4310f3685ecffa6a89467c5c372ff7c44134e23b"
+              ]
+            },
+            {
+              "slug": "dieseldorff-kekchi-will-1583-1932",
+              "kind": "epub",
+              "name": "Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.epub",
+              "title": "1583年のケクチ語遺言書",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 2200,
+              "imageRefs": 0,
+              "size": 225975,
+              "sha256": "9870aaf84f623424687260f507970591bdf3ebd7d16c8c087e50fd425dadae5c",
+              "blobs": [
+                "c405c0d94684d8f94e8e1d799ddd5dac64b9ed6f"
+              ]
+            },
+            {
+              "slug": "dieseldorff-cauac-thunderbolt-signs-1932",
+              "kind": "pdf",
+              "name": "Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.pdf",
+              "title": "カウアクと雷電記号についての補足資料",
+              "author": "エルヴィン・P・ディースルドルフ（書簡）／W・ゲイツ（編集・論評）",
+              "marker": "〔原刊 p. 68〕",
+              "pages": 4,
+              "imageCount": 0,
+              "size": 235791,
+              "sha256": "af9331b928dfc83fa28b34d1281d1475efcd6c82bde712e476b7da20e091ce1c",
+              "blobs": [
+                "34c8258c4ede168ddd56e31f282d9424e9b55247"
+              ]
+            },
+            {
+              "slug": "dieseldorff-cauac-thunderbolt-signs-1932",
+              "kind": "epub",
+              "name": "Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.epub",
+              "title": "カウアクと雷電記号についての補足資料",
+              "author": "エルヴィン・P・ディースルドルフ（書簡）／W・ゲイツ（編集・論評）",
+              "minJapanese": 2300,
+              "imageRefs": 0,
+              "size": 243235,
+              "sha256": "7021fd304e8d84dba1e2fc997abf31876585f077fb6d1d3d8b9a1a43a88a784f",
+              "blobs": [
+                "6974e2c88668d1c482642ab2e0b00128c35843bb"
+              ]
+            },
+            {
+              "slug": "dieseldorff-arqueologia-alta-verapaz-1936",
+              "kind": "pdf",
+              "name": "Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.pdf",
+              "title": "アルタ・ベラパスの考古学とマヤ研究の諸問題",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 183〕",
+              "pages": 12,
+              "imageCount": 5,
+              "size": 1207292,
+              "sha256": "9a92464c09c047ae8f4ef87754012d952d7e7bb18dba4b645b45ee1917fafc89",
+              "blobs": [
+                "f0eb21ed7e5ea5f323f363468500ffded82e8da1",
+                "d62036136d696ecf80f3bc17c00461112fced3ec"
+              ]
+            },
+            {
+              "slug": "dieseldorff-arqueologia-alta-verapaz-1936",
+              "kind": "epub",
+              "name": "Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.epub",
+              "title": "アルタ・ベラパスの考古学とマヤ研究の諸問題",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 6400,
+              "imageRefs": 5,
+              "size": 1720239,
+              "sha256": "59cd9795a62dc196ba4cdd9946791354c59aaafab8cfe692ddc58d2ce983b72b",
+              "blobs": [
+                "776b8115d31e7f7bcde272af0321348cbc000d46",
+                "814b5ceb68396743b5248352de3397a6926299fb",
+                "6e8046f771bcc2dca752e45fecf1487549b8380b"
+              ]
+            },
+            {
+              "slug": "dieseldorff-calendario-maya-quirigua-1936",
+              "kind": "pdf",
+              "name": "Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.pdf",
+              "title": "キリグアのマヤ暦",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 272〕",
+              "pages": 7,
+              "imageCount": 0,
+              "size": 277585,
+              "sha256": "cbcfe02ba71ab3ab5fb92633dfcf2d199f0f62ab6c3d8dd3b93f6fb8db361e33",
+              "blobs": [
+                "57a2ee716f437fe26cf1d251340531c439e45471"
+              ]
+            },
+            {
+              "slug": "dieseldorff-calendario-maya-quirigua-1936",
+              "kind": "epub",
+              "name": "Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.epub",
+              "title": "キリグアのマヤ暦",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 4400,
+              "imageRefs": 0,
+              "size": 201341,
+              "sha256": "f84f67b921d4b0d8ec8e18fef98487952761472b43451ee643fc9f74f321df08",
+              "blobs": [
+                "a2a6baaec6edfa7baff11f282e324988bebd38df"
+              ]
+            },
+            {
+              "slug": "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
+              "kind": "pdf",
+              "name": "Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.pdf",
+              "title": "アルタ・ベラパス県の薬用植物",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 92〕",
+              "pages": 33,
+              "imageCount": 13,
+              "size": 3322046,
+              "sha256": "736f02cc39417c17c044fe29f19797d86280fb032d34b13e2267011291540dd5",
+              "blobs": [
+                "af37e31b41eb29a64dff926833b1dd5fc2429db5",
+                "5bb30eddebb4a8dc69f4897fe2446c484079dcc4",
+                "6e9776ae36b9472a6f013143b797acb7c4ad9b0a",
+                "bbf266f2c6df25216d79561bf6a796c57ed0ff96",
+                "f2d6cddbf5ae1e65cdc92e20264efff6221016b3"
+              ]
+            },
+            {
+              "slug": "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
+              "kind": "epub",
+              "name": "Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.epub",
+              "title": "アルタ・ベラパス県の薬用植物",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 13400,
+              "imageRefs": 13,
+              "size": 3884962,
+              "sha256": "e962b75cf9c035937bbc016ea0f0bbb20a369ac95fd0e206b17e443c355a432c",
+              "blobs": [
+                "5729075f6860a42d91d60e6fe5b261a8bd6de202",
+                "8bfdc85d5dd74b20af5b4639c7e2d74b8d0e9a6b",
+                "d689be002ecafd7aebf73f8f9436c935f48dc94c",
+                "b50d8b013ae0b7805dd0a07c2dbd0ad2627bbb60",
+                "ccb27067b7c663e85cc427694e22583ebd417664",
+                "7a7054a200310a13720b31fec746af665cd8244b"
+              ]
+            },
+            {
+              "slug": "dieseldorff-causa-calendario-quirigua-1940",
+              "kind": "pdf",
+              "name": "Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.pdf",
+              "title": "キリグアのマヤ人が紀元前3373年9月22日に暦を開始した理由",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 271〕",
+              "pages": 11,
+              "imageCount": 1,
+              "size": 737686,
+              "sha256": "54763346750798409782078c2f568f158ff6d702f9ca07c2bbe05dd63167887d",
+              "blobs": [
+                "644ce6575075589eff2f581e1c9a6adfd9640776",
+                "52a89041a5529b8785eae489c4a90081a86a8c1f"
+              ]
+            },
+            {
+              "slug": "dieseldorff-causa-calendario-quirigua-1940",
+              "kind": "epub",
+              "name": "Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.epub",
+              "title": "キリグアのマヤ人が紀元前3373年9月22日に暦を開始した理由",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "minJapanese": 6000,
+              "imageRefs": 1,
+              "size": 737137,
+              "sha256": "c5a5ed1ad35c91116b36a54df25968135dd4222603e9ded4b5e8130c23a39a9c",
+              "blobs": [
+                "aab49535fd8de178da658d76ea171bf2e7db0080",
+                "b613b091d5d26374eed8ef95dbeea70be42b8144"
+              ]
+            },
+            {
+              "slug": "schellhas-virchow-deformierter-schaedel-ulpan-1894",
+              "kind": "pdf",
+              "name": "Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラ、コバン近郊ウルパンの変形頭蓋",
+              "author": "パウル・シェルハス、ルドルフ・ヴィルヒョウ",
+              "marker": "〔原刊 p. 424〕",
+              "pages": 3,
+              "imageCount": 0,
+              "size": 159813,
+              "sha256": "9445d9ed1a40d5e30818c6ba3bbe852ec07cf772d2484b9f46db3a1678648e94",
+              "blobs": [
+                "02199fe1daba866fc0bfaa66cc3c728cc6965806"
+              ]
+            },
+            {
+              "slug": "schellhas-virchow-deformierter-schaedel-ulpan-1894",
+              "kind": "epub",
+              "name": "Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.epub",
+              "title": "グアテマラ、コバン近郊ウルパンの変形頭蓋",
+              "author": "パウル・シェルハス、ルドルフ・ヴィルヒョウ",
+              "minJapanese": 1500,
+              "imageRefs": 0,
+              "size": 239902,
+              "sha256": "69e891d5102f90be2c38546ca9fe5d2d2cbbcfcebfde201015651ec80c5d7489",
+              "blobs": [
+                "b6bb103e74ca60caaa04483b06ef4f8b8c7b3669"
+              ]
+            },
+            {
+              "slug": "virchow-graeberschaedel-guatemala-1897",
+              "kind": "pdf",
+              "name": "Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラの墓葬頭蓋",
+              "author": "ルドルフ・ヴィルヒョウ",
+              "marker": "〔原刊 p. 324〕",
+              "pages": 8,
+              "imageCount": 1,
+              "size": 383987,
+              "sha256": "40e002c41b2207bcf11bd477400372f767309aabae7e3382291cf792be20d461",
+              "blobs": [
+                "327204ddef89b06b41ee82a556212d0371440da1"
+              ]
+            },
+            {
+              "slug": "virchow-graeberschaedel-guatemala-1897",
+              "kind": "epub",
+              "name": "Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.epub",
+              "title": "グアテマラの墓葬頭蓋",
+              "author": "ルドルフ・ヴィルヒョウ",
+              "minJapanese": 4000,
+              "imageRefs": 1,
+              "size": 374760,
+              "sha256": "c5c579d5cb42d1daf8e5d06c06d7bf0ebcd6527700659d81d36a6f9a188d47c2",
+              "blobs": [
+                "9780689b953f7358552dbe22982b4a4a0073ddef"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dieseldorff-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/dieseldorff-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  image_list = subprocess.check_output(["pdfimages", "-list", str(target)], text=True)
+                  image_count = sum(
+                      1 for line in image_list.splitlines()
+                      if re.match(r"^\s*\d+\s+\d+\s+", line)
+                  )
+                  assert image_count == asset["imageCount"], (asset["name"], image_count)
+
+                  document_text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  normalized = re.sub(r"\s+", "", document_text)
+                  assert re.sub(r"\s+", "", asset["title"]) in normalized
+                  assert re.sub(r"\s+", "", asset["author"]) in normalized
+                  assert asset["marker"] in document_text
+                  assert not any(term in document_text for term in forbidden)
+                  assert "\ufffd" not in document_text and "\x00" not in document_text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  document_text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", document_text))
+                  normalized = re.sub(r"\s+", "", document_text)
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert re.sub(r"\s+", "", asset["title"]) in normalized
+                  assert re.sub(r"\s+", "", asset["author"]) in normalized
+                  assert not any(term in document_text for term in forbidden)
+                  assert "\ufffd" not in document_text and "\x00" not in document_text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/dieseldorff-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Dieseldorff release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/dieseldorff-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Dieseldorff release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+

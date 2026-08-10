@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "d74ff403c0c638f51bc9506ba19b03ba91217dad",
+  "archive_commit": "a1cc7e1e3e3bb8aa8dae292b1d6c58c82a40e8a6",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -125,6 +125,24 @@
     "perigny-maler-discoveries-yucatan-1908": "publications/perigny-maler-discoveries-yucatan-1908/master.docx",
     "perigny-yucatan-inconnu-geographie-1908": "publications/perigny-yucatan-inconnu-geographie-1908/master.docx",
     "perigny-villes-mortes-amerique-centrale-1909": "publications/perigny-villes-mortes-amerique-centrale-1909/master.docx",
-    "perigny-ruines-rio-bec-1909": "publications/perigny-ruines-rio-bec-1909/master.docx"
+    "perigny-ruines-rio-bec-1909": "publications/perigny-ruines-rio-bec-1909/master.docx",
+    "dieseldorff-gegenstaende-guatemala-1893": "publications/dieseldorff-gegenstaende-guatemala-1893/master.docx",
+    "dieseldorff-bemaltes-thongefaess-chama-1894": "publications/dieseldorff-bemaltes-thongefaess-chama-1894/master.docx",
+    "dieseldorff-vampyrkoepfige-gottheit-1894": "publications/dieseldorff-vampyrkoepfige-gottheit-1894/master.docx",
+    "dieseldorff-neue-ausgrabungen-chajcar-1895": "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/master.docx",
+    "dieseldorff-two-vases-chama-1904": "publications/dieseldorff-two-vases-chama-1904/master.docx",
+    "dieseldorff-jadeit-schmuck-1905": "publications/dieseldorff-jadeit-schmuck-1905/master.docx",
+    "dieseldorff-klassifizierung-funde-1909": "publications/dieseldorff-klassifizierung-funde-1909/master.docx",
+    "dieseldorff-tzultaca-mam-1926": "publications/dieseldorff-tzultaca-mam-1926/master.docx",
+    "dieseldorff-kunst-religion-band-i-1926": "publications/dieseldorff-kunst-religion-band-i-1926/master.docx",
+    "dieseldorff-kunst-religion-band-ii-1931": "publications/dieseldorff-kunst-religion-band-ii-1931/master.docx",
+    "dieseldorff-kekchi-will-1583-1932": "publications/dieseldorff-kekchi-will-1583-1932/master.docx",
+    "dieseldorff-cauac-thunderbolt-signs-1932": "publications/dieseldorff-cauac-thunderbolt-signs-1932/master.docx",
+    "dieseldorff-arqueologia-alta-verapaz-1936": "publications/dieseldorff-arqueologia-alta-verapaz-1936/master.docx",
+    "dieseldorff-calendario-maya-quirigua-1936": "publications/dieseldorff-calendario-maya-quirigua-1936/master.docx",
+    "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940": "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/master.docx",
+    "dieseldorff-causa-calendario-quirigua-1940": "publications/dieseldorff-causa-calendario-quirigua-1940/master.docx",
+    "schellhas-virchow-deformierter-schaedel-ulpan-1894": "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/master.docx",
+    "virchow-graeberschaedel-guatemala-1897": "publications/virchow-graeberschaedel-guatemala-1897/master.docx"
   }
 }
