@@ -1,0 +1,270 @@
+name: Publish Dieseldorff old painted pottery assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-dieseldorff-alte-bemalte-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-dieseldorff-alte-bemalte-assets-20260810.yml
+      ASSET_MANIFEST: |-
+        [
+          {
+            "kind": "epub",
+            "minJapanese": 3500,
+            "imageRefs": 3,
+            "title": "グアテマラの古い彩色土器",
+            "author": "エルヴィン・P・ディースルドルフ",
+            "name": "Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.epub",
+            "size": 2454045,
+            "sha256": "7df7e0b60a5bfa531242c639e3333425a7bba9a5491cf97c431170388a1a5be3",
+            "blobs": [
+              "01caea9ba98415574a46248b7bbf8f54155c6b59",
+              "c4f1bcb10cbc569ff59f3ec85aeaa192fece210c",
+              "69e839ae2cb3712fa463929823cae933d27b6508",
+              "4b43c1ceb1903fdb873773d9991d1ee708a038ea",
+              "608f13c593c2bc06391438116965231a24859446",
+              "96ecdead0c0ebfd5d71cc001b1ee03947aeffbae",
+              "8eb5004d582bc868d39ef2c61f43d53f0f923fc6",
+              "29a0cde58313d489e0dd2a3cf2e2bc1e67f7c3a2",
+              "43a2d1b1005323609a077eedd7dc7454931951fe",
+              "4770b15d00a5deba93e986052d9347667749591d"
+            ]
+          },
+          {
+            "kind": "pdf",
+            "pages": 7,
+            "title": "グアテマラの古い彩色土器",
+            "author": "エルヴィン・P・ディースルドルフ",
+            "marker": "〔原刊 p. 551〕",
+            "name": "Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.pdf",
+            "size": 773272,
+            "sha256": "f082e921259f123935f67d61390cd835bb260e13cc02f00d8299d50eca77ddff",
+            "blobs": [
+              "34dca23e1843c81e7ebf459eaa3ce92ecfb83bec",
+              "bb6f7f20705a0c057b7d29920ac17e4c9322a9c2",
+              "82874717a24537c29b19a9f91c353d34ba2da9f6"
+            ]
+          }
+        ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dieseldorff-alte-bemalte-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/dieseldorff-alte-bemalte-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "原刊冒頭",
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert asset["marker"] in text
+                  assert not re.search(r"(?m)^\s*日本語全訳\s*$", text)
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/dieseldorff-alte-bemalte-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          for asset in "${asset_paths[@]}"; do
+            gh release download publications-current --pattern "$(basename "$asset")" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Dieseldorff old pottery release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/dieseldorff-alte-bemalte-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Dieseldorff old pottery release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
