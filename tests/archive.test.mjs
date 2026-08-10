@@ -63,9 +63,9 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 84);
-  assert.equal(shortPublications.length, 39);
-  assert.equal(shortPublicationAuthors.length, 16);
+  assert.equal(majorPublications.length, 82);
+  assert.equal(shortPublications.length, 41);
+  assert.equal(shortPublicationAuthors.length, 17);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -108,6 +108,8 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "perigny-ruines-rio-bec-1909",
       "perigny-villes-mortes-amerique-centrale-1909",
       "morelet-exploration-guatemala-1850",
+      "morelet-testacea-novissima-pars-i-1849",
+      "morelet-testacea-novissima-pars-ii-1851",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -142,6 +144,18 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     moreletCommittee.publications.map((item) => item.slug),
     ["morelet-exploration-guatemala-1850"],
+  );
+  const morelet = shortPublicationAuthors.find(
+    (author) => author.key === "arthur-morelet",
+  );
+  assert.ok(morelet);
+  assert.equal(morelet.name, "ピエール＝マリー＝アルテュール・モルレ");
+  assert.deepEqual(
+    morelet.publications.map((item) => item.slug),
+    [
+      "morelet-testacea-novissima-pars-i-1849",
+      "morelet-testacea-novissima-pars-ii-1851",
+    ],
   );
   const committee = shortPublicationAuthors.find(
     (author) => author.key === "societe-de-geographie-committee",
@@ -323,8 +337,8 @@ test("second approved Galindo batch remains individually catalogued", () => {
 test("Morelet natural-history publications retain their approved scope and provider terms", () => {
   const expected = new Map([
     ["morelet-exploration-guatemala-1850", [5, "short-work"]],
-    ["morelet-testacea-novissima-pars-i-1849", [23, "major-work"]],
-    ["morelet-testacea-novissima-pars-ii-1851", [21, "major-work"]],
+    ["morelet-testacea-novissima-pars-i-1849", [23, "short-work"]],
+    ["morelet-testacea-novissima-pars-ii-1851", [21, "short-work"]],
   ]);
   for (const [slug, [pageCount, recordClass]] of expected) {
     const item = publications.find((publication) => publication.slug === slug);
@@ -431,8 +445,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">84<\/strong>件/);
-  assert.match(html, /id="paper-match-count">39<\/strong>件/);
+  assert.match(html, /id="book-match-count">82<\/strong>件/);
+  assert.match(html, /id="paper-match-count">41<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');
@@ -490,6 +504,9 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /id="author-juan-galindo"/);
   assert.match(html, /フアン・ガリンド/);
   assert.match(html, />11篇</);
+  assert.match(html, /id="author-arthur-morelet"/);
+  assert.match(html, /ピエール＝マリー＝アルテュール・モルレ/);
+  assert.match(html, />2篇</);
   const shortPanel = html.slice(
     html.indexOf('id="short-works" role="tabpanel"'),
     html.indexOf('<section class="about" id="about">'),

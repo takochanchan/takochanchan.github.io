@@ -5744,6 +5744,8 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "morelet-testacea-novissima-pars-i-1849": "arthur-morelet",
+  "morelet-testacea-novissima-pars-ii-1851": "arthur-morelet",
   "morelet-exploration-guatemala-1850":
     "arthur-morelet-achille-valenciennes",
   "peniche-relaciones-belice-1869": "manuel-peniche",
