@@ -179,6 +179,16 @@ DOCX_SOURCES = {
     / "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.docx",
     "cortes-y-larraz-descripcion-geografico-moral-1771": SOURCES
     / "Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.docx",
+    "perigny-ruines-nacun-1906": SOURCES
+    / "Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.docx",
+    "perigny-exploration-yucatan-1906": SOURCES
+    / "Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.docx",
+    "lemoine-travers-peten-yucatan-1906": SOURCES
+    / "Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.docx",
+    "perigny-peten-1907": SOURCES
+    / "Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.docx",
+    "perigny-maya-ruins-quintana-roo-1907": SOURCES
+    / "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

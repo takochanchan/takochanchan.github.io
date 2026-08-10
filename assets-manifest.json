@@ -1064,6 +1064,24 @@
       "sha256": "31a8294698a780df6a55394e0da901f804fd1b6daedb7c776f852c60640f21e5"
     },
     {
+      "path": "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.epub",
+      "size": 404016,
+      "sha256": "7ee76e2f712682f17970c42c9bd70318027e40aab1fd1705bd61b19b5d5da7d6"
+    },
+    {
+      "path": "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.pdf",
+      "size": 596178,
+      "sha256": "8f6fbdb72d6801f9f530e5ad48b35dbba0a2e41904aa60af16b8bd45bcae892e"
+    },
+    {
+      "path": "publications/lemoine-travers-peten-yucatan-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lemoine-travers-peten-yucatan-1906/cover.jpg",
+      "size": 100995,
+      "sha256": "f20651f2a26c5c2c42de86beab80596dcc8feb2f82cf037c6df581f444cc236c"
+    },
+    {
       "path": "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
       "size": 29895104,
@@ -1368,6 +1386,78 @@
       "url": "https://takochanchan.github.io/publications/peniche-relaciones-belice-1869/cover.jpg",
       "size": 37703,
       "sha256": "69da7049f7e89e17fa3f08de2e63d76c9f298b16acacf9b39ce3525dc710c809"
+    },
+    {
+      "path": "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
+      "size": 88321,
+      "sha256": "4be7559016c58f2d625550a83c78c4fd853ec0a99af85e506c5a2a8115339ac0"
+    },
+    {
+      "path": "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
+      "size": 146616,
+      "sha256": "2fe9b0592218afc3e5166fd2f5bcb7f1a276b39b2ee972989207257579431352"
+    },
+    {
+      "path": "publications/perigny-exploration-yucatan-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-exploration-yucatan-1906/cover.jpg",
+      "size": 88910,
+      "sha256": "8036aacf88c06dbf1e1afb3df00205c95c9a890dea0cff6cfa3f197bbf2d315e"
+    },
+    {
+      "path": "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
+      "size": 115127,
+      "sha256": "c751b6bce25d17de8725bda2bf64b0ca42e962107a389d63da42366a4edec671"
+    },
+    {
+      "path": "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
+      "size": 227134,
+      "sha256": "feb5eb69f614d30590e0b3a72ec167dee3805797ad46d70c866b4d017f45fb8d"
+    },
+    {
+      "path": "publications/perigny-maya-ruins-quintana-roo-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-maya-ruins-quintana-roo-1907/cover.jpg",
+      "size": 110087,
+      "sha256": "8dfe45a6c6b1adf366d16a0b2abb3de3c0688cf0a0bcf42a8804f4076b6cb9f4"
+    },
+    {
+      "path": "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.epub",
+      "size": 78463,
+      "sha256": "7d58153ef44a4a71fce196c76c6f47a48f633f103d7b1c6b819bab4be497097b"
+    },
+    {
+      "path": "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.pdf",
+      "size": 235759,
+      "sha256": "4884cbeec1e67ed3914facc9bf9e99ee060d72bdb7c396c2d5e34432b20e40a2"
+    },
+    {
+      "path": "publications/perigny-peten-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-peten-1907/cover.jpg",
+      "size": 76244,
+      "sha256": "50e9b191913decbeb3ac3dd9129e76c7fbf6f83020ba7bcdb18140a793409bf9"
+    },
+    {
+      "path": "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.epub",
+      "size": 281566,
+      "sha256": "ea0ea237b6a6b0367038987f3eafedf08a172a81fca38306c4b4e1b74c025c0e"
+    },
+    {
+      "path": "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.pdf",
+      "size": 412437,
+      "sha256": "8cf0d5ca7aa8bc1e06caaf2bdf649272c438a2562e4daca429e8d630b93deba5"
+    },
+    {
+      "path": "publications/perigny-ruines-nacun-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-ruines-nacun-1906/cover.jpg",
+      "size": 83771,
+      "sha256": "e7461d7c5e577e0af436504cf73fd4898659fc4a840a45aa4a942a8b809545c2"
     },
     {
       "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",

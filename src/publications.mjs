@@ -3906,6 +3906,172 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  {
+    slug: "perigny-ruines-nacun-1906",
+    title: "ナクン遺跡",
+    originalTitle: "Les ruines de Nacun",
+    subtitle: "1906年刊・原刊360–362頁・本文・図版3点 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "LES RUINES DE NACUN · LA NATURE · 1906",
+    originalPublication:
+      "パリ、『La Nature』第1745号、1906年11月3日、360–362頁",
+    year: 1906,
+    extent: "PDF 7頁・原刊360–362頁・図版3点",
+    description:
+      "モーリス・ド・ペリニーが1905年末に実施した第一次ペテン探検と、当時「ナクン」と呼ばれたナクム遺跡の踏査を報告した記事。遺跡への行程、建築群、石碑、出土品に関する本文、原刊頁境界、図版3点とキャプションを省略なく訳しています。",
+    cover: "publications/perigny-ruines-nacun-1906/cover.jpg",
+    pdf:
+      "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 3,
+    plateCount: 0,
+    types: ["考古学報告", "遺跡報告", "雑誌記事"],
+    regions: ["ナクム", "ペテン", "グアテマラ"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "ナクム遺跡",
+      "ペテン探検",
+      "石碑",
+      "遺跡建築",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-exploration-yucatan-1906",
+    title: "ユカタン探検",
+    originalTitle: "Une exploration au Yucatan",
+    subtitle: "1906年刊・原刊340–341頁・編集部導入・書簡 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "UNE EXPLORATION AU YUCATAN · JOURNAL DE LA SOCIÉTÉ DES AMÉRICANISTES · 1906",
+    originalPublication:
+      "パリ、『Journal de la Société des Américanistes』新シリーズ第3巻第2号、1906年、340–341頁",
+    year: 1906,
+    extent: "PDF 3頁・原刊340–341頁・図版なし",
+    description:
+      "ペリニーが1904–1906年のユカタン・ペテン探検を要約した書簡。国際地理学会議への参加、主要遺跡の訪問、サン・ペドロ川遡航、ヤシュハとナクムの踏査、および次のキンタナ・ロー探検計画を記した編集部導入と書簡本文を省略なく訳しています。",
+    cover: "publications/perigny-exploration-yucatan-1906/cover.jpg",
+    pdf:
+      "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["探検報告", "書簡", "学術誌記事"],
+    regions: ["ユカタン", "ペテン", "グアテマラ", "英領ホンジュラス"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "ペテン探検",
+      "ナクム遺跡",
+      "ヤシュハ遺跡",
+      "サン・ペドロ川",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "lemoine-travers-peten-yucatan-1906",
+    title: "ペテンとユカタンを横断して",
+    originalTitle: "À travers le Peten et le Yucatan",
+    subtitle: "1906年刊・原刊482–486頁・講演報告・行程図 日本語全訳",
+    author: "フレデリック・ルモワーヌ",
+    series: "À TRAVERS LE PETEN ET LE YUCATAN · LA GÉOGRAPHIE · 1906",
+    originalPublication:
+      "パリ、『La Géographie』第13巻、1906年、482–486頁",
+    year: 1906,
+    extent: "PDF 8頁・原刊482–486頁・行程図1点",
+    description:
+      "モーリス・ド・ペリニーによるペテン・ユカタン探検の地理学協会講演を、フレデリック・ルモワーヌが報告した記事。ベラクルスからペテン、英領ホンジュラス、ユカタンへ至る行程、各地の自然・住民・交通・遺跡を扱う本文、行程図、閉会評を省略なく訳しています。",
+    cover: "publications/lemoine-travers-peten-yucatan-1906/cover.jpg",
+    pdf:
+      "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.epub",
+    pageCount: 8,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["地理報告", "講演記録", "学会誌記事"],
+    regions: ["ペテン", "ユカタン", "グアテマラ", "英領ホンジュラス"],
+    languages: ["フランス語"],
+    tags: [
+      "ペテン探検",
+      "ユカタン探検",
+      "サン・ペドロ川",
+      "ナクム遺跡",
+      "行程図",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-peten-1907",
+    title: "ペテン",
+    originalTitle: "Le Peten",
+    subtitle: "1907年刊・原刊287–290頁・本文 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "LE PETEN · LA GÉOGRAPHIE · 1907",
+    originalPublication:
+      "パリ、『La Géographie』第16巻、1907年、287–290頁",
+    year: 1907,
+    extent: "PDF 6頁・原刊287–290頁・図版なし",
+    description:
+      "サン・ペドロ川からフローレス、ヤシュハ、ナクム、英領ホンジュラスへ至ったペリニーの第一次ペテン探検報告。河川・森林・交通路、各地の住民、遺跡と石碑、探検行程を扱う原刊287–290頁の本文を省略なく訳しています。",
+    cover: "publications/perigny-peten-1907/cover.jpg",
+    pdf:
+      "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["地理報告", "探検記", "学会誌記事"],
+    regions: ["ペテン", "グアテマラ", "英領ホンジュラス"],
+    languages: ["フランス語"],
+    tags: [
+      "ペテン探検",
+      "サン・ペドロ川",
+      "ナクム遺跡",
+      "ヤシュハ遺跡",
+      "河川地理",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-maya-ruins-quintana-roo-1907",
+    title: "キンタナ・ローのマヤ遺跡",
+    originalTitle: "Maya Ruins in Quintana Roo",
+    subtitle: "1907年刊・原刊232–235頁・本文・編集注 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "MAYA RUINS IN QUINTANA ROO · RECORDS OF THE PAST · 1907",
+    originalPublication:
+      "ワシントン、『Records of the Past』第6巻、1907年、232–235頁",
+    year: 1907,
+    extent: "PDF 6頁・原刊232–235頁・編集注1点・図版なし",
+    description:
+      "ペリニーのキンタナ・ロー探検と、リオ・ベックを含む四群のマヤ遺跡の発見を英語で紹介した署名記事。イカイチェ、反乱状態のマヤ人地域、遺跡建築、探検上の困難を扱う本文、節見出し、署名、編集注を省略なく訳しています。",
+    cover: "publications/perigny-maya-ruins-quintana-roo-1907/cover.jpg",
+    pdf:
+      "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["考古学報告", "探検報告", "雑誌記事"],
+    regions: ["キンタナ・ロー", "リオ・ベック", "ユカタン", "メキシコ"],
+    languages: ["英語"],
+    tags: [
+      "マヤ考古学",
+      "リオ・ベック遺跡",
+      "イカイチェ",
+      "キンタナ・ロー探検",
+      "遺跡建築",
+      "一次史料",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -5073,6 +5239,58 @@ const publicationMetadata = {
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
+  "perigny-ruines-nacun-1906": {
+    sourceEdition:
+      "Maurice de Périgny「Les ruines de Nacun」『La Nature』第1745号（Paris、1906年11月3日）pp. 360–362。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のモーリス・ド・ペリニー文書所収原刊切抜き（ark:/12148/btv1b108914998）を底本とした。原刊本文360–362頁、図版3点、キャプションを収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b108914998",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-exploration-yucatan-1906": {
+    sourceEdition:
+      "Maurice de Périgny「Une exploration au Yucatan」『Journal de la Société des Américanistes』nouvelle série, tome 3, no 2（Paris、1906年）pp. 340–341。",
+    sourceProvider:
+      "Persée公開の『Journal de la Société des Américanistes』原刊画像を底本とした。編集部導入、ペリニーの書簡本文、原刊340–341頁を収録した。",
+    sourceUrl:
+      "https://www.persee.fr/doc/jsa_0037-9174_1906_num_3_2_3469_t1_0340_0000_2",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "lemoine-travers-peten-yucatan-1906": {
+    sourceEdition:
+      "Frédéric Lemoine「À travers le Peten et le Yucatan; par le comte Maurice de Périgny」『La Géographie』tome 13（Paris、1906年）pp. 482–485、閉会評p. 486。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開の『La Géographie』第13巻原刊画像（ark:/12148/bpt6k377513）を底本とした。本文、行程図とキャプション、486頁冒頭まで続く閉会評を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/bpt6k377513",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-peten-1907": {
+    sourceEdition:
+      "Maurice de Périgny「Le Peten」『La Géographie』tome 16（Paris、1907年）pp. 287–290。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開の『La Géographie』第16巻原刊画像（ark:/12148/bpt6k377544）を底本とした。原刊287–290頁の本文を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/bpt6k377544",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-maya-ruins-quintana-roo-1907": {
+    sourceEdition:
+      "Maurice de Périgny「Maya Ruins in Quintana Roo」『Records of the Past』volume 6（Washington、1907年）pp. 232–235。",
+    sourceProvider:
+      "Getty Research Institute所蔵原刊本のInternet Archiveデジタル複製を収めるWikimedia Commons公開PDFを底本とした。本文、節見出し、署名、編集注を収録した。",
+    sourceUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c0/Records_of_the_past_%28IA_gri_33125000987509%29.pdf",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -5111,6 +5329,11 @@ const shortWorkAuthorBySlug = {
   "dieseldorff-reliefbild-chipolem-1895": "erwin-p-dieseldorff",
   "dieseldorff-cuculcan-1895": "erwin-p-dieseldorff",
   "dieseldorff-tolteken-1896": "erwin-p-dieseldorff",
+  "perigny-ruines-nacun-1906": "maurice-de-perigny",
+  "perigny-exploration-yucatan-1906": "maurice-de-perigny",
+  "lemoine-travers-peten-yucatan-1906": "frederic-lemoine",
+  "perigny-peten-1907": "maurice-de-perigny",
+  "perigny-maya-ruins-quintana-roo-1907": "maurice-de-perigny",
 };
 
 export const publicationReleaseTag = "publications-current";

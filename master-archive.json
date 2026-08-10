@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "2f119d4be2870812df127c1123c77001ea5f02e7",
+  "archive_commit": "224bc10c7c0f6d53cdf840c73fc3ee07c32ae945",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -111,6 +111,11 @@
     "dieseldorff-reliefbild-chipolem-1895": "publications/dieseldorff-reliefbild-chipolem-1895/master.docx",
     "dieseldorff-cuculcan-1895": "publications/dieseldorff-cuculcan-1895/master.docx",
     "dieseldorff-tolteken-1896": "publications/dieseldorff-tolteken-1896/master.docx",
-    "cortes-y-larraz-descripcion-geografico-moral-1771": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/master.docx"
+    "cortes-y-larraz-descripcion-geografico-moral-1771": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/master.docx",
+    "perigny-ruines-nacun-1906": "publications/perigny-ruines-nacun-1906/master.docx",
+    "perigny-exploration-yucatan-1906": "publications/perigny-exploration-yucatan-1906/master.docx",
+    "lemoine-travers-peten-yucatan-1906": "publications/lemoine-travers-peten-yucatan-1906/master.docx",
+    "perigny-peten-1907": "publications/perigny-peten-1907/master.docx",
+    "perigny-maya-ruins-quintana-roo-1907": "publications/perigny-maya-ruins-quintana-roo-1907/master.docx"
   }
 }
