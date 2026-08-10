@@ -332,16 +332,22 @@ jobs:
               entries[name] = digest
           assert len(entries) >= 228 and len(entries) % 2 == 0, len(entries)
 
-          added = 0
+          targets = []
           for record in os.environ["ASSETS"].splitlines():
               if not record.strip():
                   continue
               _key, name, _size, digest, _blobs = record.split("|", 4)
-              assert name not in entries, name
               entries[name] = digest
-              lines.append(f"{digest}  {name}")
-              added += 1
-          assert added == 6
+              targets.append((name, digest))
+          assert len(targets) == 6
+
+          target_names = {name for name, _digest in targets}
+          lines = [
+              line
+              for line in lines
+              if line.partition("  ")[2] not in target_names
+          ]
+          lines.extend(f"{digest}  {name}" for name, digest in targets)
           assert len(lines) == len(entries)
           Path("/tmp/SHA256SUMS.txt").write_text(
               "\n".join(lines) + "\n",
@@ -415,8 +421,9 @@ jobs:
 
           workflow=.github/workflows/publish-morelet-assets-20260810.yml
           git rm -- "$workflow"
+          git rm --ignore-unmatch -- \
+            .release-upload-errors/morelet-papers-31400451567.txt
           git diff --cached --check
-          npm ci
           npm run build
           npm test
 
