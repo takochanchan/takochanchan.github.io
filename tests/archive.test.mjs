@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 102);
+  assert.equal(publications.length, 107);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,8 +64,8 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 80);
-  assert.equal(shortPublications.length, 22);
-  assert.equal(shortPublicationAuthors.length, 12);
+  assert.equal(shortPublications.length, 27);
+  assert.equal(shortPublicationAuthors.length, 13);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -91,6 +91,11 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "ximenez-escolios-ayer-ms-1515",
       "marimon-lacandones-1695",
       "peniche-relaciones-belice-1869",
+      "dieseldorff-ausgrabungen-coban-1893",
+      "dieseldorff-gefaess-chama-1895",
+      "dieseldorff-reliefbild-chipolem-1895",
+      "dieseldorff-cuculcan-1895",
+      "dieseldorff-tolteken-1896",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -349,7 +354,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">80<\/strong>件/);
-  assert.match(html, /id="paper-match-count">22<\/strong>件/);
+  assert.match(html, /id="paper-match-count">27<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');

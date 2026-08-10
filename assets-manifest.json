@@ -362,6 +362,96 @@
       "sha256": "feb4ac0de3efe993033dd0a31605a5425fee15b1a3e80fc4472c4640c6b22a26"
     },
     {
+      "path": "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
+      "size": 1504682,
+      "sha256": "087c5acc1456096fd5a99ae28b818da39e6c64755141825ac959809684c19eb2"
+    },
+    {
+      "path": "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.pdf",
+      "size": 1371781,
+      "sha256": "c0d19d36273070ad52ddad69bb71936992892ac1fbee4b9f75443082f19c324e"
+    },
+    {
+      "path": "publications/dieseldorff-ausgrabungen-coban-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-ausgrabungen-coban-1893/cover.jpg",
+      "size": 171391,
+      "sha256": "785d0be7216adb9bc1f5dabf8241ff6d964afc981c37bdc97e269216d35a375d"
+    },
+    {
+      "path": "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
+      "size": 979406,
+      "sha256": "065550d9b4036ef5beb73791e26781aa54bfeb3d71ae7ef94cb6843e94292f7d"
+    },
+    {
+      "path": "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.pdf",
+      "size": 612626,
+      "sha256": "7255cfbcd9ca3e03f3e3aa0a10f2c1c0e0d2a8c0cd3280cc45d0a5b4ba2d02ab"
+    },
+    {
+      "path": "publications/dieseldorff-cuculcan-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-cuculcan-1895/cover.jpg",
+      "size": 140235,
+      "sha256": "9f5e9936b07590ec774b01d93fba099d26d7a0fc674c994b01a0023d40ba51e9"
+    },
+    {
+      "path": "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.epub",
+      "size": 879004,
+      "sha256": "ed898a3cc81bd294d2828b7a1c3f8c232aac56be9c923e3d1d79ea02c0ba2deb"
+    },
+    {
+      "path": "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.pdf",
+      "size": 726758,
+      "sha256": "cc639455eb65bb25b3f5601ea287203763e90ab1a4f19d01ad9657c1c36ddcae"
+    },
+    {
+      "path": "publications/dieseldorff-gefaess-chama-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-gefaess-chama-1895/cover.jpg",
+      "size": 147630,
+      "sha256": "2424e1d84e200ae7699928f21925e865a1e15430c7b3917187a4fbb1de10a446"
+    },
+    {
+      "path": "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
+      "size": 472444,
+      "sha256": "17feba71e3432af68bdf4589d43a73c682badcf066ac3765fa09fb3b2bee7502"
+    },
+    {
+      "path": "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.pdf",
+      "size": 411335,
+      "sha256": "c7963271c0ad86eb28185a5b3ff24eee5beb9be1f0e054bd8504ec0058d7e694"
+    },
+    {
+      "path": "publications/dieseldorff-reliefbild-chipolem-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-reliefbild-chipolem-1895/cover.jpg",
+      "size": 154212,
+      "sha256": "d9f54d18bc9983bbf81b39ae8b56adba447fa58e81b0f321d96e660ab5f2ace9"
+    },
+    {
+      "path": "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.epub",
+      "size": 124956,
+      "sha256": "8cf42874ec38d4bd73d70aaa2056a3b8f1901cfbf9dc9f5f1943a86e0ac307f5"
+    },
+    {
+      "path": "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.pdf",
+      "size": 154437,
+      "sha256": "1f65cd65fc99dd7131696430fb5153f471b3ea216eaea67a18fe2285e489f72a"
+    },
+    {
+      "path": "publications/dieseldorff-tolteken-1896/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-tolteken-1896/cover.jpg",
+      "size": 142448,
+      "sha256": "2b3af1944e98854361f8d47859002c930eac37af46a494ac516ce17dffc92ab2"
+    },
+    {
       "path": "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
       "size": 3432879,

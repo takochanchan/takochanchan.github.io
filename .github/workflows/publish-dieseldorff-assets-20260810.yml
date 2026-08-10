@@ -1,0 +1,392 @@
+name: Publish Dieseldorff release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-dieseldorff-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-dieseldorff-assets-20260810.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "kind": "epub",
+              "minJapanese": 6000,
+              "imageRefs": 9,
+              "title": "コバンにおける発掘",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "name": "Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
+              "size": 1504682,
+              "sha256": "087c5acc1456096fd5a99ae28b818da39e6c64755141825ac959809684c19eb2",
+              "blobs": [
+                "5b8656237f1e0cc67138d80411713e17663ada4a",
+                "ec2dd6b951db83f340f42254df7d264d5ec80547",
+                "ba1571f5e65a44be9a99901599211b32406d453a",
+                "cec769e620a464cd00f3ebdee1f6a831175b4be1",
+                "b9b5188bb624694b92ef35b66d515e978089b655",
+                "09f3d378e3978b3380558733845b1b717a714418",
+                "ebd1410d03fa98a26d9a629a3fafb2829837be3e",
+                "95380b996840a8c8b19cc62b701e4a33cd85b260"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 13,
+              "title": "コバンにおける発掘",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 382〕",
+              "name": "Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.pdf",
+              "size": 1371781,
+              "sha256": "c0d19d36273070ad52ddad69bb71936992892ac1fbee4b9f75443082f19c324e",
+              "blobs": [
+                "28937aa2e2a3416ae530143b6884f0f3c0a4e98f",
+                "3440109aa9b2c9cdd3757043e3d9479dd73524e5",
+                "2445526a93bc3f5da9ae29a60e73838513bd4ad2",
+                "205f4fc65249717ba0c8a335287f1a6f4afb7a4b",
+                "9253d457a4161bf6be33f6fa87cff1f43f013c40",
+                "d55d5d3e1d9d1de25828023b32a7d6b90c9a2540",
+                "118c40ea29573d7df2fded428e55b3a5729ca56d"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 1400,
+              "imageRefs": 3,
+              "title": "ククルカン",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "name": "Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
+              "size": 979406,
+              "sha256": "065550d9b4036ef5beb73791e26781aa54bfeb3d71ae7ef94cb6843e94292f7d",
+              "blobs": [
+                "13c726f26149ba458ab2fa736cb5a5a2413499f9",
+                "b080c40bf59054187421161f5ea376f864efc125",
+                "b802e3507416c61f1d1c19e946523b7d34c5467a",
+                "2c47210ebd977157c8a2b001b81d2c4d049d1264",
+                "4f099230806936331225f74e5532a176e55f8072"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 5,
+              "title": "ククルカン",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 783〕",
+              "name": "Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.pdf",
+              "size": 612626,
+              "sha256": "7255cfbcd9ca3e03f3e3aa0a10f2c1c0e0d2a8c0cd3280cc45d0a5b4ba2d02ab",
+              "blobs": [
+                "6ca3d230422f0b88e01f0b59516eccd199ad763a",
+                "10772f74f8fd8d1534720fe04d076d6c078d2171",
+                "4e193132370193c54a13d795fcf7ff4e73d706b6"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 6200,
+              "imageRefs": 6,
+              "title": "チャマの器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "name": "Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.epub",
+              "size": 879004,
+              "sha256": "ed898a3cc81bd294d2828b7a1c3f8c232aac56be9c923e3d1d79ea02c0ba2deb",
+              "blobs": [
+                "712119d410ae3000e9310d036dd143b10b929847",
+                "f60c0d248291fe8193632b0706d9b756ea869f21",
+                "178857b5cd6813fe2825b81cea0b734cb090f49b",
+                "d763eb3efd6796618e75c7a4fdcde8db980b0cdd",
+                "138714cc0f44dfb87d5528035a4698a0eb650efa"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 11,
+              "title": "チャマの器",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 776〕",
+              "name": "Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.pdf",
+              "size": 726758,
+              "sha256": "cc639455eb65bb25b3f5601ea287203763e90ab1a4f19d01ad9657c1c36ddcae",
+              "blobs": [
+                "b99a3117b694b79e6c1888aed6450546fa519960",
+                "53e93cf96408b78f2bc88b0f049415216bd3f089",
+                "e90b5ebc32a20f0f3ee2e362a37da381c199fba8",
+                "1c5a8f607e4a4474e97fa072d5feaed611efeb60"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 2700,
+              "imageRefs": 3,
+              "title": "チポレムの浮彫像",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "name": "Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
+              "size": 472444,
+              "sha256": "17feba71e3432af68bdf4589d43a73c682badcf066ac3765fa09fb3b2bee7502",
+              "blobs": [
+                "ae34ef7472e39454f783f9b366c2cfd5dadf63c8",
+                "21b7d8e9743928461c879f2eceeffae4d4e32314",
+                "5c221a5b205d81c66b25f84daac405e7e3b8b1ff"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 6,
+              "title": "チポレムの浮彫像",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 780〕",
+              "name": "Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.pdf",
+              "size": 411335,
+              "sha256": "c7963271c0ad86eb28185a5b3ff24eee5beb9be1f0e054bd8504ec0058d7e694",
+              "blobs": [
+                "d8d327135d59cbbf2fe32a030ddef20bb999c69f",
+                "426b5eb87332edad1b9c6895f88b076d57de2432",
+                "c6c750dd78a7f14e21984818e9e1d9876a617e2e"
+              ]
+            },
+            {
+              "kind": "epub",
+              "minJapanese": 1750,
+              "imageRefs": 0,
+              "title": "トルテカ人とは誰であったか",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "name": "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.epub",
+              "size": 124956,
+              "sha256": "8cf42874ec38d4bd73d70aaa2056a3b8f1901cfbf9dc9f5f1943a86e0ac307f5",
+              "blobs": [
+                "d35a1381fd140ea5d3c639cc3ec679273c753f66"
+              ]
+            },
+            {
+              "kind": "pdf",
+              "pages": 3,
+              "title": "トルテカ人とは誰であったか",
+              "author": "エルヴィン・P・ディースルドルフ",
+              "marker": "〔原刊 p. 418〕",
+              "name": "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.pdf",
+              "size": 154437,
+              "sha256": "1f65cd65fc99dd7131696430fb5153f471b3ea216eaea67a18fe2285e489f72a",
+              "blobs": [
+                "9ba253f92249c540edd6de2113367a103aa44721"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/dieseldorff-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/dieseldorff-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "原刊冒頭",
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert asset["marker"] in text
+                  assert not re.search(r"(?m)^\s*日本語全訳\s*$", text)
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/dieseldorff-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          gh release download publications-current --pattern 'Dieseldorff_*' --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Dieseldorff release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/dieseldorff-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Dieseldorff release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+

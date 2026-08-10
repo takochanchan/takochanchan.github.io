@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "c4d0c4161a5facdca5573144187d8dc49606ffc9",
+  "archive_commit": "36ca7ca82398251133cf4357575518c5149fd754",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -104,6 +104,11 @@
     "us-senate-central-america-correspondence-1853": "publications/us-senate-central-america-correspondence-1853/master.md",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
     "peniche-relaciones-belice-1869": "publications/peniche-relaciones-belice-1869/master.docx",
-    "southey-chronological-history-west-indies-1827": "publications/southey-chronological-history-west-indies-1827/master.docx"
+    "southey-chronological-history-west-indies-1827": "publications/southey-chronological-history-west-indies-1827/master.docx",
+    "dieseldorff-ausgrabungen-coban-1893": "publications/dieseldorff-ausgrabungen-coban-1893/master.docx",
+    "dieseldorff-gefaess-chama-1895": "publications/dieseldorff-gefaess-chama-1895/master.docx",
+    "dieseldorff-reliefbild-chipolem-1895": "publications/dieseldorff-reliefbild-chipolem-1895/master.docx",
+    "dieseldorff-cuculcan-1895": "publications/dieseldorff-cuculcan-1895/master.docx",
+    "dieseldorff-tolteken-1896": "publications/dieseldorff-tolteken-1896/master.docx"
   }
 }

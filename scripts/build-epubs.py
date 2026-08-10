@@ -165,6 +165,16 @@ DOCX_SOURCES = {
     "ximenez-escolios-ayer-ms-1515": SOURCES
     / "翻訳サイト"
     / "Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.docx",
+    "dieseldorff-ausgrabungen-coban-1893": SOURCES
+    / "Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.docx",
+    "dieseldorff-gefaess-chama-1895": SOURCES
+    / "Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.docx",
+    "dieseldorff-reliefbild-chipolem-1895": SOURCES
+    / "Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.docx",
+    "dieseldorff-cuculcan-1895": SOURCES
+    / "Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.docx",
+    "dieseldorff-tolteken-1896": SOURCES
+    / "Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.docx",
 }
 
 TAGGED_PDF_SOURCES = {

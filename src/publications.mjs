@@ -3665,6 +3665,173 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  {
+    slug: "dieseldorff-ausgrabungen-coban-1893",
+    title: "コバンにおける発掘",
+    originalTitle: "Ausgrabungen in Coban",
+    subtitle:
+      "1893年刊・原刊374–382頁・本文・ヴィルヒョウ分析報告・図1–11 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "AUSGRABUNGEN IN COBAN · ZEITSCHRIFT FÜR ETHNOLOGIE · 1893",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第25巻、1893年、374–382頁",
+    year: 1893,
+    extent: "PDF 13頁・原刊374–382頁・図11点・鉱物分析付報",
+    description:
+      "コバン近郊とチャマ渓谷で出土した彩色・線刻土器、埋葬、供献皿、黄鉄鉱片などを報告する発掘論文。編集部導入、ディースルドルフ本文、図1–11と図注、脚注、ルドルフ・ヴィルヒョウによる骨・顔料・鉱物試料の分析報告を省略なく訳しています。",
+    cover: "publications/dieseldorff-ausgrabungen-coban-1893/cover.jpg",
+    pdf:
+      "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
+    pageCount: 13,
+    figureCount: 11,
+    plateCount: 0,
+    types: ["考古学報告", "発掘報告", "学会会報"],
+    regions: ["コバン", "チャマ", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "マヤ考古学",
+      "彩色土器",
+      "埋葬",
+      "黄鉄鉱",
+      "ヴィルヒョウ",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "dieseldorff-gefaess-chama-1895",
+    title: "チャマの器",
+    originalTitle: "Das Gefäss von Chamá",
+    subtitle:
+      "1895年刊・原刊770–776頁・本文・引用・図1–5および補図 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "DAS GEFÄSS VON CHAMÁ · ZEITSCHRIFT FÜR ETHNOLOGIE · 1895",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第27巻、1895年、770–776頁",
+    year: 1895,
+    extent: "PDF 11頁・原刊770–776頁・図1–5および補図2点",
+    description:
+      "チャマ出土の彩色土器図像をめぐり、暦、供犠、ククルカン、死の日々の神格を論じた考古学論文。編集部導入、本文、ランダほかの引用、図1–5・図1a・図2aと図注を省略なく訳し、原刊で分載された図像も欠落なく収録しています。",
+    cover: "publications/dieseldorff-gefaess-chama-1895/cover.jpg",
+    pdf:
+      "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.epub",
+    pageCount: 11,
+    figureCount: 7,
+    plateCount: 0,
+    types: ["考古学論文", "図像研究", "学会会報"],
+    regions: ["チャマ", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "マヤ考古学",
+      "彩色土器",
+      "ククルカン",
+      "供犠",
+      "暦",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "dieseldorff-reliefbild-chipolem-1895",
+    title: "チポレムの浮彫像",
+    originalTitle: "Reliefbild aus Chipolem",
+    subtitle: "1895年刊・原刊777–780頁・本文・図1–6 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "RELIEFBILD AUS CHIPOLEM · ZEITSCHRIFT FÜR ETHNOLOGIE · 1895",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第27巻、1895年、777–780頁",
+    year: 1895,
+    extent: "PDF 6頁・原刊777–780頁・図6点",
+    description:
+      "チポレムのチムルトゥン洞窟前で発見された土製浮彫を起点に、焼燔供献、時の蛇、若いククルカン、時間区分の更新を論じた考古学論文。編集部導入、本文、図1–6と図注を省略なく訳しています。",
+    cover: "publications/dieseldorff-reliefbild-chipolem-1895/cover.jpg",
+    pdf:
+      "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 6,
+    plateCount: 0,
+    types: ["考古学論文", "図像研究", "学会会報"],
+    regions: ["チポレム", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "マヤ考古学",
+      "洞窟祭祀",
+      "土製浮彫",
+      "ククルカン",
+      "焼燔供献",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "dieseldorff-cuculcan-1895",
+    title: "ククルカン",
+    originalTitle: "Cuculcan",
+    subtitle: "1895年刊・原刊780–783頁・本文・図1–19 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "CUCULCAN · ZEITSCHRIFT FÜR ETHNOLOGIE · 1895",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第27巻、1895年、780–783頁",
+    year: 1895,
+    extent: "PDF 5頁・原刊780–783頁・図19点",
+    description:
+      "チャマ、ペテト、チャフカル、チムルトゥン出土品の図像を比較し、ケツァルと蛇の結合からククルカンの頭部表現が形成されたと論じる短篇。共通の編集部導入、本文、図1–19と図注を省略なく訳しています。",
+    cover: "publications/dieseldorff-cuculcan-1895/cover.jpg",
+    pdf:
+      "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
+    pageCount: 5,
+    figureCount: 19,
+    plateCount: 0,
+    types: ["考古学論文", "図像研究", "学会会報"],
+    regions: ["チャマ", "コバン", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "マヤ考古学",
+      "ククルカン",
+      "ケツァルコアトル",
+      "神格図像",
+      "彩色土器",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "dieseldorff-tolteken-1896",
+    title: "トルテカ人とは誰であったか",
+    originalTitle: "Wer waren die Tolteken?",
+    subtitle: "1896年刊・原刊415–418頁・半標題・標題・本文 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series: "WER WAREN DIE TOLTEKEN? · FESTSCHRIFT FÜR ADOLF BASTIAN · 1896",
+    originalPublication:
+      "ベルリン、『Festschrift für Adolf Bastian zu seinem 70. Geburtstage』、1896年、415–418頁",
+    year: 1896,
+    extent: "PDF 3頁・原刊415–418頁・図版なし",
+    description:
+      "ククルカン／ケツァルコアトルの図像と神殿の重層構造を手掛かりに、トルテカ人とマヤ人の関係を仮説的に論じた短篇。著者名半標題、論文標題、本文、末尾の日付・地名を省略なく訳しています。",
+    cover: "publications/dieseldorff-tolteken-1896/cover.jpg",
+    pdf:
+      "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.epub",
+    pageCount: 3,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["考古学論文", "民族起源論", "記念論集"],
+    regions: ["メソアメリカ", "マヤ地域", "チョルラ", "コパン"],
+    languages: ["ドイツ語"],
+    tags: [
+      "トルテカ人",
+      "マヤ人",
+      "ククルカン",
+      "ケツァルコアトル",
+      "神殿建築",
+      "一次史料",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -4754,6 +4921,61 @@ const publicationMetadata = {
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
+  "dieseldorff-ausgrabungen-coban-1893": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Ausgrabungen in Coban」『Zeitschrift für Ethnologie』Bd. 25（Berlin、1893年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 374–382。1893年6月10日付。Rudolf Virchowの試料分析報告を付す。",
+    sourceProvider:
+      "Internet Archive公開の『Zeitschrift für Ethnologie』第25巻スキャン（identifier: zeitschriftfuret2518unse）を主底本とし、原刊誌面とOCRを照合した。編集部導入、ディースルドルフ本文、図1–11、図注、脚注、ヴィルヒョウ付加報告を収録した。",
+    sourceUrl:
+      "https://archive.org/details/zeitschriftfuret2518unse",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "dieseldorff-gefaess-chama-1895": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Das Gefäss von Chamá」『Zeitschrift für Ethnologie』Bd. 27（Berlin、1895年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 770–776。1895年10月付。",
+    sourceProvider:
+      "Internet Archive公開の『Zeitschrift für Ethnologie』第27巻スキャン（identifier: zeitschriftfure25urgegoog）を主底本とし、原刊誌面とOCRを照合した。編集部導入、本文、引用、図1–5・図1a・図2aおよび図注を収録した。",
+    sourceUrl:
+      "https://archive.org/details/zeitschriftfure25urgegoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "dieseldorff-reliefbild-chipolem-1895": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Reliefbild aus Chipolem」『Zeitschrift für Ethnologie』Bd. 27（Berlin、1895年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 777–780。1895年11月7日付。",
+    sourceProvider:
+      "Internet Archive公開の『Zeitschrift für Ethnologie』第27巻スキャン（identifier: zeitschriftfure25urgegoog）を主底本とし、原刊誌面とOCRを照合した。共通の編集部導入、本文、図1–6および図注を収録した。",
+    sourceUrl:
+      "https://archive.org/details/zeitschriftfure25urgegoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "dieseldorff-cuculcan-1895": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Cuculcan」『Zeitschrift für Ethnologie』Bd. 27（Berlin、1895年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 780–783。1895年11月7日付。",
+    sourceProvider:
+      "Internet Archive公開の『Zeitschrift für Ethnologie』第27巻スキャン（identifier: zeitschriftfure25urgegoog）を主底本とし、原刊誌面とOCRを照合した。共通の編集部導入、本文、図1–19および図注を収録した。",
+    sourceUrl:
+      "https://archive.org/details/zeitschriftfure25urgegoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "dieseldorff-tolteken-1896": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Wer waren die Tolteken?」『Festschrift für Adolf Bastian zu seinem 70. Geburtstage, 26. Juni 1896』（Berlin: Dietrich Reimer (Ernst Vohsen)、1896年）pp. 415–418。",
+    sourceProvider:
+      "Internet Archive公開の原刊スキャン（identifier: festschriftfrad00bastgoog）を主底本とし、原刊誌面とOCRを照合した。原刊415頁の著者名半標題、416頁の論文標題、417–418頁の本文を収録した。",
+    sourceUrl:
+      "https://archive.org/details/festschriftfrad00bastgoog",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -4785,6 +5007,11 @@ const shortWorkAuthorBySlug = {
   "ximenez-escolios-ayer-ms-1515": "francisco-ximenez",
   "us-senate-central-america-correspondence-1853":
     "united-states-department-of-state",
+  "dieseldorff-ausgrabungen-coban-1893": "erwin-p-dieseldorff",
+  "dieseldorff-gefaess-chama-1895": "erwin-p-dieseldorff",
+  "dieseldorff-reliefbild-chipolem-1895": "erwin-p-dieseldorff",
+  "dieseldorff-cuculcan-1895": "erwin-p-dieseldorff",
+  "dieseldorff-tolteken-1896": "erwin-p-dieseldorff",
 };
 
 export const publicationReleaseTag = "publications-current";
