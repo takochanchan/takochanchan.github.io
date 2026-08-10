@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 118);
+  assert.equal(publications.length, 123);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 84);
-  assert.equal(shortPublications.length, 34);
+  assert.equal(shortPublications.length, 39);
   assert.equal(shortPublicationAuthors.length, 16);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -102,6 +102,11 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "lemoine-travers-peten-yucatan-1906",
       "perigny-peten-1907",
       "perigny-maya-ruins-quintana-roo-1907",
+      "perigny-yucatan-inconnu-1908",
+      "perigny-maler-discoveries-yucatan-1908",
+      "perigny-yucatan-inconnu-geographie-1908",
+      "perigny-ruines-rio-bec-1909",
+      "perigny-villes-mortes-amerique-centrale-1909",
       "morelet-exploration-guatemala-1850",
     ]),
   );
@@ -195,6 +200,11 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "perigny-exploration-yucatan-1906",
       "perigny-maya-ruins-quintana-roo-1907",
       "perigny-peten-1907",
+      "perigny-maler-discoveries-yucatan-1908",
+      "perigny-yucatan-inconnu-1908",
+      "perigny-yucatan-inconnu-geographie-1908",
+      "perigny-ruines-rio-bec-1909",
+      "perigny-villes-mortes-amerique-centrale-1909",
     ],
   );
   const lemoine = shortPublicationAuthors.find(
@@ -422,7 +432,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">84<\/strong>件/);
-  assert.match(html, /id="paper-match-count">34<\/strong>件/);
+  assert.match(html, /id="paper-match-count">39<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const googleSearchPosition = html.indexOf('id="google-site-search"');

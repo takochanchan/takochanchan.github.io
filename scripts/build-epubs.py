@@ -189,6 +189,16 @@ DOCX_SOURCES = {
     / "Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.docx",
     "perigny-maya-ruins-quintana-roo-1907": SOURCES
     / "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.docx",
+    "perigny-yucatan-inconnu-1908": SOURCES
+    / "Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.docx",
+    "perigny-maler-discoveries-yucatan-1908": SOURCES
+    / "Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.docx",
+    "perigny-yucatan-inconnu-geographie-1908": SOURCES
+    / "Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.docx",
+    "perigny-villes-mortes-amerique-centrale-1909": SOURCES
+    / "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.docx",
+    "perigny-ruines-rio-bec-1909": SOURCES
+    / "Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {

@@ -4237,10 +4237,188 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "perigny-yucatan-inconnu-1908",
+    title: "未知のユカタン",
+    originalTitle: "Yucatan inconnu",
+    subtitle: "1908年刊・原刊66–84頁・本文・地図・図版6点 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "YUCATAN INCONNU · JOURNAL DE LA SOCIÉTÉ DES AMÉRICANISTES · 1908",
+    originalPublication:
+      "パリ、『Journal de la Société des Américanistes』第5巻、1908年、66–84頁",
+    year: 1908,
+    extent: "PDF 23頁・原刊66–84頁・地図・図版6点",
+    description:
+      "ペリニーがリオ・オンドからイカイチェを経てキンタナ・ロー内陸へ入った第二次探検の詳細報告。チョコハ、リオ・ベックなどの遺跡、マヤ諸集落、森林交通を扱う本文、原刊頁境界、地図・平面図・写真図版6点と全キャプションを省略なく訳しています。",
+    cover: "publications/perigny-yucatan-inconnu-1908/cover.jpg",
+    pdf:
+      "publications/perigny-yucatan-inconnu-1908/Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-yucatan-inconnu-1908/Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
+    pageCount: 23,
+    figureCount: 6,
+    plateCount: 0,
+    types: ["考古学報告", "探検報告", "学術誌論文"],
+    regions: ["キンタナ・ロー", "リオ・ベック", "ユカタン", "メキシコ"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "リオ・ベック遺跡",
+      "イカイチェ",
+      "チョコハ遺跡",
+      "キンタナ・ロー探検",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-maler-discoveries-yucatan-1908",
+    title: "マーラー氏のユカタンにおける最新の発見",
+    originalTitle: "Les dernières découvertes de M. Maler dans le Yucatan",
+    subtitle: "1908年刊・原刊95–98頁・本文 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series:
+      "LES DERNIÈRES DÉCOUVERTES DE M. MALER DANS LE YUCATAN · JOURNAL DE LA SOCIÉTÉ DES AMÉRICANISTES · 1908",
+    originalPublication:
+      "パリ、『Journal de la Société des Américanistes』第5巻、1908年、95–98頁",
+    year: 1908,
+    extent: "PDF 6頁・原刊95–98頁・図版なし",
+    description:
+      "テオベルト・マーラーがアルタル・デ・サクリフィシオス、セイバル、イツィムテ、カンクエンで記録した遺構・石碑・祭壇・ヒエログリフを、ペリニーが紹介した短報。原刊95–98頁の本文と原刊頁境界を省略なく訳しています。",
+    cover: "publications/perigny-maler-discoveries-yucatan-1908/cover.jpg",
+    pdf:
+      "publications/perigny-maler-discoveries-yucatan-1908/Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-maler-discoveries-yucatan-1908/Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["考古学報告", "文献紹介", "学術誌短報"],
+    regions: ["ウスマシンタ川流域", "ペテン", "グアテマラ", "メキシコ"],
+    languages: ["フランス語"],
+    tags: [
+      "テオベルト・マーラー",
+      "セイバル遺跡",
+      "アルタル・デ・サクリフィシオス遺跡",
+      "イツィムテ遺跡",
+      "カンクエン遺跡",
+      "石碑",
+    ],
+  },
+  {
+    slug: "perigny-yucatan-inconnu-geographie-1908",
+    title: "未知のユカタン（『ラ・ジェオグラフィ』版）",
+    originalTitle: "Le Yucatan inconnu",
+    subtitle: "1908年刊・原刊227–238頁・本文・原注 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "LE YUCATAN INCONNU · LA GÉOGRAPHIE · 1908",
+    originalPublication:
+      "パリ、『La Géographie』第18巻、1908年、227–238頁",
+    year: 1908,
+    extent: "PDF 16頁・原刊227–238頁・原注1点・図版なし",
+    description:
+      "ペリニーのキンタナ・ロー探検を『La Géographie』に掲載した別稿。イカイチェ、リオ・ベック、ノホチナ、ウオルトゥニチ、ヤアビチナ、ノカカブの各遺跡を扱う本文、原注、節見出し、署名、原刊頁境界を省略なく訳しています。",
+    cover: "publications/perigny-yucatan-inconnu-geographie-1908/cover.jpg",
+    pdf:
+      "publications/perigny-yucatan-inconnu-geographie-1908/Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-yucatan-inconnu-geographie-1908/Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
+    pageCount: 16,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["考古学報告", "探検報告", "地理学会誌論文"],
+    regions: ["キンタナ・ロー", "リオ・ベック", "ユカタン", "メキシコ"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "リオ・ベック遺跡",
+      "ノホチナ遺跡",
+      "ヤアビチナ遺跡",
+      "キンタナ・ロー探検",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-villes-mortes-amerique-centrale-1909",
+    title: "中部アメリカの死都",
+    originalTitle: "Villes mortes de l’Amérique centrale",
+    subtitle: "1909年刊・原刊445–480頁・三回連載・図版41点 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "VILLES MORTES DE L’AMÉRIQUE CENTRALE · LE TOUR DU MONDE · 1909",
+    originalPublication:
+      "パリ、『Le Tour du Monde』新シリーズ第15巻、第38–40号、1909年、445–480頁",
+    year: 1909,
+    extent: "PDF 73頁・原刊445–480頁・三回連載・図版41点",
+    description:
+      "ペリニーのユカタン・ペテン探検を豊富な写真と図で紹介した三回連載。行程、マヤ諸集落、森林、遺跡発見とリオ・ベック建築を扱う本文、各回見出し・継続表示・署名・権利表示、個別切出し図版41点と全キャプションを省略なく収録しています。",
+    cover: "publications/perigny-villes-mortes-amerique-centrale-1909/cover.jpg",
+    pdf:
+      "publications/perigny-villes-mortes-amerique-centrale-1909/Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-villes-mortes-amerique-centrale-1909/Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.epub",
+    pageCount: 73,
+    figureCount: 41,
+    plateCount: 0,
+    types: ["探検記", "考古学報告", "挿絵入り雑誌連載"],
+    regions: ["ユカタン", "キンタナ・ロー", "リオ・ベック", "ペテン"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "リオ・ベック遺跡",
+      "キンタナ・ロー探検",
+      "ペテン探検",
+      "写真図版",
+      "一次史料",
+    ],
+  },
+  {
+    slug: "perigny-ruines-rio-bec-1909",
+    title: "リオ・ベック遺跡",
+    originalTitle: "Ruines de Rio Beque",
+    subtitle: "1909年刊・原刊300–301頁・本文・脚注・図版2点 日本語全訳",
+    author: "モーリス・ド・ペリニー",
+    series: "RUINES DE RIO BEQUE · LA NATURE · 1909",
+    originalPublication:
+      "パリ、『La Nature』第1872号、1909年4月10日、300–301頁",
+    year: 1909,
+    extent: "PDF 6頁・原刊300–301頁・原注1点・訳注2点・図版2点",
+    description:
+      "ペリニーが発見したリオ・ベック遺跡の建築を報告した記事。双塔を備える主建物、内部室、装飾石、ペテンと北ユカタンの建築的関係を扱う本文、脚注、図版2点と全キャプション、署名を省略なく訳しています。",
+    cover: "publications/perigny-ruines-rio-bec-1909/cover.jpg",
+    pdf:
+      "publications/perigny-ruines-rio-bec-1909/Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/perigny-ruines-rio-bec-1909/Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 2,
+    plateCount: 0,
+    types: ["考古学報告", "遺跡報告", "雑誌記事"],
+    regions: ["リオ・ベック", "キンタナ・ロー", "ユカタン", "メキシコ"],
+    languages: ["フランス語"],
+    tags: [
+      "マヤ考古学",
+      "リオ・ベック遺跡",
+      "リオ・ベック様式",
+      "マヤ建築",
+      "双塔建築",
+      "一次史料",
+    ],
+  },
 ];
 
 const publicDomainRights =
   "原刊本文はパブリックドメインです。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。";
+
+const JapaneseEditionNoReuseRights =
+  "日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。";
+
+const perseePublicDomainRights =
+  "モーリス・ド・ペリニーの原刊本文および著者作成の図・写真は著作権保護期間を満了しています。第三者名義の図版は個別の権利表示が優先します。Persée由来の画像・データは、現行CGUにより、私的・科学・教育目的等の非営利用途に限り、Persée名、出典および原ページへのリンクを表示して利用できます。商用利用にはPerséeの明示的許諾が必要です。" +
+  JapaneseEditionNoReuseRights;
+
+const gallicaPublicDomainRights =
+  "モーリス・ド・ペリニーの原刊本文および著者作成の図・写真は著作権保護期間を満了しています。第三者名義の図版は個別の権利表示が優先します。Gallica/BnF由来のデジタル画像は、非商用利用または学術・科学出版では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示を条件に無償で再利用でき、商用利用はBnFの許諾および利用料の対象となります。" +
+  JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
   "remesal-historia-general-1619": {
@@ -5488,7 +5666,63 @@ const publicationMetadata = {
       "Getty Research Institute所蔵原刊本のInternet Archiveデジタル複製を収めるWikimedia Commons公開PDFを底本とした。本文、節見出し、署名、編集注を収録した。",
     sourceUrl:
       "https://upload.wikimedia.org/wikipedia/commons/c/c0/Records_of_the_past_%28IA_gri_33125000987509%29.pdf",
-    rights: publicDomainRights,
+    rights:
+      "原刊本文は著作権保護期間を満了しています。本PDFには原刊画像を転載していません。底本ファイルはWikimedia Commonsでパブリックドメイン資料として公開され、原スキャンはInternet ArchiveのGetty Research Institute所蔵本に由来します。再利用時は当該Commonsファイルページの権利表示および原提供機関の条件を確認してください。" +
+      JapaneseEditionNoReuseRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-yucatan-inconnu-1908": {
+    sourceEdition:
+      "Maurice de Périgny「Yucatan inconnu」『Journal de la Société des Américanistes』tome 5（Paris、1908年）pp. 66–84。",
+    sourceProvider:
+      "Persée公開の『Journal de la Société des Américanistes』原刊画像を底本とした。原刊66–84頁の本文、地図、遺構図、写真図版、全キャプション、肩書を収録した。",
+    sourceUrl:
+      "https://www.persee.fr/doc/jsa_0037-9174_1908_num_5_1_3476",
+    rights: perseePublicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-maler-discoveries-yucatan-1908": {
+    sourceEdition:
+      "Maurice de Périgny「Les dernières découvertes de M. Maler dans le Yucatan」『Journal de la Société des Américanistes』tome 5（Paris、1908年）pp. 95–98。",
+    sourceProvider:
+      "Persée公開の『Journal de la Société des Américanistes』原刊画像を底本とした。原刊95–98頁の本文を収録し、底本画像そのものは日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.persee.fr/doc/jsa_0037-9174_1908_num_5_1_3484",
+    rights: perseePublicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-yucatan-inconnu-geographie-1908": {
+    sourceEdition:
+      "Maurice de Périgny「Le Yucatan inconnu」『La Géographie』tome 18（Paris、1908年）pp. 227–238。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開の原刊画像（ark:/12148/btv1b108916455）を底本とした。原刊227–238頁の本文、原注、節見出し、署名を収録し、底本画像そのものは日本語版へ転載していない。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b108916455",
+    rights: gallicaPublicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-villes-mortes-amerique-centrale-1909": {
+    sourceEdition:
+      "Maurice de Périgny「Villes mortes de l’Amérique centrale」『Le Tour du Monde』nouvelle série, tome 15, nos 38–40（Paris、1909年9月18日・25日、10月2日）pp. 445–480。",
+    sourceProvider:
+      "Wikimedia Commons公開DjVuを底本とし、フランス国立図書館Gallica原提供画像（ark:/12148/bpt6k34472h）と照合した。三回連載本文、各回見出し、継続表示、署名、権利表示、および原刊頁から個別に切り出した図版41点と全キャプションを収録し、日本語キャプションを各図版の直下に配置した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/bpt6k34472h",
+    rights:
+      "モーリス・ド・ペリニーの原刊本文はパブリックドメインです。原刊各回の「翻訳権・複製権留保」は1909年当時の表示であり、現在の保護状態を示しません。Commons底本はPublic Domain Mark 1.0表示です。原提供元Gallica/BnF由来画像の非商用利用または学術・科学出版では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示が必要で、商用利用はBnFの許諾および利用料の対象となります。" +
+      JapaneseEditionNoReuseRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "perigny-ruines-rio-bec-1909": {
+    sourceEdition:
+      "Maurice de Périgny「Ruines de Rio Beque」『La Nature』no 1872（Paris、1909年4月10日）pp. 300–301。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開の原刊画像（ark:/12148/btv1b108915054）を底本とした。本文、原注、図版2点と全キャプション、署名を収録した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b108915054",
+    rights: gallicaPublicDomainRights,
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
@@ -5548,6 +5782,11 @@ const shortWorkAuthorBySlug = {
   "lemoine-travers-peten-yucatan-1906": "frederic-lemoine",
   "perigny-peten-1907": "maurice-de-perigny",
   "perigny-maya-ruins-quintana-roo-1907": "maurice-de-perigny",
+  "perigny-yucatan-inconnu-1908": "maurice-de-perigny",
+  "perigny-maler-discoveries-yucatan-1908": "maurice-de-perigny",
+  "perigny-yucatan-inconnu-geographie-1908": "maurice-de-perigny",
+  "perigny-villes-mortes-amerique-centrale-1909": "maurice-de-perigny",
+  "perigny-ruines-rio-bec-1909": "maurice-de-perigny",
 };
 
 export const publicationReleaseTag = "publications-current";

@@ -1,0 +1,699 @@
+name: Publish Perigny batch 2 release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-perigny-batch2-assets-20260810.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-perigny-batch2-assets-20260810.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "slug": "perigny-maya-ruins-quintana-roo-1907",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
+              "title": "キンタナ・ローのマヤ遺跡",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 232〕",
+              "pages": 6,
+              "imageCount": 0,
+              "size": 263558,
+              "sha256": "008d68a16bd7ecad8855d55889b139b0fbd09e0ba209b265c7a0801bd157f5d1",
+              "blobs": [
+                "74f2aed414f81dc7f5e7a6181c0e2c78f236ac1a",
+                "b134d4919b8724533e52bc046ded23a6e3eefb8b"
+              ]
+            },
+            {
+              "slug": "perigny-maya-ruins-quintana-roo-1907",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
+              "title": "キンタナ・ローのマヤ遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 3500,
+              "imageRefs": 0,
+              "size": 158315,
+              "sha256": "91939d64e47f070e3cc21cb64874462bd1549501d01f5372f955fb96e4098e9a",
+              "blobs": [
+                "cfab6af2cec1e52f66bc78c850835aa98d1cef9b"
+              ]
+            },
+            {
+              "slug": "perigny-yucatan-inconnu-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
+              "title": "未知のユカタン",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 66〕",
+              "pages": 23,
+              "imageCount": 6,
+              "size": 2598469,
+              "sha256": "ca9a91266fb23e6184ce24c168813c73a7a0f665db37d78f0d5e47b357e9ccc6",
+              "blobs": [
+                "f192017171fd5e478ef72cc9177735b2eab5ccf2",
+                "bb7e8a0a80a3d86354ff8b5c2d6d054e1b3b2c23",
+                "3df6150e4be2ff17d5ff5ec4bfbfab80868f3f2b",
+                "3f029f3750519538462bb6cb6ead0d970f7641ef",
+                "857ff24671ca93be7ed94022b032c6be38295bb4",
+                "31b6964c8edb02ae800c1601494dc49149656be6",
+                "9e1db531705f3a41da3f77a84783bfa6d7547a24",
+                "d4cf7ae5d8cecd7d06c52e264fe8135e9c48d0a6",
+                "574cbe6731c64bac7ad54b9086cc41f9ebab2184",
+                "15fefdd982c6049bad3649df2d2d2b29941706c1"
+              ]
+            },
+            {
+              "slug": "perigny-yucatan-inconnu-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
+              "title": "未知のユカタン",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 12000,
+              "imageRefs": 6,
+              "size": 3170394,
+              "sha256": "169cdcf6788e358e53c7755a14e108f066435b14e1a3653624d7a9c3f5695d4a",
+              "blobs": [
+                "c89a12cc45433f400a58cc6c5856048df83bbe7b",
+                "f3b6298675e7a4ffa265a3ef0f3870aa3acbe27c",
+                "7649446ae026434e08a7aee964c2e81e7ca884ec",
+                "e65a838537e78dea9fdbe8eaf5b4b95763fd5ffb",
+                "5bbe4a52cafc82e92e37887ac8d5d176a1cdcecd",
+                "f3c59f9e9442cbc30b3d5f98458fe0fe9eabfdb3",
+                "84cbc9835b3d0730f5520db20caaf1a526d50fad",
+                "a68e94f8976213a929dc1a5349fcc5b4994b7317",
+                "59bbbab2fd65f839bb875d60d9403cd2812e762e",
+                "5de62a8595b98346aaa98357fc71dec879b1fc3f",
+                "21ed25b09e3e893dc2ab863ec37ae6e8a59b2a71",
+                "02848be6c4b7e554cb3d5524516ed8419706dfb1",
+                "fb7e8d84f164aa0adb950a6d57524e1816b0cde2"
+              ]
+            },
+            {
+              "slug": "perigny-maler-discoveries-yucatan-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.pdf",
+              "title": "マーラー氏のユカタンにおける最新の発見",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 95〕",
+              "pages": 6,
+              "imageCount": 0,
+              "size": 243643,
+              "sha256": "ed5b7edecefd425f84fb4b55357795460db29a52a726af194603c84f8d8143a7",
+              "blobs": [
+                "aaf9a229faaf71f512e35c4567b5390830e703a3"
+              ]
+            },
+            {
+              "slug": "perigny-maler-discoveries-yucatan-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.epub",
+              "title": "マーラー氏のユカタンにおける最新の発見",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 3500,
+              "imageRefs": 0,
+              "size": 146618,
+              "sha256": "61a394caeaacfc2f59f4710190c25737e71b65ef3a6dcc66a6443e1b17cb633f",
+              "blobs": [
+                "dddd895f8bf418048c0be4965bdb123cc5ff323a"
+              ]
+            },
+            {
+              "slug": "perigny-yucatan-inconnu-geographie-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
+              "title": "未知のユカタン",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 227〕",
+              "pages": 16,
+              "imageCount": 0,
+              "size": 446576,
+              "sha256": "1935d60baec1507030680b0bc2a94652386009da1509e79e2476af672de33e5e",
+              "blobs": [
+                "461f6875906fd450c8eb8a0f6a665b3605369c34",
+                "db4b12548b7c92712cc9c095375989fa3d808bbc"
+              ]
+            },
+            {
+              "slug": "perigny-yucatan-inconnu-geographie-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
+              "title": "未知のユカタン（『ラ・ジェオグラフィ』版）",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 11000,
+              "imageRefs": 0,
+              "size": 161708,
+              "sha256": "4e4976ae67ce3655b4fb349515cd80a14ba78fc1df54dda6497eb9b9fbd79444",
+              "blobs": [
+                "52ffde480fca3a89720b97d8bc7be30b36ae169b"
+              ]
+            },
+            {
+              "slug": "perigny-villes-mortes-amerique-centrale-1909",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.pdf",
+              "title": "中部アメリカの死都",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 445〕",
+              "pages": 73,
+              "imageCount": 41,
+              "size": 25377110,
+              "sha256": "fa51d081329f81f3680648720b83d5c0079e7c8227493eb214828a191d0d4b75",
+              "blobs": [
+                "f401716ceddd1355d61dd7f6d06c93f1b74eb0f4",
+                "97d0739b465e99a9df7ac0eaf903170dd021d6f4",
+                "f9d5185eadc9883c8651e7804d293acff53d8968",
+                "ccf5b9f6b7bf65fdb0c9b1ac18d2ed9f0e09007b",
+                "e251b2c2bad203c249f5d9e89e4e2af69d83e02d",
+                "5ea9758d6b28d9b9cecda01b6bbb5f88b3b4d68b",
+                "46e7df88701642987461cee52b47791b7a17a6f6",
+                "b30e53af70a16b202a96c820bf6ac1fb54874783",
+                "8617bddc043309e52eaf9b733bb1f4bf829c287a",
+                "056a7e5197e87c6ea3d3792332ea81c3661a98b0",
+                "d2a5f00a3d8c93f813aad8c3c8ca3abc6f8682bc",
+                "a9a39a14712262a8222af00da8f52bab147cd9e0",
+                "29bf0529e3f373b6078a8b8dc88b10a90f31c875",
+                "59207b4712a3991e11ea856a66c0266909b626b2",
+                "8862a8ade4ec85cca0c450068a6875360e076fca",
+                "a01abcb0526974cfdc0fa310e2f5799b3a849ed4",
+                "0ac65609917a25acc2ef57e9ff9ea0f13867e2d8",
+                "fece95821df2c89fa745df4ea69afc43ea242f88",
+                "91dbba632f44862c5b936c07e1609e78ed987917",
+                "be6ece039991b599ad5a08df2afc93987ea1a0a4",
+                "f48fb03df7268631200c405953fe92da979b305d",
+                "5da671328ae7b3ee653fd55e650e4ad84d0e1f8f",
+                "b1885c6f9f5b129ddd2d98adf0af0619f87bf5ae",
+                "50ce5c777df24f11d3ab3739b851a7f538c426f9",
+                "b07cba0a8c267140bfc681698824ce4cd821578e",
+                "c2b5be2179d9389444e889d5abd3d2f9dd648ce0",
+                "338f3c1e92098f185801f9907c03d09003417f3d",
+                "dd4fac15b377efbb691e5ba41161520ec43b2456",
+                "7ed8be7d4e37457b0e7feb65f6ca27e9a6c233bc",
+                "050251ae54bde12f38f96a50fe9980bb88f397ca",
+                "5c599c784610853fdefbf1bfd098ef846aee9743",
+                "4c74f6726efb9af6a7b0baab84f58aafa8bdf71b",
+                "f68b80852255ad9dff05d7770f999e1f55ab714a",
+                "a3d6d4ca7e4fde92b84e0e7c779fab8be70a3139",
+                "89f511ecc9251b8b4524628ff5a7350b629bd31a",
+                "07f970e2c3180628d28da795c729f3c81e1c527c",
+                "4816fcd75349815f92de72ead0019c7964bcc064",
+                "4bfed651299ef20b48e3d6653bdcbaed7e1a8dde",
+                "5f37b472de91568f2af8caa7dd8c86900f6bdc27",
+                "b2c788c9061067759f11d2d5d7cb2e0ff97c4666",
+                "154b3fe381bd1564899f819a15c21f2af4a0fbdb",
+                "83c78930456caecea8ba2b527ba66a28f67009e9",
+                "2ae84be480bfb3ff59fe329bbaf20abd506c8300",
+                "35feff06d96837e242d9f19186f5dbf007919a27",
+                "53eef317f368841dcd49f2096326648b2b8134b9",
+                "86d6b6b4dbba1f65d9eda8dbb91cea1087e34716",
+                "b79977923d6019ef9fe9953d301168eff2358817",
+                "f3cf15b9bc413b927ea8260b10d54a0e713ba08d",
+                "81eec8cbde11a56419ec4a3fb2a492020e62c351",
+                "2365b22a33d8e7d367adeb04c183c8933e133799",
+                "a61bf9632c3e8fa4bf58ac6d0982772d7f65d4c7",
+                "02332c33687c51817ae367bab9e09214c48f65fb",
+                "db0ee1df28e9a09dfd4e2119f7b8aa531954758f",
+                "50bae4096e1d9184c9d604d53753df767a452ae1",
+                "2da3d6245f95eeda01a10ee881fddf1350cb88bc",
+                "413f3833ddb5537b814689c07b7cfc202c76997b",
+                "a0945a2052b9ee4807c87b422b23e54ea2344879",
+                "6de047900a53bfca04d8d46534f9577d8990aeed",
+                "9f79b8afe970a1b21accb02f85d998fdb0d8e065",
+                "5deeed31763f4c36f462194adcc317e9e72cc350",
+                "3678c6cd146e0803e807b7bcbea0105bbcdeb390",
+                "9fa9a927608796b6a6b76876399581734eb0cbb7",
+                "029a9dfdf78a50285ca61d87b4e11ac5fcccc302",
+                "1e33178365b589395c4d3d51d93e52639768fe60",
+                "258f7771c6dcc06732ed4cb4fb51d8861558d44d",
+                "851630e52cfdc7103ae2556179549d46c8eb5977",
+                "b8444893e1baa7e4fac1909b60b0a7ff01a14747",
+                "b5528b87d404a2544685f432e30f4199745b15da",
+                "c738c7c991e5bc60e24b66e2c65a8897fb4f82af",
+                "00781c1a162ac8b2e934bbcaf53855c485e8baf5",
+                "a8d8742f1eaecd11165e74d73e71e8584ae88581",
+                "9b956359ef749a7f5d3dc9fe30b9df82e4f90ed1",
+                "3514da2d048e98900d71c5ff133fe91963e853a8",
+                "c738853ddd074933989d96fab09aa6c99dbe52d4",
+                "d7269f5837f3d47cdd4f681b51bfc878f1536623",
+                "66504fcd996cd633bf4cfc6da0e27e4de64fe7d2",
+                "e503817e3d69b19d4a315c4ede356c2c4457d79d",
+                "1b26d8290ccc2e0be80285af90d50d8cbc1ddc9e",
+                "780163f46cca35e041d53ca35ef19af36ec9cb63",
+                "716b6a9b263abdbe53d4a336286198331e4c8e3d",
+                "991caf5726c6bd594cf97fe522c6aeef05417ab1",
+                "9087a9b3600e40f2aaeb5aac73952b4b2338d248",
+                "ca9d3caacbde5e8b915d633fdffc5a96ae25efbc",
+                "356896ace2a09c40812b5726ca621c777b2201c8",
+                "843a033a4fc8fdccf8a7ae88275b29f2d8e3fe06",
+                "eba622c0fdf81890fa269603d95baeca0f521399",
+                "1ad7ec6c4b19bff5a49bc2a7d826ed1d48c3bb42",
+                "5f47363910dda5d49ead0aad29fa40b83c179c1f",
+                "c02724f34fe280d5f9cc11adb5719f9c1c3a2634",
+                "1fbed231d8e209c7fda3a03e28a7c3488b465658",
+                "cee3d7ff03cd624520be6f3220ef929cf9896f71",
+                "53cdc2356713b39afd7c53074914dfcb933de4c0",
+                "48d88b085c6b596dabc087c3c7cb592c2d1ed8ca",
+                "5f39c155f205c306225532010a364efdc854baa4",
+                "bbfb2416c8ed00df1f25543ae5f0f125856d2c2b",
+                "ce0e50d57c6a4b400722c08a430d9fcc082ad536",
+                "9047f787d5154c331b19822f8cf61be2cd7278d3"
+              ]
+            },
+            {
+              "slug": "perigny-villes-mortes-amerique-centrale-1909",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.epub",
+              "title": "中部アメリカの死都",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 34000,
+              "imageRefs": 41,
+              "size": 42390595,
+              "sha256": "2866373e94b5d307060d2161f227642d83a360ad47f9cc7a762973bd1f7bfd4e",
+              "blobs": [
+                "9346e70c4a5dbb9776bb0d694352b55163b27b53",
+                "04c014c04ad79d20a6b888e27e2edfdc2bcf9289",
+                "06a22d0029c1d54b181d6a169ca296997bc4552d",
+                "b8f4375dd4f55472af4ffe9e9e3bedc24a48458b",
+                "1e32d0424b7921ddad9062e34177b9ddefa9b53d",
+                "236cb8083255ed5f8b20e9e5998320c973263db1",
+                "df0be721a0c71f9879633199f4bbb9bbbdfe33f2",
+                "0e606c3108b984d14281089f4dd8c5959cbd4691",
+                "1f384976daa044f77f3e5413f7f918f76cf41d24",
+                "8587cc3a720549ba055b882f0fab2e39ac550b7a",
+                "3fb74875fe77142e477b4fae20d5269677b1a1ce",
+                "4f7fab0ca16c089068409bf855179f0706353941",
+                "07255a20b7bcb2a655723a29a9ee62c14032f722",
+                "be9c628e8dedec3407083f5872b20da90fb28cc9",
+                "6a7d6dac7328c4e13f116d5bafdbbd29b62d1e6d",
+                "207cc746abcb808be205b865dfa47b2b48f5ac2e",
+                "d5d7644e853fa02ea9d8e6950f3f847aae90cadd",
+                "b1ea119ad2411bb85712228b62912d95f195f729",
+                "66dc9c9595bb7874f4420bfe07fad7b2f197c6de",
+                "c2dc4dc912d3ef50f24545fe8def8b7a6028a59a",
+                "8cc74cef9dd8e13e5dd6aa7fb72ee853e5e2fe08",
+                "9acd3c08f7253b9a9c657369092988d498b35c15",
+                "4604250af8d3aa632ae571ecd05a64ec56607b05",
+                "5c79af221aa1f5e7fb8d48bb9af911edaa56b070",
+                "ce0ef92492f0967e47a67c6fbf0f2eb5ae3cddaf",
+                "04a7aa0643cfde842a720eb548a48d920bc9028e",
+                "062504a97dfa8aedc1c848bea2c6fc6fc4693e86",
+                "7bbc396b92781998c5ccd253b47b823c6164f463",
+                "f26af019907f92dc3294eb16681e594847be70cd",
+                "3affbb7ffdba1d245fb8fb2ded5d80999a184a04",
+                "a76a21e603fe8b2a70fa8d0947cdbc3028631b14",
+                "6e331a7d26f42338b4f457fad4ff48d9eea877f1",
+                "39d89b51a0ebbd53f2c79344d4533d9a9204dc33",
+                "e09a91e0698d9388b16e19e5a2b10a62681e5a31",
+                "f38adc56f19dfc3f79e94e44f41a7b4159d64de7",
+                "dc89252be49f5986d79b1f817435660a11ee1251",
+                "3d87a3f8b6b338cf23293c4b339c5bcb49bcbebe",
+                "a28f8de0a73bd6cf85429d1858310dec47fa55ea",
+                "c289372de8c3df4fd27c30e1c9a90aa6ac7fa101",
+                "ef21865777716c290b37e203cb3196eb3ec1452f",
+                "040a3f6b3d7159429558bc9662396d1ae398382c",
+                "e942f18b75873f473f3a3d83f91a328281ed4e74",
+                "6d6c881f7f7f32de1c2daa152c9a5bc7371ae771",
+                "2c5c6fb03454b8184fe9e04795d4b133f574f381",
+                "58b7cc2005d9bc8058c6fd7d15e57ee3f6105750",
+                "5051557561de698233ee76ac2be425b94afe621c",
+                "c071c0bb3dc68fb8a3a9142eb0500d7feeb5c83a",
+                "3ef6c4f2faf13ff278b5b852cac1b0329fe0087d",
+                "e12171dc619973aee14de09f470dcc9ac23413a5",
+                "f21b465cc626609de1f56c2e92cc6d35e8bf26f6",
+                "6fd9d84a7ace0c2b47cb3601f229c327866260e7",
+                "fa703e4847a73efc556550f62b05e0b89492bf02",
+                "21df65757ba613ee002c8da5d0ac0a3b6060f44d",
+                "c484d2b848d12762985972487b8f3d30731e8af6",
+                "21533f9ce4412f100fbbd9c305c7fc609b8a1ec9",
+                "44cf1d5e3c38c16595e17f9c3ba08376c3ae1c6c",
+                "0047f0bf0120b78dce7f24ce1abf7a859e9e1c44",
+                "96f97e4af690b1536b62defb31f6e7eb4071ce7a",
+                "cdf4df40991437cc13ec4b7c57d81ee36518673e",
+                "b780054ea7e1f62e925414cda63d40ee6272fd29",
+                "400e656dada02d8bcdffb4ecdc18aa321822b289",
+                "6bcd1b15aafe19c2e7e0f90cece64f72b78b3d5c",
+                "3c0b499399ab334e18fcc7d43efc5b3182783553",
+                "ccf44564920a136b3619807dcf61f79eaffa2edf",
+                "11a246097288bded02a247f5bfa033976607a9cf",
+                "906d96a5a27954d7676741eef9021f274327d62a",
+                "8b90d2dd924f454b507d21d0c6b3fa881c27cbb5",
+                "26dbc08f66818b30714196a77f62fd77cd015e4c",
+                "84f7671e8465c456aef240641ba024cd7aa7d98b",
+                "12fcfb6ff3b17097986a852761a009a76bb9e393",
+                "1641af18bc2ebba4f9d4799e3e8e33ba0d128629",
+                "bd334b8ee8bd0bb17efdb3bea9a915c178ce2fb1",
+                "b250b0cdac5049d48f6e07d6c3db4a43d3f527ae",
+                "6865d8c75a814e46cf1b09debbf82e7bad239fc7",
+                "ea58cb23b3ebbfa34e5f4c31a1d65a42553332a9",
+                "c9d8e75f8bc1b76b1c7b4e64fe8a01bab18137d9",
+                "c6b8320ff0deb4b2e97fe0cd22bc0f0c4640ebce",
+                "d8e26be32e0c94809f4576ae00ea4a0fbc7afb4c",
+                "ec0565915de1244cb7c20fd849a8775cb587ac8a",
+                "50115b16524e3b8b841bfa20a6a0fde941669008",
+                "1eb4bac331d9e423734ee1a9c51b8737c7610315",
+                "64f66c511c8e87253c594739feeda2f5bb3c119d",
+                "8440b9190b9930d417462ea3ce755e4afd604f91",
+                "4894e55f4e4ad2aa87a6684ac88ab678b2da0bae",
+                "f7dd00d7714355896a08762c7a2dda20ebbc1b53",
+                "9ba907b44cc98085adb1bed918101b3d1566a182",
+                "6ce2b300e88eb02d3c20419190c8a7feac106cf4",
+                "8c76f8b75f91d0aad079e9c4e778a2d45c9ce3be",
+                "45e53d38c14482a1c01182b98d0eccb0b5638947",
+                "92fb7cc13a3204ab738426abdff65f92550069c5",
+                "75ca150c9f9e120f591158c51d1a2b6c2381225d",
+                "17408ea01cb54cfec1b7855667d6e8306284027c",
+                "d8780f06e2f8352853283482a0f2fdf18c7beb63",
+                "fe22b57bbe203e6f9662b8b48ab5909bc998d961",
+                "7650110a508a45de451513ddfcbb266edd5e8cc2",
+                "b2829a9bf05967ddee1f9443a9b6fa916ace5a6a",
+                "05dde5ad39ad1b000e80d77de3ccd8b39c89e047",
+                "5c880266e46ae0feb2ee495bd22c509c2377a149",
+                "26f54ad2aee1d7405f36dfbba10d09fbdc47a6f9",
+                "78a495ef9867ff2ef5b11c6283510f5f0487baab",
+                "437d26750c661e8bf8736a86dd92ea336cce4cc4",
+                "c98464e361b14b72c9f8785717c951cede93fa8d",
+                "521b49a85dd433d31b3bf290b95ee6b528434f19",
+                "6f2e03c3fd307c7ca210a6cdcf8712655978ffac",
+                "edcb9ae44e8729a4b1c0797521d25f65e89dd91f",
+                "e0a640c30289c5e9642dd686300f882c846287fd",
+                "d6a8dabe22b985c4d7a00a83efe3f3657e17cba3",
+                "91e808f8b085652b9662988dd4152ce2ae2a38bd",
+                "3907a843b8133bc436dcdcb5f92d912efe81b30b",
+                "4a7c328e1e342f4c78251ecb65df98824e674011",
+                "7d6749ad69e94ffbb0b2a7f0c10625b484f2b30e",
+                "4ab6ee6df06a5ec7cbee5b034fa25435cad0124b",
+                "0a5789ad94e4fa580402aef4922b899cd5ede27f",
+                "9c9f02e10d856ba587193abf48033c081a3f7c80",
+                "bd8a80e9bf75727d8e540e26d888b71467970037",
+                "1007015962ee12217dd949e141482647bfe62efe",
+                "409c0d497672daa9641bb13f4e593621e8fe10c1",
+                "438432ed341eb8a5a2f31f9d078451515509acd8",
+                "8a5682c601748cd0cd0b38b845b9bee7752b5dc1",
+                "3fa2a02b1be47f6de0ecb0123e4e509842634bf8",
+                "05245898205ede65b2fdd056b0609f8f27f9f985",
+                "cf298f6035b194ac8083a5bd7e3308db47fe5080",
+                "25b70af2476571ec547fda1cf896e11d0fc7c95b",
+                "7ca44cbf2a07ec99db7dc299f6dbd1e8b74daec6",
+                "8bdbd8f547a687a5075d4ea4b66e8ba646bc178b",
+                "a1c50ecb23c68449d18e71412197d0535e3fdc04",
+                "e3ed2e53db8317eca02df55ae59f8f37fc232eea",
+                "b5362ac02a896e99186252431f621fef270b31b0",
+                "334eab20f54aaf176bc5cbf73414ce9cf7e6d7ec",
+                "06c55da638e2ac88dc9a4a409d4588686bac9136",
+                "fd7e600ea32836d726a4c5dcad217440f6a364a0",
+                "64e84ce4852497100fd93214b55399f7a414e53b",
+                "aec818402ccd6348c39324a2b1169831b1aa8dd9",
+                "27f234f6d4b7dea1fb6634dd63ef7be2e10ede9d",
+                "a99cca83da6d62ec10b0226d3aa305d13be2732e",
+                "ba828e98b195881e8c3681cd4a4fbd734b8990ce",
+                "04234963b70f6f13f4091b3e8aca37ea3c6fa4c6",
+                "74c4b4cd60f90c6e8c5478f54f99d529396fffd4",
+                "33aeea35e165441c8009c7eb3099de9e68bf8c83",
+                "fc345c9a9a37c338460bc0d51ba33c377b167c29",
+                "0c3fc6b84ab8ddbbe72ffd1cea5ab9958ae00c61",
+                "7b12420d32e09c43d221e46a9b9402f4c1c00b9a",
+                "f911309ad9d2a3a89b68dfe213b1e970018c330e",
+                "17ebcf1ecf651238de293dceba59361ac25f5f10",
+                "6bf2b2cd8497e667640a001934ced512fd0e8245",
+                "a1807bd377c4b98fba80da121b045cac88e2e05b",
+                "6d4c84a2530d2d55f249bf978ebf370be3fce131",
+                "aa1f2308cb3896cfc69d947909a0eb0a5f743fc2",
+                "b17ae469c08098c3ee69cff6dcfd69e748f0c81e",
+                "26444ae202147bb54b9e7956ff59dc7efa60f659",
+                "720aeba6c0cedc0cd70628a9857039679a18b426",
+                "541cbe296f1bdf81f6753db447b80f636bac4479",
+                "0560a1fcd0b366aca6e93e21c46f0911b4343bd1",
+                "13d3b4836746c4df5fe9723ad11ada99d94cde7b",
+                "3bc5c2cae55e0ea2a5323ef39eade24ec3b31ee1",
+                "5a45a50f1029342ae0a2de52e9645152144b7111",
+                "6000baf00aa506fe57639cf56038bca956e306d0",
+                "ff84670cad47f901a61804221c49e3b56587873b",
+                "3007bc07cdf493cd8b78fdb3004b49e3005d9cdd",
+                "0304032d27d0b4cc0be8b0e1bb201c2efcc06c68",
+                "342fdde87a87140e6b14446090ada48ab52c18f1",
+                "09f1fb06b2106649994430b61d6db8c28c06e2c5"
+              ]
+            },
+            {
+              "slug": "perigny-ruines-rio-bec-1909",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.pdf",
+              "title": "リオ・ベック遺跡",
+              "author": "モーリス・ド・ペリニー伯",
+              "marker": "〔原刊 p. 300〕",
+              "pages": 6,
+              "imageCount": 2,
+              "size": 837993,
+              "sha256": "e02e63250472986109c0b55b98c5de4c7a3ca00b420d87550d93d1154db32721",
+              "blobs": [
+                "c1a7d7f9cfedbf1ed618be91d6741faa8958f2c6",
+                "8307e7a414c0aa5e0cefb75b5ee4984a796eb517",
+                "99867528ea8e9c5b5d25269492f80780403e6a3d",
+                "cec7690068a96b40098a004b282214d08d9b375a"
+              ]
+            },
+            {
+              "slug": "perigny-ruines-rio-bec-1909",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.epub",
+              "title": "リオ・ベック遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "minJapanese": 2000,
+              "imageRefs": 2,
+              "size": 785477,
+              "sha256": "358ca108edd5fe6606a16a8679362712e4c1583a4c7592779b2cc8b7eb3af40a",
+              "blobs": [
+                "6b04542810ae3d7c766e55857b662e3cd8a9200b",
+                "df3b830118c49ff84f42f1ee0c31654eb4a7d6a0",
+                "3b1083ec0638797a02f2f8c360b8572a5ca2151a"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/perigny-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/perigny-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert asset["marker"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert asset["title"] in text
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/perigny-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Perigny batch 2 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/perigny-batch2-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Perigny batch 2 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
