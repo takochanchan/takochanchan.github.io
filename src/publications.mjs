@@ -3868,6 +3868,44 @@ const publicationRecords = [
       "一次史料",
     ],
   },
+  {
+    slug: "cortes-y-larraz-descripcion-geografico-moral-1771",
+    title: "グアテマラ司教区地理・道徳誌",
+    originalTitle:
+      "Descripción geográfico-moral de la diócesis de Goathemala",
+    subtitle:
+      "1771年公式呈上写本全3巻・司祭管区図113点・送付状2通 日本語全訳",
+    author: "ペドロ・コルテス・イ・ララス",
+    series: "DESCRIPCIÓN GEOGRÁFICO-MORAL · 1771",
+    originalPublication:
+      "1771年公式呈上筆記写本（Archivo General de Indias, GUATEMALA,948,N.2–N.3）",
+    year: 1771,
+    extent:
+      "PDF 794頁・全3巻・原刊頁標592件・司祭管区図113点・特別図2点・表258点・送付状2通",
+    description:
+      "1768年から1770年に行われたグアテマラ司教区の司牧巡察を、教区・町ごとの地理、人口、言語、産業、交通、宗教生活、社会状況とともに記録した大部の地誌。1771年の公式呈上筆記写本全3巻、司祭管区図113点、特別図2点、人口表を含む258表、1771年4月1日・5月1日付送付状を収録しています。以前の下訳は再利用せず、PARES公開の史料画像から改めて全訳し、1958年版は判読と本文校合にのみ用いました。",
+    cover:
+      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
+    pdf:
+      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
+    pageCount: 794,
+    figureCount: 113,
+    plateCount: 0,
+    types: ["司牧巡察記録", "地誌", "教会史", "植民地行政史"],
+    regions: ["グアテマラ", "エルサルバドル", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "司牧巡察",
+      "グアテマラ司教区",
+      "人口表",
+      "先住民社会",
+      "司祭管区図",
+      "PARES",
+      "18世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -5020,6 +5058,18 @@ const publicationMetadata = {
     sourceUrl:
       "https://archive.org/details/festschriftfrad00bastgoog",
     rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
+  "cortes-y-larraz-descripcion-geografico-moral-1771": {
+    sourceEdition:
+      "Pedro Cortés y Larraz『Descripción geográfico-moral de la diócesis de Goathemala』1771年公式呈上筆記写本、Archivo General de Indias, ES.41091.AGI/15//GUATEMALA,948,N.2–N.3（地図・図版：MP-GUATEMALA,74–186）。",
+    sourceProvider:
+      "スペイン文化省（Ministerio de Cultura, España）・インディアス総合文書館（Archivo General de Indias）所蔵、PARES公開画像を主底本とした。PARES N.2: https://pares.mcu.es/ParesBusquedas20/catalogo/show/7023642?nm ／ N.3: https://pares.mcu.es/ParesBusquedas20/catalogo/show/7023643?nm。1958年刊本は筆記体の判読と本文校合に限って用い、同版独自の序説・注・編集物は収録していない。",
+    sourceUrl:
+      "https://pares.mcu.es/ParesBusquedas20/catalogo/show/7023642?nm",
+    rights:
+      "1771年原著本文はパブリックドメインです。掲載画像はPARESの再利用条件に基づき、スペイン文化省、インディアス総合文書館、請求記号およびPARES URLを表示して利用しています。画像自体に本版独自のCreative Commonsライセンスは設定していません。1958年版独自の序文・校訂・注・編集物は収録していません。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },

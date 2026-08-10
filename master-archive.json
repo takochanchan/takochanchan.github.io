@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "2987b0bb5d7ba330c9b2a06e7e7e97b95d8ca8be",
+  "archive_commit": "2f119d4be2870812df127c1123c77001ea5f02e7",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -110,6 +110,7 @@
     "dieseldorff-gefaess-chama-1895": "publications/dieseldorff-gefaess-chama-1895/master.docx",
     "dieseldorff-reliefbild-chipolem-1895": "publications/dieseldorff-reliefbild-chipolem-1895/master.docx",
     "dieseldorff-cuculcan-1895": "publications/dieseldorff-cuculcan-1895/master.docx",
-    "dieseldorff-tolteken-1896": "publications/dieseldorff-tolteken-1896/master.docx"
+    "dieseldorff-tolteken-1896": "publications/dieseldorff-tolteken-1896/master.docx",
+    "cortes-y-larraz-descripcion-geografico-moral-1771": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/master.docx"
   }
 }
