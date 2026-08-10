@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ccbd0b1e339ab89c91f0d24b0ec50afdfbfcd3db",
+  "archive_commit": "ad43b66b26bf6985413d8c18a1026574460a2e76",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
+    "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",

@@ -43,6 +43,44 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "san-buenaventura-arte-lengua-maya-1684",
+    title: "マヤ語文法",
+    originalTitle: "Arte de la lengua Maya",
+    subtitle:
+      "1684年メキシコ初版・標題紙・献呈・認可・検閲・本文p. 1–76 日本語全訳",
+    author: "ガブリエル・デ・サン・ブエナベントゥラ",
+    series: "ARTE DE LA LENGUA MAYA · 1684",
+    originalPublication:
+      "メキシコ、ベルナルド・カルデロン未亡人印刷所、1684年",
+    year: 1684,
+    extent:
+      "PDF 131頁・無頁数前付18面・本文1–76頁・原刊標題紙1点・文法表・祈祷定型",
+    description:
+      "植民地期ユカテコ・マヤ語の刊本文法書。標題紙、献呈、認可・検閲、四活用、動詞の変異、代名詞・小辞、sum相当動詞、派生規則、聖体拝領・告解・洗礼・婚姻・終油の定型文まで、1684年初版の原刊順に収録し、マヤ語形・例文の原綴と原刊頁標識を保持しています。",
+    cover:
+      "publications/san-buenaventura-arte-lengua-maya-1684/cover.jpg",
+    pdf:
+      "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.epub",
+    pageCount: 131,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["文法書", "言語資料", "宣教資料", "一次史料"],
+    regions: ["ユカタン", "カンペチェ", "メキシコ", "マヤ地域"],
+    languages: ["スペイン語", "マヤ語", "ラテン語"],
+    tags: [
+      "ユカテコ・マヤ語",
+      "植民地期マヤ語",
+      "フランシスコ会",
+      "宣教言語学",
+      "活用",
+      "小辞",
+      "祈祷文",
+      "17世紀",
+    ],
+  },
+  {
     slug: "atkins-voyage-guinea-1735",
     title: "ギニア、ブラジル、西インド諸島への航海",
     originalTitle:
@@ -5122,6 +5160,17 @@ const publicationMetadata = {
       "1619年原刊本文は著作権保護期間を満了しています。Internet Archiveに掲載された所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-09",
     updatedDate: "2026-08-09",
+  },
+  "san-buenaventura-arte-lengua-maya-1684": {
+    sourceEdition:
+      "Gabriel de San Buenaventura『Arte de la lengua Maya』（México: por la viuda de Bernardo Calderón、1684年初版）。",
+    sourceProvider:
+      "Biblioteca Nazionale Centrale di Roma所蔵の1684年初版をGoogleがデジタル化し、Internet Archiveが公開した全102デジタル頁（識別子 bub_gb_AFgIgt-jnXoC、ARK ark:/13960/t7sn35s0x）を底本とした。1888年Francisco Díaz de León再版は用いていない。",
+    sourceUrl: "https://archive.org/details/bub_gb_AFgIgt-jnXoC",
+    rights:
+      "1684年原刊本文は著作権保護期間を満了しています。Internet Archiveの当該記録はUsage欄にCreative Commons Public Domain Mark 1.0（PDM 1.0）を表示しています。PDM 1.0はライセンスではなく、既知の著作権上の制約がないことを示す標章であり、許諾を求めず商用利用を含む複製・改変・配布等が可能である旨を示す一方、法域差、著作者人格権、無保証等の留保があります。",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
   },
   "atkins-voyage-guinea-1735": {
     sourceEdition:

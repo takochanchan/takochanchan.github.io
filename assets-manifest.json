@@ -2126,6 +2126,24 @@
       "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
     },
     {
+      "path": "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.epub",
+      "size": 876667,
+      "sha256": "cf482d9eef34b781085eb45169c7c6a5e1a794ffa796115ae5e4e6dc55b2c817"
+    },
+    {
+      "path": "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.pdf",
+      "size": 2282316,
+      "sha256": "7efc4dc56d69ad04f1a8416fe3c62eddc6e047677d26f1ec9364d995be8d8520"
+    },
+    {
+      "path": "publications/san-buenaventura-arte-lengua-maya-1684/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-buenaventura-arte-lengua-maya-1684/cover.jpg",
+      "size": 42453,
+      "sha256": "34de8aa51180f4eb39e244e8c9cacbc519268478593139972fa301ad2e208aaa"
+    },
+    {
       "path": "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
       "size": 139534,

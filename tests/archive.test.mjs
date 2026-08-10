@@ -30,7 +30,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 146);
+  assert.equal(publications.length, 147);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,7 +63,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 84);
+  assert.equal(majorPublications.length, 85);
   assert.equal(shortPublications.length, 62);
   assert.equal(shortPublicationAuthors.length, 23);
   assert.deepEqual(
@@ -261,6 +261,24 @@ test("short works use explicit author groups instead of page-count rules", () =>
       .recordClass,
     "major-work",
   );
+});
+
+test("San Buenaventura 1684 uses the approved first-edition scope and public-domain statement", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "san-buenaventura-arte-lengua-maya-1684",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 131);
+  assert.equal(item.figureCount, 1);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.sourceEdition, /1684年初版/);
+  assert.match(item.sourceProvider, /Biblioteca Nazionale Centrale di Roma/);
+  assert.match(item.sourceProvider, /1888年.*用いていない/);
+  assert.match(item.rights, /Public Domain Mark 1\.0/);
+  assert.match(item.rights, /商用利用/);
+  assert.doesNotMatch(item.rights, /日本語翻訳版|再利用ライセンス/);
 });
 
 test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
@@ -471,7 +489,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">84<\/strong>件/);
+  assert.match(html, /id="book-match-count">85<\/strong>件/);
   assert.match(html, /id="paper-match-count">62<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
