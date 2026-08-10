@@ -1,0 +1,278 @@
+name: Publish Romero edition once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publish-romero-assets-20260811.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      ASSETS: |
+        romero_pdf|Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf|16738916|92380a3dc5b761365e719f5a1657568a9758f08a9003785afc717886791c50f3|8d4472e09366fa26b4e8d80af046b57234cc4c0a 2186c4c30ddfb499945eaf7324f1325c96780511 e62d8b54045a4117d3a62b20aa0406ab562be7cf fa904319d81d53c48cdca15cc827033140f719aa 6b228c477cf6cd59e32350b409ddf5d002841b77 f51f135edf06884817da172d188ac6f9ed037d29 fc9038241daba1a3b527390700babbb264b0eb90 dd08537cf3fb8b0c59ae76531a9dd342350f52dc 3c193cd48d0ee37247de90f25c5b9e94dc5ece09 db360a85e606d50e290bedbbddb86571f6d8e147 ddec5184edfe268d6a62c493805dda09afd1a161 a2918a080587d46f968e0a938d801bf507d8bb91 dee90e0be2375e286050278768eb14f0335051f9 ed9e065fd37667055d3eb9b5428e4453a1f2d985 540466918c89afc8af59457c982f4088fabee418 bdc1e6bc57037928a5e18ae7f32714f0a4fe2b18 7b64a8da44b73b62bdecc1ce064b325411565e5c a01efce999a883e7a13d835a0e87259edc0fcf08 ad44e423064780fbcb2098ef94c8ab844bc8bfa6 db0f31bd31c3c698a477558285094b1a959487b7 98a432723e6846da979e2fb0d661441a410c2b7d 2650e23dd92117baffee378cf22de587617f0d66 057a607c971993be5ab54ccef67e295b321d10fc 6fa5531aef344883d269bee0c3e8c5b627629186 0634031fd9679abae429254b476430bd69b3b164 f42978cc60b3686c1db3fdfa69572dc596997ef0 b074e737daabfb6ba59a9384834b1a76ea4e4edb c67853df4c95d915658b5a45ead66478a1e7052f 85f5ccd73582c8195c3a3d0cd44c664ec7a11a24 e9ca33aa4aa0f86e42157644e13024d242c1db6a 7caa3661f2ad433198e31b578ea5f5e9940bdc8b 258a9b5d90d02a552fbf45ecec91dd7edbcbae8f f54baa1e0f59e6a9546978e24878fa7a90ca238e 350d1fa197920beb566d39b04015a6e746ba5842 66cb9d83e0ae5a3cc49160794f08253564f5f72e ab13642d4d411cddbd3f7ffcb5687c1d66f830d0 a8e21d99269da980be1b91d8f53a11291913e3bb af76b95218280a3f073882769bea83cbb930d52c 49082fbf4378da1f6b544ca95a8b83beea5e8458 207df112df89c6709df95289a980c8669b02118d f714714660c459362f9e4d3d2e858fac78a98b92 704b7a41e2578aa82a0835c03b21d592e15589f2 1c0f556067b8021e6846a32252a9719e869a5074 d5b55d456917cd99f2145b132c55d0046195e4a9 f80be08aec92256d9244cac3323ba4e4fa9570ac 90ae9748b48f30f391bc5dbe0919001c012633b6 1ec7b4a237ce94d39fec51d33b3ae6b738c9e1ef e834f589e2c23243bf1e4e7fbd7006852c7b6490 bd2728f7f9ad612182a1f9f965852015428b7243 a4fb0aa25003f68e3a266078d9810f64dbce9822 993d9e22980a1d2d48ce4a9d2c0e3db7e9b55cb1 0ffb540d4a33e748cf4e8b71ad713b4c3ec14716 4a04b1190884f142f6589889cd9013066d289f32 7f39075c7d52affaf1450676648c837fc65cdba5 6996e08d96f34adc0c81d42163ad658e5b0f0849 a46db8053809973a8537ff24f73f5edbdd9562d3 b861ac0de5745b3fc44366f4a927ee186cbf9e3e 5998fb21e0343662ea81afb7616f048d53e4e4d6 f61c2afdddabf16fe4febed3026c08ce771a5ceb edf7f6066f4fe8cbdde9a94eb2021570b8c988dd 4266c2c3e1f40a52eddd52de671b522c17502bc0 0cdadb04eebb4f9efe0e000af7c5f0111b5b0a49 e9e13be29f32db852e0688763c5790f1686af80e 14e558cc033447ad40fe97de6816b88930cc87a5 2ebf97d5fabffa6818037d44d10dd56e4bfa0e15 c6cdeaad6fc4e6f21f0caf254ff97e5722d1ae45 3ad650ef5c6389f6e2d26fd9cfd85aab7fc22244 79566ae5777e06975e16142aeb20dab4999bd155 3d151b9d833bb71083b8392f13cde277ae615a49 0f6b299821c5df845c57065d49b4f1aea7136604 99c32f31e17a13f420f90666055bee91bda79bf4 379ac52070064ccda58f01bf0bf4f325b8baad46 d6d104107ece05a78fd9faf4ad267127a17c9453 74481a83fb6c818b58f8464bb59fb4654cc86b55 c375129d7b5fffb4eee27668ad921004eb88c6e6 8b99be06f275d20ceb91bc90c0af7745523ad9a5 290b0d80889d14ab8d53896e444b2153bc2e0171 56a7bede26382618e8cdd28a5d2e8f8c8f071fc5 2cd97dfe050d2a6a0c6c9eaf25129d0876061bce 5c1b323e85a5d95ee4c0381657a43fce4fc14a30 fbf3378d123d42fb05697ca26be44943abba5d98 3ef7c1a7abcdc31021719588b2de09c823fd1820 565951e84a9514995c219da375bdba79b726d714 236656a7d2fad1f1371600d853afc9e3cf2ab4f0 2ae38044f83ecc8410dcf657282a53f578c24ddd 99bc8afb591aedeb16f70088204c7d9878c71f01 6fc8bdffb5797c6fa6a9e7887fe88af2e8f87501 7c543452ded7293c7ca8d2bd4ce3b0610e141a96 23c4586533b44d68b9129607d31e333ae887ce24 548dedeeecfa76126ad174f3eb2217a13aec56c7 4f1bd33adf326353909cf7982cac4bfa3f0a881f 4e9037644386ac5193bcb4243bc5eb99c826e83b c4197a0bfe92e0903dc49b4a5e4672fa890e5e25 6c6f76df75dfdbc1f272f322d2ab89b06627280b f5e950081d0f78484236889301700f7a76fa4b3f 5ee083ef3805604782dd4750b4982d45dce786b8 b00f7be95adf4244c72f9667aa9e0cd4bb265579 78749921eaa1e6cf528d5e76b101be64136fe2c4 62317457758323b123075458af9ed1670586594c 8f14092517b0d6214aa972b4b5a81c6421964eb8 7dce60b52ed08a6c68f4eb084d08e059722cd39c 0fd4c6928512a48f06ac721d9de9f678b7f29621 4d0826576de95cdef8664f7e7b447d7456487bd2 0c3260bd0995225b5059c4e4c86964cac9d8bfc3 76326b22dec78e7867d207d9cc204ae2c1364db0 922c96bfac9f94300f5f163ee6e10253e4fe0e96 c763dd5fd1516925bc84b99adaa1dcb21eeea92d 563b0cb732871ea15e4aec55bfb9a7602a7432e7 c5742f429016067e78fd0fb528257f6f0587a415 5a89f0bd9733970b2bfac6cab1f4e24772700625 784b35252843a4e23f76f96fd3bc361904b22cdd 03aea3fe427c5d0e05eac7510f017cbb4245ca5d 0bfa6d384202153ca409470bd037d39ed17d93f7 21158d4f133189b49152274a69814056dd05c484 987b254c52a11ecaa804bc08a2fe08ad4bf546e1 ad76bf942baa8a2c60b9fb52385c995e52fdf30a fcad0a9de6209b4346e865d8b74605cabce42cac 4f6f49e05a3a1aa8dd4fa3fa14f41ffaf70df5e1 eda25469f144164bd8070a241879c0f631724783 bfbceebc302ffc01dfe326278e3aa0047b75f48b f40904e3cd7064399ad821707b4277a9d83e15fd c8f2cd964c64c6498dc10238ee1c2e30a65edb09 162816153e0ef17dad328a6abf5530169583b7ab 4e4188c5098cb6182d100fee4450d18706951f46 c1fb883c00931dba3f10b2387a0c72013937a51c 8a25c24aad5069347873b16cd0c7cf9cdf2561a0 af69645cf8642d457e29c139e25fb26601f87c42 0d583afc2ac7c2fb78542314c93f93cc435dae47 dd59f2bb7497c92973b3178759493cc9d59a0c45 ea6d2daf34b063f389b60065d4994452e3d7ff99 2c60d133d9b52010152598fa89446bd966dd919f f05bfa894d2b86556e2446279878ca0577d901e2 a63dfb7e9fcaf13cd0a2c4bcbdd9251bd731fc5b 886ad237fe0f8a336fcab5b851b9972a535b28d9 e8ec18f657bd27f4367df447810d9671e867f0f8 1dd7b2adf74988c9a9ea13847034dcc379bbbc38 83c62a796d13d29c3458e78fabb94643014bb387 1b65b45823be3bac3b5aac8283beef281d35dbca 8e2113a946c171a134933e08d3e8dda770d4fb8a 07a2a4d9aed8fc484c0b65fa5d93f34a3c7c95df 344be504d59e7fc11f9a9aa5bd05beef4fef7377 f25dc708e705a7dc8c8cdba780075c4623503382 1ca0906466fa76b7b1c7e6fadf850712b9796bc8 9ef6a393ebc1f6502f081e8255d01c738a3a4ec2 6f2dc1554ba95e7fcda9e5f9995c60d85adeac90 e3118acc0fe5eca0f4f7857b433a4daa6303c468 7591d87e184a3b5f046efbb046b262da30642787 f324dc839b88a40924218708bb1d3f4ce80e48c7 e37156583559a610ea1f371635b73581f1dc7a99 46da963a4ea40107c0b668435b901be0961e19e0 3a9292d0cf55b2b1ef3921ac7a0496b1d643a5d0 4e636214c7f12d853bb79bd545862ad3403e6844 26e7d350de09e3bfa27c006ff5bd80dce89152fd 1648b22e9dd366e6ae6172beb4140a9a196a5e02 7fb90f5f8cd651c4faf47fcee2a9b46e64f0f96e 991c02700984b9acb88be27dafe00f2502764699 e1bf908653c084b9bbf307e3322a4ec3e1a4421d ca913ccacbd6cd0720a4cd6bd5c8766827bd219a 240cfba10cbb1d5afda821664de5dc15cf98aeec 3d99f2130a5d246da8dbb51e80017d6ce4d42437 955f630c8d38e08d12f786f5e1c7632ca16255be 8171619b206528d8fcebc45ecab9ac22a3301a3e b303aa6f4b72740884b48597a9fe00e4bc777e3c f0b5dcf98ffaf35a1adab6f5775bd00a3368824d 3410657a6708b4f911f55629469968b73ef1aae4 19381a69a77eafa5015ca894a7bf3a0dbde3b645 333a2f46235f8d7511ec4d89668cd844e080362c ce6ec251f8df75c69289e714239e03a5f4a37af9 82f8f07a6e1aaee100089e38f2ca2383a52d5816 980c22c688089cd49f2c4f65b043d7460bf7e381 da86e7aae091ef0a9cf0d343b59d5df382b1441c
+        romero_epub|Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub|1288223|cf0700fa5bee80024790698cd4f5940928718a5e1e286e3347f545c29fd403f9|89d8645e316dc39ad1cf1a0fa89e5db363ab368f 5bbc7d71956e3168cabd1c4769e33d064568976a 79126f38b8e331b7a077e224b01f2de3c16dfa29 d8fd71794acfbf749fc166f855d20f283de491ef e6ded2e9c0cc3645c9a8d5388c22d2c2e15987a7 86852f9cffd64ba710f43c37c1700d5a4fe1674d 6d550fea19d355771d585e16b9bb15972fa61480 86b46f5e1687ad7f6f7b7490989c876fbd46deda 2d2ade573c05edfda92223ba852ada4b637b321a 09b1105c309488440bcfe4fac7ac12ddbbd8339e 0cbe53bbb92a4cd93c54c99bcce0e85ced71f792 c84e7e1a6ab828b70c8337353039389f86d29031 41b925b67c1ed82c1273dea3cc6eebd9be98e13f 643fa197e243abacdf76b1d12df5762d957367f7
+      SITE_FILES: |
+        assets-manifest.json|140985|f6944324d569426a8ed0a6bd752f0011bb042f3aac3eac06886fda689cc8ebe1|4b0ea7e4db2487cc75165aa098e833f45544a64a 3185cd774d68d6775cfaf5cdb26a27625d8f6fd2
+        master-archive.json|11683|c3736631b2c9872eb84fa7d417926fe787c65d1086640419fbccfbd0f311f25a|45eefe22d6071bc1bf8c8c3bf5192ad8b1e71d05
+        scripts/validate-epubs.py|10646|b3ffe08a001fe97e7ea92930cf876cba8431344237498cfa67873ccf0e764825|11003d9f074f0be64a3c4cf8ced1b170de4e1b02
+        src/publications.mjs|325452|e064d9a6692364b7eac70937f64c7097b6eb730247f023987c152e4bff6fee32|d871222d2033e59d781c7c8dbd436ba872b3c02f 59916f17c6ef98bd55462762a49016babad57289 05055aac84cbc9b3259ffa684a0743f8668f0908 694a0ab36418f0a64bd1aa890ad14a8c8d5a75f9
+        tests/archive.test.mjs|27795|2ab8e1cdebec8913aa607d0909e9aba893314d972c7fb850cc0ec194dd6a5030|973f6e3204bc22f7e984f6bf720dfe1635f63b3a
+        static/publications/romero-bosquejo-chiapas-soconusco-1877/cover.jpg|86485|580b845125da70db19cd2557d5aa61d5af5382f779b2dd1537dcdd11fb0fd42e|ba1ab47277ded9b3f51993235bd794bbb79df6d5
+
+    steps:
+      - name: Check out the publication site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and verify staged assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/romero-assets
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            target="/tmp/romero-assets/$name"
+            : > "$target"
+            for blob_sha in $blobs; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content | tr -d '\n' | base64 --decode >> "$target"
+            done
+            echo "$digest  $target" | sha256sum -c -
+            test "$(stat -c %s "$target")" = "$size"
+          done <<< "$ASSETS"
+
+      - name: Validate the approved PDF and EPUB container
+        run: |
+          set -euo pipefail
+          pdf=/tmp/romero-assets/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf
+          epub=/tmp/romero-assets/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub
+          pdfinfo "$pdf" > /tmp/romero-pdfinfo.txt
+          grep -E '^Creator:[[:space:]]+Writer$' /tmp/romero-pdfinfo.txt
+          grep -E '^Producer:[[:space:]]+LibreOffice' /tmp/romero-pdfinfo.txt
+          grep -E '^Tagged:[[:space:]]+yes$' /tmp/romero-pdfinfo.txt
+          grep -E '^Pages:[[:space:]]+1568$' /tmp/romero-pdfinfo.txt
+          grep -F 'Page size:       612 x 792 pts (letter)' /tmp/romero-pdfinfo.txt
+          pdffonts "$pdf" > /tmp/romero-fonts.txt
+          pdftotext -layout "$pdf" /tmp/romero-pdf.txt
+          python3 - /tmp/romero-fonts.txt /tmp/romero-pdf.txt "$epub" <<'PY'
+          import re
+          import sys
+          import zipfile
+          from pathlib import Path
+
+          font_lines = Path(sys.argv[1]).read_text(
+              encoding="utf-8"
+          ).splitlines()[2:]
+          assert font_lines
+          for line in font_lines:
+              match = re.match(
+                  r"^(.+?)\s{2,}(.+?)\s{2,}(.+?)\s{2,}"
+                  r"(yes|no)\s+(yes|no)\s+(yes|no)\s+\d+\s+\d+$",
+                  line.strip(),
+              )
+              assert match is not None, line
+              assert match.group(4) == "yes", line
+              assert "Noto" in match.group(1), line
+
+          text = Path(sys.argv[2]).read_text(encoding="utf-8")
+          compact = re.sub(r"\s+", "", text)
+          for phrase in (
+              "チアパスおよびソコヌスコのメキシコ編入史概説",
+              "メキシコと中央アメリカ・グアテマラとの国境交渉",
+              "マティアス・ロメロ",
+              "ColumbiaUniversityLibraries",
+              "GoogleBooks",
+              "〔原刊p.i〕",
+              "〔原刊p.xxiv〕",
+              "〔原刊p.3〕",
+              "〔原刊p.798〕",
+              "正誤表",
+          ):
+              assert phrase in compact, phrase
+          for phrase in ("確認用", "校閲用", "未公開", "Proof"):
+              assert phrase not in compact, phrase
+          japanese = len(
+              re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text)
+          )
+          assert japanese >= 1_000_000, japanese
+
+          with zipfile.ZipFile(sys.argv[3]) as archive:
+              assert archive.testzip() is None
+              assert archive.namelist()[0] == "mimetype"
+              assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+              assert archive.read("mimetype") == b"application/epub+zip"
+          print(f"PDF and EPUB container OK: {japanese:,} Japanese characters")
+          PY
+
+
+      - name: Prepare shared checksum file
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-release
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/current-release \
+            --repo "$GITHUB_REPOSITORY"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          current = Path("/tmp/current-release/SHA256SUMS.txt")
+          lines = current.read_text(encoding="utf-8").splitlines()
+          entries = {}
+          for line in lines:
+              digest, separator, name = line.partition("  ")
+              assert separator and len(digest) == 64 and name
+              assert name not in entries
+              entries[name] = digest
+          assert len(entries) >= 234 and len(entries) % 2 == 0, len(entries)
+
+          targets = []
+          for record in os.environ["ASSETS"].splitlines():
+              if not record.strip():
+                  continue
+              _key, name, _size, digest, _blobs = record.split("|", 4)
+              entries[name] = digest
+              targets.append((name, digest))
+          assert len(targets) == 2
+
+          target_names = {name for name, _digest in targets}
+          lines = [
+              line
+              for line in lines
+              if line.partition("  ")[2] not in target_names
+          ]
+          lines.extend(f"{digest}  {name}" for name, digest in targets)
+          assert len(lines) == len(entries)
+          Path("/tmp/SHA256SUMS.txt").write_text(
+              "\n".join(lines) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Upload and verify two release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          upload_args=()
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            upload_args+=("/tmp/romero-assets/$name")
+          done <<< "$ASSETS"
+          gh release upload publications-current \
+            "${upload_args[@]}" \
+            /tmp/SHA256SUMS.txt \
+            --clobber \
+            --repo "$GITHUB_REPOSITORY"
+
+          mkdir -p /tmp/verified-release
+          while IFS='|' read -r key name size digest blobs; do
+            test -n "$name" || continue
+            gh release download publications-current \
+              --pattern "$name" \
+              --dir /tmp/verified-release \
+              --repo "$GITHUB_REPOSITORY"
+            echo "$digest  /tmp/verified-release/$name" | sha256sum -c -
+            test "$(stat -c %s "/tmp/verified-release/$name")" = "$size"
+          done <<< "$ASSETS"
+          gh release download publications-current \
+            --pattern SHA256SUMS.txt \
+            --dir /tmp/verified-release \
+            --repo "$GITHUB_REPOSITORY"
+          cmp /tmp/SHA256SUMS.txt /tmp/verified-release/SHA256SUMS.txt
+
+      - name: Reassemble and verify site files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/romero-site
+          while IFS='|' read -r path size digest blobs; do
+            test -n "$path" || continue
+            target="/tmp/romero-site/$path"
+            mkdir -p "$(dirname "$target")"
+            : > "$target"
+            for blob_sha in $blobs; do
+              gh api "repos/$GITHUB_REPOSITORY/git/blobs/$blob_sha" \
+                --jq .content | tr -d '\n' | base64 --decode >> "$target"
+            done
+            echo "$digest  $target" | sha256sum -c -
+            test "$(stat -c %s "$target")" = "$size"
+          done <<< "$SITE_FILES"
+
+      - name: Validate and publish the site
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          while IFS='|' read -r path _size _digest _blobs; do
+            test -n "$path" || continue
+            mkdir -p "$(dirname "$path")"
+            cp "/tmp/romero-site/$path" "$path"
+            git add -- "$path"
+          done <<< "$SITE_FILES"
+
+          workflow=.github/workflows/publish-romero-assets-20260811.yml
+          git rm -- "$workflow"
+          git diff --cached --check
+          npm run build
+          npm test
+
+          slug=romero-bosquejo-chiapas-soconusco-1877
+          mkdir -p "/tmp/romero-public-root/publications/$slug"
+          cp /tmp/romero-assets/*.epub \
+            "/tmp/romero-public-root/publications/$slug/"
+          python3 scripts/validate-epubs.py \
+            /tmp/romero-public-root \
+            --slug "$slug"
+
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git commit -m "Publish Romero Chiapas and Soconusco translation"
+          git push origin HEAD:main
+
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Frelease-upload-romero-20260811" \
+            >/dev/null 2>&1 || true
+
+      - name: Record public diagnostic on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' \
+            "Romero release workflow failed. Inspect this run before retrying." \
+            "Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            > /tmp/romero-release-error.txt
+          content="$(base64 -w0 /tmp/romero-release-error.txt)"
+          gh api --method PUT \
+            "repos/$GITHUB_REPOSITORY/contents/.release-upload-errors/romero-bosquejo-chiapas-soconusco-1877-${GITHUB_RUN_ID}.txt" \
+            -f message="Record Romero release failure" \
+            -f content="$content" \
+            -f branch=main
