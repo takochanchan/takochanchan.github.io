@@ -167,6 +167,8 @@ DOCX_SOURCES = {
     / "Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.docx",
     "dieseldorff-ausgrabungen-coban-1893": SOURCES
     / "Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.docx",
+    "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893": SOURCES
+    / "Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.docx",
     "dieseldorff-gefaess-chama-1895": SOURCES
     / "Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.docx",
     "dieseldorff-reliefbild-chipolem-1895": SOURCES

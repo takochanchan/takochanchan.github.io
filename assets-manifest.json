@@ -362,6 +362,24 @@
       "sha256": "feb4ac0de3efe993033dd0a31605a5425fee15b1a3e80fc4472c4640c6b22a26"
     },
     {
+      "path": "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.epub",
+      "size": 2454045,
+      "sha256": "7df7e0b60a5bfa531242c639e3333425a7bba9a5491cf97c431170388a1a5be3"
+    },
+    {
+      "path": "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.pdf",
+      "size": 773272,
+      "sha256": "f082e921259f123935f67d61390cd835bb260e13cc02f00d8299d50eca77ddff"
+    },
+    {
+      "path": "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/cover.jpg",
+      "size": 157399,
+      "sha256": "163963e0eb46b9dd215ecee78b6fad93817dc07f3be76949306b1bf599c07af1"
+    },
+    {
       "path": "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
       "size": 1504682,

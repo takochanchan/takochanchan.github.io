@@ -3700,6 +3700,42 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893",
+    title: "グアテマラの古い彩色土器",
+    originalTitle: "Alte bemalte Thongefässe von Guatemala",
+    subtitle:
+      "1893年刊・原刊547–551頁・本文・図1–2・図版XVI・付加発言 日本語全訳",
+    author: "エルヴィン・P・ディースルドルフ",
+    series:
+      "ALTE BEMALTE THONGEFÄSSE VON GUATEMALA · ZEITSCHRIFT FÜR ETHNOLOGIE · 1893",
+    originalPublication:
+      "ベルリン、『Zeitschrift für Ethnologie』第25巻、1893年、547–551頁・図版XVI",
+    year: 1893,
+    extent: "PDF 7頁・原刊547–551頁・本文図2点・図版XVI・付加発言",
+    description:
+      "チャマ渓谷の墓から出土した二点の複合形彩色土器について、器形、人物・ケツァール・貝殻・暦記号の図像、埋葬状況を報告した考古学論文。編集部導入、ディースルドルフ本文、図1–2、原刊図版XVI、パウル・シェルハスとルドルフ・ヴィルヒョウの付加発言を省略なく訳しています。",
+    cover:
+      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/cover.jpg",
+    pdf:
+      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 2,
+    plateCount: 1,
+    types: ["考古学論文", "土器研究", "学会会報"],
+    regions: ["チャマ", "アルタ・ベラパス", "グアテマラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "マヤ考古学",
+      "彩色土器",
+      "図像研究",
+      "ククルカン",
+      "絵文書",
+      "一次史料",
+    ],
+  },
+  {
     slug: "dieseldorff-gefaess-chama-1895",
     title: "チャマの器",
     originalTitle: "Das Gefäss von Chamá",
@@ -4932,6 +4968,17 @@ const publicationMetadata = {
     publishedDate: "2026-08-10",
     updatedDate: "2026-08-10",
   },
+  "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893": {
+    sourceEdition:
+      "Erwin P. Dieseldorff「Alte bemalte Thongefässe von Guatemala」『Zeitschrift für Ethnologie』Bd. 25（Berlin、1893年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 547–551, Tafel XVI。Paul Schellhasを介して提出され、SchellhasおよびRudolf Virchowの付加発言を伴う。",
+    sourceProvider:
+      "Internet Archive公開の『Zeitschrift für Ethnologie』第25巻スキャン（identifier: zeitschriftfuret2518unse）を主底本とし、原刊誌面とOCRを照合した。編集部導入、ディースルドルフ本文、本文図1–2、図版XVI、シェルハスおよびヴィルヒョウの付加発言を収録した。",
+    sourceUrl:
+      "https://archive.org/details/zeitschriftfuret2518unse",
+    rights: publicDomainRights,
+    publishedDate: "2026-08-10",
+    updatedDate: "2026-08-10",
+  },
   "dieseldorff-gefaess-chama-1895": {
     sourceEdition:
       "Erwin P. Dieseldorff「Das Gefäss von Chamá」『Zeitschrift für Ethnologie』Bd. 27（Berlin、1895年）Verhandlungen der Berliner Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, pp. 770–776。1895年10月付。",
@@ -5008,6 +5055,8 @@ const shortWorkAuthorBySlug = {
   "us-senate-central-america-correspondence-1853":
     "united-states-department-of-state",
   "dieseldorff-ausgrabungen-coban-1893": "erwin-p-dieseldorff",
+  "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893":
+    "erwin-p-dieseldorff",
   "dieseldorff-gefaess-chama-1895": "erwin-p-dieseldorff",
   "dieseldorff-reliefbild-chipolem-1895": "erwin-p-dieseldorff",
   "dieseldorff-cuculcan-1895": "erwin-p-dieseldorff",

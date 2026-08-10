@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "36ca7ca82398251133cf4357575518c5149fd754",
+  "archive_commit": "2987b0bb5d7ba330c9b2a06e7e7e97b95d8ca8be",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
@@ -106,6 +106,7 @@
     "peniche-relaciones-belice-1869": "publications/peniche-relaciones-belice-1869/master.docx",
     "southey-chronological-history-west-indies-1827": "publications/southey-chronological-history-west-indies-1827/master.docx",
     "dieseldorff-ausgrabungen-coban-1893": "publications/dieseldorff-ausgrabungen-coban-1893/master.docx",
+    "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893": "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/master.docx",
     "dieseldorff-gefaess-chama-1895": "publications/dieseldorff-gefaess-chama-1895/master.docx",
     "dieseldorff-reliefbild-chipolem-1895": "publications/dieseldorff-reliefbild-chipolem-1895/master.docx",
     "dieseldorff-cuculcan-1895": "publications/dieseldorff-cuculcan-1895/master.docx",
