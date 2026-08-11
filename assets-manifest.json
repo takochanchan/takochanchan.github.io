@@ -1280,6 +1280,24 @@
       "sha256": "d36d441238b044068b44d7d90a32daacde61de04f21dc9a3d6548e8fc98eedbd"
     },
     {
+      "path": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.epub",
+      "size": 21473383,
+      "sha256": "952b3417a72bb7b8c70639b0a4978657e29a26d63a6334a2ec6aba12aab15584"
+    },
+    {
+      "path": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.pdf",
+      "size": 12542977,
+      "sha256": "93e9f250b85cc4dcc1990673b3fd60585f4feb96aec0cf19cff090589ccf54c0"
+    },
+    {
+      "path": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/cover.jpg",
+      "size": 78192,
+      "sha256": "7a8afa85b9a98aa7093d5757f1797bc91a1011f9d36b080109677ccfb86e291b"
+    },
+    {
       "path": "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
       "size": 1193212,

@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "835234618b53e8632f9fcf4efadc9fc09c3c83a1",
+  "archive_commit": "79b30cb33b881b93e2aeb0fcdee42f0f07808557",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
+    "gemelli-careri-giro-del-mondo-nuova-spagna-1700": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/master.docx",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",

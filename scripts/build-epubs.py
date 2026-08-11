@@ -215,6 +215,9 @@ DOCX_SOURCES = {
     / "Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.docx",
     "cortes-y-larraz-descripcion-geografico-moral-1771": SOURCES
     / "Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.docx",
+    "gemelli-careri-giro-del-mondo-nuova-spagna-1700": SOURCES
+    / "翻訳サイト"
+    / "Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.docx",
     "perigny-ruines-nacun-1906": SOURCES
     / "Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.docx",
     "perigny-exploration-yucatan-1906": SOURCES
@@ -1732,4 +1735,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

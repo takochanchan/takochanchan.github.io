@@ -5198,6 +5198,45 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  {
+    slug: "gemelli-careri-giro-del-mondo-nuova-spagna-1700",
+    title: "世界周遊　第六部　新スペイン",
+    originalTitle:
+      "Giro del mondo del dottor D. Gio. Francesco Gemelli Careri. Parte sesta, contenente le cose più ragguardevoli vedute nella Nuova Spagna",
+    subtitle:
+      "1700年ナポリ初版・全四書四十章・バセット書簡・事項索引・正誤表 日本語全訳",
+    author: "ジョヴァンニ・フランチェスコ・ジェメリ・カレリ",
+    series: "GIRO DEL MONDO · PARTE SESTA · 1700",
+    originalPublication:
+      "ナポリ、ジュゼッペ・ロゼッリ印刷所、1700年",
+    year: 1700,
+    extent:
+      "PDF 342頁・前付・全4書40章・原刊1–496頁・バセット書簡・事項索引184項・正誤表48項・原刊略標題紙および標題紙2点・内容図版15点",
+    description:
+      "イタリア人旅行者ジェメリ・カレリが1697年にアカプルコへ到着してから、メキシコ市、パチューカ、テオティワカン、ベラクルス、ハバナを経てヨーロッパへ帰還するまでを記した『世界周遊』第六部。新スペインの都市、鉱山、暦、祭祀、動植物、征服史を扱う全四書四十章に加え、献辞、章目次、バセット書簡、事項索引、正誤表を省略なく収録しています。1700年初版の略標題紙・標題紙2点と内容図版15点を掲げ、装飾図は省略しています。",
+    cover:
+      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/cover.jpg",
+    pdf:
+      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.epub",
+    pageCount: 342,
+    figureCount: 17,
+    plateCount: 0,
+    types: ["旅行記", "歴史書", "地誌", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "キューバ", "スペイン", "イタリア"],
+    languages: ["イタリア語", "ラテン語", "スペイン語"],
+    tags: [
+      "世界周航",
+      "メキシコ市",
+      "パチューカ鉱山",
+      "テオティワカン",
+      "植民地期",
+      "征服史",
+      "17世紀",
+      "旅行記",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -5254,6 +5293,18 @@ const publicationMetadata = {
       "1684年原刊本文は著作権保護期間を満了しています。Internet Archiveの当該記録はUsage欄にCreative Commons Public Domain Mark 1.0（PDM 1.0）を表示しています。PDM 1.0はライセンスではなく、既知の著作権上の制約がないことを示す標章であり、許諾を求めず商用利用を含む複製・改変・配布等が可能である旨を示す一方、法域差、著作者人格権、無保証等の留保があります。",
     publishedDate: "2026-08-11",
     updatedDate: "2026-08-11",
+  },
+  "gemelli-careri-giro-del-mondo-nuova-spagna-1700": {
+    sourceEdition:
+      "Giovanni Francesco Gemelli Careri『Giro del mondo del dottor D. Gio. Francesco Gemelli Careri. Parte sesta, contenente le cose più ragguardevoli vedute nella Nuova Spagna』（Napoli: Giuseppe Roselli、1700年初版）。",
+    sourceProvider:
+      "Getty Research Institute所蔵の1700年ナポリ初版本を収めるInternet Archive公開の全552画像（識別子 girodelmondodeld06geme）を本文底本とした。イタリア語Wikisourceの未校了転写は読解・検索補助に限定し、本文、固有名詞、数値、原刊頁境界、索引、正誤表は初版画像で確定した。略標題紙・標題紙2点はGetty本のWikimedia Commonsレンダリング、内容図版10点はセビーリャ大学図書館古書部門、残る5点は1704年英訳版・1700年版・1719年仏訳版の公開画像に基づく。",
+    sourceUrl:
+      "https://archive.org/details/girodelmondodeld06geme",
+    rights:
+      "1700年原刊本文および原刊図像は著作権保護期間を満了しています。底本原本の所蔵・スキャン提供機関はGetty Research Institute、デジタル公開機関はInternet Archiveです。当該Internet Archive項目に個別のCreative Commonsライセンス表示はなく、Getty Open Content ProgramのCC0がこの個別資料へ適用されるとは扱っていません。略標題紙・標題紙2点はWikimedia CommonsのPD-old-70-expired表示、セビーリャ大学図書館古書部門由来の内容図版10点はCC BY 2.0、1704年英訳版のアステカ移住図1点と1700年版の植物図3点はPublic Domain Mark 1.0、1719年仏訳版のメシカ暦図1点はCC0 1.0の表示に従っています。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
   },
   "atkins-voyage-guinea-1735": {
     sourceEdition:
