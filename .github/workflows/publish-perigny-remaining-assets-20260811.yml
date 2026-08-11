@@ -1,0 +1,1256 @@
+name: Publish remaining Perigny release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-perigny-remaining-assets-20260811.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-perigny-remaining-assets-20260811.yml
+      ASSET_MANIFEST: |-
+          [
+            {
+              "slug": "perigny-communications-central-america-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_voies_de_communication_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
+              "title": "中央アメリカの交通路",
+              "author": "モーリス・ド・ペリニー",
+              "size": 505663,
+              "sha256": "e5dca018621aa385100cdbea021bfc98eb82eb2802ca74a42a1162aa396142ea",
+              "blobs": [
+                "3393ccb551bc4d8406b7d0f00572916c07c6ba2d"
+              ],
+              "marker": "〔原刊 p. 260〕",
+              "pages": 14,
+              "imageCount": 1
+            },
+            {
+              "slug": "perigny-communications-central-america-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_voies_de_communication_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
+              "title": "中央アメリカの交通路",
+              "author": "モーリス・ド・ペリニー",
+              "size": 341368,
+              "sha256": "c11e2869e01eeebbf2e08cbae3cac6df361dfcc943497be2748eefd846fb2df0",
+              "blobs": [
+                "f7de307b0293016d2c0355e4b1c70eaf59326c7c"
+              ],
+              "minJapanese": 8663,
+              "imageRefs": 1
+            },
+            {
+              "slug": "perigny-mexico-economic-development-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Mexique_et_son_developpement_economique_1911_Japanese_Complete_Translation.pdf",
+              "title": "メキシコとその経済発展",
+              "author": "モーリス・ド・ペリニー",
+              "size": 521950,
+              "sha256": "61dd28f8418f7737b7509b22869e7d9ff89dcedf18aab1f36414fdf1b4fba43b",
+              "blobs": [
+                "c5bb9a116cf4db5bb046f15d0c3a0b8b81cd46ad"
+              ],
+              "marker": "〔原刊 p. 109〕",
+              "pages": 19,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-mexico-economic-development-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Mexique_et_son_developpement_economique_1911_Japanese_Complete_Translation.epub",
+              "title": "メキシコとその経済発展",
+              "author": "モーリス・ド・ペリニー",
+              "size": 165852,
+              "sha256": "66382583bb40b2def8c66a7c76143f4534db847068830508d32eae0663498e6a",
+              "blobs": [
+                "0e218b8309792614ecd4002bd4f49e0c1ecc5c28"
+              ],
+              "minJapanese": 11304,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-mission-central-america-nakcun-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Mission_dans_l_Amerique_centrale_1909_1910_1911_Japanese_Complete_Translation.pdf",
+              "title": "1909–1910年中央アメリカ調査——ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 3510528,
+              "sha256": "ecdd766cc241a3313324d71e4956edcafa3cbd2afe9c97a3f4444fafe5742473",
+              "blobs": [
+                "502932f3484409157609ec5b3ef4962d6d5c2c20",
+                "32d9d5b355f48c292aa5b27d2bc4d7f8aa8c9075",
+                "f7308e845fc6733704f037361170314a8a11cdc2",
+                "148831fee814baecb09fea762d2c0e863ddadd9c",
+                "6e93aeb7aac44f63ee75b6a1a246685de533f04a",
+                "35e29e3932d3147bd2b7dd41778c8ec2af33da9a"
+              ],
+              "marker": "〔原刊 p. 1〕",
+              "pages": 27,
+              "imageCount": 16
+            },
+            {
+              "slug": "perigny-mission-central-america-nakcun-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Mission_dans_l_Amerique_centrale_1909_1910_1911_Japanese_Complete_Translation.epub",
+              "title": "1909–1910年中央アメリカ調査——ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 7052672,
+              "sha256": "4c1f31ace1d4f1f1a030d134c1876092b38f04555f0b464eb704a3ff6d4067b9",
+              "blobs": [
+                "66e97e53b6d79e153a29ab3182a9d9810594546a",
+                "3bd77772116e3824f2320e7bd5ae37025709fc0f",
+                "cf5253af21efe7e3a9089c75618363bcd65e183a",
+                "04aa7bb013bf497397ce56895f3410d034c709ee",
+                "848e23ff56a38fe72b4918f4fc2beefc7da4dc92",
+                "12259dd0691937331c9ccbe75003bb86e6b541c9",
+                "57af4c9ce807af2bb674275e3c99b93ed27589bf",
+                "a909ee2294da205fde650d6894afd6a143e6b66c",
+                "d031e86d5e4a21e88c217e6249ef3faf602e7885",
+                "472715e5a859932ad4d1feefb61908a9268ea156",
+                "d05016d29e75cf8892807b49659ba5b2bd1b7d2c"
+              ],
+              "minJapanese": 7964,
+              "imageRefs": 16
+            },
+            {
+              "slug": "perigny-costa-rica-pays-gens-choses-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Costa_Rica_Le_pays_Les_gens_Les_choses_1912_Japanese_Complete_Translation.pdf",
+              "title": "コスタリカ——国土・人々・事物",
+              "author": "モーリス・ド・ペリニー",
+              "size": 433744,
+              "sha256": "a17726ae00b6af5b01126b1bd75c4793791c9eef95893b59e5a75d362955e50c",
+              "blobs": [
+                "f018892b21d85aa871f52c5ae9a3b1790f02152c"
+              ],
+              "marker": "〔原刊 p. 204〕",
+              "pages": 12,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-costa-rica-pays-gens-choses-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Costa_Rica_Le_pays_Les_gens_Les_choses_1912_Japanese_Complete_Translation.epub",
+              "title": "コスタリカ——国土・人々・事物",
+              "author": "モーリス・ド・ペリニー",
+              "size": 137699,
+              "sha256": "84cf4028d488ff310d100f33889c6d9910fbccc1684ad2b5e9fbc48c1d813a64",
+              "blobs": [
+                "e694f0baa45a4e05b420b416246768303960e140"
+              ],
+              "minJapanese": 7106,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-quechis-kekchis-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_Indiens_Quechis_ou_Kekchis_1912_Japanese_Complete_Translation.pdf",
+              "title": "アルタ・ベラパス（グアテマラ）のケチ族、またはケクチ族",
+              "author": "モーリス・ド・ペリニー",
+              "size": 262288,
+              "sha256": "5f14a70aaf79b6d7812e940f0708e3a2807637a14c2768ed295430987d5066ae",
+              "blobs": [
+                "ba11d48691d036803737414411ef22c33163aa06"
+              ],
+              "marker": "〔原刊 p. 238〕",
+              "pages": 5,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-quechis-kekchis-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_Indiens_Quechis_ou_Kekchis_1912_Japanese_Complete_Translation.epub",
+              "title": "アルタ・ベラパス（グアテマラ）のケチ族、またはケクチ族",
+              "author": "モーリス・ド・ペリニー",
+              "size": 132304,
+              "sha256": "09ce5c2ad2dc8494406741843485466686085b50826f094812673ac9f1ecc7ed",
+              "blobs": [
+                "6fbe18e5c532d3fcd79df91aee4636c11a82b9a5"
+              ],
+              "minJapanese": 2870,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-francais-mexique-1905",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_Francais_au_Mexique_1905_Japanese_Complete_Translation.pdf",
+              "title": "メキシコのフランス人",
+              "author": "モーリス・ド・ペリニー",
+              "size": 311629,
+              "sha256": "8c80d7ae84939adbff2fa92a8c87c4041efc47204ae5637471425298288c9b9b",
+              "blobs": [
+                "317244ddd68c719fbc3c9271d097df79623a51fc"
+              ],
+              "marker": "〔原刊 p. 292〕",
+              "pages": 6,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-francais-mexique-1905",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_Francais_au_Mexique_1905_Japanese_Complete_Translation.epub",
+              "title": "メキシコのフランス人",
+              "author": "モーリス・ド・ペリニー",
+              "size": 111229,
+              "sha256": "697cec7656f09d643d60447fb33fdd6c4d4c905d25cd3c8fa45b8048beccc13c",
+              "blobs": [
+                "5d0a301d00c7958c8f9798926afcfa556cd829b4"
+              ],
+              "minJapanese": 3201,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-henequen-yucatan-1906",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_La_Culture_du_henequen_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
+              "title": "ユカタンにおけるエネケン栽培",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1089795,
+              "sha256": "57795b6ecb29a6bf89d68431bae0b4a21c91366cc0f8341c09a48bfb902a7838",
+              "blobs": [
+                "69e6dc290cc2727be2d8d992de39b31de362b4cf",
+                "f6eb36e009fe451737e6ec5fed305c16ed4b27ad"
+              ],
+              "marker": "〔原刊 p. 308〕",
+              "pages": 6,
+              "imageCount": 3
+            },
+            {
+              "slug": "perigny-henequen-yucatan-1906",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_La_Culture_du_henequen_au_Yucatan_1906_Japanese_Complete_Translation.epub",
+              "title": "ユカタンにおけるエネケン栽培",
+              "author": "モーリス・ド・ペリニー",
+              "size": 2343318,
+              "sha256": "0bf87da8e8e41933b9647ea77fb5f0908462bb7b6c091cfe505050838695fd48",
+              "blobs": [
+                "7231215f6347fad382875a6b4124931e8fb8f41d",
+                "8e78a8cb7611b87742ef325b0de984b24efeea72",
+                "f72e06ae8f3bb3a98f3faf294a671914e54307cc",
+                "68f33ff70d7e8f7ce605ff0d71b42a947ee747b2"
+              ],
+              "minJapanese": 2373,
+              "imageRefs": 3
+            },
+            {
+              "slug": "perigny-merida-ville-florissante-1906",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Une_Ville_florissante_des_Tropiques_au_Yucatan_Merida_1906_Japanese_Complete_Translation.pdf",
+              "title": "ユカタンの熱帯に栄える都市——メリダ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1106861,
+              "sha256": "01f205aef3bb1ebbea47e83cd45afa4c774abdfcee481c8c1cb74ff39a8d02a7",
+              "blobs": [
+                "d82815bd05016a109309dc0785c4d6ad8c15d780",
+                "4496c25da41348bc3bf390aebba911fec6686fad"
+              ],
+              "marker": "〔原刊 p. 385〕",
+              "pages": 6,
+              "imageCount": 2
+            },
+            {
+              "slug": "perigny-merida-ville-florissante-1906",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Une_Ville_florissante_des_Tropiques_au_Yucatan_Merida_1906_Japanese_Complete_Translation.epub",
+              "title": "ユカタンの熱帯に栄える都市——メリダ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1731419,
+              "sha256": "aa7ff90100a67d4e0a57249f5259221fed0c12617ea8cf5b8bf8b4d598f02ff1",
+              "blobs": [
+                "623f47f398b45763a91f59de3952090be6bc017a",
+                "b68edbda5dade28cfc49dbc37f4cf3a8326664e8",
+                "8fc6933555d6541dc5ccd4143310fff680ad5da4"
+              ],
+              "minJapanese": 3029,
+              "imageRefs": 2
+            },
+            {
+              "slug": "perigny-modern-mexico-1907",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Modern_Mexico_1907_Japanese_Complete_Translation.pdf",
+              "title": "近代メキシコ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1151817,
+              "sha256": "d35f8d343a976d3aee2900dccd3f12c1c09420bea0c2cf7d9b90149547522322",
+              "blobs": [
+                "d987b738e29888ccb1513c7df9b46c395f84cde2",
+                "caa2bdc8b40122817debeeecff1d277d5d915906"
+              ],
+              "marker": "〔原刊 p. 701〕",
+              "pages": 11,
+              "imageCount": 6
+            },
+            {
+              "slug": "perigny-modern-mexico-1907",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Modern_Mexico_1907_Japanese_Complete_Translation.epub",
+              "title": "近代メキシコ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 2082735,
+              "sha256": "d406b675199e97b5d1afc770b489ef0b51126afdd4d10915b4fdb7d75c311225",
+              "blobs": [
+                "d713e4120cb0c6a615cf199c40ec2aae5071aaa2",
+                "3388ee5f81a457c07a1234eb26270c40ccfe9233",
+                "d5408b9023c94568c62ede0c4cd5da6862b36cf7"
+              ],
+              "minJapanese": 4159,
+              "imageRefs": 6
+            },
+            {
+              "slug": "perigny-industrie-chicle-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_L_Industrie_du_chicle_1908_Japanese_Complete_Translation.pdf",
+              "title": "チクレ産業",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1225746,
+              "sha256": "a90c89871c8744e1518e02d9a7d3e2b7846cbbcc12e6b9b4e756f35a16f66182",
+              "blobs": [
+                "0a4fb390f3d3c08bce37d1fc93fb4c99fae3e92e",
+                "f7315ab1b0484413f5f1a7e1958aa1fb36e1d34a"
+              ],
+              "marker": "〔原刊 p. 388〕",
+              "pages": 6,
+              "imageCount": 5
+            },
+            {
+              "slug": "perigny-industrie-chicle-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_L_Industrie_du_chicle_1908_Japanese_Complete_Translation.epub",
+              "title": "チクレ産業",
+              "author": "モーリス・ド・ペリニー",
+              "size": 2029527,
+              "sha256": "3329da7f7e4cbeb668ba275d2e6f32e14af43b60040978c33f4329b81258d5f2",
+              "blobs": [
+                "865a8c666bb652c41fe811e69ad0dea9cf77158b",
+                "7bc2b95c5c02fad88d28beba4fa28b836e8fb988",
+                "6dc1d2002103797551d126476c41d2daebd78a56"
+              ],
+              "minJapanese": 1614,
+              "imageRefs": 5
+            },
+            {
+              "slug": "perigny-emigration-asiatique-mexique-1909",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_L_Emigration_asiatique_au_Mexique_1909_Japanese_Complete_Translation.pdf",
+              "title": "メキシコへのアジア移民",
+              "author": "モーリス・ド・ペリニー",
+              "size": 214554,
+              "sha256": "fb95658a567a637515dfce2628fd2b54bf8f312fc3ebc4a11f17cf02ae597dc8",
+              "blobs": [
+                "d6b7b8585b3c56b6f0b0824af0a53c6a448994ee"
+              ],
+              "marker": "〔原刊 p. 19〕",
+              "pages": 4,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-emigration-asiatique-mexique-1909",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_L_Emigration_asiatique_au_Mexique_1909_Japanese_Complete_Translation.epub",
+              "title": "メキシコへのアジア移民",
+              "author": "モーリス・ド・ペリニー",
+              "size": 125478,
+              "sha256": "3d0eb7240c14d1015559e681b3422448db91629dbcd012bb911a922f50505648",
+              "blobs": [
+                "6a4845234548cc24f591a4811836cb51daeb1669"
+              ],
+              "minJapanese": 2617,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-lettre-guatemala-cafe",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Lettre_de_Guatemala_n_d_Japanese_Complete_Translation.pdf",
+              "title": "グアテマラからの書簡――コーヒー産業",
+              "author": "モーリス・ド・ペリニー",
+              "size": 188575,
+              "sha256": "06dba6f465b3d1afd5d469d31645f5f0c1614d54ebe81f899f6f3fe75574c470",
+              "blobs": [
+                "d8eb0e0cf904bd250171bbe85f31c743289f3420"
+              ],
+              "marker": "〔原刊 p. 273〕",
+              "pages": 3,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-lettre-guatemala-cafe",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Lettre_de_Guatemala_n_d_Japanese_Complete_Translation.epub",
+              "title": "グアテマラからの書簡――コーヒー産業",
+              "author": "モーリス・ド・ペリニー",
+              "size": 123748,
+              "sha256": "a0c2bfe04f92507b64711508b48f7bd7788835f4665218a9ee02dfc0633d48e6",
+              "blobs": [
+                "f9c148520ec504e6eb3b65c2e1c8a0ab771db5ab"
+              ],
+              "minJapanese": 1542,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-ecole-cadets-honduras-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Une_Ecole_de_cadets_au_Honduras_1910_Japanese_Complete_Translation.pdf",
+              "title": "ホンジュラスの士官候補生学校",
+              "author": "モーリス・ド・ペリニー",
+              "size": 309424,
+              "sha256": "ba4d53b35d5e7c23d199a65a2b75d0561dae20cd3ef847a16f5bb000ae56035f",
+              "blobs": [
+                "eeaf4642a187161cbb94776ea40c8c3185da083d"
+              ],
+              "marker": "〔原刊 p.［無頁］（『La France militaire』1910年9月24日）〕",
+              "pages": 5,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-ecole-cadets-honduras-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Une_Ecole_de_cadets_au_Honduras_1910_Japanese_Complete_Translation.epub",
+              "title": "ホンジュラスの士官候補生学校",
+              "author": "モーリス・ド・ペリニー",
+              "size": 126497,
+              "sha256": "dd76be6550280ff09499dd412f64cc2f665fc537f6f945a5418951d82f65117f",
+              "blobs": [
+                "a43afb0fd66621a64b79d6e448b90be03ec96104"
+              ],
+              "minJapanese": 2729,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-port-amapala-honduras-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Port_d_Amapala_Honduras_1910_Japanese_Complete_Translation.pdf",
+              "title": "アマパラ港（ホンジュラス）",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1028118,
+              "sha256": "17a74c8f5814937ea34388cd6619e2e9f960dcf9f56c2168abc207c32833e1c8",
+              "blobs": [
+                "0cf866084720e2a7ed3c9aae950b7a48e43e2e69",
+                "bb7a81f9213acc4a8c264bcdac0d28dab1d539e6"
+              ],
+              "marker": "〔原刊 p. 365〕",
+              "pages": 4,
+              "imageCount": 2
+            },
+            {
+              "slug": "perigny-port-amapala-honduras-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Port_d_Amapala_Honduras_1910_Japanese_Complete_Translation.epub",
+              "title": "アマパラ港（ホンジュラス）",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1126523,
+              "sha256": "f1eebd4b91c21a1682dc2227dd2ebe7f361633459659bd34c08fba9fb557c56e",
+              "blobs": [
+                "d9ae8164d01588d5700e3d01de8f6c13c831b860",
+                "7495910fcea0926728abf7431c6ab192603ca971"
+              ],
+              "minJapanese": 1736,
+              "imageRefs": 2
+            },
+            {
+              "slug": "perigny-ancienne-route-galions-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_L_Ancienne_route_des_galions_1910_Japanese_Complete_Translation.pdf",
+              "title": "ガレオン船の旧道",
+              "author": "モーリス・ド・ペリニー",
+              "size": 201529,
+              "sha256": "e277f67099e38e3659ed8327b1c74409cb6bfdb63238763062b2097351f4fb51",
+              "blobs": [
+                "cc391361c7226dc2c8cb57187bfcc7dd914a6e31"
+              ],
+              "marker": "〔原刊 p. 83〕",
+              "pages": 4,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-ancienne-route-galions-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_L_Ancienne_route_des_galions_1910_Japanese_Complete_Translation.epub",
+              "title": "ガレオン船の旧道",
+              "author": "モーリス・ド・ペリニー",
+              "size": 115074,
+              "sha256": "b96d78e7644edaeaaa5edb4776d7278224c424e65053a2f7b03b412f0055d944",
+              "blobs": [
+                "fc6eadd4a59bf8d3b1da8c7747043a9f5adcb251"
+              ],
+              "minJapanese": 2151,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-honduras-ecole-militaire-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Honduras_et_son_Ecole_militaire_1910_Japanese_Complete_Translation.pdf",
+              "title": "中央アメリカ諸共和国——ホンジュラスとその士官学校",
+              "author": "モーリス・ド・ペリニー",
+              "size": 441254,
+              "sha256": "5244bc10b5c7be7baacff8828f27ef6213d364153c4d683d135e1941f206b111",
+              "blobs": [
+                "165a3797da702acf365feceee0f5229de32b6160"
+              ],
+              "marker": "〔原刊 p. 401〕",
+              "pages": 7,
+              "imageCount": 2
+            },
+            {
+              "slug": "perigny-honduras-ecole-militaire-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Honduras_et_son_Ecole_militaire_1910_Japanese_Complete_Translation.epub",
+              "title": "中央アメリカ諸共和国——ホンジュラスとその士官学校",
+              "author": "モーリス・ド・ペリニー",
+              "size": 299730,
+              "sha256": "ea5ec08c46ce5846d2134cf38452248da9d0cfc69a36a00cbaf712d6c423af82",
+              "blobs": [
+                "bf84cfd68aceb6f5f1068d5bac6471ebecf28284"
+              ],
+              "minJapanese": 3444,
+              "imageRefs": 2
+            },
+            {
+              "slug": "perigny-ruines-nakcun-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nakcun_1910_Japanese_Complete_Translation.pdf",
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 271842,
+              "sha256": "3b4033611d9fa4dcc9946f9392a8abba158b4392c31db17fa723a976bb5d3ca9",
+              "blobs": [
+                "ab28345c6e8111c6c2eec93be297154d850ef957"
+              ],
+              "marker": "〔原刊 p. 485〕",
+              "pages": 4,
+              "imageCount": 1
+            },
+            {
+              "slug": "perigny-ruines-nakcun-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_ruines_de_Nakcun_1910_Japanese_Complete_Translation.epub",
+              "title": "ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 190239,
+              "sha256": "8177eb5ce7c3f54003ee3c6d08f30f73271cedc8b2fb842adcf11797fd115b52",
+              "blobs": [
+                "06a892d1a0e242677159986a8b0af776b6e8ae9e"
+              ],
+              "minJapanese": 2025,
+              "imageRefs": 1
+            },
+            {
+              "slug": "perigny-villes-mortes-nakcun-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_Nakcun_1911_Japanese_Complete_Translation.pdf",
+              "title": "中央アメリカの死都——ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1640719,
+              "sha256": "0ae36c59127b9f5b0c9466e70c6d544a394d7fc7a94307427125ab6831b131ff",
+              "blobs": [
+                "9ee3f32065d82bbb56bd35251db9eacfbdecf70a",
+                "b26394a0c25d9d027da34cf266a92166afd4c922",
+                "10a09ef8a91f2c7640954cd0e29bce9ba2b53ba5"
+              ],
+              "marker": "〔原刊 p. 349〕",
+              "pages": 27,
+              "imageCount": 18
+            },
+            {
+              "slug": "perigny-villes-mortes-nakcun-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_Nakcun_1911_Japanese_Complete_Translation.epub",
+              "title": "中央アメリカの死都——ナクン遺跡",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1164600,
+              "sha256": "54c9c6bb6db90495192b4a404d22d297842bb9aabdf05907ff751555733f89cc",
+              "blobs": [
+                "8bfe4b640020fb3b1ec8bcf82fe3faf9a7ea22c8",
+                "0a16baf435083815477f94f71ee5447dc5088d05"
+              ],
+              "minJapanese": 9927,
+              "imageRefs": 18
+            },
+            {
+              "slug": "perigny-ruines-nakcun-mission-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_Ruines_de_Nakcun_Mission_archeologique_1912_Japanese_Complete_Translation.pdf",
+              "title": "ナクン遺跡——1909〜1910年中央アメリカ考古学調査",
+              "author": "モーリス・ド・ペリニー",
+              "size": 486111,
+              "sha256": "8e7a617cd91d3f716a310c20305e2fac70c61ff04ca3ceff10e7e8b333c578e1",
+              "blobs": [
+                "2a7adab86c0c10ecc88e1f5c0eb4f9af18cb055d"
+              ],
+              "marker": "最終タイプ稿第1葉（BnF f. 37）",
+              "pages": 16,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-ruines-nakcun-mission-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_Ruines_de_Nakcun_Mission_archeologique_1912_Japanese_Complete_Translation.epub",
+              "title": "ナクン遺跡——1909〜1910年中央アメリカ考古学調査",
+              "author": "モーリス・ド・ペリニー",
+              "size": 172582,
+              "sha256": "ff3c7ad3e46530217a2274739b687676a911a79b0e9afd5ac1f5721b5916614c",
+              "blobs": [
+                "022230c73fc1230df821690b2405aa570e4ffe1e"
+              ],
+              "minJapanese": 10806,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-plein-cintre-architecture-maya-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Plein_Cintre_dans_l_Architecture_Maya_1912_Japanese_Complete_Translation.pdf",
+              "title": "マヤ建築における半円アーチ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 109553,
+              "sha256": "5d2e1a1852ffa0a65437d9b5f25dcf25fb1970bbad7e34bc57ed87bb35357408",
+              "blobs": [
+                "445a1e6206b8c150177639bd7fcf0a5263d338ff"
+              ],
+              "marker": "〔原刊 p. 295（会議報告抄録）〕",
+              "pages": 2,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-plein-cintre-architecture-maya-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Plein_Cintre_dans_l_Architecture_Maya_1912_Japanese_Complete_Translation.epub",
+              "title": "マヤ建築における半円アーチ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 139029,
+              "sha256": "5a5c9bf12edbaaff1c3deab80c0e899b654aea9bc0b0e2c927e2baef3d11145b",
+              "blobs": [
+                "624852a4e02d5dee44d0997cfa2030aa34d1dd42"
+              ],
+              "minJapanese": 781,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-review-gates-perez-codex-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Review_William_E_Gates_Perez_Codex_1912_Japanese_Complete_Translation.pdf",
+              "title": "ウィリアム・E・ゲイツ『マヤ＝ツェンタル・ペレス絵文書注解』書評",
+              "author": "モーリス・ド・ペリニー",
+              "size": 190467,
+              "sha256": "d8f6bfddef09088cf7244918d5a9ed522e56a18983c2fa6ab9795f6636a09c17",
+              "blobs": [
+                "dece4918c0ae01e5b1b82ca81a20b300e103c1e1"
+              ],
+              "marker": "〔原刊 p. 315〕",
+              "pages": 3,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-review-gates-perez-codex-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Review_William_E_Gates_Perez_Codex_1912_Japanese_Complete_Translation.epub",
+              "title": "ウィリアム・E・ゲイツ『マヤ＝ツェンタル・ペレス絵文書注解』書評",
+              "author": "モーリス・ド・ペリニー",
+              "size": 126314,
+              "sha256": "10a7f2ac72ddfa9226785ff4202dc31196494a1d2c5cce1f163968f29652fd75",
+              "blobs": [
+                "5f82edd83fb814c94353937c4146dd1deefd4b7f"
+              ],
+              "minJapanese": 2060,
+              "imageRefs": 0
+            },
+            {
+              "slug": "societe-americanistes-maler-tozzer-tikal-1912",
+              "kind": "pdf",
+              "name": "Societe_des_Americanistes_Maler_Tozzer_Tikal_Received_Books_1912_Japanese_Complete_Translation.pdf",
+              "title": "ティカル遺跡に関するマレル／トッツァー二著の受贈記録",
+              "author": "パリ・アメリカニスト協会会報（無署名）",
+              "size": 111283,
+              "sha256": "8f8e70b0ceacf79897d3309025f48418175599d5403adbcde6dc5ecc978a6e21",
+              "blobs": [
+                "a0eb2619be55ebc1f6b3359b663885657f807835"
+              ],
+              "marker": "〔原刊 p. 124（学会会報・受領刊行物一覧中の該当項目）〕",
+              "pages": 2,
+              "imageCount": 0
+            },
+            {
+              "slug": "societe-americanistes-maler-tozzer-tikal-1912",
+              "kind": "epub",
+              "name": "Societe_des_Americanistes_Maler_Tozzer_Tikal_Received_Books_1912_Japanese_Complete_Translation.epub",
+              "title": "ティカル遺跡に関するマレル／トッツァー二著の受贈記録",
+              "author": "パリ・アメリカニスト協会会報（無署名）",
+              "size": 135888,
+              "sha256": "1ee7d1071448f7d27c6292cfc8ae632f777d6f7647eca57f9f12938ccd319a8a",
+              "blobs": [
+                "4c1a74ddab1412872ad9c6a190519866b2d37a8c"
+              ],
+              "minJapanese": 784,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-morelos-revolution-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Au_pays_de_la_Revolution_mexicaine_Etat_de_Morelos_1912_Japanese_Complete_Translation.pdf",
+              "title": "メキシコ革命の地——モレロス州",
+              "author": "モーリス・ド・ペリニー",
+              "size": 406912,
+              "sha256": "a1ad89e5ed498d727384f48e092fc508dcc5b8f42cbf5f5d40033359bfb3423f",
+              "blobs": [
+                "25ea6daf15096b09f998029b181b80dac2f9cd9d"
+              ],
+              "marker": "〔原刊 p. 125〕",
+              "pages": 4,
+              "imageCount": 1
+            },
+            {
+              "slug": "perigny-morelos-revolution-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Au_pays_de_la_Revolution_mexicaine_Etat_de_Morelos_1912_Japanese_Complete_Translation.epub",
+              "title": "メキシコ革命の地——モレロス州",
+              "author": "モーリス・ド・ペリニー",
+              "size": 312741,
+              "sha256": "c4707b1dcceb9afdd96ac910ff92b8d317878697b423961e857dc4850629ef1d",
+              "blobs": [
+                "d40bb2e662a77721c76b980162b59b7e7ab4eedb"
+              ],
+              "minJapanese": 1780,
+              "imageRefs": 1
+            },
+            {
+              "slug": "perigny-mexique-developpement-revised-typescript-1911",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Mexique_et_son_developpement_economique_1911_Revised_Typescript_Japanese_Complete_Translation.pdf",
+              "title": "メキシコとその経済発展——1911年改稿タイプ稿",
+              "author": "モーリス・ド・ペリニー",
+              "size": 564077,
+              "sha256": "854c491742d425fae6baed9845b5e7cf4ef5dc3873a93c33cf13469a231a440a",
+              "blobs": [
+                "098f9335880c51f4b1262291024e29e673b59ebe"
+              ],
+              "marker": "〔原稿 p. 1〕",
+              "pages": 21,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-mexique-developpement-revised-typescript-1911",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Mexique_et_son_developpement_economique_1911_Revised_Typescript_Japanese_Complete_Translation.epub",
+              "title": "メキシコとその経済発展——1911年改稿タイプ稿",
+              "author": "モーリス・ド・ペリニー",
+              "size": 189102,
+              "sha256": "6c268f3feb712ac915e7a56f424b749b1fc088ece0b462247f46127866ba2026",
+              "blobs": [
+                "48cb3211da394d175939588fb71b0c7dba214eb9"
+              ],
+              "minJapanese": 13626,
+              "imageRefs": 0
+            },
+            {
+              "slug": "reynaud-perigny-honnorat-interets-mexique-1914",
+              "kind": "pdf",
+              "name": "Reynaud_Perigny_Honnorat_Les_Interets_francais_au_Mexique_1914_Japanese_Complete_Translation.pdf",
+              "title": "メキシコにおけるフランスの権益",
+              "author": "ポール・レノー／モーリス・ド・ペリニー／アンドレ・オノラ",
+              "size": 356257,
+              "sha256": "c7f5f53c14771c6776c6c000073afaa7923e0e0091cce7f112114a6bccf6c334",
+              "blobs": [
+                "282cb9d9887ec3c0b8af762690e62df659305bdd"
+              ],
+              "marker": "〔原刊 p. 115〕",
+              "pages": 14,
+              "imageCount": 0
+            },
+            {
+              "slug": "reynaud-perigny-honnorat-interets-mexique-1914",
+              "kind": "epub",
+              "name": "Reynaud_Perigny_Honnorat_Les_Interets_francais_au_Mexique_1914_Japanese_Complete_Translation.epub",
+              "title": "メキシコにおけるフランスの権益",
+              "author": "ポール・レノー／モーリス・ド・ペリニー／アンドレ・オノラ",
+              "size": 162385,
+              "sha256": "5f9fe22f85e720cf3c628f623a68ae4d7f334f4fa819945085bde10200c7c903",
+              "blobs": [
+                "d473738148c44918dcab626ae34a6bfc7d6638d9"
+              ],
+              "minJapanese": 8935,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-costa-rica-guerre-1917",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Costa_Rica_pendant_la_guerre_1917_Japanese_Complete_Translation.pdf",
+              "title": "戦時下のコスタリカ——その経済的将来とパナマ運河",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1428004,
+              "sha256": "09007fd82bd35da110469cfd1ddad47b9cfa0f6864b6d2522f8abb2cb4b0599c",
+              "blobs": [
+                "6b74f1cc7058e26314adfb35c8b2bae335f81f9b",
+                "e8b78cfdcc2f70f4815c59dd54967f098d67c84f",
+                "5c939cd9680cd1732e9c85ac98ee3d6188ecb144"
+              ],
+              "marker": "〔原刊 p. 41〕",
+              "pages": 10,
+              "imageCount": 4
+            },
+            {
+              "slug": "perigny-costa-rica-guerre-1917",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Costa_Rica_pendant_la_guerre_1917_Japanese_Complete_Translation.epub",
+              "title": "戦時下のコスタリカ——その経済的将来とパナマ運河",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1021597,
+              "sha256": "c74abe9dbb9fdd353b822fa1b37efe177039eb0be11d5baf54b1f7790c500b84",
+              "blobs": [
+                "62f2cd68c692a4eea12dbb8db0a20d3703b59df3",
+                "e07dbf169fc63ee708ab65c38130adb9609c9640"
+              ],
+              "minJapanese": 3984,
+              "imageRefs": 4
+            },
+            {
+              "slug": "perigny-amerique-centrale-guerre-1919",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_L_Amerique_centrale_pendant_la_guerre_1919_Japanese_Complete_Translation.pdf",
+              "title": "戦時下の中央アメリカ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 532566,
+              "sha256": "9f3ef03db733adcd3d4154c312499d664fe365e698d2753ea7dd5cdc396689f2",
+              "blobs": [
+                "6b9c3e8fce6727dd2765ee4bc8cd4f29db1128d6"
+              ],
+              "marker": "〔原刊 p. 251〕",
+              "pages": 14,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-amerique-centrale-guerre-1919",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_L_Amerique_centrale_pendant_la_guerre_1919_Japanese_Complete_Translation.epub",
+              "title": "戦時下の中央アメリカ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 145077,
+              "sha256": "98d82449ad36071ecf4b9b3b4c7da1604b8f82fe44a744038b54d3d8a580d672",
+              "blobs": [
+                "e169f012c1ed17cc629253bfcea4f058d81d023e"
+              ],
+              "minJapanese": 8519,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-hokkaido-ainos-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Dans_l_Hokkaido_ancienne_ile_d_Yeso_pays_des_Ainos_1908_Japanese_Complete_Translation.pdf",
+              "title": "北海道——旧蝦夷島、アイヌの国",
+              "author": "モーリス・ド・ペリニー",
+              "size": 633477,
+              "sha256": "5df5be9f6f0498340c4f028f8b97dce9a89c4bba276c8690dadb4575a4c88186",
+              "blobs": [
+                "5ef177319bdce2ce86f50fecec65622c1843e7d0"
+              ],
+              "marker": "〔原刊 p. 209〕",
+              "pages": 7,
+              "imageCount": 3
+            },
+            {
+              "slug": "perigny-hokkaido-ainos-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Dans_l_Hokkaido_ancienne_ile_d_Yeso_pays_des_Ainos_1908_Japanese_Complete_Translation.epub",
+              "title": "北海道——旧蝦夷島、アイヌの国",
+              "author": "モーリス・ド・ペリニー",
+              "size": 415644,
+              "sha256": "283df216cdfc8325c18f211881754ba7e451bead0b78646e77dd02a2f26fd02b",
+              "blobs": [
+                "76135ad3845fabb58544b82cfaef5f87cd72a57e"
+              ],
+              "minJapanese": 3690,
+              "imageRefs": 3
+            },
+            {
+              "slug": "perigny-iles-riou-kiou-1908",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Les_Iles_Riou_Kiou_1908_Japanese_Complete_Translation.pdf",
+              "title": "琉球諸島",
+              "author": "モーリス・ド・ペリニー",
+              "size": 315468,
+              "sha256": "4cd54a6f2389433b2ed17ff8d56f578a46df6efcde9ccae41dfd37d934ac170c",
+              "blobs": [
+                "55d538a191f0c0dbcc9ed48089282b0629693c75"
+              ],
+              "marker": "〔原刊 p. 403〕",
+              "pages": 6,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-iles-riou-kiou-1908",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Les_Iles_Riou_Kiou_1908_Japanese_Complete_Translation.epub",
+              "title": "琉球諸島",
+              "author": "モーリス・ド・ペリニー",
+              "size": 120509,
+              "sha256": "dfa9b79b0fa45076cdf7284a09ac47eb0bec09979db1a0a1f472e95bc1f8847e",
+              "blobs": [
+                "ad63d695d5cbc38f8afd36c75c5126e133f916c8"
+              ],
+              "minJapanese": 4212,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-principaute-japonaise-riou-kiou-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Histoire_d_une_principaute_japonaise_les_iles_Riou_Kiou_1910_Japanese_Complete_Translation.pdf",
+              "title": "日本の一公国の歴史――琉球諸島",
+              "author": "モーリス・ド・ペリニー",
+              "size": 1025096,
+              "sha256": "1b6e47fbd2668d6b64dbf0250b26e7964308566726ab1120911d66b8bdf6e4f0",
+              "blobs": [
+                "7eadfa14febb4ea4cca9d9bdd0b700682fbf638b",
+                "3dc7ee1f3dd5e587d6329ae6289da816f8ca1f7d"
+              ],
+              "marker": "〔原刊 p. 393〕",
+              "pages": 6,
+              "imageCount": 3
+            },
+            {
+              "slug": "perigny-principaute-japonaise-riou-kiou-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Histoire_d_une_principaute_japonaise_les_iles_Riou_Kiou_1910_Japanese_Complete_Translation.epub",
+              "title": "日本の一公国の歴史――琉球諸島",
+              "author": "モーリス・ド・ペリニー",
+              "size": 783830,
+              "sha256": "b0ccc61e0d2e9cdff1744fa70d66a1b75cbde37eb27f03786dc60d08e7c21582",
+              "blobs": [
+                "c43c8f6134fdfd43d3599dbec6913555c7614207",
+                "8b65a5dd060e81c93e018f625a963d2fb0bdd0b0"
+              ],
+              "minJapanese": 2635,
+              "imageRefs": 3
+            },
+            {
+              "slug": "perigny-pays-ainos-1910",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Le_Pays_des_Ainos_1910_Japanese_Complete_Translation.pdf",
+              "title": "アイヌの国",
+              "author": "モーリス・ド・ペリニー",
+              "size": 467796,
+              "sha256": "20ad688f805e6c6242156c93da8a99ca1a791eba93a2ae246d048d6a7c8e4845",
+              "blobs": [
+                "5fec3faf338457eed2cec777df5ff0fa3f1e06bf"
+              ],
+              "marker": "〔原刊 p. 1（扉）〕",
+              "pages": 14,
+              "imageCount": 0
+            },
+            {
+              "slug": "perigny-pays-ainos-1910",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Le_Pays_des_Ainos_1910_Japanese_Complete_Translation.epub",
+              "title": "アイヌの国",
+              "author": "モーリス・ド・ペリニー",
+              "size": 140934,
+              "sha256": "e019ad0b57e73fb4dd964b35ce9d478e909fd488d9cb43b540ea968bbe1afcd1",
+              "blobs": [
+                "4a7674392d392a4a4be30d8aaef08ed488c67cf3"
+              ],
+              "minJapanese": 9376,
+              "imageRefs": 0
+            },
+            {
+              "slug": "perigny-riou-kiou-coree-1912",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_Aux_iles_Riou_Kiou_et_en_Coree_1912_Japanese_Complete_Translation.pdf",
+              "title": "琉球諸島と朝鮮へ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 3786530,
+              "sha256": "e0f5ac307d81a36a39d1d3f12cf49c9cc98e912aae9b6d4b2462217826e85a57",
+              "blobs": [
+                "fcd0557265710a1b4cfe0c8bbb644a09ed799ea1",
+                "d8e41d21a23285d1146abcb24489a785f8cdc1db",
+                "c70395d21f07ce2ae662df4d4befeedbf98244e1",
+                "0344e4c65467009d1d5cd64dbac4c7143eb06d22",
+                "42238d9ae297825c6b42e85302939276747ae2bd",
+                "cc5143ce8de4dcb2a321b0ee956329ed758ab07d"
+              ],
+              "marker": "〔原刊 p. 1〕",
+              "pages": 36,
+              "imageCount": 25
+            },
+            {
+              "slug": "perigny-riou-kiou-coree-1912",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_Aux_iles_Riou_Kiou_et_en_Coree_1912_Japanese_Complete_Translation.epub",
+              "title": "琉球諸島と朝鮮へ",
+              "author": "モーリス・ド・ペリニー",
+              "size": 4612545,
+              "sha256": "c140cd72e2e77559a92cf06fea818c09ae4f2734a9634bd8acfcad49dd3fd76f",
+              "blobs": [
+                "c72c9856cb9257d31f957d202dbd530b897f5f27",
+                "ad9110ac4cafc50c43e083bba4b987c4a57f4ef4",
+                "d69741b9ad604a72781b2ea8c63e28337bcf1ad2",
+                "13201fb5c34d0b3e15f43015a6c0694022c95190",
+                "82c52db71b10570f0027b3fee4403140719d81cb",
+                "cb0c2e07621e3efbb405aa9b5b8f8bf40d589332",
+                "d3a91e14de977d552a5f72972730ca0a2a86a192"
+              ],
+              "minJapanese": 8929,
+              "imageRefs": 25
+            },
+            {
+              "slug": "perigny-coree-impressions-voyage-1913",
+              "kind": "pdf",
+              "name": "Maurice_de_Perigny_En_Coree_Impressions_de_voyage_c1913_Japanese_Complete_Translation.pdf",
+              "title": "朝鮮にて――旅行印象",
+              "author": "モーリス・ド・ペリニー",
+              "size": 2693300,
+              "sha256": "85dbf589cced579655db387a05c36cd43eaff71f23e6d43f97c916a1c1d76157",
+              "blobs": [
+                "ddcebcf440aa6154630b680cea68f3a5b4fc71a7",
+                "75ca6c58719f738eea4a06365e3ac1e3221d3a3f",
+                "8351d8915854badcfe4a72ff310e7b1f6536822e",
+                "a9325e5e7a3ebf8a1581e9d43bb6b4fb6db96b7b"
+              ],
+              "marker": "〔原稿 p. 1〕",
+              "pages": 20,
+              "imageCount": 7
+            },
+            {
+              "slug": "perigny-coree-impressions-voyage-1913",
+              "kind": "epub",
+              "name": "Maurice_de_Perigny_En_Coree_Impressions_de_voyage_c1913_Japanese_Complete_Translation.epub",
+              "title": "朝鮮にて――旅行印象",
+              "author": "モーリス・ド・ペリニー",
+              "size": 3164474,
+              "sha256": "262f5e9fe0c7cf9c2baf8155a85eb996c33766e6d362b7429ecbb7b3e876d1f3",
+              "blobs": [
+                "717525f66f99f6b8f429f8f798cb2e8814a800cf",
+                "7941a1ea09d68cfcc0db7f4b5fb255e05c25bf1e",
+                "542cd3f2d4e00b815d0754595b17309988fe412b",
+                "3a502baf3bbafaca76df02ad9d1d18cc5c47c4fe",
+                "0fd18ad8caba62541badd9b8520d41ae7f75552a"
+              ],
+              "minJapanese": 10047,
+              "imageRefs": 7
+            }
+          ]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/perigny-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/perigny-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "Proof",
+              "未公開",
+              "公開承認前",
+              "翻訳作業稿",
+          )
+
+          def compact(value):
+              return re.sub(r"\s+", "", value)
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert any("Noto" in line for line in font_lines)
+                  assert all(line.count("yes") >= 3 for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  assert compact(asset["title"]) in compact(text)
+                  assert asset["author"] in text
+                  assert compact(asset["marker"]) in compact(text)
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+                      documents = [
+                          ET.fromstring(archive.read(name))
+                          for name in names
+                          if name.endswith((".xhtml", ".html"))
+                      ]
+                  text = "\n".join("".join(document.itertext()) for document in documents)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  assert japanese >= asset["minJapanese"], (asset["name"], japanese)
+                  assert image_refs == asset["imageRefs"], (asset["name"], image_refs)
+                  assert compact(asset["title"]) in compact(text)
+                  assert asset["author"] in text
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/perigny-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed remaining Perigny release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/perigny-remaining-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Perigny batch 3 release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1

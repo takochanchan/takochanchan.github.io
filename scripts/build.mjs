@@ -35,6 +35,14 @@ const escapeHtml = (value = "") =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+const compareYears = (left, right, descending = false) => {
+  const leftKnown = Number.isInteger(left.year);
+  const rightKnown = Number.isInteger(right.year);
+  if (leftKnown !== rightKnown) return leftKnown ? -1 : 1;
+  if (!leftKnown) return 0;
+  return descending ? right.year - left.year : left.year - right.year;
+};
+
 const jsonForScript = (value) =>
   JSON.stringify(value)
     .replaceAll("<", "\\u003c")
@@ -125,7 +133,7 @@ const publicationCard = (item) => `
   </article>`;
 
 const staticCatalogue = [...majorPublications]
-  .sort((a, b) => a.year - b.year)
+  .sort((a, b) => compareYears(a, b))
   .map(publicationCard)
   .join("");
 
@@ -679,7 +687,7 @@ const relatedFor = (current) =>
       ...candidate,
       __score: scoreRelated(current, candidate),
     }))
-    .sort((a, b) => b.__score - a.__score || a.year - b.year)
+    .sort((a, b) => b.__score - a.__score || compareYears(a, b))
     .slice(0, 3);
 
 const tagList = (item) =>

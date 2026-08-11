@@ -153,7 +153,16 @@
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
 
+  const compareYears = (left, right, descending = false) => {
+    const leftKnown = Number.isInteger(left.year);
+    const rightKnown = Number.isInteger(right.year);
+    if (leftKnown !== rightKnown) return leftKnown ? -1 : 1;
+    if (!leftKnown) return 0;
+    return descending ? right.year - left.year : left.year - right.year;
+  };
+
   const eraFor = (year) => {
+    if (!Number.isInteger(year)) return "";
     if (year < 1700) return "17世紀";
     if (year < 1800) return "18世紀";
     if (year < 1850) return "19世紀前半";
@@ -271,7 +280,7 @@
       .sort((a, b) => a.name.localeCompare(b.name, "ja"))
       .map((author) => {
         const authorPublications = [...author.publications].sort(
-          (a, b) => a.year - b.year || a.title.localeCompare(b.title, "ja"),
+          (a, b) => compareYears(a, b) || a.title.localeCompare(b.title, "ja"),
         );
         const authorId = `author-${author.key}`;
         const open = location.hash.slice(1) === authorId ? " open" : "";
@@ -389,10 +398,10 @@
     );
 
     filtered = [...filtered].sort((a, b) => {
-      if (state.sort === "year-desc") return b.year - a.year;
+      if (state.sort === "year-desc") return compareYears(a, b, true);
       if (state.sort === "title") return a.title.localeCompare(b.title, "ja");
       if (state.sort === "author") return a.author.localeCompare(b.author, "ja");
-      return a.year - b.year;
+      return compareYears(a, b);
     });
 
     const perPage =

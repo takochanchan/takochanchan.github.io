@@ -1,3 +1,9 @@
+import {
+  perignyRemainingPublicationMetadata,
+  perignyRemainingPublicationRecords,
+  perignyRemainingShortWorkAuthors,
+} from "./perigny-remaining-publications.mjs";
+
 const publicationRecords = [
   {
     slug: "remesal-historia-general-1619",
@@ -5192,6 +5198,7 @@ const publicationRecords = [
       "18世紀",
     ],
   },
+  ...perignyRemainingPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -6815,6 +6822,7 @@ const publicationMetadata = {
     publishedDate: "2026-08-11",
     updatedDate: "2026-08-11",
   },
+  ...perignyRemainingPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -6895,6 +6903,7 @@ const shortWorkAuthorBySlug = {
   "perigny-ruines-nakcun-1911": "maurice-de-perigny",
   "perigny-costa-rica-nantes-1911": "maurice-de-perigny",
   "perigny-amerique-centrale-1911": "maurice-de-perigny",
+  ...perignyRemainingShortWorkAuthors,
 };
 
 export const publicationReleaseTag = "publications-current";
@@ -6904,6 +6913,14 @@ export const publicationReleaseUrl =
 const releaseAssetUrl = (relativePath) => {
   const fileName = relativePath.slice(relativePath.lastIndexOf("/") + 1);
   return `${publicationReleaseUrl}/${encodeURIComponent(fileName)}`;
+};
+
+const comparePublicationYears = (left, right) => {
+  const leftKnown = Number.isInteger(left.year);
+  const rightKnown = Number.isInteger(right.year);
+  if (leftKnown !== rightKnown) return leftKnown ? -1 : 1;
+  if (!leftKnown) return 0;
+  return left.year - right.year;
 };
 
 export const publications = publicationRecords.map((item) => {
@@ -6950,7 +6967,8 @@ export const shortPublicationAuthors = [
   .map((group) => ({
     ...group,
     publications: group.publications.sort(
-      (a, b) => a.year - b.year || a.title.localeCompare(b.title, "ja"),
+      (a, b) =>
+        comparePublicationYears(a, b) || a.title.localeCompare(b.title, "ja"),
     ),
   }))
   .sort((a, b) => a.name.localeCompare(b.name, "ja"));

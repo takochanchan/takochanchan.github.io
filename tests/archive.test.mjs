@@ -11,6 +11,7 @@ import {
   shortPublications,
   taxonomy,
 } from "../src/publications.mjs";
+import { perignyRemainingSlugs } from "../src/perigny-remaining-publications.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
@@ -30,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 149);
+  assert.equal(publications.length, 182);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,8 +65,8 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 87);
-  assert.equal(shortPublications.length, 62);
-  assert.equal(shortPublicationAuthors.length, 23);
+  assert.equal(shortPublications.length, 95);
+  assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -131,6 +132,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "morelet-exploration-guatemala-1850",
       "morelet-testacea-novissima-pars-i-1849",
       "morelet-testacea-novissima-pars-ii-1851",
+      ...perignyRemainingSlugs,
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -231,21 +233,71 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     perigny.publications.map((item) => item.slug),
     [
+      "perigny-francais-mexique-1905",
       "perigny-ruines-nacun-1906",
+      "perigny-henequen-yucatan-1906",
+      "perigny-merida-ville-florissante-1906",
       "perigny-exploration-yucatan-1906",
       "perigny-maya-ruins-quintana-roo-1907",
       "perigny-peten-1907",
+      "perigny-modern-mexico-1907",
+      "perigny-industrie-chicle-1908",
       "perigny-maler-discoveries-yucatan-1908",
+      "perigny-hokkaido-ainos-1908",
       "perigny-yucatan-inconnu-1908",
       "perigny-yucatan-inconnu-geographie-1908",
+      "perigny-iles-riou-kiou-1908",
+      "perigny-emigration-asiatique-mexique-1909",
       "perigny-ruines-rio-bec-1909",
       "perigny-villes-mortes-amerique-centrale-1909",
+      "perigny-pays-ainos-1910",
+      "perigny-port-amapala-honduras-1910",
+      "perigny-ancienne-route-galions-1910",
       "perigny-costa-rica-pays-habitants-ressources-1910",
       "perigny-lettre-costa-rica-1910",
+      "perigny-ruines-nakcun-1910",
+      "perigny-ecole-cadets-honduras-1910",
+      "perigny-honduras-ecole-militaire-1910",
+      "perigny-principaute-japonaise-riou-kiou-1910",
+      "perigny-mission-central-america-nakcun-1911",
       "perigny-costa-rica-nantes-1911",
       "perigny-ruines-nakcun-1911",
+      "perigny-mexico-economic-development-1911",
+      "perigny-mexique-developpement-revised-typescript-1911",
       "perigny-amerique-centrale-1911",
+      "perigny-communications-central-america-1911",
+      "perigny-villes-mortes-nakcun-1911",
+      "perigny-quechis-kekchis-1912",
+      "perigny-review-gates-perez-codex-1912",
+      "perigny-costa-rica-pays-gens-choses-1912",
+      "perigny-ruines-nakcun-mission-1912",
+      "perigny-plein-cintre-architecture-maya-1912",
+      "perigny-morelos-revolution-1912",
+      "perigny-riou-kiou-coree-1912",
+      "perigny-coree-impressions-voyage-1913",
+      "perigny-costa-rica-guerre-1917",
+      "perigny-amerique-centrale-guerre-1919",
+      "perigny-lettre-guatemala-cafe",
     ],
+  );
+  const americanistes = shortPublicationAuthors.find(
+    (author) => author.key === "societe-des-americanistes",
+  );
+  assert.equal(americanistes?.name, "パリ・アメリカニスト協会会報（無署名）");
+  assert.deepEqual(
+    americanistes?.publications.map((item) => item.slug),
+    ["societe-americanistes-maler-tozzer-tikal-1912"],
+  );
+  const mexicoCommittee = shortPublicationAuthors.find(
+    (author) => author.key === "reynaud-perigny-honnorat",
+  );
+  assert.equal(
+    mexicoCommittee?.name,
+    "ポール・レノー／モーリス・ド・ペリニー／アンドレ・オノラ",
+  );
+  assert.deepEqual(
+    mexicoCommittee?.publications.map((item) => item.slug),
+    ["reynaud-perigny-honnorat-interets-mexique-1914"],
   );
   const lemoine = shortPublicationAuthors.find(
     (author) => author.key === "frederic-lemoine",
@@ -491,7 +543,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">87<\/strong>件/);
-  assert.match(html, /id="paper-match-count">62<\/strong>件/);
+  assert.match(html, /id="paper-match-count">95<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
