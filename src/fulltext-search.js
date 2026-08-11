@@ -103,6 +103,12 @@
       .map(({ segment }) => segment);
   };
 
+  const surfaceWords = (query) =>
+    String(query || "")
+      .normalize("NFC")
+      .trim()
+      .match(/[\p{L}\p{N}]+/gu) || [];
+
   const centralSplitOrder = (length) =>
     Array.from(
       { length: Math.max(0, length - 1) },
@@ -116,20 +122,23 @@
     tokens.join(" ").replaceAll('"', " ").replace(/\s+/gu, " ").trim();
 
   const literalCandidateQueries = (query) => {
-    const tokens = segmentWords(query);
-    if (!tokens.length) return [];
-    const variants = [candidateQuery(tokens)];
-    for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
-      const graphemes = [...tokens[tokenIndex]];
-      for (const splitAt of centralSplitOrder(graphemes.length)) {
-        variants.push(
-          candidateQuery([
-            ...tokens.slice(0, tokenIndex),
-            graphemes.slice(0, splitAt).join(""),
-            graphemes.slice(splitAt).join(""),
-            ...tokens.slice(tokenIndex + 1),
-          ]),
-        );
+    const variants = [];
+    const tokenizations = [segmentWords(query), surfaceWords(query)];
+    for (const tokens of tokenizations) {
+      if (!tokens.length) continue;
+      variants.push(candidateQuery(tokens));
+      for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
+        const graphemes = [...tokens[tokenIndex]];
+        for (const splitAt of centralSplitOrder(graphemes.length)) {
+          variants.push(
+            candidateQuery([
+              ...tokens.slice(0, tokenIndex),
+              graphemes.slice(0, splitAt).join(""),
+              graphemes.slice(splitAt).join(""),
+              ...tokens.slice(tokenIndex + 1),
+            ]),
+          );
+        }
       }
     }
     return [...new Set(variants.filter(Boolean))];
@@ -147,6 +156,79 @@
     return (subResults || []).filter((subResult) =>
       comparableText(subResult.plain_excerpt).includes(needle),
     );
+  };
+
+  const markedLiteralExcerpt = (text, query) => {
+    const source = String(text || "").normalize("NFC");
+    const literal = [...String(query || "").normalize("NFC")].filter(
+      (character) => !/\s/u.test(character),
+    );
+    if (!literal.length) return escapeHtml(source);
+    const expression = new RegExp(
+      literal.map(escapeRegExp).join("\\s*"),
+      "giu",
+    );
+    let result = "";
+    let previous = 0;
+    let match;
+    while ((match = expression.exec(source))) {
+      result += escapeHtml(source.slice(previous, match.index));
+      result += "<mark>" + escapeHtml(match[0]) + "</mark>";
+      previous = match.index + match[0].length;
+      if (!match[0].length) expression.lastIndex += 1;
+    }
+    return result + escapeHtml(source.slice(previous));
+  };
+
+  const literalSubResultsFor = (subResults, query) =>
+    exactSubResultsFor(subResults, query).map((subResult) => ({
+      ...subResult,
+      excerpt: markedLiteralExcerpt(subResult.plain_excerpt, query),
+    }));
+
+  const subResultKey = (subResult) =>
+    blockIdFor(subResult) ||
+    String(subResult?.url || "") ||
+    String(subResult?.plain_excerpt || "");
+
+  const mergePagefindReferences = (references, query) => {
+    const groups = new Map();
+    for (const reference of references) {
+      if (!reference?.id) continue;
+      if (!groups.has(reference.id)) groups.set(reference.id, []);
+      groups.get(reference.id).push(reference);
+    }
+    return [...groups.entries()].map(([id, variants]) => {
+      let dataPromise;
+      return {
+        id,
+        score: Math.max(
+          ...variants.map((reference) => reference.score || 0),
+        ),
+        data: () => {
+          if (!dataPromise) {
+            dataPromise = Promise.all(
+              variants.map((reference) => reference.data()),
+            ).then((documents) => {
+              const first = documents[0];
+              if (!first) throw new Error("Empty Pagefind reference: " + id);
+              const subResults = new Map();
+              for (const document of documents) {
+                for (const subResult of literalSubResultsFor(
+                  document.sub_results,
+                  query,
+                )) {
+                  const key = subResultKey(subResult);
+                  if (!subResults.has(key)) subResults.set(key, subResult);
+                }
+              }
+              return { ...first, sub_results: [...subResults.values()] };
+            });
+          }
+          return dataPromise;
+        },
+      };
+    });
   };
 
   const loadInBatches = async (items, concurrency, loader) => {
@@ -569,57 +651,56 @@
   };
 
   const literalPagefindSearch = async (api, query, documentMap) => {
-    for (const candidate of literalCandidateQueries(query)) {
-      const exactQuery = '"' + candidate + '"';
-      const exactResult = await api.search(exactQuery);
-      if (!exactResult.results.length) continue;
-
-      const broadResult = await api.search(candidate);
+    const candidates = literalCandidateQueries(query);
+    const exactSearches = await Promise.all(
+      candidates.map(async (candidate) => ({
+        candidate,
+        result: await api.search('"' + candidate + '"'),
+      })),
+    );
+    const matchedSearches = exactSearches.filter(
+      ({ result }) => result.results.length,
+    );
+    if (matchedSearches.length) {
+      const broadSearches = await Promise.all(
+        matchedSearches.map(({ candidate }) => api.search(candidate)),
+      );
       return groupDocumentResults(
-        exactResult.results,
-        broadResult.results,
+        mergePagefindReferences(
+          matchedSearches.flatMap(({ result }) => result.results),
+          query,
+        ),
+        mergePagefindReferences(
+          broadSearches.flatMap((result) => result.results),
+          query,
+        ),
         documentMap,
         query,
       );
     }
 
-    // Defensive fallback for browsers where an exact phrase unexpectedly
-    // returns nothing: gather boundary candidates, then hydrate and retain
-    // only literal fragments. This is slower, so the verified exact path above
-    // remains the normal route.
-    const candidatesById = new Map();
-    for (const candidate of literalCandidateQueries(query)) {
-      const candidateResult = await api.search(candidate);
-      for (const reference of candidateResult.results) {
-        const current = candidatesById.get(reference.id);
-        if (!current || reference.score > current.score) {
-          candidatesById.set(reference.id, reference);
-        }
-      }
-    }
-
-    const candidates = [...candidatesById.values()].sort(
-      (left, right) => right.score - left.score,
+    // Compound names can have no stable quoted-token form in Pagefind's
+    // Japanese index. Merge every punctuation- and word-boundary candidate,
+    // then hydrate and retain only fragments containing the literal query.
+    const broadSearches = await Promise.all(
+      candidates.map((candidate) => api.search(candidate)),
+    );
+    const broadReferences = mergePagefindReferences(
+      broadSearches.flatMap((result) => result.results),
+      query,
     );
     const literalReferences = [];
     for (
       let index = 0;
-      index < candidates.length;
+      index < broadReferences.length;
       index += LITERAL_FILTER_CONCURRENCY
     ) {
       const filtered = await Promise.all(
-        candidates
+        broadReferences
           .slice(index, index + LITERAL_FILTER_CONCURRENCY)
           .map(async (reference) => {
             const data = await reference.data();
-            const subResults = exactSubResultsFor(data.sub_results, query);
-            if (!subResults.length) return null;
-            const literalData = { ...data, sub_results: subResults };
-            return {
-              ...reference,
-              recordClass: data.meta?.recordClass,
-              data: async () => literalData,
-            };
+            return data.sub_results.length ? reference : null;
           }),
       );
       literalReferences.push(...filtered.filter(Boolean));
@@ -627,7 +708,7 @@
 
     return groupDocumentResults(
       literalReferences,
-      candidates,
+      broadReferences,
       documentMap,
       query,
     );

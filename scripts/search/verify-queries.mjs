@@ -3,8 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import {
-  groupDocumentReferences,
-  literalCandidateQueries,
+  literalPagefindSearch,
   snippetsFor,
 } from "../../src/fulltext-search-core.mjs";
 
@@ -66,20 +65,8 @@ const api = pagefindModule.createInstance({
   noWorker: true,
 });
 
-const searchLiteral = async (query) => {
-  for (const candidate of literalCandidateQueries(query)) {
-    const exact = await api.search(`"${candidate}"`);
-    if (!exact.results.length) continue;
-    const broad = await api.search(candidate);
-    return groupDocumentReferences(
-      exact.results,
-      broad.results,
-      documentMap,
-      query,
-    );
-  }
-  throw new Error(`Literal query returned no results: ${query}`);
-};
+const searchLiteral = (query) =>
+  literalPagefindSearch(api, query, documentMap);
 
 const verifyQuery = async (query, expected) => {
   const grouped = await searchLiteral(query);
@@ -118,6 +105,23 @@ const verifyQuery = async (query, expected) => {
         ) {
           throw new Error(`${query}: non-literal fragment survived filtering`);
         }
+        const comparableQuery = query.normalize("NFC").replace(/\s+/gu, "");
+        if (
+          result.sub_results.some((subResult) => {
+            const marks = [
+              ...String(subResult.excerpt || "").matchAll(
+                /<mark>([\s\S]*?)<\/mark>/gu,
+              ),
+            ];
+            return !marks.some(
+              (match) =>
+                match[1].normalize("NFC").replace(/\s+/gu, "") ===
+                comparableQuery,
+            );
+          })
+        ) {
+          throw new Error(`${query}: literal query is not highlighted as a unit`);
+        }
         return snippetsFor(result, pageMap).length;
       }),
     );
@@ -153,11 +157,24 @@ try {
     papers: 3,
     pages: 52,
   });
+  const piedras = await verifyQuery("ピエドラス", {
+    books: 19,
+    papers: 9,
+    pages: 145,
+  });
+  const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
+    books: 12,
+    papers: 8,
+    pages: 121,
+  });
   await verifyCounts("ラカンドン", { books: 46, papers: 13 });
   await verifyCounts("ポ", { books: 39, papers: 10 });
   process.stdout.write(
     `Literal search OK: グリハルバ ${grijalva} pages, ` +
-      `グリハルバ川 ${grijalvaRiver} pages, ラカンドン and ポ counts.\n`,
+      `グリハルバ川 ${grijalvaRiver} pages, ` +
+      `ピエドラス ${piedras} pages, ` +
+      `ピエドラス・ネグラス ${piedrasNegras} pages, ` +
+      `ラカンドン and ポ counts.\n`,
   );
 } finally {
   await api.destroy();

@@ -8,6 +8,9 @@ import {
   exactSubResultsFor,
   groupDocumentReferences,
   literalCandidateQueries,
+  literalPagefindSearch,
+  markedLiteralExcerpt,
+  mergePagefindReferences,
   resultLabel,
   snippetsFor,
 } from "../src/fulltext-search-core.mjs";
@@ -96,6 +99,11 @@ test("literal Japanese search keeps voiced kana and retries index word boundarie
   assert.equal(riverQueries[0], "グリハルバ 川");
   assert.ok(riverQueries.includes("グリ ハルバ 川"));
   assert.ok(!nameQueries.includes("クリバ"));
+
+  const piedrasNegrasQueries = literalCandidateQueries(
+    "ピエドラス・ネグラス",
+  );
+  assert.ok(piedrasNegrasQueries.includes("ピエドラ ス ネグラス"));
 });
 
 test("literal filtering keeps every real occurrence and rejects fuzzy kana hits", () => {
@@ -112,6 +120,108 @@ test("literal filtering keeps every real occurrence and rejects fuzzy kana hits"
     subResults[0],
     subResults[2],
   ]);
+  assert.equal(
+    markedLiteralExcerpt(
+      "ピエドラス・ネグラスではネグラスだけを強調しない",
+      "ピエドラス・ネグラス",
+    ),
+    "<mark>ピエドラス・ネグラス</mark>ではネグラスだけを強調しない",
+  );
+});
+
+test("candidate references merge every literal block without duplicate fragments", async () => {
+  const reference = (score, subResults) => ({
+    id: "ja_same",
+    score,
+    data: async () => ({
+      meta: { slug: "book-a", recordClass: "major-work" },
+      sub_results: subResults,
+    }),
+  });
+  const merged = mergePagefindReferences(
+    [
+      reference(1, [
+        {
+          anchor: { id: "b00001" },
+          plain_excerpt: "ピエドラス川",
+          excerpt: "<mark>ピエドラス</mark>川",
+        },
+      ]),
+      reference(4, [
+        {
+          anchor: { id: "b00001" },
+          plain_excerpt: "ピエドラス川",
+          excerpt: "ピエドラ<mark>ス</mark>川",
+        },
+        {
+          anchor: { id: "b00002" },
+          plain_excerpt: "ピエドラス・ネグラス",
+          excerpt: "ピエドラ<mark>ス</mark>・ネグラス",
+        },
+        {
+          anchor: { id: "b00003" },
+          plain_excerpt: "ネグラスだけ",
+          excerpt: "<mark>ネグラス</mark>だけ",
+        },
+      ]),
+    ],
+    "ピエドラス",
+  );
+  assert.equal(merged.length, 1);
+  assert.equal(merged[0].score, 4);
+  const data = await merged[0].data();
+  assert.deepEqual(
+    data.sub_results.map((subResult) => subResult.anchor.id),
+    ["b00001", "b00002"],
+  );
+  assert.deepEqual(
+    data.sub_results.map((subResult) => subResult.excerpt),
+    [
+      "<mark>ピエドラス</mark>川",
+      "<mark>ピエドラス</mark>・ネグラス",
+    ],
+  );
+});
+
+test("literal Pagefind search combines later word-boundary candidates", async () => {
+  const dataFor = (slug, text, block) => async () => ({
+    meta: { slug, recordClass: "major-work", title: slug },
+    sub_results: [
+      { plain_excerpt: text, anchor: { id: block }, url: `/#${block}` },
+    ],
+  });
+  const early = {
+    id: "ja_early",
+    score: 1,
+    data: dataFor("early", "ピエドラス川", "b00001"),
+  };
+  const later = {
+    id: "ja_later",
+    score: 2,
+    data: dataFor("later", "ピエドラス・ネグラス", "b00002"),
+  };
+  const api = {
+    search: async (query) => {
+      if (query === '"ピエドラス"' || query === "ピエドラス") {
+        return { results: [early] };
+      }
+      if (query === '"ピエドラ ス"' || query === "ピエドラ ス") {
+        return { results: [later] };
+      }
+      return { results: [] };
+    },
+  };
+  const grouped = await literalPagefindSearch(api, "ピエドラス", {
+    fragments: {
+      ja_early: ["early", "major-work", 0],
+      ja_later: ["later", "major-work", 0],
+    },
+  });
+  assert.equal(grouped.books, 2);
+  assert.deepEqual(
+    grouped.results.map((result) => result.id),
+    ["later", "early"],
+  );
 });
 
 test("split search documents are regrouped into unique works", async () => {
@@ -207,7 +317,11 @@ test("Pagefind groups small documents and result data loads progressively", () =
   assert.match(browserScript, /ensureDocumentMap\(\)/);
   assert.match(browserScript, /literalPagefindSearch\(api, query, documentMap\)/);
   assert.match(browserScript, /groupDocumentResults\(/);
-  assert.match(browserScript, /const exactQuery = '\"' \+ candidate \+ '\"';/);
+  assert.match(browserScript, /const exactSearches = await Promise\.all\(/);
+  assert.match(browserScript, /matchedSearches\.flatMap/);
+  assert.match(browserScript, /mergePagefindReferences\(/);
+  assert.match(browserScript, /surfaceWords\(query\)/);
+  assert.match(browserScript, /markedLiteralExcerpt\(/);
   assert.match(browserScript, /exactSubResultsFor\(/);
   assert.doesNotMatch(browserScript, /filters: \{ recordClass:/);
   assert.match(browserScript, /const INITIAL_WORK_BATCH_SIZE = 6;/);
