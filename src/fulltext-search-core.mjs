@@ -48,3 +48,59 @@ export const countsFor = (results) => {
 
 export const resultLabel = ({ books, papers }) =>
   "書籍 " + books + "冊・論文 " + papers + "篇が該当";
+
+const segmentWords = (query) => {
+  const normalized = String(query || "").normalize("NFC").trim();
+  if (!normalized) return [];
+  if (typeof Intl.Segmenter !== "function") {
+    return normalized.split(/\s+/u).filter(Boolean);
+  }
+  const segmenter = new Intl.Segmenter("ja", { granularity: "word" });
+  return [...segmenter.segment(normalized)]
+    .filter(({ segment, isWordLike }) =>
+      isWordLike || /[\p{L}\p{N}]/u.test(segment),
+    )
+    .map(({ segment }) => segment);
+};
+
+const centralSplitOrder = (length) =>
+  Array.from({ length: Math.max(0, length - 1) }, (_, index) => index + 1).sort(
+    (a, b) => Math.abs(a - length / 2) - Math.abs(b - length / 2) || a - b,
+  );
+
+const quoteExact = (tokens) =>
+  '"' + tokens.join(" ").replaceAll('"', " ") + '"';
+
+export const exactSearchQueries = (query) => {
+  const tokens = segmentWords(query);
+  if (!tokens.length) return [];
+  const variants = [quoteExact(tokens)];
+  for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
+    const graphemes = [...tokens[tokenIndex]];
+    for (const splitAt of centralSplitOrder(graphemes.length)) {
+      variants.push(
+        quoteExact([
+          ...tokens.slice(0, tokenIndex),
+          graphemes.slice(0, splitAt).join(""),
+          graphemes.slice(splitAt).join(""),
+          ...tokens.slice(tokenIndex + 1),
+        ]),
+      );
+    }
+  }
+  return [...new Set(variants)];
+};
+
+const comparableText = (value) =>
+  String(value || "")
+    .normalize("NFC")
+    .toLocaleLowerCase("ja")
+    .replace(/\s+/gu, "");
+
+export const exactSubResultsFor = (subResults, query) => {
+  const needle = comparableText(query);
+  if (!needle) return [];
+  return (subResults || []).filter((subResult) =>
+    comparableText(subResult.plain_excerpt).includes(needle),
+  );
+};

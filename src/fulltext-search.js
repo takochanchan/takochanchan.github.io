@@ -86,6 +86,66 @@
   const resolveUrl = (value, fallback) =>
     new URL(value || fallback, document.baseURI).toString();
 
+  const segmentWords = (query) => {
+    const normalized = String(query || "").normalize("NFC").trim();
+    if (!normalized) return [];
+    if (typeof Intl.Segmenter !== "function") {
+      return normalized.split(/\s+/u).filter(Boolean);
+    }
+    const segmenter = new Intl.Segmenter("ja", { granularity: "word" });
+    return [...segmenter.segment(normalized)]
+      .filter(({ segment, isWordLike }) =>
+        isWordLike || /[\p{L}\p{N}]/u.test(segment),
+      )
+      .map(({ segment }) => segment);
+  };
+
+  const centralSplitOrder = (length) =>
+    Array.from(
+      { length: Math.max(0, length - 1) },
+      (_, index) => index + 1,
+    ).sort(
+      (a, b) =>
+        Math.abs(a - length / 2) - Math.abs(b - length / 2) || a - b,
+    );
+
+  const quoteExact = (tokens) =>
+    '"' + tokens.join(" ").replaceAll('"', " ") + '"';
+
+  const exactSearchQueries = (query) => {
+    const tokens = segmentWords(query);
+    if (!tokens.length) return [];
+    const variants = [quoteExact(tokens)];
+    for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
+      const graphemes = [...tokens[tokenIndex]];
+      for (const splitAt of centralSplitOrder(graphemes.length)) {
+        variants.push(
+          quoteExact([
+            ...tokens.slice(0, tokenIndex),
+            graphemes.slice(0, splitAt).join(""),
+            graphemes.slice(splitAt).join(""),
+            ...tokens.slice(tokenIndex + 1),
+          ]),
+        );
+      }
+    }
+    return [...new Set(variants)];
+  };
+
+  const comparableText = (value) =>
+    String(value || "")
+      .normalize("NFC")
+      .toLocaleLowerCase("ja")
+      .replace(/\s+/gu, "");
+
+  const exactSubResultsFor = (subResults, query) => {
+    const needle = comparableText(query);
+    if (!needle) return [];
+    return (subResults || []).filter((subResult) =>
+      comparableText(subResult.plain_excerpt).includes(needle),
+    );
+  };
+
   const loadPageMap = async (slug) => {
     if (!mapCache.has(slug)) {
       const mapsPath = resolveUrl(config.mapsPath, "./maps/");
@@ -291,6 +351,7 @@
           const instance = module.createInstance({
             basePath: pagefindBase,
             language: "ja",
+            exactDiacritics: true,
           });
           await instance.init();
           return instance;
@@ -302,6 +363,53 @@
         });
     }
     return pagefindPromise;
+  };
+
+  const exactPagefindSearch = async (api, query, options = {}) => {
+    let emptyResult = null;
+    for (const exactQuery of exactSearchQueries(query)) {
+      const exactResult = await api.search(exactQuery, options);
+      if (exactResult.results.length) {
+        const broadQuery = exactQuery.slice(1, -1);
+        const broadResult = await api.search(broadQuery, options);
+        const broadById = new Map(
+          broadResult.results.map((reference) => [reference.id, reference]),
+        );
+        const results = exactResult.results.map((exactReference) => {
+          const broadReference = broadById.get(exactReference.id);
+          let dataPromise;
+          return {
+            ...exactReference,
+            data: () => {
+              if (!dataPromise) {
+                dataPromise = (async () => {
+                  const broadData = await (broadReference || exactReference).data();
+                  let subResults = exactSubResultsFor(
+                    broadData.sub_results,
+                    query,
+                  );
+                  if (!subResults.length && broadReference) {
+                    const exactData = await exactReference.data();
+                    subResults = exactSubResultsFor(
+                      exactData.sub_results,
+                      query,
+                    );
+                  }
+                  return { ...broadData, sub_results: subResults };
+                })();
+              }
+              return dataPromise;
+            },
+          };
+        });
+        return {
+          result: { ...exactResult, results },
+          exactQuery,
+        };
+      }
+      emptyResult = exactResult;
+    }
+    return { result: emptyResult || { results: [] }, exactQuery: null };
   };
 
   const markedExcerpt = (text, tokens) => {
@@ -413,15 +521,23 @@
         result = fallbackSearch(query);
       } else try {
         const api = await ensurePagefind();
-        // Pagefind instances share internal search state. Serialize the three
-        // queries so filtered counts cannot race with the result set.
-        const all = await api.search(query);
-        const books = await api.search(query, {
-          filters: { recordClass: "major-work" },
-        });
-        const papers = await api.search(query, {
-          filters: { recordClass: "short-work" },
-        });
+        // Exact phrase search determines the correct work set and prevents
+        // Pagefind's fuzzy fallback from turning voiced kana into unrelated
+        // unvoiced terms. A second unquoted search recovers every occurrence;
+        // each sub-result is then checked against the literal user query.
+        // Boundary variants bridge index/Intl.Segmenter disagreements such as
+        // グリ｜ハルバ without changing what the user typed.
+        const { result: all, exactQuery } = await exactPagefindSearch(api, query);
+        const books = exactQuery
+          ? await api.search(exactQuery, {
+              filters: { recordClass: "major-work" },
+            })
+          : { results: [] };
+        const papers = exactQuery
+          ? await api.search(exactQuery, {
+              filters: { recordClass: "short-work" },
+            })
+          : { results: [] };
         result = {
           results: all.results,
           books: books.results.length,
