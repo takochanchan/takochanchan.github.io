@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260811-fulltext-search-v1";
+const assetVersion = "20260811-fulltext-search-v2";
 
 const escapeHtml = (value = "") =>
   String(value)

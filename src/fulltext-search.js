@@ -4,6 +4,7 @@
   const INITIAL_SNIPPET_LIMIT = 10;
   const SNIPPET_BATCH_SIZE = 20;
   const WORK_BATCH_SIZE = 20;
+  const RESULT_LOAD_CONCURRENCY = 2;
   const config = window.FULLTEXT_SEARCH_CONFIG || {};
   const previewCorpus = window.SEARCH_PREVIEW_CORPUS || null;
   const previewMetadata = window.SEARCH_PREVIEW_META || null;
@@ -232,20 +233,29 @@
       renderedWorks + WORK_BATCH_SIZE,
     );
     if (!slice.length) return;
+    const batchEnd = renderedWorks + slice.length;
     status.textContent = "検索結果を読み込んでいます…";
-    const loaded = await Promise.all(
-      slice.map(async (reference) => {
-        const result = await reference.data();
-        const pageMap = result.__pageMap || (await loadPageMap(result.meta.slug));
-        return { result, pageMap };
-      }),
-    );
-    if (searchId !== activeSearch) return;
-    loaded.forEach(({ result, pageMap }) =>
-      resultList.append(resultCard(result, pageMap)),
-    );
-    renderedWorks += slice.length;
-    status.textContent = "";
+    for (let index = 0; index < slice.length; index += RESULT_LOAD_CONCURRENCY) {
+      const loaded = await Promise.all(
+        slice
+          .slice(index, index + RESULT_LOAD_CONCURRENCY)
+          .map(async (reference) => {
+            const result = await reference.data();
+            const pageMap =
+              result.__pageMap || (await loadPageMap(result.meta.slug));
+            return { result, pageMap };
+          }),
+      );
+      if (searchId !== activeSearch) return;
+      loaded.forEach(({ result, pageMap }) =>
+        resultList.append(resultCard(result, pageMap)),
+      );
+      renderedWorks += loaded.length;
+      status.textContent =
+        renderedWorks < batchEnd
+          ? "検索結果を読み込んでいます…（" + renderedWorks + "件表示）"
+          : "";
+    }
     if (renderedWorks < pendingResults.length) {
       const remaining = pendingResults.length - renderedWorks;
       const button = node(
@@ -403,11 +413,15 @@
         result = fallbackSearch(query);
       } else try {
         const api = await ensurePagefind();
-        const [all, books, papers] = await Promise.all([
-          api.search(query),
-          api.search(query, { filters: { recordClass: "major-work" } }),
-          api.search(query, { filters: { recordClass: "short-work" } }),
-        ]);
+        // Pagefind instances share internal search state. Serialize the three
+        // queries so filtered counts cannot race with the result set.
+        const all = await api.search(query);
+        const books = await api.search(query, {
+          filters: { recordClass: "major-work" },
+        });
+        const papers = await api.search(query, {
+          filters: { recordClass: "short-work" },
+        });
         result = {
           results: all.results,
           books: books.results.length,

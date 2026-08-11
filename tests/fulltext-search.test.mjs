@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import {
   INITIAL_SNIPPET_LIMIT,
@@ -7,6 +8,11 @@ import {
   resultLabel,
   snippetsFor,
 } from "../src/fulltext-search-core.mjs";
+
+const browserScript = await readFile(
+  new URL("../src/fulltext-search.js", import.meta.url),
+  "utf8",
+);
 
 test("initial result display is capped at ten snippets", () => {
   assert.equal(INITIAL_SNIPPET_LIMIT, 10);
@@ -76,4 +82,13 @@ test("book and paper counts use archive record classes", () => {
   ]);
   assert.deepEqual(counts, { books: 1, papers: 2 });
   assert.equal(resultLabel(counts), "書籍 1冊・論文 2篇が該当");
+});
+
+test("Pagefind count queries are serialized and result data loads progressively", () => {
+  assert.doesNotMatch(browserScript, /Promise\.all\(\[\s*api\.search\(query\)/);
+  assert.match(browserScript, /const RESULT_LOAD_CONCURRENCY = 2;/);
+  assert.match(
+    browserScript,
+    /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= loaded\.length/,
+  );
 });
