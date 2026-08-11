@@ -5152,6 +5152,45 @@ const publicationRecords = [
       "17世紀",
     ],
   },
+  {
+    slug: "beltran-arte-idioma-maya-1746",
+    title: "マヤ語文法・ユカテコ語小辞典",
+    originalTitle:
+      "Arte de el idioma Maya reducido a succintas reglas, y semilexicon yucateco",
+    subtitle:
+      "1746年メキシコ初版・前付・本文p. 1–187・著者自筆訂正・折込図2葉 日本語全訳",
+    author: "ペドロ・ベルトラン・デ・サンタ・ロサ・マリア",
+    series: "ARTE DE EL IDIOMA MAYA · 1746",
+    originalPublication:
+      "メキシコ、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年",
+    year: 1746,
+    extent:
+      "PDF 372頁・前付16頁・本文1–187頁・無番号最終頁1頁・原刊標題紙1点・折込図2葉・活用表・語彙表・数詞表",
+    description:
+      "フランシスコ会士ペドロ・ベルトランがユカテコ・マヤ語の発音、品詞、代名詞、四活用、時制、動詞形成、小辞、数詞、人体・疾病・親族・動植物・家財の語彙を体系化した1746年刊文法書・小辞典。JCB所蔵初版の前付、本文、無番号最終頁、折込図2葉を原刊順に収録し、マヤ語形・例文の原綴、原刊頁標識、1750年の著者自筆訂正を保持しています。虫損で物理的に失われた1語だけを1859年再版で補合し、その箇所を明示しています。",
+    cover: "publications/beltran-arte-idioma-maya-1746/cover.jpg",
+    pdf:
+      "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
+    pageCount: 372,
+    figureCount: 1,
+    plateCount: 2,
+    types: ["文法書", "辞書", "言語資料", "宣教史料"],
+    regions: ["ユカタン", "メリダ", "メキシコ", "マヤ地域"],
+    languages: ["スペイン語", "ユカテコ・マヤ語", "ラテン語"],
+    tags: [
+      "ユカテコ・マヤ語",
+      "植民地期マヤ語",
+      "フランシスコ会",
+      "宣教言語学",
+      "活用",
+      "小辞",
+      "数詞",
+      "親族語彙",
+      "18世紀",
+    ],
+  },
 ];
 
 const publicDomainRights =
@@ -6750,6 +6789,17 @@ const publicationMetadata = {
       "https://contentdm.lib.byu.edu/digital/collection/p15999coll16/id/57684/",
     rights:
       "1620年原著は著作権保護期間を満了したパブリックドメイン資料です。BYU Digital Collections親レコード57684はデジタル底本を「Copyright Status: Public domain」と表示しており、これはCreative Commonsライセンスではなく公開機関によるパブリックドメイン表示です。BYUのDigital Collections Copyrightは、著作権保護期間を満了した資料を許諾または制限なく自由に利用できると案内しています。所蔵・公開機関表記：Original held in L. Tom Perry Special Collections, Harold B. Lee Library, Brigham Young University, Provo, UT 84602.",
+    publishedDate: "2026-08-11",
+    updatedDate: "2026-08-11",
+  },
+  "beltran-arte-idioma-maya-1746": {
+    sourceEdition:
+      "Pedro Beltrán de Santa Rosa María『Arte de el idioma Maya reducido a succintas reglas, y semilexicon yucateco』（México: por la viuda de D. Joseph Bernardo de Hogal、1746年初版、John Carter Brown Library請求記号 B746 .B453a）。",
+    sourceProvider:
+      "John Carter Brown Library所蔵1746年初版を、同館原本に基づくInternet Archive公開の500 ppi・216画像（識別子 artedeelidiomama00belt）で第一底本とした。虫損で物理的に失われた原刊前付p. [4]冒頭の1語のみ、Smithsonian Libraries所蔵1859年再版の画像（識別子 artedelidiomamay00belt）で補った。1859年版独自の綴字変更・組替え・編集者注は採用していない。",
+    sourceUrl: "https://archive.org/details/artedeelidiomama00belt",
+    rights:
+      "1746年原刊本文と1859年再版本文は著作権保護期間を満了したパブリックドメイン資料です。John Carter Brown Libraryのデジタル画像はCC BY 4.0で提供されています。画像クレジット：Courtesy of the John Carter Brown Library. Digital images licensed under CC BY 4.0. Cropping, rotation, tonal adjustment, and layout changes have been made for this edition. JCB公開条件：https://jcblibrary.org/permissions/ 。Smithsonian Librariesは、個別に別表示がないデジタル・ライブラリー上のパブリックドメイン書籍について、自由なダウンロード、利用、再利用、改変を認めています。Smithsonian Libraries公開条件：https://library.si.edu/copyright 。",
     publishedDate: "2026-08-11",
     updatedDate: "2026-08-11",
   },

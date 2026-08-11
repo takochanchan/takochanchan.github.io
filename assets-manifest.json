@@ -2664,6 +2664,24 @@
       "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
       "size": 74503,
       "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
+    },
+    {
+      "path": "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
+      "size": 52562155,
+      "sha256": "ae92ba16fe27263b573ddc1227bb2e171be6ccc71bddead88627701cad76de39"
+    },
+    {
+      "path": "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.pdf",
+      "size": 10361499,
+      "sha256": "f5ab034d31c5d47896e9247df97627e252ba4ee5224125ab8154d2cb52b3fb94"
+    },
+    {
+      "path": "publications/beltran-arte-idioma-maya-1746/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/beltran-arte-idioma-maya-1746/cover.jpg",
+      "size": 59486,
+      "sha256": "58f2e64c58133f7703e1475055780d223a182e2acdb106ae186bdac17dcda26a"
     }
   ]
 }

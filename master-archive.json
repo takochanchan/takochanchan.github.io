@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ad43b66b26bf6985413d8c18a1026574460a2e76",
+  "archive_commit": "5c8f663d7365c7812d43710d55885063b25d3fa8",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -150,6 +150,7 @@
     "perigny-costa-rica-pays-habitants-ressources-1910": "publications/perigny-costa-rica-pays-habitants-ressources-1910/master.docx",
     "perigny-costa-rica-nantes-1911": "publications/perigny-costa-rica-nantes-1911/master.docx",
     "perigny-amerique-centrale-1911": "publications/perigny-amerique-centrale-1911/master.docx",
-    "coronel-arte-maya-1620": "publications/coronel-arte-maya-1620/master.docx"
+    "coronel-arte-maya-1620": "publications/coronel-arte-maya-1620/master.docx",
+    "beltran-arte-idioma-maya-1746": "publications/beltran-arte-idioma-maya-1746/master.docx"
   }
 }
