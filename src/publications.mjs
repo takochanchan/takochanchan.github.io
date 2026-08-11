@@ -1336,6 +1336,7 @@ const publicationRecords = [
     pdf: "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.pdf",
     epub: "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.epub",
     pageCount: 201,
+    searchOcrPageLimit: 93,
     figureCount: 10,
     plateCount: 0,
     types: ["地形図", "調査報告", "一次史料", "書簡"],

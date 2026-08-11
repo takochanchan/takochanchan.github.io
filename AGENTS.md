@@ -11,12 +11,19 @@ This public repository is paired with the private working-master repository
 4. Verify the resulting full 40-character archive commit SHA on GitHub.
 5. Update `master-archive.json` with that SHA and the canonical master path.
 6. Run `npm run build` and `npm test`.
-7. Only after all prior steps pass, upload/replace the public PDF and EPUB and
-   publish the site.
+7. Upload/replace the public PDF and EPUB, update their checksum manifest, then
+   regenerate the full-text search index from the canonical master (or its
+   checksum-approved final EPUB mirror in the public build) and the exact final PDF.
+8. Run `npm run verify:search`; require complete slug coverage, canonical
+   bibliography URLs, original-page labels, physical PDF pages, and the current
+   archive/PDF checksums.
+9. Only after all prior steps pass, publish the site with the generated search
+   index in the Pages artifact.
 
-The release is incomplete if the working master is missing. If archival,
-remote verification, or the master gate fails, stop the public release. Never
-publish first with a promise to archive later.
+The release is incomplete if the working master or current search index is
+missing. If archival, remote verification, page mapping, search coverage, or
+the master gate fails, stop the public release. Never publish first with a
+promise to archive or index later.
 
 ## Canonical master
 
@@ -32,4 +39,3 @@ publish first with a promise to archive later.
   in this public repository.
 - Re-read remote `main` immediately before any write and never force-update it.
 - Preserve concurrent publication work and unrelated user changes.
-

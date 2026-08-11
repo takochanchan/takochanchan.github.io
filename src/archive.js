@@ -114,9 +114,6 @@
     }
   })();
   const controls = {
-    googleForm: document.querySelector("#google-site-search"),
-    googleInput: document.querySelector("#google-search-query"),
-    googleValue: document.querySelector("#google-search-value"),
     search: document.querySelector("#archive-search"),
     type: document.querySelector("#filter-type"),
     region: document.querySelector("#filter-region"),
@@ -196,6 +193,8 @@
 
   const updateUrl = () => {
     const next = new URLSearchParams();
+    const fulltextQuery = new URLSearchParams(location.search).get("fulltext");
+    if (fulltextQuery) next.set("fulltext", fulltextQuery);
     if (state.q) next.set("q", state.q);
     if (state.type) next.set("type", state.type);
     if (state.region) next.set("region", state.region);
@@ -430,14 +429,6 @@
     renderActive();
     updateUrl();
   };
-
-  controls.googleForm.addEventListener("submit", () => {
-    const query = controls.googleInput.value.trim();
-    controls.googleValue.value =
-      `(site:${location.hostname} OR ` +
-      "site:github.com/takochanchan/takochanchan.github.io/releases) " +
-      query;
-  });
 
   let searchTimer;
   controls.search.addEventListener("input", () => {

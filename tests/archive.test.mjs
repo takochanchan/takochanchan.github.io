@@ -455,9 +455,11 @@ test("home page contains scalable archive controls", async () => {
     "archive-per-page",
     "archive-reset",
     "archive-pagination",
-    "google-site-search",
-    "google-search-query",
-    "google-search-value",
+    "fulltext-form",
+    "fulltext-query",
+    "fulltext-dialog",
+    "fulltext-dialog-close",
+    "fulltext-result-list",
   ]) {
     assert.match(html, new RegExp(`id="${id}"`));
   }
@@ -477,15 +479,14 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
-  assert.match(html, /\/archive\.js\?v=20260801-paper-fold-v1/);
-  assert.match(
-    html,
-    /サイト本文とGitHub Releases上のPDFは\s+Googleで検索できます/,
-  );
+  assert.match(html, /\/archive\.css\?v=20260811-fulltext-search-v1/);
+  assert.match(html, /\/archive\.js\?v=20260811-fulltext-search-v1/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260811-fulltext-search-v1/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260811-fulltext-search-v1/);
   assert.match(html, /書名・著者・地名・キーワード/);
-  assert.match(html, /Googleサイト内検索/);
-  assert.match(html, /action="https:\/\/www\.google\.com\/search"/);
+  assert.match(html, /本文全文検索/);
+  assert.match(html, /同じPDF頁の一致は1件にまとめ/);
+  assert.doesNotMatch(html, /Googleサイト内検索|google-site-search|www\.google\.com\/search/);
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
@@ -493,13 +494,13 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /id="paper-match-count">62<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
-  const googleSearchPosition = html.indexOf('id="google-site-search"');
+  const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
   const matchSummaryPosition = html.indexOf('id="collection-match-summary"');
   const collectionTabsPosition = html.indexOf('class="collection-tabs"');
   const booksPanelPosition = html.indexOf('id="publications" role="tabpanel"');
   assert.ok(
     catalogueSearchPosition < matchSummaryPosition &&
-      googleSearchPosition < matchSummaryPosition &&
+      fulltextSearchPosition < matchSummaryPosition &&
       matchSummaryPosition < collectionTabsPosition &&
       collectionTabsPosition < booksPanelPosition,
     "all search controls and category match counts must precede the tabs",
@@ -524,10 +525,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /PDFとリフロー型EPUB/);
   assert.match(html, /href="\/about\/">翻訳・編集・レビュー・再利用方針を読む/);
   assert.doesNotMatch(html, /生成AIの余剰リソース/);
-  assert.match(
-    html,
-    /PDF・EPUB本体はGitHub Releasesで配布しています/,
-  );
+  assert.match(html, /原刊標識と日本語版PDFの物理頁を併記/);
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
     majorPublications.length,
@@ -576,7 +574,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
+  assert.match(html, /\/archive\.css\?v=20260811-fulltext-search-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -584,6 +582,7 @@ test("catalogue search stays within publication metadata", async () => {
   assert.doesNotMatch(script, /search-index\.json|__fullText|PDF本文/u);
   assert.match(script, /item\.__search\.includes\(query\)/);
   assert.match(script, /const matching = publications\.filter/);
+  assert.match(script, /if \(fulltextQuery\) next\.set\("fulltext", fulltextQuery\)/);
   assert.match(script, /item\.recordClass === "major-work"/);
   assert.match(script, /item\.recordClass === "short-work"/);
   assert.match(script, /shortCatalogue\(filteredShort\)/);
@@ -592,11 +591,7 @@ test("catalogue search stays within publication metadata", async () => {
   assert.doesNotMatch(script, /short-work-card__series/);
   assert.match(script, /controls\.bookMatch\.textContent = String\(filtered\.length\)/);
   assert.match(script, /controls\.paperMatch\.textContent = String\(filteredShort\.length\)/);
-  assert.match(script, /site:\$\{location\.hostname\} OR/);
-  assert.match(
-    script,
-    /site:github\.com\/takochanchan\/takochanchan\.github\.io\/releases/,
-  );
+  assert.doesNotMatch(script, /google-site-search|www\.google\.com\/search|site:\$\{location\.hostname\}/);
   assert.match(script, /frame\.src = button\.dataset\.pdfSrc/);
   assert.match(script, /const defaultPageSize = "12"/);
   assert.match(script, /const paginationItems = \(pages\) =>/);
@@ -643,17 +638,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260801-paper-fold-v1/);
-    assert.match(html, /\/archive\.js\?v=20260801-paper-fold-v1/);
+    assert.match(html, /\/archive\.css\?v=20260811-fulltext-search-v1/);
+    assert.match(html, /\/archive\.js\?v=20260811-fulltext-search-v1/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260801-paper-fold-v1#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260811-fulltext-search-v1#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260801-paper-fold-v1#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260811-fulltext-search-v1#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

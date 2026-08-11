@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260801-paper-fold-v1";
+const assetVersion = "20260811-fulltext-search-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -208,6 +208,7 @@ const documentShell = ({
   <meta property="og:url" content="${escapeHtml(canonical)}">
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <link rel="stylesheet" href="/archive.css?v=${assetVersion}">
+  <link rel="stylesheet" href="/fulltext-search.css?v=${assetVersion}">
   <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
   <title>${escapeHtml(title)}</title>
 </head>
@@ -223,6 +224,27 @@ const totalVisuals = publications.reduce(
   (sum, item) => sum + item.figureCount + item.plateCount,
   0,
 );
+
+const fulltextDialog = () => `
+  <dialog id="fulltext-dialog" class="fulltext-dialog" aria-labelledby="fulltext-dialog-query">
+    <div class="fulltext-dialog__frame">
+      <header class="fulltext-dialog__header">
+        <div>
+          <p class="fulltext-dialog__eyebrow">SEARCH RESULTS</p>
+          <h2 id="fulltext-dialog-query">検索結果</h2>
+        </div>
+        <button id="fulltext-dialog-close" class="fulltext-dialog__close" type="button"
+          aria-label="検索結果を閉じる">×</button>
+      </header>
+      <div class="fulltext-dialog__summary">
+        <p id="fulltext-summary" aria-live="polite">検索語を入力してください。</p>
+        <p id="fulltext-status" class="fulltext-status" aria-live="polite"></p>
+      </div>
+      <div class="fulltext-dialog__body">
+        <div id="fulltext-result-list" class="fulltext-result-list"></div>
+      </div>
+    </div>
+  </dialog>`;
 
 const home = documentShell({
   title: site.name,
@@ -286,21 +308,20 @@ ${header()}
 
       <div class="active-filters" id="active-filters"></div>
 
-      <div class="google-search-block">
-      <form class="google-search" id="google-site-search"
-        action="https://www.google.com/search" method="get" target="_blank"
-        rel="noopener" role="search">
-        <label for="google-search-query">Googleサイト内検索</label>
-        <input id="google-search-query" type="search"
-          placeholder="PDF本文を含む語句" autocomplete="off" required>
-        <input id="google-search-value" name="q" type="hidden">
-        <button type="submit">Googleで検索</button>
-      </form>
-      <p class="google-search__note">
-        サイト本文とGitHub Releases上のPDFは Googleで検索できます。
-        PDF・EPUB本体はGitHub Releasesで配布しています。Googleの索引状況により、
-        公開直後の資料やPDF本文が検索結果に表示されない場合があります。
-      </p>
+      <div class="fulltext-search-block">
+        <form id="fulltext-form" class="fulltext-form fulltext-form--archive"
+          role="search" onsubmit="return false">
+          <label for="fulltext-query">本文全文検索</label>
+          <div class="fulltext-form__row">
+            <input id="fulltext-query" name="fulltext" type="search" required
+              placeholder="本文・注・図版説明を検索" autocomplete="off">
+            <button type="submit">検索</button>
+          </div>
+        </form>
+        <p class="fulltext-help" id="fulltext-scope">
+          検索結果は資料単位でモーダル表示します。同じPDF頁の一致は1件にまとめ、
+          原刊標識と日本語版PDFの物理頁を併記します。
+        </p>
       </div>
 
       <p class="collection-match-summary" id="collection-match-summary" aria-live="polite">
@@ -405,10 +426,21 @@ ${header()}
     </div>
   </section>
 </main>
+${fulltextDialog()}
 ${footer()}`,
   scripts: `
 <script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
-<script src="/archive.js?v=${assetVersion}" defer></script>`,
+<script>
+window.FULLTEXT_SEARCH_CONFIG={
+  pagefindModule:"/search/pagefind/pagefind.js",
+  pagefindBase:"/search/pagefind/",
+  mapsPath:"/search/maps/",
+  metadataPath:"/search/search-meta.json",
+  preferEmbedded:false
+};
+</script>
+<script src="/archive.js?v=${assetVersion}" defer></script>
+<script src="/fulltext-search.js?v=${assetVersion}" defer></script>`,
 });
 
 const aboutPage = documentShell({
@@ -833,6 +865,14 @@ await Promise.all([
   writeFile(path.join(dist, "about", "index.html"), aboutPage),
   cp(path.join(projectRoot, "src", "styles.css"), path.join(dist, "archive.css")),
   cp(path.join(projectRoot, "src", "archive.js"), path.join(dist, "archive.js")),
+  cp(
+    path.join(projectRoot, "src", "fulltext-search.css"),
+    path.join(dist, "fulltext-search.css"),
+  ),
+  cp(
+    path.join(projectRoot, "src", "fulltext-search.js"),
+    path.join(dist, "fulltext-search.js"),
+  ),
   cp(
     path.join(projectRoot, "google6a6ff1ca39cd5a62.html"),
     path.join(dist, "google6a6ff1ca39cd5a62.html"),

@@ -29,8 +29,48 @@ jobs:
         with:
           node-version: 22
 
+      - name: Install build dependencies
+        run: npm ci
+
       - name: Build archive pages
-        run: node scripts/build.mjs
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/**', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
+
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
+
+      - name: Verify full-text index coverage and page maps
+        run: npm run verify:search
 
       - name: Validate archive
         run: npm test

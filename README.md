@@ -13,6 +13,7 @@ GitHub Pages 用の静的アーカイブです。
 - `epub-sources/` — PDFのみ残っていた資料の校正済みリフロー原稿
 - `scripts/build-epubs.py` — 編集原稿・構造化PDFからリフロー型EPUB 3を生成
 - `scripts/validate-epubs.py` — EPUBの構造、リンク、リフロー指定を検証
+- `scripts/search/` — 正本と最終PDFから全文検索索引・原刊頁／PDF頁対応を生成・検証
 - `static/publications/*/cover.jpg` — Pagesに含める表紙画像
 - `assets-manifest.json` — Release配布PDF・EPUBと表紙画像の容量・SHA-256
 
@@ -43,6 +44,12 @@ npm test
 `main` ブランチが更新されると、GitHub Actions がサイト一式を生成し、
 GitHub Pages へ公開します。
 
-共通検索領域には、一覧の書誌検索とは別に「Googleでサイト内を検索」も設けています。
-サイトとGitHub Releases上のPDFを対象に検索語をGoogle検索へ `site:` 条件付きで送信し、
-外部APIやローカル検索索引は使用しません。
+共通検索領域には、一覧の書誌検索とは別に、公開版全文を対象とする静的検索を設けています。
+検索結果は資料単位のモーダルで表示し、1資料につき最初の10頁を示します。同じPDF頁の
+複数一致は1件にまとめ、各スニペットに原刊標識と日本語版PDFの物理頁を併記します。
+資料名からは必ず既存の書誌ページへ移動します。
+
+検索索引と一時的な本文データはGit履歴へ収録せず、GitHub Pagesのビルド時に、正本または
+SHA-256を固定した最終EPUBと最終PDFから生成して
+Pages artifactへだけ含めます。新規・改訂公開ではPDF・EPUBと同様に検索索引の更新を
+完了条件とし、全資料の収録、正本コミット、PDF SHA-256、頁対応を検査します。
