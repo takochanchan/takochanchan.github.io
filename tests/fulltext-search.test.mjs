@@ -116,7 +116,8 @@ test("literal filtering keeps every real occurrence and rejects fuzzy kana hits"
 test("Pagefind count queries are serialized and result data loads progressively", () => {
   assert.doesNotMatch(browserScript, /Promise\.all\(\[\s*api\.search\(query\)/);
   assert.match(browserScript, /exactDiacritics: true/);
-  assert.match(browserScript, /noWorker: true/);
+  assert.match(browserScript, /root\.setAttribute\("lang", "und"\)/);
+  assert.doesNotMatch(browserScript, /noWorker: true/);
   assert.match(browserScript, /literalPagefindSearch\(api, query\)/);
   assert.match(browserScript, /const exactQuery = '\"' \+ candidate \+ '\"';/);
   assert.match(browserScript, /exactSubResultsFor\(/);

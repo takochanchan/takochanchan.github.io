@@ -349,15 +349,24 @@
       const pagefindBase = resolveUrl(config.pagefindBase, "./pagefind/");
       pagefindPromise = import(pagefindPath)
         .then(async (module) => {
-          const instance = module.createInstance({
-            basePath: pagefindBase,
-            language: "ja",
-            exactDiacritics: true,
-            // Pagefind 1.5.2's worker tokenizer drops the explicit Japanese
-            // boundary variants used below. Main-thread search uses the same
-            // tokenizer as the verified build and returns the literal phrase.
-            noWorker: true,
-          });
+          // Pagefind 1.5.2 ignores createInstance({ language }) and reads the
+          // document language instead. Chrome then re-tokenizes Japanese query
+          // strings differently from the generated index. Detect the sole
+          // Japanese index through Pagefind's fallback while treating our
+          // explicit spaces as authoritative query boundaries.
+          const root = document.documentElement;
+          const documentLanguage = root.getAttribute("lang");
+          let instance;
+          try {
+            root.setAttribute("lang", "und");
+            instance = module.createInstance({
+              basePath: pagefindBase,
+              exactDiacritics: true,
+            });
+          } finally {
+            if (documentLanguage === null) root.removeAttribute("lang");
+            else root.setAttribute("lang", documentLanguage);
+          }
           await instance.init();
           return instance;
         })
