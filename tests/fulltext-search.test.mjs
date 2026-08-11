@@ -5,8 +5,8 @@ import {
   INITIAL_SNIPPET_LIMIT,
   blockIdFor,
   countsFor,
-  exactSearchQueries,
   exactSubResultsFor,
+  literalCandidateQueries,
   resultLabel,
   snippetsFor,
 } from "../src/fulltext-search-core.mjs";
@@ -86,15 +86,15 @@ test("book and paper counts use archive record classes", () => {
   assert.equal(resultLabel(counts), "書籍 1冊・論文 2篇が該当");
 });
 
-test("exact Japanese search keeps voiced kana and retries index word boundaries", () => {
-  const nameQueries = exactSearchQueries("グリハルバ");
-  assert.equal(nameQueries[0], '"グリハルバ"');
-  assert.equal(nameQueries[1], '"グリ ハルバ"');
+test("literal Japanese search keeps voiced kana and retries index word boundaries", () => {
+  const nameQueries = literalCandidateQueries("グリハルバ");
+  assert.equal(nameQueries[0], "グリハルバ");
+  assert.equal(nameQueries[1], "グリ ハルバ");
 
-  const riverQueries = exactSearchQueries("グリハルバ川");
-  assert.equal(riverQueries[0], '"グリハルバ 川"');
-  assert.ok(riverQueries.includes('"グリ ハルバ 川"'));
-  assert.ok(!nameQueries.includes('"クリバ"'));
+  const riverQueries = literalCandidateQueries("グリハルバ川");
+  assert.equal(riverQueries[0], "グリハルバ 川");
+  assert.ok(riverQueries.includes("グリ ハルバ 川"));
+  assert.ok(!nameQueries.includes("クリバ"));
 });
 
 test("literal filtering keeps every real occurrence and rejects fuzzy kana hits", () => {
@@ -116,10 +116,13 @@ test("literal filtering keeps every real occurrence and rejects fuzzy kana hits"
 test("Pagefind count queries are serialized and result data loads progressively", () => {
   assert.doesNotMatch(browserScript, /Promise\.all\(\[\s*api\.search\(query\)/);
   assert.match(browserScript, /exactDiacritics: true/);
-  assert.match(browserScript, /exactPagefindSearch\(api, query\)/);
+  assert.match(browserScript, /noWorker: true/);
+  assert.match(browserScript, /literalPagefindSearch\(api, query\)/);
+  assert.match(browserScript, /const exactQuery = '\"' \+ candidate \+ '\"';/);
   assert.match(browserScript, /exactSubResultsFor\(/);
   assert.doesNotMatch(browserScript, /const all = await api\.search\(query\)/);
   assert.match(browserScript, /const RESULT_LOAD_CONCURRENCY = 2;/);
+  assert.match(browserScript, /const LITERAL_FILTER_CONCURRENCY = 4;/);
   assert.match(
     browserScript,
     /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= loaded\.length/,

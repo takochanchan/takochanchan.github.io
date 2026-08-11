@@ -68,18 +68,18 @@ const centralSplitOrder = (length) =>
     (a, b) => Math.abs(a - length / 2) - Math.abs(b - length / 2) || a - b,
   );
 
-const quoteExact = (tokens) =>
-  '"' + tokens.join(" ").replaceAll('"', " ") + '"';
+const candidateQuery = (tokens) =>
+  tokens.join(" ").replaceAll('"', " ").replace(/\s+/gu, " ").trim();
 
-export const exactSearchQueries = (query) => {
+export const literalCandidateQueries = (query) => {
   const tokens = segmentWords(query);
   if (!tokens.length) return [];
-  const variants = [quoteExact(tokens)];
+  const variants = [candidateQuery(tokens)];
   for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
     const graphemes = [...tokens[tokenIndex]];
     for (const splitAt of centralSplitOrder(graphemes.length)) {
       variants.push(
-        quoteExact([
+        candidateQuery([
           ...tokens.slice(0, tokenIndex),
           graphemes.slice(0, splitAt).join(""),
           graphemes.slice(splitAt).join(""),
@@ -88,7 +88,7 @@ export const exactSearchQueries = (query) => {
       );
     }
   }
-  return [...new Set(variants)];
+  return [...new Set(variants.filter(Boolean))];
 };
 
 const comparableText = (value) =>

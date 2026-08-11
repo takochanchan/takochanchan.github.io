@@ -5,6 +5,7 @@
   const SNIPPET_BATCH_SIZE = 20;
   const WORK_BATCH_SIZE = 20;
   const RESULT_LOAD_CONCURRENCY = 2;
+  const LITERAL_FILTER_CONCURRENCY = 4;
   const config = window.FULLTEXT_SEARCH_CONFIG || {};
   const previewCorpus = window.SEARCH_PREVIEW_CORPUS || null;
   const previewMetadata = window.SEARCH_PREVIEW_META || null;
@@ -109,18 +110,18 @@
         Math.abs(a - length / 2) - Math.abs(b - length / 2) || a - b,
     );
 
-  const quoteExact = (tokens) =>
-    '"' + tokens.join(" ").replaceAll('"', " ") + '"';
+  const candidateQuery = (tokens) =>
+    tokens.join(" ").replaceAll('"', " ").replace(/\s+/gu, " ").trim();
 
-  const exactSearchQueries = (query) => {
+  const literalCandidateQueries = (query) => {
     const tokens = segmentWords(query);
     if (!tokens.length) return [];
-    const variants = [quoteExact(tokens)];
+    const variants = [candidateQuery(tokens)];
     for (let tokenIndex = 0; tokenIndex < tokens.length; tokenIndex += 1) {
       const graphemes = [...tokens[tokenIndex]];
       for (const splitAt of centralSplitOrder(graphemes.length)) {
         variants.push(
-          quoteExact([
+          candidateQuery([
             ...tokens.slice(0, tokenIndex),
             graphemes.slice(0, splitAt).join(""),
             graphemes.slice(splitAt).join(""),
@@ -129,7 +130,7 @@
         );
       }
     }
-    return [...new Set(variants)];
+    return [...new Set(variants.filter(Boolean))];
   };
 
   const comparableText = (value) =>
@@ -352,6 +353,10 @@
             basePath: pagefindBase,
             language: "ja",
             exactDiacritics: true,
+            // Pagefind 1.5.2's worker tokenizer drops the explicit Japanese
+            // boundary variants used below. Main-thread search uses the same
+            // tokenizer as the verified build and returns the literal phrase.
+            noWorker: true,
           });
           await instance.init();
           return instance;
@@ -365,51 +370,107 @@
     return pagefindPromise;
   };
 
-  const exactPagefindSearch = async (api, query, options = {}) => {
-    let emptyResult = null;
-    for (const exactQuery of exactSearchQueries(query)) {
-      const exactResult = await api.search(exactQuery, options);
-      if (exactResult.results.length) {
-        const broadQuery = exactQuery.slice(1, -1);
-        const broadResult = await api.search(broadQuery, options);
-        const broadById = new Map(
-          broadResult.results.map((reference) => [reference.id, reference]),
-        );
-        const results = exactResult.results.map((exactReference) => {
-          const broadReference = broadById.get(exactReference.id);
-          let dataPromise;
-          return {
-            ...exactReference,
-            data: () => {
-              if (!dataPromise) {
-                dataPromise = (async () => {
-                  const broadData = await (broadReference || exactReference).data();
-                  let subResults = exactSubResultsFor(
-                    broadData.sub_results,
+  const literalPagefindSearch = async (api, query) => {
+    for (const candidate of literalCandidateQueries(query)) {
+      const exactQuery = '"' + candidate + '"';
+      const exactResult = await api.search(exactQuery);
+      if (!exactResult.results.length) continue;
+
+      const broadResult = await api.search(candidate);
+      const broadById = new Map(
+        broadResult.results.map((reference) => [reference.id, reference]),
+      );
+      const results = exactResult.results.map((exactReference) => {
+        const broadReference = broadById.get(exactReference.id);
+        let dataPromise;
+        return {
+          ...exactReference,
+          data: () => {
+            if (!dataPromise) {
+              dataPromise = (async () => {
+                const broadData = await (broadReference || exactReference).data();
+                let subResults = exactSubResultsFor(
+                  broadData.sub_results,
+                  query,
+                );
+                if (!subResults.length && broadReference) {
+                  const exactData = await exactReference.data();
+                  subResults = exactSubResultsFor(
+                    exactData.sub_results,
                     query,
                   );
-                  if (!subResults.length && broadReference) {
-                    const exactData = await exactReference.data();
-                    subResults = exactSubResultsFor(
-                      exactData.sub_results,
-                      query,
-                    );
-                  }
-                  return { ...broadData, sub_results: subResults };
-                })();
-              }
-              return dataPromise;
-            },
-          };
-        });
-        return {
-          result: { ...exactResult, results },
-          exactQuery,
+                }
+                return { ...broadData, sub_results: subResults };
+              })();
+            }
+            return dataPromise;
+          },
         };
-      }
-      emptyResult = exactResult;
+      });
+      const books = await api.search(exactQuery, {
+        filters: { recordClass: "major-work" },
+      });
+      const papers = await api.search(exactQuery, {
+        filters: { recordClass: "short-work" },
+      });
+      return {
+        results,
+        books: books.results.length,
+        papers: papers.results.length,
+      };
     }
-    return { result: emptyResult || { results: [] }, exactQuery: null };
+
+    // Defensive fallback for browsers where an exact phrase unexpectedly
+    // returns nothing: gather boundary candidates, then hydrate and retain
+    // only literal fragments. This is slower, so the verified exact path above
+    // remains the normal route.
+    const candidatesById = new Map();
+    for (const candidate of literalCandidateQueries(query)) {
+      const candidateResult = await api.search(candidate);
+      for (const reference of candidateResult.results) {
+        const current = candidatesById.get(reference.id);
+        if (!current || reference.score > current.score) {
+          candidatesById.set(reference.id, reference);
+        }
+      }
+    }
+
+    const candidates = [...candidatesById.values()].sort(
+      (left, right) => right.score - left.score,
+    );
+    const results = [];
+    for (
+      let index = 0;
+      index < candidates.length;
+      index += LITERAL_FILTER_CONCURRENCY
+    ) {
+      const filtered = await Promise.all(
+        candidates
+          .slice(index, index + LITERAL_FILTER_CONCURRENCY)
+          .map(async (reference) => {
+            const data = await reference.data();
+            const subResults = exactSubResultsFor(data.sub_results, query);
+            if (!subResults.length) return null;
+            const literalData = { ...data, sub_results: subResults };
+            return {
+              ...reference,
+              recordClass: data.meta?.recordClass,
+              data: async () => literalData,
+            };
+          }),
+      );
+      results.push(...filtered.filter(Boolean));
+    }
+
+    return {
+      results,
+      books: results.filter(
+        (reference) => reference.recordClass === "major-work",
+      ).length,
+      papers: results.filter(
+        (reference) => reference.recordClass === "short-work",
+      ).length,
+    };
   };
 
   const markedExcerpt = (text, tokens) => {
@@ -521,28 +582,12 @@
         result = fallbackSearch(query);
       } else try {
         const api = await ensurePagefind();
-        // Exact phrase search determines the correct work set and prevents
-        // Pagefind's fuzzy fallback from turning voiced kana into unrelated
-        // unvoiced terms. A second unquoted search recovers every occurrence;
-        // each sub-result is then checked against the literal user query.
-        // Boundary variants bridge index/Intl.Segmenter disagreements such as
-        // グリ｜ハルバ without changing what the user typed.
-        const { result: all, exactQuery } = await exactPagefindSearch(api, query);
-        const books = exactQuery
-          ? await api.search(exactQuery, {
-              filters: { recordClass: "major-work" },
-            })
-          : { results: [] };
-        const papers = exactQuery
-          ? await api.search(exactQuery, {
-              filters: { recordClass: "short-work" },
-            })
-          : { results: [] };
-        result = {
-          results: all.results,
-          books: books.results.length,
-          papers: papers.results.length,
-        };
+        // Pagefind's browser worker and build-time tokenizer can disagree on
+        // Japanese word boundaries. Search every unchanged boundary variant,
+        // then accept only fragments that contain the user's literal NFC text.
+        // This preserves voiced kana and removes fuzzy candidates such as
+        // 「クリバ」 without trusting Pagefind's diacritic normalization.
+        result = await literalPagefindSearch(api, query);
       } catch (pagefindError) {
         result = fallbackSearch(query);
         if (!result) throw pagefindError;
