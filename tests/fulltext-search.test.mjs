@@ -6,6 +6,7 @@ import {
   blockIdFor,
   countsFor,
   exactSubResultsFor,
+  groupDocumentReferences,
   literalCandidateQueries,
   resultLabel,
   snippetsFor,
@@ -113,19 +114,109 @@ test("literal filtering keeps every real occurrence and rejects fuzzy kana hits"
   ]);
 });
 
-test("Pagefind count queries are serialized and result data loads progressively", () => {
+test("split search documents are regrouped into unique works", async () => {
+  const dataFor = (slug, recordClass, subResults) => async () => ({
+    meta: { slug, recordClass, title: slug },
+    sub_results: subResults,
+  });
+  const exactReferences = [
+    {
+      id: "ja_a",
+      score: 1,
+      data: dataFor("book-a", "major-work", [
+        { plain_excerpt: "上流のグリハルバ川", anchor: { id: "b00001" } },
+      ]),
+    },
+    {
+      id: "ja_b",
+      score: 1,
+      data: dataFor("book-a", "major-work", [
+        { plain_excerpt: "グリハルバ川流域", anchor: { id: "b00008" } },
+      ]),
+    },
+    {
+      id: "ja_c",
+      score: 1,
+      data: dataFor("paper-c", "short-work", [
+        { plain_excerpt: "グリハルバを渡る", anchor: { id: "b00002" } },
+      ]),
+    },
+  ];
+  const broadReferences = [
+    {
+      id: "ja_a",
+      score: 4,
+      data: dataFor("book-a", "major-work", [
+        { plain_excerpt: "上流のグリハルバ川", anchor: { id: "b00001" } },
+      ]),
+    },
+    {
+      id: "ja_b",
+      score: 3,
+      data: dataFor("book-a", "major-work", [
+        { plain_excerpt: "グリハルバ川流域", anchor: { id: "b00008" } },
+        { plain_excerpt: "ラ・クリバ", anchor: { id: "b00009" } },
+      ]),
+    },
+    {
+      id: "ja_c",
+      score: 2,
+      data: dataFor("paper-c", "short-work", [
+        { plain_excerpt: "グリハルバを渡る", anchor: { id: "b00002" } },
+      ]),
+    },
+  ];
+  const grouped = groupDocumentReferences(
+    exactReferences,
+    broadReferences,
+    {
+      fragments: {
+        ja_a: ["book-a", "major-work", 0],
+        ja_b: ["book-a", "major-work", 1],
+        ja_c: ["paper-c", "short-work", 0],
+      },
+    },
+    "グリハルバ",
+  );
+  assert.deepEqual(
+    { books: grouped.books, papers: grouped.papers },
+    { books: 1, papers: 1 },
+  );
+  assert.deepEqual(
+    grouped.results.map((reference) => reference.id),
+    ["book-a", "paper-c"],
+  );
+  const book = await grouped.results[0].data();
+  assert.equal(book.__partialSearch, true);
+  assert.deepEqual(
+    book.sub_results.map((result) => result.anchor.id),
+    ["b00001"],
+  );
+  const fullBook = await book.__loadFull();
+  assert.deepEqual(
+    fullBook.sub_results.map((result) => result.anchor.id),
+    ["b00001", "b00008"],
+  );
+});
+
+test("Pagefind groups small documents and result data loads progressively", () => {
   assert.doesNotMatch(browserScript, /Promise\.all\(\[\s*api\.search\(query\)/);
   assert.match(browserScript, /exactDiacritics: true/);
   assert.match(browserScript, /root\.setAttribute\("lang", "und"\)/);
   assert.doesNotMatch(browserScript, /noWorker: true/);
-  assert.match(browserScript, /literalPagefindSearch\(api, query\)/);
+  assert.match(browserScript, /ensureDocumentMap\(\)/);
+  assert.match(browserScript, /literalPagefindSearch\(api, query, documentMap\)/);
+  assert.match(browserScript, /groupDocumentResults\(/);
   assert.match(browserScript, /const exactQuery = '\"' \+ candidate \+ '\"';/);
   assert.match(browserScript, /exactSubResultsFor\(/);
-  assert.doesNotMatch(browserScript, /const all = await api\.search\(query\)/);
+  assert.doesNotMatch(browserScript, /filters: \{ recordClass:/);
+  assert.match(browserScript, /const INITIAL_WORK_BATCH_SIZE = 6;/);
   assert.match(browserScript, /const RESULT_LOAD_CONCURRENCY = 2;/);
+  assert.match(browserScript, /const DOCUMENT_LOAD_CONCURRENCY = 6;/);
   assert.match(browserScript, /const LITERAL_FILTER_CONCURRENCY = 4;/);
+  assert.match(browserScript, /全一致頁を表示/);
   assert.match(
     browserScript,
-    /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= loaded\.length/,
+    /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= 1/,
   );
 });

@@ -12,6 +12,7 @@ import {
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { gunzipSync } from "node:zlib";
 import * as pagefind from "pagefind";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -25,6 +26,8 @@ const argument = (name) => {
 const manifestArg = argument("--manifest");
 const outputArg = argument("--output");
 const buildPrototype = process.argv.includes("--prototype");
+const SEARCH_PART_TEXT_LIMIT = 100_000;
+const SEARCH_PART_CHUNK_LIMIT = 1_200;
 if (!manifestArg || !outputArg) {
   throw new Error("Usage: build-index.mjs --manifest FILE --output DIST_DIR");
 }
@@ -85,14 +88,46 @@ const directorySize = async (directory) => {
   return bytes;
 };
 
-const documentFor = (work) =>
-  [
+const searchPartsFor = (work) => {
+  const parts = [];
+  let chunks = [];
+  let textLength = 0;
+  let lastPdfPage = null;
+
+  const finishPart = () => {
+    if (!chunks.length) return;
+    parts.push({ index: parts.length, chunks });
+    chunks = [];
+    textLength = 0;
+  };
+
+  for (const chunk of work.chunks) {
+    const startsNewPdfPage =
+      chunks.length > 0 && chunk.pdfPage !== lastPdfPage;
+    const exceedsLimit =
+      textLength + chunk.text.length > SEARCH_PART_TEXT_LIMIT ||
+      chunks.length >= SEARCH_PART_CHUNK_LIMIT;
+    if (startsNewPdfPage && exceedsLimit) finishPart();
+    chunks.push(chunk);
+    textLength += chunk.text.length;
+    lastPdfPage = chunk.pdfPage;
+  }
+  finishPart();
+  return parts;
+};
+
+const searchDocumentUrl = (slug, partIndex) =>
+  `/__fulltext/${slug}/part-${String(partIndex).padStart(4, "0")}/`;
+
+const documentFor = (work, part) => {
+  const documentUrl = searchDocumentUrl(work.slug, part.index);
+  return [
     "<!doctype html>",
     '<html lang="ja">',
     "<head>",
     '  <meta charset="utf-8">',
     '  <meta name="robots" content="noindex">',
-    '  <link rel="canonical" href="' + escapeHtml(work.url) + '">',
+    '  <link rel="canonical" href="' + escapeHtml(documentUrl) + '">',
     '  <meta data-pagefind-meta="title[content]" content="' +
       escapeHtml(work.title) +
       '">',
@@ -111,6 +146,9 @@ const documentFor = (work) =>
     '  <meta data-pagefind-meta="url[content]" content="' +
       escapeHtml(work.url) +
       '">',
+    '  <meta data-pagefind-meta="searchPart[content]" content="' +
+      String(part.index) +
+      '">',
     '  <meta data-pagefind-filter="recordClass[content]" content="' +
       escapeHtml(work.recordClass) +
       '">',
@@ -118,7 +156,7 @@ const documentFor = (work) =>
     "</head>",
     "<body>",
     "  <h1 data-pagefind-ignore>" + escapeHtml(work.title) + "</h1>",
-    work.chunks
+    part.chunks
       .map(
         (chunk) =>
           '  <h6 id="' +
@@ -131,6 +169,54 @@ const documentFor = (work) =>
     "</body>",
     "</html>",
   ].join("\n");
+};
+
+const pagefindDocumentMap = async (pagefindPath, expectedDocuments) => {
+  const fragmentPath = path.join(pagefindPath, "fragment");
+  const filenames = (await readdir(fragmentPath)).filter((filename) =>
+    filename.endsWith(".pf_fragment"),
+  );
+  const fragments = {};
+  const foundDocuments = new Set();
+  for (const filename of filenames) {
+    const compressed = await readFile(path.join(fragmentPath, filename));
+    const decoded = gunzipSync(compressed).toString("utf8");
+    if (!decoded.startsWith("pagefind_dcd")) {
+      throw new Error(`Unexpected Pagefind fragment format: ${filename}`);
+    }
+    const fragment = JSON.parse(decoded.slice("pagefind_dcd".length));
+    const slug = fragment.meta?.slug;
+    const recordClass = fragment.meta?.recordClass;
+    const partIndex = Number(fragment.meta?.searchPart);
+    const key = `${slug}:${partIndex}`;
+    if (
+      !expectedDocuments.has(key) ||
+      !["major-work", "short-work"].includes(recordClass) ||
+      foundDocuments.has(key)
+    ) {
+      throw new Error(`Unexpected Pagefind search document: ${filename}`);
+    }
+    foundDocuments.add(key);
+    fragments[filename.replace(/\.pf_fragment$/, "")] = [
+      slug,
+      recordClass,
+      partIndex,
+    ];
+  }
+  if (
+    foundDocuments.size !== expectedDocuments.size ||
+    [...expectedDocuments].some((key) => !foundDocuments.has(key))
+  ) {
+    throw new Error(
+      `Pagefind document map is incomplete: ${foundDocuments.size}/${expectedDocuments.size}`,
+    );
+  }
+  return {
+    schemaVersion: 1,
+    documents: foundDocuments.size,
+    fragments,
+  };
+};
 
 const previewCorpusFor = (corpus) => ({
   schemaVersion: 1,
@@ -204,7 +290,7 @@ const prototypePage = ({
     "          </div>",
     "        </form>",
     '        <p class="fulltext-help">',
-    "          検索結果はモーダルで開きます。原刊標識は正本どおりに表示し、PDF頁は表紙を1頁とする物理ページ番号です。",
+    "          検索結果はモーダルで開きます。大冊は最初の一致頁を先に表示し、全一致頁を資料ごとに展開できます。原刊標識は正本どおりに表示し、PDF頁は表紙を1頁とする物理ページ番号です。",
     "        </p>",
     "      </div>",
     "    </section>",
@@ -229,7 +315,7 @@ const prototypePage = ({
     "    </div>",
     "  </dialog>",
     "  <script>",
-    '    window.FULLTEXT_SEARCH_CONFIG = { pagefindModule: "./pagefind/pagefind.js", pagefindBase: "./pagefind/", mapsPath: "./maps/", metadataPath: "./search-meta.json", preferEmbedded: ' +
+    '    window.FULLTEXT_SEARCH_CONFIG = { pagefindModule: "./pagefind/pagefind.js", pagefindBase: "./pagefind/", documentMapPath: "./document-map.json", mapsPath: "./maps/", metadataPath: "./search-meta.json", preferEmbedded: ' +
       String(preferEmbedded) +
       " };",
     "    window.SEARCH_PREVIEW_CORPUS = " +
@@ -264,16 +350,23 @@ try {
     writePlayground: false,
     verbose: false,
   });
+  const expectedDocuments = new Set();
   for (const work of corpus.works) {
     if (!/^[a-z0-9-]+$/.test(work.slug)) {
       throw new Error("Unsafe slug: " + work.slug);
     }
-    const result = await index.addHTMLFile({
-      url: work.url,
-      content: documentFor(work),
-    });
-    if (result.errors?.length) {
-      throw new Error(work.slug + ": " + result.errors.join("; "));
+    for (const part of searchPartsFor(work)) {
+      const documentUrl = searchDocumentUrl(work.slug, part.index);
+      expectedDocuments.add(`${work.slug}:${part.index}`);
+      const result = await index.addHTMLFile({
+        url: documentUrl,
+        content: documentFor(work, part),
+      });
+      if (result.errors?.length) {
+        throw new Error(
+          `${work.slug} part ${part.index}: ${result.errors.join("; ")}`,
+        );
+      }
     }
     const map = {
       schemaVersion: 1,
@@ -304,6 +397,15 @@ try {
     throw new Error(written.errors.join("; "));
   }
   await pagefind.close();
+  const documentMap = await pagefindDocumentMap(
+    pagefindPath,
+    expectedDocuments,
+  );
+  await writeFile(
+    path.join(outputPath, "document-map.json"),
+    JSON.stringify(documentMap),
+    "utf8",
+  );
 
   // The prototype uses Pagefind's low-level API, so its optional prebuilt UI
   // bundles and highlighting helper would only add transfer weight.
@@ -332,6 +434,7 @@ try {
     workSlugs: corpus.works.map((work) => work.slug),
     books,
     papers,
+    documents: documentMap.documents,
     chunks: corpus.works.reduce((sum, work) => sum + work.chunks.length, 0),
     pagefindBytes: await directorySize(pagefindPath),
     sourceModes: Object.fromEntries(

@@ -104,3 +104,115 @@ export const exactSubResultsFor = (subResults, query) => {
     comparableText(subResult.plain_excerpt).includes(needle),
   );
 };
+
+export const groupDocumentReferences = (
+  exactReferences,
+  broadReferences,
+  documentMap,
+  query,
+) => {
+  const broadById = new Map(
+    broadReferences.map((reference) => [reference.id, reference]),
+  );
+  const worksBySlug = new Map();
+  exactReferences.forEach((exactReference, order) => {
+    const mapping = documentMap.fragments?.[exactReference.id];
+    if (!mapping) throw new Error(`Unmapped search document: ${exactReference.id}`);
+    const [slug, recordClass, partIndex] = mapping;
+    if (!worksBySlug.has(slug)) {
+      worksBySlug.set(slug, {
+        slug,
+        recordClass,
+        score: 0,
+        order,
+        documents: [],
+      });
+    }
+    const work = worksBySlug.get(slug);
+    const broadReference = broadById.get(exactReference.id);
+    work.score += broadReference?.score || exactReference.score || 0;
+    work.documents.push({ partIndex, exactReference, broadReference });
+  });
+
+  const works = [...worksBySlug.values()].sort(
+    (left, right) => right.score - left.score || left.order - right.order,
+  );
+  const results = works.map((work) => {
+    work.documents.sort((left, right) => left.partIndex - right.partIndex);
+    let dataPromise;
+    let fullDataPromise;
+    const loadFullData = () => {
+      if (!fullDataPromise) {
+        fullDataPromise = Promise.all(
+          work.documents.map(async ({ exactReference, broadReference }) => {
+            const broadData = await (broadReference || exactReference).data();
+            let subResults = exactSubResultsFor(
+              broadData.sub_results,
+              query,
+            );
+            if (!subResults.length && broadReference) {
+              const exactData = await exactReference.data();
+              subResults = exactSubResultsFor(
+                exactData.sub_results,
+                query,
+              );
+            }
+            return { data: broadData, subResults };
+          }),
+        ).then((documents) => {
+          const first = documents[0]?.data;
+          if (!first) throw new Error(`Empty search work: ${work.slug}`);
+          return {
+            ...first,
+            meta: {
+              ...first.meta,
+              slug: work.slug,
+              recordClass: work.recordClass,
+            },
+            sub_results: documents.flatMap(
+              (document) => document.subResults,
+            ),
+          };
+        });
+      }
+      return fullDataPromise;
+    };
+    return {
+      id: work.slug,
+      score: work.score,
+      recordClass: work.recordClass,
+      data: () => {
+        if (!dataPromise) {
+          dataPromise = (async () => {
+            if (work.documents.length === 1) return loadFullData();
+            for (const { exactReference } of work.documents) {
+              const exactData = await exactReference.data();
+              const subResults = exactSubResultsFor(
+                exactData.sub_results,
+                query,
+              );
+              if (!subResults.length) continue;
+              return {
+                ...exactData,
+                meta: {
+                  ...exactData.meta,
+                  slug: work.slug,
+                  recordClass: work.recordClass,
+                },
+                sub_results: subResults,
+                __partialSearch: true,
+                __loadFull: loadFullData,
+              };
+            }
+            return loadFullData();
+          })();
+        }
+        return dataPromise;
+      },
+    };
+  });
+  const books = works.filter(
+    (work) => work.recordClass === "major-work",
+  ).length;
+  return { results, books, papers: works.length - books };
+};

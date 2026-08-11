@@ -429,6 +429,11 @@
   display: none;
 }
 
+.fulltext-more:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 .fulltext-publication-link {
   padding: 9px 0;
   border-bottom: 1px solid var(--rust);

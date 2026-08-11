@@ -17,6 +17,9 @@ const directory = path.resolve(
 const metadata = JSON.parse(
   await readFile(path.join(directory, "search-meta.json"), "utf8"),
 );
+const documentMap = JSON.parse(
+  await readFile(path.join(directory, "document-map.json"), "utf8"),
+);
 const archive = JSON.parse(
   await readFile(path.join(projectRoot, "master-archive.json"), "utf8"),
 );
@@ -50,8 +53,69 @@ if (metadata.books + metadata.papers !== publications.length) {
 if (!Number.isInteger(metadata.chunks) || metadata.chunks < publications.length) {
   throw new Error("Search index contains too few text chunks");
 }
+if (
+  documentMap.schemaVersion !== 1 ||
+  !Number.isInteger(documentMap.documents) ||
+  documentMap.documents < publications.length ||
+  metadata.documents !== documentMap.documents
+) {
+  throw new Error("Search document map is missing or inconsistent");
+}
 if ((await stat(path.join(directory, "pagefind", "pagefind.js"))).size < 1000) {
   throw new Error("Pagefind browser module is missing or empty");
+}
+
+const publicationBySlug = new Map(
+  publications.map((publication) => [publication.slug, publication]),
+);
+const fragmentDirectory = path.join(directory, "pagefind", "fragment");
+const fragmentNames = (await readdir(fragmentDirectory))
+  .filter((name) => name.endsWith(".pf_fragment"))
+  .sort();
+const fragmentNameSet = new Set(fragmentNames);
+const mappedFragments = Object.entries(documentMap.fragments || {});
+if (
+  fragmentNames.length !== documentMap.documents ||
+  mappedFragments.length !== documentMap.documents
+) {
+  throw new Error(
+    `Search fragments: ${fragmentNames.length}/${documentMap.documents}`,
+  );
+}
+const partsBySlug = new Map();
+for (const [fragmentId, mapping] of mappedFragments) {
+  if (!/^ja_[a-f0-9]+$/.test(fragmentId) || !Array.isArray(mapping)) {
+    throw new Error(`Invalid search document mapping: ${fragmentId}`);
+  }
+  const [slug, recordClass, partIndex] = mapping;
+  const publication = publicationBySlug.get(slug);
+  if (
+    !publication ||
+    publication.recordClass !== recordClass ||
+    !Number.isInteger(partIndex) ||
+    partIndex < 0
+  ) {
+    throw new Error(`Invalid search document metadata: ${fragmentId}`);
+  }
+  const filename = `${fragmentId}.pf_fragment`;
+  if (!fragmentNameSet.has(filename)) {
+    throw new Error(`Mapped search fragment is missing: ${filename}`);
+  }
+  const bytes = (await stat(path.join(fragmentDirectory, filename))).size;
+  if (bytes > 750_000) {
+    throw new Error(`Search fragment exceeds the mobile budget: ${filename}`);
+  }
+  if (!partsBySlug.has(slug)) partsBySlug.set(slug, []);
+  partsBySlug.get(slug).push(partIndex);
+}
+for (const publication of publications) {
+  const parts = (partsBySlug.get(publication.slug) || []).sort((a, b) => a - b);
+  if (
+    !parts.length ||
+    parts.some((partIndex, index) => partIndex !== index)
+  ) {
+    throw new Error(`${publication.slug}: incomplete search document sequence`);
+  }
 }
 
 const mapNames = (await readdir(path.join(directory, "maps")))

@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260811-fulltext-search-v5";
+const assetVersion = "20260811-fulltext-search-v6";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -328,7 +328,8 @@ ${header()}
         </form>
         <p class="fulltext-help" id="fulltext-scope">
           検索結果は資料単位でモーダル表示します。同じPDF頁の一致は1件にまとめ、
-          原刊標識と日本語版PDFの物理頁を併記します。
+          原刊標識と日本語版PDFの物理頁を併記します。大冊は最初の一致頁を先に表示し、
+          全一致頁を資料ごとに展開できます。
         </p>
       </div>
 
@@ -442,6 +443,7 @@ ${footer()}`,
 window.FULLTEXT_SEARCH_CONFIG={
   pagefindModule:"/search/pagefind/pagefind.js",
   pagefindBase:"/search/pagefind/",
+  documentMapPath:"/search/document-map.json",
   mapsPath:"/search/maps/",
   metadataPath:"/search/search-meta.json",
   preferEmbedded:false

@@ -3,8 +3,10 @@
 
   const INITIAL_SNIPPET_LIMIT = 10;
   const SNIPPET_BATCH_SIZE = 20;
+  const INITIAL_WORK_BATCH_SIZE = 6;
   const WORK_BATCH_SIZE = 20;
   const RESULT_LOAD_CONCURRENCY = 2;
+  const DOCUMENT_LOAD_CONCURRENCY = 6;
   const LITERAL_FILTER_CONCURRENCY = 4;
   const config = window.FULLTEXT_SEARCH_CONFIG || {};
   const previewCorpus = window.SEARCH_PREVIEW_CORPUS || null;
@@ -35,7 +37,7 @@
 
   const mapCache = new Map();
   let pagefindPromise;
-  let pagefindUnavailable = false;
+  let documentMapPromise;
   let activeSearch = 0;
   let pendingResults = [];
   let renderedWorks = 0;
@@ -147,6 +149,18 @@
     );
   };
 
+  const loadInBatches = async (items, concurrency, loader) => {
+    const loaded = [];
+    for (let index = 0; index < items.length; index += concurrency) {
+      loaded.push(
+        ...(await Promise.all(
+          items.slice(index, index + concurrency).map(loader),
+        )),
+      );
+    }
+    return loaded;
+  };
+
   const loadPageMap = async (slug) => {
     if (!mapCache.has(slug)) {
       const mapsPath = resolveUrl(config.mapsPath, "./maps/");
@@ -159,6 +173,35 @@
       );
     }
     return mapCache.get(slug);
+  };
+
+  const ensureDocumentMap = () => {
+    if (!documentMapPromise) {
+      const mapPath = resolveUrl(
+        config.documentMapPath,
+        "./document-map.json",
+      );
+      documentMapPromise = fetch(mapPath)
+        .then((response) => {
+          if (!response.ok) throw new Error("Search document map missing");
+          return response.json();
+        })
+        .then((documentMap) => {
+          if (
+            documentMap.schemaVersion !== 1 ||
+            !documentMap.fragments ||
+            !Number.isInteger(documentMap.documents)
+          ) {
+            throw new Error("Unsupported search document map");
+          }
+          return documentMap;
+        })
+        .catch((error) => {
+          documentMapPromise = undefined;
+          throw error;
+        });
+    }
+    return documentMapPromise;
   };
 
   const updateUrl = (query) => {
@@ -253,7 +296,9 @@
     const matchCount = node(
       "p",
       "fulltext-result__match-count",
-      "一致頁 " + snippets.length + "頁",
+      result.__partialSearch
+        ? "一致頁 " + snippets.length + "頁以上"
+        : "一致頁 " + snippets.length + "頁",
     );
     heading.append(type, title, author, matchCount);
 
@@ -262,6 +307,12 @@
     const actions = node("div", "fulltext-result__actions");
     const more = node("button", "fulltext-more");
     more.type = "button";
+    const loadFull = node(
+      "button",
+      "fulltext-more fulltext-load-all",
+      "全一致頁を表示",
+    );
+    loadFull.type = "button";
     const publication = node("a", "fulltext-publication-link", "書誌・本文へ →");
     publication.href = bibliographyUrlFor(result.meta?.slug);
 
@@ -282,40 +333,58 @@
       }
     };
     more.addEventListener("click", () => appendSnippets(SNIPPET_BATCH_SIZE));
+    if (result.__partialSearch && typeof result.__loadFull === "function") {
+      loadFull.addEventListener("click", async () => {
+        loadFull.disabled = true;
+        loadFull.textContent = "全一致頁を読み込んでいます…";
+        try {
+          const fullResult = await result.__loadFull();
+          article.replaceWith(resultCard(fullResult, pageMap));
+        } catch (error) {
+          console.error(error);
+          loadFull.disabled = false;
+          loadFull.textContent = "再度、全一致頁を読み込む";
+        }
+      });
+    } else {
+      loadFull.hidden = true;
+    }
     appendSnippets(INITIAL_SNIPPET_LIMIT);
-    actions.append(more, publication);
+    actions.append(more, loadFull, publication);
     article.append(heading, list, actions);
     return article;
   };
 
   const appendWorkBatch = async (searchId) => {
+    const batchSize = renderedWorks
+      ? WORK_BATCH_SIZE
+      : INITIAL_WORK_BATCH_SIZE;
     const slice = pendingResults.slice(
       renderedWorks,
-      renderedWorks + WORK_BATCH_SIZE,
+      renderedWorks + batchSize,
     );
     if (!slice.length) return;
     const batchEnd = renderedWorks + slice.length;
     status.textContent = "検索結果を読み込んでいます…";
     for (let index = 0; index < slice.length; index += RESULT_LOAD_CONCURRENCY) {
-      const loaded = await Promise.all(
-        slice
-          .slice(index, index + RESULT_LOAD_CONCURRENCY)
-          .map(async (reference) => {
-            const result = await reference.data();
-            const pageMap =
-              result.__pageMap || (await loadPageMap(result.meta.slug));
-            return { result, pageMap };
-          }),
-      );
-      if (searchId !== activeSearch) return;
-      loaded.forEach(({ result, pageMap }) =>
-        resultList.append(resultCard(result, pageMap)),
-      );
-      renderedWorks += loaded.length;
-      status.textContent =
-        renderedWorks < batchEnd
-          ? "検索結果を読み込んでいます…（" + renderedWorks + "件表示）"
-          : "";
+      const loading = slice
+        .slice(index, index + RESULT_LOAD_CONCURRENCY)
+        .map(async (reference) => {
+          const result = await reference.data();
+          const pageMap =
+            result.__pageMap || (await loadPageMap(result.meta.slug));
+          return { result, pageMap };
+        });
+      for (const loaded of loading) {
+        const { result, pageMap } = await loaded;
+        if (searchId !== activeSearch) return;
+        resultList.append(resultCard(result, pageMap));
+        renderedWorks += 1;
+        status.textContent =
+          renderedWorks < batchEnd
+            ? "検索結果を読み込んでいます…（" + renderedWorks + "件表示）"
+            : "";
+      }
     }
     if (renderedWorks < pendingResults.length) {
       const remaining = pendingResults.length - renderedWorks;
@@ -338,9 +407,6 @@
   };
 
   const ensurePagefind = () => {
-    if (pagefindUnavailable) {
-      return Promise.reject(new Error("Pagefind unavailable"));
-    }
     if (!pagefindPromise) {
       const pagefindPath = resolveUrl(
         config.pagefindModule,
@@ -371,7 +437,6 @@
           return instance;
         })
         .catch((error) => {
-          pagefindUnavailable = true;
           pagefindPromise = undefined;
           throw error;
         });
@@ -379,25 +444,58 @@
     return pagefindPromise;
   };
 
-  const literalPagefindSearch = async (api, query) => {
-    for (const candidate of literalCandidateQueries(query)) {
-      const exactQuery = '"' + candidate + '"';
-      const exactResult = await api.search(exactQuery);
-      if (!exactResult.results.length) continue;
+  const groupDocumentResults = (
+    exactReferences,
+    broadReferences,
+    documentMap,
+    query,
+  ) => {
+    const broadById = new Map(
+      broadReferences.map((reference) => [reference.id, reference]),
+    );
+    const worksBySlug = new Map();
+    exactReferences.forEach((exactReference, order) => {
+      const mapping = documentMap.fragments[exactReference.id];
+      if (!mapping) {
+        throw new Error(`Unmapped search document: ${exactReference.id}`);
+      }
+      const [slug, recordClass, partIndex] = mapping;
+      if (!worksBySlug.has(slug)) {
+        worksBySlug.set(slug, {
+          slug,
+          recordClass,
+          score: 0,
+          order,
+          documents: [],
+        });
+      }
+      const work = worksBySlug.get(slug);
+      const broadReference = broadById.get(exactReference.id);
+      work.score += broadReference?.score || exactReference.score || 0;
+      work.documents.push({
+        partIndex,
+        exactReference,
+        broadReference,
+      });
+    });
 
-      const broadResult = await api.search(candidate);
-      const broadById = new Map(
-        broadResult.results.map((reference) => [reference.id, reference]),
-      );
-      const results = exactResult.results.map((exactReference) => {
-        const broadReference = broadById.get(exactReference.id);
-        let dataPromise;
-        return {
-          ...exactReference,
-          data: () => {
-            if (!dataPromise) {
-              dataPromise = (async () => {
-                const broadData = await (broadReference || exactReference).data();
+    const works = [...worksBySlug.values()].sort(
+      (left, right) => right.score - left.score || left.order - right.order,
+    );
+    const results = works.map((work) => {
+      work.documents.sort((left, right) => left.partIndex - right.partIndex);
+      let dataPromise;
+      let fullDataPromise;
+      const loadFullData = () => {
+        if (!fullDataPromise) {
+          fullDataPromise = (async () => {
+            const documents = await loadInBatches(
+              work.documents,
+              DOCUMENT_LOAD_CONCURRENCY,
+              async ({ exactReference, broadReference }) => {
+                const broadData = await (
+                  broadReference || exactReference
+                ).data();
                 let subResults = exactSubResultsFor(
                   broadData.sub_results,
                   query,
@@ -409,24 +507,80 @@
                     query,
                   );
                 }
-                return { ...broadData, sub_results: subResults };
-              })();
-            }
-            return dataPromise;
-          },
-        };
-      });
-      const books = await api.search(exactQuery, {
-        filters: { recordClass: "major-work" },
-      });
-      const papers = await api.search(exactQuery, {
-        filters: { recordClass: "short-work" },
-      });
-      return {
-        results,
-        books: books.results.length,
-        papers: papers.results.length,
+                return { data: broadData, subResults };
+              },
+            );
+            const first = documents[0]?.data;
+            if (!first) throw new Error(`Empty search work: ${work.slug}`);
+            return {
+              ...first,
+              meta: {
+                ...first.meta,
+                slug: work.slug,
+                recordClass: work.recordClass,
+              },
+              sub_results: documents.flatMap(
+                (document) => document.subResults,
+              ),
+            };
+          })();
+        }
+        return fullDataPromise;
       };
+      return {
+        id: work.slug,
+        score: work.score,
+        recordClass: work.recordClass,
+        data: () => {
+          if (!dataPromise) {
+            dataPromise = (async () => {
+              if (work.documents.length === 1) return loadFullData();
+              for (const { exactReference } of work.documents) {
+                const exactData = await exactReference.data();
+                const subResults = exactSubResultsFor(
+                  exactData.sub_results,
+                  query,
+                );
+                if (!subResults.length) continue;
+                return {
+                  ...exactData,
+                  meta: {
+                    ...exactData.meta,
+                    slug: work.slug,
+                    recordClass: work.recordClass,
+                  },
+                  sub_results: subResults,
+                  __partialSearch: true,
+                  __loadFull: loadFullData,
+                };
+              }
+              return loadFullData();
+            })();
+          }
+          return dataPromise;
+        },
+      };
+    });
+
+    const books = works.filter(
+      (work) => work.recordClass === "major-work",
+    ).length;
+    return { results, books, papers: works.length - books };
+  };
+
+  const literalPagefindSearch = async (api, query, documentMap) => {
+    for (const candidate of literalCandidateQueries(query)) {
+      const exactQuery = '"' + candidate + '"';
+      const exactResult = await api.search(exactQuery);
+      if (!exactResult.results.length) continue;
+
+      const broadResult = await api.search(candidate);
+      return groupDocumentResults(
+        exactResult.results,
+        broadResult.results,
+        documentMap,
+        query,
+      );
     }
 
     // Defensive fallback for browsers where an exact phrase unexpectedly
@@ -447,7 +601,7 @@
     const candidates = [...candidatesById.values()].sort(
       (left, right) => right.score - left.score,
     );
-    const results = [];
+    const literalReferences = [];
     for (
       let index = 0;
       index < candidates.length;
@@ -468,18 +622,15 @@
             };
           }),
       );
-      results.push(...filtered.filter(Boolean));
+      literalReferences.push(...filtered.filter(Boolean));
     }
 
-    return {
-      results,
-      books: results.filter(
-        (reference) => reference.recordClass === "major-work",
-      ).length,
-      papers: results.filter(
-        (reference) => reference.recordClass === "short-work",
-      ).length,
-    };
+    return groupDocumentResults(
+      literalReferences,
+      candidates,
+      documentMap,
+      query,
+    );
   };
 
   const markedExcerpt = (text, tokens) => {
@@ -590,13 +741,16 @@
       ) {
         result = fallbackSearch(query);
       } else try {
-        const api = await ensurePagefind();
+        const [api, documentMap] = await Promise.all([
+          ensurePagefind(),
+          ensureDocumentMap(),
+        ]);
         // Pagefind's browser worker and build-time tokenizer can disagree on
         // Japanese word boundaries. Search every unchanged boundary variant,
         // then accept only fragments that contain the user's literal NFC text.
         // This preserves voiced kana and removes fuzzy candidates such as
         // 「クリバ」 without trusting Pagefind's diacritic normalization.
-        result = await literalPagefindSearch(api, query);
+        result = await literalPagefindSearch(api, query, documentMap);
       } catch (pagefindError) {
         result = fallbackSearch(query);
         if (!result) throw pagefindError;
@@ -637,6 +791,19 @@
     if (!form.reportValidity()) return;
     search();
   });
+
+  const warmSearchBackend = () => {
+    if (previewCorpus && config.preferEmbedded) return;
+    Promise.all([ensurePagefind(), ensureDocumentMap()]).catch(() => {
+      // A transient warm-up failure is retried when the user submits a query.
+    });
+  };
+  input.addEventListener("focus", warmSearchBackend, { once: true });
+  if (typeof requestIdleCallback === "function") {
+    requestIdleCallback(warmSearchBackend, { timeout: 2_000 });
+  } else {
+    setTimeout(warmSearchBackend, 500);
+  }
 
   closeButton.addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {

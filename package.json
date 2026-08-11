@@ -16,7 +16,7 @@
     "test": "npm run verify:masters && node --test tests/archive.test.mjs && npm run test:search",
     "test:search": "python3 -m unittest discover -s tests -p 'test_search_*.py' && node --test tests/fulltext-search.test.mjs",
     "test:epub": "python3 scripts/validate-epubs.py dist",
-    "verify:search": "node scripts/search/verify-index.mjs --directory dist/search",
+    "verify:search": "node scripts/search/verify-index.mjs --directory dist/search && node scripts/search/verify-queries.mjs --directory dist/search",
     "verify:masters": "node scripts/verify-master-archive.mjs"
   },
   "devDependencies": {
