@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 188);
+  assert.equal(publications.length, 189);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 93);
+  assert.equal(majorPublications.length, 94);
   assert.equal(shortPublications.length, 95);
   assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
@@ -352,6 +352,24 @@ test("Gemelli Careri 1700 keeps the approved source, figures, and reuse statemen
   assert.match(item.description, /装飾図は省略/);
 });
 
+test("Codex Perez keeps the approved PMM 9 scope, title, and rights boundary", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "codex-perez-pmm9-1877",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "コデックス・ペレス");
+  assert.equal(item.subtitle, "マニのチラム・バラムの書とユカテコ・マヤ史料");
+  assert.equal(item.pageCount, 231);
+  assert.equal(item.figureCount, 19);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.sourceEdition, /Princeton Mesoamerican Manuscripts no\. 9/);
+  assert.match(item.sourceProvider, /IIIF全142画像/);
+  assert.match(item.rights, /Copyright Not Evaluated/);
+  assert.match(item.rights, /Copyright and Permissions Policies/);
+  assert.match(item.description, /マニ本系/);
+});
+
 test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
   const item = publications.find(
     (publication) => publication.slug === "sapper-alta-verapaz-1901",
@@ -563,7 +581,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">93<\/strong>件/);
+  assert.match(html, /id="book-match-count">94<\/strong>件/);
   assert.match(html, /id="paper-match-count">95<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -678,19 +696,41 @@ test("catalogue search stays within publication metadata", async () => {
   assert.doesNotMatch(script, /const perPage = 6/);
 });
 
-test("sitemap exposes every same-origin detail page", async () => {
-  const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
-  assert.match(sitemap, /https:\/\/takochanchan\.github\.io\/about\//);
-  for (const item of publications) {
+test("sitemap index separates books, papers, and author anchors", async () => {
+  const index = await readFile(path.join(dist, "sitemap.xml"), "utf8");
+  const books = await readFile(path.join(dist, "sitemap-books.xml"), "utf8");
+  const papers = await readFile(path.join(dist, "sitemap-papers.xml"), "utf8");
+  const authors = await readFile(path.join(dist, "sitemap-authors.xml"), "utf8");
+  assert.match(index, /<sitemapindex/);
+  assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-books\.xml/);
+  assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-papers\.xml/);
+  assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-authors\.xml/);
+  assert.match(books, /https:\/\/takochanchan\.github\.io\/about\//);
+  for (const item of majorPublications) {
     assert.match(
-      sitemap,
+      books,
       new RegExp(
         `https://takochanchan\\.github\\.io/publications/${item.slug}/`,
       ),
     );
-    assert.doesNotMatch(sitemap, new RegExp(escapeHtml(item.pdfUrl)));
   }
-  assert.doesNotMatch(sitemap, /github\.com/);
+  for (const item of shortPublications) {
+    assert.match(
+      papers,
+      new RegExp(
+        `https://takochanchan\\.github\\.io/publications/${item.slug}/`,
+      ),
+    );
+  }
+  for (const author of shortPublicationAuthors) {
+    assert.match(authors, new RegExp(`#author-${author.key}`));
+  }
+  for (const sitemap of [books, papers, authors]) {
+    for (const item of publications) {
+      assert.doesNotMatch(sitemap, new RegExp(escapeHtml(item.pdfUrl)));
+    }
+    assert.doesNotMatch(sitemap, /github\.com/);
+  }
 });
 
 test("every publication has a detail page, local cover, and release links", async () => {
@@ -832,6 +872,9 @@ test("rendered public site does not expose the previous identifying host", async
     "archive.js",
     "robots.txt",
     "sitemap.xml",
+    "sitemap-books.xml",
+    "sitemap-papers.xml",
+    "sitemap-authors.xml",
     ...publications.map((item) => `publications/${item.slug}/index.html`),
   ];
   for (const relative of textFiles) {

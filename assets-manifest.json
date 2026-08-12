@@ -290,6 +290,24 @@
       "sha256": "be2ca8663bcf0250afb0b12c38c7f96abcfeabe0e8a333c8d044c27f417769d2"
     },
     {
+      "path": "publications/codex-perez-pmm9-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/codex-perez-pmm9-1877/cover.jpg",
+      "size": 75248,
+      "sha256": "e1dc545373968cd187dc149ffcffd0f944e32e56bbbe1beb381bd0cdb49bff01"
+    },
+    {
+      "path": "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
+      "size": 9263022,
+      "sha256": "e16155ceda369c06e4d9bf157d0ffc265390dc8ff53f8158dacd319e3f399a75"
+    },
+    {
+      "path": "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.pdf",
+      "size": 5798349,
+      "sha256": "e703e50da9ab527f9e9365e68bd9be4d6940741c4c95354a1b157b4e477abac0"
+    },
+    {
       "path": "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
       "size": 18345877,

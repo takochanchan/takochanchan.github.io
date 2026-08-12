@@ -3110,6 +3110,42 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "codex-perez-pmm9-1877",
+    title: "コデックス・ペレス",
+    originalTitle: "Codex Pérez: manuscript, [1877]",
+    subtitle: "マニのチラム・バラムの書とユカテコ・マヤ史料",
+    author: "フアン・ピオ・ペレス／クレスセンシオ・カリーリョ・イ・アンコナ",
+    series: "CODEX PÉREZ · PRINCETON MESOAMERICAN MANUSCRIPTS NO. 9 · 1877",
+    originalPublication:
+      "ユカタン州メリダ、クレスセンシオ・カリーリョ・イ・アンコナ清書、1877年",
+    year: 1877,
+    extent:
+      "PDF 231頁・Princeton Mesoamerican Manuscripts no. 9 全142画像・本文fol. 1r–59v・暦表3組・十三カトゥン予言2組・図19点・土地文書",
+    description:
+      "フアン・ピオ・ペレスが植民地期ユカテコ・マヤ語資料から集成し、クレスセンシオ・カリーリョ・イ・アンコナが1877年に清書した『コデックス・ペレス』の日本語全訳。マニ本系の『チラム・バラムの書』、260日暦と365日暦、十三カトゥン予言、年代記、祭司予言、イシル暦、マニ境界協約、シウ家殺害記事、ソトゥタ土地文書を、Princeton Mesoamerican Manuscripts no. 9 の全142画像に基づく写本順で収録しています。",
+    cover: "publications/codex-perez-pmm9-1877/cover.jpg",
+    pdf:
+      "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
+    pageCount: 231,
+    figureCount: 19,
+    plateCount: 0,
+    types: ["写本史料", "年代記", "暦書", "一次史料"],
+    regions: ["ユカタン", "マニ", "メリダ", "イシル", "ソトゥタ", "マヤ地域"],
+    languages: ["ユカテコ・マヤ語", "スペイン語"],
+    tags: [
+      "チラム・バラム",
+      "マヤ暦",
+      "カトゥン予言",
+      "植民地期マヤ語",
+      "フアン・ピオ・ペレス",
+      "土地文書",
+      "マニ",
+      "19世紀写本",
+    ],
+  },
+  {
     slug: "roys-chilam-balam-chumayel-1933",
     title: "チュマイェルのチラム・バラムの書",
     originalTitle: "The Book of Chilam Balam of Chumayel",
@@ -6430,6 +6466,18 @@ const publicationMetadata = {
       "1882年原刊および原刊の図版は、米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載されたLibrary of Congress所蔵本のデジタル画像には、公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
+  },
+  "codex-perez-pmm9-1877": {
+    sourceEdition:
+      "Juan Pío Pérez編纂、Crescencio Carrillo y Ancona写『Codex Pérez: manuscript, [1877]』Princeton University Library, Manuscripts Division, C0940, Princeton Mesoamerican Manuscripts no. 9。",
+    sourceProvider:
+      "Princeton University Library Digital Collectionsが公開する大型清書本のIIIF全142画像を直接の底本とし、1877年写本の配列、三部構成、注記、反復、表、数字、図像を基準にした。Juan Pío Pérezの1837年頃の原編集写本に付された頁番号、同系の『チラム・バラム』諸本、公開校訂本文・部分訳は、欠字、綴り、反復箇所、語の切れ目と解釈の照合に限って用いた。",
+    sourceUrl:
+      "https://digital-collections.princeton.edu/i/codex-pe%CC%81rez-manuscript-1877/item/dc2f6e4e-9ba2-4330-8114-71d4c71aec9a",
+    rights:
+      "Juan Pío Pérez（1859年没）およびCrescencio Carrillo y Ancona（1897年没）による写本文言は著作権保護期間を満了しています。Princeton University Libraryの個別資料ページは本写本画像を「Copyright Not Evaluated」と表示しています。同館のCopyright and Permissions Policiesは、所蔵資料の多くについて著作権を保有せず、同館が作成したデジタル複製にも新たな著作権を主張しない一方、個々の利用に関する法令・第三者権利・資料条件の確認を利用者へ求めています。本版は研究上必要な頭像、暦輪、日名グリフ、表の部分だけを収録し、資料名、所蔵機関、請求記号、該当葉を明記しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
   },
   "roys-chilam-balam-chumayel-1933": {
     sourceEdition:

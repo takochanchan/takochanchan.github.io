@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "1580e4c2842acd9f474b678dc57fed86ab1a5f40",
+  "archive_commit": "d790ac1711aa13125fb31a9e9c027cc57f630448",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -57,6 +57,7 @@
     "byam-chiapas-1897": "publications/byam-chiapas-1897/master.docx",
     "robles-memoria-historica-chiapa-1813": "publications/robles-memoria-historica-chiapa-1813/master.md",
     "brinton-nagualism-1894": "publications/brinton-nagualism-1894/master.docx",
+    "codex-perez-pmm9-1877": "publications/codex-perez-pmm9-1877/master.docx",
     "pineda-chiapas-soconusco-1845": "publications/pineda-chiapas-soconusco-1845/master.docx",
     "paniagua-catecismo-chiapas-1876": "publications/paniagua-catecismo-chiapas-1876/master.docx",
     "morris-colony-british-honduras-1883": "publications/morris-colony-british-honduras-1883/master.docx",

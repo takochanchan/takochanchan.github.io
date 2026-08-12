@@ -256,6 +256,10 @@ DOCX_SOURCES = {
 }
 
 MARKDOWN_SOURCES = {
+    "codex-perez-pmm9-1877": SOURCES
+    / "翻訳サイト"
+    / "codex-perez-pmm9-1877"
+    / "master.md",
     "morelet-exploration-guatemala-1850": SOURCES
     / "Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.md",
     "morelet-testacea-novissima-pars-i-1849": SOURCES

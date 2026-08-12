@@ -907,19 +907,53 @@ await Promise.all(
   }),
 );
 
-const sitemapEntries = [
-  `${site.url}/`,
-  `${site.url}/about/`,
-  ...publications.map(
-    (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
-  ),
+const sitemapDocument = (entries) =>
+  `<?xml version="1.0" encoding="UTF-8"?>\n` +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+  entries.map((url) => `  <url><loc>${url}</loc></url>`).join("\n") +
+  `\n</urlset>\n`;
+
+const sitemapFiles = [
+  {
+    name: "sitemap-books.xml",
+    entries: [
+      `${site.url}/`,
+      `${site.url}/about/`,
+      ...majorPublications.map(
+        (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
+      ),
+    ],
+  },
+  {
+    name: "sitemap-papers.xml",
+    entries: shortPublications.map(
+      (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
+    ),
+  },
+  {
+    name: "sitemap-authors.xml",
+    entries: shortPublicationAuthors.map(
+      (author) => `${site.url}/#author-${encodeURIComponent(author.key)}`,
+    ),
+  },
 ];
+
+await Promise.all(
+  sitemapFiles.map(({ name, entries }) =>
+    writeFile(path.join(dist, name), sitemapDocument(entries)),
+  ),
+);
 await writeFile(
   path.join(dist, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    sitemapEntries.map((url) => `  <url><loc>${url}</loc></url>`).join("\n") +
-    `\n</urlset>\n`,
+    `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    sitemapFiles
+      .map(
+        ({ name }) =>
+          `  <sitemap><loc>${site.url}/${name}</loc></sitemap>`,
+      )
+      .join("\n") +
+    `\n</sitemapindex>\n`,
 );
 
 if (localAssets) {
