@@ -5237,6 +5237,188 @@ const publicationRecords = [
       "旅行記",
     ],
   },
+  {
+    slug: "ixtlilxochitl-sumaria-todas",
+    title: "ヌエバ・エスパーニャ諸事略報",
+    originalTitle:
+      "Sumaria relación de todas las cosas que han sucedido en la Nueva España…",
+    subtitle:
+      "自筆稿 f.1r–81v・世界創造からスペイン人到来まで 日本語全訳",
+    author: "フェルナンド・デ・アルバ・イシュトリルショチトル",
+    series: "CÓDICE CHIMALPAHIN · AUTÓGRAFO · I",
+    originalPublication: "ヌエバ・エスパーニャ、1600年頃、自筆稿（未刊）",
+    year: 1600,
+    extent:
+      "PDF 179頁・Códice Chimalpahin第1巻 f.1r–81v（162面）・五報告・チチメカ諸侯史・自筆稿folio標162件・関連図版1点",
+    description:
+      "世界創造と四つの時代、トルテカ人の移住・王統・滅亡、ショロトル以後のチチメカ諸侯、テツココ王統、スペイン人到来と征服までを叙述する自筆稿。後代刊本で均されてきた作品境界、見出し、folio順、抹消・欄外追記・欠損の注記を保持し、Códice Chimalpahin第1巻 f.1r–81vから全訳しています。",
+    cover: "publications/ixtlilxochitl-sumaria-todas/cover.jpg",
+    pdf:
+      "publications/ixtlilxochitl-sumaria-todas/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Todas_Cosas_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ixtlilxochitl-sumaria-todas/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Todas_Cosas_Japanese_Complete_Translation.epub",
+    pageCount: 179,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "自筆稿", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テツココ", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "トルテカ",
+      "チチメカ",
+      "アコルワ",
+      "テツココ王統",
+      "征服史",
+      "Códice Chimalpahin",
+      "自筆稿",
+      "17世紀",
+    ],
+  },
+  {
+    slug: "ixtlilxochitl-relacion-sucinta",
+    title: "ヌエバ・エスパーニャ史簡略報告",
+    originalTitle:
+      "Relación sucinta en forma de memorial de las historias de la Nueva España y sus señoríos hasta el ingreso de los españoles",
+    subtitle:
+      "自筆稿 f.177r–185v・覚書形式・スペイン人到来まで 日本語全訳",
+    author: "フェルナンド・デ・アルバ・イシュトリルショチトル",
+    series: "CÓDICE CHIMALPAHIN · AUTÓGRAFO · II",
+    originalPublication: "ヌエバ・エスパーニャ、1600年頃、自筆稿（未刊）",
+    year: 1600,
+    extent:
+      "PDF 34頁・Códice Chimalpahin第1巻 f.177r–185v（18面）・現存冒頭部および第三報告―第十二報告・系譜・自筆稿folio標18件・関連図版1点",
+    description:
+      "ヌエバ・エスパーニャの諸民族・諸王国の来歴を覚書形式でまとめ、スペイン人到来以前までをたどる簡潔な自筆稿。現存冒頭部から第十二報告、メシコ諸侯の系統・系譜、その他の諸侯に関する記述までを、欠けた冒頭と原稿上の不連続を補作せず、Códice Chimalpahin第1巻 f.177r–185vから全訳しています。",
+    cover: "publications/ixtlilxochitl-relacion-sucinta/cover.jpg",
+    pdf:
+      "publications/ixtlilxochitl-relacion-sucinta/Fernando_de_Alva_Ixtlilxochitl_Relacion_Sucinta_Memorial_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ixtlilxochitl-relacion-sucinta/Fernando_de_Alva_Ixtlilxochitl_Relacion_Sucinta_Memorial_Japanese_Complete_Translation.epub",
+    pageCount: 34,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "覚書", "自筆稿", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テツココ", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "王統",
+      "系譜",
+      "メシコ",
+      "テツココ",
+      "Códice Chimalpahin",
+      "自筆稿",
+      "17世紀",
+    ],
+  },
+  {
+    slug: "ixtlilxochitl-compendio-tetzcoco",
+    title: "テツココ諸王の歴史綱要",
+    originalTitle: "Compendio histórico de los reyes de Tetzcoco",
+    subtitle:
+      "1608年頃自筆稿 f.147r–214r・第一報告―第十三報告 日本語全訳",
+    author: "フェルナンド・デ・アルバ・イシュトリルショチトル",
+    series: "CÓDICE CHIMALPAHIN · AUTÓGRAFO · III",
+    originalPublication: "ヌエバ・エスパーニャ、1608年頃、自筆稿（未刊）",
+    year: 1608,
+    extent:
+      "PDF 147頁・Códice Chimalpahin第2巻 f.147r–214r（135面）・全13報告・自筆稿folio標135件・関連図版1点",
+    description:
+      "諸民族の入植、巨人・トルテカ人、ショロトル以後の大チチメカ諸王、ネサワルコヨトルを中心とするテツココ王統、スペイン人到来と征服までを全十三報告で叙述する歴史綱要。自筆稿固有の章立て、異綴り、抹消・挿入・本文中断を保持し、Códice Chimalpahin第2巻 f.147r–214rから全訳しています。",
+    cover: "publications/ixtlilxochitl-compendio-tetzcoco/cover.jpg",
+    pdf:
+      "publications/ixtlilxochitl-compendio-tetzcoco/Fernando_de_Alva_Ixtlilxochitl_Compendio_Historico_Reyes_Tetzcoco_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ixtlilxochitl-compendio-tetzcoco/Fernando_de_Alva_Ixtlilxochitl_Compendio_Historico_Reyes_Tetzcoco_Japanese_Complete_Translation.epub",
+    pageCount: 147,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "自筆稿", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テツココ", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "テツココ王統",
+      "ショロトル",
+      "ネサワルコヨトル",
+      "アコルワ",
+      "征服史",
+      "Códice Chimalpahin",
+      "自筆稿",
+      "17世紀",
+    ],
+  },
+  {
+    slug: "ixtlilxochitl-sumaria-general",
+    title: "ヌエバ・エスパーニャ通史略報",
+    originalTitle:
+      "Sumaria relación de la historia general de esta Nueva España desde el origen del mundo hasta la hora de agora…",
+    subtitle:
+      "1625年頃自筆稿 f.161r–175v・世界の起源から現在まで 日本語全訳",
+    author: "フェルナンド・デ・アルバ・イシュトリルショチトル",
+    series: "CÓDICE CHIMALPAHIN · AUTÓGRAFO · IV",
+    originalPublication: "ヌエバ・エスパーニャ、1625年頃、自筆稿（未刊）",
+    year: 1625,
+    extent:
+      "PDF 29頁・Códice Chimalpahin第1巻 f.161r–175v（30面）・自筆稿folio標30件・関連図版1点",
+    description:
+      "先住民の歴史・絵文書・文字・古歌から、世界の起源、トルテカ人、チチメカ人、諸王統を著者の時代まで圧縮して述べる通史略報。連続する独立作品としての境界を保ち、自筆稿の見出し、folio順、抹消・欄外追記・欠損注記を残して、Códice Chimalpahin第1巻 f.161r–175vから全訳しています。",
+    cover: "publications/ixtlilxochitl-sumaria-general/cover.jpg",
+    pdf:
+      "publications/ixtlilxochitl-sumaria-general/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Historia_General_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ixtlilxochitl-sumaria-general/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Historia_General_Japanese_Complete_Translation.epub",
+    pageCount: 29,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "自筆稿", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テツココ", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "通史",
+      "トルテカ",
+      "チチメカ",
+      "王統",
+      "Códice Chimalpahin",
+      "自筆稿",
+      "17世紀",
+    ],
+  },
+  {
+    slug: "ixtlilxochitl-historia-chichimeca",
+    title: "チチメカ民族史",
+    originalTitle: "Historia de la nación chichimeca",
+    subtitle:
+      "1640年頃自筆稿 f.1r–143v・献辞・読者への序・本文 日本語全訳",
+    author: "フェルナンド・デ・アルバ・イシュトリルショチトル",
+    series: "CÓDICE CHIMALPAHIN · AUTÓGRAFO · V",
+    originalPublication: "ヌエバ・エスパーニャ、1640年頃、自筆稿（未刊）",
+    year: 1640,
+    extent:
+      "PDF 319頁・Códice Chimalpahin第2巻 f.1r–143v（286面）・献辞・読者への序・本文・自筆稿folio標286件・関連図版1点",
+    description:
+      "世界創造とトルテカ人の時代から、ショロトルの入植、アコルワ＝テツココ王統、ネサワルコヨトルとネサワルピリ、スペイン人到来、テノチティトラン包囲までを叙述する大部の自筆稿。後代版の再配列を退け、末尾の挿入紙を f.140v→142v→142r→141v→141r→143r→143v の論理順で提示し、Códice Chimalpahin第2巻 f.1r–143vから全訳しています。",
+    cover: "publications/ixtlilxochitl-historia-chichimeca/cover.jpg",
+    pdf:
+      "publications/ixtlilxochitl-historia-chichimeca/Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/ixtlilxochitl-historia-chichimeca/Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.epub",
+    pageCount: 319,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "自筆稿", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テツココ", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "チチメカ",
+      "アコルワ",
+      "テツココ王統",
+      "ネサワルコヨトル",
+      "テノチティトラン",
+      "征服史",
+      "Códice Chimalpahin",
+      "自筆稿",
+      "17世紀",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -5263,6 +5445,9 @@ const springerArchiveRights =
 const JapaneseEditionNoReuseRights =
   "日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。";
 
+const ixtlilxochitlRights =
+  "フェルナンド・デ・アルバ・イシュトリルショチトルの原著本文は著作権保護期間を満了したパブリックドメイン資料です。日本語訳・校訂・組版は原著本文のパブリックドメイン状態とは別であり、再利用許諾を付与していません。本文の転記・校合に用いたINAH公開のCódice Chimalpahin自筆稿画像はCC BY-NC-ND 4.0で提供されていますが、本版には当該自筆稿画像を転載していません。各冊に収録した別系統の絵文書・初期刊本図版については、原所蔵機関、デジタル提供元、個別の権利表示・利用条件を冊内に明記しています。";
+
 const perseePublicDomainRights =
   "モーリス・ド・ペリニーの原刊本文および著者作成の図・写真は著作権保護期間を満了しています。第三者名義の図版は個別の権利表示が優先します。Persée由来の画像・データは、現行CGUにより、私的・科学・教育目的等の非営利用途に限り、Persée名、出典および原ページへのリンクを表示して利用できます。商用利用にはPerséeの明示的許諾が必要です。" +
   JapaneseEditionNoReuseRights;
@@ -5272,6 +5457,61 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "ixtlilxochitl-sumaria-todas": {
+    sourceEdition:
+      "Fernando de Alva Ixtlilxóchitl『Sumaria relación de todas las cosas que han sucedido en la Nueva España, y de muchas cosas que los Tultecas alcanzaron y supieron…』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第1巻 f.1r–81v。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開するCódice Chimalpahin第1巻画像を本文正本とし、162面すべてを転記・校合した。後代刊本・校訂版は難読箇所と異読の確認補助に限り、自筆稿にない本文や後代の作品配列を採用していない。自筆稿画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
+    rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
+  "ixtlilxochitl-relacion-sucinta": {
+    sourceEdition:
+      "Fernando de Alva Ixtlilxóchitl『Relación sucinta en forma de memorial de las historias de la Nueva España y sus señoríos hasta el ingreso de los españoles』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第1巻 f.177r–185v。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開するCódice Chimalpahin第1巻画像を本文正本とし、18面すべてを転記・校合した。冒頭欠損、報告番号、抹消・欄外追記は自筆稿どおり記録し、隣接する空白葉およびNuño de Guzmán関係の別文書を収録していない。自筆稿画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
+    rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
+  "ixtlilxochitl-compendio-tetzcoco": {
+    sourceEdition:
+      "Fernando de Alva Ixtlilxóchitl『Compendio histórico de los reyes de Tetzcoco』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第2巻 f.147r–214r。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開するCódice Chimalpahin第2巻画像を本文正本とし、135面すべてを転記・校合した。後代刊本・校訂版は難読箇所と異読の確認補助に限り、f.145–146の空白葉を作品へ含めていない。自筆稿画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_2/index.php",
+    rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
+  "ixtlilxochitl-sumaria-general": {
+    sourceEdition:
+      "Fernando de Alva Ixtlilxóchitl『Sumaria relación de la historia general de esta Nueva España desde el origen del mundo hasta la hora de agora…』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第1巻 f.161r–175v。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開するCódice Chimalpahin第1巻画像を本文正本とし、30面すべてを転記・校合した。第1作品との間の別紙や後続作品を混入させず、独立作品としての連続範囲を保持した。自筆稿画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
+    rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
+  "ixtlilxochitl-historia-chichimeca": {
+    sourceEdition:
+      "Fernando de Alva Ixtlilxóchitl『Historia de la nación chichimeca』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第2巻 f.1r–143v。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開するCódice Chimalpahin第2巻画像を本文正本とし、286面すべてを転記・校合した。後代版による末尾挿入紙の再配列を採らず、筆跡・文脈・接続に基づく論理順を訳注とともに明示した。f.144r–144vの関連資料は本文外とし、自筆稿画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_2/index.php",
+    rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
   "remesal-historia-general-1619": {
     sourceEdition:
       "Antonio de Remesal『Historia de la Provincia de S. Vicente de Chiapa y Guatemala de la Orden de nro. glorioso Padre Sancto Domingo: escríbense juntamente los principios de las demás provincias de esta religión de las Indias Occidentales, y lo secular de la gobernación de Guatemala』（Madrid: Francisco de Angulo、1619年初版）。",

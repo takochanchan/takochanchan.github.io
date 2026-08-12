@@ -1,11 +1,16 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "79b30cb33b881b93e2aeb0fcdee42f0f07808557",
+  "archive_commit": "d26de634ebefd9f4a8cb042ca62f1134041e359b",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
     "gemelli-careri-giro-del-mondo-nuova-spagna-1700": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/master.docx",
+    "ixtlilxochitl-sumaria-todas": "publications/ixtlilxochitl-sumaria-todas/master.docx",
+    "ixtlilxochitl-relacion-sucinta": "publications/ixtlilxochitl-relacion-sucinta/master.docx",
+    "ixtlilxochitl-compendio-tetzcoco": "publications/ixtlilxochitl-compendio-tetzcoco/master.docx",
+    "ixtlilxochitl-sumaria-general": "publications/ixtlilxochitl-sumaria-general/master.docx",
+    "ixtlilxochitl-historia-chichimeca": "publications/ixtlilxochitl-historia-chichimeca/master.docx",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",

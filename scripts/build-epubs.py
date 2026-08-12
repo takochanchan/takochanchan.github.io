@@ -238,6 +238,21 @@ DOCX_SOURCES = {
     / "Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.docx",
     "perigny-ruines-rio-bec-1909": SOURCES
     / "Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.docx",
+    "ixtlilxochitl-sumaria-todas": SOURCES
+    / "翻訳サイト"
+    / "Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Todas_Cosas_Japanese_Complete_Translation.docx",
+    "ixtlilxochitl-relacion-sucinta": SOURCES
+    / "翻訳サイト"
+    / "Fernando_de_Alva_Ixtlilxochitl_Relacion_Sucinta_Memorial_Japanese_Complete_Translation.docx",
+    "ixtlilxochitl-compendio-tetzcoco": SOURCES
+    / "翻訳サイト"
+    / "Fernando_de_Alva_Ixtlilxochitl_Compendio_Historico_Reyes_Tetzcoco_Japanese_Complete_Translation.docx",
+    "ixtlilxochitl-sumaria-general": SOURCES
+    / "翻訳サイト"
+    / "Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Historia_General_Japanese_Complete_Translation.docx",
+    "ixtlilxochitl-historia-chichimeca": SOURCES
+    / "翻訳サイト"
+    / "Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {
