@@ -31,7 +31,7 @@ from xml.etree import ElementTree as ET
 
 
 ORIGINAL_MARKER_RE = re.compile(
-    r"〔\s*(?:(?:原刊|原資料|原書|原写本|原稿|底本|原誌|原報告)"
+    r"〔\s*(?:(?:原刊|原資料|原書|原写本|自筆稿(?!の)|原稿|底本|原誌|原報告)"
     r"[^〕\r\n]{0,180})〕"
 )
 OCR_CACHE_VERSION = 1
@@ -178,6 +178,7 @@ def is_original_page_marker(value: str) -> bool:
             r"表紙|扉|標題紙)"
             r"|原書(?:\s+p\.?|折込図版)"
             r"|原写本(?:\s+p\.?|・第|・無番号挿入葉)"
+            r"|自筆稿(?:\s+第\d+巻\s+f\.?\s*\d+[rv]?|\s+f\.?\s*\d+[rv]?)"
             r"|原稿\s+p\."
             r"|底本\s+p\."
             r"|原誌(?:\s*p\.?|\d+頁)"
