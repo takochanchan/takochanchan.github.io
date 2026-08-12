@@ -1,0 +1,440 @@
+name: Publish Tezozomoc release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-tezozomoc-assets-20260812.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      WORKFLOW_PATH: .github/workflows/publish-tezozomoc-assets-20260812.yml
+      STAGING_BRANCH: agent/release-upload-tezozomoc-20260812-2220
+      ASSET_MANIFEST: |-
+          [
+            {
+              "slug": "tezozomoc-cronica-mexicana-kraus-117",
+              "kind": "pdf",
+              "name": "Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.pdf",
+              "title": "メキシコ年代記",
+              "author": "伝エルナンド・アルバラード・テソソモク",
+              "pages": 509,
+              "folioMarkers": 316,
+              "chapters": 111,
+              "size": 3569620,
+              "sha256": "a38c8f2c66531dbb787a465d96b49120be4aaddc873a25d6d1f68bd4c13e44fd",
+              "blobs": [
+                "e166d2a900cb068db157fb14d7218b9a42a36b57",
+                "7f6a15b1c816f567568d5ad571c47a32a9ac95fb",
+                "be5913001ab00cd502ebc388444bc3428e3b2d87",
+                "be45326e9f044ceac8f632efbdf9418ee975b0b9",
+                "79e9b33ba550d67029ec8d4a923519aee020f533",
+                "9ff6cd0e01b262c1aba8cac7dbbac903a75eb7de",
+                "3d1aa1dee9f1b042c61c06778b520e9b5d3158a1",
+                "dc44f77cc47ccf82fd24f78bd4b0263c9bf91e80",
+                "cda993adc975969bfc071181665d253c59f6aefe",
+                "40503d7f0009a9db3491986ab909f80c5c8b4203",
+                "9f0022780ec6906e7b95287eb41c376a5ecc6c8d",
+                "80e56b03975a0e08a1fef2d460f4b6fe8f716f1e",
+                "359af9fb48a4307c2db3c4f79a8215bb9acbae68",
+                "accb3dc561a16b46448e40081a867d4b00d42f95",
+                "fdd1c53aa1965567bf2e22c264e49777422f2a9c",
+                "9f461a9fbc43265a3cdc95224146738f5c370836",
+                "9adbdb3da309300712897625900ceda40b77c875",
+                "3b53fc8f4adaeb1f92cd314eac81fa9cd69ed305",
+                "dc12474a3340b03300be38b8def50a90ee5edf18",
+                "d3eec7d6ba37af6b4babf9a972f316d22c1e3afa",
+                "60c34fdd9c70d2cc168692bdc7eab8cce4c017a4",
+                "ea3c29bc85210671977f0b8810cec5ad826fe68d",
+                "c9a8dedf5a1248ba30bf550341c481e9d64be008",
+                "c5e88df031ea139d19691e0be2b08ebf88421183",
+                "a4b40857bf7c18c7599317464fb68c69d0614fa1",
+                "b54841925ed8bd51fbb13b38b08770e435849247",
+                "fa0d000b2f4cf61f1a1bd513ddfdab0289607bdb",
+                "11408e469789cd405eaaca30714bad82421b5119",
+                "e3e858a852e286946e632451dc3b9512a655ce33",
+                "e2bca1255b36b720ae6d0dea02804fe96b7b27cc",
+                "a68d8fb33b56a7f7d2e65d665cd23bc411276153",
+                "e9906b3a67020dce1b5f967b5e267cfb7f0df534",
+                "f93614a3d94cf17a54396e268049f033027ad10a",
+                "8df0df603f0dcee04587a2d6e5692f9c8293eace",
+                "bbe55c2c6654d50d4f26e24ec1ea90be489f1857",
+                "6c12a33bbcd76e63b74ac74cea295d2d5804104e",
+                "02fc25b94e6447f349a86d08e33914988ab3de6e",
+                "219650440022f9469c7a66808852ac43d4e37f10",
+                "1e3b29dd33cfb499eee078ffd78a626fe345f3bb",
+                "b5bffea613747bd3ebaac8d6e0534168e30ac782",
+                "eeb27d3521ab8e3746611e495d38545042eaec34",
+                "e809550acda85b766c8c36e5bfb4d1ebd836a37c",
+                "5575edc4529a3113d285a175e50cc2f0f24240e4",
+                "86a0c3cb9789e9394506e2ecdb1b81e0aaaf2431",
+                "c0b04ec645d163ccdfa09045c0ba10b210d58a0a",
+                "7b46812b60bb81a40c7e48a60abab407be6802db",
+                "44d20c1d82adece47eaa75862f6820c288dbe49a",
+                "ae34385cd6a61fb1be7390f01c512fd152546d98",
+                "3c399de5a777229af09e256a1a60852b572756b1",
+                "67e22590e9b564872154eaf76ff569b49d849d6d",
+                "ae6c356053f52048cae053d754debcda571d5b75",
+                "c760847f00f4bd38d243b32c32203f1d15c60184",
+                "937a89c1dd19a9a5c5c6b42ab2e56475ce75a112",
+                "07a2d7198e3553d2b55debdf02283bd0107e44be",
+                "949516b1545381ddabe5c23a88f8ecc59056086e"
+              ]
+            },
+            {
+              "slug": "tezozomoc-cronica-mexicana-kraus-117",
+              "kind": "epub",
+              "name": "Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.epub",
+              "title": "メキシコ年代記",
+              "author": "伝エルナンド・アルバラード・テソソモク",
+              "minJapanese": 360000,
+              "imageRefs": 0,
+              "folioMarkers": 316,
+              "chapters": 111,
+              "size": 631308,
+              "sha256": "b852dd13453a8562bbf7dc0f40c07c49c001da4053a52c48aa71e57c7a59b0bb",
+              "blobs": [
+                "14c81c0d7487eeab4c58d9799300e79ef872c2ba",
+                "5b005e042bd9f8548031a5d0215bd4470272d4cb",
+                "05d1f518a527dd1b55427517c8300146a249bea8",
+                "153f2e123c41c5f3f2bfbe569a8edef50eba984b",
+                "a808d1cf4f0b8490f68b99e25f1d17270ef44bf9",
+                "6e312ffdc348d12bc56d1b73ed631c4389720103",
+                "018dfde36c6e0ad8f8d7334ebbb8c025d64d147a",
+                "6dc0dbe8d013d8ae2bc097d4e8aa16b336119321",
+                "40e994cf4dde725b40eef1b4d73836e1dfa3b956",
+                "84ba1883a7f1d64cec3781d36539ea91d9f8757a"
+              ]
+            }
+          ]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Reassemble and validate release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/tezozomoc-assets
+          python3 - <<'PY'
+          import base64
+          import hashlib
+          import json
+          import os
+          import posixpath
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+          from xml.etree import ElementTree as ET
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/tezozomoc-assets")
+          repository = os.environ["GITHUB_REPOSITORY"]
+          forbidden = (
+              "公開前確認版",
+              "prepublication proof",
+              "従来版",
+              "校訂注",
+              "翻訳プロジェクト",
+              "GPT",
+              "ChatGPT",
+              "確認用",
+              "未公開",
+              "公開承認前",
+          )
+
+          for asset in assets:
+              target = root / asset["name"]
+              with target.open("wb") as output:
+                  for blob_sha in asset["blobs"]:
+                      encoded = subprocess.check_output(
+                          [
+                              "gh",
+                              "api",
+                              f"repos/{repository}/git/blobs/{blob_sha}",
+                              "--jq",
+                              ".content",
+                          ],
+                          text=True,
+                      )
+                      output.write(base64.b64decode("".join(encoded.split())))
+
+              data = target.read_bytes()
+              assert len(data) == asset["size"], (asset["name"], len(data))
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+
+              if asset["kind"] == "pdf":
+                  info = subprocess.check_output(["pdfinfo", str(target)], text=True)
+                  pages = int(re.search(r"^Pages:\s+(\d+)$", info, re.M).group(1))
+                  assert pages == asset["pages"], (asset["name"], pages)
+                  assert "612 x 792 pts (letter)" in info
+                  assert re.search(r"^Tagged:\s+yes$", info, re.M)
+                  assert re.search(r"^JavaScript:\s+no$", info, re.M)
+                  assert re.search(r"^Encrypted:\s+no$", info, re.M)
+
+                  fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
+                  font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
+                  assert font_lines
+                  assert all(line.count("yes") >= 3 for line in font_lines)
+                  assert any("NotoSerifJP" in line for line in font_lines)
+                  assert any("NotoSansJP" in line for line in font_lines)
+
+                  text = subprocess.check_output(
+                      ["pdftotext", "-layout", str(target), "-"],
+                      text=True,
+                  )
+                  normalized = re.sub(r"\s+", "", text)
+                  for required in (
+                      asset["title"],
+                      asset["author"],
+                      "独立日本語全訳",
+                      "〔クラウス117写本f.160v〕",
+                      "〔クラウス117写本f.4r–5v欠葉〕",
+                      "写本の物理的要素",
+                      "利用・複製に既知の制限なし",
+                      "原写本の物理的要素217件",
+                  ):
+                      assert re.sub(r"\s+", "", required) in normalized, required
+                  folios = re.findall(r"〔クラウス117写本f\.\d+[rv]〕", normalized)
+                  assert len(folios) == asset["folioMarkers"], len(folios)
+                  headings = set(re.findall(r"写本第(\d+)章", normalized))
+                  assert len(headings) == asset["chapters"], len(headings)
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+              else:
+                  with zipfile.ZipFile(target) as archive:
+                      assert archive.testzip() is None
+                      names = archive.namelist()
+                      assert names[0] == "mimetype"
+                      assert archive.getinfo("mimetype").compress_type == zipfile.ZIP_STORED
+                      assert archive.read("mimetype") == b"application/epub+zip"
+
+                      container = ET.fromstring(archive.read("META-INF/container.xml"))
+                      rootfile = container.find(
+                          ".//{urn:oasis:names:tc:opendocument:xmlns:container}rootfile"
+                      )
+                      assert rootfile is not None
+                      opf_path = rootfile.attrib["full-path"]
+                      opf = ET.fromstring(archive.read(opf_path))
+                      assert opf.attrib.get("version", "").startswith("3")
+                      ns = {"opf": "http://www.idpf.org/2007/opf"}
+                      items = opf.findall(".//opf:manifest/opf:item", ns)
+                      assert items
+                      by_id = {item.attrib["id"]: item for item in items}
+                      assert len([
+                          item for item in items
+                          if "nav" in item.attrib.get("properties", "").split()
+                      ]) == 1
+                      assert len([
+                          item for item in items
+                          if "cover-image" in item.attrib.get("properties", "").split()
+                      ]) == 1
+                      opf_dir = posixpath.dirname(opf_path)
+                      for item in items:
+                          member = posixpath.normpath(
+                              posixpath.join(opf_dir, item.attrib["href"])
+                          )
+                          assert member in names, member
+                      spine = opf.findall(".//opf:spine/opf:itemref", ns)
+                      assert spine
+                      assert all(item.attrib["idref"] in by_id for item in spine)
+
+                      documents = []
+                      content_documents = []
+                      document_paths = []
+                      for item in items:
+                          if item.attrib.get("media-type") != "application/xhtml+xml":
+                              continue
+                          member = posixpath.normpath(
+                              posixpath.join(opf_dir, item.attrib["href"])
+                          )
+                          document = ET.fromstring(archive.read(member))
+                          document_paths.append(member)
+                          documents.append(document)
+                          if "nav" not in item.attrib.get("properties", "").split():
+                              content_documents.append(document)
+
+                      for member, document in zip(document_paths, documents):
+                          member_dir = posixpath.dirname(member)
+                          for element in document.iter():
+                              for attr in ("href", "src"):
+                                  value = element.attrib.get(attr)
+                                  if not value:
+                                      continue
+                                  parsed = urlsplit(value)
+                                  if parsed.scheme or parsed.netloc or not parsed.path:
+                                      continue
+                                  resolved = posixpath.normpath(
+                                      posixpath.join(member_dir, unquote(parsed.path))
+                                  )
+                                  assert resolved in names, (member, value, resolved)
+
+                  text = "\n".join(
+                      "".join(document.itertext()) for document in content_documents
+                  )
+                  normalized = re.sub(r"\s+", "", text)
+                  image_refs = sum(
+                      len(document.findall(".//{http://www.w3.org/1999/xhtml}img"))
+                      for document in content_documents
+                  )
+                  japanese = len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", text))
+                  chapter_headings = [
+                      "".join(element.itertext())
+                      for document in content_documents
+                      for element in document.iter()
+                      if element.tag.rsplit("}", 1)[-1] == "h1"
+                      and re.match(r"^写本第\d+章", "".join(element.itertext()))
+                  ]
+                  folios = re.findall(r"〔クラウス117写本f\.\d+[rv]〕", normalized)
+                  assert japanese >= asset["minJapanese"], japanese
+                  assert image_refs == asset["imageRefs"], image_refs
+                  assert len(chapter_headings) == asset["chapters"], len(chapter_headings)
+                  assert len(folios) == asset["folioMarkers"], len(folios)
+                  for required in (
+                      asset["title"],
+                      asset["author"],
+                      "独立日本語全訳",
+                      "〔クラウス117写本f.160v〕",
+                      "〔クラウス117写本f.4r–5v欠葉〕",
+                      "写本の物理的要素",
+                      "利用・複製に既知の制限なし",
+                      "原写本の物理的要素217件",
+                      "日本語翻訳版には再利用ライセンスを設定していません",
+                  ):
+                      assert re.sub(r"\s+", "", required) in normalized, required
+                  assert not any(term in text for term in forbidden)
+                  assert "\ufffd" not in text and "\x00" not in text
+          PY
+
+      - name: Upload release assets and verify downloads
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current /tmp/verified
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/current --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          names = {asset["name"] for asset in assets}
+          current = Path("/tmp/current/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          kept = [
+              line for line in current
+              if len(line.split(maxsplit=1)) != 2 or line.split(maxsplit=1)[1] not in names
+          ]
+          kept.extend(f'{asset["sha256"]}  {asset["name"]}' for asset in assets)
+          Path("/tmp/SHA256SUMS.txt").write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+
+          mapfile -t asset_paths < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print("/tmp/tezozomoc-assets/" + asset["name"])
+          PY
+          )
+          gh release upload publications-current "${asset_paths[@]}" /tmp/SHA256SUMS.txt --clobber --repo "$GITHUB_REPOSITORY"
+
+          mapfile -t asset_names < <(
+            python3 - <<'PY'
+          import json
+          import os
+          for asset in json.loads(os.environ["ASSET_MANIFEST"]):
+              print(asset["name"])
+          PY
+          )
+          for name in "${asset_names[@]}"; do
+            gh release download publications-current --pattern "$name" --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+          done
+          gh release download publications-current --pattern SHA256SUMS.txt --dir /tmp/verified --repo "$GITHUB_REPOSITORY"
+
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          assets = json.loads(os.environ["ASSET_MANIFEST"])
+          root = Path("/tmp/verified")
+          sums = root.joinpath("SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          for asset in assets:
+              data = root.joinpath(asset["name"]).read_bytes()
+              assert len(data) == asset["size"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"]
+              assert f'{asset["sha256"]}  {asset["name"]}' in sums
+          PY
+
+      - name: Remove one-time workflow and staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            git rm -f .github/publication-failures/tezozomoc-release-*.txt 2>/dev/null || true
+            if git diff --cached --quiet; then
+              break
+            fi
+            git commit -m "Remove completed Tezozomoc release workflow"
+            if git push origin HEAD:main; then
+              break
+            fi
+            if [ "$attempt" = 3 ]; then
+              exit 1
+            fi
+          done
+          git push origin --delete "$STAGING_BRANCH" || true
+
+      - name: Record workflow failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          failure_path=".github/publication-failures/tezozomoc-release-$GITHUB_RUN_ID.txt"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B failure origin/main
+            mkdir -p "$(dirname "$failure_path")"
+            printf 'run_id=%s\nrun_url=https://github.com/%s/actions/runs/%s\n' "$GITHUB_RUN_ID" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" > "$failure_path"
+            git add "$failure_path"
+            git commit -m "Record failed Tezozomoc release workflow"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
