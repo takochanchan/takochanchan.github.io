@@ -168,7 +168,7 @@ try {
     pages: 121,
   });
   await verifyCounts("ラカンドン", { books: 46, papers: 13 });
-  await verifyCounts("ポ", { books: 39, papers: 10 });
+  await verifyCounts("ポ", { books: 40, papers: 10 });
   process.stdout.write(
     `Literal search OK: グリハルバ ${grijalva} pages, ` +
       `グリハルバ川 ${grijalvaRiver} pages, ` +
