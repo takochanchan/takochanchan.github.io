@@ -1,0 +1,127 @@
+name: Preflight Tezozomoc site publication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/preflight-tezozomoc-site-20260812.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tezozomoc-site-preflight
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      WORKFLOW_PATH: .github/workflows/preflight-tezozomoc-site-20260812.yml
+      PREFLIGHT_COMMIT: 88146bd03fa8ff4dbfbd75f9aa4e48b3c2c96095
+
+    steps:
+      - name: Check out proposed publication
+        uses: actions/checkout@v4
+        with:
+          ref: 88146bd03fa8ff4dbfbd75f9aa4e48b3c2c96095
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Restore checksum-verified search inputs
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: tezozomoc-preflight-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure PDF text and OCR tools are available
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch exact final PDF and EPUB inputs
+        run: npm run fetch:search-assets
+
+      - name: Generate full-text search index
+        run: npm run build:search
+
+      - name: Verify full-text index and archive tests
+        run: |
+          npm run verify:search
+          npm test
+
+      - name: Verify Tezozomoc page map
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          import { readFile } from "node:fs/promises";
+
+          const slug = "tezozomoc-cronica-mexicana-kraus-117";
+          const map = JSON.parse(
+            await readFile(`dist/search/maps/${slug}.json`, "utf8"),
+          );
+          const labels = Object.values(map.blocks).map((entry) => String(entry[0]));
+          assert.equal(map.slug, slug);
+          assert.equal(
+            map.pdfSha256,
+            "a38c8f2c66531dbb787a465d96b49120be4aaddc873a25d6d1f68bd4c13e44fd",
+          );
+          assert.equal(
+            map.sourceSha256,
+            "b852dd13453a8562bbf7dc0f40c07c49c001da4053a52c48aa71e57c7a59b0bb",
+          );
+          assert.ok(labels.some((label) => /クラウス\s*117\s*写本 f\.1r/.test(label)));
+          assert.ok(labels.some((label) => /クラウス\s*117\s*写本 f\.160v/.test(label)));
+          assert.ok(
+            Object.values(map.blocks).every(
+              (entry) =>
+                Number.isInteger(entry[1]) &&
+                entry[1] >= 1 &&
+                entry[1] <= 509,
+            ),
+          );
+          console.log(
+            `Tezozomoc page map OK: ${Object.keys(map.blocks).length} blocks.`,
+          );
+          NODE
+
+      - name: Remove one-time preflight workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B cleanup origin/main
+            if [ -f "$WORKFLOW_PATH" ]; then
+              git rm "$WORKFLOW_PATH"
+            fi
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Remove completed Tezozomoc site preflight"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1
