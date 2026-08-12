@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "6bb284dc67da228daaabbce709c18f017001d65c",
+  "archive_commit": "a5935fb84f8d0507bef0b891cc1aa42746191840",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -11,6 +11,7 @@
     "ixtlilxochitl-compendio-tetzcoco": "publications/ixtlilxochitl-compendio-tetzcoco/master.docx",
     "ixtlilxochitl-sumaria-general": "publications/ixtlilxochitl-sumaria-general/master.docx",
     "ixtlilxochitl-historia-chichimeca": "publications/ixtlilxochitl-historia-chichimeca/master.docx",
+    "castillo-historias-mexicanos-conquista-1908": "publications/castillo-historias-mexicanos-conquista-1908/master.docx",
     "tezozomoc-cronica-mexicana-kraus-117": "publications/tezozomoc-cronica-mexicana-kraus-117/master.docx",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "marimon-lacandones-1695": "publications/marimon-lacandones-1695/master.md",

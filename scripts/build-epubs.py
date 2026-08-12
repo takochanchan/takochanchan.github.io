@@ -259,6 +259,10 @@ DOCX_SOURCES = {
 }
 
 MARKDOWN_SOURCES = {
+    "castillo-historias-mexicanos-conquista-1908": SOURCES
+    / "翻訳サイト"
+    / "castillo-historias-mexicanos-conquista-1908"
+    / "master.md",
     "codex-perez-pmm9-1877": SOURCES
     / "翻訳サイト"
     / "codex-perez-pmm9-1877"

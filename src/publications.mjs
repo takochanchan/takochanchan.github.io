@@ -5456,6 +5456,44 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "castillo-historias-mexicanos-conquista-1908",
+    title: "メシカ人と諸民族の到来史／メシコ征服史",
+    originalTitle:
+      "Historia de la venida de los mexicanos y otros pueblos e Historia de la conquista",
+    subtitle: "16世紀ナワトル語史料・現存断片全訳",
+    author: "クリストバル・デル・カスティーリョ",
+    series: "HISTORIAS DE CRISTÓBAL DEL CASTILLO · SIGLO XVI",
+    originalPublication:
+      "16世紀末ナワトル語原著、フィレンツェ、サルヴァドール・ランディ印刷所、1908年刊",
+    year: 1599,
+    extent:
+      "PDF 62頁・三部30章および現存断片・原刊／写本出所標識43件・原刊標題紙1点・訳注8項",
+    description:
+      "16世紀末にナワトル語で著された、メシカ人と諸民族の移住伝承、メシコの征服戦争、暦に関する歴史断片の日本語全訳。1908年パソ・イ・トロンコソ版を主底本とし、同版未収録断片と疑問箇所をフランス国立図書館所蔵のFonds mexicain諸写本で照合しています。ナワトル語本文が失われた章は、アントニオ・ピチャルドの現存スペイン語訳・要約から訳しました。",
+    cover:
+      "publications/castillo-historias-mexicanos-conquista-1908/cover.jpg",
+    pdf:
+      "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.epub",
+    pageCount: 62,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "写本史料", "一次史料"],
+    regions: ["メキシコ", "メキシコ盆地", "テノチティトラン", "アナワク"],
+    languages: ["ナワトル語", "スペイン語"],
+    tags: [
+      "メシカ",
+      "アステカ",
+      "移住伝承",
+      "メシコ征服史",
+      "クリストバル・デル・カスティーリョ",
+      "アントニオ・ピチャルド",
+      "フランシスコ・デル・パソ・イ・トロンコソ",
+      "16世紀",
+    ],
+  },
+  {
     slug: "tezozomoc-cronica-mexicana-kraus-117",
     title: "メキシコ年代記",
     originalTitle: "Crónica mexicana",
@@ -5583,6 +5621,17 @@ const publicationMetadata = {
     rights: ixtlilxochitlRights,
     publishedDate: "2026-08-12",
     updatedDate: "2026-08-12",
+  },
+  "castillo-historias-mexicanos-conquista-1908": {
+    sourceEdition:
+      "Cristóbal del Castillo『Fragmentos de la obra general sobre historia de los mexicanos, escrita en lengua náhuatl por Cristóbal del Castillo, siglo XVI』、Francisco del Paso y Troncosoスペイン語訳（Florencia: Tipografía de Salvador Landi、1908年）。",
+    sourceProvider:
+      "Internet Archive公開のテキサス大学図書館旧蔵1908年版（identifier: fragmentosdelao00castgoog）を主底本とし、同版未収録断片と判読上の疑問箇所をBibliothèque nationale de France, Gallica公開のFonds mexicain 262・263・294・297・304・305・306・310で照合した。写本の所在・配列・帰属判断にはRamón Troncoso Pérez『Crónica del Nepantla』（2011年博士論文、UABリポジトリ2012年公開）を主要典拠とし、Federico Navarrete Linares編訳（1991／2001年）とAntonio de León y Gama（1792年）を補助的に参照した。これら現代研究の校訂本文・現代訳は転載せず、日本語本文の重訳元にもしていない。",
+    sourceUrl: "https://archive.org/details/fragmentosdelao00castgoog",
+    rights:
+      "16世紀原著本文と1908年刊本の本文・翻訳は著作権保護期間を満了し、Internet Archiveの当該項目はNOT_IN_COPYRIGHTと表示しています。原刊標題紙画像は同公開スキャンから出所表示を保持して収録しました。BnF Gallicaの写本画像は本文照合に限って用い、本版へ転載していません。Ramón Troncoso Pérez論文はUABリポジトリ上で著作権・関連権による保護対象と表示されるため、研究上の判断のみを参照し、本文・現代訳を転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
   },
   "tezozomoc-cronica-mexicana-kraus-117": {
     sourceEdition:

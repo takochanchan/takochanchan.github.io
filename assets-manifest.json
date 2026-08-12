@@ -218,6 +218,24 @@
       "sha256": "1f1bdc97e6f8fde54ba22c12bd4b08c56bf74b13e5495a8fcfea0b6da30c44c2"
     },
     {
+      "path": "publications/castillo-historias-mexicanos-conquista-1908/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/castillo-historias-mexicanos-conquista-1908/cover.jpg",
+      "size": 25801,
+      "sha256": "8bf92a18cebf47832f0a5e2a5cefd5ace08d69279c1379082665a05db92a5b7d"
+    },
+    {
+      "path": "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.epub",
+      "size": 498838,
+      "sha256": "1a9e74969171670aea5c80dc1fd2e0fa01126fb3eea5a0608ec818640b4e4215"
+    },
+    {
+      "path": "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.pdf",
+      "size": 857089,
+      "sha256": "f5e5e1a6c63dbf38cb7373371b12070b28f50aaa418e32bdde83625b602ca863"
+    },
+    {
       "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "size": 2587197,
