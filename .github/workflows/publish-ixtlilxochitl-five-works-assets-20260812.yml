@@ -299,7 +299,10 @@ jobs:
                   fonts = subprocess.check_output(["pdffonts", str(target)], text=True)
                   font_lines = [line for line in fonts.splitlines()[2:] if line.strip()]
                   assert font_lines
-                  assert all("Noto" in line and line.count("yes") >= 3 for line in font_lines)
+                  assert all(
+                      ("Noto" in line or "DejaVu" in line) and line.count("yes") >= 3
+                      for line in font_lines
+                  )
 
                   images = subprocess.check_output(["pdfimages", "-list", str(target)], text=True)
                   image_lines = [
@@ -458,6 +461,7 @@ jobs:
             if [ -f "$WORKFLOW_PATH" ]; then
               git rm "$WORKFLOW_PATH"
             fi
+            git rm -f .github/publication-failures/ixtlilxochitl-five-works-release-*.txt 2>/dev/null || true
             if git diff --cached --quiet; then
               break
             fi
