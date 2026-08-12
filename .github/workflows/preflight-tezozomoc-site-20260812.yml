@@ -19,13 +19,13 @@ jobs:
     timeout-minutes: 60
     env:
       WORKFLOW_PATH: .github/workflows/preflight-tezozomoc-site-20260812.yml
-      PREFLIGHT_COMMIT: 88146bd03fa8ff4dbfbd75f9aa4e48b3c2c96095
+      PREFLIGHT_COMMIT: f7dbbc799a1fee76002dacf38bbba442a3d49cd1
 
     steps:
       - name: Check out proposed publication
         uses: actions/checkout@v4
         with:
-          ref: 88146bd03fa8ff4dbfbd75f9aa4e48b3c2c96095
+          ref: f7dbbc799a1fee76002dacf38bbba442a3d49cd1
           fetch-depth: 0
 
       - name: Set up Node
