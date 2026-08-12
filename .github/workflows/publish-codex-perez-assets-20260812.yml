@@ -1,0 +1,187 @@
+name: Publish Codex Perez release assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-codex-perez-assets-20260812.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-codex-perez-assets-20260812
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: publications-current
+      STAGING_REF: agent/release-upload-codex-perez-20260812
+      WORKFLOW_PATH: .github/workflows/publish-codex-perez-assets-20260812.yml
+      PDF_NAME: Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.pdf
+      EPUB_NAME: Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub
+      PDF_SIZE: "5798349"
+      EPUB_SIZE: "9263022"
+      PDF_SHA256: e703e50da9ab527f9e9365e68bd9be4d6940741c4c95354a1b157b4e477abac0
+      EPUB_SHA256: e16155ceda369c06e4d9bf157d0ffc265390dc8ff53f8158dacd319e3f399a75
+    steps:
+      - name: Check out staged chunks
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGING_REF }}
+          fetch-depth: 1
+
+      - name: Reassemble exact release files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          cat .release-staging/codex-perez-20260812/pdf/part-* > "release/$PDF_NAME"
+          cat .release-staging/codex-perez-20260812/epub/part-* > "release/$EPUB_NAME"
+          test "$(stat -c %s "release/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "release/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "release/$PDF_NAME" | cut -d' ' -f1)" = "$PDF_SHA256"
+          test "$(sha256sum "release/$EPUB_NAME" | cut -d' ' -f1)" = "$EPUB_SHA256"
+
+      - name: Install PDF inspection tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install --yes poppler-utils
+
+      - name: Validate final PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          PDF="release/$PDF_NAME"
+          pdfinfo "$PDF" > pdfinfo.txt
+          grep -F 'Title:           コデックス・ペレス' pdfinfo.txt
+          grep -F 'Subject:         マニのチラム・バラムの書とユカテコ・マヤ史料' pdfinfo.txt
+          grep -E '^Tagged:[[:space:]]+yes$' pdfinfo.txt
+          grep -E '^Pages:[[:space:]]+231$' pdfinfo.txt
+          grep -E '^Page size:[[:space:]]+612 x 792 pts \(letter\)$' pdfinfo.txt
+          pdffonts "$PDF" > pdffonts.txt
+          awk 'NR > 2 && ($4 != "yes" || $5 != "yes" || $6 != "yes") { print; bad=1 } END { exit bad }' pdffonts.txt
+          grep -F 'NotoSerifJP' pdffonts.txt
+          grep -F 'NotoSansJP' pdffonts.txt
+          pdftotext -enc UTF-8 "$PDF" pdf.txt
+          grep -F 'コデックス・ペレス' pdf.txt
+          grep -F 'マニのチラム・バラムの書とユカテコ・マヤ史料' pdf.txt
+          grep -F 'Princeton Mesoamerican Manuscripts no. 9' pdf.txt
+          grep -F 'Copyright Not Evaluated' pdf.txt
+          if grep -E 'HOLD|独立レビュー|監査|対校行|未完了|別途確認|試訳|刊行前|校閲用|確認用|Prepublication|Proof' pdf.txt; then
+            exit 1
+          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          text = Path('pdf.txt').read_text(encoding='utf-8')
+          assert '\ufffd' not in text
+          assert '\x00' not in text
+          PY
+
+      - name: Validate final EPUB
+        shell: bash
+        run: |
+          set -euo pipefail
+          unzip -t "release/$EPUB_NAME"
+          python3 - <<'PY'
+          import re
+          import zipfile
+          from pathlib import Path
+          epub = Path('release') / Path(__import__('os').environ['EPUB_NAME'])
+          forbidden = re.compile(r'HOLD|独立レビュー|監査|対校行|未完了|別途確認|試訳|刊行前|校閲用|確認用|Prepublication|Proof')
+          with zipfile.ZipFile(epub) as archive:
+              names = archive.namelist()
+              assert archive.read('mimetype') == b'application/epub+zip'
+              assert 'META-INF/container.xml' in names
+              opf_names = [name for name in names if name.endswith('.opf')]
+              assert len(opf_names) == 1
+              opf = archive.read(opf_names[0]).decode('utf-8')
+              assert re.search(r'<package\b[^>]*\bversion="3(?:\.0)?"', opf)
+              xhtml = '\n'.join(
+                  archive.read(name).decode('utf-8')
+                  for name in names
+                  if name.endswith(('.xhtml', '.html'))
+              )
+              assert 'コデックス・ペレス' in xhtml
+              assert 'マニのチラム・バラムの書とユカテコ・マヤ史料' in xhtml
+              assert 'Princeton Mesoamerican Manuscripts no. 9' in xhtml
+              assert 'Copyright Not Evaluated' in xhtml
+              assert len(re.findall(r'[ぁ-んァ-ヶ一-龠々〆ヵヶ]', xhtml)) >= 95000
+              assert len(re.findall(r'<img\b', xhtml, flags=re.I)) == 19
+              images = [name for name in names if re.search(r'\.(?:jpe?g|png|gif|webp|svg)$', name, flags=re.I)]
+              assert len(images) == 20
+              assert not forbidden.search(xhtml)
+              assert '\ufffd' not in xhtml
+              assert '\x00' not in xhtml
+          PY
+
+      - name: Update the durable release and checksum ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null
+          mkdir -p checksum-old release-upload
+          if gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir checksum-old; then
+            cp checksum-old/SHA256SUMS.txt release-upload/SHA256SUMS.txt
+          else
+            : > release-upload/SHA256SUMS.txt
+          fi
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+          path = Path('release-upload/SHA256SUMS.txt')
+          pdf = os.environ['PDF_NAME']
+          epub = os.environ['EPUB_NAME']
+          kept = [
+              line for line in path.read_text(encoding='utf-8').splitlines()
+              if not line.endswith('  ' + pdf) and not line.endswith('  ' + epub)
+          ]
+          kept.extend([
+              os.environ['PDF_SHA256'] + '  ' + pdf,
+              os.environ['EPUB_SHA256'] + '  ' + epub,
+          ])
+          kept.sort(key=lambda line: line.split('  ', 1)[-1])
+          path.write_text('\n'.join(kept) + '\n', encoding='utf-8')
+          PY
+          gh release upload "$TAG" \
+            "release/$PDF_NAME" \
+            "release/$EPUB_NAME" \
+            release-upload/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
+
+      - name: Redownload and verify published bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-verify
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir release-verify
+          test "$(stat -c %s "release-verify/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "release-verify/$EPUB_NAME")" = "$EPUB_SIZE"
+          test "$(sha256sum "release-verify/$PDF_NAME" | cut -d' ' -f1)" = "$PDF_SHA256"
+          test "$(sha256sum "release-verify/$EPUB_NAME" | cut -d' ' -f1)" = "$EPUB_SHA256"
+          grep -F "$PDF_SHA256  $PDF_NAME" release-verify/SHA256SUMS.txt
+          grep -F "$EPUB_SHA256  $EPUB_NAME" release-verify/SHA256SUMS.txt
+
+      - name: Remove one-shot workflow and staging branch
+        if: ${{ success() }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          workflow_sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH" \
+            -f message='Remove completed Codex Perez release workflow' \
+            -f sha="$workflow_sha" \
+            -f branch=main
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_REF"
