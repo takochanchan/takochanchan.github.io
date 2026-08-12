@@ -168,7 +168,7 @@ for (const publication of publications) {
     if (!/^b\d{5}$/.test(blockId)) throw new Error(`${publication.slug}: unsafe block ID`);
     if (
       !Array.isArray(mapping) ||
-      !/^(?:原刊|原資料|原書|原写本|自筆稿|原稿|底本|原誌|原報告)/.test(String(mapping[0]))
+      !/^(?:原刊|原資料|原書|原写本|自筆稿|原稿|底本|原誌|原報告|クラウス\s*117\s*写本)/.test(String(mapping[0]))
     ) {
       throw new Error(`${publication.slug}: missing original-page label`);
     }

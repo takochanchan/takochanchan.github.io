@@ -105,6 +105,28 @@ class SearchExtractorTest(unittest.TestCase):
             )
         )
 
+    def test_kraus_117_folio_marker_is_preserved_as_the_page_label(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔クラウス 117 写本 f.1r〕最初の本文。",
+                "同じfolioの続き。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("クラウス 117 写本 f.1r", "最初の本文。"),
+                ("クラウス 117 写本 f.1r", "同じfolioの続き。"),
+            ],
+        )
+
+    def test_kraus_117_editorial_note_is_not_a_page_label(self):
+        self.assertFalse(
+            extract_corpus.is_original_page_marker(
+                "〔クラウス117写本の本文はここで中断する〕"
+            )
+        )
+
     def test_standalone_source_image_page_becomes_the_current_label(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             ["原資料画像頁 2–3", "地形図の本文"]

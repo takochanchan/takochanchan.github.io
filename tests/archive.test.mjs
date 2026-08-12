@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 189);
+  assert.equal(publications.length, 190);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 94);
+  assert.equal(majorPublications.length, 95);
   assert.equal(shortPublications.length, 95);
   assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
@@ -333,6 +333,26 @@ test("San Buenaventura 1684 uses the approved first-edition scope and public-dom
   assert.doesNotMatch(item.rights, /日本語翻訳版|再利用ライセンス/);
 });
 
+test("Tezozomoc Kraus 117 keeps the manuscript scope and concise rights statement", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "tezozomoc-cronica-mexicana-kraus-117",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 509);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.sourceEdition, /mss31013-11700/);
+  assert.match(item.sourceProvider, /f\.1r–160v の316面/);
+  assert.match(item.sourceProvider, /判読と位置照合の補助/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /利用・複製に既知の制限なし/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.doesNotMatch(item.sourceProvider, /翻訳プロジェクト/);
+  assert.doesNotMatch(item.rights, /CC BY|Creative Commons/);
+});
+
 test("Gemelli Careri 1700 keeps the approved source, figures, and reuse statements", () => {
   const item = publications.find(
     (publication) =>
@@ -581,7 +601,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">94<\/strong>件/);
+  assert.match(html, /id="book-match-count">95<\/strong>件/);
   assert.match(html, /id="paper-match-count">95<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

@@ -5455,6 +5455,42 @@ const publicationRecords = [
       "17世紀",
     ],
   },
+  {
+    slug: "tezozomoc-cronica-mexicana-kraus-117",
+    title: "メキシコ年代記",
+    originalTitle: "Crónica mexicana",
+    subtitle:
+      "クラウス117写本 f.1r–160v・全111章（第4章欠葉） 日本語全訳",
+    author: "伝エルナンド・アルバラード・テソソモク",
+    series: "CRÓNICA MEXICANA · KRAUS MS 117",
+    originalPublication: "メキシコ、1600年頃、クラウス117写本（未刊）",
+    year: 1600,
+    extent:
+      "PDF 509頁・写本 f.1r–160v・全111章（第4章欠葉）・写本葉標316面・欠葉表示1件・写本物理要素217件",
+    description:
+      "メシカ人のアストラン出立、メキシコ＝テノチティトラン建設、周辺諸国との戦争と征服、モクテスマ2世の治世、スペイン人到来までを叙述する植民地期の年代記。クラウス117写本の章順、章題、葉標、欠葉、抹消、欄外書入れ、指示手などを保持し、写本 f.1r–160vから全訳しています。",
+    cover: "publications/tezozomoc-cronica-mexicana-kraus-117/cover.jpg",
+    pdf:
+      "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.epub",
+    pageCount: 509,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "写本", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "テノチティトラン", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "メシカ",
+      "アステカ",
+      "テノチティトラン",
+      "ウィツィロポチトリ",
+      "モクテスマ2世",
+      "征服史",
+      "クラウス117",
+      "16世紀",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -5545,6 +5581,17 @@ const publicationMetadata = {
     sourceUrl:
       "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_2/index.php",
     rights: ixtlilxochitlRights,
+    publishedDate: "2026-08-12",
+    updatedDate: "2026-08-12",
+  },
+  "tezozomoc-cronica-mexicana-kraus-117": {
+    sourceEdition:
+      "Fernando Alvarado Tezozomoc [attributed]『La corónica Mexicana』、Hans Peter Kraus Collection、mss31013-11700、Library of Congress、メキシコ、1600年頃。",
+    sourceProvider:
+      "アメリカ議会図書館が公開するクラウス117写本画像を本文底本とし、現存する f.1r–160v の316面を照合した。Gonzalo Díaz Migoyoによる2021年の古文書学的転写は判読と位置照合の補助に限り、現代編集者による訳・解釈・補足・語義説明は移入していない。写本画像は日本語版へ転載していない。",
+    sourceUrl: "https://www.loc.gov/item/mss31013-11700/",
+    rights:
+      "原著本文はパブリックドメインです。アメリカ議会図書館は当該写本について、利用・複製に既知の制限なしと表示しています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-12",
     updatedDate: "2026-08-12",
   },

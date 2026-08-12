@@ -253,6 +253,9 @@ DOCX_SOURCES = {
     "ixtlilxochitl-historia-chichimeca": SOURCES
     / "翻訳サイト"
     / "Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.docx",
+    "tezozomoc-cronica-mexicana-kraus-117": SOURCES
+    / "翻訳サイト"
+    / "Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {
