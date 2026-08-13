@@ -160,7 +160,7 @@ try {
     books: 12,
     papers: 8,
   });
-  await verifyCounts("ラカンドン", { books: 47, papers: 13 });
+  await verifyCounts("ラカンドン", { books: 48, papers: 13 });
   await verifyCounts("ポ", { books: 44, papers: 10 });
   const pageChecks = [
     ["グリハルバ", grijalva, 174],
