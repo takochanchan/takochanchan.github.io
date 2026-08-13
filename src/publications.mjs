@@ -5670,6 +5670,46 @@ const publicationRecords = [
       "16世紀",
     ],
   },
+  {
+    slug: "pineda-sublevaciones-indigenas-chiapas-1888",
+    title: "チアパス州で起きた先住民蜂起の歴史",
+    originalTitle:
+      "Historia de las sublevaciones indígenas habidas en el Estado de Chiapas",
+    subtitle:
+      "1888年初版・原刊3–132頁・原注・標題紙文字転記 日本語全訳・校訂版",
+    author: "ビセンテ・ピネダ",
+    series: "HISTORIA DE LAS SUBLEVACIONES INDÍGENAS · 1888",
+    originalPublication:
+      "チアパス、J. J. ヒメネス主宰州政府印刷所、1888年",
+    year: 1888,
+    extent:
+      "PDF 107頁・原刊標題紙文字転記・原刊本文3–132頁・序論・全7章・原注・語形一覧・暦名",
+    description:
+      "ビセンテ・ピネダが、征服期から1870年までにチアパス州で起きた四度の先住民蜂起を叙述した1888年刊の地方史。ソクトン（チアパネカ）、ツェルタル、ツォツィル／チャムラの蜂起、シウダー・レアル建設、1869–1870年の戦闘を扱い、後半には「チアパス」の語源論、ツェルタル語とツォツィル語の関係、ツェルタル暦を収めています。原刊本文3–132頁を省略せず訳し、同じ所蔵冊に別標題紙で合冊された文法書・辞書は別著作として収録対象外としました。",
+    cover:
+      "publications/pineda-sublevaciones-indigenas-chiapas-1888/cover.jpg",
+    pdf:
+      "publications/pineda-sublevaciones-indigenas-chiapas-1888/Vicente_Pineda_Historia_de_las_sublevaciones_indigenas_1888_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/pineda-sublevaciones-indigenas-chiapas-1888/Vicente_Pineda_Historia_de_las_sublevaciones_indigenas_1888_Japanese_Complete_Translation.epub",
+    pageCount: 107,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["歴史書", "地方史", "先住民史", "言語資料"],
+    regions: ["チアパス", "メキシコ", "ツェルタル地域", "ツォツィル地域"],
+    languages: ["スペイン語", "ツェルタル語"],
+    tags: [
+      "先住民蜂起",
+      "チアパス蜂起",
+      "ツェルタル",
+      "ツォツィル",
+      "チャムラ",
+      "シウダー・レアル",
+      "カースト戦争",
+      "植民地史",
+      "19世紀",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -7445,6 +7485,17 @@ const publicationMetadata = {
       "1877年原刊本文はパブリックドメインです。底本提供機関はColumbia University Libraries。底本PDFはGoogle Booksによりパブリックドメインと表示され、同PDFの利用ガイドラインに従ってGoogleの表示を保持した原刊標題紙画像を収録しています。Columbia University Librariesの公開方針では、著作権保護のない資料は制限なく利用でき、学術研究に伴う刊行には通常条件を課さないとされています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-11",
     updatedDate: "2026-08-11",
+  },
+  "pineda-sublevaciones-indigenas-chiapas-1888": {
+    sourceEdition:
+      "Vicente Pineda『Historia de las sublevaciones indígenas habidas en el Estado de Chiapas』（Chiapas: Tipografía del Gobierno, dirigida por J. J. Jiménez、1888年初版）のうち、標題作本文3–132頁。",
+    sourceProvider:
+      "La Trobe University OPAL公開の1888年刊本デジタル複製（DOI: 10.26181/22299244）を主底本とし、Universidad Autónoma de Nuevo León, Colección Digital所蔵本（identifier 1080013829）で頁配列、難読箇所、原刊標題紙を照合した。UANL公開画像は転載・切り抜きせず、原刊標題紙は文字転記のみを収録した。",
+    sourceUrl: "https://doi.org/10.26181/22299244",
+    rights:
+      "1888年原刊本文は著作権保護期間を満了したパブリックドメイン資料です。La Trobe University OPALのレコードは原資料をPublic Domain、公開ファイルをCC0と表示しています。UANLは公開画像をCC BY-NC-ND 2.5 MXと表示しているため、その画像は本版に転載・切り抜きしていません。日本語翻訳・編集部分には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
   },
   ...perignyRemainingPublicationMetadata,
 };

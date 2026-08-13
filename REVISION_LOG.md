@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-14 — `pineda-sublevaciones-indigenas-chiapas-1888` 新規公開
+
+- ビセンテ・ピネダ『チアパス州で起きた先住民蜂起の歴史』（1888年初版）の日本語全訳をPDF 107頁・EPUB 3で公開。
+- 原刊標題紙は文字転記とし、原刊本文3–132頁、序論、全7章、原注、語形一覧、ツェルタル暦名を収録。原刊頁標識130件は3–132頁の連続性を検証した。
+- 主底本はLa Trobe University OPAL公開複製（DOI 10.26181/22299244）。丁合に用いたUANL画像はCC BY-NC-ND 2.5 MX表示のため、転載・切り抜きを行っていない。公開表紙は日本語版の独自組版から作成した。
+- 公開PDFのSHA-256は `fea8639fa98d3ecc6d30c377e85b7ab42fc2c8d3cc98c6a05252d183e9823bd4`、EPUBは `31d47ac1a8a48671a23e1b27d00fe8c9fadadc723073fff4a09b3e146c21decb`、表紙は `d4602c237f2780eb2657c2ed231e2726773092ee0f17cd81f8f92240bd813e18`。
+- Markdown正本（SHA-256 `0cfaed31aa9e7b49fc877f8b26ca14eb6598fd650d0a3ef2c821f4e755a3451a`）を非公開原本アーカイブのコミット `4b6425f6c9b5cb52d088f72f447bb2742bb279b0` に固定した。
+
 ## 2026-08-13 — `wafer-new-voyage-isthmus-america-1699` 新規公開
 
 - ライオネル・ウェイファー『アメリカ地峡新航海記・地誌』（1699年初版）の日本語全訳をPDF 134頁・EPUB 3で公開。

@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 195);
+  assert.equal(publications.length, 196);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 101);
+  assert.equal(majorPublications.length, 102);
   assert.equal(shortPublications.length, 94);
   assert.equal(shortPublicationAuthors.length, 24);
   assert.deepEqual(
@@ -536,6 +536,29 @@ test("Wafer 1699 publication metadata stays fixed", () => {
   assert.equal(item.publishedDate, "2026-08-13");
 });
 
+test("Pineda 1888 sublevaciones publication metadata stays fixed", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "pineda-sublevaciones-indigenas-chiapas-1888",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 107);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /原刊標題紙文字転記/);
+  assert.match(item.extent, /原刊本文3–132頁/);
+  assert.match(item.sourceEdition, /1888年初版/);
+  assert.match(item.sourceEdition, /本文3–132頁/);
+  assert.match(item.sourceProvider, /La Trobe University OPAL/);
+  assert.match(item.sourceProvider, /1080013829/);
+  assert.match(item.sourceProvider, /転載・切り抜きせず/);
+  assert.match(item.rights, /CC BY-NC-ND 2\.5 MX/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-14");
+  assert.equal(item.updatedDate, "2026-08-14");
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
@@ -624,7 +647,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">101<\/strong>件/);
+  assert.match(html, /id="book-match-count">102<\/strong>件/);
   assert.match(html, /id="paper-match-count">94<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
