@@ -31,6 +31,13 @@ jobs:
         with:
           ref: release-staging-ximenez-ayer-vol2-20260813-v1
 
+      - name: Install PDF inspection tool
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
       - name: Reassemble and verify new assets
         shell: bash
         run: |
