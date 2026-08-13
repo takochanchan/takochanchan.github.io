@@ -18,7 +18,7 @@ jobs:
   publish-site:
     runs-on: ubuntu-latest
     env:
-      EXPECTED_PARENT: 2499d43b5b28f97437ed95adee6d4215f5a8e6ea
+      EXPECTED_PARENT: 74852151a78f44e6e999ad2542cf17ae57102dd3
       EXPECTED_BASE: 7e5e0632a7bd2c52a0af8d45878f9e4b78000253
       EXPECTED_STAGE_COMMIT: bfce1b32c657f92690aafbd5e2436a82b1606c6e
       EXPECTED_TARGET_TREE: 058cc1706ffcc07dbe044913283cb48029322e8d
@@ -80,6 +80,13 @@ jobs:
           npm run build
           node --test tests/archive.test.mjs
 
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
       - name: Restore final PDF and EPUB inputs
         uses: actions/cache@v4
         with:
@@ -122,6 +129,7 @@ jobs:
           mkdir -p "dist/$(dirname "$epub_path")"
           cp ".cache/fulltext-assets/$epub_path" "dist/$epub_path"
           python3 scripts/validate-epubs.py dist --slug "$PINEDA_SLUG"
+          rm -f "dist/$epub_path"
 
       - name: Cache current search inputs
         continue-on-error: true
@@ -133,12 +141,14 @@ jobs:
           key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
 
       - name: Build full-text search
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           set -euo pipefail
           npm run build:search
 
       - name: Cache current full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         continue-on-error: true
         uses: actions/cache/save@v4
         with:
