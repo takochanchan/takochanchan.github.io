@@ -18,9 +18,10 @@ jobs:
   publish-site:
     runs-on: ubuntu-latest
     env:
-      EXPECTED_PARENT: 7e5e0632a7bd2c52a0af8d45878f9e4b78000253
-      EXPECTED_STAGE_COMMIT: 245fc2a356f037741b155ec8a81d34510e859438
-      EXPECTED_TARGET_TREE: f569fa804b0973084ce61834175e2248d11e61c5
+      EXPECTED_PARENT: 2499d43b5b28f97437ed95adee6d4215f5a8e6ea
+      EXPECTED_BASE: 7e5e0632a7bd2c52a0af8d45878f9e4b78000253
+      EXPECTED_STAGE_COMMIT: bfce1b32c657f92690aafbd5e2436a82b1606c6e
+      EXPECTED_TARGET_TREE: 058cc1706ffcc07dbe044913283cb48029322e8d
       STAGING_BRANCH: site-staging-pineda-sublevaciones-20260814-v1
       WORKFLOW_PATH: .github/workflows/publish-pineda-sublevaciones-site-20260814-v1.yml
       PINEDA_SLUG: pineda-sublevaciones-indigenas-chiapas-1888
@@ -40,7 +41,7 @@ jobs:
           test "$(git rev-parse "refs/remotes/origin/$STAGING_BRANCH")" = "$EXPECTED_STAGE_COMMIT"
           actual=/tmp/pineda-stage-files.txt
           expected=/tmp/pineda-expected-files.txt
-          git diff --name-status "$EXPECTED_PARENT" "refs/remotes/origin/$STAGING_BRANCH" | LC_ALL=C sort > "$actual"
+          git diff --name-status "$EXPECTED_BASE" "refs/remotes/origin/$STAGING_BRANCH" | LC_ALL=C sort > "$actual"
           printf '%s\n' \
             "A	static/publications/pineda-sublevaciones-indigenas-chiapas-1888/cover.jpg" \
             "M	REVISION_LOG.md" \
