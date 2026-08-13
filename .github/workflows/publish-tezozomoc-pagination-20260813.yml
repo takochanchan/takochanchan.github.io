@@ -37,8 +37,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p release
-          cat "$STAGING_ROOT"/pdf.part-* > "release/$PDF_NAME"
-          cp "$STAGING_ROOT/epub.b64" "release/$EPUB_NAME"
+          cat "$STAGING_ROOT"/pdf.part-* | iconv -f UTF-8 -t ISO-8859-1 | base64 -d > "release/$PDF_NAME"
+          iconv -f UTF-8 -t ISO-8859-1 "$STAGING_ROOT/epub.b64" | base64 -d > "release/$EPUB_NAME"
           test "$(stat -c%s "release/$PDF_NAME")" = 3715315
           test "$(stat -c%s "release/$EPUB_NAME")" = 632593
           test "$(sha256sum "release/$PDF_NAME" | cut -d' ' -f1)" = "$PDF_SHA"
