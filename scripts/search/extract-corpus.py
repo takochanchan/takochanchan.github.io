@@ -35,10 +35,14 @@ from xml.etree import ElementTree as ET
 # point to a printed page, a manuscript folio, a digital image, or an explicitly
 # described composite source.
 ORIGINAL_MARKER_RE = re.compile(
+    r"(?:"
     r"〔\s*(?:(?:原刊|原資料|原書|原写本|自筆稿(?!の)|原稿|底本|原誌|原報告|"
     r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
     r"主底本|補完底本|合成底本)"
     r"[^〕\r\n]{0,240})〕"
+    r"|\{\{\s*SOURCE\s*:\s*[^{}\r\n]{1,240}\s*\}\}"
+    r")",
+    re.IGNORECASE,
 )
 DEFAULT_SOURCE_LOCATION = "底本位置なし（前付）"
 DOCX_NON_LOCATION_SENTINEL = "\ue000"
@@ -177,7 +181,16 @@ def clean_markdown_inline(value: str) -> str:
 
 
 def original_marker_label(value: str) -> str:
-    label = re.sub(r"\s+", " ", value.strip()[1:-1]).strip()
+    marker = value.strip()
+    if marker.startswith("{{"):
+        label = re.sub(
+            r"^\{\{\s*SOURCE\s*:\s*|\s*\}\}$",
+            "",
+            marker,
+            flags=re.IGNORECASE,
+        )
+        return "出所 " + re.sub(r"\s+", " ", label).strip()
+    label = re.sub(r"\s+", " ", marker[1:-1]).strip()
     # Some legacy PMM 9 masters put a location and a full editorial note in one
     # Source Page paragraph.  Keep the searchable location concise; the note is
     # recovered separately by embedded_source_note(). Revised masters split the
@@ -190,6 +203,8 @@ def original_marker_label(value: str) -> str:
 
 def embedded_source_note(value: str) -> str | None:
     """Recover a note attached to a legacy PMM source-location paragraph."""
+    if not value.strip().startswith("〔"):
+        return None
     label = re.sub(r"\s+", " ", value.strip()[1:-1]).strip()
     if not re.match(r"^PMM\s*\d+\s*,", label, re.IGNORECASE):
         return None
@@ -207,7 +222,11 @@ def embedded_source_note(value: str) -> str | None:
 
 
 def is_original_page_marker(value: str) -> bool:
-    label = original_marker_label(value) if value.startswith("〔") else value.strip()
+    label = (
+        original_marker_label(value)
+        if value.lstrip().startswith(("〔", "{{"))
+        else value.strip()
+    )
     if re.match(r"^原資料\s*[:：]", label):
         return True
     if STANDALONE_SOURCE_PAGE_RE.fullmatch(label):
@@ -262,7 +281,11 @@ def is_original_page_marker(value: str) -> bool:
 
 
 def is_placeholder_original_marker(value: str) -> bool:
-    label = original_marker_label(value) if value.startswith("〔") else value.strip()
+    label = (
+        original_marker_label(value)
+        if value.lstrip().startswith(("〔", "{{"))
+        else value.strip()
+    )
     return bool(
         re.fullmatch(
             r"(?:原刊(?:旧付番)?|原書|原写本|原稿|底本|原誌)"
@@ -271,6 +294,7 @@ def is_placeholder_original_marker(value: str) -> bool:
             re.IGNORECASE,
         )
         or re.fullmatch(r"原資料\s*[:：]\s*(?:X|○+)", label, re.IGNORECASE)
+        or re.fullmatch(r"出所\s+(?:X|○+)", label, re.IGNORECASE)
     )
 
 

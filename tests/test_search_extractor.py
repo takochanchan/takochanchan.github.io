@@ -162,6 +162,29 @@ class SearchExtractorTest(unittest.TestCase):
             [("出所 1908年版 p.42／BnF Ms. mex. 305, f.12r", "本文。")],
         )
 
+    def test_legacy_epub_source_placeholder_becomes_a_location(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "{{SOURCE: 1908年版 p.81}}",
+                "最初の本文。",
+                "{{SOURCE: BnF Ms. mex. 305, f.46r／1908年版 p.95}}",
+                "続き。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("出所 1908年版 p.81", "最初の本文。"),
+                (
+                    "出所 BnF Ms. mex. 305, f.46r／1908年版 p.95",
+                    "続き。",
+                ),
+            ],
+        )
+        self.assertTrue(
+            extract_corpus.is_placeholder_original_marker("{{SOURCE: X}}")
+        )
+
     def test_explicit_composite_source_marker_is_kept_as_one_location(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [
