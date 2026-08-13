@@ -1,0 +1,114 @@
+name: Publish three Otto Stoll translations
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-stoll-site-20260813-v1.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publish-stoll-site-20260813-v1
+  cancel-in-progress: false
+
+jobs:
+  publish-site:
+    runs-on: ubuntu-latest
+    env:
+      EXPECTED_PARENT: 397039b9159a06c707187bc5de16fad0b787f834
+      EXPECTED_TARGET_TREE: b02dfbb293cc32b77ea12c2462a2eba44a8902a1
+      STAGING_BRANCH: publish-staging-stoll-site-20260813-v1
+      STAGING_ROOT: .release-staging/stoll-site-20260813-v1
+      PATCH_SHA256: 3ec59e6356c236d3afa9f3331f764bcc02e464ba31a2353e71c2284ce13cd178
+      PATCH_SIZE: "365315"
+      PATCH_PARTS: "6"
+      WORKFLOW_PATH: .github/workflows/publish-stoll-site-20260813-v1.yml
+    steps:
+      - name: Check out publication branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Reassemble and verify publication patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD^)" = "$EXPECTED_PARENT"
+          test "$(git diff --name-only "$EXPECTED_PARENT" HEAD)" = "$WORKFLOW_PATH"
+          git fetch origin "$STAGING_BRANCH:refs/remotes/origin/$STAGING_BRANCH"
+          patch_dir=/tmp/stoll-site-publish
+          mkdir -p "$patch_dir"
+          patch_file="$patch_dir/publication.patch"
+          mapfile -t parts < <(git ls-tree -r --name-only "refs/remotes/origin/$STAGING_BRANCH" "$STAGING_ROOT" | LC_ALL=C sort)
+          test "${#parts[@]}" = "$PATCH_PARTS"
+          : > "$patch_file"
+          for part in "${parts[@]}"; do
+            git show "refs/remotes/origin/$STAGING_BRANCH:$part" >> "$patch_file"
+          done
+          test "$(stat -c %s "$patch_file")" = "$PATCH_SIZE"
+          printf "%s  %s\n" "$PATCH_SHA256" "$patch_file" | sha256sum -c -
+
+      - name: Apply and structurally verify publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          patch_file=/tmp/stoll-site-publish/publication.patch
+          git config user.name "Publication Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git am --3way "$patch_file"
+          actual=/tmp/stoll-site-actual.txt
+          expected=/tmp/stoll-site-expected.txt
+          git diff --name-status "$EXPECTED_PARENT" HEAD | LC_ALL=C sort > "$actual"
+          printf '%s\n' \
+            "A	.github/workflows/publish-stoll-site-20260813-v1.yml" \
+            "A	static/publications/stoll-ethnographie-guatemala-1884/cover.jpg" \
+            "A	static/publications/stoll-ixil-language-1887/cover.jpg" \
+            "A	static/publications/stoll-pokom-languages-1888-1896/cover.jpg" \
+            "M	assets-manifest.json" \
+            "M	master-archive.json" \
+            "M	scripts/build-epubs.py" \
+            "M	scripts/validate-epubs.py" \
+            "M	src/publications.mjs" \
+            "M	tests/archive.test.mjs" | LC_ALL=C sort > "$expected"
+          cmp "$expected" "$actual"
+          verify_dir=/tmp/stoll-site-tree-check
+          mkdir -p "$verify_dir"
+          GIT_INDEX_FILE="$verify_dir/index" git read-tree HEAD
+          GIT_INDEX_FILE="$verify_dir/index" git rm --cached --quiet "$WORKFLOW_PATH"
+          actual_tree="$(GIT_INDEX_FILE="$verify_dir/index" git write-tree)"
+          test "$actual_tree" = "$EXPECTED_TARGET_TREE"
+
+      - name: Install and validate site
+        env:
+          NPM_CONFIG_CACHE: /tmp/stoll-site-npm-cache
+        run: |
+          npm ci
+          npm run build
+          npm test
+
+      - name: Publish main
+        run: git push origin HEAD:main
+
+      - name: Remove staging branch and one-shot workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH"
+          workflow_sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH" \
+            -f message="Remove completed Stoll site workflow" \
+            -f sha="$workflow_sha" -f branch=main
+          final_sha="$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)"
+          final_tree="$(gh api "repos/$GITHUB_REPOSITORY/git/commits/$final_sha" --jq .tree.sha)"
+          test "$final_tree" = "$EXPECTED_TARGET_TREE"
+          gh workflow run pages.yml --ref main
