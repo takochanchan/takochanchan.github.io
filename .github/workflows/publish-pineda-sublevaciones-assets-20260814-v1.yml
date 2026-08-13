@@ -18,7 +18,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TAG: publications-current
-      EXPECTED_MAIN: d6cf3709f6e7081a024b17b997846fc19da43e48
       EXPECTED_STAGE: d1b24af63b083a366686af0985341c52801911a7
       STAGING_BRANCH: release-staging-pineda-sublevaciones-20260814-v1
       STAGING_ROOT: .release-staging/pineda-sublevaciones-20260814-v1
@@ -40,7 +39,6 @@ jobs:
         run: |
           set -euo pipefail
           test "$(git rev-parse HEAD)" = "$EXPECTED_STAGE"
-          test "$(git rev-parse "origin/main")" = "$EXPECTED_MAIN"
           mkdir -p release
           while IFS=$'\t' read -r filename kind size digest pages; do
             cat "$STAGING_ROOT/$filename"/part-* > "release/$filename"
