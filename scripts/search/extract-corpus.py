@@ -36,7 +36,7 @@ from xml.etree import ElementTree as ET
 # described composite source.
 ORIGINAL_MARKER_RE = re.compile(
     r"(?:"
-    r"〔\s*(?:(?:原刊|原資料|原書|原写本|自筆稿(?!の)|原稿|底本|原誌|原報告|"
+    r"〔\s*(?:(?:原刊|原冊|原資料|原書|原写本|自筆稿(?!の)|原稿|底本|原誌|原報告|"
     r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
     r"主底本|補完底本|合成底本)"
     r"[^〕\r\n]{0,240})〕"
@@ -264,6 +264,7 @@ def is_original_page_marker(value: str) -> bool:
             r"原刊(?:\s+(?:p\.?|fol\.?)|第二冊|旧付番|前付|巻頭書目|楽譜|図版|PDF|"
             r"注\d+・原刊|\d|[ivxlcdm]+頁|・|半標題紙|外装表紙|折込地図|"
             r"表紙|扉|標題紙)"
+            r"|原冊\s*f\.?\s*\d+[rv]"
             r"|原書(?:\s+p\.?|折込図版)"
             r"|原写本(?:\s+p\.?|・第|・無番号挿入葉)"
             r"|自筆稿(?:\s+第\d+巻\s+f\.?\s*\d+[rv]?|\s+f\.?\s*\d+[rv]?)"

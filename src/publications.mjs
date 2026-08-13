@@ -5710,6 +5710,42 @@ const publicationRecords = [
       "19世紀",
     ],
   },
+  {
+    slug: "codice-chimalpahin-volumen-3",
+    title: "コーデックス・チマルパイン 第3巻――ナワトル語・スペイン語歴史史料集",
+    originalTitle: "Códice Chimalpahin, volumen 3",
+    subtitle: "原冊 f.1r–202v・全15史料 日本語全訳・訳注版",
+    author: "複数筆者・編者不詳",
+    series: "CÓDICE CHIMALPAHIN · VOLUMEN 3",
+    originalPublication: "ヌエバ・エスパーニャ、16–17世紀、写本集成（未刊）",
+    year: 1600,
+    extent:
+      "PDF 416頁・原冊 f.1r–202v（404本文面）・全15史料・原冊葉標識251件・第15史料紙面 p.50–77併記28件",
+    description:
+      "『コーデックス・チマルパイン』第3巻の現行綴じに収められた、ナワトル語・スペイン語・ラテン語の歴史史料、年代記、系譜、法務・貢納文書、書簡、神学／霊修ノート断片を原冊順に全訳した史料集です。各史料タイトルに原冊葉範囲と言語を掲げ、葉標識を独立段落で示しました。第15史料は原冊葉と手稿紙面頁を併記し、紙面p.58→p.57の物理的転置、貼紙下の欠損、末尾の本文中断を原冊どおり保持しています。",
+    cover: "publications/codice-chimalpahin-volumen-3/cover.jpg",
+    pdf:
+      "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+    pageCount: 416,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["史料集", "年代記", "写本", "一次史料"],
+    regions: ["メキシコ", "新スペイン", "メキシコ盆地", "ミチュアカン"],
+    languages: ["ナワトル語", "スペイン語", "ラテン語"],
+    tags: [
+      "メシカ",
+      "テノチティトラン",
+      "テツココ",
+      "系譜",
+      "法務文書",
+      "Códice Chimalpahin",
+      "写本集成",
+      "16世紀",
+      "17世紀",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -7494,6 +7530,18 @@ const publicationMetadata = {
     sourceUrl: "https://doi.org/10.26181/22299244",
     rights:
       "1888年原刊本文は著作権保護期間を満了したパブリックドメイン資料です。La Trobe University OPALのレコードは原資料をPublic Domain、公開ファイルをCC0と表示しています。UANLは公開画像をCC BY-NC-ND 2.5 MXと表示しているため、その画像は本版に転載・切り抜きしていません。日本語翻訳・編集部分には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
+  "codice-chimalpahin-volumen-3": {
+    sourceEdition:
+      "Instituto Nacional de Antropología e Historia, Biblioteca Nacional de Antropología e Historia所蔵『Códice Chimalpahin』第3巻、原冊 f.1r–203r、デジタル画像418点。翻訳対象本文は f.1r–202vの404面。",
+    sourceProvider:
+      "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開する第3巻原本画像を本文底本とし、現行綴じの全15史料を原冊順に転記・校合した。後代写本・近代校訂版・既刊外国語訳は、判読不能箇所、欠葉、異綴り、移配、異読の照合に限って用い、日本語本文の重訳元にはしていない。INAH原本画像は日本語版へ転載していない。",
+    sourceUrl:
+      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_3/index.php",
+    rights:
+      "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。本文の転記・校合に用いたINAH公開のCódice Chimalpahin原本画像はCC BY-NC-ND 4.0で提供されていますが、本版には当該画像を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-14",
     updatedDate: "2026-08-14",
   },

@@ -256,6 +256,9 @@ DOCX_SOURCES = {
     "tezozomoc-cronica-mexicana-kraus-117": SOURCES
     / "翻訳サイト"
     / "Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.docx",
+    "codice-chimalpahin-volumen-3": SOURCES
+    / "翻訳サイト"
+    / "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {
