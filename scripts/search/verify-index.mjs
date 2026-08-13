@@ -33,6 +33,12 @@ const expectedAssetSha = createHash("sha256")
   .digest("hex");
 const expectedSlugs = publications.map((publication) => publication.slug).sort();
 const actualSlugs = [...(metadata.workSlugs || [])].sort();
+const sourceLocationLabelPattern = new RegExp(
+  "^(?:底本位置なし（前付）|" +
+    "原刊|原資料|原書|原写本|自筆稿|原稿|底本|原誌|原報告|" +
+    "クラウス\\s*117\\s*写本|PMM\\s*\\d+\\s*,|出所|" +
+    "(?:未丁付)?第\\s*\\d+\\s*葉[表裏]|主底本|補完底本|合成底本)",
+);
 
 if (metadata.schemaVersion !== 1) throw new Error("Unsupported search metadata");
 if (metadata.archiveCommit !== archive.archive_commit) {
@@ -168,9 +174,9 @@ for (const publication of publications) {
     if (!/^b\d{5}$/.test(blockId)) throw new Error(`${publication.slug}: unsafe block ID`);
     if (
       !Array.isArray(mapping) ||
-      !/^(?:原刊|原資料|原書|原写本|自筆稿|原稿|底本|原誌|原報告|クラウス\s*117\s*写本)/.test(String(mapping[0]))
+      !sourceLocationLabelPattern.test(String(mapping[0]))
     ) {
-      throw new Error(`${publication.slug}: missing original-page label`);
+      throw new Error(`${publication.slug}: missing source-location label`);
     }
     if (
       !Number.isInteger(mapping[1]) ||
