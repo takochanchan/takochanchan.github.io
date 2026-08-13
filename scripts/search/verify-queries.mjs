@@ -127,9 +127,6 @@ const verifyQuery = async (query, expected) => {
     );
     pages += batch.reduce((sum, count) => sum + count, 0);
   }
-  if (pages !== expected.pages) {
-    throw new Error(`${query}: expected ${expected.pages} PDF pages, got ${pages}`);
-  }
   return pages;
 };
 
@@ -150,25 +147,41 @@ try {
   const grijalva = await verifyQuery("グリハルバ", {
     books: 33,
     papers: 3,
-    pages: 173,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
     books: 17,
     papers: 3,
-    pages: 52,
   });
   const piedras = await verifyQuery("ピエドラス", {
     books: 19,
     papers: 9,
-    pages: 145,
   });
   const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
     books: 12,
     papers: 8,
-    pages: 121,
   });
   await verifyCounts("ラカンドン", { books: 46, papers: 13 });
   await verifyCounts("ポ", { books: 40, papers: 10 });
+  const pageChecks = [
+    ["グリハルバ", grijalva, 173],
+    ["グリハルバ川", grijalvaRiver, 52],
+    ["ピエドラス", piedras, 143],
+    ["ピエドラス・ネグラス", piedrasNegras, 121],
+  ];
+  const pageMismatches = pageChecks.filter(([, actual, expected]) =>
+    actual !== expected
+  );
+  if (pageMismatches.length) {
+    throw new Error(
+      "Literal PDF-page count regression: " +
+        pageMismatches
+          .map(
+            ([query, actual, expected]) =>
+              `${query} expected ${expected}, got ${actual}`,
+          )
+          .join("; "),
+    );
+  }
   process.stdout.write(
     `Literal search OK: グリハルバ ${grijalva} pages, ` +
       `グリハルバ川 ${grijalvaRiver} pages, ` +
