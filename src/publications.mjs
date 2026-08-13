@@ -5618,15 +5618,15 @@ const publicationRecords = [
     originalPublication: "メキシコ、1600年頃、クラウス117写本（未刊）",
     year: 1600,
     extent:
-      "PDF 509頁・写本 f.1r–160v・全111章（第4章欠葉）・写本葉標316面・欠葉表示1件・写本物理要素217件",
+      "PDF 470頁・写本 f.1r–160v・全111章（第4章欠葉）・写本葉標316面・欠葉表示1件・写本物理要素217件",
     description:
-      "メシカ人のアストラン出立、メキシコ＝テノチティトラン建設、周辺諸国との戦争と征服、モクテスマ2世の治世、スペイン人到来までを叙述する植民地期の年代記。クラウス117写本の章順、章題、葉標、欠葉、抹消、欄外書入れ、指示手などを保持し、写本 f.1r–160vから全訳しています。",
+      "メシカ人のアストラン出立、メキシコ＝テノチティトラン建設、周辺諸国との戦争と征服、モクテスマ2世の治世、スペイン人到来までを叙述する植民地期の年代記。クラウス117写本の章順、章題、葉標、欠葉、抹消、欄外書入れ、指示手などを保持し、写本 f.1r–160vから全訳しています。度量衡語彙は写本画像へ独自に再照合し、braça 32例を「ブラサ」に統一するなど、写本に即して校訂しました。",
     cover: "publications/tezozomoc-cronica-mexicana-kraus-117/cover.jpg",
     pdf:
       "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.pdf",
     epub:
       "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.epub",
-    pageCount: 509,
+    pageCount: 470,
     figureCount: 0,
     plateCount: 0,
     types: ["歴史書", "年代記", "写本", "一次史料"],
@@ -5756,7 +5756,7 @@ const publicationMetadata = {
     rights:
       "原著本文はパブリックドメインです。アメリカ議会図書館は当該写本について、利用・複製に既知の制限なしと表示しています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
+    updatedDate: "2026-08-13",
   },
   "remesal-historia-general-1619": {
     sourceEdition:
