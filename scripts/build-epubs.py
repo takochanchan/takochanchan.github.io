@@ -289,6 +289,12 @@ TAGGED_PDF_SOURCES = {
     "tribes-and-temples-vol-2",
 }
 
+STOLL_PDF_SOURCES = {
+    "stoll-ethnographie-guatemala-1884",
+    "stoll-ixil-language-1887",
+    "stoll-pokom-languages-1888-1896",
+}
+
 TAGGED_PDF_FIGURE_ALTS = {
     "cook-balise-merida-1769": [
         "1769年初版の原刊標題紙",
@@ -1446,6 +1452,219 @@ def render_tagged_pdf_html(pdf: Path, item: dict[str, Any], directory: Path) -> 
     return output
 
 
+def join_stoll_lines(left: str, right: str) -> str:
+    """Join PDF visual lines without inserting spaces into Japanese prose."""
+    left = left.rstrip()
+    right = right.lstrip()
+    if not left:
+        return right
+    if not right:
+        return left
+    if left.endswith("-"):
+        return left + right
+    left_token = re.search(r"([A-Za-zÀ-ÖØ-öø-ÿ0-9]+)$", left)
+    right_token = re.match(r"([A-Za-zÀ-ÖØ-öø-ÿ0-9]+)", right)
+    if left_token and right_token:
+        if len(left_token.group(1)) == 1:
+            return left + right
+        return left + " " + right
+    return left + right
+
+
+def stoll_image_alt(item: dict[str, Any], page_number: int, page_text: str) -> str:
+    title_pages = {
+        "stoll-ethnographie-guatemala-1884": {
+            3: "1884年初版『グアテマラ共和国民族誌論』原刊標題紙",
+        },
+        "stoll-ixil-language-1887": {
+            3: "1887年初版『イシル人の言語』原刊標題紙",
+        },
+        "stoll-pokom-languages-1888-1896": {
+            3: "1888年刊『ポコム語群のマヤ諸語』第一部原刊標題紙",
+            336: "1896年刊『ポコム語群のマヤ諸語』第二部原刊標題紙",
+        },
+    }
+    if page_number in title_pages.get(item["slug"], {}):
+        return title_pages[item["slug"]][page_number]
+    source_page = re.search(r"〔原刊\s*p\.\s*([^〕]+)〕", page_text)
+    if source_page:
+        return f"原刊{source_page.group(1)}頁の比較語彙表・原資料画像"
+    heading = next(
+        (
+            part.strip()
+            for part in page_text.splitlines()
+            if part.strip().startswith(("付図", "図"))
+        ),
+        "",
+    )
+    return heading or f"{item['title']} PDF {page_number}頁の原資料画像"
+
+
+def render_stoll_pdf_html(pdf: Path, item: dict[str, Any], directory: Path) -> Path:
+    """Recover reflow text and every embedded source image from a final PDF.
+
+    The three Stoll PDFs are the approved tagged publication files, but one of
+    their structure trees is cyclic.  Visual-line recovery avoids dropping text
+    while retaining the exact embedded title leaves, comparative tables, and
+    appended figures in PDF reading order.
+    """
+    media = directory / "media"
+    media.mkdir(parents=True, exist_ok=True)
+    document = fitz.open(pdf)
+    body: list[str] = []
+    image_count = 0
+    heading_serial = 0
+
+    for page_number, page in enumerate(document, start=1):
+        page_dict = page.get_text("dict", sort=True)
+        lines: list[dict[str, Any]] = []
+        images: list[tuple[float, dict[str, Any]]] = []
+        raw_page_text: list[str] = []
+
+        for block in page_dict.get("blocks", []):
+            if block.get("type") == 1:
+                images.append((float(block["bbox"][1]), block))
+                continue
+            for line in block.get("lines", []):
+                spans = [span for span in line.get("spans", []) if span.get("text")]
+                if not spans:
+                    continue
+                text = "".join(span["text"] for span in spans).strip()
+                if not text:
+                    continue
+                bbox = line["bbox"]
+                lines.append(
+                    {
+                        "y0": float(bbox[1]),
+                        "y1": float(bbox[3]),
+                        "x0": float(bbox[0]),
+                        "x1": float(bbox[2]),
+                        "text": text,
+                        "size": max(float(span.get("size", 0)) for span in spans),
+                        "bold": any("Bold" in span.get("font", "") for span in spans),
+                    }
+                )
+                raw_page_text.append(text)
+
+        # Merge fragments that occupy the same visual baseline.  Wide gaps are
+        # explicit cell separators, so vocabulary tables remain intelligible.
+        merged: list[dict[str, Any]] = []
+        for line in sorted(lines, key=lambda row: (row["y0"], row["x0"])):
+            if merged and abs(line["y0"] - merged[-1]["y0"]) <= 2.0:
+                previous = merged[-1]
+                gap = line["x0"] - previous["x1"]
+                separator = " ｜ " if gap > 18 else ""
+                previous["text"] += separator + line["text"]
+                previous["x1"] = max(previous["x1"], line["x1"])
+                previous["y1"] = max(previous["y1"], line["y1"])
+                previous["size"] = max(previous["size"], line["size"])
+                previous["bold"] = previous["bold"] or line["bold"]
+            else:
+                merged.append(dict(line))
+
+        elements: list[tuple[float, str, dict[str, Any] | None]] = []
+        for line in merged:
+            text = normalize_pdf_text(line["text"])
+            height = float(page.rect.height)
+            if line["y1"] <= 61 and "オットー・シュトル" in text:
+                continue
+            if line["y0"] >= height * 0.91 and re.fullmatch(r"[0-9IVXLCDM\s–—-]+", text):
+                continue
+            elements.append((line["y0"], "text", {**line, "text": text}))
+        elements.extend((y0, "image", block) for y0, block in images)
+        elements.sort(key=lambda value: value[0])
+
+        page_text = "\n".join(raw_page_text)
+        body.append(f'<section class="pdf-page" data-pdf-page="{page_number}">\n')
+        pending: dict[str, Any] | None = None
+
+        def flush_pending() -> None:
+            nonlocal pending
+            if not pending:
+                return
+            escaped = html.escape(pending["text"])
+            body.append(f'<p class="{pending["class"]}">{escaped}</p>\n')
+            pending = None
+
+        for _position, kind, record in elements:
+            if kind == "image":
+                flush_pending()
+                assert record is not None
+                image_count += 1
+                extension = str(record.get("ext") or "png").lower()
+                if extension == "jpeg":
+                    extension = "jpg"
+                filename = f"p{page_number:04d}-image-{image_count:03d}.{extension}"
+                (media / filename).write_bytes(record["image"])
+                alt = stoll_image_alt(item, page_number, page_text)
+                body.append(
+                    f'<figure><img src="media/{filename}" '
+                    f'alt="{html.escape(alt, quote=True)}"/></figure>\n'
+                )
+                continue
+
+            assert record is not None
+            text = record["text"]
+            size = record["size"]
+            is_source = bool(re.match(r"^[〔【]原刊", text))
+            is_table = " ｜ " in text
+            is_heading = size >= 14 or (
+                record["bold"] and size >= 11.5 and len(text) <= 100
+            )
+            if is_source:
+                flush_pending()
+                body.append(f'<p class="source-page">{html.escape(text)}</p>\n')
+                continue
+            if is_heading:
+                flush_pending()
+                level = 1 if size >= 22 else (2 if size >= 14 else 3)
+                heading_serial += 1
+                body.append(
+                    f'<h{level} id="stoll-heading-{heading_serial:05d}">'
+                    f"{html.escape(text)}</h{level}>\n"
+                )
+                continue
+            if is_table:
+                flush_pending()
+                body.append(f'<p class="table-row">{html.escape(text)}</p>\n')
+                continue
+
+            css_class = "note" if size <= 9.0 else "body"
+            if (
+                pending
+                and pending["class"] == css_class
+                and record["y0"] - pending["y1"] <= 15
+                and abs(record["x0"] - pending["x0"]) <= 25
+            ):
+                pending["text"] = join_stoll_lines(pending["text"], text)
+                pending["y1"] = record["y1"]
+            else:
+                flush_pending()
+                pending = {
+                    "text": text,
+                    "class": css_class,
+                    "x0": record["x0"],
+                    "y1": record["y1"],
+                }
+        flush_pending()
+        body.append("</section>\n")
+
+    document.close()
+    expected_images = int(item.get("figureCount", 0)) + int(item.get("plateCount", 0))
+    if image_count != expected_images:
+        raise ValueError(
+            f"{item['slug']}: recovered {image_count} images, expected {expected_images}"
+        )
+    output = directory / "document.html"
+    output.write_text(html_document(item["title"], "".join(body)), encoding="utf-8")
+    print(
+        f"{item['slug']}: visual-line PDF recovery, "
+        f"{len(document) if not document.is_closed else item['pageCount']} pages, "
+        f"{image_count} images"
+    )
+    return output
+
+
 def block_text(block: dict[str, Any]) -> tuple[str, float, bool]:
     lines: list[str] = []
     sizes: list[float] = []
@@ -1667,6 +1886,15 @@ def build_one(
                 item,
                 from_format="markdown+raw_html+east_asian_line_breaks",
                 resource_path=source.parent,
+            )
+        elif slug in STOLL_PDF_SOURCES:
+            source = render_stoll_pdf_html(pdf_path(item), item, directory)
+            pandoc_to_epub(
+                source,
+                raw_epub,
+                item,
+                from_format="html+raw_html",
+                resource_path=directory,
             )
         elif slug in TAGGED_PDF_SOURCES:
             source = render_tagged_pdf_html(pdf_path(item), item, directory)

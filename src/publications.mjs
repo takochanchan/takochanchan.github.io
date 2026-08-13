@@ -3036,6 +3036,43 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "stoll-ethnographie-guatemala-1884",
+    title: "グアテマラ共和国民族誌論",
+    originalTitle: "Zur Ethnographie der Republik Guatemala",
+    subtitle:
+      "1884年初版・本文全175頁、比較語彙表、付図 日本語全訳",
+    author: "オットー・シュトル",
+    series: "ZUR ETHNOGRAPHIE DER REPUBLIK GUATEMALA · 1884",
+    originalPublication: "チューリヒ、Orell Füssli & Co.、1884年",
+    year: 1884,
+    extent:
+      "PDF 197頁・原刊本文1–175頁・比較語彙表原頁25点・原刊標題紙1点・付図2点",
+    description:
+      "スイスの医師・民族学者オットー・シュトルが、グアテマラ滞在中の調査をもとに、同国の先住民諸集団、分布、人口、生活、歴史、およびマヤ諸語を比較した1884年刊の民族誌・比較言語学研究。本文全175頁、比較語彙表、マヤ諸語模式系統樹と民族誌地図、原刊標題紙を収録しています。",
+    cover:
+      "publications/stoll-ethnographie-guatemala-1884/cover.jpg",
+    pdf:
+      "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.pdf",
+    epub:
+      "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.epub",
+    pageCount: 197,
+    figureCount: 26,
+    plateCount: 2,
+    types: ["民族誌", "言語学研究", "比較語彙", "一次史料"],
+    regions: ["グアテマラ", "中央アメリカ", "マヤ地域"],
+    languages: ["ドイツ語", "マヤ諸語"],
+    tags: [
+      "先住民",
+      "マヤ諸語",
+      "比較言語学",
+      "比較語彙",
+      "民族誌",
+      "言語分布",
+      "原刊図版",
+      "19世紀",
+    ],
+  },
+  {
     slug: "stoll-guatemala-reisen-schilderungen-1886",
     title: "グアテマラ――1878–1883年の旅行と描写",
     originalTitle:
@@ -3069,6 +3106,81 @@ const publicationRecords = [
       "気象観測",
       "民族誌図",
       "折込地図",
+      "19世紀",
+    ],
+  },
+  {
+    slug: "stoll-ixil-language-1887",
+    title: "イシル人の言語",
+    originalTitle:
+      "Die Sprache der Ixil-Indianer: Ein Beitrag zur Ethnologie und Linguistik der Maya-Völker",
+    subtitle:
+      "1887年初版・本文全156頁、比較語彙、補遺、正誤、広告 日本語全訳",
+    author: "オットー・シュトル",
+    series: "DIE SPRACHE DER IXIL-INDIANER · 1887",
+    originalPublication: "ライプツィヒ、F. A. Brockhaus、1887年",
+    year: 1887,
+    extent:
+      "PDF 227頁・原刊本文1–156頁・比較語彙・補遺・正誤表・巻末広告・原刊標題紙1点",
+    description:
+      "オットー・シュトルによるイシル語の文法・語彙研究。音論、名詞・代名詞・数詞・動詞などの文法記述、例文、グアテマラ北西部諸語の比較語彙を収め、イシル語をマヤ諸語の民族学・比較言語学のなかに位置づけた1887年刊の基礎資料です。原刊本文、補遺、正誤表、広告、原刊標題紙を収録しています。",
+    cover: "publications/stoll-ixil-language-1887/cover.jpg",
+    pdf:
+      "publications/stoll-ixil-language-1887/Otto_Stoll_Die_Sprache_der_Ixil_Indianer_Japanese_Full_Translation.pdf",
+    epub:
+      "publications/stoll-ixil-language-1887/Otto_Stoll_Die_Sprache_der_Ixil_Indianer_Japanese_Full_Translation.epub",
+    pageCount: 227,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["言語学研究", "文法書", "比較語彙", "一次史料"],
+    regions: ["グアテマラ", "イシル地域", "マヤ地域"],
+    languages: ["ドイツ語", "イシル語", "マヤ諸語"],
+    tags: [
+      "イシル語",
+      "マヤ諸語",
+      "比較言語学",
+      "文法",
+      "語彙",
+      "民族学",
+      "原刊標題紙",
+      "19世紀",
+    ],
+  },
+  {
+    slug: "stoll-pokom-languages-1888-1896",
+    title: "ポコム語群のマヤ諸語",
+    originalTitle: "Die Maya-Sprachen der Pokom-Gruppe",
+    subtitle:
+      "第一部ポコンチ語（1888年）・第二部ケクチ語／付録ウスパンテカ語（1896年）日本語全訳",
+    author: "オットー・シュトル",
+    series: "DIE MAYA-SPRACHEN DER POKOM-GRUPPE · 1888–1896",
+    originalPublication:
+      "第一部：ウィーン、Alfred Hölder、1888年；第二部：ライプツィヒ、K. F. Köhler’s Antiquarium、1896年",
+    year: 1888,
+    extent:
+      "PDF 725頁・第一部原刊1–203頁・第二部原刊1–221頁・補遺・巻末広告・原刊標題紙2点",
+    description:
+      "オットー・シュトルがポコム語群を構成するポコンチ語、ケクチ語、ウスパンテカ語を記述・比較した二部作。音論、形態論、統語論、語彙、例文と比較資料を収める1888–1896年刊の大規模なマヤ言語学資料です。欠落頁を別本で補完し、両部の原刊標題紙、補遺、広告を含めて収録しています。",
+    cover:
+      "publications/stoll-pokom-languages-1888-1896/cover.jpg",
+    pdf:
+      "publications/stoll-pokom-languages-1888-1896/Otto_Stoll_Die_Maya_Sprachen_der_Pokom_Gruppe_Japanese_Full_Translation.pdf",
+    epub:
+      "publications/stoll-pokom-languages-1888-1896/Otto_Stoll_Die_Maya_Sprachen_der_Pokom_Gruppe_Japanese_Full_Translation.epub",
+    pageCount: 725,
+    figureCount: 2,
+    plateCount: 0,
+    types: ["言語学研究", "文法書", "比較語彙", "一次史料"],
+    regions: ["グアテマラ", "ベラパス", "マヤ地域"],
+    languages: ["ドイツ語", "ポコンチ語", "ケクチ語", "ウスパンテカ語"],
+    tags: [
+      "ポコンチ語",
+      "ケクチ語",
+      "ウスパンテカ語",
+      "ポコム語群",
+      "マヤ諸語",
+      "比較言語学",
+      "文法",
       "19世紀",
     ],
   },
@@ -6541,6 +6653,18 @@ const publicationMetadata = {
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
   },
+  "stoll-ethnographie-guatemala-1884": {
+    sourceEdition:
+      "Otto Stoll『Zur Ethnographie der Republik Guatemala』（Zürich: Druck von Orell Füssli & Co.、1884年初版）。",
+    sourceProvider:
+      "Harvard University Peabody Museum所蔵本を収めるInternet Archive公開画像（識別子bub_gb_I1kTAAAAYAAJ）を底本とした。原刊本文1–175頁、比較語彙表、付図を収録し、原刊標題紙画像を併載した。",
+    sourceUrl:
+      "https://archive.org/details/bub_gb_I1kTAAAAYAAJ",
+    rights:
+      "1884年原刊は著作権保護期間を満了しています。Internet Archiveの資料ページは当該デジタル資料をPublic Domain Mark 1.0で表示しています。デジタル画像には公開元・所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
+  },
   "stoll-guatemala-reisen-schilderungen-1886": {
     sourceEdition:
       "Otto Stoll『Guatemala: Reisen und Schilderungen aus den Jahren 1878–1883』（Leipzig: F. A. Brockhaus、1886年初版）。",
@@ -6552,6 +6676,30 @@ const publicationMetadata = {
       "1886年原刊および原刊の図版・地図は著作権保護期間を満了しています。Internet Archiveに掲載されたWellcome Library所蔵本はPublic Domain Mark表示です。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-07-31",
     updatedDate: "2026-07-31",
+  },
+  "stoll-ixil-language-1887": {
+    sourceEdition:
+      "Otto Stoll『Die Sprache der Ixil-Indianer: Ein Beitrag zur Ethnologie und Linguistik der Maya-Völker』（Leipzig: F. A. Brockhaus、1887年初版）。",
+    sourceProvider:
+      "Harvard University所蔵本を収めるInternet Archive公開画像（識別子bub_gb_f1oTAAAAYAAJ）を底本とした。原刊本文1–156頁、比較語彙、補遺、正誤表、巻末広告を収録し、原刊標題紙画像を併載した。",
+    sourceUrl:
+      "https://archive.org/details/bub_gb_f1oTAAAAYAAJ",
+    rights:
+      "1887年原刊は著作権保護期間を満了しています。Internet Archiveの資料ページは当該デジタル資料をPublic Domain Mark 1.0で表示しています。デジタル画像には公開元・所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
+  },
+  "stoll-pokom-languages-1888-1896": {
+    sourceEdition:
+      "Otto Stoll『Die Maya-Sprachen der Pokom-Gruppe』第一部『Die Sprache der Pokonchi-Indianer』（Wien: Alfred Hölder、1888年）および第二部『Die Sprache der K’ekchi-Indianer, nebst Anhang: Die Uspanteca-Sprache』（Leipzig: K. F. Köhler’s Antiquarium、1896年）。",
+    sourceProvider:
+      "Harvard University所蔵本を収めるInternet Archive公開画像（識別子bub_gb_r28AAAAAYAAJ）を主底本とした。第一部原刊183–184頁の欠落と185頁左欄の欠損はGoogle BooksのUniversity of California所蔵本（識別子eWRFAQAAIAAJ）で補完し、第二部はBayerische Staatsbibliothek公開資料（識別子11814635bsb）でも原画像照合した。両部の原刊標題紙画像を併載した。",
+    sourceUrl:
+      "https://archive.org/details/bub_gb_r28AAAAAYAAJ",
+    rights:
+      "1888年・1896年原刊は著作権保護期間を満了しています。Internet Archiveの主底本資料ページは当該デジタル資料をPublic Domain Mark 1.0で表示しています。補完・照合用画像には各公開元・所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
   },
   "brinton-chilan-balam-1882": {
     sourceEdition:
