@@ -73,7 +73,7 @@ jobs:
               text = "".join(texts)
               assert text.count("原刊 p.") == 131
               assert not re.search("公開前|確認用|公開作業は行っていない|review", text)
-              assert image_refs >= 1
+              assert "pineda_public_cover.jpg" in archive.read("EPUB/text/cover.xhtml").decode("utf-8")
           print("Pineda EPUB 3 cover and content validation OK")
           PY
 
