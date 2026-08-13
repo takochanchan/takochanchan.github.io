@@ -1,0 +1,144 @@
+name: Publish Ayer MS 1515 volume 2 assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-ximenez-ayer-vol2-20260813-v1.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      TAG: publications-current
+      STAGING_BRANCH: release-staging-ximenez-ayer-vol2-20260813-v1
+      STAGING_ROOT: .release-staging/ximenez-ayer-ms-1515-volume-2
+      PDF: Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.pdf
+      EPUB: Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.epub
+      PDF_SIZE: "62476199"
+      EPUB_SIZE: "57654775"
+      PDF_SHA256: 53c08cbd1973b80775553c3e18ba2623fc096c04a98f67b7d5c3748c8c40fdae
+      EPUB_SHA256: a6b1b84da4617bf752031707cfe29e1bd9ca8171035b5e7fc8f222cab7826558
+      OLD_PDF: Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf
+      OLD_EPUB: Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub
+      WORKFLOW_PATH: .github/workflows/publish-ximenez-ayer-vol2-20260813-v1.yml
+    steps:
+      - name: Check out staged release bytes
+        uses: actions/checkout@v4
+        with:
+          ref: release-staging-ximenez-ayer-vol2-20260813-v1
+
+      - name: Reassemble and verify new assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          cat "$STAGING_ROOT"/pdf/part-* > "release/$PDF"
+          cat "$STAGING_ROOT"/epub/part-* > "release/$EPUB"
+          test "$(stat -c %s "release/$PDF")" = "$PDF_SIZE"
+          test "$(stat -c %s "release/$EPUB")" = "$EPUB_SIZE"
+          test "$(sha256sum "release/$PDF" | cut -d' ' -f1)" = "$PDF_SHA256"
+          test "$(sha256sum "release/$EPUB" | cut -d' ' -f1)" = "$EPUB_SHA256"
+          pdfinfo "release/$PDF" | grep -Eq '^Pages:[[:space:]]+270$'
+          unzip -t "release/$EPUB" >/dev/null
+
+      - name: Build the updated checksum manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p current
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern SHA256SUMS.txt --dir current
+          awk -v old_pdf="$OLD_PDF" -v old_epub="$OLD_EPUB" \
+              -v new_pdf="$PDF" -v new_epub="$EPUB" \
+            '$2 != old_pdf && $2 != old_epub && $2 != new_pdf && $2 != new_epub' \
+            current/SHA256SUMS.txt > release/SHA256SUMS.txt
+          printf '%s  %s\n%s  %s\n' \
+            "$EPUB_SHA256" "$EPUB" "$PDF_SHA256" "$PDF" \
+            >> release/SHA256SUMS.txt
+          LC_ALL=C sort -k2,2 -o release/SHA256SUMS.txt release/SHA256SUMS.txt
+          test "$(grep -Fc "  $PDF" release/SHA256SUMS.txt)" = 1
+          test "$(grep -Fc "  $EPUB" release/SHA256SUMS.txt)" = 1
+          ! grep -Fq "  $OLD_PDF" release/SHA256SUMS.txt
+          ! grep -Fq "  $OLD_EPUB" release/SHA256SUMS.txt
+
+      - name: Require unused new asset names
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          names="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --json assets --jq '.assets[].name')"
+          ! grep -Fxq "$PDF" <<<"$names"
+          ! grep -Fxq "$EPUB" <<<"$names"
+          grep -Fxq "$OLD_PDF" <<<"$names"
+          grep -Fxq "$OLD_EPUB" <<<"$names"
+
+      - name: Upload combined PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$TAG" "release/$PDF" "release/$EPUB" \
+            --repo "$GITHUB_REPOSITORY"
+          gh release upload "$TAG" release/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and verify combined assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --pattern "$PDF" --pattern "$EPUB" --pattern SHA256SUMS.txt \
+            --dir verify
+          grep -E "  (${PDF}|${EPUB})$" verify/SHA256SUMS.txt \
+            > verify/AYER_SHA256SUMS.txt
+          test "$(wc -l < verify/AYER_SHA256SUMS.txt)" = 2
+          (cd verify && sha256sum -c AYER_SHA256SUMS.txt)
+          cmp "release/$PDF" "verify/$PDF"
+          cmp "release/$EPUB" "verify/$EPUB"
+
+      - name: Delete superseded standalone Escolios assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release delete-asset "$TAG" "$OLD_PDF" \
+            --repo "$GITHUB_REPOSITORY" --yes
+          gh release delete-asset "$TAG" "$OLD_EPUB" \
+            --repo "$GITHUB_REPOSITORY" --yes
+          names="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" \
+            --json assets --jq '.assets[].name')"
+          grep -Fxq "$PDF" <<<"$names"
+          grep -Fxq "$EPUB" <<<"$names"
+          ! grep -Fxq "$OLD_PDF" <<<"$names"
+          ! grep -Fxq "$OLD_EPUB" <<<"$names"
+
+      - name: Remove staging branch and one-shot workflow
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH"
+          workflow_sha="$(gh api \
+            "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH?ref=main" \
+            --jq .sha)"
+          gh api --method DELETE \
+            "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH" \
+            -f message="Remove completed Ayer volume 2 asset workflow" \
+            -f sha="$workflow_sha" \
+            -f branch=main
