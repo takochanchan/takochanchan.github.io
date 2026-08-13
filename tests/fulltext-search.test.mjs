@@ -46,7 +46,7 @@ test("snippets preserve labels, sort by PDF page, and merge same-page hits", () 
       {
         anchor: { id: "b00003" },
         url: "/work/#b00003",
-        excerpt: "同じPDF頁の別の原刊頁",
+        excerpt: "同じPDF頁の別の底本位置",
       },
       {
         anchor: { id: "b00002" },
@@ -57,15 +57,15 @@ test("snippets preserve labels, sort by PDF page, and merge same-page hits", () 
   };
   const pageMap = {
     blocks: {
-      b00001: ["原刊 fol. 12r", 4, 0],
+      b00001: ["写本 f. 12r", 4, 0],
       b00002: ["原刊 p. 8", 9, 1],
-      b00003: ["原刊 fol. 12v", 4, 2],
+      b00003: ["写本 f. 12v", 4, 2],
     },
   };
   assert.deepEqual(snippetsFor(result, pageMap), [
     {
       blockId: "b00001",
-      originalPage: "原刊 fol. 12r／原刊 fol. 12v",
+      originalPage: "写本 f. 12r／写本 f. 12v",
       pdfPage: 4,
       order: 0,
       excerpt: "一つ目",

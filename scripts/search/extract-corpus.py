@@ -30,11 +30,22 @@ from urllib.parse import unquote
 from xml.etree import ElementTree as ET
 
 
+# The internal name is retained because the search-index schema still calls the
+# field ``originalPage``.  In practice this is a source-location marker: it may
+# point to a printed page, a manuscript folio, a digital image, or an explicitly
+# described composite source.
 ORIGINAL_MARKER_RE = re.compile(
     r"〔\s*(?:(?:原刊|原資料|原書|原写本|自筆稿(?!の)|原稿|底本|原誌|原報告|"
-    r"クラウス\s*117\s*写本)"
-    r"[^〕\r\n]{0,180})〕"
+    r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
+    r"主底本|補完底本|合成底本)"
+    r"[^〕\r\n]{0,240})〕"
 )
+DEFAULT_SOURCE_LOCATION = "底本位置なし（前付）"
+DOCX_NON_LOCATION_SENTINEL = "\ue000"
+DOCX_STYLE_SENSITIVE_MARKER_RE = re.compile(
+    r"^\s*〔\s*(?:PMM\s*\d+\s*,|出所|主底本|補完底本|合成底本)"
+)
+DOCX_SOURCE_LOCATION_STYLES = {"Source Page", "Source Folio"}
 OCR_CACHE_VERSION = 1
 TRANSLATION_HEADING_RE = re.compile(
     r"^\s*(?:#{1,6}\s*)?(?:\*{0,2})?日本語全訳(?:\*{0,2})?\s*$",
@@ -71,7 +82,8 @@ EPUB_BLOCK_TAGS = {
 }
 FACSIMILE_ONLY_RE = re.compile(r"^原資料(?:画像)?頁\s*\d+$")
 STANDALONE_SOURCE_PAGE_RE = re.compile(
-    r"^原資料(?:画像)?頁\s*\d+(?:\s*[–-]\s*\d+)?$"
+    r"^(?:原資料(?:画像)?頁\s*\d+(?:\s*[–-]\s*\d+)?|"
+    r"(?:未丁付)?第\s*\d+\s*葉[表裏])$"
 )
 EPUB_METADATA_HEADING_RE = re.compile(
     r"^(?:書誌(?:・底本)?|底本|著作権(?:・(?:利用条件|翻訳方針))?|利用条件)$"
@@ -150,6 +162,7 @@ def normalize_for_match(value: str) -> str:
 
 
 def clean_markdown_inline(value: str) -> str:
+    value = value.replace(DOCX_NON_LOCATION_SENTINEL, "")
     value = re.sub(r"!\[([^\]]*)\]\([^)]*\)", r"\1", value)
     value = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", value)
     value = re.sub(r"<[^>]+>", " ", value)
@@ -164,13 +177,68 @@ def clean_markdown_inline(value: str) -> str:
 
 
 def original_marker_label(value: str) -> str:
-    return re.sub(r"\s+", " ", value.strip()[1:-1]).strip()
+    label = re.sub(r"\s+", " ", value.strip()[1:-1]).strip()
+    # Some legacy PMM 9 masters put a location and a full editorial note in one
+    # Source Page paragraph.  Keep the searchable location concise; the note is
+    # recovered separately by embedded_source_note(). Revised masters split the
+    # two paragraphs at source.
+    if re.match(r"^PMM\s*\d+\s*,", label, re.IGNORECASE):
+        label = label.split("。", 1)[0].rstrip("。")
+        label = re.split(r"[：、]", label, maxsplit=1)[0].strip()
+    return label
+
+
+def embedded_source_note(value: str) -> str | None:
+    """Recover a note attached to a legacy PMM source-location paragraph."""
+    label = re.sub(r"\s+", " ", value.strip()[1:-1]).strip()
+    if not re.match(r"^PMM\s*\d+\s*,", label, re.IGNORECASE):
+        return None
+    separators = [
+        (position, separator)
+        for separator in ("。", "：", "、")
+        if (position := label.find(separator)) > 0
+    ]
+    if separators:
+        position, separator = min(separators)
+        tail = label[position + len(separator) :].strip()
+        if tail:
+            return tail
+    return None
 
 
 def is_original_page_marker(value: str) -> bool:
     label = original_marker_label(value) if value.startswith("〔") else value.strip()
     if re.match(r"^原資料\s*[:：]", label):
         return True
+    if STANDALONE_SOURCE_PAGE_RE.fullmatch(label):
+        return True
+    if re.match(r"^出所\b", label):
+        return bool(
+            re.search(
+                r"(?:\b\d{4}年版\s*p\.?\s*\d|"
+                r"\b(?:f|ff|fol|fols)\.\s*\d+[rv]?|"
+                r"\b(?:p|pp|n)\.\s*\d)",
+                label,
+                re.IGNORECASE,
+            )
+        )
+    if re.match(r"^PMM\s*\d+\s*,", label, re.IGNORECASE):
+        return bool(
+            re.search(
+                r"\b(?:f|ff|fol|fols)\.\s*\d+[rv]?",
+                label,
+                re.IGNORECASE,
+            )
+        )
+    if re.match(r"^(?:主底本|補完底本|合成底本)\b", label):
+        return bool(
+            re.search(
+                r"(?:\bp\.?\s*\d|\b(?:f|ff|fol|fols)\.\s*\d+[rv]?|"
+                r"(?:底本|デジタル)画像\s*\d)",
+                label,
+                re.IGNORECASE,
+            )
+        )
     return bool(
         re.match(
             r"^(?:"
@@ -181,7 +249,8 @@ def is_original_page_marker(value: str) -> bool:
             r"|原写本(?:\s+p\.?|・第|・無番号挿入葉)"
             r"|自筆稿(?:\s+第\d+巻\s+f\.?\s*\d+[rv]?|\s+f\.?\s*\d+[rv]?)"
             r"|原稿\s+p\."
-            r"|底本\s+p\."
+            r"|底本(?:\s+p\.?|画像\s*\d)"
+            r"|デジタル画像\s*\d"
             r"|原誌(?:\s*p\.?|\d+頁)"
             r"|原報告第\d+(?:[–-]\d+)?頁"
             r"|クラウス\s*117\s*写本\s+f\.?\s*\d+[rv]"
@@ -264,6 +333,10 @@ def markdown_paragraphs(path: Path) -> list[str]:
             flush()
             paragraphs.append(line)
             continue
+        if STANDALONE_SOURCE_PAGE_RE.fullmatch(line.strip()):
+            flush()
+            paragraphs.append(line.strip())
+            continue
         if "|" in line and line.strip().startswith("|"):
             flush()
             cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
@@ -279,6 +352,18 @@ def docx_part_paragraphs(archive: zipfile.ZipFile, name: str) -> list[str]:
         root = ET.fromstring(archive.read(name))
     except KeyError:
         return []
+    style_names: dict[str, str] = {}
+    try:
+        styles_root = ET.fromstring(archive.read("word/styles.xml"))
+    except KeyError:
+        styles_root = None
+    if styles_root is not None:
+        for style in styles_root.findall(f"{W}style"):
+            style_id = style.get(f"{W}styleId")
+            name_node = style.find(f"{W}name")
+            if style_id and name_node is not None and name_node.get(f"{W}val"):
+                style_names[style_id] = str(name_node.get(f"{W}val"))
+
     paragraphs: list[str] = []
     for paragraph in root.iter(f"{W}p"):
         pieces: list[str] = []
@@ -292,6 +377,20 @@ def docx_part_paragraphs(archive: zipfile.ZipFile, name: str) -> list[str]:
         text = re.sub(r"[ \t]+", " ", "".join(pieces))
         text = re.sub(r"\s*\n\s*", " ", text).strip()
         if text:
+            ppr = paragraph.find(f"{W}pPr")
+            style_node = ppr.find(f"{W}pStyle") if ppr is not None else None
+            style_id = style_node.get(f"{W}val") if style_node is not None else None
+            style_name = style_names.get(style_id or "", "")
+            if (
+                DOCX_STYLE_SENSITIVE_MARKER_RE.match(text)
+                and style_name not in DOCX_SOURCE_LOCATION_STYLES
+            ):
+                text = re.sub(
+                    r"^(\s*〔\s*)",
+                    rf"\1{DOCX_NON_LOCATION_SENTINEL}",
+                    text,
+                    count=1,
+                )
             paragraphs.append(text)
     return paragraphs
 
@@ -379,7 +478,7 @@ def epub_footnote_reference_pages(
     documents: list[tuple[str, ET.Element]],
 ) -> dict[str, str]:
     """Map EPUB noteref anchors to the source page current at the citation."""
-    current_marker = "原刊 無頁数（前付）"
+    current_marker = DEFAULT_SOURCE_LOCATION
     output: dict[str, str] = {}
     for member, body in documents:
         for block in epub_block_elements(body):
@@ -573,7 +672,7 @@ def epub_paragraphs(path: Path) -> list[str]:
 
 
 def paragraphs_with_original_pages(paragraphs: list[str]) -> list[tuple[str, str]]:
-    current_marker = "原刊 無頁数（前付）"
+    current_marker = DEFAULT_SOURCE_LOCATION
     output: list[tuple[str, str]] = []
     for paragraph in paragraphs:
         standalone_marker = STANDALONE_SOURCE_PAGE_RE.fullmatch(paragraph.strip())
@@ -598,6 +697,9 @@ def paragraphs_with_original_pages(paragraphs: list[str]) -> list[tuple[str, str
             if before:
                 output.append((current_marker, before))
             current_marker = original_marker_label(marker.group(0))
+            embedded_note = embedded_source_note(marker.group(0))
+            if embedded_note:
+                output.append((current_marker, f"訳注　{embedded_note}"))
             cursor = marker.end()
         after = clean_markdown_inline(paragraph[cursor:])
         if after:
@@ -617,6 +719,13 @@ def original_labels_for_pdf_pages(pages: list[str]) -> list[list[str]]:
             label = original_marker_label(marker.group(0))
             if label not in labels:
                 labels.append(label)
+        for line in page.splitlines():
+            candidate = re.sub(r"\s+", " ", line).strip()
+            if (
+                STANDALONE_SOURCE_PAGE_RE.fullmatch(candidate)
+                and candidate not in labels
+            ):
+                labels.append(candidate)
         output.append(labels)
     return output
 

@@ -53,8 +53,8 @@ class SearchExtractorTest(unittest.TestCase):
         self.assertEqual(
             annotated,
             [
-                ("原刊 無頁数（前付）", "原刊標題紙"),
-                ("原刊 無頁数（前付）", "境界調査報告"),
+                ("底本位置なし（前付）", "原刊標題紙"),
+                ("底本位置なし（前付）", "境界調査報告"),
                 ("原刊 p. 3", "ここから本文。"),
             ],
         )
@@ -66,7 +66,7 @@ class SearchExtractorTest(unittest.TestCase):
         self.assertEqual(
             annotated,
             [
-                ("原刊 無頁数（前付）", "案内だけ"),
+                ("底本位置なし（前付）", "案内だけ"),
                 ("原刊 p. 7", "本文"),
             ],
         )
@@ -78,8 +78,112 @@ class SearchExtractorTest(unittest.TestCase):
         self.assertEqual(
             annotated,
             [
-                ("原刊 無頁数（前付）", "案内"),
+                ("底本位置なし（前付）", "案内"),
                 ("原資料：CR-AN-001", "本文"),
+            ],
+        )
+
+    def test_pmm_folio_marker_is_preserved_as_the_source_location(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔PMM 9, fol. 12r〕最初の本文。",
+                "同じfolioの続き。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("PMM 9, fol. 12r", "最初の本文。"),
+                ("PMM 9, fol. 12r", "同じfolioの続き。"),
+            ],
+        )
+
+    def test_pmm_location_label_drops_attached_editorial_explanation(self):
+        marker = (
+            "〔PMM 9, fols. 45v–51r（画像094–105）。"
+            "写本の物理順に従い、本文を配列した。〕"
+        )
+        self.assertEqual(
+            extract_corpus.original_marker_label(marker),
+            "PMM 9, fols. 45v–51r（画像094–105）",
+        )
+
+        self.assertEqual(
+            extract_corpus.paragraphs_with_original_pages([marker]),
+            [
+                (
+                    "PMM 9, fols. 45v–51r（画像094–105）",
+                    "訳注　写本の物理順に従い、本文を配列した。",
+                )
+            ],
+        )
+
+    def test_docx_source_note_with_pmm_folio_does_not_replace_location(self):
+        document_xml = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:p><w:pPr><w:pStyle w:val="SourcePage"/></w:pPr><w:r><w:t>〔PMM 9, fol. 12r〕</w:t></w:r></w:p>
+    <w:p><w:r><w:t>本文。</w:t></w:r></w:p>
+    <w:p><w:pPr><w:pStyle w:val="SourceNote"/></w:pPr><w:r><w:t>〔PMM 9, fol. 12r。異本では語順が異なる。〕</w:t></w:r></w:p>
+    <w:p><w:r><w:t>続き。</w:t></w:r></w:p>
+  </w:body>
+</w:document>"""
+        styles_xml = """<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:style w:type="paragraph" w:styleId="SourcePage"><w:name w:val="Source Page"/></w:style>
+  <w:style w:type="paragraph" w:styleId="SourceNote"><w:name w:val="Source Note"/></w:style>
+</w:styles>"""
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "master.docx"
+            with zipfile.ZipFile(path, "w") as archive:
+                archive.writestr("word/document.xml", document_xml)
+                archive.writestr("word/styles.xml", styles_xml)
+            annotated = extract_corpus.paragraphs_with_original_pages(
+                extract_corpus.docx_paragraphs(path)
+            )
+
+        self.assertEqual(
+            annotated,
+            [
+                ("PMM 9, fol. 12r", "本文。"),
+                ("PMM 9, fol. 12r", "〔PMM 9, fol. 12r。異本では語順が異なる。〕"),
+                ("PMM 9, fol. 12r", "続き。"),
+            ],
+        )
+
+    def test_castillo_source_marker_keeps_multiple_witnesses(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔出所 1908年版 p.42／BnF Ms. mex. 305, f.12r〕本文。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [("出所 1908年版 p.42／BnF Ms. mex. 305, f.12r", "本文。")],
+        )
+
+    def test_explicit_composite_source_marker_is_kept_as_one_location(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔主底本 原刊 p. 93／補完底本 写本 f. 46r〕本文。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [("主底本 原刊 p. 93／補完底本 写本 f. 46r", "本文。")],
+        )
+
+    def test_standalone_japanese_folio_marker_is_preserved(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            ["第12葉表", "本文。", "未丁付第2葉裏", "続き。"]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("第12葉表", "第12葉表"),
+                ("第12葉表", "本文。"),
+                ("未丁付第2葉裏", "未丁付第2葉裏"),
+                ("未丁付第2葉裏", "続き。"),
             ],
         )
 
@@ -152,7 +256,7 @@ class SearchExtractorTest(unittest.TestCase):
         chapter = """<?xml version="1.0"?>
 <html xmlns="http://www.w3.org/1999/xhtml"><body>
   <h1>日本語全訳</h1>
-  <p>〔原刊 fol. 12r〕最初の本文。</p>
+  <p>〔自筆稿 f. 12r〕最初の本文。</p>
   <p>続きの本文。</p>
 </body></html>"""
         with tempfile.TemporaryDirectory() as directory:
@@ -167,8 +271,8 @@ class SearchExtractorTest(unittest.TestCase):
         self.assertEqual(
             annotated,
             [
-                ("原刊 fol. 12r", "最初の本文。"),
-                ("原刊 fol. 12r", "続きの本文。"),
+                ("自筆稿 f. 12r", "最初の本文。"),
+                ("自筆稿 f. 12r", "続きの本文。"),
             ],
         )
 

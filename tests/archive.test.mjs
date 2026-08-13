@@ -636,7 +636,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /PDFとリフロー型EPUB/);
   assert.match(html, /href="\/about\/">翻訳・編集・レビュー・再利用方針を読む/);
   assert.doesNotMatch(html, /生成AIの余剰リソース/);
-  assert.match(html, /原刊標識と日本語版PDFの物理頁を併記/);
+  assert.match(html, /底本位置標識（原刊頁・写本葉丁・画像番号など）と日本語版PDFの物理頁を併記/);
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
     majorPublications.length,
