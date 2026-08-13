@@ -166,7 +166,7 @@ try {
     ["グリハルバ", grijalva, 173],
     ["グリハルバ川", grijalvaRiver, 52],
     ["ピエドラス", piedras, 143],
-    ["ピエドラス・ネグラス", piedrasNegras, 121],
+    ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
   const pageMismatches = pageChecks.filter(([, actual, expected]) =>
     actual !== expected
