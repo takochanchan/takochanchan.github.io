@@ -18,10 +18,10 @@ jobs:
   publish-site:
     runs-on: ubuntu-latest
     env:
-      EXPECTED_PARENT: 74852151a78f44e6e999ad2542cf17ae57102dd3
+      EXPECTED_PARENT: c9dff79c7825587a39183449b63662d9b2d294f6
       EXPECTED_BASE: 7e5e0632a7bd2c52a0af8d45878f9e4b78000253
       EXPECTED_STAGE_COMMIT: bfce1b32c657f92690aafbd5e2436a82b1606c6e
-      EXPECTED_TARGET_TREE: 058cc1706ffcc07dbe044913283cb48029322e8d
+      EXPECTED_TARGET_TREE: 57bae12957a6192acce0c33bf38d4ad68e70523e
       STAGING_BRANCH: site-staging-pineda-sublevaciones-20260814-v1
       WORKFLOW_PATH: .github/workflows/publish-pineda-sublevaciones-site-20260814-v1.yml
       PINEDA_SLUG: pineda-sublevaciones-indigenas-chiapas-1888
