@@ -771,6 +771,16 @@ ${header({
             <dt>底本</dt>
             <dd>${escapeHtml(item.sourceEdition)}</dd>
           </div>
+          ${
+            item.majorSources?.length
+              ? `<div class="publication-info__wide">
+            <dt>主要収録史料</dt>
+            <dd><ul class="publication-info__source-list">${item.majorSources
+              .map((source) => `<li>${escapeHtml(source)}</li>`)
+              .join("")}</ul></dd>
+          </div>`
+              : ""
+          }
           <div class="publication-info__wide">
             <dt>公開元</dt>
             <dd>${sourceProvider}</dd>

@@ -1403,6 +1403,15 @@ select {
   overflow-wrap: anywhere;
 }
 
+.publication-info__source-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.publication-info__source-list li + li {
+  margin-top: 0.35rem;
+}
+
 .publication-info__grid a {
   color: var(--teal);
   text-decoration: underline;

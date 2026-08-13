@@ -559,6 +559,28 @@ test("Pineda 1888 sublevaciones publication metadata stays fixed", () => {
   assert.equal(item.updatedDate, "2026-08-14");
 });
 
+test("Chimalpahin volume 3 credits its compiler and names major sources", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "codice-chimalpahin-volumen-3",
+  );
+  assert.ok(item);
+  assert.equal(
+    item.author,
+    "ドミンゴ・デ・サン・アントン・ムニョン・チマルパイン（編）",
+  );
+  for (const source of [
+    "メキシコ史／年代記",
+    "メシカヨトル年代記",
+    "ガブリエル・デ・アヤラ『メシカ年代記』",
+    "暦を伴うメキシコ史／年代記",
+    "メシカの来住の記録",
+    "コルワカンの王侯・領主・住民の系譜と世代",
+  ]) {
+    assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
+  }
+  assert.doesNotMatch(item.author, /編者不詳/);
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
