@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5a2557216e326c51c30a749d971288332b74046d",
+  "archive_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -191,7 +191,8 @@
     "perigny-principaute-japonaise-riou-kiou-1910": "publications/perigny-principaute-japonaise-riou-kiou-1910/master.docx",
     "perigny-pays-ainos-1910": "publications/perigny-pays-ainos-1910/master.md",
     "perigny-riou-kiou-coree-1912": "publications/perigny-riou-kiou-coree-1912/master.docx",
-    "perigny-coree-impressions-voyage-1913": "publications/perigny-coree-impressions-voyage-1913/master.docx"
+    "perigny-coree-impressions-voyage-1913": "publications/perigny-coree-impressions-voyage-1913/master.docx",
+    "wafer-new-voyage-isthmus-america-1699": "publications/wafer-new-voyage-isthmus-america-1699/master.docx"
   },
   "release_fallbacks": {
     "tezozomoc-cronica-mexicana-kraus-117": {
@@ -243,6 +244,16 @@
       "master_filename": "master.docx",
       "master_size": 1314377,
       "master_sha256": "47f0b6bd94273515c51c09d83226c951d14eb27015d278112256fded33ee9bd3"
+    },
+    "wafer-new-voyage-isthmus-america-1699": {
+      "canonical_path": "publications/wafer-new-voyage-isthmus-america-1699/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
+      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "master_filename": "master.docx",
+      "master_size": 5553208,
+      "master_sha256": "c16be80b86f77373626dc213e2cdbf75c55aed0c5d25eb67357664f98db1c68d"
     }
   }
 }
