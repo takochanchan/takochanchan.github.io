@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+  "archive_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -197,19 +197,19 @@
     "tezozomoc-cronica-mexicana-kraus-117": {
       "canonical_path": "publications/tezozomoc-cronica-mexicana-kraus-117/master.docx",
       "status": "pending_lfs",
-      "release_tag": "master-tezozomoc-cronica-mexicana-kraus-117-20260813-v1",
-      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-tezozomoc-cronica-mexicana-kraus-117-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "release_tag": "master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "master.docx",
-      "master_size": 427641,
-      "master_sha256": "f7d744ce91eed138c34bcb8a5a973400f850667a0554b932f6c74678b40788b5"
+      "master_size": 427241,
+      "master_sha256": "297b9dfb32bc18799c2071fc16707853b91e777c0b4deabc4b49134399f9ea8f"
     },
     "ximenez-ayer-ms-1515-volume-2": {
       "canonical_path": "publications/ximenez-ayer-ms-1515-volume-2/master.docx",
       "status": "pending_lfs",
       "release_tag": "master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_master.docx",
       "master_size": 58718918,
       "master_sha256": "5684786bba9cd80d167260431587c82b7b48def19958df5ae49d12779ae19993"
@@ -219,7 +219,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-ethnographie-guatemala-1884-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ethnographie-guatemala-1884-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "master.docx",
       "master_size": 4105894,
       "master_sha256": "a715ef99d4fb9f6008b2b0a9f7f1c952cbafa11a51fe313d253ee5d77c32b046"
@@ -229,7 +229,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-ixil-language-1887-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ixil-language-1887-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "master.docx",
       "master_size": 391033,
       "master_sha256": "a5e8fd8becb25a60a9655a815de5e6b42488ff5fa8780fcff824960723bc7075"
@@ -239,7 +239,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-pokom-languages-1888-1896-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-pokom-languages-1888-1896-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "master.docx",
       "master_size": 1314377,
       "master_sha256": "47f0b6bd94273515c51c09d83226c951d14eb27015d278112256fded33ee9bd3"
@@ -249,7 +249,7 @@
       "status": "pending_lfs",
       "release_tag": "master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
-      "ledger_commit": "01c35918bfcfd4168afa8b947567f7a1ab793c49",
+      "ledger_commit": "b295e627fa998cfaaa6f98805da4280f2d667bb4",
       "master_filename": "master.docx",
       "master_size": 5553208,
       "master_sha256": "c16be80b86f77373626dc213e2cdbf75c55aed0c5d25eb67357664f98db1c68d"

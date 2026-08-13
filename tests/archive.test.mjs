@@ -330,7 +330,7 @@ test("Tezozomoc Kraus 117 keeps the manuscript scope and concise rights statemen
   );
   assert.ok(item);
   assert.equal(item.recordClass, "major-work");
-  assert.equal(item.pageCount, 470);
+  assert.equal(item.pageCount, 513);
   assert.equal(item.figureCount, 0);
   assert.equal(item.plateCount, 0);
   assert.match(item.sourceEdition, /mss31013-11700/);
@@ -512,9 +512,10 @@ test("Tezozomoc measurement review metadata stays fixed", () => {
       publication.slug === "tezozomoc-cronica-mexicana-kraus-117",
   );
   assert.ok(item);
-  assert.equal(item.pageCount, 470);
-  assert.match(item.extent, /PDF 470頁/);
+  assert.equal(item.pageCount, 513);
+  assert.match(item.extent, /PDF 513頁/);
   assert.match(item.description, /braça 32例を「ブラサ」に統一/);
+  assert.match(item.description, /写本見出し111件.*すべてページ冒頭/);
   assert.equal(item.updatedDate, "2026-08-13");
   assert.doesNotMatch(item.extent, /PDF 509頁/);
 });
