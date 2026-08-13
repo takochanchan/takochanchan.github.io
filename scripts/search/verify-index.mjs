@@ -28,6 +28,10 @@ const assetManifestBytes = await readFile(
 );
 const assetManifest = JSON.parse(assetManifestBytes.toString("utf8"));
 const assets = new Map(assetManifest.assets.map((asset) => [asset.path, asset]));
+const masterPathFor = (slug) =>
+  archive.publications[slug] ??
+  archive.release_fallbacks?.[slug]?.canonical_path ??
+  null;
 const expectedAssetSha = createHash("sha256")
   .update(assetManifestBytes)
   .digest("hex");
@@ -149,7 +153,8 @@ for (const publication of publications) {
   if (pageMap.pdfSha256 !== pdfAsset.sha256) {
     throw new Error(`${publication.slug}: stale PDF checksum in search map`);
   }
-  if (!archive.publications[publication.slug] || pageMap.masterPath !== archive.publications[publication.slug]) {
+  const masterPath = masterPathFor(publication.slug);
+  if (!masterPath || pageMap.masterPath !== masterPath) {
     throw new Error(`${publication.slug}: missing canonical master reference`);
   }
   if (!['canonical-master', 'approved-epub-mirror'].includes(pageMap.sourceMode)) {

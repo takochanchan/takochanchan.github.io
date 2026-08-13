@@ -64,9 +64,9 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 96);
-  assert.equal(shortPublications.length, 95);
-  assert.equal(shortPublicationAuthors.length, 25);
+  assert.equal(majorPublications.length, 97);
+  assert.equal(shortPublications.length, 94);
+  assert.equal(shortPublicationAuthors.length, 24);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -89,7 +89,6 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "arthes-peten-1893",
       "chonay-totonicapan-title-1886",
       "societe-geographie-central-america-report-1836",
-      "ximenez-escolios-ayer-ms-1515",
       "marimon-lacandones-1695",
       "peniche-relaciones-belice-1869",
       "dieseldorff-ausgrabungen-coban-1893",
@@ -188,15 +187,6 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     committee.publications.map((item) => item.slug),
     ["societe-geographie-central-america-report-1836"],
-  );
-  const ximenez = shortPublicationAuthors.find(
-    (author) => author.key === "francisco-ximenez",
-  );
-  assert.ok(ximenez);
-  assert.equal(ximenez.name, "フランシスコ・ヒメネス");
-  assert.deepEqual(
-    ximenez.publications.map((item) => item.slug),
-    ["ximenez-escolios-ayer-ms-1515"],
   );
   const stateDepartment = shortPublicationAuthors.find(
     (author) => author.key === "united-states-department-of-state",
@@ -412,15 +402,18 @@ test("revised Galindo Palenque record includes the Baezo appendix", () => {
   assert.equal(item.updatedDate, "2026-08-01");
 });
 
-test("Ximenez Escolios is catalogued as the complete six-leaf short work", () => {
+test("Ximenez Ayer MS 1515 volume 2 combines Popol Vuh and Escolios", () => {
   const item = publications.find(
-    (publication) => publication.slug === "ximenez-escolios-ayer-ms-1515",
+    (publication) => publication.slug === "ximenez-ayer-ms-1515-volume-2",
   );
   assert.ok(item);
-  assert.equal(item.recordClass, "short-work");
-  assert.equal(item.pageCount, 28);
-  assert.equal(item.plateCount, 12);
-  assert.match(item.subtitle, /第2巻末尾・全6葉/);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 270);
+  assert.equal(item.plateCount, 134);
+  assert.match(item.subtitle, /第2巻/);
+  assert.match(item.subtitle, /ポポル・ヴフ56葉/);
+  assert.match(item.subtitle, /歴史起源注解6葉/);
+  assert.match(item.description, /キチェ語の挨拶文5篇/);
   assert.match(item.description, /1734年のエチャーベ署名文/);
   assert.deepEqual(item.languages, ["スペイン語", "キチェ語", "ラテン語"]);
 });
@@ -601,8 +594,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">96<\/strong>件/);
-  assert.match(html, /id="paper-match-count">95<\/strong>件/);
+  assert.match(html, /id="book-match-count">97<\/strong>件/);
+  assert.match(html, /id="paper-match-count">94<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

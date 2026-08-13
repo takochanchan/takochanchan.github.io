@@ -162,9 +162,9 @@ DOCX_SOURCES = {
     "montufar-memorias-revolucion-centro-america-1832": SOURCES
     / "翻訳サイト"
     / "Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.docx",
-    "ximenez-escolios-ayer-ms-1515": SOURCES
+    "ximenez-ayer-ms-1515-volume-2": SOURCES
     / "翻訳サイト"
-    / "Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.docx",
+    / "Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.docx",
     "dieseldorff-ausgrabungen-coban-1893": SOURCES
     / "Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.docx",
     "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893": SOURCES

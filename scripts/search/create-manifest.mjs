@@ -28,6 +28,10 @@ const archiveLedger = JSON.parse(
   await readFile(path.join(projectRoot, "master-archive.json"), "utf8"),
 );
 const assets = new Map(assetManifest.assets.map((asset) => [asset.path, asset]));
+const masterPathFor = (slug) =>
+  archiveLedger.publications[slug] ??
+  archiveLedger.release_fallbacks?.[slug]?.canonical_path ??
+  null;
 
 const usableMaster = async (filename) => {
   if (!mastersRoot) return false;
@@ -45,7 +49,7 @@ const usableMaster = async (filename) => {
 
 const works = [];
 for (const publication of publications) {
-  const masterPath = archiveLedger.publications[publication.slug];
+  const masterPath = masterPathFor(publication.slug);
   if (!masterPath) throw new Error(`Missing master ledger entry: ${publication.slug}`);
   const pdfAsset = assets.get(publication.pdf);
   const epubAsset = assets.get(publication.epub);

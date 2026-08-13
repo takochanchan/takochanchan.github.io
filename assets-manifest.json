@@ -3404,22 +3404,22 @@
       "sha256": "25b52ae1d3b8f4202cbe13b100435c0df75b39012907cc74b6dda473c0b4b2a2"
     },
     {
-      "path": "publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
-      "size": 290298,
-      "sha256": "29c3dd6bf60abb93c0f02bae298cba2b6ba1747948c5c1cb0c65e394dc80f836"
+      "path": "publications/ximenez-ayer-ms-1515-volume-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ximenez-ayer-ms-1515-volume-2/cover.jpg",
+      "size": 85163,
+      "sha256": "ea8ea3db9adc6ebb6eeaf3aa2d694f26caea6344b288da34fe13bcb03a59949c"
     },
     {
-      "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
-      "size": 7311140,
-      "sha256": "bbfe7567227f88c8f447c96a7b0854bd466c387ee70c0e87a3ba528a4c90e842"
+      "path": "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.epub",
+      "size": 57654775,
+      "sha256": "a6b1b84da4617bf752031707cfe29e1bd9ca8171035b5e7fc8f222cab7826558"
     },
     {
-      "path": "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf",
-      "size": 9482611,
-      "sha256": "74f9d180244331883d54e01b0cb0226f7dc04b64230b2ec2341c034e98b732de"
+      "path": "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.pdf",
+      "size": 62476199,
+      "sha256": "53c08cbd1973b80775553c3e18ba2623fc096c04a98f67b7d5c3748c8c40fdae"
     },
     {
       "path": "publications/young-black-charaibs-st-vincent-1795/cover.jpg",

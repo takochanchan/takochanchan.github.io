@@ -8,6 +8,11 @@ This public repository is paired with the private working-master repository
 1. Finalise the editable working master and its `BIBLIOGRAPHY.json`.
 2. Store the master in the private repository under `publications/<slug>/`.
 3. Verify that the private repository's validation and Git LFS checks pass.
+   If Git LFS cannot accept new bytes because its bandwidth or storage quota is
+   exhausted, use the private repository's documented Release fallback instead:
+   create a new version-specific Release, upload the master, bibliography,
+   rights information, and checksums, re-download and verify every byte, then
+   commit a permanent `pending_lfs` record to `MASTER_RELEASE_LEDGER.json`.
 4. Verify the resulting full 40-character archive commit SHA on GitHub.
 5. Update `master-archive.json` with that SHA and the canonical master path.
 6. Run `npm run build` and `npm test`.
@@ -24,6 +29,11 @@ The release is incomplete if the working master or current search index is
 missing. If archival, remote verification, page mapping, search coverage, or
 the master gate fails, stop the public release. Never publish first with a
 promise to archive or index later.
+
+Release fallback records and their assets are permanent provenance. After Git
+LFS becomes available, migrate the exact verified bytes to the canonical path,
+but do not delete or overwrite the version-specific Release or its ledger
+record.
 
 ## Canonical master
 

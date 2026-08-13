@@ -3738,36 +3738,38 @@ const publicationRecords = [
     ],
   },
   {
-    slug: "ximenez-escolios-ayer-ms-1515",
-    title: "『インディオの起源の物語』への注解",
-    originalTitle: "Escolios a las historias de el origen de los indios",
-    subtitle: "Ayer MS 1515 第2巻末尾・全6葉 日本語全訳",
+    slug: "ximenez-ayer-ms-1515-volume-2",
+    title: "ポポル・ヴフ／歴史起源注解",
+    originalTitle:
+      "Empiezan las historias del origen de los indios de esta provincia de Guatemala; Escolios a las historias de el origen de los indios",
+    subtitle:
+      "Ayer MS 1515 第2巻・無番号前付8面・ポポル・ヴフ56葉・歴史起源注解6葉",
     author: "フランシスコ・ヒメネス",
-    series: "ESCOLIOS · AYER MS 1515",
-    originalPublication: "チチカステナンゴ、1700–1715年頃（写本）",
-    year: 1700,
+    series: "POPOL VUH · ESCOLIOS · AYER MS 1515 · VOLUME II",
+    originalPublication: "チチカステナンゴ、1701–1715年頃（写本）",
+    year: 1701,
     extent:
-      "PDF 28頁・写本全6葉（12葉面）・ヒメネス本文・別筆付記・底本画像12点",
+      "PDF 270頁・無番号前付8面・ポポル・ヴフ第1葉表–第56葉裏・挿入白紙2面・歴史起源注解第1葉表–第6葉裏・底本画像134点",
     description:
-      "ニューベリー図書館所蔵 Ayer MS 1515 第2巻末尾の全6葉を対象とする日本語全訳。フランシスコ・ヒメネスによる序と「第1章　神の存在について」に加え、第5–6葉の別筆雑記、1734年のエチャーベ署名文、キチェ語の告解手引・カテキズム質問断片を収録し、全12葉面の底本画像を併載しています。",
-    cover: "publications/ximenez-escolios-ayer-ms-1515/cover.jpg",
+      "ニューベリー図書館所蔵 Ayer MS 1515 第2巻の合冊版。無番号前付の表題・序、キチェ語の挨拶文5篇と婚姻儀礼定型句、ポポル・ヴフのカスティーリャ語本文、第1葉表–第56葉裏、巻末の歴史起源注解全6葉を収録しています。歴史起源注解にはヒメネス本文、別筆付記、1734年のエチャーベ署名文、キチェ語の告解手引・カテキズム質問断片を含みます。無番号前付、挿入白紙、歴史起源注解を含む底本画像134点を写本順に併載しています。",
+    cover: "publications/ximenez-ayer-ms-1515-volume-2/cover.jpg",
     pdf:
-      "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.pdf",
+      "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.pdf",
     epub:
-      "publications/ximenez-escolios-ayer-ms-1515/Francisco_Ximenez_Escolios_Ayer_MS_1515_Japanese_Complete_Translation.epub",
-    pageCount: 28,
+      "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.epub",
+    pageCount: 270,
     figureCount: 0,
-    plateCount: 12,
-    types: ["注解", "写本", "一次史料", "宗教史"],
-    regions: ["グアテマラ", "チチカステナンゴ", "ラビナル", "キチェ高地"],
+    plateCount: 134,
+    types: ["歴史書", "神話", "写本", "一次史料"],
+    regions: ["グアテマラ", "チチカステナンゴ", "キチェ高地"],
     languages: ["スペイン語", "キチェ語", "ラテン語"],
     tags: [
       "Ayer MS 1515",
       "ポポル・ヴフ",
+      "歴史起源注解",
       "ドミニコ会",
       "先住民宗教",
       "キチェ語",
-      "植民地期",
       "写本画像",
       "18世紀",
     ],
@@ -6729,16 +6731,16 @@ const publicationMetadata = {
     publishedDate: "2026-08-01",
     updatedDate: "2026-08-01",
   },
-  "ximenez-escolios-ayer-ms-1515": {
+  "ximenez-ayer-ms-1515-volume-2": {
     sourceEdition:
-      "Francisco Ximénez「Escolios a las historias de el origen de los indios」Newberry Library, Edward E. Ayer Collection, Vault Ayer MS 1515, vol. 2, 巻末全6葉。",
+      "Francisco Ximénez『Empiezan las historias del origen de los indios de esta provincia de Guatemala; Escolios a las historias de el origen de los indios』Newberry Library, Edward E. Ayer Collection, Vault Ayer MS 1515, vol. 2, 無番号前付8面、ポポル・ヴフ第1葉表–第56葉裏、挿入白紙2面、歴史起源注解第1葉表–第6葉裏。",
     sourceProvider:
-      "ニューベリー図書館所蔵写本の公開画像を底本とし、米国議会図書館公開のデジタル画像を使用した。Multepal／Áanalteʼ の外交的翻刻を検索・照合の補助とし、第5葉裏の別筆文はJosé de Aguilar『Sermones del Dulcissimo Nombre de Maria』第2巻（Sevilla、1701年）65–66頁とも照合した。",
+      "ニューベリー図書館所蔵写本を、米国議会図書館が旧World Digital Library資料19995として公開する全134画像で底本化した。ポポル・ヴフ本文は写本のカスティーリャ語欄を対象とし、無番号前付のキチェ語文は写本カラー画像および400 dpiマイクロフィルム像で照合した。歴史起源注解はMultepal／Áanalteʼ の外交的翻刻を検索・照合の補助とし、第5葉裏の別筆文はJosé de Aguilar『Sermones del Dulcissimo Nombre de Maria』第2巻（Sevilla、1701年）65–66頁とも照合した。",
     sourceUrl: "https://www.loc.gov/item/2021668226/",
     rights:
-      "18世紀写本の本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
+      "18世紀写本の本文は米国・日本ともに著作権保護期間を満了しています。米国議会図書館の当該項目は権利状態を「No Copyright - United States」と表示しています。所蔵・公開機関表記：Newberry Library, Edward E. Ayer Collection／Library of Congress。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
   },
   "us-senate-central-america-correspondence-1853": {
     sourceEdition:
@@ -7290,7 +7292,6 @@ const shortWorkAuthorBySlug = {
     "societe-de-geographie-committee",
   "arthes-peten-1893": "federico-guillermo-arthes",
   "chonay-totonicapan-title-1886": "dionisio-jose-chonay",
-  "ximenez-escolios-ayer-ms-1515": "francisco-ximenez",
   "us-senate-central-america-correspondence-1853":
     "united-states-department-of-state",
   "dieseldorff-ausgrabungen-coban-1893": "erwin-p-dieseldorff",
