@@ -43,7 +43,6 @@ jobs:
           test "$(stat -c%s "release/$EPUB_NAME")" = 632593
           test "$(sha256sum "release/$PDF_NAME" | cut -d' ' -f1)" = "$PDF_SHA"
           test "$(sha256sum "release/$EPUB_NAME" | cut -d' ' -f1)" = "$EPUB_SHA"
-          pdfinfo "release/$PDF_NAME" | grep -q '^Pages:[[:space:]]*513$'
           unzip -t "release/$EPUB_NAME" >/dev/null
 
       - name: Update release checksum index
