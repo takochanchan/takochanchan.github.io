@@ -132,6 +132,33 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "wafer-new-voyage-isthmus-america-1699",
+    title: "アメリカ地峡新航海記・地誌",
+    originalTitle: "A New Voyage and Description of the Isthmus of America",
+    subtitle:
+      "ダリエン滞在、先住民社会、自然誌、南海航海・1699年初版 日本語全訳",
+    author: "ライオネル・ウェイファー",
+    series: "A NEW VOYAGE AND DESCRIPTION OF THE ISTHMUS OF AMERICA · 1699",
+    originalPublication: "ロンドン、1699年",
+    year: 1699,
+    extent:
+      "PDF 134頁・前付・本文1–224頁・索引7葉・正誤表・原刊銅版図4点・付載広告",
+    description:
+      "私掠船航海の途上でダリエン地峡に取り残されたライオネル・ウェイファーが、現地での滞在、先住民社会の風俗・言語・医療、地形、動植物、南海航海を記した1699年初版の日本語全訳。原刊標題紙、献辞、読者序、正誤表、本文、索引、巻末書籍広告、折込地図と銅版図を収録しています。",
+    cover: "publications/wafer-new-voyage-isthmus-america-1699/cover.jpg",
+    pdf:
+      "publications/wafer-new-voyage-isthmus-america-1699/Lionel_Wafer_A_New_Voyage_1699_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/wafer-new-voyage-isthmus-america-1699/Lionel_Wafer_A_New_Voyage_1699_Japanese_Complete_Translation.epub",
+    pageCount: 134,
+    figureCount: 0,
+    plateCount: 4,
+    types: ["航海記", "地誌", "一次史料"],
+    regions: ["ダリエン", "パナマ", "カリブ海", "太平洋"],
+    languages: ["英語"],
+    tags: ["クナ族", "ダリエン地峡", "私掠船", "自然誌", "折込地図", "銅版図"],
+  },
+  {
     slug: "marimon-lacandones-1695",
     title: "アントニオ・マルヒル修道士のラカンドン人報告（1695年）",
     originalTitle: "Fray Antonio Margil über die Lacandones, 1695",
@@ -5802,6 +5829,18 @@ const publicationMetadata = {
       "1735年原刊の著者ジョン・アトキンズは1757年に没しており、原刊本文および原刊図像は米国・日本ともに著作権保護期間を満了しています。Internet Archiveに掲載された所蔵本のデジタル画像には、公開元および所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-08",
     updatedDate: "2026-08-08",
+  },
+  "wafer-new-voyage-isthmus-america-1699": {
+    sourceEdition:
+      "Lionel Wafer『A New Voyage and Description of the Isthmus of America』（London: Printed for James Knapton、1699年初版）。",
+    sourceProvider:
+      "Internet Archive公開のEarly English Books 1641–1700マイクロフィルム画像を主底本とした。密着綴じ・欠損箇所と図版はGetty Research Institute所蔵1903年覆刻本で照合した。",
+    sourceUrl:
+      "https://archive.org/details/bim_early-english-books-1641-1700_a-new-voyage-and-descrip_wafer-lionel_1699",
+    rights:
+      "1699年原刊と1903年覆刻本はパブリックドメインです。Wikimedia Commonsの1699年版資料ページはPublic Domain Mark 1.0を表示しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-13",
+    updatedDate: "2026-08-13",
   },
   "marimon-lacandones-1695": {
     sourceEdition:
