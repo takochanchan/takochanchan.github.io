@@ -3,6 +3,20 @@
 This public repository is paired with the private working-master repository
 `takochanchan/-archive-masters`.
 
+## GitHub control path
+
+- Agents must not execute GitHub CLI (`gh`) from a local runtime or ChatGPT Work
+  environment, even when it is installed.
+- Do not install GitHub CLI, run `gh auth login`, request CLI credentials, or
+  propose local CLI use as a prerequisite, fallback, or recovery path.
+- Perform repository reads and writes through the connected GitHub app. Perform
+  Release transfers and remote verification through the repository's one-shot
+  GitHub Actions workflows created through that app.
+- Repository-controlled commands executed inside a GitHub-hosted Actions runner
+  are part of the approved remote workflow; they do not authorize local CLI use.
+- If the app or workflow is temporarily blocked, preserve the current state and
+  resume through the same approved path. Do not switch to local GitHub CLI.
+
 ## Mandatory order for every new or revised publication
 
 1. Finalise the editable working master and its `BIBLIOGRAPHY.json`.
