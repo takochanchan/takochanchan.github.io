@@ -1,11 +1,11 @@
 {
-  "requested_at": "2026-08-14T14:42:00+09:00",
+  "requested_at": "2026-08-14T14:55:00+09:00",
   "archive_commit": "30d25b018a5109bdde7b90f9cc98497c1a66d82b",
   "asset_branch": "agent/berendt-batch-01-public-assets-20260814-v1",
   "asset_commit": "53d5fdd8b7d5e29dd5b7346b55af1f3d98c5323f",
   "site_branch": "agent/berendt-batch-01-publication-20260814-v1",
   "site_commit": "07c2030490ed5202c1a4b36d263d3630fff57bc0",
-  "expected_main_before_trigger": "78fbc2671384d690882582b51e1b7907b6924843",
+  "expected_main_before_trigger": "a4b9b2303e064b1906dd7f39c5b9874570d91813",
   "publication_count": 5,
-  "attempt": 2
+  "attempt": 3
 }
