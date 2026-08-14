@@ -118,6 +118,16 @@ DOCX_SOURCES = {
     "stoll-guatemala-reisen-schilderungen-1886": SOURCES
     / "翻訳サイト"
     / "Otto_Stoll_Guatemala_Japanese_review_v13.docx",
+    "berendt-vermessungsarbeiten-mexiko-1862": SOURCES
+    / "Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.docx",
+    "berendt-maasse-gewichte-mexiko-1862": SOURCES
+    / "Carl_Hermann_Berendt_Maasse_und_Gewichte_in_Mexiko_1862_Japanese_Complete_Translation.docx",
+    "berendt-handel-veracruz-1862": SOURCES
+    / "Carl_Hermann_Berendt_Der_Handel_von_Veracruz_1862_Japanese_Complete_Translation.docx",
+    "berendt-cochenille-produktion-oaxaca-1862": SOURCES
+    / "Carl_Hermann_Berendt_Die_Cochenille-Produktion_des_Staates_von_Oaxaca_1758-1858_1862_Japanese_Complete_Translation.docx",
+    "berendt-mexikanische-geographische-literatur-1862-1": SOURCES
+    / "Carl_Hermann_Berendt_Die_Mexikanische_Geographische_Literatur_seit_1860_1862_Installment_1_Japanese_Complete_Translation.docx",
     "galindo-caribs-central-america-1833": SOURCES
     / "Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.docx",
     "galindo-antiquities-peten-1834": SOURCES

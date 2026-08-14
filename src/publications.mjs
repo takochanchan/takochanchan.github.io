@@ -2473,6 +2473,172 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "berendt-vermessungsarbeiten-mexiko-1862",
+    title: "メキシコにおける測量事業",
+    originalTitle: "I. Vermessungs-Arbeiten in Mexiko",
+    subtitle: "1862年原刊・原刊171–173頁、原注4件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1862",
+    originalPublication: "ゴータ、1862年",
+    year: 1862,
+    extent: "PDF 6頁・原刊171–173頁・原注4件",
+    description:
+      "テワンテペク地峡、ソノラ、ベラクルス＝メキシコ鉄道、プエブラ州、メキシコ盆地、ミチョアカン州などで進められた測量・鉄道・地図作成事業を報告した『メキシコ通信』第1報。原刊171–173頁の本文全文と原注4件を収録しています。",
+    cover:
+      "publications/berendt-vermessungsarbeiten-mexiko-1862/cover.jpg",
+    pdf:
+      "publications/berendt-vermessungsarbeiten-mexiko-1862/Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-vermessungsarbeiten-mexiko-1862/Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.epub",
+    pageCount: 6,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["測量報告", "地理報告", "交通史", "鉄道史"],
+    regions: ["メキシコ", "テワンテペク地峡", "ベラクルス", "ソノラ", "プエブラ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "三角測量",
+      "地図作成",
+      "テワンテペク鉄道",
+      "ベラクルス鉄道",
+      "メキシコ盆地",
+      "19世紀後半",
+    ],
+  },
+  {
+    slug: "berendt-maasse-gewichte-mexiko-1862",
+    title: "メキシコの度量衡",
+    originalTitle: "II. Maasse und Gewichte in Mexiko",
+    subtitle: "1862年原刊・原刊215–216頁、原注1件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1862",
+    originalPublication: "ゴータ、1862年",
+    year: 1862,
+    extent: "PDF 7頁・原刊215–216頁・原注1件・換算表8点",
+    description:
+      "メキシコ・バラとレグアの法定値、メートル法導入の経緯、長さ・面積・穀物および液体の容積・重量・貴金属重量・貨幣制度を官定換算表で整理した『メキシコ通信』第2報。原刊215–216頁を全訳しています。",
+    cover:
+      "publications/berendt-maasse-gewichte-mexiko-1862/cover.jpg",
+    pdf:
+      "publications/berendt-maasse-gewichte-mexiko-1862/Carl_Hermann_Berendt_Maasse_und_Gewichte_in_Mexiko_1862_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-maasse-gewichte-mexiko-1862/Carl_Hermann_Berendt_Maasse_und_Gewichte_in_Mexiko_1862_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["度量衡", "統計資料", "地理報告", "経済史"],
+    regions: ["メキシコ", "ユカタン", "タバスコ", "ベラクルス"],
+    languages: ["ドイツ語"],
+    tags: [
+      "メートル法",
+      "バラ",
+      "レグア",
+      "土地制度",
+      "貨幣制度",
+      "19世紀後半",
+    ],
+  },
+  {
+    slug: "berendt-handel-veracruz-1862",
+    title: "ベラクルスの貿易",
+    originalTitle: "III. Der Handel von Veracruz",
+    subtitle: "1862年原刊・原刊216–218頁、原注3件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1862",
+    originalPublication: "ゴータ、1862年",
+    year: 1862,
+    extent: "PDF 8頁・原刊216–218頁・原注3件・統計表3点",
+    description:
+      "1856–1860年のベラクルス税関年報を基礎に、輸出入総額、主要輸出品、関税収入と、内戦・交通遮断・密輸が貿易へ与えた影響を分析した『メキシコ通信』第3報。原刊216–218頁を全訳しています。",
+    cover: "publications/berendt-handel-veracruz-1862/cover.jpg",
+    pdf:
+      "publications/berendt-handel-veracruz-1862/Carl_Hermann_Berendt_Der_Handel_von_Veracruz_1862_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-handel-veracruz-1862/Carl_Hermann_Berendt_Der_Handel_von_Veracruz_1862_Japanese_Complete_Translation.epub",
+    pageCount: 8,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["貿易統計", "経済史", "港湾史", "統計資料"],
+    regions: ["メキシコ", "ベラクルス", "オアハカ", "タバスコ", "メキシコ湾岸"],
+    languages: ["ドイツ語"],
+    tags: [
+      "ベラクルス港",
+      "税関",
+      "輸出入",
+      "銀輸出",
+      "コチニール",
+      "19世紀後半",
+    ],
+  },
+  {
+    slug: "berendt-cochenille-produktion-oaxaca-1862",
+    title: "オアハカ州の100年間（1758–1858年）のコチニール生産",
+    originalTitle:
+      "IV. Die Cochenille-Produktion des Staates von Oaxaca in 100 Jahren (1758–1858)",
+    subtitle: "1862年原刊・原刊256–258頁、原注5件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1862",
+    originalPublication: "ゴータ、1862年",
+    year: 1862,
+    extent: "PDF 7頁・原刊256–258頁・原注5件・統計表5点",
+    description:
+      "1758–1858年のオアハカ州コチニール生産量・価額を100年間にわたって比較し、価格下落、内戦、金融慣行、輸送費、課税、合成染料の影響を論じた『メキシコ通信』第4報。原刊256–258頁を全訳しています。",
+    cover:
+      "publications/berendt-cochenille-produktion-oaxaca-1862/cover.jpg",
+    pdf:
+      "publications/berendt-cochenille-produktion-oaxaca-1862/Carl_Hermann_Berendt_Die_Cochenille-Produktion_des_Staates_von_Oaxaca_1758-1858_1862_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-cochenille-produktion-oaxaca-1862/Carl_Hermann_Berendt_Die_Cochenille-Produktion_des_Staates_von_Oaxaca_1758-1858_1862_Japanese_Complete_Translation.epub",
+    pageCount: 7,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["産業史", "農業史", "経済史", "統計資料"],
+    regions: ["メキシコ", "オアハカ", "ベラクルス"],
+    languages: ["ドイツ語"],
+    tags: [
+      "コチニール",
+      "サポテカ人",
+      "染料",
+      "農業金融",
+      "価格史",
+      "19世紀後半",
+    ],
+  },
+  {
+    slug: "berendt-mexikanische-geographische-literatur-1862-1",
+    title: "1860年以後のメキシコ地理学文献",
+    originalTitle:
+      "V. Die Mexikanische Geographische Literatur seit dem Jahre 1860",
+    subtitle: "1862年原刊・連載第1回、原刊336–341頁、原注8件 日本語全訳",
+    author: "カール・ヘルマン・ベレント",
+    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1862",
+    originalPublication: "ゴータ、1862年",
+    year: 1862,
+    extent: "PDF 16頁・原刊336–341頁・原注8件・文献20項目",
+    description:
+      "メキシコで刊行された歴史・地理・統計文献20点を、書誌情報と批評を付して紹介した『メキシコ通信』第5報の初回掲載分。アラマン、イカスバルセタらの著作・史料集を論じ、原誌の「続く」までを全訳しています。",
+    cover:
+      "publications/berendt-mexikanische-geographische-literatur-1862-1/cover.jpg",
+    pdf:
+      "publications/berendt-mexikanische-geographische-literatur-1862-1/Carl_Hermann_Berendt_Die_Mexikanische_Geographische_Literatur_seit_1860_1862_Installment_1_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/berendt-mexikanische-geographische-literatur-1862-1/Carl_Hermann_Berendt_Die_Mexikanische_Geographische_Literatur_seit_1860_1862_Installment_1_Japanese_Complete_Translation.epub",
+    pageCount: 16,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["書誌", "地理学史", "歴史学史", "文献紹介"],
+    regions: ["メキシコ"],
+    languages: ["ドイツ語"],
+    tags: [
+      "メキシコ書誌",
+      "地理学文献",
+      "歴史書",
+      "史料集",
+      "イカスバルセタ",
+      "19世紀後半",
+    ],
+  },
+  {
     slug: "berendt-central-america-explorations-1867",
     title: "中央アメリカ探査報告",
     originalTitle: "Report of Explorations in Central America",
@@ -7068,6 +7234,66 @@ const publicationMetadata = {
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },
+  "berendt-vermessungsarbeiten-mexiko-1862": {
+    sourceEdition:
+      "Dr. H. Berendt, “I. Vermessungs-Arbeiten in Mexiko,” Dr. H. Berendt’s Mittheilungen über Mexiko, Petermann’s Geographische Mittheilungen, 1862, Heft V, S. 171–173.",
+    sourceProvider:
+      "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1862年原誌画像（識別子petermannsgeogr05haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    sourceUrl:
+      "https://archive.org/details/petermannsgeogr05haacgoog",
+    rights:
+      "1862年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムの権利表示は「NOT_IN_COPYRIGHT」（米国）です。個別のCreative Commonsライセンス指定はありません。再利用時はInternet Archiveの利用規約とRights & Access表示に従い、資料名、識別子、原刊頁および各機関名を表示します。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
+  "berendt-maasse-gewichte-mexiko-1862": {
+    sourceEdition:
+      "Dr. H. Berendt, “II. Maasse und Gewichte in Mexiko,” Dr. H. Berendt’s Mittheilungen über Mexiko, Petermann’s Geographische Mittheilungen, 1862, Heft VI, S. 215–216.",
+    sourceProvider:
+      "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1862年原誌画像（識別子petermannsgeogr05haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    sourceUrl:
+      "https://archive.org/details/petermannsgeogr05haacgoog",
+    rights:
+      "1862年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムの権利表示は「NOT_IN_COPYRIGHT」（米国）です。個別のCreative Commonsライセンス指定はありません。再利用時はInternet Archiveの利用規約とRights & Access表示に従い、資料名、識別子、原刊頁および各機関名を表示します。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
+  "berendt-handel-veracruz-1862": {
+    sourceEdition:
+      "Dr. H. Berendt, “III. Der Handel von Veracruz,” Dr. H. Berendt’s Mittheilungen über Mexiko, Petermann’s Geographische Mittheilungen, 1862, Heft VI, S. 216–218.",
+    sourceProvider:
+      "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1862年原誌画像（識別子petermannsgeogr05haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    sourceUrl:
+      "https://archive.org/details/petermannsgeogr05haacgoog",
+    rights:
+      "1862年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムの権利表示は「NOT_IN_COPYRIGHT」（米国）です。個別のCreative Commonsライセンス指定はありません。再利用時はInternet Archiveの利用規約とRights & Access表示に従い、資料名、識別子、原刊頁および各機関名を表示します。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
+  "berendt-cochenille-produktion-oaxaca-1862": {
+    sourceEdition:
+      "Dr. H. Berendt, “IV. Die Cochenille-Produktion des Staates von Oaxaca in 100 Jahren (1758–1858),” Dr. H. Berendt’s Mittheilungen über Mexiko, Petermann’s Geographische Mittheilungen, 1862, Heft VII, S. 256–258.",
+    sourceProvider:
+      "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1862年原誌画像（識別子petermannsgeogr05haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    sourceUrl:
+      "https://archive.org/details/petermannsgeogr05haacgoog",
+    rights:
+      "1862年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムの権利表示は「NOT_IN_COPYRIGHT」（米国）です。個別のCreative Commonsライセンス指定はありません。再利用時はInternet Archiveの利用規約とRights & Access表示に従い、資料名、識別子、原刊頁および各機関名を表示します。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
+  "berendt-mexikanische-geographische-literatur-1862-1": {
+    sourceEdition:
+      "Dr. H. Berendt, “V. Die Mexikanische Geographische Literatur seit dem Jahre 1860,” Dr. H. Berendt’s Mittheilungen über Mexiko, Petermann’s Geographische Mittheilungen, 1862, Heft IX, S. 336–341（連載第1回）.",
+    sourceProvider:
+      "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1862年原誌画像（識別子petermannsgeogr05haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    sourceUrl:
+      "https://archive.org/details/petermannsgeogr05haacgoog",
+    rights:
+      "1862年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムの権利表示は「NOT_IN_COPYRIGHT」（米国）です。個別のCreative Commonsライセンス指定はありません。再利用時はInternet Archiveの利用規約とRights & Access表示に従い、資料名、識別子、原刊頁および各機関名を表示します。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
   "garcia-pelaez-memorias-guatemala-1851-1852": {
     sourceEdition:
       "Francisco de Paula García Peláez, Memorias para la historia del antiguo reyno de Guatemala, tomo primero, Guatemala: Establecimiento tipográfico de L. Luna, 1851; tomos segundo y tercero, Guatemala: Establecimiento tipográfico de L. Luna, 1852.",
@@ -8084,6 +8310,12 @@ const shortWorkAuthorBySlug = {
   "marimon-lacandones-1695": "sebastian-marimon-y-tudo",
   "esquinca-usumacinta": "jose-maria-esquinca",
   "sapper-eastern-lacandons-1891": "karl-sapper",
+  "berendt-vermessungsarbeiten-mexiko-1862": "carl-hermann-berendt",
+  "berendt-maasse-gewichte-mexiko-1862": "carl-hermann-berendt",
+  "berendt-handel-veracruz-1862": "carl-hermann-berendt",
+  "berendt-cochenille-produktion-oaxaca-1862": "carl-hermann-berendt",
+  "berendt-mexikanische-geographische-literatur-1862-1":
+    "carl-hermann-berendt",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
