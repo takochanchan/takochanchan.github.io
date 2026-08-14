@@ -1,5 +1,15 @@
 # 改訂記録
 
+## 2026-08-15 — Carl Hermann Berendt 生前論文・報告 第4組（3点）新規公開
+
+- 1875年「ニカラグアの民族学について」、1876年「中央アメリカ古代文明の地理的分布」、1877年「グアテマラの歴史文書コレクション」を、明確に刊行された論文・報告だけの3点として、各1点の独立したPDF・EPUBで公開。
+- 実物のPérigny論文DOCXを母版とし、段落・文字書式、行間、頁設定を変更せず本文を直接流し込んだ校閲済みDOCXを正本とした。PDFからの再構成は行っていない。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 冒頭の原資料画像と単独の「日本語全訳」見出しは置かず、本文冒頭に各和訳題名を置いた。本文画像は3点とも0点である。
+- 原著・公開機関の利用条件は、Oxford University／Internet ArchiveのNOT_IN_COPYRIGHT表示、JSTOR Early Journal Content告知／Internet Archive、Smithsonian Institution／Internet Archiveの各資料表示に即して作品別に記載した。日本語版について独自の再利用ライセンス表示は追加していない。
+- 公開PDFのSHA-256は順に `968169fc810ee0d241db07f5f8200aca336a6bf47deca2211345cf8dc7efa16c`、`a2318baf2540bd795e3ade76f09817f518c122416d4def9ee3d1d3eb0a5a6be5`、`df7ad0d709f2a580eeea58f18716009449e1b03dc99e3513371dfaeade2e27a9`。
+- EPUBのSHA-256は順に `e7afff10b3b4feb7b122bf419bbe7add1b587fb0afb6604d0bf431911cfcaa51`、`5e69acbcce6e21238350fabfdaf0a73c3550e611f2d5af65dc77e5c78da3ae2e`、`be1df27cccd6d53a8dea05db0e3c7aa3f1f0e816aa5715708f3c8afbd0ed3d98`。
+- 編集可能DOCX正本と書誌・権利・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `3eb9b355961eced70c8a988609500534ca7d021c` に固定した。非公開Releaseへの格納・再取得照合はGitHub Actions run `31840485650`、公開Releaseへの格納・再取得照合はrun `31841070625` で完了した。
+
 ## 2026-08-14 — Carl Hermann Berendt 生前論文・報告 第3組（5点）新規公開
 
 - 1872年「メキシコ」、1873年「テワンテペク地峡のインディアン」、1873年「カリブ語またはカリフ語の文法・辞書について」、1874年「ダリエン語」、1874年「ニカラグアの民族学について」を、各1点の独立したPDF・EPUBとして公開。

@@ -3041,6 +3041,119 @@ const publicationRecords = [
     ]
   },
   {
+    "slug": "berendt-ethnologie-nicaragua-1875",
+    "title": "ニカラグアの民族学について",
+    "originalTitle": "Zur Ethnologie von Nicaragua",
+    "subtitle": "1875年刊行報告・原刊46–47頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "CORRESPONDENZ-BLATT · 1875",
+    "originalPublication": "1875年",
+    "year": 1875,
+    "extent": "PDF 4頁・原刊46–47頁",
+    "description": "ベレントの書簡から編集部が掲げたニカラグア民族学の続報。1874年報告を承け、同地域の諸集団と言語の系統・分布を論じる原刊46–47頁を全訳しています。",
+    "cover": "publications/berendt-ethnologie-nicaragua-1875/cover.jpg",
+    "pdf": "publications/berendt-ethnologie-nicaragua-1875/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1875_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-ethnologie-nicaragua-1875/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1875_Japanese_Complete_Translation.epub",
+    "pageCount": 4,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "民族学",
+      "言語分布",
+      "書簡報告"
+    ],
+    "regions": [
+      "ニカラグア",
+      "中央アメリカ"
+    ],
+    "languages": [
+      "ドイツ語"
+    ],
+    "tags": [
+      "ニカラグア",
+      "先住民言語",
+      "民族分類",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-ancient-central-american-civilization-1876",
+    "title": "中央アメリカ古代文明の地理的分布",
+    "originalTitle": "Geographical Distribution of the Ancient Central American Civilization",
+    "subtitle": "1876年刊行論文・原刊132–145頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "JOURNAL OF THE AMERICAN GEOGRAPHICAL SOCIETY OF NEW YORK · 1876",
+    "originalPublication": "ニューヨーク、1876年",
+    "year": 1876,
+    "extent": "PDF 12頁・原刊132–145頁",
+    "description": "中央アメリカ古代文明の中心域と外縁を、遺跡、建築技術、民族・言語分布、植民地期記録から総合的に画定した論文。1876年7月10日の会合で朗読された原刊132–145頁を全訳しています。",
+    "cover": "publications/berendt-ancient-central-american-civilization-1876/cover.jpg",
+    "pdf": "publications/berendt-ancient-central-american-civilization-1876/Carl_Hermann_Berendt_Geographical_Distribution_Ancient_Central_American_Civilization_1876_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-ancient-central-american-civilization-1876/Carl_Hermann_Berendt_Geographical_Distribution_Ancient_Central_American_Civilization_1876_Japanese_Complete_Translation.epub",
+    "pageCount": 12,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歴史地理",
+      "考古学",
+      "比較言語学"
+    ],
+    "regions": [
+      "中央アメリカ",
+      "メキシコ",
+      "グアテマラ",
+      "ホンジュラス",
+      "ニカラグア"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "古代文明",
+      "文化圏",
+      "言語分布",
+      "遺跡",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-historical-documents-guatemala-1877",
+    "title": "グアテマラの歴史文書コレクション",
+    "originalTitle": "Collections of Historical Documents in Guatemala",
+    "subtitle": "1877年刊行報告・原刊421–423頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "SMITHSONIAN ANNUAL REPORT · 1877",
+    "originalPublication": "ワシントン、1877年",
+    "year": 1877,
+    "extent": "PDF 4頁・原刊421–423頁",
+    "description": "グアテマラの公私文書館に残る歴史資料の所在、保存状況、収集と刊行の必要をスミソニアンへ報告した書誌・史料学上の短報。原刊421–423頁を全訳しています。",
+    "cover": "publications/berendt-historical-documents-guatemala-1877/cover.jpg",
+    "pdf": "publications/berendt-historical-documents-guatemala-1877/Carl_Hermann_Berendt_Collections_of_Historical_Documents_in_Guatemala_1877_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-historical-documents-guatemala-1877/Carl_Hermann_Berendt_Collections_of_Historical_Documents_in_Guatemala_1877_Japanese_Complete_Translation.epub",
+    "pageCount": 4,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "書誌報告",
+      "史料学",
+      "歴史学"
+    ],
+    "regions": [
+      "グアテマラ",
+      "中央アメリカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "歴史文書",
+      "文書館",
+      "史料収集",
+      "スミソニアン",
+      "19世紀後半"
+    ]
+  },
+  {
     slug: "berendt-central-america-explorations-1867",
     title: "中央アメリカ探査報告",
     originalTitle: "Report of Explorations in Central America",
@@ -8037,6 +8150,30 @@ const publicationMetadata = {
     "publishedDate": "2026-08-14",
     "updatedDate": "2026-08-14"
   },
+  "berendt-ethnologie-nicaragua-1875": {
+    "sourceEdition": "“Wissenschaftliche Mittheilungen. Zur Ethnologie von Nicaragua,” Correspondenz-Blatt der deutschen Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, Jg. 6, Nr. 6, Juni 1875, pp. 46–47. ベレントの書簡から編集部が掲げた続報。",
+    "sourceProvider": "Oxford University所蔵本をInternet Archiveが公開する1870–1875年合冊（識別子 correspndenzbla00avgoog）を主底本とし、原刊46–47頁の画像とDjVu XMLを照合した。",
+    "sourceUrl": "https://archive.org/details/correspndenzbla00avgoog",
+    "rights": "1875年刊の原著本文はパブリックドメインです。Internet Archiveの当該アイテムはcontributorをOxford University、possible-copyright-statusをNOT_IN_COPYRIGHTと表示しています。個別のCreative Commonsライセンスおよびrights欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
+  "berendt-ancient-central-american-civilization-1876": {
+    "sourceEdition": "C. H. Berendt, “Geographical Distribution of the Ancient Central American Civilization,” Journal of the American Geographical Society of New York, vol. 8, 1876, pp. 132–145. 1876年7月10日の会合で朗読された論文。",
+    "sourceProvider": "JSTOR提供の掲載誌画像をInternet Archiveが公開するアイテム（識別子 jstor-196379、JSTOR stable 196379）を主底本とし、原刊132–145頁の画像とテキスト層を照合した。",
+    "sourceUrl": "https://archive.org/details/jstor-196379",
+    "rights": "1876年刊の原著本文はパブリックドメインです。Internet Archiveの当該アイテムはcontributorをJSTORと表示し、個別のCreative Commonsライセンス、rights欄、possible-copyright-status欄の指定はありません。収録PDF冒頭のJSTOR Early Journal Content告知は、非営利目的でのオンライン掲載・再配布を認める旨を記しています。公開画像の利用には同告知およびInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
+  "berendt-historical-documents-guatemala-1877": {
+    "sourceEdition": "C. H. Berendt, “Collections of Historical Documents in Guatemala,” Annual Report of the Board of Regents of the Smithsonian Institution for the Year 1876, Washington: Government Printing Office, 1877, pp. 421–423.",
+    "sourceProvider": "Smithsonian Institution年報1876年巻（1877年刊）をInternet Archiveが公開する画像（識別子 annual-report-board-of-regents-smithsonian_1876）を主底本とし、原刊421–423頁の画像とOCRを照合した。",
+    "sourceUrl": "https://archive.org/details/annual-report-board-of-regents-smithsonian_1876",
+    "rights": "1877年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの当該アイテムはSmithsonian Institution年報を収録し、contributorをInternet Archiveと表示しています。個別のCreative Commonsライセンス、rights欄、possible-copyright-status欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
   "berendt-central-america-explorations-1867": {
     sourceEdition:
       "Carl Hermann Berendt, “Report of Explorations in Central America,” Annual Report of the Board of Regents of the Smithsonian Institution, Showing the Operations, Expenditures, and Condition of the Institution for the Year 1867, Washington: Government Printing Office, 1868, pp. 420–426.",
@@ -9198,6 +9335,9 @@ const shortWorkAuthorBySlug = {
   "berendt-carib-karif-language-1873": "carl-hermann-berendt",
   "berendt-darien-language-1874": "carl-hermann-berendt",
   "berendt-ethnologie-nicaragua-1874": "carl-hermann-berendt",
+  "berendt-ethnologie-nicaragua-1875": "carl-hermann-berendt",
+  "berendt-ancient-central-american-civilization-1876": "carl-hermann-berendt",
+  "berendt-historical-documents-guatemala-1877": "carl-hermann-berendt",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
