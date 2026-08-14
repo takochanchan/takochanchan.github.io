@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 234);
+  assert.equal(publications.length, 235);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -63,8 +63,32 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
+test("Bibliografia mexicana lists representative included works bilingually", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug ===
+      "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886",
+  );
+  assert.ok(item);
+  assert.equal(item.author, "ホアキン・ガルシア・イカスバルセタ");
+  assert.equal(item.pageCount, 921);
+  assert.ok(item.majorSources.length >= 10);
+  for (const source of [
+    "Breve y más compendiosa doctrina christiana",
+    "Vocabulario en la lengua Castellana y Mexicana",
+    "Túmulo Imperial de la gran Ciudad de México",
+    "Psalmodia Cristiana",
+    "Problemas y Secretos Maravillosos de las Indias",
+    "Arte Mexicana",
+    "Advertencias para los confessores de los Naturales",
+  ]) {
+    assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
+  }
+  assert.ok(item.majorSources.every((entry) => /（[^）]+）/.test(entry)));
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 103);
+  assert.equal(majorPublications.length, 104);
   assert.equal(shortPublications.length, 131);
   assert.equal(shortPublicationAuthors.length, 31);
   assert.deepEqual(
@@ -929,7 +953,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">103<\/strong>件/);
+  assert.match(html, /id="book-match-count">104<\/strong>件/);
   assert.match(html, /id="paper-match-count">131<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

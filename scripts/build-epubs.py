@@ -272,6 +272,9 @@ DOCX_SOURCES = {
     "codice-chimalpahin-volumen-3": SOURCES
     / "翻訳サイト"
     / "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.docx",
+    "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886": SOURCES
+    / "翻訳サイト"
+    / "Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {

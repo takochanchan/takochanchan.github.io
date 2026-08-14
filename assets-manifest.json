@@ -1910,6 +1910,24 @@
       "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
     },
     {
+      "path": "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
+      "size": 68504370,
+      "sha256": "cb1c771e5078ffdb388ac8a8d1fd340d4b7f1c83d80c1308ee335702526ce449"
+    },
+    {
+      "path": "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.pdf",
+      "size": 30343976,
+      "sha256": "e03278f8a3e7d8457559360603a41fa7e8d256067284313907ba88fd6dfca9f9"
+    },
+    {
+      "path": "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/cover.jpg",
+      "size": 53856,
+      "sha256": "9871b13149522a656ff1118982ccbd814d50f7404ac371ad4c4b3fd2b2d3e0b1"
+    },
+    {
       "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
       "size": 1164384,

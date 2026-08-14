@@ -7179,6 +7179,58 @@ const publicationRecords = [
       "科学史"
     ]
   },
+  {
+    slug: "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886",
+    title: "16世紀メキシコ書誌",
+    originalTitle: "Bibliografía mexicana del siglo XVI",
+    subtitle:
+      "1886年初版・前付・本文1–419頁・追補・索引・正誤表 日本語全訳",
+    author: "ホアキン・ガルシア・イカスバルセタ",
+    series: "BIBLIOGRAFÍA MEXICANA · 1886",
+    originalPublication:
+      "メキシコ、Librería de Andrade y Morales, Sucesores、1886年",
+    year: 1886,
+    extent:
+      "PDF 921頁・原刊前付V–XXIX頁・本文1–419頁・本編116項目・刊行直前追記2項目・原注520件・原刊図版50点・本文版画7点",
+    description:
+      "メキシコにおける印刷術導入の経緯を論じ、1539年から1600年までに同地で刊行された書籍を著者伝・書誌解説とともに収録した、ホアキン・ガルシア・イカスバルセタの1886年刊書誌。前付、序論、本編全116項目、刊行直前追記2項目、原注520件、索引、正誤表、原刊図版・本文版画を収録しています。",
+    majorSources: [
+      "Anónimo（無署名）『Breve y más compendiosa doctrina christiana en lengua mexicana y castellana（メキシコ語・カスティーリャ語による簡潔にして、より要約されたキリスト教教理）』（1539年・第1番）",
+      "Francisco Cervantes de Salazar（フランシスコ・セルバンテス・デ・サラサール）『Diálogos（対話篇）』（1554年・第22番）",
+      "Fray Alonso de Molina（フライ・アロンソ・デ・モリナ）『Vocabulario en la lengua Castellana y Mexicana（カスティーリャ語・メキシコ語辞典）』（1555年・第23番）",
+      "Fray Maturino Gilberti（フライ・マトゥリノ・ヒルベルティ）『Arte en Lengua de Michoacán（ミチョアカン語文法）』『Tesoro Espiritual en Lengua de Mechuacán（ミチョアカン語霊的宝庫）』（1558年・第31–32番）",
+      "Francisco Cervantes de Salazar（フランシスコ・セルバンテス・デ・サラサール）『Túmulo Imperial de la gran Ciudad de México（大メキシコ市皇帝の霊廟）』（1560年・第39番、全文再録）",
+      "Doctor Francisco Bravo（フランシスコ・ブラボ博士）『Opera medicinalia（医学著作集）』（1570年・第57番）",
+      "Fray Alonso de Molina（フライ・アロンソ・デ・モリナ）『Arte de la lengua Mexicana y Castellana（メキシコ語・カスティーリャ語文法）』『Vocabulario en lengua Castellana y Mexicana / Mexicana y Castellana（カスティーリャ語・メキシコ語／メキシコ語・カスティーリャ語語彙集）』（1571年・第58–60番）",
+      "Fray Juan de Córdoba（フライ・フアン・デ・コルドバ）『Arte en Lengua Zapoteca（サポテカ語文法）』『Vocabulario en Lengua Zapoteca（サポテカ語語彙集）』（1578年・第78–79番）",
+      "Fray Bernardino de Sahagún（フライ・ベルナルディノ・デ・サアグン）『Psalmodia Cristiana y Sermonario de los Santos del año, en lengua Mexicana（メキシコ語によるキリスト教詩編・一年の聖人説教集）』（1583年・第92番）",
+      "Doctor Juan de Cárdenas（フアン・デ・カルデナス博士）『Primera Parte de los Problemas y Secretos Maravillosos de las Indias（インディアスの驚くべき問題と秘密・第一部）』（1591年・第101番）",
+      "Fray Antonio de los Reyes（フライ・アントニオ・デ・ロス・レイェス）『Arte en Lengua Mixteca（ミシュテカ語文法）』／Fray Francisco de Alvarado（フライ・フランシスコ・デ・アルバラド）『Vocabulario en Lengua Misteca（ミシュテカ語語彙集）』（1593年・第103–104番）",
+      "Padre Antonio del Rincón（アントニオ・デル・リンコン師）『Arte Mexicana（メキシコ語文法）』（1595年・第109番）",
+      "Fray Joan Baptista（フライ・フアン・バウティスタ）『Advertencias para los confessores de los Naturales（先住民の告解聴聞司祭のための注意）』（1600年・第115番）",
+    ],
+    cover:
+      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/cover.jpg",
+    pdf:
+      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
+    pageCount: 921,
+    figureCount: 7,
+    plateCount: 50,
+    types: ["書誌", "印刷史", "書物史", "研究資料"],
+    regions: ["メキシコ", "ヌエバ・エスパーニャ", "メソアメリカ"],
+    languages: ["スペイン語", "ラテン語", "ナワトル語"],
+    tags: [
+      "16世紀メキシコ",
+      "書誌学",
+      "初期印刷",
+      "フアン・パブロス",
+      "植民地期メキシコ",
+      "著者伝",
+      "初版",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -7217,6 +7269,18 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886": {
+    sourceEdition:
+      "Joaquín García Icazbalceta『Bibliografía mexicana del siglo XVI. Primera parte: catálogo razonado de libros impresos en México de 1539 á 1600, con biografías de autores y otras ilustraciones, precedido de una noticia acerca de la introducción de la imprenta en México』（México: Librería de Andrade y Morales, Sucesores、1886年初版）。",
+    sourceProvider:
+      "米国国立医学図書館（U.S. National Library of Medicine）所蔵の1886年初版本（NLM UID: 58330430R）を底本とし、NLMが公開しMedical Heritage Library／Internet Archiveを経てWikimedia Commonsにも収録された全556頁カラー画像を本文・標題紙・図版の照合に用いた。OCRは検索・転記補助に限り、本文、固有名詞、書誌転記、原刊頁境界、原注、索引、正誤表、図版は初版画像で確定した。",
+    sourceUrl:
+      "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-58330430R-bk",
+    rights:
+      "1886年刊の原著はパブリックドメインです。NLM Digital Collectionsは当該資料をPublic domainと表示し、Wikimedia Commons上の底本ファイルにもCreative Commons Public Domain Mark 1.0が付されています。底本画像のクレジットは “Courtesy of the National Library of Medicine.” としています。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
+  },
   "historia-tolteca-chichimeca": {
     sourceEdition:
       "Bibliothèque nationale de France, Département des manuscrits所蔵『Historia Tolteca-Chichimeca』（Mexicain 46–58）、16世紀ナワトル語写本。本体50葉が現存し、第34葉と第52葉を欠く。",

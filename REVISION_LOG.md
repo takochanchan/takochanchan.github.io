@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-15 — Joaquín García Icazbalceta『Bibliografía mexicana del siglo XVI』日本語全訳 新規公開
+
+- 1886年初版の前付V–XXIX頁、本文1–419頁、本編116項目、刊行直前追記2項目、原注520件、索引、正誤表を全訳し、原刊図版50点・本文版画7点を収録したPDF 921頁とEPUBを公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 書誌名と著者名は原語表記と日本語訳・日本語表記を併記した。書誌ページの「主要収録史料」には、1539年刊『Breve y más compendiosa doctrina christiana』から1600年刊フアン・バウティスタ『Advertencias para los confessores de los Naturales』まで、代表的な13件を原題・原著者名と日本語訳・日本語表記を組み合わせて掲載した。
+- 底本は米国国立医学図書館所蔵の1886年初版本（NLM UID: 58330430R）。NLM公開の全556頁カラー画像を本文・標題紙・図版の照合に用い、OCRは検索・転記補助に限った。原著はパブリックドメインで、底本画像のクレジットは “Courtesy of the National Library of Medicine.” とした。
+- 公開PDFのSHA-256は `e03278f8a3e7d8457559360603a41fa7e8d256067284313907ba88fd6dfca9f9`、EPUBは `cb1c771e5078ffdb388ac8a8d1fd340d4b7f1c83d80c1308ee335702526ce449`。
+- 編集可能DOCX正本と書誌・権利・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `4762e2b8c09405352724e85ffa9dd2c014dff572` に固定した。非公開Releaseへの格納・再取得照合はGitHub Actions run `31841868124`、公開Releaseへの格納・再取得照合はrun `31842605445` で完了した。
+
 ## 2026-08-15 — Carl Hermann Berendt 生前論文・報告 第4組（3点）新規公開
 
 - 1875年「ニカラグアの民族学について」、1876年「中央アメリカ古代文明の地理的分布」、1877年「グアテマラの歴史文書コレクション」を、明確に刊行された論文・報告だけの3点として、各1点の独立したPDF・EPUBで公開。
