@@ -64,8 +64,8 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 105);
-  assert.equal(shortPublications.length, 115);
+  assert.equal(majorPublications.length, 103);
+  assert.equal(shortPublications.length, 117);
   assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -115,6 +115,8 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "dieseldorff-jadeit-schmuck-1905",
       "dieseldorff-klassifizierung-funde-1909",
       "dieseldorff-tzultaca-mam-1926",
+      "dieseldorff-kunst-religion-band-i-1926",
+      "dieseldorff-kunst-religion-band-ii-1931",
       "dieseldorff-kekchi-will-1583-1932",
       "dieseldorff-cauac-thunderbolt-signs-1932",
       "dieseldorff-arqueologia-alta-verapaz-1936",
@@ -324,6 +326,27 @@ test("short works use explicit author groups instead of page-count rules", () =>
       .recordClass,
     "major-work",
   );
+});
+
+test("Dieseldorff Bands I and II are catalogued as papers", () => {
+  const bandI = publications.find(
+    (item) => item.slug === "dieseldorff-kunst-religion-band-i-1926",
+  );
+  const bandII = publications.find(
+    (item) => item.slug === "dieseldorff-kunst-religion-band-ii-1931",
+  );
+
+  assert.ok(bandI);
+  assert.ok(bandII);
+  assert.equal(bandI.recordClass, "short-work");
+  assert.equal(bandI.pageCount, 107);
+  assert.ok(bandI.types.includes("考古学論文"));
+  assert.equal(bandII.recordClass, "short-work");
+  assert.ok(bandII.types.includes("考古学論文"));
+  assert.match(bandI.rights, /CC BY-NC-SA 4\.0/);
+  assert.match(bandII.rights, /CC BY-NC-SA 4\.0/);
+  assert.match(bandI.sourceProvider, /Springer.*画像データは収録していない/);
+  assert.match(bandII.sourceProvider, /Springer.*画像データは収録していない/);
 });
 
 test("San Buenaventura 1684 uses the approved first-edition scope and public-domain statement", () => {
@@ -805,8 +828,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">105<\/strong>件/);
-  assert.match(html, /id="paper-match-count">115<\/strong>件/);
+  assert.match(html, /id="book-match-count">103<\/strong>件/);
+  assert.match(html, /id="paper-match-count">117<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

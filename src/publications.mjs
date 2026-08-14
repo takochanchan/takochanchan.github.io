@@ -5011,24 +5011,26 @@ const publicationRecords = [
     title: "古代および現代中央アメリカのマヤ諸民族の芸術と宗教",
     originalTitle:
       "Kunst und Religion der Mayavölker im alten und heutigen Mittelamerika",
-    subtitle: "1926年単行本初版・本文45頁・図239点・図版53葉 日本語全訳",
+    subtitle: "1925年雑誌初出・原刊1–45頁・図239点・図版53葉 日本語全訳",
     author: "エルヴィン・P・ディースルドルフ",
-    series: "KUNST UND RELIGION DER MAYAVÖLKER · BAND I · 1926",
-    originalPublication: "ベルリン、Julius Springer、1926年",
-    year: 1926,
-    extent: "PDF 106頁・原刊本文45頁・図239点・図版53葉",
+    series:
+      "KUNST UND RELIGION DER MAYAVÖLKER · ZEITSCHRIFT FÜR ETHNOLOGIE · 1925",
+    originalPublication:
+      "『Zeitschrift für Ethnologie』Bd. 57（1925年）Heft 1/2, pp. 1–45",
+    year: 1925,
+    extent: "PDF 107頁・原刊1–45頁・図239点・図版53葉",
     description:
-      "古代の土器・彫刻・絵文書と、近現代ケクチ社会の宗教実践を比較し、マヤの神格、儀礼、暦、病因観、芸術表現を総合的に論じた単行本。献辞、本文、注、図239点、図版53葉、図注を省略なく収録しています。",
+      "古代の土器・彫刻・絵文書と、近現代ケクチ社会の宗教実践を比較し、マヤの神格、儀礼、暦、病因観、芸術表現を総合的に論じた1925年論文。献辞、本文、注、図239点、図版53葉、図注を収録しています。",
     cover:
       "publications/dieseldorff-kunst-religion-band-i-1926/cover.jpg",
     pdf:
       "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
     epub:
       "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
-    pageCount: 106,
+    pageCount: 107,
     figureCount: 239,
     plateCount: 53,
-    types: ["考古学書", "宗教研究", "図像研究", "民族誌"],
+    types: ["考古学論文", "宗教研究", "図像研究", "民族誌"],
     regions: ["中央アメリカ", "マヤ地域", "グアテマラ", "アルタ・ベラパス"],
     languages: ["ドイツ語"],
     tags: ["マヤ芸術", "マヤ宗教", "ケクチ", "図像学", "暦", "一次史料"],
@@ -5037,14 +5039,17 @@ const publicationRecords = [
     slug: "dieseldorff-kunst-religion-band-ii-1931",
     title: "マヤ諸民族の芸術と宗教 II――コパンの記念物",
     originalTitle: "Kunst und Religion der Mayavölker II: Die Copaner Denkmäler",
-    subtitle: "1931年単行本初版・本文46頁・本文図11点・図版24葉 日本語全訳",
+    subtitle:
+      "1930年雑誌初出・原刊1–44頁・1931年訂正稿・本文図11点・図版24葉 日本語全訳",
     author: "エルヴィン・P・ディースルドルフ",
-    series: "KUNST UND RELIGION DER MAYAVÖLKER · BAND II · 1931",
-    originalPublication: "ベルリン、Julius Springer、1931年",
-    year: 1931,
-    extent: "PDF 83頁・原刊本文46頁・図38点・図版24葉",
+    series:
+      "KUNST UND RELIGION DER MAYAVÖLKER II · ZEITSCHRIFT FÜR ETHNOLOGIE · 1930",
+    originalPublication:
+      "『Zeitschrift für Ethnologie』Bd. 62（1930年）Heft 1/6, pp. 1–44；1931年単行本版の訂正・改訂 pp. 45–46を併録",
+    year: 1930,
+    extent: "PDF 83頁・原刊1–44頁・1931年訂正稿2頁・図38点・図版24葉",
     description:
-      "コパンの石碑・祭壇・神殿彫刻を、暦、天文学、神格、方位、王権表象から体系的に解釈した第二巻。表紙、標題紙、献辞、本文、訂正、本文図11点、図版24葉上の図27点、図注を収録しています。",
+      "コパンの石碑・祭壇・神殿彫刻を暦、天文学、神格、方位、王権表象から体系的に解釈した1930年論文。雑誌初出本文、1931年訂正稿、本文図11点、図版24葉上の図27点、図注を収録しています。",
     cover:
       "publications/dieseldorff-kunst-religion-band-ii-1931/cover.jpg",
     pdf:
@@ -5054,7 +5059,7 @@ const publicationRecords = [
     pageCount: 83,
     figureCount: 38,
     plateCount: 24,
-    types: ["考古学書", "記念物研究", "図像研究", "暦研究"],
+    types: ["考古学論文", "記念物研究", "図像研究", "暦研究"],
     regions: ["コパン", "ホンジュラス", "マヤ地域", "中央アメリカ"],
     languages: ["ドイツ語"],
     tags: ["コパン遺跡", "マヤ文字", "マヤ暦", "天文学", "石碑", "一次史料"],
@@ -6639,8 +6644,8 @@ const newberryArchiveRights =
 const iaCcByNcNdRights =
   "原刊本文はパブリックドメインです。Internet Archiveの当該底本項目にはCC BY-NC-ND 4.0が表示され、クレジット表示、非商用、改変物の配布禁止が条件とされています。この項目表示と原著そのものの権利状態は区別して記録しています。日本語翻訳版には再利用ライセンスを設定していません。";
 
-const springerArchiveRights =
-  "著者エルヴィン・P・ディースルドルフは1940年没であり、原著の保護状況は利用地域によって異なりえます。Springer Nature Linkは電子版を購読コンテンツのプレビューとして提供し、全体へのアクセスに機関契約・ログインまたは購入を案内し、再利用はReprints and Permissions手続で確認する方式です。公開機関の表示条件と原著そのものの権利状態を区別して記録しています。日本語翻訳版には再利用ライセンスを設定していません。";
+const digiHubCcByNcSaRights =
+  "Universitätsbibliothek / Humboldt-Universität zu Berlinがdigi-hub / EVIFA Digitalで公開する原載誌スキャンの項目メタデータはCC BY-NC-SA 4.0を表示しています。原載誌画像からの切り出し・調整、日本語訳、編集、組版を含む本版全体もCC BY-NC-SA 4.0で公開します。クレジット表示、非商用、同一条件での継承が必要です。原著・図像に別の権利が残る法域では、その権利も尊重してください。";
 const JapaneseEditionNoReuseRights =
   "日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。";
 
@@ -8298,23 +8303,25 @@ const publicationMetadata = {
   },
   "dieseldorff-kunst-religion-band-i-1926": {
     sourceEdition:
-      "E. P. Dieseldorff『Kunst und Religion der Mayavölker im alten und heutigen Mittelamerika』（Berlin: Julius Springer、1926年）。本文45頁、図239点・図版53葉。初出『Zeitschrift für Ethnologie』Bd. 57（1925年）Heft 1/2, pp. 1–45。",
+      "E. P. Dieseldorff「Kunst und Religion der Mayavölker im alten und heutigen Mittelamerika」『Zeitschrift für Ethnologie』Bd. 57（1925年）Heft 1/2, pp. 1–45。本文図5点（図235–239）と図版53葉（図1–234）、計239図。",
     sourceProvider:
-      "Springer NatureのSpringer Book Archives所収電子版（DOI: 10.1007/978-3-642-94351-5）を単行本初版の底本とし、雑誌初出本文とも照合した。Springer Nature Linkは購読コンテンツのプレビューと表示し、全文アクセスに機関契約・ログインまたは購入、再利用にReprints and Permissions手続を案内し、書誌上の権利表示を© 1926 Julius Springer, Berlinとしている。",
-    sourceUrl: "https://doi.org/10.1007/978-3-642-94351-5",
-    rights: springerArchiveRights,
+      "Universitätsbibliothek / Humboldt-Universität zu Berlinがdigi-hub / EVIFA Digitalで公開する原載誌第57巻スキャン（item id 1568386342916、URN urn:nbn:de:kobv:11-d-6501314）を本文・全図版の画像底本とした。1926年Julius Springer単行本版は書誌と本文異同の確認にのみ参照し、同電子版の画像データは収録していない。",
+    sourceUrl:
+      "https://www.digi-hub.de/viewer/metadata/1568386342916/9/-/",
+    rights: digiHubCcByNcSaRights,
     publishedDate: "2026-08-11",
-    updatedDate: "2026-08-11",
+    updatedDate: "2026-08-14",
   },
   "dieseldorff-kunst-religion-band-ii-1931": {
     sourceEdition:
-      "E. P. Dieseldorff『Kunst und Religion der Mayavölker II: Die Copaner Denkmäler』（Berlin: Julius Springer、1931年）。本文46頁、本文図11点、図版24葉上の図27点。初出『Zeitschrift für Ethnologie』Bd. 62（1930年）Heft 1/6, pp. 1–46。",
+      "E. P. Dieseldorff「Kunst und Religion der Mayavölker II: Die Copaner Denkmäler」『Zeitschrift für Ethnologie』Bd. 62（1930年）Heft 1/6, pp. 1–44。本文図11点。1931年単行本版の訂正・改訂 pp. 45–46と図版24葉上の図27点を併録。",
     sourceProvider:
-      "Springer NatureのSpringer Book Archives所収電子版（DOI: 10.1007/978-3-642-51329-9）を単行本初版の底本とした。Springer Nature Linkは購読プレビューを表示し、全体へのアクセスに機関契約・ログインまたは購入、再利用にReprints and Permissions手続を案内し、電子版にCopyright 1931 by Julius Springer, Berlinと表示する。",
-    sourceUrl: "https://doi.org/10.1007/978-3-642-51329-9",
-    rights: springerArchiveRights,
+      "Universitätsbibliothek / Humboldt-Universität zu Berlinがdigi-hub / EVIFA Digitalで公開する原載誌第62巻スキャン（item id 1564414985756、URN urn:nbn:de:kobv:11-d-6482604）を本文・全図版の画像底本とした。1931年Julius Springer単行本版は訂正稿、書誌、本文異同の確認にのみ参照し、同電子版の画像データは収録していない。",
+    sourceUrl:
+      "https://www.digi-hub.de/viewer/metadata/1564414985756/9/-/",
+    rights: digiHubCcByNcSaRights,
     publishedDate: "2026-08-11",
-    updatedDate: "2026-08-11",
+    updatedDate: "2026-08-14",
   },
   "dieseldorff-kekchi-will-1583-1932": {
     sourceEdition:
@@ -8697,6 +8704,8 @@ const shortWorkAuthorBySlug = {
   "dieseldorff-jadeit-schmuck-1905": "erwin-p-dieseldorff",
   "dieseldorff-klassifizierung-funde-1909": "erwin-p-dieseldorff",
   "dieseldorff-tzultaca-mam-1926": "erwin-p-dieseldorff",
+  "dieseldorff-kunst-religion-band-i-1926": "erwin-p-dieseldorff",
+  "dieseldorff-kunst-religion-band-ii-1931": "erwin-p-dieseldorff",
   "dieseldorff-kekchi-will-1583-1932": "erwin-p-dieseldorff",
   "dieseldorff-cauac-thunderbolt-signs-1932":
     "dieseldorff-w-gates",
