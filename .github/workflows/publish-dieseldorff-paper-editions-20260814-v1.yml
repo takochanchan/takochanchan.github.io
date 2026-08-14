@@ -22,6 +22,7 @@ jobs:
       WORKFLOW_PATH: .github/workflows/publish-dieseldorff-paper-editions-20260814-v1.yml
       RELEASE_TAG: publications-current
       BUNDLE_SHA256: 83f55767646ada3f4a6d572c5f97fcf35d303d67b21fdb316cbe6ad978fd0c36
+      OVERRIDE_SHA256: 611c8168084892c25fb3a31cc03018d90b160881b755ef23f1348b2cec52bd26
       ARCHIVE_COMMIT: c03f92a4916767bdb635fb4039a517465d5a8f19
     steps:
       - name: Check out checksum-pinned staging bytes
@@ -38,6 +39,9 @@ jobs:
           echo "$BUNDLE_SHA256  /tmp/dieseldorff-public.tar.gz" | sha256sum -c -
           mkdir -p /tmp/dieseldorff-public
           tar -xzf /tmp/dieseldorff-public.tar.gz -C /tmp/dieseldorff-public
+          cp "staging/$STAGING_ROOT/site-overrides-v2.tar.gz" /tmp/site-overrides-v2.tar.gz
+          echo "$OVERRIDE_SHA256  /tmp/site-overrides-v2.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/site-overrides-v2.tar.gz -C /tmp/dieseldorff-public
 
       - name: Validate paper PDFs, EPUBs, covers, and metadata
         shell: bash
@@ -115,7 +119,7 @@ jobs:
 
           site = root / "site"
           site_files = payload["site_files"]
-          assert len(site_files) == 6
+          assert len(site_files) == 7
           assert all((site / path).is_file() for path in site_files)
           manifest = json.loads((site / "assets-manifest.json").read_text(encoding="utf-8"))
           manifest_entries = {entry["path"]: entry for entry in manifest["assets"]}
