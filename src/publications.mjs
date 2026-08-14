@@ -6,6 +6,448 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "flint-antiquities-nicaragua-palenque-builders-1882",
+    "title": "ニカラグアの古物――パレンケ建設者の起源",
+    "originalTitle": "Antiquities of Nicaragua—Origin of the Palenque Builders",
+    "subtitle": "1882年刊・原刊289–302頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "ANTIQUITIES OF NICARAGUA—ORIGIN OF THE PALENQUE BUILDERS · 1882",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第4巻第4号、1882年10月、289–302頁",
+    "year": 1882,
+    "extent": "PDF 16頁・原刊289–302頁",
+    "description": "チョンタレス、テウステペ周辺の洞窟・埋葬・頭蓋・石器・岩刻と、南北アメリカの文化移動、パレンケ建設者の起源を論じた、エンゲルマン宛長篇書簡の日本語全訳です。原刊頁標識、編集部前文、原注、署名を保持しています。",
+    "pageCount": 16,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "書簡",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "チョンタレス",
+      "テウステペ",
+      "パレンケ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "ニカラグア考古学",
+      "洞窟",
+      "埋葬",
+      "石器",
+      "岩刻画",
+      "パレンケ"
+    ],
+    "sourceEdition": "Earl Flint, “Antiquities of Nicaragua—Origin of the Palenque Builders: A Letter from Dr. Earl Flint to Dr. Engelman,” The American Antiquarian and Oriental Journal, vol. IV, no. 4 (October 1882), pp. 289–302.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua19peetgoog の原刊289–302頁を本文底本とし、HathiTrust mdp.39015016871488／osu.32435027251644を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua19peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-antiquities-nicaragua-palenque-builders-1882/cover.jpg",
+    "pdf": "publications/flint-antiquities-nicaragua-palenque-builders-1882/Earl_Flint_Antiquities_of_Nicaragua_Origin_of_the_Palenque_Builders_1882_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-antiquities-nicaragua-palenque-builders-1882/Earl_Flint_Antiquities_of_Nicaragua_Origin_of_the_Palenque_Builders_1882_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-human-foot-prints-nicaragua-1884",
+    "title": "ニカラグアの人足跡",
+    "originalTitle": "Human Foot Prints in Nicaragua",
+    "subtitle": "1884年刊・原刊112–114頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "HUMAN FOOT PRINTS IN NICARAGUA · 1884",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第6巻第2号、1884年3月、112–114頁",
+    "year": 1884,
+    "extent": "PDF 4頁・原刊112–114頁",
+    "description": "マナグア近郊アカウアリンカの採石場に現れた複数列の人足跡、火山性泥流・凝灰岩層、動物足跡、標本の切り出しを報告した編集者宛書簡の日本語全訳です。",
+    "pageCount": 4,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "地質学報告",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "火山灰",
+      "凝灰岩",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Human Foot Prints in Nicaragua,” The American Antiquarian and Oriental Journal, vol. VI, no. 2 (March 1884), pp. 112–114.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua01peetgoog の原刊112–114頁を本文底本とし、americanantiqua13peetgoogおよびHathiTrust mdp.39015014318490を対校資料としました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua01peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-human-foot-prints-nicaragua-1884/cover.jpg",
+    "pdf": "publications/flint-human-foot-prints-nicaragua-1884/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1884_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-human-foot-prints-nicaragua-1884/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1884_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-human-foot-prints-nicaragua-1885",
+    "title": "ニカラグアの人足跡〔続報〕",
+    "originalTitle": "Human Foot Prints in Nicaragua",
+    "subtitle": "1885年刊・原刊156–158頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "HUMAN FOOT PRINTS IN NICARAGUA · 1885",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第7巻第3号、1885年5月、156–158頁",
+    "year": 1885,
+    "extent": "PDF 5頁・原刊156–158頁",
+    "description": "1884年報告の続報。マナグア山地南西斜面、サン・ラファエル地区、凝灰岩層、洞窟内記号、海成化石と足跡層の地質解釈を追加し、ピーボディ博物館との調査関係にも触れます。",
+    "pageCount": 5,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "地質学報告",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "サン・ラファエル",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "洞窟",
+      "海成化石",
+      "ピーボディ博物館",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Human Foot Prints in Nicaragua,” The American Antiquarian and Oriental Journal, vol. VII, no. 3 (May 1885), pp. 156–158.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua34peetgoog の原刊156–158頁を本文底本とし、HathiTrust mdp.39015028719378を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua34peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-human-foot-prints-nicaragua-1885/cover.jpg",
+    "pdf": "publications/flint-human-foot-prints-nicaragua-1885/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1885_Continuation_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-human-foot-prints-nicaragua-1885/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1885_Continuation_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-pre-adamite-foot-prints-1886",
+    "title": "アダム以前の人足跡",
+    "originalTitle": "Pre-Adamite Foot-Prints",
+    "subtitle": "1886年刊・原刊230–233頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "PRE-ADAMITE FOOT-PRINTS · 1886",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第8巻第4号、1886年7月、230–233頁",
+    "year": 1886,
+    "extent": "PDF 6頁・原刊230–233頁",
+    "description": "アカウアリンカ足跡を19世紀末の先アダム人・第三紀人類論争へ位置づけた論考。番号付き反論、宛名、署名、日付、原注を含む全訳で、当時の地質学史・人類起源論を伝えます。",
+    "pageCount": 6,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "地質学論文",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "先アダム人",
+      "第三紀人類",
+      "科学史",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Pre-Adamite Foot-Prints,” The American Antiquarian and Oriental Journal, vol. VIII, no. 4 (July 1886), pp. 230–233.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua27peetgoog の原刊230–233頁を本文底本とし、HathiTrust mdp.39015012874767を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua27peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-pre-adamite-foot-prints-1886/cover.jpg",
+    "pdf": "publications/flint-pre-adamite-foot-prints-1886/Earl_Flint_Pre_Adamite_Foot_Prints_1886_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-pre-adamite-foot-prints-1886/Earl_Flint_Pre_Adamite_Foot_Prints_1886_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-human-footprints-eocene-1888",
+    "title": "始新世の人足跡",
+    "originalTitle": "Human Footprints in the Eocene",
+    "subtitle": "1888年刊・原刊252–254頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "HUMAN FOOTPRINTS IN THE EOCENE · 1888",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第10巻第4号、1888年7月、252–254頁",
+    "year": 1888,
+    "extent": "PDF 5頁・原刊252–254頁",
+    "description": "ニカラグアの人足跡を始新世へ遡らせようとしたフリントの地質学的推論を示す短論。当時のアメリカ第三紀人類論を検討する一次史料として、原刊頁標識と書簡末尾を保持しました。",
+    "pageCount": 5,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "地質学論文",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "始新世",
+      "第三紀人類",
+      "科学史",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Human Footprints in the Eocene,” The American Antiquarian and Oriental Journal, vol. X, no. 4 (July 1888), pp. 252–254.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua00peetgoog の原刊252–254頁を本文底本とし、HathiTrust mdp.39015027068306を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua00peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-human-footprints-eocene-1888/cover.jpg",
+    "pdf": "publications/flint-human-footprints-eocene-1888/Earl_Flint_Human_Footprints_in_the_Eocene_1888_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-human-footprints-eocene-1888/Earl_Flint_Human_Footprints_in_the_Eocene_1888_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-paleolithics-nicaragua-1888",
+    "title": "ニカラグアの旧石器遺物",
+    "originalTitle": "Paleolithics in Nicaragua",
+    "subtitle": "1888年刊・原刊381–382頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "PALEOLITHICS IN NICARAGUA · 1888",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第10巻第6号、1888年11月、381–382頁",
+    "year": 1888,
+    "extent": "PDF 4頁・原刊381–382頁",
+    "description": "ニカラグアの石器分類、サン・アンドレス洞窟近くの層序、旧石器・新石器という用語への疑義を論じた短報。ベレント、パットナム、ピーボディ博物館、スミソニアンへの言及を含みます。",
+    "pageCount": 4,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "石器研究",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "サン・アンドレス"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "旧石器",
+      "新石器",
+      "石器",
+      "洞窟",
+      "ベレント",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Paleolithics in Nicaragua,” The American Antiquarian and Oriental Journal, vol. X, no. 6 (November 1888), pp. 381–382.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua00peetgoog の原刊381–382頁を本文底本とし、HathiTrust mdp.39015027068306で書誌と巻を照合しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua00peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-paleolithics-nicaragua-1888/cover.jpg",
+    "pdf": "publications/flint-paleolithics-nicaragua-1888/Earl_Flint_Paleolithics_in_Nicaragua_1888_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-paleolithics-nicaragua-1888/Earl_Flint_Paleolithics_in_Nicaragua_1888_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-nicaragua-foot-prints-1889",
+    "title": "ニカラグアの人足跡",
+    "originalTitle": "Nicaragua Foot-prints",
+    "subtitle": "1889年刊・原刊306–311頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "NICARAGUA FOOT-PRINTS · 1889",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第11巻第5号、1889年9月、306–311頁",
+    "year": 1889,
+    "extent": "PDF 10頁・原刊306–311頁",
+    "description": "アカウアリンカ足跡について、地層、標本、歩行方向、火山活動、年代論を再整理した六頁の総括論文。1884–1888年の短報群を受けたフリントの最終的な考古・地質論を全訳しました。",
+    "pageCount": 10,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "地質学論文",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "火山活動",
+      "地層",
+      "年代論",
+      "総括論文"
+    ],
+    "sourceEdition": "Earl Flint, “Nicaragua Foot-prints,” The American Antiquarian and Oriental Journal, vol. XI, no. 5 (September 1889), pp. 306–311.",
+    "sourceProvider": "Bayerische Staatsbibliothek München／Münchener DigitalisierungsZentrum公開の bsb11547459、請求記号 Am.a. 110-11、原刊306–311頁（URN urn:nbn:de:bvb:12-bsb11547459-2、Googleデジタル化）を本文底本とし、HathiTrust mdp.39015012874775を対校巻として記録しました。",
+    "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb11547459",
+    "rights": "原著本文は1889年に米国で公刊されたパブリックドメイン資料です。BSB／MDZのデジタル資料 bsb11547459 はRightsStatements.org「No Copyright - Non-Commercial Use Only 1.0」（NoC-NC 1.0）で公開されています。本版は非商用公開で、BSB／MDZの誌面画像を転載していません。出典：Bayerische Staatsbibliothek München, Am.a. 110-11, pp. 306–311, urn:nbn:de:bvb:12-bsb11547459-2, digitized by Google。https://rightsstatements.org/vocab/NoC-NC/1.0/ HathiTrustの対校巻はGoogleデジタル化資料で、同館の公式再利用案内が画像・OCRの再ホスト、再配布、商用利用を制限します。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-nicaragua-foot-prints-1889/cover.jpg",
+    "pdf": "publications/flint-nicaragua-foot-prints-1889/Earl_Flint_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-nicaragua-foot-prints-1889/Earl_Flint_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-what-dr-flint-says-nicaragua-footprints-1890",
+    "title": "ニカラグアの人足跡についてフリント博士が述べること",
+    "originalTitle": "What Dr. Flint Has to Say about the Nicaragua Footprints",
+    "subtitle": "1890年刊・原刊30–32頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "WHAT DR. FLINT HAS TO SAY ABOUT THE NICARAGUA FOOTPRINTS · 1890",
+    "originalPublication": "『Science』new series第15巻第362号、1890年1月10日、30–32頁",
+    "year": 1890,
+    "extent": "PDF 8頁・原刊30–32頁",
+    "description": "ヒルボーン・T・クレソン宛フリント書簡の抜粋として『Science』に掲載された足跡報告。地層、採取標本、足跡の向きと保存状態を論じる本文を、編集上の見出しと原刊頁標識を含めて訳しました。",
+    "pageCount": 8,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "地質学報告",
+      "書簡"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "Science",
+      "クレソン",
+      "地層",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “What Dr. Flint Has to Say about the Nicaragua Footprints,” Science, new series, vol. 15, no. 362 (10 January 1890), pp. 30–32, DOI 10.1126/science.ns-15.362.30.",
+    "sourceProvider": "JSTOR Early Journal ContentとしてInternet Archiveが公開する単論文 jstor-1762701 を本文底本としました。Science／AAASのDOIページは著者・題名・巻号・頁の書誌確認にのみ用い、同サイトのPDF画像は転載していません。",
+    "sourceUrl": "https://archive.org/details/jstor-1762701",
+    "rights": "原著本文は1890年に米国で公刊されたパブリックドメイン資料です。JSTOR Early Journal Contentの利用表示および現行利用規約は、同コンテンツの全部または一部を非商用目的で複製・使用・再配布でき、JSTORの出典表示を求めています。本版は非商用公開です。Courtesy of JSTOR。https://www.about.jstor.org/terms/ Science／AAASのDOIページは書誌確認だけに用い、AAASのPDF画像は転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/cover.jpg",
+    "pdf": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-prehistoric-horse-america-1891",
+    "title": "アメリカの先史時代の馬",
+    "originalTitle": "Prehistoric Horse in America",
+    "subtitle": "1891年刊・原刊13299頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "PREHISTORIC HORSE IN AMERICA · 1891",
+    "originalPublication": "『Scientific American Supplement』第32巻第832号、1891年12月12日、13299頁",
+    "year": 1891,
+    "extent": "PDF 4頁・原刊13299頁・図1点",
+    "description": "ニカラグアの岩面に刻まれた騎乗人物らしい図像を、在来の化石馬と結びつけて論じた図入り短報。原刊図一点、寸法・来歴キャプション、リバス発1891年10月27日付署名を収録しました。",
+    "pageCount": 4,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "岩刻画研究",
+      "古生物学史"
+    ],
+    "regions": [
+      "ニカラグア",
+      "リバス",
+      "サン・ラファエル・デル・スル"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "岩刻画",
+      "化石馬",
+      "騎乗人物",
+      "Scientific American",
+      "一次史料"
+    ],
+    "sourceEdition": "Earl Flint, “Prehistoric Horse in America,” Scientific American Supplement, vol. XXXII, no. 832 (12 December 1891), p. 13299, DOI 10.1038/scientificamerican12121891-13299asupp.",
+    "sourceProvider": "Internet ArchiveのSIMマイクロフィルム公開項目 sim_scientific-american-supplement_1891-12-12_32_832 を本文・図の底本とし、Project Gutenberg版『Scientific American Supplement, No. 832』を文字対校にのみ用いました。",
+    "sourceUrl": "https://archive.org/details/sim_scientific-american-supplement_1891-12-12_32_832",
+    "rights": "原著本文および原刊図版は1891年に米国で公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は記事内容として原刊図版一点を収録しました。Project Gutenberg版は文字対校にのみ用い、その電子書籍ファイルまたは同版固有の組版を転載していません。同版を再配布する場合はProject Gutenberg Licenseと商標条件が適用されます。https://www.gutenberg.org/policy/license",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-prehistoric-horse-america-1891/cover.jpg",
+    "pdf": "publications/flint-prehistoric-horse-america-1891/Earl_Flint_Prehistoric_Horse_in_America_1891_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-prehistoric-horse-america-1891/Earl_Flint_Prehistoric_Horse_in_America_1891_Japanese_Complete_Translation.epub"
+  },
+  {
+    "slug": "flint-rainfall-rivas-nicaragua-1898",
+    "title": "ニカラグア、リバスの降水量",
+    "originalTitle": "Rainfall at Rivas, Nicaragua",
+    "subtitle": "1898年刊・原刊304–305頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "RAINFALL AT RIVAS, NICARAGUA · 1898",
+    "originalPublication": "『Monthly Weather Review』第26巻第7号、1898年7月、304–305頁",
+    "year": 1898,
+    "extent": "PDF 3頁・原刊304–305頁",
+    "description": "リバスで1880年代以降に蓄積された月別・年別降水量を報告する表付き資料。原刊の数値、空欄、T.（trace）、年計を保持して表を組み直し、本文と表の期間不一致や集計上の注意を編集注にまとめました。",
+    "pageCount": 3,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "気象報告",
+      "統計資料",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "リバス"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "降水量",
+      "気象観測",
+      "月別統計",
+      "Monthly Weather Review",
+      "米国気象局"
+    ],
+    "sourceEdition": "Earl Flint, “Rainfall at Rivas, Nicaragua,” Monthly Weather Review, vol. 26, no. 7 (July 1898), pp. 304–305, DOI 10.1175/1520-0493(1898)26[304:RARN]2.0.CO;2.",
+    "sourceProvider": "Internet ArchiveのSIMマイクロフィルム公開項目 sim_monthly-weather-review_1898-07_26_7 の原刊304–305頁を本文・表の底本とし、American Meteorological Societyの巻号目次・DOIページとNOAAの著者索引で書誌を照合しました。AMSサイトのPDF画像は転載していません。",
+    "sourceUrl": "https://archive.org/details/sim_monthly-weather-review_1898-07_26_7",
+    "rights": "原刊は1898年の米国気象局刊行物です。NWSの公式利用条件に従い、組み直した表を含む米国政府資料部分は著作権保護の対象外です。本版はNOAA／NWSの承認を意味せず、改変物を政府の公式資料として表示しません。https://www.weather.gov/disclaimer/ Internet Archiveの当該項目にはrights／licenseurlの表示がなく、誌面画像は転載していません。AMSの巻号目次・DOIページは書誌確認だけに用い、AMSサイトのPDF画像は転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14",
+    "cover": "publications/flint-rainfall-rivas-nicaragua-1898/cover.jpg",
+    "pdf": "publications/flint-rainfall-rivas-nicaragua-1898/Earl_Flint_Rainfall_at_Rivas_Nicaragua_1898_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-rainfall-rivas-nicaragua-1898/Earl_Flint_Rainfall_at_Rivas_Nicaragua_1898_Japanese_Complete_Translation.epub"
+  },
+  {
     slug: "remesal-historia-general-1619",
     title: "西インド総史",
     originalTitle:
@@ -5833,6 +6275,86 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "flint-antiquities-nicaragua-palenque-builders-1882": {
+    "sourceEdition": "Earl Flint, “Antiquities of Nicaragua—Origin of the Palenque Builders: A Letter from Dr. Earl Flint to Dr. Engelman,” The American Antiquarian and Oriental Journal, vol. IV, no. 4 (October 1882), pp. 289–302.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua19peetgoog の原刊289–302頁を本文底本とし、HathiTrust mdp.39015016871488／osu.32435027251644を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua19peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-human-foot-prints-nicaragua-1884": {
+    "sourceEdition": "Earl Flint, “Human Foot Prints in Nicaragua,” The American Antiquarian and Oriental Journal, vol. VI, no. 2 (March 1884), pp. 112–114.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua01peetgoog の原刊112–114頁を本文底本とし、americanantiqua13peetgoogおよびHathiTrust mdp.39015014318490を対校資料としました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua01peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-human-foot-prints-nicaragua-1885": {
+    "sourceEdition": "Earl Flint, “Human Foot Prints in Nicaragua,” The American Antiquarian and Oriental Journal, vol. VII, no. 3 (May 1885), pp. 156–158.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua34peetgoog の原刊156–158頁を本文底本とし、HathiTrust mdp.39015028719378を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua34peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-pre-adamite-foot-prints-1886": {
+    "sourceEdition": "Earl Flint, “Pre-Adamite Foot-Prints,” The American Antiquarian and Oriental Journal, vol. VIII, no. 4 (July 1886), pp. 230–233.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua27peetgoog の原刊230–233頁を本文底本とし、HathiTrust mdp.39015012874767を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua27peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-human-footprints-eocene-1888": {
+    "sourceEdition": "Earl Flint, “Human Footprints in the Eocene,” The American Antiquarian and Oriental Journal, vol. X, no. 4 (July 1888), pp. 252–254.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua00peetgoog の原刊252–254頁を本文底本とし、HathiTrust mdp.39015027068306を対校候補として記録しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua00peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-paleolithics-nicaragua-1888": {
+    "sourceEdition": "Earl Flint, “Paleolithics in Nicaragua,” The American Antiquarian and Oriental Journal, vol. X, no. 6 (November 1888), pp. 381–382.",
+    "sourceProvider": "Internet Archive公開巻 americanantiqua00peetgoog の原刊381–382頁を本文底本とし、HathiTrust mdp.39015027068306で書誌と巻を照合しました。",
+    "sourceUrl": "https://archive.org/details/americanantiqua00peetgoog",
+    "rights": "原著本文と原刊誌面は米国で1929年以前に公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。HathiTrustの対校巻はGoogleデジタル化資料であり、同館の公式再利用案内はGoogleスキャン画像・OCRの再ホスト、再配布および商用利用を制限する一方、画像から翻刻・要約・翻訳した本文には制限を設けないとしています。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-nicaragua-foot-prints-1889": {
+    "sourceEdition": "Earl Flint, “Nicaragua Foot-prints,” The American Antiquarian and Oriental Journal, vol. XI, no. 5 (September 1889), pp. 306–311.",
+    "sourceProvider": "Bayerische Staatsbibliothek München／Münchener DigitalisierungsZentrum公開の bsb11547459、請求記号 Am.a. 110-11、原刊306–311頁（URN urn:nbn:de:bvb:12-bsb11547459-2、Googleデジタル化）を本文底本とし、HathiTrust mdp.39015012874775を対校巻として記録しました。",
+    "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb11547459",
+    "rights": "原著本文は1889年に米国で公刊されたパブリックドメイン資料です。BSB／MDZのデジタル資料 bsb11547459 はRightsStatements.org「No Copyright - Non-Commercial Use Only 1.0」（NoC-NC 1.0）で公開されています。本版は非商用公開で、BSB／MDZの誌面画像を転載していません。出典：Bayerische Staatsbibliothek München, Am.a. 110-11, pp. 306–311, urn:nbn:de:bvb:12-bsb11547459-2, digitized by Google。https://rightsstatements.org/vocab/NoC-NC/1.0/ HathiTrustの対校巻はGoogleデジタル化資料で、同館の公式再利用案内が画像・OCRの再ホスト、再配布、商用利用を制限します。本版はHathiTrustの画像・OCRを転載していません。https://hathitrust.atlassian.net/wiki/spaces/GS/pages/2386591873/Reusing+HathiTrust+Content",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-what-dr-flint-says-nicaragua-footprints-1890": {
+    "sourceEdition": "Earl Flint, “What Dr. Flint Has to Say about the Nicaragua Footprints,” Science, new series, vol. 15, no. 362 (10 January 1890), pp. 30–32, DOI 10.1126/science.ns-15.362.30.",
+    "sourceProvider": "JSTOR Early Journal ContentとしてInternet Archiveが公開する単論文 jstor-1762701 を本文底本としました。Science／AAASのDOIページは著者・題名・巻号・頁の書誌確認にのみ用い、同サイトのPDF画像は転載していません。",
+    "sourceUrl": "https://archive.org/details/jstor-1762701",
+    "rights": "原著本文は1890年に米国で公刊されたパブリックドメイン資料です。JSTOR Early Journal Contentの利用表示および現行利用規約は、同コンテンツの全部または一部を非商用目的で複製・使用・再配布でき、JSTORの出典表示を求めています。本版は非商用公開です。Courtesy of JSTOR。https://www.about.jstor.org/terms/ Science／AAASのDOIページは書誌確認だけに用い、AAASのPDF画像は転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-prehistoric-horse-america-1891": {
+    "sourceEdition": "Earl Flint, “Prehistoric Horse in America,” Scientific American Supplement, vol. XXXII, no. 832 (12 December 1891), p. 13299, DOI 10.1038/scientificamerican12121891-13299asupp.",
+    "sourceProvider": "Internet ArchiveのSIMマイクロフィルム公開項目 sim_scientific-american-supplement_1891-12-12_32_832 を本文・図の底本とし、Project Gutenberg版『Scientific American Supplement, No. 832』を文字対校にのみ用いました。",
+    "sourceUrl": "https://archive.org/details/sim_scientific-american-supplement_1891-12-12_32_832",
+    "rights": "原著本文および原刊図版は1891年に米国で公刊されたパブリックドメイン資料です。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は記事内容として原刊図版一点を収録しました。Project Gutenberg版は文字対校にのみ用い、その電子書籍ファイルまたは同版固有の組版を転載していません。同版を再配布する場合はProject Gutenberg Licenseと商標条件が適用されます。https://www.gutenberg.org/policy/license",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "flint-rainfall-rivas-nicaragua-1898": {
+    "sourceEdition": "Earl Flint, “Rainfall at Rivas, Nicaragua,” Monthly Weather Review, vol. 26, no. 7 (July 1898), pp. 304–305, DOI 10.1175/1520-0493(1898)26[304:RARN]2.0.CO;2.",
+    "sourceProvider": "Internet ArchiveのSIMマイクロフィルム公開項目 sim_monthly-weather-review_1898-07_26_7 の原刊304–305頁を本文・表の底本とし、American Meteorological Societyの巻号目次・DOIページとNOAAの著者索引で書誌を照合しました。AMSサイトのPDF画像は転載していません。",
+    "sourceUrl": "https://archive.org/details/sim_monthly-weather-review_1898-07_26_7",
+    "rights": "原刊は1898年の米国気象局刊行物です。NWSの公式利用条件に従い、組み直した表を含む米国政府資料部分は著作権保護の対象外です。本版はNOAA／NWSの承認を意味せず、改変物を政府の公式資料として表示しません。https://www.weather.gov/disclaimer/ Internet Archiveの当該項目にはrights／licenseurlの表示がなく、誌面画像は転載していません。AMSの巻号目次・DOIページは書誌確認だけに用い、AMSサイトのPDF画像は転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  }
   "ixtlilxochitl-sumaria-todas": {
     sourceEdition:
       "Fernando de Alva Ixtlilxóchitl『Sumaria relación de todas las cosas que han sucedido en la Nueva España, y de muchas cosas que los Tultecas alcanzaron y supieron…』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第1巻 f.1r–81v。",
@@ -7614,6 +8136,16 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "flint-antiquities-nicaragua-palenque-builders-1882": "earl-flint",
+  "flint-human-foot-prints-nicaragua-1884": "earl-flint",
+  "flint-human-foot-prints-nicaragua-1885": "earl-flint",
+  "flint-pre-adamite-foot-prints-1886": "earl-flint",
+  "flint-human-footprints-eocene-1888": "earl-flint",
+  "flint-paleolithics-nicaragua-1888": "earl-flint",
+  "flint-nicaragua-foot-prints-1889": "earl-flint",
+  "flint-what-dr-flint-says-nicaragua-footprints-1890": "earl-flint",
+  "flint-prehistoric-horse-america-1891": "earl-flint",
+  "flint-rainfall-rivas-nicaragua-1898": "earl-flint",
   "morelet-testacea-novissima-pars-i-1849": "arthur-morelet",
   "morelet-testacea-novissima-pars-ii-1851": "arthur-morelet",
   "morelet-exploration-guatemala-1850":

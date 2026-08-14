@@ -1,0 +1,105 @@
+name: Verify Earl Flint site publication
+
+on:
+  push:
+    branches: ["agent/flint-site-publication-20260814-v1"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out candidate site tree
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and run catalogue tests
+        run: |
+          set -euo pipefail
+          npm run build
+          npm test
+
+      - name: Download and checksum-verify the ten new EPUBs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import urllib.request
+
+          manifest = json.load(open("assets-manifest.json"))
+          assets = [
+              asset for asset in manifest["assets"]
+              if asset["path"].startswith("publications/flint-") and asset["path"].endswith(".epub")
+          ]
+          assert len(assets) == 10
+          root = pathlib.Path(".cache/flint-public-assets")
+          for asset in assets:
+              destination = root / asset["path"]
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              request = urllib.request.Request(asset["url"], headers={"User-Agent": "takochan-publication-verifier/1.0"})
+              with urllib.request.urlopen(request) as response:
+                  data = response.read()
+              assert len(data) == asset["size"], asset["path"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"], asset["path"]
+              destination.write_bytes(data)
+          PY
+
+      - name: Validate the ten reflowable EPUB 3 editions
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=()
+          while IFS= read -r slug; do args+=(--slug "$slug"); done < <(
+            node --input-type=module - <<'JS'
+          import { publications } from "./src/publications.mjs";
+          for (const item of publications.filter((entry) => entry.slug.startsWith("flint-"))) {
+            console.log(item.slug);
+          }
+          JS
+          )
+          python3 scripts/validate-epubs.py .cache/flint-public-assets "${args[@]}"
+
+      - name: Verify source-provider notices on generated pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib
+
+          slugs = [
+              path.name
+              for path in pathlib.Path("dist/publications").iterdir()
+              if path.is_dir() and path.name.startswith("flint-")
+          ]
+          assert len(slugs) == 10
+          combined = ""
+          for slug in slugs:
+              text = (pathlib.Path("dist/publications") / slug / "index.html").read_text(encoding="utf-8")
+              assert "権利・利用条件" in text
+              assert "日本語翻訳版には再利用ライセンス" not in text
+              assert "日本語版ライセンス" not in text
+              combined += text
+          for required in (
+              "Internet Archive",
+              "HathiTrust",
+              "Bayerische Staatsbibliothek",
+              "No Copyright - Non-Commercial Use Only 1.0",
+              "JSTOR",
+              "Project Gutenberg",
+              "NWS",
+              "American Meteorological Society",
+          ):
+              assert required in combined, required
+          PY

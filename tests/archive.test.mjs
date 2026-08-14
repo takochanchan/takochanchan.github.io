@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 198);
+  assert.equal(publications.length, 208);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -65,11 +65,21 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 104);
-  assert.equal(shortPublications.length, 94);
-  assert.equal(shortPublicationAuthors.length, 24);
+  assert.equal(shortPublications.length, 104);
+  assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
+      "flint-antiquities-nicaragua-palenque-builders-1882",
+      "flint-human-foot-prints-nicaragua-1884",
+      "flint-human-foot-prints-nicaragua-1885",
+      "flint-pre-adamite-foot-prints-1886",
+      "flint-human-footprints-eocene-1888",
+      "flint-paleolithics-nicaragua-1888",
+      "flint-nicaragua-foot-prints-1889",
+      "flint-what-dr-flint-says-nicaragua-footprints-1890",
+      "flint-prehistoric-horse-america-1891",
+      "flint-rainfall-rivas-nicaragua-1898",
       "esquinca-usumacinta",
       "sapper-eastern-lacandons-1891",
       "berendt-central-america-explorations-1867",
@@ -670,7 +680,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">104<\/strong>件/);
-  assert.match(html, /id="paper-match-count">94<\/strong>件/);
+  assert.match(html, /id="paper-match-count">104<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
