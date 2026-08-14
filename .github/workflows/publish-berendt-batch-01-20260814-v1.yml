@@ -73,7 +73,7 @@ jobs:
                   "Google",
                   "Internet Archive",
                   "NOT_IN_COPYRIGHT",
-                  "個別のCreative Commonsライセンス指定はありません",
+                  "個別のCC指定なし",
               ):
                   assert required in rights + provider, (slug, required)
               assert record["sourceUrl"] == "https://archive.org/details/petermannsgeogr05haacgoog"
