@@ -1,5 +1,5 @@
 name: Publish Berendt papers 6-10
-# Retry 3: archive ledger and catalogue-size assertions are aligned.
+# Retry 4: archive ledger and exact short-work inventory are aligned.
 
 on:
   push:
