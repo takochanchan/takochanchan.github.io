@@ -1,0 +1,153 @@
+name: Verify Berendt batch 03 site publications
+
+on:
+  push:
+    branches: ["agent/berendt-batch-03-site-20260814-v1"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out candidate site tree
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build archive pages and verify master ledger
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
+
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
+
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Verify full-text index and catalogue tests
+        run: |
+          set -euo pipefail
+          npm run verify:search
+          npm test
+
+      - name: Download and checksum-verify the ten new public files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import urllib.request
+
+          slugs = {
+              "berendt-mexico-1872",
+              "berendt-indianer-tehuantepec-1873",
+              "berendt-carib-karif-language-1873",
+              "berendt-darien-language-1874",
+              "berendt-ethnologie-nicaragua-1874",
+          }
+          manifest = json.load(open("assets-manifest.json"))
+          assets = [
+              asset
+              for asset in manifest["assets"]
+              if asset["path"].split("/")[1] in slugs
+              and asset["path"].endswith((".pdf", ".epub"))
+          ]
+          assert len(assets) == 10
+          root = pathlib.Path(".cache/berendt-batch-03-public-assets")
+          for asset in assets:
+              destination = root / asset["path"]
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              request = urllib.request.Request(
+                  asset["url"],
+                  headers={"User-Agent": "takochan-publication-verifier/1.0"},
+              )
+              with urllib.request.urlopen(request) as response:
+                  data = response.read()
+              assert len(data) == asset["size"], asset["path"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"], asset["path"]
+              destination.write_bytes(data)
+          PY
+
+      - name: Validate all five reflowable EPUB 3 editions
+        run: >-
+          python3 scripts/validate-epubs.py .cache/berendt-batch-03-public-assets
+          --slug berendt-mexico-1872
+          --slug berendt-indianer-tehuantepec-1873
+          --slug berendt-carib-karif-language-1873
+          --slug berendt-darien-language-1874
+          --slug berendt-ethnologie-nicaragua-1874
+
+      - name: Verify all five publication pages and provider notices
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import pathlib
+
+          expected = {
+              "berendt-mexico-1872": ("メキシコ", 113567, ("University of Michigan", "Public Domain Mark 1.0")),
+              "berendt-indianer-tehuantepec-1873": ("テワンテペク地峡のインディアン", 122828, ("Getty Research Institute", "NOT_IN_COPYRIGHT")),
+              "berendt-carib-karif-language-1873": ("カリブ語またはカリフ語の文法・辞書について", 131188, ("Smithsonian Institution", "Internet Archive")),
+              "berendt-darien-language-1874": ("ダリエン語", 120047, ("Internet Archive", "IA1630708-07")),
+              "berendt-ethnologie-nicaragua-1874": ("ニカラグアの民族学について", 122103, ("Oxford University", "NOT_IN_COPYRIGHT")),
+          }
+          archive = json.load(open("master-archive.json"))
+          assert archive["archive_commit"] == "0c076abc2cdaf84812f6a4f938c944d272d3af9c"
+          for slug, (title, cover_size, phrases) in expected.items():
+              page = pathlib.Path("dist/publications") / slug / "index.html"
+              text = page.read_text(encoding="utf-8")
+              for required in (title, "権利・利用条件", *phrases):
+                  assert required in text, (slug, required)
+              for banned in ("日本語翻訳版には再利用ライセンス", "日本語版ライセンス"):
+                  assert banned not in text, (slug, banned)
+              cover = pathlib.Path("dist/publications") / slug / "cover.jpg"
+              assert cover.stat().st_size == cover_size, slug
+              fallback = archive["release_fallbacks"][slug]
+              assert fallback["ledger_commit"] == archive["archive_commit"]
+              assert fallback["status"] == "pending_lfs"
+          PY
