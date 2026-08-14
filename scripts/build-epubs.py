@@ -218,6 +218,9 @@ DOCX_SOURCES = {
     "gemelli-careri-giro-del-mondo-nuova-spagna-1700": SOURCES
     / "翻訳サイト"
     / "Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.docx",
+    "fuentes-guzman-recordacion-florida-1882-1883": SOURCES
+    / "翻訳サイト"
+    / "Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.docx",
     "perigny-ruines-nacun-1906": SOURCES
     / "Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.docx",
     "perigny-exploration-yucatan-1906": SOURCES

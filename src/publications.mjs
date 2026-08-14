@@ -5415,6 +5415,45 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "fuentes-guzman-recordacion-florida-1882-1883",
+    title: "グアテマラ史、またはフロリダの回想",
+    originalTitle: "Historia de Guatemala ó Recordación Florida",
+    subtitle:
+      "1882–1883年サラゴサ初刊本・全2巻・前付、本文全16書、増補・注・索引・刊行付属資料 日本語全訳",
+    author: "フランシスコ・アントニオ・デ・フエンテス・イ・グスマン",
+    series: "HISTORIA DE GUATEMALA Ó RECORDACIÓN FLORIDA · 1882–1883",
+    originalPublication:
+      "マドリード、ルイス・ナバロ、1882–1883年、全2巻（フスト・サラゴサ編）",
+    year: 1882,
+    extent:
+      "PDF 992頁・全2巻・全16書・増補と注・地理注記・伝記事項・語彙集・索引・購読者名簿・刊行案内・表78点・資料画像11点",
+    description:
+      "17世紀グアテマラの年代記作者フエンテス・イ・グスマンが、先住諸民族の歴史、征服、都市・村落、地理、制度、家系と同時代社会を記した大著。フスト・サラゴサ編1882–1883年マドリード刊本の前付、本文全16書、増補と注、地理注記、伝記事項、語彙集、索引、購読者名簿、刊行案内を原刊順に収録し、原刊頁標識、表78点、資料画像11点を保持しています。",
+    cover:
+      "publications/fuentes-guzman-recordacion-florida-1882-1883/cover.jpg",
+    pdf:
+      "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
+    pageCount: 992,
+    figureCount: 11,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "植民地史", "一次史料"],
+    regions: ["グアテマラ", "中央アメリカ", "マヤ地域"],
+    languages: ["スペイン語", "ラテン語", "マヤ諸語"],
+    tags: [
+      "植民地期",
+      "グアテマラ王国",
+      "征服史",
+      "マヤ諸民族",
+      "サラゴサ注",
+      "地理注記",
+      "語彙集",
+      "17世紀",
+      "19世紀刊行",
+    ],
+  },
+  {
     slug: "ixtlilxochitl-sumaria-todas",
     title: "ヌエバ・エスパーニャ諸事略報",
     originalTitle:
@@ -5904,6 +5943,18 @@ const publicationMetadata = {
       "1700年原刊本文および原刊図像は著作権保護期間を満了しています。底本原本の所蔵・スキャン提供機関はGetty Research Institute、デジタル公開機関はInternet Archiveです。当該Internet Archive項目に個別のCreative Commonsライセンス表示はなく、Getty Open Content ProgramのCC0がこの個別資料へ適用されるとは扱っていません。略標題紙・標題紙2点はWikimedia CommonsのPD-old-70-expired表示、セビーリャ大学図書館古書部門由来の内容図版10点はCC BY 2.0、1704年英訳版のアステカ移住図1点と1700年版の植物図3点はPublic Domain Mark 1.0、1719年仏訳版のメシカ暦図1点はCC0 1.0の表示に従っています。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-12",
     updatedDate: "2026-08-12",
+  },
+  "fuentes-guzman-recordacion-florida-1882-1883": {
+    sourceEdition:
+      "Francisco Antonio de Fuentes y Guzmán『Historia de Guatemala ó Recordación Florida』（Justo Zaragoza編、Madrid: Luis Navarro、1882–1883年、全2巻）。",
+    sourceProvider:
+      "第1巻はハーバード大学所蔵本をWikimedia Commonsが公開した全564画像、第2巻はハーバード大学所蔵本をInternet Archiveが公開した全456画像（識別子 historiadeguate02zaragoog）を底本とした。本文、固有名詞、数値、原刊頁境界、表、注、索引、購読者名簿、刊行案内は各巻の原刊画像で確定した。",
+    sourceUrl:
+      "https://commons.wikimedia.org/wiki/File:Recordacion_Florida_Tomo_I.pdf",
+    rights:
+      "17世紀の原著本文および1882–1883年刊のサラゴサ編纂資料は著作権保護期間を満了しています。底本画像にはWikimedia Commons、Internet Archiveおよび所蔵館の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
   },
   "atkins-voyage-guinea-1735": {
     sourceEdition:

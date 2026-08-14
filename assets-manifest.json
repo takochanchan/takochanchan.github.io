@@ -1064,6 +1064,24 @@
       "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
     },
     {
+      "path": "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
+      "size": 1507415,
+      "sha256": "263cdfe3c4d4fe42de89195bd69d617bb27f065e2e53d9519c6893f92f8a9d4f"
+    },
+    {
+      "path": "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.pdf",
+      "size": 11844307,
+      "sha256": "0a33d8129d9903f7b9f3cb5a64a3f9baefaf9d8b7a3fb1ecc522541b8fc46e01"
+    },
+    {
+      "path": "publications/fuentes-guzman-recordacion-florida-1882-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/fuentes-guzman-recordacion-florida-1882-1883/cover.jpg",
+      "size": 74430,
+      "sha256": "29e1663a6134a724bd65a0f7e3ac00a2d9431f32797c58ae49c378b4a4862519"
+    },
+    {
       "path": "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
       "size": 17785119,
