@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "48370735f610cd6202b9f0b066f5a2b5a54388ff",
+  "archive_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -435,6 +435,56 @@
       "master_filename": "master.docx",
       "master_size": 70143662,
       "master_sha256": "852fc05e69b2b3559a478511aabd16549d53dd9b6c767cda441eb956e4ccc02d"
+    },
+    "berendt-baumwollenbau-yucatan-1863": {
+      "canonical_path": "publications/berendt-baumwollenbau-yucatan-1863/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-berendt-baumwollenbau-yucatan-1863-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-baumwollenbau-yucatan-1863-20260814-v2",
+      "ledger_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
+      "master_filename": "master.docx",
+      "master_size": 42427,
+      "master_sha256": "de769486fd5cf067e1d969e783422e414db7f5c8df64578db8c6eee07e38038f"
+    },
+    "berendt-analytical-alphabet-1869": {
+      "canonical_path": "publications/berendt-analytical-alphabet-1869/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-berendt-analytical-alphabet-1869-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-analytical-alphabet-1869-20260814-v2",
+      "ledger_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
+      "master_filename": "master.docx",
+      "master_size": 50268,
+      "master_sha256": "d4177557e10a3fb160e1420dd9cf5aa8f7abe61310cd3d2862938da04d92f409"
+    },
+    "berendt-escritos-garcia-icazbalceta-1870": {
+      "canonical_path": "publications/berendt-escritos-garcia-icazbalceta-1870/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-berendt-escritos-garcia-icazbalceta-1870-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-escritos-garcia-icazbalceta-1870-20260814-v2",
+      "ledger_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
+      "master_filename": "master.docx",
+      "master_size": 50174,
+      "master_sha256": "b1a71c92aa4c6676a2878d216b1ae6f1809735298640c8a10ee09d5e1b88a726"
+    },
+    "berendt-trabajos-linguisticos-juan-pio-perez-1871": {
+      "canonical_path": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-berendt-trabajos-linguisticos-juan-pio-perez-1871-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-trabajos-linguisticos-juan-pio-perez-1871-20260814-v2",
+      "ledger_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
+      "master_filename": "master.docx",
+      "master_size": 46964,
+      "master_sha256": "8db3de6f8e7030de47ebac82a4de6d09108295424befb1e30121f76180499f7c"
+    },
+    "berendt-el-ramie-1871": {
+      "canonical_path": "publications/berendt-el-ramie-1871/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-berendt-el-ramie-1871-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-el-ramie-1871-20260814-v2",
+      "ledger_commit": "29bc5e132056d6e62e2f9267edd3d5f7add2d230",
+      "master_filename": "master.docx",
+      "master_size": 60922,
+      "master_sha256": "d2f333c771ae8710eea8cd570a6c4cad3aedf9991d8e9a7f30f52629e353031e"
     }
   }
 }

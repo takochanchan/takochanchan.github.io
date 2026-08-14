@@ -482,6 +482,43 @@ test("Ximenez Ayer MS 1515 volume 1 is catalogued as the complete combined volum
   ]);
 });
 
+
+test("approved Berendt papers batch 02 remains individually catalogued", () => {
+  const expected = new Map([
+    ["berendt-baumwollenbau-yucatan-1863", 2],
+    ["berendt-analytical-alphabet-1869", 8],
+    ["berendt-escritos-garcia-icazbalceta-1870", 8],
+    ["berendt-trabajos-linguisticos-juan-pio-perez-1871", 5],
+    ["berendt-el-ramie-1871", 17],
+  ]);
+  const rights = [];
+  for (const [slug, pageCount] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, "carl-hermann-berendt", slug);
+    assert.equal(item.pageCount, pageCount, slug);
+    assert.equal(item.publishedDate, "2026-08-14", slug);
+    assert.doesNotMatch(item.rights, /日本語翻訳版には再利用ライセンス|日本語版ライセンス/, slug);
+    rights.push(item.rights, item.sourceProvider);
+  }
+  const combined = rights.join(" ");
+  for (const phrase of [
+    "New York Public Library",
+    "NOT_IN_COPYRIGHT",
+    "Library of Congress",
+    "Free to Use and Reuse",
+    "UNAM",
+    "NoC-US 1.0",
+    "Princeton University",
+    "HathiTrust",
+    "権利コードpd",
+    "個別のCreative Commonsライセンス指定",
+  ]) {
+    assert.match(combined, new RegExp(phrase), phrase);
+  }
+});
+
 test("approved Galindo short-paper batch remains individually catalogued", () => {
   const expectedPages = new Map([
     ["galindo-caribs-central-america-1833", 3],

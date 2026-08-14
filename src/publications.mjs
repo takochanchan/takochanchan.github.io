@@ -2639,6 +2639,205 @@ const publicationRecords = [
     ],
   },
   {
+    "slug": "berendt-baumwollenbau-yucatan-1863",
+    "title": "ユカタンの綿花栽培",
+    "originalTitle": "Baumwollenbau in Yucatan",
+    "subtitle": "1863年原刊・原刊389頁、原注1件 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN · 1863",
+    "originalPublication": "ゴータ、1863年",
+    "year": 1863,
+    "extent": "PDF 2頁・原刊389頁・原注1件",
+    "description": "ユカタンで1862年に始まった綿花栽培について、品種、収量、経費、粗収益をエネケンと比較して報告した短報。原刊389頁の本文全文と原注1件を収録しています。",
+    "cover": "publications/berendt-baumwollenbau-yucatan-1863/cover.jpg",
+    "pdf": "publications/berendt-baumwollenbau-yucatan-1863/Carl_Hermann_Berendt_Baumwollenbau_in_Yucatan_1863_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-baumwollenbau-yucatan-1863/Carl_Hermann_Berendt_Baumwollenbau_in_Yucatan_1863_Japanese_Complete_Translation.epub",
+    "pageCount": 2,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "農業報告",
+      "産業史",
+      "地理報告"
+    ],
+    "regions": [
+      "メキシコ",
+      "ユカタン",
+      "カンペチェ",
+      "タバスコ"
+    ],
+    "languages": [
+      "ドイツ語"
+    ],
+    "tags": [
+      "綿花",
+      "エネケン",
+      "農業収益",
+      "テマシュ",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-analytical-alphabet-1869",
+    "title": "メキシコ・中央アメリカ諸語の分析的アルファベット",
+    "originalTitle": "Analytical Alphabet for the Mexican & Central American Languages",
+    "subtitle": "1869年初版・自筆稿ファクシミリ1–8頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "AMERICAN ETHNOLOGICAL SOCIETY · 1869",
+    "originalPublication": "ニューヨーク、1869年",
+    "year": 1869,
+    "extent": "PDF 8頁・自筆稿ファクシミリ1–8頁・表6点",
+    "description": "メキシコ・中央アメリカ諸語の音を記録するため、子音・母音・韻律記号を分析的に整理したベレントの表記法。自筆稿ファクシミリ1–8頁の本文、例語、祈祷文例、追記、署名を全訳しています。",
+    "cover": "publications/berendt-analytical-alphabet-1869/cover.jpg",
+    "pdf": "publications/berendt-analytical-alphabet-1869/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-analytical-alphabet-1869/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.epub",
+    "pageCount": 8,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "言語学",
+      "音声学",
+      "文字論",
+      "表記法"
+    ],
+    "regions": [
+      "メキシコ",
+      "中央アメリカ",
+      "ユカタン"
+    ],
+    "languages": [
+      "英語",
+      "マヤ諸語"
+    ],
+    "tags": [
+      "分析的アルファベット",
+      "音価",
+      "マヤ語",
+      "祈祷文",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-escritos-garcia-icazbalceta-1870",
+    "title": "ドン・ホアキン・ガルシア・イカスバルセタの著作",
+    "originalTitle": "Los escritos de D. Joaquín García Icazbalceta",
+    "subtitle": "1870年再掲本文・原刊642–647頁、原注1件 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "BOLETÍN DE LA SOCIEDAD MEXICANA DE GEOGRAFÍA Y ESTADÍSTICA · 1870",
+    "originalPublication": "メキシコ、1870年",
+    "year": 1870,
+    "extent": "PDF 8頁・原刊642–647頁・原注1件",
+    "description": "同時代メキシコの書誌学者ホアキン・ガルシア・イカスバルセタの収集、翻訳、史料刊行、印刷史研究を評価した書誌評論。『Boletín』再掲本文642–647頁を全訳しています。",
+    "cover": "publications/berendt-escritos-garcia-icazbalceta-1870/cover.jpg",
+    "pdf": "publications/berendt-escritos-garcia-icazbalceta-1870/Carl_Hermann_Berendt_Los_escritos_de_Joaquin_Garcia_Icazbalceta_1870_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-escritos-garcia-icazbalceta-1870/Carl_Hermann_Berendt_Los_escritos_de_Joaquin_Garcia_Icazbalceta_1870_Japanese_Complete_Translation.epub",
+    "pageCount": 8,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "書誌",
+      "文献紹介",
+      "歴史学史",
+      "人物評伝"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア・イカスバルセタ",
+      "印刷史",
+      "史料刊行",
+      "メキシコ書誌",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-trabajos-linguisticos-juan-pio-perez-1871",
+    "title": "ドン・フアン・ピオ・ペレスの言語学上の仕事",
+    "originalTitle": "Los trabajos lingüísticos de D. Juan Pío Pérez",
+    "subtitle": "1871年原刊・原刊58–61頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "BOLETÍN DE LA SOCIEDAD MEXICANA DE GEOGRAFÍA Y ESTADÍSTICA · 1871",
+    "originalPublication": "メキシコ、1871年",
+    "year": 1871,
+    "extent": "PDF 5頁・原刊58–61頁",
+    "description": "マヤ語研究者フアン・ピオ・ペレスの生涯、辞書編纂資料、チラム・バラム写本、植物名集成、未完辞書の構成を詳述した書誌・言語学史報告。原刊58–61頁を全訳しています。",
+    "cover": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/cover.jpg",
+    "pdf": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/Carl_Hermann_Berendt_Los_trabajos_linguisticos_de_Juan_Pio_Perez_1871_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/Carl_Hermann_Berendt_Los_trabajos_linguisticos_de_Juan_Pio_Perez_1871_Japanese_Complete_Translation.epub",
+    "pageCount": 5,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "言語学史",
+      "書誌",
+      "人物評伝",
+      "マヤ研究"
+    ],
+    "regions": [
+      "メキシコ",
+      "ユカタン",
+      "メリダ",
+      "ペト"
+    ],
+    "languages": [
+      "スペイン語",
+      "マヤ語"
+    ],
+    "tags": [
+      "フアン・ピオ・ペレス",
+      "マヤ語辞典",
+      "チラム・バラム",
+      "植物名",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-el-ramie-1871",
+    "title": "ラミー――その栽培法と植物に関する若干の知見",
+    "originalTitle": "El ramié. Tratado sobre el cultivo y algunas noticias de esta planta",
+    "subtitle": "1871年別刷・本文3–39頁、原注5件 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "IMPRENTA DE M. ALDANA RIVAS · 1871",
+    "originalPublication": "メリダ、1871年",
+    "year": 1871,
+    "extent": "PDF 17頁・本文3–39頁・原注5件・数表3点",
+    "description": "ラミーの植物学的位置、アメリカへの導入、繁殖・栽培、収穫、繊維処理機、収益見込みをまとめた農業技術論。1871年別刷の本文3–39頁、原注5件、数表3点を全訳しています。",
+    "cover": "publications/berendt-el-ramie-1871/cover.jpg",
+    "pdf": "publications/berendt-el-ramie-1871/Carl_Hermann_Berendt_El_ramie_1871_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-el-ramie-1871/Carl_Hermann_Berendt_El_ramie_1871_Japanese_Complete_Translation.epub",
+    "pageCount": 17,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "農業技術",
+      "植物学",
+      "産業史",
+      "経済史"
+    ],
+    "regions": [
+      "メキシコ",
+      "ユカタン",
+      "ベラクルス",
+      "タバスコ",
+      "ルイジアナ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ラミー",
+      "Boehmeria",
+      "繊維作物",
+      "栽培法",
+      "繊維処理機",
+      "19世紀後半"
+    ]
+  },
+  {
     slug: "berendt-central-america-explorations-1867",
     title: "中央アメリカ探査報告",
     originalTitle: "Report of Explorations in Central America",
@@ -7310,6 +7509,46 @@ const publicationMetadata = {
     publishedDate: "2026-07-30",
     updatedDate: "2026-07-30",
   },
+  "berendt-baumwollenbau-yucatan-1863": {
+    "sourceEdition": "Dr. H. Berendt, “Baumwollenbau in Yucatan,” Petermanns Geographische Mittheilungen, 9. Band, 1863, S. 389.",
+    "sourceProvider": "New York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した1863年原誌画像（識別子petermannsgeogr09haacgoog）を主底本とした。OCRは検索・判読の補助にのみ用いた。",
+    "sourceUrl": "https://archive.org/details/petermannsgeogr09haacgoog",
+    "rights": "1863年原刊本文および誌面はパブリックドメインです。底本はNew York Public Library所蔵本をGoogleがデジタル化し、Internet Archiveで公開した資料で、当該アイテムはNOT_IN_COPYRIGHT（米国）、個別のCreative Commonsライセンス指定なしです。画像・メタデータの利用にはInternet ArchiveのTermsおよびRights & Access表示が適用されます。再利用時は原著名、識別子petermannsgeogr09haacgoog、原刊頁および各機関名を表示します。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-analytical-alphabet-1869": {
+    "sourceEdition": "Dr. C. H. Berendt, Analytical Alphabet for the Mexican & Central American Languages, New York: American Ethnological Society / American Photo-Lithographic Co., 1869, 自筆稿ファクシミリ1–8頁。",
+    "sourceProvider": "Library of Congress所蔵初版画像（請求記号・識別子21020706）を主底本とし、Internet Archive公開の同一所蔵本（識別子analyticalalphab00bere）を画像取得・照合に用いた。",
+    "sourceUrl": "https://www.loc.gov/item/21020706/",
+    "rights": "1869年刊の原著本文およびファクシミリはパブリックドメインです。Library of Congressは当該資料をPublic Domain／Free to Use and Reuseとして公開しています。Internet Archiveの同一資料には個別のCreative Commonsライセンス指定がありません。再利用時は原著名、原刊頁、Library of Congress所蔵・公開、Internet Archive識別子analyticalalphab00bereを表示します。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-escritos-garcia-icazbalceta-1870": {
+    "sourceEdition": "C. A. B. [Carl Hermann Berendt], “Los escritos de D. Joaquín García Icazbalceta,” Revista de Mérida 2 (1870); 再掲 Boletín de la Sociedad Mexicana de Geografía y Estadística, 2ª época, tomo II, 1870, pp. 642–647.",
+    "sourceProvider": "UNAM・Instituto de Investigaciones Históricas『Fuentes para el estudio de la historia moderna de los pueblos indígenas de México』公開のBoletín再掲本文および巻PDF（所蔵表示IGg Fondo Reservado）を主底本とした。",
+    "sourceUrl": "https://hmpi.historicas.unam.mx/fuentes/boletin-smge/los-escritos-d-joaquin-garcia-icazbalceta",
+    "rights": "1870年原著本文および原誌誌面はパブリックドメインです。UNAM・Instituto de Investigaciones Históricasの公開ページは、非営利目的、無改変・無切除、完全な出典と電子アドレスの表示等を条件とし、それ以外には事前の書面許可を求めます（DR © 2019–2022）。個別のCreative Commonsライセンス指定はありません。本版はUNAMのページまたは誌面画像を転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-trabajos-linguisticos-juan-pio-perez-1871": {
+    "sourceEdition": "Dr. C. Hermann Berendt, “Los trabajos lingüísticos de D. Juan Pío Pérez,” Boletín de la Sociedad Mexicana de Geografía y Estadística, 2ª época, tomo III, núms. 1–6, 1871, pp. 58–61; 別刷6頁。",
+    "sourceProvider": "UNAM・Instituto de Investigaciones Históricas公開の原誌本文・巻PDFを主底本とし、University of Pennsylvania Libraries, Kislak Center, Berendt-Brinton Linguistic Collection, Ms. Coll. 700 Item 5の別刷（ARK 81431/p3bz61p4b）を校合本とした。",
+    "sourceUrl": "https://hmpi.historicas.unam.mx/fuentes/boletin-smge/los-trabajos-linguisticos-d-juan-pio-perez",
+    "rights": "1871年原著本文および原誌・別刷の印刷面はパブリックドメインです。UNAM公開ページは非営利、無改変・無切除、完全な出典表示等の条件を掲げ、個別のCreative Commonsライセンス指定はありません。Pennの校合本はRightsStatements.orgのNo Copyright—United States（NoC-US 1.0）表示です。本版は両機関の画像を転載していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-el-ramie-1871": {
+    "sourceEdition": "Dr. C. H. Berendt, El ramié. Tratado sobre el cultivo y algunas noticias de esta planta, Mérida: Imprenta de M. Aldana Rivas, 1871, 39 + [1] pp.（Revista de Mérida掲載文の別刷）。",
+    "sourceProvider": "Princeton University所蔵本をGoogleがデジタル化した全文を主底本とし、HathiTrust Digital Libraryの同一所蔵識別子njp.32101078193446、権利コードpd、Full Viewの書誌・画像で照合した。",
+    "sourceUrl": "https://catalog.hathitrust.org/Record/009037780",
+    "rights": "1871年原著本文および印刷面はパブリックドメインです。HathiTrustは本書をPublic Domain／Full View（権利コードpd）として公開し、個別のCreative Commonsライセンス指定はありません。Google／HathiTrustの画像およびOCRは転載せず、画像照合して作成した独自翻刻の日本語訳を収録しています。底本画像の利用にはGoogle BooksおよびHathiTrustの条件が適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
   "berendt-central-america-explorations-1867": {
     sourceEdition:
       "Carl Hermann Berendt, “Report of Explorations in Central America,” Annual Report of the Board of Regents of the Smithsonian Institution, Showing the Operations, Expenditures, and Condition of the Institution for the Year 1867, Washington: Government Printing Office, 1868, pp. 420–426.",
@@ -8411,6 +8650,11 @@ const shortWorkAuthorBySlug = {
   "berendt-cochenille-produktion-oaxaca-1862": "carl-hermann-berendt",
   "berendt-mexikanische-geographische-literatur-1862-1":
     "carl-hermann-berendt",
+  "berendt-baumwollenbau-yucatan-1863": "carl-hermann-berendt",
+  "berendt-analytical-alphabet-1869": "carl-hermann-berendt",
+  "berendt-escritos-garcia-icazbalceta-1870": "carl-hermann-berendt",
+  "berendt-trabajos-linguisticos-juan-pio-perez-1871": "carl-hermann-berendt",
+  "berendt-el-ramie-1871": "carl-hermann-berendt",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
