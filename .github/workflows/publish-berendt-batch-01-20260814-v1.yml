@@ -73,7 +73,7 @@ jobs:
                   "Google",
                   "Internet Archive",
                   "NOT_IN_COPYRIGHT",
-                  "個別のCC指定なし",
+                  "個別のCreative Commonsライセンス指定はありません",
               ):
                   assert required in rights + provider, (slug, required)
               assert record["sourceUrl"] == "https://archive.org/details/petermannsgeogr05haacgoog"
@@ -180,7 +180,7 @@ jobs:
             assert.match(item.sourceProvider, /Google/);
             assert.match(item.sourceProvider, /Internet Archive/);
             assert.match(item.rights, /NOT_IN_COPYRIGHT/);
-            assert.match(item.rights, /個別のCC指定なし/);
+            assert.match(item.rights, /個別のCreative Commonsライセンス指定はありません/);
             assert.doesNotMatch(item.rights, /日本語翻訳版には再利用ライセンス|日本語版ライセンス/);
           }
           NODE
