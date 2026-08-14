@@ -6623,6 +6623,246 @@ const publicationRecords = [
       "16世紀",
     ],
   },
+  {
+    "slug": "putnam-antiquity-man-america-1884",
+    "title": "アメリカにおける人類の古さ",
+    "originalTitle": "[Remarks on the Antiquity of Man in America]",
+    "subtitle": "1884年会議録・原刊92–93頁 日本語全訳",
+    "author": "フレデリック・W・パットナム",
+    "series": "PROCEEDINGS OF THE AMERICAN ANTIQUARIAN SOCIETY · 1884",
+    "originalPublication": "『Proceedings of the American Antiquarian Society』第3巻第2部、1884年10月、会議録77–93頁中92–93頁",
+    "year": 1884,
+    "extent": "PDF 2頁・会議録原刊92–93頁",
+    "description": "ピーボディ博物館が受け入れたアカウアリンカの足跡標本と上載地層を紹介し、同じ発言でトレントン砂礫層出土の人間下顎骨・歯・打製石器にも触れたフレデリック・W・パットナムの1884年会議発言記録。原刊に独立表題がないため便宜的英題を付した日本語全訳です。",
+    "cover": "publications/putnam-antiquity-man-america-1884/cover.jpg",
+    "pdf": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.pdf",
+    "epub": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.epub",
+    "pageCount": 2,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学会議録",
+      "博物館報告",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ",
+      "ニュージャージー",
+      "トレントン"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "ピーボディ博物館",
+      "トレントン砂礫層",
+      "人骨",
+      "科学史"
+    ]
+  },
+  {
+    "slug": "mca-pre-adamite-track-1885",
+    "title": "アダム以前の足跡",
+    "originalTitle": "The Pre-Adamite Track",
+    "subtitle": "1885年刊・原刊364–367頁 日本語全訳",
+    "author": "A・McA",
+    "series": "THE PRE-ADAMITE TRACK · 1885",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第7巻第6号、1885年11月、364–367頁（Correspondence欄）",
+    "year": 1885,
+    "extent": "PDF 5頁・原刊364–367頁",
+    "description": "アール・フリントが報告したアカウアリンカ人足跡を人工彫刻とみなし、北米各地の岩面足跡説を皮肉を交えて批判したA. Mc A.の1885年書簡。BradfordおよびPriestからの引用を含む日本語全訳です。",
+    "cover": "publications/mca-pre-adamite-track-1885/cover.jpg",
+    "pdf": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.pdf",
+    "epub": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.epub",
+    "pageCount": 5,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学書簡",
+      "考古学論説",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ",
+      "北アメリカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "先アダム人",
+      "岩面彫刻",
+      "アール・フリント",
+      "科学史"
+    ]
+  },
+  {
+    "slug": "unsigned-nicaragua-footprints-again-1886",
+    "title": "ニカラグアの人足跡、ふたたび",
+    "originalTitle": "The Nicaragua Foot-Prints Again",
+    "subtitle": "1886年刊・原刊373–374頁 日本語全訳",
+    "author": "無署名（“The Museum”欄）",
+    "series": "THE NICARAGUA FOOT-PRINTS AGAIN · 1886",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第8巻第6号、1886年11月、373–374頁（The Museum欄）",
+    "year": 1886,
+    "extent": "PDF 2頁・原刊373–374頁・編集者注1点",
+    "description": "ニューヨーク・ヘラルドの記事を引き、H・H・レヴィットが米国へ運んだアカウアリンカ足跡標本と上位地層の標本・計測値を紹介した1886年の無署名記事。編集者注を含む日本語全訳です。",
+    "cover": "publications/unsigned-nicaragua-footprints-again-1886/cover.jpg",
+    "pdf": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.pdf",
+    "epub": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.epub",
+    "pageCount": 2,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学記事",
+      "新聞転載",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ",
+      "ウィーン"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "H・H・レヴィット",
+      "地層",
+      "博物館",
+      "科学史"
+    ]
+  },
+  {
+    "slug": "brinton-ancient-human-footprint-nicaragua-1887",
+    "title": "ニカラグアの古代人足跡について",
+    "originalTitle": "On an Ancient Human Footprint from Nicaragua",
+    "subtitle": "1887年刊・原刊437–444頁・図版2点 日本語全訳",
+    "author": "ダニエル・G・ブリントン",
+    "series": "ON AN ANCIENT HUMAN FOOTPRINT FROM NICARAGUA · 1887",
+    "originalPublication": "『Proceedings of the American Philosophical Society』第24巻第126号、1887年、437–444頁",
+    "year": 1887,
+    "extent": "PDF 9頁・原刊437–444頁・図版2点・地層断面全17層",
+    "description": "マナグア湖岸のアカウアリンカ人足跡について、アール・フリントの書簡、採石場の地層断面全17層、足跡標本、動植物化石、年代論を検討したダニエル・G・ブリントンの1887年論文。原刊前置図版と地層断面図を含む日本語全訳です。",
+    "cover": "publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
+    "pdf": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.pdf",
+    "epub": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.epub",
+    "pageCount": 9,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "地質学論文",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "凝灰岩",
+      "火山地質",
+      "ピーボディ博物館",
+      "科学史"
+    ]
+  },
+  {
+    "slug": "editorial-age-nicaragua-footprints-1889",
+    "title": "ニカラグアの人足跡の年代",
+    "originalTitle": "The Age of the Nicaragua Foot-Prints",
+    "subtitle": "1889年刊・原刊120–121頁・前扉図版1点 日本語全訳",
+    "author": "編集部（スティーヴン・D・ピート編集）",
+    "series": "THE AGE OF THE NICARAGUA FOOT-PRINTS · 1889",
+    "originalPublication": "『The American Antiquarian and Oriental Journal』第11巻第2号、1889年3月、120–121頁（Editorial欄）",
+    "year": 1889,
+    "extent": "PDF 4頁・原刊120–121頁・前扉図版1点",
+    "description": "アカウアリンカ足跡の年代をめぐるアール・フリントとD・G・ブリントンの見解、貝殻・化石葉・サンダル使用の論点を整理した1889年の無署名編集記事。本文が参照する前扉図版を含む日本語全訳です。",
+    "cover": "publications/editorial-age-nicaragua-footprints-1889/cover.jpg",
+    "pdf": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
+    "epub": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
+    "pageCount": 4,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "考古学論説",
+      "編集記事",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ",
+      "サン・ラファエル"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "アール・フリント",
+      "D・G・ブリントン",
+      "前扉図版",
+      "科学史"
+    ]
+  },
+  {
+    "slug": "crawford-neolithic-man-nicaragua-1891",
+    "title": "ニカラグアの新石器時代人",
+    "originalTitle": "Neolithic Man in Nicaragua",
+    "subtitle": "1891年刊・原刊160–166頁 日本語全訳",
+    "author": "ジョン・クロフォード",
+    "series": "NEOLITHIC MAN IN NICARAGUA · 1891",
+    "originalPublication": "『The American Geologist』第8巻第3号、1891年9月、160–166頁",
+    "year": 1891,
+    "extent": "PDF 7頁・原刊160–166頁・地層列挙（a）–（k）・原注7点",
+    "description": "マナグア地下のアカウアリンカ足跡層について、人間と家畜の足跡、火山性泥流による成層、1876年の泥流、マサヤ火山の活動、地質年代を論じたジョン・クロフォードの1891年論文。地層列挙（a）–（k）、番号原注5点、記号原注2点を含む日本語全訳です。",
+    "cover": "publications/crawford-neolithic-man-nicaragua-1891/cover.jpg",
+    "pdf": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.pdf",
+    "epub": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
+    "pageCount": 7,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学論文",
+      "地質学論文",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マナグア",
+      "アカウアリンカ",
+      "マサヤ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "人足跡",
+      "アカウアリンカ",
+      "泥流",
+      "火山礫岩",
+      "新石器時代",
+      "科学史"
+    ]
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -8635,6 +8875,54 @@ const publicationMetadata = {
     "publishedDate": "2026-08-14",
     "updatedDate": "2026-08-14"
   },
+  "putnam-antiquity-man-america-1884": {
+    "sourceEdition": "Frederick W. Putnam, remarks recorded by Edward L. Davis, in “Semi-Annual Meeting, April 30, 1884, at the Hall of the American Academy of Arts and Sciences, Boston,” Proceedings of the American Antiquarian Society, vol. 3, part 2, October 1884, pp. 77–93, at pp. 92–93.",
+    "sourceProvider": "American Antiquarian Society公式公開PDF 48057588.pdfの会議録92–93頁を本文底本としました。原刊に独立表題はなく、本版の英語表題は本文の導入句に基づく便宜的表題です。",
+    "sourceUrl": "https://www.americanantiquarian.org/proceedings/48057588.pdf",
+    "rights": "1884年に公刊された原著本文はパブリックドメインです。American Antiquarian Society公式PDFの包括的表示は、個人利用の印刷、ダウンロードおよび電子メール送信を認める一方、複数サイトまたはlistservへの複製・送信には許諾を求めています。本版は同PDFを翻刻と頁境界の確認にのみ用い、原刊画像または固有の組版を転載していません。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "mca-pre-adamite-track-1885": {
+    "sourceEdition": "A. Mc A., “The Pre-Adamite Track,” The American Antiquarian and Oriental Journal, vol. VII, no. 6, November 1885, pp. 364–367, in “Correspondence.”",
+    "sourceProvider": "Internet Archive公開のSIMマイクロフィルム項目 sim_american-antiquarian-and-oriental-journal_1885-11_7_6 の原刊364–367頁を本文底本としました。原誌末尾の署名は “A. Mc A.” です。",
+    "sourceUrl": "https://archive.org/details/sim_american-antiquarian-and-oriental-journal_1885-11_7_6",
+    "rights": "原著本文と1885年の原刊誌面はパブリックドメインです。Internet Archiveの当該項目にはrights／licenseurlの表示がありません。本版は同項目の誌面画像・OCRまたは固有の組版を転載していません。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "unsigned-nicaragua-footprints-again-1886": {
+    "sourceEdition": "Unsigned, “The Nicaragua Foot-Prints Again,” The American Antiquarian and Oriental Journal, vol. VIII, no. 6, November 1886, pp. 373–374, in “The Museum.”",
+    "sourceProvider": "Internet Archive公開のSIMマイクロフィルム項目 sim_american-antiquarian-and-oriental-journal_1886-11_8_6 の原刊373–374頁を本文底本としました。記事は無署名で、原誌の見出しは “Nicaragua” です。",
+    "sourceUrl": "https://archive.org/details/sim_american-antiquarian-and-oriental-journal_1886-11_8_6",
+    "rights": "原著本文と1886年の原刊誌面はパブリックドメインです。Internet Archiveの当該項目にはrights／licenseurlの表示がありません。本版は同項目の誌面画像・OCRまたは固有の組版を転載していません。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "brinton-ancient-human-footprint-nicaragua-1887": {
+    "sourceEdition": "Daniel G. Brinton, “On an Ancient Human Footprint from Nicaragua,” Proceedings of the American Philosophical Society, vol. 24, no. 126, 1887, pp. 437–444. Read November 18, 1887; printed December 29, 1887.",
+    "sourceProvider": "Biodiversity Heritage Library／Internet Archive公開の Proceedings of the American Philosophical Society 第24巻（BHL item 31428、Internet Archive identifier proceedingsofamep24amer）の原刊437–444頁および前置図版を本文・図版の底本とし、JSTOR stable 983095で書誌を照合しました。JSTOR配布PDFまたはその固有の組版は転載していません。",
+    "sourceUrl": "https://www.biodiversitylibrary.org/item/31428",
+    "rights": "原著本文と1887年の原刊誌面はパブリックドメインです。Biodiversity Heritage Library item 31428およびInternet Archive同巻はNOT_IN_COPYRIGHTと表示しています。図版2点は同じ公開誌面から採録し、JSTOR配布PDFまたはその固有の組版は転載していません。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "editorial-age-nicaragua-footprints-1889": {
+    "sourceEdition": "Unsigned editorial, “The Age of the Nicaragua Foot-Prints,” The American Antiquarian and Oriental Journal, vol. XI, no. 2, March 1889, pp. 120–121. The issue was edited by Stephen D. Peet.",
+    "sourceProvider": "Internet Archive公開のSIMマイクロフィルム項目 sim_american-antiquarian-and-oriental-journal_1889-03_11_2 の原刊120–121頁および同号前扉を底本としました。原誌では “Editorial” 欄の無署名記事であり、本文が前扉を直接参照します。",
+    "sourceUrl": "https://archive.org/details/sim_american-antiquarian-and-oriental-journal_1889-03_11_2",
+    "rights": "原著本文、原刊前扉図版および1889年の原刊誌面はパブリックドメインです。Internet Archiveの当該項目にはrights／licenseurlの表示がありません。本文が直接参照する前扉図版1点を記事内容として採録し、余白調整、グレースケール化と軽微な階調補正のみを施しました。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "crawford-neolithic-man-nicaragua-1891": {
+    "sourceEdition": "J. Crawford, “Neolithic Man in Nicaragua,” The American Geologist, vol. 8, no. 3, September 1891, pp. 160–166.",
+    "sourceProvider": "Biodiversity Heritage Library公開の The American Geologist 第8巻（BHL item 240809、Internet Archive identifier panamericangeolo81891desm）の原刊160–166頁を本文底本としました。後発の短縮再録版は底本に用いていません。",
+    "sourceUrl": "https://www.biodiversitylibrary.org/item/240809",
+    "rights": "原著本文と1891年の原刊誌面はパブリックドメインです。Biodiversity Heritage Libraryは当該第8巻をPublic domainと表示しています。底本はUniversity of Illinois Urbana-Champaign所蔵本であり、公開画像は本文、脚注、数値、綴りおよび頁境界の照合に用い、原刊誌面の画像は転載していません。本日本語訳には再利用許諾を付与していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
   ...perignyRemainingPublicationMetadata,
 };
 
@@ -8739,6 +9027,12 @@ const shortWorkAuthorBySlug = {
   "flint-prehistoric-horse-america-1891": "earl-flint",
   "flint-rainfall-rivas-nicaragua-1898": "earl-flint",
   "flint-rainfall-central-western-nicaragua-1899": "earl-flint",
+  "putnam-antiquity-man-america-1884": "frederick-w-putnam",
+  "mca-pre-adamite-track-1885": "a-mc-a",
+  "unsigned-nicaragua-footprints-again-1886": "anonymous-american-antiquarian",
+  "brinton-ancient-human-footprint-nicaragua-1887": "daniel-g-brinton",
+  "editorial-age-nicaragua-footprints-1889": "american-antiquarian-editorial",
+  "crawford-neolithic-man-nicaragua-1891": "john-crawford",
   ...perignyRemainingShortWorkAuthors,
 };
 

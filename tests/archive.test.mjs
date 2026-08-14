@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 220);
+  assert.equal(publications.length, 226);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -65,8 +65,8 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 103);
-  assert.equal(shortPublications.length, 117);
-  assert.equal(shortPublicationAuthors.length, 25);
+  assert.equal(shortPublications.length, 123);
+  assert.equal(shortPublicationAuthors.length, 31);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -154,6 +154,12 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "flint-prehistoric-horse-america-1891",
       "flint-rainfall-rivas-nicaragua-1898",
       "flint-rainfall-central-western-nicaragua-1899",
+      "putnam-antiquity-man-america-1884",
+      "mca-pre-adamite-track-1885",
+      "unsigned-nicaragua-footprints-again-1886",
+      "brinton-ancient-human-footprint-nicaragua-1887",
+      "editorial-age-nicaragua-footprints-1889",
+      "crawford-neolithic-man-nicaragua-1891",
       ...perignyRemainingSlugs,
     ]),
   );
@@ -589,6 +595,28 @@ test("second approved Galindo batch remains individually catalogued", () => {
   }
 });
 
+test("six non-Flint Acahualinca papers retain journal and rights metadata", () => {
+  const expected = [
+    ["putnam-antiquity-man-america-1884", "frederick-w-putnam", "Proceedings of the American Antiquarian Society"],
+    ["mca-pre-adamite-track-1885", "a-mc-a", "The American Antiquarian and Oriental Journal"],
+    ["unsigned-nicaragua-footprints-again-1886", "anonymous-american-antiquarian", "The American Antiquarian and Oriental Journal"],
+    ["brinton-ancient-human-footprint-nicaragua-1887", "daniel-g-brinton", "Proceedings of the American Philosophical Society"],
+    ["editorial-age-nicaragua-footprints-1889", "american-antiquarian-editorial", "The American Antiquarian and Oriental Journal"],
+    ["crawford-neolithic-man-nicaragua-1891", "john-crawford", "The American Geologist"],
+  ];
+  for (const [slug, authorKey, journal] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, authorKey, slug);
+    assert.match(item.originalPublication, new RegExp(journal), slug);
+    assert.match(item.sourceEdition, new RegExp(journal), slug);
+    assert.match(item.sourceProvider, /(Internet Archive|Biodiversity Heritage Library|American Antiquarian Society)/, slug);
+    assert.match(item.rights, /パブリックドメイン/, slug);
+    assert.ok(item.sourceUrl.startsWith("https://"), slug);
+  }
+});
+
 test("Earl Flint papers remain individually catalogued under one author", () => {
   const expected = [
     "flint-antiquities-nicaragua-palenque-builders-1882",
@@ -829,7 +857,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">103<\/strong>件/);
-  assert.match(html, /id="paper-match-count">117<\/strong>件/);
+  assert.match(html, /id="paper-match-count">123<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

@@ -326,6 +326,24 @@
       "sha256": "670f3bfb433134efc7ce34acf79a0dcdd7fd21c18a25802bdd445ad53591ff10"
     },
     {
+      "path": "publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
+      "size": 155198,
+      "sha256": "2dc6da08d2ac7f643629d6da88c1f39953b80f90b2defe4cf609a37b78424b29"
+    },
+    {
+      "path": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.epub",
+      "size": 716195,
+      "sha256": "193d2e40500eea8eb51f20d7ae2cefaac2f74d521f9bb75e86cba7dc66e7d82a"
+    },
+    {
+      "path": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.pdf",
+      "size": 759431,
+      "sha256": "606a1139e05ca183c4b8e765ae6e9ad66f4330d3485cdd5a1ebf76626b3959ac"
+    },
+    {
       "path": "publications/brinton-chilan-balam-1882/cover.jpg",
       "url": "https://takochanchan.github.io/publications/brinton-chilan-balam-1882/cover.jpg",
       "size": 62610,
@@ -594,6 +612,24 @@
       "url": "https://takochanchan.github.io/publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
       "size": 73957,
       "sha256": "fdf4256587c9a982f2968646599e66f233cc32fbca565be177a982be0cd8dc5c"
+    },
+    {
+      "path": "publications/crawford-neolithic-man-nicaragua-1891/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/crawford-neolithic-man-nicaragua-1891/cover.jpg",
+      "size": 144037,
+      "sha256": "4f37b730e89168997a10cd99e65d6d30fc65e1c2f8ecc4c326fac72c86ef8d23"
+    },
+    {
+      "path": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
+      "size": 132038,
+      "sha256": "31a0c5e7d25a913a269e16e247b5de5494519564b56e68c37dff3b44da3bdde3"
+    },
+    {
+      "path": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.pdf",
+      "size": 338182,
+      "sha256": "40b68f840e93699506ece449e2878e79baa691d3357fc3544936fbc1a1f2e3d1"
     },
     {
       "path": "publications/crowe-gospel-central-america-1850/cover.jpg",
@@ -1098,6 +1134,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf",
       "size": 175052249,
       "sha256": "722fe6eef2c07f1899d7b22261c5ef7ccad8729e1c270839aa8c749e87e9d7e5"
+    },
+    {
+      "path": "publications/editorial-age-nicaragua-footprints-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/editorial-age-nicaragua-footprints-1889/cover.jpg",
+      "size": 143515,
+      "sha256": "0b7a03a34a2a5dfd326b8c94702353ce0671688c57aed77e2ff348d6308b0ae9"
+    },
+    {
+      "path": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
+      "size": 256436,
+      "sha256": "54774c45c7935aa0f3d6e32e6fd8780c63caf4965db31db6fbd4546b63a81588"
+    },
+    {
+      "path": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
+      "size": 309505,
+      "sha256": "1719bcb5bfd9059fc00ab72c9d92c5d2fcc776b8715916540c6607c82a5c53ea"
     },
     {
       "path": "publications/egan-wyer-1930/cover.jpg",
@@ -2088,6 +2142,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
       "size": 15453556,
       "sha256": "58d3016e8dbc93128de12ee908bf65d4fb6300ca09aa048c83fcdcec7a91b897"
+    },
+    {
+      "path": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.epub",
+      "size": 119845,
+      "sha256": "19806c64cd7599aed6b7e356ad02021a01661bfb6eba94ba2dafc9a1403294cd"
+    },
+    {
+      "path": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.pdf",
+      "size": 250517,
+      "sha256": "a8e5882453eb799617afdb3b54268e0140053e0eb7b89f0aace3e36ae7630833"
+    },
+    {
+      "path": "publications/mca-pre-adamite-track-1885/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mca-pre-adamite-track-1885/cover.jpg",
+      "size": 134909,
+      "sha256": "a6fd127b6cb9e0e91b76faae2a059fdc0168f1e044b3c8de50db906225839adf"
     },
     {
       "path": "publications/means-yucatan-itzas-1917/cover.jpg",
@@ -3206,6 +3278,24 @@
       "sha256": "3ba8b86255f8194c72dd9ea4baf5608592709ff0f0a2c749323ba70b660ea054"
     },
     {
+      "path": "publications/putnam-antiquity-man-america-1884/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/putnam-antiquity-man-america-1884/cover.jpg",
+      "size": 171922,
+      "sha256": "651a3f39087b70fe147b90cae4466043ee76720405b9d253c32c68a37c32f694"
+    },
+    {
+      "path": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.epub",
+      "size": 154996,
+      "sha256": "64e6ff56a5d4e592584bb3a2dee718f27120fff5946c85aeae9e343ffc0cfab8"
+    },
+    {
+      "path": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.pdf",
+      "size": 147137,
+      "sha256": "7152f60968561e9631b534f69e1a04a8aff7accc42334feb772e60cb0f4c2e2a"
+    },
+    {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "size": 17224938,
@@ -3744,6 +3834,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.pdf",
       "size": 31246474,
       "sha256": "5fa0017f350b23f7ad93c7ef46cbef4074ac57a5c0f079716b0ef57abfad7f34"
+    },
+    {
+      "path": "publications/unsigned-nicaragua-footprints-again-1886/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/unsigned-nicaragua-footprints-again-1886/cover.jpg",
+      "size": 143638,
+      "sha256": "a22b8b5b32e55e4c93878646e1541a8e763c0aaaeaf233a7f9c88d73765ae237"
+    },
+    {
+      "path": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.epub",
+      "size": 126298,
+      "sha256": "08fc952c108a258da92d22b68800c7dea95b986c859d1fb32c65265dd6692773"
+    },
+    {
+      "path": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.pdf",
+      "size": 142665,
+      "sha256": "2f5487298fb2e2d2b3590db967a88eda5b68343bb9b9a946d394aae151f23e4a"
     },
     {
       "path": "publications/uring-voyages-travels-1928/cover.jpg",
