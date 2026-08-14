@@ -109,7 +109,13 @@ jobs:
                   assert len(re.findall(r'[ぁ-んァ-ヶ一-龠々〆ヵヶ]', epub_text)) >= 1000
                   for phrase in banned:
                       assert phrase not in epub_text, (slug, phrase)
-          actual = {path.name for path in root.iterdir() if path.is_file() and path.name != 'bundle.tar.gz'}
+          actual = {
+              path.name
+              for path in root.iterdir()
+              if path.is_file()
+              and path.name != 'bundle.tar.gz'
+              and not path.name.startswith('bundle.tar.gz.part-')
+          }
           assert actual == expected_files, (actual, expected_files)
           PY
 
