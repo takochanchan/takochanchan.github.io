@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 214);
+  assert.equal(publications.length, 215);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -64,7 +64,7 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 104);
+  assert.equal(majorPublications.length, 105);
   assert.equal(shortPublications.length, 110);
   assert.equal(shortPublicationAuthors.length, 25);
   assert.deepEqual(
@@ -394,6 +394,34 @@ test("Codex Perez keeps the approved PMM 9 scope, title, and rights boundary", (
   assert.match(item.rights, /Copyright Not Evaluated/);
   assert.match(item.rights, /Copyright and Permissions Policies/);
   assert.match(item.description, /マニ本系/);
+});
+
+test("Historia Tolteca-Chichimeca keeps the approved manuscript and supplement scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "historia-tolteca-chichimeca",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "トルテカ・チチメカ史");
+  assert.equal(item.originalTitle, "Historia Tolteca-Chichimeca");
+  assert.equal(item.author, "編者不詳");
+  assert.equal(item.pageCount, 190);
+  assert.equal(item.figureCount, 100);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.subtitle, /全四百四十二段落/);
+  assert.match(item.subtitle, /付属別資料一点/);
+  assert.match(item.description, /本文図版に数えず/);
+  assert.match(item.description, /付属別資料/);
+  assert.match(item.sourceEdition, /Mexicain 46–58/);
+  assert.match(item.sourceProvider, /ガリカ公開.*本文と絵文書の底本/);
+  assert.match(item.sourceProvider, /アモシュカリ公開.*付属別資料/);
+  assert.match(item.sourceProvider, /補助資料は内部検証に限定/);
+  assert.doesNotMatch(item.sourceProvider, /1976|復元葉順|原冊順|校訂版/);
+  assert.match(
+    item.rights,
+    /Source gallica\.bnf\.fr \/ Bibliothèque nationale de France/,
+  );
+  assert.doesNotMatch(`${item.title}\n${item.subtitle}\n${item.author}`, /日本語全訳|匿名/);
 });
 
 test("corrected Sapper author form stays fixed for Alta Verapaz", () => {
@@ -735,7 +763,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">104<\/strong>件/);
+  assert.match(html, /id="book-match-count">105<\/strong>件/);
   assert.match(html, /id="paper-match-count">110<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

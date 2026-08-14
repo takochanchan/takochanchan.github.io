@@ -3852,6 +3852,24 @@
       "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
       "size": 74503,
       "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
+    },
+    {
+      "path": "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.epub",
+      "size": 70139252,
+      "sha256": "9361825687254a6bdcbfc22619c610c0e418b4b64c59d014ddd2c9038b51380f"
+    },
+    {
+      "path": "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.pdf",
+      "size": 64415836,
+      "sha256": "22540574db398ed7ae4b13ded7127852715826135b01337b73d247ecb864c660"
+    },
+    {
+      "path": "publications/historia-tolteca-chichimeca/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/historia-tolteca-chichimeca/cover.jpg",
+      "size": 37842,
+      "sha256": "9e7a3ba52fc2d204385d0a6919d0d865495fb659f86763359dda72d7f8b1383b"
     }
   ]
 }

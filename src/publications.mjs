@@ -6384,6 +6384,41 @@ const publicationRecords = [
       "Monthly Weather Review"
     ]
   },
+  {
+    slug: "historia-tolteca-chichimeca",
+    title: "トルテカ・チチメカ史",
+    originalTitle: "Historia Tolteca-Chichimeca",
+    subtitle: "全四百四十二段落・原冊画像百点・付属別資料一点",
+    author: "編者不詳",
+    series: "HISTORIA TOLTECA-CHICHIMECA",
+    originalPublication: "16世紀、クワウティンチャン、ナワトル語写本",
+    year: "16世紀",
+    extent:
+      "PDF 190頁・全442段落・原冊画像100点・付属別資料1点・欠葉第34葉／第52葉",
+    description:
+      "クワウティンチャンに伝わる起源、移住、同盟、抗争、統治、系譜、貢納を、ナワトル語本文と絵文書で記した16世紀写本です。全四百四十二段落を収録し、各原冊画像の直後に対応訳文と段落番号を置きました。クワウティンチャン・トトミワカン境界図は本文図版に数えず、本体とは別の関連文書である付属別資料として収録しています。",
+    cover: "publications/historia-tolteca-chichimeca/cover.jpg",
+    pdf:
+      "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.epub",
+    pageCount: 190,
+    figureCount: 100,
+    plateCount: 0,
+    types: ["歴史書", "絵文書", "写本", "一次史料"],
+    regions: ["メキシコ", "プエブラ", "クワウティンチャン", "メソアメリカ"],
+    languages: ["ナワトル語", "ポポロカ語"],
+    tags: [
+      "トルテカ・チチメカ",
+      "ノノワルカ",
+      "チョロラ",
+      "クワウティンチャン",
+      "系譜",
+      "貢納",
+      "暦日",
+      "16世紀",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -6422,6 +6457,17 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "historia-tolteca-chichimeca": {
+    sourceEdition:
+      "Bibliothèque nationale de France, Département des manuscrits所蔵『Historia Tolteca-Chichimeca』（Mexicain 46–58）、16世紀ナワトル語写本。本体50葉が現存し、第34葉と第52葉を欠く。",
+    sourceProvider:
+      "フランス国立図書館ガリカ公開のメキシコ写本46–58原冊画像を本文と絵文書の底本とし、原冊画像100点を収録した。クワウティンチャン・トトミワカン境界図のみアモシュカリ公開の資料46–58を用い、本体とは別の関連文書である付属別資料として収録した。補助資料は内部検証に限定した。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b84559448",
+    rights:
+      "16世紀の原著本文と絵文書はパブリックドメインです。ガリカ／フランス国立図書館由来のデジタル画像は、非商用利用では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示を条件に無償で再利用でき、商用利用はフランス国立図書館の許諾および利用料の対象となります。本版は同表示を収録しています。アモシュカリ公開複製には個別の再利用ライセンス表示を確認できないため、出典を明記した非営利の付属別資料としてのみ掲載しています。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-14",
+    updatedDate: "2026-08-14",
+  },
   "ixtlilxochitl-sumaria-todas": {
     sourceEdition:
       "Fernando de Alva Ixtlilxóchitl『Sumaria relación de todas las cosas que han sucedido en la Nueva España, y de muchas cosas que los Tultecas alcanzaron y supieron…』自筆稿、Biblioteca Nacional de Antropología e Historia所蔵 Códice Chimalpahin、第1巻 f.1r–81v。",

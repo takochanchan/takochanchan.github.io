@@ -210,6 +210,18 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_manuscript_japanese_folio_marker_is_preserved(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            ["〔原冊第12葉表〕", "本文。", "〔原冊第12葉裏〕", "続き。"]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("原冊第12葉表", "本文。"),
+                ("原冊第12葉裏", "続き。"),
+            ],
+        )
+
     def test_autograph_folio_marker_is_preserved_as_the_page_label(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [
