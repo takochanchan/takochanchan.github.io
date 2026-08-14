@@ -1,4 +1,5 @@
 name: Publish Berendt papers 6-10
+# Retry 2: all release fallbacks now point to the current archive ledger commit.
 
 on:
   push:
