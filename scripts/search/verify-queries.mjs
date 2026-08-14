@@ -150,7 +150,7 @@ try {
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
     books: 20,
-    papers: 4,
+    papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
     books: 19,
