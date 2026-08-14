@@ -1,5 +1,14 @@
 # 改訂記録
 
+## 2026-08-14 — Carl Hermann Berendt 生前論文・報告 第2組（5点）新規公開
+
+- 1863年「ユカタンの綿花栽培」、1869年「メキシコ・中央アメリカ諸語の分析的アルファベット」、1870年「ドン・ホアキン・ガルシア・イカスバルセタの著作」、1871年「ドン・フアン・ピオ・ペレスの言語学上の仕事」、1871年『ラミー――その栽培法と植物に関する若干の知見』を、各1点の独立したPDF・EPUBとして公開。
+- 実物のPérigny論文DOCXを母版とし、段落・文字書式、行間、頁設定を変更せず本文を流し込んだ。冒頭の原資料画像と単独の「日本語全訳」見出しは置かず、本文冒頭に各和訳題名を置いた。
+- 原著・公開機関の利用条件は、New York Public Library／Internet Archive、Library of Congress、UNAM、University of Pennsylvania Libraries、Princeton University／HathiTrustの各資料表示に即して作品別に記載した。日本語版について独自の再利用ライセンス表示は追加していない。
+- 公開PDFのSHA-256は順に `23577ce35b5b2b53bc95eaaba69a1d8aaa5885a0b5d631e8bff6ed6b776dde1`、`d1a48a21005d55a27924455e301fe3a9e0a58804570e239bed2fa429170d6582`、`35fa0b4683a7126237e5dbf7cf829e0055e8cd9dcfb8cd9384654731e655f0a2`、`9d9f4b31a2867e97132ddd9d6d372a1c24d0965e79e1e693eda76fbb4cc2093d`、`e522755c13651c6febfb00790f25c2c45b734f0cba5e4a9d6a97902f1fc54477`。
+- EPUBのSHA-256は順に `55f94c7c9f9766aefe998c2bbfaa7b18e584dc6ee52ff27897a9cf3a1fe1a053`、`0c953f3f4e1bba2dd1100b59dbeb556dce2b30d11808b9e89705f7ecdd3050b9`、`b582621dd368036d3e368e713e074802a048059f91c973b886b4ab22b77e895b`、`0682a432c38e5edbb84ee711cf7688174edbd7412acf3820e1fabc10c6f6ef4d`、`73e26f28cb2d01a8db67402237bb7e5fe8f3e4e1527b8bcb7a970779667db889`。
+- 編集可能DOCX正本と書誌・権利・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `29bc5e132056d6e62e2f9267edd3d5f7add2d230` に固定した。公開検証はGitHub Actions run `31785543162` で完了し、公開Releaseから全10ファイルを再取得して承認済みバイト列との一致を確認した。
+
 ## 2026-08-14 — `fuentes-guzman-recordacion-florida-1882-1883` 新規公開
 
 - フランシスコ・アントニオ・デ・フエンテス・イ・グスマン『グアテマラ史、またはフロリダの回想』の日本語全訳をPDF 992頁・EPUB 3で公開。
