@@ -1,0 +1,163 @@
+name: Publish Earl Flint 1899 rainfall release assets
+
+on:
+  push:
+    branches: ["agent/flint-rainfall-1899-public-assets-20260814-v1"]
+    paths:
+      - ".release-staging/flint-rainfall-1899-20260814-v1/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publication-release-assets
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_BRANCH: agent/flint-rainfall-1899-public-assets-20260814-v1
+      STAGING_ROOT: .release-staging/flint-rainfall-1899-20260814-v1
+      RELEASE_TAG: publications-current
+      PDF_NAME: Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.pdf
+      EPUB_NAME: Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.epub
+    steps:
+      - name: Check out checksum-pinned staging bytes
+        uses: actions/checkout@v4
+
+      - name: Validate the new PDF and EPUB
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import os
+          import pathlib
+          import re
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path(os.environ["STAGING_ROOT"])
+          expected = {
+              os.environ["PDF_NAME"]: (201727, "0c625c428c2bde5dae6f07041c05f8490305b8f30870671a990e75054489c040"),
+              os.environ["EPUB_NAME"]: (281264, "fa65e6f64e2995a7b0e854431f42391f339770400289222bd0a0fc3234e14269"),
+          }
+          assert {path.name for path in root.iterdir() if path.is_file()} == set(expected)
+          for name, (size, digest) in expected.items():
+              data = (root / name).read_bytes()
+              assert len(data) == size, name
+              assert hashlib.sha256(data).hexdigest() == digest, name
+
+          pdf = (root / os.environ["PDF_NAME"]).read_bytes()
+          assert pdf.startswith(b"%PDF-") and b"%%EOF" in pdf[-2048:]
+
+          with zipfile.ZipFile(root / os.environ["EPUB_NAME"]) as archive:
+              first = archive.infolist()[0]
+              assert first.filename == "mimetype" and first.compress_type == 0
+              assert archive.read("mimetype") == b"application/epub+zip"
+              roots = [
+                  ET.fromstring(archive.read(name))
+                  for name in archive.namelist()
+                  if name.endswith((".xhtml", ".html"))
+              ]
+              text = " ".join(" ".join(node.itertext()) for node in roots)
+              headings = [
+                  " ".join("".join(element.itertext()).split())
+                  for node in roots
+                  for element in node.iter()
+                  if element.attrib.get("data-custom-style") == "Galindo Body Heading"
+              ]
+              assert headings == ["ニカラグア中部および西部の降水量"], headings
+              assert "原著・公開機関の利用条件" in text
+              assert "Internet Archive" in text
+              assert "American Meteorological Society" in text
+              assert len(re.findall(r"[ぁ-んァ-ヶ一-龠々〆ヵヶ]", text)) >= 1000
+              for phrase in ("確認用校正刷", "日本語翻訳版には再利用ライセンス", "日本語版ライセンス"):
+                  assert phrase not in text, phrase
+          PY
+
+      - name: Require both public asset names to be new
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' > /tmp/existing-assets.txt
+          python - <<'PY'
+          import os
+          import pathlib
+          existing = set(pathlib.Path("/tmp/existing-assets.txt").read_text().splitlines())
+          expected = {os.environ["PDF_NAME"], os.environ["EPUB_NAME"]}
+          collision = sorted(expected & existing)
+          assert not collision, f"Refusing to overwrite existing release assets: {collision}"
+          PY
+
+      - name: Upload assets and extend checksum inventory
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir current
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir current
+          python - <<'PY'
+          import os
+          import pathlib
+
+          checksum = pathlib.Path("current/SHA256SUMS.txt")
+          rows = [line for line in checksum.read_text(encoding="utf-8").splitlines() if line.strip()]
+          parsed = [line.split("  ", 1) for line in rows]
+          assert all(len(row) == 2 for row in parsed)
+          names = [row[1] for row in parsed]
+          assert len(names) == len(set(names)), "Duplicate names in current checksum inventory"
+          additions = {
+              os.environ["PDF_NAME"]: "0c625c428c2bde5dae6f07041c05f8490305b8f30870671a990e75054489c040",
+              os.environ["EPUB_NAME"]: "fa65e6f64e2995a7b0e854431f42391f339770400289222bd0a0fc3234e14269",
+          }
+          assert not (set(additions) & set(names)), "New filenames already occur in checksum inventory"
+          rows.extend(f"{digest}  {name}" for name, digest in additions.items())
+          checksum.write_text("\n".join(sorted(rows, key=lambda line: line.split("  ", 1)[1])) + "\n", encoding="utf-8")
+          PY
+          gh release upload "$RELEASE_TAG" "$STAGING_ROOT/$PDF_NAME" "$STAGING_ROOT/$EPUB_NAME" --repo "$GITHUB_REPOSITORY"
+          gh release upload "$RELEASE_TAG" current/SHA256SUMS.txt --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and byte-verify both public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir verify
+          for name in "$PDF_NAME" "$EPUB_NAME"; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$name" --dir verify
+            cmp "$STAGING_ROOT/$name" "verify/$name"
+          done
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir verify
+          python - <<'PY'
+          import hashlib
+          import os
+          import pathlib
+          expected = {
+              os.environ["PDF_NAME"]: (201727, "0c625c428c2bde5dae6f07041c05f8490305b8f30870671a990e75054489c040"),
+              os.environ["EPUB_NAME"]: (281264, "fa65e6f64e2995a7b0e854431f42391f339770400289222bd0a0fc3234e14269"),
+          }
+          sums = {}
+          for line in pathlib.Path("verify/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines():
+              if line.strip():
+                  digest, name = line.split("  ", 1)
+                  sums[name] = digest
+          for name, (size, digest) in expected.items():
+              data = pathlib.Path("verify", name).read_bytes()
+              assert len(data) == size, name
+              assert hashlib.sha256(data).hexdigest() == digest == sums[name], name
+          PY
+
+      - name: Remove checksum-pinned staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH"
