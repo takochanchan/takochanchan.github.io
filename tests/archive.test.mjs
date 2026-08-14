@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 231);
+  assert.equal(publications.length, 234);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -65,7 +65,7 @@ test("catalogue metadata is complete and unique", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 103);
-  assert.equal(shortPublications.length, 128);
+  assert.equal(shortPublications.length, 131);
   assert.equal(shortPublicationAuthors.length, 31);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -83,6 +83,9 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "berendt-carib-karif-language-1873",
       "berendt-darien-language-1874",
       "berendt-ethnologie-nicaragua-1874",
+      "berendt-ethnologie-nicaragua-1875",
+      "berendt-ancient-central-american-civilization-1876",
+      "berendt-historical-documents-guatemala-1877",
       "berendt-vermessungsarbeiten-mexiko-1862",
       "berendt-maasse-gewichte-mexiko-1862",
       "berendt-handel-veracruz-1862",
@@ -592,6 +595,37 @@ test("approved Berendt papers batch 03 remains individually catalogued", () => {
   }
 });
 
+test("approved Berendt papers batch 04 remains individually catalogued", () => {
+  const expected = new Map([
+    ["berendt-ethnologie-nicaragua-1875", 4],
+    ["berendt-ancient-central-american-civilization-1876", 12],
+    ["berendt-historical-documents-guatemala-1877", 4],
+  ]);
+  const notices = [];
+  for (const [slug, pageCount] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, "carl-hermann-berendt", slug);
+    assert.equal(item.pageCount, pageCount, slug);
+    assert.equal(item.publishedDate, "2026-08-15", slug);
+    assert.doesNotMatch(item.rights, /日本語翻訳版には再利用ライセンス|日本語版ライセンス/, slug);
+    notices.push(item.rights, item.sourceProvider);
+  }
+  const combined = notices.join(" ");
+  for (const phrase of [
+    "Oxford University",
+    "NOT_IN_COPYRIGHT",
+    "JSTOR",
+    "Early Journal Content",
+    "Smithsonian Institution",
+    "Internet Archive",
+    "個別のCreative Commonsライセンス",
+  ]) {
+    assert.match(combined, new RegExp(phrase), phrase);
+  }
+});
+
 test("approved Galindo short-paper batch remains individually catalogued", () => {
   const expectedPages = new Map([
     ["galindo-caribs-central-america-1833", 3],
@@ -896,7 +930,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">103<\/strong>件/);
-  assert.match(html, /id="paper-match-count">128<\/strong>件/);
+  assert.match(html, /id="paper-match-count">131<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

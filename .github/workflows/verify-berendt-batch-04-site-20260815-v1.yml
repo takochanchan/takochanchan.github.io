@@ -1,0 +1,161 @@
+name: Verify Berendt batch 04 site publications
+
+on:
+  push:
+    branches: ["agent/berendt-batch-04-site-20260815-v1"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out candidate site tree
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build archive pages and verify master ledger
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
+
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
+
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Verify full-text index and catalogue tests
+        run: |
+          set -euo pipefail
+          npm run verify:search
+          npm test
+
+      - name: Validate all three reflowable EPUB 3 editions
+        run: >-
+          python3 scripts/validate-epubs.py .cache/fulltext-assets
+          --slug berendt-ethnologie-nicaragua-1875
+          --slug berendt-ancient-central-american-civilization-1876
+          --slug berendt-historical-documents-guatemala-1877
+
+      - name: Verify all three pages, exact public assets, and provider notices
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import subprocess
+
+          expected = {
+              'berendt-ethnologie-nicaragua-1875': {
+                  'title': 'ニカラグアの民族学について',
+                  'pages': 4,
+                  'markers': 2,
+                  'cover_size': 90528,
+                  'phrases': ('Oxford University', 'NOT_IN_COPYRIGHT'),
+                  'pdf_sha256': '968169fc810ee0d241db07f5f8200aca336a6bf47deca2211345cf8dc7efa16c',
+                  'epub_sha256': 'e7afff10b3b4feb7b122bf419bbe7add1b587fb0afb6604d0bf431911cfcaa51',
+              },
+              'berendt-ancient-central-american-civilization-1876': {
+                  'title': '中央アメリカ古代文明の地理的分布',
+                  'pages': 12,
+                  'markers': 14,
+                  'cover_size': 98501,
+                  'phrases': ('JSTOR', 'Early Journal Content'),
+                  'pdf_sha256': 'a2318baf2540bd795e3ade76f09817f518c122416d4def9ee3d1d3eb0a5a6be5',
+                  'epub_sha256': '5e69acbcce6e21238350fabfdaf0a73c3550e611f2d5af65dc77e5c78da3ae2e',
+              },
+              'berendt-historical-documents-guatemala-1877': {
+                  'title': 'グアテマラの歴史文書コレクション',
+                  'pages': 4,
+                  'markers': 3,
+                  'cover_size': 97488,
+                  'phrases': ('Smithsonian Institution', 'Internet Archive'),
+                  'pdf_sha256': 'df7ad0d709f2a580eeea58f18716009449e1b03dc99e3513371dfaeade2e27a9',
+                  'epub_sha256': 'be1df27cccd6d53a8dea05db0e3c7aa3f1f0e816aa5715708f3c8afbd0ed3d98',
+              },
+          }
+          manifest = json.load(open('assets-manifest.json'))
+          asset_by_path = {asset['path']: asset for asset in manifest['assets']}
+          archive = json.load(open('master-archive.json'))
+          assert archive['archive_commit'] == '3eb9b355961eced70c8a988609500534ca7d021c'
+          assert {fallback['ledger_commit'] for fallback in archive['release_fallbacks'].values()} == {archive['archive_commit']}
+          for slug, values in expected.items():
+              page = pathlib.Path('dist/publications') / slug / 'index.html'
+              html = page.read_text(encoding='utf-8')
+              for phrase in (values['title'], '権利・利用条件', *values['phrases']):
+                  assert phrase in html, (slug, phrase)
+              for banned in ('日本語翻訳版には再利用ライセンス', '日本語版ライセンス'):
+                  assert banned not in html, (slug, banned)
+              cover = pathlib.Path('dist/publications') / slug / 'cover.jpg'
+              assert cover.stat().st_size == values['cover_size'], slug
+              fallback = archive['release_fallbacks'][slug]
+              assert fallback['status'] == 'pending_lfs'
+              assert fallback['ledger_commit'] == archive['archive_commit']
+
+              assets = [
+                  asset
+                  for asset in asset_by_path.values()
+                  if asset['path'].startswith(f'publications/{slug}/')
+              ]
+              assert len(assets) == 3
+              for suffix, digest in (('.pdf', values['pdf_sha256']), ('.epub', values['epub_sha256'])):
+                  asset = next(item for item in assets if item['path'].endswith(suffix))
+                  local = pathlib.Path('.cache/fulltext-assets') / asset['path']
+                  data = local.read_bytes()
+                  assert len(data) == asset['size']
+                  assert hashlib.sha256(data).hexdigest() == digest == asset['sha256']
+                  if suffix == '.pdf':
+                      info = subprocess.check_output(['pdfinfo', str(local)], text=True)
+                      pages = re.search(r'^Pages:\s+(\d+)$', info, re.MULTILINE)
+                      assert pages and int(pages.group(1)) == values['pages']
+                      text = subprocess.check_output(['pdftotext', str(local), '-'], text=True)
+                      assert values['title'] in text
+                      assert len(re.findall(r'〔原刊 p\. [0-9]+〕', text)) == values['markers']
+                      for phrase in values['phrases']:
+                          assert phrase in text, (slug, phrase)
+          PY
