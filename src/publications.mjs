@@ -6343,6 +6343,47 @@ const publicationRecords = [
       "米国気象局"
     ]
   },
+  {
+    "slug": "flint-rainfall-central-western-nicaragua-1899",
+    "title": "ニカラグア中部および西部の降水量",
+    "originalTitle": "Rainfall in Central and Western Nicaragua",
+    "subtitle": "1899年刊・原刊587頁・日本語全訳",
+    "author": "アール・フリント",
+    "series": "RAINFALL IN CENTRAL AND WESTERN NICARAGUA · 1899",
+    "originalPublication": "『Monthly Weather Review』第27巻補遺第13号、1899年、587頁",
+    "year": 1899,
+    "extent": "PDF 4頁・原刊587頁",
+    "description": "マサヤ、グラナダ、リバスの降水記録を比較し、湖水位・森林伐採・運河給水との関係を論じた短報。1863年以後の少雨、ティピタパ流出口の閉塞、植林による蒸発抑制についての長期観察を収録します。",
+    "cover": "publications/flint-rainfall-central-western-nicaragua-1899/cover.jpg",
+    "pdf": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.pdf",
+    "epub": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.epub",
+    "pageCount": 4,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "気象報告",
+      "水文資料",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マサヤ",
+      "グラナダ",
+      "リバス",
+      "マナグア湖"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "降水量",
+      "湖水位",
+      "ティピタパ",
+      "運河",
+      "森林保全",
+      "Monthly Weather Review"
+    ]
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -8294,6 +8335,14 @@ const publicationMetadata = {
     "publishedDate": "2026-08-14",
     "updatedDate": "2026-08-14"
   },
+  "flint-rainfall-central-western-nicaragua-1899": {
+    "sourceEdition": "Earl Flint, “Rainfall in Central and Western Nicaragua,” Monthly Weather Review, vol. 27, supplementary no. 13 (Summary 1899), p. 587, DOI 10.1175/1520-0493(1899)27[587a:RICAWN]2.0.CO;2.",
+    "sourceProvider": "Internet ArchiveのSIMマイクロフィルム公開項目 sim_monthly-weather-review_1899_27_13 の原刊587頁を本文底本とし、American Meteorological Societyの巻号目次・DOIページで著者・書誌を照合しました。原刊著者行は “By Earl Flint, dated December 13, 1899.” であり、AMS配布PDF・HTML・同会固有の組版は転載していません。",
+    "sourceUrl": "https://archive.org/details/sim_monthly-weather-review_1899_27_13",
+    "rights": "原著本文と原刊誌面は1899年に米国で公刊され、現在はパブリックドメインに属します。Internet Archiveの当該項目にはrights／licenseurlの表示がなく、本版は同項目の誌面画像・OCRを転載していません。American Meteorological Societyの公式アーカイブは記事書誌、DOI、PDF導線および「Get Permissions」を表示し、現行許諾案内は同会が権利を有する記事部分の再利用に許諾申請を求めます。本版はAMS配布PDF・HTML・同会固有の組版を転載せず、1899年原刊本文をSIM原誌画像から翻刻・翻訳しました。https://www.ametsoc.org/ams/publications/permissions/",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
   ...perignyRemainingPublicationMetadata,
 };
 
@@ -8390,6 +8439,7 @@ const shortWorkAuthorBySlug = {
   "flint-what-dr-flint-says-nicaragua-footprints-1890": "earl-flint",
   "flint-prehistoric-horse-america-1891": "earl-flint",
   "flint-rainfall-rivas-nicaragua-1898": "earl-flint",
+  "flint-rainfall-central-western-nicaragua-1899": "earl-flint",
   ...perignyRemainingShortWorkAuthors,
 };
 

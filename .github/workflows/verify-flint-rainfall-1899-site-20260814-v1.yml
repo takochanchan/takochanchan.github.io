@@ -1,0 +1,135 @@
+name: Verify Earl Flint 1899 rainfall site publication
+
+on:
+  push:
+    branches: ["agent/flint-rainfall-1899-site-20260814-v1"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out candidate site tree
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
+
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
+
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Verify full-text index and catalogue tests
+        run: |
+          set -euo pipefail
+          npm run verify:search
+          npm test
+
+      - name: Download and checksum-verify the new EPUB
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import urllib.request
+
+          slug = "flint-rainfall-central-western-nicaragua-1899"
+          manifest = json.load(open("assets-manifest.json"))
+          assets = [
+              asset for asset in manifest["assets"]
+              if asset["path"].startswith(f"publications/{slug}/") and asset["path"].endswith(".epub")
+          ]
+          assert len(assets) == 1
+          root = pathlib.Path(".cache/flint-rainfall-1899-public-assets")
+          asset = assets[0]
+          destination = root / asset["path"]
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          request = urllib.request.Request(asset["url"], headers={"User-Agent": "takochan-publication-verifier/1.0"})
+          with urllib.request.urlopen(request) as response:
+              data = response.read()
+          assert len(data) == asset["size"], asset["path"]
+          assert hashlib.sha256(data).hexdigest() == asset["sha256"], asset["path"]
+          destination.write_bytes(data)
+          PY
+
+      - name: Validate the reflowable EPUB 3 edition
+        run: >-
+          python3 scripts/validate-epubs.py .cache/flint-rainfall-1899-public-assets
+          --slug flint-rainfall-central-western-nicaragua-1899
+
+      - name: Verify the publication page and provider notices
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib
+
+          slug = "flint-rainfall-central-western-nicaragua-1899"
+          page = pathlib.Path("dist/publications") / slug / "index.html"
+          text = page.read_text(encoding="utf-8")
+          for required in (
+              "ニカラグア中部および西部の降水量",
+              "権利・利用条件",
+              "Internet Archive",
+              "American Meteorological Society",
+              "Get Permissions",
+              "https://www.ametsoc.org/ams/publications/permissions/",
+          ):
+              assert required in text, required
+          for banned in (
+              "日本語翻訳版には再利用ライセンス",
+              "日本語版ライセンス",
+          ):
+              assert banned not in text, banned
+          cover = pathlib.Path("dist/publications") / slug / "cover.jpg"
+          assert cover.stat().st_size == 284935
+          PY

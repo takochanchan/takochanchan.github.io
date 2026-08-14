@@ -1280,6 +1280,24 @@
       "sha256": "097ca5ca5055228374b351c74f14f2fb6108dbbd0e3b5a7aa51ce34b94c6fa1d"
     },
     {
+      "path": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.epub",
+      "size": 281264,
+      "sha256": "fa65e6f64e2995a7b0e854431f42391f339770400289222bd0a0fc3234e14269"
+    },
+    {
+      "path": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.pdf",
+      "size": 201727,
+      "sha256": "0c625c428c2bde5dae6f07041c05f8490305b8f30870671a990e75054489c040"
+    },
+    {
+      "path": "publications/flint-rainfall-central-western-nicaragua-1899/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/flint-rainfall-central-western-nicaragua-1899/cover.jpg",
+      "size": 284935,
+      "sha256": "86cfaa7c6de18b43db2b85355e150103a22aebe93251b8d32405dd4dcd8cb8e1"
+    },
+    {
       "path": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.epub",
       "size": 249516,
