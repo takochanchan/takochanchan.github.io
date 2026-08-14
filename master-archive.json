@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+  "archive_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -201,7 +201,7 @@
       "status": "pending_lfs",
       "release_tag": "master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 427241,
       "master_sha256": "297b9dfb32bc18799c2071fc16707853b91e777c0b4deabc4b49134399f9ea8f"
@@ -211,7 +211,7 @@
       "status": "pending_lfs",
       "release_tag": "master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_master.docx",
       "master_size": 58718918,
       "master_sha256": "5684786bba9cd80d167260431587c82b7b48def19958df5ae49d12779ae19993"
@@ -221,7 +221,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-ethnographie-guatemala-1884-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ethnographie-guatemala-1884-20260813-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 4105894,
       "master_sha256": "a715ef99d4fb9f6008b2b0a9f7f1c952cbafa11a51fe313d253ee5d77c32b046"
@@ -231,7 +231,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-ixil-language-1887-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ixil-language-1887-20260813-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 391033,
       "master_sha256": "a5e8fd8becb25a60a9655a815de5e6b42488ff5fa8780fcff824960723bc7075"
@@ -241,7 +241,7 @@
       "status": "pending_lfs",
       "release_tag": "master-stoll-pokom-languages-1888-1896-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-pokom-languages-1888-1896-20260813-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 1314377,
       "master_sha256": "47f0b6bd94273515c51c09d83226c951d14eb27015d278112256fded33ee9bd3"
@@ -251,7 +251,7 @@
       "status": "pending_lfs",
       "release_tag": "master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 5553208,
       "master_sha256": "c16be80b86f77373626dc213e2cdbf75c55aed0c5d25eb67357664f98db1c68d"
@@ -261,10 +261,110 @@
       "status": "pending_lfs",
       "release_tag": "master-fuentes-guzman-recordacion-florida-1882-1883-20260814-v1",
       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-fuentes-guzman-recordacion-florida-1882-1883-20260814-v1",
-      "ledger_commit": "b6fcfedd1c57ba1e5791359dc2b453f6b1141c79",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
       "master_filename": "master.docx",
       "master_size": 1284326,
       "master_sha256": "8ab7022076b8678c9a634ce1df2fa62d413cea48cef394b6299e7a066d55650e"
+    },
+    "flint-antiquities-nicaragua-palenque-builders-1882": {
+      "canonical_path": "publications/flint-antiquities-nicaragua-palenque-builders-1882/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-antiquities-nicaragua-palenque-builders-1882-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-antiquities-nicaragua-palenque-builders-1882-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 56826,
+      "master_sha256": "4e8a49a6a5a13abccbea0b2533229e35f07a916392f5edce86f71bc7021be076"
+    },
+    "flint-human-foot-prints-nicaragua-1884": {
+      "canonical_path": "publications/flint-human-foot-prints-nicaragua-1884/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-human-foot-prints-nicaragua-1884-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-foot-prints-nicaragua-1884-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 43917,
+      "master_sha256": "0fc11f27930918a83ddd79a46983da5ecb35dc3e34f7292cee3b9a8b0da9178c"
+    },
+    "flint-human-foot-prints-nicaragua-1885": {
+      "canonical_path": "publications/flint-human-foot-prints-nicaragua-1885/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-human-foot-prints-nicaragua-1885-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-foot-prints-nicaragua-1885-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 45276,
+      "master_sha256": "fff124bcfccf595734d26255cf2877baa99e78c8816525ca222f87e182d772a1"
+    },
+    "flint-pre-adamite-foot-prints-1886": {
+      "canonical_path": "publications/flint-pre-adamite-foot-prints-1886/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-pre-adamite-foot-prints-1886-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-pre-adamite-foot-prints-1886-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 46039,
+      "master_sha256": "1df8b6b18e2b60f7f5f9c42c101babbb8e73d8d69e079ff4dad65b0506f1b6b9"
+    },
+    "flint-human-footprints-eocene-1888": {
+      "canonical_path": "publications/flint-human-footprints-eocene-1888/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-human-footprints-eocene-1888-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-footprints-eocene-1888-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 44643,
+      "master_sha256": "6dfcb0df4aea662a417eca1bae39713b529a39f6b827ad300b23d50d42d19876"
+    },
+    "flint-paleolithics-nicaragua-1888": {
+      "canonical_path": "publications/flint-paleolithics-nicaragua-1888/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-paleolithics-nicaragua-1888-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-paleolithics-nicaragua-1888-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 44522,
+      "master_sha256": "3f7cc27a3c7403a55b7408033f52cfb222cfe4cab3396402ca358f7f3e43c03c"
+    },
+    "flint-nicaragua-foot-prints-1889": {
+      "canonical_path": "publications/flint-nicaragua-foot-prints-1889/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-nicaragua-foot-prints-1889-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-nicaragua-foot-prints-1889-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 49648,
+      "master_sha256": "db7b4c15edb8738f35f2cae6861b9a1927af67f773e95a3ef31cc3f47b821e95"
+    },
+    "flint-what-dr-flint-says-nicaragua-footprints-1890": {
+      "canonical_path": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-what-dr-flint-says-nicaragua-footprints-1890-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-what-dr-flint-says-nicaragua-footprints-1890-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 48435,
+      "master_sha256": "b64ecff96698916fb5eff88f0e98da19444038bd564354fe0aef838086831b51"
+    },
+    "flint-prehistoric-horse-america-1891": {
+      "canonical_path": "publications/flint-prehistoric-horse-america-1891/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-prehistoric-horse-america-1891-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-prehistoric-horse-america-1891-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 139288,
+      "master_sha256": "e5d710d510956e9c56e30abf6b1882ee3b885a55d203794f4a9e819cdf1aa75e"
+    },
+    "flint-rainfall-rivas-nicaragua-1898": {
+      "canonical_path": "publications/flint-rainfall-rivas-nicaragua-1898/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-flint-rainfall-rivas-nicaragua-1898-20260814-v2",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-rainfall-rivas-nicaragua-1898-20260814-v2",
+      "ledger_commit": "679682c59f5a3287e064c19cfb1b02e7d8a45a9a",
+      "master_filename": "master.docx",
+      "master_size": 45576,
+      "master_sha256": "bd0cdeb8882a18a8dc9a056fe7462e3c91f7d5622ccbc762534c8da7d0d8184f"
     }
   }
 }
