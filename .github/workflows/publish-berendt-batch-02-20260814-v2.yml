@@ -1,5 +1,5 @@
 name: Publish Berendt papers 6-10
-# Retry 2: all release fallbacks now point to the current archive ledger commit.
+# Retry 3: archive ledger and catalogue-size assertions are aligned.
 
 on:
   push:
