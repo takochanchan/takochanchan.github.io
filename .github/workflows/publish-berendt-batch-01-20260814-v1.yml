@@ -1,0 +1,371 @@
+name: Publish Berendt papers 1-5
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".publication-triggers/publish-berendt-batch-01-20260814-v1.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publication-release
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      ASSET_BRANCH: agent/berendt-batch-01-public-assets-20260814-v1
+      SITE_BRANCH: agent/berendt-batch-01-publication-20260814-v1
+      STAGING_ROOT: .release-staging/berendt-papers-20260814-v1
+      WORKFLOW_PATH: .github/workflows/publish-berendt-batch-01-20260814-v1.yml
+      TRIGGER_PATH: .publication-triggers/publish-berendt-batch-01-20260814-v1.json
+      RELEASE_TAG: publications-current
+    steps:
+      - name: Check out checksum-pinned release bytes
+        uses: actions/checkout@v4
+        with:
+          ref: agent/berendt-batch-01-public-assets-20260814-v1
+          path: assets
+
+      - name: Check out publication source
+        uses: actions/checkout@v4
+        with:
+          ref: agent/berendt-batch-01-publication-20260814-v1
+          path: site
+          fetch-depth: 0
+
+      - name: Validate PDF and EPUB bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import shutil
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path("assets/.release-staging/berendt-papers-20260814-v1")
+          payload = json.loads((root / "manifest.json").read_text(encoding="utf-8"))
+          assert len(payload) == 5
+          seen = set()
+          banned = (
+              "確認用校正刷",
+              "日本語翻訳版には再利用ライセンス",
+              "日本語版ライセンス",
+          )
+          for entry in payload:
+              record = entry["record"]
+              slug = record["slug"]
+              assert slug not in seen
+              seen.add(slug)
+              assert record["author"] == "Carl Hermann Berendt"
+              rights = record["rights"]
+              provider = record["sourceProvider"]
+              for required in (
+                  "New York Public Library",
+                  "Google",
+                  "Internet Archive",
+                  "NOT_IN_COPYRIGHT",
+                  "個別のCC指定なし",
+              ):
+                  assert required in rights + provider, (slug, required)
+              assert record["sourceUrl"] == "https://archive.org/details/petermannsgeogr05haacgoog"
+
+              public_assets = [
+                  asset for asset in entry["archive_assets"]
+                  if pathlib.PurePosixPath(asset["filename"]).suffix in {".pdf", ".epub"}
+              ]
+              assert len(public_assets) == 2
+              assert {pathlib.PurePosixPath(asset["filename"]).suffix for asset in public_assets} == {".pdf", ".epub"}
+              for asset in public_assets:
+                  name = asset["filename"]
+                  source = root / slug / name
+                  data = source.read_bytes()
+                  assert len(data) == asset["size"], (slug, name)
+                  assert hashlib.sha256(data).hexdigest() == asset["sha256"], (slug, name)
+                  assert not (pathlib.Path("release") / name).exists(), name
+                  shutil.copyfile(source, pathlib.Path("release") / name)
+
+                  if name.endswith(".pdf"):
+                      assert data.startswith(b"%PDF-") and b"%%EOF" in data[-2048:]
+                  else:
+                      with zipfile.ZipFile(source) as archive:
+                          assert archive.testzip() is None
+                          first = archive.infolist()[0]
+                          assert first.filename == "mimetype" and first.compress_type == 0
+                          assert archive.read("mimetype") == b"application/epub+zip"
+                          roots = [
+                              ET.fromstring(archive.read(member))
+                              for member in archive.namelist()
+                              if member.endswith((".xhtml", ".html"))
+                          ]
+                          text = " ".join(" ".join(node.itertext()) for node in roots)
+                          titles = [
+                              " ".join("".join(node.itertext()).split())
+                              for document in roots
+                              for node in document.iter()
+                              if node.attrib.get("data-custom-style") == "Galindo Body Title"
+                          ]
+                          markers = [
+                              " ".join("".join(node.itertext()).split())
+                              for document in roots
+                              for node in document.iter()
+                              if node.attrib.get("data-custom-style") == "Galindo Page Marker"
+                          ]
+                          images = [node for document in roots for node in document.iter() if node.tag.endswith("}img")]
+                          assert titles == [record["title"]], (slug, titles)
+                          assert markers and all(re.fullmatch(r"〔原刊\s+p\.\s*[0-9]+〕", marker) for marker in markers)
+                          assert not images, slug
+                          assert "原著・公開機関の利用条件・翻訳方針" in text
+                          for phrase in banned:
+                              assert phrase not in text, (slug, phrase)
+          PY
+
+      - name: Install build dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Validate catalogue, archive gate, site, and EPUBs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import pathlib
+          import shutil
+
+          payload = json.load(open("assets/.release-staging/berendt-papers-20260814-v1/manifest.json"))
+          for entry in payload:
+              slug = entry["record"]["slug"]
+              epub = next(asset for asset in entry["archive_assets"] if asset["filename"].endswith(".epub"))
+              target = pathlib.Path("epub-root/publications") / slug / epub["filename"]
+              target.parent.mkdir(parents=True)
+              shutil.copyfile(pathlib.Path("release") / epub["filename"], target)
+          PY
+          cd site
+          npm run verify:masters
+          node scripts/build.mjs
+          node --test tests/archive.test.mjs
+          python3 -m unittest discover -s tests -p 'test_search_*.py'
+          node --test tests/fulltext-search.test.mjs
+          python3 scripts/validate-epubs.py ../epub-root \
+            --slug berendt-vermessungsarbeiten-mexiko-1862 \
+            --slug berendt-maasse-gewichte-mexiko-1862 \
+            --slug berendt-handel-veracruz-1862 \
+            --slug berendt-cochenille-produktion-oaxaca-1862 \
+            --slug berendt-mexikanische-geographische-literatur-1862-1
+          node --input-type=module - <<'NODE'
+          import assert from "node:assert/strict";
+          import { publications } from "./src/publications.mjs";
+          const slugs = [
+            "berendt-vermessungsarbeiten-mexiko-1862",
+            "berendt-maasse-gewichte-mexiko-1862",
+            "berendt-handel-veracruz-1862",
+            "berendt-cochenille-produktion-oaxaca-1862",
+            "berendt-mexikanische-geographische-literatur-1862-1",
+          ];
+          for (const slug of slugs) {
+            const item = publications.find((entry) => entry.slug === slug);
+            assert.ok(item, slug);
+            assert.equal(item.authorKey, "carl-hermann-berendt", slug);
+            assert.equal(item.recordClass, "short-work", slug);
+            assert.match(item.sourceProvider, /New York Public Library/);
+            assert.match(item.sourceProvider, /Google/);
+            assert.match(item.sourceProvider, /Internet Archive/);
+            assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+            assert.match(item.rights, /個別のCC指定なし/);
+            assert.doesNotMatch(item.rights, /日本語翻訳版には再利用ライセンス|日本語版ライセンス/);
+          }
+          NODE
+
+      - name: Verify full-text extraction and physical PDF mapping
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          cd site
+          mkdir -p .cache
+          python - <<'PY'
+          import json
+          import pathlib
+
+          release = (pathlib.Path.cwd().parent / "release").resolve()
+          payload = json.load(open("../assets/.release-staging/berendt-papers-20260814-v1/manifest.json"))
+          works = []
+          for entry in payload:
+              record = entry["record"]
+              assets = entry["archive_assets"]
+              epub = next(asset for asset in assets if asset["filename"].endswith(".epub"))
+              pdf = next(asset for asset in assets if asset["filename"].endswith(".pdf"))
+              slug = record["slug"]
+              works.append({
+                  "slug": slug,
+                  "title": record["title"],
+                  "author": "カール・ヘルマン・ベレント",
+                  "recordClass": "short-work",
+                  "url": f"/publications/{slug}/",
+                  "pdfUrl": f"https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/{pdf['filename']}",
+                  "masterPath": f"publications/{slug}/master.docx",
+                  "source": str(release / epub["filename"]),
+                  "format": "epub",
+                  "sourceMode": "approved-epub-mirror",
+                  "sourceSha256": epub["sha256"],
+                  "pdf": str(release / pdf["filename"]),
+                  "pdfSha256": pdf["sha256"],
+              })
+          manifest = {
+              "schemaVersion": 1,
+              "archiveCommit": "30d25b018a5109bdde7b90f9cc98497c1a66d82b",
+              "assetManifestSha256": None,
+              "works": works,
+          }
+          pathlib.Path(".cache/berendt-batch-01-search-manifest.json").write_text(
+              json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+          python3 scripts/search/extract-corpus.py \
+            --manifest .cache/berendt-batch-01-search-manifest.json \
+            --output .cache/berendt-batch-01-search-corpus.json
+          python - <<'PY'
+          import json
+
+          expected = {
+              "berendt-vermessungsarbeiten-mexiko-1862": (6, 45, 4900),
+              "berendt-maasse-gewichte-mexiko-1862": (7, 125, 4278),
+              "berendt-handel-veracruz-1862": (8, 227, 5551),
+              "berendt-cochenille-produktion-oaxaca-1862": (7, 197, 5673),
+              "berendt-mexikanische-geographische-literatur-1862-1": (16, 160, 15861),
+          }
+          corpus = json.load(open(".cache/berendt-batch-01-search-corpus.json"))
+          assert len(corpus["works"]) == 5
+          for work in corpus["works"]:
+              pages, chunks, characters = expected[work["slug"]]
+              assert work["pdfPageCount"] == pages
+              assert len(work["chunks"]) == chunks
+              assert sum(len(chunk["text"]) for chunk in work["chunks"]) == characters
+              assert work["mappingSummary"]["unmapped"] == 0
+              assert work["mappingSummary"]["verifiedRate"] == 1.0
+              assert work["mappingSummary"]["pdfTextMode"] == "embedded"
+          PY
+
+      - name: Upload PDF and EPUB and refresh release checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release-metadata updated-release-metadata
+          gh release download "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern SHA256SUMS.txt \
+            --dir release-metadata
+          gh release upload "$RELEASE_TAG" release/*.epub release/*.pdf \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
+          python - <<'PY'
+          import json
+          import pathlib
+
+          payload = json.load(open("assets/.release-staging/berendt-papers-20260814-v1/manifest.json"))
+          expected = {}
+          for entry in payload:
+              for asset in entry["archive_assets"]:
+                  if asset["filename"].endswith((".pdf", ".epub")):
+                      expected[asset["filename"]] = asset["sha256"]
+          assert len(expected) == 10
+          path = pathlib.Path("release-metadata/SHA256SUMS.txt")
+          previous = {}
+          for line in path.read_text(encoding="utf-8").splitlines():
+              digest, filename = line.split("  ", 1)
+              assert filename not in previous
+              previous[filename] = digest
+          previous.update(expected)
+          lines = [f"{digest}  {filename}" for filename, digest in sorted(previous.items())]
+          assert len(lines) == len(previous)
+          target = pathlib.Path("updated-release-metadata/SHA256SUMS.txt")
+          target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+          PY
+          gh release upload "$RELEASE_TAG" updated-release-metadata/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --clobber
+
+      - name: Re-download and verify public release bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify-release
+          gh release download "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern 'Carl_Hermann_Berendt_*1862*.epub' \
+            --pattern 'Carl_Hermann_Berendt_*1862*.pdf' \
+            --pattern SHA256SUMS.txt \
+            --dir verify-release
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/$RELEASE_TAG" > verify-release/release.json
+          python - <<'PY'
+          import json
+          import pathlib
+
+          payload = json.load(open("assets/.release-staging/berendt-papers-20260814-v1/manifest.json"))
+          expected = {}
+          for entry in payload:
+              for asset in entry["archive_assets"]:
+                  if asset["filename"].endswith((".pdf", ".epub")):
+                      expected[asset["filename"]] = asset
+          sums = pathlib.Path("verify-release/SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
+          release = json.load(open("verify-release/release.json"))
+          remote = {asset["name"]: asset for asset in release["assets"]}
+          for filename, asset in expected.items():
+              original = pathlib.Path("release") / filename
+              downloaded = pathlib.Path("verify-release") / filename
+              assert original.read_bytes() == downloaded.read_bytes(), filename
+              assert f"{asset['sha256']}  {filename}" in sums
+              assert remote[filename]["size"] == asset["size"]
+              assert remote[filename]["digest"] == f"sha256:{asset['sha256']}"
+          PY
+
+      - name: Publish the verified catalogue source
+        id: publish-source
+        working-directory: site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git rebase origin/main
+          git push origin HEAD:main
+          echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Remove staging branches and one-shot controls
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$ASSET_BRANCH"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$SITE_BRANCH"
+          workflow_sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$WORKFLOW_PATH" \
+            -f message="Remove completed Berendt batch 1 publication workflow" \
+            -f sha="$workflow_sha" \
+            -f branch=main
+          trigger_sha="$(gh api "repos/$GITHUB_REPOSITORY/contents/$TRIGGER_PATH?ref=main" --jq .sha)"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/contents/$TRIGGER_PATH" \
+            -f message="Remove completed Berendt batch 1 publication trigger" \
+            -f sha="$trigger_sha" \
+            -f branch=main
