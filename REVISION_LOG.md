@@ -1,5 +1,14 @@
 # 改訂記録
 
+## 2026-08-14 — Carl Hermann Berendt 生前論文・報告 第3組（5点）新規公開
+
+- 1872年「メキシコ」、1873年「テワンテペク地峡のインディアン」、1873年「カリブ語またはカリフ語の文法・辞書について」、1874年「ダリエン語」、1874年「ニカラグアの民族学について」を、各1点の独立したPDF・EPUBとして公開。
+- 承認済みPDFの全ページ画像を公開PDFと照合し、見た目の差分0件を確認した。冒頭の原資料画像と単独の「日本語全訳」見出しは置かず、本文冒頭に各和訳題名を置いた。「ダリエン語」の原著本文内地図1点だけを本文相当位置に保持した。
+- 原著・公開機関の利用条件は、University of Michigan／Internet Archive、Getty Research Institute／Internet Archive、Smithsonian Institution／Internet Archive、Internet ArchiveマイクロフィルムIA1630708-07、Oxford University／Internet Archiveの各資料表示に即して作品別に記載した。日本語版について独自の再利用ライセンス表示は追加していない。
+- 公開PDFのSHA-256は順に `e2299fc6f4ea285608c8cc010440d04cf8b86bf986119e5a36cd1fd7da0f571e`、`55b6810f956545a2a4f0bd1f8b18e5d504a24d5251ac1292740b2eb7c2db31e3`、`ea30684c0c5d1a3ee5dfc9c364886339def67c30b179a1d265bc9e999b11f9b0`、`c5faab3c1dc8d258155166a826bb4271c60c33fb078ed77ee589cec6318f3202`、`8248a3fe1050244d364d72c3ada1d393f3dc020a4aee79ebc3197f2a6c997cff`。
+- EPUBのSHA-256は順に `9404fb1d2551b602837ec7dbf1b858e09043b56c44207c11281bcad024980b12`、`3754faa626038941c8a3b8b348bb79b8cac03b24b2eed483a49767b841f7a2d9`、`5f4dc8f631a1f1d992da69d72a9ab539991acf1672663d50c1efc93fef329055`、`eb70a5d0e0fc01bfafc8c1ecf9b818be19d5917ecd11544070ac123227092101`、`c78922bd412e0b5e183384ef3e5076ba6c097c1ad13febc567be42e8f6e48c3b`。
+- 編集可能DOCX正本と書誌・権利・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `0c076abc2cdaf84812f6a4f938c944d272d3af9c` に固定した。公開Releaseへの格納・再取得照合はGitHub Actions run `31804625360` で完了した。
+
 ## 2026-08-14 — ディースルドルフ『マヤ諸民族の芸術と宗教』I・II 論文版改訂
 
 - 第I巻と第II巻を単行本扱いから論文扱いへ戻し、公開目録を書籍103点・論文117点に更新した。第I巻は1925年『Zeitschrift für Ethnologie』初出論文、第II巻は1930年同誌初出論文と1931年訂正稿の構成として記録した。

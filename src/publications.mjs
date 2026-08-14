@@ -2838,6 +2838,209 @@ const publicationRecords = [
     ]
   },
   {
+    "slug": "berendt-mexico-1872",
+    "title": "メキシコ",
+    "originalTitle": "Mexico",
+    "subtitle": "1872年事典項目・原刊261–288頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "DEUTSCH-AMERIKANISCHES CONVERSATIONS-LEXIKON · 1872",
+    "originalPublication": "ニューヨーク、1872年",
+    "year": 1872,
+    "extent": "PDF 46頁・原刊261–288頁",
+    "description": "『独米会話辞典』第7巻の「メキシコ」項目。国土、地形、気候、人口、民族、行政、産業、交通、歴史に加え、同名の州・連邦区・首都までを扱う原刊261–288頁の全訳です。",
+    "cover": "publications/berendt-mexico-1872/cover.jpg",
+    "pdf": "publications/berendt-mexico-1872/Carl_Hermann_Berendt_Mexico_1872_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-mexico-1872/Carl_Hermann_Berendt_Mexico_1872_Japanese_Complete_Translation.epub",
+    "pageCount": 46,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "地理事典",
+      "地域研究",
+      "歴史地理"
+    ],
+    "regions": [
+      "メキシコ",
+      "北アメリカ",
+      "中央アメリカ"
+    ],
+    "languages": [
+      "ドイツ語"
+    ],
+    "tags": [
+      "メキシコ地誌",
+      "人口",
+      "産業",
+      "交通",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-indianer-tehuantepec-1873",
+    "title": "テワンテペク地峡のインディアン",
+    "originalTitle": "Die Indianer des Isthmus von Tehuantepec",
+    "subtitle": "1873年原刊・原刊146–153頁、語彙表・数詞表 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "ZEITSCHRIFT FÜR ETHNOLOGIE · 1873",
+    "originalPublication": "ベルリン、1873年",
+    "year": 1873,
+    "extent": "PDF 10頁・原刊146–153頁・語彙表・数詞表",
+    "description": "テワンテペク地峡のサポテカ、ソケ、ミヘ、ワベ、ポポルカなどの諸集団と言語資料を検討した民族学・比較言語学報告。原刊146–153頁の本文、脚注、語彙表、数詞表を全訳しています。",
+    "cover": "publications/berendt-indianer-tehuantepec-1873/cover.jpg",
+    "pdf": "publications/berendt-indianer-tehuantepec-1873/Carl_Hermann_Berendt_Die_Indianer_des_Isthmus_von_Tehuantepec_1873_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-indianer-tehuantepec-1873/Carl_Hermann_Berendt_Die_Indianer_des_Isthmus_von_Tehuantepec_1873_Japanese_Complete_Translation.epub",
+    "pageCount": 10,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "民族学",
+      "比較言語学",
+      "言語資料"
+    ],
+    "regions": [
+      "メキシコ",
+      "テワンテペク地峡",
+      "オアハカ",
+      "チアパス"
+    ],
+    "languages": [
+      "ドイツ語",
+      "サポテカ語",
+      "ソケ語",
+      "ミヘ語",
+      "ワベ語"
+    ],
+    "tags": [
+      "テワンテペク",
+      "ソケ＝ミヘ諸語",
+      "語彙表",
+      "数詞",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-carib-karif-language-1873",
+    "title": "カリブ語またはカリフ語の文法・辞書について――その話者に関する若干の報告を添えて",
+    "originalTitle": "On a Grammar and Dictionary of the Carib or Karif Language, with Some Account of the People by Whom It Is Spoken",
+    "subtitle": "1873年年報報告・原刊363–364頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "SMITHSONIAN ANNUAL REPORT · 1873",
+    "originalPublication": "ワシントン、1874年（1873年年報）",
+    "year": 1873,
+    "extent": "PDF 3頁・原刊363–364頁",
+    "description": "アレグザンダー・ヘンダーソンによるカリフ語文法・辞書稿をスミソニアンへ提出し、話者の歴史、言語接触、刊行上の再編案を述べた短報。原刊363–364頁を全訳しています。",
+    "cover": "publications/berendt-carib-karif-language-1873/cover.jpg",
+    "pdf": "publications/berendt-carib-karif-language-1873/Carl_Hermann_Berendt_Carib_or_Karif_Language_1873_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-carib-karif-language-1873/Carl_Hermann_Berendt_Carib_or_Karif_Language_1873_Japanese_Complete_Translation.epub",
+    "pageCount": 3,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "言語学",
+      "書誌報告",
+      "民族誌"
+    ],
+    "regions": [
+      "英領ホンジュラス",
+      "ベリーズ",
+      "ホンジュラス",
+      "セント・ヴィンセント"
+    ],
+    "languages": [
+      "英語",
+      "ガリフナ語"
+    ],
+    "tags": [
+      "カリブ語",
+      "カリフ語",
+      "ガリフナ",
+      "言語接触",
+      "19世紀後半"
+    ]
+  },
+  {
+    "slug": "berendt-darien-language-1874",
+    "title": "ダリエン語",
+    "originalTitle": "The Darien Language",
+    "subtitle": "1874年原刊・原刊54–59頁、地図1点 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "THE AMERICAN HISTORICAL RECORD · 1874",
+    "originalPublication": "フィラデルフィア、1874年",
+    "year": 1874,
+    "extent": "PDF 10頁・原刊54–59頁・地図1点",
+    "description": "ダリエン地峡のクエバ、コイバ、チョコ、チョロなどの言語資料を、16世紀記録と近代語彙から比較した論文。原刊54–59頁の本文、脚注、語彙、著者原図の民族誌略図1点を全訳・収録しています。",
+    "cover": "publications/berendt-darien-language-1874/cover.jpg",
+    "pdf": "publications/berendt-darien-language-1874/Carl_Hermann_Berendt_The_Darien_Language_1874_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-darien-language-1874/Carl_Hermann_Berendt_The_Darien_Language_1874_Japanese_Complete_Translation.epub",
+    "pageCount": 10,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "比較言語学",
+      "民族誌",
+      "歴史言語学"
+    ],
+    "regions": [
+      "パナマ",
+      "ダリエン",
+      "コロンビア",
+      "チョコ"
+    ],
+    "languages": [
+      "英語",
+      "ダリエン諸語"
+    ],
+    "tags": [
+      "ダリエン",
+      "クエバ語",
+      "コイバ語",
+      "ウェイファー",
+      "民族誌地図"
+    ]
+  },
+  {
+    "slug": "berendt-ethnologie-nicaragua-1874",
+    "title": "ニカラグアの民族学について",
+    "originalTitle": "Zur Ethnologie von Nicaragua",
+    "subtitle": "1874年原刊・原刊70–72頁 日本語全訳",
+    "author": "カール・ヘルマン・ベレント",
+    "series": "CORRESPONDENZ-BLATT · 1874",
+    "originalPublication": "1874年",
+    "year": 1874,
+    "extent": "PDF 6頁・原刊70–72頁",
+    "description": "ベレントの書簡から編集部が抄出したニカラグア民族学の予備報告。チョロテガ、マリビオ／スブティアバ、ニカラオ、その他の集団と言語分布を扱う原刊70–72頁を全訳しています。",
+    "cover": "publications/berendt-ethnologie-nicaragua-1874/cover.jpg",
+    "pdf": "publications/berendt-ethnologie-nicaragua-1874/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1874_Japanese_Complete_Translation.pdf",
+    "epub": "publications/berendt-ethnologie-nicaragua-1874/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1874_Japanese_Complete_Translation.epub",
+    "pageCount": 6,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "民族学",
+      "言語分布",
+      "書簡抄録"
+    ],
+    "regions": [
+      "ニカラグア",
+      "マサヤ",
+      "レオン",
+      "ニコヤ"
+    ],
+    "languages": [
+      "ドイツ語",
+      "マンゲ語",
+      "スブティアバ語",
+      "ナワトル語"
+    ],
+    "tags": [
+      "ニカラグア",
+      "チョロテガ",
+      "マンゲ",
+      "スブティアバ",
+      "19世紀後半"
+    ]
+  },
+  {
     slug: "berendt-central-america-explorations-1867",
     title: "中央アメリカ探査報告",
     originalTitle: "Report of Explorations in Central America",
@@ -7794,6 +7997,46 @@ const publicationMetadata = {
     "publishedDate": "2026-08-14",
     "updatedDate": "2026-08-14"
   },
+  "berendt-mexico-1872": {
+    "sourceEdition": "Carl Hermann Berendt, “Mexico,” Deutsch-amerikanisches Conversations-Lexikon, Bd. 7, New York: F. Gerhard, 1872, pp. 261–288.",
+    "sourceProvider": "University of Michigan所蔵本をInternet Archiveが公開する第7巻（識別子bub_gb_uXdMAAAAMAAJ_2）を主底本とした。原刊261–288頁の画像、テキスト層および頁単位の再OCRを照合した。",
+    "sourceUrl": "https://archive.org/details/bub_gb_uXdMAAAAMAAJ_2",
+    "rights": "1872年刊の原著本文はパブリックドメインです。Internet Archiveの当該アイテムはcontributorをUniversity of Michigan、licenseurlをPublic Domain Mark 1.0（http://creativecommons.org/publicdomain/mark/1.0/）と表示し、rights欄には個別指定がありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-indianer-tehuantepec-1873": {
+    "sourceEdition": "H. Berendt, “Die Indianer des Isthmus von Tehuantepec,” Zeitschrift für Ethnologie, Bd. 5, 1873, pp. 146–153.",
+    "sourceProvider": "Getty Research Institute所蔵本をInternet Archiveが公開する第5巻（識別子zeitschriftfre05berl）を主底本とした。原刊146–153頁の画像、テキスト層および頁単位の再OCRを照合した。",
+    "sourceUrl": "https://archive.org/details/zeitschriftfre05berl",
+    "rights": "1873年刊の原著本文はパブリックドメインです。Internet Archiveの当該アイテムはcontributorをGetty Research Institute、possible-copyright-statusをNOT_IN_COPYRIGHTと表示しています。個別のCreative Commonsライセンスおよびrights欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-carib-karif-language-1873": {
+    "sourceEdition": "C. H. Berendt, “On a Grammar and Dictionary of the Carib or Karif Language, with Some Account of the People by Whom It Is Spoken,” Annual Report of the Board of Regents of the Smithsonian Institution for 1873, Washington: Government Printing Office, 1874, pp. 363–364.",
+    "sourceProvider": "Smithsonian Institution年報1873年巻をInternet Archiveが公開する画像（識別子annual-report-board-of-regents-smithsonian_1873）を主底本とし、原刊363–364頁の画像とOCRを照合した。",
+    "sourceUrl": "https://archive.org/details/annual-report-board-of-regents-smithsonian_1873",
+    "rights": "1874年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの当該アイテムには個別のCreative Commonsライセンス、rights欄、possible-copyright-status欄の指定がありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-darien-language-1874": {
+    "sourceEdition": "C. Hermann Berendt, “The Darien Language: Paper Read before the American Ethnological Society, Nov. 12th, 1873,” The American Historical Record, vol. 3, no. 26, February 1874, pp. 54–59, map.",
+    "sourceProvider": "Internet Archive公開の該当号（識別子sim_potters-american-monthly_1874-02_3_26、マイクロフィルム原資料番号IA1630708-07）を主底本とした。原刊54–59頁の画像とテキスト層を照合し、原刊55頁の地図を本文相当位置に収録した。",
+    "sourceUrl": "https://archive.org/details/sim_potters-american-monthly_1874-02_3_26",
+    "rights": "1874年刊の原著本文と地図はパブリックドメインです。Internet Archiveの当該アイテムはSerials in Microfilmコレクションとして公開され、contributorはInternet Archive、sourceはIA1630708-07 / microfilmです。個別のCreative Commonsライセンス、rights欄、possible-copyright-status欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
+  "berendt-ethnologie-nicaragua-1874": {
+    "sourceEdition": "“Wissenschaftliche Mittheilungen. Zur Ethnologie von Nicaragua,” Correspondenz-Blatt der deutschen Gesellschaft für Anthropologie, Ethnologie und Urgeschichte, Jg. 5, Nr. 9, September 1874, pp. 70–72. Berendtの書簡から編集部が抄出した予備報告。",
+    "sourceProvider": "Oxford University所蔵本をInternet Archiveが公開する1870–1875年合冊（識別子correspndenzbla00avgoog）を主底本とし、原刊70–72頁の画像とDjVu XMLを照合した。",
+    "sourceUrl": "https://archive.org/details/correspndenzbla00avgoog",
+    "rights": "1874年刊の原著本文はパブリックドメインです。Internet Archiveの当該アイテムは所蔵・提供元をOxford University、possible-copyright-statusをNOT_IN_COPYRIGHTと表示しています。個別のCreative Commonsライセンスおよびrights欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-08-14"
+  },
   "berendt-central-america-explorations-1867": {
     sourceEdition:
       "Carl Hermann Berendt, “Report of Explorations in Central America,” Annual Report of the Board of Regents of the Smithsonian Institution, Showing the Operations, Expenditures, and Condition of the Institution for the Year 1867, Washington: Government Printing Office, 1868, pp. 420–426.",
@@ -8950,6 +9193,11 @@ const shortWorkAuthorBySlug = {
   "berendt-escritos-garcia-icazbalceta-1870": "carl-hermann-berendt",
   "berendt-trabajos-linguisticos-juan-pio-perez-1871": "carl-hermann-berendt",
   "berendt-el-ramie-1871": "carl-hermann-berendt",
+  "berendt-mexico-1872": "carl-hermann-berendt",
+  "berendt-indianer-tehuantepec-1873": "carl-hermann-berendt",
+  "berendt-carib-karif-language-1873": "carl-hermann-berendt",
+  "berendt-darien-language-1874": "carl-hermann-berendt",
+  "berendt-ethnologie-nicaragua-1874": "carl-hermann-berendt",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
