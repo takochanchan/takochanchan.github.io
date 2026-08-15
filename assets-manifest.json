@@ -1928,6 +1928,24 @@
       "sha256": "f0995b7c67ea986a54879cc8be76b1c1b765622b69cf3495a92321a3308c221d"
     },
     {
+      "path": "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.epub",
+      "size": 212080,
+      "sha256": "7585d94389c62e8eed08566c0342636142f2a15d028d1cfd1d156a18df58d8e8"
+    },
+    {
+      "path": "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.pdf",
+      "size": 3502101,
+      "sha256": "1a0558adc1ceb55d9967b6e80baa2c133e59ef9df69380b69769570467c2cae5"
+    },
+    {
+      "path": "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/cover.jpg",
+      "size": 73028,
+      "sha256": "8cc73a627bfdf56d99c14e779ad4386eeacfd54667a014a850efb54d05ec1a80"
+    },
+    {
       "path": "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
       "size": 68504370,

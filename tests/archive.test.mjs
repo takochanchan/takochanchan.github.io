@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 236);
+  assert.equal(publications.length, 237);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -61,6 +61,49 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.types.length >= 8);
   assert.ok(taxonomy.regions.includes("ウスマシンタ川流域"));
   assert.ok(taxonomy.languages.includes("フランス語"));
+});
+
+test("Apuntes catalogo 1866 preserves bilingual authors and titles", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug ===
+      "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "アメリカ先住民諸語著述家目録のための覚書");
+  assert.equal(
+    item.originalTitle,
+    "Apuntes para un catálogo de escritores en lenguas indígenas de América",
+  );
+  assert.equal(item.author, "ホアキン・ガルシア・イカスバルセタ");
+  assert.equal(item.pageCount, 178);
+  assert.equal(item.figureCount, 1);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /全175項目/);
+  assert.ok(item.majorSources.length >= 12);
+  assert.ok(
+    item.majorSources.every(
+      (entry) => /（[^）]+）/.test(entry) && /『[^』]+（[^）]+）』/.test(entry),
+    ),
+  );
+  for (const source of [
+    "Doctrina Christiana, y Pláticas doctrinales",
+    "Grammar of the Mutsun Language",
+    "Arte y Dictionario en lengua Michuacana",
+    "Arte de la lengua Maya",
+    "Arte en Lengua Mixteca",
+    "Arte en Lengua Zapoteca",
+    "Sermones en mexicano",
+  ]) {
+    assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
+  }
+  assert.match(item.sourceEdition, /1866年初版、60部限定印刷/);
+  assert.match(item.sourceProvider, /Real Academia Española/);
+  assert.match(item.sourceProvider, /請求記号40-IX-75/);
+  assert.match(item.sourceProvider, /Google Books/);
+  assert.match(item.rights, /頁画像.*転載していません/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("Bibliografia mexicana lists representative included works bilingually", () => {
@@ -104,7 +147,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 105);
+  assert.equal(majorPublications.length, 106);
   assert.equal(shortPublications.length, 131);
   assert.equal(shortPublicationAuthors.length, 31);
   assert.deepEqual(
@@ -969,7 +1012,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">105<\/strong>件/);
+  assert.match(html, /id="book-match-count">106<\/strong>件/);
   assert.match(html, /id="paper-match-count">131<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

@@ -7180,6 +7180,73 @@ const publicationRecords = [
     ]
   },
   {
+    slug: "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
+    title: "アメリカ先住民諸語著述家目録のための覚書",
+    originalTitle:
+      "Apuntes para un catálogo de escritores en lenguas indígenas de América",
+    subtitle:
+      "1866年初版・前付・第I部、第II部、付録全175項目・追加訂正 日本語全訳",
+    author: "ホアキン・ガルシア・イカスバルセタ",
+    series: "APUNTES PARA UN CATÁLOGO · 1866",
+    originalPublication: "メキシコ、著者私設印刷所、1866年",
+    year: 1866,
+    extent:
+      "PDF 178頁・原刊前付V–XIII頁・本文1–157頁・全175項目・追加訂正・原刊標題紙画像1点",
+    description:
+      "アメリカ先住民諸語で著された、またはそれらを扱う文法書・辞書・教理書・説教集・手写本などを記録した、ホアキン・ガルシア・イカスバルセタの1866年刊書誌。著者蔵書を収める第I部82項目、他の蔵書・所在資料を収める第II部88項目、付録5項目、追加・訂正を省略なく収録し、各項目の著者名と書名を原語・日本語併記で掲載しています。",
+    majorSources: [
+      "Manuel Aguirre（マヌエル・アギーレ）『Doctrina Christiana, y Pláticas doctrinales（キリスト教教理および教理講話）』（1765年・第1項）",
+      "Felipe Arroyo de la Cuesta（フェリペ・アロヨ・デ・ラ・クエスタ）『Grammar of the Mutsun Language（ムツン語文法）』（1861年・第7項）",
+      "Juan Bautista（フアン・バウティスタ）『Confessionario en lengua Mexicana y Castellana（メキシコ語・カスティーリャ語聴罪師用書）』（1599年・第10項）",
+      "Juan Baptista de Lagunas（フアン・バウティスタ・デ・ラグナス）『Arte y Dictionario en lengua Michuacana（ミチョアカン語の文法と辞書）』（1574年・第14項）",
+      "Gabriel de San Buenaventura（ガブリエル・デ・サン・ブエナベントゥラ）『Arte de la lengua Maya（マヤ語文法）』（1684年・第15項）",
+      "Horacio Carochi（オラシオ・カロチ）『Arte de la Lengua Mexicana（メキシコ語文法）』（1645年・第16項）",
+      "Fray Alonso de Molina（アロンソ・デ・モリナ修道士）『Vocabulario en la lengua Castellana y Mexicana（カスティーリャ語・メキシコ語語彙集）』（1555年・第48項）",
+      "Ignacio de Paredes（イグナシオ・デ・パレデス）『Catecismo Mexicano（メキシコ語教理問答）』（1758年・第56項）",
+      "Fray Antonio de los Reyes（アントニオ・デ・ロス・レイェス修道士）『Arte en Lengua Mixteca（ミシュテカ語文法）』（1593年・第63項）",
+      "Padre Antonio del Rincon（アントニオ・デル・リンコン神父）『Arte Mexicana（メキシコ語文法）』（1593年・第64項）",
+      "Buckingham Smith（バッキンガム・スミス）『A grammatical Sketch of the Heve Language（エベ語文法概説）』（1861年・第72項）",
+      "Fray Juan de Córdoba（フアン・デ・コルドバ修道士）『Arte en Lengua Zapoteca（サポテカ語文法）』（1578年・第99項）",
+      "Fr. Maturino Gilberti（マトゥリノ・ヒルベルティ修道士）『Arte en lengua de Michoacan（ミチョアカン語文法）』（1558年・第113項）",
+      "Fray Bernardino de Sahagun（ベルナルディノ・デ・サアグン修道士）『Sermones en mexicano（メキシコ語説教集）』（1540–1563年・第158項）",
+    ],
+    cover:
+      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/cover.jpg",
+    pdf:
+      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.epub",
+    pageCount: 178,
+    figureCount: 1,
+    plateCount: 0,
+    types: ["書誌", "言語資料", "書物史", "研究資料"],
+    regions: ["メキシコ", "北アメリカ", "中部アメリカ", "南アメリカ"],
+    languages: [
+      "スペイン語",
+      "ラテン語",
+      "英語",
+      "フランス語",
+      "ナワトル語",
+      "マヤ語",
+      "ミチョアカン語",
+      "ミシュテカ語",
+      "サポテカ語",
+      "オパタ語",
+      "ムツン語",
+      "ピマ語",
+    ],
+    tags: [
+      "アメリカ先住民諸語",
+      "書誌学",
+      "宣教言語学",
+      "文法書",
+      "辞書",
+      "教理書",
+      "稀覯書",
+      "19世紀",
+    ],
+  },
+  {
     slug: "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886",
     title: "16世紀メキシコ書誌",
     originalTitle: "Bibliografía mexicana del siglo XVI",
@@ -7307,6 +7374,18 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866": {
+    sourceEdition:
+      "Joaquín García Icazbalceta『Apuntes para un catálogo de escritores en lenguas indígenas de América』（México: Imprenta particular del autor、1866年初版、60部限定印刷）。",
+    sourceProvider:
+      "スペイン王立アカデミー（Real Academia Española）所蔵の著者署名入り第21号本（請求記号40-IX-75）の全頁画像を本文の読解・照合に用い、同館画像は転載していない。原刊標題紙画像1点のみ、大英図書館所蔵本をGoogle Booksがデジタル化した1866年初版本（ID: 94paAAAAcAAJ）から、透かしを保持して収録した。1898年第二版は判読疑義の限定照合にのみ用いた。",
+    sourceUrl:
+      "https://books.google.com/books/about/Apuntes_para_un_Cat%C3%A1logo_de_Escritores.html?id=94paAAAAcAAJ",
+    rights:
+      "1866年刊の原著本文はパブリックドメインです。スペイン王立アカデミーの頁画像は読解・照合にのみ使用し、本版には転載していません。Google Booksが大英図書館所蔵本から作成した原刊標題紙画像1点は、公開元の表示と透かしを保持し、非商用で収録しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
+  },
   "baqueiro-ensayo-revoluciones-yucatan-1878-1887": {
     sourceEdition:
       "Serapio Baqueiro『Ensayo histórico sobre las revoluciones de Yucatán desde el año de 1840 hasta 1864』改訂全3巻版（Mérida: Imprenta de Manuel Heredia Argüelles, 1878–1879; Tipografía de G. Canto, 1887）。",

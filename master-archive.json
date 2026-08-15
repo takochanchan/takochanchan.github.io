@@ -654,6 +654,16 @@
       "master_size": 68393129,
       "master_sha256": "c4ef14c7d7460d184d62a031781b551827db9e4baf1b9656aab098e45f7b67a3"
     },
+    "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866": {
+      "canonical_path": "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866-20260815-v1",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866-20260815-v1",
+      "ledger_commit": "09fff004396053b573297c0f8fd9ce5f03c591fa",
+      "master_filename": "master.docx",
+      "master_size": 1284391,
+      "master_sha256": "edfaf28bd9c0590c8c856a1d66a45aeb6cbbb3b51f4fa87077a05912d360abc8"
+    },
     "baqueiro-ensayo-revoluciones-yucatan-1878-1887": {
       "canonical_path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/master.docx",
       "status": "pending_lfs",
