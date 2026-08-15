@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-15 — Carl Hermann Berendt 未刊行資料 第2組（3点）新規公開
+
+- 「中央アメリカ先住民とその諸言語」、「ニカラグアで話されるカスティーリャ語の語彙と慣用表現」、「チョロテガ／マングエ語とスブティアバ語――比較語彙・文法覚書・採集資料」を、各1点の独立した論文形式PDF・EPUBとして公開した。PDFは順に14頁、112頁、60頁。
+- 底本はBrigham Young University, L. Tom Perry Special Collections所蔵William Gates papers（MSS 279, Series 10, Box 109, Folder 3）と、University of Pennsylvania Libraries, Kislak Center所蔵Berendt-Brinton Linguistic Collection（Item 178、Items 144・242・247）。原資料本文はパブリックドメインであり、BYU公開記録はPublic domain、Penn公開記録はNo Copyright – United States（NoC-US 1.0）と表示している。
+- 公開PDFのSHA-256は順に `ab5067d52e2ac19650b441c4ed9e40aaf7f916ed0978591c3338da6abd080451`、`43a7a7d9511831544bd9b7fcc6f53771e00cf831256ff89012945a26016f141f`、`e730e08fd0e051f68cbffb30f44343b192874dfaa9281890ff6220ab796f4b5e`。EPUBは順に `e236c9174567766119aefed3b7346dbf3b3d0a2fff29b46767f7797fbc5d1453`、`080f78ca593b1f678dec6ac56a24f94649ebc8585d6cdd01d598a5d87dfbabb0`、`c4d5f3f43a0219b1aa9510ea9a4c7f5bf746f8a4d32e9ce38f1216004ad60331`。
+- 編集可能正本・書誌・権利・底本マニフェスト・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `488584531c8508467decb7efd3729cc7d0bef106` に固定した。非公開Releaseへの格納・再取得照合はGitHub Actions run `31883522728`、公開Releaseへの格納・再取得照合はrun `31883938278` で完了した。
+
 ## 2026-08-15 — Francisco Cervantes de Salazar『México en 1554』1875年版 新規公開
 
 - 1875年版の前付I–L頁、ラテン語対話3篇、ホアキン・ガルシア・イカスバルセタによるスペイン語訳3篇、原注527件、図版3点を原刊順に収録したPDF 402頁とリフロー型EPUBを公開した。ラテン語原文は保持し、イカスバルセタのスペイン語本文を日本語へ訳した。

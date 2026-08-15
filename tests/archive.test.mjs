@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 241);
+  assert.equal(publications.length, 244);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -148,7 +148,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 107);
-  assert.equal(shortPublications.length, 134);
+  assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -172,6 +172,9 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "berendt-veracruz-correspondence-1861-1862",
       "berendt-drei-tage-cuba-1860",
       "berendt-acasaguastlan-jilotepec-1878",
+      "berendt-indigenas-america-central-1877",
+      "berendt-palabras-modismos-nicaragua-1874",
+      "berendt-mangue-subtiaba-dossier-1874",
       "berendt-vermessungsarbeiten-mexiko-1862",
       "berendt-maasse-gewichte-mexiko-1862",
       "berendt-handel-veracruz-1862",
@@ -757,6 +760,54 @@ test("Penn Berendt batch 05 uses Japanese titles and collection subtitles", () =
   }
 });
 
+test("Berendt batch 06 uses Japanese titles and collection subtitles", () => {
+  const expected = new Map([
+    [
+      "berendt-indigenas-america-central-1877",
+      [
+        "中央アメリカ先住民とその諸言語",
+        "William Gates papers, MSS 279, Series 10, Box 109, Folder 3",
+        14,
+        /contentdm\.lib\.byu\.edu/,
+        /Public domain/,
+      ],
+    ],
+    [
+      "berendt-palabras-modismos-nicaragua-1874",
+      [
+        "ニカラグアで話されるカスティーリャ語の語彙と慣用表現",
+        "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 178",
+        112,
+        /colenda\.library\.upenn\.edu/,
+        /No Copyright – United States/,
+      ],
+    ],
+    [
+      "berendt-mangue-subtiaba-dossier-1874",
+      [
+        "チョロテガ／マングエ語とスブティアバ語――比較語彙・文法覚書・採集資料",
+        "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 144, 242, 247",
+        60,
+        /colenda\.library\.upenn\.edu/,
+        /No Copyright – United States/,
+      ],
+    ],
+  ]);
+  for (const [slug, [title, subtitle, pages, sourcePattern, rightsPattern]] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, "carl-hermann-berendt", slug);
+    assert.equal(item.title, title, slug);
+    assert.equal(item.subtitle, subtitle, slug);
+    assert.equal(item.pageCount, pages, slug);
+    assert.match(item.sourceUrl, sourcePattern, slug);
+    assert.match(item.rights, rightsPattern, slug);
+    assert.match(item.rights, /パブリックドメイン/, slug);
+    assert.doesNotMatch(item.rights, /本訳|再利用ライセンス/, slug);
+  }
+});
+
 test("México en 1554 retains its bilingual 1875 edition scope", () => {
   const item = publications.find(
     (publication) => publication.slug === "cervantes-salazar-mexico-en-1554-1875",
@@ -1081,7 +1132,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">107<\/strong>件/);
-  assert.match(html, /id="paper-match-count">134<\/strong>件/);
+  assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

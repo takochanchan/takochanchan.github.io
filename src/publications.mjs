@@ -7496,6 +7496,111 @@ const publicationRecords = [
       "ホセ・イノセンテ・コルドン",
     ],
   },
+  {
+    slug: "berendt-indigenas-america-central-1877",
+    title: "中央アメリカ先住民とその諸言語",
+    originalTitle: "Los indígenas de la América Central y sus idiomas",
+    subtitle:
+      "William Gates papers, MSS 279, Series 10, Box 109, Folder 3",
+    author: "カール・ヘルマン・ベレント",
+    series: "WILLIAM GATES PAPERS · MSS 279 · SERIES 10 · BOX 109 · FOLDER 3",
+    originalPublication: "1877年（BYU所蔵スペイン語草稿複写）",
+    year: 1877,
+    extent: "PDF 14頁・BYU公開45頁・番号付草稿本文35頁",
+    description:
+      "マヤ人、タバスコのチョンタル人、チョル人を地理・歴史・文献・言語の諸面から論じたベレントの草稿。番号付本文1–35頁を復元配列し、地名と言語接触の考察、1618年バリャドリード証言の抜書までを訳しています。",
+    cover:
+      "publications/berendt-indigenas-america-central-1877/cover.jpg",
+    pdf:
+      "publications/berendt-indigenas-america-central-1877/C_Hermann_Berendt_Los_indigenas_America_Central_1877_Japanese_Translation.pdf",
+    epub:
+      "publications/berendt-indigenas-america-central-1877/C_Hermann_Berendt_Los_indigenas_America_Central_1877_Japanese_Translation.epub",
+    pageCount: 14,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["言語資料", "民族誌", "自筆稿"],
+    regions: ["中央アメリカ", "ユカタン", "チアパス", "タバスコ"],
+    languages: ["スペイン語", "マヤ諸語", "チョンタル語", "チョル語"],
+    tags: [
+      "マヤ人",
+      "チョンタル",
+      "チョル",
+      "歴史言語学",
+      "地名",
+      "1618年バリャドリード証言",
+    ],
+  },
+  {
+    slug: "berendt-palabras-modismos-nicaragua-1874",
+    title: "ニカラグアで話されるカスティーリャ語の語彙と慣用表現",
+    originalTitle:
+      "Palabras y modismos de la lengua castellana según se habla en Nicaragua",
+    subtitle:
+      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 178",
+    author: "カール・ヘルマン・ベレント",
+    series: "BERENDT-BRINTON LINGUISTIC COLLECTION · ITEM 178",
+    originalPublication: "ニカラグア、1874年（Penn自筆稿）",
+    year: 1874,
+    extent: "PDF 112頁・Penn公開425頁・本文1,346項目＋追補273項目",
+    description:
+      "ニカラグアの地方語、語法、動植物名、民俗語彙を集成した自筆辞書。本文1,346項目と追補273項目、計1,619項目について、見出し語の原綴、定義、用例、相互参照、余白追記を保持して訳しています。",
+    cover:
+      "publications/berendt-palabras-modismos-nicaragua-1874/cover.jpg",
+    pdf:
+      "publications/berendt-palabras-modismos-nicaragua-1874/C_Hermann_Berendt_Palabras_modismos_Nicaragua_1874_Japanese_Translation.pdf",
+    epub:
+      "publications/berendt-palabras-modismos-nicaragua-1874/C_Hermann_Berendt_Palabras_modismos_Nicaragua_1874_Japanese_Translation.epub",
+    pageCount: 112,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["辞書", "言語資料", "自筆稿"],
+    regions: ["ニカラグア", "中央アメリカ"],
+    languages: ["スペイン語"],
+    tags: [
+      "ニカラグア・スペイン語",
+      "地方語彙",
+      "慣用表現",
+      "動植物名",
+      "民俗語彙",
+      "歴史辞書学",
+    ],
+  },
+  {
+    slug: "berendt-mangue-subtiaba-dossier-1874",
+    title:
+      "チョロテガ／マングエ語とスブティアバ語――比較語彙・文法覚書・採集資料",
+    originalTitle:
+      "Lengua chorotega o mangue; Apuntes sobre la lengua de subtiaba; The Mangues (Chorotegans or Dirians), Nicaragua",
+    subtitle:
+      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 144, 242, 247",
+    author: "カール・ヘルマン・ベレント",
+    series: "BERENDT-BRINTON LINGUISTIC COLLECTION · ITEMS 144, 242, 247",
+    originalPublication: "ニカラグア、1874年頃（Penn写本資料）",
+    year: 1874,
+    extent: "PDF 60頁・Penn原資料PDF計103頁・比較語彙／文法覚書／採集票",
+    description:
+      "相互参照関係にある三つのPennレコードを一資料篇にまとめた研究用訳稿。チアパネコ語、マングエ語、スブティアバ語の比較語彙、発音・文法・会話例、話者別採集票、民族誌・地名・書誌メモを収録しています。",
+    cover:
+      "publications/berendt-mangue-subtiaba-dossier-1874/cover.jpg",
+    pdf:
+      "publications/berendt-mangue-subtiaba-dossier-1874/C_Hermann_Berendt_Mangue_Subtiaba_Dossier_1874_Japanese_Translation.pdf",
+    epub:
+      "publications/berendt-mangue-subtiaba-dossier-1874/C_Hermann_Berendt_Mangue_Subtiaba_Dossier_1874_Japanese_Translation.epub",
+    pageCount: 60,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["言語資料", "比較語彙", "自筆稿"],
+    regions: ["ニカラグア", "チアパス", "中央アメリカ"],
+    languages: ["スペイン語", "マングエ語", "スブティアバ語", "チアパネコ語"],
+    tags: [
+      "チョロテガ",
+      "マングエ語",
+      "スブティアバ語",
+      "チアパネコ語",
+      "比較語彙",
+      "歴史言語資料",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -8566,6 +8671,47 @@ const publicationMetadata = {
     "rights": "原資料本文は米国においてパブリックドメインです。三つのPennデジタル資料にはRightsStatements.orgのNo Copyright - United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。本日本語訳には再利用ライセンスを設定していません。",
     "publishedDate": "2026-08-15",
     "updatedDate": "2026-08-15"
+  },
+  "berendt-indigenas-america-central-1877": {
+    sourceEdition:
+      "C. Hermann Berendt, Los indígenas de la América Central y sus idiomas, 1877, William Gates papers, MSS 279, Series 10, Box 109, Folder 3.",
+    sourceProvider:
+      "L. Tom Perry Special Collections, Harold B. Lee Library, Brigham Young University所蔵のスペイン語草稿複写。BYU Digital Collectionsの公開画像から番号付本文1–35頁を復元配列し、公開画像11–46の無番号作業紙群は翻訳対象外とした。",
+    sourceUrl:
+      "https://contentdm.lib.byu.edu/digital/collection/Gates/id/104276",
+    additionalSourceUrls: [
+      "https://archives.lib.byu.edu/repositories/14/archival_objects/54387",
+    ],
+    rights:
+      "原資料本文はパブリックドメインです。BYU Digital Collectionsの公開記録はRightsをPublic domain、Rights HolderをBrigham Young Universityと表示しています。公開・所蔵：L. Tom Perry Special Collections, Harold B. Lee Library, Brigham Young University。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
+  },
+  "berendt-palabras-modismos-nicaragua-1874": {
+    sourceEdition:
+      "Carl Hermann Berendt, Palabras y modismos de la lengua castellana según se habla en Nicaragua, 1874, Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 178.",
+    sourceProvider:
+      "University of Pennsylvania Libraries, Kislak Center for Special Collections, Rare Books and Manuscripts所蔵のスペイン語自筆語彙集を収めるColenda公開PDF全425頁を主底本とし、本文1,346項目と追補273項目を原画像と照合した。",
+    sourceUrl: "https://colenda.library.upenn.edu/catalog/81431-p3833nd59",
+    rights:
+      "原資料本文は米国においてパブリックドメインです。Pennのデジタル資料にはRightsStatements.orgのNo Copyright – United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
+  },
+  "berendt-mangue-subtiaba-dossier-1874": {
+    sourceEdition:
+      "Lengua chorotega o mangue (Item 144); Apuntes sobre la lengua de subtiaba (Item 242); The Mangues (Chorotegans or Dirians), Nicaragua (Item 247), Berendt-Brinton Linguistic Collection, Ms. Coll. 700.",
+    sourceProvider:
+      "University of Pennsylvania Libraries, Kislak Center for Special Collections, Rare Books and Manuscripts所蔵の三レコードを公開するColenda PDF計103頁を主底本とした。相互参照関係のある資料を一資料篇に収め、各Itemと公開PDF頁の境界を保持した。",
+    sourceUrl: "https://colenda.library.upenn.edu/catalog/81431-p36m33q58",
+    additionalSourceUrls: [
+      "https://colenda.library.upenn.edu/catalog/81431-p39c6sn0w",
+      "https://colenda.library.upenn.edu/catalog/81431-p37d2qv0z",
+    ],
+    rights:
+      "原資料本文は米国においてパブリックドメインです。三つのPennデジタル資料にはRightsStatements.orgのNo Copyright – United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
   },
   "berendt-central-america-explorations-1867": {
     sourceEdition:
@@ -9735,6 +9881,9 @@ const shortWorkAuthorBySlug = {
   "berendt-veracruz-correspondence-1861-1862": "carl-hermann-berendt",
   "berendt-drei-tage-cuba-1860": "carl-hermann-berendt",
   "berendt-acasaguastlan-jilotepec-1878": "berendt-bromowicz-cordon",
+  "berendt-indigenas-america-central-1877": "carl-hermann-berendt",
+  "berendt-palabras-modismos-nicaragua-1874": "carl-hermann-berendt",
+  "berendt-mangue-subtiaba-dossier-1874": "carl-hermann-berendt",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
   "galindo-usumacinta-1833": "juan-galindo",
