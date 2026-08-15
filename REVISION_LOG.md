@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-15 — Serapio Baqueiro『Ensayo histórico sobre las revoluciones de Yucatán』日本語全訳 新規公開
+
+- 1878年、1879年、1887年刊の改訂全3巻版から、前付、全24章、結び、証拠文書、原注75件、各巻索引を全訳し、原刊頁標識1,536件と原刊肖像図版1点を保持したPDF 1,251頁とEPUBを公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 全体を軽く通読し、固有名詞、時系列、章構成、資料位置標識、原注参照を中心に訳文をレビューした。Fancourt版DOCXを参考設定として使うのではなく、同DOCXを文字どおり複製したうえで本文を置換・流し込みした編集可能DOCXを正本とし、Pandocのreference-doc機能は使用していない。
+- 底本はBritish Library所蔵本（請求記号9781.dd.11、システム番号000192443）のデジタル画像とALTO OCR。第1巻の献辞頁とビセンテ・リバ・パラシオ肖像はGoogle Books所収のColumbia University所蔵本（volume ID `OWpKAAAAYAAJ`）でも照合した。
+- 公開PDFのSHA-256は `5b70f159595a3610297c678e8f2418455aad60d3eadc3874e1d0c8af8f828658`、EPUBは `5160027a21a0a289d35678850ad78715810ad7e017c11756a7279fff74e323ad`、DOCX正本は `d252468a0deaf406328a3a4c675c17f0787a8bb89aca075a2999c8c3b19c5859`。
+- 編集可能DOCX正本と書誌・権利・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `09fff004396053b573297c0f8fd9ce5f03c591fa` に固定した。非公開Releaseへの格納・再取得照合はGitHub Actions run `31857721844`、公開Releaseへの格納・再取得照合はrun `31857995331` で完了した。
+
 ## 2026-08-15 — Joaquín García Icazbalceta『Bibliografía mexicana del siglo XVI』日本語全訳 新規公開
 
 - 1886年初版の前付V–XXIX頁、本文1–419頁、本編116項目、刊行直前追記2項目、原注520件、索引、正誤表を全訳し、原刊図版50点・本文版画7点を収録したPDF 921頁とEPUBを公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。

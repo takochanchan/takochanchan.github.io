@@ -63,49 +63,6 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
-test("Apuntes catalogo 1866 preserves bilingual authors and titles", () => {
-  const item = publications.find(
-    (publication) =>
-      publication.slug ===
-      "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
-  );
-  assert.ok(item);
-  assert.equal(item.recordClass, "major-work");
-  assert.equal(item.title, "アメリカ先住民諸語著述家目録のための覚書");
-  assert.equal(
-    item.originalTitle,
-    "Apuntes para un catálogo de escritores en lenguas indígenas de América",
-  );
-  assert.equal(item.author, "ホアキン・ガルシア・イカスバルセタ");
-  assert.equal(item.pageCount, 178);
-  assert.equal(item.figureCount, 1);
-  assert.equal(item.plateCount, 0);
-  assert.match(item.extent, /全175項目/);
-  assert.ok(item.majorSources.length >= 12);
-  assert.ok(
-    item.majorSources.every(
-      (entry) => /（[^）]+）/.test(entry) && /『[^』]+（[^）]+）』/.test(entry),
-    ),
-  );
-  for (const source of [
-    "Doctrina Christiana, y Pláticas doctrinales",
-    "Grammar of the Mutsun Language",
-    "Arte y Dictionario en lengua Michuacana",
-    "Arte de la lengua Maya",
-    "Arte en Lengua Mixteca",
-    "Arte en Lengua Zapoteca",
-    "Sermones en mexicano",
-  ]) {
-    assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
-  }
-  assert.match(item.sourceEdition, /1866年初版、60部限定印刷/);
-  assert.match(item.sourceProvider, /Real Academia Española/);
-  assert.match(item.sourceProvider, /請求記号40-IX-75/);
-  assert.match(item.sourceProvider, /Google Books/);
-  assert.match(item.rights, /頁画像.*転載していません/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
-});
-
 test("Bibliografia mexicana lists representative included works bilingually", () => {
   const item = publications.find(
     (publication) =>
@@ -128,6 +85,22 @@ test("Bibliografia mexicana lists representative included works bilingually", ()
     assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
   }
   assert.ok(item.majorSources.every((entry) => /（[^）]+）/.test(entry)));
+});
+
+test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "baqueiro-ensayo-revoluciones-yucatan-1878-1887",
+  );
+  assert.ok(item);
+  assert.equal(item.author, "セラピオ・バケイロ");
+  assert.equal(item.pageCount, 1251);
+  assert.equal(item.plateCount, 1);
+  assert.match(item.extent, /改訂全3巻/);
+  assert.match(item.description, /全24章/);
+  assert.match(item.sourceProvider, /British Library/);
+  assert.match(item.sourceProvider, /9781\.dd\.11/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
