@@ -145,7 +145,7 @@ const verifyCounts = async (query, expected) => {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 38,
+    books: 39,
     papers: 6,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
@@ -161,9 +161,9 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 49, papers: 14 });
-  await verifyCounts("ポ", { books: 46, papers: 11 });
+  await verifyCounts("ポ", { books: 47, papers: 11 });
   const pageChecks = [
-    ["グリハルバ", grijalva, 226],
+    ["グリハルバ", grijalva, 237],
     ["グリハルバ川", grijalvaRiver, 67],
     ["ピエドラス", piedras, 143],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
