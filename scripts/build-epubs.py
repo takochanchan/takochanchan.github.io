@@ -275,6 +275,9 @@ DOCX_SOURCES = {
     "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886": SOURCES
     / "翻訳サイト"
     / "Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.docx",
+    "cervantes-salazar-mexico-en-1554-1875": SOURCES
+    / "翻訳サイト"
+    / "Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.docx",
 }
 
 MARKDOWN_SOURCES = {

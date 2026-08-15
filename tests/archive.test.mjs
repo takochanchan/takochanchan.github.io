@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 240);
+  assert.equal(publications.length, 241);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -147,7 +147,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 106);
+  assert.equal(majorPublications.length, 107);
   assert.equal(shortPublications.length, 134);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -757,6 +757,26 @@ test("Penn Berendt batch 05 uses Japanese titles and collection subtitles", () =
   }
 });
 
+test("México en 1554 retains its bilingual 1875 edition scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "cervantes-salazar-mexico-en-1554-1875",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "1554年のメキシコ");
+  assert.equal(item.originalTitle, "México en 1554");
+  assert.equal(item.pageCount, 402);
+  assert.deepEqual(item.languages, ["ラテン語", "スペイン語"]);
+  assert.match(item.subtitle, /ラテン語原文/);
+  assert.match(item.subtitle, /イカスバルセタ西訳の日本語訳/);
+  assert.match(item.sourceProvider, /Brown University Library/);
+  assert.match(item.sourceProvider, /Internet Archive/);
+  assert.match(item.sourceProvider, /Real Academia Española/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.doesNotMatch(item.subtitle, /日本語全訳/);
+});
+
 test("approved Galindo short-paper batch remains individually catalogued", () => {
   const expectedPages = new Map([
     ["galindo-caribs-central-america-1833", 3],
@@ -1060,7 +1080,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">106<\/strong>件/);
+  assert.match(html, /id="book-match-count">107<\/strong>件/);
   assert.match(html, /id="paper-match-count">134<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

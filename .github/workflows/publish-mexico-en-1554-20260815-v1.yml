@@ -1,0 +1,269 @@
+name: Publish Mexico en 1554 release assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-mexico-en-1554-20260815-v1.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-release-assets
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_BRANCH: agent/mexico-1554-public-assets-20260815-v1
+      STAGING_ROOT: .release-staging/mexico-public-20260815-v1
+      WORKFLOW_PATH: .github/workflows/publish-mexico-en-1554-20260815-v1.yml
+      RELEASE_TAG: publications-current
+      BUNDLE_SIZE: "6437901"
+      BUNDLE_SHA256: 1929cc049fdc665e1e9c99283c009048cbfa323bbdf32f3dd97e5520b6a4be0f
+
+    steps:
+      - name: Check out checksum-pinned public assets
+        uses: actions/checkout@v4
+        with:
+          ref: agent/mexico-1554-public-assets-20260815-v1
+
+      - name: Restore checksum-pinned public bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat "$STAGING_ROOT"/bundle.tar.gz.part-* > /tmp/mexico-public.tar.gz
+          test "$(stat -c %s /tmp/mexico-public.tar.gz)" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  /tmp/mexico-public.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/mexico-public.tar.gz -C "$STAGING_ROOT"
+
+      - name: Ensure PDF inspection tools are available
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdfinfo >/dev/null 2>&1 || ! command -v pdftotext >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+
+      - name: Validate public PDF and EPUB
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import subprocess
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path('.release-staging/mexico-public-20260815-v1')
+          payload = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          assert len(payload) == 1
+          entry = payload[0]
+          assert entry['slug'] == 'cervantes-salazar-mexico-en-1554-1875'
+          assert entry['title'] == '1554年のメキシコ'
+          assert entry['original_title'] == 'México en 1554'
+          assert entry['source_page_markers'] == 239
+          assert entry['footnotes'] == 527
+          assert entry['embedded_images'] == 3
+          expected_files = {'manifest.json'}
+          for kind in ('pdf', 'epub'):
+              asset = entry[kind]
+              expected_files.add(asset['filename'])
+              data = (root / asset['filename']).read_bytes()
+              assert len(data) == asset['size'], kind
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], kind
+
+          banned = ('日本語全訳', '確認用校正刷', '日本語全訳版（確認用）')
+          marker_re = re.compile(r'^〔原刊\s+p\.\s*(?:[IVXLCDM]+|\d+)[^〕]*〕$', re.MULTILINE)
+          pdf = root / entry['pdf']['filename']
+          pdf_bytes = pdf.read_bytes()
+          assert pdf_bytes.startswith(b'%PDF-') and b'%%EOF' in pdf_bytes[-4096:]
+          info = subprocess.check_output(['pdfinfo', str(pdf)], text=True)
+          assert re.search(r'^Pages:\s+402$', info, re.MULTILINE)
+          assert re.search(r'^Page size:\s+612 x 792 pts \(letter\)$', info, re.MULTILINE)
+          assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
+          assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
+          pdf_text = subprocess.check_output(['pdftotext', str(pdf), '-'], text=True)
+          assert len(marker_re.findall(pdf_text)) == 239
+          pdf_compact = re.sub(r'\s+', '', pdf_text)
+          for phrase in (
+              'MÉXICO EN 1554',
+              entry['original_title'],
+              entry['author'],
+              entry['editor_translator'],
+              '第1対話',
+              '第2対話',
+              '第3対話',
+              '文献目録',
+              'O. S. C. S. M. E. C. A. R.',
+              'Brown University Library',
+              'Internet Archive',
+              'NOT_IN_COPYRIGHT',
+              'Real Academia Española',
+              '5-IV-28',
+          ):
+              assert re.sub(r'\s+', '', phrase) in pdf_compact, phrase
+          assert '�' not in pdf_text and '□' not in pdf_text
+          for phrase in banned:
+              assert phrase not in pdf_text and phrase not in info, phrase
+
+          epub = root / entry['epub']['filename']
+          with zipfile.ZipFile(epub) as archive:
+              assert archive.testzip() is None
+              first = archive.infolist()[0]
+              assert first.filename == 'mimetype' and first.compress_type == 0
+              assert archive.read('mimetype') == b'application/epub+zip'
+              container = ET.fromstring(archive.read('META-INF/container.xml'))
+              rootfile = next(node for node in container.iter() if node.tag.endswith('}rootfile'))
+              opf = ET.fromstring(archive.read(rootfile.attrib['full-path']))
+              cover_items = [item for item in opf.iter() if item.tag.endswith('}item') and 'cover-image' in item.attrib.get('properties', '').split()]
+              assert len(cover_items) == 1
+              roots = [ET.fromstring(archive.read(name)) for name in archive.namelist() if name.endswith(('.xhtml', '.html'))]
+              epub_text = ' '.join(' '.join(root_node.itertext()) for root_node in roots)
+              source_nodes = [node for root_node in roots for node in root_node.iter() if 'source-page' in node.attrib.get('class', '').split()]
+              def epub_type(node):
+                  return ' '.join(value for key, value in node.attrib.items() if key == 'epub:type' or key.endswith('}type'))
+              noterefs = [node for root_node in roots for node in root_node.iter() if 'noteref' in epub_type(node).split()]
+              footnote_nodes = [node for root_node in roots for node in root_node.iter() if 'footnote' in epub_type(node).split()]
+              images = [name for name in archive.namelist() if pathlib.PurePosixPath(name).suffix.lower() in {'.jpg', '.jpeg', '.png', '.gif', '.svg', '.webp'}]
+              assert len(source_nodes) == 239, len(source_nodes)
+              assert len(noterefs) == 527, len(noterefs)
+              assert len(footnote_nodes) == 527, len(footnote_nodes)
+              assert len(images) == 4, images
+              assert len(re.findall(r'[ぁ-んァ-ヶ一-龠々〆ヵヶ]', epub_text)) >= 190000
+              for phrase in (
+                  entry['title'],
+                  entry['original_title'],
+                  entry['author'],
+                  entry['editor_translator'],
+                  '第1対話',
+                  '第2対話',
+                  '第3対話',
+                  '文献目録',
+                  'Brown University Library',
+                  'NOT_IN_COPYRIGHT',
+                  'Real Academia Española',
+              ):
+                  assert phrase in epub_text, phrase
+              for phrase in banned:
+                  assert phrase not in epub_text, phrase
+
+          actual = {path.name for path in root.iterdir() if path.is_file()}
+          assert actual == expected_files, (actual, expected_files)
+          PY
+
+      - name: Upload assets and merge the public checksum ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null
+          python - <<'PY' > /tmp/public-asset-names.txt
+          import json
+          payload = json.load(open('.release-staging/mexico-public-20260815-v1/manifest.json'))
+          for entry in payload:
+              print(entry['pdf']['filename'])
+              print(entry['epub']['filename'])
+          PY
+          while IFS= read -r name; do
+            gh release upload "$RELEASE_TAG" "$STAGING_ROOT/$name" --repo "$GITHUB_REPOSITORY" --clobber
+          done < /tmp/public-asset-names.txt
+
+          mkdir -p /tmp/checksum-ledger
+          if ! gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/checksum-ledger; then
+            : > /tmp/checksum-ledger/SHA256SUMS.txt
+          fi
+          python - <<'PY'
+          import json
+          import pathlib
+          import re
+
+          root = pathlib.Path('.release-staging/mexico-public-20260815-v1')
+          checksum_path = pathlib.Path('/tmp/checksum-ledger/SHA256SUMS.txt')
+          checksums = {}
+          for line in checksum_path.read_text(encoding='utf-8').splitlines():
+              if not line.strip():
+                  continue
+              digest, name = line.split(maxsplit=1)
+              name = name.lstrip('*')
+              assert re.fullmatch(r'[0-9a-f]{64}', digest), line
+              checksums[name] = digest
+          for entry in json.loads((root / 'manifest.json').read_text(encoding='utf-8')):
+              for kind in ('pdf', 'epub'):
+                  asset = entry[kind]
+                  checksums[asset['filename']] = asset['sha256']
+          checksum_path.write_text(
+              ''.join(f'{checksums[name]}  {name}\n' for name in sorted(checksums, key=str.casefold)),
+              encoding='utf-8',
+          )
+          PY
+          gh release upload "$RELEASE_TAG" /tmp/checksum-ledger/SHA256SUMS.txt --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and verify every published byte
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/verified-public
+          while IFS= read -r name; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$name" --dir /tmp/verified-public --clobber
+            cmp "$STAGING_ROOT/$name" "/tmp/verified-public/$name"
+          done < /tmp/public-asset-names.txt
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/verified-public --clobber
+          cmp /tmp/checksum-ledger/SHA256SUMS.txt /tmp/verified-public/SHA256SUMS.txt
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+
+          payload = json.load(open('.release-staging/mexico-public-20260815-v1/manifest.json'))
+          root = pathlib.Path('/tmp/verified-public')
+          checksum_lines = root.joinpath('SHA256SUMS.txt').read_text(encoding='utf-8').splitlines()
+          checksum_map = {line.split(maxsplit=1)[1].lstrip('*'): line.split(maxsplit=1)[0] for line in checksum_lines if line.strip()}
+          for entry in payload:
+              for kind in ('pdf', 'epub'):
+                  asset = entry[kind]
+                  data = (root / asset['filename']).read_bytes()
+                  assert len(data) == asset['size']
+                  assert hashlib.sha256(data).hexdigest() == asset['sha256']
+                  assert checksum_map[asset['filename']] == asset['sha256']
+          PY
+
+      - name: Check out current public main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: public-main
+          fetch-depth: 0
+
+      - name: Commit workflow cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C public-main fetch origin main
+          git -C public-main checkout -B main origin/main
+          git -C public-main config user.name "github-actions[bot]"
+          git -C public-main config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C public-main rm -f --ignore-unmatch "$WORKFLOW_PATH"
+          if ! git -C public-main diff --cached --quiet; then
+            git -C public-main commit -m "Publish Mexico en 1554 release assets"
+            git -C public-main pull --rebase origin main
+            git -C public-main push origin HEAD:main
+          fi
+
+      - name: Remove staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH" >/dev/null

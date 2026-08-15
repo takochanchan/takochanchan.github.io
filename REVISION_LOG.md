@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-15 — Francisco Cervantes de Salazar『México en 1554』1875年版 新規公開
+
+- 1875年版の前付I–L頁、ラテン語対話3篇、ホアキン・ガルシア・イカスバルセタによるスペイン語訳3篇、原注527件、図版3点を原刊順に収録したPDF 402頁とリフロー型EPUBを公開した。ラテン語原文は保持し、イカスバルセタのスペイン語本文を日本語へ訳した。
+- Fancourt版DOCXを文字どおり複製し、母版の実在段落を基準に本文を置換・流し込みした編集可能DOCXを正本とした。原刊頁標識239件は母版内の実際の標識段落から段落プロパティを継承し、全件を右寄せにした。Pandocのreference-doc機能は使用していない。
+- 底本はBrown University Library所蔵本のInternet Archive公開スキャン（識別子 `mxicoen1554tre00cerv`）。同本で欠ける前付原刊XIV–XV頁だけをReal Academia Española所蔵本（請求記号5-IV-28）で補い、RAE画像は転載していない。Internet Archiveの権利表示は `NOT_IN_COPYRIGHT`。日本語翻訳版には再利用ライセンスを設定していない。
+- 公開PDFは提示・承認済みPDFとバイト単位で同一。PDFのSHA-256は `4cd84dd615d08b969fe90d51b4bf08adef063c9e19ce55ed62e8fe8c65843a76`、EPUBは `0d45cb4dc754f9950a4fd824f3f9ab40493b31900e364b5df81d8b9758f27fcf`、DOCX正本は `c9aa725f830082b85d99ae2f678c55b4ca03fe1d1ff9896f7f19aa43651a3c63`。
+- 編集可能正本・書誌・権利・底本マニフェスト・検証記録・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `ab21cafadf2120c5f899d4f1595aa6e8c25311dd` に固定した。非公開Releaseへの格納・全ファイル再取得照合はGitHub Actions run `31882130639` で完了した。
+
 ## 2026-08-15 — Carl Hermann Berendt Penn未刊行資料 第1組（3点）新規公開
 
 - Penn LibrariesのBerendt-Brinton Linguistic Collectionから、Item 245「ベラクルス通信・論説集――三国干渉の初期、一八六一―一八六二年」、Item 230「キューバ島の三日間」、Items 90・244・149をまとめた「アカサグアストランおよびヒロテペケへの遠征」の3点を、独立した論文形式のPDF・EPUBとして公開した。

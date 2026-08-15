@@ -7180,6 +7180,45 @@ const publicationRecords = [
     ]
   },
   {
+    slug: "cervantes-salazar-mexico-en-1554-1875",
+    title: "1554年のメキシコ",
+    originalTitle: "México en 1554",
+    subtitle:
+      "1875年版・ラテン語原文・イカスバルセタ西訳の日本語訳",
+    author:
+      "フランシスコ・セルバンテス・デ・サラサール（編訳：ホアキン・ガルシア・イカスバルセタ）",
+    series: "MÉXICO EN 1554 · 1875",
+    originalPublication:
+      "メキシコ、Antigua Librería de Andrade y Morales、1875年",
+    year: 1875,
+    extent:
+      "PDF 402頁・原刊前付I–L頁・本文1–344頁・ラテン語対話3篇・イカスバルセタ西訳3篇・脚注527件・図版3点",
+    description:
+      "フランシスコ・セルバンテス・デ・サラサールが1554年のメキシコ市を描いたラテン語対話三篇を、ホアキン・ガルシア・イカスバルセタが伝記、歴史・書誌注、スペイン語訳、文献目録とともに刊行した1875年版。ラテン語原文を保持し、イカスバルセタのスペイン語本文を日本語へ訳して、前付、三対話、原注、文献目録を原刊順に収録しています。",
+    cover:
+      "publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
+    pdf:
+      "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.pdf",
+    epub:
+      "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.epub",
+    pageCount: 402,
+    figureCount: 0,
+    plateCount: 3,
+    types: ["対話篇", "都市史", "植民地史", "一次史料"],
+    regions: ["メキシコシティ", "メキシコ", "ヌエバ・エスパーニャ"],
+    languages: ["ラテン語", "スペイン語"],
+    tags: [
+      "16世紀メキシコ",
+      "メキシコ市",
+      "メキシコ王立大学",
+      "都市誌",
+      "人文主義",
+      "初期印刷",
+      "ホアキン・ガルシア・イカスバルセタ",
+      "1554年",
+    ],
+  },
+  {
     slug: "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
     title: "アメリカ先住民諸語著述家目録のための覚書",
     originalTitle:
@@ -7495,6 +7534,17 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "cervantes-salazar-mexico-en-1554-1875": {
+    sourceEdition:
+      "Francisco Cervantes de Salazar, México en 1554: Tres diálogos latinos que Francisco Cervantes Salazar escribió e imprimió en México en dicho año, edición, traducción castellana y notas de Joaquín García Icazbalceta (México: Antigua Librería de Andrade y Morales, 1875).",
+    sourceProvider:
+      "Brown University Library所蔵本をInternet Archiveが公開する1875年版スキャン（識別子mxicoen1554tre00cerv、408画像）を正底本とした。同本で欠ける前付原刊XIV–XV頁に限り、Real Academia Española所蔵本（請求記号5-IV-28）で本文を補完した。RAE画像は照合と欠文復元にのみ用い、本版には転載していない。",
+    sourceUrl: "https://archive.org/details/mxicoen1554tre00cerv",
+    rights:
+      "原著および1875年版の本文は著作権保護期間を満了したパブリックドメイン資料です。Internet Archiveの当該項目は、Brown University Libraryを所蔵・提供機関とし、権利状態をNOT_IN_COPYRIGHTと表示しています。Real Academia Española所蔵本は前付XIV–XV頁の照合と欠文復元にのみ用い、同館画像を転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-15",
+    updatedDate: "2026-08-15",
+  },
   "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866": {
     sourceEdition:
       "Joaquín García Icazbalceta『Apuntes para un catálogo de escritores en lenguas indígenas de América』（México: Imprenta particular del autor、1866年初版、60部限定印刷）。",

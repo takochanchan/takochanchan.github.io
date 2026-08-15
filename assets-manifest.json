@@ -650,6 +650,24 @@
       "sha256": "f5e5e1a6c63dbf38cb7373371b12070b28f50aaa418e32bdde83625b602ca863"
     },
     {
+      "path": "publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
+      "size": 110495,
+      "sha256": "320a4b7a2a7a027ed3aab4b356e2e03c0d3537139895f98f1cd05e1524dbbd77"
+    },
+    {
+      "path": "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.epub",
+      "size": 2689122,
+      "sha256": "0d45cb4dc754f9950a4fd824f3f9ab40493b31900e364b5df81d8b9758f27fcf"
+    },
+    {
+      "path": "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.pdf",
+      "size": 5775173,
+      "sha256": "4cd84dd615d08b969fe90d51b4bf08adef063c9e19ce55ed62e8fe8c65843a76"
+    },
+    {
       "path": "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
       "size": 2587197,
