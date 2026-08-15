@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 237);
+  assert.equal(publications.length, 240);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -148,8 +148,8 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 106);
-  assert.equal(shortPublications.length, 131);
-  assert.equal(shortPublicationAuthors.length, 31);
+  assert.equal(shortPublications.length, 134);
+  assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -169,6 +169,9 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "berendt-ethnologie-nicaragua-1875",
       "berendt-ancient-central-american-civilization-1876",
       "berendt-historical-documents-guatemala-1877",
+      "berendt-veracruz-correspondence-1861-1862",
+      "berendt-drei-tage-cuba-1860",
+      "berendt-acasaguastlan-jilotepec-1878",
       "berendt-vermessungsarbeiten-mexiko-1862",
       "berendt-maasse-gewichte-mexiko-1862",
       "berendt-handel-veracruz-1862",
@@ -709,6 +712,51 @@ test("approved Berendt papers batch 04 remains individually catalogued", () => {
   }
 });
 
+test("Penn Berendt batch 05 uses Japanese titles and collection subtitles", () => {
+  const expected = new Map([
+    [
+      "berendt-veracruz-correspondence-1861-1862",
+      [
+        "ベラクルス通信・論説集――三国干渉の初期、一八六一―一八六二年",
+        "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 245",
+        45,
+        "carl-hermann-berendt",
+      ],
+    ],
+    [
+      "berendt-drei-tage-cuba-1860",
+      [
+        "キューバ島の三日間",
+        "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 230",
+        32,
+        "carl-hermann-berendt",
+      ],
+    ],
+    [
+      "berendt-acasaguastlan-jilotepec-1878",
+      [
+        "アカサグアストランおよびヒロテペケへの遠征――アラギラク／チョルティ語調査・関連書簡・サン・アグスティン古文書（一八七八年）",
+        "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 90, 244, 149",
+        33,
+        "berendt-bromowicz-cordon",
+      ],
+    ],
+  ]);
+  for (const [slug, [title, subtitle, pages, authorKey]] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, "short-work", slug);
+    assert.equal(item.authorKey, authorKey, slug);
+    assert.equal(item.title, title, slug);
+    assert.equal(item.subtitle, subtitle, slug);
+    assert.equal(item.pageCount, pages, slug);
+    assert.match(item.sourceUrl, /^https:\/\/colenda\.library\.upenn\.edu\/catalog\//, slug);
+    assert.doesNotMatch(item.subtitle, /日本語全訳/, slug);
+    assert.match(item.rights, /No Copyright - United States/, slug);
+    assert.match(item.rights, /再利用ライセンスを設定していません/, slug);
+  }
+});
+
 test("approved Galindo short-paper batch remains individually catalogued", () => {
   const expectedPages = new Map([
     ["galindo-caribs-central-america-1833", 3],
@@ -1013,7 +1061,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">106<\/strong>件/);
-  assert.match(html, /id="paper-match-count">131<\/strong>件/);
+  assert.match(html, /id="paper-match-count">134<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

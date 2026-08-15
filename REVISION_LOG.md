@@ -1,5 +1,14 @@
 # 改訂記録
 
+## 2026-08-15 — Carl Hermann Berendt Penn未刊行資料 第1組（3点）新規公開
+
+- Penn LibrariesのBerendt-Brinton Linguistic Collectionから、Item 245「ベラクルス通信・論説集――三国干渉の初期、一八六一―一八六二年」、Item 230「キューバ島の三日間」、Items 90・244・149をまとめた「アカサグアストランおよびヒロテペケへの遠征」の3点を、独立した論文形式のPDF・EPUBとして公開した。
+- 各版の主題は日本語訳題とし、副題にはそれぞれのコレクション名・請求記号・アイテム番号を置いた。原題は本文の書誌・底本欄とサイト書誌に保持した。
+- 公開PDFは順に45頁、32頁、33頁。Item 245の挿図4点、三資料篇の原資料画像3点と語彙表13点を保持し、原資料頁・Penn PDF頁の位置標識と訳注を付した。全110頁をレンダリングして、題名、柱、図表、ページ送り、文字欠落、重なり、裁ち落ちを確認した。
+- 底本はUniversity of Pennsylvania Libraries, Kislak Center所蔵資料のColenda公開PDF（Item 245、230、90、244、149）。各レコードのNo Copyright - United States（NoC-US 1.0）表示と画像提供機関を作品別に記録し、日本語訳には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は順に `b7ddb1c03f65371928a68c2a6f271c42fba368a8bfa456a1cc96257683bd9263`、`b920f7f257443a654880ecd6784a9b1357fe65cce48df4283b0574fd32c82845`、`38a2983da6f36828596ffc8f3769bf2f93b6be68f103daaf3617a9a9305efd9c`。EPUBは順に `0134e4f3a326e48f4b9331f1debc9ed1d9329f6b5cf3c01ea18bb27c2f4da9cd`、`6fa1d586b85cd406573bfa7503c5092edb540a20fcad6921eed54c04ecbc2c67`、`4c0dc1cce0fb0794f917be78714b44bb290115ff4adbc97ba53566ece6e4e164`。
+- 編集可能正本・書誌・権利・底本マニフェスト・チェックサム一式は非公開原本アーカイブの恒久台帳コミット `3720e425986e75e2b7546091a55995cfff4ecfe8` に固定した。非公開Releaseへの格納・再取得照合はGitHub Actions run `31860309214`、公開Releaseへの格納・再取得照合はrun `31860878545` で完了した。
+
 ## 2026-08-15 — Serapio Baqueiro『Ensayo histórico sobre las revoluciones de Yucatán』日本語全訳 新規公開
 
 - 1878年、1879年、1887年刊の改訂全3巻版から、前付、全24章、結び、証拠文書、原注75件、各巻索引を全訳し、原刊頁標識1,536件と原刊肖像図版1点を保持したPDF 1,251頁とEPUBを公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。

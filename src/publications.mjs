@@ -7336,6 +7336,127 @@ const publicationRecords = [
       "カンペチェ分離",
     ],
   },
+  {
+    slug: "berendt-veracruz-correspondence-1861-1862",
+    title: "ベラクルス通信・論説集――三国干渉の初期、一八六一―一八六二年",
+    originalTitle:
+      "Correspondenz [und] Artikel aus Veracruz (erste Zeit der Intervention), 1861–1862",
+    subtitle:
+      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 245",
+    author: "カール・ヘルマン・ベレント",
+    series: "BERENDT-BRINTON LINGUISTIC COLLECTION · ITEM 245",
+    originalPublication: "ベラクルス、1861–1862年（Penn写本・切抜き資料）",
+    year: 1861,
+    extent: "PDF 45頁・Penn PDF 140頁・挿図4点",
+    description:
+      "三国干渉初期のベラクルスから送られた通信、時事論説、請願書、演説写し、詩、風刺画、後年の注記をまとめた資料集。ドイツ語・フランス語・スペイン語の印刷物と自筆稿を、文書境界とPenn画像頁を保持して訳しています。",
+    cover:
+      "publications/berendt-veracruz-correspondence-1861-1862/cover.jpg",
+    pdf:
+      "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.pdf",
+    epub:
+      "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.epub",
+    pageCount: 45,
+    figureCount: 4,
+    plateCount: 0,
+    types: ["書簡集", "時事論説", "一次史料"],
+    regions: ["ベラクルス", "メキシコ", "カリブ海"],
+    languages: ["ドイツ語", "フランス語", "スペイン語"],
+    tags: [
+      "三国干渉",
+      "フランス干渉戦争",
+      "ベニート・フアレス",
+      "ベラクルス",
+      "新聞切抜き",
+      "自筆稿",
+    ],
+  },
+  {
+    slug: "berendt-drei-tage-cuba-1860",
+    title: "キューバ島の三日間",
+    originalTitle:
+      "Drei Tage auf der Insel Cuba. Reise Fragment für meine Tochter Helene",
+    subtitle:
+      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 230",
+    author: "カール・ヘルマン・ベレント",
+    series: "BERENDT-BRINTON LINGUISTIC COLLECTION · ITEM 230",
+    originalPublication: "メキシコ湾・キューバ、1860年頃（Penn自筆稿）",
+    year: 1860,
+    extent: "PDF 32頁・原写本68頁・Penn PDF 160頁",
+    description:
+      "ベレントが娘ヘレーネのために記したドイツ語旅行記断片。ユカタン沿岸からハバナへ向かう船旅、キューバの都市生活・農園・奴隷制・中国人契約労働、自然と風俗の観察を、原写本頁とPenn画像頁を付して訳しています。",
+    cover: "publications/berendt-drei-tage-cuba-1860/cover.jpg",
+    pdf:
+      "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.pdf",
+    epub:
+      "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.epub",
+    pageCount: 32,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["旅行記", "民族誌", "自筆稿"],
+    regions: ["キューバ", "ハバナ", "マタンサス", "ユカタン", "メキシコ湾"],
+    languages: ["ドイツ語", "スペイン語"],
+    tags: [
+      "キューバ旅行",
+      "海上航行",
+      "奴隷制",
+      "中国人契約労働",
+      "砂糖農園",
+      "19世紀中葉",
+    ],
+  },
+  {
+    slug: "berendt-acasaguastlan-jilotepec-1878",
+    title:
+      "アカサグアストランおよびヒロテペケへの遠征――アラギラク／チョルティ語調査・関連書簡・サン・アグスティン古文書（一八七八年）",
+    originalTitle:
+      "Expedition nach Acasaguastlan und Jilotepec; Letter to José Inocenta Cordon and related papers from the expedition of Franz Bromowicz, 1878; Nahuatl de San Agustin Acasaguastlan",
+    subtitle:
+      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 90, 244, 149",
+    author:
+      "カール・ヘルマン・ベレント、フランツ・ブロモヴィチ、ホセ・イノセンテ・コルドンほか",
+    series:
+      "BERENDT-BRINTON LINGUISTIC COLLECTION · ITEMS 90, 244, 149",
+    originalPublication:
+      "グアテマラ、1878年（Penn写本資料。Item 149に17世紀文書を含む）",
+    year: 1878,
+    extent: "PDF 33頁・Penn原資料PDF計81頁・語彙表13点・原資料画像3点",
+    description:
+      "1878年2月のアカサグアストラン―ヒロテペケ言語調査に関する三つのPennレコードを、出典境界を保持して収めた資料篇。二組の語彙表、旅程、証明書、ベレントとコルドンの書簡、遺跡報告、17世紀ナワトル語会計文書断片、サン・アグスティン採録語彙を収録しています。",
+    cover:
+      "publications/berendt-acasaguastlan-jilotepec-1878/cover.jpg",
+    pdf:
+      "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.pdf",
+    epub:
+      "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.epub",
+    pageCount: 33,
+    figureCount: 3,
+    plateCount: 0,
+    types: ["言語資料", "語彙集", "書簡資料", "古文書"],
+    regions: [
+      "アカサグアストラン",
+      "ヒロテペケ",
+      "グアテマラ",
+      "中央アメリカ",
+    ],
+    languages: [
+      "ドイツ語",
+      "スペイン語",
+      "チョルティ語",
+      "ナワトル語",
+      "ポコマン語",
+      "アラギラク語",
+    ],
+    tags: [
+      "言語調査",
+      "語彙表",
+      "アラギラク",
+      "チョルティ",
+      "ナワトル",
+      "フランツ・ブロモヴィチ",
+      "ホセ・イノセンテ・コルドン",
+    ],
+  },
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -8365,6 +8486,34 @@ const publicationMetadata = {
     "sourceProvider": "Smithsonian Institution年報1876年巻（1877年刊）をInternet Archiveが公開する画像（識別子 annual-report-board-of-regents-smithsonian_1876）を主底本とし、原刊421–423頁の画像とOCRを照合した。",
     "sourceUrl": "https://archive.org/details/annual-report-board-of-regents-smithsonian_1876",
     "rights": "1877年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの当該アイテムはSmithsonian Institution年報を収録し、contributorをInternet Archiveと表示しています。個別のCreative Commonsライセンス、rights欄、possible-copyright-status欄の指定はありません。公開画像の利用にはInternet ArchiveのTerms of Useが適用されます。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
+  "berendt-veracruz-correspondence-1861-1862": {
+    "sourceEdition": "C. Hermann Berendt, Correspondenz [und] Artikel aus Veracruz (erste Zeit der Intervention), 1861–1862, Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 245.",
+    "sourceProvider": "University of Pennsylvania Libraries, Kislak Center for Special Collections, Rare Books and Manuscripts所蔵資料のColenda公開PDF全140頁を主底本とし、ドイツ語・フランス語・スペイン語の印刷物と自筆稿を頁単位で照合した。OCRは検索・判読補助にのみ用いた。",
+    "sourceUrl": "https://colenda.library.upenn.edu/catalog/81431-p3fx74j95",
+    "rights": "原資料本文は米国においてパブリックドメインです。Pennのデジタル資料にはRightsStatements.orgのNo Copyright - United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。本日本語訳には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
+  "berendt-drei-tage-cuba-1860": {
+    "sourceEdition": "C. Hermann Berendt, Drei Tage auf der Insel Cuba. Reise Fragment für meine Tochter Helene, ca. 1860, Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 230.",
+    "sourceProvider": "University of Pennsylvania Libraries, Kislak Center for Special Collections, Rare Books and Manuscripts所蔵のドイツ語自筆稿を収めるColenda公開PDF全160頁を主底本とし、正像・鏡像・裏写りを頁単位で判別して照合した。OCRは検索・判読補助にのみ用いた。",
+    "sourceUrl": "https://colenda.library.upenn.edu/catalog/81431-p3bz61v8h",
+    "rights": "原写本本文は米国においてパブリックドメインです。Pennのデジタル資料にはRightsStatements.orgのNo Copyright - United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。本日本語訳には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-15",
+    "updatedDate": "2026-08-15"
+  },
+  "berendt-acasaguastlan-jilotepec-1878": {
+    "sourceEdition": "Expedition nach Acasaguastlan und Jilotepec (Item 90); Letter to José Inocenta Cordon and related papers from the expedition of Franz Bromowicz, 1878 (Item 244); Nahuatl de San Agustin Acasaguastlan (Item 149), Berendt-Brinton Linguistic Collection, Ms. Coll. 700.",
+    "sourceProvider": "University of Pennsylvania Libraries, Kislak Center for Special Collections, Rare Books and Manuscripts所蔵の三レコード（Item 90、244、149）を公開するColenda PDF計81頁を主底本とした。相互参照関係のある資料を一資料篇に収めたが、各レコードの出典境界と画像頁を保持した。OCRは検索・判読補助にのみ用いた。",
+    "sourceUrl": "https://colenda.library.upenn.edu/catalog/81431-p37h1dx0s",
+    "additionalSourceUrls": [
+      "https://colenda.library.upenn.edu/catalog/81431-p33n2115h",
+      "https://colenda.library.upenn.edu/catalog/81431-p34j0b71h"
+    ],
+    "rights": "原資料本文は米国においてパブリックドメインです。三つのPennデジタル資料にはRightsStatements.orgのNo Copyright - United States（NoC-US 1.0）が表示されています。画像提供：University of Pennsylvania Libraries。本日本語訳には再利用ライセンスを設定していません。",
     "publishedDate": "2026-08-15",
     "updatedDate": "2026-08-15"
   },
@@ -9533,6 +9682,9 @@ const shortWorkAuthorBySlug = {
   "berendt-ancient-central-american-civilization-1876": "carl-hermann-berendt",
   "berendt-historical-documents-guatemala-1877": "carl-hermann-berendt",
   "berendt-central-america-explorations-1867": "carl-hermann-berendt",
+  "berendt-veracruz-correspondence-1861-1862": "carl-hermann-berendt",
+  "berendt-drei-tage-cuba-1860": "carl-hermann-berendt",
+  "berendt-acasaguastlan-jilotepec-1878": "berendt-bromowicz-cordon",
   "galindo-ruins-palenque-literary-gazette-1831": "juan-galindo",
   "galindo-noticias-peten-1831": "juan-galindo",
   "galindo-usumacinta-1833": "juan-galindo",

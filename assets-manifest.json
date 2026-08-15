@@ -92,6 +92,24 @@
       "sha256": "f5ab034d31c5d47896e9247df97627e252ba4ee5224125ab8154d2cb52b3fb94"
     },
     {
+      "path": "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.epub",
+      "size": 3382774,
+      "sha256": "4c0dc1cce0fb0794f917be78714b44bb290115ff4adbc97ba53566ece6e4e164"
+    },
+    {
+      "path": "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.pdf",
+      "size": 3756604,
+      "sha256": "38a2983da6f36828596ffc8f3769bf2f93b6be68f103daaf3617a9a9305efd9c"
+    },
+    {
+      "path": "publications/berendt-acasaguastlan-jilotepec-1878/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/berendt-acasaguastlan-jilotepec-1878/cover.jpg",
+      "size": 140455,
+      "sha256": "65b1f45112566e8c7bba501d27320a295c114d14e3351c4d54fb022ebdc377d3"
+    },
+    {
       "path": "publications/berendt-analytical-alphabet-1869/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.epub",
       "size": 231892,
@@ -216,6 +234,24 @@
       "url": "https://takochanchan.github.io/publications/berendt-darien-language-1874/cover.jpg",
       "size": 120047,
       "sha256": "a6907352c04f2ef3328837facc2718ce85cc9a0afb3f851d728afa207a4031c2"
+    },
+    {
+      "path": "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.epub",
+      "size": 39177,
+      "sha256": "6fa1d586b85cd406573bfa7503c5092edb540a20fcad6921eed54c04ecbc2c67"
+    },
+    {
+      "path": "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.pdf",
+      "size": 740778,
+      "sha256": "b920f7f257443a654880ecd6784a9b1357fe65cce48df4283b0574fd32c82845"
+    },
+    {
+      "path": "publications/berendt-drei-tage-cuba-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/berendt-drei-tage-cuba-1860/cover.jpg",
+      "size": 100632,
+      "sha256": "2fdce1f5a2cf574adc0e32a5a05dbb4356ccab273f6e638d1f359399ead25b70"
     },
     {
       "path": "publications/berendt-el-ramie-1871/Carl_Hermann_Berendt_El_ramie_1871_Japanese_Complete_Translation.epub",
@@ -414,6 +450,24 @@
       "url": "https://takochanchan.github.io/publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/cover.jpg",
       "size": 255306,
       "sha256": "c3236b0a907f95c9c5a91bbb77fc73cb4b7dc43e5a3b2f3096a7f17dcac52313"
+    },
+    {
+      "path": "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.epub",
+      "size": 1129829,
+      "sha256": "0134e4f3a326e48f4b9331f1debc9ed1d9329f6b5cf3c01ea18bb27c2f4da9cd"
+    },
+    {
+      "path": "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.pdf",
+      "size": 2374313,
+      "sha256": "b7ddb1c03f65371928a68c2a6f271c42fba368a8bfa456a1cc96257683bd9263"
+    },
+    {
+      "path": "publications/berendt-veracruz-correspondence-1861-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/berendt-veracruz-correspondence-1861-1862/cover.jpg",
+      "size": 127868,
+      "sha256": "757ba097b4be89749b8cb3ff0a69deabe4d39b97f7b33a09842cfb1456a51fa6"
     },
     {
       "path": "publications/berendt-vermessungsarbeiten-mexiko-1862/Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.epub",
