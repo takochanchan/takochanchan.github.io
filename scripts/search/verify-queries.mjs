@@ -145,7 +145,7 @@ const verifyCounts = async (query, expected) => {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 40,
+    books: 41,
     papers: 7,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
