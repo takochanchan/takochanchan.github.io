@@ -182,10 +182,10 @@ th {
 .source-page,
 .page-marker {
   margin: 1.2em 0 0.45em;
-  color: #596663;
+  color: inherit;
   font-size: 0.78em;
   letter-spacing: 0.04em;
-  text-align: left;
+  text-align: right;
 }
 
 .note,

@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-20 — Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin『Diario』新規公開
+
+- BNAH MS 256B ff.17r–18vで失われた冒頭を補い、BnF Mexicain 220 pp.1–282を正本とする1577–1615年の日記全範囲を、日本語全訳・訳注版として公開した。PDFは266頁、原刊頁／葉標識は291件で、すべて右寄せした。
+- Rafael Tenaの2001年校訂・スペイン語訳とAxolotl Corpusは異読・固有名・年代の校合補助に限り、日本語本文の重訳元にはしていない。BnF、BNAH、Reyes García論文、Tena版の原稿・紙面画像は転載していない。
+- 公開PDFは提示・承認済みPDFとバイト単位で同一。SHA-256はPDF `707445759846468907e4e6f9d31fab1e06e069cbdb021d2831b3f92ee858563f`、EPUB `13176180ce79b78c3983a213ee312c5eebe410954206e3d75a71945a187efc4d`。EPUBはMarkdown正本から直接生成し、原刊標識291件を右寄せで保持した。
+- 編集可能Markdown正本と書誌は、非公開原本アーカイブのコミット `fd9c49d866bbb3c60566f7f19ddfa03d9780e987` に固定した。GitHub上から再取得した正本のGit blob SHAは手元原稿と一致した。
+
 ## 2026-08-15 — Carl Hermann Berendt 未刊行資料 第2組（3点）新規公開
 
 - 「中央アメリカ先住民とその諸言語」、「ニカラグアで話されるカスティーリャ語の語彙と慣用表現」、「チョロテガ／マングエ語とスブティアバ語――比較語彙・文法覚書・採集資料」を、各1点の独立した論文形式PDF・EPUBとして公開した。PDFは順に14頁、112頁、60頁。

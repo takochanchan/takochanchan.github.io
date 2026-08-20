@@ -6482,6 +6482,48 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "chimalpahin-diario-1577-1615",
+    title: "チマルパイン『日記』",
+    originalTitle: "Diario",
+    subtitle:
+      "BNAH MS 256B ff.17r–18v・BnF Mexicain 220 pp.1–282・1577–1615年 日本語全訳・訳注版",
+    author:
+      "ドミンゴ・フランシスコ・デ・サン・アントン・ムニョン・チマルパイン・クアウテレワニツィン",
+    originalAuthor:
+      "Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin",
+    series: "DIARIO · 1577–1615",
+    originalPublication:
+      "ヌエバ・エスパーニャ、1577–1615年、ナワトル語写本（未刊）",
+    year: 1615,
+    extent:
+      "PDF 266頁・BNAH MS 256B ff.17r–18v（4面）・BnF Mexicain 220 pp.1–282・原刊頁／葉標識291件・図版なし",
+    description:
+      "チマルパインが1577年から1615年までのメシコとヌエバ・エスパーニャの出来事をナワトル語で記した同時代日記。疫病、地震、洪水、宗教行列、教会・副王政・先住民共同体の動向に加え、ロドリゴ・デ・ビベロの帰還、セバスティアン・ビスカイノの日本渡航、慶長遣欧使節と日本人一行のメシコ滞在も収録します。BnF Mexicain 220の本文全範囲を正本とし、失われた冒頭をBNAH MS 256Bで補って、原注・欄外注・加筆・抹消と原刊位置標識を保持しました。",
+    cover: "publications/chimalpahin-diario-1577-1615/cover.jpg",
+    pdf:
+      "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.epub",
+    pageCount: 266,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["年代記", "日記", "写本", "一次史料"],
+    regions: ["メキシコ", "ヌエバ・エスパーニャ", "メキシコ市", "日本"],
+    languages: ["ナワトル語", "スペイン語"],
+    tags: [
+      "チマルパイン",
+      "メシコ",
+      "トラテロルコ",
+      "慶長遣欧使節",
+      "支倉常長",
+      "ロドリゴ・デ・ビベロ",
+      "セバスティアン・ビスカイノ",
+      "植民地史",
+      "16世紀",
+      "17世紀",
+    ],
+  },
+  {
     "slug": "flint-antiquities-nicaragua-palenque-builders-1882",
     "title": "ニカラグアの古物――パレンケ建設者の起源",
     "originalTitle": "Antiquities of Nicaragua—Origin of the Palenque Builders",
@@ -9705,6 +9747,17 @@ const publicationMetadata = {
       "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。本文の転記・校合に用いたINAH公開のCódice Chimalpahin原本画像はCC BY-NC-ND 4.0で提供されていますが、本版には当該画像を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-14",
     updatedDate: "2026-08-14",
+  },
+  "chimalpahin-diario-1577-1615": {
+    sourceEdition:
+      "Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin『Diario』。主底本：Bibliothèque nationale de France, Département des Manuscrits, Mexicain 220, pp.1–282。冒頭補完：Biblioteca Nacional de Antropología e Historia, Colección Antigua, MS 256B, ff.17r–18v。Mexicain 220 pp.283–284の後代抜書は対象外。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のMexicain 220原冊画像（ark:/12148/btv1b8562411r）を本文正本とした。BNAH MS 256Bの冒頭補完部はLuis Reyes García「Un nuevo manuscrito de Chimalpahin」（1971年）掲載の四面画像・転写で独立照合した。Rafael Tenaの2001年校訂・スペイン語訳およびAxolotl Corpusは異読・固有名・年代の校合補助に限り、日本語本文の重訳元にはしていない。原稿画像は日本語版へ転載していない。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b8562411r",
+    rights:
+      "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。Gallica/BnF由来のデジタル画像は、非商用利用または学術・科学出版では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示を条件に無償で再利用でき、商用利用はBnFの許諾および利用料の対象となります。本版にはBnF画像、BNAH写本画像、Reyes García論文の図版、Tena校訂本文・スペイン語訳を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-20",
+    updatedDate: "2026-08-20",
   },
   "flint-antiquities-nicaragua-palenque-builders-1882": {
     "sourceEdition": "Earl Flint, “Antiquities of Nicaragua—Origin of the Palenque Builders: A Letter from Dr. Earl Flint to Dr. Engelman,” The American Antiquarian and Oriental Journal, vol. IV, no. 4 (October 1882), pp. 289–302.",

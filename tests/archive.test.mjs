@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 244);
+  assert.equal(publications.length, 245);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -147,7 +147,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 107);
+  assert.equal(majorPublications.length, 108);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1043,6 +1043,37 @@ test("Chimalpahin volume 3 credits its compiler and names major sources", () => 
   assert.doesNotMatch(item.author, /編者不詳/);
 });
 
+test("Chimalpahin Diario preserves its composite source and bilingual catalogue credit", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "chimalpahin-diario-1577-1615",
+  );
+  assert.ok(item);
+  assert.equal(item.originalTitle, "Diario");
+  assert.equal(item.title, "チマルパイン『日記』");
+  assert.equal(
+    item.originalAuthor,
+    "Domingo Francisco de San Antón Muñón Chimalpahin Cuauhtlehuanitzin",
+  );
+  assert.match(item.author, /チマルパイン・クアウテレワニツィン/);
+  assert.equal(item.pageCount, 266);
+  assert.equal(item.figureCount, 0);
+  assert.match(item.sourceEdition, /Mexicain 220, pp\.1–282/);
+  assert.match(item.sourceEdition, /MS 256B, ff\.17r–18v/);
+  assert.match(item.sourceProvider, /Tena.*校合補助/);
+  assert.match(item.rights, /原稿画像は日本語版へ転載していません|画像.*転載していません/);
+
+  const page = await readFile(
+    path.join(dist, "publications", item.slug, "index.html"),
+    "utf8",
+  );
+  const originalTitleAt = page.indexOf(escapeHtml(item.originalTitle));
+  const japaneseTitleAt = page.indexOf(escapeHtml(item.title), originalTitleAt + 1);
+  const originalAuthorAt = page.indexOf(escapeHtml(item.originalAuthor));
+  const japaneseAuthorAt = page.indexOf(escapeHtml(item.author), originalAuthorAt + 1);
+  assert.ok(originalTitleAt >= 0 && japaneseTitleAt > originalTitleAt);
+  assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
@@ -1131,7 +1162,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">107<\/strong>件/);
+  assert.match(html, /id="book-match-count">108<\/strong>件/);
   assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
