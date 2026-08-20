@@ -38,6 +38,24 @@
       "sha256": "e210db00c2ed72bccf389b5f1823c860e4a7799f99365a127d3adcbb097d24af"
     },
     {
+      "path": "publications/bancroft-history-central-america-1886-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-history-central-america-1886-1887/cover.jpg",
+      "size": 91302,
+      "sha256": "eefd50d68b5fe8109cf93bd738e6bf16b27ba49c00fac7c714bfcedd58be3264"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.epub",
+      "size": 18454900,
+      "sha256": "723709d4ab686d69dead17384efbc39f70b435a1ab5e078e5a12c4eb35987442"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.pdf",
+      "size": 72568331,
+      "sha256": "dc53bfffb1d60236a866bf1d6ed62bc7d52f63f3f7e65f4df650fddff636de6d"
+    },
+    {
       "path": "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
       "size": 2414303,

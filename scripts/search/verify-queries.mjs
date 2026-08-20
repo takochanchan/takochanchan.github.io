@@ -145,27 +145,27 @@ const verifyCounts = async (query, expected) => {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 39,
+    books: 40,
     papers: 7,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
-    books: 20,
+    books: 21,
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
-    books: 19,
+    books: 20,
     papers: 9,
   });
   const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
     books: 12,
     papers: 8,
   });
-  await verifyCounts("ラカンドン", { books: 49, papers: 15 });
-  await verifyCounts("ポ", { books: 46, papers: 11 });
+  await verifyCounts("ラカンドン", { books: 50, papers: 15 });
+  await verifyCounts("ポ", { books: 47, papers: 11 });
   const pageChecks = [
-    ["グリハルバ", grijalva, 238],
-    ["グリハルバ川", grijalvaRiver, 67],
-    ["ピエドラス", piedras, 143],
+    ["グリハルバ", grijalva, 252],
+    ["グリハルバ川", grijalvaRiver, 71],
+    ["ピエドラス", piedras, 145],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
   const pageMismatches = pageChecks.filter(([, actual, expected]) =>

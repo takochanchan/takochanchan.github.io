@@ -1,5 +1,14 @@
 # 改訂記録
 
+## 2026-08-21 — Hubert Howe Bancroft『History of Central America』全三巻合本版 新規公開
+
+- 1886–1887年刊の全3巻を一冊にまとめ、原刊前付、全98章、原注4,325件、図版75点、第I巻引用典拠一覧、第III巻索引を収録した日本語全訳を、合本PDF 2,585頁とEPUBで公開した。原刊頁標識2,334件を本文位置に保持し、分冊版は公開していない。
+- 独立レビューを複数実施し、重大な誤訳・欠落・章構成の不整合を点検した。最終判定はCritical 0件・Major 0件。PDF全2,585頁を画像確認し、表紙、前付、段組、原注、図表、ページ送り、文字欠落、重なり、裁ち落ちを検証した。
+- 底本はUniversidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵本（Luis Luján Muñoz寄贈）をInternet Archiveが公開する3冊（`histofcenthoweguat`、`histoofcen07howeguatguat`、`historyofcenthoweguat`）。Project Gutenberg eBooks 58658・58669・62657は文字照合に用いた。原著はパブリックドメインで、Internet Archiveの3項目は`NOT_IN_COPYRIGHT`、Project Gutenberg版は米国でPublic domain／Project Gutenberg Licenseと表示される。日本語翻訳版には独自の再利用ライセンスを設定していない。
+- 公開PDFは提示・承認済みPDFとバイト単位で同一。SHA-256はPDF `dc53bfffb1d60236a866bf1d6ed62bc7d52f63f3f7e65f4df650fddff636de6d`、EPUB `723709d4ab686d69dead17384efbc39f70b435a1ab5e078e5a12c4eb35987442`、合本表紙 `eefd50d68b5fe8109cf93bd738e6bf16b27ba49c00fac7c714bfcedd58be3264`、DOCX正本 `a7e97620d91fd7ad89e7e9fbae879721db04baf492e239256eca3209799c4e02`。
+- 編集可能DOCX正本、Markdown原稿、書誌、権利、底本マニフェスト、QA記録、チェックサムおよび再現用アーカイブは、非公開Release `master-bancroft-history-central-america-1886-1887-20260821-v1` に格納し、全9資産の再取得照合後、恒久台帳コミット `88221c740bbbc3e4d22ff7d215eb62c87f625a7e` に`pending_lfs`として固定した。非公開検証はGitHub Actions run `32405465386`で完了した。
+- 全文検索用に承認済みEPUBから25,198ブロックを抽出し、承認済みPDF全2,585頁へ対応付けた。実頁未対応0件、検証済み対応率100.0%を確認した。
+
 ## 2026-08-21 — ディエゴ・ムニョス・カマルゴ『トラスカラ市・州およびその共和国の歴史』新規公開
 
 - フランス国立図書館所蔵メキシコ写本210の現存範囲 f. 30r–93vを、欠首・欠尾を別系統本文で補わず訳出し、PDF 184頁とEPUBで公開した。写本葉面標識128件を本文位置に保持し、PDFでは右寄せした。
