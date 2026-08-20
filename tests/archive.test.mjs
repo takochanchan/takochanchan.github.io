@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 245);
+  assert.equal(publications.length, 246);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -147,7 +147,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 108);
+  assert.equal(majorPublications.length, 109);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1074,6 +1074,32 @@ test("Chimalpahin Diario preserves its composite source and bilingual catalogue 
   assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
 });
 
+test("Boturini catalogue records original-language bibliography before Japanese", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "boturini-idea-catalogo-1746",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 264);
+  assert.equal(item.originalAuthor, "Lorenzo Boturini Benaduci");
+  assert.match(item.originalTitle, /^Idea de una nueva historia general/);
+  assert.match(item.description, /書誌185件/);
+  assert.match(item.description, /原題・原著者名を先に/);
+  assert.match(item.description, /日本語訳題・日本語著者名を後に/);
+  assert.match(item.sourceProvider, /ideadeunanuevahi00botu_0/);
+
+  const page = await readFile(
+    path.join(dist, "publications", item.slug, "index.html"),
+    "utf8",
+  );
+  const originalTitleAt = page.indexOf(escapeHtml(item.originalTitle));
+  const japaneseTitleAt = page.indexOf(escapeHtml(item.title), originalTitleAt + 1);
+  const originalAuthorAt = page.indexOf(escapeHtml(item.originalAuthor));
+  const japaneseAuthorAt = page.indexOf(escapeHtml(item.author), originalAuthorAt + 1);
+  assert.ok(originalTitleAt >= 0 && japaneseTitleAt > originalTitleAt);
+  assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
+});
+
 test("Lundell bibliography uses the Japanese translation cover", () => {
   const item = publications.find(
     (publication) => publication.slug === "lundell-vegetation-peten-1937",
@@ -1162,7 +1188,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">108<\/strong>件/);
+  assert.match(html, /id="book-match-count">109<\/strong>件/);
   assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

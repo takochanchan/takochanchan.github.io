@@ -542,6 +542,24 @@
       "sha256": "cca5c41550563b275868ff7f97c88559de419ea8418627f90f9f10103f18a42e"
     },
     {
+      "path": "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Boturini_Idea_y_Catalogo_1746_JA.epub",
+      "size": 8912877,
+      "sha256": "12b77d3ef5466da1f5fe26bb85fc4f3b64e5d9ee19a6f729371786535fc19aae"
+    },
+    {
+      "path": "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Boturini_Idea_y_Catalogo_1746_JA.pdf",
+      "size": 5033883,
+      "sha256": "7989679ca4c8ddd84d9c3d78a504f6e4d06cbc76c903d216946d3176083a107d"
+    },
+    {
+      "path": "publications/boturini-idea-catalogo-1746/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/boturini-idea-catalogo-1746/cover.jpg",
+      "size": 235583,
+      "sha256": "f4c02288defd1b995a47e0b183d2b82b3e019ede3cfd8674518aa3be837f458c"
+    },
+    {
       "path": "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
       "size": 41132122,

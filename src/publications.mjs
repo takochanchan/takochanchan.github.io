@@ -6524,6 +6524,43 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "boturini-idea-catalogo-1746",
+    title: "北アメリカ一般史の新構想／インディアス歴史博物館目録",
+    originalTitle:
+      "Idea de una nueva historia general de la América Septentrional / Catálogo del Museo Histórico Indiano",
+    subtitle:
+      "1746年マドリード初版・前付・Idea本文1–167頁・Catálogo本文1–96頁 日本語全訳",
+    author: "ロレンソ・ボトゥリーニ・ベナドゥチ",
+    originalAuthor: "Lorenzo Boturini Benaduci",
+    series: "IDEA DE UNA NUEVA HISTORIA GENERAL · 1746",
+    originalPublication: "マドリード、Juan de Zúñiga、1746年初版",
+    year: 1746,
+    extent:
+      "PDF 264頁・原刊前付36頁・Idea本文167頁・Catálogo前付8頁および本文96頁・銅版口絵2点・標題紙2点",
+    description:
+      "ロレンソ・ボトゥリーニ・ベナドゥチがヌエバ・エスパーニャの先住民史料と歴史叙述の構想をまとめた『北アメリカ一般史の新構想』と、自ら収集した絵文書・写本・印刷物を記録する『インディアス歴史博物館目録』を、1746年初版の配列どおり一冊に収録した日本語全訳です。前付、本文、原刊頁標識、口絵・標題紙を保持し、Catálogoの書誌185件では原題・原著者名を先に、日本語訳題・日本語著者名を後に併記しています。",
+    cover: "publications/boturini-idea-catalogo-1746/cover.jpg",
+    pdf:
+      "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.pdf",
+    epub:
+      "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.epub",
+    pageCount: 264,
+    figureCount: 0,
+    plateCount: 4,
+    types: ["歴史書", "史料目録", "史学史", "一次史料"],
+    regions: ["メキシコ", "ヌエバ・エスパーニャ"],
+    languages: ["スペイン語", "ラテン語", "イタリア語"],
+    tags: [
+      "ボトゥリーニ",
+      "絵文書",
+      "ナワトル史料",
+      "先住民史料",
+      "史料目録",
+      "ビコ",
+      "18世紀",
+    ],
+  },
+  {
     "slug": "flint-antiquities-nicaragua-palenque-builders-1882",
     "title": "ニカラグアの古物――パレンケ建設者の起源",
     "originalTitle": "Antiquities of Nicaragua—Origin of the Palenque Builders",
@@ -9756,6 +9793,17 @@ const publicationMetadata = {
     sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b8562411r",
     rights:
       "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。Gallica/BnF由来のデジタル画像は、非商用利用または学術・科学出版では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示を条件に無償で再利用でき、商用利用はBnFの許諾および利用料の対象となります。本版にはBnF画像、BNAH写本画像、Reyes García論文の図版、Tena校訂本文・スペイン語訳を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-20",
+    updatedDate: "2026-08-20",
+  },
+  "boturini-idea-catalogo-1746": {
+    sourceEdition:
+      "Lorenzo Boturini Benaduci, Idea de una nueva historia general de la América Septentrional, seguida del Catálogo del Museo Histórico Indiano, Madrid: Imprenta de Juan de Zúñiga, 1746年初版。",
+    sourceProvider:
+      "John Carter Brown Library所蔵第2本をデジタル化したInternet Archive項目 ideadeunanuevahi00botu_0（全324画像）を主底本とし、同館所蔵第1本 ideadeunanuevahi01botu およびGetty Research Institute所蔵本 deunanuevahistor00botu で前付、本文、原刊頁標識、図版、書誌表記を対校しました。",
+    sourceUrl: "https://archive.org/details/ideadeunanuevahi00botu_0",
+    rights:
+      "1746年原刊は著作権保護期間を満了したパブリックドメイン資料です。John Carter Brown Library由来の主底本はWikimedia CommonsでPublic Domain Mark 1.0と表示されています。日本語翻訳・編集・組版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-20",
     updatedDate: "2026-08-20",
   },
