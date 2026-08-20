@@ -6482,6 +6482,44 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "pomar-relacion-tezcuco-1582",
+    title: "テスクコ報告書",
+    originalTitle:
+      "Relaçion q se enbio a su magestad (Relación de Tezcuco)",
+    subtitle:
+      "1582年3月9日成立・Benson Latin American Collection Ms. G57–G58 日本語全訳",
+    author: "フアン・バウティスタ・デ・ポマール",
+    originalAuthor: "Juan Bautista de Pomar",
+    series: "RELACIÓN DE TEZCUCO · 1582",
+    originalPublication:
+      "テスクコ、1582年3月9日成立。現存本は17世紀初頭の写本。",
+    year: 1582,
+    extent:
+      "PDF 87頁・Benson Latin American Collection Ms. G57 f. 1r–92r・Ms. G58 f. 92r–102v・写本葉標識205件・図版なし",
+    description:
+      "フアン・バウティスタ・デ・ポマールが1582年に作成したテスクコの地誌・歴史・社会・宗教・統治・戦争・衣食・自然環境に関する報告書の日本語全訳です。現存する回答本文（第11項から第27項、第30項、第31項）と、同写本に続く1577年版『インディアス記述のために作成すべき報告書についての指示と覚書』全50項を、Benson Latin American Collection Ms. G57、G58の物理的な綴じ順に戻して収録しています。G59の歌謡集は別作品のため対象外です。",
+    cover: "publications/pomar-relacion-tezcuco-1582/cover.jpg",
+    pdf:
+      "publications/pomar-relacion-tezcuco-1582/Pomar_Relacion_de_Tezcuco_1582_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/pomar-relacion-tezcuco-1582/Pomar_Relacion_de_Tezcuco_1582_Japanese_Complete_Translation.epub",
+    pageCount: 87,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["地誌", "歴史書", "写本", "一次史料"],
+    regions: ["メキシコ", "ヌエバ・エスパーニャ", "テスクコ"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "ポマール",
+      "テスクコ",
+      "アコルワ",
+      "ネサワルコヨトル",
+      "地理報告書",
+      "先住民史",
+      "16世紀",
+    ],
+  },
+  {
     slug: "chimalpahin-diario-1577-1615",
     title: "チマルパイン『日記』",
     originalTitle: "Diario",
@@ -9784,6 +9822,18 @@ const publicationMetadata = {
       "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。本文の転記・校合に用いたINAH公開のCódice Chimalpahin原本画像はCC BY-NC-ND 4.0で提供されていますが、本版には当該画像を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-14",
     updatedDate: "2026-08-14",
+  },
+  "pomar-relacion-tezcuco-1582": {
+    sourceEdition:
+      "Juan Bautista de Pomar, Relaçion q se enbio a su magestad (Relación de Tezcuco), Benson Latin American Collection, Genaro García Collection, Ms. G57 f. 1r–92r and Ms. G58 f. 92r–102v, 17世紀初頭写本（原作1582年）。",
+    sourceProvider:
+      "Benson Latin American Collection, LLILAS Benson Latin American Studies and Collections, The University of Texas at Austin。デジタル資料識別子 utblac:e98983f6-9321-45cf-9976-40373dbd61a6。公開画像はG58、G57の順だが、所蔵原冊の物理的順序はG57、G58である。判読照合にはJoaquín García Icazbalceta刊本（1891年）とRené Acuña校訂本（1986年）を用いた。",
+    sourceUrl:
+      "https://collections.lib.utexas.edu/catalog/utblac%3Ae98983f6-9321-45cf-9976-40373dbd61a6",
+    rights:
+      "1582年原著本文と17世紀写本は著作権保護期間を満了したパブリックドメイン資料です。テキサス大学オースティン校のデジタル資料にはCreative Commons Public Domain Mark 1.0が明示されています。日本語翻訳・編集・組版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-20",
+    updatedDate: "2026-08-20",
   },
   "chimalpahin-diario-1577-1615": {
     sourceEdition:

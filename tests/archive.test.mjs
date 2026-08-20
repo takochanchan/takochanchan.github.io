@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 246);
+  assert.equal(publications.length, 247);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -222,7 +222,7 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 109);
+  assert.equal(majorPublications.length, 110);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1116,6 +1116,27 @@ test("Chimalpahin volume 3 credits its compiler and names major sources", () => 
     assert.ok(item.majorSources.some((entry) => entry.includes(source)), source);
   }
   assert.doesNotMatch(item.author, /編者不詳/);
+});
+
+test("Pomar Relación de Tezcuco preserves its Benson manuscript scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "pomar-relacion-tezcuco-1582",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.originalAuthor, "Juan Bautista de Pomar");
+  assert.equal(
+    item.originalTitle,
+    "Relaçion q se enbio a su magestad (Relación de Tezcuco)",
+  );
+  assert.equal(item.pageCount, 87);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /Ms\. G57 f\. 1r–92r/);
+  assert.match(item.extent, /Ms\. G58 f\. 92r–102v/);
+  assert.match(item.sourceProvider, /utblac:e98983f6-9321-45cf-9976-40373dbd61a6/);
+  assert.match(item.rights, /Public Domain Mark 1\.0/);
+  assert.equal(item.publishedDate, "2026-08-20");
 });
 
 test("Chimalpahin Diario preserves its composite source and bilingual catalogue credit", async () => {
