@@ -22,8 +22,8 @@ jobs:
       RELEASE_TAG: publications-current
       STAGING_BRANCH: codex-release-g59-cantares-20260821-v1
       READY_BRANCH: codex-ready-g59-cantares-20260821-v1
-      PAYLOAD_SHA256: c0f464cff043c7f20838c62689437d21e163f6b9fd8d55d525ce685e4f5a831a
-      PAYLOAD_SIZE: "2199148"
+      PAYLOAD_SHA256: 8717097183c3895b3b0834c062244a1aa48fe8e86932c5a0993bbdfd2f1c87b0
+      PAYLOAD_SIZE: "2199193"
       PAYLOAD_PARTS: "9"
     steps:
       - name: Check out the publication trigger commit
