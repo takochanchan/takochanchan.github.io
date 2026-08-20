@@ -129,6 +129,8 @@ jobs:
                       labels = []
                       for document in documents:
                           for ordered in (node for node in document.iter() if node.tag.endswith('}ol')):
+                              if ordered.attrib.get('type') != '1':
+                                  continue
                               start = int(ordered.attrib.get('start', '1'))
                               count = sum(1 for node in ordered if node.tag.endswith('}li'))
                               labels.extend(range(start, start + count))
