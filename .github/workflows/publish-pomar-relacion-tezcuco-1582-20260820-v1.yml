@@ -311,7 +311,9 @@ jobs:
           if (pageMap.masterPath !== `publications/${slug}/master.md`) throw new Error('Pomar search master path mismatch');
           const mappings = Object.values(pageMap.blocks || {});
           if (!mappings.length) throw new Error('Pomar search map is empty');
-          const labels = new Set(mappings.map((entry) => String(entry[0])));
+          const labels = new Set(
+            mappings.flatMap((entry) => String(entry[0]).split("／")),
+          );
           if (!labels.has('写本（Benson Ms. G57）f. 1r')) throw new Error('Pomar first source label missing');
           if (!labels.has('写本（Benson Ms. G58）f. 102v')) throw new Error('Pomar final source label missing');
           if (mappings.some((entry) => !Number.isInteger(entry[1]) || entry[1] < 1 || entry[1] > 87)) throw new Error('Pomar physical PDF mapping mismatch');
