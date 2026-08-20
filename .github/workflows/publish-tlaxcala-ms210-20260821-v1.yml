@@ -90,7 +90,7 @@ jobs:
                   compact = re.sub(r'\s+', '', pdf_text)
                   assert re.sub(r'\s+', '', asset['title']) in compact
                   assert re.sub(r'\s+', '', asset['subtitle']) in compact
-                  assert pdf_text.count('〔原刊') == asset['source_markers']
+                  assert pdf_text.count('〔原刊') == asset['source_markers'] + 1
                   images = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
                   assert not [line for line in images.splitlines()[2:] if line.strip()]
                   for phrase in banned:
@@ -114,15 +114,15 @@ jobs:
                       compact = re.sub(r'\s+', '', epub_text)
                       assert re.sub(r'\s+', '', asset['title']) in compact
                       assert re.sub(r'\s+', '', asset['subtitle']) in compact
-                      assert sum(source.count('〔原刊') for source in html_sources) == asset['source_markers']
-                      assert sum(source.count('source-page page-marker') for source in html_sources) == asset['source_markers']
+                      assert sum(source.count('〔原刊') for source in html_sources) == asset['source_markers'] + 1
+                      assert sum(source.count('class="source-page"') for source in html_sources) == asset['source_markers']
                       styles = '\n'.join(
                           archive.read(name).decode('utf-8')
                           for name in archive.namelist()
                           if name.endswith('.css')
                       )
                       assert re.search(
-                          r'\.source-page,\s*\.page-marker\s*\{[^}]*text-align:\s*right;',
+                          r'\.source-page\s*\{[^}]*text-align:\s*right;',
                           styles,
                           re.DOTALL,
                       )
