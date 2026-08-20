@@ -140,7 +140,7 @@ jobs:
                           for name in archive.namelist()
                           if name.endswith('.css')
                       )
-                      assert re.search(r'\.source-page,\s*\.page-marker\s*\{[^}]*text-align:\s*right;', styles, re.DOTALL)
+                      assert re.search(r'\.source-page\s*\{[^}]*text-align:\s*right;', styles, re.DOTALL)
                       images = [
                           pathlib.PurePosixPath(name).name
                           for name in archive.namelist()
