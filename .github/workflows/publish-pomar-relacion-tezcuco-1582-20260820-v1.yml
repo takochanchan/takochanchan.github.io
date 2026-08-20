@@ -1,0 +1,341 @@
+name: Publish Pomar Relación de Tezcuco assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-pomar-relacion-tezcuco-1582-20260820-v1.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_BRANCH: agent/pomar-relacion-tezcuco-public-assets-20260820-v1
+      STAGING_ROOT: .release-staging/pomar-relacion-tezcuco-1582-20260820-v1
+      WORKFLOW_PATH: .github/workflows/publish-pomar-relacion-tezcuco-1582-20260820-v1.yml
+      RELEASE_TAG: publications-current
+      BUNDLE_SIZE: "1034207"
+      BUNDLE_SHA256: e9deaf51aa1901494b05ccc6794fab39e2cfe38c001a902edc9992c338d9c542
+
+    steps:
+      - name: Check out checksum-pinned staging bytes
+        uses: actions/checkout@v4
+        with:
+          ref: agent/pomar-relacion-tezcuco-public-assets-20260820-v1
+
+      - name: Restore checksum-pinned publication bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat "$STAGING_ROOT"/bundle.tar.gz.part-* > /tmp/publication-bundle.tar.gz
+          test "$(stat -c %s /tmp/publication-bundle.tar.gz)" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  /tmp/publication-bundle.tar.gz" | sha256sum -c -
+          mkdir -p "$STAGING_ROOT/payload"
+          tar -xzf /tmp/publication-bundle.tar.gz -C "$STAGING_ROOT/payload" --no-same-owner
+
+      - name: Validate final PDF, EPUB, and cover bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdfinfo >/dev/null 2>&1 || ! command -v pdftotext >/dev/null 2>&1 || ! command -v pdfimages >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import subprocess
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path('.release-staging/pomar-relacion-tezcuco-1582-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          assert manifest['schema_version'] == 1
+          assert manifest['batch'] == 'pomar-relacion-tezcuco-1582-20260820-v1'
+          assert manifest['release_tag'] == 'publications-current'
+          assert len(manifest['assets']) == 2
+          actual = {path.name for path in (root / 'assets').iterdir() if path.is_file()}
+          expected = {asset['filename'] for asset in manifest['assets']}
+          assert actual == expected
+
+          markers = []
+          for leaf in range(1, 92):
+              markers.extend((
+                  f'〔写本（Benson Ms. G57）f. {leaf}r〕',
+                  f'〔写本（Benson Ms. G57）f. {leaf}v〕',
+              ))
+          markers.extend((
+              '〔写本（Benson Ms. G57）f. 92r〕',
+              '〔写本（Benson Ms. G58）f. 92r〕',
+              '〔写本（Benson Ms. G58）f. 92v〕',
+          ))
+          for leaf in range(93, 103):
+              markers.extend((
+                  f'〔写本（Benson Ms. G58）f. {leaf}r〕',
+                  f'〔写本（Benson Ms. G58）f. {leaf}v〕',
+              ))
+          assert len(markers) == 205
+          marker_re = re.compile(r'〔写本（Benson Ms\. G5[78]）f\. [0-9]+[rv]〕')
+          banned = ('確認用校正刷', '日本語全訳版（確認用）', '承認前非公開', '公開前確認用')
+
+          for asset in manifest['assets']:
+              path = root / 'assets' / asset['filename']
+              data = path.read_bytes()
+              assert len(data) == asset['size'], asset['filename']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['filename']
+              if asset['kind'] == 'pdf':
+                  assert data.startswith(b'%PDF-') and b'%%EOF' in data[-4096:]
+                  info = subprocess.check_output(['pdfinfo', str(path)], text=True)
+                  assert re.search(r"^Pages:\s+87$", info, re.MULTILINE)
+                  assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
+                  assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
+                  text = subprocess.check_output(['pdftotext', str(path), '-'], text=True).replace('\u00a0', ' ')
+                  assert marker_re.findall(text) == markers
+                  labels = [int(value) for value in re.findall(r'(?m)^\s*([1-9]|[1-4][0-9]|50)\.\s', text)]
+                  assert labels == list(range(1, 51)), labels
+                  assert asset['title'] in text
+                  assert asset['subtitle'] in text
+                  images = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
+                  assert not [line for line in images.splitlines()[2:] if line.strip()]
+                  for phrase in banned:
+                      assert phrase not in text
+              else:
+                  with zipfile.ZipFile(path) as archive:
+                      assert archive.testzip() is None
+                      first = archive.infolist()[0]
+                      assert first.filename == 'mimetype' and first.compress_type == 0
+                      assert archive.read('mimetype') == b'application/epub+zip'
+                      container = ET.fromstring(archive.read('META-INF/container.xml'))
+                      rootfile = next(node for node in container.iter() if node.tag.endswith('}rootfile'))
+                      opf = ET.fromstring(archive.read(rootfile.attrib['full-path']))
+                      assert asset['title'] in ' '.join(node.text or '' for node in opf.iter())
+                      html_names = [name for name in archive.namelist() if name.endswith(('.xhtml', '.html'))]
+                      html_sources = [archive.read(name).decode('utf-8') for name in html_names]
+                      html = '\n'.join(html_sources).replace('\u00a0', ' ')
+                      assert marker_re.findall(html) == markers
+                      assert html.count('source-page page-marker') == 205
+                      documents = [ET.fromstring(source) for source in html_sources]
+                      epub_text = ' '.join(' '.join(document.itertext()) for document in documents)
+                      assert asset['subtitle'] in epub_text
+                      labels = []
+                      for document in documents:
+                          for ordered in (node for node in document.iter() if node.tag.endswith('}ol')):
+                              start = int(ordered.attrib.get('start', '1'))
+                              count = sum(1 for node in ordered if node.tag.endswith('}li'))
+                              labels.extend(range(start, start + count))
+                      assert labels == list(range(1, 51)), labels
+                      styles = '\n'.join(
+                          archive.read(name).decode('utf-8')
+                          for name in archive.namelist()
+                          if name.endswith('.css')
+                      )
+                      assert re.search(r'\.source-page,\s*\.page-marker\s*\{[^}]*text-align:\s*right;', styles, re.DOTALL)
+                      images = [
+                          pathlib.PurePosixPath(name).name
+                          for name in archive.namelist()
+                          if pathlib.PurePosixPath(name).suffix.lower() in {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
+                      ]
+                      assert images == ['cover.jpg']
+                      for phrase in banned:
+                          assert phrase not in epub_text
+
+          cover = manifest['cover']
+          cover_path = root / 'cover' / cover['filename']
+          cover_bytes = cover_path.read_bytes()
+          assert len(cover_bytes) == cover['size']
+          assert hashlib.sha256(cover_bytes).hexdigest() == cover['sha256']
+          assert cover_bytes.startswith(b'\xff\xd8') and cover_bytes.endswith(b'\xff\xd9')
+          PY
+
+      - name: Check out current site main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repository
+          fetch-depth: 0
+
+      - name: Stage cover and verify catalogue metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p repository/static/publications/pomar-relacion-tezcuco-1582
+          cp "$STAGING_ROOT/payload/cover/cover.jpg" repository/static/publications/pomar-relacion-tezcuco-1582/cover.jpg
+          cd repository
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          import { publications } from './src/publications.mjs';
+          const item = publications.find((entry) => entry.slug === 'pomar-relacion-tezcuco-1582');
+          if (!item || item.pageCount !== 87 || item.figureCount !== 0 || item.plateCount !== 0) throw new Error('Pomar catalogue metadata mismatch');
+          if (item.originalTitle !== 'Relaçion q se enbio a su magestad (Relación de Tezcuco)') throw new Error('Pomar original title mismatch');
+          const archive = JSON.parse(await readFile('master-archive.json', 'utf8'));
+          if (archive.archive_commit !== 'ec560ec69f1b14bcd7fd57087bd8dd57ec0f550c') throw new Error('Private archive SHA mismatch');
+          if (archive.publications[item.slug] !== `publications/${item.slug}/master.md`) throw new Error('Pomar master path mismatch');
+          const manifest = JSON.parse(await readFile('assets-manifest.json', 'utf8'));
+          const assets = new Map(manifest.assets.map((asset) => [asset.path, asset]));
+          for (const [path, sha] of [
+            [item.pdf, '0484daf191978be614ca55f6c1e65435b43ce4b545a9dd6fffa29e28f88ae3c0'],
+            [item.epub, 'ade85ab7eae1fb421b0b7740938ee91b3217a46a4dc64abe08144f002b856fd6'],
+            [item.cover, 'a0746206946e8c1c7c1fe46d8b40a9810e9581290233b10a4b567dcaf7433c8b'],
+          ]) {
+            if (assets.get(path)?.sha256 !== sha) throw new Error(`Asset checksum mismatch: ${path}`);
+          }
+          NODE
+
+      - name: Install dependencies, build, and test the site
+        working-directory: repository
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+          npm test
+
+      - name: Merge shared release checksum ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-checksums
+          if gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/current-checksums; then
+            cp /tmp/current-checksums/SHA256SUMS.txt /tmp/SHA256SUMS.previous.txt
+          else
+            : > /tmp/SHA256SUMS.previous.txt
+          fi
+          python - <<'PY'
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/pomar-relacion-tezcuco-1582-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          new = {asset['filename']: asset['sha256'] for asset in manifest['assets']}
+          old = {}
+          for line in pathlib.Path('/tmp/SHA256SUMS.previous.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  old[parts[1].lstrip('* ')] = parts[0]
+          old.update(new)
+          pathlib.Path('/tmp/SHA256SUMS.txt').write_text(
+              ''.join(f'{sha}  {name}\n' for name, sha in sorted(old.items())),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload assets to the shared public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$RELEASE_TAG" "$STAGING_ROOT/payload/assets"/* /tmp/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and byte-verify public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify
+          python - <<'PY' > /tmp/public-assets.txt
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/pomar-relacion-tezcuco-1582-20260820-v1/payload')
+          for asset in json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['assets']:
+              print(asset['filename'])
+          PY
+          while IFS= read -r filename; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$filename" --dir verify --clobber
+            cmp "$STAGING_ROOT/payload/assets/$filename" "verify/$filename"
+          done < /tmp/public-assets.txt
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir verify --clobber
+          cmp /tmp/SHA256SUMS.txt verify/SHA256SUMS.txt
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/pomar-relacion-tezcuco-1582-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          ledger = {}
+          for line in pathlib.Path('verify/SHA256SUMS.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  ledger[parts[1].lstrip('* ')] = parts[0]
+          for asset in manifest['assets']:
+              data = (pathlib.Path('verify') / asset['filename']).read_bytes()
+              assert len(data) == asset['size']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256']
+              assert ledger[asset['filename']] == asset['sha256']
+          PY
+
+      - name: Restore prior full-text asset cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('repository/assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Rebuild and verify the complete full-text index
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v tesseract >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y tesseract-ocr
+          fi
+          mkdir -p repository/.cache
+          if [ -d .cache/fulltext-assets ]; then cp -a .cache/fulltext-assets repository/.cache/; fi
+          if [ -d .cache/fulltext-ocr ]; then cp -a .cache/fulltext-ocr repository/.cache/; fi
+          cd repository
+          npm run fetch:search-assets
+          npm run build:search
+          npm run verify:search
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const slug = 'pomar-relacion-tezcuco-1582';
+          const pageMap = JSON.parse(await readFile(`dist/search/maps/${slug}.json`, 'utf8'));
+          if (pageMap.canonicalUrl !== `/publications/${slug}/`) throw new Error('Pomar canonical search URL mismatch');
+          if (pageMap.pdfSha256 !== '0484daf191978be614ca55f6c1e65435b43ce4b545a9dd6fffa29e28f88ae3c0') throw new Error('Pomar search PDF checksum mismatch');
+          if (pageMap.masterPath !== `publications/${slug}/master.md`) throw new Error('Pomar search master path mismatch');
+          const mappings = Object.values(pageMap.blocks || {});
+          if (!mappings.length) throw new Error('Pomar search map is empty');
+          const labels = new Set(mappings.map((entry) => String(entry[0])));
+          if (!labels.has('写本（Benson Ms. G57）f. 1r')) throw new Error('Pomar first source label missing');
+          if (!labels.has('写本（Benson Ms. G58）f. 102v')) throw new Error('Pomar final source label missing');
+          if (mappings.some((entry) => !Number.isInteger(entry[1]) || entry[1] < 1 || entry[1] > 87)) throw new Error('Pomar physical PDF mapping mismatch');
+          NODE
+
+      - name: Commit cover and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C repository fetch origin main
+          git -C repository checkout -B main origin/main
+          mkdir -p repository/static/publications/pomar-relacion-tezcuco-1582
+          cp "$STAGING_ROOT/payload/cover/cover.jpg" repository/static/publications/pomar-relacion-tezcuco-1582/cover.jpg
+          git -C repository config user.name "github-actions[bot]"
+          git -C repository config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C repository add -- static/publications/pomar-relacion-tezcuco-1582/cover.jpg
+          git -C repository rm -f --ignore-unmatch "$WORKFLOW_PATH"
+          git -C repository commit -m "Verify Pomar Relación de Tezcuco publication assets"
+          git -C repository pull --rebase origin main
+          git -C repository push origin HEAD:main
+
+      - name: Remove staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH" >/dev/null
