@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ec560ec69f1b14bcd7fd57087bd8dd57ec0f550c",
+  "archive_commit": "1c0e0de25634584d362f201ca48d51ac8d6bcfa7",
   "publications": {
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
@@ -193,7 +193,8 @@
     "pineda-sublevaciones-indigenas-chiapas-1888": "publications/pineda-sublevaciones-indigenas-chiapas-1888/master.md",
     "codice-chimalpahin-volumen-3": "publications/codice-chimalpahin-volumen-3/master.md",
     "chimalpahin-diario-1577-1615": "publications/chimalpahin-diario-1577-1615/master.md",
-    "pomar-relacion-tezcuco-1582": "publications/pomar-relacion-tezcuco-1582/master.md"
+    "pomar-relacion-tezcuco-1582": "publications/pomar-relacion-tezcuco-1582/master.md",
+    "munoz-camargo-historia-tlaxcala-ms210": "publications/munoz-camargo-historia-tlaxcala-ms210/master.md"
   },
   "release_fallbacks": {
     "tezozomoc-cronica-mexicana-kraus-117": {
