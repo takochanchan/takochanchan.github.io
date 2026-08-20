@@ -5,6 +5,7 @@
 - 1746年マドリード初版の前付、『Idea』本文1–167頁、『Catálogo』前付および本文1–96頁を原刊順にまとめ、銅版口絵2点、標題紙2点、原刊頁標識を保持した日本語全訳をPDF 264頁とEPUBで公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
 - 実物のFancourt固定母版DOCX（SHA-256 `4192b835548fb2a87ed54a65df45054fcaf3e3aa704bc4ec3a4c10a5a775dc0`）を文字どおり複製し、母版の既存要素へ本文を流し込んだ。固定部のバイト同一性、202スタイル、本文行間320 twips、原刊標識色 `68747D`、『Idea』1–167頁および『Catálogo』1–96頁の標識連続性を検証した。
 - 『Catálogo』に掲載する書誌185件は、各項目で原題・原著者名を先に置き、対応する日本語訳題・日本語著者名を直後に置いた。185組すべてについて欠落、孤立、順序逆転がないことを検証した。扉の併記はこの書誌要件には含めていない。
+- 公開書誌の表紙画像には、原刊標題紙ではなく日本語訳版の表紙を使用した。
 - 主底本はJohn Carter Brown Library所蔵第2本のInternet Archive公開複製 `ideadeunanuevahi00botu_0`。同館所蔵第1本 `ideadeunanuevahi01botu` とGetty Research Institute所蔵本 `deunanuevahistor00botu` で前付、本文、原刊頁標識、図版、書誌表記を対校した。
 - 公開PDFのSHA-256は `7989679ca4c8ddd84d9c3d78a504f6e4d06cbc76c903d216946d3176083a107d`、EPUBは `12b77d3ef5466da1f5fe26bb85fc4f3b64e5d9ee19a6f729371786535fc19aae`、DOCX正本は `14bb6b3925cc244fde8bace6649282a7359cff08bda05331df0f018f521a2225`。
 - 編集可能DOCX正本と書誌・権利・底本マニフェスト・検証記録・チェックサム一式は、非公開Release `master-boturini-idea-catalogo-1746-20260820-v1` に格納し、恒久台帳コミット `8b584a0895c920ecd681af065eaf76bb4f29a74b` に `pending_lfs` として固定した。非公開Releaseへの格納・全11ファイルの再取得照合はGitHub Actions run `32357575478`、公開ReleaseへのPDF・EPUB格納・再取得照合はrun `32358614720` で完了した。

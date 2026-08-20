@@ -1083,7 +1083,7 @@ test("Chimalpahin Diario preserves its composite source and bilingual catalogue 
   assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
 });
 
-test("Boturini catalogue records original-language bibliography before Japanese", async () => {
+test("Boturini bibliography uses the Japanese translation cover", async () => {
   const item = publications.find(
     (publication) => publication.slug === "boturini-idea-catalogo-1746",
   );
@@ -1092,9 +1092,11 @@ test("Boturini catalogue records original-language bibliography before Japanese"
   assert.equal(item.pageCount, 264);
   assert.equal(item.originalAuthor, "Lorenzo Boturini Benaduci");
   assert.match(item.originalTitle, /^Idea de una nueva historia general/);
-  assert.match(item.description, /書誌185件/);
-  assert.match(item.description, /原題・原著者名を先に/);
-  assert.match(item.description, /日本語訳題・日本語著者名を後に/);
+  assert.equal(
+    item.cover,
+    "publications/boturini-idea-catalogo-1746/japanese-cover.jpg",
+  );
+  assert.doesNotMatch(item.description, /書誌185件|原題・原著者名を先に/);
   assert.match(item.sourceProvider, /ideadeunanuevahi00botu_0/);
 
   const page = await readFile(
