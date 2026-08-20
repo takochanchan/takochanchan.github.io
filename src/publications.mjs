@@ -6538,8 +6538,8 @@ const publicationRecords = [
     extent:
       "PDF 264頁・原刊前付36頁・Idea本文167頁・Catálogo前付8頁および本文96頁・銅版口絵2点・標題紙2点",
     description:
-      "ロレンソ・ボトゥリーニ・ベナドゥチがヌエバ・エスパーニャの先住民史料と歴史叙述の構想をまとめた『北アメリカ一般史の新構想』と、自ら収集した絵文書・写本・印刷物を記録する『インディアス歴史博物館目録』を、1746年初版の配列どおり一冊に収録した日本語全訳です。前付、本文、原刊頁標識、口絵・標題紙を保持し、Catálogoの書誌185件では原題・原著者名を先に、日本語訳題・日本語著者名を後に併記しています。",
-    cover: "publications/boturini-idea-catalogo-1746/cover.jpg",
+      "ロレンソ・ボトゥリーニ・ベナドゥチがヌエバ・エスパーニャの先住民史料と歴史叙述の構想をまとめた『北アメリカ一般史の新構想』と、自ら収集した絵文書・写本・印刷物を記録する『インディアス歴史博物館目録』を、1746年初版の配列どおり一冊に収録した日本語全訳です。",
+    cover: "publications/boturini-idea-catalogo-1746/japanese-cover.jpg",
     pdf:
       "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.pdf",
     epub:
