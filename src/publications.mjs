@@ -6,6 +6,54 @@ import {
 
 const publicationRecords = [
   {
+    slug: "bancroft-history-central-america-1886-1887",
+    title: "中央アメリカ史",
+    originalTitle: "History of Central America",
+    subtitle: "全三巻合本版・1501–1887年 日本語全訳",
+    author: "ヒューバート・ハウ・バンクロフト",
+    originalAuthor: "Hubert Howe Bancroft",
+    series: "HISTORY OF CENTRAL AMERICA · 1886–1887",
+    originalPublication:
+      "サンフランシスコ、The History Company、1886–1887年",
+    year: 1886,
+    extent:
+      "PDF 2,585頁・全3巻98章・原刊頁標識2,334件・原注4,325件・図版75点・第I巻引用典拠一覧・第III巻索引",
+    description:
+      "ヒューバート・ハウ・バンクロフトが、スペイン勢力の到来と初期征服から植民地統治、独立、中央アメリカ連邦の解体、各共和国の1887年までを三巻で叙述した通史。原刊前付、全98章、原注4,325件、図表、第I巻引用典拠一覧、第III巻索引を一冊にまとめ、原刊頁標識2,334件を保持した日本語全訳・全三巻合本版です。",
+    cover:
+      "publications/bancroft-history-central-america-1886-1887/cover.jpg",
+    pdf:
+      "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.pdf",
+    epub:
+      "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.epub",
+    pageCount: 2585,
+    figureCount: 72,
+    plateCount: 3,
+    types: ["歴史書", "通史", "一次史料"],
+    regions: [
+      "中央アメリカ",
+      "グアテマラ",
+      "ホンジュラス",
+      "エルサルバドル",
+      "ニカラグア",
+      "コスタリカ",
+      "パナマ",
+    ],
+    languages: ["英語", "スペイン語"],
+    tags: [
+      "バンクロフト",
+      "中央アメリカ史",
+      "植民地史",
+      "独立史",
+      "グアテマラ",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタリカ",
+      "パナマ",
+      "19世紀",
+    ],
+  },
+  {
     slug: "remesal-historia-general-1619",
     title: "西インド総史",
     originalTitle:
@@ -7793,6 +7841,17 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "bancroft-history-central-america-1886-1887": {
+    sourceEdition:
+      "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vols. VI–VIII, History of Central America, vols. I–III (San Francisco: The History Company, 1886–1887).",
+    sourceProvider:
+      "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵本（Luis Luján Muñoz寄贈）をInternet Archiveが公開する3冊の画像（識別子 histofcenthoweguat、histoofcen07howeguatguat、historyofcenthoweguat）を主底本とした。Project Gutenberg eBooks 58658・58669・62657は文字照合に用い、本文・頁境界・図版は底本画像で確定した。",
+    sourceUrl: "https://archive.org/details/histofcenthoweguat",
+    rights:
+      "1886–1887年刊の原著本文はパブリックドメインです。Internet Archiveの上記3項目は権利状態をNOT_IN_COPYRIGHTと表示し、別個のCreative CommonsライセンスURLは掲示していません。Project Gutenbergの3電子本は米国でPublic domainと表示され、Project Gutenberg Licenseの条件で配布されています。日本語翻訳版には独自の再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-21",
+    updatedDate: "2026-08-21",
+  },
   "cervantes-salazar-mexico-en-1554-1875": {
     sourceEdition:
       "Francisco Cervantes de Salazar, México en 1554: Tres diálogos latinos que Francisco Cervantes Salazar escribió e imprimió en México en dicho año, edición, traducción castellana y notas de Joaquín García Icazbalceta (México: Antigua Librería de Andrade y Morales, 1875).",
