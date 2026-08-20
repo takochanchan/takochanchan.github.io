@@ -6360,6 +6360,43 @@ const publicationRecords = [
     ],
   },
   {
+    slug: "munoz-camargo-historia-tlaxcala-ms210",
+    title: "トラスカラ市・州およびその共和国の歴史",
+    originalTitle:
+      "Historia de la ciudad y provincia de Tlaxcala y su república",
+    subtitle: "BnFメキシコ写本210 f. 30r–93v（欠首・欠尾）",
+    author: "ディエゴ・ムニョス・カマルゴ",
+    series: "HISTORIA DE TLAXCALA · MS. MEXICAIN 210",
+    originalPublication: "ヌエバ・エスパーニャ、16世紀末、写本（未刊）",
+    year: 1585,
+    extent:
+      "PDF 184頁・写本 f. 30r–93v・葉面標識128件（欠首・欠尾）",
+    description:
+      "トラスカラの地理、自然、諸集団の由来、社会と宗教、メシカとの対立、スペイン人との同盟、征服戦争を叙述する植民地期の歴史書。フランス国立図書館所蔵メキシコ写本210の現存範囲 f. 30r–93vを、欠首・欠尾を補わず訳出しています。写本画像を最終根拠とし、現代版の編者注・注番号・注データは使用または収録していません。",
+    cover:
+      "publications/munoz-camargo-historia-tlaxcala-ms210/cover.jpg",
+    pdf:
+      "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.pdf",
+    epub:
+      "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.epub",
+    pageCount: 184,
+    figureCount: 0,
+    plateCount: 0,
+    types: ["歴史書", "年代記", "写本", "一次史料"],
+    regions: ["トラスカラ", "メキシコ", "新スペイン", "メキシコ盆地"],
+    languages: ["スペイン語", "ナワトル語"],
+    tags: [
+      "トラスカラ",
+      "トラスカルテカ",
+      "メシカ",
+      "アステカ",
+      "エルナン・コルテス",
+      "征服史",
+      "メキシコ写本210",
+      "16世紀",
+    ],
+  },
+  {
     slug: "tezozomoc-cronica-mexicana-kraus-117",
     title: "メキシコ年代記",
     originalTitle: "Crónica mexicana",
@@ -7880,6 +7917,17 @@ const publicationMetadata = {
       "16世紀原著本文と1908年刊本の本文・翻訳は著作権保護期間を満了し、Internet Archiveの当該項目はNOT_IN_COPYRIGHTと表示しています。原刊標題紙画像は同公開スキャンから出所表示を保持して収録しました。BnF Gallicaの写本画像は本文照合に限って用い、本版へ転載していません。Ramón Troncoso Pérez論文はUABリポジトリ上で著作権・関連権による保護対象と表示されるため、研究上の判断のみを参照し、本文・現代訳を転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
     publishedDate: "2026-08-13",
     updatedDate: "2026-08-13",
+  },
+  "munoz-camargo-historia-tlaxcala-ms210": {
+    sourceEdition:
+      "Diego Muñoz Camargo『Historia de la ciudad y provincia de Tlaxcala y su república』、Bibliothèque nationale de France, Département des Manuscrits, Fonds mexicain, Ms. mexicain 210、f. 30r–93v。",
+    sourceProvider:
+      "フランス国立図書館Gallica公開のMs. mexicain 210写本画像を本文底本とし、現存するf. 30r–93vの128葉面を照合しました。補助転写は文字判読と本文位置の追跡に限定し、1998年版を含む現代版の編者注・注番号・注データ、ならびに旧仏訳の解釈は本文へ移入していません。写本画像は日本語版へ転載していません。",
+    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b100875153",
+    rights:
+      "16世紀の原著本文はパブリックドメインです。Gallica／フランス国立図書館の写本画像は本文の読解・照合に用い、日本語版へ転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    publishedDate: "2026-08-21",
+    updatedDate: "2026-08-21",
   },
   "tezozomoc-cronica-mexicana-kraus-117": {
     sourceEdition:

@@ -2702,6 +2702,24 @@
       "sha256": "4c5192463124bc053defcb91f63bf267ab479f4796ad9a30aef76f06d9a4157d"
     },
     {
+      "path": "publications/munoz-camargo-historia-tlaxcala-ms210/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/munoz-camargo-historia-tlaxcala-ms210/cover.jpg",
+      "size": 92408,
+      "sha256": "59d56b3f18ad4e10850dc44e86e4998a728db37bfb4c9a6df0a6afe65c514e50"
+    },
+    {
+      "path": "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_de_Tlaxcala_Ms210_JA.epub",
+      "size": 156831,
+      "sha256": "e1c07232c12f883df6fe0982500b307f0875d2b0d398e2846491009e894c2ce4"
+    },
+    {
+      "path": "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_de_Tlaxcala_Ms210_JA.pdf",
+      "size": 1661758,
+      "sha256": "a5286bbb2d6e7fbebb87c50f97a37a7d8c0288381dc3dd328d4b91aafe8facca"
+    },
+    {
       "path": "publications/ordonez-creation-1907/cover.jpg",
       "url": "https://takochanchan.github.io/publications/ordonez-creation-1907/cover.jpg",
       "size": 42506,
