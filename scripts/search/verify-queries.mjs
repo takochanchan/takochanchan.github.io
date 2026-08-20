@@ -163,8 +163,8 @@ try {
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
   await verifyCounts("ポ", { books: 47, papers: 11 });
   const pageChecks = [
-    ["グリハルバ", grijalva, 252],
-    ["グリハルバ川", grijalvaRiver, 71],
+    ["グリハルバ", grijalva, 253],
+    ["グリハルバ川", grijalvaRiver, 72],
     ["ピエドラス", piedras, 145],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
