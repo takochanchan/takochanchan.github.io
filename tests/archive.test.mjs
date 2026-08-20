@@ -63,6 +63,81 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
+test("century-only catalogue dates sort at each century's final year", async () => {
+  const tolteca = publications.find(
+    (item) => item.slug === "historia-tolteca-chichimeca",
+  );
+  assert.ok(tolteca);
+  assert.equal(tolteca.year, "16世紀");
+
+  for (const relative of ["src/archive.js", "scripts/build.mjs"]) {
+    const source = await readFile(path.join(root, relative), "utf8");
+    const helperAt = source.indexOf("const catalogueYearForSort =");
+    const comparatorAt = source.indexOf("const compareYears =", helperAt);
+    const comparatorTail = source.slice(comparatorAt).match(/\n\s*};/);
+    assert.ok(helperAt >= 0, `${relative}: century helper`);
+    assert.ok(comparatorAt > helperAt, `${relative}: year comparator`);
+    assert.ok(comparatorTail, `${relative}: comparator end`);
+    const comparatorEnd =
+      comparatorAt + comparatorTail.index + comparatorTail[0].length;
+    const helpers = Function(
+      `${source.slice(helperAt, comparatorEnd)}
+return { catalogueYearForSort, compareYears };`,
+    )();
+
+    assert.equal(helpers.catalogueYearForSort(1619), 1619, relative);
+    assert.equal(helpers.catalogueYearForSort("16世紀"), 1599, relative);
+    assert.equal(helpers.catalogueYearForSort("17世紀"), 1699, relative);
+    assert.equal(helpers.catalogueYearForSort("16世紀後半"), null, relative);
+
+    const sample = [
+      { year: 1600 },
+      { year: "16世紀" },
+      { year: 1598 },
+      { year: "年代不明" },
+    ];
+    assert.deepEqual(
+      [...sample].sort(helpers.compareYears).map((item) => item.year),
+      [1598, "16世紀", 1600, "年代不明"],
+      `${relative}: ascending`,
+    );
+    assert.deepEqual(
+      [...sample]
+        .sort((a, b) => helpers.compareYears(a, b, true))
+        .map((item) => item.year),
+      [1600, "16世紀", 1598, "年代不明"],
+      `${relative}: descending`,
+    );
+  }
+
+  const html = await readFile(path.join(dist, "index.html"), "utf8");
+  const catalogueStart = html.indexOf(
+    '<div class="archive-grid" data-archive>',
+  );
+  const catalogueEnd = html.indexOf(
+    '<nav class="pagination"',
+    catalogueStart,
+  );
+  assert.ok(catalogueStart >= 0 && catalogueEnd > catalogueStart);
+  const catalogue = html.slice(catalogueStart, catalogueEnd);
+  const toltecaAt = catalogue.indexOf(
+    "/publications/historia-tolteca-chichimeca/",
+  );
+  const remesalAt = catalogue.indexOf(
+    "/publications/remesal-historia-general-1619/",
+  );
+  assert.ok(toltecaAt >= 0 && remesalAt > toltecaAt);
+  const toltecaCardStart = catalogue.lastIndexOf(
+    '<article class="record-card">',
+    toltecaAt,
+  );
+  const toltecaCardEnd = catalogue.indexOf("</article>", toltecaAt);
+  assert.match(
+    catalogue.slice(toltecaCardStart, toltecaCardEnd),
+    /<span>16世紀<\/span>/,
+  );
+});
+
 test("Apuntes catalogo 1866 preserves bilingual authors and titles", () => {
   const item = publications.find(
     (publication) =>
@@ -1207,10 +1282,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260812-fulltext-search-v7/);
-  assert.match(html, /\/archive\.js\?v=20260812-fulltext-search-v7/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260812-fulltext-search-v7/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260812-fulltext-search-v7/);
+  assert.match(html, /\/archive\.css\?v=20260820-century-sort-v1/);
+  assert.match(html, /\/archive\.js\?v=20260820-century-sort-v1/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260820-century-sort-v1/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260820-century-sort-v1/);
   assert.match(html, /documentMapPath:"\/search\/document-map\.json"/);
   assert.match(html, /書名・著者・地名・キーワード/);
   assert.match(html, /本文全文検索/);
@@ -1304,7 +1379,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260812-fulltext-search-v7/);
+  assert.match(html, /\/archive\.css\?v=20260820-century-sort-v1/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -1390,17 +1465,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260812-fulltext-search-v7/);
-    assert.match(html, /\/archive\.js\?v=20260812-fulltext-search-v7/);
+    assert.match(html, /\/archive\.css\?v=20260820-century-sort-v1/);
+    assert.match(html, /\/archive\.js\?v=20260820-century-sort-v1/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260812-fulltext-search-v7#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260820-century-sort-v1#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260812-fulltext-search-v7#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260820-century-sort-v1#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

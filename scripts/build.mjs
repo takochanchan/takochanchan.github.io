@@ -25,7 +25,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260812-fulltext-search-v7";
+const assetVersion = "20260820-century-sort-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -35,12 +35,22 @@ const escapeHtml = (value = "") =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+const catalogueYearForSort = (year) => {
+  if (Number.isInteger(year)) return year;
+  const century = String(year).match(/^(\d+)世紀$/u);
+  if (!century) return null;
+  const centuryNumber = Number(century[1]);
+  return centuryNumber > 0 ? centuryNumber * 100 - 1 : null;
+};
+
 const compareYears = (left, right, descending = false) => {
-  const leftKnown = Number.isInteger(left.year);
-  const rightKnown = Number.isInteger(right.year);
+  const leftYear = catalogueYearForSort(left.year);
+  const rightYear = catalogueYearForSort(right.year);
+  const leftKnown = Number.isInteger(leftYear);
+  const rightKnown = Number.isInteger(rightYear);
   if (leftKnown !== rightKnown) return leftKnown ? -1 : 1;
   if (!leftKnown) return 0;
-  return descending ? right.year - left.year : left.year - right.year;
+  return descending ? rightYear - leftYear : leftYear - rightYear;
 };
 
 const jsonForScript = (value) =>
@@ -172,7 +182,13 @@ const shortWorkCatalogue = shortPublicationAuthors
           <span class="short-author__toggle" aria-hidden="true"></span>
         </summary>
         <div class="short-author__works">
-          ${author.publications.map(shortWorkCard).join("")}
+          ${[...author.publications]
+            .sort(
+              (a, b) =>
+                compareYears(a, b) || a.title.localeCompare(b.title, "ja"),
+            )
+            .map(shortWorkCard)
+            .join("")}
         </div>
       </details>`,
   )

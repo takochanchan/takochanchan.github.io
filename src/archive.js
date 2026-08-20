@@ -153,12 +153,22 @@
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
 
+  const catalogueYearForSort = (year) => {
+    if (Number.isInteger(year)) return year;
+    const century = String(year).match(/^(\d+)世紀$/u);
+    if (!century) return null;
+    const centuryNumber = Number(century[1]);
+    return centuryNumber > 0 ? centuryNumber * 100 - 1 : null;
+  };
+
   const compareYears = (left, right, descending = false) => {
-    const leftKnown = Number.isInteger(left.year);
-    const rightKnown = Number.isInteger(right.year);
+    const leftYear = catalogueYearForSort(left.year);
+    const rightYear = catalogueYearForSort(right.year);
+    const leftKnown = Number.isInteger(leftYear);
+    const rightKnown = Number.isInteger(rightYear);
     if (leftKnown !== rightKnown) return leftKnown ? -1 : 1;
     if (!leftKnown) return 0;
-    return descending ? right.year - left.year : left.year - right.year;
+    return descending ? rightYear - leftYear : leftYear - rightYear;
   };
 
   const eraFor = (year) => {
