@@ -1066,10 +1066,19 @@ test("Chimalpahin Diario preserves its composite source and bilingual catalogue 
     path.join(dist, "publications", item.slug, "index.html"),
     "utf8",
   );
-  const originalTitleAt = page.indexOf(escapeHtml(item.originalTitle));
-  const japaneseTitleAt = page.indexOf(escapeHtml(item.title), originalTitleAt + 1);
-  const originalAuthorAt = page.indexOf(escapeHtml(item.originalAuthor));
-  const japaneseAuthorAt = page.indexOf(escapeHtml(item.author), originalAuthorAt + 1);
+  const heroStart = page.indexOf('<section class="publication-hero">');
+  const heroEnd = page.indexOf("</section>", heroStart);
+  const hero = page.slice(heroStart, heroEnd);
+  const originalTitleAt = hero.indexOf(escapeHtml(item.originalTitle));
+  const japaneseTitleAt = hero.indexOf(`<h1>${escapeHtml(item.title)}</h1>`);
+  const originalAuthorAt = hero.indexOf(
+    `<span class="catalogue-author__original">${escapeHtml(item.originalAuthor)}</span>`,
+  );
+  const japaneseAuthorAt = hero.indexOf(
+    `<span class="catalogue-author__japanese">${escapeHtml(item.author)}</span>`,
+  );
+  assert.match(hero, /<span>原題<\/span>/);
+  assert.doesNotMatch(hero, /<span>日本語題<\/span>/);
   assert.ok(originalTitleAt >= 0 && japaneseTitleAt > originalTitleAt);
   assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
 });
@@ -1092,12 +1101,33 @@ test("Boturini catalogue records original-language bibliography before Japanese"
     path.join(dist, "publications", item.slug, "index.html"),
     "utf8",
   );
-  const originalTitleAt = page.indexOf(escapeHtml(item.originalTitle));
-  const japaneseTitleAt = page.indexOf(escapeHtml(item.title), originalTitleAt + 1);
-  const originalAuthorAt = page.indexOf(escapeHtml(item.originalAuthor));
-  const japaneseAuthorAt = page.indexOf(escapeHtml(item.author), originalAuthorAt + 1);
+  const heroStart = page.indexOf('<section class="publication-hero">');
+  const heroEnd = page.indexOf("</section>", heroStart);
+  const hero = page.slice(heroStart, heroEnd);
+  const originalTitleAt = hero.indexOf(escapeHtml(item.originalTitle));
+  const japaneseTitleAt = hero.indexOf(`<h1>${escapeHtml(item.title)}</h1>`);
+  const originalAuthorAt = hero.indexOf(
+    `<span class="catalogue-author__original">${escapeHtml(item.originalAuthor)}</span>`,
+  );
+  const japaneseAuthorAt = hero.indexOf(
+    `<span class="catalogue-author__japanese">${escapeHtml(item.author)}</span>`,
+  );
+  assert.match(hero, /<span>原題<\/span>/);
+  assert.doesNotMatch(hero, /<span>日本語題<\/span>/);
   assert.ok(originalTitleAt >= 0 && japaneseTitleAt > originalTitleAt);
   assert.ok(originalAuthorAt >= 0 && japaneseAuthorAt > originalAuthorAt);
+});
+
+test("bilingual catalogue keeps original-script names supplementary and Japanese names primary", async () => {
+  const css = await readFile(path.join(root, "src", "styles.css"), "utf8");
+  const originalRule = css.match(/\.catalogue-author__original\s*\{([^}]*)\}/)?.[1] ?? "";
+  const japaneseRule = css.match(/\.catalogue-author__japanese\s*\{([^}]*)\}/)?.[1] ?? "";
+  assert.match(originalRule, /color:\s*var\(--muted\)/);
+  assert.match(originalRule, /font-size:\s*0\.92em/);
+  assert.match(originalRule, /font-weight:\s*500/);
+  assert.match(japaneseRule, /color:\s*inherit/);
+  assert.match(japaneseRule, /font-size:\s*1em/);
+  assert.match(japaneseRule, /font-weight:\s*750/);
 });
 
 test("Lundell bibliography uses the Japanese translation cover", () => {
