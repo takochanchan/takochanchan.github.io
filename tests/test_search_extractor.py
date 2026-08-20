@@ -222,6 +222,23 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_named_manuscript_folio_marker_is_preserved(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔写本（Benson Ms. G57）f. 1r〕",
+                "最初の本文。",
+                "〔写本（Benson Ms. G58）f. 102v〕",
+                "最後の本文。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("写本（Benson Ms. G57）f. 1r", "最初の本文。"),
+                ("写本（Benson Ms. G58）f. 102v", "最後の本文。"),
+            ],
+        )
+
     def test_autograph_folio_marker_is_preserved_as_the_page_label(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [
