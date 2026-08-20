@@ -101,6 +101,20 @@ const formatDate = (value) => {
   return `${year}年${Number(month)}月${Number(day)}日`;
 };
 
+const cataloguePrimaryTitle = (item) =>
+  item.originalAuthor ? item.originalTitle : item.title;
+
+const catalogueSecondaryTitle = (item) =>
+  item.originalAuthor ? item.title : item.originalTitle;
+
+const catalogueSecondaryTitleLabel = (item) =>
+  item.originalAuthor ? "日本語題" : "原題";
+
+const catalogueAuthorMarkup = (item) =>
+  item.originalAuthor
+    ? `<span class="catalogue-author__original">${escapeHtml(item.originalAuthor)}</span><span class="catalogue-author__japanese">${escapeHtml(item.author)}</span>`
+    : escapeHtml(item.author);
+
 const publicationCard = (item) => `
   <article class="record-card">
     <a class="record-card__cover" href="/publications/${escapeHtml(item.slug)}/">
@@ -110,9 +124,9 @@ const publicationCard = (item) => `
     </a>
     <div class="record-card__body">
       <p class="record-card__series">${escapeHtml(item.series)}</p>
-      <h3><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h3>
-      <p class="record-card__original-title"><span>原題</span><cite>${escapeHtml(item.originalTitle)}</cite></p>
-      <p class="record-card__author">${escapeHtml(item.author)}</p>
+      <h3><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(cataloguePrimaryTitle(item))}</a></h3>
+      <p class="record-card__original-title"><span>${catalogueSecondaryTitleLabel(item)}</span><cite>${escapeHtml(catalogueSecondaryTitle(item))}</cite></p>
+      <p class="record-card__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
       <p class="record-card__subtitle">${escapeHtml(item.subtitle)}</p>
       <div class="tag-list">
         ${[item.types[0], item.regions[0], item.languages[0]]
@@ -144,8 +158,8 @@ const shortWorkCard = (item) => `
       <span>${escapeHtml(String(item.pageCount))}頁</span>
     </div>
     <div class="short-work-card__body">
-      <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h4>
-      <p class="short-work-card__original-title"><cite>${escapeHtml(item.originalTitle)}</cite></p>
+      <h4><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(cataloguePrimaryTitle(item))}</a></h4>
+      <p class="short-work-card__original-title"><cite>${escapeHtml(catalogueSecondaryTitle(item))}</cite></p>
       <p class="short-work-card__publication">${escapeHtml(item.originalPublication)}</p>
       <div class="short-work-card__actions">
         <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
@@ -733,13 +747,13 @@ ${header({
         <div>
           <p class="publication-hero__record-class">${escapeHtml(recordClassLabel)}</p>
           <p class="eyebrow">${escapeHtml(item.series)}</p>
-          <h1>${escapeHtml(item.title)}</h1>
+          <h1>${escapeHtml(cataloguePrimaryTitle(item))}</h1>
           <p class="publication-hero__original-title">
-            <span>原題</span>
-            <cite>${escapeHtml(item.originalTitle)}</cite>
+            <span>${catalogueSecondaryTitleLabel(item)}</span>
+            <cite>${escapeHtml(catalogueSecondaryTitle(item))}</cite>
           </p>
           <p class="publication-hero__subtitle">${escapeHtml(item.subtitle)}</p>
-          <p class="publication-hero__author">${escapeHtml(item.author)}</p>
+          <p class="publication-hero__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
           <div class="publication-actions">

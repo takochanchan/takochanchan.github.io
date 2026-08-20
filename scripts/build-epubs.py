@@ -281,6 +281,10 @@ DOCX_SOURCES = {
 }
 
 MARKDOWN_SOURCES = {
+    "chimalpahin-diario-1577-1615": SOURCES
+    / "翻訳サイト"
+    / "chimalpahin-diario-1577-1615"
+    / "master.md",
     "castillo-historias-mexicanos-conquista-1908": SOURCES
     / "翻訳サイト"
     / "castillo-historias-mexicanos-conquista-1908"

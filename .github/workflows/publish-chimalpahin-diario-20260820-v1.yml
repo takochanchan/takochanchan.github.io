@@ -1,0 +1,246 @@
+name: Publish Chimalpahin Diario assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-chimalpahin-diario-20260820-v1.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_BRANCH: agent/chimalpahin-diario-public-assets-20260820-v1
+      STAGING_ROOT: .release-staging/chimalpahin-diario-public-20260820-v1
+      WORKFLOW_PATH: .github/workflows/publish-chimalpahin-diario-20260820-v1.yml
+      RELEASE_TAG: publications-current
+      BUNDLE_SIZE: "1599213"
+      BUNDLE_SHA256: f8bbe2d15a428e854a6cd8a7197aa0bc4cddaf4f117f284d2b8b5c2d0226b244
+
+    steps:
+      - name: Check out checksum-pinned staging bytes
+        uses: actions/checkout@v4
+        with:
+          ref: agent/chimalpahin-diario-public-assets-20260820-v1
+
+      - name: Restore checksum-pinned publication bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat "$STAGING_ROOT"/bundle.tar.gz.part-* > /tmp/publication-bundle.tar.gz
+          test "$(stat -c %s /tmp/publication-bundle.tar.gz)" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  /tmp/publication-bundle.tar.gz" | sha256sum -c -
+          mkdir -p "$STAGING_ROOT/payload"
+          tar -xzf /tmp/publication-bundle.tar.gz -C "$STAGING_ROOT/payload" --no-same-owner
+
+      - name: Validate final PDF and EPUB assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdfinfo >/dev/null 2>&1 || ! command -v pdftotext >/dev/null 2>&1 || ! command -v pdfimages >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import subprocess
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path('.release-staging/chimalpahin-diario-public-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          assert manifest['schema_version'] == 1
+          assert manifest['batch'] == 'chimalpahin-diario-1577-1615-20260820-v1'
+          assert manifest['release_tag'] == 'publications-current'
+          assert len(manifest['assets']) == 2
+          actual = {path.name for path in (root / 'assets').iterdir() if path.is_file()}
+          expected = {asset['filename'] for asset in manifest['assets']}
+          assert actual == expected
+          banned = (
+              '確認用校正刷',
+              '日本語全訳版（確認用）',
+              '承認前非公開',
+              '公開前確認用',
+          )
+
+          for asset in manifest['assets']:
+              path = root / 'assets' / asset['filename']
+              data = path.read_bytes()
+              assert len(data) == asset['size'], asset['filename']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['filename']
+              if asset['kind'] == 'pdf':
+                  assert data.startswith(b'%PDF-') and b'%%EOF' in data[-4096:]
+                  info = subprocess.check_output(['pdfinfo', str(path)], text=True)
+                  assert re.search(rf"^Pages:\s+{asset['pages']}$", info, re.MULTILINE)
+                  assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
+                  assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
+                  pdf_text = subprocess.check_output(['pdftotext', str(path), '-'], text=True)
+                  compact = re.sub(r'\s+', '', pdf_text)
+                  assert re.sub(r'\s+', '', asset['title']) in compact
+                  assert re.sub(r'\s+', '', asset['subtitle']) in compact
+                  assert pdf_text.count('〔原刊') == asset['source_markers']
+                  images = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
+                  assert not [line for line in images.splitlines()[2:] if line.strip()]
+                  for phrase in banned:
+                      assert phrase not in pdf_text
+              else:
+                  with zipfile.ZipFile(path) as archive:
+                      assert archive.testzip() is None
+                      first = archive.infolist()[0]
+                      assert first.filename == 'mimetype' and first.compress_type == 0
+                      assert archive.read('mimetype') == b'application/epub+zip'
+                      container = ET.fromstring(archive.read('META-INF/container.xml'))
+                      rootfile = next(node for node in container.iter() if node.tag.endswith('}rootfile'))
+                      opf = ET.fromstring(archive.read(rootfile.attrib['full-path']))
+                      assert asset['title'] in ' '.join(node.text or '' for node in opf.iter())
+                      html_names = [name for name in archive.namelist() if name.endswith(('.xhtml', '.html'))]
+                      html_sources = [archive.read(name).decode('utf-8') for name in html_names]
+                      epub_text = ' '.join(
+                          ' '.join(ET.fromstring(source).itertext())
+                          for source in html_sources
+                      )
+                      compact = re.sub(r'\s+', '', epub_text)
+                      assert re.sub(r'\s+', '', asset['title']) in compact
+                      assert re.sub(r'\s+', '', asset['subtitle']) in compact
+                      assert sum(source.count('〔原刊') for source in html_sources) == asset['source_markers']
+                      assert sum(source.count('source-page page-marker') for source in html_sources) == asset['source_markers']
+                      styles = '\n'.join(
+                          archive.read(name).decode('utf-8')
+                          for name in archive.namelist()
+                          if name.endswith('.css')
+                      )
+                      assert re.search(
+                          r'\.source-page,\s*\.page-marker\s*\{[^}]*text-align:\s*right;',
+                          styles,
+                          re.DOTALL,
+                      )
+                      images = [
+                          pathlib.PurePosixPath(name).name
+                          for name in archive.namelist()
+                          if pathlib.PurePosixPath(name).suffix.lower() in {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
+                      ]
+                      assert images == ['cover.jpg']
+                      for phrase in banned:
+                          assert phrase not in epub_text
+          PY
+
+      - name: Merge shared release checksum ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-checksums
+          if gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/current-checksums; then
+            cp /tmp/current-checksums/SHA256SUMS.txt /tmp/SHA256SUMS.previous.txt
+          else
+            : > /tmp/SHA256SUMS.previous.txt
+          fi
+          python - <<'PY'
+          import json
+          import pathlib
+
+          root = pathlib.Path('.release-staging/chimalpahin-diario-public-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          new = {asset['filename']: asset['sha256'] for asset in manifest['assets']}
+          old = {}
+          for line in pathlib.Path('/tmp/SHA256SUMS.previous.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  old[parts[1].lstrip('* ')] = parts[0]
+          old.update(new)
+          pathlib.Path('/tmp/SHA256SUMS.txt').write_text(
+              ''.join(f'{sha}  {name}\n' for name, sha in sorted(old.items())),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload assets to the shared public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$RELEASE_TAG" "$STAGING_ROOT/payload/assets"/* /tmp/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and byte-verify public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify
+          python - <<'PY' > /tmp/public-assets.txt
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/chimalpahin-diario-public-20260820-v1/payload')
+          for asset in json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['assets']:
+              print(asset['filename'])
+          PY
+          while IFS= read -r filename; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$filename" --dir verify --clobber
+            cmp "$STAGING_ROOT/payload/assets/$filename" "verify/$filename"
+          done < /tmp/public-assets.txt
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir verify --clobber
+          cmp /tmp/SHA256SUMS.txt verify/SHA256SUMS.txt
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/chimalpahin-diario-public-20260820-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          ledger = {}
+          for line in pathlib.Path('verify/SHA256SUMS.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  ledger[parts[1].lstrip('* ')] = parts[0]
+          for asset in manifest['assets']:
+              data = (pathlib.Path('verify') / asset['filename']).read_bytes()
+              assert len(data) == asset['size']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256']
+              assert ledger[asset['filename']] == asset['sha256']
+          PY
+
+      - name: Check out current site main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repository
+          fetch-depth: 0
+
+      - name: Remove one-shot workflow from current main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C repository fetch origin main
+          git -C repository checkout -B main origin/main
+          git -C repository config user.name "github-actions[bot]"
+          git -C repository config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C repository rm -f --ignore-unmatch "$WORKFLOW_PATH"
+          if git -C repository diff --cached --quiet; then
+            echo "Workflow cleanup is already complete."
+          else
+            git -C repository commit -m "Verify Chimalpahin Diario publication assets"
+            git -C repository pull --rebase origin main
+            git -C repository push origin HEAD:main
+          fi
+
+      - name: Remove staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH" >/dev/null

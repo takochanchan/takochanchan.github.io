@@ -776,6 +776,24 @@
       "sha256": "3e0d5725290fe5a3e946196a833e30b8b83952fd3feade16046ea4e054da7bb3"
     },
     {
+      "path": "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.epub",
+      "size": 240204,
+      "sha256": "13176180ce79b78c3983a213ee312c5eebe410954206e3d75a71945a187efc4d"
+    },
+    {
+      "path": "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.pdf",
+      "size": 2262719,
+      "sha256": "707445759846468907e4e6f9d31fab1e06e069cbdb021d2831b3f92ee858563f"
+    },
+    {
+      "path": "publications/chimalpahin-diario-1577-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/chimalpahin-diario-1577-1615/cover.jpg",
+      "size": 121316,
+      "sha256": "76b9a4dd4150df414bbcb3a260a53c8890280600a8483bb7bddcbe054d767df9"
+    },
+    {
       "path": "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
       "size": 608102,

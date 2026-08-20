@@ -173,7 +173,15 @@ local function label_inline_images(element)
 end
 
 function Para(element)
-  return label_inline_images(element)
+  element = label_inline_images(element)
+  local text = pandoc.utils.stringify(element)
+  if text:match("^〔原刊 [pf]%..+〕$") ~= nil then
+    return pandoc.Div(
+      {element},
+      pandoc.Attr("", {"source-page", "page-marker"}, {})
+    )
+  end
+  return element
 end
 
 function Plain(element)
