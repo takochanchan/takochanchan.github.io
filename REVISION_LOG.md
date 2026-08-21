@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-21 — 『Cultivo del café en la Costa Meridional de Chiapas』新規公開
+
+- Matías Romero『Cultivo del café en la Costa Meridional de Chiapas』1893年第四版を、原刊標題紙、第三版序、本文5–163頁、付録、索引末尾まで収めた日本語全訳として公開した。PDF 158頁、原刊位置標識167件、表31点、真正脚注3件、原刊画像1点を保持した。
+- 実物のFancourt固定母版DOCX（SHA-256 `4192b835548fb2a87ed54a65df45054fcaf3e3aa704bc4ec3a4c10a5a775dc0e`）を複製し、固定OOXML部品のバイト一致、表紙13段落、埋込・サブセット・Unicode対応書体、全158頁の画像化と個別目視を確認した。別レビュアーも正規生成入口を独自再実行し、全頁と全訳本文順を検査してPASSした。
+- 底本はStanford University Libraries所蔵、Googleデジタル化、Internet Archive公開の1893年第四版。Internet Archive項目の権利状態 `NOT_IN_COPYRIGHT`（copyright-region: US）、個別CC表示なし、Google利用指針、日本語翻訳版の再利用ライセンス未設定を権利欄と書誌に明記した。
+- 公開PDFのSHA-256は `ff1936259bb402c5445805138354762abb1616c2032b9df0eacbc6cd8f825702`、EPUBは `be16975095753b8988d07b3a172dfc838243d2cdd8a6ee1e76d6dccdfeb038dd`、DOCX正本は `836a50f1547ac6805495702897e938bea2197e72cb209d38f61bd5a5804cb80e`。正本は私有アーカイブのコミット `fe3f0d7877cd9d30b4873abfcd1085947124bbbe` に保存した。
+- 公開識別子：`romero-cultivo-cafe-chiapas-1893`。
+
 ## 2026-08-21 — 『Romances de los señores de la Nueva España』Ms. G59 新規公開
 
 - Benson Latin American Collection Ms. G59 f. 1r–42v（f. 33欠）の慣例上の全36歌と、第XXIX歌後の独立単位XXIX-Aを、写本順の日本語全訳としてPDF 37頁・EPUBで公開した。写本位置標識99件を保持した。

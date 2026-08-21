@@ -6,6 +6,47 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "romero-cultivo-cafe-chiapas-1893",
+    "title": "チアパス南部沿岸におけるコーヒー栽培",
+    "originalTitle": "Cultivo del café en la Costa Meridional de Chiapas",
+    "subtitle": "1893年第四版・前付・本文5–163頁・付録・索引 日本語全訳",
+    "author": "マティアス・ロメロ",
+    "originalAuthor": "Matías Romero",
+    "series": "CULTIVO DEL CAFÉ · 1893",
+    "originalPublication": "メキシコ、勧業省印刷局、1893年第四版",
+    "year": 1893,
+    "extent": "PDF 158頁・原刊標題紙・第三版序・本文5–163頁・付録・索引・原刊頁標識167件・表31点・原刊画像1点",
+    "description": "マティアス・ロメロが、チアパス南部沿岸、とりわけソコヌスコにおけるコーヒー栽培の自然条件、土地取得、労働、造成、収穫、加工、輸送、費用と収益を論じた実用書です。1893年第四版の原刊標題紙、第三版序、本文5–163頁、付録、索引末尾までを省略なく収録しています。",
+    "cover": "publications/romero-cultivo-cafe-chiapas-1893/cover.jpg",
+    "pdf": "publications/romero-cultivo-cafe-chiapas-1893/Matias_Romero_Cafe_Chiapas_Japanese_Complete_Translation.pdf",
+    "epub": "publications/romero-cultivo-cafe-chiapas-1893/Matias_Romero_Cafe_Chiapas_Japanese_Complete_Translation.epub",
+    "pageCount": 158,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "農業書",
+      "経済史",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "チアパス",
+      "ソコヌスコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "コーヒー",
+      "コーヒー栽培",
+      "農業",
+      "ソコヌスコ",
+      "チアパス",
+      "労働",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "g59-romances-senores-nueva-espana",
     "title": "ヌエバ・エスパーニャ諸侯の歌謡",
     "originalTitle": "Romances de los señores de la Nueva España",
@@ -7924,6 +7965,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "romero-cultivo-cafe-chiapas-1893": {
+      "sourceEdition": "Matías Romero『Cultivo del café en la Costa Meridional de Chiapas』（México: Oficina Tipográfica de la Secretaría de Fomento, Calle de San Andrés núm. 15、1893年第四版）。",
+      "sourceProvider": "Stanford University Libraries所蔵本。Googleがデジタル化し、Internet Archiveが識別子 cultivodelcafen00romegoog として公開。",
+      "sourceUrl": "https://archive.org/details/cultivodelcafen00romegoog",
+      "rights": "原刊本文はパブリックドメインです。Internet Archiveの当該項目は権利状態を「NOT_IN_COPYRIGHT」（copyright-region: US）と表示し、個別のCreative Commonsライセンスは表示していません。Googleがデジタル複製に付した利用指針は、個人的・非商業的利用、自動照会の回避、Google表示の保持、利用地での適法性確認を求めています。デジタル画像にはこれら公開元の利用条件が適用されます。日本語翻訳版には再利用ライセンスを設定していません。",
+      "publishedDate": "2026-08-21",
+      "updatedDate": "2026-08-21"
+    },
   "g59-romances-senores-nueva-espana": {
     "sourceEdition": "Romances de los señores de la Nueva España, Benson Latin American Collection, Genaro García Collection, Ms. G59, f. 1r–42v（f. 33欠）, 17世紀写本（編纂1582年頃）。",
     "sourceProvider": "LLILAS Benson Latin American Studies and Collections, The University of Texas at Austin。公開ファクシミリはBiblioteca Digital Mexicanaを参照し、判読照合にはJohn Bierhorst, Ballads of the Lords of New Spain（2009）を用いた。",
