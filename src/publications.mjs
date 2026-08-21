@@ -6,6 +6,89 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "g59-romances-senores-nueva-espana",
+    "title": "ヌエバ・エスパーニャ諸侯の歌謡",
+    "originalTitle": "Romances de los señores de la Nueva España",
+    "subtitle": "Benson Latin American Collection Ms. G59 f. 1r–42v（f. 33欠）日本語全訳",
+    "author": "作者未詳",
+    "originalAuthor": "Anónimo",
+    "series": "ROMANCES DE LOS SEÑORES  ·  MS. G59",
+    "originalPublication": "1582年頃編纂。現存本は17世紀写本。",
+    "year": 1582,
+    "extent": "PDF 37頁・Benson Latin American Collection, Ms. G59 · f. 1r–42v（f. 33欠）・写本位置標識99件・図版なし",
+    "description": "ヌエバ・エスパーニャのナワトル語歌謡を収めるMs. G59の日本語全訳です。慣例上の全36歌を写本順に収録し、第XXIX歌後の独立単位をXXIX-Aとして示しています。現存しない第33葉によって失われた第XXVIII歌後半は、並行本文『Cantares Mexicanos』第XL歌から補い、主底本と補完底本の範囲を明示しました。",
+    "cover": "publications/g59-romances-senores-nueva-espana/cover.jpg",
+    "pdf": "publications/g59-romances-senores-nueva-espana/G59_Romances_de_los_senores_Japanese_Complete_Translation.pdf",
+    "epub": "publications/g59-romances-senores-nueva-espana/G59_Romances_de_los_senores_Japanese_Complete_Translation.epub",
+    "pageCount": 37,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歌謡集",
+      "写本",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパーニャ",
+      "中央メキシコ"
+    ],
+    "languages": [
+      "ナワトル語",
+      "スペイン語"
+    ],
+    "tags": [
+      "ナワトル語",
+      "歌謡",
+      "ネサワルコヨトル",
+      "メシカ",
+      "16世紀",
+      "Ms. G59"
+    ]
+  },
+  {
+    "slug": "cantares-mexicanos-ms-1628-bis",
+    "title": "メシコの歌謡",
+    "originalTitle": "Cantares Mexicanos",
+    "subtitle": "Biblioteca Nacional de México Ms. 1628 bis f. 1r–85r・全92歌日本語全訳",
+    "author": "作者複数・編者未詳",
+    "originalAuthor": "Autores múltiples; compilador anónimo",
+    "series": "CANTARES MEXICANOS  ·  MS. 1628 BIS",
+    "originalPublication": "16世紀後半成立。写本の転写年記は1597年と解される。",
+    "year": 1597,
+    "extent": "PDF 309頁・Biblioteca Nacional de México, Ms. 1628 bis · f. 1r–85r · 全92歌・写本位置標識169件・図版なし",
+    "description": "複合写本『Cantares Mexicanos』の歌謡集部分、f. 1r–85rの全92歌・第1節から第1719節までを収める日本語全訳です。歌題、部立て、演奏指示、反復、歌唱音節、ラテン語句、固有名、節番号を保持し、全169葉面の位置標識を付しました。写本のf. 85v以降に続く非歌謡諸篇は本書の範囲外です。",
+    "cover": "publications/cantares-mexicanos-ms-1628-bis/cover.jpg",
+    "pdf": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.pdf",
+    "epub": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.epub",
+    "pageCount": 309,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歌謡集",
+      "写本",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパーニャ",
+      "中央メキシコ"
+    ],
+    "languages": [
+      "ナワトル語",
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "ナワトル語",
+      "歌謡",
+      "メシカ",
+      "テノチティトラン",
+      "16世紀",
+      "Ms. 1628 bis"
+    ]
+  },
+  {
     slug: "bancroft-history-central-america-1886-1887",
     title: "中央アメリカ史",
     originalTitle: "History of Central America",
@@ -7841,6 +7924,22 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "g59-romances-senores-nueva-espana": {
+    "sourceEdition": "Romances de los señores de la Nueva España, Benson Latin American Collection, Genaro García Collection, Ms. G59, f. 1r–42v（f. 33欠）, 17世紀写本（編纂1582年頃）。",
+    "sourceProvider": "LLILAS Benson Latin American Studies and Collections, The University of Texas at Austin。公開ファクシミリはBiblioteca Digital Mexicanaを参照し、判読照合にはJohn Bierhorst, Ballads of the Lords of New Spain（2009）を用いた。",
+    "sourceUrl": "https://bdmx.mx/documento/romances-senores-nueva-espana",
+    "rights": "底本写本の本文はパブリックドメインです。公開画像とメタデータの利用条件は各公開機関の表示に従います。現代の校訂・翻訳は照合にのみ用い、訳文・注釈を転載していません。日本語翻訳・編集・組版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-21",
+    "updatedDate": "2026-08-21"
+  },
+  "cantares-mexicanos-ms-1628-bis": {
+    "sourceEdition": "Cantares Mexicanos, Biblioteca Nacional de México, Ms. 1628 bis, f. 1r–85r。Antonio Peñafiel (ed.), Cantares en idioma mexicano（1904）およびUNAM校訂版（2016）を照合。",
+    "sourceProvider": "Biblioteca Nacional de MéxicoおよびUniversidad Nacional Autónoma de México, Instituto de Investigaciones Históricas。歌謡集部分は複合写本全295葉のうちf. 1r–85r。",
+    "sourceUrl": "https://historicas.unam.mx/publicaciones/publicadigital/libros/cantares/cm02.html",
+    "rights": "原写本本文とPeñafielの1904年刊本はパブリックドメインです。UNAM版は公開表示の条件に従い照合に用い、頁画像、現代スペイン語訳、注釈を転載していません。現代の校訂・注釈の権利は各権利者に留保されます。日本語翻訳・編集・組版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-21",
+    "updatedDate": "2026-08-21"
+  },
   "bancroft-history-central-america-1886-1887": {
     sourceEdition:
       "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vols. VI–VIII, History of Central America, vols. I–III (San Francisco: The History Company, 1886–1887).",

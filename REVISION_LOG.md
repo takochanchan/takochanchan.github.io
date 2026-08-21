@@ -1,5 +1,21 @@
 # 改訂記録
 
+## 2026-08-21 — 『Romances de los señores de la Nueva España』Ms. G59 新規公開
+
+- Benson Latin American Collection Ms. G59 f. 1r–42v（f. 33欠）の慣例上の全36歌と、第XXIX歌後の独立単位XXIX-Aを、写本順の日本語全訳としてPDF 37頁・EPUBで公開した。写本位置標識99件を保持した。
+- 欠失するf. 33によって失われた第XXVIII歌後半は、並行本文『Cantares Mexicanos』第XL歌 f. 25r–25vからのみ補った。主底本G59の標識、補完底本の標識、欠落・補完注を別個に表示し、補完範囲を明示した。
+- 実物のFancourt固定母版DOCX（SHA-256 `4192b835548fb2a87ed54a65df45054fcaf3e3aa704bc4ec3a4c10a5a775dc0e`）を検証基準とし、固定書式、用紙寸法、表紙構造、本文配置、埋込Notoフォントを照合した。最終PDF全37頁を再描画し、欠頁、空白頁、文字欠落、重なり、裁ち落ちがないことを確認した。
+- 公開PDFのSHA-256は `fd214c9be5ea1e355098153077ad21b407a892cbaeafd60b4bc2568a7319171a`、EPUBは `2a4d10f3aa2e4eec325d620b51339231ec7ef9d18a9dbeb98fd37c0794f5e09f`、Markdown正本は `816d6aadac4d228c4cd298a3b582bff810a7df18629ffa39ca1f794336661bb6`。公開PDFは最終検証PDFとバイト単位で同一である。
+- 編集可能Markdown正本と書誌は、非公開原本アーカイブの恒久コミット `ffbf5ccacc7751d47dcb9f292eedd530d6712207` に固定した。PDF・EPUBはチェックサム照合後に公開Releaseへ格納し、全文検索の索引・頁対応を検証した。
+
+## 2026-08-21 — 『Cantares Mexicanos』Ms. 1628 bis 歌謡集全訳 新規公開
+
+- Biblioteca Nacional de México Ms. 1628 bis f. 1r–85rの歌謡集部分を、全92歌・第1節から第1719節までの日本語全訳としてPDF 309頁・EPUBで公開した。写本位置標識169件を保持し、f. 85v以降の非歌謡諸篇は対象外とした。
+- 歌題、部立て、演奏指示、反復、歌唱音節、ラテン語句、固有名、節番号を保持した。最終PDF全309頁を再描画し、欠頁、空白頁、文字欠落、重なり、裁ち落ちがないことを確認した。
+- 実物のFancourt固定母版DOCX（SHA-256 `4192b835548fb2a87ed54a65df45054fcaf3e3aa704bc4ec3a4c10a5a775dc0e`）を検証基準として、固定書式、用紙寸法、表紙構造、本文配置、埋込Notoフォントを照合した。
+- 公開PDFのSHA-256は `3081c4f2eaa4552956904347820ad664121033d10a78597059b8e327b4dc1a58`、EPUBは `7a37a6e3ee146250ba7876f1b600fb43e7105805ccbaeffd36a595317572b76a`、Markdown正本は `94ff3225be43df20c263a238bbc1ce9ed283aff153e6ebdbaa7bf7be0315eff4`。公開PDFは最終検証PDFとバイト単位で同一である。
+- 編集可能Markdown正本と書誌は、非公開原本アーカイブの恒久コミット `ffbf5ccacc7751d47dcb9f292eedd530d6712207` に固定した。PDF・EPUBはチェックサム照合後に公開Releaseへ格納し、全文検索の索引・頁対応を検証した。
+
 ## 2026-08-21 — Hubert Howe Bancroft『History of Central America』全三巻合本版 新規公開
 
 - 1886–1887年刊の全3巻を一冊にまとめ、原刊前付、全98章、原注4,325件、図版75点、第I巻引用典拠一覧、第III巻索引を収録した日本語全訳を、合本PDF 2,585頁とEPUBで公開した。原刊頁標識2,334件を本文位置に保持し、分冊版は公開していない。
