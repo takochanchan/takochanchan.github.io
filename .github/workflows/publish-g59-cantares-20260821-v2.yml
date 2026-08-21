@@ -22,7 +22,7 @@ jobs:
       RELEASE_TAG: publications-current
       STAGING_BRANCH: codex-release-g59-cantares-20260821-v1
       READY_BRANCH: codex-ready-g59-cantares-20260821-v2
-      PAYLOAD_SHA256: 080ed030aadc6ef6fc7fd88ce221bae84bee56f580fc340692c3dfdbbf5b75e8
+      PAYLOAD_SHA256: 8e20a5334a9383aad2d6b7da58d7e53c4c5f32d5f7005332b283f7b68d626adc
       PAYLOAD_SIZE: "2199215"
       PAYLOAD_PARTS: "9"
     steps:
@@ -248,10 +248,28 @@ jobs:
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Build and verify the exact final full-text search index
+      - name: Restore the exact final full-text search index
+        id: search-index-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Build the exact final full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           npm run fetch:search-assets
           npm run build:search
+
+      - name: Save the exact final full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Verify the exact final full-text search index
+        run: |
           npm run verify:search
           npm test
 
