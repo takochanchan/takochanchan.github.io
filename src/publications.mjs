@@ -6,6 +6,51 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "roberts-voyages-central-america-1827",
+    "title": "中央アメリカ東岸および内陸部航海旅行記",
+    "originalTitle": "Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America",
+    "subtitle": "サン・フアン川・ニカラグア湖・レオンへの旅",
+    "author": "オーランド・W・ロバーツ",
+    "originalAuthor": "Orlando W. Roberts",
+    "series": "ORLANDO W. ROBERTS · 1827",
+    "originalPublication": "エディンバラ、コンスタブル社刊。ロンドン、ハースト・チャンス社取次、1827年",
+    "year": 1827,
+    "extent": "PDF 202頁・前付・序文xiii–xxiii頁・本文25–294頁・付録295–302頁・原刊頁標識289件・原刊画像2点・折込地図1点",
+    "description": "中央アメリカ東岸を航海し、サン・フアン川を遡ってニカラグア湖を横断し、レオンへ至った交易者オーランド・W・ロバーツの旅行記の全訳です。前付、エドワード・アーヴィングの序文、本文全14章、折込地図、付録注IからVIII、奥付を収録し、モスキート海岸、パナマ、コスタリカ、ニカラグア、ホンジュラスの地域・交易・先住民社会を記録します。",
+    "cover": "publications/roberts-voyages-central-america-1827/cover.jpg",
+    "pdf": "publications/roberts-voyages-central-america-1827/Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.pdf",
+    "epub": "publications/roberts-voyages-central-america-1827/Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.epub",
+    "pageCount": 202,
+    "figureCount": 3,
+    "plateCount": 0,
+    "types": [
+      "旅行記",
+      "地誌",
+      "交易史料",
+      "一次史料"
+    ],
+    "regions": [
+      "中央アメリカ",
+      "パナマ",
+      "コスタリカ",
+      "ニカラグア",
+      "ホンジュラス",
+      "カリブ海岸"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "モスキート海岸",
+      "サン・フアン川",
+      "ニカラグア湖",
+      "レオン",
+      "先住民交易",
+      "航海",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "villavicencio-luz-metodo-idolatras-1692",
     "title": "偶像崇拝者を告解させ、偶像崇拝を根絶するための光と方法",
     "originalTitle": "Luz y método de confesar idólatras y destierro de idolatrías",
@@ -8087,6 +8132,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "roberts-voyages-central-america-1827": {
+    "sourceEdition": "Orlando W. Roberts, Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America, Edinburgh: Constable & Co.; London: Hurst, Chance, & Co., 1827。主底本はGetty Research Institute所蔵初版本。",
+    "sourceProvider": "Getty Research Institute所蔵本のInternet Archive公開画像（gri_33125013633827、314画像頁）を主底本とし、Library of Congress所蔵同年初版本のInternet Archive公開画像（narrativesofvoya00robe、310画像頁）を本文校合に用いました。主底本所収の折込地図を採用しています。",
+    "sourceUrl": "https://archive.org/details/gri_33125013633827",
+    "rights": "1827年刊の原著はパブリックドメインです。主底本のInternet Archive公開メタデータは権利状態をNOT_IN_COPYRIGHTと表示しています。日本語翻訳・編集・組版には独自の再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-22",
+    "updatedDate": "2026-08-22"
+  },
   "villavicencio-luz-metodo-idolatras-1692": {
     "sourceEdition": "Diego Jaimes Ricardo Villavicencio『Luz y método de confesar idólatras y destierro de idolatrías』、Puebla de los Ángeles: Imprenta de Diego Fernández de León、1692年。主底本はチリ国立図書館所蔵本、Memoria Chilena MC0042352。",
     "sourceProvider": "チリ国立図書館／Memoria Chilenaが公開するMC0042352（210画像頁）を主底本とし、マックス・プランク法史・法理論研究所リンガ文庫Bc 86（DOI 10.48644/mpirg_escidoc_71443）を校合に用いました。初版異状態の書簡は異状態研究と校訂版で補完しました。",

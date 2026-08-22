@@ -240,6 +240,11 @@ try {
     "villavicencio-luz-metodo-idolatras-1692",
     1,
   );
+  const robertsRoyalScale = await verifyPublicationQuery(
+    "国王の公秤",
+    "roberts-voyages-central-america-1827",
+    1,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 253],
     ["グリハルバ川", grijalvaRiver, 72],
@@ -267,7 +272,8 @@ try {
       `ピエドラス・ネグラス ${piedrasNegras} pages, ` +
       `ラカンドン and ポ counts, 人の皮剥ぎ ${duranFlaying} pages, ` +
       `翡翠の小像 ${alvaJadeImage} pages, ` +
-      `テポナグアステ ${villavicencioTeponaguaste} pages.\n`,
+      `テポナグアステ ${villavicencioTeponaguaste} pages, ` +
+      `国王の公秤 ${robertsRoyalScale} pages.\n`,
   );
 } finally {
   await api.destroy();
