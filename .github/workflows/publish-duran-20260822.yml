@@ -1,4 +1,4 @@
-name: Publish Durán complete Japanese translation
+name: Publish Durán complete Japanese translation (search-count retry)
 
 on:
   push:
@@ -28,6 +28,7 @@ jobs:
       STATUS_TESTS: agent/status-duran-20260822-v1-tests
       STATUS_RELEASE: agent/status-duran-20260822-v1-release
       STATUS_SEARCH: agent/status-duran-20260822-v1-search
+      FIXED_APPLY_SHA256: 8084c4bdf67fb273c914994adf5f9116a711cfc067fa66a0f915bc1db0463722
       PAYLOAD_SHA256: dc3fc4ee4f3f4b4ce123f042fe67233bcd36565d3846ebc61101ad07f112ebaa
       PAYLOAD_SIZE: "82471925"
       PAYLOAD_PARTS: "315"
@@ -82,6 +83,16 @@ jobs:
           mkdir -p "$RUNNER_TEMP/publication-payload"
           tar -xzf "$RUNNER_TEMP/duran-public-release.tar.gz" \
             -C "$RUNNER_TEMP/publication-payload"
+
+      - name: Install the checksum-locked search-count fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          fixed="staging/release-staging/duran-20260822/apply_public_release.fixed.py"
+          target="$RUNNER_TEMP/publication-payload/public_release_payload/apply_public_release.py"
+          test "$(sha256sum "$fixed" | awk '{print $1}')" = "$FIXED_APPLY_SHA256"
+          cp "$fixed" "$target"
+          chmod 755 "$target"
 
       - name: Validate the exact PDF, EPUB, cover, and figure files
         shell: bash
