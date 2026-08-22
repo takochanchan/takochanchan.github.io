@@ -1,0 +1,29 @@
+name: Verify Google indexing metadata
+
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static archive
+        run: npm run build
+
+      - name: Run archive regression tests
+        run: node --test tests/archive.test.mjs
