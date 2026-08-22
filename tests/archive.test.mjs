@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 254);
+  assert.equal(publications.length, 255);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -232,8 +232,23 @@ test("Alva confessionary metadata retains the approved complete scope", () => {
   assert.match(item.rights, /CC BY 4\.0/);
 });
 
+test("Villavicencio confessionary metadata retains the approved complete scope", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "villavicencio-luz-metodo-idolatras-1692",
+  );
+  assert.ok(item);
+  assert.equal(item.pageCount, 218);
+  assert.equal(item.figureCount, 2);
+  assert.match(item.extent, /底本位置標識213件/);
+  assert.match(item.description, /告解質問76問/);
+  assert.match(item.description, /説教4篇/);
+  assert.match(item.sourceProvider, /Memoria Chilena/);
+  assert.match(item.rights, /Public Domain Mark 1\.0/);
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 117);
+  assert.equal(majorPublications.length, 118);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1327,7 +1342,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">117<\/strong>件/);
+  assert.match(html, /id="book-match-count">118<\/strong>件/);
   assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

@@ -6,6 +6,51 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "villavicencio-luz-metodo-idolatras-1692",
+    "title": "偶像崇拝者を告解させ、偶像崇拝を根絶するための光と方法",
+    "originalTitle": "Luz y método de confesar idólatras y destierro de idolatrías",
+    "subtitle": "1692年プエブラ初版・前付・第一部22章・ナワトル語告解76問・説教4篇・末尾索引",
+    "author": "ディエゴ・ハイメス・リカルド・ビリャビセンシオ",
+    "originalAuthor": "Diego Jaimes Ricardo Villavicencio",
+    "series": "LUZ Y MÉTODO · PUEBLA 1692",
+    "originalPublication": "プエブラ・デ・ロス・アンヘレス、ディエゴ・フェルナンデス・デ・レオン印刷所、1692年",
+    "year": 1692,
+    "extent": "PDF 218頁・前付23頁・第一部1–136頁（37–39頁・132頁欠番）・第二部1–51頁・末尾索引・底本位置標識213件・原刊画像2点",
+    "description": "偶像崇拝者の告解と偶像崇拝の根絶を目的として、司牧者・聴罪司祭向けに編まれた1692年刊宗教書の全訳です。前付、第一部22章、ナワトル語による告解質問76問、説教4篇、供犠・迷信一覧35項、警告、末尾索引を原刊順に収録しました。後刷りの一部にのみ加えられたフランシスコ・ヌニェス・デ・ラ・ベガ書簡は、補入であることを明示して収録しています。",
+    "cover": "publications/villavicencio-luz-metodo-idolatras-1692/cover.jpg",
+    "pdf": "publications/villavicencio-luz-metodo-idolatras-1692/Diego_Jaimes_Ricardo_Villavicencio_Luz_y_metodo_1692_Japanese_Complete_Translation.pdf",
+    "epub": "publications/villavicencio-luz-metodo-idolatras-1692/Diego_Jaimes_Ricardo_Villavicencio_Luz_y_metodo_1692_Japanese_Complete_Translation.epub",
+    "pageCount": 218,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "宗教書",
+      "告解問答",
+      "宣教資料",
+      "言語資料",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパーニャ",
+      "プエブラ"
+    ],
+    "languages": [
+      "スペイン語",
+      "ナワトル語",
+      "ラテン語"
+    ],
+    "tags": [
+      "偶像崇拝",
+      "告解",
+      "ナワトル語",
+      "迷信",
+      "先住民宗教",
+      "宣教",
+      "17世紀"
+    ]
+  },
+  {
     "slug": "alva-confessionario-mayor-menor-1634",
     "title": "ナワトル語大・小告解問答",
     "originalTitle": "Confessionario mayor, y menor en lengua mexicana. Y pláticas contra las supersticiones de idolatría, que el día de hoy han quedado a los naturales desta Nueva España, e instrucción de los santos sacramentos…",
@@ -8042,6 +8087,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "villavicencio-luz-metodo-idolatras-1692": {
+    "sourceEdition": "Diego Jaimes Ricardo Villavicencio『Luz y método de confesar idólatras y destierro de idolatrías』、Puebla de los Ángeles: Imprenta de Diego Fernández de León、1692年。主底本はチリ国立図書館所蔵本、Memoria Chilena MC0042352。",
+    "sourceProvider": "チリ国立図書館／Memoria Chilenaが公開するMC0042352（210画像頁）を主底本とし、マックス・プランク法史・法理論研究所リンガ文庫Bc 86（DOI 10.48644/mpirg_escidoc_71443）を校合に用いました。初版異状態の書簡は異状態研究と校訂版で補完しました。",
+    "sourceUrl": "https://www.memoriachilena.gob.cl/602/w3-article-10029.html",
+    "rights": "1692年刊の原著はパブリックドメインです。Memoria Chilenaは主底本を『共通文化遺産』として自由な利用・複製を認めています。校合本Bc 86はPublic Domain Mark 1.0で公開されています。日本語翻訳・編集・組版には独自の再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-22",
+    "updatedDate": "2026-08-22"
+  },
   "alva-confessionario-mayor-menor-1634": {
     "sourceEdition": "Bartolomé de Alva『Confessionario mayor, y menor en lengua mexicana』、México: Francisco Salbago、1634年。John Carter Brown Library、請求記号 BA634 .A472c。",
     "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library、JCB）所蔵本の全122画像。Internet Archiveが識別子 confessionarioma00alva として公開。",
