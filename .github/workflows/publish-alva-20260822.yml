@@ -220,6 +220,10 @@ jobs:
             "$RUNNER_TEMP/publication-payload/public_release_payload/apply_public_release.py" \
             "$GITHUB_WORKSPACE" \
             "$RUNNER_TEMP/publication-payload/public_release_payload"
+          mkdir -p "static/publications/$SLUG"
+          mv \
+            "public/$SLUG/cover.jpg" \
+            "static/publications/$SLUG/cover.jpg"
           node scripts/verify-master-archive.mjs
           node --check src/publications.mjs
           node --check scripts/search/verify-queries.mjs
@@ -378,7 +382,7 @@ jobs:
               "REVISION_LOG.md",
               "assets-manifest.json",
               "master-archive.json",
-              "public/alva-confessionario-mayor-menor-1634/cover.jpg",
+              "static/publications/alva-confessionario-mayor-menor-1634/cover.jpg",
               "scripts/search/verify-queries.mjs",
               "scripts/validate-epubs.py",
               "src/publications.mjs",
@@ -409,7 +413,7 @@ jobs:
             REVISION_LOG.md \
             assets-manifest.json \
             master-archive.json \
-            "public/$SLUG/cover.jpg" \
+            "static/publications/$SLUG/cover.jpg" \
             scripts/search/verify-queries.mjs \
             scripts/validate-epubs.py \
             src/publications.mjs \
