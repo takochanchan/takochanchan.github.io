@@ -40,6 +40,9 @@ const server = createServer(async (request, response) => {
     response.writeHead(404).end();
   }
 });
+server.keepAliveTimeout = 120_000;
+server.headersTimeout = 125_000;
+server.requestTimeout = 0;
 
 await new Promise((resolve, reject) => {
   server.once("error", reject);
@@ -143,6 +146,51 @@ const verifyCounts = async (query, expected) => {
   }
 };
 
+
+const verifyPublicationQuery = async (query, slug, expectedPages) => {
+  const grouped = await searchLiteral(query);
+  let found = false;
+  let pages = 0;
+  for (let index = 0; index < grouped.results.length; index += 4) {
+    const batch = await Promise.all(
+      grouped.results.slice(index, index + 4).map(async (reference) => {
+        const preview = await reference.data();
+        const result = preview.__partialSearch
+          ? await preview.__loadFull()
+          : preview;
+        if (result.meta.slug !== slug) return 0;
+        found = true;
+        const comparableQuery = query.normalize("NFC").replace(/\s+/gu, "");
+        if (
+          result.sub_results.some(
+            (subResult) =>
+              !String(subResult.plain_excerpt || "")
+                .normalize("NFC")
+                .replace(/\s+/gu, "")
+                .includes(comparableQuery),
+          )
+        ) {
+          throw new Error(`${query}: non-literal target fragment survived filtering`);
+        }
+        const pageMap = JSON.parse(
+          await readFile(
+            path.join(directory, "maps", result.meta.slug + ".json"),
+            "utf8",
+          ),
+        );
+        return snippetsFor(result, pageMap).length;
+      }),
+    );
+    pages += batch.reduce((sum, count) => sum + count, 0);
+  }
+  if (!found || pages !== expectedPages) {
+    throw new Error(
+      `${query}: ${slug} expected ${expectedPages} pages, got ${pages}`,
+    );
+  }
+  return pages;
+};
+
 try {
   const grijalva = await verifyQuery("グリハルバ", {
     books: 41,
@@ -162,6 +210,11 @@ try {
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
   await verifyCounts("ポ", { books: 48, papers: 11 });
+  const duranFlaying = await verifyPublicationQuery(
+    "人の皮剥ぎ",
+    "duran-historia-indias-nueva-espana-1581",
+    6,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 253],
     ["グリハルバ川", grijalvaRiver, 72],
@@ -187,7 +240,7 @@ try {
       `グリハルバ川 ${grijalvaRiver} pages, ` +
       `ピエドラス ${piedras} pages, ` +
       `ピエドラス・ネグラス ${piedrasNegras} pages, ` +
-      `ラカンドン and ポ counts.\n`,
+      `ラカンドン and ポ counts, 人の皮剥ぎ ${duranFlaying} pages.\n`,
   );
 } finally {
   await api.destroy();

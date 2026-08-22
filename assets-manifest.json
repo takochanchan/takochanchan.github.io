@@ -1496,6 +1496,24 @@
       "sha256": "67d10f5c58913a03cf63b55944faf90484012f088d5a84da89164d8aaae3066a"
     },
     {
+      "path": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.epub",
+      "size": 48536431,
+      "sha256": "a87a2085037906faf6206dbe9a481029d90c3a2c7df1ea0ff3a7b0ab6967580a"
+    },
+    {
+      "path": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.pdf",
+      "size": 35410793,
+      "sha256": "8eb122dd176dbd751a405c7f7aa4c7efd2eeda1c5826b50dcf076b8943986a1e"
+    },
+    {
+      "path": "publications/duran-historia-indias-nueva-espana-1581/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/duran-historia-indias-nueva-espana-1581/cover.jpg",
+      "size": 74797,
+      "sha256": "d8a9a593be6669fac4aa6828c9f3d470641dd056b1695989d8a473d2e4ac4e61"
+    },
+    {
       "path": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
       "size": 256436,
