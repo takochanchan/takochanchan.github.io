@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-22 — オーランド・W・ロバーツ『Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America』新規公開
+
+- 1827年エディンバラ初版の前付、エドワード・アーヴィングの序文、本文全14章、折込地図、付録注I–VIII、奥付を、省略のない日本語全訳としてPDF 202頁・EPUBで公開した。原刊頁標識289件と原刊画像2点・折込地図1点を保持した。
+- 主底本はGetty Research Institute所蔵初版本（Internet Archive `gri_33125013633827`）で、Library of Congress所蔵同年初版本（`narrativesofvoya00robe`）を本文校合に用いた。
+- 独立レビューでは原刊画像へ戻り、本文439段落と原注40段落の計479段落を全件照合した。16分割、頁標識越し238結合、同頁3結合を反映し、DOCXとPDFの本文・原注の順序、原刊頁標識289件、全202頁を再検査した。本文は左揃えで、段落字下げを追加していない。
+- 公開PDFのSHA-256は `363824afb2299c2d372291169432a9cbc7aa9720620d76b1d06eaafcebb344cd`、EPUBは `286cef15021e56210bfcb93b26488945d0f94457ba90a209488b9ebcf23bb491`、DOCX正本は `c68d369586784a58a683b578fa0210c13ea58acfc007d4f563d51c7c9ab2034a`。編集可能正本は非公開原本アーカイブのコミット `2b55b0fe16030de8de22e0fea97f37cf1db7bd4f` に保存した。
+- 公開識別子：`roberts-voyages-central-america-1827`。
+
 ## 2026-08-22 — ディエゴ・ハイメス・リカルド・ビリャビセンシオ『Luz y método de confesar idólatras y destierro de idolatrías』新規公開
 
 - 1692年プエブラ初版の前付、第一部22章、ナワトル語告解質問76問、説教4篇、供犠・迷信一覧35項、警告、末尾索引を、省略のない日本語全訳としてPDF 218頁・EPUBで公開した。原刊頁順と底本位置標識213件、原刊画像2点を保持した。
