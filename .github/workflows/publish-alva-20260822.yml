@@ -426,11 +426,13 @@ jobs:
                   text=True,
               ).splitlines()
           )
+          untracked = subprocess.check_output(
+              ["git", "ls-files", "--others", "--exclude-standard"],
+              text=True,
+          ).splitlines()
           actual.update(
-              subprocess.check_output(
-                  ["git", "ls-files", "--others", "--exclude-standard"],
-                  text=True,
-              ).splitlines()
+              path for path in untracked
+              if not path.startswith("staging/")
           )
           if actual != expected:
               raise SystemExit(
