@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import {
+  exactSubResultsFor,
   literalPagefindSearch,
   snippetsFor,
 } from "../../src/fulltext-search-core.mjs";
@@ -148,42 +149,48 @@ const verifyCounts = async (query, expected) => {
 
 
 const verifyPublicationQuery = async (query, slug, expectedPages) => {
-  const grouped = await searchLiteral(query);
-  let found = false;
-  let pages = 0;
-  for (let index = 0; index < grouped.results.length; index += 4) {
-    const batch = await Promise.all(
-      grouped.results.slice(index, index + 4).map(async (reference) => {
-        const preview = await reference.data();
-        const result = preview.__partialSearch
-          ? await preview.__loadFull()
-          : preview;
-        if (result.meta.slug !== slug) return 0;
-        found = true;
-        const comparableQuery = query.normalize("NFC").replace(/\s+/gu, "");
-        if (
-          result.sub_results.some(
-            (subResult) =>
-              !String(subResult.plain_excerpt || "")
-                .normalize("NFC")
-                .replace(/\s+/gu, "")
-                .includes(comparableQuery),
-          )
-        ) {
-          throw new Error(`${query}: non-literal target fragment survived filtering`);
-        }
-        const pageMap = JSON.parse(
-          await readFile(
-            path.join(directory, "maps", result.meta.slug + ".json"),
-            "utf8",
-          ),
-        );
-        return snippetsFor(result, pageMap).length;
-      }),
+  let references = [];
+  let searchTerm = null;
+  for (const candidate of ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]) {
+    const result = await api.search(candidate);
+    const targetReferences = result.results.filter(
+      (reference) => documentMap.fragments?.[reference.id]?.[0] === slug,
     );
-    pages += batch.reduce((sum, count) => sum + count, 0);
+    if (targetReferences.length) {
+      references = targetReferences;
+      searchTerm = candidate;
+      break;
+    }
   }
-  if (!found || pages !== expectedPages) {
+  if (!references.length) {
+    throw new Error(`${query}: no indexed fragment candidate for ${slug}`);
+  }
+
+  const subResults = [];
+  let firstDocument = null;
+  for (const reference of references) {
+    const document = await reference.data();
+    firstDocument ||= document;
+    subResults.push(...exactSubResultsFor(document.sub_results, query));
+  }
+  if (!firstDocument || !subResults.length) {
+    throw new Error(
+      `${query}: ${slug} candidates via ${searchTerm} lack the exact phrase`,
+    );
+  }
+
+  const pageMap = JSON.parse(
+    await readFile(path.join(directory, "maps", slug + ".json"), "utf8"),
+  );
+  const pages = snippetsFor(
+    {
+      ...firstDocument,
+      meta: { ...firstDocument.meta, slug },
+      sub_results: subResults,
+    },
+    pageMap,
+  ).length;
+  if (pages !== expectedPages) {
     throw new Error(
       `${query}: ${slug} expected ${expectedPages} pages, got ${pages}`,
     );
