@@ -150,7 +150,7 @@ jobs:
               raise SystemExit("PDF contains a proof-era or forbidden cover string")
           fonts = subprocess.check_output(["pdffonts", str(paths["pdf"])], text=True)
           font_rows = [line.split() for line in fonts.splitlines()[2:] if line.strip()]
-          if not font_rows or any(row[3] != "yes" or row[6] != "yes" for row in font_rows):
+          if not font_rows or any(row[3] != "yes" or row[5] != "yes" for row in font_rows):
               raise SystemExit("PDF fonts are not all embedded with Unicode maps")
           if not all("Noto" in row[0] for row in font_rows):
               raise SystemExit("PDF contains a non-Noto embedded font")
