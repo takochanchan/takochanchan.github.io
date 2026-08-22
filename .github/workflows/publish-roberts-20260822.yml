@@ -423,27 +423,17 @@ jobs:
               print(f"release asset OK: {filename}")
           PY
 
-      - name: Restore the exact final full-text search index
-        id: search-index-cache
-        uses: actions/cache/restore@v4
-        with:
-          path: dist/search
-          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
       - name: Restore PDF and EPUB search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        id: search-assets-cache
         uses: actions/cache/restore@v4
         with:
           path: |
             .cache/fulltext-assets
             .cache/fulltext-ocr
-          key: publish-roberts-assets-${{ hashFiles('assets-manifest.json') }}
+          key: publish-roberts-fresh-assets-${{ hashFiles('assets-manifest.json') }}
           restore-keys: |
             fulltext-assets-
 
       - name: Ensure full-text extraction tools are available
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -453,28 +443,10 @@ jobs:
           fi
 
       - name: Fetch checksum-verified full-text inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: npm run fetch:search-assets
 
-      - name: Save the exact PDF and EPUB search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            .cache/fulltext-assets
-            .cache/fulltext-ocr
-          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
-
       - name: Build the exact final full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: npm run build:search
-
-      - name: Save the exact final full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: dist/search
-          key: fulltext-index-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
       - name: Verify full-text search and Roberts page mapping
         run: npm run verify:search
