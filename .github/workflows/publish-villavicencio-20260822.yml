@@ -244,7 +244,7 @@ jobs:
           payload="$RUNNER_TEMP/publication-payload/public_release_payload"
           python3 "$payload/apply_public_release.py" "$GITHUB_WORKSPACE" "$payload"
           mkdir -p "static/publications/$SLUG"
-          mv "public/$SLUG/cover.jpg" "static/publications/$SLUG/cover.jpg"
+          mv "$payload/public/$SLUG/cover.jpg" "static/publications/$SLUG/cover.jpg"
           node scripts/verify-master-archive.mjs
           node --check src/publications.mjs
           node --check scripts/search/verify-queries.mjs
