@@ -228,20 +228,35 @@ const documentShell = ({
   canonical = site.url,
   body,
   scripts = "",
+  structuredData = null,
+  ogType = "website",
+  image = "",
+  publishedDate = "",
+  updatedDate = "",
 }) => `<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(description)}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#101c1d">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${escapeHtml(ogType)}">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
+  ${image ? `<meta property="og:image" content="${escapeHtml(image)}">` : ""}
+  ${publishedDate ? `<meta property="article:published_time" content="${escapeHtml(publishedDate)}">` : ""}
+  ${updatedDate ? `<meta property="article:modified_time" content="${escapeHtml(updatedDate)}">` : ""}
+  <meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  ${image ? `<meta name="twitter:image" content="${escapeHtml(image)}">` : ""}
   <link rel="canonical" href="${escapeHtml(canonical)}">
+  <link rel="sitemap" type="application/xml" href="${site.url}/sitemap.xml">
   <link rel="stylesheet" href="/archive.css?v=${assetVersion}">
   <link rel="stylesheet" href="/fulltext-search.css?v=${assetVersion}">
+  ${structuredData ? `<script type="application/ld+json">${jsonForScript(structuredData)}</script>` : ""}
   <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
   <title>${escapeHtml(title)}</title>
 </head>
@@ -281,6 +296,32 @@ const fulltextDialog = () => `
 
 const home = documentShell({
   title: site.name,
+  structuredData: [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: `${site.url}/`,
+      name: site.name,
+      alternateName: site.englishName,
+      description: site.description,
+      inLanguage: "ja",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${site.url}/#collection`,
+      url: `${site.url}/`,
+      name: site.name,
+      description: site.description,
+      inLanguage: "ja",
+      isPartOf: { "@id": `${site.url}/#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: publications.length,
+      },
+    },
+  ],
   body: `
 ${header()}
 <main id="main">
@@ -722,6 +763,77 @@ const tagList = (item) =>
     .map((tag) => `<span>${escapeHtml(tag)}</span>`)
     .join("");
 
+const publicationStructuredData = (item, isShortWork) => {
+  const canonical = `${site.url}/publications/${item.slug}/`;
+  const workType = isShortWork ? "ScholarlyArticle" : "Book";
+  const originalWork = {
+    "@type": workType,
+    name: item.originalTitle,
+    inLanguage: item.languages,
+    ...(item.originalAuthor
+      ? { author: { "@type": "Person", name: item.originalAuthor } }
+      : {}),
+    ...(item.sourceUrl ? { url: item.sourceUrl } : {}),
+  };
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": workType,
+      "@id": `${canonical}#work`,
+      url: canonical,
+      name: item.title,
+      alternateName: item.originalTitle,
+      ...(isShortWork ? { headline: item.title } : {}),
+      description: item.description,
+      author: { "@type": "Person", name: item.author },
+      inLanguage: "ja",
+      datePublished: item.publishedDate,
+      dateModified: item.updatedDate,
+      image: `${site.url}/${item.cover}`,
+      identifier: item.slug,
+      genre: item.types,
+      keywords: [...item.regions, ...item.languages, ...item.tags].join(", "),
+      isAccessibleForFree: true,
+      ...(isShortWork
+        ? { pagination: `${item.pageCount}頁` }
+        : { numberOfPages: item.pageCount }),
+      encoding: [
+        {
+          "@type": "MediaObject",
+          contentUrl: item.pdfUrl,
+          encodingFormat: "application/pdf",
+          contentSize: item.pdfSize,
+        },
+        {
+          "@type": "MediaObject",
+          contentUrl: item.epubUrl,
+          encodingFormat: "application/epub+zip",
+          contentSize: item.epubSize,
+        },
+      ],
+      translationOfWork: originalWork,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: site.name,
+          item: `${site.url}/`,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: item.title,
+          item: canonical,
+        },
+      ],
+    },
+  ];
+};
+
 const detailPage = (item) => {
   const related = relatedFor(item);
   const visualTotal = item.figureCount + item.plateCount;
@@ -739,6 +851,11 @@ const detailPage = (item) => {
     title: `${item.title}｜${site.shortName}`,
     description: item.description,
     canonical: `${site.url}/publications/${item.slug}/`,
+    structuredData: publicationStructuredData(item, isShortWork),
+    ogType: isShortWork ? "article" : "book",
+    image: `${site.url}/${item.cover}`,
+    publishedDate: item.publishedDate,
+    updatedDate: item.updatedDate,
     body: `
 ${header({
   detail: true,
@@ -940,34 +1057,51 @@ await Promise.all(
   }),
 );
 
+const latestUpdatedDate = (items) =>
+  items.reduce(
+    (latest, item) =>
+      item.updatedDate && item.updatedDate > latest ? item.updatedDate : latest,
+    "",
+  );
+
+const publicationSitemapEntry = (item) => ({
+  loc: `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
+  lastmod: item.updatedDate,
+  image: `${site.url}/${item.cover}`,
+});
+
 const sitemapDocument = (entries) =>
   `<?xml version="1.0" encoding="UTF-8"?>\n` +
-  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-  entries.map((url) => `  <url><loc>${url}</loc></url>`).join("\n") +
+  `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ` +
+  `xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n` +
+  entries
+    .map(
+      ({ loc, lastmod = "", image = "" }) =>
+        `  <url><loc>${escapeHtml(loc)}</loc>` +
+        (lastmod ? `<lastmod>${escapeHtml(lastmod)}</lastmod>` : "") +
+        (image
+          ? `<image:image><image:loc>${escapeHtml(image)}</image:loc></image:image>`
+          : "") +
+        `</url>`,
+    )
+    .join("\n") +
   `\n</urlset>\n`;
 
+const currentCatalogueDate = latestUpdatedDate(publications);
 const sitemapFiles = [
   {
     name: "sitemap-books.xml",
+    lastmod: latestUpdatedDate(majorPublications),
     entries: [
-      `${site.url}/`,
-      `${site.url}/about/`,
-      ...majorPublications.map(
-        (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
-      ),
+      { loc: `${site.url}/`, lastmod: currentCatalogueDate },
+      { loc: `${site.url}/about/` },
+      ...majorPublications.map(publicationSitemapEntry),
     ],
   },
   {
     name: "sitemap-papers.xml",
-    entries: shortPublications.map(
-      (item) => `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
-    ),
-  },
-  {
-    name: "sitemap-authors.xml",
-    entries: shortPublicationAuthors.map(
-      (author) => `${site.url}/#author-${encodeURIComponent(author.key)}`,
-    ),
+    lastmod: latestUpdatedDate(shortPublications),
+    entries: shortPublications.map(publicationSitemapEntry),
   },
 ];
 
@@ -982,8 +1116,10 @@ await writeFile(
     `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
     sitemapFiles
       .map(
-        ({ name }) =>
-          `  <sitemap><loc>${site.url}/${name}</loc></sitemap>`,
+        ({ name, lastmod }) =>
+          `  <sitemap><loc>${site.url}/${name}</loc>` +
+          (lastmod ? `<lastmod>${lastmod}</lastmod>` : "") +
+          `</sitemap>`,
       )
       .join("\n") +
     `\n</sitemapindex>\n`,
