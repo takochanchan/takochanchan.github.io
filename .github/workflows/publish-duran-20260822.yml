@@ -1,4 +1,4 @@
-name: Publish Durán complete Japanese translation (targeted search gate)
+name: Publish Durán complete Japanese translation (bounded target gate)
 
 on:
   push:
@@ -29,7 +29,7 @@ jobs:
       STATUS_RELEASE: agent/status-duran-20260822-v1-release
       STATUS_SEARCH: agent/status-duran-20260822-v1-search
       FIXED_APPLY_SHA256: e6837b60bd32ddf7ad5f8c48f2ca398957f641eff7deb3a5bbd53d6f26b257b6
-      DURAN_QUERY_CHECK_SHA256: b8226eee299c513424218423df619805b93ffa9a36a806a6e78754e0cf6edca3
+      DURAN_QUERY_CHECK_SHA256: dfc3518ed1f30bd478c134fc1013075f9e5184001d8d3f87db04a436c79edcf2
       PAYLOAD_SHA256: dc3fc4ee4f3f4b4ce123f042fe67233bcd36565d3846ebc61101ad07f112ebaa
       PAYLOAD_SIZE: "82471925"
       PAYLOAD_PARTS: "315"
@@ -399,7 +399,8 @@ jobs:
           verified=false
           for attempt in 1 2 3
           do
-            if node "$duran_check" --directory dist/search; then
+            if timeout --signal=TERM --kill-after=10s 240s \
+              node "$duran_check" --directory dist/search; then
               verified=true
               break
             fi
