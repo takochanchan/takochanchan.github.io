@@ -6,6 +6,38 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "duran-historia-indias-nueva-espana-1581",
+    "title": "ヌエバ・エスパーニャ諸インディア史",
+    "originalTitle": "Historia de las Indias de Nueva España e islas de la tierra firme",
+    "subtitle": "BNE Vitr/26/11 自筆稿・全三部・図版117点 日本語全訳",
+    "author": "ディエゴ・デュラン",
+    "originalAuthor": "Diego Durán",
+    "series": "HISTORIA DE LAS INDIAS · BNE VITR/26/11",
+    "originalPublication": "ヌエバ・エスパーニャ、1570–1581年成立、BNE Vitr/26/11 自筆稿",
+    "year": 1581,
+    "extent": "PDF 913頁・自筆稿 f.1v–f.345v・全三部・自筆稿位置標識661件・彩色図版117点",
+    "description": "ディエゴ・デュランがメシカの起源、移住、諸都市との戦争と支配、神々、祭祀、暦法を記した自筆稿の日本語全訳です。BNE Vitr/26/11の葉順、章配置、段落、図像位置に従い、『ヌエバ・エスパーニャ諸インディア史』『儀礼と祭式の書』『古暦』の全三部を収録しています。全117図は人物・器物・文字・名標・彩色枠を欠かさない矩形の全図として収録しました。",
+    "cover": "publications/duran-historia-indias-nueva-espana-1581/cover.jpg",
+    "pdf": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.pdf",
+    "epub": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.epub",
+    "pageCount": 913,
+    "figureCount": 117,
+    "plateCount": 0,
+    "types": ["歴史書", "年代記", "写本", "宗教史", "一次史料"],
+    "regions": ["メキシコ", "ヌエバ・エスパーニャ", "中央メキシコ"],
+    "languages": ["スペイン語", "ナワトル語"],
+    "tags": [
+      "メシカ",
+      "アステカ",
+      "テノチティトラン",
+      "神々",
+      "祭祀",
+      "暦",
+      "BNE Vitr/26/11",
+      "16世紀"
+    ]
+  },
+  {
     "slug": "romero-cultivo-cafe-chiapas-1893",
     "title": "チアパス南部沿岸におけるコーヒー栽培",
     "originalTitle": "Cultivo del café en la Costa Meridional de Chiapas",
@@ -7965,6 +7997,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "duran-historia-indias-nueva-espana-1581": {
+    "sourceEdition": "Diego Durán『Historia de las Indias de Nueva España e islas de la tierra firme』、Biblioteca Nacional de España、Vitr/26/11、自筆稿（『儀礼と祭式の書』1570年、『古暦』1579年、『ヌエバ・エスパーニャ諸インディア史』1581年）。",
+    "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）がBNE Digitalで公開するVitr/26/11の全354画像。BNE Alma MMS ID 991054889969708606、BNE Digital UUID 19ca8a23-e58a-4e27-979f-86b6242e15df。ホセ・フェルナンド・ラミレス編1867–1880年版は判読・章境界・異読の照合にのみ用いた。",
+    "sourceUrl": "https://bnedigital.bne.es/bd/es/viewer?id=19ca8a23-e58a-4e27-979f-86b6242e15df",
+    "rights": "16世紀成立の原著はパブリックドメインです。BNEは、同館が公開するパブリックドメイン資料の画像を、クリエイティブ・コモンズ表示4.0国際（CC BY 4.0）または同等の条件で、出典表示のうえ再利用できると案内しています。本版の各図版にはスペイン国立図書館（BNE）Vitr/26/11所蔵と表示しています。日本語翻訳・編集・組版には独自の再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-22",
+    "updatedDate": "2026-08-22"
+  },
   "romero-cultivo-cafe-chiapas-1893": {
       "sourceEdition": "Matías Romero『Cultivo del café en la Costa Meridional de Chiapas』（México: Oficina Tipográfica de la Secretaría de Fomento, Calle de San Andrés núm. 15、1893年第四版）。",
       "sourceProvider": "Stanford University Libraries所蔵本。Googleがデジタル化し、Internet Archiveが識別子 cultivodelcafen00romegoog として公開。",
