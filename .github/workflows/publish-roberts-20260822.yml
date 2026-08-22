@@ -1,11 +1,11 @@
 name: Publish Roberts complete Japanese translation
 
 on:
-  workflow_dispatch:
-  push:
+  pull_request:
     branches: ["main"]
+    types: [opened, synchronize, reopened]
     paths:
-      - ".github/workflows/publish-roberts-20260822.yml"
+      - ".github/roberts-publication-trigger-20260822"
 
 permissions:
   contents: write
@@ -27,7 +27,9 @@ jobs:
       PDF_FILENAME: Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.pdf
       EPUB_FILENAME: Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.epub
       SOURCE_SITE_COMMIT: 086f9120de1f7c8843f0d69a777edf885c6681eb
-      TRIGGER_PARENT_COMMIT: cf2c9b0b3a4516d61ea2283bc4adc60c0f1fd5dc
+      TRIGGER_FILE: .github/roberts-publication-trigger-20260822
+      BASE_MAIN_COMMIT: ${{ github.event.pull_request.base.sha }}
+      TRIGGER_HEAD_COMMIT: ${{ github.event.pull_request.head.sha }}
       ARCHIVE_COMMIT: 2b55b0fe16030de8de22e0fea97f37cf1db7bd4f
       PAYLOAD_SHA256: d24cb0736c3169132bdb973bcd5595bd3646cb42d6c6d8fab7b064f1d0f37192
       PAYLOAD_SIZE: "4400344"
@@ -44,6 +46,7 @@ jobs:
       - name: Check out the publication trigger commit
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
           persist-credentials: true
 
@@ -51,8 +54,16 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if test "$(git rev-parse HEAD^)" != "$TRIGGER_PARENT_COMMIT"; then
-            echo "manual publication trigger parent is not the recorded gate commit" >&2
+          if test "$(git rev-parse HEAD)" != "$TRIGGER_HEAD_COMMIT"; then
+            echo "checked-out commit is not the recorded trigger head" >&2
+            exit 1
+          fi
+          if test "$(git rev-parse HEAD^)" != "$BASE_MAIN_COMMIT"; then
+            echo "publication trigger parent is not the recorded main commit" >&2
+            exit 1
+          fi
+          if test "$(git diff --name-only HEAD^ HEAD)" != "$TRIGGER_FILE"; then
+            echo "publication trigger commit contains an unexpected path" >&2
             exit 1
           fi
 
@@ -473,12 +484,13 @@ jobs:
         run: |
           set -euo pipefail
           workflow=".github/workflows/publish-roberts-20260822.yml"
-          rm "$workflow"
+          rm "$workflow" "$TRIGGER_FILE"
           python3 - <<'PY'
           import subprocess
 
           expected = {
               ".github/workflows/publish-roberts-20260822.yml",
+              ".github/roberts-publication-trigger-20260822",
               "REVISION_LOG.md",
               "assets-manifest.json",
               "master-archive.json",
@@ -503,17 +515,17 @@ jobs:
               )
           PY
           remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          if test "$remote_main" != "$GITHUB_SHA"; then
-            echo "main advanced during publication gate: $remote_main != $GITHUB_SHA" >&2
+          if test "$remote_main" != "$BASE_MAIN_COMMIT"; then
+            echo "main advanced during publication gate: $remote_main != $BASE_MAIN_COMMIT" >&2
             exit 1
           fi
-          if test "$(git rev-parse HEAD^)" != "$TRIGGER_PARENT_COMMIT"; then
-            echo "manual publication trigger parent is not the recorded gate commit" >&2
+          if test "$(git rev-parse HEAD^)" != "$BASE_MAIN_COMMIT"; then
+            echo "publication trigger parent is not the recorded main commit" >&2
             exit 1
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$READY_BRANCH"
-          git add "$workflow" REVISION_LOG.md assets-manifest.json master-archive.json "static/publications/$SLUG/cover.jpg" scripts/search/verify-queries.mjs scripts/validate-epubs.py src/publications.mjs tests/archive.test.mjs
+          git add "$workflow" "$TRIGGER_FILE" REVISION_LOG.md assets-manifest.json master-archive.json "static/publications/$SLUG/cover.jpg" scripts/search/verify-queries.mjs scripts/validate-epubs.py src/publications.mjs tests/archive.test.mjs
           git commit -m "Publish Roberts complete Japanese translation" -m "Publish the approved 202-page PDF, verified EPUB, three-image catalogue entry, private-master ledger reference, paragraph-preservation audit, and literal full-text search regression."
           git push origin "HEAD:refs/heads/$READY_BRANCH"
