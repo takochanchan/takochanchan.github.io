@@ -378,7 +378,23 @@ jobs:
           new = 'await verifyCounts("ポ", { books: 48, papers: 11 });'
           if text.count(old) != 1:
               raise SystemExit("unexpected short-query regression source")
-          path.write_text(text.replace(old, new), encoding="utf-8")
+          text = text.replace(old, new)
+          old_candidates = (
+              '  for (const candidate of ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]) {'
+          )
+          new_candidates = '''  const candidates =
+            query === "人の皮剥ぎ"
+              ? ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]
+              : query === "翡翠の小像が現世の財を与える"
+                ? ["翡翠", "小像", "現世", "財"]
+                : [query];
+          for (const candidate of candidates) {'''
+          if text.count(old_candidates) != 1:
+              raise SystemExit("unexpected publication-query candidate source")
+          path.write_text(
+              text.replace(old_candidates, new_candidates),
+              encoding="utf-8",
+          )
           PY
 
       - name: Verify full-text search and Alva page mapping
