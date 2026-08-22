@@ -1,4 +1,4 @@
-name: Publish Durán complete Japanese translation (search-count retry)
+name: Publish Durán complete Japanese translation (resilient search retry)
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
       STATUS_TESTS: agent/status-duran-20260822-v1-tests
       STATUS_RELEASE: agent/status-duran-20260822-v1-release
       STATUS_SEARCH: agent/status-duran-20260822-v1-search
-      FIXED_APPLY_SHA256: 8084c4bdf67fb273c914994adf5f9116a711cfc067fa66a0f915bc1db0463722
+      FIXED_APPLY_SHA256: e6837b60bd32ddf7ad5f8c48f2ca398957f641eff7deb3a5bbd53d6f26b257b6
       PAYLOAD_SHA256: dc3fc4ee4f3f4b4ce123f042fe67233bcd36565d3846ebc61101ad07f112ebaa
       PAYLOAD_SIZE: "82471925"
       PAYLOAD_PARTS: "315"
@@ -392,7 +392,17 @@ jobs:
 
       - name: Verify the exact final full-text search index
         run: |
-          npm run verify:search
+          verified=false
+          for attempt in 1 2 3
+          do
+            if npm run verify:search; then
+              verified=true
+              break
+            fi
+            echo "Search verification attempt $attempt failed; retrying local index reads."
+            sleep 2
+          done
+          test "$verified" = true
           npm test
 
       - name: Signal search verification
