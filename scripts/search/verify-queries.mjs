@@ -156,6 +156,8 @@ const verifyPublicationQuery = async (query, slug, expectedPages) => {
     ? ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]
     : query === "翡翠の小像が現世の財を与える"
       ? ["翡翠", "小像", "現世", "財"]
+      : query === "テポナグアステに関する四冊の書物"
+        ? ["テポナグアステ", "四冊", "書物"]
       : [query];
 for (const candidate of candidates) {
     const result = await api.search(candidate);
@@ -233,6 +235,11 @@ try {
     "alva-confessionario-mayor-menor-1634",
     1,
   );
+  const villavicencioTeponaguaste = await verifyPublicationQuery(
+    "テポナグアステに関する四冊の書物",
+    "villavicencio-luz-metodo-idolatras-1692",
+    1,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 253],
     ["グリハルバ川", grijalvaRiver, 72],
@@ -258,7 +265,9 @@ try {
       `グリハルバ川 ${grijalvaRiver} pages, ` +
       `ピエドラス ${piedras} pages, ` +
       `ピエドラス・ネグラス ${piedrasNegras} pages, ` +
-      `ラカンドン and ポ counts, 人の皮剥ぎ ${duranFlaying} pages.\n`,
+      `ラカンドン and ポ counts, 人の皮剥ぎ ${duranFlaying} pages, ` +
+      `翡翠の小像 ${alvaJadeImage} pages, ` +
+      `テポナグアステ ${villavicencioTeponaguaste} pages.\n`,
   );
 } finally {
   await api.destroy();
