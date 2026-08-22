@@ -6,6 +6,51 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "alva-confessionario-mayor-menor-1634",
+    "title": "ナワトル語大・小告解問答",
+    "originalTitle": "Confessionario mayor, y menor en lengua mexicana. Y pláticas contra las supersticiones de idolatría, que el día de hoy han quedado a los naturales desta Nueva España, e instrucción de los santos sacramentos…",
+    "subtitle": "1634年メキシコ初版・前付・大告解問答・小告解問答・秘跡講話・四つの祈り 日本語全訳",
+    "author": "バルトロメ・デ・アルバ",
+    "originalAuthor": "Bartolomé de Alva",
+    "series": "CONFESSIONARIO MAYOR Y MENOR · 1634",
+    "originalPublication": "メキシコ、フランシスコ・サルバゴ、1634年",
+    "year": 1634,
+    "extent": "PDF 66頁・原刊第1–51葉・無葉番号最終葉・底本位置標識57件・原刊画像12点",
+    "description": "バルトロメ・デ・アルバがナワトル語とスペイン語の対向二欄で編んだ告解・秘跡指南書の日本語全訳です。原標題紙、印刷特許・許可・認可、献辞、大告解問答、小告解問答、七つの秘跡に関する講話、言語上の注記、四つの祈り、奥付を原刊順に収録し、欄外講話と欄外注も対応位置へ移して明示しました。",
+    "cover": "publications/alva-confessionario-mayor-menor-1634/cover.jpg",
+    "pdf": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.pdf",
+    "epub": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
+    "pageCount": 66,
+    "figureCount": 12,
+    "plateCount": 0,
+    "types": [
+      "宗教書",
+      "告解問答",
+      "言語資料",
+      "宣教資料",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパーニャ",
+      "中央メキシコ"
+    ],
+    "languages": [
+      "ナワトル語",
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "ナワトル語",
+      "告解",
+      "偶像崇拝",
+      "迷信",
+      "秘跡",
+      "宣教",
+      "17世紀"
+    ]
+  },
+  {
     "slug": "duran-historia-indias-nueva-espana-1581",
     "title": "ヌエバ・エスパーニャ諸インディア史",
     "originalTitle": "Historia de las Indias de Nueva España e islas de la tierra firme",
@@ -7997,6 +8042,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "alva-confessionario-mayor-menor-1634": {
+    "sourceEdition": "Bartolomé de Alva『Confessionario mayor, y menor en lengua mexicana』、México: Francisco Salbago、1634年。John Carter Brown Library、請求記号 BA634 .A472c。",
+    "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library、JCB）所蔵本の全122画像。Internet Archiveが識別子 confessionarioma00alva として公開。",
+    "sourceUrl": "https://archive.org/details/confessionarioma00alva",
+    "rights": "1634年刊の原著はパブリックドメインです。底本画像はジョン・カーター・ブラウン図書館がクリエイティブ・コモンズ表示4.0国際（CC BY 4.0）で公開しており、本版では Courtesy of the John Carter Brown Library と表示しています。日本語翻訳・編集・組版には独自の再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-22",
+    "updatedDate": "2026-08-22"
+  },
   "duran-historia-indias-nueva-espana-1581": {
     "sourceEdition": "Diego Durán『Historia de las Indias de Nueva España e islas de la tierra firme』、Biblioteca Nacional de España、Vitr/26/11、自筆稿（『儀礼と祭式の書』1570年、『古暦』1579年、『ヌエバ・エスパーニャ諸インディア史』1581年）。",
     "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）がBNE Digitalで公開するVitr/26/11の全354画像。BNE Alma MMS ID 991054889969708606、BNE Digital UUID 19ca8a23-e58a-4e27-979f-86b6242e15df。ホセ・フェルナンド・ラミレス編1867–1880年版は判読・章境界・異読の照合にのみ用いた。",

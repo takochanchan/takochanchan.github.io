@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-22 — バルトロメ・デ・アルバ『Confessionario mayor, y menor en lengua mexicana』新規公開
+
+- 1634年メキシコ初版の原標題紙、印刷特許・許可・認可、献辞、大告解問答、小告解問答、七つの秘跡に関する講話、言語上の注記、四つの祈り、奥付を、省略のない日本語全訳としてPDF 66頁・EPUBで公開した。原刊第1–51葉と無葉番号最終葉の順序を保ち、底本位置標識57件と原刊画像12点を収録した。
+- 全訳を前付–第20葉、第21–40葉、第41葉–最終葉の三範囲に分けて独立レビューし、指摘を統合した。Fancourt固定母版に基づく最終DOCXと全66頁のPDFを検査し、表紙・本文左揃え・埋込Unicode対応Noto書体・画像・標識・頁送りを確認した。承認後に校正表示を除去した公開PDFを固定した。
+- 底本はJohn Carter Brown Library所蔵本（BA634 .A472c）の全122画像で、Internet Archive識別子は confessionarioma00alva。原著はパブリックドメイン、底本画像はCC BY 4.0で、Courtesy of the John Carter Brown Library と表示した。日本語翻訳・編集・組版には独自の再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は 57cf5994043e06a906e01347a39ec902c37fbaa02824727e8d5f1d9e33cfe1db、EPUBは 9a5b76305efa07b6fae75945d27e534960e2475002ed7b39b7be28829603f9d0、DOCX正本は 01aa38956ac09c0c93ad2125524b77cff1ee027a47f53f6c0e85e71c27b15c9e。編集可能正本は非公開原本アーカイブのコミット ffbbe7c9359c3a9878d64b65bbc74e55fe7f2670 に保存した。
+- 公開識別子：alva-confessionario-mayor-menor-1634。
+
 ## 2026-08-22 — ディエゴ・デュラン『Historia de las Indias de Nueva España e islas de la tierra firme』新規公開
 
 - スペイン国立図書館所蔵BNE Vitr/26/11自筆稿の全三部を、PDF 913頁・EPUBとして公開した。自筆稿位置標識661件と彩色図版117点を保持し、本文、葉順、章配置、段落、図像位置を自筆稿へ照合した。

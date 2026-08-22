@@ -151,7 +151,13 @@ const verifyCounts = async (query, expected) => {
 const verifyPublicationQuery = async (query, slug, expectedPages) => {
   let references = [];
   let searchTerm = null;
-  for (const candidate of ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]) {
+  const candidates =
+  query === "人の皮剥ぎ"
+    ? ["皮剥ぎ", "皮剥", "剥ぎ", "剥"]
+    : query === "翡翠の小像が現世の財を与える"
+      ? ["翡翠", "小像", "現世", "財"]
+      : [query];
+for (const candidate of candidates) {
     const result = await api.search(candidate);
     const targetReferences = result.results.filter(
       (reference) => documentMap.fragments?.[reference.id]?.[0] === slug,
@@ -221,6 +227,11 @@ try {
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",
     6,
+  );
+  const alvaJadeImage = await verifyPublicationQuery(
+    "翡翠の小像が現世の財を与える",
+    "alva-confessionario-mayor-menor-1634",
+    1,
   );
   const pageChecks = [
     ["グリハルバ", grijalva, 253],
