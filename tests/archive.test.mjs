@@ -1457,40 +1457,88 @@ test("catalogue search stays within publication metadata", async () => {
   assert.doesNotMatch(script, /const perPage = 6/);
 });
 
-test("sitemap index separates books, papers, and author anchors", async () => {
+test("sitemaps expose canonical URLs, update dates, and cover images", async () => {
   const index = await readFile(path.join(dist, "sitemap.xml"), "utf8");
   const books = await readFile(path.join(dist, "sitemap-books.xml"), "utf8");
   const papers = await readFile(path.join(dist, "sitemap-papers.xml"), "utf8");
-  const authors = await readFile(path.join(dist, "sitemap-authors.xml"), "utf8");
   assert.match(index, /<sitemapindex/);
   assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-books\.xml/);
   assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-papers\.xml/);
-  assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-authors\.xml/);
+  assert.match(index, /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
+  assert.doesNotMatch(index, /sitemap-authors|#author-/);
   assert.match(books, /https:\/\/takochanchan\.github\.io\/about\//);
-  for (const item of majorPublications) {
+
+  for (const [item, sitemap] of [
+    ...majorPublications.map((item) => [item, books]),
+    ...shortPublications.map((item) => [item, papers]),
+  ]) {
+    const loc = `https://takochanchan.github.io/publications/${item.slug}/`;
+    const marker = `<loc>${loc}</loc>`;
+    const entryAt = sitemap.indexOf(marker);
+    assert.ok(entryAt >= 0, `${item.slug}: sitemap URL`);
+    const entryEnd = sitemap.indexOf("</url>", entryAt);
+    assert.ok(entryEnd > entryAt, `${item.slug}: sitemap entry`);
+    const entry = sitemap.slice(entryAt, entryEnd);
     assert.match(
-      books,
+      entry,
+      new RegExp(`<lastmod>${item.updatedDate}<\\/lastmod>`),
+      `${item.slug}: lastmod`,
+    );
+    assert.match(
+      entry,
       new RegExp(
-        `https://takochanchan\\.github\\.io/publications/${item.slug}/`,
+        `<image:image><image:loc>https://takochanchan\\.github\\.io/${item.cover.replace(
+          /[.*+?^${}()|[\]\\]/g,
+          "\\$&",
+        )}<\\/image:loc><\\/image:image>`,
+      ),
+      `${item.slug}: cover image`,
+    );
+    assert.doesNotMatch(entry, /github\.com/);
+    assert.doesNotMatch(entry, new RegExp(escapeHtml(item.pdfUrl)));
+  }
+
+  await assert.rejects(access(path.join(dist, "sitemap-authors.xml")));
+});
+
+test("publication pages expose Google-readable metadata and schema.org records", async () => {
+  for (const item of [majorPublications[0], shortPublications[0]]) {
+    const html = await readFile(
+      path.join(dist, "publications", item.slug, "index.html"),
+      "utf8",
+    );
+    assert.match(
+      html,
+      /<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">/,
+    );
+    assert.match(
+      html,
+      new RegExp(
+        `<meta property="og:image" content="https://takochanchan\\.github\\.io/${item.cover.replace(
+          /[.*+?^${}()|[\]\\]/g,
+          "\\$&",
+        )}">`,
       ),
     );
-  }
-  for (const item of shortPublications) {
-    assert.match(
-      papers,
-      new RegExp(
-        `https://takochanchan\\.github\\.io/publications/${item.slug}/`,
-      ),
+    const match = html.match(
+      /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
     );
-  }
-  for (const author of shortPublicationAuthors) {
-    assert.match(authors, new RegExp(`#author-${author.key}`));
-  }
-  for (const sitemap of [books, papers, authors]) {
-    for (const item of publications) {
-      assert.doesNotMatch(sitemap, new RegExp(escapeHtml(item.pdfUrl)));
-    }
-    assert.doesNotMatch(sitemap, /github\.com/);
+    assert.ok(match, `${item.slug}: JSON-LD`);
+    const records = JSON.parse(match[1]);
+    const canonical = `https://takochanchan.github.io/publications/${item.slug}/`;
+    const work = records.find((record) => record["@id"] === `${canonical}#work`);
+    assert.ok(work, `${item.slug}: work record`);
+    assert.equal(work["@type"], item.recordClass === "short-work" ? "ScholarlyArticle" : "Book");
+    assert.equal(work.name, item.title);
+    assert.equal(work.alternateName, item.originalTitle);
+    assert.equal(work.url, canonical);
+    assert.equal(work.datePublished, item.publishedDate);
+    assert.equal(work.dateModified, item.updatedDate);
+    assert.equal(work.translationOfWork.name, item.originalTitle);
+    assert.deepEqual(
+      work.encoding.map((encoding) => encoding.encodingFormat),
+      ["application/pdf", "application/epub+zip"],
+    );
   }
 });
 
@@ -1635,7 +1683,6 @@ test("rendered public site does not expose the previous identifying host", async
     "sitemap.xml",
     "sitemap-books.xml",
     "sitemap-papers.xml",
-    "sitemap-authors.xml",
     ...publications.map((item) => `publications/${item.slug}/index.html`),
   ];
   for (const relative of textFiles) {

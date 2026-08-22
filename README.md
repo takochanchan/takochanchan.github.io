@@ -4,6 +4,8 @@
 PDFとリフロー型EPUB 3で公開する、
 GitHub Pages 用の静的アーカイブです。
 
+公開サイト: [https://takochanchan.github.io/](https://takochanchan.github.io/)
+
 ## 構成
 
 - `src/publications.mjs` — 書誌情報、分類、タグ
