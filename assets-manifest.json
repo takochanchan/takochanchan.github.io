@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
+      "size": 4113148,
+      "sha256": "9a5b76305efa07b6fae75945d27e534960e2475002ed7b39b7be28829603f9d0"
+    },
+    {
+      "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.pdf",
+      "size": 2075065,
+      "sha256": "57cf5994043e06a906e01347a39ec902c37fbaa02824727e8d5f1d9e33cfe1db"
+    },
+    {
+      "path": "publications/alva-confessionario-mayor-menor-1634/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alva-confessionario-mayor-menor-1634/cover.jpg",
+      "size": 68454,
+      "sha256": "65228c4c6080339315fbf8c465042146d05110e527a938826d538223bb17cdba"
+    },
+    {
       "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/arthes_peten_1893_ja.epub",
       "size": 96542,
