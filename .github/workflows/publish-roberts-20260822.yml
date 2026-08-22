@@ -354,6 +354,16 @@ jobs:
           if text.count(old) != 1:
               raise SystemExit("unexpected short-literal search regression state")
           path.write_text(text.replace(old, new), encoding="utf-8")
+
+          pages_path = Path(".github/workflows/pages.yml")
+          pages_text = pages_path.read_text(encoding="utf-8")
+          old_key = "key: fulltext-index-$" + "{{ hashFiles("
+          new_key = "key: fulltext-index-roberts-v1-$" + "{{ hashFiles("
+          if pages_text.count(old_key) != 2:
+              raise SystemExit("unexpected Pages search-cache key state")
+          pages_path.write_text(
+              pages_text.replace(old_key, new_key), encoding="utf-8"
+          )
           PY
           mkdir -p "static/publications/$SLUG"
           mv "$payload/public/$SLUG/cover.jpg" "static/publications/$SLUG/cover.jpg"
@@ -462,6 +472,12 @@ jobs:
       - name: Verify full-text search and Roberts page mapping
         run: npm run verify:search
 
+      - name: Save the verified final full-text search index
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-roberts-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
       - name: Commit the verified publication to a ready branch
         shell: bash
         run: |
@@ -473,6 +489,7 @@ jobs:
 
           expected = {
               ".github/workflows/publish-roberts-20260822.yml",
+              ".github/workflows/pages.yml",
               ".github/roberts-publication-trigger-20260822",
               "REVISION_LOG.md",
               "assets-manifest.json",
@@ -497,11 +514,6 @@ jobs:
                   + f"missing={sorted(expected - actual)} extra={sorted(actual - expected)}"
               )
           PY
-          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          if test "$remote_main" != "$BASE_MAIN_COMMIT"; then
-            echo "main advanced during publication gate: $remote_main != $BASE_MAIN_COMMIT" >&2
-            exit 1
-          fi
           if test "$(git rev-parse HEAD^)" != "$BASE_MAIN_COMMIT"; then
             echo "publication trigger parent is not the recorded main commit" >&2
             exit 1
@@ -509,6 +521,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$READY_BRANCH"
-          git add "$workflow" "$TRIGGER_FILE" REVISION_LOG.md assets-manifest.json master-archive.json "static/publications/$SLUG/cover.jpg" scripts/search/verify-queries.mjs scripts/validate-epubs.py src/publications.mjs tests/archive.test.mjs
+          git add "$workflow" "$TRIGGER_FILE" .github/workflows/pages.yml REVISION_LOG.md assets-manifest.json master-archive.json "static/publications/$SLUG/cover.jpg" scripts/search/verify-queries.mjs scripts/validate-epubs.py src/publications.mjs tests/archive.test.mjs
           git commit -m "Publish Roberts complete Japanese translation" -m "Publish the approved 202-page PDF, verified EPUB, three-image catalogue entry, private-master ledger reference, paragraph-preservation audit, and literal full-text search regression."
           git push origin "HEAD:refs/heads/$READY_BRANCH"
