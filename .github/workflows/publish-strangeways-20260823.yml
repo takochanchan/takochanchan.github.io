@@ -274,7 +274,7 @@ jobs:
           if "JohnCarterBrownLibrary" in compact:
               raise SystemExit("PDF contains the incorrect image attribution")
           first_page = subprocess.check_output(["pdftotext", "-f", "1", "-l", "1", str(pdf), "-"], text=True)
-          if "校訂版・2026" not in re.sub(r"\s+", "", first_page):
+          if not re.search(r"校訂版[・·]2026", re.sub(r"\s+", "", first_page)):
               raise SystemExit("approved cover edition line is missing")
           if "日本語全訳" in first_page:
               raise SystemExit("forbidden cover wording is present")
