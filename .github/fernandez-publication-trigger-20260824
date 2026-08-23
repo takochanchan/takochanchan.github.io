@@ -1,0 +1,9 @@
+{
+  "slug": "fernandez-historia-costa-rica-1889",
+  "source_site_commit": "5713680275302161265e027492a4ba69d4df24af",
+  "bootstrap_commit": "70799332ff2c720476b65714aa1916ef5c320480",
+  "archive_commit": "68f2e501c520b2ab876f95dfcb9ab916c158ebe0",
+  "payload_sha256": "0b60d92bd1f7b9aa0aff3a78dbf28c46bc00bb43ddc3abe1e945d8a3b46a79f9",
+  "pdf_sha256": "805d705580ff18eb110dbe0685741c66bf4be92dd583a7151e8968eb1f3e886c",
+  "epub_sha256": "37e3f5693b6ac9541e85ba3cb4925b9c4c901b1d1adb973372aa7996f32f1210"
+}
