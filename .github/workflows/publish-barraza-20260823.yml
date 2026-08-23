@@ -64,8 +64,12 @@ jobs:
             echo "publication trigger parent is not the recorded main commit" >&2
             exit 1
           fi
-          if test "$(git rev-parse "$BASE_MAIN_COMMIT^")" != "$SOURCE_SITE_COMMIT"; then
-            echo "publication workflow bootstrap is not based on the reviewed site commit" >&2
+          if ! git merge-base --is-ancestor "$SOURCE_SITE_COMMIT" "$BASE_MAIN_COMMIT"; then
+            echo "reviewed site commit is not an ancestor of the publication bootstrap" >&2
+            exit 1
+          fi
+          if test "$(git diff --name-only "$SOURCE_SITE_COMMIT" "$BASE_MAIN_COMMIT")" != ".github/workflows/publish-barraza-20260823.yml"; then
+            echo "publication bootstrap contains an unexpected path" >&2
             exit 1
           fi
           if test "$(git diff --name-only HEAD^ HEAD)" != "$TRIGGER_FILE"; then
@@ -390,6 +394,24 @@ jobs:
           set -euo pipefail
           payload="$RUNNER_TEMP/publication-payload/public_release_payload"
           python3 "$payload/apply_public_release.py" "$GITHUB_WORKSPACE" "$payload"
+          node - <<'JS'
+          import { readFile, writeFile } from "node:fs/promises";
+          const filename = "scripts/search/verify-queries.mjs";
+          const source = await readFile(filename, "utf8");
+          const replacements = [
+            ["const barrazaCaballito = await verifyPublicationQuery(", "const barrazaArchiveBurning = await verifyPublicationQuery("],
+            ['"クンブレ・デル・カバジト",', '"文書庫を焼き",'],
+            ["`クンブレ・デル・カバジト ${barrazaCaballito} pages.\\n`,", "`文書庫を焼き ${barrazaArchiveBurning} pages.\\n`,"],
+          ];
+          let corrected = source;
+          for (const [before, after] of replacements) {
+            if (corrected.split(before).length !== 2) {
+              throw new Error(`search verification correction target is not unique: ${before}`);
+            }
+            corrected = corrected.replace(before, after);
+          }
+          await writeFile(filename, corrected, "utf8");
+          JS
           node scripts/verify-master-archive.mjs
           node --check src/publications.mjs
           node --check scripts/search/verify-queries.mjs
