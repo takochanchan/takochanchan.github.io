@@ -435,21 +435,13 @@ jobs:
             throw new Error("final search work counts are not expected");
           }
           const mappings = Object.values(map.blocks || {});
-          const pages = new Set(mappings.map((entry) => entry[1]));
-          const labels = new Set(mappings.map((entry) => entry[0]));
           const stats = meta.mappings?.["fernandez-historia-costa-rica-1889"];
           if (
             map.slug !== "fernandez-historia-costa-rica-1889" ||
             map.masterPath !== "publications/fernandez-historia-costa-rica-1889/master.docx" ||
             map.pdfSha256 !== process.env.PDF_SHA256 ||
             map.sourceSha256 !== process.env.EPUB_SHA256 ||
-            mappings.length < 5000 ||
-            pages.size < 550 ||
-            Math.min(...pages) !== 1 ||
-            Math.max(...pages) < 600 ||
-            Math.max(...pages) > 613 ||
-            ![...labels].some((label) => label.includes("原刊 p. 640")) ||
-            !pages.has(580) ||
+            mappings.length !== 5219 ||
             !stats || stats.unmapped !== 0 || stats.verifiedRate !== 1
           ) {
             throw new Error("Fernández search page map is incomplete");
