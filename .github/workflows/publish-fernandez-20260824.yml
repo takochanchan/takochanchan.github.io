@@ -1,0 +1,558 @@
+name: Publish Fernández Historia de Costa Rica complete Japanese translation
+
+on:
+  pull_request:
+    branches: ["main"]
+    types: [opened, synchronize, reopened]
+    paths:
+      - ".github/fernandez-publication-trigger-20260824"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-fernandez-historia-costa-rica-20260824
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: publications-current
+      STAGING_BRANCH: agent/fernandez-public-assets-20260824-v1
+      READY_BRANCH: agent/fernandez-publication-ready-20260824-v1
+      SLUG: fernandez-historia-costa-rica-1889
+      PDF_FILENAME: Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.pdf
+      EPUB_FILENAME: Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub
+      SOURCE_SITE_COMMIT: 5713680275302161265e027492a4ba69d4df24af
+      TRIGGER_FILE: .github/fernandez-publication-trigger-20260824
+      BASE_MAIN_COMMIT: ${{ github.event.pull_request.base.sha }}
+      TRIGGER_HEAD_COMMIT: ${{ github.event.pull_request.head.sha }}
+      ARCHIVE_COMMIT: 68f2e501c520b2ab876f95dfcb9ab916c158ebe0
+      PAYLOAD_SHA256: 0b60d92bd1f7b9aa0aff3a78dbf28c46bc00bb43ddc3abe1e945d8a3b46a79f9
+      PAYLOAD_SIZE: "7947907"
+      PAYLOAD_PARTS: "16"
+      PDF_SHA256: 805d705580ff18eb110dbe0685741c66bf4be92dd583a7151e8968eb1f3e886c
+      PDF_SIZE: "8906130"
+      EPUB_SHA256: 37e3f5693b6ac9541e85ba3cb4925b9c4c901b1d1adb973372aa7996f32f1210
+      EPUB_SIZE: "2271836"
+      COVER_SHA256: 44c98f1712a949a96a742f851ff548185db6355c940e519960546388f0cdd739
+      COVER_SIZE: "50845"
+      BIBLIOGRAPHY_SHA256: fa39e7a1c1d4feb89f328712b3624710a250b7d7adbc08b1f14213e8b73e297a
+      GATE_SHA256: d85b9a6ee757dc10e818b88a7c1e84ed93224352159f07d8dc04dab866bcfb5f
+      REPORT_SHA256: a85c8b5a2f83860574bcc16dea201a89c0479f939ba408572156fa17819d8c88
+      APPLY_SHA256: ab170faaf7fb09ea1a5971f4058bcc30347bfdc057fdb4183b3546a1e1f9ad86
+    steps:
+      - name: Check out the publication trigger commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Validate the trigger provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test "$(git rev-parse HEAD)" != "$TRIGGER_HEAD_COMMIT"; then
+            echo "checked-out commit is not the recorded trigger head" >&2
+            exit 1
+          fi
+          if test "$(git rev-parse HEAD^)" != "$BASE_MAIN_COMMIT"; then
+            echo "publication trigger parent is not the recorded main commit" >&2
+            exit 1
+          fi
+          if ! git merge-base --is-ancestor "$SOURCE_SITE_COMMIT" "$BASE_MAIN_COMMIT"; then
+            echo "reviewed site commit is not an ancestor of the publication bootstrap" >&2
+            exit 1
+          fi
+          if test "$(git diff --name-only "$SOURCE_SITE_COMMIT" "$BASE_MAIN_COMMIT")" != ".github/workflows/publish-fernandez-20260824.yml"; then
+            echo "publication bootstrap contains an unexpected path" >&2
+            exit 1
+          fi
+          if test "$(git diff --name-only HEAD^ HEAD)" != "$TRIGGER_FILE"; then
+            echo "publication trigger commit contains an unexpected path" >&2
+            exit 1
+          fi
+
+      - name: Check out the checksum-locked payload
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.STAGING_BRANCH }}
+          path: staging
+          sparse-checkout: release-staging/fernandez-20260824
+          sparse-checkout-cone-mode: false
+
+      - name: Reconstruct and verify the publication payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib
+          import os
+          from pathlib import Path
+
+          source = Path("staging/release-staging/fernandez-20260824")
+          parts = sorted(source.glob("chunk-*"))
+          count = int(os.environ["PAYLOAD_PARTS"])
+          expected = [f"chunk-{index:04d}" for index in range(count)]
+          if [part.name for part in parts] != expected:
+              raise SystemExit("payload part set is incomplete or unexpected")
+          output = Path(os.environ["RUNNER_TEMP"]) / "fernandez-public-release.tar.gz"
+          digest = hashlib.sha256()
+          size = 0
+          with output.open("wb") as destination:
+              for part in parts:
+                  block = part.read_bytes()
+                  destination.write(block)
+                  digest.update(block)
+                  size += len(block)
+          if size != int(os.environ["PAYLOAD_SIZE"]):
+              raise SystemExit(f"payload size {size} is not expected")
+          if digest.hexdigest() != os.environ["PAYLOAD_SHA256"]:
+              raise SystemExit("payload SHA-256 mismatch")
+          print(f"payload OK: {size} bytes {digest.hexdigest()}")
+          PY
+          mkdir -p "$RUNNER_TEMP/publication-payload"
+          tar -xzf "$RUNNER_TEMP/fernandez-public-release.tar.gz" -C "$RUNNER_TEMP/publication-payload"
+          cd "$RUNNER_TEMP/publication-payload/public_release_payload"
+          sha256sum -c PAYLOAD_SHA256SUMS.txt
+
+      - name: Validate the approved PDF, EPUB, cover, bibliography, and gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdfinfo >/dev/null || ! command -v pdftotext >/dev/null || ! command -v pdffonts >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          import re
+          import subprocess
+          import zipfile
+          from pathlib import Path
+          from xml.etree import ElementTree as ET
+
+          payload = Path(os.environ["RUNNER_TEMP"]) / "publication-payload/public_release_payload"
+          locked = {
+              "BIBLIOGRAPHY.json": os.environ["BIBLIOGRAPHY_SHA256"],
+              "publication_gate.json": os.environ["GATE_SHA256"],
+              "publication_report.json": os.environ["REPORT_SHA256"],
+              "apply_public_release.py": os.environ["APPLY_SHA256"],
+          }
+          for filename, expected in locked.items():
+              actual = hashlib.sha256((payload / filename).read_bytes()).hexdigest()
+              if actual != expected:
+                  raise SystemExit(f"{filename}: checksum mismatch")
+
+          report = json.loads((payload / "publication_report.json").read_text(encoding="utf-8"))
+          expected_report = {
+              "slug": os.environ["SLUG"],
+              "source_site_commit": os.environ["SOURCE_SITE_COMMIT"],
+              "archive_commit": os.environ["ARCHIVE_COMMIT"],
+              "canonical_master": f'publications/{os.environ["SLUG"]}/master.docx',
+              "translation_rights": "日本語訳には再利用ライセンスを設定していない",
+          }
+          for key, value in expected_report.items():
+              if report.get(key) != value:
+                  raise SystemExit(f"publication report mismatch: {key}")
+          if report.get("search") != {
+              "source_mode": "approved-epub-mirror",
+              "pdf_pages": 613,
+              "distinct_source_location_labels": 643,
+              "terminal_original_print_page": 640,
+              "terminal_physical_page": 580,
+              "terminal_query": "川がなす二百九の湾曲または折返し",
+          }:
+              raise SystemExit("search extraction report mismatch")
+
+          gate = json.loads((payload / "publication_gate.json").read_text(encoding="utf-8"))
+          expected_gate = {
+              "verdict": "GO",
+              "approval": "user_approved_after_pdf_preview",
+              "approved_pdf_sha256": os.environ["PDF_SHA256"],
+              "pdf_pages": 613,
+              "original_print_last_page": 640,
+              "source_markers": 643,
+              "footnotes": 243,
+              "tables": 44,
+              "noncover_images": 24,
+              "rendered_pages_checked": 613,
+              "proof_labels_count": 0,
+              "a11y_high": 0,
+              "a11y_medium": 0,
+              "a11y_low": 0,
+          }
+          for key, value in expected_gate.items():
+              if gate.get(key) != value:
+                  raise SystemExit(f"publication gate mismatch: {key}")
+          required_flags = (
+              "independent_review", "complete_translation",
+              "paragraph_boundaries_collated", "full_page_render_verified",
+              "fonts_embedded", "unicode_maps_present",
+              "portrait_aspect_ratio_verified", "terminal_original_page_verified",
+              "final_footnote_243_verified", "autograph_plates_24_verified",
+          )
+          if not all(gate.get(key) for key in required_flags):
+              raise SystemExit("publication gate completion flag is missing")
+
+          bibliography = json.loads((payload / "BIBLIOGRAPHY.json").read_text(encoding="utf-8"))
+          publication = bibliography["publication"]
+          working = bibliography["working_master"]
+          scope = bibliography["translation_scope"]
+          if publication.get("slug") != os.environ["SLUG"]:
+              raise SystemExit("bibliography slug mismatch")
+          rights = publication.get("rights", "")
+          if "パブリックドメイン" not in rights or "再利用ライセンスを設定していません" not in rights:
+              raise SystemExit("bibliography rights statement is incomplete")
+          provider = publication.get("sourceProvider", "")
+          if not all(value in provider for value in ("ハーバード大学", "Google", "Internet Archive")):
+              raise SystemExit("bibliography source attribution is incomplete")
+          required_master = {
+              "master_size": 2178116,
+              "master_sha256": "cb09346757925c54184d0b34beb3204959d6e6fdec8cf38d8291925dc7480fa3",
+              "source_location_markers": 643,
+              "noncover_embedded_images": 24,
+              "tables": 44,
+              "footnotes": 243,
+              "publicationStatus": "approved_for_publication",
+          }
+          for key, value in required_master.items():
+              if working.get(key) != value:
+                  raise SystemExit(f"working-master report mismatch: {key}")
+          if not all(scope.get(key) for key in (
+              "complete_translation", "original_physical_order_preserved",
+              "paragraph_boundaries_collated", "independent_review",
+              "full_page_render_verified",
+          )):
+              raise SystemExit("translation-scope completion flag is missing")
+
+          asset_root = payload / "public" / os.environ["SLUG"]
+          expected_assets = {
+              os.environ["PDF_FILENAME"]: (int(os.environ["PDF_SIZE"]), os.environ["PDF_SHA256"]),
+              os.environ["EPUB_FILENAME"]: (int(os.environ["EPUB_SIZE"]), os.environ["EPUB_SHA256"]),
+              "cover.jpg": (int(os.environ["COVER_SIZE"]), os.environ["COVER_SHA256"]),
+          }
+          paths = {}
+          for filename, (size, expected_digest) in expected_assets.items():
+              path = asset_root / filename
+              data = path.read_bytes()
+              if len(data) != size or hashlib.sha256(data).hexdigest() != expected_digest:
+                  raise SystemExit(f"{filename}: exact-byte validation failed")
+              paths[filename] = path
+
+          pdf = paths[os.environ["PDF_FILENAME"]]
+          info = subprocess.check_output(["pdfinfo", str(pdf)], text=True)
+          if not re.search(r"^Pages:\s+613$", info, flags=re.MULTILINE):
+              raise SystemExit("PDF page count mismatch")
+          if "612 x 792 pts (letter)" not in info:
+              raise SystemExit("PDF page size mismatch")
+          if not re.search(r"^Tagged:\s+yes$", info, flags=re.MULTILINE):
+              raise SystemExit("PDF is not tagged")
+          layout = subprocess.check_output(["pdftotext", "-layout", str(pdf), "-"], text=True)
+          marker_values = re.findall(r"〔原刊\s+p\.\s+([IVXLC]+|\d+)〕", layout)
+          roman = [value for value in marker_values if not value.isdigit()]
+          arabic = [int(value) for value in marker_values if value.isdigit()]
+          if roman != ["X", "V", "VI", "VII"] or arabic != list(range(1, 641)):
+              raise SystemExit("PDF source marker sequence mismatch")
+          compact = re.sub(r"\s+", "", layout)
+          required_pdf = [
+              "スペイン統治下のコスタリカ史", "本訳について",
+              "〔原刊p.1〕", "〔原刊p.640〕", "索引終", "正誤表",
+              "川がなす二百九の湾曲または折返し",
+          ]
+          if any(value not in compact for value in required_pdf):
+              raise SystemExit("PDF required wording is missing")
+          page_579 = re.sub(r"\s+", "", subprocess.check_output(
+              ["pdftotext", "-f", "579", "-l", "579", str(pdf), "-"], text=True
+          ))
+          page_580 = re.sub(r"\s+", "", subprocess.check_output(
+              ["pdftotext", "-f", "580", "-l", "580", str(pdf), "-"], text=True
+          ))
+          if "〔原刊p.640〕" not in page_579 or "川がなす二百九の湾曲または折返し" not in page_580:
+              raise SystemExit("physical pages 579–580 do not contain the approved terminal source page")
+          pages = layout.split("\f")
+          if len(pages) < 613:
+              raise SystemExit("PDF text extraction returned too few physical pages")
+          blank_pages = [
+              index + 1 for index, value in enumerate(pages[:613])
+              if not re.sub(r"\s+", "", value)
+          ]
+          if blank_pages:
+              raise SystemExit(f"blank translation PDF pages: {blank_pages}")
+          fonts = subprocess.check_output(["pdffonts", str(pdf)], text=True)
+          font_rows = [line.split() for line in fonts.splitlines()[2:] if line.strip()]
+          if not font_rows or any(
+              len(row) < 6 or row[3] != "yes" or row[4] != "yes" or row[5] != "yes"
+              for row in font_rows
+          ):
+              raise SystemExit("PDF fonts are not all embedded, subset, and Unicode mapped")
+          if not all("Noto" in row[0] for row in font_rows):
+              raise SystemExit("PDF contains a non-Noto embedded font")
+
+          epub = paths[os.environ["EPUB_FILENAME"]]
+          with zipfile.ZipFile(epub) as archive:
+              if archive.testzip() is not None:
+                  raise SystemExit("corrupt EPUB")
+              infos = archive.infolist()
+              if not infos or infos[0].filename != "mimetype" or infos[0].compress_type != zipfile.ZIP_STORED:
+                  raise SystemExit("EPUB mimetype entry is invalid")
+              if archive.read("mimetype") != b"application/epub+zip":
+                  raise SystemExit("EPUB mimetype is invalid")
+              container = ET.fromstring(archive.read("META-INF/container.xml"))
+              rootfile = next(node for node in container.iter() if node.tag.endswith("rootfile"))
+              package = ET.fromstring(archive.read(rootfile.attrib["full-path"]))
+              if not package.attrib.get("version", "").startswith("3"):
+                  raise SystemExit("EPUB package is not version 3")
+              item_nodes = [node for node in package.iter() if node.tag.endswith("item")]
+              if not any("cover-image" in node.attrib.get("properties", "").split() for node in item_nodes):
+                  raise SystemExit("EPUB cover-image property is missing")
+              if not any("nav" in node.attrib.get("properties", "").split() for node in item_nodes):
+                  raise SystemExit("EPUB navigation document is missing")
+              texts = []
+              source_classes = 0
+              images = []
+              noterefs = 0
+              footnotes = 0
+              for name in archive.namelist():
+                  if not name.endswith((".xhtml", ".html")):
+                      continue
+                  document = ET.fromstring(archive.read(name))
+                  texts.append(" ".join("".join(document.itertext()).split()))
+                  for node in document.iter():
+                      if "source-page" in node.attrib.get("class", "").split():
+                          source_classes += 1
+                      if node.tag.endswith("img"):
+                          images.append(node)
+                      epub_type = node.attrib.get("{http://www.idpf.org/2007/ops}type", "")
+                      noterefs += epub_type == "noteref"
+                      footnotes += epub_type == "footnote"
+              full_text = "\n".join(texts)
+              compact_epub = re.sub(r"\s+", "", full_text)
+              if source_classes != 643 or len(images) != 24:
+                  raise SystemExit("EPUB source marker or image count mismatch")
+              if noterefs != 243 or footnotes != 243:
+                  raise SystemExit("EPUB footnote count mismatch")
+              if any(not image.attrib.get("alt", "").strip() for image in images):
+                  raise SystemExit("EPUB image without alternative text")
+              if len(re.findall(r"[\u3040-\u30ff\u3400-\u9fff]", full_text)) <= 390_000:
+                  raise SystemExit("EPUB Japanese text volume is unexpectedly low")
+              required_epub = [
+                  "本訳について", "〔原刊p.640〕",
+                  "川がなす二百九の湾曲または折返し", "索引終", "正誤表",
+              ]
+              if any(value not in compact_epub for value in required_epub):
+                  raise SystemExit("EPUB required wording is missing")
+              css_files = [name for name in archive.namelist() if name.endswith(".css")]
+              if len(css_files) != 1:
+                  raise SystemExit("EPUB stylesheet count mismatch")
+              css_digest = hashlib.sha256(archive.read(css_files[0])).hexdigest()
+              if css_digest != "4c03aae7dde601da9065926819d2ac824cf8f02def8590f083b9ccb1910f5844":
+                  raise SystemExit("EPUB public stylesheet mismatch")
+          print("Approved PDF, EPUB, cover, bibliography, and publication gate are valid")
+          PY
+
+      - name: Apply the checksum-locked source changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          payload="$RUNNER_TEMP/publication-payload/public_release_payload"
+          python3 "$payload/apply_public_release.py" "$GITHUB_WORKSPACE" "$payload"
+          node scripts/verify-master-archive.mjs
+          node --check src/publications.mjs
+          node --check scripts/search/verify-queries.mjs
+          python3 -m py_compile scripts/validate-epubs.py
+          git diff --check
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Build and test the complete source change
+        run: |
+          npm run build
+          npm test
+
+      - name: Restore PDF and EPUB search inputs
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: publish-fernandez-fresh-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Ensure full-text extraction tools are available
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdftotext >/dev/null || ! command -v tesseract >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Seed and fetch checksum-verified full-text inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          payload="$RUNNER_TEMP/publication-payload/public_release_payload/public/$SLUG"
+          destination=".cache/fulltext-assets/publications/$SLUG"
+          mkdir -p "$destination"
+          cp "$payload/$PDF_FILENAME" "$destination/$PDF_FILENAME"
+          cp "$payload/$EPUB_FILENAME" "$destination/$EPUB_FILENAME"
+          npm run fetch:search-assets
+
+      - name: Build and verify the exact final full-text search index
+        run: |
+          npm run build:search
+          npm run verify:search
+          node - <<'JS'
+          import { readFile } from "node:fs/promises";
+          const meta = JSON.parse(await readFile("dist/search/search-meta.json", "utf8"));
+          const map = JSON.parse(await readFile("dist/search/maps/fernandez-historia-costa-rica-1889.json", "utf8"));
+          if (meta.works !== 259 || meta.books !== 122 || meta.papers !== 137) {
+            throw new Error("final search work counts are not expected");
+          }
+          const mappings = Object.values(map.blocks || {});
+          const pages = new Set(mappings.map((entry) => entry[1]));
+          const labels = new Set(mappings.map((entry) => entry[0]));
+          const stats = meta.mappings?.["fernandez-historia-costa-rica-1889"];
+          if (
+            map.slug !== "fernandez-historia-costa-rica-1889" ||
+            map.masterPath !== "publications/fernandez-historia-costa-rica-1889/master.docx" ||
+            map.pdfSha256 !== process.env.PDF_SHA256 ||
+            map.sourceSha256 !== process.env.EPUB_SHA256 ||
+            mappings.length < 5000 ||
+            pages.size < 550 ||
+            Math.min(...pages) !== 1 ||
+            Math.max(...pages) < 600 ||
+            Math.max(...pages) > 613 ||
+            ![...labels].some((label) => label.includes("原刊 p. 640")) ||
+            !pages.has(580) ||
+            !stats || stats.unmapped !== 0 || stats.verifiedRate !== 1
+          ) {
+            throw new Error("Fernández search page map is incomplete");
+          }
+          JS
+
+      - name: Upload the checksum-locked release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          checksum_dir="$RUNNER_TEMP/release-checksums"
+          asset_dir="$RUNNER_TEMP/publication-payload/public_release_payload/public/$SLUG"
+          mkdir -p "$checksum_dir"
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir "$checksum_dir"
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          path = Path(os.environ["RUNNER_TEMP"]) / "release-checksums/SHA256SUMS.txt"
+          additions = {
+              os.environ["EPUB_FILENAME"]: os.environ["EPUB_SHA256"],
+              os.environ["PDF_FILENAME"]: os.environ["PDF_SHA256"],
+          }
+          kept = []
+          for line in path.read_text(encoding="utf-8").splitlines():
+              fields = line.split()
+              if fields and fields[-1] in additions:
+                  continue
+              kept.append(line)
+          kept.extend(f"{digest}  {filename}" for filename, digest in sorted(additions.items()))
+          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+          gh release upload "$RELEASE_TAG" "$asset_dir/$PDF_FILENAME" "$asset_dir/$EPUB_FILENAME" "$checksum_dir/SHA256SUMS.txt" --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Download the public release assets back and verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          verify_dir="$RUNNER_TEMP/release-verify"
+          mkdir -p "$verify_dir"
+          for filename in "$PDF_FILENAME" "$EPUB_FILENAME" SHA256SUMS.txt
+          do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$filename" --dir "$verify_dir"
+          done
+          python3 - <<'PY'
+          import hashlib
+          import os
+          from pathlib import Path
+
+          root = Path(os.environ["RUNNER_TEMP"]) / "release-verify"
+          expected = {
+              os.environ["PDF_FILENAME"]: (int(os.environ["PDF_SIZE"]), os.environ["PDF_SHA256"]),
+              os.environ["EPUB_FILENAME"]: (int(os.environ["EPUB_SIZE"]), os.environ["EPUB_SHA256"]),
+          }
+          checksums = set((root / "SHA256SUMS.txt").read_text(encoding="utf-8").splitlines())
+          for filename, (size, digest) in expected.items():
+              data = (root / filename).read_bytes()
+              if len(data) != size or hashlib.sha256(data).hexdigest() != digest:
+                  raise SystemExit(f"downloaded release asset mismatch: {filename}")
+              if f"{digest}  {filename}" not in checksums:
+                  raise SystemExit(f"SHA256SUMS entry mismatch: {filename}")
+              print(f"release asset OK: {filename}")
+          PY
+
+      - name: Save the verified final full-text search index
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Commit the verified publication to a ready branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          workflow=".github/workflows/publish-fernandez-20260824.yml"
+          rm "$workflow" "$TRIGGER_FILE"
+          python3 - <<'PY'
+          import subprocess
+
+          expected = {
+              ".github/workflows/pages.yml",
+              ".github/workflows/publish-fernandez-20260824.yml",
+              ".github/fernandez-publication-trigger-20260824",
+              "REVISION_LOG.md",
+              "assets-manifest.json",
+              "master-archive.json",
+              "scripts/search/verify-queries.mjs",
+              "scripts/validate-epubs.py",
+              "src/publications.mjs",
+              "static/publications/fernandez-historia-costa-rica-1889/cover.jpg",
+              "tests/archive.test.mjs",
+          }
+          actual = set(subprocess.check_output(["git", "diff", "--name-only"], text=True).splitlines())
+          untracked = subprocess.check_output(
+              ["git", "ls-files", "--others", "--exclude-standard"], text=True
+          ).splitlines()
+          actual.update(path for path in untracked if not path.startswith("staging/"))
+          if actual != expected:
+              raise SystemExit(
+                  "unexpected source diff: "
+                  + f"missing={sorted(expected - actual)} extra={sorted(actual - expected)}"
+              )
+          PY
+          if test "$(git rev-parse HEAD^)" != "$BASE_MAIN_COMMIT"; then
+            echo "publication trigger parent is not the recorded main commit" >&2
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$READY_BRANCH"
+          git add "$workflow" "$TRIGGER_FILE" .github/workflows/pages.yml REVISION_LOG.md assets-manifest.json master-archive.json scripts/search/verify-queries.mjs scripts/validate-epubs.py src/publications.mjs "static/publications/$SLUG/cover.jpg" tests/archive.test.mjs
+          git commit -m "Publish Fernández Historia de Costa Rica complete Japanese translation" -m "Publish the approved 613-page PDF and verified EPUB with the complete 1889 original through page 640, private-master binding, 643 source-location labels, 24 autograph plates, full render checks, and exact full-text mapping."
+          git push origin "HEAD:refs/heads/$READY_BRANCH"
+
+      - name: Remove the temporary payload branch
+        shell: bash
+        run: git push origin --delete "$STAGING_BRANCH"
