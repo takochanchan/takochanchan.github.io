@@ -6,6 +6,51 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "barraza-anastasio-aquino-2001",
+    "title": "アナスタシオ・アキノの壮挙：歴史的一考察",
+    "originalTitle": "La gesta de Anastasio Aquino: una aproximación histórica",
+    "subtitle": "2001年エルサルバドル工科大学版・日本語全訳",
+    "author": "ホルヘ・バラサ・イバラ",
+    "originalAuthor": "Jorge Barraza Ibarra",
+    "series": "LA GESTA DE ANASTASIO AQUINO · 2001",
+    "originalPublication": "サン・サルバドル、エルサルバドル工科大学、2001年6月",
+    "year": 2001,
+    "extent": "PDF 210頁・前付9頁・原刊15頁および17–148頁・付録6頁・裏表紙・底本位置標識149件・原注131件・表9点・原刊画像19点",
+    "description": "1833年にエルサルバドルのノヌアルコ地方で起きたアナスタシオ・アキノの反乱を、植民地秩序、中央アメリカ独立と連邦共和国、1832年の州政治、先住民社会と土地・労働制度の長期的背景から検討した歴史研究の全訳です。全4部、序文、用語集、参考文献、付録を収録し、原刊の章立て、段落、原注、表、図版、頁順を保持しました。",
+    "cover": "publications/barraza-anastasio-aquino-2001/cover.jpg",
+    "pdf": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.pdf",
+    "epub": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.epub",
+    "pageCount": 210,
+    "figureCount": 19,
+    "plateCount": 0,
+    "types": [
+      "歴史研究",
+      "先住民史",
+      "反乱史",
+      "社会史"
+    ],
+    "regions": [
+      "エルサルバドル",
+      "中央アメリカ",
+      "ノヌアルコ地方",
+      "サン・ビセンテ",
+      "サン・サルバドル"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "アナスタシオ・アキノ",
+      "ノヌアルコ族",
+      "1833年反乱",
+      "植民地秩序",
+      "中央アメリカ連邦共和国",
+      "先住民抵抗",
+      "エルサルバドル史",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "roberts-voyages-central-america-1827",
     "title": "中央アメリカ東岸および内陸部航海旅行記",
     "originalTitle": "Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America",
@@ -8132,6 +8177,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "barraza-anastasio-aquino-2001": {
+    "sourceEdition": "Jorge Barraza Ibarra, La gesta de Anastasio Aquino: una aproximación histórica, San Salvador: Universidad Tecnológica de El Salvador, junio de 2001。エルサルバドル工科大学機関リポジトリ収録版。",
+    "sourceProvider": "Universidad Tecnológica de El Salvador（UTEC）機関リポジトリの2001年版PDF。リポジトリ項目ID 16710037-9250-4d19-84aa-c9f319a7546a、ハンドル http://hdl.handle.net/11298/1290、PDF 149頁、底本PDF SHA-256 fce6be683a623d4985c2fef02164d07069e62ef8daca9c71136ce83a3f83a3cf。",
+    "sourceUrl": "https://repositorio.utec.edu.sv/items/16710037-9250-4d19-84aa-c9f319a7546a",
+    "rights": "UTEC機関リポジトリの書誌メタデータは本書をCreative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）で提供しています。本日本語版は同ライセンスに基づく翻案物として同じCC BY-NC-SA 4.0で公開します。再利用時は原著者Jorge Barraza Ibarra、原題、エルサルバドル工科大学、2001年、底本URLを表示し、非営利利用と同一条件での継承が必要です。改変内容はスペイン語から日本語への翻訳、原刊頁標識の付与、組版変更、原刊図版の切り出し・再配置です。ライセンス本文：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "publishedDate": "2026-08-23",
+    "updatedDate": "2026-08-23"
+  },
   "roberts-voyages-central-america-1827": {
     "sourceEdition": "Orlando W. Roberts, Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America, Edinburgh: Constable & Co.; London: Hurst, Chance, & Co., 1827。主底本はGetty Research Institute所蔵初版本。",
     "sourceProvider": "Getty Research Institute所蔵本のInternet Archive公開画像（gri_33125013633827、314画像頁）を主底本とし、Library of Congress所蔵同年初版本のInternet Archive公開画像（narrativesofvoya00robe、310画像頁）を本文校合に用いました。主底本所収の折込地図を採用しています。",
