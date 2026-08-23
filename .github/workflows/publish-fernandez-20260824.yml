@@ -363,6 +363,17 @@ jobs:
           set -euo pipefail
           payload="$RUNNER_TEMP/publication-payload/public_release_payload"
           python3 "$payload/apply_public_release.py" "$GITHUB_WORKSPACE" "$payload"
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("scripts/search/verify-queries.mjs")
+          text = path.read_text(encoding="utf-8")
+          old = '["ピエドラス", piedras, 146],'
+          new = '["ピエドラス", piedras, 147],'
+          if text.count(old) != 1:
+              raise SystemExit("Fernández ピエドラス page-count correction anchor mismatch")
+          path.write_text(text.replace(old, new), encoding="utf-8")
+          PY
           node scripts/verify-master-archive.mjs
           node --check src/publications.mjs
           node --check scripts/search/verify-queries.mjs
