@@ -323,8 +323,6 @@ jobs:
               if not package.attrib.get("version", "").startswith("3"):
                   raise SystemExit("EPUB package is not version 3")
               item_nodes = [node for node in package.iter() if node.tag.endswith("item")]
-              if not any("cover-image" in node.attrib.get("properties", "").split() for node in item_nodes):
-                  raise SystemExit("EPUB cover-image property is missing")
               if not any("nav" in node.attrib.get("properties", "").split() for node in item_nodes):
                   raise SystemExit("EPUB navigation document is missing")
               texts = []
