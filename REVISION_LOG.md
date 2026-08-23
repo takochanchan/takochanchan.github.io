@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-23 — ホルヘ・バラサ・イバラ『La gesta de Anastasio Aquino: una aproximación histórica』新規公開
+
+- エルサルバドル工科大学（UTEC）機関リポジトリ収録の2001年版を、前付、序文、全4部、用語集、参考文献、付録、裏表紙まで省略のない日本語全訳としてPDF 210頁・EPUBで公開した。前付9頁、原刊15頁および17–148頁、付録6頁、裏表紙の順序を保ち、底本位置標識149件、原注131件、表9点、原刊画像19点を収録した。
+- 全訳を独立レビューし、原文との対応、固有名、年号、段落、原注、表、図版を照合した。Fancourt固定母版に基づく最終DOCXと全210頁のPDFを検査し、表紙、本文左揃え、埋込・Unicode対応Noto書体、画像、標識、頁送り、アクセシビリティを確認した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 底本はUniversidad Tecnológica de El Salvador機関リポジトリの項目16710037-9250-4d19-84aa-c9f319a7546a（handle 11298/1290）。原著と本日本語版はCC BY-NC-SA 4.0で公開し、原著者、原題、UTEC、2001年、底本URL、翻訳・頁標識付与・組版・図版再配置という改変内容を明記した。
+- 公開PDFのSHA-256は `9a5fd6b51e069cd8c7fb822bfd3650e90b5c7447d17d04beeb1ed3815121d046`、EPUBは `f47d5dee6e56e2c6b01c7e0d7a77c339ff6fd1973de0d1ea63ba7ad2b37de512`、DOCX正本は `570ca88b0139fe71e39b9f108ce3df833b842bec7004c4f60b089943cd433751`。編集可能正本は非公開原本アーカイブのコミット `1e0beb2b0f1318f36632b25d09c0e6796193fd17` に保存した。
+- 公開識別子：`barraza-anastasio-aquino-2001`。
+
 ## 2026-08-22 — オーランド・W・ロバーツ『Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America』新規公開
 
 - 1827年エディンバラ初版の前付、エドワード・アーヴィングの序文、本文全14章、折込地図、付録注I–VIII、奥付を、省略のない日本語全訳としてPDF 202頁・EPUBで公開した。原刊頁標識289件と原刊画像2点・折込地図1点を保持した。

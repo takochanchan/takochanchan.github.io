@@ -83,6 +83,23 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_approved_legacy_pdf_location_labels_are_preserved(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔前付・底本PDF p. 2〕原刊標題紙",
+                "〔付録・底本PDF p. 145〕年表",
+                "〔裏表紙・底本PDF p. 149〕裏表紙",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("前付・底本PDF p. 2", "原刊標題紙"),
+                ("付録・底本PDF p. 145", "年表"),
+                ("裏表紙・底本PDF p. 149", "裏表紙"),
+            ],
+        )
+
     def test_pmm_folio_marker_is_preserved_as_the_source_location(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [

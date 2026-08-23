@@ -110,6 +110,24 @@
       "sha256": "b7a55d2b43b341570bfd77fce910c0681914d5582b0e9ad894c5bb92e870537b"
     },
     {
+      "path": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.epub",
+      "size": 17559754,
+      "sha256": "f47d5dee6e56e2c6b01c7e0d7a77c339ff6fd1973de0d1ea63ba7ad2b37de512"
+    },
+    {
+      "path": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.pdf",
+      "size": 9823467,
+      "sha256": "9a5fd6b51e069cd8c7fb822bfd3650e90b5c7447d17d04beeb1ed3815121d046"
+    },
+    {
+      "path": "publications/barraza-anastasio-aquino-2001/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/barraza-anastasio-aquino-2001/cover.jpg",
+      "size": 63661,
+      "sha256": "e18659e1b2e986719083e6ba823a1e2dbb295ef8bd9249717b3da7ce1b6ec611"
+    },
+    {
       "path": "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
       "size": 52562155,

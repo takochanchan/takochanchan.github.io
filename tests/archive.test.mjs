@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 256);
+  assert.equal(publications.length, 257);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -247,6 +247,22 @@ test("Roberts voyage metadata retains the approved complete scope", () => {
   assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
+test("Barraza Aquino study metadata retains the approved complete scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "barraza-anastasio-aquino-2001",
+  );
+  assert.ok(item);
+  assert.equal(item.pageCount, 210);
+  assert.equal(item.figureCount, 19);
+  assert.match(item.extent, /底本位置標識149件/);
+  assert.match(item.extent, /原注131件/);
+  assert.match(item.description, /全4部/);
+  assert.match(item.sourceProvider, /Universidad Tecnológica de El Salvador/);
+  assert.match(item.sourceProvider, /11298\/1290/);
+  assert.match(item.rights, /CC BY-NC-SA 4\.0/);
+  assert.match(item.rights, /同じCC BY-NC-SA 4\.0/);
+});
+
 test("Villavicencio confessionary metadata retains the approved complete scope", () => {
   const item = publications.find(
     (publication) =>
@@ -263,7 +279,7 @@ test("Villavicencio confessionary metadata retains the approved complete scope",
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 119);
+  assert.equal(majorPublications.length, 120);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1357,7 +1373,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">119<\/strong>件/);
+  assert.match(html, /id="book-match-count">120<\/strong>件/);
   assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

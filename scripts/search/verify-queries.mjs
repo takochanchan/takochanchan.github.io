@@ -224,7 +224,7 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
-  await verifyCounts("ポ", { books: 48, papers: 11 });
+  await verifyCounts("ポ", { books: 49, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",
@@ -243,6 +243,11 @@ try {
   const robertsRoyalScale = await verifyPublicationQuery(
     "国王の公秤",
     "roberts-voyages-central-america-1827",
+    1,
+  );
+  const barrazaArchiveBurning = await verifyPublicationQuery(
+    "文書庫を焼き",
+    "barraza-anastasio-aquino-2001",
     1,
   );
   const pageChecks = [
@@ -273,7 +278,8 @@ try {
       `ラカンドン and ポ counts, 人の皮剥ぎ ${duranFlaying} pages, ` +
       `翡翠の小像 ${alvaJadeImage} pages, ` +
       `テポナグアステ ${villavicencioTeponaguaste} pages, ` +
-      `国王の公秤 ${robertsRoyalScale} pages.\n`,
+      `国王の公秤 ${robertsRoyalScale} pages, ` +
+      `文書庫を焼き ${barrazaArchiveBurning} pages.\n`,
   );
 } finally {
   await api.destroy();
