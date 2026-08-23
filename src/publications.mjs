@@ -6,6 +6,52 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "strangeways-mosquito-shore-1822",
+    "title": "モスキート海岸概説――ポヤイス領を含む",
+    "originalTitle": "Sketch of the Mosquito Shore, Including the Territory of Poyais",
+    "subtitle": "1822年初版・日本語全訳",
+    "author": "トマス・ストレンジウェイズ",
+    "originalAuthor": "Thomas Strangeways",
+    "series": "SKETCH OF THE MOSQUITO SHORE · 1822",
+    "originalPublication": "エディンバラ、William Blackwood／ロンドン、T. Caddell、1822年",
+    "year": 1822,
+    "extent": "原刊前付viii頁・本文355頁・日本語版PDF 239頁・原刊位置標識374件・脚注648件・表31点・図版3点",
+    "description": "1822年に刊行されたモスキート海岸とポヤイス領の地誌・入植案内の全訳です。自然環境、住民、農業、交易、港湾、行政および入植の実務を扱い、原刊の前付、本文末尾355頁、脚注、表、口絵、折込地図、ブラック・リヴァー港景を収録しました。原刊位置標識374件を保持し、Fancourt固定母版で組版した239頁版です。",
+    "cover": "publications/strangeways-mosquito-shore-1822/cover.jpg",
+    "pdf": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.pdf",
+    "epub": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.epub",
+    "pageCount": 239,
+    "figureCount": 3,
+    "plateCount": 0,
+    "types": [
+      "地誌",
+      "植民地資料",
+      "移民案内",
+      "交易史料",
+      "一次史料"
+    ],
+    "regions": [
+      "中央アメリカ",
+      "モスキート海岸",
+      "ポヤイス",
+      "ホンジュラス",
+      "ニカラグア",
+      "カリブ海岸"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "グレゴール・マクレガー",
+      "ポヤイス",
+      "モスキート海岸",
+      "植民",
+      "農業",
+      "交易",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "barraza-anastasio-aquino-2001",
     "title": "アナスタシオ・アキノの壮挙：歴史的一考察",
     "originalTitle": "La gesta de Anastasio Aquino: una aproximación histórica",
@@ -8177,6 +8223,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "strangeways-mosquito-shore-1822": {
+    "sourceEdition": "Thomas Strangeways, Sketch of the Mosquito Shore, Including the Territory of Poyais: Descriptive of the Country; with Some Information as to Its Productions, the Best Mode of Culture, &c. Chiefly Intended for the Use of Settlers, Edinburgh: William Blackwood; London: T. Caddell, 1822, viii + 355 pp.",
+    "sourceProvider": "Library of Congress所蔵本（LCCN 05009918）の全巻画像をInternet Archive識別子 sketchofmosquito00stra から参照。口絵と折込地図は同館公開画像、ブラック・リヴァー港景は同館リソース20頁からWikimedia Commonsへ切り出されたパブリックドメイン画像を使用。",
+    "sourceUrl": "https://archive.org/details/sketchofmosquito00stra",
+    "rights": "1822年刊の原著はパブリックドメインである。Library of Congress所蔵本の公開画像およびWikimedia Commons上の同書ブラック・リヴァー港景はいずれも公開ページ上でパブリックドメインと表示されている。本日本語訳には再利用ライセンスを設定していない。",
+    "publishedDate": "2026-08-23",
+    "updatedDate": "2026-08-23"
+  },
   "barraza-anastasio-aquino-2001": {
     "sourceEdition": "Jorge Barraza Ibarra, La gesta de Anastasio Aquino: una aproximación histórica, San Salvador: Universidad Tecnológica de El Salvador, junio de 2001。エルサルバドル工科大学機関リポジトリ収録版。",
     "sourceProvider": "Universidad Tecnológica de El Salvador（UTEC）機関リポジトリの2001年版PDF。リポジトリ項目ID 16710037-9250-4d19-84aa-c9f319a7546a、ハンドル http://hdl.handle.net/11298/1290、PDF 149頁、底本PDF SHA-256 fce6be683a623d4985c2fef02164d07069e62ef8daca9c71136ce83a3f83a3cf。",
