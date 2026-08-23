@@ -4268,6 +4268,24 @@
       "sha256": "453bb56b5938ae11013b0427d619e99e5f018eff679d214ea8be16b3eeb1d86f"
     },
     {
+      "path": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.epub",
+      "size": 20379732,
+      "sha256": "139fdcfa36f73bb8fb5aac81a36a970ad69b199e6590ab91d1cadb25e34b33bb"
+    },
+    {
+      "path": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.pdf",
+      "size": 5611811,
+      "sha256": "29c48657d5857fc52879b08179cf90612319f6906380a7ab6b7bcfc54e2d7335"
+    },
+    {
+      "path": "publications/strangeways-mosquito-shore-1822/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/strangeways-mosquito-shore-1822/cover.jpg",
+      "size": 42272,
+      "sha256": "48ce16b21b417adc6ea0daabce862925111a6dbf2a9f5e60e68163db6724e481"
+    },
+    {
       "path": "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
       "size": 298182,
