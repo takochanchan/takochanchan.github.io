@@ -224,7 +224,7 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
-  await verifyCounts("ポ", { books: 51, papers: 11 });
+  await verifyCounts("ポ", { books: 52, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",

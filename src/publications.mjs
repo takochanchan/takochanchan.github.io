@@ -6,6 +6,54 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "guzman-apuntamientos-topografia-salvador-1883",
+    "title": "サルバドル共和国自然地理覚書",
+    "originalTitle": "Apuntamientos sobre la topografía física de la República del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigración, climas, estadística, etc.",
+    "subtitle": "博物誌、生産物、産業、商業、移民、気候、統計ほか",
+    "author": "ダビッド・ホアキン・グスマン",
+    "originalAuthor": "David Joaquín Guzmán",
+    "series": "APUNTAMIENTOS SOBRE EL SALVADOR · 1883",
+    "originalPublication": "サンサルバドル、「エル・コメタ」印刷所、1883年",
+    "year": 1883,
+    "extent": "日本語版PDF 569頁・原刊標題紙・前付iii–xxii頁・本文23–525頁・底本位置標識523件・表81点・注14件",
+    "description": "1883年に刊行されたエルサルバドルの総合地誌の日本語全訳です。自然地理、水理地理、地質、鉱物、植物、動物、農業、工業、商業、移民、気候、統計、先住民史・諸語を扱い、標題紙、前付、詳細目次、献辞、委員会報告、新聞評、政府決定、本文、注、表、語彙集、付録を収録しました。原刊の段落、見出し、表、注、頁順を保持しています。",
+    "cover": "publications/guzman-apuntamientos-topografia-salvador-1883/cover.jpg",
+    "pdf": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
+    "epub": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
+    "pageCount": 569,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "地誌",
+      "自然史",
+      "統計資料",
+      "経済史料"
+    ],
+    "regions": [
+      "エルサルバドル",
+      "中央アメリカ",
+      "サン・サルバドル",
+      "レンパ川",
+      "フォンセカ湾"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "エルサルバドル史",
+      "自然地理",
+      "博物誌",
+      "農業",
+      "鉱業",
+      "商業",
+      "移民",
+      "気候",
+      "統計",
+      "ピピル語",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "fernandez-historia-costa-rica-1889",
     "title": "スペイン統治下のコスタリカ史",
     "originalTitle": "Historia de Costa Rica durante la dominación española, 1502–1821",
@@ -8270,6 +8318,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "guzman-apuntamientos-topografia-salvador-1883": {
+    "sourceEdition": "David Joaquín Guzmán, Apuntamientos sobre la topografía física de la República del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigración, climas, estadística, etc., San Salvador: Tipografía de «El Cometa», 1883, 525 pp.",
+    "sourceProvider": "Google Booksが全頁公開する1883年初版画像（Google Books ID: yZzaN6j2O_gC、全550画像、原刊本文525頁）を主底本としました。Google Booksの書誌は著者、刊行所、刊年および525頁を表示しています。",
+    "sourceUrl": "https://books.google.com/books?id=yZzaN6j2O_gC",
+    "rights": "1883年刊の原著はパブリックドメインです。Google Booksの底本表示も当該資料をパブリックドメインとしており、デジタルファイルには同サービスが表示する非商業利用、帰属表示の保持等の条件があります。本版はGoogle Booksをデジタル化・公開元として明記し、底本画像または同サービス固有の組版を転載していません。本日本語訳には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-24",
+    "updatedDate": "2026-08-24"
+  },
   "fernandez-historia-costa-rica-1889": {
     "sourceEdition": "León Fernández, Historia de Costa Rica durante la dominación española, 1502–1821, publicado por Ricardo Fernández Guardia, Madrid: Tipografía de Manuel Ginés Hernández, 1889。",
     "sourceProvider": "ハーバード大学所蔵本をGoogleがデジタル化し、Internet Archiveが公開する1889年マドリード初版画像（Internet Archive identifier: historiadecosta00ferngoog）を主底本としました。同公開記録はNOT_IN_COPYRIGHTと表示しています。判読の校合にはニューヨーク公共図書館所蔵の同版画像およびコスタリカ国立図書館を含むSINABI公開画像を参照しました。",

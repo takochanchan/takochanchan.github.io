@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-24 — ダビッド・ホアキン・グスマン『Apuntamientos sobre la topografía física de la República del Salvador』新規公開
+
+- 1883年サンサルバドル初版の標題紙、前付iii–xxii頁、本文23–525頁を、省略のない日本語全訳としてPDF 569頁・EPUBで公開した。底本位置標識523件、表81点、注14件を保持した。
+- 原文と訳文を独立レビューし、原本段落、欠落・重複、固有名詞、数値、年代、否定、主述関係、注、表を照合した。Fancourt固定母版の最終DOCXとPDF全569頁を描画・検査し、標題紙、前付、本文末尾、原刊頁標識、表、注、書体と頁送りを確認した。
+- 底本はGoogle Booksが全頁公開する1883年初版（ID `yZzaN6j2O_gC`、全550画像、原刊本文525頁）。原著はパブリックドメインで、Google Booksをデジタル化・公開元として明記した。日本語訳には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は `3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022`、EPUBは `a5e4e9066e1eba8f4202c8c0a7600cc2a1c405645f21aea265efac037e0a9990`、DOCX正本は `92a2ae4617a1cfc370d4903b4281695fdd9725d6b6f997b7464450cb3f953e01`。編集可能正本は非公開原本アーカイブのコミット `da4be82b510b0a6350b71ae25cec82e99b78da9b` に保存した。
+- 公開識別子：`guzman-apuntamientos-topografia-salvador-1883`。
+
 ## 2026-08-24 — レオン・フェルナンデス『Historia de Costa Rica durante la dominación española, 1502–1821』新規公開
 
 - 1889年マドリード初版の前付V–VII頁、本文1–640頁、注243件、自筆署名見本24葉と名簿、索引、正誤表を、省略のない日本語全訳としてPDF 613頁・EPUBで公開した。原刊位置標識643件と表44点を保持した。

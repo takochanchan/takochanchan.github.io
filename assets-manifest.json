@@ -2306,6 +2306,24 @@
       "sha256": "21a29af6c88a0477183c45eed81b6f88e1ecf3c7d1576d45c8b5bdd6395d11f2"
     },
     {
+      "path": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
+      "size": 586205,
+      "sha256": "a5e4e9066e1eba8f4202c8c0a7600cc2a1c405645f21aea265efac037e0a9990"
+    },
+    {
+      "path": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
+      "size": 6450961,
+      "sha256": "3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022"
+    },
+    {
+      "path": "publications/guzman-apuntamientos-topografia-salvador-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/guzman-apuntamientos-topografia-salvador-1883/cover.jpg",
+      "size": 115128,
+      "sha256": "085a53cb64ef3fb4ac78c46dee5e0c25ff5de512c3d268a0c7f687f042ea2861"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "size": 475891,

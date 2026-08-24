@@ -278,6 +278,9 @@ DOCX_SOURCES = {
     "cervantes-salazar-mexico-en-1554-1875": SOURCES
     / "翻訳サイト"
     / "Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.docx",
+    "guzman-apuntamientos-topografia-salvador-1883": SOURCES
+    / "翻訳サイト"
+    / "Guzman_Apuntamientos_1883_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {
