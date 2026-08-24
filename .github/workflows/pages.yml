@@ -134,10 +134,10 @@ jobs:
           unzip -t "$payload/$EPUB_NAME"
 
           site_patch="$RUNNER_TEMP/barberena-site.patch"
-          gh api "repos/$GITHUB_REPOSITORY/git/blobs/77dd9c6ff4be8d222f486da1a639f99bbcd05dce" --jq .content |
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/1c21d3b1184d89a380bf7819f1952811bed7eed3" --jq .content |
             tr -d '\n' | base64 -d > "$site_patch"
-          test "$(stat -c %s "$site_patch")" = "86438"
-          echo "371931d0be8e42ccfbce8665c09cf63494cbb50ec5e547215bf1d35055158ded  $site_patch" | sha256sum -c -
+          test "$(stat -c %s "$site_patch")" = "87228"
+          echo "17a96d04dacdd81b1e670ed12627ab5fe10dfe2112d14e2888a535ecd582a0bc  $site_patch" | sha256sum -c -
           git apply --check --binary "$site_patch"
           git apply --index --binary "$site_patch"
           python3 - <<'PY'
