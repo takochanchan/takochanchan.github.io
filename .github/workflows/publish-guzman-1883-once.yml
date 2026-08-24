@@ -1,0 +1,325 @@
+name: Publish Guzman 1883 once
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-guzman-1883-once.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publication-release
+  cancel-in-progress: false
+
+env:
+  SLUG: guzman-apuntamientos-topografia-salvador-1883
+  PDF_NAME: David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf
+  EPUB_NAME: David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub
+  PDF_SHA: 3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022
+  EPUB_SHA: a5e4e9066e1eba8f4202c8c0a7600cc2a1c405645f21aea265efac037e0a9990
+  COVER_SHA: 085a53cb64ef3fb4ac78c46dee5e0c25ff5de512c3d268a0c7f687f042ea2861
+  STAGING_BRANCH: agent/publication-upload-guzman-20260824
+  ARCHIVE_COMMIT: da4be82b510b0a6350b71ae25cec82e99b78da9b
+  GH_TOKEN: ${{ github.token }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Check out publication source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use isolated publication branch
+        run: git checkout -B publish-guzman-1883 "$GITHUB_SHA"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Restore verified PDF and EPUB cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+          restore-keys: |
+            fulltext-assets-
+
+      - name: Reconstruct and verify release payload
+        run: |
+          bundle="$RUNNER_TEMP/guzman-public-assets.tar.gz"
+          : > "$bundle"
+          for sha in 3a927eccaffeb470569fff583d31e86a60d80554 54c04b1e553d374013aada7f1454e8ccb4d7d1d1 2ad7a2ca06d881b4aa66e5a4bd364ef9c66cc06a 82c0af89e16cb32025d7f8a1112b025c643ffe2a 7016e68b021cf77d8aca20d80bbac99f58df105d 168c64fc6e3fd613cd6fd8eeabd80678eb4429d4 a7a6107a68cc51bed70f0cd17a429fd90d9d1aa6 c9dd4002f3dc1fe64471628cc421722c605d8733 f1d07d0f5b62be64b02ca149b5e6052f5537ee8a d2222aa9ba3591528cad5ab5ab02121bda81231e 12b0344dda350426d529583c5dc079895330efe7 806f699377b4e4f8e72026c81e19a17686604e1d f68d96436ba09a0bfe9920286f487caacd933ab9 b635dacf822b41e2223b8b301b45b6f575d7bea4 0b335f6ca833eb159cf85bf003b634c10c69976f 4e8bb9b5e29b01c2129dfd06c3fa473fe8442cda; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content |
+              tr -d '\n' | base64 -d >> "$bundle"
+          done
+          test "$(stat -c %s "$bundle")" = "4165273"
+          echo "6d76d88a7c76d36cc44177bbbac7552602f535a41c146e3380e84ffbc6458860  $bundle" | sha256sum -c -
+          mkdir -p "$RUNNER_TEMP/guzman-release"
+          tar -xzf "$bundle" -C "$RUNNER_TEMP/guzman-release"
+          payload="$RUNNER_TEMP/guzman-release/release-payload"
+          test "$(stat -c %s "$payload/$PDF_NAME")" = "6450961"
+          test "$(stat -c %s "$payload/$EPUB_NAME")" = "586205"
+          test "$(stat -c %s "$payload/cover.jpg")" = "115128"
+          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
+          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
+          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "569"
+          unzip -t "$payload/$EPUB_NAME"
+
+      - name: Update catalogue, archive ledger, and manifests
+        run: |
+          python3 - <<'PY'
+          import base64
+          import json
+          from pathlib import Path
+
+          slug = "guzman-apuntamientos-topografia-salvador-1883"
+          record = json.loads(base64.b64decode("ewogICJzbHVnIjogImd1em1hbi1hcHVudGFtaWVudG9zLXRvcG9ncmFmaWEtc2FsdmFkb3ItMTg4MyIsCiAgInRpdGxlIjogIuOCteODq+ODkOODieODq+WFseWSjOWbveiHqueEtuWcsOeQhuimmuabuCIsCiAgIm9yaWdpbmFsVGl0bGUiOiAiQXB1bnRhbWllbnRvcyBzb2JyZSBsYSB0b3BvZ3JhZsOtYSBmw61zaWNhIGRlIGxhIFJlcMO6YmxpY2EgZGVsIFNhbHZhZG9yLCBjb21wcmVuZGllbmRvIHN1IGhpc3RvcmlhIG5hdHVyYWwsIHN1cyBwcm9kdWNjaW9uZXMsIGluZHVzdHJpYSwgY29tZXJjaW8gZSBpbm1pZ3JhY2nDs24sIGNsaW1hcywgZXN0YWTDrXN0aWNhLCBldGMuIiwKICAic3VidGl0bGUiOiAi5Y2a54mp6KqM44CB55Sf55Sj54mp44CB55Sj5qWt44CB5ZWG5qWt44CB56e75rCR44CB5rCX5YCZ44CB57Wx6KiI44G744GLIiwKICAiYXV0aG9yIjogIuODgOODk+ODg+ODieODu+ODm+OCouOCreODs+ODu+OCsOOCueODnuODsyIsCiAgIm9yaWdpbmFsQXV0aG9yIjogIkRhdmlkIEpvYXF1w61uIEd1em3DoW4iLAogICJzZXJpZXMiOiAiQVBVTlRBTUlFTlRPUyBTT0JSRSBFTCBTQUxWQURPUiDCtyAxODgzIiwKICAib3JpZ2luYWxQdWJsaWNhdGlvbiI6ICLjgrXjg7PjgrXjg6vjg5Djg4njg6vjgIHjgIzjgqjjg6vjg7vjgrPjg6Hjgr/jgI3ljbDliLfmiYDjgIExODgz5bm0IiwKICAieWVhciI6IDE4ODMsCiAgImV4dGVudCI6ICLml6XmnKzoqp7niYhQREYgNTY56aCB44O75Y6f5YiK5qiZ6aGM57SZ44O75YmN5LuYaWlp4oCTeHhpaemggeODu+acrOaWhzIz4oCTNTI16aCB44O75bqV5pys5L2N572u5qiZ6K2YNTIz5Lu244O76KGoODHngrnjg7vms6gxNOS7tiIsCiAgImRlc2NyaXB0aW9uIjogIjE4ODPlubTjgavliIrooYzjgZXjgozjgZ/jgqjjg6vjgrXjg6vjg5Djg4njg6vjga7nt4/lkIjlnLDoqozjga7ml6XmnKzoqp7lhajoqLPjgafjgZnjgILoh6rnhLblnLDnkIbjgIHmsLTnkIblnLDnkIbjgIHlnLDos6rjgIHpibHnianjgIHmpI3nianjgIHli5XnianjgIHovrLmpa3jgIHlt6Xmpa3jgIHllYbmpa3jgIHnp7vmsJHjgIHmsJflgJnjgIHntbHoqIjjgIHlhYjkvY/msJHlj7Ljg7voq7joqp7jgpLmibHjgYTjgIHmqJnpoYzntJnjgIHliY3ku5jjgIHoqbPntLDnm67mrKHjgIHnjK7ovp7jgIHlp5Tlk6HkvJrloLHlkYrjgIHmlrDogZ7oqZXjgIHmlL/lupzmsbrlrprjgIHmnKzmlofjgIHms6jjgIHooajjgIHoqp7lvZnpm4bjgIHku5jpjLLjgpLlj47pjLLjgZfjgb7jgZfjgZ/jgILljp/liIrjga7mrrXokL3jgIHopovlh7rjgZfjgIHooajjgIHms6jjgIHpoIHpoIbjgpLkv53mjIHjgZfjgabjgYTjgb7jgZnjgIIiLAogICJjb3ZlciI6ICJwdWJsaWNhdGlvbnMvZ3V6bWFuLWFwdW50YW1pZW50b3MtdG9wb2dyYWZpYS1zYWx2YWRvci0xODgzL2NvdmVyLmpwZyIsCiAgInBkZiI6ICJwdWJsaWNhdGlvbnMvZ3V6bWFuLWFwdW50YW1pZW50b3MtdG9wb2dyYWZpYS1zYWx2YWRvci0xODgzL0RhdmlkX0pfR3V6bWFuX0FwdW50YW1pZW50b3NfVG9wb2dyYWZpYV9TYWx2YWRvcl8xODgzX0phcGFuZXNlX0NvbXBsZXRlX1RyYW5zbGF0aW9uLnBkZiIsCiAgImVwdWIiOiAicHVibGljYXRpb25zL2d1em1hbi1hcHVudGFtaWVudG9zLXRvcG9ncmFmaWEtc2FsdmFkb3ItMTg4My9EYXZpZF9KX0d1em1hbl9BcHVudGFtaWVudG9zX1RvcG9ncmFmaWFfU2FsdmFkb3JfMTg4M19KYXBhbmVzZV9Db21wbGV0ZV9UcmFuc2xhdGlvbi5lcHViIiwKICAicGFnZUNvdW50IjogNTY5LAogICJmaWd1cmVDb3VudCI6IDAsCiAgInBsYXRlQ291bnQiOiAwLAogICJ0eXBlcyI6IFsKICAgICLlnLDoqowiLAogICAgIuiHqueEtuWPsiIsCiAgICAi57Wx6KiI6LOH5paZIiwKICAgICLntYzmuIjlj7LmlpkiCiAgXSwKICAicmVnaW9ucyI6IFsKICAgICLjgqjjg6vjgrXjg6vjg5Djg4njg6siLAogICAgIuS4reWkruOCouODoeODquOCqyIsCiAgICAi44K144Oz44O744K144Or44OQ44OJ44OrIiwKICAgICLjg6zjg7Pjg5Hlt50iLAogICAgIuODleOCqeODs+OCu+OCq+a5viIKICBdLAogICJsYW5ndWFnZXMiOiBbCiAgICAi44K544Oa44Kk44Oz6KqeIgogIF0sCiAgInRhZ3MiOiBbCiAgICAi44Ko44Or44K144Or44OQ44OJ44Or5Y+yIiwKICAgICLoh6rnhLblnLDnkIYiLAogICAgIuWNmueJqeiqjCIsCiAgICAi6L6y5qWtIiwKICAgICLpibHmpa0iLAogICAgIuWVhualrSIsCiAgICAi56e75rCRIiwKICAgICLmsJflgJkiLAogICAgIue1seioiCIsCiAgICAi44OU44OU44Or6KqeIiwKICAgICIxOeS4lue0gCIKICBdCn0="))
+          metadata = json.loads(base64.b64decode("ewogICJzb3VyY2VFZGl0aW9uIjogIkRhdmlkIEpvYXF1w61uIEd1em3DoW4sIEFwdW50YW1pZW50b3Mgc29icmUgbGEgdG9wb2dyYWbDrWEgZsOtc2ljYSBkZSBsYSBSZXDDumJsaWNhIGRlbCBTYWx2YWRvciwgY29tcHJlbmRpZW5kbyBzdSBoaXN0b3JpYSBuYXR1cmFsLCBzdXMgcHJvZHVjY2lvbmVzLCBpbmR1c3RyaWEsIGNvbWVyY2lvIGUgaW5taWdyYWNpw7NuLCBjbGltYXMsIGVzdGFkw61zdGljYSwgZXRjLiwgU2FuIFNhbHZhZG9yOiBUaXBvZ3JhZsOtYSBkZSDCq0VsIENvbWV0YcK7LCAxODgzLCA1MjUgcHAuIiwKICAic291cmNlUHJvdmlkZXIiOiAiR29vZ2xlIEJvb2tz44GM5YWo6aCB5YWs6ZaL44GZ44KLMTg4M+W5tOWIneeJiOeUu+WDj++8iEdvb2dsZSBCb29rcyBJRDogeVp6YU42ajJPX2dD44CB5YWoNTUw55S75YOP44CB5Y6f5YiK5pys5paHNTI16aCB77yJ44KS5Li75bqV5pys44Go44GX44G+44GX44Gf44CCR29vZ2xlIEJvb2tz44Gu5pu46KqM44Gv6JGX6ICF44CB5YiK6KGM5omA44CB5YiK5bm044GK44KI44GzNTI16aCB44KS6KGo56S644GX44Gm44GE44G+44GZ44CCIiwKICAic291cmNlVXJsIjogImh0dHBzOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcz9pZD15WnphTjZqMk9fZ0MiLAogICJyaWdodHMiOiAiMTg4M+W5tOWIiuOBruWOn+iRl+OBr+ODkeODluODquODg+OCr+ODieODoeOCpOODs+OBp+OBmeOAgkdvb2dsZSBCb29rc+OBruW6leacrOihqOekuuOCguW9k+ipsuizh+aWmeOCkuODkeODluODquODg+OCr+ODieODoeOCpOODs+OBqOOBl+OBpuOBiuOCiuOAgeODh+OCuOOCv+ODq+ODleOCoeOCpOODq+OBq+OBr+WQjOOCteODvOODk+OCueOBjOihqOekuuOBmeOCi+mdnuWVhualreWIqeeUqOOAgeW4sOWxnuihqOekuuOBruS/neaMgeetieOBruadoeS7tuOBjOOBguOCiuOBvuOBmeOAguacrOeJiOOBr0dvb2dsZSBCb29rc+OCkuODh+OCuOOCv+ODq+WMluODu+WFrOmWi+WFg+OBqOOBl+OBpuaYjuiomOOBl+OAgeW6leacrOeUu+WDj+OBvuOBn+OBr+WQjOOCteODvOODk+OCueWbuuacieOBrue1hOeJiOOCkui7oui8ieOBl+OBpuOBhOOBvuOBm+OCk+OAguacrOaXpeacrOiqnuios+OBq+OBr+WGjeWIqeeUqOODqeOCpOOCu+ODs+OCueOCkuioreWumuOBl+OBpuOBhOOBvuOBm+OCk+OAgiIsCiAgInB1Ymxpc2hlZERhdGUiOiAiMjAyNi0wOC0yNCIsCiAgInVwZGF0ZWREYXRlIjogIjIwMjYtMDgtMjQiCn0="))
+
+          publications_path = Path("src/publications.mjs")
+          publications = publications_path.read_text(encoding="utf-8")
+          if f'"slug": "{slug}"' in publications:
+              raise SystemExit(f"{slug} already exists")
+          record_text = "\n".join("  " + line for line in json.dumps(record, ensure_ascii=False, indent=2).splitlines())
+          record_marker = "const publicationRecords = [\n"
+          if record_marker not in publications:
+              raise SystemExit("publication record marker missing")
+          publications = publications.replace(record_marker, record_marker + record_text + ",\n", 1)
+
+          metadata_text = "\n".join(json.dumps({slug: metadata}, ensure_ascii=False, indent=2).splitlines()[1:-1])
+          metadata_marker = "const publicationMetadata = {\n"
+          if metadata_marker not in publications:
+              raise SystemExit("publication metadata marker missing")
+          publications = publications.replace(metadata_marker, metadata_marker + metadata_text + ",\n", 1)
+          publications_path.write_text(publications, encoding="utf-8")
+
+          archive_path = Path("master-archive.json")
+          archive = json.loads(archive_path.read_text(encoding="utf-8"))
+          archive["archive_commit"] = "da4be82b510b0a6350b71ae25cec82e99b78da9b"
+          archive["publications"][slug] = f"publications/{slug}/master.docx"
+          archive["publications"] = dict(sorted(archive["publications"].items()))
+          archive_path.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          manifest_path = Path("assets-manifest.json")
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          new_assets = [
+              {
+                  "path": f"publications/{slug}/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
+                  "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
+                  "size": 586205,
+                  "sha256": "a5e4e9066e1eba8f4202c8c0a7600cc2a1c405645f21aea265efac037e0a9990",
+              },
+              {
+                  "path": f"publications/{slug}/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
+                  "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
+                  "size": 6450961,
+                  "sha256": "3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022",
+              },
+              {
+                  "path": f"publications/{slug}/cover.jpg",
+                  "url": f"https://takochanchan.github.io/publications/{slug}/cover.jpg",
+                  "size": 115128,
+                  "sha256": "085a53cb64ef3fb4ac78c46dee5e0c25ff5de512c3d268a0c7f687f042ea2861",
+              },
+          ]
+          existing = {asset["path"] for asset in manifest["assets"]}
+          overlap = existing & {asset["path"] for asset in new_assets}
+          if overlap:
+              raise SystemExit(f"asset entries already exist: {sorted(overlap)}")
+          manifest["assets"].extend(new_assets)
+          manifest["assets"].sort(key=lambda asset: asset["path"])
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          epub_builder_path = Path("scripts/build-epubs.py")
+          epub_builder = epub_builder_path.read_text(encoding="utf-8")
+          source_entry = (
+              '    "guzman-apuntamientos-topografia-salvador-1883": SOURCES\n'
+              '    / "翻訳サイト"\n'
+              '    / "Guzman_Apuntamientos_1883_Japanese_Complete_Translation.docx",\n'
+          )
+          source_marker = "}\n\nMARKDOWN_SOURCES = {"
+          if slug in epub_builder:
+              raise SystemExit("EPUB source route already exists")
+          if source_marker not in epub_builder:
+              raise SystemExit("EPUB source marker missing")
+          epub_builder_path.write_text(epub_builder.replace(source_marker, source_entry + "}\n\nMARKDOWN_SOURCES = {", 1), encoding="utf-8")
+
+          validator_path = Path("scripts/validate-epubs.py")
+          validator = validator_path.read_text(encoding="utf-8")
+          old_validator = 'assert len(items) == 259, f"expected 259 publications, found {len(items)}"'
+          new_validator = 'assert len(items) == 260, f"expected 260 publications, found {len(items)}"'
+          if validator.count(old_validator) != 1:
+              raise SystemExit("EPUB publication count marker missing")
+          validator_path.write_text(validator.replace(old_validator, new_validator), encoding="utf-8")
+
+          tests_path = Path("tests/archive.test.mjs")
+          tests = tests_path.read_text(encoding="utf-8")
+          old_test = "assert.equal(publications.length, 259);"
+          if tests.count(old_test) != 1:
+              raise SystemExit("catalogue count marker missing")
+          tests_path.write_text(tests.replace(old_test, "assert.equal(publications.length, 260);"), encoding="utf-8")
+
+          revision_path = Path("REVISION_LOG.md")
+          revision = revision_path.read_text(encoding="utf-8")
+          heading = "# 改訂記録\n"
+          entry = base64.b64decode("IyMgMjAyNi0wOC0yNCDigJQg44OA44OT44OD44OJ44O744Ob44Ki44Kt44Oz44O744Kw44K544Oe44Oz44COQXB1bnRhbWllbnRvcyBzb2JyZSBsYSB0b3BvZ3JhZsOtYSBmw61zaWNhIGRlIGxhIFJlcMO6YmxpY2EgZGVsIFNhbHZhZG9y44CP5paw6KaP5YWs6ZaLCgotIDE4ODPlubTjgrXjg7PjgrXjg6vjg5Djg4njg6vliJ3niYjjga7mqJnpoYzntJnjgIHliY3ku5hpaWnigJN4eGlp6aCB44CB5pys5paHMjPigJM1MjXpoIHjgpLjgIHnnIHnlaXjga7jgarjgYTml6XmnKzoqp7lhajoqLPjgajjgZfjgaZQREYgNTY56aCB44O7RVBVQuOBp+WFrOmWi+OBl+OBn+OAguW6leacrOS9jee9ruaomeitmDUyM+S7tuOAgeihqDgx54K544CB5rOoMTTku7bjgpLkv53mjIHjgZfjgZ/jgIIKLSDljp/mlofjgajoqLPmlofjgpLni6znq4vjg6zjg5Pjg6Xjg7zjgZfjgIHljp/mnKzmrrXokL3jgIHmrKDokL3jg7vph43opIfjgIHlm7rmnInlkI3oqZ7jgIHmlbDlgKTjgIHlubTku6PjgIHlkKblrprjgIHkuLvov7DplqLkv4LjgIHms6jjgIHooajjgpLnhaflkIjjgZfjgZ/jgIJGYW5jb3VydOWbuuWumuavjeeJiOOBruacgOe1gkRPQ1jjgahQREblhag1NjnpoIHjgpLmj4/nlLvjg7vmpJzmn7vjgZfjgIHmqJnpoYzntJnjgIHliY3ku5jjgIHmnKzmlofmnKvlsL7jgIHljp/liIrpoIHmqJnorZjjgIHooajjgIHms6jjgIHmm7jkvZPjgajpoIHpgIHjgorjgpLnorroqo3jgZfjgZ/jgIIKLSDlupXmnKzjga9Hb29nbGUgQm9va3PjgYzlhajpoIHlhazplovjgZnjgosxODgz5bm05Yid54mI77yISUQgYHlaemFONmoyT19nQ2DjgIHlhag1NTDnlLvlg4/jgIHljp/liIrmnKzmloc1MjXpoIHvvInjgILljp/okZfjga/jg5Hjg5bjg6rjg4Pjgq/jg4njg6HjgqTjg7PjgafjgIFHb29nbGUgQm9va3PjgpLjg4fjgrjjgr/jg6vljJbjg7vlhazplovlhYPjgajjgZfjgabmmI7oqJjjgZfjgZ/jgILml6XmnKzoqp7oqLPjgavjga/lho3liKnnlKjjg6njgqTjgrvjg7PjgrnjgpLoqK3lrprjgZfjgabjgYTjgarjgYTjgIIKLSDlhazplotQREbjga5TSEEtMjU244GvIGAzY2I1ZDI1ZDczMDZkNmQ2NTBjNWQyNmM3ZDg5NzJhZGViYTMxNDdlMWNmYTg3MWQ2Mzk0NzJiOGY5OTk5MDIyYOOAgUVQVULjga8gYGE1ZTRlOTA2NmUxZWJhOGY0MjAyYzhjMGE3NjAwY2MyYTFjNDA1NjQ1ZjIxYWVhMjY1ZWZhYzAzN2UwYTk5OTBg44CBRE9DWOato+acrOOBryBgOTJhMmFlNDYxN2ExY2ZjMzcwZDQ5MDNiNDI4MTY5NWZkZDk3MjVkNmI2Zjk5N2I3NDY0NDUwY2IzZjk1M2UwMWDjgILnt6jpm4blj6/og73mraPmnKzjga/pnZ7lhazplovljp/mnKzjgqLjg7zjgqvjgqTjg5bjga7jgrPjg5/jg4Pjg4ggYGRhNGJlODJiNTEwYjBhNjM1MGI3MWFlMjVjZWM4MmU5OWI3OGRhOWJgIOOBq+S/neWtmOOBl+OBn+OAggotIOWFrOmWi+itmOWIpeWtkO+8mmBndXptYW4tYXB1bnRhbWllbnRvcy10b3BvZ3JhZmlhLXNhbHZhZG9yLTE4ODNg44CCCg==").decode("utf-8")
+          if heading not in revision or slug in revision:
+              raise SystemExit("revision log marker missing or duplicate")
+          revision_path.write_text(revision.replace(heading, heading + "\n" + entry, 1), encoding="utf-8")
+          PY
+
+          payload="$RUNNER_TEMP/guzman-release/release-payload"
+          mkdir -p "static/publications/$SLUG"
+          cp "$payload/cover.jpg" "static/publications/$SLUG/cover.jpg"
+          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
+          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
+          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
+          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
+          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
+
+      - name: Install build dependencies
+        run: npm ci
+
+      - name: Ensure PDF text and OCR tools are available
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Validate EPUB, site build, and full-text search before release
+        run: |
+          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
+          npm run build
+          npm run fetch:search-assets
+          npm run build:search
+          npm run verify:search
+          npm test
+
+      - name: Save verified asset cache
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+
+      - name: Save verified search index
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Confirm remote main is unchanged
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+
+      - name: Upload and re-download verified Release assets
+        run: |
+          payload="$RUNNER_TEMP/guzman-release/release-payload"
+          checksum_dir="$RUNNER_TEMP/release-checksums"
+          verify_dir="$RUNNER_TEMP/release-verify"
+          mkdir -p "$checksum_dir" "$verify_dir"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
+          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
+          import sys
+          from pathlib import Path
+          path = Path(sys.argv[1])
+          additions = {
+              "David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf":
+                  "3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022",
+              "David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub":
+                  "a5e4e9066e1eba8f4202c8c0a7600cc2a1c405645f21aea265efac037e0a9990",
+          }
+          kept = []
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              name = line.split("  ", 1)[1] if "  " in line else ""
+              if name not in additions:
+                  kept.append(line)
+          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
+          kept.sort(key=lambda line: line.split("  ", 1)[1])
+          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+          gh release upload publications-current             "$payload/$PDF_NAME"             "$payload/$EPUB_NAME"             "$checksum_dir/SHA256SUMS.txt"             --clobber
+          gh release download publications-current             --pattern "$PDF_NAME"             --pattern "$EPUB_NAME"             --pattern SHA256SUMS.txt             --dir "$verify_dir"
+          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "6450961"
+          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "586205"
+          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
+          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
+          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
+          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "569"
+          unzip -t "$verify_dir/$EPUB_NAME"
+
+      - name: Commit verified publication
+        id: publish
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add             src/publications.mjs             master-archive.json             assets-manifest.json             scripts/build-epubs.py             scripts/validate-epubs.py             tests/archive.test.mjs             REVISION_LOG.md             "static/publications/$SLUG/cover.jpg"
+          git rm .github/workflows/publish-guzman-1883-once.yml
+          git commit -m "Publish Guzmán Apuntamientos 1883"
+          git push origin HEAD:main
+          final_sha="$(git rev-parse HEAD)"
+          echo "sha=$final_sha" >> "$GITHUB_OUTPUT"
+          encoded_branch="$(python3 -c 'import os, urllib.parse; print(urllib.parse.quote(os.environ["STAGING_BRANCH"], safe=""))')"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded_branch" >/dev/null 2>&1 || true
+
+      - name: Deploy verified site
+        env:
+          FINAL_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          gh workflow run pages.yml --ref main
+          run_id=""
+          for attempt in $(seq 1 40); do
+            run_id="$(gh run list --workflow pages.yml --branch main --event workflow_dispatch --limit 30               --json databaseId,headSha,createdAt               --jq ".[] | select(.headSha == \"$FINAL_SHA\") | .databaseId" | head -1)"
+            test -n "$run_id" && break
+            sleep 5
+          done
+          test -n "$run_id"
+          gh run watch "$run_id" --exit-status
+
+      - name: Verify live publication
+        run: |
+          site="https://takochanchan.github.io"
+          page="$site/publications/$SLUG/"
+          for attempt in $(seq 1 24); do
+            if curl -fsSL "$page" -o "$RUNNER_TEMP/live-page.html" &&
+               grep -Fq "サルバドル共和国自然地理覚書" "$RUNNER_TEMP/live-page.html"; then
+              break
+            fi
+            sleep 10
+          done
+          grep -Fq "サルバドル共和国自然地理覚書" "$RUNNER_TEMP/live-page.html"
+          curl -fsSL "$site/sitemap-books.xml" | grep -Fq "$site/publications/$SLUG/"
+          curl -fsSL "$site/search/search-meta.json" -o "$RUNNER_TEMP/search-meta.json"
+          jq -e --arg slug "$SLUG" '.workSlugs | index($slug) != null' "$RUNNER_TEMP/search-meta.json"
+          curl -fsSL "$site/search/maps/$SLUG.json" -o "$RUNNER_TEMP/search-map.json"
+          jq -e             --arg url "/publications/$SLUG/"             --arg sha "$PDF_SHA"             '.canonicalUrl == $url and .pdfSha256 == $sha and (.blocks | length) > 0'             "$RUNNER_TEMP/search-map.json"
+          curl -fsSL "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt"             -o "$RUNNER_TEMP/live-SHA256SUMS.txt"
+          grep -Fx "$PDF_SHA  $PDF_NAME" "$RUNNER_TEMP/live-SHA256SUMS.txt"
+          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$RUNNER_TEMP/live-SHA256SUMS.txt"
