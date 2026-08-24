@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-24 — フアン・デ・トルケマダ『Monarquía indiana』新規公開
+
+- 1615年セビーリャ初版三巻本の前付、全二十一書本文、各巻索引、後付を、省略のない日本語全訳としてPDF 3701頁・EPUBで公開した。原刊位置標識2334件と欄外注2317件を保持した。
+- 原刊段落を保持し、Fancourt固定母版とNoto書体で組版した。原刊標識は `〔原刊 p. X〕` と `〔原刊 標題紙〕` に統一し、無頁付部分のみローマ数字の編集上の通し頁を用いた。画像番号や境界線は用いていない。
+- 画像底本・OCR取得元はJohn Carter Brown Library所蔵一六一五年初版三巻本（請求記号 `1-SIZE B615 .T687v`）のInternet Archive公開版（`iaiiiapartedelos01torq`、`iaiiiapartedelos02torq`、`iaiiiapartedelos03torq`）。Wikimedia Commonsは底本に用いていない。原刊はパブリックドメイン、JCBデジタル資料はCC BY 4.0で、`Courtesy of the John Carter Brown Library` と表示した。日本語訳には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は `17916055e698be9ca64fec56b3a44686a45f5f9449dde8a554fb55977e1b5335`、EPUBは `fbb1d4cfda027fa7c6abdbd98c61059cb3aca60227a4f2273d5f24f77de67568`、DOCX正本は `43f87bb21cf63192687000dc41444cf52ebadb0489b4cea95aa9db3fb75330b2`。編集可能正本は非公開原本アーカイブのコミット `a834f50f972a36bd78fa37a1f5449daad2cb5e60` に保存した。
+- 公開識別子：`torquemada-monarquia-indiana-1615`。
+
 ## 2026-08-24 — ダビッド・ホアキン・グスマン『Apuntamientos sobre la topografía física de la República del Salvador』新規公開
 
 - 1883年サンサルバドル初版の標題紙、前付iii–xxii頁、本文23–525頁を、省略のない日本語全訳としてPDF 569頁・EPUBで公開した。底本位置標識523件、表81点、注14件を保持した。

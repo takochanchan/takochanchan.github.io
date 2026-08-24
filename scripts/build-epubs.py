@@ -281,6 +281,9 @@ DOCX_SOURCES = {
     "guzman-apuntamientos-topografia-salvador-1883": SOURCES
     / "翻訳サイト"
     / "Guzman_Apuntamientos_1883_Japanese_Complete_Translation.docx",
+    "torquemada-monarquia-indiana-1615": SOURCES
+    / "翻訳サイト"
+    / "Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {

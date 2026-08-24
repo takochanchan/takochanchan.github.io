@@ -6,6 +6,53 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "torquemada-monarquia-indiana-1615",
+    "title": "インディア王国誌",
+    "originalTitle": "Los veinte y un libros rituales y Monarquía indiana",
+    "subtitle": "1615年セビーリャ初版・全三巻二十一書 日本語全訳",
+    "author": "フアン・デ・トルケマダ",
+    "originalAuthor": "Juan de Torquemada",
+    "series": "MONARQUÍA INDIANA · 1615",
+    "originalPublication": "セビーリャ、マティアス・クラビホ、1615年",
+    "year": 1615,
+    "extent": "日本語版PDF 3701頁・全3巻・全21書・原刊前付・本文・各巻索引・原刊位置標識2334件・欄外注2317件",
+    "description": "フアン・デ・トルケマダが1615年に刊行した全三巻二十一書のヌエバ・エスパニャ史・民族誌・宣教史の日本語全訳です。John Carter Brown Library所蔵初版本をInternet Archive公開画像から用い、原刊の前付、本文、各巻索引、欄外注、段落と頁順を保持しました。",
+    "cover": "publications/torquemada-monarquia-indiana-1615/cover.jpg",
+    "pdf": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.pdf",
+    "epub": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub",
+    "pageCount": 3701,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歴史書",
+      "民族誌",
+      "宣教史",
+      "植民地史",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパニャ",
+      "メソアメリカ",
+      "中央アメリカ",
+      "西インド諸島"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "メキシコ史",
+      "先住民史",
+      "ナワ族",
+      "アステカ",
+      "フランシスコ会",
+      "キリスト教宣教",
+      "スペイン征服",
+      "16世紀",
+      "17世紀"
+    ]
+  },
+  {
     "slug": "guzman-apuntamientos-topografia-salvador-1883",
     "title": "サルバドル共和国自然地理覚書",
     "originalTitle": "Apuntamientos sobre la topografía física de la República del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigración, climas, estadística, etc.",
@@ -8318,6 +8365,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "torquemada-monarquia-indiana-1615": {
+    "sourceEdition": "Juan de Torquemada, Los veinte y un libros rituales y Monarquía indiana, 3 vols., Sevilla: Matías Clavijo, 1615. John Carter Brown Library, call number 1-SIZE B615 .T687v.",
+    "sourceProvider": "John Carter Brown Library所蔵の1615年初版三巻本を、同館資料のInternet Archive公開版（第1巻 iaiiiapartedelos01torq、第2巻 iaiiiapartedelos02torq、第3巻 iaiiiapartedelos03torq）から画像底本およびOCR取得元として用いました。Internet Archiveは閲覧・配布プラットフォームであり、所蔵・デジタル画像提供機関はJohn Carter Brown Libraryです。Wikimedia Commonsは底本に用いていません。",
+    "sourceUrl": "https://archive.org/details/iaiiiapartedelos01torq",
+    "rights": "1615年原刊の内容はパブリックドメインです。John Carter Brown Libraryは、Internet Archiveを含む同館デジタルコレクションをCreative Commons Attribution 4.0 International（CC BY 4.0）で提供し、クレジット表記として「Courtesy of the John Carter Brown Library」を求めています。本版は同館所蔵本のデジタル画像およびOCRを原文確認に用い、底本画像そのものは転載していません。本日本語訳には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-24",
+    "updatedDate": "2026-08-24"
+  },
   "guzman-apuntamientos-topografia-salvador-1883": {
     "sourceEdition": "David Joaquín Guzmán, Apuntamientos sobre la topografía física de la República del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigración, climas, estadística, etc., San Salvador: Tipografía de «El Cometa», 1883, 525 pp.",
     "sourceProvider": "Google Booksが全頁公開する1883年初版画像（Google Books ID: yZzaN6j2O_gC、全550画像、原刊本文525頁）を主底本としました。Google Booksの書誌は著者、刊行所、刊年および525頁を表示しています。",

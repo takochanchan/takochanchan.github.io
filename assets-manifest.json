@@ -4376,6 +4376,24 @@
       "sha256": "46cd70177488feaa3a027f0670b45c2634833cea85a1e19609e10a53e1a6233c"
     },
     {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub",
+      "size": 9958534,
+      "sha256": "fbb1d4cfda027fa7c6abdbd98c61059cb3aca60227a4f2273d5f24f77de67568"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.pdf",
+      "size": 28811590,
+      "sha256": "17916055e698be9ca64fec56b3a44686a45f5f9449dde8a554fb55977e1b5335"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/torquemada-monarquia-indiana-1615/cover.jpg",
+      "size": 72583,
+      "sha256": "d3cf4a5713bc6c2fdda3f6000f601b137971fa5c5dc3f572d2dd8f65cabc7312"
+    },
+    {
       "path": "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
       "size": 47371701,

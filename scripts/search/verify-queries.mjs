@@ -208,11 +208,11 @@ for (const candidate of candidates) {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 41,
+    books: 42,
     papers: 7,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
-    books: 22,
+    books: 23,
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
@@ -224,7 +224,7 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
-  await verifyCounts("ポ", { books: 52, papers: 11 });
+  await verifyCounts("ポ", { books: 53, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",
@@ -261,8 +261,8 @@ try {
     1,
   );
   const pageChecks = [
-    ["グリハルバ", grijalva, 253],
-    ["グリハルバ川", grijalvaRiver, 72],
+    ["グリハルバ", grijalva, 272],
+    ["グリハルバ川", grijalvaRiver, 74],
     ["ピエドラス", piedras, 147],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
