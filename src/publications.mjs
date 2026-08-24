@@ -16,7 +16,7 @@ const publicationRecords = [
     "originalPublication": "サンサルバドル、「エル・コメタ」印刷所、1883年",
     "year": 1883,
     "extent": "日本語版PDF 569頁・原刊標題紙・前付iii–xxii頁・本文23–525頁・底本位置標識523件・表81点・注14件",
-    "description": "1883年に刊行されたエルサルバドルの総合地誌の日本語全訳です。自然地理、水理地理、地質、鉱物、植物、動物、農業、工業、商業、移民、気候、統計、先住民史・諸語を扱い、標題紙、前付、詳細目次、献辞、委員会報告、新聞評、政府決定、本文、注、表、語彙集、付録を収録しました。原刊の段落、見出し、表、注、頁順を保持しています。",
+    "description": "1883年に刊行されたエルサルバドルの総合地誌の日本語全訳です。自然地理、水理地理、地質、鉱物、植物、動物、農業、工業、商業、移民、気候、統計、先住民史・諸語を扱い、標題紙、前付、詳細目次、献辞、委員会報告、新聞評、政府決定、本文、注、表、語彙集、付録を収録しました。",
     "cover": "publications/guzman-apuntamientos-topografia-salvador-1883/cover.jpg",
     "pdf": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
     "epub": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
