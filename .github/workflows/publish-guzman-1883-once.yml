@@ -212,6 +212,14 @@ jobs:
               raise SystemExit("catalogue count marker missing")
           tests_path.write_text(tests.replace(old_test, "assert.equal(publications.length, 260);"), encoding="utf-8")
 
+          queries_path = Path("scripts/search/verify-queries.mjs")
+          queries = queries_path.read_text(encoding="utf-8")
+          old_query_count = 'await verifyCounts("ポ", { books: 51, papers: 11 });'
+          new_query_count = 'await verifyCounts("ポ", { books: 52, papers: 11 });'
+          if queries.count(old_query_count) != 1:
+              raise SystemExit("literal search count marker missing")
+          queries_path.write_text(queries.replace(old_query_count, new_query_count), encoding="utf-8")
+
           revision_path = Path("REVISION_LOG.md")
           revision = revision_path.read_text(encoding="utf-8")
           heading = "# 改訂記録\n"
@@ -333,7 +341,7 @@ jobs:
           test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add             src/publications.mjs             master-archive.json             assets-manifest.json             scripts/build-epubs.py             scripts/validate-epubs.py             tests/archive.test.mjs             REVISION_LOG.md             "static/publications/$SLUG/cover.jpg"
+          git add             src/publications.mjs             master-archive.json             assets-manifest.json             scripts/build-epubs.py             scripts/validate-epubs.py             scripts/search/verify-queries.mjs             tests/archive.test.mjs             REVISION_LOG.md             "static/publications/$SLUG/cover.jpg"
           git rm .github/workflows/publish-guzman-1883-once.yml
           git commit -m "Publish Guzmán Apuntamientos 1883"
           git push origin HEAD:main
