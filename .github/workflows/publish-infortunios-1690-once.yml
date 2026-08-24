@@ -39,6 +39,34 @@ jobs:
       - name: Use isolated publication branch
         run: git checkout -B publish-infortunios-1690 "$GITHUB_SHA"
 
+      - name: Prepare progress reporting
+        run: |
+          mkdir -p "$RUNNER_TEMP/publication-bin"
+          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          status="$1"
+          detail="${2:-}"
+          path="publication-status-infortunios.json"
+          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
+          body="$(jq -cn \
+            --arg status "$status" \
+            --arg detail "$detail" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
+          encoded="$(printf '%s' "$body" | base64 -w0)"
+          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
+          args=(--method PUT "$endpoint" -f "message=Report Infortunios publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
+          if test -n "$sha"; then
+            args+=(-f "sha=$sha")
+          fi
+          gh api "${args[@]}" >/dev/null
+          SH
+          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
+          "$RUNNER_TEMP/publication-bin/report-status" started
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -103,6 +131,9 @@ jobs:
           cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
           cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
 
+      - name: Report verified payload
+        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
+
       - name: Install build dependencies
         run: npm ci
 
@@ -115,12 +146,16 @@ jobs:
 
       - name: Validate EPUB, site build, and full-text search before release
         run: |
+          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
           python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
           npm run build
           npm run fetch:search-assets
           npm run build:search
           npm run verify:search
           npm test
+
+      - name: Report passed pre-publication gate
+        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
 
       - name: Save verified asset cache
         continue-on-error: true
@@ -189,6 +224,9 @@ jobs:
           grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
           test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "64"
           unzip -t "$verify_dir/$EPUB_NAME"
+
+      - name: Report verified Release assets
+        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
 
       - name: Commit verified publication
         id: publish
