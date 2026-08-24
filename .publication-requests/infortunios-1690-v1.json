@@ -3,5 +3,7 @@
   "slug": "siguenza-infortunios-alonso-ramirez-1690",
   "archive_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
   "payload_sha256": "3d4a3ef214f9520ce5a533729bd72f497d642c549f9e99c77567b74b40def9d3",
-  "requested_at": "2026-08-24"
+  "requested_at": "2026-08-24",
+  "attempt": 2,
+  "supersedes": "491fcfd1bd519b8636dc91e79b101133d6948c0e"
 }
