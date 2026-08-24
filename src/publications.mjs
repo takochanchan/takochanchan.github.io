@@ -6,6 +6,50 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "siguenza-infortunios-alonso-ramirez-1690",
+    "title": "アロンソ・ラミレスの不運",
+    "originalTitle": "Infortunios de Alonso Ramírez",
+    "subtitle": "1690年メキシコ刊・世界周航と海賊捕囚の記録 日本語全訳",
+    "author": "カルロス・デ・シグエンサ・イ・ゴンゴラ",
+    "originalAuthor": "Carlos de Sigüenza y Góngora",
+    "series": "INFORTUNIOS DE ALONSO RAMÍREZ · 1690",
+    "originalPublication": "メキシコ、ベルナルド・カルデロン未亡人相続人印刷所、1690年",
+    "year": 1690,
+    "extent": "日本語版PDF 64頁・全7節",
+    "description": "プエルトリコ生まれのアロンソ・ラミレスが、フィリピンでイングランド人海賊に捕らえられ、太平洋・インド洋・大西洋を経てユカタン海岸に座礁するまでの遍歴を、シグエンサ・イ・ゴンゴラが1690年にまとめた物語的報告の日本語全訳です。",
+    "cover": "publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
+    "pdf": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
+    "epub": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
+    "pageCount": 64,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "旅行記",
+      "海事史",
+      "捕囚記",
+      "一次史料"
+    ],
+    "regions": [
+      "プエルトリコ",
+      "フィリピン",
+      "メキシコ",
+      "ユカタン",
+      "カリブ海"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "アロンソ・ラミレス",
+      "シグエンサ・イ・ゴンゴラ",
+      "海賊",
+      "世界周航",
+      "海難",
+      "スペイン領フィリピン",
+      "17世紀"
+    ]
+  },
+  {
     "slug": "torquemada-monarquia-indiana-1615",
     "title": "インディア王国誌",
     "originalTitle": "Los veinte y un libros rituales y Monarquía indiana",
@@ -8365,6 +8409,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "siguenza-infortunios-alonso-ramirez-1690": {
+    "sourceEdition": "Carlos de Sigüenza y Góngora, Infortunios de Alonso Ramírez, in Colección de libros raros o curiosos que tratan de América, tomo XX, ed. Pedro Vindel, Madrid: Imprenta de la viuda de Gabriel Pedraza, 1902, pp. 17–132.",
+    "sourceProvider": "University of Toronto、Robarts Library所蔵本をInternet Archiveが識別子 infortuniosdealo00siguoft で公開する1902年復刻版画像を底本としました。同版は1690年初版標題紙の複製を伴います。",
+    "sourceUrl": "https://archive.org/details/infortuniosdealo00siguoft",
+    "rights": "1690年原著および1902年復刻版はパブリックドメインです。Internet Archiveの公開記録は当該資料をNOT_IN_COPYRIGHTと表示しています。本日本語訳には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-24",
+    "updatedDate": "2026-08-24"
+  },
   "torquemada-monarquia-indiana-1615": {
     "sourceEdition": "Juan de Torquemada, Los veinte y un libros rituales y Monarquía indiana, 3 vols., Sevilla: Matías Clavijo, 1615. John Carter Brown Library, call number 1-SIZE B615 .T687v.",
     "sourceProvider": "John Carter Brown Library所蔵の1615年初版三巻本を、同館資料のInternet Archive公開版（第1巻 iaiiiapartedelos01torq、第2巻 iaiiiapartedelos02torq、第3巻 iaiiiapartedelos03torq）から画像底本およびOCR取得元として用いました。Internet Archiveは閲覧・配布プラットフォームであり、所蔵・デジタル画像提供機関はJohn Carter Brown Libraryです。Wikimedia Commonsは底本に用いていません。",

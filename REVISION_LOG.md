@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-24 — カルロス・デ・シグエンサ・イ・ゴンゴラ『Infortunios de Alonso Ramírez』新規公開
+
+- 1690年初版標題紙複製、献辞、認可、許可概要、全七節、末尾認可書を、省略のない日本語全訳としてPDF 64頁・EPUBで公開した。原刊17–132頁の位置標識116件、原注10件、標題紙画像1点を保持した。
+- スペイン語底本のみから独立して翻訳し、中井訳は参照していない。原文対照、段落境界、固有名、数値、方位、海事語、原注を再点検し、Fancourt固定母版とNoto書体によるDOCXおよびPDF全64頁を検査した。
+- 底本はUniversity of Toronto、Robarts Library所蔵本をInternet Archiveが公開するPedro Vindel編1902年復刻版（`infortuniosdealo00siguoft`、pp. 17–132）。1690年原著および1902年復刻版はパブリックドメインで、日本語訳には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は `2ade2a89d573d8b850189e29fa3753a8695fd896c64eeb064c2875a6ba05f639`、EPUBは `30aa06077eedf62a5b852e449b2c924ceccfc2cac9f5b6f36938ed271a4c202a`、DOCX正本は `1300237a9d60f9211df35e42bb524ae3e8bd393af574ff9dec16f543720a1f5e`。編集可能正本は非公開原本アーカイブのコミット `f59aedd50e973ae9d521c94f18086c9519420e0e` に保存した。
+- 公開識別子：`siguenza-infortunios-alonso-ramirez-1690`。
+
 ## 2026-08-24 — フアン・デ・トルケマダ『Monarquía indiana』新規公開
 
 - 1615年セビーリャ初版三巻本の前付、全二十一書本文、各巻索引、後付を、省略のない日本語全訳としてPDF 3701頁・EPUBで公開した。原刊位置標識2334件と欄外注2317件を保持した。

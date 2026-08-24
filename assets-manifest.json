@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
+      "size": 804001,
+      "sha256": "30aa06077eedf62a5b852e449b2c924ceccfc2cac9f5b6f36938ed271a4c202a"
+    },
+    {
+      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
+      "size": 1098931,
+      "sha256": "2ade2a89d573d8b850189e29fa3753a8695fd896c64eeb064c2875a6ba05f639"
+    },
+    {
+      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
+      "size": 89464,
+      "sha256": "8b2f3e552b00acbf91b6fd0d55a8968952efaad39f5efeb3465d316e47370b24"
+    },
+    {
       "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "size": 4113148,

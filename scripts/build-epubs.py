@@ -284,6 +284,9 @@ DOCX_SOURCES = {
     "torquemada-monarquia-indiana-1615": SOURCES
     / "翻訳サイト"
     / "Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.docx",
+    "siguenza-infortunios-alonso-ramirez-1690": SOURCES
+    / "翻訳サイト"
+    / "Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {
