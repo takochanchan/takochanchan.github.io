@@ -216,7 +216,7 @@ try {
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
-    books: 21,
+    books: 22,
     papers: 9,
   });
   const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
@@ -224,7 +224,7 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
-  await verifyCounts("ポ", { books: 53, papers: 11 });
+  await verifyCounts("ポ", { books: 54, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",
@@ -263,7 +263,7 @@ try {
   const pageChecks = [
     ["グリハルバ", grijalva, 272],
     ["グリハルバ川", grijalvaRiver, 74],
-    ["ピエドラス", piedras, 147],
+    ["ピエドラス", piedras, 162],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
   const pageMismatches = pageChecks.filter(([, actual, expected]) =>

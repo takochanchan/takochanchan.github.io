@@ -6,6 +6,55 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "barberena-fonseca-monografias-departamentales-1909-1914",
+    "title": "県別モノグラフ（七冊合冊）",
+    "originalTitle": "Monografías departamentales",
+    "subtitle": "エルサルバドル七県の地理・統計資料 日本語訳",
+    "author": "サンティアゴ・I・バルベレナ／ペドロ・S・フォンセカ",
+    "originalAuthor": "Santiago I. Barberena / Pedro S. Fonseca",
+    "series": "MONOGRAFÍAS DEPARTAMENTALES · 1909–1914",
+    "originalPublication": "サン・サルバドル、国立印刷所、1909–1914年",
+    "year": 1909,
+    "extent": "PDF 318頁・第2・4・5・6・8・10・11冊・原刊表紙5点・県境概略図1点",
+    "description": "エルサルバドル統計総局が1909–1914年に刊行した全14冊の県別地誌のうち、モラサン、チャラテナンゴ、カバニャス、サンタ・アナ、サン・ミゲル、ラ・ウニオン、アワチャパンの7県を収録しています。地形、河川、集落、人口、農業、鉱業、交通、教育、行政を市町村単位で記述した、20世紀初頭エルサルバドルの地域資料です。",
+    "cover": "publications/barberena-fonseca-monografias-departamentales-1909-1914/cover.jpg",
+    "pdf": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.pdf",
+    "epub": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
+    "pageCount": 318,
+    "figureCount": 6,
+    "plateCount": 0,
+    "types": [
+      "地誌",
+      "統計資料",
+      "地域史",
+      "一次史料"
+    ],
+    "regions": [
+      "エルサルバドル",
+      "モラサン県",
+      "チャラテナンゴ県",
+      "カバニャス県",
+      "サンタ・アナ県",
+      "サン・ミゲル県",
+      "ラ・ウニオン県",
+      "アワチャパン県"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "サンティアゴ・I・バルベレナ",
+      "ペドロ・S・フォンセカ",
+      "県別モノグラフ",
+      "人口統計",
+      "地理",
+      "農業",
+      "鉱業",
+      "教育",
+      "20世紀初頭"
+    ]
+  },
+  {
     "slug": "siguenza-infortunios-alonso-ramirez-1690",
     "title": "アロンソ・ラミレスの不運",
     "originalTitle": "Infortunios de Alonso Ramírez",
@@ -8409,6 +8458,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "barberena-fonseca-monografias-departamentales-1909-1914": {
+    "sourceEdition": "Santiago I. Barberena and Pedro S. Fonseca, Monografías departamentales, vols. II, IV, V, VI, VIII, X and XI, San Salvador: Imprenta Nacional, 1909–1914. Vols. VI and XI are taken from the reprint in Anales del Museo Nacional “David J. Guzmán”, tomo VI, nos. 23–24, 1955.",
+    "sourceProvider": "第2・4・5・8・10冊はスペイン国立研究評議会（CSIC）シムルグで公開されるセビリア・アメリカニスト図書館所蔵原刊画像（親レコード990002354020204201）。第6・11冊はイベロアメリカ遺産デジタル図書館（BDPI）／エルサルバドル科学文化リポジトリ（REDICCES）で公開されるエルサルバドル国立図書館所蔵『国立博物館年報「ダビド・J・グスマン」』第6巻第23–24号（1955年）再録（http://hdl.handle.net/10972/2951）を用いました。",
+    "sourceUrl": "https://simurg.csic.es/view/990002354020204201_V2/",
+    "rights": "第2・4・5・8・10冊の底本画像はCSICシムルグの表示—非営利—継承4.0国際（CC BY-NC-SA 4.0）表示に従います。第6・11冊の1955年再録はパブリック・ドメイン・マーク1.0で公開されています。日本語訳・編注はCC BY-NC-SA 4.0で提供します。",
+    "publishedDate": "2026-08-24",
+    "updatedDate": "2026-08-24"
+  },
   "siguenza-infortunios-alonso-ramirez-1690": {
     "sourceEdition": "Carlos de Sigüenza y Góngora, Infortunios de Alonso Ramírez, in Colección de libros raros o curiosos que tratan de América, tomo XX, ed. Pedro Vindel, Madrid: Imprenta de la viuda de Gabriel Pedraza, 1902, pp. 17–132.",
     "sourceProvider": "University of Toronto、Robarts Library所蔵本をInternet Archiveが識別子 infortuniosdealo00siguoft で公開する1902年復刻版画像を底本としました。同版は1690年初版標題紙の複製を伴います。",

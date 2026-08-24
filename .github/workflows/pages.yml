@@ -1,85 +1,50 @@
-name: Publish Barberena-Fonseca seven-volume collection once
-# Temporary contents for the already-registered pages.yml workflow.
+name: Deploy archive to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-    paths:
-      - ".github/workflows/pages.yml"
-      - ".publication-requests/barberena-fonseca-7vols-v1.json"
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  actions: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: publication-release
+  group: pages
   cancel-in-progress: true
 
-env:
-  SLUG: barberena-fonseca-monografias-departamentales-1909-1914
-  PDF_NAME: Barberena_Monografias_Departamentales_7vols_Japanese_Translation.pdf
-  EPUB_NAME: Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub
-  PDF_SHA: 32c0fcecb3d49634c591cf656e3fa731a42548a62083a6e93dc3c63abefa772e
-  EPUB_SHA: bfa22098631805d478c12c379e5e90716294f878f5102260e1843afebcc850df
-  COVER_SHA: 82ce9c607f6508a6ca6bad2f498d125371b4d930f2cbec883e3c20e543da9f64
-  ARCHIVE_COMMIT: be11ba414c7fc062cae1f4ce3cc9255236bfe7b2
-  STAGING_BRANCH: agent/publication-upload-barberena-20260824-v1
-  GH_TOKEN: ${{ github.token }}
-
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
     steps:
-      - name: Check out publication source
+      - name: Check out source
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Use isolated publication branch
-        run: git checkout -B publish-barberena-fonseca "$GITHUB_SHA"
-
-      - name: Prepare progress reporting
-        run: |
-          mkdir -p "$RUNNER_TEMP/publication-bin"
-          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
-          #!/usr/bin/env bash
-          set -euo pipefail
-          status="$1"
-          detail="${2:-}"
-          path="publication-status-barberena.json"
-          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
-          body="$(jq -cn \
-            --arg status "$status" \
-            --arg detail "$detail" \
-            --arg head_sha "$GITHUB_SHA" \
-            --arg run_id "$GITHUB_RUN_ID" \
-            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
-          encoded="$(printf '%s' "$body" | base64 -w0)"
-          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
-          args=(--method PUT "$endpoint" -f "message=Report Barberena publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
-          if test -n "$sha"; then
-            args+=(-f "sha=$sha")
-          fi
-          gh api "${args[@]}" >/dev/null
-          SH
-          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
-          "$RUNNER_TEMP/publication-bin/report-status" started
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install PDF inspection tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils
+      - name: Install build dependencies
+        run: npm ci
 
-      - name: Restore verified PDF and EPUB cache
-        uses: actions/cache/restore@v4
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -88,224 +53,50 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
-      - name: Reconstruct and verify release payload and site patch
-        run: |
-          bundle="$RUNNER_TEMP/barberena-public-assets.tar.gz"
-          : > "$bundle"
-          for sha in \
-            c644f14d8dd0de4ee2ecefef5c480f12d35f5ccb \
-            e77f48d44cb0f9dd070161b53b000d9c45c6a229 \
-            58c046cac89c8e03af523d5243c663f965bd9f72 \
-            eecf60cbdc30d9982d466a1a84c5006210ef811a \
-            06493c170fdfe9b0f22d0ecc1bc3d7d4935a9285 \
-            3d275f99a2ef6727529f9cee16bc30fb095713d6 \
-            90ea99781dfd94047c00db7bb5e9b1bc41567955 \
-            27afc3e53007a0d2b1893c4795a28e25fb1ed180 \
-            182aeecb45a6cdb19162fe8cfb07481ee6a8a7d5 \
-            a24e5136caa8581f99f262a1355929e05994f245 \
-            0defe2ba724712b2287a071014635b9ee9a749b8 \
-            3e8efe71e53f1f9d0c26a82387e0281a59f3fd5a \
-            e2ccb4fe546beb29d41bc21b1b8b215b39abbe88 \
-            675a614595ea433ab210b1668a00f07b8eaaa541 \
-            967575f351955909d71d24a95fa732a540414779 \
-            ee3bb09cf34711d39de91d033c03afdb173e7d37 \
-            e495de561903a4b4d5afc8ac6cf15da22b23cb15 \
-            005286cc24f2858601f5238cae15a4d977e7ac65 \
-            569ba7910e29117aaa3a5227d31d5d8b14e186a7 \
-            734a00cd43525badb1532b50a9a9571146ba9fb4 \
-            8cbb73b6d0fe6da213779534f97a7db71bba8cc7 \
-            c037e03fe4f2671d81fa6d2f5aeab332c80ac59a; do
-            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content |
-              tr -d '\n' | base64 -d >> "$bundle"
-          done
-          test "$(stat -c %s "$bundle")" = "11297626"
-          echo "c5792e127794f9cea357f1ca2ffd50fa1abc403c6234f1701359aa0777ad6851  $bundle" | sha256sum -c -
-
-          mkdir -p "$RUNNER_TEMP/barberena-release"
-          tar -xzf "$bundle" -C "$RUNNER_TEMP/barberena-release"
-          payload="$RUNNER_TEMP/barberena-release/release-payload"
-          test "$(stat -c %s "$payload/$PDF_NAME")" = "7313234"
-          test "$(stat -c %s "$payload/$EPUB_NAME")" = "6325714"
-          test "$(stat -c %s "$payload/cover.jpg")" = "45776"
-          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
-          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
-          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
-          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "318"
-          unzip -t "$payload/$EPUB_NAME"
-
-          site_patch="$RUNNER_TEMP/barberena-site.patch"
-          gh api "repos/$GITHUB_REPOSITORY/git/blobs/1c21d3b1184d89a380bf7819f1952811bed7eed3" --jq .content |
-            tr -d '\n' | base64 -d > "$site_patch"
-          test "$(stat -c %s "$site_patch")" = "87228"
-          echo "17a96d04dacdd81b1e670ed12627ab5fe10dfe2112d14e2888a535ecd582a0bc  $site_patch" | sha256sum -c -
-          git apply --check --binary "$site_patch"
-          git apply --index --binary "$site_patch"
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path("tests/archive.test.mjs")
-          text = path.read_text(encoding="utf-8")
-          replacements = [
-              (
-                  "assert.equal(publications.length, 262);",
-                  "assert.equal(publications.length, 263);",
-              ),
-              (
-                  "assert.equal(majorPublications.length, 125);",
-                  "assert.equal(majorPublications.length, 126);",
-              ),
-              (
-                  'assert.match(html, /id="book-match-count">125<\\/strong>件/);',
-                  'assert.match(html, /id="book-match-count">126<\\/strong>件/);',
-              ),
-          ]
-          for old, new in replacements:
-              if text.count(old) != 1:
-                  raise SystemExit(f"unexpected test baseline for: {old}")
-              text = text.replace(old, new)
-          path.write_text(text, encoding="utf-8")
-          PY
-          git add tests/archive.test.mjs
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path("scripts/search/verify-queries.mjs")
-          text = path.read_text(encoding="utf-8")
-          old = 'await verifyCounts("ポ", { books: 53, papers: 11 });'
-          new = 'await verifyCounts("ポ", { books: 54, papers: 11 });'
-          if text.count(old) != 1:
-              raise SystemExit("unexpected ポ search-count baseline")
-          text = text.replace(old, new)
-          page_old = '["ピエドラス", piedras, 161],'
-          page_new = '["ピエドラス", piedras, 162],'
-          if text.count(page_old) != 1:
-              raise SystemExit("unexpected ピエドラス page-count baseline")
-          path.write_text(text.replace(page_old, page_new), encoding="utf-8")
-          PY
-          git add scripts/search/verify-queries.mjs
-          grep -Fq "$SLUG" src/publications.mjs
-          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
-          grep -Fq "CC BY-NC-SA 4.0" src/publications.mjs
-          echo "$COVER_SHA  static/publications/$SLUG/cover.jpg" | sha256sum -c -
-          cmp "static/publications/$SLUG/cover.jpg" "$payload/cover.jpg"
-
-          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
-          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
-          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
-          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
-          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
-          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
-          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
-
-      - name: Report verified payload
-        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
-
-      - name: Install build dependencies
-        run: npm ci
-
       - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           if ! command -v pdftotext || ! command -v tesseract; then
             sudo apt-get update
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Validate EPUB, site build, and full-text search before release
-        run: |
-          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
-          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
-          npm run build
-          npm run fetch:search-assets
-          npm run build:search
-          npm run verify:search
-          npm test
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
 
-      - name: Report passed pre-publication gate
-        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
 
-      - name: Save verified asset cache
-        continue-on-error: true
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            .cache/fulltext-assets
-            .cache/fulltext-ocr
-          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
-
-      - name: Save verified search index
-        continue-on-error: true
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: dist/search
           key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
-      - name: Confirm remote main is unchanged
-        run: |
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+      - name: Verify full-text index coverage and page maps
+        run: npm run verify:search
 
-      - name: Upload and re-download verified Release assets
-        run: |
-          payload="$RUNNER_TEMP/barberena-release/release-payload"
-          checksum_dir="$RUNNER_TEMP/release-checksums"
-          verify_dir="$RUNNER_TEMP/release-verify"
-          mkdir -p "$checksum_dir" "$verify_dir"
-          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
-          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
-          import os
-          import sys
-          from pathlib import Path
+      - name: Validate archive
+        run: npm test
 
-          path = Path(sys.argv[1])
-          additions = {
-              os.environ["PDF_NAME"]: os.environ["PDF_SHA"],
-              os.environ["EPUB_NAME"]: os.environ["EPUB_SHA"],
-          }
-          kept = []
-          for line in path.read_text(encoding="utf-8").splitlines():
-              if not line.strip():
-                  continue
-              name = line.split("  ", 1)[1] if "  " in line else ""
-              if name not in additions:
-                  kept.append(line)
-          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
-          kept.sort(key=lambda line: line.split("  ", 1)[1])
-          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
-          PY
-          gh release upload publications-current \
-            "$payload/$PDF_NAME" \
-            "$payload/$EPUB_NAME" \
-            "$checksum_dir/SHA256SUMS.txt" \
-            --clobber
-          gh release download publications-current \
-            --pattern "$PDF_NAME" \
-            --pattern "$EPUB_NAME" \
-            --pattern SHA256SUMS.txt \
-            --dir "$verify_dir"
-          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "7313234"
-          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "6325714"
-          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
-          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
-          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
-          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
-          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "318"
-          unzip -t "$verify_dir/$EPUB_NAME"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
-      - name: Report verified Release assets
-        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Let repository initialization finish
+        run: sleep 45
 
-      - name: Commit verified publication and start Pages deployment
-        run: |
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git checkout 9d056cd208768e83cf8b5224f7dd4a5bc6dc3070 -- .github/workflows/pages.yml
-          git rm .publication-requests/barberena-fonseca-7vols-v1.json
-          git commit -m "Publish Barberena-Fonseca departmental monographs"
-          git push origin HEAD:main
-          final_sha="$(git rev-parse HEAD)"
-          "$RUNNER_TEMP/publication-bin/report-status" published_commit "$final_sha"
-          gh api --method POST \
-            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
-            -f ref=main
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

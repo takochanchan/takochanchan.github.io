@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
+      "size": 6325714,
+      "sha256": "bfa22098631805d478c12c379e5e90716294f878f5102260e1843afebcc850df"
+    },
+    {
+      "path": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.pdf",
+      "size": 7313234,
+      "sha256": "32c0fcecb3d49634c591cf656e3fa731a42548a62083a6e93dc3c63abefa772e"
+    },
+    {
+      "path": "publications/barberena-fonseca-monografias-departamentales-1909-1914/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/barberena-fonseca-monografias-departamentales-1909-1914/cover.jpg",
+      "size": 45776,
+      "sha256": "82ce9c607f6508a6ca6bad2f498d125371b4d930f2cbec883e3c20e543da9f64"
+    },
+    {
       "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "size": 804001,

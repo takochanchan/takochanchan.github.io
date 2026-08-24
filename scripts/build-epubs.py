@@ -287,6 +287,9 @@ DOCX_SOURCES = {
     "siguenza-infortunios-alonso-ramirez-1690": SOURCES
     / "翻訳サイト"
     / "Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.docx",
+    "barberena-fonseca-monografias-departamentales-1909-1914": SOURCES
+    / "翻訳サイト"
+    / "Barberena_Monografias_7vols_Fancourt_Mother.docx",
 }
 
 MARKDOWN_SOURCES = {
