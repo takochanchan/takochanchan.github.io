@@ -134,12 +134,38 @@ jobs:
           unzip -t "$payload/$EPUB_NAME"
 
           site_patch="$RUNNER_TEMP/barberena-site.patch"
-          gh api "repos/$GITHUB_REPOSITORY/git/blobs/286929de6c95df1036cfd934fa28305c04da07d6" --jq .content |
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/77dd9c6ff4be8d222f486da1a639f99bbcd05dce" --jq .content |
             tr -d '\n' | base64 -d > "$site_patch"
-          test "$(stat -c %s "$site_patch")" = "88159"
-          echo "c81b2d2c52514343edb52f0260873bbaf0d1b2a5988cb59f4274c1ccacc1fb37  $site_patch" | sha256sum -c -
+          test "$(stat -c %s "$site_patch")" = "86438"
+          echo "371931d0be8e42ccfbce8665c09cf63494cbb50ec5e547215bf1d35055158ded  $site_patch" | sha256sum -c -
           git apply --check --binary "$site_patch"
           git apply --index --binary "$site_patch"
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("tests/archive.test.mjs")
+          text = path.read_text(encoding="utf-8")
+          replacements = [
+              (
+                  "assert.equal(publications.length, 262);",
+                  "assert.equal(publications.length, 263);",
+              ),
+              (
+                  "assert.equal(majorPublications.length, 125);",
+                  "assert.equal(majorPublications.length, 126);",
+              ),
+              (
+                  'assert.match(html, /id="book-match-count">125<\\/strong>件/);',
+                  'assert.match(html, /id="book-match-count">126<\\/strong>件/);',
+              ),
+          ]
+          for old, new in replacements:
+              if text.count(old) != 1:
+                  raise SystemExit(f"unexpected test baseline for: {old}")
+              text = text.replace(old, new)
+          path.write_text(text, encoding="utf-8")
+          PY
+          git add tests/archive.test.mjs
           grep -Fq "$SLUG" src/publications.mjs
           grep -Fq "$ARCHIVE_COMMIT" master-archive.json
           grep -Fq "CC BY-NC-SA 4.0" src/publications.mjs
