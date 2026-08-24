@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 263);
+  assert.equal(publications.length, 264);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -328,13 +328,36 @@ test("Villavicencio confessionary metadata retains the approved complete scope",
   assert.match(item.rights, /Public Domain Mark 1\.0/);
 });
 
+test("González Tehuacán paper retains its approved article scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "gonzalez-ruinas-tehuacan-1892",
+  );
+  assert.ok(item);
+  assert.equal(item.type, "paper");
+  assert.equal(item.recordClass, "short-work");
+  assert.equal(item.authorKey, "dario-gonzalez");
+  assert.equal(item.author, "ダリオ・ゴンサレス");
+  assert.equal(item.originalAuthor, "Darío González");
+  assert.equal(item.pageCount, 9);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /原刊203–206頁/);
+  assert.match(item.sourceProvider, /launi36guat/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/launi36guat/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-25");
+  assert.equal(item.updatedDate, "2026-08-25");
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 126);
-  assert.equal(shortPublications.length, 137);
-  assert.equal(shortPublicationAuthors.length, 32);
+  assert.equal(shortPublications.length, 138);
+  assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
+      "gonzalez-ruinas-tehuacan-1892",
       "esquinca-usumacinta",
       "sapper-eastern-lacandons-1891",
       "berendt-central-america-explorations-1867",
@@ -1424,7 +1447,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">126<\/strong>件/);
-  assert.match(html, /id="paper-match-count">137<\/strong>件/);
+  assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

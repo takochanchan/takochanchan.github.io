@@ -6,6 +6,47 @@ import {
 
 const publicationRecords = [
   {
+    "type": "paper",
+    "slug": "gonzalez-ruinas-tehuacan-1892",
+    "title": "テワカン遺跡――先コロンブス期の遺物",
+    "originalTitle": "Ruinas de Tehuacán. Objetos precolombinos",
+    "subtitle": "1892年刊・原刊203–206頁 日本語全訳",
+    "author": "ダリオ・ゴンサレス",
+    "originalAuthor": "Darío González",
+    "series": "RUINAS DE TEHUACÁN · LA UNIVERSIDAD · 1892",
+    "originalPublication": "サン・サルバドル、『La Universidad』第III系列第6号、1892年6月、203–206頁",
+    "year": 1892,
+    "extent": "PDF 9頁・原刊203–206頁・原注4件",
+    "description": "ダリオ・ゴンサレスがエルサルバドルのテワカン遺跡を記述した1892年の考古学報告。造成台地、石壁、ピラミッド、石彫・土器などの出土品を紹介し、当時のトルテカ系・ピピル系移住説と地名語源を論じます。",
+    "cover": "publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
+    "pdf": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.pdf",
+    "epub": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
+    "pageCount": 9,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "考古学報告",
+      "遺跡報告",
+      "学術誌論文"
+    ],
+    "regions": [
+      "テワカン",
+      "サン・ビセンテ",
+      "エルサルバドル"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "テワカン遺跡",
+      "エルサルバドル考古学",
+      "ピピル",
+      "トルテカ",
+      "先コロンブス期",
+      "一次史料"
+    ]
+  },
+  {
     "slug": "barberena-fonseca-monografias-departamentales-1909-1914",
     "title": "県別モノグラフ（七冊合冊）",
     "originalTitle": "Monografías departamentales",
@@ -8458,6 +8499,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "gonzalez-ruinas-tehuacan-1892": {
+    "sourceEdition": "Darío González, “Ruinas de Tehuacán. Objetos precolombinos,” La Universidad: órgano del Instituto Nacional del mismo nombre, serie III, núm. 6, San Salvador, junio de 1892, pp. 203–206.",
+    "sourceProvider": "ビブリオテカ・ルートヴィヒ・フォン・ミーゼス（フランシスコ・マロキン大学）所蔵本をInternet Archiveが公開する原刊スキャン（identifier: launi36guat）を底本としました。原刊203–206頁の本文と原注を誌面画像およびOCRで照合し、底本画像そのものは転載していません。",
+    "sourceUrl": "https://archive.org/details/launi36guat",
+    "rights": "1892年刊の原著本文はパブリックドメインです。著者ダリオ・ゴンサレスは1911年に没しています。Internet Archiveの当該項目には個別のCreative Commonsライセンスは表示されていません。本版は底本画像を閲覧・校合にのみ用い、画像そのものは転載していません。日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。",
+    "publishedDate": "2026-08-25",
+    "updatedDate": "2026-08-25"
+  },
   "barberena-fonseca-monografias-departamentales-1909-1914": {
     "sourceEdition": "Santiago I. Barberena and Pedro S. Fonseca, Monografías departamentales, vols. II, IV, V, VI, VIII, X and XI, San Salvador: Imprenta Nacional, 1909–1914. Vols. VI and XI are taken from the reprint in Anales del Museo Nacional “David J. Guzmán”, tomo VI, nos. 23–24, 1955.",
     "sourceProvider": "第2・4・5・8・10冊はスペイン国立研究評議会（CSIC）シムルグで公開されるセビリア・アメリカニスト図書館所蔵原刊画像（親レコード990002354020204201）。第6・11冊はイベロアメリカ遺産デジタル図書館（BDPI）／エルサルバドル科学文化リポジトリ（REDICCES）で公開されるエルサルバドル国立図書館所蔵『国立博物館年報「ダビド・J・グスマン」』第6巻第23–24号（1955年）再録（http://hdl.handle.net/10972/2951）を用いました。",
@@ -10837,6 +10886,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "gonzalez-ruinas-tehuacan-1892": "dario-gonzalez",
   "morelet-testacea-novissima-pars-i-1849": "arthur-morelet",
   "morelet-testacea-novissima-pars-ii-1851": "arthur-morelet",
   "morelet-exploration-guatemala-1850":

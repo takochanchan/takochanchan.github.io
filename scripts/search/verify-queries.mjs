@@ -223,7 +223,7 @@ try {
     books: 12,
     papers: 8,
   });
-  await verifyCounts("ラカンドン", { books: 50, papers: 15 });
+  await verifyCounts("ラカンドン", { books: 50, papers: 16 });
   await verifyCounts("ポ", { books: 54, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",

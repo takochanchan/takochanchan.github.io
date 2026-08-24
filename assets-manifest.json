@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
+      "size": 156608,
+      "sha256": "6c51ba7ab812d5f4525ae4b7fc8956140e28f60d70e03c8e5d783ef4d2f83b78"
+    },
+    {
+      "path": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.pdf",
+      "size": 364507,
+      "sha256": "0622266a945cfc4cdeb0b6fe77773aff05402967b1aa16f3697f7f198ee86daa"
+    },
+    {
+      "path": "publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
+      "size": 153181,
+      "sha256": "6b8c91c2a80b393ccd587ff9799789285dcfdceeac39072ecccb397e7e524bcb"
+    },
+    {
       "path": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
       "size": 6325714,
