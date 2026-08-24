@@ -10814,4 +10814,3 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
-

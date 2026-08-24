@@ -1765,4 +1765,3 @@ test("current repository source does not reference the previous identifying host
     assert.doesNotMatch(content, /masaki1979|chatgpt\.site/i, relative);
   }
 });
-
