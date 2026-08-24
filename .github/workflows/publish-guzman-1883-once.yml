@@ -145,7 +145,10 @@ jobs:
 
           archive_path = Path("master-archive.json")
           archive = json.loads(archive_path.read_text(encoding="utf-8"))
-          archive["archive_commit"] = "da4be82b510b0a6350b71ae25cec82e99b78da9b"
+          archive_commit = "da4be82b510b0a6350b71ae25cec82e99b78da9b"
+          archive["archive_commit"] = archive_commit
+          for fallback in archive.get("release_fallbacks", {}).values():
+              fallback["ledger_commit"] = archive_commit
           archive["publications"][slug] = f"publications/{slug}/master.docx"
           archive["publications"] = dict(sorted(archive["publications"].items()))
           archive_path.write_text(json.dumps(archive, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
