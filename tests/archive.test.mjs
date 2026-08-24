@@ -63,6 +63,28 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.languages.includes("フランス語"));
 });
 
+test("public bibliography omits production boilerplate", () => {
+  const prohibited =
+    /原刊の前付、本文、各巻索引、欄外注|段落と頁順を(?:保持|維持)/u;
+  for (const item of publications) {
+    assert.doesNotMatch(
+      `${item.extent ?? ""}\n${item.description}`,
+      prohibited,
+      item.slug,
+    );
+  }
+
+  const torquemada = publications.find(
+    (item) => item.slug === "torquemada-monarquia-indiana-1615",
+  );
+  assert.ok(torquemada);
+  assert.equal(torquemada.extent, "日本語版PDF 3701頁・全3巻・全21書");
+  assert.equal(
+    torquemada.description,
+    "フアン・デ・トルケマダが1615年に刊行した全三巻二十一書のヌエバ・エスパニャ史・民族誌・宣教史の日本語全訳です。John Carter Brown Library所蔵初版本をInternet Archive公開画像から底本として用いました。",
+  );
+});
+
 test("Strangeways Mosquito Shore retains the approved complete scope", () => {
   const item = publications.find(
     (publication) => publication.slug === "strangeways-mosquito-shore-1822",
