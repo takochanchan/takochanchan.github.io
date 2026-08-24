@@ -1640,6 +1640,24 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
+      "path": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
+      "size": 2271836,
+      "sha256": "37e3f5693b6ac9541e85ba3cb4925b9c4c901b1d1adb973372aa7996f32f1210"
+    },
+    {
+      "path": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.pdf",
+      "size": 8906130,
+      "sha256": "805d705580ff18eb110dbe0685741c66bf4be92dd583a7151e8968eb1f3e886c"
+    },
+    {
+      "path": "publications/fernandez-historia-costa-rica-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/fernandez-historia-costa-rica-1889/cover.jpg",
+      "size": 50845,
+      "sha256": "44c98f1712a949a96a742f851ff548185db6355c940e519960546388f0cdd739"
+    },
+    {
       "path": "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
       "size": 29617527,

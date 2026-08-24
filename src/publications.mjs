@@ -6,6 +6,53 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "fernandez-historia-costa-rica-1889",
+    "title": "スペイン統治下のコスタリカ史",
+    "originalTitle": "Historia de Costa Rica durante la dominación española, 1502–1821",
+    "subtitle": "1502–1821年・1889年マドリード初版 日本語全訳",
+    "author": "レオン・フェルナンデス",
+    "originalAuthor": "León Fernández",
+    "series": "HISTORIA DE COSTA RICA · 1889",
+    "originalPublication": "マドリード、マヌエル・ヒネス・エルナンデス印刷所、1889年",
+    "year": 1889,
+    "extent": "PDF 613頁・原刊前付V–VII頁・本文1–640頁・注243件・表44点・自筆署名見本24葉・名簿・索引・正誤表",
+    "description": "レオン・フェルナンデスが、コロンによる1502年のコスタリカ沿岸到達から1821年の独立までを、征服、植民地行政、総督、先住民社会、宣教、海防、モスキート海岸との関係、経済と人口の推移に沿って年代順にまとめたコスタリカ植民地史の古典です。リカルド・フェルナンデス・グアルディアが公刊した1889年初版の前付、本文1–640頁、注、自筆署名見本24葉と名簿、索引、正誤表を収録し、原刊の段落、引用、表、注、頁順を保持しています。",
+    "cover": "publications/fernandez-historia-costa-rica-1889/cover.jpg",
+    "pdf": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.pdf",
+    "epub": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
+    "pageCount": 613,
+    "figureCount": 0,
+    "plateCount": 24,
+    "types": [
+      "歴史書",
+      "通史",
+      "植民地史"
+    ],
+    "regions": [
+      "コスタリカ",
+      "中央アメリカ",
+      "カリブ海沿岸",
+      "ニカラグア",
+      "パナマ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "コスタリカ史",
+      "スペイン統治",
+      "植民地行政",
+      "先住民史",
+      "モスキート海岸",
+      "タラマンカ",
+      "独立",
+      "16世紀",
+      "17世紀",
+      "18世紀",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "strangeways-mosquito-shore-1822",
     "title": "モスキート海岸概説――ポヤイス領を含む",
     "originalTitle": "Sketch of the Mosquito Shore, Including the Territory of Poyais",
@@ -8223,6 +8270,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "fernandez-historia-costa-rica-1889": {
+    "sourceEdition": "León Fernández, Historia de Costa Rica durante la dominación española, 1502–1821, publicado por Ricardo Fernández Guardia, Madrid: Tipografía de Manuel Ginés Hernández, 1889。",
+    "sourceProvider": "ハーバード大学所蔵本をGoogleがデジタル化し、Internet Archiveが公開する1889年マドリード初版画像（Internet Archive identifier: historiadecosta00ferngoog）を主底本としました。同公開記録はNOT_IN_COPYRIGHTと表示しています。判読の校合にはニューヨーク公共図書館所蔵の同版画像およびコスタリカ国立図書館を含むSINABI公開画像を参照しました。",
+    "sourceUrl": "https://archive.org/details/historiadecosta00ferngoog",
+    "rights": "原著者レオン・フェルナンデス（1840–1887）および公刊者リカルド・フェルナンデス・グアルディア（1867–1950）の著作権保護期間は満了しており、原著はパブリックドメインです。Internet Archiveの主底本公開記録はNOT_IN_COPYRIGHTと表示しています。デジタル画像には公開元の利用条件が適用される場合があります。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-24",
+    "updatedDate": "2026-08-24"
+  },
   "strangeways-mosquito-shore-1822": {
     "sourceEdition": "Thomas Strangeways, Sketch of the Mosquito Shore, Including the Territory of Poyais: Descriptive of the Country; with Some Information as to Its Productions, the Best Mode of Culture, &c. Chiefly Intended for the Use of Settlers, Edinburgh: William Blackwood; London: T. Caddell, 1822, viii + 355 pp.",
     "sourceProvider": "Library of Congress所蔵本（LCCN 05009918）の全巻画像をInternet Archive識別子 sketchofmosquito00stra から参照。口絵と折込地図は同館公開画像、ブラック・リヴァー港景は同館リソース20頁からWikimedia Commonsへ切り出されたパブリックドメイン画像を使用。",
@@ -10759,3 +10814,4 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+

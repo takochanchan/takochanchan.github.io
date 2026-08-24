@@ -216,7 +216,7 @@ try {
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
-    books: 20,
+    books: 21,
     papers: 9,
   });
   const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
@@ -224,7 +224,7 @@ try {
     papers: 8,
   });
   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
-  await verifyCounts("ポ", { books: 50, papers: 11 });
+  await verifyCounts("ポ", { books: 51, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
     "duran-historia-indias-nueva-espana-1581",
@@ -255,10 +255,15 @@ try {
     "strangeways-mosquito-shore-1822",
     1,
   );
+  const fernandezClosing = await verifyPublicationQuery(
+    "川がなす二百九の湾曲または折返し",
+    "fernandez-historia-costa-rica-1889",
+    1,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 253],
     ["グリハルバ川", grijalvaRiver, 72],
-    ["ピエドラス", piedras, 145],
+    ["ピエドラス", piedras, 147],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
   const pageMismatches = pageChecks.filter(([, actual, expected]) =>
@@ -285,7 +290,8 @@ try {
       `テポナグアステ ${villavicencioTeponaguaste} pages, ` +
       `国王の公秤 ${robertsRoyalScale} pages, ` +
       `文書庫を焼き ${barrazaArchiveBurning} pages, ` +
-      `大西洋の波濤の彼方に輝く諸国 ${strangewaysClosing} pages.\n`,
+      `大西洋の波濤の彼方に輝く諸国 ${strangewaysClosing} pages, ` +
+      `川がなす二百九の湾曲または折返し ${fernandezClosing} pages.\n`,
   );
 } finally {
   await api.destroy();

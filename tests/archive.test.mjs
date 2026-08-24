@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 258);
+  assert.equal(publications.length, 259);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -75,6 +75,20 @@ test("Strangeways Mosquito Shore retains the approved complete scope", () => {
   assert.match(item.description, /原刊位置標識374件/);
   assert.match(item.sourceProvider, /Library of Congress/);
   assert.match(item.rights, /再利用ライセンスを設定していない/);
+});
+
+test("Fernández Costa Rica history retains the approved complete scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "fernandez-historia-costa-rica-1889",
+  );
+  assert.ok(item);
+  assert.equal(item.pageCount, 613);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 24);
+  assert.match(item.extent, /原刊前付V–VII頁・本文1–640頁/);
+  assert.match(item.description, /原刊の段落、引用、表、注、頁順/);
+  assert.match(item.sourceProvider, /Internet Archive/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("century-only catalogue dates sort at each century's final year", async () => {
@@ -293,7 +307,7 @@ test("Villavicencio confessionary metadata retains the approved complete scope",
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 121);
+  assert.equal(majorPublications.length, 122);
   assert.equal(shortPublications.length, 137);
   assert.equal(shortPublicationAuthors.length, 32);
   assert.deepEqual(
@@ -1387,7 +1401,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">121<\/strong>件/);
+  assert.match(html, /id="book-match-count">122<\/strong>件/);
   assert.match(html, /id="paper-match-count">137<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -1751,3 +1765,4 @@ test("current repository source does not reference the previous identifying host
     assert.doesNotMatch(content, /masaki1979|chatgpt\.site/i, relative);
   }
 });
+
