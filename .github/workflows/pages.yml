@@ -1,50 +1,91 @@
-name: Deploy archive to GitHub Pages
+name: Publish Leonard Sigüenza monograph once
+# Temporary contents for the already-registered pages.yml workflow.
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+    paths:
+      - ".github/workflows/pages.yml"
+      - ".publication-requests/leonard-don-carlos-de-siguenza-y-gongora-1929-v1.json"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  actions: write
 
 concurrency:
-  group: pages
+  group: publication-release
   cancel-in-progress: true
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out source
-        uses: actions/checkout@v4
+env:
+  SLUG: leonard-don-carlos-de-siguenza-y-gongora-1929
+  PDF_NAME: Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.pdf
+  EPUB_NAME: Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub
+  PDF_SHA: 9978e77a889e09836a5f0776ac99e4f78cdaf0e9f895dc21141de9808ad41c28
+  EPUB_SHA: 84690381ec71164dff63f6579ad8b728f7a65ca28a240082cb713d5d51d899c3
+  COVER_SHA: 23d9cde6c3a2a13bb507c295e2a4e7c0ea7351f2baa437022777fd36218c3ad5
+  ARCHIVE_COMMIT: 64f556f533c17d620ae8fc5003a5a2e4117bd090
+  STAGING_BRANCH: agent/publication-upload-leonard-siguenza-20260825-v1
+  ASSET_BLOBS: "965064cde2ab7295dc706c330e4cf94ed4e0d053 3666f825a93123f6182db4d8e312cfc6ca34b252 8e6865899639244414d9a2b69fdde7d4fe71a0e0 2bed7a6f5251733ea2e8d3afcc6d9c507cee9670 a9c02b7a0752e30d4742257575920282a74814f5 7faf582f584ad4cd2b197ee6a915bb88e6d76979 cc3809fd98cbe1912fb4f50ba1ea8d53fc77d7fd 639d91e8adfd780ad932c7ad9e4469a737fa1677 8f1d467b73d0bdb650f15618184387f85ef80b71 f81c1ac35af2e980d324285569352299866444ce fdcf2d773252d2f593f77a74c71fbcfe5b001f4a"
+  ASSET_BUNDLE_SIZE: "7339264"
+  ASSET_BUNDLE_SHA: 0b3bb53a60209bdfee6a01e813063bc6271cfa9032316ca1f0e93a001934f126
+  SITE_PATCH_BLOB: 86d1cebcded2b90e2a8f39f08ec006a25c79ceca
+  SITE_PATCH_SIZE: "46094"
+  SITE_PATCH_SHA: 50feb55c85f7ec8d8cb1279443d1ccc7e3c17fece5e29d8efb8afae9cc6502af
+  GH_TOKEN: ${{ github.token }}
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out publication source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Use isolated publication branch
+        run: git checkout -B publish-leonard-siguenza "$GITHUB_SHA"
+
+      - name: Prepare progress reporting
+        run: |
+          mkdir -p "$RUNNER_TEMP/publication-bin"
+          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          status="$1"
+          detail="${2:-}"
+          path="publication-status-leonard-siguenza.json"
+          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
+          body="$(jq -cn \
+            --arg status "$status" \
+            --arg detail "$detail" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
+          encoded="$(printf '%s' "$body" | base64 -w0)"
+          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
+          args=(--method PUT "$endpoint" -f "message=Report Leonard publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
+          if test -n "$sha"; then
+            args+=(-f "sha=$sha")
+          fi
+          gh api "${args[@]}" >/dev/null
+          SH
+          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
+          "$RUNNER_TEMP/publication-bin/report-status" started
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install build dependencies
-        run: npm ci
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils unzip
 
-      - name: Build archive pages
-        run: npm run build
-
-      - name: Restore generated full-text index
-        id: search-index-cache
-        uses: actions/cache@v4
-        with:
-          path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
-      - name: Restore final PDF and EPUB inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+      - name: Restore verified PDF and EPUB cache
+        uses: actions/cache/restore@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -53,50 +94,163 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
+      - name: Reconstruct and verify release payload and site patch
+        run: |
+          bundle="$RUNNER_TEMP/leonard-public-assets.tar.gz"
+          : > "$bundle"
+          for oid in $ASSET_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$oid" --jq .content |
+              tr -d '\n' | base64 -d >> "$bundle"
+          done
+          test "$(stat -c %s "$bundle")" = "$ASSET_BUNDLE_SIZE"
+          echo "$ASSET_BUNDLE_SHA  $bundle" | sha256sum -c -
+
+          mkdir -p "$RUNNER_TEMP/leonard-release"
+          tar -xzf "$bundle" -C "$RUNNER_TEMP/leonard-release"
+          payload="$RUNNER_TEMP/leonard-release/release-payload"
+          test "$(stat -c %s "$payload/$PDF_NAME")" = "6090289"
+          test "$(stat -c %s "$payload/$EPUB_NAME")" = "3260342"
+          test "$(stat -c %s "$payload/cover.jpg")" = "64472"
+          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
+          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
+          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "318"
+          unzip -t "$payload/$EPUB_NAME"
+
+          site_patch="$RUNNER_TEMP/leonard-site.patch"
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$SITE_PATCH_BLOB" --jq .content |
+            tr -d '\n' | base64 -d > "$site_patch"
+          test "$(stat -c %s "$site_patch")" = "$SITE_PATCH_SIZE"
+          echo "$SITE_PATCH_SHA  $site_patch" | sha256sum -c -
+          git apply --check --binary "$site_patch"
+          git apply --index --binary "$site_patch"
+          grep -Fq "$SLUG" src/publications.mjs
+          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
+          grep -Fq "$EPUB_SHA" assets-manifest.json
+          echo "$COVER_SHA  static/publications/$SLUG/cover.jpg" | sha256sum -c -
+          cmp "static/publications/$SLUG/cover.jpg" "$payload/cover.jpg"
+
+          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
+          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
+          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
+          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
+          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
+
+      - name: Report verified payload
+        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
+
+      - name: Install build dependencies
+        run: npm ci
+
       - name: Ensure PDF text and OCR tools are available
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           if ! command -v pdftotext || ! command -v tesseract; then
             sudo apt-get update
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Fetch checksum-verified search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run fetch:search-assets
+      - name: Validate EPUB, site build, and full-text search before release
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
+          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
+          npm run build
+          npm run fetch:search-assets
+          npm run build:search
+          npm run verify:search
+          npm test
 
-      - name: Generate full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run build:search
+      - name: Report passed pre-publication gate
+        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
 
-      - name: Save generated full-text index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
+      - name: Save verified asset cache
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+
+      - name: Save verified search index
+        continue-on-error: true
         uses: actions/cache/save@v4
         with:
           path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+          key: fulltext-index-leonard-siguenza-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
-      - name: Verify full-text index coverage and page maps
-        run: npm run verify:search
+      - name: Confirm remote main is unchanged
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
 
-      - name: Validate archive
-        run: npm test
+      - name: Upload and re-download verified Release assets
+        run: |
+          payload="$RUNNER_TEMP/leonard-release/release-payload"
+          checksum_dir="$RUNNER_TEMP/release-checksums"
+          verify_dir="$RUNNER_TEMP/release-verify"
+          mkdir -p "$checksum_dir" "$verify_dir"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
+          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
+          import os
+          import sys
+          from pathlib import Path
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+          path = Path(sys.argv[1])
+          additions = {
+              os.environ["PDF_NAME"]: os.environ["PDF_SHA"],
+              os.environ["EPUB_NAME"]: os.environ["EPUB_SHA"],
+          }
+          kept = []
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              name = line.split("  ", 1)[1] if "  " in line else ""
+              if name not in additions:
+                  kept.append(line)
+          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
+          kept.sort(key=lambda line: line.split("  ", 1)[1])
+          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+          gh release upload publications-current \
+            "$payload/$PDF_NAME" \
+            "$payload/$EPUB_NAME" \
+            "$checksum_dir/SHA256SUMS.txt" \
+            --clobber
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir "$verify_dir"
+          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "6090289"
+          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "3260342"
+          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
+          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
+          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
+          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "318"
+          unzip -t "$verify_dir/$EPUB_NAME"
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Let repository initialization finish
-        run: sleep 45
+      - name: Report verified Release assets
+        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit verified publication and start Pages deployment
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git checkout "$GITHUB_SHA^" -- .github/workflows/pages.yml
+          git rm .publication-requests/leonard-don-carlos-de-siguenza-y-gongora-1929-v1.json
+          git commit -m "Publish Leonard Sigüenza monograph"
+          git push origin HEAD:main
+          final_sha="$(git rev-parse HEAD)"
+          "$RUNNER_TEMP/publication-bin/report-status" published_commit "$final_sha"
+          gh api --method POST \
+            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
+            -f ref=main
+
+      - name: Report publication failure
+        if: failure()
+        run: "$RUNNER_TEMP/publication-bin/report-status failed || true"
