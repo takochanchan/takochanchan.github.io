@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: publication-release
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
   SLUG: guzman-apuntamientos-topografia-salvador-1883
@@ -38,6 +38,35 @@ jobs:
       - name: Use isolated publication branch
         run: git checkout -B publish-guzman-1883 "$GITHUB_SHA"
 
+      - name: Prepare progress reporting
+        run: |
+          mkdir -p "$RUNNER_TEMP/publication-bin"
+          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          status="$1"
+          detail="${2:-}"
+          path="publication-status-guzman.json"
+          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
+          body="$(jq -cn \
+            --arg status "$status" \
+            --arg detail "$detail" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg run_attempt "$GITHUB_RUN_ATTEMPT" \
+            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,run_attempt:$run_attempt,updated_at:$updated_at}')"
+          encoded="$(printf '%s' "$body" | base64 -w0)"
+          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
+          args=(--method PUT "$endpoint" -f "message=Report Guzman publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
+          if test -n "$sha"; then
+            args+=(-f "sha=$sha")
+          fi
+          gh api "${args[@]}" >/dev/null
+          SH
+          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
+          "$RUNNER_TEMP/publication-bin/report-status" started
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -59,6 +88,7 @@ jobs:
             fulltext-assets-
 
       - name: Reconstruct and verify release payload
+        id: payload
         run: |
           bundle="$RUNNER_TEMP/guzman-public-assets.tar.gz"
           : > "$bundle"
@@ -80,7 +110,12 @@ jobs:
           test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "569"
           unzip -t "$payload/$EPUB_NAME"
 
+      - name: Report verified payload
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" payload_verified
+
       - name: Update catalogue, archive ledger, and manifests
+        id: metadata
         run: |
           python3 - <<'PY'
           import base64
@@ -194,6 +229,10 @@ jobs:
           cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
           cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
 
+      - name: Report prepared publication metadata
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" metadata_prepared
+
       - name: Install build dependencies
         run: npm ci
 
@@ -205,13 +244,19 @@ jobs:
           fi
 
       - name: Validate EPUB, site build, and full-text search before release
+        id: gate
         run: |
+          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
           python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
           npm run build
           npm run fetch:search-assets
           npm run build:search
           npm run verify:search
           npm test
+
+      - name: Report passed pre-publication gate
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" prepublication_gate_passed
 
       - name: Save verified asset cache
         continue-on-error: true
@@ -235,6 +280,7 @@ jobs:
           test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
 
       - name: Upload and re-download verified Release assets
+        id: release
         run: |
           payload="$RUNNER_TEMP/guzman-release/release-payload"
           checksum_dir="$RUNNER_TEMP/release-checksums"
@@ -273,6 +319,10 @@ jobs:
           test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "569"
           unzip -t "$verify_dir/$EPUB_NAME"
 
+      - name: Report verified Release assets
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" release_verified
+
       - name: Commit verified publication
         id: publish
         run: |
@@ -304,6 +354,7 @@ jobs:
           gh run watch "$run_id" --exit-status
 
       - name: Verify live publication
+        id: live
         run: |
           site="https://takochanchan.github.io"
           page="$site/publications/$SLUG/"
@@ -323,3 +374,10 @@ jobs:
           curl -fsSL "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt"             -o "$RUNNER_TEMP/live-SHA256SUMS.txt"
           grep -Fx "$PDF_SHA  $PDF_NAME" "$RUNNER_TEMP/live-SHA256SUMS.txt"
           grep -Fx "$EPUB_SHA  $EPUB_NAME" "$RUNNER_TEMP/live-SHA256SUMS.txt"
+
+      - name: Report pre-publication failure
+        if: failure() && steps.publish.outcome != 'success'
+        env:
+          DETAIL: payload=${{ steps.payload.outcome }},metadata=${{ steps.metadata.outcome }},gate=${{ steps.gate.outcome }},release=${{ steps.release.outcome }}
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" failed "$DETAIL"
