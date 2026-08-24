@@ -1,0 +1,1833 @@
+diff --git a/REVISION_LOG.md b/REVISION_LOG.md
+index 00880a0..6b59b83 100644
+--- a/REVISION_LOG.md
++++ b/REVISION_LOG.md
+@@ -1,5 +1,13 @@
+ # 改訂記録
+ 
++## 2026-08-24 — カルロス・デ・シグエンサ・イ・ゴンゴラ『Infortunios de Alonso Ramírez』新規公開
++
++- 1690年初版標題紙複製、献辞、認可、許可概要、全七節、末尾認可書を、省略のない日本語全訳としてPDF 64頁・EPUBで公開した。原刊17–132頁の位置標識116件、原注10件、標題紙画像1点を保持した。
++- スペイン語底本のみから独立して翻訳し、中井訳は参照していない。原文対照、段落境界、固有名、数値、方位、海事語、原注を再点検し、Fancourt固定母版とNoto書体によるDOCXおよびPDF全64頁を検査した。
++- 底本はUniversity of Toronto、Robarts Library所蔵本をInternet Archiveが公開するPedro Vindel編1902年復刻版（`infortuniosdealo00siguoft`、pp. 17–132）。1690年原著および1902年復刻版はパブリックドメインで、日本語訳には再利用ライセンスを設定していない。
++- 公開PDFのSHA-256は `2ade2a89d573d8b850189e29fa3753a8695fd896c64eeb064c2875a6ba05f639`、EPUBは `30aa06077eedf62a5b852e449b2c924ceccfc2cac9f5b6f36938ed271a4c202a`、DOCX正本は `1300237a9d60f9211df35e42bb524ae3e8bd393af574ff9dec16f543720a1f5e`。編集可能正本は非公開原本アーカイブのコミット `f59aedd50e973ae9d521c94f18086c9519420e0e` に保存した。
++- 公開識別子：`siguenza-infortunios-alonso-ramirez-1690`。
++
+ ## 2026-08-24 — フアン・デ・トルケマダ『Monarquía indiana』新規公開
+ 
+ - 1615年セビーリャ初版三巻本の前付、全二十一書本文、各巻索引、後付を、省略のない日本語全訳としてPDF 3701頁・EPUBで公開した。原刊位置標識2334件と欄外注2317件を保持した。
+diff --git a/assets-manifest.json b/assets-manifest.json
+index a0873cd..99ce67a 100644
+--- a/assets-manifest.json
++++ b/assets-manifest.json
+@@ -1,6 +1,24 @@
+ {
+   "version": 1,
+   "assets": [
++    {
++      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
++      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
++      "size": 804001,
++      "sha256": "30aa06077eedf62a5b852e449b2c924ceccfc2cac9f5b6f36938ed271a4c202a"
++    },
++    {
++      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
++      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
++      "size": 1098931,
++      "sha256": "2ade2a89d573d8b850189e29fa3753a8695fd896c64eeb064c2875a6ba05f639"
++    },
++    {
++      "path": "publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
++      "url": "https://takochanchan.github.io/publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
++      "size": 89464,
++      "sha256": "8b2f3e552b00acbf91b6fd0d55a8968952efaad39f5efeb3465d316e47370b24"
++    },
+     {
+       "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
+       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
+diff --git a/master-archive.json b/master-archive.json
+index d439853..bf867aa 100644
+--- a/master-archive.json
++++ b/master-archive.json
+@@ -1,8 +1,9 @@
+ {
+   "schema_version": 2,
+   "repository": "takochanchan/-archive-masters",
+-  "archive_commit": "41fd60d91322366029c807742ce114093448a5b0",
++  "archive_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+   "publications": {
++    "siguenza-infortunios-alonso-ramirez-1690": "publications/siguenza-infortunios-alonso-ramirez-1690/master.docx",
+     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
+     "arthes-peten-1893": "publications/arthes-peten-1893/master.md",
+     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
+@@ -214,7 +215,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-bancroft-history-central-america-1886-1887-20260821-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-bancroft-history-central-america-1886-1887-20260821-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 18405241,
+       "master_sha256": "a7e97620d91fd7ad89e7e9fbae879721db04baf492e239256eca3209799c4e02"
+@@ -224,7 +225,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-baqueiro-ensayo-revoluciones-yucatan-1878-1887-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-baqueiro-ensayo-revoluciones-yucatan-1878-1887-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 2242358,
+       "master_sha256": "d252468a0deaf406328a3a4c675c17f0787a8bb89aca075a2999c8c3b19c5859"
+@@ -234,7 +235,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-acasaguastlan-jilotepec-1878-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-acasaguastlan-jilotepec-1878-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 3415418,
+       "master_sha256": "70ee44a9102cbc68e8c0fcc6a12a462116c4df911a710d9f6c14c644e4b866e8"
+@@ -244,7 +245,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-analytical-alphabet-1869-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-analytical-alphabet-1869-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 50268,
+       "master_sha256": "d4177557e10a3fb160e1420dd9cf5aa8f7abe61310cd3d2862938da04d92f409"
+@@ -254,7 +255,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-ancient-central-american-civilization-1876-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-ancient-central-american-civilization-1876-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 54724,
+       "master_sha256": "11e349fbce7fee436aba2ccd42f26f58733cd7a0e0881dc21370249d3f288bc6"
+@@ -264,7 +265,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-baumwollenbau-yucatan-1863-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-baumwollenbau-yucatan-1863-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 42427,
+       "master_sha256": "de769486fd5cf067e1d969e783422e414db7f5c8df64578db8c6eee07e38038f"
+@@ -274,7 +275,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-carib-karif-language-1873-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-carib-karif-language-1873-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 43630,
+       "master_sha256": "2a4b7c31ce1e631d9bb618e1259d39a50623cc47ba1a65730520dcdac16a7af1"
+@@ -284,7 +285,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-cochenille-produktion-oaxaca-1862-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-cochenille-produktion-oaxaca-1862-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 48944,
+       "master_sha256": "948376ea124f78f2c1a270b23188064649194922f49e305f2667a8bc7d632132"
+@@ -294,7 +295,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-darien-language-1874-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-darien-language-1874-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 256901,
+       "master_sha256": "ef3a6561b57a03936f96f3d989276b631bb3ba6affbce036fe2da6031cd99de6"
+@@ -304,7 +305,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-drei-tage-cuba-1860-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-drei-tage-cuba-1860-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.md",
+       "master_size": 85898,
+       "master_sha256": "892a1d66b397377caed3bb728b7cf3d9fbd5754309d3f4f9e2b82c573c3ccd4b"
+@@ -314,7 +315,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-el-ramie-1871-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-el-ramie-1871-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 60922,
+       "master_sha256": "d2f333c771ae8710eea8cd570a6c4cad3aedf9991d8e9a7f30f52629e353031e"
+@@ -324,7 +325,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-escritos-garcia-icazbalceta-1870-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-escritos-garcia-icazbalceta-1870-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 50174,
+       "master_sha256": "b1a71c92aa4c6676a2878d216b1ae6f1809735298640c8a10ee09d5e1b88a726"
+@@ -334,7 +335,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-ethnologie-nicaragua-1874-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-ethnologie-nicaragua-1874-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 46478,
+       "master_sha256": "0c79fe4f0e222d2b6dd511765c2ab6e1ab59715104c93f5270eff01c4c485d97"
+@@ -344,7 +345,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-ethnologie-nicaragua-1875-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-ethnologie-nicaragua-1875-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 43949,
+       "master_sha256": "13716afd870f80f7ca8c6194c04ad382dd49448428e6bfffe8af8a48b9ab05c4"
+@@ -354,7 +355,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-handel-veracruz-1862-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-handel-veracruz-1862-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 49682,
+       "master_sha256": "62dc00fa4cf43c3d60883bea4c1ac73c728e327c85cdadbe953293ee182dc9d8"
+@@ -364,7 +365,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-historical-documents-guatemala-1877-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-historical-documents-guatemala-1877-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 45444,
+       "master_sha256": "30a9c3b57d094da9502fcc349146b464d99712e14ed6897816db4077084c95df"
+@@ -374,7 +375,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-indianer-tehuantepec-1873-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-indianer-tehuantepec-1873-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 53009,
+       "master_sha256": "15b14a1d58cf7580dadf6f1491863f529bf77672a1d79820faf0730d0f3edab9"
+@@ -384,7 +385,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-indigenas-america-central-1877-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-indigenas-america-central-1877-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.md",
+       "master_size": 35617,
+       "master_sha256": "c3f5cebf22cb8c55f847504782f72538f9ef06b068344b02d8268f61303c7067"
+@@ -394,7 +395,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-maasse-gewichte-mexiko-1862-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-maasse-gewichte-mexiko-1862-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 46975,
+       "master_sha256": "e4655a2164543c47e2e6ae0b29672484b6002bad628e3ccefc3e9c3cbaf2bcf6"
+@@ -404,7 +405,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-mangue-subtiaba-dossier-1874-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-mangue-subtiaba-dossier-1874-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 92959,
+       "master_sha256": "4ce35801599d3ffa13f974d00c7387fe2c3f5dc831e9d2eda5137ea9987c8652"
+@@ -414,7 +415,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-mexico-1872-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-mexico-1872-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 94066,
+       "master_sha256": "a0a9c049d4d6024c7400f41efee3c745ed3217578b0e2d834b9ccc5d8e37872a"
+@@ -424,7 +425,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-mexikanische-geographische-literatur-1862-1-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-mexikanische-geographische-literatur-1862-1-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 56807,
+       "master_sha256": "63c19609bdc65df5f503d445b86e1232b6b8a73d851f8bca29af67e5281f9719"
+@@ -434,7 +435,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-palabras-modismos-nicaragua-1874-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-palabras-modismos-nicaragua-1874-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.md",
+       "master_size": 195681,
+       "master_sha256": "5af34170d983e8fb12b12dbc4d7caa008aacc206dc32bc252ac97b27533350a7"
+@@ -444,7 +445,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-trabajos-linguisticos-juan-pio-perez-1871-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-trabajos-linguisticos-juan-pio-perez-1871-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 46964,
+       "master_sha256": "8db3de6f8e7030de47ebac82a4de6d09108295424befb1e30121f76180499f7c"
+@@ -454,7 +455,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-veracruz-correspondence-1861-1862-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-veracruz-correspondence-1861-1862-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 1152794,
+       "master_sha256": "6f101c0e6cc0ba77555370706c0e8eb93a46fcb1a75eeb0fc8199995debb887b"
+@@ -464,7 +465,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-berendt-vermessungsarbeiten-mexiko-1862-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-berendt-vermessungsarbeiten-mexiko-1862-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 46690,
+       "master_sha256": "d451423f2baf9b7f81795ae73208f1d8313c5d84b475ed68c0db4019d6db80f9"
+@@ -474,7 +475,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-boturini-idea-catalogo-1746-20260820-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-boturini-idea-catalogo-1746-20260820-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 9161074,
+       "master_sha256": "14bb6b3925cc244fde8bace6649282a7359cff08bda05331df0f018f521a2225"
+@@ -484,7 +485,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-brinton-ancient-human-footprint-nicaragua-1887-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-brinton-ancient-human-footprint-nicaragua-1887-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 621337,
+       "master_sha256": "f66bce3148bf034aa16d24a909c6f3acabf8af84ea305007b6d92e804ad88c6c"
+@@ -494,7 +495,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-cervantes-salazar-mexico-en-1554-1875-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-cervantes-salazar-mexico-en-1554-1875-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 3570632,
+       "master_sha256": "c9aa725f830082b85d99ae2f678c55b4ca03fe1d1ff9896f7f19aa43651a3c63"
+@@ -504,7 +505,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-crawford-neolithic-man-nicaragua-1891-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-crawford-neolithic-man-nicaragua-1891-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 48372,
+       "master_sha256": "af234d9542b99b2952c22cb844e4f1cbdd53cafd8294d382b23217708adfdd25"
+@@ -514,7 +515,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-dieseldorff-kunst-religion-band-i-1926-20260814-paper-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-dieseldorff-kunst-religion-band-i-1926-20260814-paper-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 43469439,
+       "master_sha256": "650cd4e959917a754d36781acc8478f544c469c8cf6902e891c10cede93bb0b4"
+@@ -524,7 +525,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-dieseldorff-kunst-religion-band-ii-1931-20260814-paper-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-dieseldorff-kunst-religion-band-ii-1931-20260814-paper-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 30669208,
+       "master_sha256": "694c06a3705a16df148c71ea802831dccb2bfa3a15b3334b3acecced6183d905"
+@@ -534,7 +535,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-editorial-age-nicaragua-footprints-1889-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-editorial-age-nicaragua-footprints-1889-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 173126,
+       "master_sha256": "f3211e6eab5ba30340019d929c4e3769ea4968d60716cf85f21e558180372f75"
+@@ -544,7 +545,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-antiquities-nicaragua-palenque-builders-1882-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-antiquities-nicaragua-palenque-builders-1882-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 56826,
+       "master_sha256": "4e8a49a6a5a13abccbea0b2533229e35f07a916392f5edce86f71bc7021be076"
+@@ -554,7 +555,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-human-foot-prints-nicaragua-1884-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-foot-prints-nicaragua-1884-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 43917,
+       "master_sha256": "0fc11f27930918a83ddd79a46983da5ecb35dc3e34f7292cee3b9a8b0da9178c"
+@@ -564,7 +565,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-human-foot-prints-nicaragua-1885-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-foot-prints-nicaragua-1885-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 45276,
+       "master_sha256": "fff124bcfccf595734d26255cf2877baa99e78c8816525ca222f87e182d772a1"
+@@ -574,7 +575,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-human-footprints-eocene-1888-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-human-footprints-eocene-1888-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 44643,
+       "master_sha256": "6dfcb0df4aea662a417eca1bae39713b529a39f6b827ad300b23d50d42d19876"
+@@ -584,7 +585,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-nicaragua-foot-prints-1889-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-nicaragua-foot-prints-1889-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 49648,
+       "master_sha256": "db7b4c15edb8738f35f2cae6861b9a1927af67f773e95a3ef31cc3f47b821e95"
+@@ -594,7 +595,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-paleolithics-nicaragua-1888-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-paleolithics-nicaragua-1888-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 44522,
+       "master_sha256": "3f7cc27a3c7403a55b7408033f52cfb222cfe4cab3396402ca358f7f3e43c03c"
+@@ -604,7 +605,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-pre-adamite-foot-prints-1886-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-pre-adamite-foot-prints-1886-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 46039,
+       "master_sha256": "1df8b6b18e2b60f7f5f9c42c101babbb8e73d8d69e079ff4dad65b0506f1b6b9"
+@@ -614,7 +615,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-prehistoric-horse-america-1891-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-prehistoric-horse-america-1891-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 139288,
+       "master_sha256": "e5d710d510956e9c56e30abf6b1882ee3b885a55d203794f4a9e819cdf1aa75e"
+@@ -624,7 +625,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-rainfall-central-western-nicaragua-1899-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-rainfall-central-western-nicaragua-1899-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 44192,
+       "master_sha256": "048e6d3b4b20fdedfcd21dd0caf7183932fbcecf1db0b523617ceb23bb31d321"
+@@ -634,7 +635,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-rainfall-rivas-nicaragua-1898-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-rainfall-rivas-nicaragua-1898-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 45576,
+       "master_sha256": "bd0cdeb8882a18a8dc9a056fe7462e3c91f7d5622ccbc762534c8da7d0d8184f"
+@@ -644,7 +645,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-flint-what-dr-flint-says-nicaragua-footprints-1890-20260814-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-flint-what-dr-flint-says-nicaragua-footprints-1890-20260814-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 48435,
+       "master_sha256": "b64ecff96698916fb5eff88f0e98da19444038bd564354fe0aef838086831b51"
+@@ -654,7 +655,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-fuentes-guzman-recordacion-florida-1882-1883-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-fuentes-guzman-recordacion-florida-1882-1883-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 1284326,
+       "master_sha256": "8ab7022076b8678c9a634ce1df2fa62d413cea48cef394b6299e7a066d55650e"
+@@ -664,7 +665,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 1284391,
+       "master_sha256": "edfaf28bd9c0590c8c856a1d66a45aeb6cbbb3b51f4fa87077a05912d360abc8"
+@@ -674,7 +675,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886-20260815-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886-20260815-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 68393129,
+       "master_sha256": "c4ef14c7d7460d184d62a031781b551827db9e4baf1b9656aab098e45f7b67a3"
+@@ -684,7 +685,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-historia-tolteca-chichimeca-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-historia-tolteca-chichimeca-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 70143662,
+       "master_sha256": "852fc05e69b2b3559a478511aabd16549d53dd9b6c767cda441eb956e4ccc02d"
+@@ -694,7 +695,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-mca-pre-adamite-track-1885-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-mca-pre-adamite-track-1885-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 45411,
+       "master_sha256": "dfaca93b11f535a0218282b9df11a22d2c4ace2426510bc646683e7c4799e9c8"
+@@ -704,7 +705,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-putnam-antiquity-man-america-1884-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-putnam-antiquity-man-america-1884-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 42589,
+       "master_sha256": "23f2bc08cf8304538ca153860329986bb6ce6aa03824f2740620380565e86108"
+@@ -714,7 +715,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-stoll-ethnographie-guatemala-1884-20260813-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ethnographie-guatemala-1884-20260813-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 4105894,
+       "master_sha256": "a715ef99d4fb9f6008b2b0a9f7f1c952cbafa11a51fe313d253ee5d77c32b046"
+@@ -724,7 +725,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-stoll-ixil-language-1887-20260813-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-ixil-language-1887-20260813-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 391033,
+       "master_sha256": "a5e8fd8becb25a60a9655a815de5e6b42488ff5fa8780fcff824960723bc7075"
+@@ -734,7 +735,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-stoll-pokom-languages-1888-1896-20260813-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-stoll-pokom-languages-1888-1896-20260813-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 1314377,
+       "master_sha256": "47f0b6bd94273515c51c09d83226c951d14eb27015d278112256fded33ee9bd3"
+@@ -744,7 +745,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-tezozomoc-cronica-mexicana-kraus-117-20260813-v2",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 427241,
+       "master_sha256": "297b9dfb32bc18799c2071fc16707853b91e777c0b4deabc4b49134399f9ea8f"
+@@ -754,7 +755,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-unsigned-nicaragua-footprints-again-1886-20260814-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-unsigned-nicaragua-footprints-again-1886-20260814-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 42570,
+       "master_sha256": "fcb84f09e2657ab2f5601516a4241db1b2a6072fa569d27a67e1d4fb4dde1cac"
+@@ -764,7 +765,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-wafer-new-voyage-isthmus-america-1699-20260813-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "master.docx",
+       "master_size": 5553208,
+       "master_sha256": "c16be80b86f77373626dc213e2cdbf75c55aed0c5d25eb67357664f98db1c68d"
+@@ -774,7 +775,7 @@
+       "status": "pending_lfs",
+       "release_tag": "master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
+       "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-ximenez-ayer-ms-1515-volume-2-20260813-v1",
+-      "ledger_commit": "41fd60d91322366029c807742ce114093448a5b0",
++      "ledger_commit": "f59aedd50e973ae9d521c94f18086c9519420e0e",
+       "master_filename": "Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_master.docx",
+       "master_size": 58718918,
+       "master_sha256": "5684786bba9cd80d167260431587c82b7b48def19958df5ae49d12779ae19993"
+diff --git a/scripts/build-epubs.py b/scripts/build-epubs.py
+index 79886f3..2455bf1 100644
+--- a/scripts/build-epubs.py
++++ b/scripts/build-epubs.py
+@@ -284,6 +284,9 @@ DOCX_SOURCES = {
+     "torquemada-monarquia-indiana-1615": SOURCES
+     / "翻訳サイト"
+     / "Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.docx",
++    "siguenza-infortunios-alonso-ramirez-1690": SOURCES
++    / "翻訳サイト"
++    / "Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.docx",
+ }
+ 
+ MARKDOWN_SOURCES = {
+diff --git a/scripts/search/verify-queries.mjs b/scripts/search/verify-queries.mjs
+index ee3a834..90a0017 100644
+--- a/scripts/search/verify-queries.mjs
++++ b/scripts/search/verify-queries.mjs
+@@ -224,7 +224,7 @@ try {
+     papers: 8,
+   });
+   await verifyCounts("ラカンドン", { books: 50, papers: 15 });
+-  await verifyCounts("ポ", { books: 53, papers: 11 });
++  await verifyCounts("ポ", { books: 54, papers: 11 });
+   const duranFlaying = await verifyPublicationQuery(
+     "人の皮剥ぎ",
+     "duran-historia-indias-nueva-espana-1581",
+diff --git a/scripts/validate-epubs.py b/scripts/validate-epubs.py
+index c879c0e..b87456b 100644
+--- a/scripts/validate-epubs.py
++++ b/scripts/validate-epubs.py
+@@ -250,7 +250,7 @@ def main() -> None:
+     PUBLIC_ROOT = args.public_root.resolve()
+ 
+     items = catalogue()
+-    assert len(items) == 261, f"expected 261 publications, found {len(items)}"
++    assert len(items) == 262, f"expected 262 publications, found {len(items)}"
+     if args.slugs:
+         selected = set(args.slugs)
+         known = {item["slug"] for item in items}
+diff --git a/src/publications.mjs b/src/publications.mjs
+index a0450d7..924b75a 100644
+--- a/src/publications.mjs
++++ b/src/publications.mjs
+@@ -5,6 +5,50 @@ import {
+ } from "./perigny-remaining-publications.mjs";
+ 
+ const publicationRecords = [
++  {
++    "slug": "siguenza-infortunios-alonso-ramirez-1690",
++    "title": "アロンソ・ラミレスの不運",
++    "originalTitle": "Infortunios de Alonso Ramírez",
++    "subtitle": "1690年メキシコ刊・世界周航と海賊捕囚の記録 日本語全訳",
++    "author": "カルロス・デ・シグエンサ・イ・ゴンゴラ",
++    "originalAuthor": "Carlos de Sigüenza y Góngora",
++    "series": "INFORTUNIOS DE ALONSO RAMÍREZ · 1690",
++    "originalPublication": "メキシコ、ベルナルド・カルデロン未亡人相続人印刷所、1690年",
++    "year": 1690,
++    "extent": "日本語版PDF 64頁・全7節",
++    "description": "プエルトリコ生まれのアロンソ・ラミレスが、フィリピンでイングランド人海賊に捕らえられ、太平洋・インド洋・大西洋を経てユカタン海岸に座礁するまでの遍歴を、シグエンサ・イ・ゴンゴラが1690年にまとめた物語的報告の日本語全訳です。",
++    "cover": "publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
++    "pdf": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
++    "epub": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
++    "pageCount": 64,
++    "figureCount": 1,
++    "plateCount": 0,
++    "types": [
++      "旅行記",
++      "海事史",
++      "捕囚記",
++      "一次史料"
++    ],
++    "regions": [
++      "プエルトリコ",
++      "フィリピン",
++      "メキシコ",
++      "ユカタン",
++      "カリブ海"
++    ],
++    "languages": [
++      "スペイン語"
++    ],
++    "tags": [
++      "アロンソ・ラミレス",
++      "シグエンサ・イ・ゴンゴラ",
++      "海賊",
++      "世界周航",
++      "海難",
++      "スペイン領フィリピン",
++      "17世紀"
++    ]
++  },
+   {
+     "slug": "torquemada-monarquia-indiana-1615",
+     "title": "インディア王国誌",
+@@ -8365,6 +8409,14 @@ const gallicaPublicDomainRights =
+   JapaneseEditionNoReuseRights;
+ 
+ const publicationMetadata = {
++  "siguenza-infortunios-alonso-ramirez-1690": {
++    "sourceEdition": "Carlos de Sigüenza y Góngora, Infortunios de Alonso Ramírez, in Colección de libros raros o curiosos que tratan de América, tomo XX, ed. Pedro Vindel, Madrid: Imprenta de la viuda de Gabriel Pedraza, 1902, pp. 17–132.",
++    "sourceProvider": "University of Toronto、Robarts Library所蔵本をInternet Archiveが識別子 infortuniosdealo00siguoft で公開する1902年復刻版画像を底本としました。同版は1690年初版標題紙の複製を伴います。",
++    "sourceUrl": "https://archive.org/details/infortuniosdealo00siguoft",
++    "rights": "1690年原著および1902年復刻版はパブリックドメインです。Internet Archiveの公開記録は当該資料をNOT_IN_COPYRIGHTと表示しています。本日本語訳には再利用ライセンスを設定していません。",
++    "publishedDate": "2026-08-24",
++    "updatedDate": "2026-08-24"
++  },
+   "torquemada-monarquia-indiana-1615": {
+     "sourceEdition": "Juan de Torquemada, Los veinte y un libros rituales y Monarquía indiana, 3 vols., Sevilla: Matías Clavijo, 1615. John Carter Brown Library, call number 1-SIZE B615 .T687v.",
+     "sourceProvider": "John Carter Brown Library所蔵の1615年初版三巻本を、同館資料のInternet Archive公開版（第1巻 iaiiiapartedelos01torq、第2巻 iaiiiapartedelos02torq、第3巻 iaiiiapartedelos03torq）から画像底本およびOCR取得元として用いました。Internet Archiveは閲覧・配布プラットフォームであり、所蔵・デジタル画像提供機関はJohn Carter Brown Libraryです。Wikimedia Commonsは底本に用いていません。",
+diff --git a/static/publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg b/static/publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg
+new file mode 100644
+index 0000000000000000000000000000000000000000..267aabc15d1d2d1cef039820efc97efbe269abcf
+GIT binary patch
+literal 89464
+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
+S%fKxIw+#IMWq|6Rh5rEv7Ulo|
+
+literal 0
+HcmV?d00001
+
+diff --git a/tests/archive.test.mjs b/tests/archive.test.mjs
+index 81afa0f..4a620c6 100644
+--- a/tests/archive.test.mjs
++++ b/tests/archive.test.mjs
+@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
+     .replaceAll("'", "&#039;");
+ 
+ test("catalogue metadata is complete and unique", () => {
+-  assert.equal(publications.length, 261);
++  assert.equal(publications.length, 262);
+   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
+   for (const item of publications) {
+     for (const key of [
+@@ -307,7 +307,7 @@ test("Villavicencio confessionary metadata retains the approved complete scope",
+ });
+ 
+ test("short works use explicit author groups instead of page-count rules", () => {
+-  assert.equal(majorPublications.length, 124);
++  assert.equal(majorPublications.length, 125);
+   assert.equal(shortPublications.length, 137);
+   assert.equal(shortPublicationAuthors.length, 32);
+   assert.deepEqual(
+@@ -1401,7 +1401,7 @@ test("home page contains scalable archive controls", async () => {
+   assert.match(html, />一覧内検索</);
+   assert.match(html, /class="collection-tabs" role="tablist"/);
+   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
+-  assert.match(html, /id="book-match-count">124<\/strong>件/);
++  assert.match(html, /id="book-match-count">125<\/strong>件/);
+   assert.match(html, /id="paper-match-count">137<\/strong>件/);
+   assert.match(html, /data-short-archive/);
+   const catalogueSearchPosition = html.indexOf('id="archive-search"');
