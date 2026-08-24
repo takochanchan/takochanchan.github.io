@@ -236,6 +236,8 @@ jobs:
               'books: 41,\n    papers: 7,': 'books: 42,\n    papers: 7,',
               'books: 22,\n    papers: 5,': 'books: 23,\n    papers: 5,',
               'await verifyCounts("ポ", { books: 52, papers: 11 });': 'await verifyCounts("ポ", { books: 53, papers: 11 });',
+              '["グリハルバ", grijalva, 253]': '["グリハルバ", grijalva, 272]',
+              '["グリハルバ川", grijalvaRiver, 72]': '["グリハルバ川", grijalvaRiver, 74]',
           }
           for old, new in query_replacements.items():
               if queries.count(old) != 1:
