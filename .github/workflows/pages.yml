@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: publication-release
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 env:
   SLUG: siguenza-infortunios-alonso-ramirez-1690
