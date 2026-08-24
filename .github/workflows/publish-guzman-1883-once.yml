@@ -210,7 +210,19 @@ jobs:
           old_test = "assert.equal(publications.length, 259);"
           if tests.count(old_test) != 1:
               raise SystemExit("catalogue count marker missing")
-          tests_path.write_text(tests.replace(old_test, "assert.equal(publications.length, 260);"), encoding="utf-8")
+          tests = tests.replace(old_test, "assert.equal(publications.length, 260);")
+          old_major_count = "assert.equal(majorPublications.length, 122);"
+          if tests.count(old_major_count) != 1:
+              raise SystemExit("major publication count marker missing")
+          tests = tests.replace(old_major_count, "assert.equal(majorPublications.length, 123);")
+          old_home_count = 'assert.match(html, /id="book-match-count">122<\\/strong>件/);'
+          if tests.count(old_home_count) != 1:
+              raise SystemExit("home page book count marker missing")
+          tests = tests.replace(
+              old_home_count,
+              'assert.match(html, /id="book-match-count">123<\\/strong>件/);',
+          )
+          tests_path.write_text(tests, encoding="utf-8")
 
           queries_path = Path("scripts/search/verify-queries.mjs")
           queries = queries_path.read_text(encoding="utf-8")
