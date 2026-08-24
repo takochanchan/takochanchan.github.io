@@ -116,9 +116,9 @@ jobs:
           unzip -t "$payload/$EPUB_NAME"
 
           site_patch="$RUNNER_TEMP/infortunios-site.patch"
-          gh api "repos/$GITHUB_REPOSITORY/git/blobs/b5a82ec93692c8d89019aecba61ab0b02e6562f0" --jq .content |
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/30f8e1b042d16c69226e754741c0876e5d684b12" --jq .content |
             tr -d '\n' | base64 -d > "$site_patch"
-          echo "a9c83506799ec67834d48c6b7fc2ec605615f908d1b9bcb369d3568abfa7275f  $site_patch" | sha256sum -c -
+          echo "539dfccd17f08539dade22cf640cf368f0df3dc4c881b94abf5610e14643e07b  $site_patch" | sha256sum -c -
           git apply --check --binary "$site_patch"
           git apply --index --binary "$site_patch"
           grep -Fq "$SLUG" src/publications.mjs
