@@ -1,4 +1,5 @@
 name: Publish Infortunios 1690 once
+# Registered one-shot publication trigger.
 
 on:
   push:
