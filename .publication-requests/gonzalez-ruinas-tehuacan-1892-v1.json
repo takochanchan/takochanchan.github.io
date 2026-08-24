@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "slug": "gonzalez-ruinas-tehuacan-1892",
+  "base_commit": "525c0be27f422c3f418497f3bde9caecb02fe4b0",
+  "archive_commit": "bb6ae93d12c4538442187eb747aa694ee7cfae64",
+  "staging_branch": "agent/publication-upload-gonzalez-tehuacan-20260825-v1",
+  "payload": {
+    "blob": "448468dea4934d8b2e96b1204366cf03812f072d",
+    "size": 614592,
+    "sha256": "807d2b90bfd30b6dfd3bed4ef3453417a8b8a625dd5c7ebcc488b3d0b02ef0bb"
+  },
+  "site_patch": {
+    "blob": "38098dbc343b860d0466a255810adeb803f9ce94",
+    "size": 231757,
+    "sha256": "462f8ffd5752b6d758ae967c7bb9f6dd12cbdeedb9890af5efc1df62cb5f74cc"
+  }
+}
