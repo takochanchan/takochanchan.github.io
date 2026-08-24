@@ -166,6 +166,18 @@ jobs:
           path.write_text(text, encoding="utf-8")
           PY
           git add tests/archive.test.mjs
+          python3 - <<'PY'
+          from pathlib import Path
+
+          path = Path("scripts/search/verify-queries.mjs")
+          text = path.read_text(encoding="utf-8")
+          old = 'await verifyCounts("ポ", { books: 53, papers: 11 });'
+          new = 'await verifyCounts("ポ", { books: 54, papers: 11 });'
+          if text.count(old) != 1:
+              raise SystemExit("unexpected ポ search-count baseline")
+          path.write_text(text.replace(old, new), encoding="utf-8")
+          PY
+          git add scripts/search/verify-queries.mjs
           grep -Fq "$SLUG" src/publications.mjs
           grep -Fq "$ARCHIVE_COMMIT" master-archive.json
           grep -Fq "CC BY-NC-SA 4.0" src/publications.mjs
