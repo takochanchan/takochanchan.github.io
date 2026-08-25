@@ -6,6 +6,48 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
+    "title": "ドン・カルロス・デ・シグエンサ・イ・ゴンゴラ",
+    "originalTitle": "Don Carlos de Sigüenza y Góngora: A Mexican Savant of the Seventeenth Century",
+    "subtitle": "17世紀メキシコの碩学・1929年初版 日本語全訳",
+    "author": "アーヴィング・A・レナード",
+    "originalAuthor": "Irving A. Leonard",
+    "series": "DON CARLOS DE SIGÜENZA Y GÓNGORA · 1929",
+    "originalPublication": "バークレー、University of California Press、1929年",
+    "year": 1929,
+    "extent": "PDF 318頁・原刊前付・本文1–287頁・脚注422件・付録A/B・索引・挿図1葉",
+    "description": "17世紀ヌエバ・エスパーニャの学者カルロス・デ・シグエンサ・イ・ゴンゴラの生涯と著作をたどる研究書。詩作、天文学、地図作成、古代史研究、1692年メキシコ市暴動、探検事業を論じ、前付、全10章、参考文献、著作目録、付録A・B、索引を収録しています。原刊の無内容の白紙葉は収録していません。",
+    "cover": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/cover.jpg",
+    "pdf": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.pdf",
+    "epub": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
+    "pageCount": 318,
+    "figureCount": 0,
+    "plateCount": 1,
+    "types": [
+      "伝記",
+      "学術史",
+      "メキシコ史",
+      "植民地史"
+    ],
+    "regions": [
+      "メキシコ",
+      "ヌエバ・エスパーニャ",
+      "メキシコ市"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "シグエンサ・イ・ゴンゴラ",
+      "ソル・フアナ",
+      "天文学",
+      "地図史",
+      "1692年メキシコ市暴動",
+      "スペイン植民地期",
+      "17世紀"
+    ]
+  },
+  {
     "type": "paper",
     "slug": "gonzalez-ruinas-tehuacan-1892",
     "title": "テワカン遺跡――先コロンブス期の遺物",
@@ -8499,6 +8541,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "leonard-don-carlos-de-siguenza-y-gongora-1929": {
+    "sourceEdition": "Irving A. Leonard, Don Carlos de Sigüenza y Góngora: A Mexican Savant of the Seventeenth Century, University of California Publications in History, Volume XVIII, Berkeley: University of California Press, issued September 1929.",
+    "sourceProvider": "University of Florida, George A. Smathers Libraries所蔵本をInternet Archiveが公開する1929年初版スキャン（identifier: doncarlosdesigen18berk）を底本としました。原刊頁画像とOCRを照合し、原刊84頁直後のシグエンサ作メキシコ盆地図を収録しています。無内容の白紙葉は収録していません。",
+    "sourceUrl": "https://archive.org/details/doncarlosdesigen18berk",
+    "rights": "米国で1929年に初出した原著は2025年1月1日から米国のパブリックドメインに属します。日本では短期保護の相互主義および戦前の日米間で翻訳が相互に自由とされた取扱いに基づき翻訳公開します。シグエンサ作メキシコ盆地図の原図および1929年掲載版も保護期間を満了しています。日本語翻訳版には再利用ライセンスを設定していません。公開ページからの閲覧・ダウンロードは可能ですが、法令上認められる引用その他の利用を除き、日本語訳、訳注、編集・組版の転載、再配布、改変版の公開を許諾するものではありません。",
+    "publishedDate": "2026-08-25",
+    "updatedDate": "2026-08-25"
+  },
   "gonzalez-ruinas-tehuacan-1892": {
     "sourceEdition": "Darío González, “Ruinas de Tehuacán. Objetos precolombinos,” La Universidad: órgano del Instituto Nacional del mismo nombre, serie III, núm. 6, San Salvador, junio de 1892, pp. 203–206.",
     "sourceProvider": "ビブリオテカ・ルートヴィヒ・フォン・ミーゼス（フランシスコ・マロキン大学）所蔵本をInternet Archiveが公開する原刊スキャン（identifier: launi36guat）を底本としました。原刊203–206頁の本文と原注を誌面画像およびOCRで照合し、底本画像そのものは転載していません。",

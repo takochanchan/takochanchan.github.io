@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 264);
+  assert.equal(publications.length, 265);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -350,8 +350,32 @@ test("González Tehuacán paper retains its approved article scope", () => {
   assert.equal(item.updatedDate, "2026-08-25");
 });
 
+test("Leonard Sigüenza monograph retains its approved complete scope", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "leonard-don-carlos-de-siguenza-y-gongora-1929",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "アーヴィング・A・レナード");
+  assert.equal(item.originalAuthor, "Irving A. Leonard");
+  assert.equal(item.pageCount, 318);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 1);
+  assert.match(item.extent, /脚注422件/);
+  assert.match(item.extent, /付録A\/B/);
+  assert.match(item.description, /全10章/);
+  assert.match(item.description, /白紙葉は収録していません/);
+  assert.match(item.sourceProvider, /doncarlosdesigen18berk/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/doncarlosdesigen18berk/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-25");
+  assert.equal(item.updatedDate, "2026-08-25");
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 126);
+  assert.equal(majorPublications.length, 127);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1446,7 +1470,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">126<\/strong>件/);
+  assert.match(html, /id="book-match-count">127<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

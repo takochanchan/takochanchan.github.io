@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
+      "size": 3260342,
+      "sha256": "84690381ec71164dff63f6579ad8b728f7a65ca28a240082cb713d5d51d899c3"
+    },
+    {
+      "path": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.pdf",
+      "size": 6090289,
+      "sha256": "9978e77a889e09836a5f0776ac99e4f78cdaf0e9f895dc21141de9808ad41c28"
+    },
+    {
+      "path": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/leonard-don-carlos-de-siguenza-y-gongora-1929/cover.jpg",
+      "size": 64472,
+      "sha256": "23d9cde6c3a2a13bb507c295e2a4e7c0ea7351f2baa437022777fd36218c3ad5"
+    },
+    {
       "path": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
       "size": 156608,
