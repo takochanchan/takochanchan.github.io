@@ -1,50 +1,92 @@
-name: Deploy archive to GitHub Pages
+name: Publish Otis Panama Railroad history once
+# Temporary contents for the already-registered pages.yml workflow.
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+    paths:
+      - ".github/workflows/pages.yml"
+      - ".publication-requests/otis-isthmus-panama-railroad-1867-v1.json"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  actions: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: publication-release
+  cancel-in-progress: false
+
+env:
+  SLUG: otis-isthmus-panama-railroad-1867
+  PDF_NAME: F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.pdf
+  EPUB_NAME: F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub
+  PDF_SHA: 83453b550412207c951f3c2d5789c3577e0a550199bd4764170b5381f37ffa7e
+  EPUB_SHA: d0222be6dea61af92176b228b955274fec2a9bfd3434461d948a8d066599c9c6
+  COVER_SHA: 733c34e6a60aa589301f43d0d0e4e773e7a5aea45e14c17aa1b5ab85a64711ff
+  ARCHIVE_COMMIT: d9766cac3ae9302aea435e05506f11e1117d24d4
+  BASE_MAIN_SHA: 950eeb944830a2ff63c88dc93fbbf4b108ef9fe5
+  STAGING_BRANCH: agent/publication-upload-otis-isthmus-panama-railroad-1867-20260825-v1
+  ASSET_BLOBS: "4555a0a91f3158600cd7c2054a2bcc7e84bd0b28 b65a215527f8e09180642f7c0643093231e34d5b 968160f68af91f3be8b5cbaf198da96c64488f40 a3fb759fe625fb24d6d84e3433436f9fec16304d 7945fd2381b0a4eb8ab6750450101108f40427bb e728f463d68d8fce692311030a92425736fe491e c9373f8f58e1103ce8124e144ca3ed6f8b5a4657 efcd63cce3720b1603a1eb48ea8dd09765f058d6 c7628220c0a8dcce112fa32cc7890bfe569d17ef f004e4aee7f453a55ee79305770de11b8595b9a4 7a99b7561c12d2e7384eeeecca79d289406b0ba4 60dc43c91d720492ad07aa0ec6d69e003d092917 f035bb03bb8bd59b33eb1d24ccb43abff666ff1f 179aa7d82d4c901491bb135c90bac650ae2d0b64 9dc364fb4428cd04593b83eca480eef3975a2f77 7ddbe3771da990a4e6c7b6bee03c0abfe908b998 dfd4fc31f5b984ced7a82233f1a0d40954f7b12b 7950dfa143c3e716088d082aaffa999a4d419739 59cef682b80b51a6053c395b3b1f65dcd5700578 d7a4d61aca9e2211779a64c1f033709477b54eab 5bf7d09a1854963f4618cf4d24db346ad5626700 78fffbe2af9d9e7b793888f17d22fd085c61cdce 250f28f54b9d9ce012412b83e6cfa296f7af6e29 9e7716f08143c01e56959b694a57b0cd5515a972 c500dcd858a53f912f9affaee2c25170318dc36e 179ca867ee868b5401a292271cfe6d37f64eb13e 2091cc47bfa978ffcac9f9ac4cb193d638ca4cde ba4d231bd8c78a0798ed768662fac9bf4ed12afb b7b3896e63d302aae307763785380d104d94ce14 00f9def538d307cf9324ba08115b71f6c035754f b17aa93e3785afe38f48fc45db98a6a6f112fc00 a35601d849b9d4d3fc93549f0d4c4e568d587d0a eea4876693877dc5955506d8cec90657f23e61d5 2f9d8bb63c9181fbeeb3de2ce854f57e72de111d 392ee3c65803f5b585e8cfe479cd75649ba7655e 54383050fef96730233e14ee4e740c6932261d83 334fddf4e7e8fad3065021691d2309a43161f970 85e15caca9e5f0aa566d747352d3462042528264 7becdfaf1559d702591cc91ef6fa66be915e7d79 e6cc439470f706b626a22fcefd3f59d703cf73c6 d207e043c49578312774621011060e9a09d10f85 166251d46000ce5c62e5748373bb97af779e4a08 f720b1c068a9ab9199d24eafd5a641faf02f00af c861dd65c918e6106a87fba883276e7d84f84594 3a4e79bf4abf55133066cb18ed84c64c6d5ae594 314aad8241cd000d8615f968bafe9b906a04b0ef 0be858240119a12fdb929220a71232b294163c6b 19c30a35debec19b3984151e17441a8975e966b8 af8960c0afaaacea3eacb136fd48703506508479 fb5c5fd49ccd4fe5d2d53f85f726995fcad8c09d 1696666e5888762175c8ac275dbb8fb5d1f62449 2baa41eea51ca802c9ef8b95f95f06fa6ade960e a1a0663007c5d1672885e2c4dc9f0cb125f7e921 20c99b74c17b40d78755b02e12d37fc95e413677 01786fc39b4f5ed57386d79355f4958bba91ae42 910e30170400110798b69f91d32812c4bff77bf3 95f7d1bb6ec0585dbb75a06e0746e94fa83c584e 5f1681f609a1234efb948cd25f065a9afbce009b 1e682619518dd9e5450b735f966416f24f393017 6afd8337a49a7d3747f24929d9abdec81c23bfcd d497712d98d2df1676182ab78adf752b795974f0 5a001d74959f91bd62d2c7b3ecb996ddfe5b8e04 9bf8270c3cdfadd38be756e0c064067c901c793f 6791f5210692518b2b2942839628a7d2f870b97b 38b2c2c48fa3097f805f6ea16d0bb2824b524224 1d5031495f9e967b472c4dc68e577278dd268f4d 406f2e86cc8e5f328620b5071703d97a3cea9de3 fdf0a8e4cc37316cf5c269ad7e4fe80144b65f42 d1392235fda66a3492a13ece9ca94101c8fde3ad 17222fb561aff978269c4399b3050369535e9ae1"
+  ASSET_BUNDLE_SIZE: "48766303"
+  ASSET_BUNDLE_SHA: 2b48bf30fda96f1b47df38a39043ef2d89f07602242428b74390d0e42f0da780
+  SITE_PATCH_BLOB: 59191372b583922f20b981d449999666c6bf17c7
+  SITE_PATCH_SIZE: "45300"
+  SITE_PATCH_SHA: 8d272dff958fa11ab2a8dd8b512560aaf7f96059c24d45d59e9b30e2250bcfd1
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
-      - name: Check out source
+      - name: Check out publication source
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Use isolated publication branch
+        run: git checkout -B publish-otis-panama "$GITHUB_SHA"
+
+      - name: Prepare progress reporting
+        run: |
+          mkdir -p "$RUNNER_TEMP/publication-bin"
+          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          status="$1"
+          detail="${2:-}"
+          path="publication-status-otis-panama.json"
+          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
+          body="$(jq -cn \
+            --arg status "$status" \
+            --arg detail "$detail" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
+          encoded="$(printf '%s' "$body" | base64 -w0)"
+          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
+          args=(--method PUT "$endpoint" -f "message=Report Otis publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
+          if test -n "$sha"; then
+            args+=(-f "sha=$sha")
+          fi
+          gh api "${args[@]}" >/dev/null
+          SH
+          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
+          "$RUNNER_TEMP/publication-bin/report-status" started
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install build dependencies
-        run: npm ci
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils unzip
 
-      - name: Build archive pages
-        run: npm run build
-
-      - name: Restore generated full-text index
-        id: search-index-cache
-        uses: actions/cache@v4
-        with:
-          path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
-      - name: Restore final PDF and EPUB inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+      - name: Restore verified PDF and EPUB cache
+        uses: actions/cache/restore@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -53,50 +95,167 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
+      - name: Reconstruct and verify release payload and site patch
+        run: |
+          bundle="$RUNNER_TEMP/otis-panama-public-assets.tar.gz"
+          : > "$bundle"
+          for oid in $ASSET_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$oid" --jq .content |
+              tr -d '\n' | base64 -d >> "$bundle"
+          done
+          test "$(stat -c %s "$bundle")" = "$ASSET_BUNDLE_SIZE"
+          echo "$ASSET_BUNDLE_SHA  $bundle" | sha256sum -c -
+
+          mkdir -p "$RUNNER_TEMP/otis-panama-release"
+          tar -xzf "$bundle" -C "$RUNNER_TEMP/otis-panama-release"
+          payload="$RUNNER_TEMP/otis-panama-release/release-payload"
+          test "$(stat -c %s "$payload/$PDF_NAME")" = "27397450"
+          test "$(stat -c %s "$payload/$EPUB_NAME")" = "25795157"
+          test "$(stat -c %s "$payload/cover.jpg")" = "103012"
+          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
+          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
+          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "334"
+          unzip -t "$payload/$EPUB_NAME"
+
+          site_patch="$RUNNER_TEMP/otis-panama-site.patch"
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$SITE_PATCH_BLOB" --jq .content |
+            tr -d '\n' | base64 -d > "$site_patch"
+          test "$(stat -c %s "$site_patch")" = "$SITE_PATCH_SIZE"
+          echo "$SITE_PATCH_SHA  $site_patch" | sha256sum -c -
+          git apply --check --binary "$site_patch"
+          git apply --index --binary "$site_patch"
+          grep -Fq "$SLUG" src/publications.mjs
+          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
+          grep -Fq "$EPUB_SHA" assets-manifest.json
+          mkdir -p "static/publications/$SLUG"
+          cp "$payload/cover.jpg" "static/publications/$SLUG/cover.jpg"
+          git add "static/publications/$SLUG/cover.jpg"
+          echo "$COVER_SHA  static/publications/$SLUG/cover.jpg" | sha256sum -c -
+          cmp "static/publications/$SLUG/cover.jpg" "$payload/cover.jpg"
+
+          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
+          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
+          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
+          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
+          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
+
+      - name: Report verified payload
+        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
+
+      - name: Install build dependencies
+        run: npm ci
+
       - name: Ensure PDF text and OCR tools are available
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           if ! command -v pdftotext || ! command -v tesseract; then
             sudo apt-get update
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Fetch checksum-verified search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run fetch:search-assets
+      - name: Validate EPUB, site build, and full-text search before release
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
+          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
+          npm run build
+          npm run fetch:search-assets
+          npm run build:search
+          npm run verify:search
+          npm test
 
-      - name: Generate full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run build:search
+      - name: Report passed pre-publication gate
+        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
 
-      - name: Save generated full-text index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
+      - name: Save verified asset cache
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+
+      - name: Save verified search index
+        continue-on-error: true
         uses: actions/cache/save@v4
         with:
           path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+          key: fulltext-index-otis-panama-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
-      - name: Verify full-text index coverage and page maps
-        run: npm run verify:search
+      - name: Confirm remote main is unchanged
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
 
-      - name: Validate archive
-        run: npm test
+      - name: Upload and re-download verified Release assets
+        run: |
+          payload="$RUNNER_TEMP/otis-panama-release/release-payload"
+          checksum_dir="$RUNNER_TEMP/release-checksums"
+          verify_dir="$RUNNER_TEMP/release-verify"
+          mkdir -p "$checksum_dir" "$verify_dir"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
+          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
+          import os
+          import sys
+          from pathlib import Path
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+          path = Path(sys.argv[1])
+          additions = {
+              os.environ["PDF_NAME"]: os.environ["PDF_SHA"],
+              os.environ["EPUB_NAME"]: os.environ["EPUB_SHA"],
+          }
+          kept = []
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              name = line.split("  ", 1)[1] if "  " in line else ""
+              if name not in additions:
+                  kept.append(line)
+          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
+          kept.sort(key=lambda line: line.split("  ", 1)[1])
+          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+          gh release upload publications-current \
+            "$payload/$PDF_NAME" \
+            "$payload/$EPUB_NAME" \
+            "$checksum_dir/SHA256SUMS.txt" \
+            --clobber
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir "$verify_dir"
+          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "27397450"
+          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "25795157"
+          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
+          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
+          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
+          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "334"
+          unzip -t "$verify_dir/$EPUB_NAME"
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Let repository initialization finish
-        run: sleep 45
+      - name: Report verified Release assets
+        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit verified publication and start Pages deployment
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git checkout "$BASE_MAIN_SHA" -- .github/workflows/pages.yml
+          git rm .publication-requests/otis-isthmus-panama-railroad-1867-v1.json
+          git commit -m "Publish Otis Panama Railroad history"
+          git push origin HEAD:main
+          final_sha="$(git rev-parse HEAD)"
+          "$RUNNER_TEMP/publication-bin/report-status" published_commit "$final_sha"
+          gh api --method POST \
+            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
+            -f ref=main
+
+      - name: Report publication failure
+        if: failure()
+        run: "$RUNNER_TEMP/publication-bin/report-status failed || true"
+
