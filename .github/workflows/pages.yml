@@ -21,16 +21,16 @@ env:
   PDF_NAME: Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.pdf
   EPUB_NAME: Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub
   PDF_SHA: efdd95f6019a42ab39758243f90d07bad5557c6dddb056152392a0ea3344ea9b
-  EPUB_SHA: cb1705c943a5bf754fa358532d6f49af3589c6c83fd2bdba41ce53383c4685f4
+  EPUB_SHA: 255e2098adc8637b3fba4f4ceb4f9b2567fbfaaa79a556e070de850d2f2efba8
   COVER_SHA: 5a82e18130ea9b2474ed40f0ada7106954d2cd91c07d8330fb038af0677bf4eb
   ARCHIVE_COMMIT: 5d92152d632202b496b6b54e12d81ecb98560710
-  STAGING_BRANCH: agent/publication-upload-siguenza-parayso-20260825-v1
-  ASSET_BLOBS: "c07f7f41e324a9d825ac1698ddc7388e53c9d731 23fd8702945fcbd066875301200a9bc6a805d629 d7feab6df8b9992a12d9195b706ccfe90dbf2dc9 79ef5904f71b8882d140478e071ba41e4c899467 f0c300128b1809cfae889580fc8ac405e79261fb ae1c1489de05d34c0c0232a7ee2afbf76cb6690d d3e5122341a43784d4f3362ab4bafb4c014a0b37 2ddfba4b6b052f32c1a00fe214ff31fab464f69c 9c75d2a42fb247abcb3e496ac9cc56c2f2237a68 2f4b6430f3b3f0467f6adea16ae7b540db88bc4f 8495c17b197a12984b29f9aff9f788aeaff6c560 05796830d38d87ec2fffec3c8e9fd1b1c60b21fd eaf4db212da1606fb211db48137081bb9c655d2e eba7973c5069c64986bea26a7bc2a3edd548e9af dfb1ee9a73950542e97c3aa5d21909c50415c381 63217a8c1246cb5d6878cbd8f01ef6a597c73f35 a4a400cb35b56e39c1bf09ea242af7c0f84a708e ae2d9c008aeb18524ef910aab66c56d27e25a55a 145b8d1744aa04731778d12f2108310671a0138d d952f5a061603676b33e3aa01115c3a41eb6915c 8bcf1b11255c51449b271b39d93713d8417122b2 15f8fc10860dd34fa2f84b70aff2ec69c9c798d1 b4e8fc508ef0a0ff76e80b22995e1f7bbd77c25c"
-  ASSET_BUNDLE_SIZE: "3013931"
-  ASSET_BUNDLE_SHA: c577ab21aadd025a646f7984fb508ba758878a0fb99dedd6762170d2529f482a
-  SITE_PATCH_BLOB: 57a02fa9acb243955291bdf6a9cb1aafb7be506e
+  STAGING_BRANCH: agent/publication-upload-siguenza-parayso-20260825-v2
+  ASSET_BLOBS: "c311e0ecab6b8339a3403eaca3e7a60e64c106fe adfc440ff09f6b113ae221c04a8a5b8087f49785 b11f3a7d09231a6487e42b8623b93b7f80e78e40 c4082d989fdea3adc05f695817c1aa7af88953a8 997a74a68b2ff6a7ac796226ab8bb7b2b11a1adb d2762b24e1537f687a71c2aef3de84bb7559a817 bc72a2d35244a4a0324ceaceb6c9f2df85f849e8 5b3f7507926636ef0269323beff3fee70a4ff96f 7f741bd79bd7fc04e3fcb36350ee514156c1a738 dae34439cdcf2a934e2b3dc5c14092d7cdbd1191 4462d03c3a1fe13fcac9e5286a92d7c1476219b1 6e87c8f0f85aa8f6f5801d21c65031a6e8d96db3 f04c69ddaa13883278b75016844b3ce871fcd287 63de33f55da974203d5a77d40f901ecfabbe6d13 642393b2812796f137ab324fc05485162885904d ae4d4d68c6b8762c6e367fd942caec4fcc0ffdc2 477897284978dbb5a3a4531f47d2ef6e746b7691 ca16b6b88a8d3271d952b456685fb1b4ec57311c 195bfae84865e6447b14ec635b3906348f5bebd5 6d06ef5f3820167d15163f875282400b81ac70b8 929fd66cae825bd623813d37f9e34ba9c2ef1455 b4fd9d8be022a62d30ee603926532830d26be472 1d669c22c17c09b11414b1042945c1d91817b0a2"
+  ASSET_BUNDLE_SIZE: "3008536"
+  ASSET_BUNDLE_SHA: c1940f61bdf5bd79efa6cd341741e63ee61db6764dcfd22752273482678e6b93
+  SITE_PATCH_BLOB: df9e3f9ca9fe617f9ab705a4f131d8d2c96f50cb
   SITE_PATCH_SIZE: "46034"
-  SITE_PATCH_SHA: 6f0b7a4a30a6f1a0d188ade5cf37bfb73c641eed1d04b56fce48624a558d48ad
+  SITE_PATCH_SHA: ba8072bf7edeb808363e1e9b0203217f8ade0777d17abea25724c7f7d97efc1e
   GH_TOKEN: ${{ github.token }}
 
 jobs:
@@ -109,7 +109,7 @@ jobs:
           tar -xzf "$bundle" -C "$RUNNER_TEMP/siguenza-parayso-release"
           payload="$RUNNER_TEMP/siguenza-parayso-release/release-payload"
           test "$(stat -c %s "$payload/$PDF_NAME")" = "3305698"
-          test "$(stat -c %s "$payload/$EPUB_NAME")" = "509271"
+          test "$(stat -c %s "$payload/$EPUB_NAME")" = "505217"
           test "$(stat -c %s "$payload/cover.jpg")" = "52461"
           echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
           echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
@@ -227,7 +227,7 @@ jobs:
             --pattern SHA256SUMS.txt \
             --dir "$verify_dir"
           test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "3305698"
-          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "509271"
+          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "505217"
           echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
           echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
           grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
