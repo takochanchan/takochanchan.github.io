@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
+      "size": 151624385,
+      "sha256": "3338bd2702850b4cff2dd3356022fca1447f7c1723bcde9885df238004342f73"
+    },
+    {
+      "path": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.pdf",
+      "size": 32009491,
+      "sha256": "22b549af8ef3f3f5466191d5c97d381be33524deee2accf0a41114aef72c9333"
+    },
+    {
+      "path": "publications/squier-nicaragua-1852/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-nicaragua-1852/cover.jpg",
+      "size": 43488,
+      "sha256": "db6e24a027fce37ccaa1fdb85914dd92687dba40c284458bd9eaff35319dd238"
+    },
+    {
       "path": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
       "size": 25795157,

@@ -6,6 +6,53 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "squier-nicaragua-1852",
+    "title": "ニカラグア",
+    "originalTitle": "Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal",
+    "subtitle": "その人民、景観、記念物、および計画中の大洋間運河・1852年刊 全二巻日本語全訳",
+    "author": "E・G・スクワイア",
+    "originalAuthor": "Ephraim George Squier",
+    "series": "NICARAGUA · 1852",
+    "originalPublication": "ロンドン、Longman, Brown, Green, and Longmans、1852年",
+    "year": 1852,
+    "extent": "全2巻合冊・PDF 782頁・原刊第1巻424頁／第2巻452頁・図版等94点・表49点",
+    "description": "米国外交官・探検家スクワイアが、ニカラグアの地理・社会・政治・宗教・先住民文化・古代遺物を旅行記と調査報告として記し、大洋間運河の候補路線、条約、商業・移民統計、先住民諸語、独立後政治史を収めた1852年刊の全二巻です。",
+    "cover": "publications/squier-nicaragua-1852/cover.jpg",
+    "pdf": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.pdf",
+    "epub": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
+    "pageCount": 782,
+    "figureCount": 94,
+    "plateCount": 0,
+    "types": [
+      "紀行",
+      "地誌",
+      "民族誌",
+      "考古学",
+      "運河史",
+      "一次史料"
+    ],
+    "regions": [
+      "ニカラグア",
+      "中央アメリカ",
+      "モスキート海岸",
+      "ホンジュラス"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "E・G・スクワイア",
+      "ニカラグア運河",
+      "大洋間運河",
+      "サン・フアン川",
+      "レオン",
+      "グラナダ",
+      "先住民諸語",
+      "古代遺物",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "otis-isthmus-panama-railroad-1867",
     "title": "パナマ地峡　パナマ鉄道史",
     "originalTitle": "Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company",
@@ -8677,6 +8724,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "squier-nicaragua-1852": {
+    "sourceEdition": "E. G. Squier, Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal. With Numerous Original Maps and Illustrations, 2 vols., London: Longman, Brown, Green, and Longmans, 1852.",
+    "sourceProvider": "Getty Research Institute所蔵本をInternet Archiveが公開する全頁画像（identifiers: gri_nicaraguaits01squi, gri_nicaraguaits02squi）を主底本としました。欠落する第1巻321頁と対向彩色図、第2巻93頁・450–451頁は、Government of Maharashtra / Public Library of India公開本（india.history.resource.52994, 52995）およびUniversity of Toronto公開本（nicaraguaitspeop02squi）で補完しました。",
+    "sourceUrl": "https://archive.org/details/gri_nicaraguaits01squi",
+    "rights": "1852年刊の原著本文・図版はパブリックドメインです。Getty本のInternet Archive項目は「Possible copyright status: NOT_IN_COPYRIGHT」と表示しています。補完図版を含むPublic Library of India本およびToronto本の当該項目には、項目固有のrights、licenseurl、usage等のライセンス表示がありません。この項目表示と原著のパブリックドメイン性は区別して記録しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-26",
+    "updatedDate": "2026-08-26"
+  },
   "otis-isthmus-panama-railroad-1867": {
     "sourceEdition": "F. N. Otis, Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company, New York: Harper & Brothers, 1867.",
     "sourceProvider": "University of California Libraries所蔵本をInternet Archiveが公開する全頁画像（identifier: isthmusofpanamah00otisrich）を底本としました。HathiTrust Record 001353545でも同版をFull Viewで確認できます。",

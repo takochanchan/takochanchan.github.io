@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-26 — E・G・スクワイア『ニカラグア』全二巻新規公開
+
+- 1852年ロンドン刊『Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal』全二巻を合冊し、前付、本文、原注、表、図版、語彙・数詞表を日本語全訳としてPDF 782頁・EPUBで公開した。原刊位置標識880件、原注85件、図版等94点、表49点を収録した。
+- 両巻の全段落を原文と再照合し、誤訳、構文直写、主語・目的語の反転、数値、固有名、脱落・重複、原段落境界を再点検した。図版94点は原刊画像、抽出PNG、最終PDF配置を照合し、四辺の欠けや過剰な切出しがないことを確認した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 主底本はGetty Research Institute所蔵本のInternet Archive公開画像（`gri_nicaraguaits01squi`、`gri_nicaraguaits02squi`）。欠落する第1巻321頁と対向彩色図、第2巻93頁・450–451頁は、Government of Maharashtra / Public Library of India公開本（`india.history.resource.52994`、`52995`）およびUniversity of Toronto公開本（`nicaraguaitspeop02squi`）で補完した。原著はパブリックドメインで、補完本の当該項目には項目固有の`rights`、`licenseurl`、`usage`等の表示がないことを、原著の権利状態と分けて明記した。日本語翻訳版には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は `22b549af8ef3f3f5466191d5c97d381be33524deee2accf0a41114aef72c9333`、EPUBは `3338bd2702850b4cff2dd3356022fca1447f7c1723bcde9885df238004342f73`、DOCX正本は `30c5832bfd17c272e23540950fef168d1777a6f394e6cb4a97324ff72c15b108`。編集可能正本は非公開原本アーカイブのコミット `3009fed0c4c3e8d25dacaca432e466fe60e97896` に保存した。
+- 公開識別子：`squier-nicaragua-1852`。
+
 ## 2026-08-25 — F・N・オーティス『パナマ地峡　パナマ鉄道史』新規公開
 
 - 1867年ニューヨーク刊『Isthmus of Panama』の前付、パナマ鉄道史、太平洋郵船会社史、旅行者・実業家便覧を日本語全訳とし、PDF 334頁・EPUBで公開した。原刊頁標277件、図版38点、表207点を収録した。

@@ -216,7 +216,7 @@ try {
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
-    books: 22,
+    books: 23,
     papers: 9,
   });
   const piedrasNegras = await verifyQuery("ピエドラス・ネグラス", {
@@ -263,7 +263,7 @@ try {
   const pageChecks = [
     ["グリハルバ", grijalva, 275],
     ["グリハルバ川", grijalvaRiver, 75],
-    ["ピエドラス", piedras, 162],
+    ["ピエドラス", piedras, 179],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];
   const pageMismatches = pageChecks.filter(([, actual, expected]) =>

@@ -1,8 +1,0 @@
-{
-  "schema_version": 1,
-  "slug": "squier-nicaragua-1852",
-  "approved_pdf_sha256": "22b549af8ef3f3f5466191d5c97d381be33524deee2accf0a41114aef72c9333",
-  "epub_sha256": "3338bd2702850b4cff2dd3356022fca1447f7c1723bcde9885df238004342f73",
-  "archive_commit": "3009fed0c4c3e8d25dacaca432e466fe60e97896",
-  "staging_branch": "agent/publication-upload-squier-nicaragua-1852-20260826-v1"
-}

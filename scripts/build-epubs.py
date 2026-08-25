@@ -59,6 +59,9 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "squier-nicaragua-1852": SOURCES
+    / "翻訳サイト"
+    / "Squier_Nicaragua_1852_Japanese_Complete_Translation.docx",
     "villagutierre-itza-1701": SOURCES
     / "翻訳サイト"
     / "villagutierre_itza_1701_ja.docx",
