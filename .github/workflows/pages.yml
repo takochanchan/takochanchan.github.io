@@ -1,50 +1,92 @@
-name: Deploy archive to GitHub Pages
+name: Publish Squier and Davis Ancient Monuments once
+# Temporary contents for the already-registered pages.yml workflow.
 
 on:
   push:
     branches: ["main"]
-  workflow_dispatch:
+    paths:
+      - ".github/workflows/pages.yml"
+      - ".publication-requests/squier-davis-ancient-monuments-mississippi-valley-1848-v1.json"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  actions: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: publication-release
+  cancel-in-progress: false
+
+env:
+  SLUG: squier-davis-ancient-monuments-mississippi-valley-1848
+  PDF_NAME: Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.pdf
+  EPUB_NAME: Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub
+  PDF_SHA: 8c9aa0beb90e0573d8d903d5e90d3e9b48957c809d19532b3b6e37bf80bd6e1d
+  EPUB_SHA: d301edeb4e9202cb35b5bda0e0b6b5bf775a52a6b1366a97783c5eb599042e79
+  COVER_SHA: 9f4b703ede147e5537301a068565335e46f7e38558052eb80a380bb5e5866edc
+  ARCHIVE_COMMIT: c2578c1d3b9b9b9a48757b1bb00ff6e389608d96
+  BASE_MAIN_SHA: d29e07194b7a7731b8e570df2018b35b56b734d4
+  STAGING_BRANCH: agent/publication-upload-squier-davis-ancient-monuments-1848-20260826-v1
+  ASSET_BLOBS: "711a1c59e770f78f435db9be0798bc5462ae0f48 bf397df53391f744d2702280098a4081afc6f71c 6eb9cb24fa3aa36dd9b9ba2df57ceb8e19c04bac bad35d2bc22a7637a57422aadcda88dae454dcd7 c3a8751a97f50ac192f61b2fa7d6f5e265e6cb8b b81ecf05381132b925760934e5e6193616da5f9c 279f43fd4f52344715747a78605d939ba526ca42 123d81b922e48e58d7dd74b2bc505f321d21beae f51b41a218c9681543c91d5ba0486f12dd6ff048 ef20dab724dc11f4566adc9ced6c2653baeb8898 4f34de12dce53b1aa207d07af010e6860be5809b 959b0e6100b01142536fc8ad1e963003086f6a76 43959844094380070cfda8c767427b9da37e4318 541be5b7af9dfcbdd667b011b453356010633781 e6ea69a1b033449b7153c9da292fd6af66253efb eda87ba3593f03329d7ec5f3c130dac0fc4a062b 23186f89b6642e9ccf4e12b3196720478bdf3aab 1aefd298666fd9e2eeb2d4c679173a3994ec6b39 e39687ef2cc00f16f98c7e3f4d26b6a7f31c369d 7c5f40919fe15a1746d1d354ee9098ed3eaf1f28 5a2e5e195474f58301c65e4fee4b77a407bc1d39 4794e670771b0ef0d5faf63b1fa77f761e2dcf07 fa6c3c98b920a023c49ff79eca534c633a21a042 a0605e8ea62169fab074117727f8661e0d3f525f c0f86494f856deaeeed20ae9f246186c1737ce78 d790457b3b46aa7f667db4a68b506b551f76e42c bf3f1ae8cdf69fa809f2f5aeffc8101bbb045dab dfa054da3cfec94cd4a9a23f328cc5a00a9f26ed 6c51071a251c08ce62aa52a057bb0ee70d21d18b 43f878cbcb7e1eb8373bdecb9a9f0a90f2c36a11 07c5701caedaedbf8e87b0b297aa9f4e575adda4 c02b34e5a0b368f0b8823b85d31dee6f78edad40 a250b4a421df358e8ce9bbfb4df8207398a7925a 97d90e30e330e2e0ae7ede3e70bc257920a96e3c 923da0930415f35841ea3094bfa095021d249673"
+  ASSET_BUNDLE_SIZE: "24318071"
+  ASSET_BUNDLE_SHA: 86c1a8bcd4b3eacf4c9994fcf4c60b2f78b6a1895698eca420cf1334d423f785
+  SITE_PATCH_BLOB: de55dc8a9d823247126f432ca5f355129a1920fd
+  SITE_PATCH_SIZE: "47438"
+  SITE_PATCH_SHA: ffac0e3b2cb389f8c42cb9eed55096913b91b57ae18e942476eb60b3f5624eaf
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
-      - name: Check out source
+      - name: Check out publication source
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Use isolated publication branch
+        run: git checkout -B publish-ancient-monuments "$GITHUB_SHA"
+
+      - name: Prepare progress reporting
+        run: |
+          mkdir -p "$RUNNER_TEMP/publication-bin"
+          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          status="$1"
+          detail="${2:-}"
+          path="publication-status-ancient-monuments.json"
+          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
+          body="$(jq -cn \
+            --arg status "$status" \
+            --arg detail "$detail" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg run_id "$GITHUB_RUN_ID" \
+            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
+          encoded="$(printf '%s' "$body" | base64 -w0)"
+          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
+          args=(--method PUT "$endpoint" -f "message=Report Ancient Monuments publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
+          if test -n "$sha"; then
+            args+=(-f "sha=$sha")
+          fi
+          gh api "${args[@]}" >/dev/null
+          SH
+          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
+          "$RUNNER_TEMP/publication-bin/report-status" started
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install build dependencies
-        run: npm ci
+      - name: Install PDF inspection tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils unzip
 
-      - name: Build archive pages
-        run: npm run build
-
-      - name: Restore generated full-text index
-        id: search-index-cache
-        uses: actions/cache@v4
-        with:
-          path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
-      - name: Restore final PDF and EPUB inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+      - name: Restore verified PDF and EPUB cache
+        uses: actions/cache/restore@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -53,50 +95,166 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
+      - name: Reconstruct and verify release payload and site patch
+        run: |
+          bundle="$RUNNER_TEMP/ancient-monuments-public-assets.tar.gz"
+          : > "$bundle"
+          for oid in $ASSET_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$oid" --jq .content |
+              tr -d '\n' | base64 -d >> "$bundle"
+          done
+          test "$(stat -c %s "$bundle")" = "$ASSET_BUNDLE_SIZE"
+          echo "$ASSET_BUNDLE_SHA  $bundle" | sha256sum -c -
+
+          mkdir -p "$RUNNER_TEMP/ancient-monuments-release"
+          tar -xzf "$bundle" -C "$RUNNER_TEMP/ancient-monuments-release"
+          payload="$RUNNER_TEMP/ancient-monuments-release/release-payload"
+          test "$(stat -c %s "$payload/$PDF_NAME")" = "11228774"
+          test "$(stat -c %s "$payload/$EPUB_NAME")" = "13466869"
+          test "$(stat -c %s "$payload/cover.jpg")" = "50389"
+          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
+          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
+          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "468"
+          unzip -t "$payload/$EPUB_NAME"
+
+          site_patch="$RUNNER_TEMP/ancient-monuments-site.patch"
+          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$SITE_PATCH_BLOB" --jq .content |
+            tr -d '\n' | base64 -d > "$site_patch"
+          test "$(stat -c %s "$site_patch")" = "$SITE_PATCH_SIZE"
+          echo "$SITE_PATCH_SHA  $site_patch" | sha256sum -c -
+          git apply --check --binary "$site_patch"
+          git apply --index --binary "$site_patch"
+          grep -Fq "$SLUG" src/publications.mjs
+          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
+          grep -Fq "$EPUB_SHA" assets-manifest.json
+          mkdir -p "static/publications/$SLUG"
+          cp "$payload/cover.jpg" "static/publications/$SLUG/cover.jpg"
+          git add "static/publications/$SLUG/cover.jpg"
+          echo "$COVER_SHA  static/publications/$SLUG/cover.jpg" | sha256sum -c -
+          cmp "static/publications/$SLUG/cover.jpg" "$payload/cover.jpg"
+
+          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
+          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
+          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
+          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
+          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
+          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
+
+      - name: Report verified payload
+        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
+
+      - name: Install build dependencies
+        run: npm ci
+
       - name: Ensure PDF text and OCR tools are available
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           if ! command -v pdftotext || ! command -v tesseract; then
             sudo apt-get update
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Fetch checksum-verified search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run fetch:search-assets
+      - name: Validate EPUB, site build, and full-text search before release
+        run: |
+          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
+          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
+          npm run build
+          npm run fetch:search-assets
+          npm run build:search
+          npm run verify:search
+          npm test
 
-      - name: Generate full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run build:search
+      - name: Report passed pre-publication gate
+        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
 
-      - name: Save generated full-text index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
+      - name: Save verified asset cache
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .cache/fulltext-assets
+            .cache/fulltext-ocr
+          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
+
+      - name: Save verified search index
+        continue-on-error: true
         uses: actions/cache/save@v4
         with:
           path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+          key: fulltext-index-ancient-monuments-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
-      - name: Verify full-text index coverage and page maps
-        run: npm run verify:search
+      - name: Confirm remote main is unchanged
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
 
-      - name: Validate archive
-        run: npm test
+      - name: Upload and re-download verified Release assets
+        run: |
+          payload="$RUNNER_TEMP/ancient-monuments-release/release-payload"
+          checksum_dir="$RUNNER_TEMP/release-checksums"
+          verify_dir="$RUNNER_TEMP/release-verify"
+          mkdir -p "$checksum_dir" "$verify_dir"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
+          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
+          import os
+          import sys
+          from pathlib import Path
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+          path = Path(sys.argv[1])
+          additions = {
+              os.environ["PDF_NAME"]: os.environ["PDF_SHA"],
+              os.environ["EPUB_NAME"]: os.environ["EPUB_SHA"],
+          }
+          kept = []
+          for line in path.read_text(encoding="utf-8").splitlines():
+              if not line.strip():
+                  continue
+              name = line.split("  ", 1)[1] if "  " in line else ""
+              if name not in additions:
+                  kept.append(line)
+          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
+          kept.sort(key=lambda line: line.split("  ", 1)[1])
+          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
+          PY
+          gh release upload publications-current \
+            "$payload/$PDF_NAME" \
+            "$payload/$EPUB_NAME" \
+            "$checksum_dir/SHA256SUMS.txt" \
+            --clobber
+          gh release download publications-current \
+            --pattern "$PDF_NAME" \
+            --pattern "$EPUB_NAME" \
+            --pattern SHA256SUMS.txt \
+            --dir "$verify_dir"
+          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "11228774"
+          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "13466869"
+          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
+          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
+          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
+          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
+          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "468"
+          unzip -t "$verify_dir/$EPUB_NAME"
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Let repository initialization finish
-        run: sleep 45
+      - name: Report verified Release assets
+        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit verified publication and start Pages deployment
+        run: |
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git checkout "$BASE_MAIN_SHA" -- .github/workflows/pages.yml
+          git rm .publication-requests/squier-davis-ancient-monuments-mississippi-valley-1848-v1.json
+          git commit -m "Publish Squier and Davis Ancient Monuments"
+          git push origin HEAD:main
+          final_sha="$(git rev-parse HEAD)"
+          "$RUNNER_TEMP/publication-bin/report-status" published_commit "$final_sha"
+          gh api --method POST \
+            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
+            -f ref=main
+
+      - name: Report publication failure
+        if: failure()
+        run: "$RUNNER_TEMP/publication-bin/report-status failed || true"
