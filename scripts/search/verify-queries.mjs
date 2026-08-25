@@ -208,11 +208,11 @@ for (const candidate of candidates) {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 42,
+    books: 43,
     papers: 7,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
-    books: 23,
+    books: 24,
     papers: 5,
   });
   const piedras = await verifyQuery("ピエドラス", {
@@ -223,7 +223,7 @@ try {
     books: 12,
     papers: 8,
   });
-  await verifyCounts("ラカンドン", { books: 50, papers: 16 });
+  await verifyCounts("ラカンドン", { books: 51, papers: 16 });
   await verifyCounts("ポ", { books: 54, papers: 11 });
   const duranFlaying = await verifyPublicationQuery(
     "人の皮剥ぎ",
@@ -261,8 +261,8 @@ try {
     1,
   );
   const pageChecks = [
-    ["グリハルバ", grijalva, 272],
-    ["グリハルバ川", grijalvaRiver, 74],
+    ["グリハルバ", grijalva, 274],
+    ["グリハルバ川", grijalvaRiver, 75],
     ["ピエドラス", piedras, 162],
     ["ピエドラス・ネグラス", piedrasNegras, 119],
   ];

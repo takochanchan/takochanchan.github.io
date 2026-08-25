@@ -1,8 +1,0 @@
-{
-  "schema_version": 1,
-  "slug": "gonzalez-compendio-geografia-centro-america-1881",
-  "approved_pdf_sha256": "26652ccdd04508d61bc83c4cfcc1dded24270fd0ae9112b0c5cbaab4f0c25dce",
-  "epub_sha256": "bc15b249a5ccd2026cbb15b65d9cc8e7168cb9b96cd533dbceb4d4ada2f9558a",
-  "archive_commit": "5eeb45cfcf2426801c64c70e933ca03e2f29b07b",
-  "staging_branch": "agent/publication-upload-gonzalez-compendio-20260825-v1"
-}

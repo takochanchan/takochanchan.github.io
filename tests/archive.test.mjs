@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 265);
+  assert.equal(publications.length, 266);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -350,6 +350,30 @@ test("González Tehuacán paper retains its approved article scope", () => {
   assert.equal(item.updatedDate, "2026-08-25");
 });
 
+test("González Central America geography retains its approved complete scope", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "gonzalez-compendio-geografia-centro-america-1881",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "ダリオ・ゴンサレス");
+  assert.equal(item.originalAuthor, "Darío González");
+  assert.equal(item.pageCount, 123);
+  assert.equal(item.figureCount, 32);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /原刊本文1–131頁/);
+  assert.match(item.extent, /索引133–135頁/);
+  assert.match(item.description, /中央アメリカ五共和国/);
+  assert.match(item.sourceProvider, /Google Books/);
+  assert.match(item.sourceProvider, /zGVqAAAAMAAJ/);
+  assert.match(item.sourceUrl, /books\.google\.com\/books\?id=zGVqAAAAMAAJ/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.doesNotMatch(item.rights, /CC BY|CCSA/);
+  assert.equal(item.publishedDate, "2026-08-25");
+  assert.equal(item.updatedDate, "2026-08-25");
+});
+
 test("Leonard Sigüenza monograph retains its approved complete scope", () => {
   const item = publications.find(
     (publication) =>
@@ -375,7 +399,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 127);
+  assert.equal(majorPublications.length, 128);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1470,7 +1494,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">127<\/strong>件/);
+  assert.match(html, /id="book-match-count">128<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

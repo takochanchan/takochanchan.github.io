@@ -6,6 +6,53 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "gonzalez-compendio-geografia-centro-america-1881",
+    "title": "中央アメリカ地理要綱",
+    "originalTitle": "Compendio de geografía de Centro-América",
+    "subtitle": "中等学校・初等学校用 訂正増補第二版・1881年刊 日本語全訳",
+    "author": "ダリオ・ゴンサレス",
+    "originalAuthor": "Darío González",
+    "series": "COMPENDIO DE GEOGRAFÍA DE CENTRO-AMÉRICA · 1881",
+    "originalPublication": "グアテマラ、エミリオ・グボー書店・文房具店、1881年",
+    "year": 1881,
+    "extent": "PDF 123頁・原刊本文1–131頁・索引133–135頁・図版32点・表20点",
+    "description": "中央アメリカ五共和国の境界、地勢、気候、河川・湖沼、産物、人口、行政、都市、交通、産業を問答形式で概説した地理教科書。グアテマラを最も詳しく扱い、エル・サルバドル、ホンジュラス、ニカラグア、コスタ・リカおよびベリーズの地誌を収録しています。",
+    "cover": "publications/gonzalez-compendio-geografia-centro-america-1881/cover.jpg",
+    "pdf": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf",
+    "epub": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
+    "pageCount": 123,
+    "figureCount": 32,
+    "plateCount": 0,
+    "types": [
+      "地誌",
+      "地理教科書",
+      "統計資料",
+      "一次史料"
+    ],
+    "regions": [
+      "中央アメリカ",
+      "グアテマラ",
+      "エル・サルバドル",
+      "ホンジュラス",
+      "ニカラグア",
+      "コスタ・リカ",
+      "ベリーズ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "中央アメリカ地理",
+      "地理教育",
+      "自然地理",
+      "人口統計",
+      "産業",
+      "交通",
+      "都市",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
     "title": "ドン・カルロス・デ・シグエンサ・イ・ゴンゴラ",
     "originalTitle": "Don Carlos de Sigüenza y Góngora: A Mexican Savant of the Seventeenth Century",
@@ -8541,6 +8588,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "gonzalez-compendio-geografia-centro-america-1881": {
+    "sourceEdition": "Darío González, Compendio de geografía de Centro-América, segunda edición, corregida y aumentada, Guatemala: Librería y Papelería de Emilio Goubaud, 1881.",
+    "sourceProvider": "テキサス大学オースティン校所蔵本をGoogle Booksが2008年7月22日にデジタル化した全頁画像（Google Books ID: zGVqAAAAMAAJ、HathiTrust Record: 101131937）を底本としました。",
+    "sourceUrl": "https://books.google.com/books?id=zGVqAAAAMAAJ",
+    "rights": "1881年刊の原著本文および図版はパブリックドメインです。Google Booksのデジタルファイルには同サービスの利用指針が適用されます。本版はGoogle Booksをデジタル化・公開元として明記しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-25",
+    "updatedDate": "2026-08-25"
+  },
   "leonard-don-carlos-de-siguenza-y-gongora-1929": {
     "sourceEdition": "Irving A. Leonard, Don Carlos de Sigüenza y Góngora: A Mexican Savant of the Seventeenth Century, University of California Publications in History, Volume XVIII, Berkeley: University of California Press, issued September 1929.",
     "sourceProvider": "University of Florida, George A. Smathers Libraries所蔵本をInternet Archiveが公開する1929年初版スキャン（identifier: doncarlosdesigen18berk）を底本としました。原刊頁画像とOCRを照合し、原刊84頁直後のシグエンサ作メキシコ盆地図を収録しています。無内容の白紙葉は収録していません。",

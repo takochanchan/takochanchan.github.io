@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
+      "size": 17508433,
+      "sha256": "bc15b249a5ccd2026cbb15b65d9cc8e7168cb9b96cd533dbceb4d4ada2f9558a"
+    },
+    {
+      "path": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf",
+      "size": 15870953,
+      "sha256": "26652ccdd04508d61bc83c4cfcc1dded24270fd0ae9112b0c5cbaab4f0c25dce"
+    },
+    {
+      "path": "publications/gonzalez-compendio-geografia-centro-america-1881/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-compendio-geografia-centro-america-1881/cover.jpg",
+      "size": 57980,
+      "sha256": "7490962103163ae2545decf31f0a4ae4fcb7112110ab98183d3bc72c3de77980"
+    },
+    {
       "path": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
       "size": 3260342,

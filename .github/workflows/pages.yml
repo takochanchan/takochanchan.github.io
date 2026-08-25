@@ -1,91 +1,50 @@
-name: Publish González Central America geography once
-# Temporary contents for the already-registered pages.yml workflow.
+name: Deploy archive to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-    paths:
-      - ".github/workflows/pages.yml"
-      - ".publication-requests/gonzalez-compendio-geografia-centro-america-1881-v1.json"
+  workflow_dispatch:
 
 permissions:
-  contents: write
-  actions: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: publication-release
+  group: pages
   cancel-in-progress: true
 
-env:
-  SLUG: gonzalez-compendio-geografia-centro-america-1881
-  PDF_NAME: Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf
-  EPUB_NAME: Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub
-  PDF_SHA: 26652ccdd04508d61bc83c4cfcc1dded24270fd0ae9112b0c5cbaab4f0c25dce
-  EPUB_SHA: bc15b249a5ccd2026cbb15b65d9cc8e7168cb9b96cd533dbceb4d4ada2f9558a
-  COVER_SHA: 7490962103163ae2545decf31f0a4ae4fcb7112110ab98183d3bc72c3de77980
-  ARCHIVE_COMMIT: 5eeb45cfcf2426801c64c70e933ca03e2f29b07b
-  STAGING_BRANCH: agent/publication-upload-gonzalez-compendio-20260825-v1
-  ASSET_BLOBS: "2c2f49e8d476862e5ff13cb9723b90f9f18db173 70bda9634cecec90dcd56fb406adbd9d80376079 fa982905945585a2cce8d21b9014ed4d4022b46e eb94eb0b8b167b55deeefd69235f2a1459e6375b 3d4767b4fe28b2871d4452121c43849dc3487b49 28535244396cc358cdeee94cc6ea5f9b9c2a0638 e550562c38eb54927ec5361ee0dfcb64af888737 f5db72908ad02dcc0d43f6a135c15a7222b1f834 59af38f8e7acb3bbe2a567e1be141f9572161037 ff37b9fe084421e628e81b222b629311750665df ab3251a6a080366030e1e7094ad30f4f462806b8 c8beaa85836f15462308858c0423c4d4339b1f3e dedefc153a57a6d39a859ed0376c556bd2017e04 2b85998f12c99840938faccb573890f049c642ad 16a983fcd0e2497d4dfe4c8a4c25399ee8482b3e de457cc535d5504273b88730e1fd77c23bb19a23 c7c6bd58734a49ea71845827c0c3998039574b0d f1de69a2b1d449c17abdf18781ea7e574f4b2ebe 889077efee768c29f4b393cf507fa236ee1059b2 21369fbf68173af17546520943da7495e5f0a051 16d87d6657b3461372ea113ffeb887c7831b0a4d d599b6e788bf1fdc3ae62ffcffa7f6fb116f6e29 f4291622f021f020a0ba91e2cd07d50d8af4088c 0499fa3dd5d89bdc54d72538148f2dd7785d6030 d261b31630f322dc4c7e734a685bf1a6b7411a83 c8089eb0722f211acf31ddfe375ae7885e1bafb5 f41668cac6b0649d0c675be3ef385c1d0ebe8494 9ebe9da4842fcbf5581d225bc570c348959bad1a b135906a4a43599145485d4b14e024ca3652e157 4fe805f922c322a494947b76c89e58171a1b98d6 569a86b15b4086bb39065d758e2356975d933993 2bdf74973e57d20b433893c84ef65bbfaf39924c 3013d5e8815ba07b070e0f756320a1f2e70aec2f 960a27c8f8c8a6a947bb8773890a740f5fb729b2 bae91d0a560b64677dd5dc6b0e98c047f23a28e8 043cbe347453b57d08135034e4a8212d7003ee18 a7b72696a006fd20ec471865c79e959bd7df99e4 d2b874b286f0e77abf650da9fae3224190f84b7c 45929e47881d9a07847fd6036d3ba0f2ce98e134 84f9d8bdf328cbbd6ffc163f9fc8b3f9646b06d8 600c503357f4776f80d4154514f2cd555f445c52 bb1cad2c493ae98c379ebdf0807a2bde37c6fae9 e9bf21a3dc1dce695ba1bcae3919ed01e983ce60 1bbfabc73d3fe24d75f0c66a6528c3dcee18d5f5 bb1b001f506a836a8c5c6f620ecfb01516f13adb 34db8b85d9dd9e362a5539cf645ca0ca6ffaa341 d34c44d410e5e40654395bb773da9f6197416bc3 7e9b8e2e34402fd4ac45c2bd1b89280dfcda6c08 89fcccd2bb0b90f08831539b349def0a54d987b7 6c23a69983509ae249ad1cf3049fece82d82a25b d4ff6cd8eb11f977218543f10f876735218feaa3 3f275f5318e43c9f2b10e5348aae296e8dbf6c38 8b95dd8bf42f2bf65e13fc3a4c4f262915ca92e1 ad9df9fb87d679c741b081d86fef931fbe034bc4 57a5798b0321d18ec776973d67b442a3be91848f df308a7bd9afdd5ac53eccf5cf2a3912c2b70cf5 fd3688c792df21714a7cbd9815d9feb666ef36d3 a21b91ef4c931e81b059e78161871b2bf7080f03 96d7517ce98047c1faec508552d6f38f03ee1440 c0811ef60f21d290c940d06dd0b3f7f625cbd0d8 d5559a0a61f14ac9d73d629a121d92f1195a3271 fe5509b0efe9288a6ced2096a3a2afde4ea72489 22294f8266309c54ba4aa581307faf521fd8957b"
-  ASSET_BUNDLE_SIZE: "32587954"
-  ASSET_BUNDLE_SHA: b8c2775403620817874f55147a7dbc5f8d35b91268f7943e57cbb6c57ab86c2b
-  SITE_PATCH_BLOB: 74aca772c7e1d1232d47b0e723d5422500b8248d
-  SITE_PATCH_SIZE: "105736"
-  SITE_PATCH_SHA: 5b6a9cdc2f540ad39fe1a4120420efd65045fb460798d9224c62da81c1ce117d
-  GH_TOKEN: ${{ github.token }}
-
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
     steps:
-      - name: Check out publication source
+      - name: Check out source
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Use isolated publication branch
-        run: git checkout -B publish-gonzalez-compendio "$GITHUB_SHA"
-
-      - name: Prepare progress reporting
-        run: |
-          mkdir -p "$RUNNER_TEMP/publication-bin"
-          cat > "$RUNNER_TEMP/publication-bin/report-status" <<'SH'
-          #!/usr/bin/env bash
-          set -euo pipefail
-          status="$1"
-          detail="${2:-}"
-          path="publication-status-gonzalez-compendio.json"
-          endpoint="repos/$GITHUB_REPOSITORY/contents/$path"
-          body="$(jq -cn \
-            --arg status "$status" \
-            --arg detail "$detail" \
-            --arg head_sha "$GITHUB_SHA" \
-            --arg run_id "$GITHUB_RUN_ID" \
-            --arg updated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            '{status:$status,detail:$detail,head_sha:$head_sha,run_id:$run_id,updated_at:$updated_at}')"
-          encoded="$(printf '%s' "$body" | base64 -w0)"
-          sha="$(gh api --method GET "$endpoint" -f ref="$STAGING_BRANCH" --jq .sha 2>/dev/null || true)"
-          args=(--method PUT "$endpoint" -f "message=Report González publication: $status" -f "branch=$STAGING_BRANCH" -f "content=$encoded")
-          if test -n "$sha"; then
-            args+=(-f "sha=$sha")
-          fi
-          gh api "${args[@]}" >/dev/null
-          SH
-          chmod +x "$RUNNER_TEMP/publication-bin/report-status"
-          "$RUNNER_TEMP/publication-bin/report-status" started
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install PDF inspection tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils unzip
+      - name: Install build dependencies
+        run: npm ci
 
-      - name: Restore verified PDF and EPUB cache
-        uses: actions/cache/restore@v4
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -94,170 +53,50 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
-      - name: Reconstruct and verify release payload and site patch
-        run: |
-          bundle="$RUNNER_TEMP/gonzalez-public-assets.tar.gz"
-          : > "$bundle"
-          for oid in $ASSET_BLOBS; do
-            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$oid" --jq .content |
-              tr -d '\n' | base64 -d >> "$bundle"
-          done
-          test "$(stat -c %s "$bundle")" = "$ASSET_BUNDLE_SIZE"
-          echo "$ASSET_BUNDLE_SHA  $bundle" | sha256sum -c -
-
-          mkdir -p "$RUNNER_TEMP/gonzalez-release"
-          tar -xzf "$bundle" -C "$RUNNER_TEMP/gonzalez-release"
-          payload="$RUNNER_TEMP/gonzalez-release/release-payload"
-          test "$(stat -c %s "$payload/$PDF_NAME")" = "15870953"
-          test "$(stat -c %s "$payload/$EPUB_NAME")" = "17508433"
-          test "$(stat -c %s "$payload/cover.jpg")" = "57980"
-          echo "$PDF_SHA  $payload/$PDF_NAME" | sha256sum -c -
-          echo "$EPUB_SHA  $payload/$EPUB_NAME" | sha256sum -c -
-          echo "$COVER_SHA  $payload/cover.jpg" | sha256sum -c -
-          test "$(pdfinfo "$payload/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "123"
-          unzip -t "$payload/$EPUB_NAME"
-
-          site_patch="$RUNNER_TEMP/gonzalez-site.patch"
-          gh api "repos/$GITHUB_REPOSITORY/git/blobs/$SITE_PATCH_BLOB" --jq .content |
-            tr -d '\n' | base64 -d > "$site_patch"
-          test "$(stat -c %s "$site_patch")" = "$SITE_PATCH_SIZE"
-          echo "$SITE_PATCH_SHA  $site_patch" | sha256sum -c -
-          git apply --check --binary "$site_patch"
-          git apply --index --binary "$site_patch"
-          grep -Fq "$SLUG" src/publications.mjs
-          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
-          grep -Fq "$EPUB_SHA" assets-manifest.json
-          mkdir -p "static/publications/$SLUG"
-          cp "$payload/cover.jpg" "static/publications/$SLUG/cover.jpg"
-          git add "static/publications/$SLUG/cover.jpg"
-          echo "$COVER_SHA  static/publications/$SLUG/cover.jpg" | sha256sum -c -
-          cmp "static/publications/$SLUG/cover.jpg" "$payload/cover.jpg"
-
-          mkdir -p "$RUNNER_TEMP/release-tree/publications/$SLUG"
-          cp "$payload/$PDF_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$PDF_NAME"
-          cp "$payload/$EPUB_NAME" "$RUNNER_TEMP/release-tree/publications/$SLUG/$EPUB_NAME"
-          cp "$payload/cover.jpg" "$RUNNER_TEMP/release-tree/publications/$SLUG/cover.jpg"
-          mkdir -p ".cache/fulltext-assets/publications/$SLUG"
-          cp "$payload/$PDF_NAME" ".cache/fulltext-assets/publications/$SLUG/$PDF_NAME"
-          cp "$payload/$EPUB_NAME" ".cache/fulltext-assets/publications/$SLUG/$EPUB_NAME"
-
-      - name: Report verified payload
-        run: "$RUNNER_TEMP/publication-bin/report-status payload_verified"
-
-      - name: Install build dependencies
-        run: npm ci
-
       - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
           if ! command -v pdftotext || ! command -v tesseract; then
             sudo apt-get update
             sudo apt-get install -y poppler-utils tesseract-ocr
           fi
 
-      - name: Validate EPUB, site build, and full-text search before release
-        run: |
-          "$RUNNER_TEMP/publication-bin/report-status" indexing_and_tests
-          python3 scripts/validate-epubs.py "$RUNNER_TEMP/release-tree" --slug "$SLUG"
-          npm run build
-          npm run fetch:search-assets
-          npm run build:search
-          npm run verify:search
-          npm test
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
 
-      - name: Report passed pre-publication gate
-        run: "$RUNNER_TEMP/publication-bin/report-status prepublication_gate_passed"
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
 
-      - name: Save verified asset cache
-        continue-on-error: true
-        uses: actions/cache/save@v4
-        with:
-          path: |
-            .cache/fulltext-assets
-            .cache/fulltext-ocr
-          key: fulltext-assets-${{ hashFiles('assets-manifest.json') }}
-
-      - name: Save verified search index
-        continue-on-error: true
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           path: dist/search
-          key: fulltext-index-gonzalez-compendio-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
 
-      - name: Confirm remote main is unchanged
-        run: |
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+      - name: Verify full-text index coverage and page maps
+        run: npm run verify:search
 
-      - name: Upload and re-download verified Release assets
-        run: |
-          payload="$RUNNER_TEMP/gonzalez-release/release-payload"
-          checksum_dir="$RUNNER_TEMP/release-checksums"
-          verify_dir="$RUNNER_TEMP/release-verify"
-          mkdir -p "$checksum_dir" "$verify_dir"
-          gh release download publications-current --pattern SHA256SUMS.txt --dir "$checksum_dir"
-          python3 - "$checksum_dir/SHA256SUMS.txt" <<'PY'
-          import os
-          import sys
-          from pathlib import Path
+      - name: Validate archive
+        run: npm test
 
-          path = Path(sys.argv[1])
-          additions = {
-              os.environ["PDF_NAME"]: os.environ["PDF_SHA"],
-              os.environ["EPUB_NAME"]: os.environ["EPUB_SHA"],
-          }
-          kept = []
-          for line in path.read_text(encoding="utf-8").splitlines():
-              if not line.strip():
-                  continue
-              name = line.split("  ", 1)[1] if "  " in line else ""
-              if name not in additions:
-                  kept.append(line)
-          kept.extend(f"{digest}  {name}" for name, digest in additions.items())
-          kept.sort(key=lambda line: line.split("  ", 1)[1])
-          path.write_text("\n".join(kept) + "\n", encoding="utf-8")
-          PY
-          gh release upload publications-current \
-            "$payload/$PDF_NAME" \
-            "$payload/$EPUB_NAME" \
-            "$checksum_dir/SHA256SUMS.txt" \
-            --clobber
-          gh release download publications-current \
-            --pattern "$PDF_NAME" \
-            --pattern "$EPUB_NAME" \
-            --pattern SHA256SUMS.txt \
-            --dir "$verify_dir"
-          test "$(stat -c %s "$verify_dir/$PDF_NAME")" = "15870953"
-          test "$(stat -c %s "$verify_dir/$EPUB_NAME")" = "17508433"
-          echo "$PDF_SHA  $verify_dir/$PDF_NAME" | sha256sum -c -
-          echo "$EPUB_SHA  $verify_dir/$EPUB_NAME" | sha256sum -c -
-          grep -Fx "$PDF_SHA  $PDF_NAME" "$verify_dir/SHA256SUMS.txt"
-          grep -Fx "$EPUB_SHA  $EPUB_NAME" "$verify_dir/SHA256SUMS.txt"
-          test "$(pdfinfo "$verify_dir/$PDF_NAME" | awk '/^Pages:/ {print $2}')" = "123"
-          unzip -t "$verify_dir/$EPUB_NAME"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
 
-      - name: Report verified Release assets
-        run: "$RUNNER_TEMP/publication-bin/report-status release_verified"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Let repository initialization finish
+        run: sleep 45
 
-      - name: Commit verified publication and start Pages deployment
-        run: |
-          git fetch origin main
-          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git checkout 12dc63f718dd4d764d6e60d01f3ecb97bfeaff3f -- .github/workflows/pages.yml
-          git rm .publication-requests/gonzalez-compendio-geografia-centro-america-1881-v1.json
-          git commit -m "Publish González Central America geography"
-          git push origin HEAD:main
-          final_sha="$(git rev-parse HEAD)"
-          "$RUNNER_TEMP/publication-bin/report-status" published_commit "$final_sha"
-          gh api --method POST \
-            "repos/$GITHUB_REPOSITORY/actions/workflows/pages.yml/dispatches" \
-            -f ref=main
-          encoded="${STAGING_BRANCH//\//%2F}"
-          gh api --method DELETE \
-            "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded" \
-            >/dev/null 2>&1 || true
-
-      - name: Report publication failure
-        if: failure()
-        run: "$RUNNER_TEMP/publication-bin/report-status failed || true"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
