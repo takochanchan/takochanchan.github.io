@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "slug": "siguenza-parayso-occidental-1684",
+  "approved_pdf_sha256": "efdd95f6019a42ab39758243f90d07bad5557c6dddb056152392a0ea3344ea9b",
+  "epub_sha256": "cb1705c943a5bf754fa358532d6f49af3589c6c83fd2bdba41ce53383c4685f4",
+  "archive_commit": "5d92152d632202b496b6b54e12d81ecb98560710",
+  "staging_branch": "agent/publication-upload-siguenza-parayso-20260825-v1"
+}
