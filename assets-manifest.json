@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
+      "size": 25795157,
+      "sha256": "d0222be6dea61af92176b228b955274fec2a9bfd3434461d948a8d066599c9c6"
+    },
+    {
+      "path": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.pdf",
+      "size": 27397450,
+      "sha256": "83453b550412207c951f3c2d5789c3577e0a550199bd4764170b5381f37ffa7e"
+    },
+    {
+      "path": "publications/otis-isthmus-panama-railroad-1867/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/otis-isthmus-panama-railroad-1867/cover.jpg",
+      "size": 103012,
+      "sha256": "733c34e6a60aa589301f43d0d0e4e773e7a5aea45e14c17aa1b5ab85a64711ff"
+    },
+    {
       "path": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
       "size": 505217,

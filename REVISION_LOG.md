@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-25 — F・N・オーティス『パナマ地峡　パナマ鉄道史』新規公開
+
+- 1867年ニューヨーク刊『Isthmus of Panama』の前付、パナマ鉄道史、太平洋郵船会社史、旅行者・実業家便覧を日本語全訳とし、PDF 334頁・EPUBで公開した。原刊頁標277件、図版38点、表207点を収録した。
+- 底本はUniversity of California Libraries所蔵本をInternet Archiveが公開する全頁画像（`isthmusofpanamah00otisrich`）。原著本文・図版はパブリックドメインで、当該項目メタデータの公開機関による権利表示 `Possible copyright status: NOT_IN_COPYRIGHT` を公開ページと各配布版に明記した。日本語翻訳版には再利用ライセンスを設定していない。
+- 公開PDFのSHA-256は `83453b550412207c951f3c2d5789c3577e0a550199bd4764170b5381f37ffa7e`、EPUBは `d0222be6dea61af92176b228b955274fec2a9bfd3434461d948a8d066599c9c6`、DOCX正本は `b22514d920c2ec17f26a4a13d77a34be36e98a6fb76a18082baa6c2acacbc862`。編集可能正本は非公開原本アーカイブのコミット `d9766cac3ae9302aea435e05506f11e1117d24d4` に保存した。
+- 公開識別子：`otis-isthmus-panama-railroad-1867`。
+
 ## 2026-08-25 — カルロス・デ・シグエンサ・イ・ゴンゴラ『西方の楽園』新規公開
 
 - 1684年メキシコ刊『Parayso occidental』の前付、全三巻66章、再掲された著者宣言、正誤表を日本語全訳とし、PDF 350頁・EPUBで公開した。原刊標題紙1点を収録した。

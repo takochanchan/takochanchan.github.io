@@ -6,6 +6,52 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "otis-isthmus-panama-railroad-1867",
+    "title": "パナマ地峡　パナマ鉄道史",
+    "originalTitle": "Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company",
+    "subtitle": "太平洋郵船会社史ならびに旅行者・実業家便覧・1867年刊 日本語全訳",
+    "author": "F・N・オーティス",
+    "originalAuthor": "Fessenden Nott Otis",
+    "series": "ISTHMUS OF PANAMA · 1867",
+    "originalPublication": "ニューヨーク、Harper & Brothers、1867年",
+    "year": 1867,
+    "extent": "PDF 334頁・原刊ix, 317頁・図版38点・表207点",
+    "description": "パナマ鉄道の計画・建設・運営と財務、地峡横断旅行案内、パナマに接続する汽船会社・航路・運賃・貨物規則、中央・南アメリカ各国およびメキシコの地誌と商業情報を収めた、1867年刊の鉄道史兼旅行・実務便覧です。",
+    "cover": "publications/otis-isthmus-panama-railroad-1867/cover.jpg",
+    "pdf": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.pdf",
+    "epub": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
+    "pageCount": 334,
+    "figureCount": 38,
+    "plateCount": 0,
+    "types": [
+      "鉄道史",
+      "交通史",
+      "旅行案内",
+      "商業便覧",
+      "一次史料"
+    ],
+    "regions": [
+      "パナマ",
+      "中央アメリカ",
+      "南アメリカ",
+      "メキシコ",
+      "カリブ海"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "パナマ鉄道",
+      "パナマ地峡",
+      "太平洋郵船会社",
+      "汽船航路",
+      "大西洋横断交通",
+      "運賃",
+      "貨物",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "siguenza-parayso-occidental-1684",
     "title": "西方の楽園",
     "originalTitle": "Parayso occidental",
@@ -8631,6 +8677,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "otis-isthmus-panama-railroad-1867": {
+    "sourceEdition": "F. N. Otis, Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company, New York: Harper & Brothers, 1867.",
+    "sourceProvider": "University of California Libraries所蔵本をInternet Archiveが公開する全頁画像（identifier: isthmusofpanamah00otisrich）を底本としました。HathiTrust Record 001353545でも同版をFull Viewで確認できます。",
+    "sourceUrl": "https://archive.org/details/isthmusofpanamah00otisrich",
+    "rights": "1867年刊の原著本文・図版はパブリックドメインです。Internet Archiveの当該項目メタデータは「Possible copyright status: NOT_IN_COPYRIGHT」と表示しています。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-25",
+    "updatedDate": "2026-08-25"
+  },
   "siguenza-parayso-occidental-1684": {
     "sourceEdition": "Carlos de Sigüenza y Góngora, Parayso occidental, plantado, y cultivado por la liberal benefica mano de los muy catholicos, y poderosos Reyes de España Nuestros Señores en su magnifico Real Convento de Jesus Maria de Mexico, México: Juan de Ribera, 1684.",
     "sourceProvider": "バイエルン州立図書館所蔵本をGoogle Booksが公開する1684年メキシコ刊本（volume ID: m0s_AAAAcAAJ）を主底本とし、Biblioteca Virtual Miguel de Cervantes公開の同版別本を文字校合に用いました。原刊標題紙は主底本画像から収録しています。",

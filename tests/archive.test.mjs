@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 267);
+  assert.equal(publications.length, 268);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -398,6 +398,30 @@ test("Sigüenza Parayso occidental retains its approved complete scope", () => {
   assert.equal(item.updatedDate, "2026-08-25");
 });
 
+test("Otis Panama Railroad history retains its approved complete scope and institutional rights display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "otis-isthmus-panama-railroad-1867",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "F・N・オーティス");
+  assert.equal(item.originalAuthor, "Fessenden Nott Otis");
+  assert.equal(item.pageCount, 334);
+  assert.equal(item.figureCount, 38);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /表207点/);
+  assert.match(item.description, /パナマ鉄道の計画・建設・運営と財務/);
+  assert.match(item.sourceProvider, /University of California Libraries/);
+  assert.match(item.sourceProvider, /isthmusofpanamah00otisrich/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/isthmusofpanamah00otisrich/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /Possible copyright status: NOT_IN_COPYRIGHT/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-25");
+  assert.equal(item.updatedDate, "2026-08-25");
+});
+
 test("Leonard Sigüenza monograph retains its approved complete scope", () => {
   const item = publications.find(
     (publication) =>
@@ -423,7 +447,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 129);
+  assert.equal(majorPublications.length, 130);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1518,7 +1542,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">129<\/strong>件/);
+  assert.match(html, /id="book-match-count">130<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
