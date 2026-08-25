@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
+      "size": 505217,
+      "sha256": "255e2098adc8637b3fba4f4ceb4f9b2567fbfaaa79a556e070de850d2f2efba8"
+    },
+    {
+      "path": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.pdf",
+      "size": 3305698,
+      "sha256": "efdd95f6019a42ab39758243f90d07bad5557c6dddb056152392a0ea3344ea9b"
+    },
+    {
+      "path": "publications/siguenza-parayso-occidental-1684/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/siguenza-parayso-occidental-1684/cover.jpg",
+      "size": 52461,
+      "sha256": "5a82e18130ea9b2474ed40f0ada7106954d2cd91c07d8330fb038af0677bf4eb"
+    },
+    {
       "path": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
       "size": 17508433,

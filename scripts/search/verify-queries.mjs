@@ -208,7 +208,7 @@ for (const candidate of candidates) {
 
 try {
   const grijalva = await verifyQuery("グリハルバ", {
-    books: 43,
+    books: 44,
     papers: 7,
   });
   const grijalvaRiver = await verifyQuery("グリハルバ川", {
@@ -261,7 +261,7 @@ try {
     1,
   );
   const pageChecks = [
-    ["グリハルバ", grijalva, 274],
+    ["グリハルバ", grijalva, 275],
     ["グリハルバ川", grijalvaRiver, 75],
     ["ピエドラス", piedras, 162],
     ["ピエドラス・ネグラス", piedrasNegras, 119],

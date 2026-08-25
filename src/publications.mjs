@@ -6,6 +6,49 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "siguenza-parayso-occidental-1684",
+    "title": "西方の楽園",
+    "originalTitle": "Parayso occidental",
+    "subtitle": "メキシコ王立ヘスス・マリア修道院の創設と発展・1684年メキシコ刊 日本語全訳",
+    "author": "カルロス・デ・シグエンサ・イ・ゴンゴラ",
+    "originalAuthor": "Carlos de Sigüenza y Góngora",
+    "series": "PARAYSO OCCIDENTAL · 1684",
+    "originalPublication": "メキシコ、フアン・デ・リベラ、1684年",
+    "year": 1684,
+    "extent": "PDF 350頁・全3巻66章・原刊前付11葉・本文fol. 1r–206v・正誤表",
+    "description": "メキシコ王立ヘスス・マリア女子修道院の創設と発展をたどり、尊者マリナ・デ・ラ・クルス、イネス・デ・ラ・クルスをはじめとする修道女たちの生涯、徳行、幻視、奇蹟を記した1684年刊の修道院史・伝記集です。",
+    "cover": "publications/siguenza-parayso-occidental-1684/cover.jpg",
+    "pdf": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.pdf",
+    "epub": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
+    "pageCount": 350,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "修道院史",
+      "女性宗教史",
+      "伝記集",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "メキシコ市",
+      "ヌエバ・エスパーニャ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "シグエンサ・イ・ゴンゴラ",
+      "ヘスス・マリア修道院",
+      "女性修道者",
+      "マリナ・デ・ラ・クルス",
+      "イネス・デ・ラ・クルス",
+      "植民地期メキシコ",
+      "カトリック",
+      "17世紀"
+    ]
+  },
+  {
     "slug": "gonzalez-compendio-geografia-centro-america-1881",
     "title": "中央アメリカ地理要綱",
     "originalTitle": "Compendio de geografía de Centro-América",
@@ -8588,6 +8631,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "siguenza-parayso-occidental-1684": {
+    "sourceEdition": "Carlos de Sigüenza y Góngora, Parayso occidental, plantado, y cultivado por la liberal benefica mano de los muy catholicos, y poderosos Reyes de España Nuestros Señores en su magnifico Real Convento de Jesus Maria de Mexico, México: Juan de Ribera, 1684.",
+    "sourceProvider": "バイエルン州立図書館所蔵本をGoogle Booksが公開する1684年メキシコ刊本（volume ID: m0s_AAAAcAAJ）を主底本とし、Biblioteca Virtual Miguel de Cervantes公開の同版別本を文字校合に用いました。原刊標題紙は主底本画像から収録しています。",
+    "sourceUrl": "https://books.google.com/books?id=m0s_AAAAcAAJ",
+    "rights": "1684年刊の原著本文と標題紙はパブリックドメインです。Google Booksの提供ファイルには同サービスのパブリックドメイン資料に関する利用条件が適用され、本版ではGoogle Booksとバイエルン州立図書館を表示しています。Biblioteca Virtual Miguel de Cervantesの画像は転載していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-25",
+    "updatedDate": "2026-08-25"
+  },
   "gonzalez-compendio-geografia-centro-america-1881": {
     "sourceEdition": "Darío González, Compendio de geografía de Centro-América, segunda edición, corregida y aumentada, Guatemala: Librería y Papelería de Emilio Goubaud, 1881.",
     "sourceProvider": "テキサス大学オースティン校所蔵本をGoogle Booksが2008年7月22日にデジタル化した全頁画像（Google Books ID: zGVqAAAAMAAJ、HathiTrust Record: 101131937）を底本としました。",
