@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 271);
+  assert.equal(publications.length, 272);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -427,6 +427,32 @@ test("Baz and Gallo Mexican Railroad history retains its approved complete scope
   assert.equal(item.updatedDate, "2026-08-26");
 });
 
+test("Prieto and Piatkowski Guatemala interoceanic railroad retains its approved scope and rights display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "アレハンドロ・プリエト／R・ピアトコフスキ");
+  assert.equal(item.originalAuthor, "Alejandro Prieto / R. Piatkowski");
+  assert.equal(item.pageCount, 37);
+  assert.equal(item.figureCount, 2);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /原刊本文5–60頁/);
+  assert.match(item.extent, /表14点/);
+  assert.match(item.description, /グアテマラを大西洋岸と太平洋岸で結ぶ/);
+  assert.match(item.sourceProvider, /Universidad Francisco Marroquín/);
+  assert.match(item.sourceProvider, /ideasgeneralesso00alejguat/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/ideasgeneralesso00alejguat/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT IN COPYRIGHT/);
+  assert.match(item.rights, /標題紙および裏表紙画像/);
+  assert.doesNotMatch(item.rights, /日本語翻訳版|再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-26");
+  assert.equal(item.updatedDate, "2026-08-26");
+});
+
 test("Otis Panama Railroad history retains its approved complete scope and institutional rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -533,7 +559,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 133);
+  assert.equal(majorPublications.length, 134);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1628,7 +1654,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">133<\/strong>件/);
+  assert.match(html, /id="book-match-count">134<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

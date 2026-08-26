@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-26 — プリエト／ピアトコフスキ『グアテマラ大洋間鉄道に関する概説』新規公開
+
+- 1880年刊『Ideas generales sobre el Ferrocarril Interoceánico de Guatemala』の原刊表紙、標題紙、献辞、本文5–60頁、付録、裏表紙を日本語全訳とし、PDF 37頁・EPUBで公開した。原刊の空白頁は省略した。
+- 底本はUniversidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵Colección Luis Luján Muñoz本をInternet Archiveが公開するスキャン（`ideasgeneralesso00alejguat`）。原著はパブリックドメインで、Internet Archiveの公開メタデータはPossible copyright statusを「NOT IN COPYRIGHT」とする。標題紙と裏表紙画像は同スキャンから採録した。
+- 公開PDFのSHA-256は `caed4c495b65cf78bee5d1fa0b498bd0c12e3071fa82ada9042014a85015ef96`、EPUBは `7adf029058c13e0f5801f45348071876f082d9d104820b41f262ba6bcbfa21ad`。編集可能正本は非公開原本アーカイブのコミット `a5ee1ecbc334d840df56c62d98e42413b5bd2809` に保存した。
+- 公開識別子：`prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880`
+
 ## 2026-08-26 — グスタボ・バス／エドゥアルド・L・ガリョ『メキシコ鉄道史』新規公開
 
 - 1874年刊『Historia del Ferrocarril Mexicano』の前付、本文5–296頁、図版・肖像・折込図を日本語全訳とし、PDF 462頁・EPUBで公開した。原刊位置標識292件、図版等38点、表143点、注87件を収録した。

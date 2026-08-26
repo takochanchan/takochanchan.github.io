@@ -6,6 +6,48 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
+    "title": "グアテマラ大洋間鉄道に関する概説",
+    "originalTitle": "Ideas generales sobre el Ferrocarril Interoceánico de Guatemala",
+    "subtitle": "1880年刊 日本語全訳",
+    "author": "アレハンドロ・プリエト／R・ピアトコフスキ",
+    "originalAuthor": "Alejandro Prieto / R. Piatkowski",
+    "series": "FERROCARRIL INTEROCEÁNICO · 1880",
+    "originalPublication": "グアテマラ、タラセナ父子印刷所、1880年",
+    "year": 1880,
+    "extent": "PDF 37頁・原刊本文5–60頁・表14点・図版2点・注4件",
+    "description": "グアテマラを大西洋岸と太平洋岸で結ぶ大洋間鉄道について、路線、軌間、建設費、資金調達、輸送需要、政府契約を検討し、サン・ホセ―エスクイントラ線の収支見積りと各国の運河計画を付録に収めた1880年刊の鉄道計画書です。",
+    "cover": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/cover.jpg",
+    "pdf": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.pdf",
+    "epub": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.epub",
+    "pageCount": 37,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "鉄道史",
+      "交通史",
+      "経済史",
+      "一次史料"
+    ],
+    "regions": [
+      "グアテマラ",
+      "サン・ホセ",
+      "エスクイントラ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "グアテマラ大洋間鉄道",
+      "鉄道建設",
+      "鉄道軌間",
+      "輸送",
+      "資金調達",
+      "運河計画",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "baz-gallo-historia-ferrocarril-mexicano-1874",
     "title": "メキシコ鉄道史",
     "originalTitle": "Historia del Ferrocarril Mexicano",
@@ -8814,6 +8856,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880": {
+    "sourceEdition": "Alejandro Prieto and R. Piatkowski, Ideas generales sobre el Ferrocarril Interoceánico de Guatemala, Guatemala: Imprenta de Taracena é Hijos, 1880.",
+    "sourceProvider": "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵Colección Luis Luján Muñoz本をInternet Archiveが公開するスキャン（識別子 ideasgeneralesso00alejguat）を底本としました。",
+    "sourceUrl": "https://archive.org/details/ideasgeneralesso00alejguat",
+    "rights": "原著はパブリックドメインに属します。Internet Archiveの公開メタデータはPossible copyright statusを「NOT IN COPYRIGHT」としています。標題紙および裏表紙画像は同公開スキャンから採録しました。",
+    "publishedDate": "2026-08-26",
+    "updatedDate": "2026-08-26"
+  },
   "baz-gallo-historia-ferrocarril-mexicano-1874": {
     "sourceEdition": "Gustavo Baz and Eduardo L. Gallo, Historia del Ferrocarril Mexicano: riqueza de México en la zona del Golfo á la Mesa Central, bajo su aspecto geológico, agrícola, manufacturero y comercial, México: Gallo y Compañía, 1874.",
     "sourceProvider": "University of Michigan Library所蔵本をGoogle BooksとHathiTrustが公開する1874年初版（Google Books 2lYzAQAAMAAJ／HathiTrust mdp.39015046460427）を主底本としました。判読困難な一部図版は、Google Booksで公開される1875年版（x6CEcgMw1IAC）の同一図版で補いました。",

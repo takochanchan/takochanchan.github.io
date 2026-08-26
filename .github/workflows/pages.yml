@@ -1,154 +1,50 @@
-name: Publish Prieto and Piatkowski translation
+name: Deploy archive to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-    paths:
-      - ".github/workflows/pages.yml"
-      - ".publication-requests/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880-v1.json"
   workflow_dispatch:
 
 permissions:
-  contents: write
-  actions: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: publish-prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880
-  cancel-in-progress: false
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  publish:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
-    env:
-      SLUG: "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880"
-      PDF_NAME: "Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.pdf"
-      EPUB_NAME: "Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.epub"
-      PDF_SHA256: "caed4c495b65cf78bee5d1fa0b498bd0c12e3071fa82ada9042014a85015ef96"
-      EPUB_SHA256: "7adf029058c13e0f5801f45348071876f082d9d104820b41f262ba6bcbfa21ad"
-      COVER_SHA256: "57b6d99e6194fbd45e0398ef319a19128b72e1dc1b27339335cbf7db2c6f0a4b"
-      PDF_SIZE: "1718059"
-      EPUB_SIZE: "19560262"
-      COVER_SIZE: "273638"
-      PDF_PAGES: "37"
-      BUNDLE_SHA256: "e3d08222c478953c20e5878cb3790b1e5549a7b6d321fb6bd93a947c0a1faa23"
-      BUNDLE_SIZE: "21287430"
-      RELEASE_TAG: "publications-current"
-      BASE_MAIN_SHA: "fbc091e18f0316aed286f32c039b41233675a653"
-      ARCHIVE_COMMIT: "a5ee1ecbc334d840df56c62d98e42413b5bd2809"
-      REQUEST_PATH: ".publication-requests/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880-v1.json"
-      ASSET_BLOBS: "76188bbc5e206424842e392f10e630dde217e65e 9f561894b30792126cbf587bd45ec045fe69f0b7 87ff99aab2993016edbd3344acc7275fc60f58ac 1c6c4ea362a0c9198c786e2d49032082877966bc 4eb719bb5ac1b8caf3dc6e91fbf3d7c81d11a1ba 9b255d1faa45187a3b35cee320986ba17c4fb4f8 1ddb9b26aac62dea68c6d3466de7c24db0975f21 28070babb2efe0e3663026861d04c48c9cb64b87 85f83870304bb4cc3b832686a69d6ef0654dcef9 a9867ee99b29422301e53000ca57b5010c28c1a0 fc5d9ae0e0dcc4578928b1dba181fb298801e897 143426cf42c14b517b9d9498df31b64de3e648ad a287a827baf2e3ce03f86ef8e4947e1915a50b36 2fecb10609923692ab58bf7d2019f677722a3c2c d95e4170c46840e337567192cbf48b0feb1d2420 21dc003b57ab8e68d4582f93bb305df7c230c01a 9e58faa48c2b64bb6570cc0f9727ed0431b94ce3 381f54accb97c5ce0f39d72719d59ee83071ea17 d299253fac8d40435b2461d1d65a01f43bd62912 6f8171523827eb208b054869114cc907c7906a0f f24c219f62f7e625d56a61b7f90547f6ce269559 6b0356538ab28bc33881f499dff0d76558d3381a b559d2cfadb1ad104a1042e4c307c9b601e2d1e7 3ee0180f67a7711f70d31fdd839d18f1eeb937ec 846a5d155ca39feab88236160a34d291543f9bbf 3cbdd63afd48ae028a697de13b05f6ac4c0f4cae 440f654a139277997695ec1f49d104bea14ab1a8 baf93b382e27a0efb21a1484cd1e13ec7c091ca2 fdc8cc5db9014d9879514a38297d7dc138ccf5a1 360fa6d29055edadfb96d37b7a8909b0cf9af8e2 f2e1261821cdac96b34eb55c71446c306c401054"
-      GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Check out publication request
+      - name: Check out source
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Reconstruct and verify approved files
-        shell: bash
-        run: |
-          set -euo pipefail
-          bundle="$RUNNER_TEMP/prieto-public-assets.tar.gz"
-          assets="$RUNNER_TEMP/prieto-public-assets"
-          : > "$bundle"
-          for sha in $ASSET_BLOBS; do
-            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content | tr -d '\n' | base64 --decode >> "$bundle"
-          done
-          test "$(stat -c%s "$bundle")" = "$BUNDLE_SIZE"
-          echo "$BUNDLE_SHA256  $bundle" | sha256sum -c -
-          mkdir -p "$assets"
-          tar -xzf "$bundle" -C "$assets"
-          pdf_src="$(find "$assets" -type f -name "$PDF_NAME" -print -quit)"
-          epub_src="$(find "$assets" -type f -name "$EPUB_NAME" -print -quit)"
-          cover_src="$(find "$assets" -type f -name '*.jpg' -print -quit)"
-          test -n "$pdf_src" && test -n "$epub_src" && test -n "$cover_src"
-          test "$(stat -c%s "$pdf_src")" = "$PDF_SIZE"
-          test "$(stat -c%s "$epub_src")" = "$EPUB_SIZE"
-          test "$(stat -c%s "$cover_src")" = "$COVER_SIZE"
-          echo "$PDF_SHA256  $pdf_src" | sha256sum -c -
-          echo "$EPUB_SHA256  $epub_src" | sha256sum -c -
-          echo "$COVER_SHA256  $cover_src" | sha256sum -c -
-          mkdir -p "$RUNNER_TEMP/approved"
-          cp "$pdf_src" "$RUNNER_TEMP/approved/$PDF_NAME"
-          cp "$epub_src" "$RUNNER_TEMP/approved/$EPUB_NAME"
-          cp "$cover_src" "$RUNNER_TEMP/approved/cover.jpg"
-
-      - name: Install verification tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y poppler-utils unzip tesseract-ocr
-
-      - name: Verify PDF and EPUB structure
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "$(pdfinfo "$RUNNER_TEMP/approved/$PDF_NAME" | awk -F: '/^Pages/ {gsub(/[[:space:]]/, "", $2); print $2}')" = "$PDF_PAGES"
-          unzip -t "$RUNNER_TEMP/approved/$EPUB_NAME" >/dev/null
-
-      - name: Apply approved catalogue changes
-        shell: bash
-        run: |
-          set -euo pipefail
-          fetch_blob_file() {
-            local sha="$1" output="$2"
-            mkdir -p "$(dirname "$output")"
-            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content | tr -d '\n' | base64 --decode > "$output"
-          }
-          fetch_blob_file 2cef187747416504ccd9937e5d03e1c9eb6143bc src/publications.mjs
-          fetch_blob_file 38b119a12211947d66a2cd6fe0af1e8b6a68e311 master-archive.json
-          fetch_blob_file e0a8960f9942d5be296f9aafbde776be37f38d35 assets-manifest.json
-          fetch_blob_file 62ff70e2e2d7a23b86ff76495348aa3c09688b96 REVISION_LOG.md
-          fetch_blob_file acadd781c1b5f296c77318acf329dcaecfaf3453 scripts/validate-epubs.py
-          fetch_blob_file d9034ebd34e8ebb8aeebe40e92a11ec5108a2e45 tests/archive.test.mjs
-          mkdir -p "static/publications/$SLUG"
-          cp "$RUNNER_TEMP/approved/cover.jpg" "static/publications/$SLUG/cover.jpg"
-          grep -Fq "$SLUG" src/publications.mjs
-          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
-          grep -Fq "$EPUB_SHA256" assets-manifest.json
-          if grep -R -Fq '本日本語訳には再利用許諾を付与しない' src/publications.mjs master-archive.json REVISION_LOG.md; then exit 1; fi
-
-      - name: Publish approved release assets
-        shell: bash
-        run: |
-          set -euo pipefail
-          sums_dir="$RUNNER_TEMP/release-sums"
-          mkdir -p "$sums_dir"
-          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir "$sums_dir"
-          awk -v p="$PDF_NAME" -v e="$EPUB_NAME" '$2 != p && $2 != e' "$sums_dir/SHA256SUMS.txt" > "$sums_dir/SHA256SUMS.new"
-          printf '%s  %s\n%s  %s\n' "$PDF_SHA256" "$PDF_NAME" "$EPUB_SHA256" "$EPUB_NAME" >> "$sums_dir/SHA256SUMS.new"
-          LC_ALL=C sort -k2,2 "$sums_dir/SHA256SUMS.new" > "$sums_dir/SHA256SUMS.txt"
-          gh release upload "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --clobber \
-            "$RUNNER_TEMP/approved/$PDF_NAME" \
-            "$RUNNER_TEMP/approved/$EPUB_NAME" \
-            "$sums_dir/SHA256SUMS.txt"
-
-      - name: Verify published release bytes
-        shell: bash
-        run: |
-          set -euo pipefail
-          verify="$RUNNER_TEMP/release-verify"
-          mkdir -p "$verify"
-          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$PDF_NAME" --pattern "$EPUB_NAME" --pattern SHA256SUMS.txt --dir "$verify"
-          test "$(stat -c%s "$verify/$PDF_NAME")" = "$PDF_SIZE"
-          test "$(stat -c%s "$verify/$EPUB_NAME")" = "$EPUB_SIZE"
-          echo "$PDF_SHA256  $verify/$PDF_NAME" | sha256sum -c -
-          echo "$EPUB_SHA256  $verify/$EPUB_NAME" | sha256sum -c -
-          test "$(pdfinfo "$verify/$PDF_NAME" | awk -F: '/^Pages/ {gsub(/[[:space:]]/, "", $2); print $2}')" = "$PDF_PAGES"
-          unzip -t "$verify/$EPUB_NAME" >/dev/null
-          grep -Fxq "$PDF_SHA256  $PDF_NAME" "$verify/SHA256SUMS.txt"
-          grep -Fxq "$EPUB_SHA256  $EPUB_NAME" "$verify/SHA256SUMS.txt"
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install site dependencies
+      - name: Install build dependencies
         run: npm ci
 
-      - name: Restore full-text asset cache
-        uses: actions/cache/restore@v4
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Restore generated full-text index
+        id: search-index-cache
+        uses: actions/cache@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Restore final PDF and EPUB inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -157,28 +53,50 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
-      - name: Build and verify complete site
-        shell: bash
+      - name: Ensure PDF text and OCR tools are available
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
         run: |
-          set -euo pipefail
-          npm run build
-          npm test
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
 
-      - name: Commit publication and restore normal deployment workflow
-        shell: bash
-        run: |
-          set -euo pipefail
-          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
-          git checkout "$BASE_MAIN_SHA" -- .github/workflows/pages.yml
-          rm -f "$REQUEST_PATH"
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -A
-          git diff --cached --check
-          git commit -m 'Publish Prieto and Piatkowski Guatemala railroad study'
-          git push origin HEAD:main
+      - name: Fetch checksum-verified search inputs
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run fetch:search-assets
 
-      - name: Deploy published site
-        shell: bash
-        run: gh workflow run pages.yml --ref main
+      - name: Generate full-text search index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        run: npm run build:search
 
+      - name: Save generated full-text index
+        if: steps.search-index-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: dist/search
+          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
+
+      - name: Verify full-text index coverage and page maps
+        run: npm run verify:search
+
+      - name: Validate archive
+        run: npm test
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Let repository initialization finish
+        run: sleep 45
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
