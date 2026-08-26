@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 282);
+  assert.equal(publications.length, 283);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -74,7 +74,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 5);
+  assert.equal(counts.get("002"), 6);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -84,6 +84,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "bury-bishop-amongst-bananas-1911",
       "squier-visit-guajiquero-indians-1859",
       "squier-volcanoes-central-america-1859",
       "squier-hunting-pass-tropical-adventure-1860",
@@ -103,7 +104,13 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.throws(
     () =>
       validateSearchShardAssignments(
-        [...publications, { ...publications[0], slug: "future-work" }],
+        [
+          ...publications,
+          {
+            ...publications.find((publication) => publication.searchShard === "001"),
+            slug: "future-work",
+          },
+        ],
         config,
       ),
     /Search shard 001 is sealed at 277 works; found 278/,
@@ -562,6 +569,29 @@ test("Otis Panama Railroad history retains its approved complete scope and insti
   assert.equal(item.updatedDate, "2026-08-25");
 });
 
+test("Bury Bishop amongst Bananas retains its approved complete scope and public-domain display", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "bury-bishop-amongst-bananas-1911",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "ハーバート・ベリー");
+  assert.equal(item.originalAuthor, "Herbert Bury");
+  assert.equal(item.pageCount, 186);
+  assert.equal(item.figureCount, 19);
+  assert.equal(item.plateCount, 15);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊本文236頁/);
+  assert.match(item.description, /バナナ農園と鉄道/);
+  assert.match(item.sourceProvider, /University of California Libraries/);
+  assert.match(item.sourceProvider, /bishopamongstban00buryrich/);
+  assert.match(item.sourceProvider, /Wikimedia Commons/);
+  assert.match(item.rights, /Public Domain（PD-US-expired）/);
+  assert.doesNotMatch(item.rights, /日本語翻訳版|再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Squier Nicaragua retains its approved complete scope and supplementary-source rights display", () => {
   const item = publications.find(
     (publication) => publication.slug === "squier-nicaragua-1852",
@@ -644,7 +674,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 134);
+  assert.equal(majorPublications.length, 135);
   assert.equal(shortPublications.length, 148);
   assert.equal(shortPublicationAuthors.length, 35);
   assert.deepEqual(
@@ -1752,7 +1782,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">134<\/strong>件/);
+  assert.match(html, /id="book-match-count">135<\/strong>件/);
   assert.match(html, /id="paper-match-count">148<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

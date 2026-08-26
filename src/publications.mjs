@@ -11,6 +11,55 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "bury-bishop-amongst-bananas-1911",
+    "title": "バナナの中の主教",
+    "originalTitle": "A Bishop amongst Bananas",
+    "subtitle": "「仰ぎ見る」・1911年刊 日本語全訳",
+    "author": "ハーバート・ベリー",
+    "originalAuthor": "Herbert Bury",
+    "series": "A BISHOP AMONGST BANANAS · 1911",
+    "originalPublication": "ロンドン、Wells Gardner, Darton & Co., Ltd.、[1911年]",
+    "year": 1911,
+    "extent": "1巻・PDF 186頁・原刊本文236頁・原刊図版15葉・巻頭画像4点",
+    "description": "英国国教会主教ハーバート・ベリーが、英領ホンジュラスからグアテマラ、ニカラグア、コスタリカ、パナマ、ジャマイカへ赴いた巡察旅行を記した1911年刊の旅行記です。バナナ農園と鉄道、洪水・地震・火山、パナマ運河工事、各地の教会と社会を全16章で描きます。",
+    "cover": "publications/bury-bishop-amongst-bananas-1911/cover.jpg",
+    "pdf": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.pdf",
+    "epub": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
+    "pageCount": 186,
+    "figureCount": 19,
+    "plateCount": 15,
+    "types": [
+      "旅行記",
+      "宗教史",
+      "社会史",
+      "植民地史",
+      "一次史料"
+    ],
+    "regions": [
+      "中央アメリカ",
+      "英領ホンジュラス",
+      "ベリーズ",
+      "グアテマラ",
+      "ニカラグア",
+      "コスタリカ",
+      "パナマ",
+      "ジャマイカ"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "ハーバート・ベリー",
+      "英国国教会",
+      "バナナ産業",
+      "ユナイテッド・フルーツ・カンパニー",
+      "パナマ運河",
+      "鉄道",
+      "20世紀初頭"
+    ],
+    "searchShard": "002"
+  },
+  {
     "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
     "title": "グアテマラ大洋間鉄道に関する概説",
     "originalTitle": "Ideas generales sobre el Ferrocarril Interoceánico de Guatemala",
@@ -8980,6 +9029,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "bury-bishop-amongst-bananas-1911": {
+    "sourceEdition": "Herbert Bury, A Bishop amongst Bananas, London: Wells Gardner, Darton & Co., Ltd., [1911].",
+    "sourceProvider": "University of California Libraries所蔵本をInternet Archiveがデジタル化した資料（識別子 bishopamongstban00buryrich）を底本としました。Wikimedia Commonsが同本を298頁のPDFとして公開しています。",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bishop_amongst_bananas_(IA_bishopamongstban00buryrich).pdf",
+    "rights": "原著および原刊図版はPublic Domain（PD-US-expired）です。University of California Libraries所蔵本をInternet Archiveがデジタル化し、Wikimedia Commonsは当該298頁PDFをPublic Domainとして公開しています。",
+    "publishedDate": "2026-08-27",
+    "updatedDate": "2026-08-27"
+  },
   "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880": {
     "sourceEdition": "Alejandro Prieto and R. Piatkowski, Ideas generales sobre el Ferrocarril Interoceánico de Guatemala, Guatemala: Imprenta de Taracena é Hijos, 1880.",
     "sourceProvider": "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵Colección Luis Luján Muñoz本をInternet Archiveが公開するスキャン（識別子 ideasgeneralesso00alejguat）を底本としました。",
