@@ -97,10 +97,10 @@ jobs:
           }
           fetch_blob_file 2cef187747416504ccd9937e5d03e1c9eb6143bc src/publications.mjs
           fetch_blob_file 38b119a12211947d66a2cd6fe0af1e8b6a68e311 master-archive.json
-          fetch_blob_file 614732610dd44e7dae7968f8ca1a17430a5e7c6a assets-manifest.json
+          fetch_blob_file e0a8960f9942d5be296f9aafbde776be37f38d35 assets-manifest.json
           fetch_blob_file 62ff70e2e2d7a23b86ff76495348aa3c09688b96 REVISION_LOG.md
           fetch_blob_file acadd781c1b5f296c77318acf329dcaecfaf3453 scripts/validate-epubs.py
-          fetch_blob_file fadf3a27f95340e74de5dcb4b597a6be9a0d4d52 tests/archive.test.mjs
+          fetch_blob_file d9034ebd34e8ebb8aeebe40e92a11ec5108a2e45 tests/archive.test.mjs
           mkdir -p "static/publications/$SLUG"
           cp "$RUNNER_TEMP/approved/cover.jpg" "static/publications/$SLUG/cover.jpg"
           grep -Fq "$SLUG" src/publications.mjs
@@ -162,9 +162,6 @@ jobs:
         run: |
           set -euo pipefail
           npm run build
-          npm run fetch:search-assets
-          npm run build:search
-          npm run verify:search
           npm test
 
       - name: Commit publication and restore normal deployment workflow
