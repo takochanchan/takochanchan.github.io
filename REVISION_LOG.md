@@ -5,7 +5,7 @@
 - 1874年刊『Historia del Ferrocarril Mexicano』の前付、本文5–296頁、図版・肖像・折込図を日本語全訳とし、PDF 462頁・EPUBで公開した。原刊位置標識292件、図版等38点、表143点、注87件を収録した。
 - 全冊の本文・表・注・図版順を原刊と照合し、最終DOCXと公開PDF全462頁を描画・検査した。ベラクルス駅図版は正立方向へ修正し、キャプションを図版直下に配置した。公開PDFの画像復号、フォント埋込み、頁境界も確認した。
 - 主底本はUniversity of Michigan Library所蔵本をGoogle BooksとHathiTrustが公開する1874年初版（Google Books `2lYzAQAAMAAJ`／HathiTrust `mdp.39015046460427`）。判読困難な一部図版のみGoogle Booksの1875年版（`x6CEcgMw1IAC`）で補った。主底本はHathiTrustで`Public Domain〔pd〕／Full view`、補助版はGoogle Booksで`Public domain／Full view`と表示され、公開機関による別個のライセンス付与は確認していない。日本語翻訳版には再利用ライセンスを設定していない。
-- 公開PDFのSHA-256は `da1cbef53de8d9a51d25a3d01125a02c5288d39d9fd6b564821754d014c54abd`、EPUBは `186e1c54b2e002bb0bad9445e988c8b7259a35643d4318b1243370387bc07a03`、DOCX正本は `78d279583fba0e4f233038bb2398bcccf28504b57d6b3c35791cf07601f0c6d6`。編集可能正本は非公開原本アーカイブのコミット `e3ee8004f8c60355ffcbdafff6171f0b209e67d8` に保存した。
+- 公開PDFのSHA-256は `da1cbef53de8d9a51d25a3d01125a02c5288d39d9fd6b564821754d014c54abd`、EPUBは `be78eb7f0777ea23de800c339f742c9fa2ebc22a1037679f10f7ca80fc97720d`、DOCX正本は `78d279583fba0e4f233038bb2398bcccf28504b57d6b3c35791cf07601f0c6d6`。編集可能正本は非公開原本アーカイブのコミット `0f07390619662c80335b48182e9aaf155c7cefb9` に保存した。
 - 公開識別子：`baz-gallo-historia-ferrocarril-mexicano-1874`。
 
 ## 2026-08-26 — スクワイア／デイヴィス『ミシシッピ川流域の古代遺構』新規公開
