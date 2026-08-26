@@ -103,6 +103,44 @@ test("public bibliography omits production boilerplate", () => {
   );
 });
 
+test("Spanish American Republics keeps unsigned authorship and the true 337–344 scope", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "squier-spanish-american-republics-1850",
+  );
+  assert.ok(item);
+  assert.equal(item.author, "無署名");
+  assert.equal(item.originalAuthor, "Anonymous");
+  assert.equal(item.attributedTo, "Ephraim George Squier");
+  assert.equal(item.attributionStatus, "tentative");
+  assert.match(item.attributionNote, /原刊は無署名/);
+  assert.match(item.attributionNote, /後世の暫定帰属/);
+  assert.equal(item.authorKey, "anonymous-american-whig-review");
+  assert.match(item.originalPublication, /337–344頁/);
+  assert.doesNotMatch(item.originalPublication, /337–352頁/);
+  assert.match(item.sourceEdition, /pp\. 337–344/);
+  assert.match(item.sourceEdition, /p\. 345から別稿 “Our Foreign Relations”/);
+
+  const html = await readFile(
+    path.join(dist, "publications", item.slug, "index.html"),
+    "utf8",
+  );
+  assert.ok(html.includes(escapeHtml(item.attributionNote)));
+  assert.match(html, /後世の暫定帰属：Ephraim George Squier/);
+  const match = html.match(
+    /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
+  );
+  assert.ok(match);
+  const records = JSON.parse(match[1]);
+  const work = records.find((record) => record["@id"]?.endsWith("#work"));
+  assert.equal(work.author.name, "Anonymous");
+  assert.equal(work.translationOfWork.author.name, "Anonymous");
+  assert.equal(work.translationOfWork.creditText, item.attributionNote);
+  assert.equal(
+    work.translationOfWork.additionalProperty.value,
+    "tentative",
+  );
+});
+
 test("Strangeways Mosquito Shore retains the approved complete scope", () => {
   const item = publications.find(
     (publication) => publication.slug === "strangeways-mosquito-shore-1822",

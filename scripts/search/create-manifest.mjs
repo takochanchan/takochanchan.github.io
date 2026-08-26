@@ -40,6 +40,9 @@ const selectedPublications = searchShard
 const assetManifestBytes = await readFile(
   path.join(projectRoot, "assets-manifest.json"),
 );
+const bibliographicManifestBytes = await readFile(
+  path.join(projectRoot, "bibliographic-manifest.json"),
+);
 const assetManifest = JSON.parse(assetManifestBytes.toString("utf8"));
 const archiveLedger = JSON.parse(
   await readFile(path.join(projectRoot, "master-archive.json"), "utf8"),
@@ -82,6 +85,12 @@ for (const publication of selectedPublications) {
     slug: publication.slug,
     title: publication.title,
     author: publication.author,
+    originalTitle: publication.originalTitle,
+    originalAuthor: publication.originalAuthor ?? null,
+    originalPublication: publication.originalPublication,
+    attributedTo: publication.attributedTo ?? null,
+    attributionStatus: publication.attributionStatus ?? null,
+    attributionNote: publication.attributionNote ?? null,
     recordClass: publication.recordClass,
     url: `/publications/${publication.slug}/`,
     pdfUrl: publication.pdfUrl,
@@ -104,6 +113,9 @@ const manifest = {
   archiveCommit: archiveLedger.archive_commit,
   assetManifestSha256: createHash("sha256")
     .update(assetManifestBytes)
+    .digest("hex"),
+  bibliographicManifestSha256: createHash("sha256")
+    .update(bibliographicManifestBytes)
     .digest("hex"),
   works,
 };

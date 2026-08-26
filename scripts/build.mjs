@@ -127,6 +127,11 @@ const catalogueAuthorMarkup = (item) =>
     ? `<span class="catalogue-author__original">${escapeHtml(item.originalAuthor)}</span><span class="catalogue-author__japanese">${escapeHtml(item.author)}</span>`
     : escapeHtml(item.author);
 
+const catalogueAttributionMarkup = (item, className) =>
+  item.attributedTo
+    ? `<p class="${className}">後世の暫定帰属：${escapeHtml(item.attributedTo)}</p>`
+    : "";
+
 const publicationCard = (item) => `
   <article class="record-card">
     <a class="record-card__cover" href="/publications/${escapeHtml(item.slug)}/">
@@ -140,6 +145,7 @@ const publicationCard = (item) => `
       <h3><a href="/publications/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}</a></h3>
       ${item.originalAuthor ? "" : catalogueOriginalTitleMarkup(item, "record-card__original-title")}
       <p class="record-card__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
+      ${catalogueAttributionMarkup(item, "record-card__attribution")}
       <p class="record-card__subtitle">${escapeHtml(item.subtitle)}</p>
       <div class="tag-list">
         ${[item.types[0], item.regions[0], item.languages[0]]
@@ -778,6 +784,16 @@ const publicationStructuredData = (item, isShortWork) => {
       ? { author: { "@type": "Person", name: item.originalAuthor } }
       : {}),
     ...(item.sourceUrl ? { url: item.sourceUrl } : {}),
+    ...(item.attributionNote ? { creditText: item.attributionNote } : {}),
+    ...(item.attributionStatus
+      ? {
+          additionalProperty: {
+            "@type": "PropertyValue",
+            name: "attributionStatus",
+            value: item.attributionStatus,
+          },
+        }
+      : {}),
   };
   return [
     {
@@ -789,7 +805,10 @@ const publicationStructuredData = (item, isShortWork) => {
       alternateName: item.originalTitle,
       ...(isShortWork ? { headline: item.title } : {}),
       description: item.description,
-      author: { "@type": "Person", name: item.author },
+      author:
+        item.originalAuthor === "Anonymous"
+          ? { "@type": "Person", name: "Anonymous", alternateName: item.author }
+          : { "@type": "Person", name: item.author },
       inLanguage: "ja",
       datePublished: item.publishedDate,
       dateModified: item.updatedDate,
@@ -884,6 +903,7 @@ ${header({
           ${item.originalAuthor ? "" : catalogueOriginalTitleMarkup(item, "publication-hero__original-title")}
           <p class="publication-hero__subtitle">${escapeHtml(item.subtitle)}</p>
           <p class="publication-hero__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
+          ${catalogueAttributionMarkup(item, "publication-hero__attribution")}
           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
           <div class="publication-actions">
@@ -915,6 +935,14 @@ ${header({
             <dt>底本</dt>
             <dd>${escapeHtml(item.sourceEdition)}</dd>
           </div>
+          ${
+            item.attributionNote
+              ? `<div class="publication-info__wide">
+            <dt>著者帰属</dt>
+            <dd>${escapeHtml(item.attributionNote)}</dd>
+          </div>`
+              : ""
+          }
           ${
             item.majorSources?.length
               ? `<div class="publication-info__wide">

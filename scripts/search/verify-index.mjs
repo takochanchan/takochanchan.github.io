@@ -43,6 +43,15 @@ const archive = JSON.parse(
 const assetManifestBytes = await readFile(
   path.join(projectRoot, "assets-manifest.json"),
 );
+const bibliographicManifestBytes = await readFile(
+  path.join(projectRoot, "bibliographic-manifest.json"),
+);
+const bibliographicManifest = JSON.parse(
+  bibliographicManifestBytes.toString("utf8"),
+);
+const strictBibliography = new Map(
+  bibliographicManifest.works.map((work) => [work.slug, work]),
+);
 const assetManifest = JSON.parse(assetManifestBytes.toString("utf8"));
 const assets = new Map(assetManifest.assets.map((asset) => [asset.path, asset]));
 const masterPathFor = (slug) =>
@@ -51,6 +60,9 @@ const masterPathFor = (slug) =>
   null;
 const expectedAssetSha = createHash("sha256")
   .update(assetManifestBytes)
+  .digest("hex");
+const expectedBibliographicSha = createHash("sha256")
+  .update(bibliographicManifestBytes)
   .digest("hex");
 const expectedSlugs = expectedPublications
   .map((publication) => publication.slug)
@@ -73,6 +85,9 @@ if (metadata.archiveCommit !== archive.archive_commit) {
 }
 if (metadata.assetManifestSha256 !== expectedAssetSha) {
   throw new Error("Search index uses a stale asset manifest");
+}
+if (metadata.bibliographicManifestSha256 !== expectedBibliographicSha) {
+  throw new Error("Search index uses a stale bibliographic manifest");
 }
 if (metadata.works !== expectedPublications.length) {
   throw new Error(
@@ -178,6 +193,20 @@ for (const publication of expectedPublications) {
   const pageMap = JSON.parse(await readFile(filename, "utf8"));
   const canonicalUrl = `/publications/${publication.slug}/`;
   if (pageMap.slug !== publication.slug) throw new Error(`Wrong map slug: ${filename}`);
+  for (const field of [
+    "title",
+    "author",
+    "originalTitle",
+    "originalAuthor",
+    "originalPublication",
+    "attributedTo",
+    "attributionStatus",
+    "attributionNote",
+  ]) {
+    if ((pageMap[field] ?? null) !== (publication[field] ?? null)) {
+      throw new Error(`${publication.slug}: stale ${field} in search map`);
+    }
+  }
   if (pageMap.canonicalUrl !== canonicalUrl) {
     throw new Error(`${publication.slug}: search result must open its bibliography page`);
   }
@@ -214,6 +243,7 @@ for (const publication of expectedPublications) {
   const blocks = Object.entries(pageMap.blocks || {});
   if (!blocks.length) throw new Error(`${publication.slug}: empty search page map`);
   const orders = new Set();
+  const sourcePages = new Set();
   for (const [blockId, mapping] of blocks) {
     if (!/^b\d{5}$/.test(blockId)) throw new Error(`${publication.slug}: unsafe block ID`);
     if (
@@ -233,6 +263,19 @@ for (const publication of expectedPublications) {
       throw new Error(`${publication.slug}: invalid source order`);
     }
     orders.add(mapping[2]);
+    for (const match of String(mapping[0]).matchAll(/原刊 p\.\s*(\d+)/gu)) {
+      sourcePages.add(Number(match[1]));
+    }
+  }
+  const strict = strictBibliography.get(publication.slug);
+  if (strict) {
+    const expectedMarkers = strict.sourcePages.markers;
+    if (
+      expectedMarkers.some((page) => !sourcePages.has(page)) ||
+      sourcePages.has(strict.sourcePages.nextWorkStartsAt)
+    ) {
+      throw new Error(`${publication.slug}: source-page scope differs from bibliography`);
+    }
   }
   if (orders.size !== blocks.length || Math.max(...orders) !== blocks.length - 1) {
     throw new Error(`${publication.slug}: duplicate or incomplete source order`);

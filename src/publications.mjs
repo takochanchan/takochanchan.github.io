@@ -237,6 +237,9 @@ const publicationRecords = [
     "subtitle": "『The American Whig Review』1850年10月号 日本語全訳",
     "author": "無署名",
     "originalAuthor": "Anonymous",
+    "attributedTo": "Ephraim George Squier",
+    "attributionStatus": "tentative",
+    "attributionNote": "原刊は無署名です。Don C. Seitz (1911), p. 52およびCharles Lee Stansifer (1968), p. 64は本稿をEphraim George Squierに帰属させますが、本サイトでは後世の暫定帰属として扱い、主著者表示には採用しません。",
     "series": "THE AMERICAN WHIG REVIEW · 1850",
     "originalPublication": "『The American Whig Review』第12巻第34号、1850年10月、337–344頁",
     "year": 1850,
@@ -251,7 +254,7 @@ const publicationRecords = [
     "types": ["政治史", "政治論", "論文", "一次史料"],
     "regions": ["中央アメリカ", "メキシコ", "グアテマラ", "エル・サルバドル"],
     "languages": ["英語"],
-    "tags": ["無署名", "E・G・スクワイア帰属", "スペイン系アメリカ", "中央アメリカ連邦", "イトゥルビデ", "自由派", "19世紀"]
+    "tags": ["無署名", "E・G・スクワイア暫定帰属", "スペイン系アメリカ", "中央アメリカ連邦", "イトゥルビデ", "自由派", "19世紀"]
   },
   {
     "slug": "squier-great-ship-canal-question-1850",
@@ -11431,7 +11434,7 @@ const publicationMetadata = {
     "updatedDate": "2026-08-26"
   },
   "squier-spanish-american-republics-1850": {
-    "sourceEdition": "Anonymous, “The Spanish American Republics, and the Causes of Their Failure. Central America,” The American Whig Review, vol. 12, no. 34, October 1850, pp. 337–344. 原刊は無署名。本稿は原刊p. 344で完結し、p. 345から別稿 “Our Foreign Relations” が始まります。Charles Lee Stansifer (1968), p. 64およびDon C. Seitz (1911), p. 52は本稿をEphraim George Squierに帰属させています。",
+    "sourceEdition": "Anonymous, “The Spanish American Republics, and the Causes of Their Failure. Central America,” The American Whig Review, vol. 12, no. 34, October 1850, pp. 337–344. 原刊は無署名。本稿は原刊p. 344で完結し、p. 345から別稿 “Our Foreign Relations” が始まります。Don C. Seitz (1911), p. 52およびCharles Lee Stansifer (1968), p. 64によるEphraim George Squierへの帰属は、後世の暫定帰属として扱います。",
     "sourceProvider": "HathiTrust Digital Library公開のCornell University Library所蔵本（coo.31924079893891）を底本とし、拡大照合にInternet Archive公開の同号（sim_american-whig-review_1850-10_12_34）を用いました。",
     "sourceUrl": "https://hdl.handle.net/2027/coo.31924079893891",
     "rights": "原著および原刊誌面はパブリックドメインに属します。HathiTrustの当該Cornell University Library所蔵本は、Book ViewerでPublic Domainと表示されています。",

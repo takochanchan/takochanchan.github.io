@@ -3,8 +3,11 @@
 ## 2026-08-26 — 「スペイン系アメリカ諸共和国とその失敗の原因――中央アメリカ」改訂
 
 - 本文冒頭に原刊標題を追加し、原刊p. 337直後に掲げた。公開PDFは13頁のまま、原刊p. 337–344の位置標識8件を収録する。
-- 原刊上の表示に従い著者表示を「無署名」とし、底本をHathiTrust Digital Library公開のCornell University Library所蔵本 `coo.31924079893891` に更新した。Internet Archive公開の同号 `sim_american-whig-review_1850-10_12_34` は拡大照合に用いた。
-- 公開PDFのSHA-256は `2fffdeb787c5c5d71eb45c81ee564108438d921920ef98c1dbfba5a39b6d01b1`、EPUBは `5ec451758c2baff4b409827435bbb06b097b118e7409f91d8bba0d729e683a84`。編集可能正本は非公開原本アーカイブのコミット `6773e05d255fd0c43858d7d7e58b1801be172a03` に保存した。
+- 原刊上の表示に従い主著者を `Anonymous`（表示：無署名）とした。Don C. Seitz（1911）p. 52およびCharles Lee Stansifer（1968）p. 64によるEphraim George Squierへの帰属は、後世の暫定帰属として主著者から分離した。
+- 原刊の連続頁を再確認し、本稿がp. 344末尾で完結し、p. 345から別稿 “Our Foreign Relations” が始まることを確認した。依頼時の337–352頁という範囲は採用せず、本稿の全収録範囲を337–344頁とした。
+- 底本をHathiTrust Digital Library公開のCornell University Library所蔵本 `coo.31924079893891` に更新した。Internet Archive公開の同号 `sim_american-whig-review_1850-10_12_34` は拡大照合に用いた。
+- PDF・EPUB・作品一覧・検索索引・引用用書誌の著者名、題名、頁範囲、暫定帰属、資産チェックサムを照合する `bibliographic-manifest.json` と自動検査を追加した。
+- 公開PDFのSHA-256は `395e843dd27b094b9bf5686f4200ad53136ca964dae1fbbb154b2715ad8c0f31`、EPUBは `01dcd13e077f4fb2276d35f840515f8904943357aef509014cc817eb0a944db6`。編集可能正本は非公開原本アーカイブのコミット `1d897fab06cb7aceae88571a153480bc3ed50d4c` に保存した。
 - 既存の公開識別子 `squier-spanish-american-republics-1850` とPDF・EPUBのファイル名は維持した。
 
 ## 2026-08-26 — E・G・スクワイア メキシコ・中央アメリカ論文5篇 新規公開

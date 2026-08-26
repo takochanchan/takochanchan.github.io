@@ -1251,6 +1251,12 @@ def build_work(manifest_path: Path, spec: dict) -> dict:
         "slug": slug,
         "title": spec["title"],
         "author": spec["author"],
+        "originalTitle": spec.get("originalTitle"),
+        "originalAuthor": spec.get("originalAuthor"),
+        "originalPublication": spec.get("originalPublication"),
+        "attributedTo": spec.get("attributedTo"),
+        "attributionStatus": spec.get("attributionStatus"),
+        "attributionNote": spec.get("attributionNote"),
         "recordClass": spec["recordClass"],
         "url": spec.get("url", f"/publications/{slug}/"),
         "pdfUrl": spec["pdfUrl"],
@@ -1296,6 +1302,9 @@ def main() -> int:
         "searchShard": manifest.get("searchShard"),
         "archiveCommit": manifest.get("archiveCommit"),
         "assetManifestSha256": manifest.get("assetManifestSha256"),
+        "bibliographicManifestSha256": manifest.get(
+            "bibliographicManifestSha256"
+        ),
         "works": works,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

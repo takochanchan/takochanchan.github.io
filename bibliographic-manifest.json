@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "works": [
+    {
+      "slug": "squier-spanish-american-republics-1850",
+      "title": "スペイン系アメリカ諸共和国とその失敗の原因――中央アメリカ",
+      "originalTitle": "The Spanish American Republics, and the Causes of Their Failure. Central America",
+      "author": "無署名",
+      "originalAuthor": "Anonymous",
+      "originalPublication": "『The American Whig Review』第12巻第34号、1850年10月、337–344頁",
+      "sourceCitation": "Anonymous, “The Spanish American Republics, and the Causes of Their Failure. Central America,” The American Whig Review, vol. 12, no. 34, October 1850, pp. 337–344.",
+      "sourcePages": {
+        "first": 337,
+        "last": 344,
+        "markers": [337, 338, 339, 340, 341, 342, 343, 344],
+        "nextWorkStartsAt": 345,
+        "nextWorkTitle": "Our Foreign Relations"
+      },
+      "attribution": {
+        "attributedTo": "Ephraim George Squier",
+        "status": "tentative",
+        "note": "原刊は無署名です。Don C. Seitz (1911), p. 52およびCharles Lee Stansifer (1968), p. 64は本稿をEphraim George Squierに帰属させますが、本サイトでは後世の暫定帰属として扱い、主著者表示には採用しません。"
+      },
+      "assets": {
+        "pdf": {
+          "path": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.pdf",
+          "size": 439827,
+          "sha256": "395e843dd27b094b9bf5686f4200ad53136ca964dae1fbbb154b2715ad8c0f31"
+        },
+        "epub": {
+          "path": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub",
+          "size": 166201,
+          "sha256": "01dcd13e077f4fb2276d35f840515f8904943357aef509014cc817eb0a944db6"
+        }
+      }
+    }
+  ]
+}

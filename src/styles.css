@@ -610,6 +610,13 @@ select {
   font-weight: 750;
 }
 
+.record-card__attribution {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+
 .catalogue-author {
   display: grid;
   gap: 0.18rem;
@@ -1301,6 +1308,13 @@ select {
   margin: 29px 0 16px;
   font-size: 17px;
   font-weight: 750;
+}
+
+.publication-hero__attribution {
+  margin: -7px 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 .publication-hero__record-class {

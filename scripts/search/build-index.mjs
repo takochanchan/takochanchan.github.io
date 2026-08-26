@@ -189,12 +189,21 @@ const pagefindDocumentMap = async (pagefindPath, expectedDocuments) => {
     const recordClass = fragment.meta?.recordClass;
     const partIndex = Number(fragment.meta?.searchPart);
     const key = `${slug}:${partIndex}`;
+    const expected = expectedDocuments.get(key);
     if (
-      !expectedDocuments.has(key) ||
+      !expected ||
       !["major-work", "short-work"].includes(recordClass) ||
       foundDocuments.has(key)
     ) {
       throw new Error(`Unexpected Pagefind search document: ${filename}`);
+    }
+    if (
+      fragment.meta?.title !== expected.title ||
+      fragment.meta?.author !== expected.author ||
+      fragment.meta?.url !== expected.url ||
+      fragment.meta?.pdfUrl !== expected.pdfUrl
+    ) {
+      throw new Error(`Stale Pagefind bibliography: ${filename}`);
     }
     foundDocuments.add(key);
     fragments[filename.replace(/\.pf_fragment$/, "")] = [
@@ -205,7 +214,7 @@ const pagefindDocumentMap = async (pagefindPath, expectedDocuments) => {
   }
   if (
     foundDocuments.size !== expectedDocuments.size ||
-    [...expectedDocuments].some((key) => !foundDocuments.has(key))
+    [...expectedDocuments.keys()].some((key) => !foundDocuments.has(key))
   ) {
     throw new Error(
       `Pagefind document map is incomplete: ${foundDocuments.size}/${expectedDocuments.size}`,
@@ -350,14 +359,19 @@ try {
     writePlayground: false,
     verbose: false,
   });
-  const expectedDocuments = new Set();
+  const expectedDocuments = new Map();
   for (const work of corpus.works) {
     if (!/^[a-z0-9-]+$/.test(work.slug)) {
       throw new Error("Unsafe slug: " + work.slug);
     }
     for (const part of searchPartsFor(work)) {
       const documentUrl = searchDocumentUrl(work.slug, part.index);
-      expectedDocuments.add(`${work.slug}:${part.index}`);
+      expectedDocuments.set(`${work.slug}:${part.index}`, {
+        title: work.title,
+        author: work.author,
+        url: work.url,
+        pdfUrl: work.pdfUrl,
+      });
       const result = await index.addHTMLFile({
         url: documentUrl,
         content: documentFor(work, part),
@@ -371,6 +385,14 @@ try {
     const map = {
       schemaVersion: 1,
       slug: work.slug,
+      title: work.title,
+      author: work.author,
+      originalTitle: work.originalTitle,
+      originalAuthor: work.originalAuthor,
+      originalPublication: work.originalPublication,
+      attributedTo: work.attributedTo,
+      attributionStatus: work.attributionStatus,
+      attributionNote: work.attributionNote,
       canonicalUrl: work.url,
       pdfUrl: work.pdfUrl,
       masterPath: work.masterPath,
@@ -431,6 +453,7 @@ try {
     prototype: buildPrototype,
     archiveCommit: corpus.archiveCommit,
     assetManifestSha256: corpus.assetManifestSha256,
+    bibliographicManifestSha256: corpus.bibliographicManifestSha256,
     works: corpus.works.length,
     workSlugs: corpus.works.map((work) => work.slug),
     books,

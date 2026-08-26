@@ -19,8 +19,20 @@ const archive = JSON.parse(
 const assetManifestBytes = await readFile(
   path.join(projectRoot, "assets-manifest.json"),
 );
+const bibliographicManifestBytes = await readFile(
+  path.join(projectRoot, "bibliographic-manifest.json"),
+);
+const bibliographicManifest = JSON.parse(
+  bibliographicManifestBytes.toString("utf8"),
+);
+const strictBibliography = new Map(
+  bibliographicManifest.works.map((work) => [work.slug, work]),
+);
 const assetManifestSha256 = createHash("sha256")
   .update(assetManifestBytes)
+  .digest("hex");
+const bibliographicManifestSha256 = createHash("sha256")
+  .update(bibliographicManifestBytes)
   .digest("hex");
 
 const fetchRequired = async (url, type) => {
@@ -41,7 +53,10 @@ for (const shard of config.shards) {
   const metadataUrl = new URL("search-meta.json", shard.baseUrl).href;
   const documentMapUrl = new URL("document-map.json", shard.baseUrl).href;
   const moduleUrl = new URL("pagefind/pagefind.js", shard.baseUrl).href;
-  const [metadata, documentMap, moduleSource] = await Promise.all([
+  const strictWorks = expected.filter((publication) =>
+    strictBibliography.has(publication.slug),
+  );
+  const [metadata, documentMap, moduleSource, strictMaps] = await Promise.all([
     fetchRequired(metadataUrl, "Search metadata").then((response) =>
       response.json(),
     ),
@@ -50,6 +65,14 @@ for (const shard of config.shards) {
     ),
     fetchRequired(moduleUrl, "Pagefind module").then((response) =>
       response.text(),
+    ),
+    Promise.all(
+      strictWorks.map((publication) =>
+        fetchRequired(
+          new URL(`maps/${publication.slug}.json`, shard.baseUrl).href,
+          "Strict bibliography search map",
+        ).then((response) => response.json()),
+      ),
     ),
   ]);
   const actualSlugs = [...(metadata.workSlugs || [])].sort();
@@ -65,6 +88,7 @@ for (const shard of config.shards) {
     metadata.searchShard !== shard.id ||
     metadata.archiveCommit !== archive.archive_commit ||
     metadata.assetManifestSha256 !== assetManifestSha256 ||
+    metadata.bibliographicManifestSha256 !== bibliographicManifestSha256 ||
     metadata.works !== expected.length ||
     JSON.stringify(actualSlugs) !== JSON.stringify(expectedSlugs) ||
     metadata.books !== expected.filter(
@@ -85,6 +109,39 @@ for (const shard of config.shards) {
     moduleSource.length < 1000
   ) {
     throw new Error(`Search shard ${shard.id} is stale or incomplete`);
+  }
+  for (const [index, publication] of strictWorks.entries()) {
+    const strict = strictBibliography.get(publication.slug);
+    const pageMap = strictMaps[index];
+    for (const field of [
+      "title",
+      "author",
+      "originalTitle",
+      "originalAuthor",
+      "originalPublication",
+      "attributedTo",
+      "attributionStatus",
+      "attributionNote",
+    ]) {
+      if ((pageMap[field] ?? null) !== (publication[field] ?? null)) {
+        throw new Error(`${publication.slug}: remote search ${field} is stale`);
+      }
+    }
+    if (pageMap.pdfSha256 !== strict.assets.pdf.sha256) {
+      throw new Error(`${publication.slug}: remote search PDF is stale`);
+    }
+    const sourcePages = new Set();
+    for (const mapping of Object.values(pageMap.blocks || {})) {
+      for (const match of String(mapping?.[0]).matchAll(/原刊 p\.\s*(\d+)/gu)) {
+        sourcePages.add(Number(match[1]));
+      }
+    }
+    if (
+      strict.sourcePages.markers.some((page) => !sourcePages.has(page)) ||
+      sourcePages.has(strict.sourcePages.nextWorkStartsAt)
+    ) {
+      throw new Error(`${publication.slug}: remote search source scope is stale`);
+    }
   }
   for (const slug of actualSlugs) {
     if (seenSlugs.has(slug)) {
