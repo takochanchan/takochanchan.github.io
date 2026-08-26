@@ -8,7 +8,7 @@
 - 底本をHathiTrust Digital Library公開のCornell University Library所蔵本 `coo.31924079893891` に更新した。Internet Archive公開の同号 `sim_american-whig-review_1850-10_12_34` は拡大照合に用いた。
 - PDF・EPUB・作品一覧・検索索引・引用用書誌の著者名、題名、頁範囲、暫定帰属、資産チェックサムを照合する `bibliographic-manifest.json` と自動検査を追加した。
 - 公開PDFのSHA-256は `395e843dd27b094b9bf5686f4200ad53136ca964dae1fbbb154b2715ad8c0f31`、EPUBは `01dcd13e077f4fb2276d35f840515f8904943357aef509014cc817eb0a944db6`。編集可能正本は非公開原本アーカイブのコミット `1d897fab06cb7aceae88571a153480bc3ed50d4c` に保存した。
-- 既存の公開識別子 `squier-spanish-american-republics-1850` とPDF・EPUBのファイル名は維持した。
+- 2026-08-27、検索索引の全件再構築が書誌マニフェスト検証を含めて完了した。公開Pages再配置の起動記録として本行を追加した。\n- 既存の公開識別子 `squier-spanish-american-republics-1850` とPDF・EPUBのファイル名は維持した。
 
 ## 2026-08-26 — E・G・スクワイア メキシコ・中央アメリカ論文5篇 新規公開
 
