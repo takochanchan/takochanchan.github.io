@@ -1,4 +1,4 @@
-name: Upload Squier batch 03 release assets
+name: Deploy archive to GitHub Pages
 
 on:
   push:
@@ -6,81 +6,58 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: squier-batch03-release-assets
+  group: pages
   cancel-in-progress: true
 
 jobs:
-  upload:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out staged release data
+      - name: Check out source
         uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          ref: agent/squier-batch03-release-assets-20260826-v1
-          path: staged
+          node-version: 22
 
-      - name: Reconstruct and verify release files
-        run: |
-          node --input-type=module <<'NODE'
-          import { createHash } from "node:crypto";
-          import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-          import { basename, join } from "node:path";
-          const root = "staged";
-          const manifest = JSON.parse(readFileSync(join(root, "manifest.json"), "utf8"));
-          mkdirSync("release-assets", { recursive: true });
-          for (const asset of manifest.assets) {
-            if (basename(asset.name) !== asset.name) throw new Error(`Invalid asset name: ${asset.name}`);
-            const bytes = Buffer.concat(asset.chunks.map((part) => readFileSync(join(root, part))));
-            const digest = createHash("sha256").update(bytes).digest("hex");
-            if (bytes.length !== asset.size || digest !== asset.sha256) {
-              throw new Error(`Checksum mismatch: ${asset.name}`);
-            }
-            writeFileSync(join("release-assets", asset.name), bytes);
-          }
-          NODE
+      - name: Install build dependencies
+        run: npm ci
 
-      - name: Upload release assets
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current" > release.json
-          node --input-type=module <<'NODE'
-          import { readFileSync, writeFileSync } from "node:fs";
-          const manifest = JSON.parse(readFileSync("staged/manifest.json", "utf8"));
-          const release = JSON.parse(readFileSync("release.json", "utf8"));
-          const existing = new Map(release.assets.map((asset) => [asset.name, asset]));
-          const pending = manifest.assets.filter((asset) => {
-            const remote = existing.get(asset.name);
-            return !remote || remote.size !== asset.size ||
-              remote.digest !== `sha256:${asset.sha256}` || remote.state !== "uploaded";
-          });
-          writeFileSync("needs-upload.txt", pending.map((asset) => asset.name).join("\n") + (pending.length ? "\n" : ""));
-          NODE
-          while IFS= read -r name; do
-            [ -z "$name" ] || gh release upload publications-current "release-assets/$name" --clobber --repo "$GITHUB_REPOSITORY"
-          done < needs-upload.txt
+      - name: Build archive pages
+        run: npm run build
 
-      - name: Download and verify uploaded assets
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          mkdir verified
-          for asset in release-assets/*; do
-            gh release download publications-current --pattern "$(basename "$asset")" --dir verified --repo "$GITHUB_REPOSITORY"
-          done
-          node --input-type=module <<'NODE'
-          import { createHash } from "node:crypto";
-          import { readFileSync } from "node:fs";
-          import { join } from "node:path";
-          const manifest = JSON.parse(readFileSync("staged/manifest.json", "utf8"));
-          for (const asset of manifest.assets) {
-            const bytes = readFileSync(join("verified", asset.name));
-            const digest = createHash("sha256").update(bytes).digest("hex");
-            if (bytes.length !== asset.size || digest !== asset.sha256) {
-              throw new Error(`Downloaded asset mismatch: ${asset.name}`);
-            }
-          }
-          NODE
+      - name: Validate archive
+        run: npm test
+
+      - name: Verify deployed full-text search shards
+        run: npm run verify:remote-search
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Let repository initialization finish
+        run: sleep 45
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+# Spanish American Republics bibliography deployment: 2026-08-27
