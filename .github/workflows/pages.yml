@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: squier-batch03-release-assets
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   upload:
@@ -45,7 +45,23 @@ jobs:
       - name: Upload release assets
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload publications-current release-assets/* --clobber --repo "$GITHUB_REPOSITORY"
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current" > release.json
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from "node:fs";
+          const manifest = JSON.parse(readFileSync("staged/manifest.json", "utf8"));
+          const release = JSON.parse(readFileSync("release.json", "utf8"));
+          const existing = new Map(release.assets.map((asset) => [asset.name, asset]));
+          const pending = manifest.assets.filter((asset) => {
+            const remote = existing.get(asset.name);
+            return !remote || remote.size !== asset.size ||
+              remote.digest !== `sha256:${asset.sha256}` || remote.state !== "uploaded";
+          });
+          writeFileSync("needs-upload.txt", pending.map((asset) => asset.name).join("\n"));
+          NODE
+          while IFS= read -r name; do
+            [ -z "$name" ] || gh release upload publications-current "release-assets/$name" --clobber --repo "$GITHUB_REPOSITORY"
+          done < needs-upload.txt
 
       - name: Download and verify uploaded assets
         env:
