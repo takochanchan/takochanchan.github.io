@@ -579,7 +579,7 @@ test("Bury Bishop amongst Bananas retains its approved complete scope and public
   assert.equal(item.author, "ハーバート・ベリー");
   assert.equal(item.originalAuthor, "Herbert Bury");
   assert.equal(item.pageCount, 186);
-  assert.equal(item.figureCount, 19);
+  assert.equal(item.figureCount, 4);
   assert.equal(item.plateCount, 15);
   assert.equal(item.searchShard, "002");
   assert.match(item.extent, /原刊本文236頁/);

@@ -30,7 +30,7 @@ const publicationRecords = [
     "pdf": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.pdf",
     "epub": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
     "pageCount": 186,
-    "figureCount": 19,
+    "figureCount": 4,
     "plateCount": 15,
     "types": [
       "旅行記",
