@@ -25,11 +25,26 @@ const extractorScript = await readFile(
   "utf8",
 );
 
+const queryVerifierScript = await readFile(
+  new URL("../scripts/search/verify-queries.mjs", import.meta.url),
+  "utf8",
+);
+
 test("search extractor preserves the shard identifier", () => {
   assert.match(
     extractorScript,
     /"searchShard": manifest\.get\("searchShard"\)/,
   );
+});
+
+test("small shards exit before Pagefind query initialization", () => {
+  const shardGuard = queryVerifierScript.indexOf(
+    "if (searchMetadata.works !== publications.length)",
+  );
+  const pagefindImport = queryVerifierScript.indexOf("const pagefindModule = await import(");
+  assert.ok(shardGuard >= 0 && pagefindImport > shardGuard);
+  assert.match(queryVerifierScript, /await new Promise\(\(resolve\) => server\.close\(resolve\)\)/);
+  assert.match(queryVerifierScript, /process\.exit\(0\)/);
 });
 
 test("initial result display is capped at ten snippets", () => {
