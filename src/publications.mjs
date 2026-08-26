@@ -6,6 +6,50 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "squier-davis-ancient-monuments-mississippi-valley-1848",
+    "title": "ミシシッピ川流域の古代遺構",
+    "originalTitle": "Ancient Monuments of the Mississippi Valley",
+    "subtitle": "広範な独自測量および踏査の成果を収録・1848年刊 日本語全訳",
+    "author": "E・G・スクワイア／E・H・デイヴィス",
+    "originalAuthor": "Ephraim George Squier / Edwin Hamilton Davis",
+    "series": "ANCIENT MONUMENTS · 1848",
+    "originalPublication": "ワシントン、Smithsonian Institution、1848年",
+    "year": 1848,
+    "extent": "1巻・原刊本文306頁・図版48枚・木口木版図207点・表14点",
+    "description": "スクワイアとデイヴィスが、オハイオおよびミシシッピ川流域の土塁、囲郭、マウンド、遺物を測量・発掘記録と図版によって体系化した、スミソニアン知識叢書第1巻（1848年）です。遺構の分類と分布、埋葬習俗、石・骨・金属・貝製品、彫刻、頭蓋計測、岩刻画を全19章に収めます。",
+    "cover": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/cover.jpg",
+    "pdf": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.pdf",
+    "epub": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
+    "pageCount": 468,
+    "figureCount": 207,
+    "plateCount": 48,
+    "types": [
+      "考古学",
+      "遺跡調査",
+      "考古学史",
+      "一次史料"
+    ],
+    "regions": [
+      "アメリカ合衆国",
+      "ミシシッピ川流域",
+      "オハイオ川流域",
+      "オハイオ州"
+    ],
+    "languages": [
+      "英語"
+    ],
+    "tags": [
+      "E・G・スクワイア",
+      "E・H・デイヴィス",
+      "マウンド・ビルダー",
+      "土塁遺構",
+      "マウンド",
+      "スミソニアン協会",
+      "北米考古学",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "squier-nicaragua-1852",
     "title": "ニカラグア",
     "originalTitle": "Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal",
@@ -8724,6 +8768,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "squier-davis-ancient-monuments-mississippi-valley-1848": {
+    "sourceEdition": "Ephraim George Squier and Edwin Hamilton Davis, Ancient Monuments of the Mississippi Valley: Comprising the Results of Extensive Original Surveys and Explorations, Smithsonian Contributions to Knowledge, Vol. I, Washington: Smithsonian Institution, 1848.",
+    "sourceProvider": "米国議会図書館所蔵の1848年初版デジタル個体（item 16012309）を主底本としました。スミソニアン図書館・アーカイブ所蔵同年版を校合に、Project Gutenberg ebook 49668の校正済み転写と図版を判読・照合補助に用いました。",
+    "sourceUrl": "https://www.loc.gov/item/16012309/",
+    "rights": "1848年刊の原著本文・図版はパブリックドメインです。米国議会図書館は当該コレクションの書籍を自由に利用・再利用できるものとして案内しています。Project Gutenberg転写は判読・照合補助に限って使用しました。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-26",
+    "updatedDate": "2026-08-26"
+  },
   "squier-nicaragua-1852": {
     "sourceEdition": "E. G. Squier, Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal. With Numerous Original Maps and Illustrations, 2 vols., London: Longman, Brown, Green, and Longmans, 1852.",
     "sourceProvider": "Getty Research Institute所蔵本をInternet Archiveが公開する全頁画像（identifiers: gri_nicaraguaits01squi, gri_nicaraguaits02squi）を主底本としました。欠落する第1巻321頁と対向彩色図、第2巻93頁・450–451頁は、Government of Maharashtra / Public Library of India公開本（india.history.resource.52994, 52995）およびUniversity of Toronto公開本（nicaraguaitspeop02squi）で補完しました。",

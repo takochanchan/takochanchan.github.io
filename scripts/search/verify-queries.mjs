@@ -260,6 +260,11 @@ try {
     "fernandez-historia-costa-rica-1889",
     1,
   );
+  const ancientMonumentsPrecision = await verifyPublicationQuery(
+    "数学的精密さ",
+    "squier-davis-ancient-monuments-mississippi-valley-1848",
+    1,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 275],
     ["グリハルバ川", grijalvaRiver, 75],
@@ -291,7 +296,8 @@ try {
       `国王の公秤 ${robertsRoyalScale} pages, ` +
       `文書庫を焼き ${barrazaArchiveBurning} pages, ` +
       `大西洋の波濤の彼方に輝く諸国 ${strangewaysClosing} pages, ` +
-      `川がなす二百九の湾曲または折返し ${fernandezClosing} pages.\n`,
+      `川がなす二百九の湾曲または折返し ${fernandezClosing} pages, ` +
+      `数学的精密さ ${ancientMonumentsPrecision} pages.\n`,
   );
 } finally {
   await api.destroy();

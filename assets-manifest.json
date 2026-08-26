@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
+      "size": 13466869,
+      "sha256": "d301edeb4e9202cb35b5bda0e0b6b5bf775a52a6b1366a97783c5eb599042e79"
+    },
+    {
+      "path": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.pdf",
+      "size": 11228774,
+      "sha256": "8c9aa0beb90e0573d8d903d5e90d3e9b48957c809d19532b3b6e37bf80bd6e1d"
+    },
+    {
+      "path": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-davis-ancient-monuments-mississippi-valley-1848/cover.jpg",
+      "size": 50389,
+      "sha256": "9f4b703ede147e5537301a068565335e46f7e38558052eb80a380bb5e5866edc"
+    },
+    {
       "path": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
       "size": 151624385,

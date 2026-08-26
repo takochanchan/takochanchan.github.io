@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 269);
+  assert.equal(publications.length, 270);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -449,6 +449,36 @@ test("Squier Nicaragua retains its approved complete scope and supplementary-sou
   assert.equal(item.updatedDate, "2026-08-26");
 });
 
+test("Squier and Davis Ancient Monuments retains its approved complete scope and institutional rights display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug ===
+      "squier-davis-ancient-monuments-mississippi-valley-1848",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "E・G・スクワイア／E・H・デイヴィス");
+  assert.equal(
+    item.originalAuthor,
+    "Ephraim George Squier / Edwin Hamilton Davis",
+  );
+  assert.equal(item.pageCount, 468);
+  assert.equal(item.figureCount, 207);
+  assert.equal(item.plateCount, 48);
+  assert.match(item.extent, /原刊本文306頁/);
+  assert.match(item.extent, /表14点/);
+  assert.match(item.description, /スミソニアン知識叢書第1巻/);
+  assert.match(item.sourceProvider, /米国議会図書館/);
+  assert.match(item.sourceProvider, /スミソニアン図書館・アーカイブ/);
+  assert.match(item.sourceProvider, /Project Gutenberg ebook 49668/);
+  assert.match(item.sourceUrl, /loc\.gov\/item\/16012309/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /自由に利用・再利用/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-26");
+  assert.equal(item.updatedDate, "2026-08-26");
+});
+
 test("Leonard Sigüenza monograph retains its approved complete scope", () => {
   const item = publications.find(
     (publication) =>
@@ -474,7 +504,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 131);
+  assert.equal(majorPublications.length, 132);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1569,7 +1599,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">131<\/strong>件/);
+  assert.match(html, /id="book-match-count">132<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
