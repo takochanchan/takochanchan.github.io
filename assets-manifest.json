@@ -758,6 +758,24 @@
       "sha256": "239ec2e086d45147f52a885cf456679a1f0779cf9e44e708c479c3c9cea76652"
     },
     {
+      "path": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
+      "size": 36657592,
+      "sha256": "2100190c2311b1f9e99ad9a171e70ac994dbe8977ab89b3dc89fb003f0d820d5"
+    },
+    {
+      "path": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.pdf",
+      "size": 6656200,
+      "sha256": "d7284c6066495b3cd6b8f25bbdfef69006ef63b6fb4bccb15f7929e5177f19d3"
+    },
+    {
+      "path": "publications/bury-bishop-amongst-bananas-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bury-bishop-amongst-bananas-1911/cover.jpg",
+      "size": 39113,
+      "sha256": "ce9a5c4bdeccf933a059d2f292bacf17d09b677645751d4a093cbfc131e03518"
+    },
+    {
       "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "size": 35544632,
