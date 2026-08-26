@@ -57,7 +57,7 @@ jobs:
             return !remote || remote.size !== asset.size ||
               remote.digest !== `sha256:${asset.sha256}` || remote.state !== "uploaded";
           });
-          writeFileSync("needs-upload.txt", pending.map((asset) => asset.name).join("\n"));
+          writeFileSync("needs-upload.txt", pending.map((asset) => asset.name).join("\n") + (pending.length ? "\n" : ""));
           NODE
           while IFS= read -r name; do
             [ -z "$name" ] || gh release upload publications-current "release-assets/$name" --clobber --repo "$GITHUB_REPOSITORY"
