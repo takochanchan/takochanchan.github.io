@@ -30,6 +30,11 @@ const queryVerifierScript = await readFile(
   "utf8",
 );
 
+const remoteShardVerifierScript = await readFile(
+  new URL("../scripts/search/verify-remote-shards.mjs", import.meta.url),
+  "utf8",
+);
+
 test("search extractor preserves the shard identifier", () => {
   assert.match(
     extractorScript,
@@ -45,6 +50,17 @@ test("small shards exit before Pagefind query initialization", () => {
   assert.ok(shardGuard >= 0 && pagefindImport > shardGuard);
   assert.match(queryVerifierScript, /await new Promise\(\(resolve\) => server\.close\(resolve\)\)/);
   assert.match(queryVerifierScript, /process\.exit\(0\)/);
+});
+
+test("sealed shards keep per-work verification without requiring current global hashes", () => {
+  assert.match(
+    remoteShardVerifierScript,
+    /const sealedShard = Number\.isInteger\(shard\.sealedWorks\)/,
+  );
+  assert.match(
+    remoteShardVerifierScript,
+    /\(!sealedShard && !currentGlobalMetadata\)/,
+  );
 });
 
 test("initial result display is capped at ten snippets", () => {
