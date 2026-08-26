@@ -55,6 +55,14 @@ export const readSearchShardConfig = async (projectRoot) => {
     ) {
       throw new Error(`Unsafe or duplicate search shard URL: ${shard.baseUrl}`);
     }
+    if (
+      shard.sealedWorks !== undefined &&
+      (!Number.isInteger(shard.sealedWorks) ||
+        shard.sealedWorks < 0 ||
+        shard.sealedWorks > config.maxWorksPerShard)
+    ) {
+      throw new Error(`Invalid sealed work count: ${shard.id}`);
+    }
     ids.add(shard.id);
     repositories.add(shard.repository);
     baseUrls.add(baseUrl.href);
@@ -88,6 +96,14 @@ export const validateSearchShardAssignments = (publications, config) => {
     if (count > config.maxWorksPerShard) {
       throw new Error(
         `Search shard ${shardId} has ${count}/${config.maxWorksPerShard} works`,
+      );
+    }
+    const sealedWorks = config.shards.find(
+      (shard) => shard.id === shardId,
+    ).sealedWorks;
+    if (sealedWorks !== undefined && count !== sealedWorks) {
+      throw new Error(
+        `Search shard ${shardId} is sealed at ${sealedWorks} works; found ${count}`,
       );
     }
   }

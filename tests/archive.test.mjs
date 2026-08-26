@@ -79,6 +79,15 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
     config.shards[0].baseUrl,
     "https://takochanchan.github.io/takochan-search-index-001/",
   );
+  assert.equal(config.shards[0].sealedWorks, 277);
+  assert.throws(
+    () =>
+      validateSearchShardAssignments(
+        [...publications, { ...publications[0], slug: "future-work" }],
+        config,
+      ),
+    /Search shard 001 is sealed at 277 works; found 278/,
+  );
 });
 
 test("public bibliography omits production boilerplate", () => {

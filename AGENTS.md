@@ -51,9 +51,13 @@ If archival, remote verification, page mapping, search coverage, or the master
 gate fails, stop the public release. Never publish first with a promise to
 archive or index later.
 
-Search shards are append-stable. `001` accepts at most 300 works; when it is
-full, add the next Project Pages repository and assign new publications to its
-three-digit ID. Never rebalance old slugs merely because catalogue order changes.
+Search shards are append-stable. `001` is sealed at 277 works. The public
+`takochan-search-index-002` repository is reserved but remains dormant and
+unreferenced until the first later publication is ready. Assign every new
+publication explicitly to `searchShard: "002"`, activate and deploy `002`, then
+publish the main site. The per-shard `sealedWorks` guard must reject silent
+fallback additions to `001`. Later active shards accept at most 300 works; never
+rebalance old slugs merely because catalogue order changes.
 
 Release fallback records and their assets are permanent provenance. After Git
 LFS becomes available, migrate the exact verified bytes to the canonical path,
