@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "batch": "squier-mexico-central-america-batch01",
+  "slugs": [
+    "squier-great-calendar-stone-1849",
+    "squier-british-encroachments-mosquito-question-1850",
+    "squier-spanish-american-republics-1850",
+    "squier-great-ship-canal-question-1850",
+    "squier-judgment-by-default-1851"
+  ],
+  "archive_commit": "c5d346b4f205b602d6e43226fd0488f14569d325",
+  "approved_pdf_sha256": [
+    "2b4cbdd308254eb78527368948ab4184b5c786d8a45dab32c4f0832866f0b512",
+    "0d685ecdabdd17c7cda2eec716a3e2f953982e9f02912e6431a60854fb941310",
+    "211c8c5f95d27faa000f42b25928e371d6c3136f0f83be08ec4d91f663dd531a",
+    "aba6f113ffb48231e59a7eecc43fc322e72eb1f6b3a2462e5d95b1ef20507e2b",
+    "02fa4a7ff80dd1c39fb78299aef7d81f3b0abb117b93133e6896efc01c14c5f1"
+  ],
+  "requested_at": "2026-08-26T00:00:00+09:00"
+}

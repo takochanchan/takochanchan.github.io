@@ -1,50 +1,196 @@
-name: Deploy archive to GitHub Pages
+name: Publish five E. G. Squier articles
 
 on:
   push:
     branches: ["main"]
+    paths:
+      - ".github/workflows/pages.yml"
+      - ".publication-requests/squier-mexico-central-america-batch01-v1.json"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
+  actions: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: publish-squier-mexico-central-america-batch01
+  cancel-in-progress: false
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      SLUGS: "squier-great-calendar-stone-1849 squier-british-encroachments-mosquito-question-1850 squier-spanish-american-republics-1850 squier-great-ship-canal-question-1850 squier-judgment-by-default-1851"
+      PDF_NAMES: "E_G_Squier_Great_Calendar_Stone_1849_Japanese_Complete_Translation.pdf E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.pdf E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.pdf E_G_Squier_Great_Ship_Canal_Question_1850_Japanese_Complete_Translation.pdf E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.pdf"
+      EPUB_NAMES: "E_G_Squier_Great_Calendar_Stone_1849_Japanese_Complete_Translation.epub E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.epub E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub E_G_Squier_Great_Ship_Canal_Question_1850_Japanese_Complete_Translation.epub E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.epub"
+      PDF_SHA256S: "2b4cbdd308254eb78527368948ab4184b5c786d8a45dab32c4f0832866f0b512 0d685ecdabdd17c7cda2eec716a3e2f953982e9f02912e6431a60854fb941310 211c8c5f95d27faa000f42b25928e371d6c3136f0f83be08ec4d91f663dd531a aba6f113ffb48231e59a7eecc43fc322e72eb1f6b3a2462e5d95b1ef20507e2b 02fa4a7ff80dd1c39fb78299aef7d81f3b0abb117b93133e6896efc01c14c5f1"
+      EPUB_SHA256S: "c01a189af29cf48fe33880d091ec373fb9d50f2e98b41932ae5227177a8704a9 aabf03babae4baf5b71b4c3a911fd7c524ab55f4688c8d1613b3c5135afa75a9 9938a47b5cb61c1de34748cad551b86982a5bd879dd3b115cd60f8fd3c93bf55 5056343349474f3db33152e335deb9279111398a2d8993031080b2227f5e55a8 1ac72358433b55770ea634663b4915b544165a7f6a874dff9ea0660dcfbe9d4c"
+      COVER_SHA256S: "e5d83ff210413066c13dd427d18d4629332a78c3333987f838cdb009262f3661 7ce46355f1b894f4690a1204d58db67898c99c3cb7c1c448d9b395111528bea9 208b478c9fb5beaa9f7c65fe811032f7f56553d966f164dc00e2c9d1281971eb 01d9437091081e995c417afcb4b86b1a903f0b6092aef085fa90f7a813264dbb 7defeabdc9f9e038f0ea06cc182a2eda4617563cc4f9d0b4497322b594dc48a2"
+      PDF_SIZES: "346626 2160094 468391 1476041 779864"
+      EPUB_SIZES: "263169 962676 176929 1042599 197024"
+      COVER_SIZES: "188943 142681 169057 181684 179776"
+      PDF_PAGES: "5 75 13 23 25"
+      BUNDLE_SHA256: "d644cd202c3d1973cdabbc36ce1d05baed9ff721a11784c1a78a027df750a0e9"
+      BUNDLE_SIZE: "8090376"
+      RELEASE_TAG: "publications-current"
+      BASE_MAIN_SHA: "9b4ad96274b28417b421f88d9429e52d00a8c665"
+      ARCHIVE_COMMIT: "c5d346b4f205b602d6e43226fd0488f14569d325"
+      REQUEST_PATH: ".publication-requests/squier-mexico-central-america-batch01-v1.json"
+      ASSET_BLOBS: "79e1ccb17715023c965b6accb426bc7aa1be824d f985093c0c4b9670a3552586a2d1766bf41cc579 6eb0d0e2280957e203b10b48bcdc2c32730769a7 4574c666d32c9a3590703fbd1f01a5c6cbde76ad c0d95a77965621826699183590ad7d3cd6272d0f 5fe258eb13b8e603a567ba9fe0e92612fd7bf585 2db892f6b8618e08a8bbb34c6c9933ac8b3b7f52 9f77b4298fd65989d61e9a6af2fd45ceb9049e5d 0d600b8be249dc61390b3dce24eb1816c19acf61 a3d6884a5b340ea7b89efab743df03bb02d46cff 51a27f7ffd7d7969d1bcb4801c66260781a9f314 a39be77da6c362ecfdca159c4168d0b5e9405d5e fa13d433aed2f53200cd9fa15ec1fcdcb415f137 fe4d34d237ca25962b2febe9bc0cb45f1e69f439 a8f36997036983ec51d7020f780c0f87037ecec5 30739dee8419a9fa42e4277f756fe4e18f2cdd52 5cafbcd60a3b799b39bd18c0f9c3227c998f801b 39e6f40efe7a148bc5b50ff6c806baf82f21d09d 6cc2f5aa95bb76ee9485aec3489e284278e95ae0 12385842f1fb2a66409a1b0de36ec8880690c00b 5c547df285e14d58fb6c0fbf9f764dc1ed50b555 06dc68343c40d4d6563c0806689a8fe2c600d434 ed356d5b414b63f8aa4d49ca033ff1d9a3f147e3 239f955c01d08e9cd2dd5aff31e3576d74b5285b 8bce8cd4f40a5c5d8ff4d49b310a75670b7e48e0 79ec2c2ec572501dc1a3f6ee740e9cd461c8662d dd6bf2959264d5df56b7cc8db4378077e29be09c 0d1ca570bdddd3ea0cc90d1e79f0c5b247e5197d b073668cec34c1be1c3974a717b18635c11f6f81 67bcf26dc339d396648c49e54e9cc075228eef76 4cf2ffc3d715c15630f3e8e72430fa1f5b22d48f 228576a542fc424a0f8dcd02d16cd83595e1cea0 151bb2e94de8f0433e8a8adcff30b02f0dc2edcf 7504caef6d700289766bda3dd7bacd3e8ddda588 574b7a7e1114da1373022fbb671b663fd7be7a9d b19053ffe693bd498ee23f3327155d28082c0f10 cbfd308e3b1fe715bcb0a20b5ba9e191a2dcbd26"
+      GH_TOKEN: ${{ github.token }}
     steps:
-      - name: Check out source
+      - name: Check out publication request
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      - name: Reconstruct and verify approved files
+        shell: bash
+        run: |
+          set -euo pipefail
+          bundle="$RUNNER_TEMP/squier-batch01-public-assets.tar.gz"
+          assets="$RUNNER_TEMP/squier-batch01-public-assets"
+          : > "$bundle"
+          for sha in $ASSET_BLOBS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content | tr -d '\n' | base64 --decode >> "$bundle"
+          done
+          test "$(stat -c%s "$bundle")" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  $bundle" | sha256sum -c -
+          mkdir -p "$assets" "$RUNNER_TEMP/approved/covers"
+          tar -xzf "$bundle" -C "$assets"
+          read -ra slugs <<< "$SLUGS"
+          read -ra pdfs <<< "$PDF_NAMES"
+          read -ra epubs <<< "$EPUB_NAMES"
+          read -ra pdf_shas <<< "$PDF_SHA256S"
+          read -ra epub_shas <<< "$EPUB_SHA256S"
+          read -ra cover_shas <<< "$COVER_SHA256S"
+          read -ra pdf_sizes <<< "$PDF_SIZES"
+          read -ra epub_sizes <<< "$EPUB_SIZES"
+          read -ra cover_sizes <<< "$COVER_SIZES"
+          test "${#slugs[@]}" = 5
+          for i in "${!slugs[@]}"; do
+            pdf_src="$assets/publications/${slugs[$i]}/${pdfs[$i]}"
+            epub_src="$assets/publications/${slugs[$i]}/${epubs[$i]}"
+            cover_src="$assets/publications/${slugs[$i]}/cover.jpg"
+            test "$(stat -c%s "$pdf_src")" = "${pdf_sizes[$i]}"
+            test "$(stat -c%s "$epub_src")" = "${epub_sizes[$i]}"
+            test "$(stat -c%s "$cover_src")" = "${cover_sizes[$i]}"
+            echo "${pdf_shas[$i]}  $pdf_src" | sha256sum -c -
+            echo "${epub_shas[$i]}  $epub_src" | sha256sum -c -
+            echo "${cover_shas[$i]}  $cover_src" | sha256sum -c -
+            cp "$pdf_src" "$RUNNER_TEMP/approved/${pdfs[$i]}"
+            cp "$epub_src" "$RUNNER_TEMP/approved/${epubs[$i]}"
+            cp "$cover_src" "$RUNNER_TEMP/approved/covers/${slugs[$i]}.jpg"
+          done
+
+      - name: Install verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils unzip tesseract-ocr
+
+      - name: Verify PDF and EPUB structure
+        shell: bash
+        run: |
+          set -euo pipefail
+          read -ra pdfs <<< "$PDF_NAMES"
+          read -ra epubs <<< "$EPUB_NAMES"
+          read -ra pages <<< "$PDF_PAGES"
+          for i in "${!pdfs[@]}"; do
+            pdf="$RUNNER_TEMP/approved/${pdfs[$i]}"
+            test "$(pdfinfo "$pdf" | awk -F: '/^Pages/ {gsub(/[[:space:]]/, "", $2); print $2}')" = "${pages[$i]}"
+            pdffonts "$pdf" | awk 'NR > 2 && NF && $1 !~ /Noto(Sans|Serif)JP/ {exit 1}'
+            unzip -t "$RUNNER_TEMP/approved/${epubs[$i]}" >/dev/null
+          done
+
+      - name: Apply approved catalogue changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          fetch_blob_file() {
+            local sha="$1" output="$2"
+            mkdir -p "$(dirname "$output")"
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content | tr -d '\n' | base64 --decode > "$output"
+          }
+          fetch_blob_file 37befff353d3eff6606e74b4f99b675e1a7b207c src/publications.mjs
+          fetch_blob_file 8d5ed3ef064a45004ab5f54420399b49b33e1a0b scripts/build-epubs.py
+          fetch_blob_file 09e10d01f84e5702f2c272ac879c4583acbe2a03 scripts/validate-epubs.py
+          fetch_blob_file 659c8e0df958499285f0614097309d095fe66341 master-archive.json
+          fetch_blob_file a2caf85029598739c7f79499f579c1220e6a01a2 assets-manifest.json
+          fetch_blob_file 4b5d4274a2c55720f1521a3e7cd7884c2b8f3b2e REVISION_LOG.md
+          fetch_blob_file 8a601275c00370908f16417c5da1e00990367c31 tests/archive.test.mjs
+          read -ra slugs <<< "$SLUGS"
+          read -ra epub_shas <<< "$EPUB_SHA256S"
+          for i in "${!slugs[@]}"; do
+            mkdir -p "static/publications/${slugs[$i]}"
+            cp "$RUNNER_TEMP/approved/covers/${slugs[$i]}.jpg" "static/publications/${slugs[$i]}/cover.jpg"
+            grep -Fq "${slugs[$i]}" src/publications.mjs
+            grep -Fq "${epub_shas[$i]}" assets-manifest.json
+          done
+          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
+          grep -Fq 'Public Domain Mark 1.0' src/publications.mjs
+          grep -Fq 'Lincoln Financial Foundation Collection' src/publications.mjs
+          grep -Fq 'NOT_IN_COPYRIGHT' src/publications.mjs
+          grep -Fq '本日本語訳には再利用許諾を付与していません' src/publications.mjs
+
+      - name: Publish approved release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          read -ra pdfs <<< "$PDF_NAMES"
+          read -ra epubs <<< "$EPUB_NAMES"
+          read -ra pdf_shas <<< "$PDF_SHA256S"
+          read -ra epub_shas <<< "$EPUB_SHA256S"
+          sums_dir="$RUNNER_TEMP/release-sums"
+          mkdir -p "$sums_dir"
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir "$sums_dir"
+          printf '%s\n' "${pdfs[@]}" "${epubs[@]}" > "$sums_dir/drop.txt"
+          awk 'NR == FNR {drop[$0] = 1; next} !($2 in drop)' "$sums_dir/drop.txt" "$sums_dir/SHA256SUMS.txt" > "$sums_dir/SHA256SUMS.new"
+          upload=()
+          for i in "${!pdfs[@]}"; do
+            printf '%s  %s\n%s  %s\n' "${pdf_shas[$i]}" "${pdfs[$i]}" "${epub_shas[$i]}" "${epubs[$i]}" >> "$sums_dir/SHA256SUMS.new"
+            upload+=("$RUNNER_TEMP/approved/${pdfs[$i]}" "$RUNNER_TEMP/approved/${epubs[$i]}")
+          done
+          LC_ALL=C sort -k2,2 "$sums_dir/SHA256SUMS.new" > "$sums_dir/SHA256SUMS.txt"
+          gh release upload "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --clobber "${upload[@]}" "$sums_dir/SHA256SUMS.txt"
+
+      - name: Verify published release bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          read -ra pdfs <<< "$PDF_NAMES"
+          read -ra epubs <<< "$EPUB_NAMES"
+          read -ra pdf_shas <<< "$PDF_SHA256S"
+          read -ra epub_shas <<< "$EPUB_SHA256S"
+          read -ra pdf_sizes <<< "$PDF_SIZES"
+          read -ra epub_sizes <<< "$EPUB_SIZES"
+          read -ra pages <<< "$PDF_PAGES"
+          verify="$RUNNER_TEMP/release-verify"
+          mkdir -p "$verify"
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir "$verify"
+          for i in "${!pdfs[@]}"; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "${pdfs[$i]}" --dir "$verify"
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "${epubs[$i]}" --dir "$verify"
+            test "$(stat -c%s "$verify/${pdfs[$i]}")" = "${pdf_sizes[$i]}"
+            test "$(stat -c%s "$verify/${epubs[$i]}")" = "${epub_sizes[$i]}"
+            echo "${pdf_shas[$i]}  $verify/${pdfs[$i]}" | sha256sum -c -
+            echo "${epub_shas[$i]}  $verify/${epubs[$i]}" | sha256sum -c -
+            test "$(pdfinfo "$verify/${pdfs[$i]}" | awk -F: '/^Pages/ {gsub(/[[:space:]]/, "", $2); print $2}')" = "${pages[$i]}"
+            unzip -t "$verify/${epubs[$i]}" >/dev/null
+            grep -Fxq "${pdf_shas[$i]}  ${pdfs[$i]}" "$verify/SHA256SUMS.txt"
+            grep -Fxq "${epub_shas[$i]}  ${epubs[$i]}" "$verify/SHA256SUMS.txt"
+          done
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install build dependencies
+      - name: Install site dependencies
         run: npm ci
 
-      - name: Build archive pages
-        run: npm run build
-
-      - name: Restore generated full-text index
-        id: search-index-cache
-        uses: actions/cache@v4
-        with:
-          path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
-      - name: Restore final PDF and EPUB inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache@v4
+      - name: Restore full-text asset cache
+        uses: actions/cache/restore@v4
         with:
           path: |
             .cache/fulltext-assets
@@ -53,50 +199,27 @@ jobs:
           restore-keys: |
             fulltext-assets-
 
-      - name: Ensure PDF text and OCR tools are available
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
+      - name: Build and verify complete site
+        shell: bash
         run: |
-          if ! command -v pdftotext || ! command -v tesseract; then
-            sudo apt-get update
-            sudo apt-get install -y poppler-utils tesseract-ocr
-          fi
+          set -euo pipefail
+          npm run build
+          npm test
 
-      - name: Fetch checksum-verified search inputs
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run fetch:search-assets
+      - name: Commit publication and restore normal deployment workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse origin/main)" = "$GITHUB_SHA"
+          git checkout "$BASE_MAIN_SHA" -- .github/workflows/pages.yml
+          rm -f "$REQUEST_PATH"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A
+          git diff --cached --check
+          git commit -m 'Publish five E. G. Squier articles'
+          git push origin HEAD:main
 
-      - name: Generate full-text search index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        run: npm run build:search
-
-      - name: Save generated full-text index
-        if: steps.search-index-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: dist/search
-          key: fulltext-index-fernandez-historia-costa-rica-v1-${{ hashFiles('assets-manifest.json', 'master-archive.json', 'src/publications.mjs', 'scripts/search/build-index.mjs', 'scripts/search/create-manifest.mjs', 'scripts/search/extract-corpus.py', 'package-lock.json') }}
-
-      - name: Verify full-text index coverage and page maps
-        run: npm run verify:search
-
-      - name: Validate archive
-        run: npm test
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Let repository initialization finish
-        run: sleep 45
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy published site
+        shell: bash
+        run: gh workflow run pages.yml --ref main
