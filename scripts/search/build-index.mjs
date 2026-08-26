@@ -427,6 +427,7 @@ try {
   const papers = corpus.works.length - books;
   const metadata = {
     schemaVersion: 1,
+    searchShard: corpus.searchShard ?? null,
     prototype: buildPrototype,
     archiveCommit: corpus.archiveCommit,
     assetManifestSha256: corpus.assetManifestSha256,
@@ -499,7 +500,9 @@ try {
     "utf8",
   );
   process.stdout.write(
-    "Search prototype: " +
+    "Search index" +
+      (metadata.searchShard ? " shard " + metadata.searchShard : "") +
+      ": " +
       metadata.works +
       " works, " +
       metadata.chunks +

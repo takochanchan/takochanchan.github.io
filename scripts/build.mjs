@@ -7,6 +7,11 @@ import {
   shortPublicationAuthors,
   shortPublications,
 } from "../src/publications.mjs";
+import {
+  browserSearchShards,
+  readSearchShardConfig,
+  validateSearchShardAssignments,
+} from "./search/shard-config.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(here, "..");
@@ -25,7 +30,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260820-century-sort-v1";
+const assetVersion = "20260826-search-shards-v1";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -72,6 +77,9 @@ const assetManifest = JSON.parse(
 const assetSizes = new Map(
   assetManifest.assets.map((asset) => [asset.path, asset.size]),
 );
+const searchShardConfig = await readSearchShardConfig(projectRoot);
+validateSearchShardAssignments(publications, searchShardConfig);
+const searchClientShards = browserSearchShards(searchShardConfig);
 for (const item of publications) {
   const pdfBytes = assetSizes.get(item.pdf);
   const epubBytes = assetSizes.get(item.epub);
@@ -507,11 +515,7 @@ ${footer()}`,
 <script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
 <script>
 window.FULLTEXT_SEARCH_CONFIG={
-  pagefindModule:"/search/pagefind/pagefind.js",
-  pagefindBase:"/search/pagefind/",
-  documentMapPath:"/search/document-map.json",
-  mapsPath:"/search/maps/",
-  metadataPath:"/search/search-meta.json",
+  shards:${jsonForScript(searchClientShards)},
   preferEmbedded:false
 };
 </script>
@@ -1032,6 +1036,10 @@ await Promise.all([
   cp(
     path.join(projectRoot, "src", "fulltext-search.js"),
     path.join(dist, "fulltext-search.js"),
+  ),
+  cp(
+    path.join(projectRoot, "search-shards.json"),
+    path.join(dist, "search-shards.json"),
   ),
   cp(
     path.join(projectRoot, "google6a6ff1ca39cd5a62.html"),

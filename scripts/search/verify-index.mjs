@@ -3,6 +3,11 @@ import { readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../../src/publications.mjs";
+import {
+  publicationsForSearchShard,
+  readSearchShardConfig,
+  validateSearchShardAssignments,
+} from "./shard-config.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(here, "../..");
@@ -14,6 +19,18 @@ const directory = path.resolve(
   projectRoot,
   argument("--directory", "dist/search"),
 );
+const searchShard = argument("--shard", process.env.SEARCH_SHARD || null);
+const searchShardConfig = await readSearchShardConfig(projectRoot);
+validateSearchShardAssignments(publications, searchShardConfig);
+if (
+  searchShard &&
+  !searchShardConfig.shards.some((shard) => shard.id === searchShard)
+) {
+  throw new Error(`Unknown search shard: ${searchShard}`);
+}
+const expectedPublications = searchShard
+  ? publicationsForSearchShard(publications, searchShard)
+  : publications;
 const metadata = JSON.parse(
   await readFile(path.join(directory, "search-meta.json"), "utf8"),
 );
@@ -35,7 +52,9 @@ const masterPathFor = (slug) =>
 const expectedAssetSha = createHash("sha256")
   .update(assetManifestBytes)
   .digest("hex");
-const expectedSlugs = publications.map((publication) => publication.slug).sort();
+const expectedSlugs = expectedPublications
+  .map((publication) => publication.slug)
+  .sort();
 const actualSlugs = [...(metadata.workSlugs || [])].sort();
 const sourceLocationLabelPattern = new RegExp(
   "^(?:底本位置なし（前付）|" +
@@ -46,28 +65,36 @@ const sourceLocationLabelPattern = new RegExp(
 );
 
 if (metadata.schemaVersion !== 1) throw new Error("Unsupported search metadata");
+if ((metadata.searchShard ?? null) !== searchShard) {
+  throw new Error("Search index shard identifier is stale");
+}
 if (metadata.archiveCommit !== archive.archive_commit) {
   throw new Error("Search index uses a stale archive commit");
 }
 if (metadata.assetManifestSha256 !== expectedAssetSha) {
   throw new Error("Search index uses a stale asset manifest");
 }
-if (metadata.works !== publications.length) {
-  throw new Error(`Search index has ${metadata.works}/${publications.length} works`);
+if (metadata.works !== expectedPublications.length) {
+  throw new Error(
+    `Search index has ${metadata.works}/${expectedPublications.length} works`,
+  );
 }
 if (JSON.stringify(actualSlugs) !== JSON.stringify(expectedSlugs)) {
   throw new Error("Search index slug set does not match the public catalogue");
 }
-if (metadata.books + metadata.papers !== publications.length) {
+if (metadata.books + metadata.papers !== expectedPublications.length) {
   throw new Error("Search index book/paper counts are inconsistent");
 }
-if (!Number.isInteger(metadata.chunks) || metadata.chunks < publications.length) {
+if (
+  !Number.isInteger(metadata.chunks) ||
+  metadata.chunks < expectedPublications.length
+) {
   throw new Error("Search index contains too few text chunks");
 }
 if (
   documentMap.schemaVersion !== 1 ||
   !Number.isInteger(documentMap.documents) ||
-  documentMap.documents < publications.length ||
+  documentMap.documents < expectedPublications.length ||
   metadata.documents !== documentMap.documents
 ) {
   throw new Error("Search document map is missing or inconsistent");
@@ -75,9 +102,18 @@ if (
 if ((await stat(path.join(directory, "pagefind", "pagefind.js"))).size < 1000) {
   throw new Error("Pagefind browser module is missing or empty");
 }
+if (
+  !Number.isInteger(metadata.pagefindBytes) ||
+  metadata.pagefindBytes < 1 ||
+  metadata.pagefindBytes > searchShardConfig.maxBytesPerShard
+) {
+  throw new Error(
+    `Search shard size exceeds its Pages budget: ${metadata.pagefindBytes}`,
+  );
+}
 
 const publicationBySlug = new Map(
-  publications.map((publication) => [publication.slug, publication]),
+  expectedPublications.map((publication) => [publication.slug, publication]),
 );
 const fragmentDirectory = path.join(directory, "pagefind", "fragment");
 const fragmentNames = (await readdir(fragmentDirectory))
@@ -119,7 +155,7 @@ for (const [fragmentId, mapping] of mappedFragments) {
   if (!partsBySlug.has(slug)) partsBySlug.set(slug, []);
   partsBySlug.get(slug).push(partIndex);
 }
-for (const publication of publications) {
+for (const publication of expectedPublications) {
   const parts = (partsBySlug.get(publication.slug) || []).sort((a, b) => a - b);
   if (
     !parts.length ||
@@ -132,10 +168,12 @@ for (const publication of publications) {
 const mapNames = (await readdir(path.join(directory, "maps")))
   .filter((name) => name.endsWith(".json"))
   .sort();
-if (mapNames.length !== publications.length) {
-  throw new Error(`Search page maps: ${mapNames.length}/${publications.length}`);
+if (mapNames.length !== expectedPublications.length) {
+  throw new Error(
+    `Search page maps: ${mapNames.length}/${expectedPublications.length}`,
+  );
 }
-for (const publication of publications) {
+for (const publication of expectedPublications) {
   const filename = path.join(directory, "maps", publication.slug + ".json");
   const pageMap = JSON.parse(await readFile(filename, "utf8"));
   const canonicalUrl = `/publications/${publication.slug}/`;

@@ -315,6 +315,11 @@ test("Pagefind groups small documents and result data loads progressively", () =
   assert.match(browserScript, /root\.setAttribute\("lang", "und"\)/);
   assert.doesNotMatch(browserScript, /noWorker: true/);
   assert.match(browserScript, /ensureDocumentMap\(\)/);
+  assert.match(browserScript, /Array\.isArray\(config\.shards\)/);
+  assert.match(browserScript, /instance\.mergeIndex\(shard\.pagefindBase/);
+  assert.match(browserScript, /const mapBaseBySlug = new Map\(\)/);
+  assert.match(browserScript, /Publication occurs in multiple shards/);
+  assert.match(browserScript, /ensureSearchMetadata\(\)/);
   assert.match(browserScript, /literalPagefindSearch\(api, query, documentMap\)/);
   assert.match(browserScript, /groupDocumentResults\(/);
   assert.match(browserScript, /const exactSearches = await Promise\.all\(/);

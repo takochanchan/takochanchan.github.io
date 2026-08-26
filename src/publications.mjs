@@ -232,16 +232,16 @@ const publicationRecords = [
   },
   {
     "slug": "squier-spanish-american-republics-1850",
-    "title": "スペイン系アメリカ諸共和国とその失敗の原因——中央アメリカ",
-    "originalTitle": "The Spanish American Republics, and the Causes of Their Failure: Central America",
+    "title": "スペイン系アメリカ諸共和国とその失敗の原因――中央アメリカ",
+    "originalTitle": "The Spanish American Republics, and the Causes of Their Failure. Central America",
     "subtitle": "『The American Whig Review』1850年10月号 日本語全訳",
-    "author": "E・G・スクワイア",
-    "originalAuthor": "Ephraim George Squier",
+    "author": "無署名",
+    "originalAuthor": "Anonymous",
     "series": "THE AMERICAN WHIG REVIEW · 1850",
-    "originalPublication": "ニューヨーク、『The American Whig Review』New Series、第6巻第4号、1850年10月、337–344頁",
+    "originalPublication": "『The American Whig Review』第12巻第34号、1850年10月、337–344頁",
     "year": 1850,
     "extent": "PDF 13頁・原刊337–344頁",
-    "description": "スペイン系アメリカ諸共和国の独立後の政治的混乱を、植民地統治の遺産、自由派と保守派の対立、中央アメリカのメキシコ帝国編入と1824年憲法の経過から論じた1850年刊論文です。",
+    "description": "スペイン系アメリカ諸共和国の独立後の政治的混乱を、植民地統治の遺産、自由派と保守派の対立、中央アメリカのメキシコ帝国編入と1824年憲法の経過から論じた1850年刊の無署名論文です。",
     "cover": "publications/squier-spanish-american-republics-1850/cover.jpg",
     "pdf": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.pdf",
     "epub": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub",
@@ -251,7 +251,7 @@ const publicationRecords = [
     "types": ["政治史", "政治論", "論文", "一次史料"],
     "regions": ["中央アメリカ", "メキシコ", "グアテマラ", "エル・サルバドル"],
     "languages": ["英語"],
-    "tags": ["E・G・スクワイア", "スペイン系アメリカ", "中央アメリカ連邦", "イトゥルビデ", "自由派", "19世紀"]
+    "tags": ["無署名", "E・G・スクワイア帰属", "スペイン系アメリカ", "中央アメリカ連邦", "イトゥルビデ", "自由派", "19世紀"]
   },
   {
     "slug": "squier-great-ship-canal-question-1850",
@@ -11431,10 +11431,10 @@ const publicationMetadata = {
     "updatedDate": "2026-08-26"
   },
   "squier-spanish-american-republics-1850": {
-    "sourceEdition": "“The Spanish American Republics, and the Causes of Their Failure: Central America,” The American Whig Review, New Series, vol. VI, no. IV (October 1850), pp. 337–344. 原刊は無署名で、Charles Lee Stansifer, Ephraim George Squier: Diversos aspectos de su carrera en Centroamérica (1968), p. 64、およびDon C. Seitz, Letters from Francis Parkman to E. G. Squier (1911), p. 52によりスクワイアへ帰属します。",
-    "sourceProvider": "Internet Archive公開本。提供元はLincoln Financial Foundation Collection（Allen County Public Library）です。",
-    "sourceUrl": "https://archive.org/details/americanwhigrevi00newy",
-    "rights": "原著はパブリックドメインです。Internet Archiveの当該資料ページには個別のCreative Commons等のライセンス表示がありません。本日本語訳には再利用許諾を付与していません。",
+    "sourceEdition": "Anonymous, “The Spanish American Republics, and the Causes of Their Failure. Central America,” The American Whig Review, vol. 12, no. 34, October 1850, pp. 337–344. 原刊は無署名。本稿は原刊p. 344で完結し、p. 345から別稿 “Our Foreign Relations” が始まります。Charles Lee Stansifer (1968), p. 64およびDon C. Seitz (1911), p. 52は本稿をEphraim George Squierに帰属させています。",
+    "sourceProvider": "HathiTrust Digital Library公開のCornell University Library所蔵本（coo.31924079893891）を底本とし、拡大照合にInternet Archive公開の同号（sim_american-whig-review_1850-10_12_34）を用いました。",
+    "sourceUrl": "https://hdl.handle.net/2027/coo.31924079893891",
+    "rights": "原著および原刊誌面はパブリックドメインに属します。HathiTrustの当該Cornell University Library所蔵本は、Book ViewerでPublic Domainと表示されています。",
     "publishedDate": "2026-08-26",
     "updatedDate": "2026-08-26"
   },
@@ -11465,7 +11465,7 @@ const shortWorkAuthorBySlug = {
   "squier-great-calendar-stone-1849": "ephraim-george-squier",
   "squier-british-encroachments-mosquito-question-1850":
     "ephraim-george-squier",
-  "squier-spanish-american-republics-1850": "ephraim-george-squier",
+  "squier-spanish-american-republics-1850": "anonymous-american-whig-review",
   "squier-great-ship-canal-question-1850": "ephraim-george-squier",
   "squier-judgment-by-default-1851": "ephraim-george-squier",
   "gonzalez-ruinas-tehuacan-1892": "dario-gonzalez",
@@ -11616,6 +11616,7 @@ export const publications = publicationRecords.map((item) => {
     ...metadata,
     recordClass: shortWorkAuthorKey ? "short-work" : "major-work",
     authorKey: shortWorkAuthorKey,
+    searchShard: item.searchShard ?? "001",
     pdfUrl: releaseAssetUrl(item.pdf),
     epubUrl: releaseAssetUrl(item.epub),
   };

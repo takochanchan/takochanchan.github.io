@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "defaultShard": "001",
+  "maxWorksPerShard": 300,
+  "maxBytesPerShard": 524288000,
+  "shards": [
+    {
+      "id": "001",
+      "repository": "takochanchan/takochan-search-index-001",
+      "baseUrl": "https://takochanchan.github.io/takochan-search-index-001/"
+    }
+  ]
+}

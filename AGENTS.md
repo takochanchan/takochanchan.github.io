@@ -30,19 +30,30 @@ This public repository is paired with the private working-master repository
 4. Verify the resulting full 40-character archive commit SHA on GitHub.
 5. Update `master-archive.json` with that SHA and the canonical master path.
 6. Run `npm run build` and `npm test`.
-7. Upload/replace the public PDF and EPUB, update their checksum manifest, then
-   regenerate the full-text search index from the canonical master (or its
-   checksum-approved final EPUB mirror in the public build) and the exact final PDF.
-8. Run `npm run verify:search`; require complete slug coverage, canonical
-   bibliography URLs, original-page labels, physical PDF pages, and the current
-   archive/PDF checksums.
-9. Only after all prior steps pass, publish the site with the generated search
-   index in the Pages artifact.
+7. Upload/replace the public PDF and EPUB and update their checksum manifest.
+8. Determine the publication's stable shard from `searchShard` (legacy records
+   default to `001`), regenerate only that external Pagefind shard from the
+   canonical master or checksum-approved final EPUB mirror and the exact final
+   PDF, and deploy it from the repository named in `search-shards.json`.
+9. Run `SEARCH_SHARD=<id> npm run verify:search` before deploying the shard.
+   Require complete shard slug coverage, canonical bibliography URLs,
+   original-page labels, physical PDF pages, and current archive/PDF checksums.
+10. Run `npm run verify:remote-search`; it must prove that the deployed shards
+    cover the exact current catalogue once, use the current archive and asset
+    manifests, and remain below their work-count and byte budgets.
+11. Only after all prior steps pass, publish the main site. The main Pages
+    artifact contains the catalogue and search client, never the Pagefind index.
 
-The release is incomplete if the working master or current search index is
-missing. If archival, remote verification, page mapping, search coverage, or
-the master gate fails, stop the public release. Never publish first with a
-promise to archive or index later.
+The release is incomplete if the working master or current external search
+shard is missing. The main Pages workflow deliberately fails before deployment
+when a shard is stale, so the previously complete live site remains in place.
+If archival, remote verification, page mapping, search coverage, or the master
+gate fails, stop the public release. Never publish first with a promise to
+archive or index later.
+
+Search shards are append-stable. `001` accepts at most 300 works; when it is
+full, add the next Project Pages repository and assign new publications to its
+three-digit ID. Never rebalance old slugs merely because catalogue order changes.
 
 Release fallback records and their assets are permanent provenance. After Git
 LFS becomes available, migrate the exact verified bytes to the canonical path,

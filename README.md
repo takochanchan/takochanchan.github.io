@@ -16,6 +16,7 @@ GitHub Pages 用の静的アーカイブです。
 - `scripts/build-epubs.py` — 編集原稿・構造化PDFからリフロー型EPUB 3を生成
 - `scripts/validate-epubs.py` — EPUBの構造、リンク、リフロー指定を検証
 - `scripts/search/` — 正本と最終PDFから全文検索索引・原刊頁／PDF頁対応を生成・検証
+- `search-shards.json` — 外部全文検索索引のProject Pages配置と容量上限
 - `static/publications/*/cover.jpg` — Pagesに含める表紙画像
 - `assets-manifest.json` — Release配布PDF・EPUBと表紙画像の容量・SHA-256
 
@@ -54,7 +55,9 @@ GitHub Pages へ公開します。
 複数一致は1件にまとめ、各スニペットに底本位置標識と日本語版PDFの物理頁を併記します。
 資料名からは必ず既存の書誌ページへ移動します。
 
-検索索引と一時的な本文データはGit履歴へ収録せず、GitHub Pagesのビルド時に、正本または
-SHA-256を固定した最終EPUBと最終PDFから生成して
-Pages artifactへだけ含めます。新規・改訂公開ではPDF・EPUBと同様に検索索引の更新を
-完了条件とし、全資料の収録、正本コミット、PDF SHA-256、頁対応を検査します。
+検索索引と一時的な本文データは本体のGit履歴・Pages artifactへ収録しません。正本または
+SHA-256を固定した最終EPUBと最終PDFから、300作品を上限とする外部Project Pages索引を
+生成します。本体Pagesには検索UIだけを置き、Pagefindの複数索引機能で外部索引群を横断します。
+新規・改訂公開ではPDF・EPUBと同様に外部索引の更新を完了条件とし、全資料の収録、
+正本コミット、PDF SHA-256、頁対応、索引容量を検査します。外部索引が現行書誌と一致しない
+場合、本体Pagesの配備は停止し、直前の完全な公開版を維持します。
