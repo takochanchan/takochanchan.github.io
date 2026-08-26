@@ -3,6 +3,11 @@ import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../../src/publications.mjs";
+import {
+  publicationsForSearchShard,
+  readSearchShardConfig,
+  validateSearchShardAssignments,
+} from "./shard-config.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(here, "../..");
@@ -20,6 +25,18 @@ const output = path.resolve(
   projectRoot,
   argument("--output", ".cache/fulltext-search-manifest.json"),
 );
+const searchShard = argument("--shard", process.env.SEARCH_SHARD || null);
+const searchShardConfig = await readSearchShardConfig(projectRoot);
+validateSearchShardAssignments(publications, searchShardConfig);
+if (
+  searchShard &&
+  !searchShardConfig.shards.some((shard) => shard.id === searchShard)
+) {
+  throw new Error(`Unknown search shard: ${searchShard}`);
+}
+const selectedPublications = searchShard
+  ? publicationsForSearchShard(publications, searchShard)
+  : publications;
 const assetManifestBytes = await readFile(
   path.join(projectRoot, "assets-manifest.json"),
 );
@@ -48,7 +65,7 @@ const usableMaster = async (filename) => {
 };
 
 const works = [];
-for (const publication of publications) {
+for (const publication of selectedPublications) {
   const masterPath = masterPathFor(publication.slug);
   if (!masterPath) throw new Error(`Missing master ledger entry: ${publication.slug}`);
   const pdfAsset = assets.get(publication.pdf);
@@ -83,6 +100,7 @@ for (const publication of publications) {
 
 const manifest = {
   schemaVersion: 1,
+  searchShard,
   archiveCommit: archiveLedger.archive_commit,
   assetManifestSha256: createHash("sha256")
     .update(assetManifestBytes)
@@ -93,6 +111,7 @@ await mkdir(path.dirname(output), { recursive: true });
 await writeFile(output, JSON.stringify(manifest, null, 2) + "\n", "utf8");
 const direct = works.filter((work) => work.sourceMode === "canonical-master").length;
 process.stdout.write(
-  `Search manifest: ${works.length} works (${direct} canonical masters, ` +
+  `Search manifest${searchShard ? ` shard ${searchShard}` : ""}: ` +
+    `${works.length} works (${direct} canonical masters, ` +
     `${works.length - direct} approved EPUB mirrors).\n`,
 );

@@ -17,6 +17,7 @@
     "test:search": "python3 -m unittest discover -s tests -p 'test_search_*.py' && node --test tests/fulltext-search.test.mjs",
     "test:epub": "python3 scripts/validate-epubs.py dist",
     "verify:search": "node scripts/search/verify-index.mjs --directory dist/search && node scripts/search/verify-queries.mjs --directory dist/search",
+    "verify:remote-search": "node scripts/search/verify-remote-shards.mjs",
     "verify:masters": "node scripts/verify-master-archive.mjs"
   },
   "devDependencies": {

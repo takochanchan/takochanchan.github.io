@@ -1,0 +1,107 @@
+name: Deploy full-text search shard to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out shard controller
+        uses: actions/checkout@v4
+
+      - name: Read pinned archive source
+        id: source
+        run: |
+          node --input-type=module -e '
+            import { appendFileSync, readFileSync } from "node:fs";
+            const source = JSON.parse(readFileSync("source.json", "utf8"));
+            if (source.schemaVersion !== 1 ||
+                !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(source.sourceRepository) ||
+                !/^[a-f0-9]{40}$/.test(source.sourceCommit) ||
+                !/^\d{3}$/.test(source.searchShard)) {
+              throw new Error("Invalid search shard source.json");
+            }
+            appendFileSync(process.env.GITHUB_OUTPUT,
+              `repository=${source.sourceRepository}\n` +
+              `commit=${source.sourceCommit}\n` +
+              `shard=${source.searchShard}\n`);
+          '
+
+      - name: Check out pinned archive code
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.source.outputs.repository }}
+          ref: ${{ steps.source.outputs.commit }}
+          path: archive
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install build dependencies
+        working-directory: archive
+        run: npm ci
+
+      - name: Restore final assets and OCR cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            archive/.cache/fulltext-assets
+            archive/.cache/fulltext-ocr
+          key: search-${{ steps.source.outputs.shard }}-${{ hashFiles('source.json') }}
+          restore-keys: |
+            search-${{ steps.source.outputs.shard }}-
+
+      - name: Ensure PDF text and OCR tools are available
+        run: |
+          if ! command -v pdftotext || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+
+      - name: Fetch checksum-verified shard inputs
+        working-directory: archive
+        env:
+          SEARCH_SHARD: ${{ steps.source.outputs.shard }}
+        run: npm run fetch:search-assets
+
+      - name: Build and verify shard
+        working-directory: archive
+        env:
+          SEARCH_SHARD: ${{ steps.source.outputs.shard }}
+        run: |
+          npm run build:search
+          npm run verify:search
+          touch dist/search/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: archive/dist/search
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy search shard
+        id: deployment
+        uses: actions/deploy-pages@v4

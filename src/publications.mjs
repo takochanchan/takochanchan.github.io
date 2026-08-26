@@ -11616,6 +11616,7 @@ export const publications = publicationRecords.map((item) => {
     ...metadata,
     recordClass: shortWorkAuthorKey ? "short-work" : "major-work",
     authorKey: shortWorkAuthorKey,
+    searchShard: item.searchShard ?? "001",
     pdfUrl: releaseAssetUrl(item.pdf),
     epubUrl: releaseAssetUrl(item.epub),
   };

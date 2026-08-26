@@ -36,8 +36,10 @@
   }
 
   const mapCache = new Map();
+  const mapBaseBySlug = new Map();
   let pagefindPromise;
   let documentMapPromise;
+  let searchMetadataPromise;
   let activeSearch = 0;
   let pendingResults = [];
   let renderedWorks = 0;
@@ -88,6 +90,37 @@
 
   const resolveUrl = (value, fallback) =>
     new URL(value || fallback, document.baseURI).toString();
+
+  const searchShards = (() => {
+    const configured = Array.isArray(config.shards) && config.shards.length
+      ? config.shards
+      : [config];
+    const ids = new Set();
+    return configured.map((shard, index) => {
+      const id = String(shard.id || String(index + 1).padStart(3, "0"));
+      if (!/^\d{3}$/.test(id) || ids.has(id)) {
+        throw new Error("Invalid or duplicate search shard: " + id);
+      }
+      ids.add(id);
+      return {
+        id,
+        pagefindModule: resolveUrl(
+          shard.pagefindModule,
+          "./pagefind/pagefind.js",
+        ),
+        pagefindBase: resolveUrl(shard.pagefindBase, "./pagefind/"),
+        documentMapPath: resolveUrl(
+          shard.documentMapPath,
+          "./document-map.json",
+        ),
+        mapsPath: resolveUrl(shard.mapsPath, "./maps/"),
+        metadataPath: resolveUrl(
+          shard.metadataPath,
+          "./search-meta.json",
+        ),
+      };
+    });
+  })();
 
   const segmentWords = (query) => {
     const normalized = String(query || "").normalize("NFC").trim();
@@ -245,7 +278,8 @@
 
   const loadPageMap = async (slug) => {
     if (!mapCache.has(slug)) {
-      const mapsPath = resolveUrl(config.mapsPath, "./maps/");
+      const mapsPath = mapBaseBySlug.get(slug);
+      if (!mapsPath) throw new Error("Search shard missing for: " + slug);
       mapCache.set(
         slug,
         fetch(new URL(slug + ".json", mapsPath)).then((response) => {
@@ -259,27 +293,48 @@
 
   const ensureDocumentMap = () => {
     if (!documentMapPromise) {
-      const mapPath = resolveUrl(
-        config.documentMapPath,
-        "./document-map.json",
-      );
-      documentMapPromise = fetch(mapPath)
-        .then((response) => {
-          if (!response.ok) throw new Error("Search document map missing");
-          return response.json();
-        })
-        .then((documentMap) => {
+      documentMapPromise = Promise.all(
+        searchShards.map(async (shard) => {
+          const response = await fetch(shard.documentMapPath);
+          if (!response.ok) {
+            throw new Error("Search document map missing: " + shard.id);
+          }
+          const documentMap = await response.json();
           if (
             documentMap.schemaVersion !== 1 ||
             !documentMap.fragments ||
             !Number.isInteger(documentMap.documents)
           ) {
-            throw new Error("Unsupported search document map");
+            throw new Error("Unsupported search document map: " + shard.id);
           }
-          return documentMap;
+          return { shard, documentMap };
+        }),
+      )
+        .then((loaded) => {
+          const fragments = {};
+          let documents = 0;
+          for (const { shard, documentMap } of loaded) {
+            documents += documentMap.documents;
+            for (const [fragmentId, mapping] of Object.entries(
+              documentMap.fragments,
+            )) {
+              if (fragments[fragmentId]) {
+                throw new Error("Duplicate search fragment: " + fragmentId);
+              }
+              fragments[fragmentId] = mapping;
+              const slug = mapping?.[0];
+              const existing = mapBaseBySlug.get(slug);
+              if (existing && existing !== shard.mapsPath) {
+                throw new Error("Publication occurs in multiple shards: " + slug);
+              }
+              mapBaseBySlug.set(slug, shard.mapsPath);
+            }
+          }
+          return { schemaVersion: 1, documents, fragments };
         })
         .catch((error) => {
           documentMapPromise = undefined;
+          mapBaseBySlug.clear();
           throw error;
         });
     }
@@ -490,12 +545,8 @@
 
   const ensurePagefind = () => {
     if (!pagefindPromise) {
-      const pagefindPath = resolveUrl(
-        config.pagefindModule,
-        "./pagefind/pagefind.js",
-      );
-      const pagefindBase = resolveUrl(config.pagefindBase, "./pagefind/");
-      pagefindPromise = import(pagefindPath)
+      const primaryShard = searchShards[0];
+      pagefindPromise = import(primaryShard.pagefindModule)
         .then(async (module) => {
           // Pagefind 1.5.2 ignores createInstance({ language }) and reads the
           // document language instead. Chrome then re-tokenizes Japanese query
@@ -508,7 +559,7 @@
           try {
             root.setAttribute("lang", "und");
             instance = module.createInstance({
-              basePath: pagefindBase,
+              basePath: primaryShard.pagefindBase,
               exactDiacritics: true,
             });
           } finally {
@@ -516,6 +567,11 @@
             else root.setAttribute("lang", documentLanguage);
           }
           await instance.init();
+          for (const shard of searchShards.slice(1)) {
+            await instance.mergeIndex(shard.pagefindBase, {
+              exactDiacritics: true,
+            });
+          }
           return instance;
         })
         .catch((error) => {
@@ -524,6 +580,64 @@
         });
     }
     return pagefindPromise;
+  };
+
+  const ensureSearchMetadata = () => {
+    if (!searchMetadataPromise) {
+      searchMetadataPromise = Promise.all(
+        searchShards.map(async (shard) => {
+          const response = await fetch(shard.metadataPath);
+          if (!response.ok) {
+            throw new Error("Search metadata missing: " + shard.id);
+          }
+          const metadata = await response.json();
+          if (
+            metadata.schemaVersion !== 1 ||
+            (metadata.searchShard && metadata.searchShard !== shard.id) ||
+            !Array.isArray(metadata.workSlugs)
+          ) {
+            throw new Error("Unsupported search metadata: " + shard.id);
+          }
+          return metadata;
+        }),
+      )
+        .then((allMetadata) => {
+          const slugs = new Set();
+          for (const metadata of allMetadata) {
+            for (const slug of metadata.workSlugs) {
+              if (slugs.has(slug)) {
+                throw new Error("Publication occurs in multiple shards: " + slug);
+              }
+              slugs.add(slug);
+            }
+          }
+          return {
+            schemaVersion: 1,
+            works: slugs.size,
+            books: allMetadata.reduce(
+              (sum, metadata) => sum + metadata.books,
+              0,
+            ),
+            papers: allMetadata.reduce(
+              (sum, metadata) => sum + metadata.papers,
+              0,
+            ),
+            chunks: allMetadata.reduce(
+              (sum, metadata) => sum + metadata.chunks,
+              0,
+            ),
+            pagefindBytes: allMetadata.reduce(
+              (sum, metadata) => sum + metadata.pagefindBytes,
+              0,
+            ),
+          };
+        })
+        .catch((error) => {
+          searchMetadataPromise = undefined;
+          throw error;
+        });
+    }
+    return searchMetadataPromise;
   };
 
   const groupDocumentResults = (
@@ -895,11 +1009,7 @@
   if (previewMetadata) {
     applyMetadata(previewMetadata);
   } else if (scope) {
-    fetch(resolveUrl(config.metadataPath, "./search-meta.json"))
-      .then((response) => {
-        if (!response.ok) throw new Error("Search metadata missing");
-        return response.json();
-      })
+    ensureSearchMetadata()
       .then(applyMetadata)
       .catch(() => {
         scope.textContent = "検索索引の構成情報を取得できませんでした。";

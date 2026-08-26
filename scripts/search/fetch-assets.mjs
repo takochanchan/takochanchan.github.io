@@ -2,6 +2,12 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { publications } from "../../src/publications.mjs";
+import {
+  publicationsForSearchShard,
+  readSearchShardConfig,
+  validateSearchShardAssignments,
+} from "./shard-config.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(here, "../..");
@@ -16,9 +22,27 @@ const outputRoot = path.resolve(
 const manifest = JSON.parse(
   await readFile(path.join(projectRoot, "assets-manifest.json"), "utf8"),
 );
-const assets = manifest.assets.filter(
+const searchShard = argument("--shard", process.env.SEARCH_SHARD || null);
+let assets = manifest.assets.filter(
   (asset) => asset.path.endsWith(".pdf") || asset.path.endsWith(".epub"),
 );
+if (searchShard) {
+  const config = await readSearchShardConfig(projectRoot);
+  validateSearchShardAssignments(publications, config);
+  if (!config.shards.some((shard) => shard.id === searchShard)) {
+    throw new Error(`Unknown search shard: ${searchShard}`);
+  }
+  const selected = publicationsForSearchShard(publications, searchShard);
+  const required = new Set(
+    selected.flatMap((publication) => [publication.pdf, publication.epub]),
+  );
+  assets = assets.filter((asset) => required.has(asset.path));
+  if (assets.length !== required.size) {
+    throw new Error(
+      `Search shard ${searchShard} assets: ${assets.length}/${required.size}`,
+    );
+  }
+}
 const concurrency = Math.max(1, Number(argument("--concurrency", "3")) || 3);
 
 const digestFile = async (filename) => {
