@@ -2,11 +2,11 @@ name: Deploy archive to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["agent/deploy-squier-spanish-pages-20260827-v2"]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -59,3 +59,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Remove temporary deployment branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          encoded="${GITHUB_REF_NAME//\//%2F}"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded"
