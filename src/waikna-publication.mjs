@@ -1,0 +1,51 @@
+export const waiknaPublicationRecords = [
+  {
+    slug: "squier-waikna-mosquito-shore-1855",
+    title: "ワイクナ――モスキート海岸での冒険",
+    originalTitle: "Waikna; or, Adventures on the Mosquito Shore",
+    subtitle: "サミュエル・A・バード名義・1855年刊 日本語全訳",
+    author: "サミュエル・A・バード（E・G・スクワイアの筆名）",
+    originalAuthor: "Samuel A. Bard [pseudonym of E. G. Squier]",
+    series: "WAIKNA · 1855",
+    originalPublication: "ニューヨーク、Harper & Brothers、1855年",
+    year: 1855,
+    extent: "1巻・PDF 285頁・原刊前付ix頁・本文13–366頁・付録3篇・図版等57点",
+    description: "スクワイアがサミュエル・A・バード名義で刊行した、モスキート海岸の旅行・民族誌です。ブルーフィールズからラグーン群、グラシアス・ア・ディオス岬、ワンクス川、ポヤー地域へ進む旅を軸に、自然環境、先住民社会、交易、歴史資料と語彙を記録しています。",
+    cover: "publications/squier-waikna-mosquito-shore-1855/cover.jpg",
+    pdf: "publications/squier-waikna-mosquito-shore-1855/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.pdf",
+    epub: "publications/squier-waikna-mosquito-shore-1855/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.epub",
+    pageCount: 285,
+    figureCount: 57,
+    plateCount: 0,
+    types: ["紀行", "地誌", "民族誌", "植民地史", "一次史料"],
+    regions: [
+      "中央アメリカ",
+      "モスキート海岸",
+      "ニカラグア",
+      "ホンジュラス",
+      "カリブ海岸",
+    ],
+    languages: ["英語"],
+    tags: [
+      "E・G・スクワイア",
+      "サミュエル・A・バード",
+      "モスキート族",
+      "ブルーフィールズ",
+      "グラシアス・ア・ディオス岬",
+      "ワンクス川",
+      "19世紀",
+    ],
+    searchShard: "002",
+  },
+];
+
+export const waiknaPublicationMetadata = {
+  "squier-waikna-mosquito-shore-1855": {
+    sourceEdition: "Samuel A. Bard [pseudonym of E. G. Squier], Waikna; or, Adventures on the Mosquito Shore, New York: Harper & Brothers, 1855.",
+    sourceProvider: "Library of Congress, Rare Book and Special Collections Division所蔵のHarper & Brothers版（General Collections copy, LCCN 03019150）の全374画像を底本としました。",
+    sourceUrl: "https://www.loc.gov/item/03019150/",
+    rights: "1855年刊の原著本文・図版はパブリックドメインです。Library of Congressは、このコレクションの文書について米国著作権その他の制限を認識していないと表示しています。クレジット表記は「Library of Congress, Rare Book and Special Collections Division」です。",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-08-27",
+  },
+};

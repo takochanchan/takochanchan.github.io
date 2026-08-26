@@ -4628,6 +4628,24 @@
       "sha256": "b6d1a593c8589816f92a910a945095b8c0548cadc96eb206d7c4dda1e2aaf419"
     },
     {
+      "path": "publications/squier-waikna-mosquito-shore-1855/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.epub",
+      "size": 15063164,
+      "sha256": "ff6474a4bff286ba03bfa2db69a84c5c9ac9ac6d76dd5e70266a0c8217a65189"
+    },
+    {
+      "path": "publications/squier-waikna-mosquito-shore-1855/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Samuel_A_Bard_Waikna_1855_Japanese_Complete_Translation.pdf",
+      "size": 15459739,
+      "sha256": "ca19f8eb634b1345bc04aaf9263a8ea7ce3cab71c31fd7e5eb97a55fe6f07207"
+    },
+    {
+      "path": "publications/squier-waikna-mosquito-shore-1855/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-waikna-mosquito-shore-1855/cover.jpg",
+      "size": 52205,
+      "sha256": "5dc28daf08b9dd0053ada1b7ad1e487ef58cdba3c3cafbe1fc8983543709e22d"
+    },
+    {
       "path": "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.epub",
       "size": 4098832,

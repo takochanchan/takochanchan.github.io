@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 283);
+  assert.equal(publications.length, 284);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -74,7 +74,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 6);
+  assert.equal(counts.get("002"), 7);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -90,6 +90,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-hunting-pass-tropical-adventure-1860",
       "squier-lake-yojoa-taulebe-1860",
       "squier-unexplored-regions-central-america-1868",
+      "squier-waikna-mosquito-shore-1855",
     ],
   );
   assert.equal(
@@ -592,6 +593,35 @@ test("Bury Bishop amongst Bananas retains its approved complete scope and public
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "squier-waikna-mosquito-shore-1855",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "サミュエル・A・バード（E・G・スクワイアの筆名）");
+  assert.equal(
+    item.originalAuthor,
+    "Samuel A. Bard [pseudonym of E. G. Squier]",
+  );
+  assert.equal(item.pageCount, 285);
+  assert.equal(item.figureCount, 57);
+  assert.equal(item.plateCount, 0);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /付録3篇/);
+  assert.match(item.extent, /図版等57点/);
+  assert.match(item.description, /モスキート海岸の旅行・民族誌/);
+  assert.match(item.sourceProvider, /Library of Congress/);
+  assert.match(item.sourceProvider, /LCCN 03019150/);
+  assert.match(item.sourceUrl, /loc\.gov\/item\/03019150/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /著作権その他の制限を認識していない/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Squier Nicaragua retains its approved complete scope and supplementary-source rights display", () => {
   const item = publications.find(
     (publication) => publication.slug === "squier-nicaragua-1852",
@@ -674,7 +704,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 135);
+  assert.equal(majorPublications.length, 136);
   assert.equal(shortPublications.length, 148);
   assert.equal(shortPublicationAuthors.length, 35);
   assert.deepEqual(
@@ -1782,7 +1812,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">135<\/strong>件/);
+  assert.match(html, /id="book-match-count">136<\/strong>件/);
   assert.match(html, /id="paper-match-count">148<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
