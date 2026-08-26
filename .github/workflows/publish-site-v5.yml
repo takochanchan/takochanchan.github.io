@@ -1,0 +1,101 @@
+name: Publish revised Spanish American Republics catalogue source
+
+on:
+  push:
+    branches:
+      - "agent/publish-squier-spanish-site-20260826-v5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-squier-spanish-site-v5
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BASE_MAIN_SHA: "6532ad879cfd96f2bffc89564270d7b58667fca0"
+      ARCHIVE_COMMIT: "1d897fab06cb7aceae88571a153480bc3ed50d4c"
+      BUNDLE_SIZE: "475380"
+      BUNDLE_SHA256: "245fa5950290aec8a5b09f63d23fa511841f0e0a9bcef8526eb29b94309bb59e"
+      CHUNKS: "78633dd04f15380f3263fc011a7a6851028db05c1 23468f51c076d9e1a9a0a4ec3cd4b658eac86dbe 900e80dad3de60ef61bbf55ae9eb58738fe155913 04661b625f25af01f30a329e0fd53b874892c6dc 12f26afb6e226bd66dfa151dc2d5783d712dabe9 69e56fe6e68e4532db1e8366b2f431f632ffb66f"
+      PDF_NAME: "E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.pdf"
+      EPUB_NAME: "E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub"
+      PDF_SHA256: "395e843dd27b094b9bf5686f4200ad53136ca964dae1fbbb154b2715ad8c0f31"
+      EPUB_SHA256: "01dcd13e077f4fb2276d35f840515f8904943357aef509014cc817eb0a944db6"
+      COVER_SHA256: "0b8c341c92f134df5d70136e2ab8bd63230f228c9be87735187082117918efc0"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Check out staging commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Confirm current main and reconstruct approved source bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_MAIN_SHA"
+          bundle="$RUNNER_TEMP/site-revision.tar.gz"
+          : > "$bundle"
+          for sha in $CHUNKS; do
+            gh api "repos/$GITHUB_REPOSITORY/git/blobs/$sha" --jq .content \
+              | tr -d '\n' | base64 --decode >> "$bundle"
+          done
+          test "$(stat -c%s "$bundle")" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  $bundle" | sha256sum -c -
+          test "$(tar -tzf "$bundle" | wc -l)" = 16
+          if tar -tzf "$bundle" | grep -Eq '(^/|(^|/)\.\.(/|$))'; then
+            echo 'Unsafe bundle path' >&2
+            exit 1
+          fi
+          git checkout --detach origin/main
+          tar -xzf "$bundle" -C .
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify archive gate, catalogue, and public assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -Fq "$ARCHIVE_COMMIT" master-archive.json
+          grep -Fq "$PDF_SHA256" assets-manifest.json
+          grep -Fq "$EPUB_SHA256" assets-manifest.json
+          echo "$COVER_SHA256  static/publications/squier-spanish-american-republics-1850/cover.jpg" | sha256sum -c -
+          release="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current")"
+          test "$(jq -r --arg name "$PDF_NAME" '.assets[] | select(.name == $name) | .digest' <<< "$release")" = "sha256:$PDF_SHA256"
+          test "$(jq -r --arg name "$EPUB_NAME" '.assets[] | select(.name == $name) | .digest' <<< "$release")" = "sha256:$EPUB_SHA256"
+          npm run build
+          npm test
+
+      - name: Commit the verified revision to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .github/workflows/pages.yml AGENTS.md PUBLICATION_WORKFLOW.md README.md REVISION_LOG.md \
+            assets-manifest.json bibliographic-manifest.json master-archive.json package.json scripts search-shards.json \
+            src static/publications/squier-spanish-american-republics-1850/cover.jpg tests
+          git diff --cached --check
+          git commit -m "Revise Spanish American Republics translation"
+          git fetch origin main
+          test "$(git rev-parse origin/main)" = "$BASE_MAIN_SHA"
+          git push origin HEAD:main
+
+      - name: Remove temporary staging branch
+        if: success()
+        shell: bash
+        run: |
+          encoded="${GITHUB_REF_NAME//\//%2F}"
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$encoded"
