@@ -265,6 +265,11 @@ try {
     "squier-davis-ancient-monuments-mississippi-valley-1848",
     1,
   );
+  const mexicanRailroadClosing = await verifyPublicationQuery(
+    "共和国最初の鉄道の歴史",
+    "baz-gallo-historia-ferrocarril-mexicano-1874",
+    1,
+  );
   const pageChecks = [
     ["グリハルバ", grijalva, 275],
     ["グリハルバ川", grijalvaRiver, 75],
@@ -297,7 +302,8 @@ try {
       `文書庫を焼き ${barrazaArchiveBurning} pages, ` +
       `大西洋の波濤の彼方に輝く諸国 ${strangewaysClosing} pages, ` +
       `川がなす二百九の湾曲または折返し ${fernandezClosing} pages, ` +
-      `数学的精密さ ${ancientMonumentsPrecision} pages.\n`,
+      `数学的精密さ ${ancientMonumentsPrecision} pages, ` +
+      `共和国最初の鉄道の歴史 ${mexicanRailroadClosing} pages.\n`,
   );
 } finally {
   await api.destroy();

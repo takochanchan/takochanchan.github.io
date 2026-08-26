@@ -31,7 +31,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 270);
+  assert.equal(publications.length, 271);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -398,6 +398,35 @@ test("Sigüenza Parayso occidental retains its approved complete scope", () => {
   assert.equal(item.updatedDate, "2026-08-25");
 });
 
+test("Baz and Gallo Mexican Railroad history retains its approved complete scope and institutional rights display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "baz-gallo-historia-ferrocarril-mexicano-1874",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "グスタボ・バス／エドゥアルド・L・ガリョ");
+  assert.equal(item.originalAuthor, "Gustavo Baz / Eduardo L. Gallo");
+  assert.equal(item.pageCount, 462);
+  assert.equal(item.figureCount, 38);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /表143点/);
+  assert.match(item.extent, /注87件/);
+  assert.match(item.description, /ベラクルス―メキシコ鉄道/);
+  assert.match(item.sourceProvider, /University of Michigan Library/);
+  assert.match(item.sourceProvider, /2lYzAQAAMAAJ/);
+  assert.match(item.sourceProvider, /mdp\.39015046460427/);
+  assert.match(item.sourceProvider, /x6CEcgMw1IAC/);
+  assert.match(item.sourceUrl, /books\.google\.com\/books\?id=2lYzAQAAMAAJ/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /Public Domain〔pd〕／Full view/);
+  assert.match(item.rights, /Public domain／Full view/);
+  assert.match(item.rights, /別個のライセンス付与は確認していません/);
+  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.equal(item.publishedDate, "2026-08-26");
+  assert.equal(item.updatedDate, "2026-08-26");
+});
+
 test("Otis Panama Railroad history retains its approved complete scope and institutional rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -504,7 +533,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 132);
+  assert.equal(majorPublications.length, 133);
   assert.equal(shortPublications.length, 138);
   assert.equal(shortPublicationAuthors.length, 33);
   assert.deepEqual(
@@ -1599,7 +1628,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">132<\/strong>件/);
+  assert.match(html, /id="book-match-count">133<\/strong>件/);
   assert.match(html, /id="paper-match-count">138<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

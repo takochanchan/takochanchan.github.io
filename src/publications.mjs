@@ -6,6 +6,52 @@ import {
 
 const publicationRecords = [
   {
+    "slug": "baz-gallo-historia-ferrocarril-mexicano-1874",
+    "title": "メキシコ鉄道史",
+    "originalTitle": "Historia del Ferrocarril Mexicano",
+    "subtitle": "湾岸地帯から中央高原にいたるメキシコの富・1874年刊 日本語全訳",
+    "author": "グスタボ・バス／エドゥアルド・L・ガリョ",
+    "originalAuthor": "Gustavo Baz / Eduardo L. Gallo",
+    "series": "HISTORIA DEL FERROCARRIL MEXICANO · 1874",
+    "originalPublication": "メキシコ、Gallo y Compañía、1874年",
+    "year": 1874,
+    "extent": "PDF 462頁・原刊前付3葉・本文5–296頁・図版等38点・表143点・注87件",
+    "description": "バスとガリョがベラクルス―メキシコ鉄道の成立、建設、路線、橋梁・トンネル・駅を記録し、湾岸地帯から中央高原に至る各地の地質、農業、工業、商業、都市と人口を統計表・図版とともに論じた1874年刊の鉄道史・地誌です。",
+    "cover": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
+    "pdf": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.pdf",
+    "epub": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.epub",
+    "pageCount": 462,
+    "figureCount": 38,
+    "plateCount": 0,
+    "types": [
+      "鉄道史",
+      "交通史",
+      "地誌",
+      "経済史",
+      "産業史",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "ベラクルス",
+      "プエブラ",
+      "メキシコ市"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "メキシコ鉄道",
+      "ベラクルス",
+      "メキシコ市",
+      "鉄道建設",
+      "橋梁",
+      "トンネル",
+      "産業統計",
+      "19世紀"
+    ]
+  },
+  {
     "slug": "squier-davis-ancient-monuments-mississippi-valley-1848",
     "title": "ミシシッピ川流域の古代遺構",
     "originalTitle": "Ancient Monuments of the Mississippi Valley",
@@ -8768,6 +8814,14 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  "baz-gallo-historia-ferrocarril-mexicano-1874": {
+    "sourceEdition": "Gustavo Baz and Eduardo L. Gallo, Historia del Ferrocarril Mexicano: riqueza de México en la zona del Golfo á la Mesa Central, bajo su aspecto geológico, agrícola, manufacturero y comercial, México: Gallo y Compañía, 1874.",
+    "sourceProvider": "University of Michigan Library所蔵本をGoogle BooksとHathiTrustが公開する1874年初版（Google Books 2lYzAQAAMAAJ／HathiTrust mdp.39015046460427）を主底本としました。判読困難な一部図版は、Google Booksで公開される1875年版（x6CEcgMw1IAC）の同一図版で補いました。",
+    "sourceUrl": "https://books.google.com/books?id=2lYzAQAAMAAJ",
+    "rights": "1874年刊の原著本文・図版はパブリックドメインです。主底本はHathiTrustでPublic Domain〔pd〕／Full view、補助版はGoogle BooksでPublic domain／Full viewと表示されています。公開機関による別個のライセンス付与は確認していません。日本語翻訳版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-26",
+    "updatedDate": "2026-08-26"
+  },
   "squier-davis-ancient-monuments-mississippi-valley-1848": {
     "sourceEdition": "Ephraim George Squier and Edwin Hamilton Davis, Ancient Monuments of the Mississippi Valley: Comprising the Results of Extensive Original Surveys and Explorations, Smithsonian Contributions to Knowledge, Vol. I, Washington: Smithsonian Institution, 1848.",
     "sourceProvider": "米国議会図書館所蔵の1848年初版デジタル個体（item 16012309）を主底本としました。スミソニアン図書館・アーカイブ所蔵同年版を校合に、Project Gutenberg ebook 49668の校正済み転写と図版を判読・照合補助に用いました。",

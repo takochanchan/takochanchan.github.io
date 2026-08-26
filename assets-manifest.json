@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.epub",
+      "size": 13961911,
+      "sha256": "186e1c54b2e002bb0bad9445e988c8b7259a35643d4318b1243370387bc07a03"
+    },
+    {
+      "path": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.pdf",
+      "size": 16039764,
+      "sha256": "da1cbef53de8d9a51d25a3d01125a02c5288d39d9fd6b564821754d014c54abd"
+    },
+    {
+      "path": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
+      "size": 93090,
+      "sha256": "016195b9e851348a34a714cfe8d2cc3aa2ca789437fa5f59913490e9f36fc50e"
+    },
+    {
       "path": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
       "size": 13466869,
