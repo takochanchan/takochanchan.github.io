@@ -76,6 +76,11 @@ for (const shard of config.shards) {
     ),
   ]);
   const actualSlugs = [...(metadata.workSlugs || [])].sort();
+  const sealedShard = Number.isInteger(shard.sealedWorks);
+  const currentGlobalMetadata =
+    metadata.archiveCommit === archive.archive_commit &&
+    metadata.assetManifestSha256 === assetManifestSha256 &&
+    metadata.bibliographicManifestSha256 === bibliographicManifestSha256;
   const mappedSlugs = new Set();
   for (const mapping of Object.values(documentMap.fragments || {})) {
     if (!Array.isArray(mapping) || !expectedSlugs.includes(mapping[0])) {
@@ -86,9 +91,7 @@ for (const shard of config.shards) {
   if (
     metadata.schemaVersion !== 1 ||
     metadata.searchShard !== shard.id ||
-    metadata.archiveCommit !== archive.archive_commit ||
-    metadata.assetManifestSha256 !== assetManifestSha256 ||
-    metadata.bibliographicManifestSha256 !== bibliographicManifestSha256 ||
+    (!sealedShard && !currentGlobalMetadata) ||
     metadata.works !== expected.length ||
     JSON.stringify(actualSlugs) !== JSON.stringify(expectedSlugs) ||
     metadata.books !== expected.filter(
