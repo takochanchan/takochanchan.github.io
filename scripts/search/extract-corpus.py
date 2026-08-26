@@ -1293,6 +1293,7 @@ def main() -> int:
         )
     corpus = {
         "schemaVersion": 1,
+        "searchShard": manifest.get("searchShard"),
         "archiveCommit": manifest.get("archiveCommit"),
         "assetManifestSha256": manifest.get("assetManifestSha256"),
         "works": works,

@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -59,7 +59,8 @@ jobs:
         run: npm ci
 
       - name: Restore final assets and OCR cache
-        uses: actions/cache@v4
+        id: search-cache
+        uses: actions/cache/restore@v4
         with:
           path: |
             archive/.cache/fulltext-assets
@@ -81,12 +82,26 @@ jobs:
           SEARCH_SHARD: ${{ steps.source.outputs.shard }}
         run: npm run fetch:search-assets
 
-      - name: Build and verify shard
+      - name: Build shard
+        working-directory: archive
+        env:
+          SEARCH_SHARD: ${{ steps.source.outputs.shard }}
+        run: npm run build:search
+
+      - name: Save final assets and OCR cache
+        if: always() && steps.search-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            archive/.cache/fulltext-assets
+            archive/.cache/fulltext-ocr
+          key: ${{ steps.search-cache.outputs.cache-primary-key }}
+
+      - name: Verify shard
         working-directory: archive
         env:
           SEARCH_SHARD: ${{ steps.source.outputs.shard }}
         run: |
-          npm run build:search
           npm run verify:search
           touch dist/search/.nojekyll
 

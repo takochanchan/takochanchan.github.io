@@ -20,6 +20,18 @@ const browserScript = await readFile(
   "utf8",
 );
 
+const extractorScript = await readFile(
+  new URL("../scripts/search/extract-corpus.py", import.meta.url),
+  "utf8",
+);
+
+test("search extractor preserves the shard identifier", () => {
+  assert.match(
+    extractorScript,
+    /"searchShard": manifest\.get\("searchShard"\)/,
+  );
+});
+
 test("initial result display is capped at ten snippets", () => {
   assert.equal(INITIAL_SNIPPET_LIMIT, 10);
 });
