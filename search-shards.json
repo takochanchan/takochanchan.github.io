@@ -9,6 +9,11 @@
       "repository": "takochanchan/takochan-search-index-001",
       "baseUrl": "https://takochanchan.github.io/takochan-search-index-001/",
       "sealedWorks": 277
+    },
+    {
+      "id": "002",
+      "repository": "takochanchan/takochan-search-index-002",
+      "baseUrl": "https://takochanchan.github.io/takochan-search-index-002/"
     }
   ]
 }

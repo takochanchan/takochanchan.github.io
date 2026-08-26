@@ -4448,6 +4448,24 @@
       "sha256": "01d9437091081e995c417afcb4b86b1a903f0b6092aef085fa90f7a813264dbb"
     },
     {
+      "path": "publications/squier-hunting-pass-tropical-adventure-1860/E_G_Squier_Hunting_a_Pass_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Hunting_a_Pass_1860_Japanese_Complete_Translation.epub",
+      "size": 167066,
+      "sha256": "8d8a8fd574023690c706750b5fbcfaed181887ff769b365fa3f43869868eb6a7"
+    },
+    {
+      "path": "publications/squier-hunting-pass-tropical-adventure-1860/E_G_Squier_Hunting_a_Pass_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Hunting_a_Pass_1860_Japanese_Complete_Translation.pdf",
+      "size": 700941,
+      "sha256": "5756fbbc2dd5d7ba84f5fbc5499693e3ae228593c8624abf14b3b205925be110"
+    },
+    {
+      "path": "publications/squier-hunting-pass-tropical-adventure-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-hunting-pass-tropical-adventure-1860/cover.jpg",
+      "size": 132483,
+      "sha256": "e76965ec55e94c6bd2a7e0dae46c2f637e2736d63a336759985cefb701044511"
+    },
+    {
       "path": "publications/squier-judgment-by-default-1851/E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.epub",
       "size": 197024,
@@ -4464,6 +4482,24 @@
       "url": "https://takochanchan.github.io/publications/squier-judgment-by-default-1851/cover.jpg",
       "size": 179776,
       "sha256": "7defeabdc9f9e038f0ea06cc182a2eda4617563cc4f9d0b4497322b594dc48a2"
+    },
+    {
+      "path": "publications/squier-lake-yojoa-taulebe-1860/E_G_Squier_Lake_of_Yojoa_or_Taulebe_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Lake_of_Yojoa_or_Taulebe_1860_Japanese_Complete_Translation.epub",
+      "size": 149915,
+      "sha256": "c35ed8884425f85c6f6fe186ca472a85206e0613045ab21bd4e80e0f511a7f9e"
+    },
+    {
+      "path": "publications/squier-lake-yojoa-taulebe-1860/E_G_Squier_Lake_of_Yojoa_or_Taulebe_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Lake_of_Yojoa_or_Taulebe_1860_Japanese_Complete_Translation.pdf",
+      "size": 296175,
+      "sha256": "b3dfeb1e336501bf7bfb599f33cbb8c18172c25d35b44e23b5d4340e90179678"
+    },
+    {
+      "path": "publications/squier-lake-yojoa-taulebe-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-lake-yojoa-taulebe-1860/cover.jpg",
+      "size": 146364,
+      "sha256": "6a3662ebd3d2be813e6eed2a072759de1ef913ea802eeebaec8fc6dcac653450"
     },
     {
       "path": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
@@ -4518,6 +4554,60 @@
       "url": "https://takochanchan.github.io/publications/squier-spanish-american-republics-1850/cover.jpg",
       "size": 155338,
       "sha256": "0b8c341c92f134df5d70136e2ab8bd63230f228c9be87735187082117918efc0"
+    },
+    {
+      "path": "publications/squier-unexplored-regions-central-america-1868/E_G_Squier_The_Unexplored_Regions_of_Central_America_1868_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_The_Unexplored_Regions_of_Central_America_1868_Japanese_Complete_Translation.epub",
+      "size": 190966,
+      "sha256": "03b53e3921311681522b2bbfdbc06886459fe1c6369109d8c4c99a11d800fcb0"
+    },
+    {
+      "path": "publications/squier-unexplored-regions-central-america-1868/E_G_Squier_The_Unexplored_Regions_of_Central_America_1868_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_The_Unexplored_Regions_of_Central_America_1868_Japanese_Complete_Translation.pdf",
+      "size": 572737,
+      "sha256": "57845820b965146edd6ead6bf74d1ce5efd884b63176ef903109093625f43471"
+    },
+    {
+      "path": "publications/squier-unexplored-regions-central-america-1868/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-unexplored-regions-central-america-1868/cover.jpg",
+      "size": 172990,
+      "sha256": "a05776fd63f4a7fe4bfa909ebdde7b323ea7dd85d8fa37d7bb0b70ae12c10e0f"
+    },
+    {
+      "path": "publications/squier-visit-guajiquero-indians-1859/E_G_Squier_A_Visit_to_the_Guajiquero_Indians_1859_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_A_Visit_to_the_Guajiquero_Indians_1859_Japanese_Complete_Translation.epub",
+      "size": 3167835,
+      "sha256": "64703e259068ae1adc8176d3021b3e6cc4b18d6fbeb99ddebbb77343c310e1ee"
+    },
+    {
+      "path": "publications/squier-visit-guajiquero-indians-1859/E_G_Squier_A_Visit_to_the_Guajiquero_Indians_1859_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_A_Visit_to_the_Guajiquero_Indians_1859_Japanese_Complete_Translation.pdf",
+      "size": 3666329,
+      "sha256": "99b1cf728426b851a31ced55d73c26c48a7c141ee5d516ec6c04b880278cb24f"
+    },
+    {
+      "path": "publications/squier-visit-guajiquero-indians-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-visit-guajiquero-indians-1859/cover.jpg",
+      "size": 160208,
+      "sha256": "83594ea0ab07f1b95cfd5053c8d0f358e9513649f7413ad942320090f1a3f51e"
+    },
+    {
+      "path": "publications/squier-volcanoes-central-america-1859/E_G_Squier_The_Volcanoes_of_Central_America_1859_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_The_Volcanoes_of_Central_America_1859_Japanese_Complete_Translation.epub",
+      "size": 4524225,
+      "sha256": "b092a53bf7a5719ef2c666c5216accf3d25f2a20fafc0705345374103338c4c0"
+    },
+    {
+      "path": "publications/squier-volcanoes-central-america-1859/E_G_Squier_The_Volcanoes_of_Central_America_1859_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_The_Volcanoes_of_Central_America_1859_Japanese_Complete_Translation.pdf",
+      "size": 5363872,
+      "sha256": "2e17a502f386230f5d7c922e6b358fe80cb607a2074db6a886db508745d5f7e0"
+    },
+    {
+      "path": "publications/squier-volcanoes-central-america-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-volcanoes-central-america-1859/cover.jpg",
+      "size": 158305,
+      "sha256": "b6d1a593c8589816f92a910a945095b8c0548cadc96eb206d7c4dda1e2aaf419"
     },
     {
       "path": "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.epub",

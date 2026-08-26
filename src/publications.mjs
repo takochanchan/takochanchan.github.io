@@ -3,6 +3,11 @@ import {
   perignyRemainingPublicationRecords,
   perignyRemainingShortWorkAuthors,
 } from "./perigny-remaining-publications.mjs";
+import {
+  squierBatch03PublicationMetadata,
+  squierBatch03PublicationRecords,
+  squierBatch03ShortWorkAuthors,
+} from "./squier-batch03-publications.mjs";
 
 const publicationRecords = [
   {
@@ -8936,6 +8941,7 @@ const publicationRecords = [
       "歴史言語資料",
     ],
   },
+  ...squierBatch03PublicationRecords,
   ...perignyRemainingPublicationRecords,
 ];
 
@@ -11457,6 +11463,7 @@ const publicationMetadata = {
     "publishedDate": "2026-08-26",
     "updatedDate": "2026-08-26"
   },
+  ...squierBatch03PublicationMetadata,
   ...perignyRemainingPublicationMetadata,
 };
 
@@ -11588,6 +11595,7 @@ const shortWorkAuthorBySlug = {
   "brinton-ancient-human-footprint-nicaragua-1887": "daniel-g-brinton",
   "editorial-age-nicaragua-footprints-1889": "american-antiquarian-editorial",
   "crawford-neolithic-man-nicaragua-1891": "john-crawford",
+  ...squierBatch03ShortWorkAuthors,
   ...perignyRemainingShortWorkAuthors,
 };
 
