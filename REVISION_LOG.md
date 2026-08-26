@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-26 — E・G・スクワイア メキシコ・中央アメリカ論文5篇 新規公開
+
+- 1849–1851年刊の「古代メキシコ人の大暦石に記された日付に関する若干の新発見」「中央アメリカにおけるイギリスの蚕食と侵略——モスキート問題」「スペイン系アメリカ諸共和国とその失敗の原因——中央アメリカ」「大船舶運河問題——イギリスおよびコスタリカ対アメリカ合衆国およびニカラグア」「欠席判決——中央アメリカと政権」を、各篇個別の日本語全訳PDF・EPUBとして公開した。公開PDFは提示・承認済みPDFとバイト単位で同一である。
+- 暦石論文の底本はWellcome Collection所蔵分離刷 `b3192962x`。原著はパブリックドメインで、同館はデジタル画像をPublic Domain Mark 1.0で表示する。1850年の3篇はInternet Archive公開のLincoln Financial Foundation Collection（Allen County Public Library）提供本を底本とし、当該資料ページには個別のCreative Commons等のライセンス表示がない。1851年論文はInternet Archive掲載のHarvard University所蔵・Googleデジタル化本（`NOT_IN_COPYRIGHT`、米国）とGoogle Books掲載のUniversity of Wisconsin–Madison所蔵本を底本とし、いずれにも個別のCreative Commons等のライセンス表示はない。各日本語訳には再利用許諾を付与していない。
+- 1850年の3篇はCharles Lee Stansifer（1968）p. 64とDon C. Seitz（1911）p. 52、1851年論文はStansifer（1968）p. 64とMichael D. Olien（1985）p. 130を帰属典拠とした。
+- 公開PDF／EPUBのSHA-256は順に、暦石論文 `2b4cbdd308254eb78527368948ab4184b5c786d8a45dab32c4f0832866f0b512`／`c01a189af29cf48fe33880d091ec373fb9d50f2e98b41932ae5227177a8704a9`、モスキート問題 `0d685ecdabdd17c7cda2eec716a3e2f953982e9f02912e6431a60854fb941310`／`aabf03babae4baf5b71b4c3a911fd7c524ab55f4688c8d1613b3c5135afa75a9`、スペイン系アメリカ諸共和国 `211c8c5f95d27faa000f42b25928e371d6c3136f0f83be08ec4d91f663dd531a`／`9938a47b5cb61c1de34748cad551b86982a5bd879dd3b115cd60f8fd3c93bf55`、大船舶運河問題 `aba6f113ffb48231e59a7eecc43fc322e72eb1f6b3a2462e5d95b1ef20507e2b`／`5056343349474f3db33152e335deb9279111398a2d8993031080b2227f5e55a8`、欠席判決 `02fa4a7ff80dd1c39fb78299aef7d81f3b0abb117b93133e6896efc01c14c5f1`／`1ac72358433b55770ea634663b4915b544165a7f6a874dff9ea0660dcfbe9d4c`。編集可能正本5本は非公開原本アーカイブのコミット `c5d346b4f205b602d6e43226fd0488f14569d325` に保存した。
+- 公開識別子：`squier-great-calendar-stone-1849`、`squier-british-encroachments-mosquito-question-1850`、`squier-spanish-american-republics-1850`、`squier-great-ship-canal-question-1850`、`squier-judgment-by-default-1851`。
+
 ## 2026-08-26 — プリエト／ピアトコフスキ『グアテマラ大洋間鉄道に関する概説』新規公開
 
 - 1880年刊『Ideas generales sobre el Ferrocarril Interoceánico de Guatemala』の原刊表紙、標題紙、献辞、本文5–60頁、付録、裏表紙を日本語全訳とし、PDF 37頁・EPUBで公開した。原刊の空白頁は省略した。

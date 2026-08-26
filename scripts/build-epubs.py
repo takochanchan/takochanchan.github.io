@@ -325,6 +325,11 @@ TAGGED_PDF_SOURCES = {
     "galindo-palenque-1832",
     "galindo-ruins-palenque-literary-gazette-1831",
     "galindo-usumacinta-1833",
+    "squier-british-encroachments-mosquito-question-1850",
+    "squier-great-calendar-stone-1849",
+    "squier-great-ship-canal-question-1850",
+    "squier-judgment-by-default-1851",
+    "squier-spanish-american-republics-1850",
     "swett-british-honduras-san-pedro-1868",
     "tribes-and-temples-vol-1",
     "tribes-and-temples-vol-2",
@@ -337,6 +342,15 @@ STOLL_PDF_SOURCES = {
 }
 
 TAGGED_PDF_FIGURE_ALTS = {
+    "squier-great-calendar-stone-1849": [
+        "図1 ガマの図に基づく。図2 ネベルの図に基づく。",
+    ],
+    "squier-british-encroachments-mosquito-question-1850": [
+        "中央アメリカ地図——モスキート海岸におけるグレートブリテンの要求範囲を示す（原刊189頁）",
+    ],
+    "squier-great-ship-canal-question-1850": [
+        "中央アメリカ地図——モスキート海岸におけるイギリスの主張を示す（原刊445頁）",
+    ],
     "cook-balise-merida-1769": [
         "1769年初版の原刊標題紙",
         "原刊1頁の装飾見出し",
