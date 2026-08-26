@@ -1,0 +1,71 @@
+name: One-shot replace Baz and Gallo EPUB
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/one-shot-replace-baz-gallo-epub.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Reconstruct, upload, and verify EPUB
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p transfer verify
+          epub="Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.epub"
+
+          fetch_blob() {
+            local sha="$1"
+            gh api "repos/${GITHUB_REPOSITORY}/git/blobs/${sha}" --jq '.content' |
+              tr -d '\n' | base64 --decode >> "transfer/${epub}"
+          }
+
+          : > "transfer/${epub}"
+          while read -r sha; do
+            fetch_blob "$sha"
+          done <<'EPUB_SHAS'
+          0df246adc30cab1113285b4150a5d4002119f797
+          d8c8c9700ef10eba90ec9feb024e8b377ad75994
+          2921c6452db11f5681ba1696338f04f881571650
+          34ff3767819da7b183aa57deabe048eaf27f0096
+          2f174090ad7a13d0ecdf6293edd66f432ea14014
+          ede8e51f115d216e576611c342d8db8e1b17befe
+          ab9d9c3ae93efb21c7fac0c077bb242f5c10ccdf
+          7cc1aac5ab41b26d2dc55acd52b73174a5206bb3
+          d825c10ed89191ba343f5004c193d381fd0b0fb0
+          19ce8e72fc0915cc52a29cadf27a310fa12417aa
+          2c6889280345aac4db61cee3412814549cd642a1
+          acecb465f6bfcdb56cc7049bffc8e99d7a505cfa
+          f9c881f6279666b99bdb69551542b43194e7f28a
+          37fc93d40e0752ce2b4371de33d2c6e41113a119
+          f3bb830157fcfcf96e9fca5e626fab046c16aacb
+          ef0d98c1f8b328d6b837cb8b7b60bfef8fa07ef9
+          777414c26d12a2a3b9a684138d6d3a89043f457d
+          645be3380cdd6934a639c5ee9488e2894e7bec7a
+          31f279afd15935faf5b9bc2fd99681dc95ad297e
+          c6330e1050e7655ecfcd87a6ca9e10838682cd3e
+          bc79d8f1b3215649d6a08445c7902a98729d9d04
+          EPUB_SHAS
+
+          test "$(stat -c '%s' "transfer/${epub}")" = "14029639"
+          (cd transfer && sha256sum -c -) <<CHECKS
+          be78eb7f0777ea23de800c339f742c9fa2ebc22a1037679f10f7ca80fc97720d  ${epub}
+          CHECKS
+
+          gh release view publications-current --repo "${GITHUB_REPOSITORY}" >/dev/null
+          gh release upload publications-current "transfer/${epub}" \
+            --clobber --repo "${GITHUB_REPOSITORY}"
+
+          gh release download publications-current --pattern "${epub}" \
+            --dir verify --repo "${GITHUB_REPOSITORY}"
+          (cd verify && sha256sum -c -) <<CHECKS
+          be78eb7f0777ea23de800c339f742c9fa2ebc22a1037679f10f7ca80fc97720d  ${epub}
+          CHECKS
