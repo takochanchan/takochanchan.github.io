@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 295);
+  assert.equal(publications.length, 296);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 18);
+  assert.equal(counts.get("002"), 19);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -107,6 +107,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "carranza-un-pueblo-los-altos-1897",
       "baily-central-america-1850",
       "childs-nicaragua-canal-survey-1852",
+      "us-navy-nicaragua-ship-canal-survey-1874",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
     ],
@@ -787,6 +788,41 @@ test("Childs Nicaragua canal survey retains the approved complete scope and sour
   assert.equal(item.updatedDate, "2026-08-28");
 });
 
+test("U.S. Navy Nicaragua canal survey retains the approved complete scope and official-source rights", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "us-navy-nicaragua-ship-canal-survey-1874",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(
+    item.title,
+    "ニカラグアを通る大西洋・太平洋間船舶運河位置選定のための探検・測量報告書",
+  );
+  assert.equal(item.author, "アメリカ合衆国海軍省");
+  assert.equal(item.originalAuthor, "United States Navy Department");
+  assert.match(item.originalTitle, /^Reports of Explorations and Surveys/);
+  assert.equal(item.pageCount, 309);
+  assert.equal(item.figureCount, 5);
+  assert.equal(item.plateCount, 20);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /本文7–143頁/);
+  assert.match(item.extent, /折込図版20葉/);
+  assert.match(item.extent, /表71点/);
+  assert.match(item.description, /1872–73年/);
+  assert.match(item.description, /メノカル/);
+  assert.match(item.description, /歴史的覚書/);
+  assert.match(item.sourceProvider, /U\.S\. Government Publishing Office/);
+  assert.match(item.sourceProvider, /SERIALSET-01582_00_00-001-0057-0000/);
+  assert.doesNotMatch(item.sourceProvider, /Smithsonian|Internet Archive|照合/);
+  assert.match(item.sourceUrl, /govinfo\.gov\/app\/details\/SERIALSET-01582/);
+  assert.match(item.rights, /17 U\.S\.C\. § 105/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-28");
+  assert.equal(item.updatedDate, "2026-08-28");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -895,7 +931,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 141);
+  assert.equal(majorPublications.length, 142);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -1989,10 +2025,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
-  assert.match(html, /\/archive\.js\?v=20260828-childs-nicaragua-canal/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260828-childs-nicaragua-canal/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260828-childs-nicaragua-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-us-navy-nicaragua-canal/);
+  assert.match(html, /\/archive\.js\?v=20260828-us-navy-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260828-us-navy-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260828-us-navy-nicaragua-canal/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2005,7 +2041,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">141<\/strong>件/);
+  assert.match(html, /id="book-match-count">142<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2089,7 +2125,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-us-navy-nicaragua-canal/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2223,17 +2259,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
-    assert.match(html, /\/archive\.js\?v=20260828-childs-nicaragua-canal/);
+    assert.match(html, /\/archive\.css\?v=20260828-us-navy-nicaragua-canal/);
+    assert.match(html, /\/archive\.js\?v=20260828-us-navy-nicaragua-canal/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260828-childs-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260828-us-navy-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260828-childs-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260828-us-navy-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-28 — アメリカ合衆国海軍省『ニカラグア船舶運河位置選定のための探検・測量報告書』新規公開
+
+- 1874年刊 *Reports of Explorations and Surveys for the Location of a Ship-Canal between the Atlantic and Pacific Oceans, through Nicaragua. 1872-'73* の前付、本文7–143頁、表71点、挿図5点、折込図版20葉を日本語全訳として収録した。公開PDFは309頁、EPUBはリフロー型EPUB 3とした。
+- 底本はU.S. Government Publishing Office（GovInfo）公開のCongressional Serial Set 1582・第43議会第1会期・上院行政文書第57号（`SERIALSET-01582_00_00-001-0057-0000`）。合衆国政府の著作物であり、17 U.S.C. § 105によりパブリックドメインである。
+- 原刊頁標7識7–143の137件、表71点、画像25点、脚注28件を収録した。公開PDFとEPUBの構造、画像、頁順、書体、枝落ち、再取得後のSHA-256を検証した。
+- 公開PDFのSHA-256は `9a22b9de597a11dbe209fe053a7f3cb374a078cb6e5dbf065df6d87e300afbd9`、EPUBは `d2a836b6e0141738059a01b532368f78b616ea4c13a632c3391d40dc377e2987`。編集可能正本は非公開原本アーカイブの検証済みコミット `011c5ae38f599a57763d1a215ba7721ff0cf88e1` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`us-navy-nicaragua-ship-canal-survey-1874`。
+
 ## 2026-08-28 — オーヴィル・W・チャイルズ『ニカラグア両洋間船舶運河』新規公開
 
 - 1852年刊 *Report of the Survey and Estimates of the Cost of Constructing the Inter-oceanic Ship Canal* の標題紙、目次、正誤表、印刷頁i–iiおよび3–153、全表、注、引用、署名を日本語全訳として収録した。公開PDFは151頁、EPUBはリフロー型EPUB 3とした。

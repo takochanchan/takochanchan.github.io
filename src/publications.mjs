@@ -1,10268 +1,15 @@
-import { createRequire } from "node:module";
-import {
-  bailyPublicationMetadata,
-  bailyPublicationRecords,
-} from "./baily-publication.mjs";
-import {
-  childsPublicationMetadata,
-  childsPublicationRecords,
-} from "./childs-publication.mjs";
-import {
-  thompsonOfficialVisitPublicationMetadata,
-  thompsonOfficialVisitPublicationRecords,
-} from "./thompson-official-visit-publication.mjs";
-import {
-  carranzaPublicationMetadata,
-  carranzaPublicationRecords,
-} from "./carranza-publication.mjs";
-import {
-  perignyRemainingPublicationMetadata,
-  perignyRemainingPublicationRecords,
-  perignyRemainingShortWorkAuthors,
-} from "./perigny-remaining-publications.mjs";
-import {
-  squierBatch03PublicationMetadata,
-  squierBatch03PublicationRecords,
-  squierBatch03ShortWorkAuthors,
-} from "./squier-batch03-publications.mjs";
-import {
-  squierRetainedPublicationMetadata,
-  squierRetainedPublicationRecords,
-  squierRetainedShortWorkAuthors,
-} from "./squier-retained-publications.mjs";
-import {
-  seitzPublicationMetadata,
-  seitzPublicationRecords,
-} from "./seitz-publication.mjs";
-import {
-  vallePublicationMetadata,
-  vallePublicationRecords,
-  valleShortWorkAuthors,
-} from "./valle-publication.mjs";
-import {
-  waiknaPublicationMetadata,
-  waiknaPublicationRecords,
-} from "./waikna-publication.mjs";
+YªçŠx-®éÜj×¢ëiºÚ+Š§j[h‘éÜ¢éíÛö÷Ôèµ©hºÚn¶X§zÍZ[\ÜÈÜ™X]T™\]Z\™HHœ›ÛH››ÙN›[Ù[HÂš[\ÜÂˆ˜Z[TX›XØ][Û“Y]Y]Kˆ˜Z[TX›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹Ø˜Z[K\X›XØ][Û‹›ZœÈÂš[\ÜÂˆÚ[ÔX›XØ][Û“Y]Y]KˆÚ[ÔX›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹ØÚ[Ë\X›XØ][Û‹›ZœÈÂš[\ÜÂˆ\Ó˜]SšXØ\˜YİXPØ[˜[X›XØ][Û“Y]Y]Kˆ\Ó˜]SšXØ\˜YİXPØ[˜[X›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹İ\Ë[˜]K[šXØ\˜YİXKXØ[˜[\X›XØ][Û‹›ZœÈÂš[\ÜÂˆÛ\ÛÛ“Ù™šXÚX[š\Ú]X›XØ][Û“Y]Y]KˆÛ\ÛÛ“Ù™šXÚX[š\Ú]X›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹İÛ\ÛÛ‹[Ù™šXÚX[]š\Ú]\X›XØ][Û‹›ZœÈÂš[\ÜÂˆØ\œ˜[˜TX›XØ][Û“Y]Y]KˆØ\œ˜[˜TX›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹ØØ\œ˜[˜K\X›XØ][Û‹›ZœÈÂš[\ÜÂˆ\šYÛT™[XZ[š[™ÔX›XØ][Û“Y]Y]Kˆ\šYÛT™[XZ[š[™ÔX›XØ][Û”™XÛÜ™Ëˆ\šYÛT™[XZ[š[™ÔÚÜÛÜšĞ]]ÜœËŸHœ›ÛH‹‹Ü\šYÛK\™[XZ[š[™Ë\X›XØ][ÛœË›ZœÈÂš[\ÜÂˆÜ]ZY\˜]ÚÔX›XØ][Û“Y]Y]KˆÜ]ZY\˜]ÚÔX›XØ][Û”™XÛÜ™ËˆÜ]ZY\˜]ÚÔÚÜÛÜšĞ]]ÜœËŸHœ›ÛH‹‹ÜÜ]ZY\‹X˜]ÚË\X›XØ][ÛœË›ZœÈÂš[\ÜÂˆÜ]ZY\”™]Z[™YX›XØ][Û“Y]Y]KˆÜ]ZY\”™]Z[™YX›XØ][Û”™XÛÜ™ËˆÜ]ZY\”™]Z[™YÚÜÛÜšĞ]]ÜœËŸHœ›ÛH‹‹ÜÜ]ZY\‹\™]Z[™Y\X›XØ][ÛœË›ZœÈÂš[\ÜÂˆÙZ]”X›XØ][Û“Y]Y]KˆÙZ]”X›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹ÜÙZ]‹\X›XØ][Û‹›ZœÈÂš[\ÜÂˆ˜[TX›XØ][Û“Y]Y]Kˆ˜[TX›XØ][Û”™XÛÜ™Ëˆ˜[TÚÜÛÜšĞ]]ÜœËŸHœ›ÛH‹‹İ˜[K\X›XØ][Û‹›ZœÈÂš[\ÜÂˆØZZÛ˜TX›XØ][Û“Y]Y]KˆØZZÛ˜TX›XØ][Û”™XÛÜ™ËŸHœ›ÛH‹‹İØZZÛ˜K\X›XØ][Û‹›ZœÈÂ‚˜ÛÛœİ™\]Z\™HHÜ™X]T™\]Z\™J[\Ü›Y]K\›
+NÂ˜ÛÛœİšX›[ÙÜ˜\XÓX[šY™\İH™\]Z\™J‹‹‹ØšX›[ÙÜ˜\XË[X[šY™\İšœÛÛˆŠNÂšYˆ
+ˆšX›[ÙÜ˜\XÓX[šY™\İœØÚ[XU™\œÚ[ÛˆOOHˆˆP\œ˜^Kš\Ğ\œ˜^JšX›[ÙÜ˜\XÓX[šY™\İœ™XÛÜ™ÊBŠHÂˆ›İÈ™]È\œ›ÜŠ•[œİ\ÜYØ[›ÛšXØ[šX›[ÙÜ˜\XÈX[šY™\İŠNÂŸB˜ÛÛœİØ[›ÛšXØ[šX›[ÙÜ˜\HH™]ÈX\
+ˆšX›[ÙÜ˜\XÓX[šY™\İœ™XÛÜ™Ë›X\
 
-const require = createRequire(import.meta.url);
-const bibliographicManifest = require("../bibliographic-manifest.json");
-if (
-  bibliographicManifest.schemaVersion !== 2 ||
-  !Array.isArray(bibliographicManifest.records)
-) {
-  throw new Error("Unsupported canonical bibliographic manifest");
-}
-const canonicalBibliography = new Map(
-  bibliographicManifest.records.map((record) => [record.slug, record]),
-);
-if (canonicalBibliography.size !== bibliographicManifest.records.length) {
-  throw new Error("Duplicate canonical bibliographic record slug");
-}
-
-const publicationRecords = [
-  {
-    "slug": "bury-bishop-amongst-bananas-1911",
-    "title": "ãƒãƒŠãƒŠã®ä¸­ã®ä¸»æ•™",
-    "originalTitle": "A Bishop amongst Bananas",
-    "subtitle": "ã€Œä»°ãè¦‹ã‚‹ã€ãƒ»1911å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒãƒ¼ãƒãƒ¼ãƒˆãƒ»ãƒ™ãƒªãƒ¼",
-    "originalAuthor": "Herbert Bury",
-    "series": "A BISHOP AMONGST BANANAS Â· 1911",
-    "originalPublication": "ãƒ­ãƒ³ãƒ‰ãƒ³ã€Wells Gardner, Darton & Co., Ltd.ã€[1911å¹´]",
-    "year": 1911,
-    "extent": "1å·»ãƒ»PDF 186é ãƒ»åŸåˆŠæœ¬æ–‡236é ãƒ»åŸåˆŠå›³ç‰ˆ15è‘‰ãƒ»å·»é ­ç”»åƒ4ç‚¹",
-    "description": "è‹±å›½å›½æ•™ä¼šä¸»æ•™ãƒãƒ¼ãƒãƒ¼ãƒˆãƒ»ãƒ™ãƒªãƒ¼ãŒã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã‹ã‚‰ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ã‚³ã‚¹ã‚¿ãƒªã‚«ã€ãƒ‘ãƒŠãƒã€ã‚¸ãƒ£ãƒã‚¤ã‚«ã¸èµ´ã„ãŸå·¡å¯Ÿæ—…è¡Œã‚’è¨˜ã—ãŸ1911å¹´åˆŠã®æ—…è¡Œè¨˜ã§ã™ã€‚ãƒãƒŠãƒŠè¾²åœ’ã¨é‰„é“ã€æ´ªæ°´ãƒ»åœ°éœ‡ãƒ»ç«å±±ã€ãƒ‘ãƒŠãƒé‹æ²³å·¥äº‹ã€å„åœ°ã®æ•™ä¼šã¨ç¤¾ä¼šã‚’å…¨16ç« ã§æãã¾ã™ã€‚",
-    "cover": "publications/bury-bishop-amongst-bananas-1911/cover.jpg",
-    "pdf": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.pdf",
-    "epub": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
-    "pageCount": 186,
-    "figureCount": 4,
-    "plateCount": 15,
-    "types": [
-      "æ—…è¡Œè¨˜",
-      "å®—æ•™å²",
-      "ç¤¾ä¼šå²",
-      "æ¤æ°‘åœ°å²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‘ãƒŠãƒ",
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ãƒãƒ¼ãƒãƒ¼ãƒˆãƒ»ãƒ™ãƒªãƒ¼",
-      "è‹±å›½å›½æ•™ä¼š",
-      "ãƒãƒŠãƒŠç”£æ¥­",
-      "ãƒ¦ãƒŠã‚¤ãƒ†ãƒƒãƒ‰ãƒ»ãƒ•ãƒ«ãƒ¼ãƒ„ãƒ»ã‚«ãƒ³ãƒ‘ãƒ‹ãƒ¼",
-      "ãƒ‘ãƒŠãƒé‹æ²³",
-      "é‰„é“",
-      "20ä¸–ç´€åˆé ­"
-    ],
-    "searchShard": "002"
-  },
-  {
-    "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
-    "title": "ã‚°ã‚¢ãƒ†ãƒãƒ©å¤§æ´‹é–“é‰„é“ã«é–¢ã™ã‚‹æ¦‚èª¬",
-    "originalTitle": "Ideas generales sobre el Ferrocarril InteroceÃ¡nico de Guatemala",
-    "subtitle": "1880å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¬ãƒãƒ³ãƒ‰ãƒ­ãƒ»ãƒ—ãƒªã‚¨ãƒˆï¼Rãƒ»ãƒ”ã‚¢ãƒˆã‚³ãƒ•ã‚¹ã‚­",
-    "originalAuthor": "Alejandro Prieto / R. Piatkowski",
-    "series": "FERROCARRIL INTEROCEÃNICO Â· 1880",
-    "originalPublication": "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã‚¿ãƒ©ã‚»ãƒŠçˆ¶å­å°åˆ·æ‰€ã€1880å¹´",
-    "year": 1880,
-    "extent": "PDF 37é ãƒ»åŸåˆŠæœ¬æ–‡5â€“60é ãƒ»è¡¨14ç‚¹ãƒ»å›³ç‰ˆ2ç‚¹ãƒ»æ³¨4ä»¶",
-    "description": "ã‚°ã‚¢ãƒ†ãƒãƒ©ã‚’å¤§è¥¿æ´‹å²¸ã¨å¤ªå¹³æ´‹å²¸ã§çµã¶å¤§æ´‹é–“é‰„é“ã«ã¤ã„ã¦ã€è·¯ç·šã€è»Œé–“ã€å»ºè¨­è²»ã€è³‡é‡‘èª¿é”ã€è¼¸é€éœ€è¦ã€æ”¿åºœå¥‘ç´„ã‚’æ¤œè¨ã—ã€ã‚µãƒ³ãƒ»ãƒ›ã‚»â€•ã‚¨ã‚¹ã‚¯ã‚¤ãƒ³ãƒˆãƒ©ç·šã®åæ”¯è¦‹ç©ã‚Šã¨å„å›½ã®é‹æ²³è¨ˆç”»ã‚’ä»˜éŒ²ã«åã‚ãŸ1880å¹´åˆŠã®é‰„é“è¨ˆç”»æ›¸ã§ã™ã€‚",
-    "cover": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/cover.jpg",
-    "pdf": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.pdf",
-    "epub": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.epub",
-    "pageCount": 37,
-    "figureCount": 2,
-    "plateCount": 0,
-    "types": [
-      "é‰„é“å²",
-      "äº¤é€šå²",
-      "çµŒæ¸ˆå²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚µãƒ³ãƒ»ãƒ›ã‚»",
-      "ã‚¨ã‚¹ã‚¯ã‚¤ãƒ³ãƒˆãƒ©"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å¤§æ´‹é–“é‰„é“",
-      "é‰„é“å»ºè¨­",
-      "é‰„é“è»Œé–“",
-      "è¼¸é€",
-      "è³‡é‡‘èª¿é”",
-      "é‹æ²³è¨ˆç”»",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "baz-gallo-historia-ferrocarril-mexicano-1874",
-    "title": "ãƒ¡ã‚­ã‚·ã‚³é‰„é“å²",
-    "originalTitle": "Historia del Ferrocarril Mexicano",
-    "subtitle": "æ¹¾å²¸åœ°å¸¯ã‹ã‚‰ä¸­å¤®é«˜åŸã«ã„ãŸã‚‹ãƒ¡ã‚­ã‚·ã‚³ã®å¯Œãƒ»1874å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚°ã‚¹ã‚¿ãƒœãƒ»ãƒã‚¹ï¼ã‚¨ãƒ‰ã‚¥ã‚¢ãƒ«ãƒ‰ãƒ»Lãƒ»ã‚¬ãƒªãƒ§",
-    "originalAuthor": "Gustavo Baz / Eduardo L. Gallo",
-    "series": "HISTORIA DEL FERROCARRIL MEXICANO Â· 1874",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€Gallo y CompaÃ±Ã­aã€1874å¹´",
-    "year": 1874,
-    "extent": "PDF 462é ãƒ»åŸåˆŠå‰ä»˜3è‘‰ãƒ»æœ¬æ–‡5â€“296é ãƒ»å›³ç‰ˆç­‰38ç‚¹ãƒ»è¡¨143ç‚¹ãƒ»æ³¨87ä»¶",
-    "description": "ãƒã‚¹ã¨ã‚¬ãƒªãƒ§ãŒãƒ™ãƒ©ã‚¯ãƒ«ã‚¹â€•ãƒ¡ã‚­ã‚·ã‚³é‰„é“ã®æˆç«‹ã€å»ºè¨­ã€è·¯ç·šã€æ©‹æ¢ãƒ»ãƒˆãƒ³ãƒãƒ«ãƒ»é§…ã‚’è¨˜éŒ²ã—ã€æ¹¾å²¸åœ°å¸¯ã‹ã‚‰ä¸­å¤®é«˜åŸã«è‡³ã‚‹å„åœ°ã®åœ°è³ªã€è¾²æ¥­ã€å·¥æ¥­ã€å•†æ¥­ã€éƒ½å¸‚ã¨äººå£ã‚’çµ±è¨ˆè¡¨ãƒ»å›³ç‰ˆã¨ã¨ã‚‚ã«è«–ã˜ãŸ1874å¹´åˆŠã®é‰„é“å²ãƒ»åœ°èªŒã§ã™ã€‚",
-    "cover": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
-    "pdf": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.pdf",
-    "epub": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/Gustavo_Baz_Eduardo_L_Gallo_Historia_del_Ferrocarril_Mexicano_1874_Japanese_Complete_Translation.epub",
-    "pageCount": 462,
-    "figureCount": 38,
-    "plateCount": 0,
-    "types": [
-      "é‰„é“å²",
-      "äº¤é€šå²",
-      "åœ°èªŒ",
-      "çµŒæ¸ˆå²",
-      "ç”£æ¥­å²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹",
-      "ãƒ—ã‚¨ãƒ–ãƒ©",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒ¡ã‚­ã‚·ã‚³é‰„é“",
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚",
-      "é‰„é“å»ºè¨­",
-      "æ©‹æ¢",
-      "ãƒˆãƒ³ãƒãƒ«",
-      "ç”£æ¥­çµ±è¨ˆ",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "squier-davis-ancient-monuments-mississippi-valley-1848",
-    "title": "ãƒŸã‚·ã‚·ãƒƒãƒ”å·æµåŸŸã®å¤ä»£éºæ§‹",
-    "originalTitle": "Ancient Monuments of the Mississippi Valley",
-    "subtitle": "åºƒç¯„ãªç‹¬è‡ªæ¸¬é‡ãŠã‚ˆã³è¸æŸ»ã®æˆæœã‚’åéŒ²ãƒ»1848å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢ï¼Eãƒ»Hãƒ»ãƒ‡ã‚¤ãƒ´ã‚£ã‚¹",
-    "originalAuthor": "Ephraim George Squier / Edwin Hamilton Davis",
-    "series": "ANCIENT MONUMENTS Â· 1848",
-    "originalPublication": "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€Smithsonian Institutionã€1848å¹´",
-    "year": 1848,
-    "extent": "1å·»ãƒ»åŸåˆŠæœ¬æ–‡306é ãƒ»å›³ç‰ˆ48æšãƒ»æœ¨å£æœ¨ç‰ˆå›³207ç‚¹ãƒ»è¡¨14ç‚¹",
-    "description": "ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢ã¨ãƒ‡ã‚¤ãƒ´ã‚£ã‚¹ãŒã€ã‚ªãƒã‚¤ã‚ªãŠã‚ˆã³ãƒŸã‚·ã‚·ãƒƒãƒ”å·æµåŸŸã®åœŸå¡ã€å›²éƒ­ã€ãƒã‚¦ãƒ³ãƒ‰ã€éºç‰©ã‚’æ¸¬é‡ãƒ»ç™ºæ˜è¨˜éŒ²ã¨å›³ç‰ˆã«ã‚ˆã£ã¦ä½“ç³»åŒ–ã—ãŸã€ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³çŸ¥è­˜å¢æ›¸ç¬¬1å·»ï¼ˆ1848å¹´ï¼‰ã§ã™ã€‚éºæ§‹ã®åˆ†é¡ã¨åˆ†å¸ƒã€åŸ‹è‘¬ç¿’ä¿—ã€çŸ³ãƒ»éª¨ãƒ»é‡‘å±ãƒ»è²è£½å“ã€å½«åˆ»ã€é ­è“‹è¨ˆæ¸¬ã€å²©åˆ»ç”»ã‚’å…¨19ç« ã«åã‚ã¾ã™ã€‚",
-    "cover": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/cover.jpg",
-    "pdf": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
-    "pageCount": 468,
-    "figureCount": 207,
-    "plateCount": 48,
-    "types": [
-      "è€ƒå¤å­¦",
-      "éºè·¡èª¿æŸ»",
-      "è€ƒå¤å­¦å²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½",
-      "ãƒŸã‚·ã‚·ãƒƒãƒ”å·æµåŸŸ",
-      "ã‚ªãƒã‚¤ã‚ªå·æµåŸŸ",
-      "ã‚ªãƒã‚¤ã‚ªå·"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-      "Eãƒ»Hãƒ»ãƒ‡ã‚¤ãƒ´ã‚£ã‚¹",
-      "ãƒã‚¦ãƒ³ãƒ‰ãƒ»ãƒ“ãƒ«ãƒ€ãƒ¼",
-      "åœŸå¡éºæ§‹",
-      "ãƒã‚¦ãƒ³ãƒ‰",
-      "ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³å”ä¼š",
-      "åŒ—ç±³è€ƒå¤å­¦",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "squier-nicaragua-1852",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-    "originalTitle": "Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal",
-    "subtitle": "ãã®äººæ°‘ã€æ™¯è¦³ã€è¨˜å¿µç‰©ã€ãŠã‚ˆã³è¨ˆç”»ä¸­ã®å¤§æ´‹é–“é‹æ²³ãƒ»1852å¹´åˆŠ å…¨äºŒå·»æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    "originalAuthor": "Ephraim George Squier",
-    "series": "NICARAGUA Â· 1852",
-    "originalPublication": "ãƒ­ãƒ³ãƒ‰ãƒ³ã€Longman, Brown, Green, and Longmansã€1852å¹´",
-    "year": 1852,
-    "extent": "å…¨2å·»åˆå†Šãƒ»PDF 782é ãƒ»åŸåˆŠç¬¬1å·»424é ï¼ç¬¬2å·»452é ãƒ»å›³ç‰ˆç­‰94ç‚¹ãƒ»è¡¨49ç‚¹",
-    "description": "ç±³å›½å¤–äº¤å®˜ãƒ»æ¢æ¤œå®¶ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢ãŒã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®åœ°ç†ãƒ»ç¤¾ä¼šãƒ»æ”¿æ²»ãƒ»å®—æ•™ãƒ»å…ˆä½æ°‘æ–‡åŒ–ãƒ»å¤ä»£éºç‰©ã‚’æ—…è¡Œè¨˜ã¨èª¿æŸ»å ±å‘Šã¨ã—ã¦è¨˜ã—ã€å¤§æ´‹é–“é‹æ²³ã®å€™è£œè·¯ç·šã€æ¡ç´„ã€å•†æ¥­ãƒ»ç§»æ°‘çµ±è¨ˆã€å…ˆä½æ°‘è«¸èªã€ç‹¬ç«‹å¾Œæ”¿æ²»å²ã‚’åã‚ãŸ1852å¹´åˆŠã®å…¨äºŒå·»ã§ã™ã€‚",
-    "cover": "publications/squier-nicaragua-1852/cover.jpg",
-    "pdf": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-nicaragua-1852/E_G_Squier_Nicaragua_1852_Japanese_Complete_Translation.epub",
-    "pageCount": 782,
-    "figureCount": 94,
-    "plateCount": 0,
-    "types": [
-      "ç´€è¡Œ",
-      "åœ°èªŒ",
-      "æ°‘æ—èªŒ",
-      "è€ƒå¤å­¦",
-      "é‹æ²³å²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³",
-      "å¤§æ´‹é–“é‹æ²³",
-      "ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³å·",
-      "ãƒ¬ã‚ªãƒ³",
-      "ã‚°ãƒ©ãƒŠãƒ€",
-      "å…ˆä½æ°‘è«¸èª",
-      "å¤ä»£éºç‰©",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "squier-great-calendar-stone-1849",
-    "title": "å¤ä»£ãƒ¡ã‚­ã‚·ã‚³äººã®å¤§æš¦çŸ³ã«è¨˜ã•ã‚ŒãŸæ—¥ä»˜ã«é–¢ã™ã‚‹è‹¥å¹²ã®æ–°ç™ºè¦‹",
-    "originalTitle": "Some New Discoveries respecting the Dates on the Great Calendar Stone of the Ancient Mexicans, with Observations on the Mexican Cycle of Fifty-two Years",
-    "subtitle": "ãƒ¡ã‚­ã‚·ã‚³ã®äº”åäºŒå¹´å‘¨æœŸã«é–¢ã™ã‚‹è€ƒå¯Ÿãƒ»1849å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    "originalAuthor": "Ephraim George Squier",
-    "series": "AMERICAN JOURNAL OF SCIENCE AND ARTS Â· 1849",
-    "originalPublication": "New Havenã€ã€The American Journal of Science and Artsã€Second Seriesã€ç¬¬7å·»ç¬¬20å·ã€1849å¹´3æœˆã€153â€“157é ",
-    "year": 1849,
-    "extent": "PDF 5é ãƒ»åŸåˆŠ153â€“157é ãƒ»å›³2ç‚¹",
-    "description": "ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢ãŒãƒ¡ã‚­ã‚·ã‚³ã®ã‚¢ã‚¹ãƒ†ã‚«å¤§æš¦çŸ³ã‚’æ¤œè¨ã—ã€ã‚¬ãƒã¨ãƒãƒ™ãƒ«ã®å›³ã‚’æ¯”è¼ƒã—ã¦å†¬è‡³ã®æ—¥ä»˜ã‚’ç¤ºã™è¨˜å·ã‚’è«–ã˜ã€ã‚¢ã‚¹ãƒ†ã‚«æš¦ã®äº”åäºŒå¹´å‘¨æœŸã¨ç¥­å¼ã¨ã®é–¢ä¿‚ã‚’è€ƒå¯Ÿã—ãŸ1849å¹´åˆŠè«–æ–‡ã§ã™ã€‚",
-    "cover": "publications/squier-great-calendar-stone-1849/cover.jpg",
-    "pdf": "publications/squier-great-calendar-stone-1849/E_G_Squier_Great_Calendar_Stone_1849_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-great-calendar-stone-1849/E_G_Squier_Great_Calendar_Stone_1849_Japanese_Complete_Translation.epub",
-    "pageCount": 5,
-    "figureCount": 2,
-    "plateCount": 0,
-    "types": ["è€ƒå¤å­¦", "æš¦å­¦", "å¤©æ–‡å­¦å²", "è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ¡ã‚­ã‚·ã‚³å¸‚"],
-    "languages": ["è‹±èª"],
-    "tags": ["Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢", "ã‚¢ã‚¹ãƒ†ã‚«æš¦", "å¤ªé™½ã®çŸ³", "æš¦çŸ³", "äº”åäºŒå¹´å‘¨æœŸ", "19ä¸–ç´€"]
-  },
-  {
-    "slug": "squier-british-encroachments-mosquito-question-1850",
-    "title": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«ãŠã‘ã‚‹ã‚¤ã‚®ãƒªã‚¹ã®èš•é£Ÿã¨ä¾µç•¥â€”â€”ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆå•é¡Œ",
-    "originalTitle": "British Encroachments and Aggressions in Central America: The Mosquito Question",
-    "subtitle": "ã€The American Whig Reviewã€1850å¹´äºŒåˆ†è¼‰ æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    "originalAuthor": "Ephraim George Squier",
-    "series": "THE AMERICAN WHIG REVIEW Â· 1850",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€ã€The American Whig Reviewã€New Seriesã€ç¬¬5å·»ç¬¬2â€“3å·ã€1850å¹´ã€188â€“203é ãƒ»235â€“268é ",
-    "year": 1850,
-    "extent": "PDF 75é ãƒ»åŸåˆŠ188â€“203é ï¼235â€“268é ãƒ»åœ°å›³1ç‚¹",
-    "description": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«ãŠã‘ã‚‹ã‚¤ã‚®ãƒªã‚¹ã®é€²å‡ºã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆä¿è­·å›½ã‚’ã‚ãã‚‹ä¸»å¼µã€ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ãƒ•ã‚©ãƒ³ã‚»ã‚«æ¹¾ã¨ãƒ†ã‚£ã‚°ãƒ¬å³¶ã€å¤§æ´‹é–“é‹æ²³ã‚’ã‚ãã‚‹å¤–äº¤å•é¡Œã‚’è«–ã˜ãŸ1850å¹´ã®äºŒåˆ†è¼‰è«–æ–‡ã§ã™ã€‚",
-    "cover": "publications/squier-british-encroachments-mosquito-question-1850/cover.jpg",
-    "pdf": "publications/squier-british-encroachments-mosquito-question-1850/E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-british-encroachments-mosquito-question-1850/E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.epub",
-    "pageCount": 75,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": ["å¤–äº¤å²", "æ”¿æ²»è«–", "é‹æ²³å²", "è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸", "ãƒ•ã‚©ãƒ³ã‚»ã‚«æ¹¾"],
-    "languages": ["è‹±èª"],
-    "tags": ["Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆå•é¡Œ", "ã‚¤ã‚®ãƒªã‚¹", "ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³å·", "å¤§æ´‹é–“é‹æ²³", "19ä¸–ç´€"]
-  },
-  {
-    "slug": "squier-spanish-american-republics-1850",
-    "title": "ã‚¹ãƒšã‚¤ãƒ³ç³»ã‚¢ãƒ¡ãƒªã‚«è«¸å…±å’Œå›½ã¨ãã®å¤±æ•—ã®åŸå› â€•â€•ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    "originalTitle": "The Spanish American Republics, and the Causes of Their Failure. Central America",
-    "subtitle": "ã€The American Whig Reviewã€1850å¹´10æœˆå· æ—¥æœ¬èªå…¨è¨³",
-    "author": "ç„¡ç½²å",
-    "originalAuthor": "Anonymous",
-    "attributedTo": "Ephraim George Squier",
-    "attributionStatus": "tentative",
-    "attributionNote": "åŸåˆŠã¯ç„¡ç½²åã§ã™ã€‚Don C. Seitz (1911), p. 52ãŠã‚ˆã³Charles Lee Stansifer (1968), p. 64ã¯æœ¬ç¨¿ã‚’Ephraim George Squierã«å¸°å±ã•ã›ã¾ã™ãŒã€æœ¬ã‚µã‚¤ãƒˆã§ã¯å¾Œä¸–ã®æš«å®šå¸°å±ã¨ã—ã¦æ‰±ã„ã€ä¸»è‘—è€…è¡¨ç¤ºã«ã¯æ¡ç”¨ã—ã¾ã›ã‚“ã€‚",
-    "series": "THE AMERICAN WHIG REVIEW Â· 1850",
-    "originalPublication": "ã€The American Whig Reviewã€ç¬¬12å·»ç¬¬34å·ã€1850å¹´10æœˆã€337â€“344é ",
-    "year": 1850,
-    "extent": "PDF 13é ãƒ»åŸåˆŠ337â€“344é ",
-    "description": "ã‚¹ãƒšã‚¤ãƒ³ç³»ã‚¢ãƒ¡ãƒªã‚«è«¸å…±å’Œå›½ã®ç‹¬ç«‹å¾Œã®æ”¿æ²»çš„æ··ä¹±ã‚’ã€æ¤æ°‘åœ°çµ±æ²»ã®éºç”£ã€è‡ªç”±æ´¾ã¨ä¿å®ˆæ´¾ã®å¯¾ç«‹ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ãƒ¡ã‚­ã‚·ã‚³å¸å›½ç·¨å…¥ã¨1824å¹´æ†²æ³•ã®çµŒéã‹ã‚‰è«–ã˜ãŸ1850å¹´åˆŠã®ç„¡ç½²åè«–æ–‡ã§ã™ã€‚",
-    "cover": "publications/squier-spanish-american-republics-1850/cover.jpg",
-    "pdf": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub",
-    "pageCount": 13,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": ["æ”¿æ²»å²", "æ”¿æ²»è«–", "è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¨ãƒ«ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«"],
-    "languages": ["è‹±èª"],
-    "tags": ["ç„¡ç½²å", "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢æš«å®šå¸°å±", "ã‚¹ãƒšã‚¤ãƒ³ç³»ã‚¢ãƒ¡ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦", "ã‚¤ãƒˆã‚¥ãƒ«ãƒ“ãƒ‡", "è‡ªç”±æ´¾", "19ä¸–ç´€"]
-  },
-  {
-    "slug": "squier-great-ship-canal-question-1850",
-    "title": "å¤§èˆ¹èˆ¶é‹æ²³å•é¡Œâ€”â€”ã‚¤ã‚®ãƒªã‚¹ãŠã‚ˆã³ã‚³ã‚¹ã‚¿ãƒªã‚«å¯¾ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½ãŠã‚ˆã³ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-    "originalTitle": "The Great Ship Canal Question: England and Costa Rica versus the United States and Nicaragua",
-    "subtitle": "ã€The American Whig Reviewã€1850å¹´11æœˆå· æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    "originalAuthor": "Ephraim George Squier",
-    "series": "THE AMERICAN WHIG REVIEW Â· 1850",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€ã€The American Whig Reviewã€New Seriesã€ç¬¬6å·»ç¬¬5å·ã€1850å¹´11æœˆã€441â€“455é ",
-    "year": 1850,
-    "extent": "PDF 23é ãƒ»åŸåˆŠ441â€“455é ãƒ»åœ°å›³1ç‚¹",
-    "description": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢åœ°å³¡ã®å¤§èˆ¹èˆ¶é‹æ²³è¨ˆç”»ã‚’ã‚ãã‚Šã€ã‚¤ã‚®ãƒªã‚¹ã®ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆä¸»å¼µã€ã‚³ã‚¹ã‚¿ãƒªã‚«ã®é ˜åœŸè¦æ±‚ã€ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½ã¨ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®ç«‹å ´ã€ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„ã‚’è«–ã˜ãŸ1850å¹´åˆŠè«–æ–‡ã§ã™ã€‚",
-    "cover": "publications/squier-great-ship-canal-question-1850/cover.jpg",
-    "pdf": "publications/squier-great-ship-canal-question-1850/E_G_Squier_Great_Ship_Canal_Question_1850_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-great-ship-canal-question-1850/E_G_Squier_Great_Ship_Canal_Question_1850_Japanese_Complete_Translation.epub",
-    "pageCount": 23,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": ["å¤–äº¤å²", "é‹æ²³å²", "æ”¿æ²»è«–", "è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸"],
-    "languages": ["è‹±èª"],
-    "tags": ["Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³", "ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆå•é¡Œ", "ã‚³ã‚¹ã‚¿ãƒªã‚«", "19ä¸–ç´€"]
-  },
-  {
-    "slug": "squier-judgment-by-default-1851",
-    "title": "æ¬ å¸­åˆ¤æ±ºâ€”â€”ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã¨æ”¿æ¨©",
-    "originalTitle": "Judgment by Default: Central America and the Administration",
-    "subtitle": "ã€The American Whig Reviewã€1851å¹´3æœˆå· æ—¥æœ¬èªå…¨è¨³",
-    "author": "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    "originalAuthor": "Ephraim George Squier",
-    "series": "THE AMERICAN WHIG REVIEW Â· 1851",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€ã€The American Whig Reviewã€New Seriesã€ç¬¬7å·»ç¬¬3å·ã€1851å¹´3æœˆã€276â€“288é ",
-    "year": 1851,
-    "extent": "PDF 25é ãƒ»åŸåˆŠ276â€“288é ",
-    "description": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ”¿ç­–ã‚’ã‚ãã‚‹ã‚¢ãƒ¡ãƒªã‚«æ”¿æ¨©ã®å¯¾å¿œã‚’æ‰¹åˆ¤ã—ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã¨ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³ã€ãƒãƒ£ãƒƒãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã¨ãƒ–ãƒ«ãƒ¯ãƒ¼ã€ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„ã€ä¸Šé™¢ã§ã®å¯©è­°ã‚’è«–ã˜ãŸ1851å¹´åˆŠè«–æ–‡ã§ã™ã€‚",
-    "cover": "publications/squier-judgment-by-default-1851/cover.jpg",
-    "pdf": "publications/squier-judgment-by-default-1851/E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.pdf",
-    "epub": "publications/squier-judgment-by-default-1851/E_G_Squier_Judgment_by_Default_1851_Japanese_Complete_Translation.epub",
-    "pageCount": 25,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": ["å¤–äº¤å²", "æ”¿æ²»è«–", "é‹æ²³å²", "è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸", "ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½", "ã‚¤ã‚®ãƒªã‚¹"],
-    "languages": ["è‹±èª"],
-    "tags": ["Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆå•é¡Œ", "ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„", "ãƒãƒ£ãƒƒãƒˆãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰", "ã‚¢ãƒ¡ãƒªã‚«å¤–äº¤", "19ä¸–ç´€"]
-  },
-  {
-    "slug": "otis-isthmus-panama-railroad-1867",
-    "title": "ãƒ‘ãƒŠãƒåœ°å³¡ã€€ãƒ‘ãƒŠãƒé‰„é“å²",
-    "originalTitle": "Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company",
-    "subtitle": "å¤ªå¹³æ´‹éƒµèˆ¹ä¼šç¤¾å²ãªã‚‰ã³ã«æ—…è¡Œè€…ãƒ»å®Ÿæ¥­å®¶ä¾¿è¦§ãƒ»1867å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "Fãƒ»Nãƒ»ã‚ªãƒ¼ãƒ†ã‚£ã‚¹",
-    "originalAuthor": "Fessenden Nott Otis",
-    "series": "ISTHMUS OF PANAMA Â· 1867",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€Harper & Brothersã€1867å¹´",
-    "year": 1867,
-    "extent": "PDF 334é ãƒ»åŸåˆŠix, 317é ãƒ»å›³ç‰ˆ38ç‚¹ãƒ»è¡¨207ç‚¹",
-    "description": "ãƒ‘ãƒŠãƒé‰„é“ã®è¨ˆç”»ãƒ»å»ºè¨­ãƒ»é‹å–¶ã¨è²¡å‹™ã€åœ°å³¡æ¨ªæ–­æ—…è¡Œæ¡ˆå†…ã€ãƒ‘ãƒŠãƒã«æ¥ç¶šã™ã‚‹æ±½èˆ¹ä¼šç¤¾ãƒ»èˆªè·¯ãƒ»é‹è³ƒãƒ»è²¨ç‰©è¦å‰‡ã€ä¸­å¤®ãƒ»å—ã‚¢ãƒ¡ãƒªã‚«å„å›½ãŠã‚ˆã³ãƒ¡ã‚­ã‚·ã‚³ã®åœ°èªŒã¨å•†æ¥­æƒ…å ±ã‚’åã‚ãŸã€1867å¹´åˆŠã®é‰„é“å²å…¼æ—…è¡Œãƒ»å®Ÿå‹™ä¾¿è¦§ã§ã™ã€‚",
-    "cover": "publications/otis-isthmus-panama-railroad-1867/cover.jpg",
-    "pdf": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.pdf",
-    "epub": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
-    "pageCount": 334,
-    "figureCount": 38,
-    "plateCount": 0,
-    "types": [
-      "é‰„é“å²",
-      "äº¤é€šå²",
-      "æ—…è¡Œæ¡ˆå†…",
-      "å•†æ¥­ä¾¿è¦§",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‘ãƒŠãƒ",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "å—ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ã‚«ãƒªãƒ–æµ·"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ãƒ‘ãƒŠãƒé‰„é“",
-      "ãƒ‘ãƒŠãƒåœ°å³¡",
-      "å¤ªå¹³æ´‹éƒµèˆ¹ä¼šç¤¾",
-      "æ±½èˆ¹èˆªè·¯",
-      "å¤§è¥¿æ´‹æ¨ªæ–­äº¤é€š",
-      "é‹è³ƒ",
-      "è²¨ç‰©",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "siguenza-parayso-occidental-1684",
-    "title": "è¥¿æ–¹ã®æ¥½åœ’",
-    "originalTitle": "Parayso occidental",
-    "subtitle": "ãƒ¡ã‚­ã‚·ã‚³ç‹ç«‹ãƒ˜ã‚¹ã‚¹ãƒ»ãƒãƒªã‚¢ä¿®é“é™¢ã®å‰µè¨­ã¨ç™ºå±•ãƒ»1684å¹´ãƒ¡ã‚­ã‚·ã‚³åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ«ãƒ­ã‚¹ãƒ»ãƒ‡ãƒ»ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-    "originalAuthor": "Carlos de SigÃ¼enza y GÃ³ngora",
-    "series": "PARAYSO OCCIDENTAL Â· 1684",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ãƒªãƒ™ãƒ©ã€1684å¹´",
-    "year": 1684,
-    "extent": "PDF 350é ãƒ»å…¨3å·»66ç« ãƒ»åŸåˆŠå‰ä»˜11è‘‰ãƒ»æœ¬æ–‡fol. 1râ€“206vãƒ»æ­£èª¤è¡¨",
-    "description": "ãƒ¡ã‚­ã‚·ã‚³ç‹ç«‹ãƒ˜ã‚¹ã‚¹ãƒ»ãƒãƒªã‚¢å¥³å­ä¿®é“é™¢ã®å‰µè¨­ã¨ç™ºå±•ã‚’ãŸã©ã‚Šã€å°Šè€…ãƒãƒªãƒŠãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ã‚¯ãƒ«ã‚¹ã€ã‚¤ãƒã‚¹ãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ã‚¯ãƒ«ã‚¹ã‚’ã¯ã˜ã‚ã¨ã™ã‚‹ä¿®é“å¥³ãŸã¡ã®ç”Ÿæ¶¯ã€å¾³è¡Œã€å¹»è¦–ã€å¥‡è¹Ÿã‚’è¨˜ã—ãŸ1684å¹´åˆŠã®ä¿®é“é™¢å²ãƒ»ä¼è¨˜é›†ã§ã™ã€‚",
-    "cover": "publications/siguenza-parayso-occidental-1684/cover.jpg",
-    "pdf": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.pdf",
-    "epub": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
-    "pageCount": 350,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "ä¿®é“é™¢å²",
-      "å¥³æ€§å®—æ•™å²",
-      "ä¼è¨˜é›†",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-      "ãƒ˜ã‚¹ã‚¹ãƒ»ãƒãƒªã‚¢ä¿®é“é™¢",
-      "å¥³æ€§ä¿®é“è€…",
-      "ãƒãƒªãƒŠãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ã‚¯ãƒ«ã‚¹",
-      "ã‚¤ãƒã‚¹ãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ã‚¯ãƒ«ã‚¹",
-      "æ¤æ°‘åœ°æœŸãƒ¡ã‚­ã‚·ã‚³",
-      "ã‚«ãƒˆãƒªãƒƒã‚¯",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "gonzalez-compendio-geografia-centro-america-1881",
-    "title": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«åœ°ç†è¦ç¶±",
-    "originalTitle": "Compendio de geografÃ­a de Centro-AmÃ©rica",
-    "subtitle": "ä¸­ç­‰å­¦æ ¡ãƒ»åˆç­‰å­¦æ ¡ç”¨ è¨‚æ­£å¢—è£œç¬¬äºŒç‰ˆãƒ»1881å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ€ãƒªã‚ªãƒ»ã‚´ãƒ³ã‚µãƒ¬ã‚¹",
-    "originalAuthor": "DarÃ­o GonzÃ¡lez",
-    "series": "COMPENDIO DE GEOGRAFÃA DE CENTRO-AMÃ‰RICA Â· 1881",
-    "originalPublication": "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã‚¨ãƒŸãƒªã‚ªãƒ»ã‚°ãƒœãƒ¼æ›¸åº—ãƒ»æ–‡æˆ¿å…·åº—ã€1881å¹´",
-    "year": 1881,
-    "extent": "PDF 123é ãƒ»åŸåˆŠæœ¬æ–‡1â€“131é ãƒ»ç´¢å¼•133â€“135é ãƒ»å›³ç‰ˆ32ç‚¹ãƒ»è¡¨20ç‚¹",
-    "description": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«äº”å…±å’Œå›½ã®å¢ƒç•Œã€åœ°å‹¢ã€æ°—å€™ã€æ²³å·ãƒ»æ¹–æ²¼ã€ç”£ç‰©ã€äººå£ã€è¡Œæ”¿ã€éƒ½å¸‚ã€äº¤é€šã€ç”£æ¥­ã‚’å•ç­”å½¢å¼ã§æ¦‚èª¬ã—ãŸåœ°ç†æ•™ç§‘æ›¸ã€‚ã‚°ã‚¢ãƒ†ãƒãƒ©ã‚’æœ€ã‚‚è©³ã—ãæ‰±ã„ã€ã‚¨ãƒ«ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ã‚³ã‚¹ã‚¿ãƒ»ãƒªã‚«ãŠã‚ˆã³ãƒ™ãƒªãƒ¼ã‚ºã®åœ°èªŒã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/gonzalez-compendio-geografia-centro-america-1881/cover.jpg",
-    "pdf": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf",
-    "epub": "publications/gonzalez-compendio-geografia-centro-america-1881/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.epub",
-    "pageCount": 123,
-    "figureCount": 32,
-    "plateCount": 0,
-    "types": [
-      "åœ°èªŒ",
-      "åœ°ç†æ•™ç§‘æ›¸",
-      "çµ±è¨ˆè³‡æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒ»ãƒªã‚«",
-      "ãƒ™ãƒªãƒ¼ã‚º"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«åœ°ç†",
-      "åœ°ç†æ•™è‚²",
-      "è‡ªç„¶åœ°ç†",
-      "äººå£çµ±è¨ˆ",
-      "ç”£æ¥­",
-      "äº¤é€š",
-      "éƒ½å¸‚",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
-    "title": "ãƒ‰ãƒ³ãƒ»ã‚«ãƒ«ãƒ­ã‚¹ãƒ»ãƒ‡ãƒ»ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-    "originalTitle": "Don Carlos de SigÃ¼enza y GÃ³ngora: A Mexican Savant of the Seventeenth Century",
-    "subtitle": "17ä¸–ç´€ãƒ¡ã‚­ã‚·ã‚³ã®ç¢©å­¦ãƒ»1929å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ´ã‚£ãƒ³ã‚°ãƒ»Aãƒ»ãƒ¬ãƒŠãƒ¼ãƒ‰",
-    "originalAuthor": "Irving A. Leonard",
-    "series": "DON CARLOS DE SIGÃœENZA Y GÃ“NGORA Â· 1929",
-    "originalPublication": "ãƒãƒ¼ã‚¯ãƒ¬ãƒ¼ã€University of California Pressã€1929å¹´",
-    "year": 1929,
-    "extent": "PDF 318é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1â€“287é ãƒ»è„šæ³¨422ä»¶ãƒ»ä»˜éŒ²A/Bãƒ»ç´¢å¼•ãƒ»æŒ¿å›³1è‘‰",
-    "description": "17ä¸–ç´€ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã®å­¦è€…ã‚«ãƒ«ãƒ­ã‚¹ãƒ»ãƒ‡ãƒ»ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©ã®ç”Ÿæ¶¯ã¨è‘—ä½œã‚’ãŸã©ã‚‹ç ”ç©¶æ›¸ã€‚è©©ä½œã€å¤©æ–‡å­¦ã€åœ°å›³ä½œæˆã€å¤ä»£å²ç ”ç©¶ã€1692å¹´ãƒ¡ã‚­ã‚·ã‚³å¸‚æš´å‹•ã€æ¢æ¤œäº‹æ¥­ã‚’è«–ã˜ã€å‰ä»˜ã€å…¨10ç« ã€å‚è€ƒæ–‡çŒ®ã€è‘—ä½œç›®éŒ²ã€ä»˜éŒ²Aãƒ»Bã€ç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚åŸåˆŠã®ç„¡å†…å®¹ã®ç™½ç´™è‘‰ã¯åéŒ²ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "cover": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/cover.jpg",
-    "pdf": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.pdf",
-    "epub": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
-    "pageCount": 318,
-    "figureCount": 0,
-    "plateCount": 1,
-    "types": [
-      "ä¼è¨˜",
-      "å­¦è¡“å²",
-      "ãƒ¡ã‚­ã‚·ã‚³å²",
-      "æ¤æ°‘åœ°å²"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-      "ã‚½ãƒ«ãƒ»ãƒ•ã‚¢ãƒŠ",
-      "å¤©æ–‡å­¦",
-      "åœ°å›³å²",
-      "1692å¹´ãƒ¡ã‚­ã‚·ã‚³å¸‚æš´å‹•",
-      "ã‚¹ãƒšã‚¤ãƒ³æ¤æ°‘åœ°æœŸ",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "type": "paper",
-    "slug": "gonzalez-ruinas-tehuacan-1892",
-    "title": "ãƒ†ãƒ¯ã‚«ãƒ³éºè·¡â€•â€•å…ˆã‚³ãƒ­ãƒ³ãƒ–ã‚¹æœŸã®éºç‰©",
-    "originalTitle": "Ruinas de TehuacÃ¡n. Objetos precolombinos",
-    "subtitle": "1892å¹´åˆŠãƒ»åŸåˆŠ203â€“206é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ€ãƒªã‚ªãƒ»ã‚´ãƒ³ã‚µãƒ¬ã‚¹",
-    "originalAuthor": "DarÃ­o GonzÃ¡lez",
-    "series": "RUINAS DE TEHUACÃN Â· LA UNIVERSIDAD Â· 1892",
-    "originalPublication": "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«ã€ã€La Universidadã€ç¬¬IIIç³»åˆ—ç¬¬6å·ã€1892å¹´6æœˆã€203â€“206é ",
-    "year": 1892,
-    "extent": "PDF 9é ãƒ»åŸåˆŠ203â€“206é ãƒ»åŸæ³¨4ä»¶",
-    "description": "ãƒ€ãƒªã‚ªãƒ»ã‚´ãƒ³ã‚µãƒ¬ã‚¹ãŒã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ã®ãƒ†ãƒ¯ã‚«ãƒ³éºè·¡ã‚’è¨˜è¿°ã—ãŸ1892å¹´ã®è€ƒå¤å­¦å ±å‘Šã€‚é€ æˆå°åœ°ã€çŸ³å£ã€ãƒ”ãƒ©ãƒŸãƒƒãƒ‰ã€çŸ³å½«ãƒ»åœŸå™¨ãªã©ã®å‡ºåœŸå“ã‚’ç´¹ä»‹ã—ã€å½“æ™‚ã®ãƒˆãƒ«ãƒ†ã‚«ç³»ãƒ»ãƒ”ãƒ”ãƒ«ç³»ç§»ä½èª¬ã¨åœ°åèªæºã‚’è«–ã˜ã¾ã™ã€‚",
-    "cover": "publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
-    "pdf": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.pdf",
-    "epub": "publications/gonzalez-ruinas-tehuacan-1892/Gonzalez_Ruinas_de_Tehuacan_1892_Japanese_Complete_Translation.epub",
-    "pageCount": 9,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "éºè·¡å ±å‘Š",
-      "å­¦è¡“èªŒè«–æ–‡"
-    ],
-    "regions": [
-      "ãƒ†ãƒ¯ã‚«ãƒ³",
-      "ã‚µãƒ³ãƒ»ãƒ“ã‚»ãƒ³ãƒ†",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒ†ãƒ¯ã‚«ãƒ³éºè·¡",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«è€ƒå¤å­¦",
-      "ãƒ”ãƒ”ãƒ«",
-      "ãƒˆãƒ«ãƒ†ã‚«",
-      "å…ˆã‚³ãƒ­ãƒ³ãƒ–ã‚¹æœŸ",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "barberena-fonseca-monografias-departamentales-1909-1914",
-    "title": "çœŒåˆ¥ãƒ¢ãƒã‚°ãƒ©ãƒ•ï¼ˆä¸ƒå†Šåˆå†Šï¼‰",
-    "originalTitle": "MonografÃ­as departamentales",
-    "subtitle": "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ä¸ƒçœŒã®åœ°ç†ãƒ»çµ±è¨ˆè³‡æ–™ æ—¥æœ¬èªè¨³",
-    "author": "ã‚µãƒ³ãƒ†ã‚£ã‚¢ã‚´ãƒ»Iãƒ»ãƒãƒ«ãƒ™ãƒ¬ãƒŠï¼ãƒšãƒ‰ãƒ­ãƒ»Sãƒ»ãƒ•ã‚©ãƒ³ã‚»ã‚«",
-    "originalAuthor": "Santiago I. Barberena / Pedro S. Fonseca",
-    "series": "MONOGRAFÃAS DEPARTAMENTALES Â· 1909â€“1914",
-    "originalPublication": "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«ã€å›½ç«‹å°åˆ·æ‰€ã€1909â€“1914å¹´",
-    "year": 1909,
-    "extent": "PDF 318é ãƒ»ç¬¬2ãƒ»4ãƒ»5ãƒ»6ãƒ»8ãƒ»10ãƒ»11å†Šãƒ»åŸåˆŠè¡¨ç´™5ç‚¹ãƒ»çœŒå¢ƒæ¦‚ç•¥å›³1ç‚¹",
-    "description": "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«çµ±è¨ˆç·å±€ãŒ1909â€“1914å¹´ã«åˆŠè¡Œã—ãŸå…¨14å†Šã®çœŒåˆ¥åœ°èªŒã®ã†ã¡ã€ãƒ¢ãƒ©ã‚µãƒ³ã€ãƒãƒ£ãƒ©ãƒ†ãƒŠãƒ³ã‚´ã€ã‚«ãƒãƒ‹ãƒ£ã‚¹ã€ã‚µãƒ³ã‚¿ãƒ»ã‚¢ãƒŠã€ã‚µãƒ³ãƒ»ãƒŸã‚²ãƒ«ã€ãƒ©ãƒ»ã‚¦ãƒ‹ã‚ªãƒ³ã€ã‚¢ãƒ¯ãƒãƒ£ãƒ‘ãƒ³ã®7çœŒã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚åœ°å½¢ã€æ²³å·ã€é›†è½ã€äººå£ã€è¾²æ¥­ã€é‰±æ¥­ã€äº¤é€šã€æ•™è‚²ã€è¡Œæ”¿ã‚’å¸‚ç”ºæ‘å˜ä½ã§è¨˜è¿°ã—ãŸã€20ä¸–ç´€åˆé ­ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ã®åœ°åŸŸè³‡æ–™ã§ã™ã€‚",
-    "cover": "publications/barberena-fonseca-monografias-departamentales-1909-1914/cover.jpg",
-    "pdf": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.pdf",
-    "epub": "publications/barberena-fonseca-monografias-departamentales-1909-1914/Barberena_Monografias_Departamentales_7vols_Japanese_Translation.epub",
-    "pageCount": 318,
-    "figureCount": 6,
-    "plateCount": 0,
-    "types": [
-      "åœ°èªŒ",
-      "çµ±è¨ˆè³‡æ–™",
-      "åœ°åŸŸå²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ¢ãƒ©ã‚µãƒ³çœŒ",
-      "ãƒãƒ£ãƒ©ãƒ†ãƒŠãƒ³ã‚´çœŒ",
-      "ã‚«ãƒãƒ‹ãƒ£ã‚¹çœŒ",
-      "ã‚µãƒ³ã‚¿ãƒ»ã‚¢ãƒŠçœŒ",
-      "ã‚µãƒ³ãƒ»ãƒŸã‚²ãƒ«çœŒ",
-      "ãƒ©ãƒ»ã‚¦ãƒ‹ã‚ªãƒ³çœŒ",
-      "ã‚¢ãƒ¯ãƒãƒ£ãƒ‘ãƒ³çœŒ"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚µãƒ³ãƒ†ã‚£ã‚¢ã‚´ãƒ»Iãƒ»ãƒãƒ«ãƒ™ãƒ¬ãƒŠ",
-      "ãƒšãƒ‰ãƒ­ãƒ»Sãƒ»ãƒ•ã‚©ãƒ³ã‚»ã‚«",
-      "çœŒåˆ¥ãƒ¢ãƒã‚°ãƒ©ãƒ•",
-      "äººå£çµ±è¨ˆ",
-      "åœ°ç†",
-      "è¾²æ¥­",
-      "é‰±æ¥­",
-      "æ•™è‚²",
-      "20ä¸–ç´€åˆé ­"
-    ]
-  },
-  {
-    "slug": "siguenza-infortunios-alonso-ramirez-1690",
-    "title": "ã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ©ãƒŸãƒ¬ã‚¹ã®ä¸é‹",
-    "originalTitle": "Infortunios de Alonso RamÃ­rez",
-    "subtitle": "1690å¹´ãƒ¡ã‚­ã‚·ã‚³åˆŠãƒ»ä¸–ç•Œå‘¨èˆªã¨æµ·è³Šæ•å›šã®è¨˜éŒ² æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ«ãƒ­ã‚¹ãƒ»ãƒ‡ãƒ»ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-    "originalAuthor": "Carlos de SigÃ¼enza y GÃ³ngora",
-    "series": "INFORTUNIOS DE ALONSO RAMÃREZ Â· 1690",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ™ãƒ«ãƒŠãƒ«ãƒ‰ãƒ»ã‚«ãƒ«ãƒ‡ãƒ­ãƒ³æœªäº¡äººç›¸ç¶šäººå°åˆ·æ‰€ã€1690å¹´",
-    "year": 1690,
-    "extent": "æ—¥æœ¬èªç‰ˆPDF 64é ãƒ»å…¨7ç¯€",
-    "description": "ãƒ—ã‚¨ãƒ«ãƒˆãƒªã‚³ç”Ÿã¾ã‚Œã®ã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ©ãƒŸãƒ¬ã‚¹ãŒã€ãƒ•ã‚£ãƒªãƒ”ãƒ³ã§ã‚¤ãƒ³ã‚°ãƒ©ãƒ³ãƒ‰äººæµ·è³Šã«æ•ã‚‰ãˆã‚‰ã‚Œã€å¤ªå¹³æ´‹ãƒ»ã‚¤ãƒ³ãƒ‰æ´‹ãƒ»å¤§è¥¿æ´‹ã‚’çµŒã¦ãƒ¦ã‚«ã‚¿ãƒ³æµ·å²¸ã«åº§ç¤ã™ã‚‹ã¾ã§ã®éæ­´ã‚’ã€ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©ãŒ1690å¹´ã«ã¾ã¨ã‚ãŸç‰©èªçš„å ±å‘Šã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/siguenza-infortunios-alonso-ramirez-1690/cover.jpg",
-    "pdf": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.pdf",
-    "epub": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
-    "pageCount": 64,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "æ—…è¡Œè¨˜",
-      "æµ·äº‹å²",
-      "æ•å›šè¨˜",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ—ã‚¨ãƒ«ãƒˆãƒªã‚³",
-      "ãƒ•ã‚£ãƒªãƒ”ãƒ³",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ã‚«ãƒªãƒ–æµ·"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ©ãƒŸãƒ¬ã‚¹",
-      "ã‚·ã‚°ã‚¨ãƒ³ã‚µãƒ»ã‚¤ãƒ»ã‚´ãƒ³ã‚´ãƒ©",
-      "æµ·è³Š",
-      "ä¸–ç•Œå‘¨èˆª",
-      "æµ·é›£",
-      "ã‚¹ãƒšã‚¤ãƒ³é ˜ãƒ•ã‚£ãƒªãƒ”ãƒ³",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "torquemada-monarquia-indiana-1615",
-    "title": "ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ç‹å›½èªŒ",
-    "originalTitle": "Los veinte y un libros rituales y MonarquÃ­a indiana",
-    "subtitle": "1615å¹´ã‚»ãƒ“ãƒ¼ãƒªãƒ£åˆç‰ˆãƒ»å…¨ä¸‰å·»äºŒåä¸€æ›¸ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ãƒˆãƒ«ã‚±ãƒãƒ€",
-    "originalAuthor": "Juan de Torquemada",
-    "series": "MONARQUÃA INDIANA Â· 1615",
-    "originalPublication": "ã‚»ãƒ“ãƒ¼ãƒªãƒ£ã€ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ã‚¯ãƒ©ãƒ“ãƒ›ã€1615å¹´",
-    "year": 1615,
-    "extent": "æ—¥æœ¬èªç‰ˆPDF 3701é ãƒ»å…¨3å·»ãƒ»å…¨21æ›¸",
-    "description": "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ãƒˆãƒ«ã‚±ãƒãƒ€ãŒ1615å¹´ã«åˆŠè¡Œã—ãŸå…¨ä¸‰å·»äºŒåä¸€æ›¸ã®ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ‹ãƒ£å²ãƒ»æ°‘æ—èªŒãƒ»å®£æ•™å²ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚John Carter Brown Libraryæ‰€è”µåˆç‰ˆæœ¬ã‚’Internet Archiveå…¬é–‹ç”»åƒã‹ã‚‰åº•æœ¬ã¨ã—ã¦ç”¨ã„ã¾ã—ãŸã€‚",
-    "cover": "publications/torquemada-monarquia-indiana-1615/cover.jpg",
-    "pdf": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.pdf",
-    "epub": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub",
-    "pageCount": 3701,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ­´å²æ›¸",
-      "æ°‘æ—èªŒ",
-      "å®£æ•™å²",
-      "æ¤æ°‘åœ°å²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ‹ãƒ£",
-      "ãƒ¡ã‚½ã‚¢ãƒ¡ãƒªã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒ¡ã‚­ã‚·ã‚³å²",
-      "å…ˆä½æ°‘å²",
-      "ãƒŠãƒ¯æ—",
-      "ã‚¢ã‚¹ãƒ†ã‚«",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š",
-      "ã‚­ãƒªã‚¹ãƒˆæ•™å®£æ•™",
-      "ã‚¹ãƒšã‚¤ãƒ³å¾æœ",
-      "16ä¸–ç´€",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "guzman-apuntamientos-topografia-salvador-1883",
-    "title": "ã‚µãƒ«ãƒãƒ‰ãƒ«å…±å’Œå›½è‡ªç„¶åœ°ç†è¦šæ›¸",
-    "originalTitle": "Apuntamientos sobre la topografÃ­a fÃ­sica de la RepÃºblica del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigraciÃ³n, climas, estadÃ­stica, etc.",
-    "subtitle": "åšç‰©èªŒã€ç”Ÿç”£ç‰©ã€ç”£æ¥­ã€å•†æ¥­ã€ç§»æ°‘ã€æ°—å€™ã€çµ±è¨ˆã»ã‹",
-    "author": "ãƒ€ãƒ“ãƒƒãƒ‰ãƒ»ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚°ã‚¹ãƒãƒ³",
-    "originalAuthor": "David JoaquÃ­n GuzmÃ¡n",
-    "series": "APUNTAMIENTOS SOBRE EL SALVADOR Â· 1883",
-    "originalPublication": "ã‚µãƒ³ã‚µãƒ«ãƒãƒ‰ãƒ«ã€ã€Œã‚¨ãƒ«ãƒ»ã‚³ãƒ¡ã‚¿ã€å°åˆ·æ‰€ã€1883å¹´",
-    "year": 1883,
-    "extent": "æ—¥æœ¬èªç‰ˆPDF 569é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»å‰ä»˜iiiâ€“xxiié ãƒ»æœ¬æ–‡23â€“525é ãƒ»åº•æœ¬ä½ç½®æ¨™è­˜523ä»¶ãƒ»è¡¨81ç‚¹ãƒ»æ³¨14ä»¶",
-    "description": "1883å¹´ã«åˆŠè¡Œã•ã‚ŒãŸã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ã®ç·åˆåœ°èªŒã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚è‡ªç„¶åœ°ç†ã€æ°´ç†åœ°ç†ã€åœ°è³ªã€é‰±ç‰©ã€æ¤ç‰©ã€å‹•ç‰©ã€è¾²æ¥­ã€å·¥æ¥­ã€å•†æ¥­ã€ç§»æ°‘ã€æ°—å€™ã€çµ±è¨ˆã€å…ˆä½æ°‘å²ãƒ»è«¸èªã‚’æ‰±ã„ã€æ¨™é¡Œç´™ã€å‰ä»˜ã€è©³ç´°ç›®æ¬¡ã€çŒ®è¾ã€å§”å“¡ä¼šå ±å‘Šã€æ–°èè©•ã€æ”¿åºœæ±ºå®šã€æœ¬æ–‡ã€æ³¨ã€è¡¨ã€èªå½™é›†ã€ä»˜éŒ²ã‚’åéŒ²ã—ã¾ã—ãŸã€‚",
-    "cover": "publications/guzman-apuntamientos-topografia-salvador-1883/cover.jpg",
-    "pdf": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.pdf",
-    "epub": "publications/guzman-apuntamientos-topografia-salvador-1883/David_J_Guzman_Apuntamientos_Topografia_Salvador_1883_Japanese_Complete_Translation.epub",
-    "pageCount": 569,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "åœ°èªŒ",
-      "è‡ªç„¶å²",
-      "çµ±è¨ˆè³‡æ–™",
-      "çµŒæ¸ˆå²æ–™"
-    ],
-    "regions": [
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ¬ãƒ³ãƒ‘å·",
-      "ãƒ•ã‚©ãƒ³ã‚»ã‚«æ¹¾"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å²",
-      "è‡ªç„¶åœ°ç†",
-      "åšç‰©èªŒ",
-      "è¾²æ¥­",
-      "é‰±æ¥­",
-      "å•†æ¥­",
-      "ç§»æ°‘",
-      "æ°—å€™",
-      "çµ±è¨ˆ",
-      "ãƒ”ãƒ”ãƒ«èª",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "fernandez-historia-costa-rica-1889",
-    "title": "ã‚¹ãƒšã‚¤ãƒ³çµ±æ²»ä¸‹ã®ã‚³ã‚¹ã‚¿ãƒªã‚«å²",
-    "originalTitle": "Historia de Costa Rica durante la dominaciÃ³n espaÃ±ola, 1502â€“1821",
-    "subtitle": "1502â€“1821å¹´ãƒ»1889å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ¬ã‚ªãƒ³ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹",
-    "originalAuthor": "LeÃ³n FernÃ¡ndez",
-    "series": "HISTORIA DE COSTA RICA Â· 1889",
-    "originalPublication": "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒ’ãƒã‚¹ãƒ»ã‚¨ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹å°åˆ·æ‰€ã€1889å¹´",
-    "year": 1889,
-    "extent": "PDF 613é ãƒ»åŸåˆŠå‰ä»˜Vâ€“VIIé ãƒ»æœ¬æ–‡1â€“640é ãƒ»æ³¨243ä»¶ãƒ»è¡¨44ç‚¹ãƒ»è‡ªç­†ç½²åè¦‹æœ¬24è‘‰ãƒ»åç°¿ãƒ»ç´¢å¼•ãƒ»æ­£èª¤è¡¨",
-    "description": "ãƒ¬ã‚ªãƒ³ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ãŒã€ã‚³ãƒ­ãƒ³ã«ã‚ˆã‚‹1502å¹´ã®ã‚³ã‚¹ã‚¿ãƒªã‚«æ²¿å²¸åˆ°é”ã‹ã‚‰1821å¹´ã®ç‹¬ç«‹ã¾ã§ã‚’ã€å¾æœã€æ¤æ°‘åœ°è¡Œæ”¿ã€ç·ç£ã€å…ˆä½æ°‘ç¤¾ä¼šã€å®£æ•™ã€æµ·é˜²ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã¨ã®é–¢ä¿‚ã€çµŒæ¸ˆã¨äººå£ã®æ¨ç§»ã«æ²¿ã£ã¦å¹´ä»£é †ã«ã¾ã¨ã‚ãŸã‚³ã‚¹ã‚¿ãƒªã‚«æ¤æ°‘åœ°å²ã®å¤å…¸ã§ã™ã€‚ãƒªã‚«ãƒ«ãƒ‰ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ãƒ»ã‚°ã‚¢ãƒ«ãƒ‡ã‚£ã‚¢ãŒå…¬åˆŠã—ãŸ1889å¹´åˆç‰ˆã®å‰ä»˜ã€æœ¬æ–‡1â€“640é ã€æ³¨ã€è‡ªç­†ç½²åè¦‹æœ¬24è‘‰ã¨åç°¿ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’åéŒ²ã—ã€åŸåˆŠã®æ®µè½ã€å¼•ç”¨ã€è¡¨ã€æ³¨ã€é é †ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/fernandez-historia-costa-rica-1889/cover.jpg",
-    "pdf": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.pdf",
-    "epub": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
-    "pageCount": 613,
-    "figureCount": 0,
-    "plateCount": 24,
-    "types": [
-      "æ­´å²æ›¸",
-      "é€šå²",
-      "æ¤æ°‘åœ°å²"
-    ],
-    "regions": [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚«ãƒªãƒ–æµ·æ²¿å²¸",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒ‘ãƒŠãƒ"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«å²",
-      "ã‚¹ãƒšã‚¤ãƒ³çµ±æ²»",
-      "æ¤æ°‘åœ°è¡Œæ”¿",
-      "å…ˆä½æ°‘å²",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ã‚¿ãƒ©ãƒãƒ³ã‚«",
-      "ç‹¬ç«‹",
-      "16ä¸–ç´€",
-      "17ä¸–ç´€",
-      "18ä¸–ç´€",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "strangeways-mosquito-shore-1822",
-    "title": "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸æ¦‚èª¬â€•â€•ãƒãƒ¤ã‚¤ã‚¹é ˜ã‚’å«ã‚€",
-    "originalTitle": "Sketch of the Mosquito Shore, Including the Territory of Poyais",
-    "subtitle": "1822å¹´åˆç‰ˆãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒˆãƒã‚¹ãƒ»ã‚¹ãƒˆãƒ¬ãƒ³ã‚¸ã‚¦ã‚§ã‚¤ã‚º",
-    "originalAuthor": "Thomas Strangeways",
-    "series": "SKETCH OF THE MOSQUITO SHORE Â· 1822",
-    "originalPublication": "ã‚¨ãƒ‡ã‚£ãƒ³ãƒãƒ©ã€William Blackwoodï¼ãƒ­ãƒ³ãƒ‰ãƒ³ã€T. Caddellã€1822å¹´",
-    "year": 1822,
-    "extent": "åŸåˆŠå‰ä»˜viiié ãƒ»æœ¬æ–‡355é ãƒ»æ—¥æœ¬èªç‰ˆPDF 239é ãƒ»åŸåˆŠä½ç½®æ¨™è­˜374ä»¶ãƒ»è„šæ³¨648ä»¶ãƒ»è¡¨31ç‚¹ãƒ»å›³ç‰ˆ3ç‚¹",
-    "description": "1822å¹´ã«åˆŠè¡Œã•ã‚ŒãŸãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã¨ãƒãƒ¤ã‚¤ã‚¹é ˜ã®åœ°èªŒãƒ»å…¥æ¤æ¡ˆå†…ã®å…¨è¨³ã§ã™ã€‚è‡ªç„¶ç’°å¢ƒã€ä½æ°‘ã€è¾²æ¥­ã€äº¤æ˜“ã€æ¸¯æ¹¾ã€è¡Œæ”¿ãŠã‚ˆã³å…¥æ¤ã®å®Ÿå‹™ã‚’æ‰±ã„ã€åŸåˆŠã®å‰ä»˜ã€æœ¬æ–‡æœ«å°¾355é ã€è„šæ³¨ã€è¡¨ã€å£çµµã€æŠ˜è¾¼åœ°å›³ã€ãƒ–ãƒ©ãƒƒã‚¯ãƒ»ãƒªãƒ´ã‚¡ãƒ¼æ¸¯æ™¯ã‚’åéŒ²ã—ã¾ã—ãŸã€‚åŸåˆŠä½ç½®æ¨™è­˜374ä»¶ã‚’ä¿æŒã—ã€Fancourtå›ºå®šæ¯ç‰ˆã§çµ„ç‰ˆã—ãŸ239é ç‰ˆã§ã™ã€‚",
-    "cover": "publications/strangeways-mosquito-shore-1822/cover.jpg",
-    "pdf": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.pdf",
-    "epub": "publications/strangeways-mosquito-shore-1822/Thomas_Strangeways_Sketch_of_the_Mosquito_Shore_1822_Japanese_Complete_Translation.epub",
-    "pageCount": 239,
-    "figureCount": 3,
-    "plateCount": 0,
-    "types": [
-      "åœ°èªŒ",
-      "æ¤æ°‘åœ°è³‡æ–™",
-      "ç§»æ°‘æ¡ˆå†…",
-      "äº¤æ˜“å²æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ãƒãƒ¤ã‚¤ã‚¹",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚«ãƒªãƒ–æµ·å²¸"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ã‚°ãƒ¬ã‚´ãƒ¼ãƒ«ãƒ»ãƒã‚¯ãƒ¬ã‚¬ãƒ¼",
-      "ãƒãƒ¤ã‚¤ã‚¹",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "æ¤æ°‘",
-      "è¾²æ¥­",
-      "äº¤æ˜“",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "barraza-anastasio-aquino-2001",
-    "title": "ã‚¢ãƒŠã‚¹ã‚¿ã‚·ã‚ªãƒ»ã‚¢ã‚­ãƒã®å£®æŒ™ï¼šæ­´å²çš„ä¸€è€ƒå¯Ÿ",
-    "originalTitle": "La gesta de Anastasio Aquino: una aproximaciÃ³n histÃ³rica",
-    "subtitle": "2001å¹´ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å·¥ç§‘å¤§å­¦ç‰ˆãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ›ãƒ«ãƒ˜ãƒ»ãƒãƒ©ã‚µãƒ»ã‚¤ãƒãƒ©",
-    "originalAuthor": "Jorge Barraza Ibarra",
-    "series": "LA GESTA DE ANASTASIO AQUINO Â· 2001",
-    "originalPublication": "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«ã€ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å·¥ç§‘å¤§å­¦ã€2001å¹´6æœˆ",
-    "year": 2001,
-    "extent": "PDF 210é ãƒ»å‰ä»˜9é ãƒ»åŸåˆŠ15é ãŠã‚ˆã³17â€“148é ãƒ»ä»˜éŒ²6é ãƒ»è£è¡¨ç´™ãƒ»åº•æœ¬ä½ç½®æ¨™è­˜149ä»¶ãƒ»åŸæ³¨131ä»¶ãƒ»è¡¨9ç‚¹ãƒ»åŸåˆŠç”»åƒ19ç‚¹",
-    "description": "1833å¹´ã«ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ã®ãƒãƒŒã‚¢ãƒ«ã‚³åœ°æ–¹ã§èµ·ããŸã‚¢ãƒŠã‚¹ã‚¿ã‚·ã‚ªãƒ»ã‚¢ã‚­ãƒã®åä¹±ã‚’ã€æ¤æ°‘åœ°ç§©åºã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ç‹¬ç«‹ã¨é€£é‚¦å…±å’Œå›½ã€1832å¹´ã®å·æ”¿æ²»ã€å…ˆä½æ°‘ç¤¾ä¼šã¨åœŸåœ°ãƒ»åŠ´åƒåˆ¶åº¦ã®é•·æœŸçš„èƒŒæ™¯ã‹ã‚‰æ¤œè¨ã—ãŸæ­´å²ç ”ç©¶ã®å…¨è¨³ã§ã™ã€‚å…¨4éƒ¨ã€åºæ–‡ã€ç”¨èªé›†ã€å‚è€ƒæ–‡çŒ®ã€ä»˜éŒ²ã‚’åéŒ²ã—ã€åŸåˆŠã®ç« ç«‹ã¦ã€æ®µè½ã€åŸæ³¨ã€è¡¨ã€å›³ç‰ˆã€é é †ã‚’ä¿æŒã—ã¾ã—ãŸã€‚",
-    "cover": "publications/barraza-anastasio-aquino-2001/cover.jpg",
-    "pdf": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.pdf",
-    "epub": "publications/barraza-anastasio-aquino-2001/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.epub",
-    "pageCount": 210,
-    "figureCount": 19,
-    "plateCount": 0,
-    "types": [
-      "æ­´å²ç ”ç©¶",
-      "å…ˆä½æ°‘å²",
-      "åä¹±å²",
-      "ç¤¾ä¼šå²"
-    ],
-    "regions": [
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒãƒŒã‚¢ãƒ«ã‚³åœ°æ–¹",
-      "ã‚µãƒ³ãƒ»ãƒ“ã‚»ãƒ³ãƒ†",
-      "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚¢ãƒŠã‚¹ã‚¿ã‚·ã‚ªãƒ»ã‚¢ã‚­ãƒ",
-      "ãƒãƒŒã‚¢ãƒ«ã‚³æ—",
-      "1833å¹´åä¹±",
-      "æ¤æ°‘åœ°ç§©åº",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦å…±å’Œå›½",
-      "å…ˆä½æ°‘æŠµæŠ—",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å²",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "roberts-voyages-central-america-1827",
-    "title": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ±å²¸ãŠã‚ˆã³å†…é™¸éƒ¨èˆªæµ·æ—…è¡Œè¨˜",
-    "originalTitle": "Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America",
-    "subtitle": "ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³å·ãƒ»ãƒ‹ã‚«ãƒ©ã‚°ã‚¢æ¹–ãƒ»ãƒ¬ã‚ªãƒ³ã¸ã®æ—…",
-    "author": "ã‚ªãƒ¼ãƒ©ãƒ³ãƒ‰ãƒ»Wãƒ»ãƒ­ãƒãƒ¼ãƒ„",
-    "originalAuthor": "Orlando W. Roberts",
-    "series": "ORLANDO W. ROBERTS Â· 1827",
-    "originalPublication": "ã‚¨ãƒ‡ã‚£ãƒ³ãƒãƒ©ã€ã‚³ãƒ³ã‚¹ã‚¿ãƒ–ãƒ«ç¤¾åˆŠã€‚ãƒ­ãƒ³ãƒ‰ãƒ³ã€ãƒãƒ¼ã‚¹ãƒˆãƒ»ãƒãƒ£ãƒ³ã‚¹ç¤¾å–æ¬¡ã€1827å¹´",
-    "year": 1827,
-    "extent": "PDF 202é ãƒ»å‰ä»˜ãƒ»åºæ–‡xiiiâ€“xxiiié ãƒ»æœ¬æ–‡25â€“294é ãƒ»ä»˜éŒ²295â€“302é ãƒ»åŸåˆŠé æ¨™è­˜289ä»¶ãƒ»åŸåˆŠç”»åƒ2ç‚¹ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    "description": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ±å²¸ã‚’èˆªæµ·ã—ã€ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³å·ã‚’é¡ã£ã¦ãƒ‹ã‚«ãƒ©ã‚°ã‚¢æ¹–ã‚’æ¨ªæ–­ã—ã€ãƒ¬ã‚ªãƒ³ã¸è‡³ã£ãŸäº¤æ˜“è€…ã‚ªãƒ¼ãƒ©ãƒ³ãƒ‰ãƒ»Wãƒ»ãƒ­ãƒãƒ¼ãƒ„ã®æ—…è¡Œè¨˜ã®å…¨è¨³ã§ã™ã€‚å‰ä»˜ã€ã‚¨ãƒ‰ãƒ¯ãƒ¼ãƒ‰ãƒ»ã‚¢ãƒ¼ãƒ´ã‚£ãƒ³ã‚°ã®åºæ–‡ã€æœ¬æ–‡å…¨14ç« ã€æŠ˜è¾¼åœ°å›³ã€ä»˜éŒ²æ³¨Iã‹ã‚‰VIIIã€å¥¥ä»˜ã‚’åéŒ²ã—ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã€ãƒ‘ãƒŠãƒã€ã‚³ã‚¹ã‚¿ãƒªã‚«ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®åœ°åŸŸãƒ»äº¤æ˜“ãƒ»å…ˆä½æ°‘ç¤¾ä¼šã‚’è¨˜éŒ²ã—ã¾ã™ã€‚",
-    "cover": "publications/roberts-voyages-central-america-1827/cover.jpg",
-    "pdf": "publications/roberts-voyages-central-america-1827/Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.pdf",
-    "epub": "publications/roberts-voyages-central-america-1827/Orlando_W_Roberts_Narrative_of_Voyages_and_Excursions_1827_Japanese_Complete_Translation.epub",
-    "pageCount": 202,
-    "figureCount": 3,
-    "plateCount": 0,
-    "types": [
-      "æ—…è¡Œè¨˜",
-      "åœ°èªŒ",
-      "äº¤æ˜“å²æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ‘ãƒŠãƒ",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚«ãƒªãƒ–æµ·å²¸"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ã‚µãƒ³ãƒ»ãƒ•ã‚¢ãƒ³å·",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢æ¹–",
-      "ãƒ¬ã‚ªãƒ³",
-      "å…ˆä½æ°‘äº¤æ˜“",
-      "èˆªæµ·",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "villavicencio-luz-metodo-idolatras-1692",
-    "title": "å¶åƒå´‡æ‹è€…ã‚’å‘Šè§£ã•ã›ã€å¶åƒå´‡æ‹ã‚’æ ¹çµ¶ã™ã‚‹ãŸã‚ã®å…‰ã¨æ–¹æ³•",
-    "originalTitle": "Luz y mÃ©todo de confesar idÃ³latras y destierro de idolatrÃ­as",
-    "subtitle": "1692å¹´ãƒ—ã‚¨ãƒ–ãƒ©åˆç‰ˆãƒ»å‰ä»˜ãƒ»ç¬¬ä¸€éƒ¨22ç« ãƒ»ãƒŠãƒ¯ãƒˆãƒ«èªå‘Šè§£76å•ãƒ»èª¬æ•™4ç¯‡ãƒ»æœ«å°¾ç´¢å¼•",
-    "author": "ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒã‚¤ãƒ¡ã‚¹ãƒ»ãƒªã‚«ãƒ«ãƒ‰ãƒ»ãƒ“ãƒªãƒ£ãƒ“ã‚»ãƒ³ã‚·ã‚ª",
-    "originalAuthor": "Diego Jaimes Ricardo Villavicencio",
-    "series": "LUZ Y MÃ‰TODO Â· PUEBLA 1692",
-    "originalPublication": "ãƒ—ã‚¨ãƒ–ãƒ©ãƒ»ãƒ‡ãƒ»ãƒ­ã‚¹ãƒ»ã‚¢ãƒ³ãƒ˜ãƒ¬ã‚¹ã€ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ãƒ»ãƒ‡ãƒ»ãƒ¬ã‚ªãƒ³å°åˆ·æ‰€ã€1692å¹´",
-    "year": 1692,
-    "extent": "PDF 218é ãƒ»å‰ä»˜23é ãƒ»ç¬¬ä¸€éƒ¨1â€“136é ï¼ˆ37â€“39é ãƒ»132é æ¬ ç•ªï¼‰ãƒ»ç¬¬äºŒéƒ¨1â€“51é ãƒ»æœ«å°¾ç´¢å¼•ãƒ»åº•æœ¬ä½ç½®æ¨™è­˜213ä»¶ãƒ»åŸåˆŠç”»åƒ2ç‚¹",
-    "description": "å¶åƒå´‡æ‹è€…ã®å‘Šè§£ã¨å¶åƒå´‡æ‹ã®æ ¹çµ¶ã‚’ç›®çš„ã¨ã—ã¦ã€å¸ç‰§è€…ãƒ»è´ç½ªå¸ç¥­å‘ã‘ã«ç·¨ã¾ã‚ŒãŸ1692å¹´åˆŠå®—æ•™æ›¸ã®å…¨è¨³ã§ã™ã€‚å‰ä»˜ã€ç¬¬ä¸€éƒ¨22ç« ã€ãƒŠãƒ¯ãƒˆãƒ«èªã«ã‚ˆã‚‹å‘Šè§£è³ªå•76å•ã€èª¬æ•™4ç¯‡ã€ä¾›çŠ ãƒ»è¿·ä¿¡ä¸€è¦§35é …ã€è­¦å‘Šã€æœ«å°¾ç´¢å¼•ã‚’åŸåˆŠé †ã«åéŒ²ã—ã¾ã—ãŸã€‚å¾Œåˆ·ã‚Šã®ä¸€éƒ¨ã«ã®ã¿åŠ ãˆã‚‰ã‚ŒãŸãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒŒãƒ‹ã‚§ã‚¹ãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ãƒ™ã‚¬æ›¸ç°¡ã¯ã€è£œå…¥ã§ã‚ã‚‹ã“ã¨ã‚’æ˜ç¤ºã—ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/villavicencio-luz-metodo-idolatras-1692/cover.jpg",
-    "pdf": "publications/villavicencio-luz-metodo-idolatras-1692/Diego_Jaimes_Ricardo_Villavicencio_Luz_y_metodo_1692_Japanese_Complete_Translation.pdf",
-    "epub": "publications/villavicencio-luz-metodo-idolatras-1692/Diego_Jaimes_Ricardo_Villavicencio_Luz_y_metodo_1692_Japanese_Complete_Translation.epub",
-    "pageCount": 218,
-    "figureCount": 2,
-    "plateCount": 0,
-    "types": [
-      "å®—æ•™æ›¸",
-      "å‘Šè§£å•ç­”",
-      "å®£æ•™è³‡æ–™",
-      "è¨€èªè³‡æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£",
-      "ãƒ—ã‚¨ãƒ–ãƒ©"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ãƒ©ãƒ†ãƒ³èª"
-    ],
-    "tags": [
-      "å¶åƒå´‡æ‹",
-      "å‘Šè§£",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "è¿·ä¿¡",
-      "å…ˆä½æ°‘å®—æ•™",
-      "å®£æ•™",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "alva-confessionario-mayor-menor-1634",
-    "title": "ãƒŠãƒ¯ãƒˆãƒ«èªå¤§ãƒ»å°å‘Šè§£å•ç­”",
-    "originalTitle": "Confessionario mayor, y menor en lengua mexicana. Y plÃ¡ticas contra las supersticiones de idolatrÃ­a, que el dÃ­a de hoy han quedado a los naturales desta Nueva EspaÃ±a, e instrucciÃ³n de los santos sacramentosâ€¦",
-    "subtitle": "1634å¹´ãƒ¡ã‚­ã‚·ã‚³åˆç‰ˆãƒ»å‰ä»˜ãƒ»å¤§å‘Šè§£å•ç­”ãƒ»å°å‘Šè§£å•ç­”ãƒ»ç§˜è·¡è¬›è©±ãƒ»å››ã¤ã®ç¥ˆã‚Š æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒãƒ«ãƒˆãƒ­ãƒ¡ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒ",
-    "originalAuthor": "BartolomÃ© de Alva",
-    "series": "CONFESSIONARIO MAYOR Y MENOR Â· 1634",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚µãƒ«ãƒã‚´ã€1634å¹´",
-    "year": 1634,
-    "extent": "PDF 66é ãƒ»åŸåˆŠç¬¬1â€“51è‘‰ãƒ»ç„¡è‘‰ç•ªå·æœ€çµ‚è‘‰ãƒ»åº•æœ¬ä½ç½®æ¨™è­˜57ä»¶ãƒ»åŸåˆŠç”»åƒ12ç‚¹",
-    "description": "ãƒãƒ«ãƒˆãƒ­ãƒ¡ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãŒãƒŠãƒ¯ãƒˆãƒ«èªã¨ã‚¹ãƒšã‚¤ãƒ³èªã®å¯¾å‘äºŒæ¬„ã§ç·¨ã‚“ã å‘Šè§£ãƒ»ç§˜è·¡æŒ‡å—æ›¸ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚åŸæ¨™é¡Œç´™ã€å°åˆ·ç‰¹è¨±ãƒ»è¨±å¯ãƒ»èªå¯ã€çŒ®è¾ã€å¤§å‘Šè§£å•ç­”ã€å°å‘Šè§£å•ç­”ã€ä¸ƒã¤ã®ç§˜è·¡ã«é–¢ã™ã‚‹è¬›è©±ã€è¨€èªä¸Šã®æ³¨è¨˜ã€å››ã¤ã®ç¥ˆã‚Šã€å¥¥ä»˜ã‚’åŸåˆŠé †ã«åéŒ²ã—ã€æ¬„å¤–è¬›è©±ã¨æ¬„å¤–æ³¨ã‚‚å¯¾å¿œä½ç½®ã¸ç§»ã—ã¦æ˜ç¤ºã—ã¾ã—ãŸã€‚",
-    "cover": "publications/alva-confessionario-mayor-menor-1634/cover.jpg",
-    "pdf": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.pdf",
-    "epub": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
-    "pageCount": 66,
-    "figureCount": 12,
-    "plateCount": 0,
-    "types": [
-      "å®—æ•™æ›¸",
-      "å‘Šè§£å•ç­”",
-      "è¨€èªè³‡æ–™",
-      "å®£æ•™è³‡æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£",
-      "ä¸­å¤®ãƒ¡ã‚­ã‚·ã‚³"
-    ],
-    "languages": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒ©ãƒ†ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "å‘Šè§£",
-      "å¶åƒå´‡æ‹",
-      "è¿·ä¿¡",
-      "ç§˜è·¡",
-      "å®£æ•™",
-      "17ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "duran-historia-indias-nueva-espana-1581",
-    "title": "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£è«¸ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢å²",
-    "originalTitle": "Historia de las Indias de Nueva EspaÃ±a e islas de la tierra firme",
-    "subtitle": "BNE Vitr/26/11 è‡ªç­†ç¨¿ãƒ»å…¨ä¸‰éƒ¨ãƒ»å›³ç‰ˆ117ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒ‡ãƒ¥ãƒ©ãƒ³",
-    "originalAuthor": "Diego DurÃ¡n",
-    "series": "HISTORIA DE LAS INDIAS Â· BNE VITR/26/11",
-    "originalPublication": "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1570â€“1581å¹´æˆç«‹ã€BNE Vitr/26/11 è‡ªç­†ç¨¿",
-    "year": 1581,
-    "extent": "PDF 913é ãƒ»è‡ªç­†ç¨¿ f.1vâ€“f.345vãƒ»å…¨ä¸‰éƒ¨ãƒ»è‡ªç­†ç¨¿ä½ç½®æ¨™è­˜661ä»¶ãƒ»å½©è‰²å›³ç‰ˆ117ç‚¹",
-    "description": "ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒ‡ãƒ¥ãƒ©ãƒ³ãŒãƒ¡ã‚·ã‚«ã®èµ·æºã€ç§»ä½ã€è«¸éƒ½å¸‚ã¨ã®æˆ¦äº‰ã¨æ”¯é…ã€ç¥ã€…ã€ç¥­ç¥€ã€æš¦æ³•ã‚’è¨˜ã—ãŸè‡ªç­†ç¨¿ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚BNE Vitr/26/11ã®è‘‰é †ã€ç« é…ç½®ã€æ®µè½ã€å›³åƒä½ç½®ã«å¾“ã„ã€ã€ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£è«¸ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢å²ã€ã€å„€ç¤¼ã¨ç¥­å¼ã®æ›¸ã€ã€å¤æš¦ã€ã®å…¨ä¸‰éƒ¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚å…¨117å›³ã¯äººç‰©ãƒ»å™¨ç‰©ãƒ»æ–‡å­—ãƒ»åæ¨™ãƒ»å½©è‰²æ ã‚’æ¬ ã‹ã•ãªã„çŸ©å½¢ã®å…¨å›³ã¨ã—ã¦åéŒ²ã—ã¾ã—ãŸã€‚",
-    "cover": "publications/duran-historia-indias-nueva-espana-1581/cover.jpg",
-    "pdf": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.pdf",
-    "epub": "publications/duran-historia-indias-nueva-espana-1581/Diego_Duran_Historia_de_las_Indias_Japanese_Complete_Translation.epub",
-    "pageCount": 913,
-    "figureCount": 117,
-    "plateCount": 0,
-    "types": ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "å†™æœ¬", "å®—æ•™å²", "ä¸€æ¬¡å²æ–™"],
-    "regions": ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£", "ä¸­å¤®ãƒ¡ã‚­ã‚·ã‚³"],
-    "languages": ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    "tags": [
-      "ãƒ¡ã‚·ã‚«",
-      "ã‚¢ã‚¹ãƒ†ã‚«",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³",
-      "ç¥ã€…",
-      "ç¥­ç¥€",
-      "æš¦",
-      "BNE Vitr/26/11",
-      "16ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "romero-cultivo-cafe-chiapas-1893",
-    "title": "ãƒã‚¢ãƒ‘ã‚¹å—éƒ¨æ²¿å²¸ã«ãŠã‘ã‚‹ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹",
-    "originalTitle": "Cultivo del cafÃ© en la Costa Meridional de Chiapas",
-    "subtitle": "1893å¹´ç¬¬å››ç‰ˆãƒ»å‰ä»˜ãƒ»æœ¬æ–‡5â€“163é ãƒ»ä»˜éŒ²ãƒ»ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ãƒ­ãƒ¡ãƒ­",
-    "originalAuthor": "MatÃ­as Romero",
-    "series": "CULTIVO DEL CAFÃ‰ Â· 1893",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€å‹§æ¥­çœå°åˆ·å±€ã€1893å¹´ç¬¬å››ç‰ˆ",
-    "year": 1893,
-    "extent": "PDF 158é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»ç¬¬ä¸‰ç‰ˆåºãƒ»æœ¬æ–‡5â€“163é ãƒ»ä»˜éŒ²ãƒ»ç´¢å¼•ãƒ»åŸåˆŠé æ¨™è­˜167ä»¶ãƒ»è¡¨31ç‚¹ãƒ»åŸåˆŠç”»åƒ1ç‚¹",
-    "description": "ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ãƒ­ãƒ¡ãƒ­ãŒã€ãƒã‚¢ãƒ‘ã‚¹å—éƒ¨æ²¿å²¸ã€ã¨ã‚Šã‚ã‘ã‚½ã‚³ãƒŒã‚¹ã‚³ã«ãŠã‘ã‚‹ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹ã®è‡ªç„¶æ¡ä»¶ã€åœŸåœ°å–å¾—ã€åŠ´åƒã€é€ æˆã€åç©«ã€åŠ å·¥ã€è¼¸é€ã€è²»ç”¨ã¨åç›Šã‚’è«–ã˜ãŸå®Ÿç”¨æ›¸ã§ã™ã€‚1893å¹´ç¬¬å››ç‰ˆã®åŸåˆŠæ¨™é¡Œç´™ã€ç¬¬ä¸‰ç‰ˆåºã€æœ¬æ–‡5â€“163é ã€ä»˜éŒ²ã€ç´¢å¼•æœ«å°¾ã¾ã§ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/romero-cultivo-cafe-chiapas-1893/cover.jpg",
-    "pdf": "publications/romero-cultivo-cafe-chiapas-1893/Matias_Romero_Cafe_Chiapas_Japanese_Complete_Translation.pdf",
-    "epub": "publications/romero-cultivo-cafe-chiapas-1893/Matias_Romero_Cafe_Chiapas_Japanese_Complete_Translation.epub",
-    "pageCount": 158,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "è¾²æ¥­æ›¸",
-      "çµŒæ¸ˆå²",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚½ã‚³ãƒŒã‚¹ã‚³"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚³ãƒ¼ãƒ’ãƒ¼",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹",
-      "è¾²æ¥­",
-      "ã‚½ã‚³ãƒŒã‚¹ã‚³",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "åŠ´åƒ",
-      "19ä¸–ç´€"
-    ]
-  },
-  {
-    "slug": "g59-romances-senores-nueva-espana",
-    "title": "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£è«¸ä¾¯ã®æ­Œè¬¡",
-    "originalTitle": "Romances de los seÃ±ores de la Nueva EspaÃ±a",
-    "subtitle": "Benson Latin American Collection Ms. G59 f. 1râ€“42vï¼ˆf. 33æ¬ ï¼‰æ—¥æœ¬èªå…¨è¨³",
-    "author": "ä½œè€…æœªè©³",
-    "originalAuthor": "AnÃ³nimo",
-    "series": "ROMANCES DE LOS SEÃ‘ORES  Â·  MS. G59",
-    "originalPublication": "1582å¹´é ƒç·¨çº‚ã€‚ç¾å­˜æœ¬ã¯17ä¸–ç´€å†™æœ¬ã€‚",
-    "year": 1582,
-    "extent": "PDF 37é ãƒ»Benson Latin American Collection, Ms. G59 Â· f. 1râ€“42vï¼ˆf. 33æ¬ ï¼‰ãƒ»å†™æœ¬ä½ç½®æ¨™è­˜99ä»¶ãƒ»å›³ç‰ˆãªã—",
-    "description": "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã®ãƒŠãƒ¯ãƒˆãƒ«èªæ­Œè¬¡ã‚’åã‚ã‚‹Ms. G59ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚æ…£ä¾‹ä¸Šã®å…¨36æ­Œã‚’å†™æœ¬é †ã«åéŒ²ã—ã€ç¬¬XXIXæ­Œå¾Œã®ç‹¬ç«‹å˜ä½ã‚’XXIX-Aã¨ã—ã¦ç¤ºã—ã¦ã„ã¾ã™ã€‚ç¾å­˜ã—ãªã„ç¬¬33è‘‰ã«ã‚ˆã£ã¦å¤±ã‚ã‚ŒãŸç¬¬XXVIIIæ­Œå¾ŒåŠã¯ã€ä¸¦è¡Œæœ¬æ–‡ã€Cantares Mexicanosã€ç¬¬XLæ­Œã‹ã‚‰è£œã„ã€ä¸»åº•æœ¬ã¨è£œå®Œåº•æœ¬ã®ç¯„å›²ã‚’æ˜ç¤ºã—ã¾ã—ãŸã€‚",
-    "cover": "publications/g59-romances-senores-nueva-espana/cover.jpg",
-    "pdf": "publications/g59-romances-senores-nueva-espana/G59_Romances_de_los_senores_Japanese_Complete_Translation.pdf",
-    "epub": "publications/g59-romances-senores-nueva-espana/G59_Romances_de_los_senores_Japanese_Complete_Translation.epub",
-    "pageCount": 37,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ­Œè¬¡é›†",
-      "å†™æœ¬",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£",
-      "ä¸­å¤®ãƒ¡ã‚­ã‚·ã‚³"
-    ],
-    "languages": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "æ­Œè¬¡",
-      "ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«",
-      "ãƒ¡ã‚·ã‚«",
-      "16ä¸–ç´€",
-      "Ms. G59"
-    ]
-  },
-  {
-    "slug": "cantares-mexicanos-ms-1628-bis",
-    "title": "ãƒ¡ã‚·ã‚³ã®æ­Œè¬¡",
-    "originalTitle": "Cantares Mexicanos",
-    "subtitle": "Biblioteca Nacional de MÃ©xico Ms. 1628 bis f. 1râ€“85rãƒ»å…¨92æ­Œæ—¥æœ¬èªå…¨è¨³",
-    "author": "ä½œè€…è¤‡æ•°ãƒ»ç·¨è€…æœªè©³",
-    "originalAuthor": "Autores mÃºltiples; compilador anÃ³nimo",
-    "series": "CANTARES MEXICANOS  Â·  MS. 1628 BIS",
-    "originalPublication": "16ä¸–ç´€å¾ŒåŠæˆç«‹ã€‚å†™æœ¬ã®è»¢å†™å¹´è¨˜ã¯1597å¹´ã¨è§£ã•ã‚Œã‚‹ã€‚",
-    "year": 1597,
-    "extent": "PDF 309é ãƒ»Biblioteca Nacional de MÃ©xico, Ms. 1628 bis Â· f. 1râ€“85r Â· å…¨92æ­Œãƒ»å†™æœ¬ä½ç½®æ¨™è­˜169ä»¶ãƒ»å›³ç‰ˆãªã—",
-    "description": "è¤‡åˆå†™æœ¬ã€Cantares Mexicanosã€ã®æ­Œè¬¡é›†éƒ¨åˆ†ã€f. 1râ€“85rã®å…¨92æ­Œãƒ»ç¬¬1ç¯€ã‹ã‚‰ç¬¬1719ç¯€ã¾ã§ã‚’åã‚ã‚‹æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚æ­Œé¡Œã€éƒ¨ç«‹ã¦ã€æ¼”å¥æŒ‡ç¤ºã€åå¾©ã€æ­Œå”±éŸ³ç¯€ã€ãƒ©ãƒ†ãƒ³èªå¥ã€å›ºæœ‰åã€ç¯€ç•ªå·ã‚’ä¿æŒã—ã€å…¨169è‘‰é¢ã®ä½ç½®æ¨™è­˜ã‚’ä»˜ã—ã¾ã—ãŸã€‚å†™æœ¬ã®f. 85vä»¥é™ã«ç¶šãéæ­Œè¬¡è«¸ç¯‡ã¯æœ¬æ›¸ã®ç¯„å›²å¤–ã§ã™ã€‚",
-    "cover": "publications/cantares-mexicanos-ms-1628-bis/cover.jpg",
-    "pdf": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.pdf",
-    "epub": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.epub",
-    "pageCount": 309,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ­Œè¬¡é›†",
-      "å†™æœ¬",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£",
-      "ä¸­å¤®ãƒ¡ã‚­ã‚·ã‚³"
-    ],
-    "languages": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒ©ãƒ†ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "æ­Œè¬¡",
-      "ãƒ¡ã‚·ã‚«",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³",
-      "16ä¸–ç´€",
-      "Ms. 1628 bis"
-    ]
-  },
-  {
-    slug: "bancroft-history-central-america-1886-1887",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å²",
-    originalTitle: "History of Central America",
-    subtitle: "å…¨ä¸‰å·»åˆæœ¬ç‰ˆãƒ»1501â€“1887å¹´ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ’ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆãƒ»ãƒã‚¦ãƒ»ãƒãƒ³ã‚¯ãƒ­ãƒ•ãƒˆ",
-    originalAuthor: "Hubert Howe Bancroft",
-    series: "HISTORY OF CENTRAL AMERICA Â· 1886â€“1887",
-    originalPublication:
-      "ã‚µãƒ³ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ã€The History Companyã€1886â€“1887å¹´",
-    year: 1886,
-    extent:
-      "PDF 2,585é ãƒ»å…¨3å·»98ç« ãƒ»åŸåˆŠé æ¨™è­˜2,334ä»¶ãƒ»åŸæ³¨4,325ä»¶ãƒ»å›³ç‰ˆ75ç‚¹ãƒ»ç¬¬Iå·»å¼•ç”¨å…¸æ‹ ä¸€è¦§ãƒ»ç¬¬IIIå·»ç´¢å¼•",
-    description:
-      "ãƒ’ãƒ¥ãƒ¼ãƒãƒ¼ãƒˆãƒ»ãƒã‚¦ãƒ»ãƒãƒ³ã‚¯ãƒ­ãƒ•ãƒˆãŒã€ã‚¹ãƒšã‚¤ãƒ³å‹¢åŠ›ã®åˆ°æ¥ã¨åˆæœŸå¾æœã‹ã‚‰æ¤æ°‘åœ°çµ±æ²»ã€ç‹¬ç«‹ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦ã®è§£ä½“ã€å„å…±å’Œå›½ã®1887å¹´ã¾ã§ã‚’ä¸‰å·»ã§å™è¿°ã—ãŸé€šå²ã€‚åŸåˆŠå‰ä»˜ã€å…¨98ç« ã€åŸæ³¨4,325ä»¶ã€å›³è¡¨ã€ç¬¬Iå·»å¼•ç”¨å…¸æ‹ ä¸€è¦§ã€ç¬¬IIIå·»ç´¢å¼•ã‚’ä¸€å†Šã«ã¾ã¨ã‚ã€åŸåˆŠé æ¨™è­˜2,334ä»¶ã‚’ä¿æŒã—ãŸæ—¥æœ¬èªå…¨è¨³ãƒ»å…¨ä¸‰å·»åˆæœ¬ç‰ˆã§ã™ã€‚",
-    cover:
-      "publications/bancroft-history-central-america-1886-1887/cover.jpg",
-    pdf:
-      "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_1886_1887_Japanese_Complete_Translation.epub",
-    pageCount: 2585,
-    figureCount: 72,
-    plateCount: 3,
-    types: ["æ­´å²æ›¸", "é€šå²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‘ãƒŠãƒ",
-    ],
-    languages: ["è‹±èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒ³ã‚¯ãƒ­ãƒ•ãƒˆ",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å²",
-      "æ¤æ°‘åœ°å²",
-      "ç‹¬ç«‹å²",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‘ãƒŠãƒ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "remesal-historia-general-1619",
-    title: "è¥¿ã‚¤ãƒ³ãƒ‰ç·å²",
-    originalTitle:
-      "Historia general de las Indias Occidentales y particular de la gobernaciÃ³n de Chiapa y Guatemala",
-    subtitle:
-      "1619å¹´åˆç‰ˆãƒ»å‰ä»˜ã€å…¨11å·»ã€å·»æœ«å¯©æŸ»ã€ç« é¡Œè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ»ãƒ¬ãƒ¡ã‚µãƒ«",
-    series: "HISTORIA GENERAL Â· 1619",
-    originalPublication: "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ³ã‚°ãƒ­ã€1619å¹´",
-    year: 1619,
-    extent:
-      "PDF 2,130é ãƒ»åŸåˆŠæœ¬æ–‡752é ãƒ»å…¨11å·»242ç« ãƒ»å‰ä»˜ãƒ»æ­£èª¤è¡¨ãƒ»å·»æœ«å¯©æŸ»ãƒ»ç« é¡Œè¡¨32é ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹",
-    description:
-      "ãƒ‰ãƒŸãƒ‹ã‚³ä¼šè–ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ‡ãƒ»ãƒã‚¢ãƒ‘ãŠã‚ˆã³ã‚°ã‚¢ãƒ†ãƒãƒ©ç®¡åŒºã®æˆç«‹ã¨æ´»å‹•ã€ãƒã‚¢ãƒ‘ãƒ»ã‚°ã‚¢ãƒ†ãƒãƒ©çµ±æ²»é ˜ã®æ”¿æ²»ãƒ»ç¤¾ä¼šãƒ»å¾æœãƒ»å®£æ•™ã‚’å™è¿°ã—ãŸ1619å¹´åˆŠã®å¤§è‘—ã€‚è¨±å¯ã€ç‰¹è¨±ã€å®šä¾¡è¨¼æ˜ã€æ­£èª¤è¡¨ã€çŒ®è¾ã€è‘—è€…åºã€å…¨11å·»242ç« ã€æ¬„å¤–æ³¨ã€å‹…æ›¸ãƒ»æ›¸ç°¡ãªã©ã®å¼•ç”¨æ–‡æ›¸ã€å·»æœ«å¯©æŸ»ã€ç« é¡Œè¡¨ã‚’åéŒ²ã—ã€1619å¹´åˆç‰ˆã®å°åˆ·é æ¨™è­˜ã¨åŸåˆŠå›ºæœ‰ã®æ¬ ç•ªãƒ»é‡è¤‡ãƒ»é€†è¡Œã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/remesal-historia-general-1619/cover.jpg",
-    pdf:
-      "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
-    pageCount: 2130,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "æ•™ä¼šå²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "ä¸­éƒ¨ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒ‰ãƒŸãƒ‹ã‚³ä¼š",
-      "ãƒ©ã‚¹ãƒ»ã‚«ã‚µã‚¹",
-      "ãƒã‚¢ãƒ‘",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "æ¤æ°‘åœ°å²",
-      "å®£æ•™å²",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "san-buenaventura-arte-lengua-maya-1684",
-    title: "ãƒãƒ¤èªæ–‡æ³•",
-    originalTitle: "Arte de la lengua Maya",
-    subtitle:
-      "1684å¹´ãƒ¡ã‚­ã‚·ã‚³åˆç‰ˆãƒ»æ¨™é¡Œç´™ãƒ»çŒ®å‘ˆãƒ»èªå¯ãƒ»æ¤œé–²ãƒ»æœ¬æ–‡p. 1â€“76 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¬ãƒ–ãƒªã‚¨ãƒ«ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ãƒ»ãƒ–ã‚¨ãƒŠãƒ™ãƒ³ãƒˆã‚¥ãƒ©",
-    series: "ARTE DE LA LENGUA MAYA Â· 1684",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ™ãƒ«ãƒŠãƒ«ãƒ‰ãƒ»ã‚«ãƒ«ãƒ‡ãƒ­ãƒ³æœªäº¡äººå°åˆ·æ‰€ã€1684å¹´",
-    year: 1684,
-    extent:
-      "PDF 131é ãƒ»ç„¡é æ•°å‰ä»˜18é¢ãƒ»æœ¬æ–‡1â€“76é ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»æ–‡æ³•è¡¨ãƒ»ç¥ˆç¥·å®šå‹",
-    description:
-      "æ¤æ°‘åœ°æœŸãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èªã®åˆŠæœ¬æ–‡æ³•æ›¸ã€‚æ¨™é¡Œç´™ã€çŒ®å‘ˆã€èªå¯ãƒ»æ¤œé–²ã€å››æ´»ç”¨ã€å‹•è©ã®å¤‰ç•°ã€ä»£åè©ãƒ»å°è¾ã€sumç›¸å½“å‹•è©ã€æ´¾ç”Ÿè¦å‰‡ã€è–ä½“æ‹é ˜ãƒ»å‘Šè§£ãƒ»æ´—ç¤¼ãƒ»å©šå§»ãƒ»çµ‚æ²¹ã®å®šå‹æ–‡ã¾ã§ã€1684å¹´åˆç‰ˆã®åŸåˆŠé †ã«åéŒ²ã—ã€ãƒãƒ¤èªå½¢ãƒ»ä¾‹æ–‡ã®åŸç¶´ã¨åŸåˆŠé æ¨™è­˜ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/san-buenaventura-arte-lengua-maya-1684/cover.jpg",
-    pdf:
-      "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.epub",
-    pageCount: 131,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ–‡æ³•æ›¸", "è¨€èªè³‡æ–™", "å®£æ•™è³‡æ–™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚«ãƒ³ãƒšãƒã‚§", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ¤èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª",
-      "æ¤æ°‘åœ°æœŸãƒãƒ¤èª",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š",
-      "å®£æ•™è¨€èªå­¦",
-      "æ´»ç”¨",
-      "å°è¾",
-      "ç¥ˆç¥·æ–‡",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "atkins-voyage-guinea-1735",
-    title: "ã‚®ãƒ‹ã‚¢ã€ãƒ–ãƒ©ã‚¸ãƒ«ã€è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶ã¸ã®èˆªæµ·",
-    originalTitle:
-      "A Voyage to Guinea, Brasil, and the West-Indies; in His Majesty's Ships, the Swallow and Weymouth",
-    subtitle:
-      "1735å¹´åˆç‰ˆãƒ»åºæ–‡ã€æœ¬æ–‡ã€åŸæ³¨ã€æ­£èª¤è¡¨ã€å·»æœ«åºƒå‘Š æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¸ãƒ§ãƒ³ãƒ»ã‚¢ãƒˆã‚­ãƒ³ã‚º",
-    series: "A VOYAGE TO GUINEA Â· 1735",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1735å¹´",
-    year: 1735,
-    extent:
-      "PDF 207é ãƒ»åŸåˆŠå†’é ­åºƒå‘Š1é ãƒ»åºæ–‡iâ€“xxvé ãƒ»æœ¬æ–‡1â€“2é ã€19â€“265é ãƒ»åŸæ³¨39ä»¶ãƒ»è¡¨17ç‚¹ãƒ»æ­£èª¤è¡¨ãƒ»å·»æœ«åºƒå‘Š6é ãƒ»åŸåˆŠå›³åƒ2ç‚¹",
-    description:
-      "ç‹ç«‹æµ·è»å¤–ç§‘åŒ»ã‚¸ãƒ§ãƒ³ãƒ»ã‚¢ãƒˆã‚­ãƒ³ã‚ºãŒã€è»è‰¦ã‚¹ãƒ¯ãƒ­ãƒ¼å·ãƒ»ã‚¦ã‚§ã‚¤ãƒã‚¹å·ã«ã‚ˆã‚‹1721â€“1723å¹´ã®èˆªæµ·ã‚’è¨˜ã—ãŸ1735å¹´åˆŠè¡Œæ›¸ã€‚ãƒãƒ‡ã‚¤ãƒ©ã€ã‚«ãƒŠãƒªã‚¢è«¸å³¶ã€ã‚«ãƒ¼ãƒœãƒ™ãƒ«ãƒ‡ã€ã‚®ãƒ‹ã‚¢æµ·å²¸ã€ãƒ–ãƒ©ã‚¸ãƒ«ã€è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶ã‚’ã‚ãã‚‹èˆªæµ·ã€å„åœ°ã®ç¤¾ä¼šãƒ»äº¤æ˜“ãƒ»è‡ªç„¶ãƒ»ç–¾ç—…ã«é–¢ã™ã‚‹è¦³å¯Ÿã‚’åã‚ã¾ã™ã€‚å†’é ­åºƒå‘Šã€æ¨™é¡Œç´™ã€åºæ–‡ã€æœ¬æ–‡ã€åŸæ³¨ã€è¡¨ã€æ­£èª¤è¡¨ã€å·»æœ«åºƒå‘Šã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠã®æ¨™é¡Œç´™ã¨èˆ¹å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/atkins-voyage-guinea-1735/cover.jpg",
-    pdf:
-      "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/atkins-voyage-guinea-1735/John_Atkins_A_Voyage_to_Guinea_Brasil_and_the_West_Indies_1735_Japanese_Complete_Translation.epub",
-    pageCount: 207,
-    figureCount: 2,
-    plateCount: 0,
-    types: ["èˆªæµ·è¨˜", "æ—…è¡Œè¨˜", "æ¤æ°‘åœ°å²", "æ°‘æ—èªŒ"],
-    regions: [
-      "è¥¿ã‚¢ãƒ•ãƒªã‚«",
-      "ã‚®ãƒ‹ã‚¢æ¹¾",
-      "ãƒ–ãƒ©ã‚¸ãƒ«",
-      "ã‚«ãƒªãƒ–æµ·",
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "ãƒãƒ«ãƒãƒ‰ã‚¹",
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "å¤§è¥¿æ´‹ä¸–ç•Œ",
-      "å¥´éš·è²¿æ˜“",
-      "ç‹ç«‹æµ·è»",
-      "èˆªæµ·å²",
-      "ã‚®ãƒ‹ã‚¢æµ·å²¸",
-      "ãƒ–ãƒ©ã‚¸ãƒ«",
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "wafer-new-voyage-isthmus-america-1699",
-    title: "ã‚¢ãƒ¡ãƒªã‚«åœ°å³¡æ–°èˆªæµ·è¨˜ãƒ»åœ°èªŒ",
-    originalTitle: "A New Voyage and Description of the Isthmus of America",
-    subtitle:
-      "ãƒ€ãƒªã‚¨ãƒ³æ»åœ¨ã€å…ˆä½æ°‘ç¤¾ä¼šã€è‡ªç„¶èªŒã€å—æµ·èˆªæµ·ãƒ»1699å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ©ã‚¤ã‚ªãƒãƒ«ãƒ»ã‚¦ã‚§ã‚¤ãƒ•ã‚¡ãƒ¼",
-    series: "A NEW VOYAGE AND DESCRIPTION OF THE ISTHMUS OF AMERICA Â· 1699",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1699å¹´",
-    year: 1699,
-    extent:
-      "PDF 134é ãƒ»å‰ä»˜ãƒ»æœ¬æ–‡1â€“224é ãƒ»ç´¢å¼•7è‘‰ãƒ»æ­£èª¤è¡¨ãƒ»åŸåˆŠéŠ…ç‰ˆå›³4ç‚¹ãƒ»ä»˜è¼‰åºƒå‘Š",
-    description:
-      "ç§æ èˆ¹èˆªæµ·ã®é€”ä¸Šã§ãƒ€ãƒªã‚¨ãƒ³åœ°å³¡ã«å–ã‚Šæ®‹ã•ã‚ŒãŸãƒ©ã‚¤ã‚ªãƒãƒ«ãƒ»ã‚¦ã‚§ã‚¤ãƒ•ã‚¡ãƒ¼ãŒã€ç¾åœ°ã§ã®æ»åœ¨ã€å…ˆä½æ°‘ç¤¾ä¼šã®é¢¨ä¿—ãƒ»è¨€èªãƒ»åŒ»ç™‚ã€åœ°å½¢ã€å‹•æ¤ç‰©ã€å—æµ·èˆªæµ·ã‚’è¨˜ã—ãŸ1699å¹´åˆç‰ˆã®æ—¥æœ¬èªå…¨è¨³ã€‚åŸåˆŠæ¨™é¡Œç´™ã€çŒ®è¾ã€èª­è€…åºã€æ­£èª¤è¡¨ã€æœ¬æ–‡ã€ç´¢å¼•ã€å·»æœ«æ›¸ç±åºƒå‘Šã€æŠ˜è¾¼åœ°å›³ã¨éŠ…ç‰ˆå›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/wafer-new-voyage-isthmus-america-1699/cover.jpg",
-    pdf:
-      "publications/wafer-new-voyage-isthmus-america-1699/Lionel_Wafer_A_New_Voyage_1699_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/wafer-new-voyage-isthmus-america-1699/Lionel_Wafer_A_New_Voyage_1699_Japanese_Complete_Translation.epub",
-    pageCount: 134,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["èˆªæµ·è¨˜", "åœ°èªŒ", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ€ãƒªã‚¨ãƒ³", "ãƒ‘ãƒŠãƒ", "ã‚«ãƒªãƒ–æµ·", "å¤ªå¹³æ´‹"],
-    languages: ["è‹±èª"],
-    tags: ["ã‚¯ãƒŠæ—", "ãƒ€ãƒªã‚¨ãƒ³åœ°å³¡", "ç§æ èˆ¹", "è‡ªç„¶èªŒ", "æŠ˜è¾¼åœ°å›³", "éŠ…ç‰ˆå›³"],
-  },
-  {
-    slug: "marimon-lacandones-1695",
-    title: "ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒãƒ«ãƒ’ãƒ«ä¿®é“å£«ã®ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººå ±å‘Šï¼ˆ1695å¹´ï¼‰",
-    originalTitle: "Fray Antonio Margil Ã¼ber die Lacandones, 1695",
-    subtitle:
-      "1882å¹´åˆŠãƒ»åŸåˆŠ130â€“132é ãƒ»å°å…¥ãƒ»æ›¸ç°¡æŠ„è¨³ãƒ»åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚»ãƒã‚¹ãƒ†ã‚£ã‚¢ãƒ³ãƒ»ãƒãƒªãƒ¢ãƒ³ãƒ»ã‚¤ãƒ»ãƒˆã‚¥ãƒ‰ãƒ¼",
-    series: "ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1882",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬14å·»ã€1882å¹´ã€130â€“132é ",
-    year: 1882,
-    extent: "PDF 3é ãƒ»åŸåˆŠ130â€“132é ãƒ»åŸæ³¨2ä»¶ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ã‚»ãƒ“ãƒ¼ãƒªãƒ£ã®ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ã‚¹ç·æ–‡æ›¸é¤¨ã§ç¢ºèªã•ã‚ŒãŸ1695å¹´7æœˆ9æ—¥ä»˜æ›¸ç°¡ã‚’ç´¹ä»‹ã™ã‚‹çŸ­å ±ã€‚ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã®å®—æ•™å„€ç¤¼ã€æ–°ç«ã€ä¾›çŒ®ã€ã‚«ã‚·ã‚±ã®å½¹å‰²ã‚’è¨˜ã™å°å…¥ãƒ»ãƒ‰ã‚¤ãƒ„èªæŠ„è¨³ãƒ»åŸæ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/marimon-lacandones-1695/cover.jpg",
-    pdf:
-      "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ°‘æ—èªŒ", "å²æ–™ç´¹ä»‹", "çŸ­å ±"],
-    regions: ["ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³åœ°æ–¹", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ãƒãƒ§ãƒ«äºº",
-      "ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒãƒ«ãƒ’ãƒ«",
-      "å®—æ•™å„€ç¤¼",
-      "æ–°ç«",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "figueroa-color-notebooks",
-    title: "ãƒ•ã‚£ã‚²ãƒ­ã‚¢æ‰‹ç¨¿ãƒãƒ¼ãƒˆ",
-    originalTitle:
-      "ColecciÃ³n Cuadernos de Colores de JosÃ© MarÃ­a Figueroa Oreamuno",
-    subtitle:
-      "èµ¤ãƒ»ç·‘ãƒ»é’ãƒ»èŒ¶ãƒãƒ¼ãƒˆãƒ»åŸè³‡æ–™ç”»åƒ466ç‚¹ æ—¥æœ¬èªè¨³ãƒ»æ—¥æœ¬èªè¨³æ³¨ãƒ»å½±å°ç‰ˆ",
-    author: "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚ªãƒ¬ã‚¢ãƒ ãƒ¼ãƒ",
-    series: "CUADERNOS DE COLORES Â· 1870â€“1890",
-    originalPublication:
-      "ã‚µãƒ³ãƒ»ãƒ›ã‚»ã€ã‚³ã‚¹ã‚¿ãƒªã‚«å›½ç«‹å…¬æ–‡æ›¸é¤¨é‹å–¶å§”å“¡ä¼šã€2023å¹´ãƒ‡ã‚¸ã‚¿ãƒ«ç‰ˆï¼ˆåŸæ‰‹ç¨¿ã€19ä¸–ç´€å¾ŒåŠï¼‰",
-    year: 1870,
-    extent: "å…¬é–‹ç”¨PDF 1,142é ãƒ»åŸè³‡æ–™ç”»åƒ466ç‚¹ãƒ»å…¬å¼PDF4å†Š490é ",
-    description:
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«ã®é¢¨åˆºç”»å®¶ãƒ»ç³»è­œç ”ç©¶è€…ãƒ»æ¢æ¤œå®¶ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãŒæ®‹ã—ãŸå½©è‰²æ‰‹ç¨¿ãƒãƒ¼ãƒˆã®ã†ã¡ã€å›½ç«‹å…¬æ–‡æ›¸é¤¨ãŒ2023å¹´ã«å…¬é–‹ã—ãŸèµ¤ãƒ»ç·‘ãƒ»é’ãƒ»èŒ¶ãƒãƒ¼ãƒˆå…¨466ç”»åƒã‚’åéŒ²ã™ã‚‹æ—¥æœ¬èªè¨³ãƒ»å½±å°ç‰ˆã€‚å…¬å¼å‰ä»˜ã€åŸè³‡æ–™ç”»åƒã€åˆ¤èª­ä¸èƒ½ç®‡æ‰€ã‚’æ˜ç¤ºã—ãŸæ—¥æœ¬èªè¨³ã€æ—¥æœ¬èªç‰ˆå´ã®ç·¨é›†æ³¨ã§ã‚ã‚‹æ—¥æœ¬èªè¨³æ³¨ã‚’åã‚ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/figueroa-color-notebooks/cover.jpg",
-    pdf:
-      "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/figueroa-color-notebooks/Jose_Maria_Figueroa_Color_Notebooks_Japanese_Complete_Translation.epub",
-    pageCount: 1142,
-    figureCount: 0,
-    plateCount: 466,
-    types: ["æ‰‹ç¨¿", "é¢¨åˆºç”»é›†", "æ­´å²è³‡æ–™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢",
-      "å½©è‰²ãƒãƒ¼ãƒˆ",
-      "æ”¿æ²»é¢¨åˆº",
-      "é¢¨åˆºç”»",
-      "è©©æ­Œ",
-      "ç³»è­œ",
-      "åŸè³‡æ–™ç”»åƒ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "figueroa-album",
-    title: "ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚¢ãƒ«ãƒãƒ ",
-    originalTitle:
-      "El polifacÃ©tico Figueroa. BiografÃ­a y catÃ¡logo completo del Ãlbum",
-    subtitle: "åŸè³‡æ–™307ä»¶ãƒ»å½±å°345ç”»åƒé  æ—¥æœ¬èªå…¨è¨³ãƒ»æ—¥æœ¬èªè¨³æ³¨",
-    author: "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚ªãƒ¬ã‚¢ãƒ ãƒ¼ãƒ",
-    series: "ÃLBUM DE FIGUEROA Â· 19ä¸–ç´€å¾ŒåŠ",
-    originalPublication:
-      "ã‚µãƒ³ãƒ»ãƒ›ã‚»ã€ã‚³ã‚¹ã‚¿ãƒªã‚«å›½ç«‹å…¬æ–‡æ›¸é¤¨é‹å–¶å§”å“¡ä¼šã€2021å¹´ãƒ‡ã‚¸ã‚¿ãƒ«ç‰ˆï¼ˆåŸæ‰‹ç¨¿ã€19ä¸–ç´€å¾ŒåŠï¼‰",
-    year: 1870,
-    extent: "å…¬é–‹ç”¨è»½é‡PDF 1,034é ãƒ»åŸè³‡æ–™307ä»¶ãƒ»å½±å°345ç”»åƒé ",
-    description:
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«ã®æ¢æ¤œå®¶ãƒ»ç³»è­œç ”ç©¶è€…ãƒ»é¢¨åˆºç”»å®¶ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãŒç·¨ã‚“ã ã€Šã‚¢ãƒ«ãƒãƒ ã€‹ã®æ—¥æœ¬èªå…¨è¨³ãƒ»å½±å°ç‰ˆã€‚åœ°å›³ã€æ—…è¡Œè¨˜ã€æ­´å²è¦šæ›¸ã€æ–°èåˆ‡æŠœãã€è‚–åƒã€ç³»è­œå›³ãªã©ã€å…¬å¼å…¬é–‹ã®åŸè³‡æ–™307ä»¶ã¨ã€PDFã‚’å±•é–‹ã—ãŸå½±å°345ç”»åƒé ã‚’åéŒ²ã€‚åˆ¤èª­ä¸èƒ½ç®‡æ‰€ã‚’æ˜ç¤ºã—ãŸæ—¥æœ¬èªè¨³ã¨ã€æ—¥æœ¬èªç‰ˆå´ã®ç·¨é›†æ³¨ã§ã‚ã‚‹æ—¥æœ¬èªè¨³æ³¨ã‚’åã‚ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/figueroa-album/cover.jpg",
-    pdf:
-      "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/figueroa-album/Jose_Maria_Figueroa_Album_Japanese_Complete_Translation.epub",
-    pageCount: 1034,
-    figureCount: 0,
-    plateCount: 345,
-    types: ["æ‰‹ç¨¿", "åœ°å›³é›†", "ç³»è­œè³‡æ–™", "æ­´å²è³‡æ–™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢",
-      "ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚¢ãƒ«ãƒãƒ ",
-      "åœ°å›³",
-      "æ—…è¡Œè¨˜",
-      "ç³»è­œ",
-      "é¢¨åˆºç”»",
-      "åŸè³‡æ–™ç”»åƒ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "us-senate-central-america-correspondence-1853",
-    title: "ç¬¬32è­°ä¼šç¬¬2ä¼šæœŸä¸Šé™¢è¡Œæ”¿æ–‡æ›¸ç¬¬27å·",
-    originalTitle:
-      "Message from the President of the United States, Communicating, in Compliance with a Resolution of the Senate, Certain Correspondence in Relation to Central America",
-    subtitle: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«é–¢ã™ã‚‹å¾€å¾©æ›¸ç°¡",
-    author: "ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½å›½å‹™çœï¼ˆç·¨ï¼‰",
-    series: "SENATE EXECUTIVE DOCUMENT NO. 27 Â· 1853",
-    originalPublication:
-      "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€ç¬¬32è­°ä¼šç¬¬2ä¼šæœŸã€ä¸Šé™¢è¡Œæ”¿æ–‡æ›¸ç¬¬27å·ã€1853å¹´",
-    year: 1853,
-    extent:
-      "PDF 118é ãƒ»åŸåˆŠå…¨106é ãƒ»å¤§çµ±é ˜æ•™æ›¸ãƒ»å›½å‹™é•·å®˜å ±å‘Šãƒ»ä»˜å±æ–‡æ›¸41ä»¶ãƒ»æ¯”è¼ƒè¡¨2ç‚¹",
-    description:
-      "1853å¹´ã€ãƒ•ã‚£ãƒ«ãƒ¢ã‚¢å¤§çµ±é ˜ãŒä¸Šé™¢æ±ºè­°ã«å¿œã˜ã¦æå‡ºã—ãŸä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é–¢ä¿‚å¤–äº¤æ–‡æ›¸é›†ã€‚1834å¹´ã‹ã‚‰1851å¹´ã¾ã§ã®ä»˜å±æ–‡æ›¸41ä»¶ã‚’åã‚ã€ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰ã®å¤–äº¤è³‡æ ¼ã¨ä»»å‹™ã€ãƒ™ãƒªãƒ¼ã‚ºå¢ƒç•Œå•é¡Œã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³ã¨å¤§æ´‹é–“äº¤é€šã€ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„ã‚’ã‚ãã‚‹è‹±ç±³äº¤æ¸‰ã‚’è¨˜éŒ²ã—ã¦ã„ã¾ã™ã€‚å¤§çµ±é ˜æ•™æ›¸ã€å›½å‹™é•·å®˜å ±å‘Šã€ä»˜å±æ–‡æ›¸ä¸€è¦§ã€åŸåˆŠæœ¬æ–‡ã‚’çœç•¥ãªãè¨³ã—ã¾ã—ãŸã€‚",
-    cover:
-      "publications/us-senate-central-america-correspondence-1853/cover.jpg",
-    pdf:
-      "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
-    pageCount: 118,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ–‡æ›¸é›†", "å¤–äº¤å²", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-      "ãƒ™ãƒªãƒ¼ã‚ºå¢ƒç•Œå•é¡Œ",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³",
-      "å¤§æ´‹é–“äº¤é€š",
-      "ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„",
-      "è‹±ç±³é–¢ä¿‚",
-      "ç±³å›½è­°ä¼šæ–‡æ›¸",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "williams-anglo-american-isthmian-diplomacy-1916",
-    title: "ä¸­ç±³åœ°å³¡ã‚’ã‚ãã‚‹è‹±ç±³å¤–äº¤",
-    originalTitle: "Anglo-American Isthmian Diplomacy, 1815â€“1915",
-    subtitle: "1916å¹´åˆŠãƒ»å…¨11ç« ã€å‚è€ƒæ–‡çŒ®ã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¡ã‚¢ãƒªãƒ¼ãƒ»ã‚¦ã‚£ãƒ«ãƒ˜ãƒ«ãƒŸãƒ³ãƒ»ã‚¦ã‚£ãƒªã‚¢ãƒ ã‚º",
-    series: "ANGLO-AMERICAN ISTHMIAN DIPLOMACY Â· 1916",
-    originalPublication:
-      "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€American Historical Associationï¼ãƒ­ãƒ³ãƒ‰ãƒ³ã€Oxford University Pressã€1916å¹´",
-    year: 1916,
-    extent:
-      "PDF 318é ãƒ»åŸåˆŠå‰ä»˜viiâ€“xiiié ãƒ»æœ¬æ–‡1â€“330é ãƒ»å‚è€ƒæ–‡çŒ®331â€“345é ãƒ»ç´¢å¼•347â€“356é ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "è‹±å›½ã¨ç±³å›½ãŒä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°å³¡äº¤é€šã€ãƒ™ãƒªãƒ¼ã‚ºã€ãƒ™ã‚¤è«¸å³¶ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³ã€ãƒ‘ãƒŠãƒé‹æ²³ã‚’ã‚ãã£ã¦å±•é–‹ã—ãŸ1815å¹´ã‹ã‚‰1915å¹´ã¾ã§ã®å¤–äº¤å²ã€‚å‰ä»˜ã€å…¨11ç« ã€åŸæ³¨ã€å‚è€ƒæ–‡çŒ®ã€ç´¢å¼•ã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠ198é ç›´å¾Œã®è‰²åˆ·æŠ˜è¾¼åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
-    pdf:
-      "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/williams-anglo-american-isthmian-diplomacy-1916/Mary_Wilhelmine_Williams_Anglo_American_Isthmian_Diplomacy_1916_Japanese_Complete_Translation.epub",
-    pageCount: 318,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["å¤–äº¤å²", "å›½éš›é–¢ä¿‚å²", "é‹æ²³å²", "æ­´å²ç ”ç©¶"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ™ãƒªãƒ¼ã‚º", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ãƒ‘ãƒŠãƒ"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ã‚¯ãƒ¬ã‚¤ãƒˆãƒ³ï¼ãƒ–ãƒ«ãƒ¯ãƒ¼æ¡ç´„",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢é‹æ²³",
-      "ãƒ‘ãƒŠãƒé‹æ²³",
-      "ãƒ¢ãƒ³ãƒ­ãƒ¼ä¸»ç¾©",
-      "ã‚¬ãƒªãƒ³ãƒ‰",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "molina-costa-rica-new-granada-1853",
-    title: "ã‚³ã‚¹ã‚¿ãƒªã‚«ã¨ãƒŒã‚¨ãƒãƒ»ã‚°ãƒ©ãƒŠãƒ€",
-    originalTitle:
-      "Costa Rica and New Granada: An Inquiry into the Question of Boundaries",
-    subtitle: "1853å¹´åˆç‰ˆãƒ»å…¨5ç« ã€æ–‡æ›¸2ç‚¹ã€ä»˜éŒ² æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒªãƒšãƒ»ãƒ¢ãƒªãƒ¼ãƒŠ",
-    series: "COSTA RICA Â· 1853",
-    originalPublication: "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€1853å¹´",
-    year: 1853,
-    extent:
-      "PDF 59é ãƒ»å‰ä»˜ãƒ»æœ¬æ–‡7â€“54é ãƒ»å…¨5ç« ãƒ»æ–‡æ›¸2ç‚¹ãƒ»ä»˜éŒ²ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«å¤–äº¤å®˜ãƒ•ã‚§ãƒªãƒšãƒ»ãƒ¢ãƒªãƒ¼ãƒŠãŒã€ãƒŒã‚¨ãƒãƒ»ã‚°ãƒ©ãƒŠãƒ€ã¨ã®ãƒœã‚«ãƒ»ãƒˆãƒ­ãƒ»ãƒãƒªã‚­å¢ƒç•Œå•é¡Œã¨ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã¨ã®å›½å¢ƒãƒ»é‹æ²³å•é¡Œã‚’è«–ã˜ãŸ1853å¹´ã®å¤–äº¤å°å†Šå­ã€‚å‰ä»˜ã€æ­£èª¤è¡¨ã€ç´¢å¼•ã€å…¨5ç« ã€ç‹å®¤æ–‡æ›¸2ç‚¹ã€ä»˜éŒ²ã€åŸæ³¨ã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠæ¨™é¡Œç´™ã¨æŠ˜è¾¼åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/molina-costa-rica-new-granada-1853/cover.svg",
-    pdf:
-      "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
-    pageCount: 59,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["å¤–äº¤å²", "å›½å¢ƒå²", "æ”¿æ²»è«–", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ãƒ‘ãƒŠãƒ", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "å›½å¢ƒå•é¡Œ",
-      "ãƒœã‚«ãƒ»ãƒˆãƒ­",
-      "ãƒãƒªã‚­",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "å¤§æ´‹é–“äº¤é€š",
-      "ã‚³ãƒ­ãƒ³ãƒ“ã‚¢ï¼ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ¡ç´„",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "squier-notes-central-america-1855",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«è¦šæ›¸",
-    originalTitle:
-      "Notes on Central America; Particularly the States of Honduras and San Salvador",
-    subtitle: "1855å¹´åˆç‰ˆãƒ»å…¨16ç« ã€é›‘éŒ²Aâ€“Eã€æ–‡çŒ®ç›®éŒ²ã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "Eãƒ»Gãƒ»ã‚¹ã‚¯ãƒ¯ã‚¤ã‚¢",
-    series: "NOTES ON CENTRAL AMERICA Â· 1855",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1855å¹´",
-    year: 1855,
-    extent: "PDF 338é ãƒ»å…¨16ç« ãƒ»é›‘éŒ²Aâ€“Eãƒ»æ–‡çŒ®ç›®éŒ²ãƒ»ç´¢å¼•ãƒ»å›³ç‰ˆï¼åœ°å›³18ç‚¹ãƒ»è¡¨44ç‚¹",
-    description:
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã¨ã‚µãƒ³ã‚µãƒ«ãƒãƒ‰ãƒ«ã‚’ä¸­å¿ƒã«ã€ä¸­éƒ¨ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ãƒ»åœ°å½¢ãƒ»æ°—å€™ãƒ»äººå£ãƒ»è³‡æºãƒ»ç”£æ¥­ãƒ»å…ˆä½æ°‘ç¤¾ä¼šãƒ»å¤ä»£éºè·¡ã‚’ã¾ã¨ã‚ã€è¨ˆç”»ä¸­ã®ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹å¤§æ´‹é–“é‰„é“ã‚’è©³è¿°ã—ãŸ1855å¹´åˆŠè¡Œæ›¸ã€‚å‰ä»˜ã€å…¨16ç« ã€é›‘éŒ²Aâ€“Eã€æ–‡çŒ®ç›®éŒ²ã€ç´¢å¼•ã€åŸæ³¨ã€å…¨44è¡¨ã‚’çœç•¥ãªãè¨³ã—ã€æœ¬æ–‡å›³ç‰ˆã€æŠ˜è¾¼å›³ã€åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/squier-notes-central-america-1855/cover.svg",
-    pdf:
-      "publications/squier-notes-central-america-1855/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/squier-notes-central-america-1855/Squier_Notes_on_Central_America_1855_Japanese_Complete_Translation.epub",
-    pageCount: 338,
-    figureCount: 18,
-    plateCount: 0,
-    types: ["åœ°èªŒ", "åœ°ç†æ›¸", "äº¤é€šå²", "æ°‘æ—èªŒ"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹å¤§æ´‹é–“é‰„é“",
-      "ãƒ•ã‚©ãƒ³ã‚»ã‚«æ¹¾",
-      "ã‚µãƒ³ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ†ã‚°ã‚·ã‚¬ãƒ«ãƒ‘",
-      "äººå£çµ±è¨ˆ",
-      "å…ˆä½æ°‘",
-      "å¤ä»£éºè·¡",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "valenzuela-lacandon-chol-1695",
-    title: "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³å¾æœãŠã‚ˆã³ãƒãƒ§ãƒ«å¾æœ",
-    originalTitle: "Conquista del LacandÃ³n y Conquista del Chol",
-    subtitle: "1695å¹´ãƒ™ãƒ«ãƒªãƒ³å†™æœ¬ãƒ»å…¨38ç«  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ‹ã‚³ãƒ©ã‚¹ãƒ»ãƒ‡ãƒ»ãƒãƒ¬ãƒ³ã‚¹ã‚¨ãƒ©",
-    series: "RELACIÃ“N HISTÃ“RICA VERDADERA Â· 1695",
-    originalPublication: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1695å¹´ï¼ˆå†™æœ¬ï¼‰",
-    year: 1695,
-    extent: "PDF 500é ãƒ»å…¨3å†Š38ç« ãƒ»å†™æœ¬folioè¡¨ç¤º795ä»¶",
-    description:
-      "1695å¹´ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½ç·è£ãƒã‚·ãƒ³ãƒˆãƒ»ãƒ‡ãƒ»ãƒãƒªã‚ªã‚¹ãƒ»ãƒ¬ã‚¢ãƒ«ã«ã‚ˆã‚‹ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³ã€ãƒãƒ§ãƒ«ã»ã‹ã®å¸°é †é å¾ã‚’ã€éšè¡Œã—ãŸãƒ‹ã‚³ãƒ©ã‚¹ãƒ»ãƒ‡ãƒ»ãƒãƒ¬ãƒ³ã‚¹ã‚¨ãƒ©ãŒè¨˜éŒ²ã—ãŸå ±å‘Šã€‚ãƒ™ãƒ«ãƒªãƒ³æ‰€è”µå†™æœ¬ Y 796 [4Â°] ã®æ¨™é¡Œã€çŒ®è¾ã€å…¨3å†Š38ç« ã€ç« ç›®æ¬¡ã‚’æ—¥æœ¬èªåŒ–ã—ã€å†™æœ¬ã®folioè¡¨ç¤ºã€å‰Šé™¤ãƒ»æŒ¿å…¥ãƒ»æ¬„å¤–æ³¨ã«é–¢ã™ã‚‹è»¢å†™æ³¨ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚ç¾ä»£ç·¨è€…ã«ã‚ˆã‚‹æ³¨ã€è§£èª¬ã€ä»˜éŒ²ã€ç´¢å¼•ã¯åéŒ²ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    cover: "publications/valenzuela-lacandon-chol-1695/cover.jpg",
-    pdf: "publications/valenzuela-lacandon-chol-1695/valenzuela_lacandon_chol_ja.pdf",
-    epub: "publications/valenzuela-lacandon-chol-1695/valenzuela_lacandon_chol_ja.epub",
-    pageCount: 500,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "ä¸€æ¬¡å²æ–™", "å¾æœå²"],
-    regions: ["ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³", "ãƒã‚¢ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒšãƒ†ãƒ³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ãƒãƒ§ãƒ«äºº",
-      "æ¤æ°‘åœ°æœŸ",
-      "17ä¸–ç´€",
-      "ãƒ™ãƒ«ãƒªãƒ³å†™æœ¬",
-    ],
-  },
-  {
-    slug: "charnay-cites-et-ruines-americaines-1863",
-    title: "ã‚¢ãƒ¡ãƒªã‚«ã®éƒ½å¸‚ã¨å»ƒå¢Ÿ",
-    originalTitle: "CitÃ©s et ruines amÃ©ricaines",
-    subtitle: "1863å¹´åˆŠãƒ»æœ¬æ–‡ã€æ³¨ã€å›³ç‰ˆè§£èª¬ æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ãƒ‡ã‚¸ãƒ¬ãƒ»ã‚·ãƒ£ãƒ«ãƒï¼ã‚¦ã‚¸ã‚§ãƒ¼ãƒŒãƒ»ã‚¨ãƒãƒ‹ãƒ¥ã‚¨ãƒ«ãƒ»ãƒ´ã‚£ã‚ªãƒ¬ï¼ãƒ«ï¼ãƒ‡ãƒ¥ã‚¯",
-    series: "CITÃ‰S ET RUINES AMÃ‰RICAINES Â· 1863",
-    originalPublication: "ãƒ‘ãƒªã€1863å¹´",
-    year: 1863,
-    extent:
-      "PDF 391é ãƒ»åŸåˆŠå‰ä»˜iâ€“xé ãƒ»æœ¬æ–‡1â€“543é ãƒ»æœ¬æ–‡æŒ¿å›³13ç‚¹ãƒ»åŸåˆŠå›³ç‰ˆ49ç‚¹",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚¹äººå†™çœŸå®¶ãƒ‡ã‚¸ãƒ¬ãƒ»ã‚·ãƒ£ãƒ«ãƒãŒ1858å¹´ã‹ã‚‰1861å¹´ã®ãƒ¡ã‚­ã‚·ã‚³æ—…è¡Œã¨éºè·¡èª¿æŸ»ã‚’ã¾ã¨ã‚ã€ãƒ´ã‚£ã‚ªãƒ¬ï¼ãƒ«ï¼ãƒ‡ãƒ¥ã‚¯ã®å»ºç¯‰è«–ã‚’ä»˜ã—ãŸ1863å¹´åˆŠè¡Œæ›¸ã€‚åºæ–‡ã€å»ºç¯‰è«–ã€å…¨17ç« ã®æ—…è¡Œè¨˜ã€åŸæ³¨ã€å›³ç‰ˆè§£èª¬ã€ç›®æ¬¡ã‚’å…¨è¨³ã—ã€æœ¬æ–‡æŒ¿å›³13ç‚¹ã¨åŸåˆŠå›³ç‰ˆ49ç‚¹ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚å›³ç‰ˆã¯ç•ªå·ã€å°ºåº¦ã€æ–‡å­—ã€ç½²åã€ä½™ç™½ã‚’æ®‹ã—ã¦ç„¡è£æ–­ã§åéŒ²ã—ã€å›³ç‰ˆVâ€“VIã¨XLVâ€“XLVIã®é€£çµãƒ‘ãƒãƒ©ãƒã¯åˆ†å‰²ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    cover: "publications/charnay-cites-et-ruines-americaines-1863/cover.jpg",
-    pdf: "publications/charnay-cites-et-ruines-americaines-1863/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.pdf",
-    epub: "publications/charnay-cites-et-ruines-americaines-1863/Charnay_Cites_et_Ruines_Americaines_1863_Japanese_Complete_Translation.epub",
-    pageCount: 391,
-    figureCount: 13,
-    plateCount: 49,
-    types: ["æ—…è¡Œè¨˜", "æ¢æ¤œè¨˜", "è€ƒå¤å­¦ç ”ç©¶", "å›³ç‰ˆé›†"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ã‚ªã‚¢ãƒã‚«", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒ¦ã‚«ã‚¿ãƒ³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒ¡ã‚­ã‚·ã‚³è€ƒå¤å­¦",
-      "å†™çœŸå²",
-      "ãƒŸãƒˆãƒ©",
-      "ãƒãƒã‚§ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡",
-      "ã‚¦ã‚·ãƒ¥ãƒãƒ«",
-      "é€£çµãƒ‘ãƒãƒ©ãƒ",
-      "åŸåˆŠå›³ç‰ˆ",
-    ],
-  },
-  {
-    slug: "dupaix-antiquites-mexicaines-1834",
-    title: "ãƒ¡ã‚­ã‚·ã‚³å¤ä»£éºç‰©",
-    originalTitle:
-      "AntiquitÃ©s mexicaines : relation des trois expÃ©ditions du capitaine Dupaix",
-    subtitle: "1834â€“1836å¹´åˆŠãƒ»å…¨2å·»ãŠã‚ˆã³ã‚¢ãƒˆãƒ©ã‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ã‚®ãƒ¨ãƒ¼ãƒ ãƒ»ãƒ‡ãƒ¥ãƒšï¼ã‚¢ãƒ¬ã‚¯ã‚µãƒ³ãƒ‰ãƒ«ãƒ»ãƒ«ãƒãƒ¯ãƒ¼ãƒ«ï¼ãƒ‡ã‚¤ãƒ´ã‚£ãƒƒãƒ‰ãƒ»ãƒ™ã‚¤ãƒªãƒ¼ãƒ»ã‚¦ã‚©ãƒ¼ãƒ‡ãƒ³ã»ã‹",
-    series: "ANTIQUITÃ‰S MEXICAINES Â· 1834â€“1836",
-    originalPublication: "ãƒ‘ãƒªã€1834â€“1836å¹´",
-    year: 1834,
-    extent: "PDF 1181é ãƒ»æœ¬æ–‡å…¨2å·»ãƒ»åŸåˆŠã‚¢ãƒˆãƒ©ã‚¹174ç´™è‘‰ãƒ»å£çµµ1ç‚¹",
-    description:
-      "ã‚¹ãƒšã‚¤ãƒ³ç‹ã®å‘½ã«ã‚ˆã‚Š1805å¹´ã‹ã‚‰1807å¹´ã«å®Ÿæ–½ã•ã‚ŒãŸãƒ‡ãƒ¥ãƒšå¤§å°‰ã®ä¸‰å›ã®ãƒ¡ã‚­ã‚·ã‚³å¤ä»£éºç‰©èª¿æŸ»ã¨ã€ãƒ«ãƒãƒ¯ãƒ¼ãƒ«ã€ã‚¦ã‚©ãƒ¼ãƒ‡ãƒ³ã»ã‹ã®è«–è€ƒã‚’åã‚ã‚‹å¤§è‘—ã€‚æœ¬æ–‡ã€æ³¨ã€è«¸æ–‡æ›¸ã€ç›®æ¬¡ã‚’å…¨è¨³ã—ã€å£çµµã¨åŸåˆŠã‚¢ãƒˆãƒ©ã‚¹174ç´™è‘‰ã‚’ç•ªå·ãƒ»åŸèªã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ãƒ»ç¸®å°ºãƒ»ä½™ç™½ã”ã¨ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
-    pdf: "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf",
-    epub: "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
-    pageCount: 1181,
-    figureCount: 1,
-    plateCount: 174,
-    types: ["è€ƒå¤å­¦ç ”ç©¶", "æ¢æ¤œè¨˜", "å›³ç‰ˆé›†"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ã‚ªã‚¢ãƒã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ¡ã‚­ã‚·ã‚³è€ƒå¤å­¦",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡",
-      "ãƒŸãƒˆãƒ©",
-      "åŸåˆŠã‚¢ãƒˆãƒ©ã‚¹",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "cogolludo-yucatan-1688",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³å²",
-    originalTitle: "Historia de Yucathan",
-    subtitle: "1688å¹´åˆç‰ˆãƒ»æœ¬æ–‡ã€å‰ä»˜ã€å·»ç« ç´¢å¼•ã€ä¸»è¦äº‹é …ç´¢å¼• æ—¥æœ¬èªè¨³",
-    author: "ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒ­ãƒšã‚¹ãƒ»ãƒ‡ãƒ»ã‚³ã‚´ãƒªãƒ¥ãƒ¼ãƒ‰",
-    series: "HISTORIA DE YUCATHAN Â· 1688",
-    originalPublication: "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€1688å¹´",
-    year: 1688,
-    extent: "PDF 1310é ãƒ»å…¨12å·»223ç« ãƒ»ä¸»è¦äº‹é …ç´¢å¼•479é …ç›®ãƒ»åŸåˆŠå›³ç‰ˆ2ç‚¹",
-    description:
-      "1688å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆã‚’åŸºæº–ã«ã€å‰ä»˜ã€å…¨12å·»223ç« ã®æœ¬æ–‡ã€å·»ç« ç´¢å¼•ã€ä¸»è¦äº‹é …ç´¢å¼•479é …ç›®ã‚’æ—¥æœ¬èªåŒ–ã€‚åŸåˆŠæœ¬æ–‡1â€“760é ã®æ”¹é ä½ç½®ã¨åˆ¥åˆ»æ‰‰ãƒ»æœ¨ç‰ˆå›³ã‚’åéŒ²ã—ã€ãƒªãƒ•ãƒ­ãƒ¼å‹EPUBã‚‚ä½µè¼‰ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/cogolludo-yucatan-1688/cover.jpg",
-    pdf: "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.pdf",
-    epub: "publications/cogolludo-yucatan-1688/Cogolludo_Historia_de_Yucathan_1688_Japanese_Translation.epub",
-    pageCount: 1310,
-    figureCount: 2,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚«ãƒ³ãƒšãƒã‚§", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒãƒ¤å²", "æ¤æ°‘åœ°æœŸ", "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š", "17ä¸–ç´€", "å·»æœ«ç´¢å¼•"],
-  },
-  {
-    slug: "villagutierre-itza-1701",
-    title: "ã‚¤ãƒ„ã‚¡åœ°æ–¹å¾æœå²",
-    originalTitle:
-      "Historia de la conquista de la provincia de el Itza, reducciÃ³n y progressos de la de el LacandÃ³n",
-    subtitle: "1701å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆãƒ»ç¬¬ä¸€éƒ¨",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ãƒ“ã‚¸ãƒ£ã‚°ãƒ†ã‚£ã‚¨ãƒ¬ãƒ»ã‚½ãƒˆï¼ãƒãƒ¨ãƒ¼ãƒ«",
-    series: "HISTORIA DE LA CONQUISTA Â· 1701",
-    originalPublication: "1701å¹´",
-    year: 1701,
-    extent: "861é ãƒ»æœ¬æ–‡10å·»128ç« ãƒ»åŸåˆŠæœ¬æ–‡660é ãƒ»åŸæ³¨191ä»¶ãƒ»ç´¢å¼•937é …ãƒ»å£çµµ1ç‚¹",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½ã¨ãƒ¦ã‚«ã‚¿ãƒ³è«¸å·ã¨ã®ä¸­é–“åœ°åŸŸã«ãŠã‘ã‚‹ã‚¤ãƒ„ã‚¡ã€ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³ãªã©ã®å¾æœãƒ»å¸°é †ã‚’è¨˜ã—ãŸ1701å¹´åˆŠã®æ­´å²æ›¸ã€‚æ‰‰ã€çŒ®è¾ã€å‡ºç‰ˆå¯©æŸ»ãƒ»è¨±å¯ã€å…¨å·»ç« ç›®éŒ²ã€ç¥è¾ãƒ»è©©ã€æœ¬æ–‡10å·»128ç« ã€åŸæ³¨ã€å·»æœ«ã®ä¸»è¦äº‹é …ç´¢å¼•ã¨å¥¥ä»˜ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/villagutierre-itza-1701/cover.jpg",
-    pdf: "publications/villagutierre-itza-1701/villagutierre_itza_1701_ja.pdf",
-    epub: "publications/villagutierre-itza-1701/villagutierre_itza_1701_ja.epub",
-    pageCount: 861,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["æ­´å²æ›¸", "ä¸€æ¬¡å²æ–™", "å¾æœå²"],
-    regions: ["ãƒšãƒ†ãƒ³", "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚¤ãƒ„ã‚¡æ—",
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ã‚«ãƒã‚¯",
-      "ãƒ‰ãƒ³ãƒ»ãƒãƒ«ãƒ†ã‚£ãƒ³ãƒ»ãƒ‡ãƒ»ã‚¦ãƒ«ã‚¹ã‚¢",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "maler-usumacinta",
-    title: "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸä¸­éƒ¨ã®èª¿æŸ»",
-    originalTitle:
-      "Researches in the Central Portion of the Usumatsintla Valley: Report of Explorations for the Museum, 1898â€“1900",
-    subtitle: "åšç‰©é¤¨ã®ãŸã‚ã«å®Ÿæ–½ã—ãŸ1898ã€œ1900å¹´ã®è¸æŸ»å ±å‘Š",
-    author: "ãƒ†ã‚ªãƒ™ãƒ«ãƒˆãƒ»ãƒãƒ¼ãƒ©ãƒ¼",
-    series: "PEABODY MUSEUM MEMOIRS Â· VOL. II",
-    originalPublication: "1901ãƒ»1903å¹´",
-    year: 1901,
-    extent: "å…¨2åˆ†å†Šãƒ»384é ãƒ»æŒ¿å›³68ç‚¹ãƒ»å›³ç‰ˆ80ç‚¹",
-    description:
-      "ãƒ”ã‚¨ãƒ‰ãƒ©ã‚¹ãƒ»ãƒã‚°ãƒ©ã‚¹ã€ãƒ¤ã‚·ãƒ¥ãƒãƒ©ãƒ³ã‚’ã¯ã˜ã‚ã¨ã™ã‚‹ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸã®éºè·¡è¸æŸ»è¨˜éŒ²ã€‚å…¬é–‹è‹±èªåˆŠæœ¬ã‹ã‚‰ã®æ—¥æœ¬èªé‡è¨³ã§ã€åŸåˆŠã®æœ¬æ–‡æŒ¿å›³ã¨å†™çœŸå›³ç‰ˆã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/maler-usumacinta/cover.jpg",
-    pdf: "publications/maler-usumacinta/Maler_Usumacinta_Japanese_Translation.pdf",
-    epub: "publications/maler-usumacinta/Maler_Usumacinta_Japanese_Translation.epub",
-    pageCount: 384,
-    figureCount: 68,
-    plateCount: 80,
-    types: ["èª¿æŸ»å ±å‘Š", "éºè·¡è¸æŸ»"],
-    regions: ["ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "ãƒ”ã‚¨ãƒ‰ãƒ©ã‚¹ãƒ»ãƒã‚°ãƒ©ã‚¹", "ãƒ¤ã‚·ãƒ¥ãƒãƒ©ãƒ³", "å†™çœŸå›³ç‰ˆ"],
-  },
-  {
-    slug: "maler-upper-usumacinta",
-    title: "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿ä¸Šæµéƒ¨ãŠã‚ˆã³éš£æ¥åœ°åŸŸã®æ¢æ¤œ",
-    originalTitle:
-      "Explorations of the Upper Usumatsintla and Adjacent Region: Altar de Sacrificios; Seibal; ItsimtÃ©-SÃ¡cluk; Cankuen",
-    subtitle:
-      "ã‚¢ãƒ«ã‚¿ãƒ«ãƒ»ãƒ‡ãƒ»ã‚µã‚¯ãƒªãƒ•ã‚£ã‚·ã‚ªã‚¹ï¼ã‚»ã‚¤ãƒãƒ«ï¼ã‚¤ãƒ„ã‚£ãƒ ãƒ†ï¼ã‚µã‚¯ãƒ«ã‚¯ï¼ã‚«ãƒ³ã‚¯ã‚¨ãƒ³",
-    author: "ãƒ†ã‚ªãƒ™ãƒ«ãƒˆãƒ»ãƒãƒ¼ãƒ©ãƒ¼",
-    series: "PEABODY MUSEUM MEMOIRS Â· VOL. IV Â· NO. 1",
-    originalPublication: "1908å¹´",
-    year: 1908,
-    extent: "83é ãƒ»æœ¬æ–‡å›³8ç‚¹ãƒ»æ¦‚ç•¥å›³1ç‚¹ãƒ»å›³ç‰ˆ13è‘‰",
-    description:
-      "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·ä¸Šæµéƒ¨ã¨éš£æ¥åœ°åŸŸã«ãŠã‘ã‚‹1904ã€œ1905å¹´ã®è¸æŸ»å ±å‘Šã€‚4éºè·¡ã®æœ¬æ–‡å…¨è¨³ã«åŠ ãˆã€åŸåˆŠã®æœ¬æ–‡å›³ã€æ¦‚ç•¥å›³ã€å†™çœŸå›³ç‰ˆIã€œXIIIã‚’å®Œå…¨åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/maler-upper-usumacinta/cover.jpg",
-    pdf: "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.pdf",
-    epub: "publications/maler-upper-usumacinta/Maler_Upper_Usumacinta_1908_Complete_Japanese_Translation.epub",
-    pageCount: 83,
-    figureCount: 9,
-    plateCount: 13,
-    types: ["èª¿æŸ»å ±å‘Š", "éºè·¡è¸æŸ»"],
-    regions: ["ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "ã‚»ã‚¤ãƒãƒ«", "ã‚«ãƒ³ã‚¯ã‚¨ãƒ³", "å†™çœŸå›³ç‰ˆ"],
-  },
-  {
-    slug: "morelet-1857",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã€ã‚­ãƒ¥ãƒ¼ãƒå³¶ãŠã‚ˆã³ãƒ¦ã‚«ã‚¿ãƒ³ç´€è¡Œ",
-    originalTitle:
-      "Voyage dans lâ€™AmÃ©rique centrale, lâ€™Ãle de Cuba et le Yucatan",
-    subtitle: "1857å¹´åˆŠãƒ»å…¨2å·» æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ”ã‚¨ãƒ¼ãƒ«ï¼ãƒãƒªãƒ¼ï¼ã‚¢ãƒ«ãƒ†ãƒ¥ãƒ¼ãƒ«ãƒ»ãƒ¢ãƒ«ãƒ¬",
-    series: "VOYAGE DANS Lâ€™AMÃ‰RIQUE CENTRALE Â· 1857",
-    originalPublication: "1857å¹´",
-    year: 1857,
-    extent: "å…¨2å·»ãƒ»538é ãƒ»ç« é ­å›³ç‰ˆ22ç‚¹ãƒ»æ¥½è­œ2é ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "ã‚­ãƒ¥ãƒ¼ãƒã‹ã‚‰ãƒ™ãƒªãƒ¼ã‚ºã€ãƒšãƒ†ãƒ³ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ãƒ¦ã‚«ã‚¿ãƒ³ã¸è‡³ã‚‹æ—…è¡Œè¨˜ã€‚åŸåˆŠ2å·»ã®æœ¬æ–‡ã€åŸæ³¨ã€å·»æœ«æ³¨ã€ä»˜éŒ²ã€åŸåˆŠç›®æ¬¡ã‚’å…¨è¨³ã—ã€ç« é ­å›³ç‰ˆã€æ°‘æ—æ—‹å¾‹è­œã€æŠ˜è¾¼åœ°å›³ã‚’å®Œå…¨åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/morelet-1857/cover.jpg",
-    pdf: "publications/morelet-1857/Morelet_1857_Japanese_Complete_Translation.pdf",
-    epub: "publications/morelet-1857/Morelet_1857_Japanese_Complete_Translation.epub",
-    pageCount: 538,
-    figureCount: 22,
-    plateCount: 3,
-    types: ["æ—…è¡Œè¨˜", "æ¢æ¤œè¨˜", "åšç‰©èªŒ"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ã‚­ãƒ¥ãƒ¼ãƒ", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒšãƒ†ãƒ³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: ["æ°‘æ—èªŒ", "è‡ªç„¶èªŒ", "æŠ˜è¾¼åœ°å›³", "æ¥½è­œ"],
-  },
-  {
-    slug: "morelet-exploration-guatemala-1850",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©æ¢æ¤œ",
-    originalTitle: "Voyage scientifique. Exploration du Guatemala",
-    subtitle:
-      "1850å¹´åˆŠãƒ»ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼å§”å“¡ä¼šå ±å‘Šãƒ»åŸåˆŠ430â€“433é  æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ãƒ”ã‚¨ãƒ¼ãƒ«ï¼ãƒãƒªãƒ¼ï¼ã‚¢ãƒ«ãƒ†ãƒ¥ãƒ¼ãƒ«ãƒ»ãƒ¢ãƒ«ãƒ¬ï¼ã‚¢ã‚·ãƒ«ãƒ»ãƒ´ã‚¡ãƒ©ãƒ³ã‚·ã‚¨ãƒ³ãƒŒ",
-    series: "EXPLORATION DU GUATEMALA Â· ACADÃ‰MIE DES SCIENCES Â· 1850",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Comptes rendus hebdomadaires des sÃ©ances de lâ€™AcadÃ©mie des sciencesã€ç¬¬30å·»ã€1850å¹´ã€430â€“433é ï¼ˆãƒ‡ã‚£ã‚¸ãƒ§ãƒ³åˆŠç‹¬ç«‹æŠœåˆ·6é ï¼‰",
-    year: 1850,
-    extent: "PDF 5é ãƒ»åŸåˆŠ430â€“433é ãƒ»å§”å“¡ä¼šå ±å‘Šãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ¢ãƒ«ãƒ¬ã®ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ—…è¡Œã§æ¡é›†ã•ã‚ŒãŸåœ°è³ªãƒ»å‹•ç‰©ãƒ»æ¤ç‰©æ¨™æœ¬ã¨å›³ç”»ã‚’ã€ãƒ•ãƒ©ãƒ³ã‚¹ç§‘å­¦ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼å§”å“¡ä¼šãŒå¯©æŸ»ã—ãŸå ±å‘Šã€‚ãƒ´ã‚¡ãƒ©ãƒ³ã‚·ã‚¨ãƒ³ãƒŒãŒå ±å‘Šè€…ã‚’å‹™ã‚ãŸ1850å¹´2æœˆ25æ—¥ä¼šåˆã®æœ¬æ–‡ã€å§”å“¡åã€æ•°å€¤ã€åˆ†é¡ç¾¤åã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/morelet-exploration-guatemala-1850/cover.jpg",
-    pdf:
-      "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/morelet-exploration-guatemala-1850/Morelet_Exploration_du_Guatemala_1850_Japanese_Complete_Translation.epub",
-    pageCount: 5,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è‡ªç„¶å²å ±å‘Š", "æ¢æ¤œå ±å‘Š", "å­¦ä¼šå ±å‘Š"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒšãƒ†ãƒ³", "ã‚­ãƒ¥ãƒ¼ãƒ", "ãƒ¦ã‚«ã‚¿ãƒ³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚¢ãƒ«ãƒ†ãƒ¥ãƒ¼ãƒ«ãƒ»ãƒ¢ãƒ«ãƒ¬",
-      "ã‚¢ã‚·ãƒ«ãƒ»ãƒ´ã‚¡ãƒ©ãƒ³ã‚·ã‚¨ãƒ³ãƒŒ",
-      "ãƒ•ãƒ©ãƒ³ã‚¹ç§‘å­¦ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼",
-      "è‡ªç„¶å²",
-      "æ¨™æœ¬",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "morelet-testacea-novissima-pars-i-1849",
-    title: "ã‚­ãƒ¥ãƒ¼ãƒå³¶ãŠã‚ˆã³ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®æ–°è²é¡ï¼ˆç¬¬Iéƒ¨ï¼‰",
-    originalTitle:
-      "Testacea novissima insulae Cubanae et Americae Centralis. Pars I",
-    subtitle: "1849å¹´åˆŠãƒ»æ¨™é¡Œãƒ»åºæ–‡ãƒ»ç¬¬1â€“85ç•ª æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ”ã‚¨ãƒ¼ãƒ«ï¼ãƒãƒªãƒ¼ï¼ã‚¢ãƒ«ãƒ†ãƒ¥ãƒ¼ãƒ«ãƒ»ãƒ¢ãƒ«ãƒ¬",
-    series: "TESTACEA NOVISSIMA Â· PARS I Â· 1849",
-    originalPublication:
-      "ãƒ‘ãƒªã€J.-B. BailliÃ¨reï¼ãƒ­ãƒ³ãƒ‰ãƒ³ã€H. BailliÃ¨reã€1849å¹´ï¼ˆãƒ‡ã‚£ã‚¸ãƒ§ãƒ³ã€Imprimerie Loireau-Feuchotï¼‰",
-    year: 1849,
-    extent: "PDF 23é ãƒ»åŸåˆŠ5â€“31é ãƒ»è²é¡85ç¨®ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ¢ãƒ«ãƒ¬ãŒã‚­ãƒ¥ãƒ¼ãƒå³¶ã€ãƒ¦ã‚«ã‚¿ãƒ³ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ãªã©ã§æ¡é›†ã—ãŸé™¸ç”£ãƒ»æ·¡æ°´ç”£è²é¡85ç¨®ã‚’è¨˜è¼‰ã—ãŸç¬¬Iéƒ¨ã€‚æ¨™é¡Œã€åºæ–‡ã€å±è¦‹å‡ºã—ã€å…¨85ç¨®ã®å½¢æ…‹è¨˜è¼‰ã€å¯¸æ³•ã€ç”£åœ°ã€æ¯”è¼ƒæ³¨ã€çµ‚è¨˜ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/morelet-testacea-novissima-pars-i-1849/cover.jpg",
-    pdf:
-      "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/morelet-testacea-novissima-pars-i-1849/Morelet_Testacea_Novissima_Pars_I_1849_Japanese_Complete_Translation.epub",
-    pageCount: 23,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è²é¡å­¦", "è‡ªç„¶å²", "åˆ†é¡å­¦", "å­¦è¡“åˆŠè¡Œç‰©"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "ãƒšãƒ†ãƒ³",
-      "ã‚­ãƒ¥ãƒ¼ãƒ",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-    ],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "è»Ÿä½“å‹•ç‰©",
-      "é™¸ç”£è²é¡",
-      "æ·¡æ°´ç”£è²é¡",
-      "æ–°ç¨®è¨˜è¼‰",
-      "è‡ªç„¶å²æ¨™æœ¬",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "morelet-testacea-novissima-pars-ii-1851",
-    title: "ã‚­ãƒ¥ãƒ¼ãƒå³¶ãŠã‚ˆã³ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®æ–°è²é¡ï¼ˆç¬¬IIéƒ¨ï¼‰",
-    originalTitle:
-      "Testacea novissima insulae Cubanae et Americae Centralis. Pars II",
-    subtitle:
-      "1851å¹´åˆŠãƒ»åºæ–‡ãƒ»ç¬¬86â€“150ç•ªãƒ»è¨‚æ­£è¡¨ãƒ»ç·ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ”ã‚¨ãƒ¼ãƒ«ï¼ãƒãƒªãƒ¼ï¼ã‚¢ãƒ«ãƒ†ãƒ¥ãƒ¼ãƒ«ãƒ»ãƒ¢ãƒ«ãƒ¬",
-    series: "TESTACEA NOVISSIMA Â· PARS II Â· 1851",
-    originalPublication:
-      "ãƒ‘ãƒªã€J.-B. BailliÃ¨reï¼ãƒ­ãƒ³ãƒ‰ãƒ³ã€H. BailliÃ¨reã€1851å¹´ï¼ˆãƒ‡ã‚£ã‚¸ãƒ§ãƒ³ã€Imprimerie Loireau-Feuchotï¼‰",
-    year: 1851,
-    extent:
-      "PDF 21é ãƒ»åŸåˆŠ5â€“30é ãƒ»è²é¡65ç¨®ãƒ»ç¬¬Iéƒ¨è¨‚æ­£è¡¨ãƒ»å…¨150ç¨®ç´¢å¼•ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ¢ãƒ«ãƒ¬ã®æ–°è²é¡è¨˜è¼‰ã‚’å®Œçµã™ã‚‹ç¬¬IIéƒ¨ã€‚åºæ–‡ã€å±è¦‹å‡ºã—ã€ç¬¬86â€“150ç•ªã®65ç¨®ã®å½¢æ…‹è¨˜è¼‰ã€å¯¸æ³•ã€ç”£åœ°ã€æ¯”è¼ƒæ³¨ã€ç¬¬Iéƒ¨è¨‚æ­£è¡¨ã€å…¨150ç¨®ç´¢å¼•ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/morelet-testacea-novissima-pars-ii-1851/cover.jpg",
-    pdf:
-      "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/morelet-testacea-novissima-pars-ii-1851/Morelet_Testacea_Novissima_Pars_II_1851_Japanese_Complete_Translation.epub",
-    pageCount: 21,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è²é¡å­¦", "è‡ªç„¶å²", "åˆ†é¡å­¦", "å­¦è¡“åˆŠè¡Œç‰©"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "ãƒšãƒ†ãƒ³",
-      "ã‚­ãƒ¥ãƒ¼ãƒ",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-    ],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "è»Ÿä½“å‹•ç‰©",
-      "é™¸ç”£è²é¡",
-      "æ·¡æ°´ç”£è²é¡",
-      "æ–°ç¨®è¨˜è¼‰",
-      "è¨‚æ­£è¡¨",
-      "ç·ç´¢å¼•",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "rockstroh-ukes",
-    title: "ã‚¦ã‚±ä¸€æ—ã®åœ°ã¸ã®æ—…",
-    originalTitle: "Viaje al paÃ­s de los ukes",
-    subtitle: "1881å¹´ç™ºè¡¨ãƒ»ç¾å­˜éƒ¨åˆ†å…¨è¨³",
-    author: "ã‚¨ãƒ‰ã‚¦ã‚£ãƒ³ãƒ»ãƒ­ãƒƒã‚¯ã‚¹ãƒˆãƒ­ãƒ¼",
-    series: "VIAJE AL PAÃS DE LOS UKES Â· 1881",
-    originalPublication: "1881å¹´",
-    year: 1881,
-    extent: "71é ãƒ»åº•æœ¬ pp. 90â€“129ï¼ˆè»¢è¼‰ç¬¬8å›ã¾ã§ï¼‰",
-    description:
-      "ãƒšãƒ†ãƒ³çœŒãƒ©ãƒ»ãƒªãƒ™ãƒ«ã‚¿ãƒ¼ãƒ‰ã‚’ç™ºã¡ã€ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³åœ°æ–¹ã¸å‘ã‹ã£ãŸå­¦è¡“æ¢æ¤œã®æ—…è¡Œè¨˜ã€‚ç¾åœ¨ç¢ºèªã§ãã‚‹æ–°èè»¢è¼‰ç¬¬8å›ã¾ã§ã‚’çœç•¥ãªãè¨³ã—ã€å¤±ã‚ã‚ŒãŸå¾ŒåŠã¯å¾©å…ƒã›ãšã€å²æ–™ã®æ®‹å­˜ç¯„å›²ã‚’æ˜ç¤ºã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/rockstroh-ukes/cover.jpg",
-    pdf: "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.pdf",
-    epub: "publications/rockstroh-ukes/Rockstroh_Ukes_1881_Extant_Japanese_Translation.epub",
-    pageCount: 71,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ¢æ¤œè¨˜", "æ—…è¡Œè¨˜"],
-    regions: ["ãƒšãƒ†ãƒ³", "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["æ–°èé€£è¼‰", "ç¾å­˜éƒ¨åˆ†", "æ°‘æ—èªŒ"],
-  },
-  {
-    slug: "chambon-mexique",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ã®ã‚¬ã‚¹ã‚³ãƒ¼ãƒ‹ãƒ¥äºº",
-    originalTitle: "Un Gascon au Mexique",
-    subtitle: "1892å¹´åˆŠãƒ»åŸåˆŠå…¨341é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ«ãƒ‰ãƒ´ã‚£ã‚¯ãƒ»ã‚·ãƒ£ãƒ³ãƒœãƒ³",
-    series: "UN GASCON AU MEXIQUE Â· 1892",
-    originalPublication: "1892å¹´",
-    year: 1892,
-    extent: "259é ãƒ»åŸåˆŠæ‰‰1é ãƒ»è­œä¾‹2é ãƒ»åºƒå‘Šä½“è£1é ",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚¹ã‚’ç™ºã¡ã€ã‚­ãƒ¥ãƒ¼ãƒã€ãƒ¦ã‚«ã‚¿ãƒ³ã€ã‚¿ãƒã‚¹ã‚³ã€ãƒã‚¢ãƒ‘ã‚¹ã€ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã‹ã‚‰ãƒ¡ã‚­ã‚·ã‚³å„åœ°ã¸é€²ã‚€æ—…è¡Œè¨˜ã€‚åŸåˆŠ341é ã®æœ¬æ–‡ã€åŸæ³¨ã€å¼•ç”¨ã€æ­Œè©ã€åŸåˆŠç›®æ¬¡ã‚’å…¨è¨³ã—ã€æ‰‰ã¨è­œä¾‹ãƒ»åºƒå‘Šã®åŸé ç”»åƒã‚’ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/chambon-mexique/cover.jpg",
-    pdf: "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.pdf",
-    epub: "publications/chambon-mexique/Chambon_Un_Gascon_au_Mexique_1892_Complete_Japanese_Translation.epub",
-    pageCount: 259,
-    figureCount: 4,
-    plateCount: 0,
-    types: ["æ—…è¡Œè¨˜"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚¿ãƒã‚¹ã‚³", "ãƒã‚¢ãƒ‘ã‚¹"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: ["ç´€è¡Œæ–‡å­¦", "è­œä¾‹", "19ä¸–ç´€ãƒ¡ã‚­ã‚·ã‚³"],
-  },
-  {
-    slug: "arthes-peten-1893",
-    title: "ãƒšãƒ†ãƒ³çœŒæ¦‚èª¬",
-    originalTitle: "Breve descripciÃ³n del departamento del PetÃ©n",
-    subtitle: "1893å¹´åŸè¼‰ãƒ»æœ¬æ–‡ãŠã‚ˆã³ä»˜éŒ²",
-    author: "ãƒ•ã‚§ãƒ‡ãƒªã‚³ãƒ»ã‚®ã‚¸ã‚§ãƒ«ãƒ¢ãƒ»ã‚¢ãƒ«ãƒ†ã‚¹",
-    series: "GEOGRAPHICAL DESCRIPTION Â· 1893",
-    originalPublication: "1893å¹´",
-    year: 1893,
-    extent: "29é ãƒ»åŸåˆŠ97-103é ãƒ»æœ¬æ–‡55æ®µè½ãƒ»ä»˜éŒ²203é …ç›®",
-    description:
-      "ãƒšãƒ†ãƒ³çœŒã®åœ°å‹¢ã€æ²³å·ãƒ»æ¹–æ²¼ã€åœ°è³ªã€æ£®æ—è³‡æºã€è€ƒå¤éºè·¡ã€ä½æ°‘ã¨ç”£æ¥­ã‚’æ¦‚èª¬ã—ãŸ1893å¹´ã®åœ°ç†å ±å‘Šã€‚æœ¬æ–‡55æ®µè½ã«åŠ ãˆã€ã‚·ã‚«ã‚´ä¸‡å›½åšè¦§ä¼šã¸é€ä»˜ã•ã‚ŒãŸç‰©å“ãƒ»å¤©ç„¶ç”£ç‰©ã®å‡ºå“ç›®éŒ²203é …ç›®ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/arthes-peten-1893/cover.jpg",
-    pdf: "publications/arthes-peten-1893/arthes_peten_1893_ja.pdf",
-    epub: "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
-    pageCount: 29,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°ç†å ±å‘Š", "åšç‰©èªŒ", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒšãƒ†ãƒ³çœŒ",
-      "è‡ªç„¶èªŒ",
-      "æ£®æ—è³‡æº",
-      "è€ƒå¤å­¦",
-      "ã‚·ã‚«ã‚´ä¸‡å›½åšè¦§ä¼š",
-      "å‡ºå“ç›®éŒ²",
-    ],
-  },
-  {
-    slug: "del-rio-palenque",
-    title: "ãƒ‘ãƒ¬ãƒ³ã‚±è¿‘éƒŠã§ç™ºè¦‹ã•ã‚ŒãŸå¤ä»£éƒ½å¸‚éºè·¡ã®è¨˜è¿°",
-    originalTitle:
-      "Description of the Ruins of an Ancient City, Discovered near Palenque, in the Kingdom of Guatemala",
-    subtitle: "1822å¹´è‹±èªåˆç‰ˆãƒ»å…¨å·»æ—¥æœ¬èªè¨³",
-    author: "ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ«ãƒ»ãƒªã‚ªï¼ãƒ‘ãƒ–ãƒ­ãƒ»ãƒ•ã‚§ãƒªã‚¯ã‚¹ãƒ»ã‚«ãƒ–ãƒ¬ãƒ©",
-    series: "ARCHAEOLOGICAL REPORT & HISTORICAL ESSAY Â· 1822",
-    originalPublication: "1822å¹´",
-    year: 1822,
-    extent: "149é ãƒ»åŸåˆŠæœ¬æ–‡ xiiiï¼‹128é ãƒ»å›³ç‰ˆ17ç‚¹",
-    description:
-      "1787å¹´ã«å®Ÿæ–½ã•ã‚ŒãŸãƒ‡ãƒ«ãƒ»ãƒªã‚ªã®ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡èª¿æŸ»å ±å‘Šã¨ã€ã‚«ãƒ–ãƒ¬ãƒ©ã®æ­´å²è«–è€ƒã‚’ä½µéŒ²ã—ãŸ1822å¹´ãƒ­ãƒ³ãƒ‰ãƒ³åˆŠè‹±èªç‰ˆã®å…¨å·»æ—¥æœ¬èªè¨³ã€‚å‰ä»˜ã€æœ¬æ–‡ã€ä»˜éŒ²ã€ãƒ¡ã‚­ã‚·ã‚³å¹´ã®è¡¨ã€è£œéºã€å…¨æ³¨è¨˜ã«åŠ ãˆã€åŸåˆŠå›³ç‰ˆ17ç‚¹ã‚’ç´™è‘‰ã®å‘¨ç¸ã”ã¨ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/del-rio-palenque/cover.jpg",
-    pdf: "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.pdf",
-    epub: "publications/del-rio-palenque/Del_Rio_Palenque_Ruins_1822_Complete_Japanese_Translation.epub",
-    pageCount: 149,
-    figureCount: 0,
-    plateCount: 17,
-    types: ["èª¿æŸ»å ±å‘Š", "æ­´å²è«–è€ƒ"],
-    regions: ["ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "18ä¸–ç´€èª¿æŸ»", "çŸ³ç‰ˆå›³ç‰ˆ", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "bourbourg-palenque-1866",
-    title:
-      "ãƒ¡ã‚­ã‚·ã‚³å¤ä»£éºè·¡â€•â€•ãƒ‘ãƒ¬ãƒ³ã‚±ãŠã‚ˆã³ãƒ¡ã‚­ã‚·ã‚³å¤ä»£æ–‡æ˜ã®ãã®ä»–ã®éºè·¡",
-    originalTitle:
-      "Monuments anciens du Mexique : PalenquÃ© et autres ruines de lâ€™ancienne civilisation du Mexique â€” Recherches sur les ruines de PalenquÃ© et sur les origines de la civilisation du Mexique",
-    subtitle: "1866å¹´åˆŠãƒ»æœ¬æ–‡ã€ç›®æ¬¡ã€å›³ç‰ˆè§£èª¬ æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ã‚·ãƒ£ãƒ«ãƒ«ï¼ã‚¨ãƒ†ã‚£ã‚¨ãƒ³ãƒŒãƒ»ãƒ–ãƒ©ãƒƒã‚¹ãƒ¼ãƒ«ãƒ»ãƒ‰ãƒ»ãƒ–ãƒ¼ãƒ«ãƒ–ãƒ¼ãƒ«ï¼ã‚¸ãƒ£ãƒ³ï¼ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»ãƒ‰ãƒ»ãƒ´ã‚¡ãƒ«ãƒ‡ãƒƒã‚¯",
-    series: "MONUMENTS ANCIENS DU MEXIQUE Â· 1866",
-    originalPublication: "1866å¹´",
-    year: 1866,
-    extent:
-      "286é ãƒ»åŸå›³ç‰ˆ56è‘‰ãƒ»æœ¬æ–‡æŒ¿å›³1ç‚¹ãƒ»äºŒè‘‰ç¶šãå…¨ä½“å›³5ç‚¹ãƒ»ä»˜å±å°åˆ·ç‰©2è‘‰",
-    description:
-      "ãƒ–ãƒ©ãƒƒã‚¹ãƒ¼ãƒ«ãƒ»ãƒ‰ãƒ»ãƒ–ãƒ¼ãƒ«ãƒ–ãƒ¼ãƒ«ãŒãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡ã¨ãƒ¡ã‚­ã‚·ã‚³æ–‡æ˜ã®èµ·æºã‚’è«–ã˜ã€ãƒ´ã‚¡ãƒ«ãƒ‡ãƒƒã‚¯ã®å›³ç‰ˆã‚’ä¼´ã£ã¦åˆŠè¡Œã—ãŸå¤§è‘—ã€‚åºæ–‡ã€æœ¬æ–‡ã€ç›®æ¬¡ã€å›³ç‰ˆè§£èª¬ã€æ³¨ã‚’çœç•¥ãªãè¨³ã—ã€åŸå›³ç‰ˆ56è‘‰ã€æœ¬æ–‡æŒ¿å›³ã€ä»˜å±å°åˆ·ç‰©ã‚’ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/bourbourg-palenque-1866/cover.jpg",
-    pdf: "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.pdf",
-    epub: "publications/bourbourg-palenque-1866/Bourbourg_Palenque_Complete_Japanese_Translation.epub",
-    pageCount: 286,
-    figureCount: 3,
-    plateCount: 61,
-    types: ["è€ƒå¤å­¦ç ”ç©¶", "éºè·¡å ±å‘Š", "å›³ç‰ˆé›†"],
-    regions: ["ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡",
-      "ãƒ´ã‚¡ãƒ«ãƒ‡ãƒƒã‚¯",
-      "åŸåˆŠå›³ç‰ˆ",
-      "çŸ³ç‰ˆå›³ç‰ˆ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "esquinca-usumacinta",
-    title: "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·é å¾æ—¥èªŒ",
-    originalTitle:
-      "Diario seguido en la expediciÃ³n del rÃ­o Usumacinta, desde el pueblo del Palenque hasta su regreso",
-    subtitle: "ãƒ‘ãƒ¬ãƒ³ã‚±æ‘å‡ºç™ºã‹ã‚‰å¸°é‚„ã¾ã§ãƒ»1826å¹´",
-    author: "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ã‚¨ã‚¹ã‚­ãƒ³ã‚«",
-    series: "DIARIO DE LA EXPEDICIÃ“N DEL RÃO USUMACINTA Â· 1826",
-    originalPublication: "1826å¹´è¨˜éŒ²ï¼1988ãƒ»2003å¹´è»¢å†™åˆŠè¡Œ",
-    year: 1826,
-    extent: "10é ãƒ»2003å¹´ç‰ˆ pp. 54â€“57æ‰€åãƒ»å›³ç‰ˆãªã—",
-    description:
-      "1826å¹´ã®é å¾æ—¥èªŒã‹ã‚‰ã€ãƒ¤ãƒ³ãƒ»ãƒ‡ãƒ»ãƒ•ã‚©ã‚¹ãŒå…¬åˆŠã—ãŸãƒ‘ãƒ¬ãƒ³ã‚±â€•ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿åŒºé–“ã‚’çœç•¥ãªãç¿»è¨³ã€‚1988å¹´ç‰ˆã¨2003å¹´ç‰ˆã‚’ç…§åˆã—ã¦æ—¥ä»˜ã®èª¤æ¤ã¨æœ«å°¾ç½²åã‚’æ ¡è¨‚ã—ã€åŸé å¾æ—¥èªŒå…¨ä½“ã§ã¯ãªãåˆŠæœ¬åéŒ²éƒ¨åˆ†ã®å…¨è¨³ã§ã‚ã‚‹ã“ã¨ã‚’æ˜ç¤ºã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/esquinca-usumacinta/cover.jpg",
-    pdf: "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.pdf",
-    epub: "publications/esquinca-usumacinta/Esquinca_Usumacinta_Expedition_1826_Published_Transcription_Complete_Japanese_Translation.epub",
-    pageCount: 10,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["é å¾æ—¥èªŒ", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["æ—¥èªŒ", "å²æ–™æ ¡è¨‚", "å…¬åˆŠéƒ¨åˆ†"],
-  },
-  {
-    slug: "galindo-ruins-palenque-literary-gazette-1831",
-    title: "ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡",
-    originalTitle: "Ruins of Palenque",
-    subtitle:
-      "1831å¹´åˆŠãƒ»åŸåˆŠ665â€“666é ï¼‹ç¿Œå·683é ãƒ»æœ¬æ–‡ãƒ»äºŒå›³ãƒ»ç·¨é›†éƒ¨è¿½è£œ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "RUINS OF PALENQUE Â· THE LITERARY GAZETTE Â· 1831",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€The Literary Gazetteã€ç¬¬769å·ãƒ»ç¬¬770å·ã€1831å¹´10æœˆ15æ—¥ãƒ»22æ—¥",
-    year: 1831,
-    extent:
-      "PDF 13é ãƒ»åŸåˆŠ665â€“666é ï¼‹ç¿Œå·683é ãƒ»åŸåˆŠèªŒé¢2é ãƒ»æœ¬æ–‡å†…å›³2ç‚¹",
-    description:
-      "ã‚¬ãƒªãƒ³ãƒ‰ãŒ1831å¹´4æœˆ26æ—¥ä»˜ã§é€ã£ãŸãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡æ›¸ç°¡ã€‚ç¬¬769å·665â€“666é ã®æœ¬æ–‡ã€åŸåˆŠèªŒé¢ã€æœ¬æ–‡å†…äºŒå›³ã€ç·¨é›†éƒ¨æ³¨ã‚’çœç•¥ãªãè¨³ã—ã€ç¬¬770å·683é ã®è¨‚æ­£ãƒ»è£œè¶³è¨˜äº‹ã¨ãã®æ³¨ã‚‚åˆ¥é …ã¨ã—ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚1832å¹´ã®ãƒ•ãƒ©ãƒ³ã‚¹èªç‰ˆã¨ã¯æ§‹æˆã¨å†…å®¹ã®ç•°ãªã‚‹ç‹¬ç«‹ã—ãŸè‹±èªç´™ç‰ˆã§ã™ã€‚",
-    cover:
-      "publications/galindo-ruins-palenque-literary-gazette-1831/cover.jpg",
-    pdf:
-      "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-ruins-palenque-literary-gazette-1831/Galindo_Ruins_of_Palenque_Literary_Gazette_1831_Japanese_Complete_Translation.epub",
-    pageCount: 13,
-    figureCount: 2,
-    plateCount: 2,
-    types: ["éºè·¡å ±å‘Š", "æ›¸ç°¡", "æ–°èè¨˜äº‹"],
-    regions: ["ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒšãƒ†ãƒ³"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡",
-      "ãƒªãƒ†ãƒ©ãƒªãƒ¼ãƒ»ã‚¬ã‚¼ãƒƒãƒˆ",
-      "åŸåˆŠèªŒé¢",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "galindo-noticias-peten-1831",
-    title: "ãƒšãƒ†ãƒ³ã«é–¢ã™ã‚‹å ±å‘Š",
-    originalTitle:
-      "Noticias del PetÃ©n recogidas por su comandante, el C. J. Galindo",
-    subtitle:
-      "1831å¹´åˆŠãƒ»åŸåˆŠ257â€“260é ãƒ»æœ¬æ–‡ãƒ»æ—…ç¨‹è¡¨ãƒ»äººå£è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "NOTICIAS DEL PETÃ‰N Â· GACETA FEDERAL Â· 1831",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Gaceta Federalã€ç¬¬35å·ã€1831å¹´9æœˆ29æ—¥ã€257â€“260é ",
-    year: 1831,
-    extent: "PDF 9é ãƒ»åŸåˆŠ257â€“260é ãƒ»åŸåˆŠå†’é ­ç”»åƒ1ç‚¹ãƒ»è¡¨2ç‚¹",
-    description:
-      "ã‚¬ãƒªãƒ³ãƒ‰ãŒãƒšãƒ†ãƒ³ã®åœ°ç†ã€å¢ƒç•Œã€æ²³å·ãƒ»æ¹–æ²¼ã€äº¤é€šè·¯ã€äººå£ã€äº¤æ˜“ã€å¾æœå²ã‚’ã¾ã¨ã‚ãŸå››é ã®å ±å‘Šã€‚åŸåˆŠæœ¬æ–‡ã€ã‚°ã‚¢ãƒ†ãƒãƒ©â€•ãƒ™ãƒªãƒ¼ã‚ºé–“ã®æ—…ç¨‹è¡¨ã€äººå£è¡¨ã‚’çœç•¥ãªãè¨³ã—ã€ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨æ‰€è”µã®åŸåˆŠåˆ‡æŠœã257é ç”»åƒã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-noticias-peten-1831/cover.jpg",
-    pdf:
-      "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-noticias-peten-1831/Galindo_Noticias_del_Peten_1831_Japanese_Complete_Translation.epub",
-    pageCount: 9,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["åœ°ç†å ±å‘Š", "çµ±è¨ˆè³‡æ–™", "æ–°èè¨˜äº‹"],
-    regions: ["ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ™ãƒªãƒ¼ã‚º", "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒšãƒ†ãƒ³å²", "äº¤é€šè·¯", "äººå£è¡¨", "ã‚¬ã‚»ã‚¿ãƒ»ãƒ•ã‚§ãƒ‡ãƒ©ãƒ«", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-palenque-1832",
-    title: "ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡ã«é–¢ã™ã‚‹è¦šæ›¸",
-    originalTitle:
-      "MÃ©moire de M. Galindo, officier supÃ©rieur de la rÃ©publique de lâ€™AmÃ©rique centrale, adressÃ© Ã  M. le secrÃ©taire de la SociÃ©tÃ© de gÃ©ographie de Paris",
-    subtitle: "1832å¹´åˆŠãƒ»åŸåˆŠ198â€“217é ï¼‹åˆ¥è‘‰å›³ç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "MÃ‰MOIRE SUR LES RUINES DE PALENQUE Â· 1832",
-    originalPublication: "1832å¹´",
-    year: 1832,
-    extent:
-      "PDF 25é ãƒ»ã‚¬ãƒªãƒ³ãƒ‰æœ¬æ–‡198â€“214é ãƒ»ãƒã‚¨ã‚½ä»˜éŒ²215â€“217é ãƒ»æœ¬æ–‡å†…æ¨¡å¼å›³1ç‚¹ãƒ»åˆ¥è‘‰å›³ç‰ˆ1è‘‰ï¼ˆå›³1â€“12ï¼‰",
-    description:
-      "ã‚¬ãƒªãƒ³ãƒ‰ãŒãƒ‘ãƒªåœ°ç†å­¦å”ä¼šã¸é€ã£ãŸãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡å ±å‘Šã€‚åŸåˆŠ198â€“214é ã®æœ¬æ–‡ãƒ»ç·¨é›†éƒ¨è„šæ³¨ãƒ»ç¥ˆç¥·æ–‡ãƒ»èªå½™ãƒ»æ•°è©ã‚’çœç•¥ãªãè¨³ã—ã€æœ¬æ–‡å†…æ¨¡å¼å›³ã¨å›³1â€“12ã‚’å«ã‚€åˆ¥è‘‰å›³ç‰ˆã‚’å¤–æ ã”ã¨ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚åŸåˆŠ215â€“217é ã®ãƒšãƒ«ãƒ•ã‚§ã‚¯ãƒˆãƒ»ãƒã‚¨ã‚½ã«ã‚ˆã‚‹ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªãƒ»ãƒãƒ¤èªèªå½™è¡¨ã‚‚ã€åˆ¥è‘—è€…ã®åˆŠæœ¬ä»˜éŒ²ã¨ã—ã¦ä½µè¼‰ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-palenque-1832/cover.jpg",
-    pdf: "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.pdf",
-    epub: "publications/galindo-palenque-1832/Galindo_Palenque_Memoir_1832_Complete_Japanese_Translation.epub",
-    pageCount: 25,
-    figureCount: 1,
-    plateCount: 1,
-    types: ["éºè·¡å ±å‘Š", "è¦šæ›¸"],
-    regions: ["ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª", "ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ¤èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "åœ°ç†å­¦å”ä¼š", "åˆ¥è‘‰å›³ç‰ˆ", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-usumacinta-1833",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·ã®è¨˜è¿°",
-    originalTitle: "A Description of the River Usumasinta, in Guatemala",
-    subtitle: "1833å¹´åˆŠãƒ»åŸåˆŠ59â€“64é ï¼‹å…¨é¢åœ°å›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "A DESCRIPTION OF THE RIVER USUMASINTA Â· 1833",
-    originalPublication: "1833å¹´",
-    year: 1833,
-    extent: "15é ãƒ»å…¨é¢åœ°å›³1ç‚¹ãƒ»æœ¬æ–‡å†…ç·šç”»3ç‚¹",
-    description:
-      "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·ã®æµè·¯ãƒ»æ”¯æµãƒ»æ²¿å²¸åœ°åŸŸã‚’è¨˜ã—ãŸç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒæ²è¼‰è«–æ–‡ã€‚æœ¬æ–‡12æ®µè½ã¨ãƒ‘ãƒ¬ãƒ³ã‚±éºè·¡ã‚’æ‰±ã†é•·å¤§è„šæ³¨11æ®µè½ã‚’å…¨è¨³ã—ã€åœ°å›³ãƒ©ãƒ™ãƒ«87ä»¶ã€å…¨é¢åœ°å›³ã€æœ¬æ–‡å†…ç·šç”»3ç‚¹ã‚’å®Œå…¨åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-usumacinta-1833/cover.jpg",
-    pdf: "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.pdf",
-    epub: "publications/galindo-usumacinta-1833/Galindo_River_Usumasinta_1833_Complete_Japanese_Translation.epub",
-    pageCount: 15,
-    figureCount: 3,
-    plateCount: 1,
-    types: ["åœ°ç†å ±å‘Š", "æ²³å·è¨˜è¿°"],
-    regions: ["ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ‘ãƒ¬ãƒ³ã‚±"],
-    languages: ["è‹±èª"],
-    tags: ["åœ°ç†å­¦å”ä¼š", "æ²³å·åœ°ç†", "å…¨é¢åœ°å›³", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-caribs-central-america-1833",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ã‚«ãƒªãƒ–äººã«ã¤ã„ã¦ã®å ±å‘Š",
-    originalTitle: "Notice of the Caribs in Central America",
-    subtitle: "1833å¹´åˆŠãƒ»åŸåˆŠ290â€“291é ãƒ»æœ¬æ–‡ãƒ»èªå½™ï¼æ•°è©è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "NOTICE OF THE CARIBS IN CENTRAL AMERICA Â· 1833",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒã€ç¬¬3å·»ã€1833å¹´ã€290â€“291é ",
-    year: 1833,
-    extent: "PDF 3é ãƒ»åŸåˆŠ290â€“291é ãƒ»ã‚«ãƒªãƒ–èªå½™18é …ç›®ãƒ»æ•°è©Iâ€“X",
-    description:
-      "ãƒˆãƒ«ãƒ’ãƒ¼ã‚¸ãƒ§ã‚’ä¸­å¿ƒã¨ã™ã‚‹ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ã‚«ãƒªãƒ–äººã«ã¤ã„ã¦ã€ç§»ä½ã€å±…ä½åœ°ã€è¨€èªã‚’è¨˜ã—ãŸçŸ­å ±ã€‚åŸåˆŠ290â€“291é ã®æœ¬æ–‡ã‚’çœç•¥ãªãè¨³ã—ã€æœ«å°¾ã®ã‚«ãƒªãƒ–èªå½™18é …ç›®ã¨æ•°è©Iâ€“Xã‚’è¡¨å½¢å¼ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-caribs-central-america-1833/cover.jpg",
-    pdf:
-      "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-caribs-central-america-1833/Galindo_Notice_of_the_Caribs_Central_America_1833_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ°‘æ—èªŒ", "è¨€èªè³‡æ–™", "å ±å‘Š"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ã‚«ãƒªãƒ–æµ·"],
-    languages: ["è‹±èª", "ã‚«ãƒªãƒ–èª"],
-    tags: ["ã‚¬ãƒªãƒ•ãƒŠ", "ã‚«ãƒªãƒ–äºº", "èªå½™", "æ•°è©", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-antiquities-peten-1834",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã€ãƒšãƒ†ãƒ³åœ°æ–¹ã§ç™ºè¦‹ã•ã‚ŒãŸè‹¥å¹²ã®å¤ç‰©ã«ã¤ã„ã¦ã®çŸ­å ±",
-    originalTitle:
-      "A short Account of some Antiquities discovered in the District of Peten, in Central America",
-    subtitle:
-      "1834å¹´åˆŠãƒ»1831å¹´æ›¸ç°¡ãƒ»åŸåˆŠ570â€“571é ï¼‹å›³ç‰ˆLIXâ€“LX æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "ANTIQUITIES DISCOVERED IN PETEN Â· 1834",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€Archaeologiaã€ç¬¬25å·»ã€1834å¹´ã€570â€“571é ",
-    year: 1834,
-    extent: "PDF 5é ãƒ»åŸåˆŠ570â€“571é ãƒ»å›³ç‰ˆ2è‘‰ï¼ˆLIXâ€“LXï¼‰",
-    description:
-      "1831å¹´10æœˆ28æ—¥ä»˜ã§ã‚¬ãƒªãƒ³ãƒ‰ãŒãƒ­ãƒ³ãƒ‰ãƒ³å¤ç‰©å”ä¼šã¸é€ã£ãŸæ›¸ç°¡ã€‚ãƒšãƒ†ãƒ³åœ°æ–¹ã§åé›†ã—ãŸãƒ‘ãƒ¬ãƒ³ã‚±ã®æ¼†å–°æµ®å½«ã¨ã€ãƒ¤ã‚·ãƒ§ãƒ¼æ¹–ï¼ˆåŸåˆŠ Yashawï¼‰ã®å³¶ã®éºæ§‹ãƒ»éºç‰©ã‚’è¨˜è¿°ã—ã¾ã™ã€‚æœ¬æ–‡ã€å®›å…ˆãƒ»ç½²åã€å›³ç‰ˆLIXãƒ»LXã®æ¨™é¡Œã¨æ³¨è¨˜ã‚’çœç•¥ãªãè¨³ã—ã€å›³ç‰ˆäºŒè‘‰ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-antiquities-peten-1834/cover.jpg",
-    pdf:
-      "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-antiquities-peten-1834/Galindo_Antiquities_Peten_1834_Japanese_Complete_Translation.epub",
-    pageCount: 5,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "æ›¸ç°¡", "å›³ç‰ˆè³‡æ–™"],
-    regions: ["ãƒšãƒ†ãƒ³", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒ¤ã‚·ãƒ§ãƒ¼æ¹–"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ã‚¤ãƒ„ã‚¡",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±",
-      "ãƒ¤ã‚·ãƒ§ãƒ¼æ¹–",
-      "åŸåˆŠå›³ç‰ˆ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "galindo-copan-full-report-1834",
-    title: "ã‚³ãƒ‘ãƒ³å¤ä»£éºè·¡èª¿æŸ»å ±å‘Šï¼ˆ1834å¹´ï¼‰",
-    originalTitle:
-      "Informe de la comisiÃ³n cientÃ­fica formada para el reconocimiento de las antigÃ¼edades de CopÃ¡n / Rapport sur les ruines de Copan et le pays voisin",
-    subtitle:
-      "ã‚¹ãƒšã‚¤ãƒ³èªåˆŠæœ¬ï¼‹BnFãƒ•ãƒ©ãƒ³ã‚¹èªç¨¿ï¼‹å›³ç‰ˆ13é¢ãƒ»ç•°åŒè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "INFORME SOBRE LAS ANTIGÃœEDADES DE COPÃN Â· 1834",
-    originalPublication:
-      "ã‚³ãƒ‘ãƒ³ã€1834å¹´6æœˆ19æ—¥ï¼ã‚¹ãƒšã‚¤ãƒ³èªæœ¬æ–‡1945å¹´åˆŠãƒ»ãƒ•ãƒ©ãƒ³ã‚¹èªç¨¿1834å¹´",
-    year: 1834,
-    extent:
-      "PDF 44é ãƒ»ã‚¹ãƒšã‚¤ãƒ³èªåˆŠæœ¬217â€“228é ãƒ»BnFç¨¿f101â€“f136ãƒ»å›³ç‰ˆ13é¢ãƒ»ç•°åŒè¡¨",
-    description:
-      "1834å¹´1æœˆã®ã‚°ã‚¢ãƒ†ãƒãƒ©å·æ”¿åºœå‘½ä»¤ã«åŸºã¥ãã‚¬ãƒªãƒ³ãƒ‰ãŒå®Ÿæ–½ã—ãŸã‚³ãƒ‘ãƒ³éºè·¡èª¿æŸ»ã®å®Œå…¨å ±å‘Šã€‚1945å¹´åˆŠã‚¹ãƒšã‚¤ãƒ³èªæœ¬æ–‡ã¨ã€BnFæ‰€è”µã®ãƒ•ãƒ©ãƒ³ã‚¹èªç¨¿ã‚’ç›¸äº’ã«çµ±åˆã›ãšåˆ¥æœ¬æ–‡ã¨ã—ã¦å…¨è¨³ã—ã€åœ°å›³ã€å¹³é¢å›³ã€æ°´å½©å…¨æ™¯ã€å›³1â€“26ã‚’å«ã‚€å›³ç‰ˆ13é¢ã¨ã€ä¸¡ç³»çµ±ã®ä¸»è¦ç•°åŒè¡¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚ãƒ¢ãƒ¼ãƒªãƒ¼1920å¹´è‹±è¨³ã¯ç•°åŒç…§åˆã«ã®ã¿ç”¨ã„ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-copan-full-report-1834/cover.jpg",
-    pdf:
-      "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-copan-full-report-1834/Galindo_Copan_Full_Report_1834_Japanese_Complete_Translation.epub",
-    pageCount: 44,
-    figureCount: 0,
-    plateCount: 13,
-    types: ["éºè·¡å ±å‘Š", "æ”¿åºœå ±å‘Š", "å†™æœ¬è³‡æ–™", "å›³ç‰ˆè³‡æ–™"],
-    regions: ["ã‚³ãƒ‘ãƒ³", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ•ãƒ©ãƒ³ã‚¹èª", "ãƒãƒ§ãƒ«ãƒ†ã‚£èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ã‚³ãƒ‘ãƒ³éºè·¡",
-      "ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨",
-      "åŸç¨¿å›³ç‰ˆ",
-      "ç•°åŒè¡¨",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "galindo-copan-literary-gazette-1835",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«â€•â€•ã‚³ãƒ‘ãƒ³éºè·¡é€šä¿¡",
-    originalTitle: "Central America",
-    subtitle: "1835å¹´åˆŠãƒ»åŸåˆŠ456â€“457é ãƒ»ç·¨é›†éƒ¨æ³¨ãƒ»æœ¬æ–‡ãƒ»ç½²å æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "CENTRAL AMERICA Â· THE LITERARY GAZETTE Â· 1835",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€The Literary Gazetteã€ç¬¬965å·ã€1835å¹´7æœˆ18æ—¥ã€456â€“457é ",
-    year: 1835,
-    extent: "PDF 7é ãƒ»åŸåˆŠ456â€“457é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ã‚³ãƒ‘ãƒ³éºè·¡ã‹ã‚‰1834å¹´6æœˆ19æ—¥ä»˜ã§é€ã‚‰ã‚Œã€ã€ãƒªãƒ†ãƒ©ãƒªãƒ¼ãƒ»ã‚¬ã‚¼ãƒƒãƒˆã€ã®ã€ŒåŸé€šä¿¡ã€æ¬„ã«æ²è¼‰ã•ã‚ŒãŸæ›¸ç°¡ã€‚éºè·¡ã®ä½ç½®ã€å»ºç¯‰ã€ç™ºæ˜ã€çŸ³ç¢‘ã€ã‚¬ãƒªãƒ³ãƒ‰è‡ªèº«ã®æ–‡æ˜å²è¦³ã‚’è¨˜ã—ãŸæœ¬æ–‡ã¨ã€æœ«å°¾ã®ç·¨é›†éƒ¨æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-copan-literary-gazette-1835/cover.jpg",
-    pdf:
-      "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-copan-literary-gazette-1835/Galindo_Copan_Literary_Gazette_1835_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["éºè·¡å ±å‘Š", "æ›¸ç°¡", "æ–°èè¨˜äº‹"],
-    regions: ["ã‚³ãƒ‘ãƒ³", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "ã‚³ãƒ‘ãƒ³éºè·¡", "ãƒªãƒ†ãƒ©ãƒªãƒ¼ãƒ»ã‚¬ã‚¼ãƒƒãƒˆ", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-eruption-cosiguina-1835",
-    title: "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ã‚³ã‚·ã‚°ã‚¤ãƒŠç«å±±ã®å™´ç«ã«ã¤ã„ã¦â€•â€•1835å¹´1æœˆ17æ—¥",
-    originalTitle:
-      "On the Eruption of the Volcano of CosigÃ¼ina, in Nicaragua, 17th January, 1835",
-    subtitle: "1835å¹´åˆŠãƒ»åŸåˆŠ387â€“392é ãƒ»æœ¬æ–‡ãƒ»åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "ERUPTION OF THE VOLCANO OF COSIGÃœINA Â· 1835",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒã€ç¬¬5å·»ã€1835å¹´ã€387â€“392é ",
-    year: 1835,
-    extent: "PDF 8é ãƒ»åŸåˆŠ387â€“392é ãƒ»åŸåˆŠå†’é ­ç”»åƒ1ç‚¹",
-    description:
-      "1835å¹´1æœˆã®ã‚³ã‚·ã‚°ã‚¤ãƒŠç«å±±å¤§å™´ç«ã«ã¤ã„ã¦ã€ã‚¬ãƒªãƒ³ãƒ‰è‡ªèº«ã®è¦³æ¸¬æ›¸ç°¡ã€ãƒ¬ã‚ªãƒ³ã®å…¬å¼å ±å‘Šã€ãƒ©ãƒ»ã‚¦ãƒ‹ã‚ªãƒ³å¸ä»¤å®˜ã®å ±å‘Šã€å„åœ°ã®é™ç°ãƒ»æš—é—‡ãƒ»åœ°éœ‡ã®è¨˜éŒ²ã‚’ã¾ã¨ã‚ãŸè«–æ–‡ã€‚åŸåˆŠ387â€“392é ã¨åŸæ³¨ã‚’çœç•¥ãªãè¨³ã—ã€è«–æ–‡å†’é ­ã®åŸåˆŠç”»åƒã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-eruption-cosiguina-1835/cover.jpg",
-    pdf:
-      "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-eruption-cosiguina-1835/Galindo_Eruption_Cosiguina_1835_Japanese_Complete_Translation.epub",
-    pageCount: 8,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["ç«å±±å ±å‘Š", "è‡ªç„¶ç½å®³è¨˜éŒ²", "åœ°ç†å­¦å”ä¼šèªŒ"],
-    regions: ["ã‚³ã‚·ã‚°ã‚¤ãƒŠç«å±±", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: ["ç«å±±å™´ç«", "é™ç°", "åœ°éœ‡", "ç‹ç«‹åœ°ç†å­¦å”ä¼š", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-ruins-copan-aas-1836",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ã‚³ãƒ‘ãƒ³éºè·¡",
-    originalTitle: "The Ruins of Copan, in Central America",
-    subtitle:
-      "1836å¹´åˆŠãƒ»åŸåˆŠ543â€“550é ãƒ»åˆŠè¡Œå§”å“¡ä¼šæ³¨ãƒ»æ›¸ç°¡æœ¬æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "THE RUINS OF COPAN Â· ARCHAEOLOGIA AMERICANA Â· 1836",
-    originalPublication:
-      "ã‚±ãƒ³ãƒ–ãƒªãƒƒã‚¸ï¼ˆãƒã‚µãƒãƒ¥ãƒ¼ã‚»ãƒƒãƒ„ï¼‰ã€ã€Archaeologia Americanaã€ç¬¬2å·»ã€1836å¹´ã€543â€“550é ",
-    year: 1836,
-    extent: "PDF 9é ãƒ»åŸåˆŠ543â€“550é ãƒ»åŸåˆŠå†’é ­ç”»åƒ1ç‚¹",
-    description:
-      "ã‚¢ãƒ¡ãƒªã‚«å¤ç‰©å”ä¼šç´€è¦ã«æ²è¼‰ã•ã‚ŒãŸã‚³ãƒ‘ãƒ³éºè·¡å ±å‘Šã€‚1835å¹´6æœˆ19æ—¥ä»˜æ›¸ç°¡ã®æœ¬æ–‡ã€åˆŠè¡Œå§”å“¡ä¼šæ³¨ã€å®›å…ˆã€ç½²åãƒ»è‚©æ›¸ã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠ543é ã®è«–æ–‡æ¨™é¡Œç”»åƒã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚1834å¹´ã«æ”¿åºœã¸æå‡ºã•ã‚ŒãŸã‚¹ãƒšã‚¤ãƒ³èªãƒ»ãƒ•ãƒ©ãƒ³ã‚¹èªã®å®Œå…¨å ±å‘Šã¨ã¯åˆ¥å€‹ã®è‹±èªçŸ­å ±ã§ã™ã€‚",
-    cover: "publications/galindo-ruins-copan-aas-1836/cover.jpg",
-    pdf:
-      "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-ruins-copan-aas-1836/Galindo_Ruins_of_Copan_AAS_1836_Japanese_Complete_Translation.epub",
-    pageCount: 9,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["éºè·¡å ±å‘Š", "æ›¸ç°¡", "å­¦ä¼šç´€è¦"],
-    regions: ["ã‚³ãƒ‘ãƒ³", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "ã‚³ãƒ‘ãƒ³éºè·¡", "ã‚¢ãƒ¡ãƒªã‚«å¤ç‰©å”ä¼š", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "galindo-on-central-america-1836",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«ã¤ã„ã¦",
-    originalTitle: "On Central America",
-    subtitle:
-      "1836å¹´åˆŠãƒ»åŸåˆŠ119â€“135é ãƒ»çµ±è¨ˆè¡¨ãƒ»è¡Œæ”¿åŒºç”»è¡¨ãƒ»åœ°å›³äºŒè‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-    series: "ON CENTRAL AMERICA Â· 1836",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€ã€ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒã€ç¬¬6å·»ã€1836å¹´ã€119â€“135é ",
-    year: 1836,
-    extent: "PDF 25é ãƒ»åŸåˆŠ119â€“135é ãƒ»åŸåˆŠå†’é ­ç”»åƒ1ç‚¹ãƒ»åœ°å›³2è‘‰ãƒ»è¡¨4ç‚¹",
-    description:
-      "ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒã«æ²è¼‰ã•ã‚ŒãŸä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ãƒ»æ”¿æ²»ãƒ»äººå£ãƒ»äº¤é€šãƒ»ç”£æ¥­ã®ç·èª¬ã¨ã‚³ã‚¹ã‚¿ãƒªã‚«å„è«–ã€‚ç·¨é›†éƒ¨å‰æ›¸ããƒ»æ³¨ã€ã‚¬ãƒªãƒ³ãƒ‰æœ¬æ–‡ã€çµ±è¨ˆè¡¨ãƒ»è¡Œæ”¿åŒºç”»è¡¨ã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠä»˜å›³ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ã‚³ã‚¹ã‚¿ãƒªã‚«å›½ç•¥å›³ã€äºŒè‘‰ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/galindo-on-central-america-1836/cover.jpg",
-    pdf:
-      "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/galindo-on-central-america-1836/Galindo_On_Central_America_1836_Japanese_Complete_Translation.epub",
-    pageCount: 25,
-    figureCount: 1,
-    plateCount: 2,
-    types: ["åœ°ç†å ±å‘Š", "çµ±è¨ˆè³‡æ–™", "åœ°å›³è³‡æ–™"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ã‚³ã‚¹ã‚¿ãƒªã‚«", "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«åœ°ç†",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "çµ±è¨ˆè¡¨",
-      "åŸåˆŠåœ°å›³",
-      "ç‹ç«‹åœ°ç†å­¦å”ä¼š",
-    ],
-  },
-  {
-    slug: "societe-geographie-central-america-report-1836",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ãŠã‚ˆã³å¤ç‰©ã«é–¢ã™ã‚‹æ‡¸è³ã«ã¤ã„ã¦ã®å ±å‘Š",
-    originalTitle:
-      "Rapport sur le concours relatif Ã  la gÃ©ographie et aux antiquitÃ©s de lâ€™AmÃ©rique centrale",
-    subtitle:
-      "1836å¹´4æœˆãƒ»åŸåˆŠ253â€“291é ãƒ»æœ¬æ–‡ãƒ»è„šæ³¨ãƒ»çµè«–äº”é … æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚¹åœ°ç†å­¦ä¼šå§”å“¡ä¼š",
-    series: "RAPPORT SUR LE CONCOURS Â· 1836",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€ãƒ•ãƒ©ãƒ³ã‚¹åœ°ç†å­¦ä¼šç´€è¦ã€ç¬¬2ã‚·ãƒªãƒ¼ã‚ºç¬¬5å·»ã€1836å¹´4æœˆã€253â€“291é ",
-    year: 1836,
-    extent: "PDF 31é ãƒ»åŸåˆŠ253â€“291é ãƒ»åŸåˆŠé è¡¨ç¤º39ä»¶ãƒ»çµè«–5é …ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚¹åœ°ç†å­¦ä¼šãŒ1825å¹´ã«è¨­å®šã—ãŸä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ãƒ»å¤ç‰©æ‡¸è³ã«ã¤ã„ã¦ã€æ—¢å¾€ã®æ¢æ¤œãƒ»åˆŠè¡Œç‰©ã¨å¿œå‹Ÿè³‡æ–™ã‚’æ¤œè¨ã—ãŸ1836å¹´ã®å§”å“¡ä¼šå ±å‘Šã€‚ãƒ•ãƒ³ãƒœãƒ«ãƒˆã€ãƒ‡ãƒ«ãƒ»ãƒªã‚ªã€ã‚¦ã‚©ãƒ«ãƒ‡ãƒƒã‚¯ã€ãƒ‡ãƒ¥ãƒšã€ã‚¬ãƒªãƒ³ãƒ‰ã‚‰ã®èª¿æŸ»ã€åœ°å›³ãƒ»å›³é¢ã‚’æ¯”è¼ƒã—ã€æ‡¸è³ã®åˆ¤æ–­ã¨ä»Šå¾Œã®èª¿æŸ»æ–¹é‡ã‚’çµè«–äº”é …ã«ã¾ã¨ã‚ã¦ã„ã¾ã™ã€‚ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰æœ¬äººã®è‘—ä½œã§ã¯ãªãã€å§”å“¡ä¼šã«ã‚ˆã‚‹ç‹¬ç«‹ã—ãŸåŒæ™‚ä»£è³‡æ–™ã§ã™ã€‚",
-    cover:
-      "publications/societe-geographie-central-america-report-1836/cover.jpg",
-    pdf:
-      "publications/societe-geographie-central-america-report-1836/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/societe-geographie-central-america-report-1836/Societe_de_Geographie_Committee_Report_Central_America_1836_Japanese_Complete_Translation.epub",
-    pageCount: 31,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å§”å“¡ä¼šå ±å‘Š", "è€ƒå¤å­¦å²", "åœ°ç†å­¦å²"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ãƒšãƒ†ãƒ³",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-    ],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "åœ°ç†å­¦ä¼š",
-      "æ‡¸è³",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±",
-      "ã‚³ãƒ‘ãƒ³",
-      "ãƒ•ã‚¢ãƒ³ãƒ»ã‚¬ãƒªãƒ³ãƒ‰",
-      "ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»ã‚¦ã‚©ãƒ«ãƒ‡ãƒƒã‚¯",
-      "ã‚®ãƒ¨ãƒ¼ãƒ ãƒ»ãƒ‡ãƒ¥ãƒš",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "tribes-and-temples-vol-1",
-    title: "éƒ¨æ—ã¨ç¥æ®¿ã€€ç¬¬Iå·»",
-    originalTitle:
-      "Tribes and Temples: A Record of the Expedition to Middle America Conducted by Tulane University in 1925, Volume I",
-    subtitle: "1926å¹´åˆŠãƒ»åŸåˆŠæœ¬æ–‡1â€“238é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚¹ãƒ»ãƒ–ãƒ­ãƒ ï¼ã‚ªãƒªãƒ´ã‚¡ãƒ¼ãƒ»ãƒ©ãƒ»ãƒ•ã‚¡ãƒ¼ã‚¸",
-    series: "TRIBES AND TEMPLES Â· VOLUME I Â· 1926",
-    originalPublication: "1926å¹´",
-    year: 1926,
-    extent: "439é ãƒ»åŸåˆŠæœ¬æ–‡1â€“238é ãƒ»ç•ªå·ä»˜æŒ¿å›³194ç‚¹ãƒ»åœ°å›³4ç‚¹ãƒ»å›³ç‰ˆ6ç‚¹",
-    description:
-      "ãƒãƒ¥ãƒ¬ãƒ¼ãƒ³å¤§å­¦ãŒ1925å¹´ã«å®Ÿæ–½ã—ãŸä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«èª¿æŸ»ã®è¨˜éŒ²ã€ç¬¬Iå·»ã€‚åŸåˆŠæœ¬æ–‡1â€“238é ã‚’çœç•¥ãªãè¨³ã—ã€ç•ªå·ä»˜æŒ¿å›³1â€“194ã€åœ°å›³Iâ€“IVã€å›³ç‰ˆIâ€“VIã€åŸåˆŠæ‰‰ãŠã‚ˆã³ç« æœ«ã‚«ãƒƒãƒˆã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/tribes-and-temples-vol-1/cover.jpg",
-    pdf: "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.pdf",
-    epub: "publications/tribes-and-temples-vol-1/Tribes_and_Temples_Vol_I_Japanese_Complete_Translation.epub",
-    pageCount: 439,
-    figureCount: 194,
-    plateCount: 10,
-    types: ["èª¿æŸ»å ±å‘Š", "æ¢æ¤œè¨˜", "æ°‘æ—èªŒ"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "1925å¹´èª¿æŸ»",
-      "ãƒãƒ¥ãƒ¬ãƒ¼ãƒ³å¤§å­¦",
-      "åŸåˆŠå›³ç‰ˆ",
-      "åœ°å›³",
-      "ãƒ•ãƒ©ãƒ³ã‚¹ãƒ»ãƒ–ãƒ­ãƒ ",
-      "ã‚ªãƒªãƒ´ã‚¡ãƒ¼ãƒ»ãƒ©ãƒ»ãƒ•ã‚¡ãƒ¼ã‚¸",
-    ],
-  },
-  {
-    slug: "tribes-and-temples-vol-2",
-    title: "éƒ¨æ—ã¨ç¥æ®¿ã€€ç¬¬IIå·»",
-    originalTitle:
-      "Tribes and Temples: A Record of the Expedition to Middle America Conducted by Tulane University in 1925, Volume II",
-    subtitle: "1927å¹´åˆŠãƒ»åŸåˆŠæœ¬æ–‡239â€“552é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚¹ãƒ»ãƒ–ãƒ­ãƒ ï¼ã‚ªãƒªãƒ´ã‚¡ãƒ¼ãƒ»ãƒ©ãƒ»ãƒ•ã‚¡ãƒ¼ã‚¸",
-    series: "TRIBES AND TEMPLES Â· VOLUME II Â· 1927",
-    originalPublication: "1927å¹´",
-    year: 1927,
-    extent: "554é ãƒ»åŸåˆŠæœ¬æ–‡239â€“552é ãƒ»ç•ªå·ä»˜æŒ¿å›³180ç‚¹ãƒ»åœ°å›³1ç‚¹ãƒ»å›³ç‰ˆ1ç‚¹",
-    description:
-      "ãƒãƒ¥ãƒ¬ãƒ¼ãƒ³å¤§å­¦ãŒ1925å¹´ã«å®Ÿæ–½ã—ãŸä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«èª¿æŸ»ã®è¨˜éŒ²ã€ç¬¬IIå·»ã€‚åŸåˆŠæœ¬æ–‡239â€“552é ã‚’çœç•¥ãªãè¨³ã—ã€ç•ªå·ä»˜æŒ¿å›³195â€“374ã€åœ°å›³Vã€å›³ç‰ˆVIIã€åŸåˆŠæ‰‰ãŠã‚ˆã³ç« æœ«ã‚«ãƒƒãƒˆã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/tribes-and-temples-vol-2/cover.jpg",
-    pdf: "publications/tribes-and-temples-vol-2/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.pdf",
-    epub: "publications/tribes-and-temples-vol-2/Tribes_and_Temples_Vol_II_Japanese_Complete_Translation.epub",
-    pageCount: 554,
-    figureCount: 180,
-    plateCount: 2,
-    types: ["èª¿æŸ»å ±å‘Š", "æ¢æ¤œè¨˜", "æ°‘æ—èªŒ"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "1925å¹´èª¿æŸ»",
-      "ãƒãƒ¥ãƒ¬ãƒ¼ãƒ³å¤§å­¦",
-      "åŸåˆŠå›³ç‰ˆ",
-      "åœ°å›³",
-      "ãƒ•ãƒ©ãƒ³ã‚¹ãƒ»ãƒ–ãƒ­ãƒ ",
-      "ã‚ªãƒªãƒ´ã‚¡ãƒ¼ãƒ»ãƒ©ãƒ»ãƒ•ã‚¡ãƒ¼ã‚¸",
-    ],
-  },
-  {
-    slug: "egan-wyer-1930",
-    title:
-      "ãƒ†ãƒã‚·ã‚±ãƒ»ãƒ”ã‚¨ãƒ‰ãƒ©ã‚¹ãƒ»ãƒã‚°ãƒ©ã‚¹é–“ã®åœ°å½¢å›³ã¨ä»˜å±æ–‡æ›¸",
-    originalTitle:
-      "Topographical Map of Land Between Tenosique & Piedras Negras, Showing Trails & Projected Cart Roads",
-    subtitle: "1930â€“1931å¹´ãƒ»å…¨107ç”»åƒé  æ—¥æœ¬èªå…¨è¨³",
-    author: "Tãƒ»ã‚¤ãƒ¼ã‚¬ãƒ³ï¼ãƒ¯ã‚¤ã‚¢ãƒ¼",
-    series: "PENN MUSEUM ARCHIVES Â· PU-MU.1105 Â· BOX 1 Â· FOLDER 6",
-    originalPublication: "1930â€“1931å¹´ä½œæˆï¼ˆæœªåˆŠã‚¢ãƒ¼ã‚«ã‚¤ãƒ–è³‡æ–™ï¼‰",
-    year: 1930,
-    extent:
-      "201é ãƒ»è¨³æ–‡93é ãƒ»åŸè³‡æ–™ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª107é ãƒ»å›³ç‰ˆ10ç´™è‘‰",
-    description:
-      "ãƒšãƒ³åšç‰©é¤¨ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã«æ®‹ã‚‹æ‰‹æãåœ°å½¢å›³ã¨ä»˜å±æ–‡æ›¸ç¾¤ã€‚é›‡ç”¨å¥‘ç´„ã€æ›¸ç°¡ã€é›»å ±ã€é“è·¯äºˆå‚™è¸æŸ»å ±å‘Šã€è²»ç”¨è¦‹ç©ã€æ§‹é€ ç•¥å›³ã€åœŸå™¨å›³ãªã©ã€ãƒ•ã‚©ãƒ«ãƒ€ãƒ¼å…¨107ç”»åƒé ã‚’é †åºã©ãŠã‚Šç¿»è¨³ã—ã€å›³ç‰ˆ10ç´™è‘‰ã¨åŸè³‡æ–™ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒªã‚’ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/egan-wyer-1930/cover.jpg",
-    pdf: "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.pdf",
-    epub: "publications/egan-wyer-1930/Egan_Wyer_Topographical_Map_and_Accompanying_Documents_Japanese_Translation.epub",
-    pageCount: 201,
-    searchOcrPageLimit: 93,
-    figureCount: 10,
-    plateCount: 0,
-    types: ["åœ°å½¢å›³", "èª¿æŸ»å ±å‘Š", "ä¸€æ¬¡å²æ–™", "æ›¸ç°¡"],
-    regions: [
-      "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ",
-      "ãƒ†ãƒã‚·ã‚±",
-      "ãƒ”ã‚¨ãƒ‰ãƒ©ã‚¹ãƒ»ãƒã‚°ãƒ©ã‚¹",
-      "ã‚¿ãƒã‚¹ã‚³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-    ],
-    languages: ["è‹±èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "é“è·¯èª¿æŸ»",
-      "è¨ˆç”»è·è»Šé“",
-      "ãƒšãƒ³åšç‰©é¤¨",
-      "ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–è³‡æ–™",
-      "åŸè³‡æ–™ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª",
-      "ç„¡è£æ–­å›³ç‰ˆ",
-    ],
-  },
-  {
-    slug: "sapper-eastern-lacandons-1891",
-    title: "æ±éƒ¨ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã‚’è¨ªã­ã¦",
-    originalTitle: "Ein Besuch bei den Ã¶stlichen Lacandonen",
-    subtitle: "1891å¹´ç™ºè¡¨ãƒ»ã€Das Auslandã€æ²è¼‰è«–æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼",
-    series: "DAS AUSLAND Â· NR. 45 Â· 1891",
-    originalPublication: "1891å¹´",
-    year: 1891,
-    extent: "10é ãƒ»æœ¬æ–‡11æ®µè½ãƒ»åŸæ³¨3ä»¶ãƒ»åŸèªŒãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª4é ",
-    description:
-      "ãƒã‚¢ãƒ‘ã‚¹æ±éƒ¨ã¨ãƒšãƒ†ãƒ³è¥¿éƒ¨ã®ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã«ã¤ã„ã¦ã€ã‚¶ãƒƒãƒ‘ãƒ¼ãŒã‚¤ã‚µãƒ³é›†è½ã¨ãƒãƒ³ãƒã‚§ãƒ»ãƒ†ãƒŠãƒŸãƒˆè¨ªå•ã‚’äº¤ãˆã¦å ±å‘Šã—ãŸæ°‘æ—èªŒçš„è¨˜éŒ²ã€‚æœ¬æ–‡11æ®µè½ã€åŸæ³¨3ä»¶ã€æœ«å°¾æ—¥ä»˜ã‚’çœç•¥ãªãè¨³ã—ã€åŸèªŒ892â€“895é ã®å…¨4é ã‚’ç´™é¢å…¨ä½“ã®ã¾ã¾ç„¡è£æ–­ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/sapper-eastern-lacandons-1891/cover.jpg",
-    pdf: "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.pdf",
-    epub: "publications/sapper-eastern-lacandons-1891/Sapper_Eastern_Lacandons_1891_Complete_Japanese_Translation.epub",
-    pageCount: 10,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ¢æ¤œè¨˜", "æ°‘æ—èªŒ", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒšãƒ†ãƒ³", "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ã‚¤ã‚µãƒ³",
-      "ãƒãƒ³ãƒã‚§ãƒ»ãƒ†ãƒŠãƒŸãƒˆ",
-      "ãƒªã‚ªãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ãƒ‘ã‚·ã‚ªãƒ³",
-      "19ä¸–ç´€æ°‘æ—èªŒ",
-      "åŸèªŒãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª",
-    ],
-  },
-  {
-    slug: "friedrichsthal-yucatan-1841",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³ã®è¨˜å¿µç‰©",
-    originalTitle: "Les Monuments de lâ€™Yucatan",
-    subtitle: "1841å¹´åˆå‡ºèªŒãƒ»æœ¬æ–‡ãŠã‚ˆã³åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒ•ã‚©ãƒ³ãƒ»ãƒ•ãƒªãƒ¼ãƒ‰ãƒªãƒ’ã‚¹ã‚¿ãƒ¼ãƒ«",
-    series: "ARCHAEOLOGICAL REPORT Â· 1841",
-    originalPublication: "ãƒ‘ãƒªã€1841å¹´",
-    year: 1841,
-    extent: "PDF 19é ãƒ»åŸåˆŠ291-314é ãƒ»åŸæ³¨4ä»¶",
-    description:
-      "ã‚ªãƒ¼ã‚¹ãƒˆãƒªã‚¢ã®å¤–äº¤å®˜ãƒ•ãƒªãƒ¼ãƒ‰ãƒªãƒ’ã‚¹ã‚¿ãƒ¼ãƒ«ãŒã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ã¨ç«å±±ã€ãƒ¦ã‚«ã‚¿ãƒ³åŠå³¶ã®è‡ªç„¶ç’°å¢ƒã€ãƒãƒã‚§ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡ãŠã‚ˆã³ã‚¦ã‚·ãƒ¥ãƒãƒ«ã®å»ºç¯‰ã€åˆæœŸãƒ€ã‚²ãƒ¬ã‚ªã‚¿ã‚¤ãƒ—æ’®å½±ã®äº‹æƒ…ã‚’å ±å‘Šã—ãŸ1841å¹´ã®è€ƒå¤å­¦ãƒ»åœ°ç†å ±å‘Šã€‚åˆå‡ºèªŒ291-314é ã®æœ¬æ–‡ã€ç½²åã€åŸæ³¨4ä»¶ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/friedrichsthal-yucatan-1841/cover.jpg",
-    pdf: "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.pdf",
-    epub: "publications/friedrichsthal-yucatan-1841/Friedrichsthal_Les_Monuments_de_l_Yucatan_1841_Japanese_Complete_Translation.epub",
-    pageCount: 19,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["èª¿æŸ»å ±å‘Š", "è€ƒå¤å­¦ç ”ç©¶", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒãƒã‚§ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡", "ã‚¦ã‚·ãƒ¥ãƒãƒ«", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒãƒã‚§ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡",
-      "ã‚¦ã‚·ãƒ¥ãƒãƒ«",
-      "ãƒ€ã‚²ãƒ¬ã‚ªã‚¿ã‚¤ãƒ—",
-      "19ä¸–ç´€",
-      "åŸèªŒåˆå‡º",
-    ],
-  },
-  {
-    slug: "means-yucatan-itzas-1917",
-    title: "ã‚¹ãƒšã‚¤ãƒ³ã«ã‚ˆã‚‹ãƒ¦ã‚«ã‚¿ãƒ³ãŠã‚ˆã³ã‚¤ãƒ„ã‚¡å¾æœå²",
-    originalTitle: "History of the Spanish Conquest of Yucatan and of the Itzas",
-    subtitle: "ãƒãƒ¤è«¸å›½ã®å½¢æˆã‹ã‚‰ã‚¿ãƒ¤ã‚µãƒ«é™¥è½ã¾ã§ãƒ»1917å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚£ãƒªãƒƒãƒ—ãƒ»ã‚¨ã‚¤ãƒ³ã‚ºãƒ¯ãƒ¼ã‚¹ãƒ»ãƒŸãƒ¼ãƒ³ã‚º",
-    series: "HISTORY Â· 1917",
-    originalPublication: "ãƒã‚µãƒãƒ¥ãƒ¼ã‚»ãƒƒãƒ„å·ã‚±ãƒ³ãƒ–ãƒªãƒƒã‚¸ã€1917å¹´",
-    year: 1917,
-    extent: "PDF 267é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1-206é ãƒ»åŸæ³¨50ç‚¹ãƒ»å›³ç‰ˆ7ç‚¹",
-    description:
-      "ãƒãƒ¤ãƒ»ã‚¤ãƒ„ã‚¡è«¸å›½ã®å½¢æˆã€ãƒ¢ãƒ³ãƒ†ãƒ›çˆ¶å­ã«ã‚ˆã‚‹ãƒ¦ã‚«ã‚¿ãƒ³å¾æœã€ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼šå£«ã®å¸ƒæ•™é å¾ã€ã‚¢ãƒ™ãƒ³ãƒ€ãƒ¼ãƒ‹ãƒ§ã®æ—…è¡Œè¨˜ã€1697å¹´ã®ã‚¿ãƒ¤ã‚µãƒ«é™¥è½ã‚’æ‰±ã†ãƒŸãƒ¼ãƒ³ã‚ºã®æ­´å²ç ”ç©¶ã€‚åˆç‰ˆã®å‰ä»˜ã€æœ¬æ–‡1-206é ã€ä»˜éŒ²ã€æ–‡çŒ®ä¸€è¦§ã€åŸæ³¨50ç‚¹ã€å›³ç‰ˆ7ç‚¹ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/means-yucatan-itzas-1917/cover.jpg",
-    pdf: "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.pdf",
-    epub: "publications/means-yucatan-itzas-1917/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.epub",
-    pageCount: 267,
-    figureCount: 0,
-    plateCount: 7,
-    types: ["æ­´å²æ›¸", "å¾æœå²", "æ­´å²è«–è€ƒ"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚«ãƒ³ãƒšãƒã‚§", "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ã‚¤ãƒ„ã‚¡",
-      "ã‚¿ãƒ¤ã‚µãƒ«",
-      "ã‚¢ãƒ™ãƒ³ãƒ€ãƒ¼ãƒ‹ãƒ§",
-      "ãƒ¢ãƒ³ãƒ†ãƒ›",
-      "ãƒãƒ¤å²",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š",
-      "ã‚¹ãƒšã‚¤ãƒ³å¾æœ",
-    ],
-  },
-  {
-    slug: "dunlop-central-america-1847",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ—…è¡Œè¨˜",
-    originalTitle: "Travels in Central America",
-    subtitle: "ç´„3å¹´é–“ã®æ»åœ¨æ—¥èªŒã€å…±å’Œå›½å²ã€ãŠã‚ˆã³æ°—å€™ãƒ»ç”£ç‰©ãƒ»é€šå•†",
-    author: "ãƒ­ãƒãƒ¼ãƒˆãƒ»ã‚°ãƒ©ã‚¹ã‚´ãƒ¼ãƒ»ãƒ€ãƒ³ãƒ­ãƒƒãƒ—",
-    series: "HISTORICAL TRAVEL NARRATIVE Â· 1847",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1847å¹´",
-    year: 1847,
-    extent: "PDF 339é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1-358é ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "1844å¹´ã‹ã‚‰1846å¹´ã¾ã§ã®ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ—…è¡Œãƒ»æ»åœ¨æ—¥èªŒã¨ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å…±å’Œå›½ã®ç‹¬ç«‹ã‹ã‚‰é€£é‚¦è§£ä½“å¾Œã¾ã§ã®æ­´å²ã€æ°—å€™ãƒ»ç”£ç‰©ãƒ»å‹•ç‰©ãƒ»åœ°è³ªãƒ»é‰±ç‰©ãƒ»ç«å±±ãƒ»åœ°éœ‡ã€é£Ÿç”Ÿæ´»ãƒ»ä½å±…ãƒ»é€šå•†ãƒ»è²¡æ”¿ãƒ»äº¤é€šã€äººå£ãƒ»æ•™è‚²ãƒ»å®—æ•™ãƒ»å¸æ³•ã«ã¤ã„ã¦ã®è¨˜éŒ²ã€‚1847å¹´åˆç‰ˆã®å‰ä»˜ã€æœ¬æ–‡1-358é ã€æŠ˜è¾¼åœ°å›³1ç‚¹ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dunlop-central-america-1847/cover.jpg",
-    pdf: "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.pdf",
-    epub: "publications/dunlop-central-america-1847/Robert_Glasgow_Dunlop_Travels_in_Central_America_1847_Japanese_Complete_Translation.epub",
-    pageCount: 339,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["æ—…è¡Œè¨˜", "æ­´å²æ›¸", "åšç‰©èªŒ"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒ»ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å…±å’Œå›½",
-      "19ä¸–ç´€",
-      "æ—…è¡Œæ—¥èªŒ",
-      "å…±å’Œå›½å²",
-      "è‡ªç„¶èªŒ",
-      "æŠ˜è¾¼åœ°å›³",
-    ],
-  },
-  {
-    slug: "bandelier-yucatan-central-america-1881",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³ãŠã‚ˆã³ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ–‡çŒ®è§£é¡Œ",
-    originalTitle: "Notes on the Bibliography of Yucatan and Central America",
-    subtitle: "1881å¹´åˆ¥åˆ·ãƒ»åŸåˆŠæœ¬æ–‡3â€“39é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ‰ãƒ«ãƒ•ãƒ»Fãƒ»ãƒãƒ³ãƒ‡ãƒªã‚¢",
-    series: "BIBLIOGRAPHICAL STUDY Â· 1881",
-    originalPublication: "ãƒã‚µãƒãƒ¥ãƒ¼ã‚»ãƒƒãƒ„å·ã‚¦ã‚¹ã‚¿ãƒ¼ã€1881å¹´",
-    year: 1881,
-    extent: "PDF 63é ãƒ»åŸåˆŠæœ¬æ–‡3â€“39é ãƒ»åŸæ³¨1ä»¶ãƒ»åŸåˆŠç”»åƒ2ç‚¹",
-    description:
-      "ãƒ¦ã‚«ã‚¿ãƒ³ã€ãƒã‚¢ãƒ‘ã‚¹ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã‚ªã‚¢ãƒã‚«ã‚’å¯¾è±¡ã«ã€16ä¸–ç´€ã‹ã‚‰19ä¸–ç´€å¾ŒåŠã¾ã§ã®æ—…è¡Œè¨˜ã€å¹´ä»£è¨˜ã€å ±å‘Šæ›¸ã€åœ°å›³ã€è€ƒå¤å­¦ãƒ»è¨€èªå­¦æ–‡çŒ®ã‚’å¹´ä»£åˆ¥ã«è«–è©•ã—ãŸæ–‡çŒ®è§£é¡Œã€‚1881å¹´åˆ¥åˆ·ã®å¤–è£…è¡¨ç´™ã€æ¨™é¡Œç´™ã€æœ¬æ–‡3â€“39é ã€åŸæ³¨1ä»¶ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/bandelier-yucatan-central-america-1881/cover.jpg",
-    pdf: "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.pdf",
-    epub: "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
-    pageCount: 63,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["æ›¸èªŒ", "ç ”ç©¶å²"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒã‚¢ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚ªã‚¢ãƒã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: ["æ–‡çŒ®ç›®éŒ²", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ã‚³ãƒ‘ãƒ³", "ãƒŸãƒˆãƒ©", "19ä¸–ç´€"],
-  },
-  {
-    slug: "rau-palenque-tablet-1879",
-    title: "åˆè¡†å›½å›½ç«‹åšç‰©é¤¨æ‰€è”µãƒ‘ãƒ¬ãƒ³ã‚±çŸ³æ¿",
-    originalTitle:
-      "The Palenque Tablet in the United States National Museum",
-    subtitle: "1879å¹´åˆç‰ˆãƒ»åŸåˆŠæœ¬æ–‡1â€“81é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒ£ãƒ¼ãƒ«ã‚ºãƒ»ãƒ©ã‚¦",
-    series: "SMITHSONIAN CONTRIBUTIONS TO KNOWLEDGE Â· NO. 331",
-    originalPublication: "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³D.C.ã€1879å¹´",
-    year: 1879,
-    extent: "PDF 130é ãƒ»åŸåˆŠæœ¬æ–‡1â€“81é ãƒ»åŸæ³¨151ä»¶ãƒ»åŸåˆŠç”»åƒ22ç‚¹",
-    description:
-      "åˆè¡†å›½å›½ç«‹åšç‰©é¤¨ã«åè”µã•ã‚ŒãŸãƒ‘ãƒ¬ãƒ³ã‚±çŸ³æ¿ã®æ¥æ­´ã¨å›³åƒã‚’ä¸­å¿ƒã«ã€ãƒ‘ãƒ¬ãƒ³ã‚±æ¢æŸ»å²ã€åå­—æ¶ã®ç¥æ®¿ã€ãƒ¡ã‚­ã‚·ã‚³ãƒ»ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®å…ˆä½æ°‘æ–‡å­—ã‚’è«–ã˜ãŸç ”ç©¶ã€‚1879å¹´åˆç‰ˆã®å‰ä»˜ã€æœ¬æ–‡1â€“81é ã€åŸæ³¨151ä»¶ã€ç´¢å¼•ã€åŸåˆŠç”»åƒ22ç‚¹ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/rau-palenque-tablet-1879/cover.jpg",
-    pdf: "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.pdf",
-    epub: "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
-    pageCount: 130,
-    figureCount: 20,
-    plateCount: 2,
-    types: ["è€ƒå¤å­¦ç ”ç©¶", "èª¿æŸ»å ±å‘Š", "å›³ç‰ˆé›†"],
-    regions: ["ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒ‘ãƒ¬ãƒ³ã‚±çŸ³æ¿", "åå­—æ¶ã®ç¥æ®¿", "ãƒãƒ¤æ–‡å­—", "ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³", "19ä¸–ç´€"],
-  },
-  {
-    slug: "charencey-votan-1871",
-    title: "ãƒ´ã‚©ã‚¿ãƒ³ç¥è©±",
-    originalTitle:
-      "Le mythe de Votan : Ã©tude sur les origines asiatiques de la civilisation amÃ©ricaine",
-    subtitle: "1871å¹´åˆŠãƒ»æœ¬æ–‡ã€ç›®æ¬¡ã€è¿½è£œã€æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¤ã‚¢ã‚µãƒ³ãƒˆãƒ»ãƒ‰ãƒ»ã‚·ãƒ£ãƒ©ãƒ³ã‚»",
-    series: "COMPARATIVE MYTHOLOGY Â· 1871",
-    originalPublication: "ã‚¢ãƒ©ãƒ³ã‚½ãƒ³ã€1871å¹´",
-    year: 1871,
-    extent: "PDF 145é ãƒ»åŸåˆŠæœ¬æ–‡7â€“144é ãƒ»åŸæ³¨242ä»¶ãƒ»åŸåˆŠç”»åƒ4ç‚¹",
-    description:
-      "ãƒ´ã‚©ã‚¿ãƒ³ä¼æ‰¿ã‚’ä¸­å¿ƒã«ã€ãƒ¡ã‚½ã‚¢ãƒ¡ãƒªã‚«ã€æ±å—ã‚¢ã‚¸ã‚¢ã€ã‚¤ãƒ³ãƒ‰ã€ã‚®ãƒªã‚·ã‚¢ã®ç¥è©±ã¨ç¿’ä¿—ã‚’æ¯”è¼ƒã—ã€ã‚¢ãƒ¡ãƒªã‚«æ–‡æ˜ã®ã‚¢ã‚¸ã‚¢èµ·æºã‚’è«–ã˜ãŸ19ä¸–ç´€ã®æ¯”è¼ƒç¥è©±ç ”ç©¶ã€‚å‰ä»˜ã€æœ¬æ–‡ã€åŸæ³¨242ä»¶ã€ç›®æ¬¡ã€è¿½è£œã€æ­£èª¤è¡¨ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/charencey-votan-1871/cover.jpg",
-    pdf: "publications/charencey-votan-1871/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.pdf",
-    epub: "publications/charencey-votan-1871/Hyacinthe_de_Charencey_Le_mythe_de_Votan_1871_Japanese_Complete_Translation.epub",
-    pageCount: 145,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["æ¯”è¼ƒç¥è©±", "æ­´å²è«–è€ƒ"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ã‚¢ã‚¸ã‚¢"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: ["ãƒ´ã‚©ã‚¿ãƒ³", "æ¯”è¼ƒç¥è©±", "æ–‡æ˜èµ·æºè«–", "19ä¸–ç´€"],
-  },
-  {
-    slug: "ordonez-creation-1907",
-    title: "ã‚¢ãƒ¡ãƒªã‚«ç•°æ•™ä½“ç³»ã«ã‚ˆã‚‹å¤©åœ°å‰µé€ å²",
-    originalTitle:
-      "Historia de la creaciÃ³n del cielo y de la tierra conforme al sistema de la gentilidad americana",
-    subtitle: "1907å¹´åˆŠç¾å­˜æœªå®Œæœ¬ãƒ»å‰ä»˜ãŠã‚ˆã³æœ¬æ–‡1â€“120é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ©ãƒ¢ãƒ³ãƒ»ãƒ‡ãƒ»ã‚ªãƒ«ãƒ‰ãƒ‹ã‚§ã‚¹ãƒ»ã‚¤ãƒ»ã‚¢ã‚®ã‚¢ãƒ«",
-    series: "HISTORIA DE LA CREACIÃ“N Â· 1907",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€1907å¹´",
-    year: 1907,
-    extent:
-      "PDF 141é ãƒ»å‰ä»˜IIIâ€“VIIIé ãƒ»æœ¬æ–‡1â€“120é ãƒ»åŸæ³¨169ä»¶ãƒ»åŸåˆŠç”»åƒ2ç‚¹",
-    description:
-      "è‘—è€…ãŒã€Œè›‡æ—ã€ã®ä¼æ‰¿ã¨ç§°ã™ã‚‹æ–‡æ›¸ã€ãƒãƒãƒ«ãƒ»ãƒ´ãƒ¼ç³»ã®ç‰©èªã€æ¤æ°‘åœ°æœŸå¹´ä»£è¨˜ã€è–æ›¸ãƒ»å¤å…¸æ–‡çŒ®ã‚’çµã³ã¤ã‘ã€å¤©åœ°å‰µé€ ã€æ´ªæ°´ã€è«¸æ°‘æ—ã®é›¢æ•£ã€å…ˆä½æ°‘ã®èµ·æºã€ãƒ‘ãƒ¬ãƒ³ã‚±ã‚’è«–ã˜ãŸæ­´å²çš„è‘—ä½œã€‚ãƒ‹ã‚³ãƒ©ã‚¹ãƒ»ãƒ¬ã‚ªãƒ³åˆŠè¡Œã®1907å¹´ç‰ˆã«ã¤ã„ã¦ã€å‰ä»˜ã€æœ¬æ–‡1â€“120é ã€åŸæ³¨169ä»¶ã‚’çœç•¥ãªãåéŒ²ã—ã€ç¬¬9ç« é€”ä¸­ã§é€”åˆ‡ã‚Œã‚‹åŸåˆŠæœ«å°¾ã‚’è£œä½œã›ãšæ˜ç¤ºã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ordonez-creation-1907/cover.jpg",
-    pdf: "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.pdf",
-    epub: "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
-    pageCount: 141,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["æ­´å²æ›¸", "ç¥è©±ç ”ç©¶", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å¤©åœ°å‰µé€ ç¥è©±",
-      "ãƒãƒãƒ«ãƒ»ãƒ´ãƒ¼",
-      "ãƒ´ã‚©ã‚¿ãƒ³",
-      "å…ˆä½æ°‘èµ·æºè«–",
-      "ç¾å­˜æœªå®Œæœ¬",
-    ],
-  },
-  {
-    slug: "le-plongeon-yucatan-1889",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³ã®ã‚ã¡ã“ã¡",
-    originalTitle: "Here and There in Yucatan: Miscellanies",
-    subtitle: "é›‘éŒ²ãƒ»1889å¹´ç‰ˆæœ¬æ–‡1â€“146é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒªã‚¹ãƒ»Dãƒ»ãƒ«ãƒ»ãƒ—ãƒ­ãƒ³ã‚¸ãƒ§ãƒ³",
-    series: "HERE AND THERE IN YUCATAN Â· 1889",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1889å¹´",
-    year: 1889,
-    extent:
-      "PDF 116é ãƒ»åŸåˆŠæœ¬æ–‡1â€“146é ãƒ»åŸæ³¨9ä»¶ãƒ»è¨³æ³¨2ä»¶ãƒ»åŸåˆŠç”»åƒ18ç‚¹",
-    description:
-      "ãƒ¦ã‚«ã‚¿ãƒ³æ²¿å²¸ã€ãƒ ãƒ˜ãƒ¼ãƒ¬ã‚¹å³¶ã€ã‚³ã‚¹ãƒ¡ãƒ«ã€ã‚«ãƒªãƒ–äººã€äº•æˆ¸ãƒ»æ´çªŸã€ãƒãƒ¤ã®å®—æ•™ãƒ»æ–‡çŒ®ãƒ»å…±åŒä½“ç”Ÿæ´»ãªã©ã‚’æ‰±ã†ç´€è¡Œãƒ»é›‘éŒ²é›†ã€‚1889å¹´J. W. Lovellç‰ˆã®åºæ–‡ã€ç›®æ¬¡ã€æœ¬æ–‡1â€“146é ã€åŸæ³¨ã€æ‰€è”µæœ¬å¤–è£…ã€åŸåˆŠè¡¨ç´™ãƒ»å‰ä»˜ã€å£çµµã¨æœ¬æ–‡å›³ç‰ˆã€å·»æœ«å•†å“åºƒå‘Šã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/le-plongeon-yucatan-1889/cover.jpg",
-    pdf: "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.pdf",
-    epub: "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
-    pageCount: 116,
-    figureCount: 11,
-    plateCount: 7,
-    types: ["æ—…è¡Œè¨˜", "æ°‘æ—èªŒ", "é›‘éŒ²"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ ãƒ˜ãƒ¼ãƒ¬ã‚¹å³¶", "ã‚³ã‚¹ãƒ¡ãƒ«", "ãƒ™ãƒªãƒ¼ã‚º"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤æ–‡åŒ–",
-      "ã‚«ãƒªãƒ–äºº",
-      "æ´çªŸ",
-      "ãƒˆãƒ­ã‚¢ãƒçµµæ–‡æ›¸",
-      "åŸåˆŠå›³ç‰ˆ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "fancourt-history-yucatan-1854",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³å²",
-    originalTitle:
-      "The History of Yucatan, from Its Discovery to the Close of the Seventeenth Century",
-    subtitle: "ç™ºè¦‹ã‹ã‚‰åä¸ƒä¸–ç´€æœ«ã¾ã§ãƒ»1854å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒ£ãƒ¼ãƒ«ã‚ºãƒ»ã‚»ãƒ³ãƒˆãƒ»ã‚¸ãƒ§ãƒ³ãƒ»ãƒ•ã‚¡ãƒ³ã‚³ãƒ¼ãƒˆ",
-    series: "THE HISTORY OF YUCATAN Â· 1854",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1854å¹´",
-    year: 1854,
-    extent:
-      "PDF 359é ãƒ»å‰ä»˜xvié ãƒ»æœ¬æ–‡ãƒ»ä»˜éŒ²1â€“340é ãƒ»åŸæ³¨215ä»¶ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹ãƒ»ä»˜è¼‰åºƒå‘Š32é ",
-    description:
-      "ãƒ¦ã‚«ã‚¿ãƒ³ã®ç™ºè¦‹ãƒ»å¾æœã‹ã‚‰ã€æ¤æ°‘åœ°çµ±æ²»ã€å®£æ•™ã€ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³ãƒ»ãƒãƒ§ãƒ«åœ°æ–¹ã¸ã®é å¾ã€1697å¹´ã®ã‚¿ãƒ¤ã‚µãƒ«å¾æœã¾ã§ã‚’è¨˜ã—ãŸæ­´å²æ›¸ã€‚1854å¹´ãƒ­ãƒ³ãƒ‰ãƒ³åˆç‰ˆã®å‰ä»˜ã€å…¨21ç« ã€ä»˜éŒ²Aâ€“Eã€åŸæ³¨215ä»¶ã€æŠ˜è¾¼åœ°å›³ã«åŠ ãˆã€æ‰€è”µæœ¬ã«åˆç¶´ã•ã‚ŒãŸã‚¸ãƒ§ãƒ³ãƒ»ãƒãƒ¬ãƒ¼ç¤¾ã®æ›¸ç›®åºƒå‘Š32é ã‚‚çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/fancourt-history-yucatan-1854/cover.jpg",
-    pdf: "publications/fancourt-history-yucatan-1854/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.pdf",
-    epub: "publications/fancourt-history-yucatan-1854/Charles_St_John_Fancourt_The_History_of_Yucatan_1854_Japanese_Complete_Translation.epub",
-    pageCount: 359,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["æ­´å²æ›¸", "å¾æœå²", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ™ãƒªãƒ¼ã‚º", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹"],
-    languages: ["è‹±èª", "ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒ¦ã‚«ã‚¿ãƒ³å¾æœ",
-      "ã‚¿ãƒ¤ã‚µãƒ«",
-      "ã‚¤ãƒ„ã‚¡æ—",
-      "ã‚¢ãƒ™ãƒ³ãƒ€ãƒ¼ãƒ‹ãƒ§",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "æŠ˜è¾¼åœ°å›³",
-    ],
-  },
-  {
-    slug: "humboldt-vues-cordilleres-1810-1813",
-    title: "ã‚³ãƒ«ãƒ‡ã‚£ãƒ¬ãƒ©å±±ç³»ã®æ™¯è¦³ã¨ã‚¢ãƒ¡ãƒªã‚«å…ˆä½è«¸æ°‘æ—ã®è¨˜å¿µç‰©",
-    originalTitle:
-      "Vues des CordillÃ¨res, et monumens des peuples indigÃ¨nes de lâ€™AmÃ©rique",
-    subtitle: "1810ï¼1813å¹´åˆŠãƒ»åºæ–‡ã€æœ¬æ–‡ã€å›³ç‰ˆã€ç´¢å¼•ãƒ»æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ¬ã‚¯ã‚µãƒ³ãƒ€ãƒ¼ãƒ»ãƒ•ã‚©ãƒ³ãƒ»ãƒ•ãƒ³ãƒœãƒ«ãƒˆ",
-    series: "VUES DES CORDILLÃˆRES Â· 1810ï¼1813",
-    originalPublication: "ãƒ‘ãƒªã€1810ï¼1813å¹´",
-    year: 1810,
-    extent:
-      "PDF 477é ãƒ»åºæ–‡Iâ€“XVIé ãƒ»æœ¬æ–‡1â€“350é ãƒ»å›³ç‰ˆIâ€“LXIXï¼ˆ68è‘‰ï¼‰ãƒ»æœ¬æ–‡æŒ¿å›³1ç‚¹ãƒ»ç´¢å¼•ãƒ»æ­£èª¤è¡¨",
-    description:
-      "ã‚¢ãƒ¬ã‚¯ã‚µãƒ³ãƒ€ãƒ¼ãƒ»ãƒ•ã‚©ãƒ³ãƒ»ãƒ•ãƒ³ãƒœãƒ«ãƒˆãŒã€ãƒ¡ã‚­ã‚·ã‚³ã€ã‚¢ãƒ³ãƒ‡ã‚¹ã»ã‹ã®æ™¯è¦³ã¨ã€ã‚¢ã‚¹ãƒ†ã‚«ã€ã‚¤ãƒ³ã‚«ã€ãƒ ã‚¤ã‚¹ã‚«ãªã©ã‚¢ãƒ¡ãƒªã‚«å…ˆä½è«¸æ°‘æ—ã®å»ºç¯‰ãƒ»å½«åˆ»ãƒ»çµµæ–‡æ›¸ãƒ»æš¦ã‚’æ¯”è¼ƒè€ƒå¯Ÿã—ãŸå›³ç‰ˆå¤§è‘—ã€‚1810ï¼1813å¹´åŸåˆŠã®åºæ–‡Iâ€“XVIé ã€æœ¬æ–‡1â€“350é ã€åŸæ³¨ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’å…¨è¨³ã—ã€å›³ç‰ˆIâ€“LXIXã®68è‘‰ï¼ˆVIIIãƒ»IXã¯åŒä¸€è‘‰ï¼‰ã¨æœ¬æ–‡æŒ¿å›³1ç‚¹ã‚’åŸåˆŠé †ã«åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/humboldt-vues-cordilleres-1810-1813/cover.jpg",
-    pdf:
-      "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf",
-    epub:
-      "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
-    pageCount: 477,
-    figureCount: 1,
-    plateCount: 68,
-    types: ["è€ƒå¤å­¦ç ”ç©¶", "å›³ç‰ˆé›†", "æ—…è¡Œè¨˜", "æ°‘æ—èªŒ"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ã‚¢ãƒ³ãƒ‡ã‚¹", "å—ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚¢ã‚¹ãƒ†ã‚«æ–‡æ˜",
-      "ã‚¤ãƒ³ã‚«æ–‡æ˜",
-      "ãƒ ã‚¤ã‚¹ã‚«",
-      "ã‚³ãƒ«ãƒ‡ã‚£ãƒ¬ãƒ©",
-      "çµµæ–‡æ›¸",
-      "æ¯”è¼ƒè€ƒå¤å­¦",
-      "åŸåˆŠå›³ç‰ˆ",
-    ],
-  },
-  {
-    slug: "tozzer-mayas-lacandones-1907",
-    title: "ãƒãƒ¤äººã¨ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã®æ¯”è¼ƒç ”ç©¶",
-    originalTitle: "A Comparative Study of the Mayas and the Lacandones",
-    subtitle: "1907å¹´åˆç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡ã€åŸæ³¨ã€å›³ç‰ˆã€å‚è€ƒæ–‡çŒ® æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ«ãƒ•ãƒ¬ãƒƒãƒ‰ãƒ»Mãƒ»ãƒˆãƒƒã‚¶ãƒ¼",
-    series: "A COMPARATIVE STUDY Â· 1907",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1907å¹´",
-    year: 1907,
-    extent:
-      "PDF 301é ãƒ»åŸåˆŠå‰ä»˜vâ€“xxé ãƒ»æœ¬æ–‡1â€“195é ãƒ»æœ¬æ–‡æŒ¿å›³49ç‚¹ãƒ»åˆ¥ä¸å›³ç‰ˆ29ç‚¹",
-    description:
-      "ã‚¢ãƒ«ãƒ•ãƒ¬ãƒƒãƒ‰ãƒ»Mãƒ»ãƒˆãƒƒã‚¶ãƒ¼ãŒã€20ä¸–ç´€åˆé ­ã®ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ãƒãƒ¤äººã¨ãƒã‚¢ãƒ‘ã‚¹ã®ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã‚’ã€æ­´å²ã€å±…ä½ç’°å¢ƒã€ç¤¾ä¼šã€æŠ€è¡“ã€èŠ¸è¡“ã€å®—æ•™ã®è«¸é¢ã‹ã‚‰æ¯”è¼ƒã—ãŸæ°‘æ—èªŒã€‚1907å¹´åˆç‰ˆã®åŸåˆŠå‰ä»˜ã€æœ¬æ–‡1â€“195é ã€åŸæ³¨ã€è¡¨ã€å‚è€ƒæ–‡çŒ®ã‚’å…¨è¨³ã—ã€æœ¬æ–‡æŒ¿å›³1â€“49ã¨åˆ¥ä¸å›³ç‰ˆIâ€“XXIXã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/tozzer-mayas-lacandones-1907/cover.jpg",
-    pdf:
-      "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/tozzer-mayas-lacandones-1907/Tozzer_A_Comparative_Study_of_the_Mayas_and_the_Lacandones_1907_Japanese_Complete_Translation.epub",
-    pageCount: 301,
-    figureCount: 49,
-    plateCount: 29,
-    types: ["æ°‘æ—èªŒ", "è€ƒå¤å­¦ç ”ç©¶", "æ¯”è¼ƒç ”ç©¶"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒã‚¢ãƒ‘ã‚¹", "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "æ°‘æ—å­¦",
-      "å®—æ•™",
-      "ç‰©è³ªæ–‡åŒ–",
-      "åŸåˆŠå›³ç‰ˆ",
-      "20ä¸–ç´€åˆé ­",
-    ],
-  },
-  {
-    slug: "frias-mexico-guatemala-boundary-1883",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å›½å¢ƒå•é¡Œ",
-    originalTitle: "CuestiÃ³n de lÃ­mites entre MÃ©xico y Guatemala",
-    subtitle: "1883å¹´ç‰¹åˆ¥ç‰ˆãƒ»åŸåˆŠæœ¬æ–‡ã€1882å¹´æ¡ç´„ã€æŠ˜è¾¼åœ°å›³ã€è‚–åƒ2ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¤ãƒ©ãƒªã‚ªãƒ³ãƒ»ãƒ•ãƒªã‚¢ã‚¹ãƒ»ã‚¤ãƒ»ã‚½ãƒˆ",
-    series: "BOUNDARY QUESTION Â· 1883",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€1883å¹´",
-    year: 1883,
-    extent: "PDF 32é ãƒ»åŸåˆŠæœ¬æ–‡3â€“40é ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹ãƒ»è‚–åƒ2ç‚¹",
-    description:
-      "ã‚¤ãƒ©ãƒªã‚ªãƒ³ãƒ»ãƒ•ãƒªã‚¢ã‚¹ãƒ»ã‚¤ãƒ»ã‚½ãƒˆãŒã€ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å›½å¢ƒå•é¡Œã€ãã®äº¤æ¸‰çµŒéã¨1882å¹´9æœˆ27æ—¥æ¡ç´„ã‚’è«–ã˜ã€å¾ŒåŠã«ãƒ¡ã‚­ã‚·ã‚³å¤–å‹™é•·å®˜ã‚¤ã‚°ãƒŠã‚·ã‚ªãƒ»ãƒãƒªã‚¹ã‚«ãƒ«ã®ç•¥ä¼ã‚’åã‚ãŸè‘—ä½œã€‚1883å¹´ç‰¹åˆ¥ç‰ˆã®æœ¬æ–‡ã€æ¡ç´„å…¨æ–‡ã€ç½²åã‚’å…¨è¨³ã—ã€æŠ˜è¾¼åœ°å›³ã¨è‚–åƒ2ç‚¹ã‚’åŸåˆŠä½ç½®ã«åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/frias-mexico-guatemala-boundary-1883/cover.jpg",
-    pdf:
-      "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
-    pageCount: 32,
-    figureCount: 1,
-    plateCount: 2,
-    types: ["å›½å¢ƒå²æ–™", "æ¡ç´„å²æ–™", "å¤–äº¤å²"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒã‚¢ãƒ‘ã‚¹"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å›½å¢ƒå•é¡Œ",
-      "1882å¹´æ¡ç´„",
-      "ã‚¤ã‚°ãƒŠã‚·ã‚ªãƒ»ãƒãƒªã‚¹ã‚«ãƒ«",
-      "ãƒ•ã‚¹ãƒˆãƒ»ãƒ«ãƒ•ã‚£ãƒãƒ»ãƒãƒªã‚ªã‚¹",
-      "æŠ˜è¾¼åœ°å›³",
-      "è‚–åƒ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "pastrana-mexico-guatemala-boundary-1897",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã¨ã®å›½å¢ƒç”»å®šãƒ¡ã‚­ã‚·ã‚³å§”å“¡ä¼šå§”å“¡é•·å ±å‘Šæ›¸",
-    originalTitle:
-      "Informe que el jefe de la ComisiÃ³n mexicana de lÃ­mites con Guatemalaâ€¦",
-    subtitle: "1897å¹´åˆç‰ˆãƒ»åŸåˆŠè¡¨ç´™ã€æ¨™é¡Œç´™ã€æœ¬æ–‡ã€æ›¸ç°¡ã€è¡¨ã€ä»˜éŒ²3â€“103é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒŒã‚¨ãƒ«ãƒ»Eãƒ»ãƒ‘ã‚¹ãƒˆãƒ©ãƒ¼ãƒŠ",
-    series: "MEXICAN BOUNDARY COMMISSION Â· 1897",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€1897å¹´",
-    year: 1897,
-    extent: "PDF 88é ãƒ»åŸåˆŠè¡¨ç´™ãƒ»æ¨™é¡Œç´™ãƒ»æœ¬æ–‡3â€“103é ãƒ»è¡¨ãŠã‚ˆã³ä»˜éŒ²",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã¨ã®å›½å¢ƒç”»å®šãƒ¡ã‚­ã‚·ã‚³å§”å“¡ä¼šå§”å“¡é•·ãƒãƒŒã‚¨ãƒ«ãƒ»Eãƒ»ãƒ‘ã‚¹ãƒˆãƒ©ãƒ¼ãƒŠãŒã€æŠ€å¸«ã‚¢ãƒ«ãƒ™ãƒ«ãƒˆãƒ»ã‚¢ãƒãƒ‰ãƒ¼ãƒ«ã®ç§‘å­¦ä½œæ¥­ã«é–¢ã™ã‚‹æ‰¹åˆ¤ã¸å›ç­”ã—ãŸé–‹ç™ºçœæå‡ºå ±å‘Šæ›¸ã€‚1897å¹´åˆç‰ˆã®æ¨™é¡Œç´™ã€æœ¬æ–‡ã€æ›¸ç°¡ã€åŸæ³¨ã€æ•°å¼ã€è¡¨ã€ä»˜éŒ²ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
-    pdf:
-      "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
-    pageCount: 88,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å›½å¢ƒå²æ–™", "å§”å“¡ä¼šå ±å‘Š", "æ¸¬é‡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒã‚¢ãƒ‘ã‚¹"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å›½å¢ƒç”»å®š",
-      "ãƒ¡ã‚­ã‚·ã‚³å›½å¢ƒå§”å“¡ä¼š",
-      "ã‚¢ãƒ«ãƒ™ãƒ«ãƒˆãƒ»ã‚¢ãƒãƒ‰ãƒ¼ãƒ«",
-      "æ¸¬é‡",
-      "å¤©æ–‡è¦³æ¸¬",
-      "è¨ˆç®—è¡¨",
-      "19ä¸–ç´€æœ«",
-    ],
-  },
-  {
-    slug: "urrutia-guatemala-mexico-boundary-1900",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã¨ãƒ¡ã‚­ã‚·ã‚³ã®å›½å¢ƒå•é¡Œã«é–¢ã™ã‚‹å ±å‘Šæ›¸",
-    originalTitle: "Memoria sobre la cuestiÃ³n de lÃ­mites entre Guatemala y MÃ©xico",
-    subtitle: "1900å¹´åˆç‰ˆãƒ»åŸåˆŠç•¥æ¨™é¡Œç´™ã€æ¨™é¡Œç´™ã€æœ¬æ–‡ãƒ»ä»˜éŒ²3â€“325é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚°ã‚¢ãƒ†ãƒãƒ©ãƒ»ãƒ¡ã‚­ã‚·ã‚³å›½å¢ƒå§”å“¡ä¼šï¼ã‚¯ãƒ©ã‚¦ãƒ‡ã‚£ã‚ªãƒ»ã‚¦ãƒ«ãƒ†ã‚£ã‚¢",
-    series: "BOUNDARY COMMISSION REPORT Â· 1900",
-    originalPublication: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1900å¹´",
-    year: 1900,
-    extent:
-      "PDF 328é ãƒ»åŸåˆŠç•¥æ¨™é¡Œç´™ãƒ»æ¨™é¡Œç´™ãƒ»æœ¬æ–‡ãŠã‚ˆã³ä»˜éŒ²3â€“325é ãƒ»è¡¨17ç‚¹",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ãƒ»ãƒ¡ã‚­ã‚·ã‚³å›½å¢ƒå§”å“¡ä¼šå§”å“¡é•·ã‚¯ãƒ©ã‚¦ãƒ‡ã‚£ã‚ªãƒ»ã‚¦ãƒ«ãƒ†ã‚£ã‚¢ãŒã€16å¹´ã«ã‚ãŸã‚‹å›½å¢ƒç”»å®šäº‹æ¥­ã®æ²¿é©ã€äº¤æ¸‰ã€æ¸¬é‡æˆæœã¨ä»˜éŒ²è³‡æ–™ã‚’å¤–å‹™å¤§è‡£ã¸å ±å‘Šã—ãŸå¤§éƒ¨ã®å§”å“¡ä¼šå²æ–™ã€‚1900å¹´åˆç‰ˆã®æœ¬æ–‡ã€æ›¸ç°¡ã€æ¡ç´„ã€ç½²åã€åŸæ³¨ã€è¡¨ã€ç›®éŒ²ã€ä»˜éŒ²ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/urrutia-guatemala-mexico-boundary-1900/cover.jpg",
-    pdf:
-      "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/urrutia-guatemala-mexico-boundary-1900/Urrutia_Memoria_Limites_Guatemala_Mexico_1900_Japanese_Complete_Translation.epub",
-    pageCount: 328,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å›½å¢ƒå²æ–™", "å§”å“¡ä¼šå ±å‘Š", "å¤–äº¤å²"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒã‚¢ãƒ‘ã‚¹"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å›½å¢ƒç”»å®š",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å›½å¢ƒå§”å“¡ä¼š",
-      "1882å¹´æ¡ç´„",
-      "æ¸¬é‡",
-      "ã‚½ã‚³ãƒŒã‚¹ã‚³",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "19ä¸–ç´€æœ«",
-    ],
-  },
-  {
-    slug: "seler-sachs-auf-alten-wegen-1900",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å¤é“ã‚’ã‚†ã",
-    originalTitle:
-      "Auf alten Wegen in Mexiko und Guatemala: Reiseerinnerungen und EindrÃ¼cke aus den Jahren 1895-1897",
-    subtitle: "1895-1897å¹´ã®æ—…ã®æ€ã„å‡ºã¨å°è±¡ãƒ»1900å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ„ã‚§ãƒ„ã‚£ãƒ¼ãƒªã‚¨ãƒ»ã‚¼ãƒ¼ãƒ©ãƒ¼ï¼ã‚¶ãƒƒã‚¯ã‚¹",
-    series: "HISTORICAL TRAVEL NARRATIVE Â· 1900",
-    originalPublication: "ãƒ™ãƒ«ãƒªãƒ³ã€1900å¹´",
-    year: 1900,
-    extent:
-      "PDF 628é ãƒ»åŸåˆŠå‰ä»˜VIIâ€“XXIVé ãƒ»æœ¬æ–‡1â€“363é ãƒ»å…‰æ²¢ç‰ˆå›³ç‰ˆ65ç‚¹ãƒ»æœ¬æ–‡æŒ¿å›³260ç‚¹ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "ãƒ„ã‚§ãƒ„ã‚£ãƒ¼ãƒªã‚¨ãƒ»ã‚¼ãƒ¼ãƒ©ãƒ¼ï¼ã‚¶ãƒƒã‚¯ã‚¹ãŒã€1895å¹´ã‹ã‚‰1897å¹´ã«ã‹ã‘ã¦ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚°ã‚¢ãƒ†ãƒãƒ©ã‚’æ¨ªæ–­ã—ãŸæ—…ã®çµŒéã€å„åœ°ã®ç”Ÿæ´»ãƒ»æ°‘æ—ãƒ»æ™¯è¦³ãƒ»è€ƒå¤éºç‰©ã‚’è¨˜ã—ãŸæ—…è¡Œè¨˜ã€‚1900å¹´åˆç‰ˆã®å¤–è£…ã€å‰ä»˜ã€æœ¬æ–‡1â€“363é ã€åŸæ³¨ã€å›³é¡Œã‚’å…¨è¨³ã—ã€å…‰æ²¢ç‰ˆå›³ç‰ˆ65ç‚¹ã€æœ¬æ–‡æŒ¿å›³260ç‚¹ã€æŠ˜è¾¼åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/seler-sachs-auf-alten-wegen-1900/cover.jpg",
-    pdf:
-      "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
-    pageCount: 628,
-    figureCount: 260,
-    plateCount: 65,
-    types: ["æ—…è¡Œè¨˜", "æ°‘æ—èªŒ", "è€ƒå¤å­¦ç ”ç©¶"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ã‚ªã‚¢ãƒã‚«", "ãƒã‚¢ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒ‘ãƒ„ã‚¯ã‚¢ãƒ­",
-      "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯",
-      "ãƒˆãƒ‹ãƒŠ",
-      "ã‚³ãƒŸã‚¿ãƒ³",
-      "ã‚­ãƒªã‚°ã‚¢",
-      "ã‚³ãƒ‘ãƒ³",
-      "åŸåˆŠå›³ç‰ˆ",
-      "19ä¸–ç´€æœ«",
-    ],
-  },
-  {
-    slug: "byam-chiapas-1897",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ãƒ»ãƒã‚¢ãƒ‘ã‚¹å·æ¦‚èª¬",
-    originalTitle: "A Sketch of the State of Chiapas, Mexico",
-    subtitle: "1897å¹´åˆç‰ˆãƒ»åŸåˆŠå¤–è£…è¡¨ç´™ã€å‰ä»˜ã€æœ¬æ–‡ã€å›³ç‰ˆã€åœ°å›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»Wãƒ»ãƒã‚¤ã‚¢ãƒ ",
-    series: "A SKETCH OF THE STATE OF CHIAPAS Â· 1897",
-    originalPublication: "ãƒ­ã‚µãƒ³ã‚¼ãƒ«ã‚¹ã€1897å¹´",
-    year: 1897,
-    extent:
-      "PDF 110é ãƒ»åŸåˆŠå¤–è£…è¡¨ç´™ãƒ»å‰ä»˜ãƒ»æœ¬æ–‡7â€“78é ãƒ»å›³ç‰ˆ68ç‚¹ãƒ»åœ°å›³3ç‚¹",
-    description:
-      "ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»Wãƒ»ãƒã‚¤ã‚¢ãƒ ãŒã€19ä¸–ç´€æœ«ã®ãƒã‚¢ãƒ‘ã‚¹å·ã«ã¤ã„ã¦ã€æ­´å²ã€åœ°ç†ã€ä½æ°‘ã€ç”£æ¥­ã€å„çœŒã€ãƒ‘ãƒ¬ãƒ³ã‚±ã®è‡ªç„¶ã¨éºè·¡ã€ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹ã€ç±³å›½ã‹ã‚‰ã®ç§»ä½ãƒ»æŠ•è³‡ã‚’æ¦‚èª¬ã—ãŸåœ°èªŒã€‚1897å¹´åˆç‰ˆã®å¤–è£…è¡¨ç´™ã€å‰ä»˜ã€æœ¬æ–‡7â€“78é ã€è¡¨ã‚’å…¨è¨³ã—ã€å›³ç‰ˆ68ç‚¹ã¨åœ°å›³3ç‚¹ã‚’åŸåˆŠä½ç½®ã«å¯¾å¿œã•ã›ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/byam-chiapas-1897/cover.jpg",
-    pdf:
-      "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
-    pageCount: 110,
-    figureCount: 68,
-    plateCount: 3,
-    types: ["åœ°ç†å ±å‘Š", "æ—…è¡Œè¨˜", "åšç‰©èªŒ"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ã‚¿ãƒã‚¹ã‚³"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒã‚¢ãƒ‘ã‚¹å·",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹",
-      "æ¤æ°‘",
-      "æŠ•è³‡æ¡ˆå†…",
-      "19ä¸–ç´€æœ«",
-      "åŸåˆŠå›³ç‰ˆ",
-      "åœ°å›³",
-    ],
-  },
-  {
-    slug: "robles-memoria-historica-chiapa-1813",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©è«¸å·ã®ä¸€ã¤ã€ãƒã‚¢ãƒ‘å·ã®æ­´å²è¦šæ›¸",
-    originalTitle:
-      "Memoria histÃ³rica de la provincia de Chiapa, una de las de Guatemala",
-    subtitle: "1813å¹´åˆç‰ˆãƒ»åŸåˆŠæ¨™é¡Œç´™ã€æœ¬æ–‡3â€“71é ã€åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒªã‚¢ãƒãƒ»ãƒ­ãƒ–ãƒ¬ã‚¹ãƒ»ãƒ‰ãƒŸãƒ³ã‚²ã‚¹ãƒ»ãƒ‡ãƒ»ãƒã‚µãƒªã‚¨ã‚´ã‚¹",
-    series: "HISTORICAL MEMOIR Â· 1813",
-    originalPublication: "ã‚«ãƒ‡ã‚£ã‚¹ã€1813å¹´",
-    year: 1813,
-    extent: "PDF 33é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»æœ¬æ–‡3â€“71é ãƒ»åŸæ³¨10ç‚¹ãƒ»è¡¨",
-    description:
-      "ãƒã‚¢ãƒ‘å·é¸å‡ºã‚³ãƒ«ãƒ†ã‚¹ä»£è­°å“¡ãƒãƒªã‚¢ãƒãƒ»ãƒ­ãƒ–ãƒ¬ã‚¹ãƒ»ãƒ‰ãƒŸãƒ³ã‚²ã‚¹ãƒ»ãƒ‡ãƒ»ãƒã‚µãƒªã‚¨ã‚´ã‚¹ãŒã€å¾æœå²ã€å·éƒ½ã‚·ã‚¦ãƒ€ãƒ»ãƒ¬ã‚¢ãƒ«ã®å»ºè¨­ã€åœ°ç†ãƒ»ä½æ°‘ãƒ»ç”£ç‰©ãƒ»äº¤é€šãƒ»è¡Œæ”¿ãƒ»æ•™è‚²ã®çŠ¶æ³ã‚’è¨˜ã—ã€å·å‚äº‹ä¼šã€å¤§å­¦ã€æ¸¯æ¹¾ã€é‹æ²³ãªã©8é …ç›®ã‚’è­°ä¼šã¸ææ¡ˆã—ãŸ1813å¹´ã®æ”¿æ²»ãƒ»åœ°èªŒå²æ–™ã€‚1813å¹´åˆç‰ˆã®æ¨™é¡Œç´™ã€æœ¬æ–‡3â€“71é ã€æ®µè½ç•ªå·ã€åŸæ³¨10ç‚¹ã€è¡¨ã€ç½²åã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/robles-memoria-historica-chiapa-1813/cover.jpg",
-    pdf:
-      "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/robles-memoria-historica-chiapa-1813/Robles_Memoria_historica_de_la_provincia_de_Chiapa_1813_Japanese_Complete_Translation.epub",
-    pageCount: 33,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "åœ°ç†å ±å‘Š", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ‘ãƒ¬ãƒ³ã‚±", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚·ã‚¦ãƒ€ãƒ»ãƒ¬ã‚¢ãƒ«",
-      "ã‚½ã‚³ãƒŒã‚¹ã‚³",
-      "ã‚³ãƒ«ãƒ†ã‚¹",
-      "å·å‚äº‹ä¼š",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±",
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³",
-      "1812å¹´æ†²æ³•",
-      "19ä¸–ç´€åˆé ­",
-    ],
-  },
-  {
-    slug: "brinton-nagualism-1894",
-    title: "ãƒŠã‚°ã‚¢ãƒªã‚ºãƒ ",
-    originalTitle:
-      "Nagualism: A Study in Native American Folk-lore and History",
-    subtitle:
-      "ã‚¢ãƒ¡ãƒªã‚«å…ˆä½æ°‘ã®æ°‘é–“ä¼æ‰¿ã¨æ­´å²ã«é–¢ã™ã‚‹ç ”ç©¶ãƒ»1894å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³",
-    series: "AMERICAN FOLK-LORE AND HISTORY Â· 1894",
-    originalPublication: "ãƒ•ã‚£ãƒ©ãƒ‡ãƒ«ãƒ•ã‚£ã‚¢ã€1894å¹´",
-    year: 1894,
-    extent:
-      "PDF 108é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»æœ¬æ–‡å…¨42ç¯€ãƒ»åŸæ³¨ãƒ»ç´¢å¼•352é …ç›®",
-    description:
-      "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³ãŒã€ãƒ¡ã‚­ã‚·ã‚³ã¨ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«ãŠã‘ã‚‹ãƒŠã‚°ã‚¢ãƒ«ã€å®ˆè­·éœŠã€å¤‰èº«ä¿¡ä»°ã€ç§˜å¯†çµç¤¾ã€å…ˆä½æ°‘åä¹±ã€ç«ãƒ»ç·‘çŸ³ãƒ»æ¨¹æœ¨ãƒ»åå­—ãªã©ã®è±¡å¾´ã€èªæºã¨æ—§ä¸–ç•Œã¨ã®æ¯”è¼ƒã‚’è«–ã˜ãŸ1894å¹´ã®æ°‘ä¿—å­¦ãƒ»å®—æ•™å²ç ”ç©¶ã€‚ç‹¬ç«‹æŠœåˆ·ã®æ¨™é¡Œç´™ã€ç›®æ¬¡ã€æœ¬æ–‡å…¨42ç¯€ã€å¼•ç”¨ã€åŸæ³¨ã€ç´¢å¼•352é …ç›®ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚å†…å®¹ã®ãªã„åŸåˆŠ2é ã¯çœç•¥ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/brinton-nagualism-1894/cover.jpg",
-    pdf:
-      "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/brinton-nagualism-1894/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.epub",
-    pageCount: 108,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ°‘ä¿—å­¦ç ”ç©¶", "å®—æ•™å²", "æ°‘æ—èªŒ"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒã‚¢ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒŠã‚°ã‚¢ãƒ«",
-      "ãƒŠã‚°ã‚¢ãƒªã‚ºãƒ ",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "å…ˆä½æ°‘å®—æ•™",
-      "æ°‘é–“ä¼æ‰¿",
-      "ç§˜å¯†çµç¤¾",
-      "å‘ªè¡“",
-      "19ä¸–ç´€æœ«",
-    ],
-  },
-  {
-    slug: "pineda-chiapas-soconusco-1845",
-    title: "ãƒã‚¢ãƒ‘ã‚¹ãŠã‚ˆã³ã‚½ã‚³ãƒŒã‚¹ã‚³çœŒåœ°ç†èªŒ",
-    originalTitle:
-      "DescripciÃ³n geogrÃ¡fica del Departamento de Chiapas y Soconusco",
-    subtitle:
-      "1845å¹´åˆç‰ˆãƒ»åŸåˆŠæ¨™é¡Œç´™ã€åºæ–‡ã€æœ¬æ–‡ã€è«¸è¡¨ã€æœ«å°¾ä»˜è¼‰æ–‡æ›¸ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ¡ãƒ†ãƒªã‚ªãƒ»ãƒ”ãƒãƒ€",
-    series: "GEOGRAPHICAL DESCRIPTION Â· 1845",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€1845å¹´",
-    year: 1845,
-    extent:
-      "PDF 133é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»åŸåˆŠIIIâ€“IVé ã€5â€“150é ãƒ»æŠ˜è¾¼è¡¨2ç‚¹ãƒ»æœ«å°¾ä»˜è¼‰æ–‡æ›¸",
-    description:
-      "ãƒã‚¢ãƒ‘ã‚¹é«˜ç­‰å¸æ³•è£åˆ¤æ‰€åˆ¤äº‹ã‚¨ãƒ¡ãƒ†ãƒªã‚ªãƒ»ãƒ”ãƒãƒ€ãŒã€ãƒã‚¢ãƒ‘ã‚¹ã¨ã‚½ã‚³ãƒŒã‚¹ã‚³ã®æ­´å²ã€åœ°ç†ã€è‡ªç„¶ã€ä½æ°‘ã€è¡Œæ”¿åŒºç”»ã€äººå£ã€æ•™è‚²ã€è¾²æ¥­ã€ç”£æ¥­ã€å•†æ¥­ã€è²¡æ”¿ã€æ°‘æ—èªŒã€å¸æ³•ãƒ»è»äº‹ã‚’ä½“ç³»çš„ã«è¨˜è¿°ã—ãŸ1845å¹´ã®åœ°ç†ãƒ»çµ±è¨ˆå²æ–™ã€‚1845å¹´åˆç‰ˆã®æ¨™é¡Œç´™ã€åºæ–‡ã€æœ¬æ–‡5â€“150é ã€äººå£æ¯”è¼ƒè¡¨ã¨æ­³å…¥ãƒ»æ”¯å‡ºè¡¨ã€æœ«å°¾ã®åœ°å›³æ‰¹è©•ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/pineda-chiapas-soconusco-1845/cover.jpg",
-    pdf:
-      "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
-    pageCount: 133,
-    figureCount: 3,
-    plateCount: 0,
-    types: ["åœ°ç†èªŒ", "çµ±è¨ˆè³‡æ–™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ã‚½ã‚³ãƒŒã‚¹ã‚³", "ãƒ¡ã‚­ã‚·ã‚³", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "äººå£çµ±è¨ˆ",
-      "è¡Œæ”¿åŒºç”»",
-      "è‡ªç„¶èªŒ",
-      "è¾²æ¥­",
-      "å•†æ¥­",
-      "æ°‘æ—èªŒ",
-      "å¸æ³•çµ±è¨ˆ",
-      "19ä¸–ç´€ä¸­è‘‰",
-    ],
-  },
-  {
-    slug: "paniagua-catecismo-chiapas-1876",
-    title: "ãƒã‚¢ãƒ‘ã‚¹æ­´å²ãƒ»çµ±è¨ˆåˆç­‰å•ç­”",
-    originalTitle: "Catecismo elemental de historia y estadÃ­stica de Chiapas",
-    subtitle:
-      "1876å¹´åˆç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨108é ã€ç´¢å¼•ã€æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ“ã‚ªãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‘ãƒ‹ã‚¢ã‚°ã‚¢",
-    series: "HISTORY AND STATISTICS Â· 1876",
-    originalPublication: "ã‚µãƒ³ãƒ»ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ©ã‚¹ãƒ»ã‚«ã‚µã‚¹ã€1876å¹´",
-    year: 1876,
-    extent:
-      "PDF 157é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1â€“108é ãƒ»ç´¢å¼•ãƒ»æ­£èª¤è¡¨ãƒ»åŸåˆŠæ¨™é¡Œç´™ç”»åƒ1ç‚¹",
-    description:
-      "ãƒã‚¢ãƒ‘ã‚¹ã®æ­´å²ã€åœ°ç†ã€ä½æ°‘ã€è¨€èªã€å®—æ•™ã€çµ±æ²»ã€äººå£ã€è²¡æ”¿ã€å¸æ³•ã€æ•™è‚²ã€è¾²æ¥­ã€ç”£æ¥­ãªã©ã‚’å•ç­”å½¢å¼ã§ã¾ã¨ã‚ãŸ1876å¹´åˆŠã®åˆç­‰æ•™è‚²ç”¨æ­´å²ãƒ»çµ±è¨ˆæ›¸ã€‚åˆç‰ˆã®æ¨™é¡Œç´™ã€å‚ç…§è‘—è€…ä¸€è¦§ã€åºè¨€ã€çŒ®è¾ã€æœ¬æ–‡å…¨108é ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/paniagua-catecismo-chiapas-1876/cover.jpg",
-    pdf:
-      "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
-    pageCount: 157,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "åœ°ç†èªŒ", "çµ±è¨ˆè³‡æ–™", "æ•™è‚²æ›¸"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒã‚¢ãƒ‘ã‚¹å²",
-      "äººå£çµ±è¨ˆ",
-      "è¡Œæ”¿åŒºç”»",
-      "å…¬æ•™è‚²",
-      "è¾²æ¥­",
-      "ç”£æ¥­",
-      "å•ç­”æ›¸",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "morris-colony-british-honduras-1883",
-    title: "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¤æ°‘åœ°",
-    originalTitle:
-      "The Colony of British Honduras: Its Resources and Prospects; with Particular Reference to Its Indigenous Plants and Economic Productions",
-    subtitle:
-      "1883å¹´åˆç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨152é ã€ä»˜éŒ²ã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»ãƒ¢ãƒªã‚¹",
-    series: "THE COLONY OF BRITISH HONDURAS Â· 1883",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1883å¹´",
-    year: 1883,
-    extent:
-      "PDF 160é ãƒ»åŸåˆŠå‰ä»˜xiiié ãƒ»æœ¬æ–‡1â€“152é ãƒ»æŠ˜è¾¼å½©è‰²åœ°å›³1ç‚¹ãƒ»å›³ç‰ˆ2è‘‰ãƒ»æœ¬æ–‡æŒ¿å›³1ç‚¹",
-    description:
-      "æ¤ç‰©å­¦è€…ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»ãƒ¢ãƒªã‚¹ãŒè‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®åœ°ç†ã€æ­´å²ã€è¡Œæ”¿ã€äº¤é€šã€ä½æ°‘ã€æ£®æ—è³‡æºã€çµŒæ¸ˆæ¤ç‰©ã€è¾²æ¥­ã€åŠ´åƒã€åœŸåœ°åˆ¶åº¦ã€æ°—å€™ã‚’èª¿æŸ»ã—ã€æ¤æ°‘åœ°ã®è³‡æºã¨å°†æ¥æ€§ã‚’è«–ã˜ãŸ1883å¹´åˆŠè¡Œæ›¸ã€‚åŸåˆŠå‰ä»˜ã€å…¨8ç« ã€åŸæ³¨ã€è¡¨ã€ä»˜éŒ²ã€æ–‡çŒ®ä¸€è¦§ã€ç´¢å¼•ã‚’å…¨è¨³ã—ã€è£…ä¸ã€ç•¥æ¨™é¡Œç´™ã€æŠ˜è¾¼å½©è‰²åœ°å›³ã€æ¨™é¡Œç´™ã€å›³ç‰ˆ2è‘‰ã€æœ¬æ–‡æŒ¿å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/morris-colony-british-honduras-1883/cover.jpg",
-    pdf:
-      "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/morris-colony-british-honduras-1883/Morris_The_Colony_of_British_Honduras_1883_Japanese_Complete_Translation.epub",
-    pageCount: 160,
-    figureCount: 1,
-    plateCount: 3,
-    types: ["åœ°ç†å ±å‘Š", "åšç‰©èªŒ", "çµŒæ¸ˆèª¿æŸ»", "æ—…è¡Œè¨˜"],
-    regions: ["è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "æ¤ç‰©èªŒ",
-      "çµŒæ¸ˆæ¤ç‰©",
-      "ãƒãƒ›ã‚¬ãƒ‹ãƒ¼",
-      "ãƒ­ã‚°ã‚¦ãƒƒãƒ‰",
-      "æ¤æ°‘åœ°è¡Œæ”¿",
-      "è¾²æ¥­",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "henderson-british-honduras-1811",
-    title: "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¤æ°‘åœ°èªŒ",
-    originalTitle:
-      "An Account of the British Settlement of Honduras; Being a View of Its Commercial and Agricultural Resources, Soil, Climate, Natural History, &c. To Which Are Added, Sketches of the Manners and Customs of the Mosquito Indians, Preceded by the Journal of a Voyage to the Mosquito Shore. Illustrated by a Map",
-    subtitle:
-      "1811å¹´å¢—è£œç¬¬2ç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨237é ã€èˆªæµ·æ—¥èªŒã€èªå½™é›†ã€æ°—è±¡è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ãƒ˜ãƒ³ãƒ€ãƒ¼ã‚½ãƒ³",
-    series: "BRITISH HONDURAS Â· 1811",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1811å¹´",
-    year: 1811,
-    extent:
-      "PDF 131é ãƒ»åŸåˆŠå‰ä»˜vâ€“xié ãƒ»æœ¬æ–‡1â€“237é ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ãƒ˜ãƒ³ãƒ€ãƒ¼ã‚½ãƒ³å¤§å°‰ãŒè‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¤æ°‘åœ°ã®æ”¿æ²»å²ã€å•†æ¥­ã€è¾²æ¥­ã€ä½æ°‘ã€è‡ªç„¶èªŒã‚’æ¦‚èª¬ã—ãŸ1811å¹´å¢—è£œç¬¬2ç‰ˆã€‚ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã¸ã®èˆªæµ·æ—¥èªŒã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆãƒ»ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ã®é¢¨ä¿—ç¿’æ…£ç´ æã€èªå½™é›†ã€1806å¹´ã®æ°—è±¡è¡¨ã‚’ä½µéŒ²ã—ã€åŸåˆŠæ¨™é¡Œç´™ã€çŒ®è¾ã€åºæ–‡ã€ç¬¬2ç‰ˆåºƒå‘Šã€ç›®æ¬¡ã€æŠ˜è¾¼åœ°å›³ã€æœ¬æ–‡å…¨237é ã€å·»æœ«å°è¨˜ã¾ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/henderson-british-honduras-1811/cover.jpg",
-    pdf:
-      "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
-    pageCount: 131,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["åœ°ç†èªŒ", "æ¤æ°‘åœ°å²", "æ—…è¡Œè¨˜", "æ°‘æ—èªŒ"],
-    regions: ["è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "æ¤æ°‘åœ°è¡Œæ”¿",
-      "ãƒãƒ›ã‚¬ãƒ‹ãƒ¼",
-      "ãƒ­ã‚°ã‚¦ãƒƒãƒ‰",
-      "åšç‰©èªŒ",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆäºº",
-      "èˆªæµ·æ—¥èªŒ",
-      "æ°—è±¡è¦³æ¸¬",
-      "19ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "gann-maya-indians-1918",
-    title: "å—ãƒ¦ã‚«ã‚¿ãƒ³ãŠã‚ˆã³åŒ—éƒ¨è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®ãƒãƒ¤äºº",
-    originalTitle:
-      "The Maya Indians of Southern Yucatan and Northern British Honduras",
-    subtitle:
-      "1918å¹´åˆç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨146é ã€å›³ç‰ˆ28ç‚¹ã€æœ¬æ–‡æŒ¿å›³84ç‚¹ã€å¼•ç”¨æ–‡çŒ®ã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒˆãƒ¼ãƒã‚¹ãƒ»Wãƒ»Fãƒ»ã‚¬ãƒ³",
-    series: "BUREAU OF AMERICAN ETHNOLOGY Â· BULLETIN 64 Â· 1918",
-    originalPublication: "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€1918å¹´",
-    year: 1918,
-    extent:
-      "PDF 210é ãƒ»åŸåˆŠ1â€“146é ãƒ»æœ¬æ–‡æŒ¿å›³84ç‚¹ãƒ»åˆ¥ä¸å›³ç‰ˆ28ç‚¹ãƒ»åŸæ³¨62ä»¶",
-    description:
-      "ãƒˆãƒ¼ãƒã‚¹ãƒ»Wãƒ»Fãƒ»ã‚¬ãƒ³ãŒå—ãƒ¦ã‚«ã‚¿ãƒ³ã¨åŒ—éƒ¨è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®ãƒãƒ¤äººã®èº«ä½“çš„ç‰¹å¾´ã€ç”Ÿæ¥­ã€ç¤¾ä¼šç”Ÿæ´»ã€åŒ»ç™‚ã€éŠæˆ¯ã€å®—æ•™å„€ç¤¼ã‚’è¨˜éŒ²ã—ã€å¾ŒåŠã§æ±éƒ¨ãƒãƒ¤åœ°åŸŸã®å¢³ä¸˜41åŸºã‚’ä¸­å¿ƒã¨ã™ã‚‹ç™ºæ˜æˆæœã‚’å ±å‘Šã—ãŸ1918å¹´åˆŠè¡Œæ›¸ã€‚è£…ä¸è¡¨ç´™ã€æ¨™é¡Œç´™ã€é€ä»˜çŠ¶ã€ç›®æ¬¡ã€å›³ç‰ˆç›®éŒ²ã€ãƒãƒ¤èªç™ºéŸ³è¡¨ã€æœ¬æ–‡ã€åŸæ³¨62ä»¶ã€è¡¨ã€æœ¬æ–‡æŒ¿å›³84ç‚¹ã€å›³ç‰ˆ28ç‚¹ã€å¼•ç”¨æ–‡çŒ®ã€ç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/gann-maya-indians-1918/cover.jpg",
-    pdf:
-      "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/gann-maya-indians-1918/Gann_The_Maya_Indians_of_Southern_Yucatan_and_Northern_British_Honduras_1918_Japanese_Complete_Translation.epub",
-    pageCount: 210,
-    figureCount: 84,
-    plateCount: 28,
-    types: ["æ°‘æ—èªŒ", "è€ƒå¤å­¦ç ”ç©¶", "ç™ºæ˜å ±å‘Š"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "æ°‘æ—å­¦",
-      "å®—æ•™å„€ç¤¼",
-      "ç‰©è³ªæ–‡åŒ–",
-      "å¢³ä¸˜ç™ºæ˜",
-      "ã‚µãƒ³ã‚¿ãƒ»ãƒªã‚¿",
-      "åŸåˆŠå›³ç‰ˆ",
-      "20ä¸–ç´€åˆé ­",
-    ],
-  },
-  {
-    slug: "uring-voyages-travels-1928",
-    title: "ãƒŠã‚µãƒ‹ã‚¨ãƒ«ãƒ»ãƒ¦ãƒ¼ãƒªãƒ³ã‚°èˆ¹é•·ã®èˆªæµ·ã¨æ—…è¡Œ",
-    originalTitle:
-      "The Voyages and Travels of Captain Nathaniel Uring",
-    subtitle:
-      "1928å¹´ã€Œèˆ¹ä¹—ã‚Šå¢æ›¸ã€ç‰ˆãƒ»ãƒ‡ãƒ¥ãƒ¯ãƒ¼åºèª¬ãƒ»æ³¨ã€æœ¬æ–‡å…¨248é ã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒŠã‚µãƒ‹ã‚¨ãƒ«ãƒ»ãƒ¦ãƒ¼ãƒªãƒ³ã‚°",
-    series: "THE SEAFARERS' LIBRARY Â· 1928",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1928å¹´",
-    year: 1928,
-    extent:
-      "PDF 350é ãƒ»åŸåˆŠå‰ä»˜vâ€“viiã€ixâ€“xxxiiié ãƒ»æœ¬æ–‡1â€“248é ãƒ»ç´¢å¼•249â€“253é ãƒ»ç•¥æ¨™é¡Œç´™ã€æ¨™é¡Œç´™å„1ç‚¹ãƒ»å›³ç‰ˆ8è‘‰",
-    description:
-      "ãƒŠã‚µãƒ‹ã‚¨ãƒ«ãƒ»ãƒ¦ãƒ¼ãƒªãƒ³ã‚°ãŒ17ä¸–ç´€æœ«ã‹ã‚‰18ä¸–ç´€åˆé ­ã«çµŒé¨“ã—ãŸå¤§è¥¿æ´‹ã€ãƒãƒ«ãƒˆæµ·ã€è¥¿ã‚¢ãƒ•ãƒªã‚«ã€è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶ã€åŒ—ç±³ã€åœ°ä¸­æµ·ã¸ã®èˆªæµ·ã¨æ—…è¡Œã®è¨˜éŒ²ã€‚è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã€ã‚«ãƒ³ãƒšãƒã‚§æ¹¾ã¸ã®èˆªæµ·ã¨é›£ç ´ã‚’å«ã‚€1726å¹´åˆç‰ˆæœ¬æ–‡ã«ã€ã‚¢ãƒ«ãƒ•ãƒ¬ãƒƒãƒ‰ãƒ»ãƒ‡ãƒ¥ãƒ¯ãƒ¼ã®åºèª¬ãƒ»æ³¨ã€ç´¢å¼•ã‚’åŠ ãˆãŸ1928å¹´ç‰ˆã‚’å…¨è¨³ã—ã€åŒç‰ˆæ‰€åã®å›³ç‰ˆ8è‘‰ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/uring-voyages-travels-1928/cover.jpg",
-    pdf:
-      "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/uring-voyages-travels-1928/Nathaniel_Uring_Voyages_and_Travels_1928_Japanese_Complete_Translation.epub",
-    pageCount: 350,
-    figureCount: 0,
-    plateCount: 10,
-    types: ["æ—…è¡Œè¨˜", "èˆªæµ·è¨˜", "æ¤æ°‘åœ°å²", "æ°‘æ—èªŒ"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚«ãƒªãƒ–æµ·",
-      "è¥¿ã‚¢ãƒ•ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "èˆªæµ·å²",
-      "å¤§è¥¿æ´‹ä¸–ç•Œ",
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "å¥´éš·è²¿æ˜“",
-      "éƒµä¾¿èˆ¹",
-      "é›£ç ´",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¹¾",
-      "18ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "cook-balise-merida-1769",
-    title: "ãƒ™ãƒªãƒ¼ã‚ºå·ã‹ã‚‰ãƒ¡ãƒªãƒ€ã¾ã§ã®é€šè¡Œã«é–¢ã™ã‚‹æ‰€è¦‹",
-    originalTitle:
-      "Remarks on a Passage from the River Balise, in the Bay of Honduras, to Merida: the Capital of the Province of Jucatan, in the Spanish West Indies",
-    subtitle:
-      "1769å¹´åˆç‰ˆãƒ»åŸåˆŠæ¨™é¡Œç´™ã€æœ¬æ–‡å…¨34é ã€åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¸ã‚§ãƒ¼ãƒ ã‚ºãƒ»ã‚¯ãƒƒã‚¯ä¸­å°‰",
-    series: "TRAVEL REPORT Â· 1769",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1769å¹´",
-    year: 1769,
-    extent:
-      "PDF 17é ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»æœ¬æ–‡1â€“34é ãƒ»åŸæ³¨1ç‚¹ãƒ»åŸåˆŠè£…é£¾1ç‚¹",
-    description:
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«é§åœ¨ã®ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»ãƒãƒ¼ãƒŠãƒ“ãƒ¼æµ·è»å°‘å°†ã®å‘½ã‚’å—ã‘ãŸã‚¸ã‚§ãƒ¼ãƒ ã‚ºãƒ»ã‚¯ãƒƒã‚¯ä¸­å°‰ãŒã€1765å¹´2æœˆã‹ã‚‰3æœˆã«ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¹¾ã®ãƒ™ãƒªãƒ¼ã‚ºå·ã‹ã‚‰ãƒã‚«ãƒ©ãƒ«ã‚’çµŒã¦ãƒ¦ã‚«ã‚¿ãƒ³å·éƒ½ãƒ¡ãƒªãƒ€ã¸å…¬æ–‡æ›¸ã‚’é‹ã‚“ã æ—…ç¨‹è¨˜ã€‚æ²¿é“ã®æ°´è·¯ã€åœ°ç†ã€è»å‚™ã€ä½æ°‘ã€äº¤æ˜“ã€çµ±æ²»ã‚’è¨˜ã—ã€åŸåˆŠæ¨™é¡Œç´™ã€æœ¬æ–‡å…¨34é ã€åŸæ³¨ã€çµ‚æ­¢è¡¨ç¤ºã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/cook-balise-merida-1769/cover.jpg",
-    pdf:
-      "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/cook-balise-merida-1769/Cook_Remarks_River_Balise_to_Merida_1769_Japanese_Complete_Translation.epub",
-    pageCount: 17,
-    figureCount: 1,
-    plateCount: 1,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†å ±å‘Š", "æ¤æ°‘åœ°å²"],
-    regions: ["è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒã‚«ãƒ©ãƒ«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "æ—…ç¨‹",
-      "ãƒ™ãƒªãƒ¼ã‚ºå·",
-      "ãƒã‚«ãƒ©ãƒ«",
-      "ãƒ¡ãƒªãƒ€",
-      "ãƒ­ã‚°ã‚¦ãƒƒãƒ‰",
-      "æ¤æ°‘åœ°è¡Œæ”¿",
-      "18ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "swett-british-honduras-san-pedro-1868",
-    title: "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ãŠã‚ˆã³ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹å…±å’Œå›½ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­ã¸ã®æ—…",
-    originalTitle:
-      "A Trip to British Honduras, and to San Pedro, Republic of Honduras",
-    subtitle:
-      "1868å¹´åˆç‰ˆãƒ»åŸåˆŠå°åˆ·è¡¨ç´™ã€æ¨™é¡Œç´™ã€åºæ–‡ã€æœ¬æ–‡3â€“125é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒ£ãƒ¼ãƒ«ã‚ºãƒ»ã‚¹ã‚¦ã‚§ãƒƒãƒˆ",
-    series: "TRAVEL ACCOUNT Â· 1868",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ã‚ªãƒ¼ãƒªãƒ³ã‚ºã€1868å¹´",
-    year: 1868,
-    extent:
-      "PDF 110é ãƒ»åŸåˆŠå°åˆ·è¡¨ç´™1ç‚¹ãƒ»æ¨™é¡Œç´™1ç‚¹ãƒ»åºæ–‡ãƒ»æœ¬æ–‡3â€“125é ",
-    description:
-      "å—åŒ—æˆ¦äº‰å¾Œã®1867å¹´æœ«ã‹ã‚‰1868å¹´æ˜¥ã«ã‹ã‘ã¦ã€ãƒŸã‚·ã‚·ãƒƒãƒ”å·å‡ºèº«ã®ãƒãƒ£ãƒ¼ãƒ«ã‚ºãƒ»ã‚¹ã‚¦ã‚§ãƒƒãƒˆãŒç§»ä½å€™è£œåœ°ã‚’èª¿æŸ»ã™ã‚‹ãŸã‚è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã¨ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹å…±å’Œå›½ã‚’æ—…ã—ãŸè¨˜éŒ²ã€‚ãƒ™ãƒªãƒ¼ã‚ºã€æ²¿å²¸æ²³å·ã€ã‚ªãƒ¢ã‚¢ã€ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­ãªã©ã®åœŸåœ°ã€ç¤¾ä¼šã€ç”£æ¥­ã€çµ±æ²»ã€ç§»æ°‘æ”¿ç­–ã‚’è¨˜ã—ã€åŸåˆŠå°åˆ·è¡¨ç´™ã€æ¨™é¡Œç´™ã€åºæ–‡ã€æœ¬æ–‡3â€“125é ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/swett-british-honduras-san-pedro-1868/cover.jpg",
-    pdf:
-      "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/swett-british-honduras-san-pedro-1868/Swett_A_Trip_to_British_Honduras_and_San_Pedro_1868_Japanese_Complete_Translation.epub",
-    pageCount: 110,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†å ±å‘Š", "ç§»æ°‘è«–"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­ãƒ»ã‚¹ãƒ¼ãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ç§»ä½èª¿æŸ»",
-      "å—åŒ—æˆ¦äº‰",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ã‚ªãƒ¢ã‚¢",
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­",
-      "æ¤æ°‘åœ°è¡Œæ”¿",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "gann-discoveries-central-america-1928",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã«ãŠã‘ã‚‹ç™ºè¦‹ã¨å†’é™º",
-    originalTitle: "Discoveries and Adventures in Central America",
-    subtitle:
-      "1928å¹´åˆç‰ˆãƒ»ã‚¸ãƒ§ã‚¤ã‚¹åºæ–‡ã€æœ¬æ–‡å…¨18ç« ã€å…¨å›³ç‰ˆã€ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒˆãƒ¼ãƒã‚¹ãƒ»Wãƒ»Fãƒ»ã‚¬ãƒ³",
-    series: "DISCOVERIES AND ADVENTURES Â· 1928",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1928å¹´",
-    year: 1928,
-    extent:
-      "PDF 296é ãƒ»åŸåˆŠå‰ä»˜5â€“17é ãƒ»æœ¬æ–‡19â€“256é ãƒ»ç´¢å¼•257â€“261é ãƒ»åŸåˆŠç”»åƒ35ç‚¹ãƒ»è¡¨2ç‚¹",
-    description:
-      "ãƒˆãƒ¼ãƒã‚¹ãƒ»Wãƒ»Fãƒ»ã‚¬ãƒ³ãŒè‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã§è¡Œã£ãŸæ—…è¡Œã€æ´çªŸèª¿æŸ»ã€ãƒãƒ¤éºè·¡ã®è¸æŸ»ãƒ»ç™ºæ˜ã‚’ã€è‡ªç„¶èªŒãƒ»æ°‘æ—èªŒçš„è¦³å¯Ÿã¨ã¨ã‚‚ã«è¨˜ã—ãŸ1928å¹´åˆŠè¡Œæ›¸ã€‚ç•¥æ¨™é¡Œç´™ã€å£çµµã€æ¨™é¡Œç´™ã€ç›®æ¬¡ã€å›³ç‰ˆç›®éŒ²ã€ãƒˆãƒ¼ãƒã‚¹ãƒ»Aãƒ»ã‚¸ãƒ§ã‚¤ã‚¹ã«ã‚ˆã‚‹åºæ–‡ã€æœ¬æ–‡å…¨18ç« ã€åŸåˆŠç”»åƒ35ç‚¹ã€è¡¨2ç‚¹ã€ç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/gann-discoveries-central-america-1928/cover.jpg",
-    pdf:
-      "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
-    pageCount: 296,
-    figureCount: 0,
-    plateCount: 35,
-    types: ["æ¢æ¤œè¨˜", "è€ƒå¤å­¦ç ”ç©¶", "æ—…è¡Œè¨˜"],
-    regions: ["è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ãƒãƒ¤åœ°åŸŸ", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "æ´çªŸèª¿æŸ»",
-      "ãƒãƒ¥ãƒ ãƒãƒ£",
-      "çŸ³ç¢‘",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "å¤§è‹±åšç‰©é¤¨",
-      "åŸåˆŠå›³ç‰ˆ",
-      "20ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "juarros-compendio-guatemala-1857",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚å²è¦è¦§",
-    originalTitle: "Compendio de la historia de la ciudad de Guatemala",
-    subtitle:
-      "1857å¹´ç‰ˆãƒ»å…¨2å·»ã€å…¨7è«–ã€ä»˜éŒ²ã€åŸæ³¨ã€ç›®æ¬¡ã€è³¼èª­è€…åç°¿ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ‰ãƒŸãƒ³ã‚´ãƒ»ãƒ•ã‚¢ãƒ­ã‚¹",
-    series: "HISTORICAL COMPENDIUM Â· 1857",
-    originalPublication: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1857å¹´",
-    year: 1857,
-    extent:
-      "PDF 697é ãƒ»åŸåˆŠç¬¬1å·»5â€“376é ã€ç¬¬2å·»5â€“384é ãƒ»åŸåˆŠç”»åƒ4ç‚¹ãƒ»è¡¨53ç‚¹ãƒ»åŸæ³¨100ä»¶",
-    description:
-      "ãƒ‰ãƒŸãƒ³ã‚´ãƒ»ãƒ•ã‚¢ãƒ­ã‚¹ã«ã‚ˆã‚‹ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½ãƒ»é¦–éƒ½ã®åœ°ç†ã€æ•™ä¼šåˆ¶åº¦ã€æ¤æ°‘åœ°å²ã€å¾æœå²ã€åœ°æ–¹å²ã‚’é›†æˆã—ãŸ1857å¹´ç‰ˆå…¨2å·»ã®æ—¥æœ¬èªå…¨è¨³ã€‚åŸåˆŠã®å‰ä»˜ã€å…¨7è«–ã€ä»˜éŒ²ã€åŸæ³¨ã€è¡¨ã€ç´¢å¼•ã€å·»æœ«ç›®æ¬¡ã€è³¼èª­è€…åç°¿ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/juarros-compendio-guatemala-1857/cover.jpg",
-    pdf:
-      "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
-    pageCount: 697,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["æ­´å²æ›¸", "åœ°èªŒ", "æ¤æ°‘åœ°å²", "æ•™ä¼šå²"],
-    regions: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚",
-      "åœ°ç†",
-      "æ•™ä¼šåˆ¶åº¦",
-      "å¾æœå²",
-      "åœ°æ–¹å²",
-      "è³¼èª­è€…åç°¿",
-      "19ä¸–ç´€ä¸­è‘‰",
-    ],
-  },
-  {
-    slug: "moran-cholti-1695",
-    title: "ãƒãƒ§ãƒ«ãƒ†ã‚£èªæ–‡æ³•ãƒ»èªå½™é›†",
-    originalTitle:
-      "Arte y vocabulario de la lengua CholtÃ­ que quiere decir lengua de milperos",
-    subtitle:
-      "1695å¹´å†™æœ¬ãƒ»æ–‡æ³•2ç¨¿ã€å®—æ•™æ–‡ã€å‘Šè§£å•ç­”ã€ãƒãƒ§ãƒ«ãƒ†ã‚£èªèªå½™ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ¢ãƒ©ãƒ³",
-    series: "ARTE Y VOCABULARIO CHOLTÃ Â· 1695",
-    originalPublication: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1685â€“1695å¹´ï¼ˆå†™æœ¬ï¼‰",
-    year: 1695,
-    extent:
-      "PDF 147é ãƒ»åŸå†™æœ¬1â€“182é ãƒ»ç„¡ç•ªå·æŒ¿å…¥è‘‰2æšãƒ»bisé 2é ãƒ»å†™æœ¬å›³ç‰ˆ7ç‚¹",
-    description:
-      "17ä¸–ç´€æœ«ã®ãƒãƒ§ãƒ«ãƒ†ã‚£èªã‚’è¨˜éŒ²ã—ãŸæ–‡æ³•æ›¸ãƒ»å®—æ•™æ–‡ãƒ»èªå½™é›†ã€‚ãƒ™ãƒ¬ãƒ³å®£æ•™åœ°ã®å‰µè¨­è¨˜äº‹ã€æ–‡æ³•2ç¨¿ã€å®—æ•™å•ç­”ã€ãƒ­ã‚¶ãƒªã‚ªã€å‘Šè§£å•ç­”ã€ã‚¹ãƒšã‚¤ãƒ³èªè¦‹å‡ºã—ã«ã‚ˆã‚‹ãƒãƒ§ãƒ«ãƒ†ã‚£èªèªå½™Aâ€“Zã€æ•°ã®ä½“ç³»ã€å¥¥æ›¸ã‚’æ—¥æœ¬èªåŒ–ã—ã€åŸå†™æœ¬é ã€ç©ºç™½é ã€æ¬ è‘‰ã€é‡ã­æ›¸ãã®ã‚ã‚‹ä½œæ¥­è‘‰ã‚’è¨˜éŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/moran-cholti-1695/cover.jpg",
-    pdf:
-      "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
-    pageCount: 147,
-    figureCount: 7,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "æ–‡æ³•æ›¸", "èªå½™é›†", "å®£æ•™å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒšãƒ†ãƒ³", "ãƒ™ãƒªãƒ¼ã‚º"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ§ãƒ«ãƒ†ã‚£èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒãƒ¤è«¸èª",
-      "ãƒãƒ§ãƒ«ãƒ†ã‚£èª",
-      "ãƒ‰ãƒŸãƒ‹ã‚³ä¼š",
-      "æ¤æ°‘åœ°æœŸ",
-      "å®—æ•™å•ç­”",
-      "å‘Šè§£å•ç­”",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "thompson-ethnology-mayas-1930",
-    title: "å—éƒ¨ãŠã‚ˆã³ä¸­éƒ¨è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®ãƒãƒ¤äººã®æ°‘æ—èªŒ",
-    originalTitle:
-      "Ethnology of the Mayas of Southern and Central British Honduras",
-    subtitle:
-      "1930å¹´åŸåˆŠãƒ»å…¨9ç« ã€ä»˜éŒ²2ç¯‡ã€å‚è€ƒæ–‡çŒ®ã€ç´¢å¼•ã€åœ°å›³1è‘‰ãƒ»å†™çœŸå›³ç‰ˆ24è‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "Jãƒ»ã‚¨ãƒªãƒƒã‚¯ãƒ»Sãƒ»ãƒˆãƒ³ãƒ—ã‚½ãƒ³",
-    series: "FIELD MUSEUM ANTHROPOLOGICAL SERIES Â· 1930",
-    originalPublication: "ã‚·ã‚«ã‚´ã€1930å¹´",
-    year: 1930,
-    extent:
-      "PDF 284é ãƒ»åŸåˆŠ27â€“213é ãƒ»åœ°å›³1è‘‰ãƒ»å†™çœŸå›³ç‰ˆ24è‘‰",
-    description:
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªã€ã‚½ã‚³ãƒ„ã€ã‚³ãƒ­ã‚µãƒ«åœ°åŒºã‚’ä¸­å¿ƒã«ã€å±…ä½ç’°å¢ƒã€è¾²è€•ã€å®—æ•™ã¨å‘ªè¡“ã€ç¤¾ä¼šç”Ÿæ´»ã€ç”Ÿæ¥­ã¨å·¥èŠ¸ã€æ°‘é–“ä¼æ‰¿ã€è¨€èªã€æ ½åŸ¹æ¤ç‰©ã‚’è¨˜éŒ²ã—ãŸæ°‘æ—èªŒã€‚åŸåˆŠå…¨9ç« ã€ä»˜éŒ²2ç¯‡ã€å‚è€ƒæ–‡çŒ®ã€ãƒãƒ¤èªç´¢å¼•ã€ä¸€èˆ¬ç´¢å¼•ã€åœ°å›³1è‘‰ã€å†™çœŸå›³ç‰ˆ24è‘‰ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/thompson-ethnology-mayas-1930/cover.jpg",
-    pdf:
-      "publications/thompson-ethnology-mayas-1930/J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/thompson-ethnology-mayas-1930/J_Eric_S_Thompson_Ethnology_of_the_Mayas_1930_Japanese_Complete_Translation.epub",
-    pageCount: 284,
-    figureCount: 1,
-    plateCount: 24,
-    types: ["æ°‘æ—èªŒ", "æ°‘é–“ä¼æ‰¿", "è¨€èªè³‡æ–™", "æ¤æ°‘åœ°å²"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒˆãƒ¬ãƒ‰åœ°åŒº",
-      "ã‚«ãƒ¨åœ°åŒº",
-      "ã‚³ãƒ­ã‚µãƒ«åœ°åŒº",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ª",
-      "ã‚½ã‚³ãƒ„",
-      "è¾²è€•",
-      "å®—æ•™å„€ç¤¼",
-      "å‘ªè¡“",
-      "æ°‘é–“ä¼æ‰¿",
-      "ç‰©è³ªæ–‡åŒ–",
-      "åŸåˆŠå›³ç‰ˆ",
-      "20ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "berendt-vermessungsarbeiten-mexiko-1862",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ã«ãŠã‘ã‚‹æ¸¬é‡äº‹æ¥­",
-    originalTitle: "I. Vermessungs-Arbeiten in Mexiko",
-    subtitle: "1862å¹´åŸåˆŠãƒ»åŸåˆŠ171â€“173é ã€åŸæ³¨4ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1862",
-    originalPublication: "ã‚´ãƒ¼ã‚¿ã€1862å¹´",
-    year: 1862,
-    extent: "PDF 6é ãƒ»åŸåˆŠ171â€“173é ãƒ»åŸæ³¨4ä»¶",
-    description:
-      "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯åœ°å³¡ã€ã‚½ãƒãƒ©ã€ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ï¼ãƒ¡ã‚­ã‚·ã‚³é‰„é“ã€ãƒ—ã‚¨ãƒ–ãƒ©å·ã€ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°ã€ãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³å·ãªã©ã§é€²ã‚ã‚‰ã‚ŒãŸæ¸¬é‡ãƒ»é‰„é“ãƒ»åœ°å›³ä½œæˆäº‹æ¥­ã‚’å ±å‘Šã—ãŸã€ãƒ¡ã‚­ã‚·ã‚³é€šä¿¡ã€ç¬¬1å ±ã€‚åŸåˆŠ171â€“173é ã®æœ¬æ–‡å…¨æ–‡ã¨åŸæ³¨4ä»¶ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-vermessungsarbeiten-mexiko-1862/cover.jpg",
-    pdf:
-      "publications/berendt-vermessungsarbeiten-mexiko-1862/Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-vermessungsarbeiten-mexiko-1862/Carl_Hermann_Berendt_Vermessungs-Arbeiten_in_Mexiko_1862_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ¸¬é‡å ±å‘Š", "åœ°ç†å ±å‘Š", "äº¤é€šå²", "é‰„é“å²"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯åœ°å³¡", "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹", "ã‚½ãƒãƒ©", "ãƒ—ã‚¨ãƒ–ãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ä¸‰è§’æ¸¬é‡",
-      "åœ°å›³ä½œæˆ",
-      "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯é‰„é“",
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹é‰„é“",
-      "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "berendt-maasse-gewichte-mexiko-1862",
-    title: "ãƒ¡ã‚­ã‚·ã‚³ã®åº¦é‡è¡¡",
-    originalTitle: "II. Maasse und Gewichte in Mexiko",
-    subtitle: "1862å¹´åŸåˆŠãƒ»åŸåˆŠ215â€“216é ã€åŸæ³¨1ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1862",
-    originalPublication: "ã‚´ãƒ¼ã‚¿ã€1862å¹´",
-    year: 1862,
-    extent: "PDF 7é ãƒ»åŸåˆŠ215â€“216é ãƒ»åŸæ³¨1ä»¶ãƒ»æ›ç®—è¡¨8ç‚¹",
-    description:
-      "ãƒ¡ã‚­ã‚·ã‚³ãƒ»ãƒãƒ©ã¨ãƒ¬ã‚°ã‚¢ã®æ³•å®šå€¤ã€ãƒ¡ãƒ¼ãƒˆãƒ«æ³•å°å…¥ã®çµŒç·¯ã€é•·ã•ãƒ»é¢ç©ãƒ»ç©€ç‰©ãŠã‚ˆã³æ¶²ä½“ã®å®¹ç©ãƒ»é‡é‡ãƒ»è²´é‡‘å±é‡é‡ãƒ»è²¨å¹£åˆ¶åº¦ã‚’å®˜å®šæ›ç®—è¡¨ã§æ•´ç†ã—ãŸã€ãƒ¡ã‚­ã‚·ã‚³é€šä¿¡ã€ç¬¬2å ±ã€‚åŸåˆŠ215â€“216é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-maasse-gewichte-mexiko-1862/cover.jpg",
-    pdf:
-      "publications/berendt-maasse-gewichte-mexiko-1862/Carl_Hermann_Berendt_Maasse_und_Gewichte_in_Mexiko_1862_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-maasse-gewichte-mexiko-1862/Carl_Hermann_Berendt_Maasse_und_Gewichte_in_Mexiko_1862_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åº¦é‡è¡¡", "çµ±è¨ˆè³‡æ–™", "åœ°ç†å ±å‘Š", "çµŒæ¸ˆå²"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚¿ãƒã‚¹ã‚³", "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒ¡ãƒ¼ãƒˆãƒ«æ³•",
-      "ãƒãƒ©",
-      "ãƒ¬ã‚°ã‚¢",
-      "åœŸåœ°åˆ¶åº¦",
-      "è²¨å¹£åˆ¶åº¦",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "berendt-handel-veracruz-1862",
-    title: "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã®è²¿æ˜“",
-    originalTitle: "III. Der Handel von Veracruz",
-    subtitle: "1862å¹´åŸåˆŠãƒ»åŸåˆŠ216â€“218é ã€åŸæ³¨3ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1862",
-    originalPublication: "ã‚´ãƒ¼ã‚¿ã€1862å¹´",
-    year: 1862,
-    extent: "PDF 8é ãƒ»åŸåˆŠ216â€“218é ãƒ»åŸæ³¨3ä»¶ãƒ»çµ±è¨ˆè¡¨3ç‚¹",
-    description:
-      "1856â€“1860å¹´ã®ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ç¨é–¢å¹´å ±ã‚’åŸºç¤ã«ã€è¼¸å‡ºå…¥ç·é¡ã€ä¸»è¦è¼¸å‡ºå“ã€é–¢ç¨åå…¥ã¨ã€å†…æˆ¦ãƒ»äº¤é€šé®æ–­ãƒ»å¯†è¼¸ãŒè²¿æ˜“ã¸ä¸ãˆãŸå½±éŸ¿ã‚’åˆ†æã—ãŸã€ãƒ¡ã‚­ã‚·ã‚³é€šä¿¡ã€ç¬¬3å ±ã€‚åŸåˆŠ216â€“218é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/berendt-handel-veracruz-1862/cover.jpg",
-    pdf:
-      "publications/berendt-handel-veracruz-1862/Carl_Hermann_Berendt_Der_Handel_von_Veracruz_1862_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-handel-veracruz-1862/Carl_Hermann_Berendt_Der_Handel_von_Veracruz_1862_Japanese_Complete_Translation.epub",
-    pageCount: 8,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è²¿æ˜“çµ±è¨ˆ", "çµŒæ¸ˆå²", "æ¸¯æ¹¾å²", "çµ±è¨ˆè³‡æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹", "ã‚ªã‚¢ãƒã‚«", "ã‚¿ãƒã‚¹ã‚³", "ãƒ¡ã‚­ã‚·ã‚³æ¹¾å²¸"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹æ¸¯",
-      "ç¨é–¢",
-      "è¼¸å‡ºå…¥",
-      "éŠ€è¼¸å‡º",
-      "ã‚³ãƒãƒ‹ãƒ¼ãƒ«",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "berendt-cochenille-produktion-oaxaca-1862",
-    title: "ã‚ªã‚¢ãƒã‚«å·ã®100å¹´é–“ï¼ˆ1758â€“1858å¹´ï¼‰ã®ã‚³ãƒãƒ‹ãƒ¼ãƒ«ç”Ÿç”£",
-    originalTitle:
-      "IV. Die Cochenille-Produktion des Staates von Oaxaca in 100 Jahren (1758â€“1858)",
-    subtitle: "1862å¹´åŸåˆŠãƒ»åŸåˆŠ256â€“258é ã€åŸæ³¨5ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1862",
-    originalPublication: "ã‚´ãƒ¼ã‚¿ã€1862å¹´",
-    year: 1862,
-    extent: "PDF 7é ãƒ»åŸåˆŠ256â€“258é ãƒ»åŸæ³¨5ä»¶ãƒ»çµ±è¨ˆè¡¨5ç‚¹",
-    description:
-      "1758â€“1858å¹´ã®ã‚ªã‚¢ãƒã‚«å·ã‚³ãƒãƒ‹ãƒ¼ãƒ«ç”Ÿç”£é‡ãƒ»ä¾¡é¡ã‚’100å¹´é–“ã«ã‚ãŸã£ã¦æ¯”è¼ƒã—ã€ä¾¡æ ¼ä¸‹è½ã€å†…æˆ¦ã€é‡‘èæ…£è¡Œã€è¼¸é€è²»ã€èª²ç¨ã€åˆæˆæŸ“æ–™ã®å½±éŸ¿ã‚’è«–ã˜ãŸã€ãƒ¡ã‚­ã‚·ã‚³é€šä¿¡ã€ç¬¬4å ±ã€‚åŸåˆŠ256â€“258é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-cochenille-produktion-oaxaca-1862/cover.jpg",
-    pdf:
-      "publications/berendt-cochenille-produktion-oaxaca-1862/Carl_Hermann_Berendt_Die_Cochenille-Produktion_des_Staates_von_Oaxaca_1758-1858_1862_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-cochenille-produktion-oaxaca-1862/Carl_Hermann_Berendt_Die_Cochenille-Produktion_des_Staates_von_Oaxaca_1758-1858_1862_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["ç”£æ¥­å²", "è¾²æ¥­å²", "çµŒæ¸ˆå²", "çµ±è¨ˆè³‡æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ã‚ªã‚¢ãƒã‚«", "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ã‚³ãƒãƒ‹ãƒ¼ãƒ«",
-      "ã‚µãƒãƒ†ã‚«äºº",
-      "æŸ“æ–™",
-      "è¾²æ¥­é‡‘è",
-      "ä¾¡æ ¼å²",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "berendt-mexikanische-geographische-literatur-1862-1",
-    title: "1860å¹´ä»¥å¾Œã®ãƒ¡ã‚­ã‚·ã‚³åœ°ç†å­¦æ–‡çŒ®",
-    originalTitle:
-      "V. Die Mexikanische Geographische Literatur seit dem Jahre 1860",
-    subtitle: "1862å¹´åŸåˆŠãƒ»é€£è¼‰ç¬¬1å›ã€åŸåˆŠ336â€“341é ã€åŸæ³¨8ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1862",
-    originalPublication: "ã‚´ãƒ¼ã‚¿ã€1862å¹´",
-    year: 1862,
-    extent: "PDF 16é ãƒ»åŸåˆŠ336â€“341é ãƒ»åŸæ³¨8ä»¶ãƒ»æ–‡çŒ®20é …ç›®",
-    description:
-      "ãƒ¡ã‚­ã‚·ã‚³ã§åˆŠè¡Œã•ã‚ŒãŸæ­´å²ãƒ»åœ°ç†ãƒ»çµ±è¨ˆæ–‡çŒ®20ç‚¹ã‚’ã€æ›¸èªŒæƒ…å ±ã¨æ‰¹è©•ã‚’ä»˜ã—ã¦ç´¹ä»‹ã—ãŸã€ãƒ¡ã‚­ã‚·ã‚³é€šä¿¡ã€ç¬¬5å ±ã®åˆå›æ²è¼‰åˆ†ã€‚ã‚¢ãƒ©ãƒãƒ³ã€ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã‚‰ã®è‘—ä½œãƒ»å²æ–™é›†ã‚’è«–ã˜ã€åŸèªŒã®ã€Œç¶šãã€ã¾ã§ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-mexikanische-geographische-literatur-1862-1/cover.jpg",
-    pdf:
-      "publications/berendt-mexikanische-geographische-literatur-1862-1/Carl_Hermann_Berendt_Die_Mexikanische_Geographische_Literatur_seit_1860_1862_Installment_1_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-mexikanische-geographische-literatur-1862-1/Carl_Hermann_Berendt_Die_Mexikanische_Geographische_Literatur_seit_1860_1862_Installment_1_Japanese_Complete_Translation.epub",
-    pageCount: 16,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ›¸èªŒ", "åœ°ç†å­¦å²", "æ­´å²å­¦å²", "æ–‡çŒ®ç´¹ä»‹"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒ¡ã‚­ã‚·ã‚³æ›¸èªŒ",
-      "åœ°ç†å­¦æ–‡çŒ®",
-      "æ­´å²æ›¸",
-      "å²æ–™é›†",
-      "ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    "slug": "berendt-baumwollenbau-yucatan-1863",
-    "title": "ãƒ¦ã‚«ã‚¿ãƒ³ã®ç¶¿èŠ±æ ½åŸ¹",
-    "originalTitle": "Baumwollenbau in Yucatan",
-    "subtitle": "1863å¹´åŸåˆŠãƒ»åŸåˆŠ389é ã€åŸæ³¨1ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "PETERMANNS GEOGRAPHISCHE MITTHEILUNGEN Â· 1863",
-    "originalPublication": "ã‚´ãƒ¼ã‚¿ã€1863å¹´",
-    "year": 1863,
-    "extent": "PDF 2é ãƒ»åŸåˆŠ389é ãƒ»åŸæ³¨1ä»¶",
-    "description": "ãƒ¦ã‚«ã‚¿ãƒ³ã§1862å¹´ã«å§‹ã¾ã£ãŸç¶¿èŠ±æ ½åŸ¹ã«ã¤ã„ã¦ã€å“ç¨®ã€åé‡ã€çµŒè²»ã€ç²—åç›Šã‚’ã‚¨ãƒã‚±ãƒ³ã¨æ¯”è¼ƒã—ã¦å ±å‘Šã—ãŸçŸ­å ±ã€‚åŸåˆŠ389é ã®æœ¬æ–‡å…¨æ–‡ã¨åŸæ³¨1ä»¶ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-baumwollenbau-yucatan-1863/cover.jpg",
-    "pdf": "publications/berendt-baumwollenbau-yucatan-1863/Carl_Hermann_Berendt_Baumwollenbau_in_Yucatan_1863_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-baumwollenbau-yucatan-1863/Carl_Hermann_Berendt_Baumwollenbau_in_Yucatan_1863_Japanese_Complete_Translation.epub",
-    "pageCount": 2,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è¾²æ¥­å ±å‘Š",
-      "ç”£æ¥­å²",
-      "åœ°ç†å ±å‘Š"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ã‚«ãƒ³ãƒšãƒã‚§",
-      "ã‚¿ãƒã‚¹ã‚³"
-    ],
-    "languages": [
-      "ãƒ‰ã‚¤ãƒ„èª"
-    ],
-    "tags": [
-      "ç¶¿èŠ±",
-      "ã‚¨ãƒã‚±ãƒ³",
-      "è¾²æ¥­åç›Š",
-      "ãƒ†ãƒã‚·ãƒ¥",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-analytical-alphabet-1869",
-    "title": "ãƒ¡ã‚­ã‚·ã‚³ãƒ»ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«è«¸èªã®åˆ†æçš„ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆ",
-    "originalTitle": "Analytical Alphabet for the Mexican & Central American Languages",
-    "subtitle": "1869å¹´åˆç‰ˆãƒ»è‡ªç­†ç¨¿ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª1â€“8é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "AMERICAN ETHNOLOGICAL SOCIETY Â· 1869",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1869å¹´",
-    "year": 1869,
-    "extent": "PDF 8é ãƒ»è‡ªç­†ç¨¿ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª1â€“8é ãƒ»è¡¨6ç‚¹",
-    "description": "ãƒ¡ã‚­ã‚·ã‚³ãƒ»ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«è«¸èªã®éŸ³ã‚’è¨˜éŒ²ã™ã‚‹ãŸã‚ã€å­éŸ³ãƒ»æ¯éŸ³ãƒ»éŸ»å¾‹è¨˜å·ã‚’åˆ†æçš„ã«æ•´ç†ã—ãŸãƒ™ãƒ¬ãƒ³ãƒˆã®è¡¨è¨˜æ³•ã€‚è‡ªç­†ç¨¿ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª1â€“8é ã®æœ¬æ–‡ã€ä¾‹èªã€ç¥ˆç¥·æ–‡ä¾‹ã€è¿½è¨˜ã€ç½²åã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-analytical-alphabet-1869/cover.jpg",
-    "pdf": "publications/berendt-analytical-alphabet-1869/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-analytical-alphabet-1869/Carl_Hermann_Berendt_Analytical_Alphabet_Mexican_Central_American_Languages_1869_Japanese_Complete_Translation.epub",
-    "pageCount": 8,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è¨€èªå­¦",
-      "éŸ³å£°å­¦",
-      "æ–‡å­—è«–",
-      "è¡¨è¨˜æ³•"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¦ã‚«ã‚¿ãƒ³"
-    ],
-    "languages": [
-      "è‹±èª",
-      "ãƒãƒ¤è«¸èª"
-    ],
-    "tags": [
-      "åˆ†æçš„ã‚¢ãƒ«ãƒ•ã‚¡ãƒ™ãƒƒãƒˆ",
-      "éŸ³ä¾¡",
-      "ãƒãƒ¤èª",
-      "ç¥ˆç¥·æ–‡",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-escritos-garcia-icazbalceta-1870",
-    "title": "ãƒ‰ãƒ³ãƒ»ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã®è‘—ä½œ",
-    "originalTitle": "Los escritos de D. JoaquÃ­n GarcÃ­a Icazbalceta",
-    "subtitle": "1870å¹´å†æ²æœ¬æ–‡ãƒ»åŸåˆŠ642â€“647é ã€åŸæ³¨1ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "BOLETÃN DE LA SOCIEDAD MEXICANA DE GEOGRAFÃA Y ESTADÃSTICA Â· 1870",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€1870å¹´",
-    "year": 1870,
-    "extent": "PDF 8é ãƒ»åŸåˆŠ642â€“647é ãƒ»åŸæ³¨1ä»¶",
-    "description": "åŒæ™‚ä»£ãƒ¡ã‚­ã‚·ã‚³ã®æ›¸èªŒå­¦è€…ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã®åé›†ã€ç¿»è¨³ã€å²æ–™åˆŠè¡Œã€å°åˆ·å²ç ”ç©¶ã‚’è©•ä¾¡ã—ãŸæ›¸èªŒè©•è«–ã€‚ã€BoletÃ­nã€å†æ²æœ¬æ–‡642â€“647é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-escritos-garcia-icazbalceta-1870/cover.jpg",
-    "pdf": "publications/berendt-escritos-garcia-icazbalceta-1870/Carl_Hermann_Berendt_Los_escritos_de_Joaquin_Garcia_Icazbalceta_1870_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-escritos-garcia-icazbalceta-1870/Carl_Hermann_Berendt_Los_escritos_de_Joaquin_Garcia_Icazbalceta_1870_Japanese_Complete_Translation.epub",
-    "pageCount": 8,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ›¸èªŒ",
-      "æ–‡çŒ®ç´¹ä»‹",
-      "æ­´å²å­¦å²",
-      "äººç‰©è©•ä¼"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿",
-      "å°åˆ·å²",
-      "å²æ–™åˆŠè¡Œ",
-      "ãƒ¡ã‚­ã‚·ã‚³æ›¸èªŒ",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-trabajos-linguisticos-juan-pio-perez-1871",
-    "title": "ãƒ‰ãƒ³ãƒ»ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹ã®è¨€èªå­¦ä¸Šã®ä»•äº‹",
-    "originalTitle": "Los trabajos lingÃ¼Ã­sticos de D. Juan PÃ­o PÃ©rez",
-    "subtitle": "1871å¹´åŸåˆŠãƒ»åŸåˆŠ58â€“61é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "BOLETÃN DE LA SOCIEDAD MEXICANA DE GEOGRAFÃA Y ESTADÃSTICA Â· 1871",
-    "originalPublication": "ãƒ¡ã‚­ã‚·ã‚³ã€1871å¹´",
-    "year": 1871,
-    "extent": "PDF 5é ãƒ»åŸåˆŠ58â€“61é ",
-    "description": "ãƒãƒ¤èªç ”ç©¶è€…ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹ã®ç”Ÿæ¶¯ã€è¾æ›¸ç·¨çº‚è³‡æ–™ã€ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ å†™æœ¬ã€æ¤ç‰©åé›†æˆã€æœªå®Œè¾æ›¸ã®æ§‹æˆã‚’è©³è¿°ã—ãŸæ›¸èªŒãƒ»è¨€èªå­¦å²å ±å‘Šã€‚åŸåˆŠ58â€“61é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/cover.jpg",
-    "pdf": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/Carl_Hermann_Berendt_Los_trabajos_linguisticos_de_Juan_Pio_Perez_1871_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-trabajos-linguisticos-juan-pio-perez-1871/Carl_Hermann_Berendt_Los_trabajos_linguisticos_de_Juan_Pio_Perez_1871_Japanese_Complete_Translation.epub",
-    "pageCount": 5,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è¨€èªå­¦å²",
-      "æ›¸èªŒ",
-      "äººç‰©è©•ä¼",
-      "ãƒãƒ¤ç ”ç©¶"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ãƒ¡ãƒªãƒ€",
-      "ãƒšãƒˆ"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒãƒ¤èª"
-    ],
-    "tags": [
-      "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹",
-      "ãƒãƒ¤èªè¾å…¸",
-      "ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ",
-      "æ¤ç‰©å",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-el-ramie-1871",
-    "title": "ãƒ©ãƒŸãƒ¼â€•â€•ãã®æ ½åŸ¹æ³•ã¨æ¤ç‰©ã«é–¢ã™ã‚‹è‹¥å¹²ã®çŸ¥è¦‹",
-    "originalTitle": "El ramiÃ©. Tratado sobre el cultivo y algunas noticias de esta planta",
-    "subtitle": "1871å¹´åˆ¥åˆ·ãƒ»æœ¬æ–‡3â€“39é ã€åŸæ³¨5ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "IMPRENTA DE M. ALDANA RIVAS Â· 1871",
-    "originalPublication": "ãƒ¡ãƒªãƒ€ã€1871å¹´",
-    "year": 1871,
-    "extent": "PDF 17é ãƒ»æœ¬æ–‡3â€“39é ãƒ»åŸæ³¨5ä»¶ãƒ»æ•°è¡¨3ç‚¹",
-    "description": "ãƒ©ãƒŸãƒ¼ã®æ¤ç‰©å­¦çš„ä½ç½®ã€ã‚¢ãƒ¡ãƒªã‚«ã¸ã®å°å…¥ã€ç¹æ®–ãƒ»æ ½åŸ¹ã€åç©«ã€ç¹Šç¶­å‡¦ç†æ©Ÿã€åç›Šè¦‹è¾¼ã¿ã‚’ã¾ã¨ã‚ãŸè¾²æ¥­æŠ€è¡“è«–ã€‚1871å¹´åˆ¥åˆ·ã®æœ¬æ–‡3â€“39é ã€åŸæ³¨5ä»¶ã€æ•°è¡¨3ç‚¹ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-el-ramie-1871/cover.jpg",
-    "pdf": "publications/berendt-el-ramie-1871/Carl_Hermann_Berendt_El_ramie_1871_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-el-ramie-1871/Carl_Hermann_Berendt_El_ramie_1871_Japanese_Complete_Translation.epub",
-    "pageCount": 17,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è¾²æ¥­æŠ€è¡“",
-      "æ¤ç‰©å­¦",
-      "ç”£æ¥­å²",
-      "çµŒæ¸ˆå²"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹",
-      "ã‚¿ãƒã‚¹ã‚³",
-      "ãƒ«ã‚¤ã‚¸ã‚¢ãƒŠ"
-    ],
-    "languages": [
-      "ã‚¹ãƒšã‚¤ãƒ³èª"
-    ],
-    "tags": [
-      "ãƒ©ãƒŸãƒ¼",
-      "Boehmeria",
-      "ç¹Šç¶­ä½œç‰©",
-      "æ ½åŸ¹æ³•",
-      "ç¹Šç¶­å‡¦ç†æ©Ÿ",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-mexico-1872",
-    "title": "ãƒ¡ã‚­ã‚·ã‚³",
-    "originalTitle": "Mexico",
-    "subtitle": "1872å¹´äº‹å…¸é …ç›®ãƒ»åŸåˆŠ261â€“288é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "DEUTSCH-AMERIKANISCHES CONVERSATIONS-LEXIKON Â· 1872",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1872å¹´",
-    "year": 1872,
-    "extent": "PDF 46é ãƒ»åŸåˆŠ261â€“288é ",
-    "description": "ã€ç‹¬ç±³ä¼šè©±è¾å…¸ã€ç¬¬7å·»ã®ã€Œãƒ¡ã‚­ã‚·ã‚³ã€é …ç›®ã€‚å›½åœŸã€åœ°å½¢ã€æ°—å€™ã€äººå£ã€æ°‘æ—ã€è¡Œæ”¿ã€ç”£æ¥­ã€äº¤é€šã€æ­´å²ã«åŠ ãˆã€åŒåã®å·ãƒ»é€£é‚¦åŒºãƒ»é¦–éƒ½ã¾ã§ã‚’æ‰±ã†åŸåˆŠ261â€“288é ã®å…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/berendt-mexico-1872/cover.jpg",
-    "pdf": "publications/berendt-mexico-1872/Carl_Hermann_Berendt_Mexico_1872_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-mexico-1872/Carl_Hermann_Berendt_Mexico_1872_Japanese_Complete_Translation.epub",
-    "pageCount": 46,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "åœ°ç†äº‹å…¸",
-      "åœ°åŸŸç ”ç©¶",
-      "æ­´å²åœ°ç†"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "åŒ—ã‚¢ãƒ¡ãƒªã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"
-    ],
-    "languages": [
-      "ãƒ‰ã‚¤ãƒ„èª"
-    ],
-    "tags": [
-      "ãƒ¡ã‚­ã‚·ã‚³åœ°èªŒ",
-      "äººå£",
-      "ç”£æ¥­",
-      "äº¤é€š",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-indianer-tehuantepec-1873",
-    "title": "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯åœ°å³¡ã®ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³",
-    "originalTitle": "Die Indianer des Isthmus von Tehuantepec",
-    "subtitle": "1873å¹´åŸåˆŠãƒ»åŸåˆŠ146â€“153é ã€èªå½™è¡¨ãƒ»æ•°è©è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1873",
-    "originalPublication": "ãƒ™ãƒ«ãƒªãƒ³ã€1873å¹´",
-    "year": 1873,
-    "extent": "PDF 10é ãƒ»åŸåˆŠ146â€“153é ãƒ»èªå½™è¡¨ãƒ»æ•°è©è¡¨",
-    "description": "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯åœ°å³¡ã®ã‚µãƒãƒ†ã‚«ã€ã‚½ã‚±ã€ãƒŸãƒ˜ã€ãƒ¯ãƒ™ã€ãƒãƒãƒ«ã‚«ãªã©ã®è«¸é›†å›£ã¨è¨€èªè³‡æ–™ã‚’æ¤œè¨ã—ãŸæ°‘æ—å­¦ãƒ»æ¯”è¼ƒè¨€èªå­¦å ±å‘Šã€‚åŸåˆŠ146â€“153é ã®æœ¬æ–‡ã€è„šæ³¨ã€èªå½™è¡¨ã€æ•°è©è¡¨ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-indianer-tehuantepec-1873/cover.jpg",
-    "pdf": "publications/berendt-indianer-tehuantepec-1873/Carl_Hermann_Berendt_Die_Indianer_des_Isthmus_von_Tehuantepec_1873_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-indianer-tehuantepec-1873/Carl_Hermann_Berendt_Die_Indianer_des_Isthmus_von_Tehuantepec_1873_Japanese_Complete_Translation.epub",
-    "pageCount": 10,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ°‘æ—å­¦",
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "è¨€èªè³‡æ–™"
-    ],
-    "regions": [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯åœ°å³¡",
-      "ã‚ªã‚¢ãƒã‚«",
-      "ãƒã‚¢ãƒ‘ã‚¹"
-    ],
-    "languages": [
-      "ãƒ‰ã‚¤ãƒ„èª",
-      "ã‚µãƒãƒ†ã‚«èª",
-      "ã‚½ã‚±èª",
-      "ãƒŸãƒ˜èª",
-      "ãƒ¯ãƒ™èª"
-    ],
-    "tags": [
-      "ãƒ†ãƒ¯ãƒ³ãƒ†ãƒšã‚¯",
-      "ã‚½ã‚±ï¼ãƒŸãƒ˜è«¸èª",
-      "èªå½™è¡¨",
-      "æ•°è©",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-carib-karif-language-1873",
-    "title": "ã‚«ãƒªãƒ–èªã¾ãŸã¯ã‚«ãƒªãƒ•èªã®æ–‡æ³•ãƒ»è¾æ›¸ã«ã¤ã„ã¦â€•â€•ãã®è©±è€…ã«é–¢ã™ã‚‹è‹¥å¹²ã®å ±å‘Šã‚’æ·»ãˆã¦",
-    "originalTitle": "On a Grammar and Dictionary of the Carib or Karif Language, with Some Account of the People by Whom It Is Spoken",
-    "subtitle": "1873å¹´å¹´å ±å ±å‘Šãƒ»åŸåˆŠ363â€“364é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "SMITHSONIAN ANNUAL REPORT Â· 1873",
-    "originalPublication": "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€1874å¹´ï¼ˆ1873å¹´å¹´å ±ï¼‰",
-    "year": 1873,
-    "extent": "PDF 3é ãƒ»åŸåˆŠ363â€“364é ",
-    "description": "ã‚¢ãƒ¬ã‚°ã‚¶ãƒ³ãƒ€ãƒ¼ãƒ»ãƒ˜ãƒ³ãƒ€ãƒ¼ã‚½ãƒ³ã«ã‚ˆã‚‹ã‚«ãƒªãƒ•èªæ–‡æ³•ãƒ»è¾æ›¸ç¨¿ã‚’ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³ã¸æå‡ºã—ã€è©±è€…ã®æ­´å²ã€è¨€èªæ¥è§¦ã€åˆŠè¡Œä¸Šã®å†ç·¨æ¡ˆã‚’è¿°ã¹ãŸçŸ­å ±ã€‚åŸåˆŠ363â€“364é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-carib-karif-language-1873/cover.jpg",
-    "pdf": "publications/berendt-carib-karif-language-1873/Carl_Hermann_Berendt_Carib_or_Karif_Language_1873_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-carib-karif-language-1873/Carl_Hermann_Berendt_Carib_or_Karif_Language_1873_Japanese_Complete_Translation.epub",
-    "pageCount": 3,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è¨€èªå­¦",
-      "æ›¸èªŒå ±å‘Š",
-      "æ°‘æ—èªŒ"
-    ],
-    "regions": [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚»ãƒ³ãƒˆãƒ»ãƒ´ã‚£ãƒ³ã‚»ãƒ³ãƒˆ"
-    ],
-    "languages": [
-      "è‹±èª",
-      "ã‚¬ãƒªãƒ•ãƒŠèª"
-    ],
-    "tags": [
-      "ã‚«ãƒªãƒ–èª",
-      "ã‚«ãƒªãƒ•èª",
-      "ã‚¬ãƒªãƒ•ãƒŠ",
-      "è¨€èªæ¥è§¦",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-darien-language-1874",
-    "title": "ãƒ€ãƒªã‚¨ãƒ³èª",
-    "originalTitle": "The Darien Language",
-    "subtitle": "1874å¹´åŸåˆŠãƒ»åŸåˆŠ54â€“59é ã€åœ°å›³1ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "THE AMERICAN HISTORICAL RECORD Â· 1874",
-    "originalPublication": "ãƒ•ã‚£ãƒ©ãƒ‡ãƒ«ãƒ•ã‚£ã‚¢ã€1874å¹´",
-    "year": 1874,
-    "extent": "PDF 10é ãƒ»åŸåˆŠ54â€“59é ãƒ»åœ°å›³1ç‚¹",
-    "description": "ãƒ€ãƒªã‚¨ãƒ³åœ°å³¡ã®ã‚¯ã‚¨ãƒã€ã‚³ã‚¤ãƒã€ãƒãƒ§ã‚³ã€ãƒãƒ§ãƒ­ãªã©ã®è¨€èªè³‡æ–™ã‚’ã€16ä¸–ç´€è¨˜éŒ²ã¨è¿‘ä»£èªå½™ã‹ã‚‰æ¯”è¼ƒã—ãŸè«–æ–‡ã€‚åŸåˆŠ54â€“59é ã®æœ¬æ–‡ã€è„šæ³¨ã€èªå½™ã€è‘—è€…åŸå›³ã®æ°‘æ—èªŒç•¥å›³1ç‚¹ã‚’å…¨è¨³ãƒ»åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-darien-language-1874/cover.jpg",
-    "pdf": "publications/berendt-darien-language-1874/Carl_Hermann_Berendt_The_Darien_Language_1874_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-darien-language-1874/Carl_Hermann_Berendt_The_Darien_Language_1874_Japanese_Complete_Translation.epub",
-    "pageCount": 10,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "æ°‘æ—èªŒ",
-      "æ­´å²è¨€èªå­¦"
-    ],
-    "regions": [
-      "ãƒ‘ãƒŠãƒ",
-      "ãƒ€ãƒªã‚¨ãƒ³",
-      "ã‚³ãƒ­ãƒ³ãƒ“ã‚¢",
-      "ãƒãƒ§ã‚³"
-    ],
-    "languages": [
-      "è‹±èª",
-      "ãƒ€ãƒªã‚¨ãƒ³è«¸èª"
-    ],
-    "tags": [
-      "ãƒ€ãƒªã‚¨ãƒ³",
-      "ã‚¯ã‚¨ãƒèª",
-      "ã‚³ã‚¤ãƒèª",
-      "ã‚¦ã‚§ã‚¤ãƒ•ã‚¡ãƒ¼",
-      "æ°‘æ—èªŒåœ°å›³"
-    ]
-  },
-  {
-    "slug": "berendt-ethnologie-nicaragua-1874",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®æ°‘æ—å­¦ã«ã¤ã„ã¦",
-    "originalTitle": "Zur Ethnologie von Nicaragua",
-    "subtitle": "1874å¹´åŸåˆŠãƒ»åŸåˆŠ70â€“72é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "CORRESPONDENZ-BLATT Â· 1874",
-    "originalPublication": "1874å¹´",
-    "year": 1874,
-    "extent": "PDF 6é ãƒ»åŸåˆŠ70â€“72é ",
-    "description": "ãƒ™ãƒ¬ãƒ³ãƒˆã®æ›¸ç°¡ã‹ã‚‰ç·¨é›†éƒ¨ãŒæŠ„å‡ºã—ãŸãƒ‹ã‚«ãƒ©ã‚°ã‚¢æ°‘æ—å­¦ã®äºˆå‚™å ±å‘Šã€‚ãƒãƒ§ãƒ­ãƒ†ã‚¬ã€ãƒãƒªãƒ“ã‚ªï¼ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒã€ãƒ‹ã‚«ãƒ©ã‚ªã€ãã®ä»–ã®é›†å›£ã¨è¨€èªåˆ†å¸ƒã‚’æ‰±ã†åŸåˆŠ70â€“72é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-ethnologie-nicaragua-1874/cover.jpg",
-    "pdf": "publications/berendt-ethnologie-nicaragua-1874/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1874_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-ethnologie-nicaragua-1874/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1874_Japanese_Complete_Translation.epub",
-    "pageCount": 6,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ°‘æ—å­¦",
-      "è¨€èªåˆ†å¸ƒ",
-      "æ›¸ç°¡æŠ„éŒ²"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒã‚µãƒ¤",
-      "ãƒ¬ã‚ªãƒ³",
-      "ãƒ‹ã‚³ãƒ¤"
-    ],
-    "languages": [
-      "ãƒ‰ã‚¤ãƒ„èª",
-      "ãƒãƒ³ã‚²èª",
-      "ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒèª",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª"
-    ],
-    "tags": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒ§ãƒ­ãƒ†ã‚¬",
-      "ãƒãƒ³ã‚²",
-      "ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒ",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-ethnologie-nicaragua-1875",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®æ°‘æ—å­¦ã«ã¤ã„ã¦",
-    "originalTitle": "Zur Ethnologie von Nicaragua",
-    "subtitle": "1875å¹´åˆŠè¡Œå ±å‘Šãƒ»åŸåˆŠ46â€“47é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "CORRESPONDENZ-BLATT Â· 1875",
-    "originalPublication": "1875å¹´",
-    "year": 1875,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ46â€“47é ",
-    "description": "ãƒ™ãƒ¬ãƒ³ãƒˆã®æ›¸ç°¡ã‹ã‚‰ç·¨é›†éƒ¨ãŒæ²ã’ãŸãƒ‹ã‚«ãƒ©ã‚°ã‚¢æ°‘æ—å­¦ã®ç¶šå ±ã€‚1874å¹´å ±å‘Šã‚’æ‰¿ã‘ã€åŒåœ°åŸŸã®è«¸é›†å›£ã¨è¨€èªã®ç³»çµ±ãƒ»åˆ†å¸ƒã‚’è«–ã˜ã‚‹åŸåˆŠ46â€“47é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-ethnologie-nicaragua-1875/cover.jpg",
-    "pdf": "publications/berendt-ethnologie-nicaragua-1875/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1875_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-ethnologie-nicaragua-1875/Carl_Hermann_Berendt_Zur_Ethnologie_von_Nicaragua_1875_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ°‘æ—å­¦",
-      "è¨€èªåˆ†å¸ƒ",
-      "æ›¸ç°¡å ±å‘Š"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"
-    ],
-    "languages": [
-      "ãƒ‰ã‚¤ãƒ„èª"
-    ],
-    "tags": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "å…ˆä½æ°‘è¨€èª",
-      "æ°‘æ—åˆ†é¡",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-ancient-central-american-civilization-1876",
-    "title": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å¤ä»£æ–‡æ˜ã®åœ°ç†çš„åˆ†å¸ƒ",
-    "originalTitle": "Geographical Distribution of the Ancient Central American Civilization",
-    "subtitle": "1876å¹´åˆŠè¡Œè«–æ–‡ãƒ»åŸåˆŠ132â€“145é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "JOURNAL OF THE AMERICAN GEOGRAPHICAL SOCIETY OF NEW YORK Â· 1876",
-    "originalPublication": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1876å¹´",
-    "year": 1876,
-    "extent": "PDF 12é ãƒ»åŸåˆŠ132â€“145é ",
-    "description": "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å¤ä»£æ–‡æ˜ã®ä¸­å¿ƒåŸŸã¨å¤–ç¸ã‚’ã€éºè·¡ã€å»ºç¯‰æŠ€è¡“ã€æ°‘æ—ãƒ»è¨€èªåˆ†å¸ƒã€æ¤æ°‘åœ°æœŸè¨˜éŒ²ã‹ã‚‰ç·åˆçš„ã«ç”»å®šã—ãŸè«–æ–‡ã€‚1876å¹´7æœˆ10æ—¥ã®ä¼šåˆã§æœ—èª­ã•ã‚ŒãŸåŸåˆŠ132â€“145é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-ancient-central-american-civilization-1876/cover.jpg",
-    "pdf": "publications/berendt-ancient-central-american-civilization-1876/Carl_Hermann_Berendt_Geographical_Distribution_Ancient_Central_American_Civilization_1876_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-ancient-central-american-civilization-1876/Carl_Hermann_Berendt_Geographical_Distribution_Ancient_Central_American_Civilization_1876_Japanese_Complete_Translation.epub",
-    "pageCount": 12,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ­´å²åœ°ç†",
-      "è€ƒå¤å­¦",
-      "æ¯”è¼ƒè¨€èªå­¦"
-    ],
-    "regions": [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "å¤ä»£æ–‡æ˜",
-      "æ–‡åŒ–åœ",
-      "è¨€èªåˆ†å¸ƒ",
-      "éºè·¡",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    "slug": "berendt-historical-documents-guatemala-1877",
-    "title": "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®æ­´å²æ–‡æ›¸ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³",
-    "originalTitle": "Collections of Historical Documents in Guatemala",
-    "subtitle": "1877å¹´åˆŠè¡Œå ±å‘Šãƒ»åŸåˆŠ421â€“423é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    "series": "SMITHSONIAN ANNUAL REPORT Â· 1877",
-    "originalPublication": "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€1877å¹´",
-    "year": 1877,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ421â€“423é ",
-    "description": "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å…¬ç§æ–‡æ›¸é¤¨ã«æ®‹ã‚‹æ­´å²è³‡æ–™ã®æ‰€åœ¨ã€ä¿å­˜çŠ¶æ³ã€åé›†ã¨åˆŠè¡Œã®å¿…è¦ã‚’ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³ã¸å ±å‘Šã—ãŸæ›¸èªŒãƒ»å²æ–™å­¦ä¸Šã®çŸ­å ±ã€‚åŸåˆŠ421â€“423é ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/berendt-historical-documents-guatemala-1877/cover.jpg",
-    "pdf": "publications/berendt-historical-documents-guatemala-1877/Carl_Hermann_Berendt_Collections_of_Historical_Documents_in_Guatemala_1877_Japanese_Complete_Translation.pdf",
-    "epub": "publications/berendt-historical-documents-guatemala-1877/Carl_Hermann_Berendt_Collections_of_Historical_Documents_in_Guatemala_1877_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ›¸èªŒå ±å‘Š",
-      "å²æ–™å­¦",
-      "æ­´å²å­¦"
-    ],
-    "regions": [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "æ­´å²æ–‡æ›¸",
-      "æ–‡æ›¸é¤¨",
-      "å²æ–™åé›†",
-      "ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³",
-      "19ä¸–ç´€å¾ŒåŠ"
-    ]
-  },
-  {
-    slug: "berendt-central-america-explorations-1867",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ¢æŸ»å ±å‘Š",
-    originalTitle: "Report of Explorations in Central America",
-    subtitle:
-      "1867å¹´å¹´å ±æ‰€åãƒ»åŸåˆŠ420â€“426é ã€åŸæ³¨5ä»¶ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "SMITHSONIAN ANNUAL REPORT Â· 1867",
-    originalPublication: "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€1868å¹´ï¼ˆ1867å¹´å¹´å ±ï¼‰",
-    year: 1867,
-    extent: "PDF 14é ãƒ»åŸåˆŠ420â€“426é ãƒ»åŸæ³¨5ä»¶",
-    description:
-      "ãƒ™ãƒªãƒ¼ã‚ºã€ãƒšãƒ†ãƒ³ã€ã‚¿ãƒã‚¹ã‚³ã«ãŠã‘ã‚‹1865å¹´ã‹ã‚‰1867å¹´ã¾ã§ã®æ¢æŸ»ã‚’å ±å‘Šã—ã€è‡ªç„¶å²æ¨™æœ¬ã®æ¡é›†ã€åœ°ç†ã€ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ãƒãƒ¤ã®æ”¿æ²»çŠ¶æ³ã€ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äººã€è¨€èªã€è€ƒå¤å­¦ä¸Šã®è¦³å¯Ÿã‚’è¨˜ã—ãŸã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³å”ä¼šå¹´å ±æ‰€åå ±å‘Šã€‚åŸåˆŠ420â€“426é ã®æœ¬æ–‡å…¨æ–‡ã¨åŸæ³¨5ä»¶ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-central-america-explorations-1867/cover.jpg",
-    pdf:
-      "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/berendt-central-america-explorations-1867/Carl_Hermann_Berendt_Report_of_Explorations_in_Central_America_1867_Japanese_Complete_Translation.epub",
-    pageCount: 14,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ¢æŸ»å ±å‘Š", "åœ°ç†å ±å‘Š", "æ°‘æ—èªŒ", "è‡ªç„¶å²"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒšãƒ†ãƒ³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¿ãƒã‚¹ã‚³",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ã‚¯ãƒ«ã‚½ã‚ªãƒ–",
-      "ãƒšãƒ†ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡æ¹–",
-      "ãƒ™ãƒªãƒ¼ã‚ºå·",
-      "ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±",
-      "è‡ªç„¶å²æ¡é›†",
-      "19ä¸–ç´€å¾ŒåŠ",
-    ],
-  },
-  {
-    slug: "garcia-pelaez-memorias-guatemala-1851-1852",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©æ—§ç‹å›½å²ã®ãŸã‚ã®è¦šæ›¸",
-    originalTitle: "Memorias para la historia del antiguo reyno de Guatemala",
-    subtitle:
-      "åˆç‰ˆå…¨3å·»ãƒ»æ¨™é¡Œç´™ãƒ»ç›®æ¬¡ãƒ»æœ¬æ–‡ãƒ»æ³¨ãƒ»è¡¨ãƒ»ç·ç´¢å¼•ãƒ»æ­£èª¤è¡¨ãƒ»è³¼èª­è€…åç°¿ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ãƒ‘ã‚¦ãƒ©ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ãƒšãƒ©ã‚¨ã‚¹",
-    series: "HISTORICAL MEMOIRS Â· 1851â€“1852",
-    originalPublication: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1851â€“1852å¹´",
-    year: 1851,
-    extent: "PDF 1,143é ãƒ»åˆç‰ˆå…¨3å·»ãƒ»è¡¨21ç‚¹",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å…ˆä½æ°‘ç¤¾ä¼šã€å¾æœã€æ¤æ°‘çµ±æ²»ã€æ•™ä¼šåˆ¶åº¦ã€äº¤æ˜“ã€éƒ½å¸‚ã€æ•™è‚²ãƒ»å­¦èŠ¸ã‚’ã€è‘—è€…ãŒåé›†ã—ãŸå¹´ä»£è¨˜ãƒ»å…¬æ–‡æ›¸ãƒ»åˆŠè¡Œç‰©ã‚’ç”¨ã„ã¦å™è¿°ã—ãŸ19ä¸–ç´€ã®ä¸‰å·»æœ¬ã€‚åˆç‰ˆã®æ¨™é¡Œç´™ã€ç›®æ¬¡ã€æœ¬æ–‡ã€æ³¨ã€è¡¨ã€ç·ç´¢å¼•ã€æ­£èª¤è¡¨ã€è³¼èª­è€…åç°¿ã¾ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
-    pdf:
-      "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
-    pageCount: 1143,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "æ¤æ°‘åœ°å²", "æ•™ä¼šå²"],
-    regions: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ãƒšãƒ†ãƒ³",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "ãƒ©ã‚«ãƒ³ãƒ‰ãƒ³äºº",
-      "ãƒãƒ§ãƒ«äºº",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ç·ç£é ˜",
-      "ã‚¢ã‚¦ãƒ‡ã‚£ã‚¨ãƒ³ã‚·ã‚¢",
-      "å¾æœ",
-      "æ¤æ°‘çµ±æ²»",
-      "æ•™ä¼šå²",
-      "äº¤æ˜“",
-      "19ä¸–ç´€ä¸­é ƒ",
-    ],
-  },
-  {
-    slug: "maudslay-glimpse-guatemala-1899",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ç´€è¡Œ",
-    originalTitle:
-      "A Glimpse at Guatemala, and Some Notes on the Ancient Monuments of Central America",
-    subtitle:
-      "1899å¹´åˆç‰ˆãƒ»å…¨26ç« ã€åŸæ³¨ã€ç´¢å¼•ã€åŸåˆŠç”»åƒ137ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ã‚¢ãƒ³ãƒ»ã‚±ã‚¢ãƒªãƒ¼ãƒ»ãƒ¢ãƒ¼ã‚ºãƒ¬ãƒ¼ï¼ã‚¢ãƒ«ãƒ•ãƒ¬ãƒƒãƒ‰ãƒ»ãƒ‘ãƒ¼ã‚·ãƒ´ã‚¡ãƒ«ãƒ»ãƒ¢ãƒ¼ã‚ºãƒ¬ãƒ¼",
-    series: "A GLIMPSE AT GUATEMALA Â· 1899",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1899å¹´",
-    year: 1899,
-    extent:
-      "PDF 466é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1â€“289é ãƒ»å…¨26ç« ãƒ»åŸåˆŠç”»åƒ137ç‚¹ãƒ»è¡¨27ç‚¹",
-    description:
-      "ã‚¢ãƒ³ãƒ»ã‚±ã‚¢ãƒªãƒ¼ãƒ»ãƒ¢ãƒ¼ã‚ºãƒ¬ãƒ¼ã¨ã‚¢ãƒ«ãƒ•ãƒ¬ãƒƒãƒ‰ãƒ»ãƒ‘ãƒ¼ã‚·ãƒ´ã‚¡ãƒ«ãƒ»ãƒ¢ãƒ¼ã‚ºãƒ¬ãƒ¼ãŒã€ã‚°ã‚¢ãƒ†ãƒãƒ©å„åœ°ã®æ—…è¡Œã¨ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å¤ä»£éºè·¡ã®èª¿æŸ»ã‚’ã¾ã¨ã‚ãŸ1899å¹´åˆŠè¡Œæ›¸ã€‚å‰ä»˜ã€æœ¬æ–‡å…¨26ç« ã€åŸæ³¨ã€ç´¢å¼•ã€å†™çœŸã€åœ°å›³ã€å¹³é¢å›³ã€æš¦è¡¨ãªã©åŸåˆŠç”»åƒ137ç‚¹ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/maudslay-glimpse-guatemala-1899/cover.jpg",
-    pdf:
-      "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/maudslay-glimpse-guatemala-1899/Maudslay_A_Glimpse_at_Guatemala_1899_Japanese_Complete_Translation.epub",
-    pageCount: 466,
-    figureCount: 137,
-    plateCount: 0,
-    types: ["æ—…è¡Œè¨˜", "è€ƒå¤å­¦ç ”ç©¶", "æ¢æ¤œè¨˜"],
-    regions: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ãƒšãƒ†ãƒ³",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ã‚³ãƒ‘ãƒ³",
-      "ã‚­ãƒªã‚°ã‚¢",
-      "ãƒãƒã‚§ãƒ³ãƒ»ã‚¤ãƒ„ã‚¡",
-      "ãƒ†ã‚£ã‚«ãƒ«",
-      "å†™çœŸå›³ç‰ˆ",
-      "åœ°å›³",
-      "æš¦",
-      "19ä¸–ç´€æœ«",
-    ],
-  },
-  {
-    slug: "dunn-guatimala-central-america-1828",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã¾ãŸã¯1827â€“28å¹´ã®ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£åˆå·",
-    originalTitle:
-      "Guatimala, or, The United Provinces of Central America in 1827â€“8",
-    subtitle:
-      "åŒå…±å’Œå›½ã«åäºŒã‹æœˆæ»åœ¨ã—ãŸé–“ã«ä½œæˆã—ãŸè¦‹èè¨˜ãŠã‚ˆã³è¦šæ›¸ãƒ»1828å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ˜ãƒ³ãƒªãƒ¼ãƒ»ãƒ€ãƒ³",
-    series: "GUATIMALA Â· 1828",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€1828å¹´",
-    year: 1828,
-    extent:
-      "PDF 204é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡9â€“318é ãƒ»å…¨4éƒ¨21ç« ãƒ»è¡¨18ç‚¹ãƒ»åŸæ³¨20ä»¶ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»å·»æœ«è¨‚æ­£",
-    description:
-      "ãƒ˜ãƒ³ãƒªãƒ¼ãƒ»ãƒ€ãƒ³ãŒä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£åˆå·ã«åäºŒã‹æœˆæ»åœ¨ã—ãŸéš›ã®è¦‹èã‚’ã¾ã¨ã‚ãŸ1828å¹´åˆŠè¡Œæ›¸ã€‚ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¹¾ã‹ã‚‰ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚ã¸ã®æ—…ã€åŒå¸‚ã®ç¤¾ä¼šãƒ»å®—æ•™ãƒ»ç”Ÿæ´»ã€ç‹¬ç«‹é©å‘½å¾Œã®æ”¿æ²»ã€äº¤æ˜“ã€è‡ªç„¶èªŒã€å…ˆä½æ°‘ã€å¤ªå¹³æ´‹å²¸ã¸ã®æ—…è¡Œã‚’è¨˜ã—ã€æ¨™é¡Œç´™ã€è‘—ä½œæ¨©ç™»éŒ²ã€ç›®æ¬¡ã€åºæ–‡ã€å…¨4éƒ¨21ç« ã€åŸæ³¨ã€è«¸è¡¨ã€å·»æœ«è¨‚æ­£ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dunn-guatimala-central-america-1828/cover.jpg",
-    pdf:
-      "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dunn-guatimala-central-america-1828/Dunn_Guatimala_1828_Japanese_Complete_Translation.epub",
-    pageCount: 204,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†èªŒ", "æ”¿æ²»å²", "æ°‘æ—èªŒ"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£åˆå·",
-      "ç‹¬ç«‹",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¹¾",
-      "äº¤æ˜“",
-      "åšç‰©èªŒ",
-      "å…ˆä½æ°‘",
-      "19ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "gibbs-british-honduras-1883",
-    title: "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-    originalTitle:
-      "British Honduras: An Historical and Descriptive Account of the Colony from Its Settlement, 1670",
-    subtitle:
-      "1670å¹´ã®å…¥æ¤ä»¥æ¥ã®æ­´å²ã¨æ¦‚æ³ãƒ»1883å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ¼ãƒãƒœãƒ«ãƒ‰ãƒ»ãƒ­ãƒãƒ¼ãƒˆã‚½ãƒ³ãƒ»ã‚®ãƒ–ã‚º",
-    series: "BRITISH HONDURAS Â· 1883",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1883å¹´",
-    year: 1883,
-    extent:
-      "PDF 238é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1â€“198é ãƒ»å…¨15ç« ãƒ»ä»˜éŒ²2ç·¨ãƒ»è¡¨25ç‚¹ãƒ»åŸæ³¨47ä»¶ãƒ»åŸåˆŠåŠæ¨™é¡ŒãŠã‚ˆã³æ¨™é¡Œç´™å„1ç‚¹ãƒ»ä»˜è¼‰åºƒå‘Š32é ",
-    description:
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã®å…¥æ¤å²ã€è¡Œæ”¿åˆ¶åº¦ã€ãƒãƒ›ã‚¬ãƒ‹ãƒ¼ãƒ»æœ¨æè²¿æ˜“ã€åœ°ç†ã€äººå£ã€åŠ´åƒã€æ°—å€™ã€ç”£ç‰©ã€æ¤ç‰©ç›¸ãƒ»å‹•ç‰©ç›¸ã‚’ã¾ã¨ã‚ãŸ1883å¹´åˆŠè¡Œæ›¸ã€‚åŸåˆŠå‰ä»˜ã€å…¨15ç« ã€ä»˜éŒ²2ç·¨ã€è«¸è¡¨ã€åŸæ³¨ã«åŠ ãˆã€åº•æœ¬ã«åˆç¶´ã•ã‚ŒãŸã‚µãƒ³ãƒ—ã‚½ãƒ³ãƒ»ãƒ­ã‚¦ç¤¾ã®åˆŠè¡Œæ›¸ç›®åºƒå‘Š32é ã‚‚åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/gibbs-british-honduras-1883/cover.jpg",
-    pdf:
-      "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/gibbs-british-honduras-1883/Archibald_Robertson_Gibbs_British_Honduras_1883_Japanese_Complete_Translation.epub",
-    pageCount: 238,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["æ­´å²æ›¸", "åœ°ç†èªŒ", "æ°‘æ—èªŒ"],
-    regions: ["è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒ™ãƒªãƒ¼ã‚º", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "æ¤æ°‘åœ°å²",
-      "ãƒ™ã‚¤ãƒãƒ³",
-      "ãƒãƒ›ã‚¬ãƒ‹ãƒ¼",
-      "æœ¨æè²¿æ˜“",
-      "è¡Œæ”¿",
-      "äººå£",
-      "åŠ´åƒ",
-      "åšç‰©èªŒ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "young-black-charaibs-st-vincent-1795",
-    title: "ã‚»ãƒ³ãƒˆãƒ»ãƒ´ã‚£ãƒ³ã‚»ãƒ³ãƒˆå³¶ã®é»’ã‚«ãƒªãƒ–äººã«é–¢ã™ã‚‹å ±å‘Š",
-    originalTitle:
-      "An Account of the Black Charaibs in the Island of St. Vincentâ€™s; with the Charaib Treaty of 1779, and Other Original Documents",
-    subtitle:
-      "1773å¹´ã®ã‚«ãƒªãƒ–æ¡ç´„ãŠã‚ˆã³ãã®ä»–ã®åŸæ–‡æ›¸ã‚’ä»˜ã™ãƒ»1795å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚µãƒ¼ãƒ»ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»ãƒ¤ãƒ³ã‚°ï¼ˆç·¨ï¼‰",
-    series: "AN ACCOUNT OF THE BLACK CHARAIBS Â· 1795",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1795å¹´",
-    year: 1795,
-    extent:
-      "PDF 70é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»çŒ®è¾ãƒ»æœ¬æ–‡1â€“125é ãƒ»1773å¹´æ¡ç´„24æ¡ãƒ»åŸæ³¨4ä»¶ãƒ»æŠ˜è¾¼ä»˜éŒ²è¡¨1ç‚¹ãƒ»å·»æœ«ä»˜éŒ²è¡¨1ç‚¹",
-    description:
-      "ã‚»ãƒ³ãƒˆãƒ»ãƒ´ã‚£ãƒ³ã‚»ãƒ³ãƒˆå³¶ã®é»’ã‚«ãƒªãƒ–äººï¼ˆã‚¬ãƒªãƒ•ãƒŠï¼‰ã®æ¥æ­´ã€åœŸåœ°æ¨©ã€è‹±å›½æ¤æ°‘åœ°æ”¿åºœã¨ã®æŠ—äº‰ã€1773å¹´æ¡ç´„ã€ãã®å¾Œã®æˆ¦äº‰ã‚’ã€æ•…ã‚µãƒ¼ãƒ»ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»ãƒ¤ãƒ³ã‚°ã®å…¬æ–‡æ›¸ã‹ã‚‰åŒåã®æ¯å­ãŒç·¨çº‚ã—ãŸ1795å¹´åˆŠè¡Œæ›¸ã€‚æ¨™é¡Œç´™ã€çŒ®è¾ã€æœ¬æ–‡ã€æ¡ç´„24æ¡ã€å®£èª“æ–‡ã€ç½²åè€…åç°¿ã€åŸæ³¨ã€æŠ˜è¾¼ãŠã‚ˆã³å·»æœ«ã®å…µåŠ›è¡¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/young-black-charaibs-st-vincent-1795/cover.jpg",
-    pdf:
-      "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
-    pageCount: 70,
-    figureCount: 0,
-    plateCount: 3,
-    types: ["æ­´å²æ›¸", "ä¸€æ¬¡å²æ–™", "æ¡ç´„å²æ–™", "æ°‘æ—èªŒ", "æ¤æ°‘åœ°å²"],
-    regions: ["ã‚»ãƒ³ãƒˆãƒ»ãƒ´ã‚£ãƒ³ã‚»ãƒ³ãƒˆ", "å°ã‚¢ãƒ³ãƒ†ã‚£ãƒ«è«¸å³¶", "ã‚«ãƒªãƒ–æµ·"],
-    languages: ["è‹±èª"],
-    tags: [
-      "é»’ã‚«ãƒªãƒ–äºº",
-      "ã‚¬ãƒªãƒ•ãƒŠ",
-      "ã‚«ãƒªãƒ–æˆ¦äº‰",
-      "1773å¹´æ¡ç´„",
-      "åœŸåœ°æ¨©",
-      "æ¤æ°‘åœ°æ”¿ç­–",
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "sapper-mittelamerikanische-reisen-studien-1902",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ—…è¡Œã¨ç ”ç©¶ 1888â€“1900å¹´",
-    originalTitle:
-      "Mittelamerikanische Reisen und Studien aus den Jahren 1888 bis 1900",
-    subtitle:
-      "1902å¹´åˆç‰ˆãƒ»åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨426é ã€çµ±è¨ˆä»˜éŒ² æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼",
-    series: "MITTELAMERIKANISCHE REISEN UND STUDIEN Â· 1902",
-    originalPublication: "ãƒ–ãƒ©ã‚¦ãƒ³ã‚·ãƒ¥ãƒ´ã‚¡ã‚¤ã‚¯ã€1902å¹´",
-    year: 1902,
-    extent:
-      "PDF 467é ãƒ»åŸåˆŠå‰ä»˜ãƒ»æœ¬æ–‡1â€“426é ãƒ»æ¨™é¡Œå›³1ç‚¹ãƒ»æœ¬æ–‡å›³60ç‚¹ãƒ»æŠ˜è¾¼åœ°å›³4ç‚¹ãƒ»çµ±è¨ˆä»˜éŒ²",
-    description:
-      "1888å¹´ã‹ã‚‰1900å¹´ã«ã‹ã‘ã¦ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å„åœ°ã‚’è¸æŸ»ã—ãŸã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼ã®æ—…è¡Œãƒ»åœ°ç†ç ”ç©¶ã€‚ã‚°ã‚¢ãƒ†ãƒãƒ©ã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ã‚³ã‚¹ã‚¿ãƒªã‚«ã€ãƒ‘ãƒŠãƒã®ç´€è¡Œã¨æ°‘æ—èªŒçš„è¦³å¯Ÿã«åŠ ãˆã€è‡ªç„¶åœ°ç†ã€ç”Ÿç”£ã€è²¿æ˜“ã€é€šè²¨ã€é‹æ²³ã€è¾²åœ’çµŒå–¶ã‚’è«–ã˜ãŸç·æ‹¬éƒ¨ã€çµ±è¨ˆä»˜éŒ²ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨426é ã€åŸæ³¨ã€è«¸è¡¨ã€æ¨™é¡Œå›³ã€æœ¬æ–‡å›³60ç‚¹ã€æŠ˜è¾¼åœ°å›³4ç‚¹ã‚’åã‚ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/sapper-mittelamerikanische-reisen-studien-1902/cover.jpg",
-    pdf:
-      "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/sapper-mittelamerikanische-reisen-studien-1902/Karl_Sapper_Mittelamerikanische_Reisen_und_Studien_1902_Japanese_Complete_Translation.epub",
-    pageCount: 467,
-    figureCount: 60,
-    plateCount: 5,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†èªŒ", "æ°‘æ—èªŒ", "åšç‰©èªŒ"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‘ãƒŠãƒ",
-    ],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ç«å±±",
-      "åœ°éœ‡",
-      "å…ˆä½æ°‘",
-      "è¾²åœ’",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼",
-      "è²¿æ˜“",
-      "é‹æ²³",
-      "çµ±è¨ˆ",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "honduras-slaves-correspondence-1823",
-    title: "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã«ãŠã‘ã‚‹å¥´éš·ã®çŠ¶æ…‹ã¨å¾…é‡ã«é–¢ã™ã‚‹å¾€å¾©æ›¸ç°¡",
-    originalTitle:
-      "Slaves at Honduras. Correspondence Relative to the Condition and Treatment of Slaves at Honduras: 1820â€“1823",
-    subtitle: "1823å¹´ä¸‹é™¢æ–‡æ›¸ç¬¬457å·ãƒ»æœ¬æ–‡3â€“100é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¤ã‚®ãƒªã‚¹è­°ä¼šä¸‹é™¢",
-    series: "HOUSE OF COMMONS PAPER 457 Â· 1823",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1823å¹´",
-    year: 1823,
-    extent:
-      "PDF 228é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»ä¸‹é™¢è¦æ±‚ç­”ç”³ãƒ»ç›®æ¬¡ãƒ»æœ¬æ–‡3â€“100é ãƒ»ä»˜å±æ–‡æ›¸ãƒ»å®£èª“ä¾›è¿°ãƒ»è«¸è¡¨ãƒ»ç³»è­œ",
-    description:
-      "ã‚¤ã‚®ãƒªã‚¹æ¤æ°‘åœ°çœãŒã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ç›£ç£å®˜ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ã‚¢ãƒ¼ã‚µãƒ¼ãŠã‚ˆã³ã‚³ãƒƒãƒ‰å°‘å°†ã¨ã®1820å¹´ã‹ã‚‰1823å¹´ã¾ã§ã®å¾€å¾©æ›¸ç°¡ã‚’ä¸‹é™¢ã¸æå‡ºã—ãŸè­°ä¼šæ–‡æ›¸ã€‚å¥´éš·ã¸ã®å‡¦ç½°ã€å¸æ³•åˆ¶åº¦ã€é€ƒäº¡ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã«ç”±æ¥ã™ã‚‹ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ã¨ãã®å­å­«ã®è‡ªç”±èº«åˆ†è«‹æ±‚ã‚’ã‚ãã‚‹æ›¸ç°¡ã€è¨¼è¨€ã€å¯©ç†è¨˜éŒ²ã€æ³•ä»¤ã€ç™»éŒ²ç°¿ã€ç³»è­œã€è¨¼æ›¸ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/honduras-slaves-correspondence-1823/cover.jpg",
-    pdf:
-      "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/honduras-slaves-correspondence-1823/Great_Britain_House_of_Commons_Slaves_at_Honduras_1823_Japanese_Complete_Translation.epub",
-    pageCount: 228,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è­°ä¼šæ–‡æ›¸", "ä¸€æ¬¡å²æ–™", "å¥´éš·åˆ¶å²", "æ¤æ°‘åœ°å²"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ã‚¢ãƒ¼ã‚µãƒ¼",
-      "å¥´éš·åˆ¶",
-      "å¥´éš·äººå£",
-      "ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³å¥´éš·",
-      "è‡ªç”±èº«åˆ†è«‹æ±‚",
-      "å¸æ³•åˆ¶åº¦",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "19ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "defence-settlers-honduras-1824",
-    title: "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¤æ°‘è€…ã®å¼è­·",
-    originalTitle:
-      "The Defence of the Settlers of Honduras Against the Unjust and Unfounded Representations of Colonel George Arthur, Late Superintendent of That Settlement",
-    subtitle:
-      "ã‚¢ãƒ¼ã‚µãƒ¼å¤§ä½ã®ç”³ç«‹ã¦ã«å¯¾ã™ã‚‹åé§ãƒ»1824å¹´ãƒ­ãƒ³ãƒ‰ãƒ³å†åˆŠç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ä½æ°‘ï¼ˆç·¨è€…åä¸è©³ï¼‰",
-    series: "THE DEFENCE OF THE SETTLERS OF HONDURAS Â· 1824",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€1824å¹´ï¼ˆA. J. Valpyå†åˆŠï¼‰",
-    year: 1824,
-    extent:
-      "PDF 168é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»ç›®æ¬¡ãƒ»æœ¬æ–‡1â€“59é ãƒ»ä»˜éŒ²60â€“93é ãƒ»1798å¹´ã‚¹ãƒšã‚¤ãƒ³è»æ¥è¥²è¨˜éŒ²94â€“102é ",
-    description:
-      "1823å¹´ã«ä¸‹é™¢ã®å‘½ã§å°åˆ·ã•ã‚ŒãŸã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã«ãŠã‘ã‚‹å¥´éš·ã®çŠ¶æ…‹ã¨å¾…é‡ã«é–¢ã™ã‚‹å¾€å¾©æ›¸ç°¡ã€ã«å¯¾ã—ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ä½æ°‘å´ã‹ã‚‰åˆŠè¡Œã•ã‚ŒãŸåé§æ›¸ã€‚ã‚¢ãƒ¼ã‚µãƒ¼ã®çµ±æ²»ã€å¥´éš·ã®å¾…é‡ã€ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³ã¨ãã®å­å­«ã®èº«åˆ†ãƒ»è²¡ç”£ã€ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸ã®æ³•ä»¤ã‚’è«–ã˜ã‚‹å…¨5éƒ¨ã€ä»˜éŒ²ã€ç½²åè€…ä¸€è¦§ã€ãŠã‚ˆã³1798å¹´ã®ã‚¹ãƒšã‚¤ãƒ³è»æ¥è¥²è¨˜éŒ²ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/defence-settlers-honduras-1824/cover.jpg",
-    pdf:
-      "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
-    pageCount: 168,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è«–äº‰æ›¸", "ä¸€æ¬¡å²æ–™", "å¥´éš·åˆ¶å²", "æ¤æ°‘åœ°å²"],
-    regions: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ã‚¢ãƒ¼ã‚µãƒ¼",
-      "å¥´éš·åˆ¶",
-      "æ¤æ°‘è€…",
-      "ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ãƒ³",
-      "è²¡ç”£æ¨©",
-      "ãƒ¢ã‚¹ã‚­ãƒ¼ãƒˆæµ·å²¸",
-      "1798å¹´ã‚¹ãƒšã‚¤ãƒ³è»æ¥è¥²",
-      "19ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "lundell-vegetation-peten-1937",
-    title: "ãƒšãƒ†ãƒ³ã®æ¤ç”Ÿ",
-    originalTitle:
-      "The Vegetation of PetÃ©n: With an Appendix, Studies of Mexican and Central American Plantsâ€”I",
-    subtitle:
-      "ä»˜éŒ²ã€Œãƒ¡ã‚­ã‚·ã‚³ãŠã‚ˆã³ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ¤ç‰©ç ”ç©¶â€”â… ã€ãƒ»1937å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "Cãƒ»ãƒ­ãƒ³ã‚°ãƒ¯ãƒ¼ã‚¹ãƒ»ãƒ©ãƒ³ãƒ‡ãƒ«",
-    series: "THE VEGETATION OF PETÃ‰N Â· 1937",
-    originalPublication: "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³D.C.ã€1937å¹´",
-    year: 1937,
-    extent:
-      "PDF 578é ãƒ»åŸåˆŠå‰ä»˜iâ€“ixé ãƒ»æœ¬æ–‡1â€“221é ãƒ»å›³ç‰ˆ39ç‚¹ï¼ˆã†ã¡èƒŒé¢ãƒã‚±ãƒƒãƒˆå›³3ç‚¹ã¯åº•æœ¬æœªåéŒ²ï¼‰ãƒ»æœ¬æ–‡å›³3ç‚¹ãƒ»è¡¨3ç‚¹ãƒ»ç´¢å¼•223â€“244é ",
-    description:
-      "ãƒšãƒ†ãƒ³åŒ—éƒ¨ãƒ»ä¸­éƒ¨ã‚µãƒãƒŠåœ°å¸¯ãƒ»å—éƒ¨ã®åœ°å½¢ã€æ°—å€™ã€åœŸå£Œã€ç«ç½ã€ãƒãƒ¤å±…ä½å²ã¨æ¤ç”Ÿé·ç§»ã‚’ç·åˆã—ãŸ1937å¹´ã®æ¤ç‰©åœ°ç†å­¦çš„ç ”ç©¶ã€‚å„åœ°åŸŸã®æ¤ç”Ÿå‹ã¨æ³¨é‡ˆä»˜ãæ¤ç‰©ç›®éŒ²ã€æ¤ç‰©ç›¸ã®é–¢ä¿‚ã€ä»˜éŒ²ã€Œãƒ¡ã‚­ã‚·ã‚³ãŠã‚ˆã³ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ¤ç‰©ç ”ç©¶â€”â… ã€ã€å›³ç‰ˆã€ç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚åº•æœ¬ã«å«ã¾ã‚Œãªã„èƒŒé¢ãƒã‚±ãƒƒãƒˆå›³ç‰ˆ3ç‚¹ã¯æ¬ è½ã‚’æ˜ç¤ºã—ã¾ã—ãŸã€‚",
-    cover:
-      "publications/lundell-vegetation-peten-1937/japanese-cover.jpg",
-    pdf:
-      "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
-    pageCount: 578,
-    figureCount: 3,
-    plateCount: 39,
-    types: ["æ¤ç‰©èªŒ", "æ¤ç‰©åœ°ç†å­¦", "ç”Ÿæ…‹å­¦", "æ¤ç‰©åˆ†é¡å­¦"],
-    regions: [
-      "ãƒšãƒ†ãƒ³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚«ãƒ³ãƒšãƒã‚§",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "æ¤ç”Ÿ",
-      "æ¤ç‰©ç›¸",
-      "æ¤ç”Ÿé·ç§»",
-      "ã‚µãƒãƒŠ",
-      "æ£®æ—",
-      "ãƒãƒ¤å±…ä½å²",
-      "æ³¨é‡ˆä»˜ãæ¤ç‰©ç›®éŒ²",
-      "æ¤ç‰©åˆ†é¡",
-      "20ä¸–ç´€å‰åŠ",
-    ],
-  },
-  {
-    slug: "sapper-alta-verapaz-1901",
-    title: "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹ï¼ˆã‚°ã‚¢ãƒ†ãƒãƒ©ï¼‰",
-    originalTitle:
-      "Die Alta Verapaz (Guatemala): Eine landeskundliche Skizze mit 5 Originalkarten",
-    subtitle:
-      "åŸå›³5æšã‚’ä»˜ã—ãŸåœ°èªŒçš„æ¦‚èª¬ãƒ»1901å¹´å­¦ä¼šèªŒæ‰€åç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼",
-    series: "DIE ALTA VERAPAZ Â· 1901",
-    originalPublication:
-      "ãƒãƒ³ãƒ–ãƒ«ã‚¯ã€1901å¹´ï¼ˆã€ãƒãƒ³ãƒ–ãƒ«ã‚¯åœ°ç†å­¦ä¼šå ±ã€ç¬¬17å·»ï¼‰",
-    year: 1901,
-    extent:
-      "PDF 193é ãƒ»åŸåˆŠ78â€“224é ãƒ»è¡¨22ç‚¹ãƒ»åŸè¡¨ç”»åƒ12ç‚¹ãƒ»æ‰€æœ‰åœ°ä¸€è¦§321ä»¶ãƒ»åŸå›³5æš",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹ã«ã¤ã„ã¦ã€åœ°è³ªã€åœ°å‹¢ã€æ°—å€™ã€æ¤ç”Ÿã€åœŸå£Œã€äººå£ã¨å±…ä½ã€ç”Ÿç”£ã¨äº¤é€šã€ã‚³ãƒ¼ãƒ’ãƒ¼è¾²åœ’ã€æ­´å²çš„äº‹ä»¶ã«ã‚ˆã‚‹ä½æ°‘æ§‹æˆã®å¤‰åŒ–ã€äººé–“æ´»å‹•ã«ã‚ˆã‚‹è‡ªç„¶æ”¹å¤‰ã‚’ç·åˆã—ãŸã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼ã®åœ°èªŒã€‚åŸåˆŠ78â€“224é ã€è«¸è¡¨ã€åŸæ³¨ã€æ‰€æœ‰åœ°ä¸€è¦§321ä»¶ã€ãŠã‚ˆã³æ‰€æœ‰åˆ†å¸ƒãƒ»é«˜åº¦å¸¯ãƒ»åœ°è³ªãƒ»æ¤ç”Ÿãƒ»è¨€èªã¨æ°‘æ—é›†å›£ã‚’ç¤ºã™åŸå›³5æšã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/sapper-alta-verapaz-1901/cover.jpg",
-    pdf:
-      "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
-    pageCount: 193,
-    figureCount: 12,
-    plateCount: 5,
-    types: ["åœ°ç†èªŒ", "åœ°è³ªå­¦", "æ°‘æ—èªŒ", "çµŒæ¸ˆå²"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "åœ°è³ª",
-      "æ°—å€™",
-      "æ¤ç”Ÿ",
-      "ã‚±ã‚¯ãƒäºº",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼è¾²åœ’",
-      "ãƒ‰ã‚¤ãƒ„äººç§»æ°‘",
-      "åœŸåœ°æ‰€æœ‰",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "santo-thomas-colonisation-1844",
-    title: "ã‚µãƒ³ãƒˆãƒ»ãƒˆãƒã‚¹ç®¡åŒºã®æ¤æ°‘",
-    originalTitle:
-      "AmÃ©rique Centrale. Colonisation du district de Santo-Thomas de Guatemala",
-    subtitle:
-      "ãƒ™ãƒ«ã‚®ãƒ¼æ¤æ°‘ä¼šç¤¾è³‡æ–™é›†ãƒ»1844å¹´åŸåˆŠå…¨4éƒ¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ™ãƒ«ã‚®ãƒ¼æ¤æ°‘ä¼šç¤¾",
-    series: "AMÃ‰RIQUE CENTRALE Â· 1844",
-    originalPublication: "ãƒ‘ãƒªã€Rignouxã€1844å¹´",
-    year: 1844,
-    extent:
-      "PDF 568é ãƒ»å¹´è¡¨ãƒ»å…¨4éƒ¨ãƒ»åŸæ³¨55ä»¶ãƒ»è¡¨49ç‚¹ãƒ»åœ°å›³5ç‚¹ãƒ»æ™¯è¦³å›³4ç‚¹ãƒ»è¨¼åˆ¸è¦‹æœ¬3ç‚¹",
-    description:
-      "ãƒ™ãƒ«ã‚®ãƒ¼æ¤æ°‘ä¼šç¤¾ãŒã‚µãƒ³ãƒˆãƒ»ãƒˆãƒã‚¹ç®¡åŒºã§é€²ã‚ãŸæ¤æ°‘äº‹æ¥­ã«ã¤ã„ã¦ã€ä¼šç¤¾é–¢ä¿‚æ–‡æ›¸ã€æ¢æ¤œå ±å‘Šã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é–¢ä¿‚æ–‡çŒ®ã®æŠœç²‹ã€ãƒ™ãƒ«ã‚®ãƒ¼ãŠã‚ˆã³ãƒ•ãƒ©ãƒ³ã‚¹å„ç´™ã®è«–è©•ã‚’å››éƒ¨ã«ã¾ã¨ã‚ãŸè³‡æ–™é›†ã€‚å¹´è¡¨ã€æœ¬æ–‡ã€åŸæ³¨ã€è«¸è¡¨ã€å„éƒ¨ç›®æ¬¡ã€åœ°å›³5ç‚¹ã€æ™¯è¦³å›³4ç‚¹ã€è¨¼åˆ¸è¦‹æœ¬3ç‚¹ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/santo-thomas-colonisation-1844/cover.jpg",
-    pdf:
-      "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/santo-thomas-colonisation-1844/Santo_Thomas_1844_Japanese_Complete_Translation.epub",
-    pageCount: 568,
-    figureCount: 8,
-    plateCount: 5,
-    types: ["æ¤æ°‘å²", "åœ°ç†èªŒ", "æ¢æ¤œè¨˜", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚¤ã‚µãƒãƒ«", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚µãƒ³ãƒˆãƒ»ãƒˆãƒã‚¹",
-      "ãƒ™ãƒ«ã‚®ãƒ¼æ¤æ°‘ä¼šç¤¾",
-      "æ¤æ°‘è¨ˆç”»",
-      "æ¢æ¤œå ±å‘Š",
-      "é€šå•†",
-      "æ–°èè³‡æ–™",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "crowe-gospel-central-america-1850",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ç¦éŸ³",
-    originalTitle: "The Gospel in Central America",
-    subtitle:
-      "å›½åœŸæ¦‚èª¬ãƒ»è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ä¼é“å²ãƒ»ã‚°ã‚¢ãƒ†ãƒãƒ©ã¸ã®è–æ›¸å°å…¥ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»ã‚¯ãƒ­ã‚¦",
-    series: "THE GOSPEL IN CENTRAL AMERICA Â· 1850",
-    originalPublication: "ãƒ­ãƒ³ãƒ‰ãƒ³ã€Charles Gilpinã€1850å¹´",
-    year: 1850,
-    extent:
-      "PDF 818é ãƒ»å·»é ­æ›¸ç›®24é ãƒ»å‰ä»˜ãƒ»æœ¬æ–‡1â€“588é ãƒ»å…¨3éƒ¨ãƒ»åŸæ³¨319ä»¶ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹",
-    description:
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ãƒ»æ­´å²ãƒ»æ”¿æ²»ãƒ»ç¤¾ä¼šãƒ»å®—æ•™ã‚’æ¦‚èª¬ã—ã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã«ãŠã‘ã‚‹ãƒãƒ—ãƒ†ã‚¹ãƒˆä¼é“ã¨ã€è‘—è€…è‡ªèº«ã«ã‚ˆã‚‹ã‚°ã‚¢ãƒ†ãƒãƒ©ã¸ã®è–æ›¸å°å…¥ã‚’è¨˜éŒ²ã—ãŸå…¨ä¸‰éƒ¨ã®è‘—ä½œã€‚åŸåˆŠã«ç¶´ã˜è¾¼ã¾ã‚ŒãŸå‡ºç‰ˆç¤¾æ›¸ç›®ã€å‰ä»˜ã€æœ¬æ–‡ã€åŸæ³¨ã€æ­£èª¤è¡¨ã€ç›®æ¬¡ã€æœ«å°¾ã®æŠ˜è¾¼åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/crowe-gospel-central-america-1850/cover.jpg",
-    pdf:
-      "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/crowe-gospel-central-america-1850/Frederick_Crowe_The_Gospel_in_Central_America_1850_Japanese_Complete_Translation.epub",
-    pageCount: 818,
-    figureCount: 1,
-    plateCount: 1,
-    types: ["åœ°ç†èªŒ", "æ”¿æ²»å²", "ä¼é“å²", "å›æƒ³éŒ²"],
-    regions: ["ãƒ™ãƒªãƒ¼ã‚º", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒãƒ—ãƒ†ã‚¹ãƒˆä¼é“",
-      "è–æ›¸é ’å¸ƒ",
-      "å®—æ•™å²",
-      "æ¤æ°‘åœ°å²",
-      "å‡ºç‰ˆç¤¾æ›¸ç›®",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "brigham-guatemala-quetzal-1887",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©â€•â€•ã‚±ãƒ„ã‚¡ãƒ¼ãƒ«ã®å›½",
-    originalTitle: "Guatemala: The Land of the Quetzal; A Sketch",
-    subtitle:
-      "1887å¹´åˆç‰ˆãƒ»å‰ä»˜ã€æœ¬æ–‡å…¨453é ã€ä»˜éŒ²ã€ç´¢å¼•ã€å…¨å›³ç‰ˆãƒ»åœ°å›³ãƒ»ä»˜è¼‰åºƒå‘Š æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»ã‚¿ãƒ•ãƒ„ãƒ»ãƒ–ãƒªã‚¬ãƒ ",
-    series: "GUATEMALA Â· THE LAND OF THE QUETZAL Â· 1887",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€Charles Scribnerâ€™s Sonsã€1887å¹´",
-    year: 1887,
-    extent:
-      "PDF 513é ãƒ»åŸåˆŠå‰ä»˜iâ€“xvé ãƒ»æœ¬æ–‡1â€“453é ãƒ»æŒ¿å›³ãƒ»å›³ç‰ˆ111ç‚¹ãƒ»åœ°å›³5ç‚¹ãƒ»ä»˜éŒ²ãƒ»ç´¢å¼•ãƒ»ä»˜è¼‰åºƒå‘Š",
-    description:
-      "ã‚¦ã‚£ãƒªã‚¢ãƒ ãƒ»ã‚¿ãƒ•ãƒ„ãƒ»ãƒ–ãƒªã‚¬ãƒ ãŒä¸‰åº¦ã®ã‚°ã‚¢ãƒ†ãƒãƒ©ãƒ»ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ—…è¡Œã‚’ã‚‚ã¨ã«ã€åœ°ç†ã€äº¤é€šã€è‡ªç„¶ã€æ¤ç‰©ã€ç«å±±ã€å„åœ°ã®ç”ºæ‘ã€å…ˆä½æ°‘ç¤¾ä¼šã€æ­´å²ã€æ”¿æ²»çµŒæ¸ˆã€è€ƒå¤éºè·¡ã‚’ã¾ã¨ã‚ãŸ1887å¹´åˆŠã®æ—…è¡Œãƒ»åœ°èªŒã€‚åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨453é ã€ä»˜éŒ²ã€ç´¢å¼•ã€æŒ¿å›³ã€åœ°å›³ã€å‡ºç‰ˆç¤¾åºƒå‘Šã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/brigham-guatemala-quetzal-1887/cover.jpg",
-    pdf:
-      "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/brigham-guatemala-quetzal-1887/William_Tufts_Brigham_Guatemala_The_Land_of_the_Quetzal_1887_Japanese_Complete_Translation.epub",
-    pageCount: 513,
-    figureCount: 111,
-    plateCount: 5,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†èªŒ", "æ°‘æ—èªŒ", "åšç‰©èªŒ"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ã‚±ãƒ„ã‚¡ãƒ¼ãƒ«",
-      "ç«å±±",
-      "å…ˆä½æ°‘",
-      "ã‚­ãƒªã‚°ã‚¢",
-      "ã‚³ãƒãƒ³",
-      "ã‚¢ãƒ†ã‚£ãƒˆãƒ©ãƒ³æ¹–",
-      "åŸåˆŠå›³ç‰ˆ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "stoll-ethnographie-guatemala-1884",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©å…±å’Œå›½æ°‘æ—èªŒè«–",
-    originalTitle: "Zur Ethnographie der Republik Guatemala",
-    subtitle:
-      "1884å¹´åˆç‰ˆãƒ»æœ¬æ–‡å…¨175é ã€æ¯”è¼ƒèªå½™è¡¨ã€ä»˜å›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«",
-    series: "ZUR ETHNOGRAPHIE DER REPUBLIK GUATEMALA Â· 1884",
-    originalPublication: "ãƒãƒ¥ãƒ¼ãƒªãƒ’ã€Orell FÃ¼ssli & Co.ã€1884å¹´",
-    year: 1884,
-    extent:
-      "PDF 197é ãƒ»åŸåˆŠæœ¬æ–‡1â€“175é ãƒ»æ¯”è¼ƒèªå½™è¡¨åŸé 25ç‚¹ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»ä»˜å›³2ç‚¹",
-    description:
-      "ã‚¹ã‚¤ã‚¹ã®åŒ»å¸«ãƒ»æ°‘æ—å­¦è€…ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«ãŒã€ã‚°ã‚¢ãƒ†ãƒãƒ©æ»åœ¨ä¸­ã®èª¿æŸ»ã‚’ã‚‚ã¨ã«ã€åŒå›½ã®å…ˆä½æ°‘è«¸é›†å›£ã€åˆ†å¸ƒã€äººå£ã€ç”Ÿæ´»ã€æ­´å²ã€ãŠã‚ˆã³ãƒãƒ¤è«¸èªã‚’æ¯”è¼ƒã—ãŸ1884å¹´åˆŠã®æ°‘æ—èªŒãƒ»æ¯”è¼ƒè¨€èªå­¦ç ”ç©¶ã€‚æœ¬æ–‡å…¨175é ã€æ¯”è¼ƒèªå½™è¡¨ã€ãƒãƒ¤è«¸èªæ¨¡å¼ç³»çµ±æ¨¹ã¨æ°‘æ—èªŒåœ°å›³ã€åŸåˆŠæ¨™é¡Œç´™ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/stoll-ethnographie-guatemala-1884/cover.jpg",
-    pdf:
-      "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.pdf",
-    epub:
-      "publications/stoll-ethnographie-guatemala-1884/Otto_Stoll_Zur_Ethnographie_der_Republik_Guatemala_Japanese_Full_Translation.epub",
-    pageCount: 197,
-    figureCount: 26,
-    plateCount: 2,
-    types: ["æ°‘æ—èªŒ", "è¨€èªå­¦ç ”ç©¶", "æ¯”è¼ƒèªå½™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "å…ˆä½æ°‘",
-      "ãƒãƒ¤è«¸èª",
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "æ¯”è¼ƒèªå½™",
-      "æ°‘æ—èªŒ",
-      "è¨€èªåˆ†å¸ƒ",
-      "åŸåˆŠå›³ç‰ˆ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "stoll-guatemala-reisen-schilderungen-1886",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©â€•â€•1878â€“1883å¹´ã®æ—…è¡Œã¨æå†™",
-    originalTitle:
-      "Guatemala: Reisen und Schilderungen aus den Jahren 1878â€“1883",
-    subtitle:
-      "1886å¹´åˆç‰ˆãƒ»å‰ä»˜ã€æœ¬æ–‡å…¨518é ã€ä»˜éŒ²ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã€å…¨æŒ¿å›³ãƒ»åœ°å›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«",
-    series: "GUATEMALA Â· REISEN UND SCHILDERUNGEN Â· 1886",
-    originalPublication: "ãƒ©ã‚¤ãƒ—ãƒ„ã‚£ãƒ’ã€F. A. Brockhausã€1886å¹´",
-    year: 1886,
-    extent:
-      "PDF 553é ãƒ»åŸåˆŠå‰ä»˜Vâ€“XIIé ãƒ»æœ¬æ–‡1â€“518é ãƒ»æŒ¿å›³12ç‚¹ãƒ»æŠ˜è¾¼æ°—è±¡è¡¨1ç‚¹ãƒ»åœ°å›³2ç‚¹ãƒ»ä»˜éŒ²ãƒ»ç´¢å¼•ãƒ»æ­£èª¤è¡¨",
-    description:
-      "ã‚¹ã‚¤ã‚¹ã®åŒ»å¸«ãƒ»æ°‘æ—å­¦è€…ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«ãŒ1878å¹´ã‹ã‚‰1883å¹´ã®ã‚°ã‚¢ãƒ†ãƒãƒ©æ»åœ¨ã¨æ—…è¡Œã‚’ã‚‚ã¨ã«ã€åœ°ç†ã€äº¤é€šã€æ°—å€™ã€å‹•æ¤ç‰©ã€éƒ½å¸‚ã€è¾²æ¥­ã¨çµŒæ¸ˆã€å…ˆä½æ°‘ç¤¾ä¼šã€è«¸è¨€èªã€æ­´å²ã€è€ƒå¤éºè·¡ã‚’ã¾ã¨ã‚ãŸ1886å¹´åˆŠã®æ—…è¡Œãƒ»åœ°èªŒã€‚åŸåˆŠå‰ä»˜ã€æœ¬æ–‡å…¨518é ã€ä»˜éŒ²ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã€æŒ¿å›³ã€æŠ˜è¾¼æ°—è±¡è¡¨ã€æ”¿æ²»åœ°å›³ã€æ°‘æ—èªŒå›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/stoll-guatemala-reisen-schilderungen-1886/cover.jpg",
-    pdf:
-      "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/stoll-guatemala-reisen-schilderungen-1886/Otto_Stoll_Guatemala_Reisen_und_Schilderungen_1886_Japanese_Complete_Translation.epub",
-    pageCount: 553,
-    figureCount: 12,
-    plateCount: 2,
-    types: ["æ—…è¡Œè¨˜", "åœ°ç†èªŒ", "æ°‘æ—èªŒ", "åšç‰©èªŒ"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "å…ˆä½æ°‘",
-      "ãƒãƒ¤è«¸èª",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼æ ½åŸ¹",
-      "æ°—è±¡è¦³æ¸¬",
-      "æ°‘æ—èªŒå›³",
-      "æŠ˜è¾¼åœ°å›³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "stoll-ixil-language-1887",
-    title: "ã‚¤ã‚·ãƒ«äººã®è¨€èª",
-    originalTitle:
-      "Die Sprache der Ixil-Indianer: Ein Beitrag zur Ethnologie und Linguistik der Maya-VÃ¶lker",
-    subtitle:
-      "1887å¹´åˆç‰ˆãƒ»æœ¬æ–‡å…¨156é ã€æ¯”è¼ƒèªå½™ã€è£œéºã€æ­£èª¤ã€åºƒå‘Š æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«",
-    series: "DIE SPRACHE DER IXIL-INDIANER Â· 1887",
-    originalPublication: "ãƒ©ã‚¤ãƒ—ãƒ„ã‚£ãƒ’ã€F. A. Brockhausã€1887å¹´",
-    year: 1887,
-    extent:
-      "PDF 227é ãƒ»åŸåˆŠæœ¬æ–‡1â€“156é ãƒ»æ¯”è¼ƒèªå½™ãƒ»è£œéºãƒ»æ­£èª¤è¡¨ãƒ»å·»æœ«åºƒå‘Šãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹",
-    description:
-      "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«ã«ã‚ˆã‚‹ã‚¤ã‚·ãƒ«èªã®æ–‡æ³•ãƒ»èªå½™ç ”ç©¶ã€‚éŸ³è«–ã€åè©ãƒ»ä»£åè©ãƒ»æ•°è©ãƒ»å‹•è©ãªã©ã®æ–‡æ³•è¨˜è¿°ã€ä¾‹æ–‡ã€ã‚°ã‚¢ãƒ†ãƒãƒ©åŒ—è¥¿éƒ¨è«¸èªã®æ¯”è¼ƒèªå½™ã‚’åã‚ã€ã‚¤ã‚·ãƒ«èªã‚’ãƒãƒ¤è«¸èªã®æ°‘æ—å­¦ãƒ»æ¯”è¼ƒè¨€èªå­¦ã®ãªã‹ã«ä½ç½®ã¥ã‘ãŸ1887å¹´åˆŠã®åŸºç¤è³‡æ–™ã§ã™ã€‚åŸåˆŠæœ¬æ–‡ã€è£œéºã€æ­£èª¤è¡¨ã€åºƒå‘Šã€åŸåˆŠæ¨™é¡Œç´™ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/stoll-ixil-language-1887/cover.jpg",
-    pdf:
-      "publications/stoll-ixil-language-1887/Otto_Stoll_Die_Sprache_der_Ixil_Indianer_Japanese_Full_Translation.pdf",
-    epub:
-      "publications/stoll-ixil-language-1887/Otto_Stoll_Die_Sprache_der_Ixil_Indianer_Japanese_Full_Translation.epub",
-    pageCount: 227,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["è¨€èªå­¦ç ”ç©¶", "æ–‡æ³•æ›¸", "æ¯”è¼ƒèªå½™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¤ã‚·ãƒ«åœ°åŸŸ", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ã‚¤ã‚·ãƒ«èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "ã‚¤ã‚·ãƒ«èª",
-      "ãƒãƒ¤è«¸èª",
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "æ–‡æ³•",
-      "èªå½™",
-      "æ°‘æ—å­¦",
-      "åŸåˆŠæ¨™é¡Œç´™",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "stoll-pokom-languages-1888-1896",
-    title: "ãƒã‚³ãƒ èªç¾¤ã®ãƒãƒ¤è«¸èª",
-    originalTitle: "Die Maya-Sprachen der Pokom-Gruppe",
-    subtitle:
-      "ç¬¬ä¸€éƒ¨ãƒã‚³ãƒ³ãƒèªï¼ˆ1888å¹´ï¼‰ãƒ»ç¬¬äºŒéƒ¨ã‚±ã‚¯ãƒèªï¼ä»˜éŒ²ã‚¦ã‚¹ãƒ‘ãƒ³ãƒ†ã‚«èªï¼ˆ1896å¹´ï¼‰æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«",
-    series: "DIE MAYA-SPRACHEN DER POKOM-GRUPPE Â· 1888â€“1896",
-    originalPublication:
-      "ç¬¬ä¸€éƒ¨ï¼šã‚¦ã‚£ãƒ¼ãƒ³ã€Alfred HÃ¶lderã€1888å¹´ï¼›ç¬¬äºŒéƒ¨ï¼šãƒ©ã‚¤ãƒ—ãƒ„ã‚£ãƒ’ã€K. F. KÃ¶hlerâ€™s Antiquariumã€1896å¹´",
-    year: 1888,
-    extent:
-      "PDF 725é ãƒ»ç¬¬ä¸€éƒ¨åŸåˆŠ1â€“203é ãƒ»ç¬¬äºŒéƒ¨åŸåˆŠ1â€“221é ãƒ»è£œéºãƒ»å·»æœ«åºƒå‘Šãƒ»åŸåˆŠæ¨™é¡Œç´™2ç‚¹",
-    description:
-      "ã‚ªãƒƒãƒˆãƒ¼ãƒ»ã‚·ãƒ¥ãƒˆãƒ«ãŒãƒã‚³ãƒ èªç¾¤ã‚’æ§‹æˆã™ã‚‹ãƒã‚³ãƒ³ãƒèªã€ã‚±ã‚¯ãƒèªã€ã‚¦ã‚¹ãƒ‘ãƒ³ãƒ†ã‚«èªã‚’è¨˜è¿°ãƒ»æ¯”è¼ƒã—ãŸäºŒéƒ¨ä½œã€‚éŸ³è«–ã€å½¢æ…‹è«–ã€çµ±èªè«–ã€èªå½™ã€ä¾‹æ–‡ã¨æ¯”è¼ƒè³‡æ–™ã‚’åã‚ã‚‹1888â€“1896å¹´åˆŠã®å¤§è¦æ¨¡ãªãƒãƒ¤è¨€èªå­¦è³‡æ–™ã§ã™ã€‚æ¬ è½é ã‚’åˆ¥æœ¬ã§è£œå®Œã—ã€ä¸¡éƒ¨ã®åŸåˆŠæ¨™é¡Œç´™ã€è£œéºã€åºƒå‘Šã‚’å«ã‚ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/stoll-pokom-languages-1888-1896/cover.jpg",
-    pdf:
-      "publications/stoll-pokom-languages-1888-1896/Otto_Stoll_Die_Maya_Sprachen_der_Pokom_Gruppe_Japanese_Full_Translation.pdf",
-    epub:
-      "publications/stoll-pokom-languages-1888-1896/Otto_Stoll_Die_Maya_Sprachen_der_Pokom_Gruppe_Japanese_Full_Translation.epub",
-    pageCount: 725,
-    figureCount: 2,
-    plateCount: 0,
-    types: ["è¨€èªå­¦ç ”ç©¶", "æ–‡æ³•æ›¸", "æ¯”è¼ƒèªå½™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ™ãƒ©ãƒ‘ã‚¹", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ãƒã‚³ãƒ³ãƒèª", "ã‚±ã‚¯ãƒèª", "ã‚¦ã‚¹ãƒ‘ãƒ³ãƒ†ã‚«èª"],
-    tags: [
-      "ãƒã‚³ãƒ³ãƒèª",
-      "ã‚±ã‚¯ãƒèª",
-      "ã‚¦ã‚¹ãƒ‘ãƒ³ãƒ†ã‚«èª",
-      "ãƒã‚³ãƒ èªç¾¤",
-      "ãƒãƒ¤è«¸èª",
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "æ–‡æ³•",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "brinton-chilan-balam-1882",
-    title: "ãƒãƒ©ãƒ³ãƒ»ãƒãƒ©ãƒ ã®è«¸æ›¸",
-    originalTitle:
-      "The Books of Chilan Balam: The Prophetic and Historic Records of the Mayas of Yucatan",
-    subtitle:
-      "ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ãƒãƒ¤ã®äºˆè¨€ã¨æ­´å²ã®è¨˜éŒ²ãƒ»1882å¹´åˆç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³",
-    series: "THE BOOKS OF CHILAN BALAM Â· 1882",
-    originalPublication: "ãƒ•ã‚£ãƒ©ãƒ‡ãƒ«ãƒ•ã‚£ã‚¢ã€Edward Stern & Co.ã€1882å¹´",
-    year: 1882,
-    extent:
-      "PDF 20é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»ã¯ã—ãŒããƒ»æœ¬æ–‡5â€“19é ãƒ»åŸæ³¨13ä»¶ãƒ»æš¦ãŠã‚ˆã³æ—¥åè¨˜å·å›³3ç‚¹",
-    description:
-      "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³ãŒã€ãƒ¦ã‚«ã‚¿ãƒ³å„åœ°ã«ä¼ã‚ã‚‹ã€ãƒãƒ©ãƒ³ãƒ»ãƒãƒ©ãƒ ã®æ›¸ã€ç¾¤ã‚’ã€äºˆè¨€ã€ç·¨å¹´ã¨æ­´å²ã€åŒ»ç™‚ã€ã‚­ãƒªã‚¹ãƒˆæ•™æ•™èª¬ã®å››ç¾¤ã‹ã‚‰æ¤œè¨ã—ã€ãƒãƒ¤æš¦ã€ã‚¢ãƒã‚¦ãƒ»ã‚«ãƒˆã‚¥ãƒ³ã€è±¡å½¢æ–‡å­—ã€æ•°è¡¨ã€å…ˆä½æ°‘åŒ»ç™‚ã®å²æ–™çš„ä¾¡å€¤ã‚’è«–ã˜ãŸ1882å¹´ã®åˆæœŸç ”ç©¶ã€‚åŸåˆŠæ¨™é¡Œç´™ã€ã¯ã—ãŒãã€æœ¬æ–‡5â€“19é ã€åŸæ³¨13ä»¶ã€æœˆåãƒ»æ—¥åè¨˜å·å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/brinton-chilan-balam-1882/cover.jpg",
-    pdf:
-      "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/brinton-chilan-balam-1882/Daniel_G_Brinton_The_Books_of_Chilan_Balam_1882_Japanese_Complete_Translation.epub",
-    pageCount: 20,
-    figureCount: 3,
-    plateCount: 0,
-    types: ["æ­´å²è«–è€ƒ", "è¨€èªè³‡æ–™", "è€ƒå¤å­¦ç ”ç©¶"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ©ãƒ³ãƒ»ãƒãƒ©ãƒ ",
-      "ãƒãƒ¤æ–‡å­—",
-      "ãƒãƒ¤æš¦",
-      "äºˆè¨€",
-      "ãƒãƒ¤å²",
-      "ãƒˆãƒ­ã‚¢ãƒçµµæ–‡æ›¸",
-      "åŸåˆŠå›³ç‰ˆ",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "codex-perez-pmm9-1877",
-    title: "ã‚³ãƒ‡ãƒƒã‚¯ã‚¹ãƒ»ãƒšãƒ¬ã‚¹",
-    originalTitle: "Codex PÃ©rez: manuscript, [1877]",
-    subtitle: "ãƒãƒ‹ã®ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ã®æ›¸ã¨ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤å²æ–™",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹ï¼ã‚¯ãƒ¬ã‚¹ã‚»ãƒ³ã‚·ã‚ªãƒ»ã‚«ãƒªãƒ¼ãƒªãƒ§ãƒ»ã‚¤ãƒ»ã‚¢ãƒ³ã‚³ãƒŠ",
-    series: "CODEX PÃ‰REZ Â· PRINCETON MESOAMERICAN MANUSCRIPTS NO. 9 Â· 1877",
-    originalPublication:
-      "ãƒ¦ã‚«ã‚¿ãƒ³å·ãƒ¡ãƒªãƒ€ã€ã‚¯ãƒ¬ã‚¹ã‚»ãƒ³ã‚·ã‚ªãƒ»ã‚«ãƒªãƒ¼ãƒªãƒ§ãƒ»ã‚¤ãƒ»ã‚¢ãƒ³ã‚³ãƒŠæ¸…æ›¸ã€1877å¹´",
-    year: 1877,
-    extent:
-      "PDF 231é ãƒ»Princeton Mesoamerican Manuscripts no. 9 å…¨142ç”»åƒãƒ»æœ¬æ–‡fol. 1râ€“59vãƒ»æš¦è¡¨3çµ„ãƒ»åä¸‰ã‚«ãƒˆã‚¥ãƒ³äºˆè¨€2çµ„ãƒ»å›³19ç‚¹ãƒ»åœŸåœ°æ–‡æ›¸",
-    description:
-      "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹ãŒæ¤æ°‘åœ°æœŸãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èªè³‡æ–™ã‹ã‚‰é›†æˆã—ã€ã‚¯ãƒ¬ã‚¹ã‚»ãƒ³ã‚·ã‚ªãƒ»ã‚«ãƒªãƒ¼ãƒªãƒ§ãƒ»ã‚¤ãƒ»ã‚¢ãƒ³ã‚³ãƒŠãŒ1877å¹´ã«æ¸…æ›¸ã—ãŸã€ã‚³ãƒ‡ãƒƒã‚¯ã‚¹ãƒ»ãƒšãƒ¬ã‚¹ã€ã®æ—¥æœ¬èªå…¨è¨³ã€‚ãƒãƒ‹æœ¬ç³»ã®ã€ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ã®æ›¸ã€ã€260æ—¥æš¦ã¨365æ—¥æš¦ã€åä¸‰ã‚«ãƒˆã‚¥ãƒ³äºˆè¨€ã€å¹´ä»£è¨˜ã€ç¥­å¸äºˆè¨€ã€ã‚¤ã‚·ãƒ«æš¦ã€ãƒãƒ‹å¢ƒç•Œå”ç´„ã€ã‚·ã‚¦å®¶æ®ºå®³è¨˜äº‹ã€ã‚½ãƒˆã‚¥ã‚¿åœŸåœ°æ–‡æ›¸ã‚’ã€Princeton Mesoamerican Manuscripts no. 9 ã®å…¨142ç”»åƒã«åŸºã¥ãå†™æœ¬é †ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/codex-perez-pmm9-1877/cover.jpg",
-    pdf:
-      "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
-    pageCount: 231,
-    figureCount: 19,
-    plateCount: 0,
-    types: ["å†™æœ¬å²æ–™", "å¹´ä»£è¨˜", "æš¦æ›¸", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒãƒ‹", "ãƒ¡ãƒªãƒ€", "ã‚¤ã‚·ãƒ«", "ã‚½ãƒˆã‚¥ã‚¿", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ",
-      "ãƒãƒ¤æš¦",
-      "ã‚«ãƒˆã‚¥ãƒ³äºˆè¨€",
-      "æ¤æ°‘åœ°æœŸãƒãƒ¤èª",
-      "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ”ã‚ªãƒ»ãƒšãƒ¬ã‚¹",
-      "åœŸåœ°æ–‡æ›¸",
-      "ãƒãƒ‹",
-      "19ä¸–ç´€å†™æœ¬",
-    ],
-  },
-  {
-    slug: "roys-chilam-balam-chumayel-1933",
-    title: "ãƒãƒ¥ãƒã‚¤ã‚§ãƒ«ã®ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ã®æ›¸",
-    originalTitle: "The Book of Chilam Balam of Chumayel",
-    subtitle:
-      "1933å¹´ã‚«ãƒ¼ãƒã‚®ãƒ¼ç ”ç©¶æ‰€ç‰ˆãƒ»åºæ–‡ã€åºè«–ã€æ ¡è¨‚ãƒãƒ¤èªæœ¬æ–‡ã€è‹±è¨³å…¨24ç« ã€å…¨æ³¨ã€ä»˜éŒ²Aâ€“Hã€å‚è€ƒæ–‡çŒ®ã€åŸåˆŠç´¢å¼•ã€æœ¬æ–‡å›³48ç‚¹ã€å›³ç‰ˆ2ç‚¹ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ãƒ©ãƒ«ãƒ•ãƒ»Lãƒ»ãƒ­ã‚¤ã‚º",
-    series: "CARNEGIE INSTITUTION OF WASHINGTON Â· PUBLICATION NO. 438 Â· 1933",
-    originalPublication:
-      "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€Carnegie Institution of Washingtonã€1933å¹´",
-    year: 1933,
-    extent:
-      "PDF 428é ãƒ»æ ¡è¨‚ãƒãƒ¤èªæœ¬æ–‡48é ãƒ»è‹±è¨³å…¨24ç« ãƒ»è„šæ³¨976ä»¶ãƒ»ä»˜éŒ²Aâ€“Hãƒ»å‚è€ƒæ–‡çŒ®ãƒ»åŸåˆŠç´¢å¼•15é ãƒ»æœ¬æ–‡å›³48ç‚¹ãƒ»å›³ç‰ˆ2ç‚¹",
-    description:
-      "ãƒ©ãƒ«ãƒ•ãƒ»Lãƒ»ãƒ­ã‚¤ã‚ºãŒã€ãƒãƒ¥ãƒã‚¤ã‚§ãƒ«ã®ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ã®æ›¸ã€ã®ãƒãƒ¤èªæœ¬æ–‡ã‚’æ ¡è¨‚ã—ã€è‹±è¨³ãƒ»æ³¨è§£ã‚’ä»˜ã—ã¦åˆŠè¡Œã—ãŸ1933å¹´ç‰ˆã€‚å¤©åœ°å‰µé€ ã€å„€ç¤¼ã€æš¦ã€å¹´ä»£è¨˜ã€ã‚«ãƒˆã‚¥ãƒ³äºˆè¨€ã€æ¤æ°‘åœ°æœŸã®å®—æ•™çš„è¡¨ç¾ãªã©ã‚’åã‚ã¾ã™ã€‚åºæ–‡ã€åºè«–ã€æ ¡è¨‚ãƒãƒ¤èªæœ¬æ–‡ã€è‹±è¨³å…¨24ç« ã€å…¨æ³¨ã€ä»˜éŒ²Aâ€“Hã€å‚è€ƒæ–‡çŒ®ã€åŸåˆŠç´¢å¼•ã€æœ¬æ–‡å›³48ç‚¹ã€å›³ç‰ˆ2ç‚¹ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/roys-chilam-balam-chumayel-1933/cover.jpg",
-    pdf:
-      "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
-    pageCount: 428,
-    figureCount: 48,
-    plateCount: 2,
-    types: ["ä¸€æ¬¡å²æ–™", "æ°‘é–“ä¼æ‰¿", "å¹´ä»£è¨˜", "å®—æ•™å²"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒãƒ¤è«¸èª", "è‹±èª"],
-    tags: [
-      "ãƒãƒ©ãƒ ãƒ»ãƒãƒ©ãƒ ",
-      "ãƒãƒ¥ãƒã‚¤ã‚§ãƒ«",
-      "ãƒãƒ¤èª",
-      "å…ˆä½æ°‘æ–‡å­¦",
-      "ç¥è©±",
-      "äºˆè¨€",
-      "ã‚«ãƒˆã‚¥ãƒ³",
-      "æš¦",
-      "æ¤æ°‘åœ°æœŸ",
-    ],
-  },
-  {
-    slug: "elorza-conquista-ytza-1714",
-    title: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã«ãŠã‘ã‚‹ã‚¤ãƒ„ã‚¡å·ã®å¾æœ",
-    originalTitle:
-      "Conquista de la provincia del Ytza, en la Nueva EspaÃ±a, por el Conde de Lizarraga Vengoa",
-    subtitle:
-      "ã€ãƒãƒ«ãƒ‰ãƒ«ãƒè°·è²´æ—è­œã€æ‰€åãƒ»åŸåˆŠ207â€“279é ãƒ»å…¨25ç«  æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ã‚¨ãƒ­ãƒ«ã‚µãƒ»ã‚¤ãƒ»ãƒ©ãƒ€",
-    series: "NOBILIARIO DE EL VALLE DE LA VALDORBA Â· 1714",
-    originalPublication:
-      "ãƒ‘ãƒ³ãƒ—ãƒ­ãƒ¼ãƒŠã€ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ»ãƒã‚¤ãƒ©ã€1714å¹´",
-    year: 1714,
-    extent:
-      "PDF 49é ãƒ»åŸåˆŠ207â€“279é ãƒ»å…¨25ç« ãƒ»ç´‹ç« å›³1ç‚¹ãƒ»æ ¡åˆæ³¨5ç‚¹",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ã‚¨ãƒ­ãƒ«ã‚µãƒ»ã‚¤ãƒ»ãƒ©ãƒ€ãŒã€ãƒãƒ«ãƒ‰ãƒ«ãƒè°·è²´æ—è­œã€ã«åã‚ãŸã€ãƒãƒ«ãƒ†ã‚£ãƒ³ãƒ»ãƒ‡ãƒ»ã‚¦ãƒ«ã‚¹ã‚¢ã«ã‚ˆã‚‹1697å¹´ã®ã‚¤ãƒ„ã‚¡å¾æœè¨˜ã€‚å›½ç‹ã¸ã®è«‹é¡˜ã€å‹…ä»¤ã€ã‚«ãƒã‚¯ã¸ã®æ›¸ç°¡ã€è»è­°ã€ã‚¿ãƒ¤ã‚µãƒ«æ”»ç•¥ã€æ•è™œç§»é€ã¾ã§ã‚’æ‰±ã†å…¨25ç« ã‚’ã€åŸåˆŠé ä½ç½®ã¨ç´‹ç« å›³ã‚’ä¿ã£ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/elorza-conquista-ytza-1714/cover.jpg",
-    pdf:
-      "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/elorza-conquista-ytza-1714/Francisco_de_Elorza_y_Rada_Conquista_de_la_Provincia_del_Ytza_1714_Japanese_Complete_Translation.epub",
-    pageCount: 49,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["ä¸€æ¬¡å²æ–™", "å¾æœå²", "ä¼è¨˜"],
-    regions: ["ãƒšãƒ†ãƒ³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚¤ãƒ„ã‚¡",
-      "ã‚¿ãƒ¤ã‚µãƒ«",
-      "ãƒãƒ«ãƒ†ã‚£ãƒ³ãƒ»ãƒ‡ãƒ»ã‚¦ãƒ«ã‚¹ã‚¢",
-      "ã‚«ãƒã‚¯",
-      "1697å¹´",
-      "æ¤æ°‘åœ°æœŸ",
-    ],
-  },
-  {
-    slug: "chonay-totonicapan-title-1886",
-    title: "ãƒˆãƒˆãƒ‹ã‚«ãƒ‘ãƒ³é ˜ä¸»æ–‡æ›¸",
-    originalTitle:
-      "TÃ­tulo de los seÃ±ores de TotonicapÃ¡n, escrito en lengua quichÃ© el aÃ±o de 1554, y traducido a la castellana el de 1834",
-    subtitle:
-      "1554å¹´ã‚­ãƒã‚§èªæ–‡æ›¸ã®1834å¹´ã‚¹ãƒšã‚¤ãƒ³èªè¨³ãƒ»1886å¹´ç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ‡ã‚£ã‚ªãƒ‹ã‚·ã‚ªãƒ»ãƒ›ã‚»ãƒ»ãƒãƒ§ãƒŠã‚¤",
-    series: "TÃTULO DE LOS SEÃ‘ORES DE TOTONICAPÃN Â· 1886",
-    originalPublication:
-      "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€ã€BoletÃ­n de la Sociedad GeogrÃ¡fica de Madridã€ã€1886å¹´",
-    year: 1886,
-    extent:
-      "PDF 33é ãƒ»ã‚»ã‚µãƒ¬ã‚ªãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ï¼ãƒ‰ã‚¥ãƒ­ã®ç´¹ä»‹ãƒ»æœ¬æ–‡å…¨7ç« ãƒ»1834å¹´è¨¼æ˜æ–‡æ›¸ãƒ»åŸåˆŠ149â€“171é ",
-    description:
-      "1554å¹´ã«ã‚­ãƒã‚§èªã§è¨˜ã•ã‚ŒãŸãƒˆãƒˆãƒ‹ã‚«ãƒ‘ãƒ³ã®é ˜ä¸»æ–‡æ›¸ã‚’ã€å…ˆä½æ°‘å¸ç¥­ãƒ‡ã‚£ã‚ªãƒ‹ã‚·ã‚ªãƒ»ãƒ›ã‚»ãƒ»ãƒãƒ§ãƒŠã‚¤ãŒ1834å¹´ã«ã‚¹ãƒšã‚¤ãƒ³èªã¸è¨³ã—ã€1886å¹´ã«ã‚»ã‚µãƒ¬ã‚ªãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ï¼ãƒ‰ã‚¥ãƒ­ã®ç´¹ä»‹ã¨ã¨ã‚‚ã«å…¬åˆŠã—ãŸå²æ–™ã€‚ã‚­ãƒã‚§è«¸é›†å›£ã®ç§»ä½ã€ç‹çµ±ã€é ˜åŸŸã€ã‚¹ãƒšã‚¤ãƒ³å¾æœæœŸã¾ã§ã®ä¼æ‰¿ã‚’ä¼ãˆã¾ã™ã€‚ç´¹ä»‹ã€æœ¬æ–‡å…¨7ç« ã€1834å¹´ã®è¨¼æ˜æ–‡æ›¸ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/chonay-totonicapan-title-1886/cover.jpg",
-    pdf:
-      "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/chonay-totonicapan-title-1886/Dionisio_Jose_Chonay_Titulo_de_los_senores_de_Totonicapan_1886_Japanese_Complete_Translation.epub",
-    pageCount: 33,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["ä¸€æ¬¡å²æ–™", "å¹´ä»£è¨˜", "å…ˆä½æ°‘æ–‡æ›¸"],
-    regions: ["ãƒˆãƒˆãƒ‹ã‚«ãƒ‘ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "ã‚­ãƒã‚§",
-      "ç³»è­œ",
-      "ç§»ä½ä¼æ‰¿",
-      "é ˜åŸŸ",
-      "1554å¹´",
-      "1834å¹´",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "saville-reports-maya-yucatan-1921",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³ã®ãƒãƒ¤å…ˆä½æ°‘ã«é–¢ã™ã‚‹å ±å‘Š",
-    originalTitle: "Reports on the Maya Indians of Yucatan",
-    subtitle:
-      "1545å¹´ãƒ»1639å¹´ãƒ»1861å¹´ã®è¨˜éŒ²ãƒ»1921å¹´ç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒ¼ã‚·ãƒ£ãƒ«ãƒ»Hãƒ»ã‚µãƒ´ã‚£ãƒ«ç·¨",
-    series: "INDIAN NOTES AND MONOGRAPHS Â· VOL. IX Â· NO. 3 Â· 1921",
-    originalPublication:
-      "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€Museum of the American Indian, Heye Foundationã€1921å¹´",
-    year: 1921,
-    extent:
-      "PDF 51é ãƒ»åŸåˆŠ137â€“226é ãƒ»å ±å‘Š3ç·¨ãƒ»ç”¨èªé›†ãƒ»å‚è€ƒæ–‡çŒ®ãƒ»æ³¨22ä»¶",
-    description:
-      "ãƒãƒ¼ã‚·ãƒ£ãƒ«ãƒ»Hãƒ»ã‚µãƒ´ã‚£ãƒ«ãŒç·¨é›†ã—ãŸã€ãƒ¦ã‚«ã‚¿ãƒ³ã®ãƒãƒ¤å…ˆä½æ°‘ã«é–¢ã™ã‚‹ä¸‰æ™‚ä»£ã®è¨˜éŒ²é›†ã€‚ã‚µãƒ³ãƒ†ã‚£ã‚¢ã‚´ãƒ»ãƒ¡ãƒ³ãƒ‡ã‚¹ã®1861å¹´å ±å‘Šã€ãƒšãƒ‰ãƒ­ãƒ»ã‚µãƒ³ãƒã‚§ã‚¹ãƒ»ãƒ‡ãƒ»ã‚¢ã‚®ãƒ©ãƒ«ã®1639å¹´è¦šæ›¸ã€ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚¨ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ã®1545å¹´å ±å‘Šã«ã€ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ãƒ»ã‚¯ãƒã‚¹ã®æ³¨è¨˜ã€ç”¨èªé›†ã€å‚è€ƒæ–‡çŒ®ã€ç·¨è€…æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/saville-reports-maya-yucatan-1921/cover.jpg",
-    pdf:
-      "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/saville-reports-maya-yucatan-1921/Marshall_H_Saville_Reports_on_the_Maya_Indians_of_Yucatan_1921_Japanese_Complete_Translation.epub",
-    pageCount: 51,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ°‘æ—èªŒ", "ä¸€æ¬¡å²æ–™", "å®—æ•™å²"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["è‹±èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒ¤",
-      "ç¿’ä¿—",
-      "ä¿¡ä»°",
-      "ã‚µãƒ³ãƒ†ã‚£ã‚¢ã‚´ãƒ»ãƒ¡ãƒ³ãƒ‡ã‚¹",
-      "ã‚µãƒ³ãƒã‚§ã‚¹ãƒ»ãƒ‡ãƒ»ã‚¢ã‚®ãƒ©ãƒ«",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚¨ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹",
-      "æ¤æ°‘åœ°æœŸ",
-    ],
-  },
-  {
-    slug: "brasseur-rabinal-achi-1862",
-    title: "ã‚­ãƒã‚§èªæ–‡æ³•ãƒ»èªå½™ã¨ã€ãƒ©ãƒ“ãƒŠãƒ«ãƒ»ã‚¢ãƒã€",
-    originalTitle:
-      "Grammaire de la langue quichÃ©e, suivie dâ€™un vocabulaire et du drame de Rabinal-Achi",
-    subtitle:
-      "1862å¹´åˆŠãƒ»æ–‡æ³•ã€èªå½™ã€ä¸‰è¨€èªæ¯”è¼ƒã€å¤ä»£è©©åŠ‡è«–ã€ã‚­ãƒã‚§èªåŸæ–‡ä»˜ãæˆ¯æ›²ã€å…¨æ³¨ãƒ»æ¥½è­œ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ã‚·ãƒ£ãƒ«ãƒ«ï¼ã‚¨ãƒ†ã‚£ã‚¨ãƒ³ãƒŒãƒ»ãƒ–ãƒ©ãƒƒã‚¹ãƒ¼ãƒ«ãƒ»ãƒ‰ãƒ»ãƒ–ãƒ¼ãƒ«ãƒ–ãƒ¼ãƒ«",
-    series: "COLLECTION DE DOCUMENTS DANS LES LANGUES INDIGÃˆNES Â· TOME II Â· 1862",
-    originalPublication:
-      "ãƒ‘ãƒªã€Arthus Bertrandï¼ãƒ­ãƒ³ãƒ‰ãƒ³ã€TrÃ¼bner and Co.ã€1862å¹´",
-    year: 1862,
-    extent:
-      "PDF 427é ãƒ»å‰ä»˜iâ€“xviié ãƒ»ç¬¬ä¸€éƒ¨1â€“246é ãƒ»ç¬¬äºŒéƒ¨5â€“122é ãƒ»æ–‡æ³•å…¨21ç« ãƒ»èªå½™ãƒ»æˆ¯æ›²å…¨43ç™ºè¨€ãƒ»æ¥½è­œ10è‘‰",
-    description:
-      "ãƒ–ãƒ©ãƒƒã‚¹ãƒ¼ãƒ«ãƒ»ãƒ‰ãƒ»ãƒ–ãƒ¼ãƒ«ãƒ–ãƒ¼ãƒ«ãŒã€ã‚­ãƒã‚§èªæ–‡æ³•ã¨èªå½™ã€ã‚«ã‚¯ãƒã‚±ãƒ«èªãƒ»ãƒ„ãƒˆã‚¥ãƒ’ãƒ«èªã¨ã®æ¯”è¼ƒã€å¾æœä»¥å‰ã®è©©ãƒ»éŸ³æ¥½ãƒ»èˆè¸Šãƒ»æ¼”åŠ‡è«–ã€å…ˆä½æ°‘èˆè¸ŠåŠ‡ã€ãƒ©ãƒ“ãƒŠãƒ«ãƒ»ã‚¢ãƒã€ã‚’ä¸€å†Šã«ã¾ã¨ã‚ãŸ1862å¹´åˆŠæœ¬ã€‚åŠæ¨™é¡Œã€æ¨™é¡Œç´™ã€çŒ®è¾ã€å°æ•™ç†æ›¸ã€åºè¨€ã€æ–‡æ³•å…¨21ç« ã€æ•°è©ä½“ç³»ã€ä¸‰è¨€èªæ¯”è¼ƒã€èªæ ¹èªå½™ã€æ­´å²åºèª¬ã€ç™»å ´äººç‰©ã€ã‚­ãƒã‚§èªåŸæ–‡ã¨æ—¥æœ¬èªè¨³ã«ã‚ˆã‚‹æˆ¯æ›²å…¨43ç™ºè¨€ã€è‘—è€…æ³¨ã€ç›®æ¬¡ã€åŸæ›²æ¥½è­œã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/brasseur-rabinal-achi-1862/cover.jpg",
-    pdf:
-      "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
-    pageCount: 427,
-    figureCount: 0,
-    plateCount: 10,
-    types: ["è¨€èªè³‡æ–™", "ä¸€æ¬¡å²æ–™", "æ¼”åŠ‡", "æ°‘æ—èªŒ"],
-    regions: ["ãƒ©ãƒ“ãƒŠãƒ«", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª", "ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "ã‚­ãƒã‚§èª",
-      "ã‚«ã‚¯ãƒã‚±ãƒ«èª",
-      "ãƒ„ãƒˆã‚¥ãƒ’ãƒ«èª",
-      "ãƒ©ãƒ“ãƒŠãƒ«ãƒ»ã‚¢ãƒ",
-      "å…ˆä½æ°‘æ¼”åŠ‡",
-      "èˆè¸ŠåŠ‡",
-      "éŸ³æ¥½",
-      "æ¥½è­œ",
-      "æ¯”è¼ƒè¨€èªå­¦",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "santibanez-geografia-regional-chiapas-1907",
-    title: "ãƒã‚¢ãƒ‘ã‚¹åœ°æ–¹åœ°ç†",
-    originalTitle: "GeografÃ­a regional de Chiapas",
-    subtitle:
-      "åœ°å‹¢ãƒ»åœ°è³ªãƒ»æ²³å·ãƒ»äººå£ãƒ»è¡Œæ”¿ãƒ»å„çœŒæ¦‚èª¬ãƒ»1907å¹´ç‰ˆ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ã‚¨ãƒ³ãƒªã‚±ãƒ»ã‚µãƒ³ãƒ†ã‚£ãƒãƒ‹ã‚§ã‚¹",
-    series: "GEOGRAFÃA REGIONAL DE CHIAPAS Â· 1907",
-    originalPublication:
-      "ãƒˆã‚¥ã‚¹ãƒˆãƒ©ãƒ»ã‚°ãƒ†ã‚£ã‚¨ãƒ¬ã‚¹ã€å·æ”¿åºœå°åˆ·æ‰€ï¼ˆãƒ•ã‚§ãƒªã‚¯ã‚¹ãƒ»ã‚µãƒ³ã‚¿ã‚¨ãƒªãƒ£ç®¡ç†ï¼‰ã€1907å¹´",
-    year: 1907,
-    extent:
-      "PDF 42é ãƒ»æ¨™é¡Œç´™ãƒ»çŒ®è¾ãƒ»åºæ–‡Vâ€“VIIé ãƒ»æœ¬æ–‡9â€“66é ãƒ»å…¨21ç¯€ãƒ»è¡¨7ç‚¹ãƒ»ç´¢å¼•",
-    description:
-      "ã‚¨ãƒ³ãƒªã‚±ãƒ»ã‚µãƒ³ãƒ†ã‚£ãƒãƒ‹ã‚§ã‚¹ãŒ1907å¹´æ™‚ç‚¹ã®ãƒã‚¢ãƒ‘ã‚¹å·ã‚’ä½“ç³»çš„ã«ã¾ã¨ã‚ãŸåœ°æ–¹åœ°ç†èªŒã€‚åœ°ç†çš„ä½ç½®ã€åœ°è³ªãƒ»å±±ç³»ã€æµ·å²¸ã€æ²³å·ã€æ¹–æ²¼ã€æ°—å€™ã€ä½æ°‘ã€äººå£ã€è¨€èªã€å®—æ•™ã€è¡Œæ”¿åŒºåˆ†ã€æ•™è‚²ã€äº¤é€šã€è²¡æ”¿ã‚’æ‰±ã„ã€12çœŒã®æ¦‚æ³ã¨çœŒéƒ½ã®åº§æ¨™ãƒ»é«˜åº¦ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚æ¨™é¡Œç´™ã€çŒ®è¾ã€åºæ–‡ã€æœ¬æ–‡å…¨21ç¯€ã€äººå£ãƒ»è²¡æ”¿ãƒ»é«˜åº¦ãªã©ã®è¡¨ã€ç´¢å¼•ã‚’çœç•¥ã›ãšåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/santibanez-geografia-regional-chiapas-1907/cover.jpg",
-    pdf:
-      "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/santibanez-geografia-regional-chiapas-1907/Enrique_Santibanez_Geografia_regional_de_Chiapas_1907_Japanese_Complete_Translation.epub",
-    pageCount: 42,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°ç†èªŒ", "çµ±è¨ˆè³‡æ–™", "è¡Œæ”¿è³‡æ–™"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "åœ°å½¢",
-      "åœ°è³ª",
-      "æ²³å·",
-      "äººå£",
-      "è¡Œæ”¿åŒºåˆ†",
-      "æ•™è‚²",
-      "äº¤é€š",
-      "è²¡æ”¿",
-      "å„çœŒæ¦‚èª¬",
-      "20ä¸–ç´€åˆé ­",
-    ],
-  },
-  {
-    slug: "pineda-traslado-poderes-chiapas-1892",
-    title: "ãƒã‚¢ãƒ‘ã‚¹å·æ”¿åºã®ç§»è»¢",
-    originalTitle:
-      "Chiapas. Traslado de los poderes pÃºblicos del Estado de San CristÃ³bal Las Casas a la Ciudad de Tuxtla GutiÃ©rrez",
-    subtitle:
-      "ã‚µãƒ³ãƒ»ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ©ã‚¹ãƒ»ã‚«ã‚µã‚¹ã‹ã‚‰ãƒˆã‚¥ã‚¹ãƒˆãƒ©ãƒ»ã‚°ãƒ†ã‚£ã‚¨ãƒ¬ã‚¹ã¸ãƒ»1892å¹´åˆŠ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ”ãƒãƒ€",
-    series: "CHIAPAS. TRASLADO DE LOS PODERES PÃšBLICOS Â· 1892",
-    originalPublication:
-      "å°åˆ·åœ°ä¸è©³ã€ãƒã‚¢ãƒ‘ã‚¹è‡ªç”±äººå°åˆ·æ‰€ï¼ˆã‚»ãƒ«ã‚½ãƒ»ã‚³ã‚¹ã‚¿ç®¡ç†ï¼‰ã€1892å¹´",
-    year: 1892,
-    extent:
-      "PDF 28é ãƒ»å…¨6ç« ãƒ»ã€LiminaRã€å†éŒ²èªŒé¢115â€“128é ãƒ»æœ«å°¾ã®è¨´ãˆãƒ»æ³¨è¨˜ãƒ»ç½²å",
-    description:
-      "1892å¹´ã«ãƒã‚¢ãƒ‘ã‚¹å·ã®æ”¿åºãŒã‚µãƒ³ãƒ»ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ©ã‚¹ãƒ»ã‚«ã‚µã‚¹ã‹ã‚‰ãƒˆã‚¥ã‚¹ãƒˆãƒ©ãƒ»ã‚°ãƒ†ã‚£ã‚¨ãƒ¬ã‚¹ã¸ç§»ã•ã‚ŒãŸéš›ã€ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ”ãƒãƒ€ãŒç§»è»¢ã«åå¯¾ã—ã¦åˆŠè¡Œã—ãŸå…¨6ç« ã®æ”¿æ²»æ–‡æ›¸ã€‚ã‚µãƒ³ãƒ»ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ã®æ­´å²ã€åœ°ç†çš„ä½ç½®ã€æ•™è‚²ãƒ»å®—æ•™æ–½è¨­ã€å…ˆä½æ°‘è«¸é›†è½ã¨ã®é–¢ä¿‚ã€å·æ³•ä¸Šã®è«–æ‹ ã‚’æŒ™ã’ã€å·éƒ½ã¨ã—ã¦ã®åœ°ä½ã‚’ä¸»å¼µã—ã¦ã„ã¾ã™ã€‚ã€LiminaRã€ã«å†éŒ²ã•ã‚ŒãŸ1892å¹´åˆŠæœ¬æ–‡ã€æœ«å°¾ã®è¨´ãˆã€æ³¨è¨˜ã€ç½²åã‚’çœç•¥ã›ãšåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/pineda-traslado-poderes-chiapas-1892/cover.jpg",
-    pdf:
-      "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/pineda-traslado-poderes-chiapas-1892/Vicente_Pineda_Chiapas_Traslado_de_los_poderes_publicos_1892_Japanese_Complete_Translation.epub",
-    pageCount: 28,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ”¿æ²»æ–‡æ›¸", "åœ°æ–¹å²", "è¡Œæ”¿è³‡æ–™"],
-    regions: [
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚µãƒ³ãƒ»ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ©ã‚¹ãƒ»ã‚«ã‚µã‚¹",
-      "ãƒˆã‚¥ã‚¹ãƒˆãƒ©ãƒ»ã‚°ãƒ†ã‚£ã‚¨ãƒ¬ã‚¹",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å·éƒ½ç§»è»¢",
-      "æ”¿åºç§»è»¢",
-      "ã‚¨ãƒŸãƒªã‚ªãƒ»ãƒ©ãƒã‚µ",
-      "åœ°åŸŸæ”¿æ²»",
-      "éƒ½å¸‚å²",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "gage-new-survey-west-indias-1655",
-    title: "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶æ–°èª¿æŸ»",
-    originalTitle: "A New Survey of the West-Indias",
-    subtitle:
-      "1655å¹´å¢—è£œç¬¬äºŒç‰ˆãƒ»çŒ®è¾ãƒ»å…¨22ç« ãƒ»ãƒã‚³ãƒ³ãƒèªï¼ãƒã‚³ãƒãƒ³èªå°æ–‡æ³•ãƒ»å·»æœ«è©³ç´°ç›®æ¬¡ãƒ»åœ°å›³4è‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒˆãƒã‚¹ãƒ»ã‚²ãƒ¼ã‚¸",
-    series: "A NEW SURVEY OF THE WEST-INDIAS Â· 1655",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€E. Cotes for John Sweetingã€1655å¹´ï¼ˆå¢—è£œç¬¬äºŒç‰ˆï¼‰",
-    year: 1655,
-    extent:
-      "PDF 670é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»çŒ®è¾ãƒ»æ¨è–¦è©©ãƒ»å…¨22ç« ãƒ»åŸåˆŠæœ¬æ–‡1â€“220é ãƒ»ãƒã‚³ãƒ³ãƒèªï¼ãƒã‚³ãƒãƒ³èªå°æ–‡æ³•ãƒ»å·»æœ«è©³ç´°ç›®æ¬¡12è‘‰ãƒ»åœ°å›³4è‘‰",
-    description:
-      "ã‚¤ãƒ³ã‚°ãƒ©ãƒ³ãƒ‰äººè–è·è€…ãƒˆãƒã‚¹ãƒ»ã‚²ãƒ¼ã‚¸ãŒã€1625å¹´ã®æ¸¡èˆªã‹ã‚‰ãƒ¡ã‚­ã‚·ã‚³ã€ãƒã‚¢ãƒ‘ã‚¹ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ãƒ™ãƒ©ãƒ‘ã‚¹ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ãƒ‘ãƒŠãƒã€ã‚«ãƒªãƒ–æµ·ã‚’çµŒãŸå¸°å›½ã¾ã§ã‚’è¨˜ã—ãŸæ—…è¡Œãƒ»åœ°èªŒã€‚1655å¹´å¢—è£œç¬¬äºŒç‰ˆã®æ¨™é¡Œç´™ã€çŒ®è¾ã€æ¨è–¦è©©ã€å…¨22ç« ã€ãƒã‚³ãƒ³ãƒèªï¼ãƒã‚³ãƒãƒ³èªå°æ–‡æ³•ã€å·»æœ«è©³ç´°ç›®æ¬¡ã‚’å…¨è¨³ã—ã€åŸåˆŠã®åœ°å›³4è‘‰ã‚’ç¶´ã˜ä½ç½®ã«å¾“ã£ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/gage-new-survey-west-indias-1655/cover.jpg",
-    pdf:
-      "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/gage-new-survey-west-indias-1655/Thomas_Gage_A_New_Survey_of_the_West-Indias_1655_Japanese_Complete_Translation.epub",
-    pageCount: 670,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["æ—…è¡Œè¨˜", "åœ°èªŒ", "ä¸€æ¬¡å²æ–™", "è¨€èªè³‡æ–™"],
-    regions: [
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚«ãƒªãƒ–æµ·",
-    ],
-    languages: ["è‹±èª", "ãƒ©ãƒ†ãƒ³èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "17ä¸–ç´€",
-      "æ¤æ°‘åœ°æœŸ",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒ™ãƒ©ãƒ‘ã‚¹",
-      "ãƒã‚³ãƒ³ãƒèª",
-      "ãƒã‚³ãƒãƒ³èª",
-      "ãƒãƒ§ã‚³ãƒ¬ãƒ¼ãƒˆ",
-      "åŸåˆŠåœ°å›³",
-    ],
-  },
-  {
-    slug: "marure-bosquejo-revoluciones-centro-america-1837-1878",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é©å‘½å²æ¦‚èª¬",
-    originalTitle:
-      "Bosquejo histÃ³rico de las revoluciones de Centro-AmÃ©rica desde 1811 hasta 1834",
-    subtitle:
-      "ç¬¬1å·»1837å¹´åˆç‰ˆãƒ»ç¬¬2å·»1878å¹´å†ç‰ˆæœ¬ãƒ»æœ¬æ–‡ãƒ»æ–‡æ›¸ãƒ»ç´¢å¼• æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¢ãƒ¬ãƒãƒ³ãƒ‰ãƒ­ãƒ»ãƒãƒ«ãƒ¬",
-    series:
-      "BOSQUEJO HISTÃ“RICO DE LAS REVOLUCIONES DE CENTRO-AMÃ‰RICA Â· 1837 / 1878",
-    originalPublication:
-      "ç¬¬1å·»ï¼šã‚°ã‚¢ãƒ†ãƒãƒ©ã€Imprenta de la N. Academia de Estudiosã€1837å¹´åˆç‰ˆï¼ç¬¬2å·»ï¼šã‚°ã‚¢ãƒ†ãƒãƒ©ã€TipografÃ­a de Â«El ProgresoÂ»ã€1878å¹´å†ç‰ˆ",
-    year: 1837,
-    extent:
-      "PDF 474é ãƒ»å…¨äºŒå·»ãƒ»ç¬¬1å·»æœ¬æ–‡1â€“295é ï¼æ–‡æ›¸Iâ€“LXVIé ãƒ»ç¬¬2å·»æœ¬æ–‡5â€“143é ï¼æ–‡æ›¸IIIâ€“LIXé ãƒ»ä¸¡å·»ç´¢å¼•ãƒ»æ­£èª¤è¡¨ãƒ»æŠ˜è¾¼å›³ç‰ˆ2é¢",
-    description:
-      "ã‚¢ãƒ¬ãƒãƒ³ãƒ‰ãƒ­ãƒ»ãƒãƒ«ãƒ¬ãŒã€1811å¹´ã®åä¹±ã‹ã‚‰ç‹¬ç«‹ã€ãƒ¡ã‚­ã‚·ã‚³å¸å›½ã¸ã®ä½µåˆã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦ã®æˆç«‹ã¨å†…æˆ¦ã¸è‡³ã‚‹æ”¿æ²»éç¨‹ã‚’ã€åŒæ™‚ä»£æ–‡æ›¸ã¨è‡ªã‚‰ã®è¦³å¯Ÿã«åŸºã¥ã„ã¦å™è¿°ã—ãŸæ­´å²æ›¸ã€‚ç¬¬1å·»1837å¹´åˆç‰ˆã¨ç¬¬2å·»1878å¹´å†ç‰ˆæœ¬ã®æœ¬æ–‡ã€è‘—è€…æ³¨ã€ä»˜éŒ²æ–‡æ›¸ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’å…¨è¨³ã—ã€åº•æœ¬è‡ªä½“ãŒä¸­æ–­ã™ã‚‹ç¬¬2å·»ç¬¬13ç« ã¯ç¾å­˜ç®‡æ‰€ã¾ã§ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/cover.jpg",
-    pdf:
-      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
-    pageCount: 474,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["æ­´å²æ›¸", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™", "æ–‡æ›¸é›†"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "19ä¸–ç´€",
-      "ä¸­ç±³ç‹¬ç«‹",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸å›½ä½µåˆ",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦",
-      "è‡ªç”±æ´¾",
-      "ä¿å®ˆæ´¾",
-      "1826â€“1829å¹´å†…æˆ¦",
-      "ãƒã‚¢ãƒ‘ã‚¹å¸°å±å•é¡Œ",
-      "å…¬æ–‡æ›¸",
-      "æœªå®Œ",
-    ],
-  },
-  {
-    slug: "montgomery-journey-guatemala-1839",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©æ—…è¡Œè¨˜",
-    originalTitle:
-      "Narrative of a Journey to Guatemala, in Central America, in 1838",
-    subtitle:
-      "1839å¹´åˆç‰ˆãƒ»çŒ®è¾ãƒ»ç›®æ¬¡ãƒ»å…¨24ç« ãƒ»åŸæ³¨ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ãƒ»ãƒ¢ãƒ³ã‚´ãƒ¡ãƒªãƒ¼",
-    series: "NARRATIVE OF A JOURNEY TO GUATEMALA Â· 1839",
-    originalPublication: "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã€Wiley & Putnamã€1839å¹´",
-    year: 1839,
-    extent:
-      "PDF 174é ãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»è‘—ä½œæ¨©è¡¨ç¤ºãƒ»çŒ®è¾ãƒ»ç›®æ¬¡ãƒ»æœ¬æ–‡å…¨24ç« ãƒ»åŸåˆŠ9â€“195é ãƒ»åŸæ³¨ãƒ»è¡¨4ç‚¹",
-    description:
-      "ã‚¢ãƒ¡ãƒªã‚«åˆè¡†å›½æ”¿åºœã®ä»»å‹™ã§ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã¸èµ´ã„ãŸã‚¸ãƒ§ãƒ¼ã‚¸ãƒ»ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ãƒ»ãƒ¢ãƒ³ã‚´ãƒ¡ãƒªãƒ¼ãŒã€1838å¹´ã®æ—…ã‚’è¨˜ã—ãŸæ—…è¡Œè¨˜ã€‚ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ã‹ã‚‰ãƒãƒãƒŠã€ãƒˆãƒ«ãƒ’ãƒ¼ãƒªãƒ§ã€ãƒ™ãƒªãƒ¼ã‚ºã€ã‚¤ã‚µãƒãƒ«ã€ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«ã‚’çµŒã¦ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚ã¸è‡³ã‚Šã€ãƒ™ãƒ©ãƒ‘ã‚¹çµŒç”±ã§å¸°å›½ã™ã‚‹æ—…ç¨‹ã«åŠ ãˆã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®åœ°ç†ã€äººå£ã€äº¤æ˜“ã€æ”¿æ²»æƒ…å‹¢ã€ã‚«ãƒ¬ãƒ¼ãƒ©èœ‚èµ·ã‚’å™è¿°ã—ã¦ã„ã¾ã™ã€‚çŒ®è¾ã€ç›®æ¬¡ã€æœ¬æ–‡å…¨24ç« ã€åŸæ³¨ã€è«¸è¡¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/montgomery-journey-guatemala-1839/cover.jpg",
-    pdf:
-      "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
-    pageCount: 174,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["æ—…è¡Œè¨˜", "åœ°èªŒ", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ã‚­ãƒ¥ãƒ¼ãƒ",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "1838å¹´",
-      "19ä¸–ç´€å‰åŠ",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦",
-      "ã‚«ãƒ¬ãƒ¼ãƒ©",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚",
-      "ã‚µãƒ³ãƒ»ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "ã‚³ã‚·ã‚°ã‚¤ãƒŠç«å±±",
-    ],
-  },
-  {
-    slug: "carrera-memorias-1837-1840-1906",
-    title: "ã‚«ãƒ¬ãƒ¼ãƒ©å°†è»å›æƒ³éŒ²",
-    originalTitle: "Memorias del General Carrera, 1837 Ã¡ 1840",
-    subtitle:
-      "1906å¹´åˆç‰ˆãƒ»ç·¨è€…åˆŠè¡Œè¶£æ„ãƒ»çœŸæ­£æ€§åºè«–ãƒ»å…¨7ç« ãƒ»ç·¨æ³¨ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«ãƒ»ã‚«ãƒ¬ãƒ¼ãƒ©ï¼ˆå£è¿°ï¼‰ï¼ã‚¤ã‚°ãƒŠã‚·ã‚ªãƒ»ã‚½ãƒªã‚¹ï¼ˆç·¨ï¼‰",
-    series: "MEMORIAS DEL GENERAL CARRERA Â· 1906",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€TipografÃ­a SÃ¡nchez & de Guiseã€1906å¹´",
-    year: 1906,
-    extent:
-      "PDF 80é ãƒ»åŸåˆŠè¡¨ç´™ãƒ»æ¨™é¡Œç´™ãƒ»ç·¨è€…åˆŠè¡Œè¶£æ„ãƒ»ã‚«ãƒ¬ãƒ¼ãƒ©ç•¥æ­´ãƒ»çœŸæ­£æ€§åºè«–ãƒ»æœ¬æ–‡å…¨7ç« ãƒ»åŸåˆŠ3â€“91é ãƒ»ç·¨æ³¨",
-    description:
-      "ã‚¤ã‚°ãƒŠã‚·ã‚ªãƒ»ã‚½ãƒªã‚¹ãŒãƒ©ãƒ•ã‚¡ã‚¨ãƒ«ãƒ»ã‚«ãƒ¬ãƒ¼ãƒ©æœ¬äººã®å£è¿°è¨˜éŒ²ã¨ã—ã¦åˆŠè¡Œã—ãŸã€1837å¹´ã‹ã‚‰1840å¹´ã¾ã§ã®å›æƒ³éŒ²ã€‚ã‚°ã‚¢ãƒ†ãƒãƒ©æ±éƒ¨ã®èœ‚èµ·ã€æ”¿åºœè»ãƒ»ãƒ¢ãƒ©ã‚µãƒ³è»ã¨ã®æˆ¦é—˜ã€é¦–éƒ½å é ˜ã€ãƒ­ã‚¹ãƒ»ã‚¢ãƒ«ãƒˆã‚¹ã‚’ã‚ãã‚‹è»äº‹è¡Œå‹•ã‚’ã€ã‚«ãƒ¬ãƒ¼ãƒ©å´ã®è¦–ç‚¹ã‹ã‚‰å™è¿°ã—ã¦ã„ã¾ã™ã€‚ç·¨è€…ã®åˆŠè¡Œè¶£æ„ã€ã‚«ãƒ¬ãƒ¼ãƒ©ç•¥æ­´ã€è¨˜éŒ²ã®çœŸæ­£æ€§ã‚’è«–ã˜ã‚‹åºè«–ã€æœ¬æ–‡å…¨7ç« ã€å²æ–™ã‚’å¼•ãç·¨æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/carrera-memorias-1837-1840-1906/cover.jpg",
-    pdf:
-      "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
-    pageCount: 80,
-    figureCount: 0,
-    plateCount: 2,
-    types: ["å›æƒ³éŒ²", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™", "ä¼è¨˜"],
-    regions: [
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ­ã‚¹ãƒ»ã‚¢ãƒ«ãƒˆã‚¹",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«ãƒ»ã‚«ãƒ¬ãƒ¼ãƒ©",
-      "1837â€“1840å¹´",
-      "ä¿å®ˆæ´¾",
-      "è‡ªç”±æ´¾",
-      "ãƒ¢ãƒ©ã‚µãƒ³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å†…æˆ¦",
-      "ãƒ­ã‚¹ãƒ»ã‚¢ãƒ«ãƒˆã‚¹",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "valle-anexion-centro-america-mexico-1924-1949",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ãƒ¡ã‚­ã‚·ã‚³ä½µåˆ",
-    originalTitle: "La anexiÃ³n de Centro AmÃ©rica a MÃ©xico",
-    subtitle:
-      "å…¨6å·»ï¼ˆ1924â€“1949å¹´åˆŠï¼‰ãƒ»1821â€“1828å¹´æ–‡æ›¸é›† æ—¥æœ¬èªå…¨è¨³ãƒ»åˆå†Šç‰ˆ",
-    author: "ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«ãƒ»ã‚¨ãƒªã‚ªãƒ‰ãƒ­ãƒ»ãƒã‚¸ã‚§ï¼ˆç·¨ï¼‰",
-    series: "ARCHIVO HISTÃ“RICO DIPLOMÃTICO MEXICANO Â· TOMOS Iâ€“VI",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€å¤–å‹™çœã€1924â€“1949å¹´",
-    year: 1924,
-    extent:
-      "PDF 2,257é ãƒ»å…¨6å·»ãƒ»åéŒ²æ–‡æ›¸1,045ä»¶ãƒ»å·»åˆ¥æ–‡æ›¸ç´¢å¼•ãƒ»å…¨å·»ç·åˆå›ºæœ‰åç´¢å¼•49é ",
-    description:
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«è«¸å·ãŒã‚¹ãƒšã‚¤ãƒ³ã‹ã‚‰ç‹¬ç«‹ã—ã€ã‚¤ãƒˆã‚¥ãƒ«ãƒ“ãƒ‡ã®ãƒ¡ã‚­ã‚·ã‚³å¸å›½ã¸ä½µåˆã•ã‚ŒãŸã®ã¡ã€å¸å›½å´©å£Šã‚’çµŒã¦åˆ†é›¢ã™ã‚‹ã¾ã§ã®1821â€“1828å¹´æ–‡æ›¸é›†ã€‚ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ãƒã‚¢ãƒ‘ã‚¹ã€ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ã‚³ã‚¹ã‚¿ãƒªã‚«ã‚’ã‚ãã‚‹å¸ƒå‘Šã€è­°ä¼šå¯©è­°ã€å¤–äº¤æ›¸ç°¡ã€è»æ”¿æ–‡æ›¸ã€è«–èª¬ã‚’åã‚ã‚‹å…¨6å·»1,045æ–‡æ›¸ã‚’å…¨è¨³ã—ã€å·»åˆ¥æ–‡æ›¸ç´¢å¼•ã¨å…¨å·»ç·åˆå›ºæœ‰åç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
-    pdf:
-      "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub",
-    pageCount: 2257,
-    figureCount: 0,
-    plateCount: 50,
-    types: ["æ–‡æ›¸é›†", "å¤–äº¤å²", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "1821â€“1828å¹´",
-      "ä¸­ç±³ç‹¬ç«‹",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸å›½ä½µåˆ",
-      "ã‚¢ã‚°ã‚¹ãƒ†ã‚£ãƒ³ãƒ»ãƒ‡ãƒ»ã‚¤ãƒˆã‚¥ãƒ«ãƒ“ãƒ‡",
-      "ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ•ã‚£ãƒªã‚½ãƒ©",
-      "ãƒã‚¢ãƒ‘ã‚¹å¸°å±å•é¡Œ",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦",
-      "å¤–äº¤æ–‡æ›¸",
-      "è­°ä¼šå¯©è­°",
-      "å…¨å·»ç´¢å¼•",
-    ],
-  },
-  {
-    slug: "montufar-memorias-revolucion-centro-america-1832",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é©å‘½å²ã®ãŸã‚ã®å›æƒ³éŒ²",
-    originalTitle:
-      "Memorias para la historia de la revoluciÃ³n de Centro-AmÃ©rica",
-    subtitle:
-      "ã€Œãƒãƒ©ãƒ‘å›æƒ³éŒ²ã€ãƒ»1832å¹´åˆç‰ˆãƒ»å‰ä»˜ãƒ»å…¨5ç« ãƒ»è¨¼æ‹ æ–‡æ›¸ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒ¢ãƒ³ãƒˆã‚¥ãƒ•ã‚¡ãƒ«ãƒ»ã‚¤ãƒ»ã‚³ãƒ­ãƒŠãƒ¼ãƒ‰",
-    series: "MEMORIAS DE JALAPA Â· 1832",
-    originalPublication: "ãƒãƒ©ãƒ‘ã€æ”¿åºœå°åˆ·å±€ã€1832å¹´",
-    year: 1832,
-    extent:
-      "PDF 267é ãƒ»åŸåˆŠå‰ä»˜Iâ€“XXXIIé ãƒ»æœ¬æ–‡ãŠã‚ˆã³è¨¼æ‹ æ–‡æ›¸1â€“257é ãƒ»å…¨5ç« ãƒ»è„šæ³¨35ä»¶ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹",
-    description:
-      "æ—§ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½æœ«æœŸã‹ã‚‰ç‹¬ç«‹ã€ãƒ¡ã‚­ã‚·ã‚³å¸å›½ã¸ã®ä½µåˆã¨åˆ†é›¢ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦ã®æˆç«‹ã€1826â€“1829å¹´å†…æˆ¦ã¨ã‚°ã‚¢ãƒ†ãƒãƒ©å é ˜ã¾ã§ã‚’ã€åŒæ™‚ä»£ã®æ”¿æ²»å®¶ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒ¢ãƒ³ãƒˆã‚¥ãƒ•ã‚¡ãƒ«ãŒå™è¿°ã—ãŸå›æƒ³éŒ²ã€‚1832å¹´åˆç‰ˆã¯ã€Œã‚ã‚‹ã‚°ã‚¢ãƒ†ãƒãƒ©äººã«ã‚ˆã‚‹ã€ã¨ã—ã¦åŒ¿ååˆŠè¡Œã•ã‚Œã€ä¸€èˆ¬ã«ã€Œãƒãƒ©ãƒ‘å›æƒ³éŒ²ã€ã¨å‘¼ã°ã‚Œã¦ã„ã¾ã™ã€‚ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«æ¦‚èª¬ã€å…¨5ç« ã€è¨¼æ‹ æ–‡æ›¸ç¬¬1â€“5å·ã€è„šæ³¨ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
-    pdf:
-      "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/montufar-memorias-revolucion-centro-america-1832/Manuel_Montufar_Memorias_para_la_historia_de_la_revolucion_de_Centro_America_1832_Japanese_Complete_Translation.epub",
-    pageCount: 267,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["å›æƒ³éŒ²", "æ”¿æ²»å²", "ä¸€æ¬¡å²æ–™", "æ­´å²æ›¸"],
-    regions: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒ©ãƒ‘å›æƒ³éŒ²",
-      "ä¸­ç±³ç‹¬ç«‹",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦",
-      "1826â€“1829å¹´å†…æˆ¦",
-      "ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒ›ã‚»ãƒ»ã‚¢ãƒ«ã‚»",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ¢ãƒ©ã‚µãƒ³",
-      "ä¿å®ˆæ´¾",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ximenez-ayer-ms-1515-volume-1",
-    title: "ä¸‰è¨€èªæ–‡æ³•ãƒ»ç¬¬äºŒè«–è€ƒ",
-    originalTitle:
-      "Arte de las tres lenguas cakchiquel, quichÃ© y tzutuhil; Tratado segundo de todo lo que debe saber un ministro para la buena administraciÃ³n de estos naturales",
-    subtitle: "Ayer MS 1515 ç¬¬1å·»ãƒ»å…¨240è‘‰é¢ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ’ãƒ¡ãƒã‚¹",
-    series: "ARTE DE LAS TRES LENGUAS Â· AYER MS 1515 Â· VOLUME I",
-    originalPublication: "ãƒãƒã‚«ã‚¹ãƒ†ãƒŠãƒ³ã‚´ã€1700â€“1703å¹´é ƒï¼ˆå†™æœ¬ï¼‰",
-    year: 1700,
-    extent: "PDF 619é ãƒ»ç¿»è¨³å¯¾è±¡å…¨240è‘‰é¢ãƒ»åº•æœ¬ç”»åƒ240ç‚¹",
-    description:
-      "ãƒ‹ãƒ¥ãƒ¼ãƒ™ãƒªãƒ¼å›³æ›¸é¤¨æ‰€è”µ Ayer MS 1515 ç¬¬1å·»ã®æ—¥æœ¬èªå…¨è¨³ã€‚å†’é ­ã®æœªä¸ä»˜4è‘‰ã¨ç¬¬1â€“93è‘‰ã®ã‚«ã‚¯ãƒã‚±ãƒ«èªãƒ»ã‚­ãƒã‚§èªãƒ»ãƒ„ãƒˆã‚¥ãƒ’ãƒ«èªæ¯”è¼ƒæ–‡æ³•ã‚’ç¬¬ä¸€éƒ¨ã€ç¬¬94â€“119è‘‰ã®è–è·è€…ç”¨å¸ç‰§æ‰‹å¼•ã‚’ç¬¬äºŒéƒ¨ã¨ã—ã¦å†™æœ¬é †ã«åéŒ²ã—ã€ç¿»è¨³å¯¾è±¡å…¨240è‘‰é¢ã®åº•æœ¬ç”»åƒã‚’ä½µè¼‰ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
-    pdf:
-      "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ximenez-ayer-ms-1515-volume-1/Francisco_Ximenez_Arte_de_las_tres_lenguas_Tratado_segundo_Ayer_MS_1515_Vol_1_Japanese_Complete_Translation.epub",
-    pageCount: 619,
-    figureCount: 0,
-    plateCount: 240,
-    types: ["æ–‡æ³•æ›¸", "å¸ç‰§æ‰‹å¼•", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒã‚«ã‚¹ãƒ†ãƒŠãƒ³ã‚´", "ã‚­ãƒã‚§é«˜åœ°"],
-    languages: [
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ã‚«ã‚¯ãƒã‚±ãƒ«èª",
-      "ã‚­ãƒã‚§èª",
-      "ãƒ„ãƒˆã‚¥ãƒ’ãƒ«èª",
-      "ãƒ©ãƒ†ãƒ³èª",
-    ],
-    tags: [
-      "Ayer MS 1515",
-      "ã‚«ã‚¯ãƒã‚±ãƒ«èª",
-      "ã‚­ãƒã‚§èª",
-      "ãƒ„ãƒˆã‚¥ãƒ’ãƒ«èª",
-      "ãƒ‰ãƒŸãƒ‹ã‚³ä¼š",
-      "å‘Šè§£",
-      "æ•™ç†å•ç­”",
-      "æ¤æ°‘åœ°æœŸ",
-      "å†™æœ¬ç”»åƒ",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ximenez-ayer-ms-1515-volume-2",
-    title: "ãƒãƒãƒ«ãƒ»ãƒ´ãƒ•ï¼æ­´å²èµ·æºæ³¨è§£",
-    originalTitle:
-      "Empiezan las historias del origen de los indios de esta provincia de Guatemala; Escolios a las historias de el origen de los indios",
-    subtitle:
-      "Ayer MS 1515 ç¬¬2å·»ãƒ»ç„¡ç•ªå·å‰ä»˜8é¢ãƒ»ãƒãƒãƒ«ãƒ»ãƒ´ãƒ•56è‘‰ãƒ»æ­´å²èµ·æºæ³¨è§£6è‘‰",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ’ãƒ¡ãƒã‚¹",
-    series: "POPOL VUH Â· ESCOLIOS Â· AYER MS 1515 Â· VOLUME II",
-    originalPublication: "ãƒãƒã‚«ã‚¹ãƒ†ãƒŠãƒ³ã‚´ã€1701â€“1715å¹´é ƒï¼ˆå†™æœ¬ï¼‰",
-    year: 1701,
-    extent:
-      "PDF 270é ãƒ»ç„¡ç•ªå·å‰ä»˜8é¢ãƒ»ãƒãƒãƒ«ãƒ»ãƒ´ãƒ•ç¬¬1è‘‰è¡¨â€“ç¬¬56è‘‰è£ãƒ»æŒ¿å…¥ç™½ç´™2é¢ãƒ»æ­´å²èµ·æºæ³¨è§£ç¬¬1è‘‰è¡¨â€“ç¬¬6è‘‰è£ãƒ»åº•æœ¬ç”»åƒ134ç‚¹",
-    description:
-      "ãƒ‹ãƒ¥ãƒ¼ãƒ™ãƒªãƒ¼å›³æ›¸é¤¨æ‰€è”µ Ayer MS 1515 ç¬¬2å·»ã®åˆå†Šç‰ˆã€‚ç„¡ç•ªå·å‰ä»˜ã®è¡¨é¡Œãƒ»åºã€ã‚­ãƒã‚§èªã®æŒ¨æ‹¶æ–‡5ç¯‡ã¨å©šå§»å„€ç¤¼å®šå‹å¥ã€ãƒãƒãƒ«ãƒ»ãƒ´ãƒ•ã®ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªæœ¬æ–‡ã€ç¬¬1è‘‰è¡¨â€“ç¬¬56è‘‰è£ã€å·»æœ«ã®æ­´å²èµ·æºæ³¨è§£å…¨6è‘‰ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚æ­´å²èµ·æºæ³¨è§£ã«ã¯ãƒ’ãƒ¡ãƒã‚¹æœ¬æ–‡ã€åˆ¥ç­†ä»˜è¨˜ã€1734å¹´ã®ã‚¨ãƒãƒ£ãƒ¼ãƒ™ç½²åæ–‡ã€ã‚­ãƒã‚§èªã®å‘Šè§£æ‰‹å¼•ãƒ»ã‚«ãƒ†ã‚­ã‚ºãƒ è³ªå•æ–­ç‰‡ã‚’å«ã¿ã¾ã™ã€‚ç„¡ç•ªå·å‰ä»˜ã€æŒ¿å…¥ç™½ç´™ã€æ­´å²èµ·æºæ³¨è§£ã‚’å«ã‚€åº•æœ¬ç”»åƒ134ç‚¹ã‚’å†™æœ¬é †ã«ä½µè¼‰ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ximenez-ayer-ms-1515-volume-2/cover.jpg",
-    pdf:
-      "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ximenez-ayer-ms-1515-volume-2/Francisco_Ximenez_Popol_Vuh_Escolios_Ayer_MS_1515_Vol_2_Japanese_Complete_Translation.epub",
-    pageCount: 270,
-    figureCount: 0,
-    plateCount: 134,
-    types: ["æ­´å²æ›¸", "ç¥è©±", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒã‚«ã‚¹ãƒ†ãƒŠãƒ³ã‚´", "ã‚­ãƒã‚§é«˜åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ã‚­ãƒã‚§èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "Ayer MS 1515",
-      "ãƒãƒãƒ«ãƒ»ãƒ´ãƒ•",
-      "æ­´å²èµ·æºæ³¨è§£",
-      "ãƒ‰ãƒŸãƒ‹ã‚³ä¼š",
-      "å…ˆä½æ°‘å®—æ•™",
-      "ã‚­ãƒã‚§èª",
-      "å†™æœ¬ç”»åƒ",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "peniche-relaciones-belice-1869",
-    title:
-      "ã‚¹ãƒšã‚¤ãƒ³ãŠã‚ˆã³ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚¤ã‚®ãƒªã‚¹ã¨ã®ã€ãƒ™ãƒªãƒ¼ã‚ºæ¤æ°‘åœ°ã‚’ã‚ãã‚‹é–¢ä¿‚å²",
-    originalTitle:
-      "Historia de las relaciones de EspaÃ±a y MÃ©xico con Inglaterra, sobre el establecimiento de Belice",
-    subtitle:
-      "1869å¹´åˆŠãƒ»åŸåˆŠæ²è¼‰æœ¬æ–‡ç¬¬ä¸€éƒ¨å…¨67é ãƒ»åŸæ³¨ãƒ»è¡¨ãƒ»æŠ˜è¾¼åœ°å›³è¡¨è¨˜å¯¾è¨³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒŒã‚¨ãƒ«ãƒ»ãƒšãƒ‹ãƒã‚§",
-    series:
-      "BOLETÃN DE LA SOCIEDAD MEXICANA DE GEOGRAFÃA Y ESTADÃSTICA Â· 1869",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€ã€BoletÃ­n de la Sociedad Mexicana de GeografÃ­a y EstadÃ­sticaã€ç¬¬äºŒæœŸç¬¬1å·»ã€1869å¹´ã€217â€“256ãƒ»377â€“403é ",
-    year: 1869,
-    extent:
-      "PDF 79é ãƒ»åŸåˆŠæ²è¼‰æœ¬æ–‡ç¬¬ä¸€éƒ¨å…¨67é ãƒ»åŸæ³¨46ä»¶ãƒ»è¡¨1ç‚¹ãƒ»åŸåˆŠæŠ˜è¾¼åœ°å›³ã®è¡¨è¨˜å¯¾è¨³",
-    description:
-      "ã‚¹ãƒšã‚¤ãƒ³ãŠã‚ˆã³ãƒ¡ã‚­ã‚·ã‚³ã¨ã‚¤ã‚®ãƒªã‚¹ã¨ã®é–“ã§ã€ãƒ™ãƒªãƒ¼ã‚ºã®ã‚¤ã‚®ãƒªã‚¹äººå…¥æ¤åœ°ã‚’ã‚ãã£ã¦ç”Ÿã˜ãŸé–¢ä¿‚ã‚’ã€17ä¸–ç´€ã®ãƒãƒƒã‚«ãƒ‹ã‚¢ã‹ã‚‰18ä¸–ç´€ã®æ¡ç´„ãƒ»å¤–äº¤äº¤æ¸‰ã¾ã§ãŸã©ã‚‹æ­´å²è«–æ–‡ã€‚1869å¹´ã«ã€ãƒ¡ã‚­ã‚·ã‚³åœ°ç†çµ±è¨ˆå­¦ä¼šç´€è¦ã€ã¸æ²è¼‰ã•ã‚ŒãŸç¬¬ä¸€éƒ¨å…¨67é ã€åŸæ³¨46ä»¶ã€è¡¨1ç‚¹ã‚’çœç•¥ãªãè¨³ã—ã€è»¢è¼‰ã—ã¦ã„ãªã„åŸåˆŠæŠ˜è¾¼åœ°å›³ã«ã¤ã„ã¦é¡Œåãƒ»èª¬æ˜æ–‡ãƒ»ä¸»è¦è¡¨è¨˜ã®å¯¾è¨³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/peniche-relaciones-belice-1869/cover.jpg",
-    pdf:
-      "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub",
-    pageCount: 79,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å¤–äº¤å²", "æ¤æ°‘åœ°å²", "æ­´å²è«–æ–‡", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¦ã‚«ã‚¿ãƒ³",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹æ¹¾",
-      "ã‚¹ãƒšã‚¤ãƒ³",
-      "ã‚¤ã‚®ãƒªã‚¹",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ™ãƒªãƒ¼ã‚º",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚«ãƒ³ãƒšãƒã‚§æœ¨",
-      "ãƒãƒƒã‚«ãƒ‹ã‚¢",
-      "ã‚¤ã‚®ãƒªã‚¹å¤–äº¤",
-      "ã‚¹ãƒšã‚¤ãƒ³å¸å›½",
-      "ãƒ¡ã‚­ã‚·ã‚³å¤–äº¤",
-      "18ä¸–ç´€æ¡ç´„",
-    ],
-  },
-  {
-    slug: "southey-chronological-history-west-indies-1827",
-    title: "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶å¹´ä»£å²",
-    originalTitle: "Chronological History of the West Indies",
-    subtitle:
-      "1827å¹´åˆç‰ˆãƒ»å…¨3å·»ãƒ»å‰ä»˜ã€æœ¬æ–‡ã€åŸæ³¨ã€ä»˜éŒ² æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒˆãƒ¼ãƒã‚¹ãƒ»ã‚µã‚¦ã‚¸ãƒ¼",
-    series: "CHRONOLOGICAL HISTORY OF THE WEST INDIES Â· 1827",
-    originalPublication:
-      "ãƒ­ãƒ³ãƒ‰ãƒ³ã€Longman, Rees, Orme, Brown, and Greenã€1827å¹´ã€å…¨3å·»",
-    year: 1827,
-    extent:
-      "PDF 2,039é ãƒ»å…¨3å·»ãƒ»åŸåˆŠæœ¬æ–‡è¨ˆ1,508é ï¼ˆ336ï¼‹552ï¼‹620é ï¼‰ãƒ»åŸæ³¨249ä»¶ãƒ»è¡¨63ç‚¹ãƒ»åŸåˆŠå›³åƒ6ç‚¹",
-    description:
-      "1492å¹´ã®ã‚³ãƒ­ãƒ³ãƒ–ã‚¹èˆªæµ·ã‹ã‚‰1816å¹´ã¾ã§ã€è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶ã¨å‘¨è¾ºæµ·åŸŸã®å‡ºæ¥äº‹ã‚’å¹´ä»£é †ã«ç·¨ã‚“ã 1827å¹´åˆŠå…¨3å·»ã®æ­´å²æ›¸ã€‚ã‚¹ãƒšã‚¤ãƒ³ãƒ»ã‚¤ã‚®ãƒªã‚¹ãƒ»ãƒ•ãƒ©ãƒ³ã‚¹ãƒ»ã‚ªãƒ©ãƒ³ãƒ€ãªã©ã®æ¤æ°‘åœ°æ”¯é…ã€æµ·è³Šãƒ»ç§æ ã€æˆ¦äº‰ã€å¥´éš·åˆ¶ã¨å¥´éš·è²¿æ˜“ã€ãƒã‚¤ãƒé©å‘½ã€å„å³¶ã®æ”¿æ²»ãƒ»ç¤¾ä¼šãƒ»äº¤æ˜“ã‚’è¨˜éŒ²ã—ã¦ã„ã¾ã™ã€‚å…¨3å·»ã®å‰ä»˜ã€æœ¬æ–‡ã€åŸæ³¨249ä»¶ã€è¡¨63ç‚¹ã€åŸåˆŠå›³åƒ6ç‚¹ã€ç¬¬3å·»ä»˜éŒ²ã‚’çœç•¥ãªãè¨³ã—ã€å„å·»ã®åŸåˆŠé æ¨™è­˜ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/southey-chronological-history-west-indies-1827/cover.jpg",
-    pdf:
-      "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.pdf",
-    epub:
-      "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.epub",
-    pageCount: 2039,
-    figureCount: 6,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "æ¤æ°‘åœ°å²", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "ã‚«ãƒªãƒ–æµ·",
-      "ã‚¸ãƒ£ãƒã‚¤ã‚«",
-      "ãƒã‚¤ãƒ",
-      "ãƒãƒãƒ",
-      "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["è‹±èª"],
-    tags: [
-      "è¥¿ã‚¤ãƒ³ãƒ‰è«¸å³¶",
-      "ã‚«ãƒªãƒ–æµ·",
-      "æ¤æ°‘åœ°å²",
-      "æµ·è³Š",
-      "ç§æ ",
-      "å¥´éš·åˆ¶",
-      "å¥´éš·è²¿æ˜“",
-      "ãƒã‚¤ãƒé©å‘½",
-      "è‹±ä»æˆ¦äº‰",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "dieseldorff-ausgrabungen-coban-1893",
-    title: "ã‚³ãƒãƒ³ã«ãŠã‘ã‚‹ç™ºæ˜",
-    originalTitle: "Ausgrabungen in Coban",
-    subtitle:
-      "1893å¹´åˆŠãƒ»åŸåˆŠ374â€“382é ãƒ»æœ¬æ–‡ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦åˆ†æå ±å‘Šãƒ»å›³1â€“11 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "AUSGRABUNGEN IN COBAN Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1893",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬25å·»ã€1893å¹´ã€374â€“382é ",
-    year: 1893,
-    extent: "PDF 13é ãƒ»åŸåˆŠ374â€“382é ãƒ»å›³11ç‚¹ãƒ»é‰±ç‰©åˆ†æä»˜å ±",
-    description:
-      "ã‚³ãƒãƒ³è¿‘éƒŠã¨ãƒãƒ£ãƒæ¸“è°·ã§å‡ºåœŸã—ãŸå½©è‰²ãƒ»ç·šåˆ»åœŸå™¨ã€åŸ‹è‘¬ã€ä¾›çŒ®çš¿ã€é»„é‰„é‰±ç‰‡ãªã©ã‚’å ±å‘Šã™ã‚‹ç™ºæ˜è«–æ–‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•æœ¬æ–‡ã€å›³1â€“11ã¨å›³æ³¨ã€è„šæ³¨ã€ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦ã«ã‚ˆã‚‹éª¨ãƒ»é¡”æ–™ãƒ»é‰±ç‰©è©¦æ–™ã®åˆ†æå ±å‘Šã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-ausgrabungen-coban-1893/cover.jpg",
-    pdf:
-      "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-ausgrabungen-coban-1893/Dieseldorff_Ausgrabungen_in_Coban_1893_Japanese_Complete_Translation.epub",
-    pageCount: 13,
-    figureCount: 11,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "ç™ºæ˜å ±å‘Š", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚³ãƒãƒ³", "ãƒãƒ£ãƒ", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "å½©è‰²åœŸå™¨",
-      "åŸ‹è‘¬",
-      "é»„é‰„é‰±",
-      "ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å¤ã„å½©è‰²åœŸå™¨",
-    originalTitle: "Alte bemalte ThongefÃ¤sse von Guatemala",
-    subtitle:
-      "1893å¹´åˆŠãƒ»åŸåˆŠ547â€“551é ãƒ»æœ¬æ–‡ãƒ»å›³1â€“2ãƒ»å›³ç‰ˆXVIãƒ»ä»˜åŠ ç™ºè¨€ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "ALTE BEMALTE THONGEFÃ„SSE VON GUATEMALA Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1893",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬25å·»ã€1893å¹´ã€547â€“551é ãƒ»å›³ç‰ˆXVI",
-    year: 1893,
-    extent: "PDF 7é ãƒ»åŸåˆŠ547â€“551é ãƒ»æœ¬æ–‡å›³2ç‚¹ãƒ»å›³ç‰ˆXVIãƒ»ä»˜åŠ ç™ºè¨€",
-    description:
-      "ãƒãƒ£ãƒæ¸“è°·ã®å¢“ã‹ã‚‰å‡ºåœŸã—ãŸäºŒç‚¹ã®è¤‡åˆå½¢å½©è‰²åœŸå™¨ã«ã¤ã„ã¦ã€å™¨å½¢ã€äººç‰©ãƒ»ã‚±ãƒ„ã‚¡ãƒ¼ãƒ«ãƒ»è²æ®»ãƒ»æš¦è¨˜å·ã®å›³åƒã€åŸ‹è‘¬çŠ¶æ³ã‚’å ±å‘Šã—ãŸè€ƒå¤å­¦è«–æ–‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•æœ¬æ–‡ã€å›³1â€“2ã€åŸåˆŠå›³ç‰ˆXVIã€ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ã¨ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦ã®ä»˜åŠ ç™ºè¨€ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/cover.jpg",
-    pdf:
-      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-alte-bemalte-thongefaesse-guatemala-1893/Dieseldorff_Alte_bemalte_Thongefaesse_von_Guatemala_1893_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 2,
-    plateCount: 1,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "åœŸå™¨ç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "å½©è‰²åœŸå™¨",
-      "å›³åƒç ”ç©¶",
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-      "çµµæ–‡æ›¸",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-gefaess-chama-1895",
-    title: "ãƒãƒ£ãƒã®å™¨",
-    originalTitle: "Das GefÃ¤ss von ChamÃ¡",
-    subtitle:
-      "1895å¹´åˆŠãƒ»åŸåˆŠ770â€“776é ãƒ»æœ¬æ–‡ãƒ»å¼•ç”¨ãƒ»å›³1â€“5ãŠã‚ˆã³è£œå›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "DAS GEFÃ„SS VON CHAMÃ Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1895",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬27å·»ã€1895å¹´ã€770â€“776é ",
-    year: 1895,
-    extent: "PDF 11é ãƒ»åŸåˆŠ770â€“776é ãƒ»å›³1â€“5ãŠã‚ˆã³è£œå›³2ç‚¹",
-    description:
-      "ãƒãƒ£ãƒå‡ºåœŸã®å½©è‰²åœŸå™¨å›³åƒã‚’ã‚ãã‚Šã€æš¦ã€ä¾›çŠ ã€ã‚¯ã‚¯ãƒ«ã‚«ãƒ³ã€æ­»ã®æ—¥ã€…ã®ç¥æ ¼ã‚’è«–ã˜ãŸè€ƒå¤å­¦è«–æ–‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€æœ¬æ–‡ã€ãƒ©ãƒ³ãƒ€ã»ã‹ã®å¼•ç”¨ã€å›³1â€“5ãƒ»å›³1aãƒ»å›³2aã¨å›³æ³¨ã‚’çœç•¥ãªãè¨³ã—ã€åŸåˆŠã§åˆ†è¼‰ã•ã‚ŒãŸå›³åƒã‚‚æ¬ è½ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-gefaess-chama-1895/cover.jpg",
-    pdf:
-      "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-gefaess-chama-1895/Dieseldorff_Das_Gefaess_von_Chama_1895_Japanese_Complete_Translation.epub",
-    pageCount: 11,
-    figureCount: 7,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "å½©è‰²åœŸå™¨",
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-      "ä¾›çŠ ",
-      "æš¦",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-reliefbild-chipolem-1895",
-    title: "ãƒãƒãƒ¬ãƒ ã®æµ®å½«åƒ",
-    originalTitle: "Reliefbild aus Chipolem",
-    subtitle: "1895å¹´åˆŠãƒ»åŸåˆŠ777â€“780é ãƒ»æœ¬æ–‡ãƒ»å›³1â€“6 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "RELIEFBILD AUS CHIPOLEM Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1895",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬27å·»ã€1895å¹´ã€777â€“780é ",
-    year: 1895,
-    extent: "PDF 6é ãƒ»åŸåˆŠ777â€“780é ãƒ»å›³6ç‚¹",
-    description:
-      "ãƒãƒãƒ¬ãƒ ã®ãƒãƒ ãƒ«ãƒˆã‚¥ãƒ³æ´çªŸå‰ã§ç™ºè¦‹ã•ã‚ŒãŸåœŸè£½æµ®å½«ã‚’èµ·ç‚¹ã«ã€ç„¼ç‡”ä¾›çŒ®ã€æ™‚ã®è›‡ã€è‹¥ã„ã‚¯ã‚¯ãƒ«ã‚«ãƒ³ã€æ™‚é–“åŒºåˆ†ã®æ›´æ–°ã‚’è«–ã˜ãŸè€ƒå¤å­¦è«–æ–‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€æœ¬æ–‡ã€å›³1â€“6ã¨å›³æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-reliefbild-chipolem-1895/cover.jpg",
-    pdf:
-      "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-reliefbild-chipolem-1895/Dieseldorff_Reliefbild_aus_Chipolem_1895_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 6,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒãƒ¬ãƒ ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "æ´çªŸç¥­ç¥€",
-      "åœŸè£½æµ®å½«",
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-      "ç„¼ç‡”ä¾›çŒ®",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-cuculcan-1895",
-    title: "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-    originalTitle: "Cuculcan",
-    subtitle: "1895å¹´åˆŠãƒ»åŸåˆŠ780â€“783é ãƒ»æœ¬æ–‡ãƒ»å›³1â€“19 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "CUCULCAN Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1895",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬27å·»ã€1895å¹´ã€780â€“783é ",
-    year: 1895,
-    extent: "PDF 5é ãƒ»åŸåˆŠ780â€“783é ãƒ»å›³19ç‚¹",
-    description:
-      "ãƒãƒ£ãƒã€ãƒšãƒ†ãƒˆã€ãƒãƒ£ãƒ•ã‚«ãƒ«ã€ãƒãƒ ãƒ«ãƒˆã‚¥ãƒ³å‡ºåœŸå“ã®å›³åƒã‚’æ¯”è¼ƒã—ã€ã‚±ãƒ„ã‚¡ãƒ«ã¨è›‡ã®çµåˆã‹ã‚‰ã‚¯ã‚¯ãƒ«ã‚«ãƒ³ã®é ­éƒ¨è¡¨ç¾ãŒå½¢æˆã•ã‚ŒãŸã¨è«–ã˜ã‚‹çŸ­ç¯‡ã€‚å…±é€šã®ç·¨é›†éƒ¨å°å…¥ã€æœ¬æ–‡ã€å›³1â€“19ã¨å›³æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-cuculcan-1895/cover.jpg",
-    pdf:
-      "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-cuculcan-1895/Dieseldorff_Cuculcan_1895_Japanese_Complete_Translation.epub",
-    pageCount: 5,
-    figureCount: 19,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-      "ã‚±ãƒ„ã‚¡ãƒ«ã‚³ã‚¢ãƒˆãƒ«",
-      "ç¥æ ¼å›³åƒ",
-      "å½©è‰²åœŸå™¨",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-tolteken-1896",
-    title: "ãƒˆãƒ«ãƒ†ã‚«äººã¨ã¯èª°ã§ã‚ã£ãŸã‹",
-    originalTitle: "Wer waren die Tolteken?",
-    subtitle: "1896å¹´åˆŠãƒ»åŸåˆŠ415â€“418é ãƒ»åŠæ¨™é¡Œãƒ»æ¨™é¡Œãƒ»æœ¬æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "WER WAREN DIE TOLTEKEN? Â· FESTSCHRIFT FÃœR ADOLF BASTIAN Â· 1896",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Festschrift fÃ¼r Adolf Bastian zu seinem 70. Geburtstageã€ã€1896å¹´ã€415â€“418é ",
-    year: 1896,
-    extent: "PDF 3é ãƒ»åŸåˆŠ415â€“418é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³ï¼ã‚±ãƒ„ã‚¡ãƒ«ã‚³ã‚¢ãƒˆãƒ«ã®å›³åƒã¨ç¥æ®¿ã®é‡å±¤æ§‹é€ ã‚’æ‰‹æ›ã‹ã‚Šã«ã€ãƒˆãƒ«ãƒ†ã‚«äººã¨ãƒãƒ¤äººã®é–¢ä¿‚ã‚’ä»®èª¬çš„ã«è«–ã˜ãŸçŸ­ç¯‡ã€‚è‘—è€…ååŠæ¨™é¡Œã€è«–æ–‡æ¨™é¡Œã€æœ¬æ–‡ã€æœ«å°¾ã®æ—¥ä»˜ãƒ»åœ°åã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-tolteken-1896/cover.jpg",
-    pdf:
-      "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-tolteken-1896/Dieseldorff_Wer_waren_die_Tolteken_1896_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "æ°‘æ—èµ·æºè«–", "è¨˜å¿µè«–é›†"],
-    regions: ["ãƒ¡ã‚½ã‚¢ãƒ¡ãƒªã‚«", "ãƒãƒ¤åœ°åŸŸ", "ãƒãƒ§ãƒ«ãƒ©", "ã‚³ãƒ‘ãƒ³"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: [
-      "ãƒˆãƒ«ãƒ†ã‚«äºº",
-      "ãƒãƒ¤äºº",
-      "ã‚¯ã‚¯ãƒ«ã‚«ãƒ³",
-      "ã‚±ãƒ„ã‚¡ãƒ«ã‚³ã‚¢ãƒˆãƒ«",
-      "ç¥æ®¿å»ºç¯‰",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "cortes-y-larraz-descripcion-geografico-moral-1771",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸æ•™åŒºåœ°ç†ãƒ»é“å¾³èªŒ",
-    originalTitle:
-      "DescripciÃ³n geogrÃ¡fico-moral de la diÃ³cesis de Goathemala",
-    subtitle:
-      "1771å¹´å…¬å¼å‘ˆä¸Šå†™æœ¬å…¨3å·»ãƒ»å¸ç¥­ç®¡åŒºå›³113ç‚¹ãƒ»é€ä»˜çŠ¶2é€š æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒšãƒ‰ãƒ­ãƒ»ã‚³ãƒ«ãƒ†ã‚¹ãƒ»ã‚¤ãƒ»ãƒ©ãƒ©ã‚¹",
-    series: "DESCRIPCIÃ“N GEOGRÃFICO-MORAL Â· 1771",
-    originalPublication:
-      "1771å¹´å…¬å¼å‘ˆä¸Šç­†è¨˜å†™æœ¬ï¼ˆArchivo General de Indias, GUATEMALA,948,N.2â€“N.3ï¼‰",
-    year: 1771,
-    extent:
-      "PDF 794é ãƒ»å…¨3å·»ãƒ»åŸåˆŠé æ¨™592ä»¶ãƒ»å¸ç¥­ç®¡åŒºå›³113ç‚¹ãƒ»ç‰¹åˆ¥å›³2ç‚¹ãƒ»è¡¨258ç‚¹ãƒ»é€ä»˜çŠ¶2é€š",
-    description:
-      "1768å¹´ã‹ã‚‰1770å¹´ã«è¡Œã‚ã‚ŒãŸã‚°ã‚¢ãƒ†ãƒãƒ©å¸æ•™åŒºã®å¸ç‰§å·¡å¯Ÿã‚’ã€æ•™åŒºãƒ»ç”ºã”ã¨ã®åœ°ç†ã€äººå£ã€è¨€èªã€ç”£æ¥­ã€äº¤é€šã€å®—æ•™ç”Ÿæ´»ã€ç¤¾ä¼šçŠ¶æ³ã¨ã¨ã‚‚ã«è¨˜éŒ²ã—ãŸå¤§éƒ¨ã®åœ°èªŒã€‚1771å¹´ã®å…¬å¼å‘ˆä¸Šç­†è¨˜å†™æœ¬å…¨3å·»ã€å¸ç¥­ç®¡åŒºå›³113ç‚¹ã€ç‰¹åˆ¥å›³2ç‚¹ã€äººå£è¡¨ã‚’å«ã‚€258è¡¨ã€1771å¹´4æœˆ1æ—¥ãƒ»5æœˆ1æ—¥ä»˜é€ä»˜çŠ¶ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚PARESå…¬é–‹ã®å²æ–™ç”»åƒã‹ã‚‰æ”¹ã‚ã¦å…¨è¨³ã—ã€1958å¹´ç‰ˆã¯åˆ¤èª­ã¨æœ¬æ–‡æ ¡åˆã«ã®ã¿ç”¨ã„ã¾ã—ãŸã€‚",
-    cover:
-      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
-    pdf:
-      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/cortes-y-larraz-descripcion-geografico-moral-1771/Cortes_y_Larraz_Descripcion_Geografico_Moral_1771_Japanese_Complete_Translation.epub",
-    pageCount: 794,
-    figureCount: 113,
-    plateCount: 0,
-    types: ["å¸ç‰§å·¡å¯Ÿè¨˜éŒ²", "åœ°èªŒ", "æ•™ä¼šå²", "æ¤æ°‘åœ°è¡Œæ”¿å²"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "å¸ç‰§å·¡å¯Ÿ",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©å¸æ•™åŒº",
-      "äººå£è¡¨",
-      "å…ˆä½æ°‘ç¤¾ä¼š",
-      "å¸ç¥­ç®¡åŒºå›³",
-      "PARES",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "perigny-ruines-nacun-1906",
-    title: "ãƒŠã‚¯ãƒ³éºè·¡",
-    originalTitle: "Les ruines de Nacun",
-    subtitle: "1906å¹´åˆŠãƒ»åŸåˆŠ360â€“362é ãƒ»æœ¬æ–‡ãƒ»å›³ç‰ˆ3ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "LES RUINES DE NACUN Â· LA NATURE Â· 1906",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€La Natureã€ç¬¬1745å·ã€1906å¹´11æœˆ3æ—¥ã€360â€“362é ",
-    year: 1906,
-    extent: "PDF 7é ãƒ»åŸåˆŠ360â€“362é ãƒ»å›³ç‰ˆ3ç‚¹",
-    description:
-      "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼ãŒ1905å¹´æœ«ã«å®Ÿæ–½ã—ãŸç¬¬ä¸€æ¬¡ãƒšãƒ†ãƒ³æ¢æ¤œã¨ã€å½“æ™‚ã€ŒãƒŠã‚¯ãƒ³ã€ã¨å‘¼ã°ã‚ŒãŸãƒŠã‚¯ãƒ éºè·¡ã®è¸æŸ»ã‚’å ±å‘Šã—ãŸè¨˜äº‹ã€‚éºè·¡ã¸ã®è¡Œç¨‹ã€å»ºç¯‰ç¾¤ã€çŸ³ç¢‘ã€å‡ºåœŸå“ã«é–¢ã™ã‚‹æœ¬æ–‡ã€åŸåˆŠé å¢ƒç•Œã€å›³ç‰ˆ3ç‚¹ã¨ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-ruines-nacun-1906/cover.jpg",
-    pdf:
-      "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-ruines-nacun-1906/Maurice_de_Perigny_Les_ruines_de_Nacun_1906_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 3,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "éºè·¡å ±å‘Š", "é›‘èªŒè¨˜äº‹"],
-    regions: ["ãƒŠã‚¯ãƒ ", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒŠã‚¯ãƒ éºè·¡",
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "çŸ³ç¢‘",
-      "éºè·¡å»ºç¯‰",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-exploration-yucatan-1906",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³æ¢æ¤œ",
-    originalTitle: "Une exploration au Yucatan",
-    subtitle: "1906å¹´åˆŠãƒ»åŸåˆŠ340â€“341é ãƒ»ç·¨é›†éƒ¨å°å…¥ãƒ»æ›¸ç°¡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "UNE EXPLORATION AU YUCATAN Â· JOURNAL DE LA SOCIÃ‰TÃ‰ DES AMÃ‰RICANISTES Â· 1906",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Journal de la SociÃ©tÃ© des AmÃ©ricanistesã€æ–°ã‚·ãƒªãƒ¼ã‚ºç¬¬3å·»ç¬¬2å·ã€1906å¹´ã€340â€“341é ",
-    year: 1906,
-    extent: "PDF 3é ãƒ»åŸåˆŠ340â€“341é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒ1904â€“1906å¹´ã®ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ãƒšãƒ†ãƒ³æ¢æ¤œã‚’è¦ç´„ã—ãŸæ›¸ç°¡ã€‚å›½éš›åœ°ç†å­¦ä¼šè­°ã¸ã®å‚åŠ ã€ä¸»è¦éºè·¡ã®è¨ªå•ã€ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­å·é¡èˆªã€ãƒ¤ã‚·ãƒ¥ãƒã¨ãƒŠã‚¯ãƒ ã®è¸æŸ»ã€ãŠã‚ˆã³æ¬¡ã®ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œè¨ˆç”»ã‚’è¨˜ã—ãŸç·¨é›†éƒ¨å°å…¥ã¨æ›¸ç°¡æœ¬æ–‡ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-exploration-yucatan-1906/cover.jpg",
-    pdf:
-      "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-exploration-yucatan-1906/Maurice_de_Perigny_Une_exploration_au_Yucatan_1906_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ¢æ¤œå ±å‘Š", "æ›¸ç°¡", "å­¦è¡“èªŒè¨˜äº‹"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "ãƒŠã‚¯ãƒ éºè·¡",
-      "ãƒ¤ã‚·ãƒ¥ãƒéºè·¡",
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­å·",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "lemoine-travers-peten-yucatan-1906",
-    title: "ãƒšãƒ†ãƒ³ã¨ãƒ¦ã‚«ã‚¿ãƒ³ã‚’æ¨ªæ–­ã—ã¦",
-    originalTitle: "Ã€ travers le Peten et le Yucatan",
-    subtitle: "1906å¹´åˆŠãƒ»åŸåˆŠ482â€“486é ãƒ»è¬›æ¼”å ±å‘Šãƒ»è¡Œç¨‹å›³ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»ãƒ«ãƒ¢ãƒ¯ãƒ¼ãƒŒ",
-    series: "Ã€ TRAVERS LE PETEN ET LE YUCATAN Â· LA GÃ‰OGRAPHIE Â· 1906",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€La GÃ©ographieã€ç¬¬13å·»ã€1906å¹´ã€482â€“486é ",
-    year: 1906,
-    extent: "PDF 8é ãƒ»åŸåˆŠ482â€“486é ãƒ»è¡Œç¨‹å›³1ç‚¹",
-    description:
-      "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼ã«ã‚ˆã‚‹ãƒšãƒ†ãƒ³ãƒ»ãƒ¦ã‚«ã‚¿ãƒ³æ¢æ¤œã®åœ°ç†å­¦å”ä¼šè¬›æ¼”ã‚’ã€ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»ãƒ«ãƒ¢ãƒ¯ãƒ¼ãƒŒãŒå ±å‘Šã—ãŸè¨˜äº‹ã€‚ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã‹ã‚‰ãƒšãƒ†ãƒ³ã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ãƒ¦ã‚«ã‚¿ãƒ³ã¸è‡³ã‚‹è¡Œç¨‹ã€å„åœ°ã®è‡ªç„¶ãƒ»ä½æ°‘ãƒ»äº¤é€šãƒ»éºè·¡ã‚’æ‰±ã†æœ¬æ–‡ã€è¡Œç¨‹å›³ã€é–‰ä¼šè©•ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/lemoine-travers-peten-yucatan-1906/cover.jpg",
-    pdf:
-      "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/lemoine-travers-peten-yucatan-1906/Frederic_Lemoine_A_travers_le_Peten_et_le_Yucatan_1906_Japanese_Complete_Translation.epub",
-    pageCount: 8,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["åœ°ç†å ±å‘Š", "è¬›æ¼”è¨˜éŒ²", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ãƒšãƒ†ãƒ³", "ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "ãƒ¦ã‚«ã‚¿ãƒ³æ¢æ¤œ",
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­å·",
-      "ãƒŠã‚¯ãƒ éºè·¡",
-      "è¡Œç¨‹å›³",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-peten-1907",
-    title: "ãƒšãƒ†ãƒ³",
-    originalTitle: "Le Peten",
-    subtitle: "1907å¹´åˆŠãƒ»åŸåˆŠ287â€“290é ãƒ»æœ¬æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "LE PETEN Â· LA GÃ‰OGRAPHIE Â· 1907",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€La GÃ©ographieã€ç¬¬16å·»ã€1907å¹´ã€287â€“290é ",
-    year: 1907,
-    extent: "PDF 6é ãƒ»åŸåˆŠ287â€“290é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­å·ã‹ã‚‰ãƒ•ãƒ­ãƒ¼ãƒ¬ã‚¹ã€ãƒ¤ã‚·ãƒ¥ãƒã€ãƒŠã‚¯ãƒ ã€è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã¸è‡³ã£ãŸãƒšãƒªãƒ‹ãƒ¼ã®ç¬¬ä¸€æ¬¡ãƒšãƒ†ãƒ³æ¢æ¤œå ±å‘Šã€‚æ²³å·ãƒ»æ£®æ—ãƒ»äº¤é€šè·¯ã€å„åœ°ã®ä½æ°‘ã€éºè·¡ã¨çŸ³ç¢‘ã€æ¢æ¤œè¡Œç¨‹ã‚’æ‰±ã†åŸåˆŠ287â€“290é ã®æœ¬æ–‡ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-peten-1907/cover.jpg",
-    pdf:
-      "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-peten-1907/Maurice_de_Perigny_Le_Peten_1907_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°ç†å ±å‘Š", "æ¢æ¤œè¨˜", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "è‹±é ˜ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "ã‚µãƒ³ãƒ»ãƒšãƒ‰ãƒ­å·",
-      "ãƒŠã‚¯ãƒ éºè·¡",
-      "ãƒ¤ã‚·ãƒ¥ãƒéºè·¡",
-      "æ²³å·åœ°ç†",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-maya-ruins-quintana-roo-1907",
-    title: "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼ã®ãƒãƒ¤éºè·¡",
-    originalTitle: "Maya Ruins in Quintana Roo",
-    subtitle: "1907å¹´åˆŠãƒ»åŸåˆŠ232â€“235é ãƒ»æœ¬æ–‡ãƒ»ç·¨é›†æ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "MAYA RUINS IN QUINTANA ROO Â· RECORDS OF THE PAST Â· 1907",
-    originalPublication:
-      "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€ã€Records of the Pastã€ç¬¬6å·»ã€1907å¹´ã€232â€“235é ",
-    year: 1907,
-    extent: "PDF 6é ãƒ»åŸåˆŠ232â€“235é ãƒ»ç·¨é›†æ³¨1ç‚¹ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ã®ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œã¨ã€ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯ã‚’å«ã‚€å››ç¾¤ã®ãƒãƒ¤éºè·¡ã®ç™ºè¦‹ã‚’è‹±èªã§ç´¹ä»‹ã—ãŸç½²åè¨˜äº‹ã€‚ã‚¤ã‚«ã‚¤ãƒã‚§ã€åä¹±çŠ¶æ…‹ã®ãƒãƒ¤äººåœ°åŸŸã€éºè·¡å»ºç¯‰ã€æ¢æ¤œä¸Šã®å›°é›£ã‚’æ‰±ã†æœ¬æ–‡ã€ç¯€è¦‹å‡ºã—ã€ç½²åã€ç·¨é›†æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-maya-ruins-quintana-roo-1907/cover.jpg",
-    pdf:
-      "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-maya-ruins-quintana-roo-1907/Maurice_de_Perigny_Maya_Ruins_in_Quintana_Roo_1907_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "æ¢æ¤œå ±å‘Š", "é›‘èªŒè¨˜äº‹"],
-    regions: ["ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["è‹±èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-      "ã‚¤ã‚«ã‚¤ãƒã‚§",
-      "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œ",
-      "éºè·¡å»ºç¯‰",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "dieseldorff-gegenstaende-guatemala-1893",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®è³‡æ–™",
-    originalTitle: "GegenstÃ¤nde aus Guatemala",
-    subtitle: "1893å¹´åˆŠãƒ»åŸåˆŠ275â€“277é ãƒ»ç·¨é›†éƒ¨å°å…¥ãƒ»å›³1 æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "ã‚¨ãƒ‰ã‚¥ã‚¢ãƒ«ãƒˆãƒ»ã‚¼ãƒ¼ãƒ©ãƒ¼ï¼ˆEãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ï¼Kãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼åé›†è³‡æ–™ï¼‰",
-    series: "GEGENSTÃ„NDE AUS GUATEMALA Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1893",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬25å·»ã€1893å¹´ã€275â€“277é ",
-    year: 1893,
-    extent: "PDF 5é ãƒ»åŸåˆŠ275â€“277é ãƒ»å›³1ç‚¹",
-    description:
-      "ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ã¨ã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼ãŒã‚³ãƒãƒ³å‘¨è¾ºã§åé›†ãƒ»ç™ºæ˜ã—ãŸè€ƒå¤è³‡æ–™ã‚’ã€ã‚¨ãƒ‰ã‚¥ã‚¢ãƒ«ãƒˆãƒ»ã‚¼ãƒ¼ãƒ©ãƒ¼ãŒãƒ™ãƒ«ãƒªãƒ³äººé¡å­¦ä¼šã§ç´¹ä»‹ã—ãŸçŸ­å ±ã€‚ç·¨é›†éƒ¨å°å…¥ã€è³‡æ–™è¨˜è¼‰ã€ä¾›çŒ®é‰¢ã®æŒ¿å›³ã¨å›³æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-gegenstaende-guatemala-1893/cover.jpg",
-    pdf:
-      "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-gegenstaende-guatemala-1893/Dieseldorff_Gegenstaende_aus_Guatemala_1893_Japanese_Complete_Translation.epub",
-    pageCount: 5,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "è³‡æ–™ç´¹ä»‹", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "åé›†è³‡æ–™", "ä¾›çŒ®é‰¢", "ã‚«ãƒ¼ãƒ«ãƒ»ã‚¶ãƒƒãƒ‘ãƒ¼", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-bemaltes-thongefaess-chama-1894",
-    title: "ãƒãƒ£ãƒã®å¢“ã‹ã‚‰å‡ºãŸäººç‰©å›³åƒå…¥ã‚Šå½©è‰²åœŸå™¨",
-    originalTitle:
-      "Ein bemaltes ThongefÃ¤ss mit figÃ¼rlichen Darstellungen aus einem Grabe von ChamÃ¡",
-    subtitle:
-      "1894å¹´åˆŠãƒ»åŸåˆŠ372â€“377é ãƒ»å›³1â€“15ãƒ»å›³ç‰ˆVIIIãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ä»˜è¨€ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "EIN BEMALTES THONGEFÃ„SS AUS CHAMÃ Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1894",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬26å·»ã€1894å¹´ã€372â€“377é ã€å›³ç‰ˆVIII",
-    year: 1894,
-    extent: "PDF 10é ãƒ»åŸåˆŠ372â€“377é ãƒ»æœ¬æ–‡å›³15ç‚¹ãƒ»å›³ç‰ˆ1è‘‰",
-    description:
-      "ãƒãƒ£ãƒã®å¢“ã‹ã‚‰å‡ºåœŸã—ãŸäººç‰©å ´é¢å…¥ã‚Šå½©è‰²åœŸå™¨ã‚’è¨˜è¼‰ã—ã€è¡£è£…ã€ä¾›çŠ ã€ç¥æ ¼ã€ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•ã‚’æ¯”è¼ƒã—ãŸè€ƒå¤å­¦è«–æ–‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€æœ¬æ–‡ã€å›³1â€“15ã€å›³ç‰ˆVIIIã€ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ã®ä»˜åŠ ç™ºè¨€ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/cover.jpg",
-    pdf:
-      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-bemaltes-thongefaess-chama-1894/Dieseldorff_Ein_bemaltes_Thongefaess_aus_Chama_1894_Japanese_Complete_Translation.epub",
-    pageCount: 10,
-    figureCount: 15,
-    plateCount: 1,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "å½©è‰²åœŸå™¨", "äººç‰©å›³åƒ", "ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-vampyrkoepfige-gottheit-1894",
-    title: "å¸è¡€é¬¼é ­ã®ç¥ã‚’æã„ãŸåœŸå™¨",
-    originalTitle:
-      "Ein ThongefÃ¤ss mit Darstellung einer vampyrkÃ¶pfigen Gottheit",
-    subtitle: "1894å¹´åˆŠãƒ»åŸåˆŠ576â€“577é ãƒ»æœ¬æ–‡ãƒ»å›³ç‰ˆXIII æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "VAMPYRKÃ–PFIGE GOTTHEIT Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1894",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬26å·»ã€1894å¹´ã€576â€“577é ã€å›³ç‰ˆXIII",
-    year: 1894,
-    extent: "PDF 3é ãƒ»åŸåˆŠ576â€“577é ãƒ»å›³ç‰ˆ1è‘‰",
-    description:
-      "ãƒãƒ£ãƒã®ç¥æ®¿ä¸˜ã§å‰¯è‘¬å“ã¨ã—ã¦ç™ºè¦‹ã•ã‚ŒãŸå††ç­’å½¢åœŸå™¨ã®å¸è¡€é¬¼ç¥å›³åƒã‚’ã€è¡£è£…ã€æ­»ç¥ã€ã‚³ã‚¦ãƒ¢ãƒªç¥ã€æ–‡å­—æ¨™è­˜ã‹ã‚‰æ¤œè¨ã—ãŸçŸ­ç¯‡ã€‚ç·¨é›†éƒ¨å°å…¥ã€å ±å‘Šæœ¬æ–‡ã€å›³ç‰ˆXIIIã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/cover.jpg",
-    pdf:
-      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-vampyrkoepfige-gottheit-1894/Dieseldorff_Vampyrkoepfige_Gottheit_1894_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "å½©è‰²åœŸå™¨", "ã‚³ã‚¦ãƒ¢ãƒªç¥", "ç¥æ ¼å›³åƒ", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-neue-ausgrabungen-chajcar-1895",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ãƒãƒ£ãƒ•ã‚«ãƒ«ã«ãŠã‘ã‚‹ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•æ°ã®æ–°ç™ºæ˜",
-    originalTitle:
-      "Neue Ausgrabungen des Hrn. Dieseldorff in Chajcar, Guatemala",
-    subtitle: "1895å¹´åˆŠãƒ»åŸåˆŠ320â€“323é ãƒ»ç™ºæ˜å ±å‘Šãƒ»ä»˜åŠ ç™ºè¨€ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ï¼ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹",
-    series:
-      "NEUE AUSGRABUNGEN IN CHAJCAR Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1895",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬27å·»ã€1895å¹´ã€320â€“323é ",
-    year: 1895,
-    extent: "PDF 5é ãƒ»åŸåˆŠ320â€“323é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒãƒ£ãƒ•ã‚«ãƒ«ã§ã®å¢³ä¸˜å¢“ç™ºæ˜ã€åŸ‹è‘¬å§¿å‹¢ã€å‰¯è‘¬åœŸå™¨ã€çŸ³å™¨ã€é¡”æ–™ã‚’è¨˜éŒ²ã—ãŸãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ã®å ±å‘Šã‚’ã€ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ãŒå­¦ä¼šã¸ç´¹ä»‹ã—ãŸä¼šè­°éŒ²é …ç›®ã€‚å°å…¥ã€ç™ºæ˜å ±å‘Šã€ä»˜åŠ ç™ºè¨€ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/cover.jpg",
-    pdf:
-      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-neue-ausgrabungen-chajcar-1895/Dieseldorff_Neue_Ausgrabungen_in_Chajcar_1895_Japanese_Complete_Translation.epub",
-    pageCount: 5,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["ç™ºæ˜å ±å‘Š", "è€ƒå¤å­¦å ±å‘Š", "å­¦ä¼šä¼šå ±"],
-    regions: ["ãƒãƒ£ãƒ•ã‚«ãƒ«", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "å¢³ä¸˜å¢“", "å‰¯è‘¬å“", "ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-two-vases-chama-1904",
-    title: "ãƒãƒ£ãƒå‡ºåœŸã®äºŒã¤ã®åœŸå™¨",
-    originalTitle: "Two Vases from Chama",
-    subtitle:
-      "1904å¹´åˆŠãƒ»åŸåˆŠ635â€“666é ãƒ»æœ¬æ–‡å›³130â€“134ãƒ»å›³ç‰ˆXLVIIIâ€“XLIX æ—¥æœ¬èªå…¨è¨³",
-    author:
-      "Eãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ã€ã‚¨ãƒ‰ã‚¥ã‚¢ãƒ«ãƒˆãƒ»ã‚¼ãƒ¼ãƒ©ãƒ¼ã€ã‚¨ãƒ«ãƒ³ã‚¹ãƒˆãƒ»ãƒ•ã‚§ãƒ«ã‚¹ãƒ†ãƒãƒ³",
-    series: "TWO VASES FROM CHAMA Â· BAE BULLETIN 28 Â· 1904",
-    originalPublication:
-      "ãƒ¯ã‚·ãƒ³ãƒˆãƒ³ã€Bureau of American Ethnology Bulletin 28ã€1904å¹´ã€635â€“666é ã€å›³ç‰ˆXLVIIIâ€“XLIX",
-    year: 1904,
-    extent: "PDF 31é ãƒ»åŸåˆŠ635â€“666é ãƒ»æœ¬æ–‡å›³5ç‚¹ãƒ»å›³ç‰ˆ2è‘‰",
-    description:
-      "ãƒãƒ£ãƒå‡ºåœŸã®äºŒã¤ã®å½©è‰²åœŸå™¨ã‚’ã‚ãã‚‹ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ã®äºŒå ±ã€ã‚·ã‚§ãƒ«ãƒã‚¹ã®ä»˜è¨˜ã€ãƒ•ã‚§ãƒ«ã‚¹ãƒ†ãƒãƒ³ã¨ã‚¼ãƒ¼ãƒ©ãƒ¼ã®æš¦ãƒ»æ–‡å­—ãƒ»å›³åƒç ”ç©¶ã‚’ã¾ã¨ã‚ãŸè‹±è¨³ç¯‡ã€‚æ¨™é¡Œã€ç›®æ¬¡ã€æœ¬æ–‡ã€å›³130â€“134ã€å›³ç‰ˆXLVIIIâ€“XLIXã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-two-vases-chama-1904/cover.jpg",
-    pdf:
-      "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-two-vases-chama-1904/Dieseldorff_Two_Vases_from_Chama_1904_Japanese_Complete_Translation.epub",
-    pageCount: 31,
-    figureCount: 5,
-    plateCount: 2,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å›³åƒç ”ç©¶", "è«–æ–‡é›†æ‰€åç¯‡"],
-    regions: ["ãƒãƒ£ãƒ", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "å½©è‰²åœŸå™¨", "ãƒãƒ¤æ–‡å­—", "æš¦", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-jadeit-schmuck-1905",
-    title: "ãƒãƒ¤è«¸æ°‘æ—ã®ç¿¡ç¿ è¼çŸ³ãã®ä»–ã®è£…èº«å…·",
-    originalTitle: "Jadeit- und anderer Schmuck der MayavÃ¶lker",
-    subtitle: "1905å¹´åˆŠãƒ»åŸåˆŠ408â€“411é ãƒ»æœ¬æ–‡å›³12ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "JADEIT- UND ANDERER SCHMUCK Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1905",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬37å·»ã€1905å¹´ã€408â€“411é ",
-    year: 1905,
-    extent: "PDF 6é ãƒ»åŸåˆŠ408â€“411é ãƒ»æœ¬æ–‡å›³12ç‚¹",
-    description:
-      "ãƒãƒ¤åœ°åŸŸã®ç¿¡ç¿ è¼çŸ³ã€çŸ³è£½ãƒ»è²è£½ãƒ»éª¨è£½è£…èº«å…·ã‚’å½¢æ…‹ã¨ç”¨é€”ã‹ã‚‰æ•´ç†ã—ã€è€³é£¾ã‚Šã€é¼»é£¾ã‚Šã€èƒ¸é£¾ã‚Šãªã©ã‚’æ¯”è¼ƒã—ãŸçŸ­å ±ã€‚ã‚«ãƒ¼ãƒ«ãƒ»ãƒ•ã‚©ãƒ³ãƒ»ãƒ‡ãƒ³ãƒ»ã‚·ãƒ¥ã‚¿ã‚¤ãƒãƒ³ã®å°å…¥ã€æœ¬æ–‡ã€å›³12ç‚¹ã¨å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-jadeit-schmuck-1905/cover.jpg",
-    pdf:
-      "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-jadeit-schmuck-1905/Dieseldorff_Jadeit_und_anderer_Schmuck_1905_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 12,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "éºç‰©ç ”ç©¶", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "ç¿¡ç¿ è¼çŸ³", "è£…èº«å…·", "çŸ³è£½å“", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-klassifizierung-funde-1909",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©åŒ—éƒ¨ã«ãŠã‘ã‚‹è€ƒå¤å­¦çš„ç™ºè¦‹ã®åˆ†é¡",
-    originalTitle:
-      "Klassifizierung seiner archÃ¤ologischen Funde im nÃ¶rdlichen Guatemala",
-    subtitle: "1909å¹´åˆŠãƒ»åŸåˆŠ862â€“874é ãƒ»è³‡æ–™å†™çœŸ1â€“99 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "KLASSIFIZIERUNG ARCHÃ„OLOGISCHER FUNDE Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1909",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬41å·»ã€1909å¹´ã€862â€“874é ",
-    year: 1909,
-    extent: "PDF 15é ãƒ»åŸåˆŠ862â€“874é ãƒ»è³‡æ–™å†™çœŸ99ç‚¹",
-    description:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©åŒ—éƒ¨ã§å¾—ãŸåœŸå™¨ãƒ»çŸ³å™¨ãƒ»å½«åƒãƒ»è£…èº«å…·ã‚’åœ°åŸŸã€æ§˜å¼ã€æŠ€æ³•ã€æ¨å®šå¹´ä»£ã‹ã‚‰åˆ†é¡ã—ãŸè¬›æ¼”è«–æ–‡ã€‚è¬›æ¼”æœ¬æ–‡ã€è³‡æ–™å†™çœŸ1â€“99ã€å›³æ³¨ã‚’åéŒ²ã—ã€æ­´å²çš„ãªæ–‡åŒ–æ®µéšè«–ã‚‚åŸè‘—ã®è¨€èª¬ã¨ã—ã¦ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-klassifizierung-funde-1909/cover.jpg",
-    pdf:
-      "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-klassifizierung-funde-1909/Dieseldorff_Klassifizierung_archaeologischer_Funde_1909_Japanese_Complete_Translation.epub",
-    pageCount: 15,
-    figureCount: 99,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "éºç‰©åˆ†é¡", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©åŒ—éƒ¨", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "éºç‰©åˆ†é¡", "åœŸå™¨", "çŸ³å™¨", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-tzultaca-mam-1926",
-    title: "ãƒ„ãƒ«ã‚¿ã‚«ã¨ãƒãƒ â€•â€•ãƒãƒ¤å®—æ•™ã®ä¸»è¦ç¥",
-    originalTitle:
-      "El TzultacÃ¡ y el Mam, los dioses prominentes de la religiÃ³n Maya",
-    subtitle: "1926å¹´åˆŠãƒ»åŸåˆŠ378â€“386é ãƒ»è¬›æ¼”æœ¬æ–‡ãƒ»å†™çœŸ3ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "EL TZULTACÃ Y EL MAM Â· ANALES DE GUATEMALA Â· 1926",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€ç¬¬2å·»ç¬¬4å·ã€1926å¹´ã€378â€“386é ",
-    year: 1926,
-    extent: "PDF 11é ãƒ»åŸåˆŠ378â€“386é ãƒ»å†™çœŸ3ç‚¹",
-    description:
-      "ã‚±ã‚¯ãƒã®å±±è°·ç¥ãƒ„ãƒ«ã‚¿ã‚«ã¨ãƒãƒ ã‚’ã€åŒæ™‚ä»£ã®å„€ç¤¼ã€å£æ‰¿ã€åœŸå™¨ãƒ»çŸ³ç¢‘å›³åƒã‹ã‚‰è«–ã˜ãŸ1925å¹´è¬›æ¼”ã®åˆŠè¡Œç‰ˆã€‚è¬›æ¼”æœ¬æ–‡ã€å†™çœŸ3ç‚¹ã€åŸå›³æ³¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-tzultaca-mam-1926/cover.jpg",
-    pdf:
-      "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-tzultaca-mam-1926/Dieseldorff_El_Tzultaca_y_el_Mam_1926_Japanese_Complete_Translation.epub",
-    pageCount: 11,
-    figureCount: 3,
-    plateCount: 0,
-    types: ["å®—æ•™ç ”ç©¶", "æ°‘æ—èªŒ", "è¬›æ¼”è¨˜éŒ²"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒ„ãƒ«ã‚¿ã‚«", "ãƒãƒ ", "ã‚±ã‚¯ãƒ", "ãƒãƒ¤å®—æ•™", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-kunst-religion-band-i-1926",
-    title: "å¤ä»£ãŠã‚ˆã³ç¾ä»£ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ã®ãƒãƒ¤è«¸æ°‘æ—ã®èŠ¸è¡“ã¨å®—æ•™",
-    originalTitle:
-      "Kunst und Religion der MayavÃ¶lker im alten und heutigen Mittelamerika",
-    subtitle: "1925å¹´é›‘èªŒåˆå‡ºãƒ»åŸåˆŠ1â€“45é ãƒ»å›³239ç‚¹ãƒ»å›³ç‰ˆ53è‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "KUNST UND RELIGION DER MAYAVÃ–LKER Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1925",
-    originalPublication:
-      "ã€Zeitschrift fÃ¼r Ethnologieã€Bd. 57ï¼ˆ1925å¹´ï¼‰Heft 1/2, pp. 1â€“45",
-    year: 1925,
-    extent: "PDF 107é ãƒ»åŸåˆŠ1â€“45é ãƒ»å›³239ç‚¹ãƒ»å›³ç‰ˆ53è‘‰",
-    description:
-      "å¤ä»£ã®åœŸå™¨ãƒ»å½«åˆ»ãƒ»çµµæ–‡æ›¸ã¨ã€è¿‘ç¾ä»£ã‚±ã‚¯ãƒç¤¾ä¼šã®å®—æ•™å®Ÿè·µã‚’æ¯”è¼ƒã—ã€ãƒãƒ¤ã®ç¥æ ¼ã€å„€ç¤¼ã€æš¦ã€ç—…å› è¦³ã€èŠ¸è¡“è¡¨ç¾ã‚’ç·åˆçš„ã«è«–ã˜ãŸ1925å¹´è«–æ–‡ã€‚çŒ®è¾ã€æœ¬æ–‡ã€æ³¨ã€å›³239ç‚¹ã€å›³ç‰ˆ53è‘‰ã€å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-kunst-religion-band-i-1926/cover.jpg",
-    pdf:
-      "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-kunst-religion-band-i-1926/Dieseldorff_Kunst_und_Religion_Band_I_1926_Japanese_Complete_Translation.epub",
-    pageCount: 107,
-    figureCount: 239,
-    plateCount: 53,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "å®—æ•™ç ”ç©¶", "å›³åƒç ”ç©¶", "æ°‘æ—èªŒ"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒãƒ¤åœ°åŸŸ", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ãƒãƒ¤èŠ¸è¡“", "ãƒãƒ¤å®—æ•™", "ã‚±ã‚¯ãƒ", "å›³åƒå­¦", "æš¦", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-kunst-religion-band-ii-1931",
-    title: "ãƒãƒ¤è«¸æ°‘æ—ã®èŠ¸è¡“ã¨å®—æ•™ IIâ€•â€•ã‚³ãƒ‘ãƒ³ã®è¨˜å¿µç‰©",
-    originalTitle: "Kunst und Religion der MayavÃ¶lker II: Die Copaner DenkmÃ¤ler",
-    subtitle:
-      "1930å¹´é›‘èªŒåˆå‡ºãƒ»åŸåˆŠ1â€“44é ãƒ»1931å¹´è¨‚æ­£ç¨¿ãƒ»æœ¬æ–‡å›³11ç‚¹ãƒ»å›³ç‰ˆ24è‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series:
-      "KUNST UND RELIGION DER MAYAVÃ–LKER II Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1930",
-    originalPublication:
-      "ã€Zeitschrift fÃ¼r Ethnologieã€Bd. 62ï¼ˆ1930å¹´ï¼‰Heft 1/6, pp. 1â€“44ï¼›1931å¹´å˜è¡Œæœ¬ç‰ˆã®è¨‚æ­£ãƒ»æ”¹è¨‚ pp. 45â€“46ã‚’ä½µéŒ²",
-    year: 1930,
-    extent: "PDF 83é ãƒ»åŸåˆŠ1â€“44é ãƒ»1931å¹´è¨‚æ­£ç¨¿2é ãƒ»å›³38ç‚¹ãƒ»å›³ç‰ˆ24è‘‰",
-    description:
-      "ã‚³ãƒ‘ãƒ³ã®çŸ³ç¢‘ãƒ»ç¥­å£‡ãƒ»ç¥æ®¿å½«åˆ»ã‚’æš¦ã€å¤©æ–‡å­¦ã€ç¥æ ¼ã€æ–¹ä½ã€ç‹æ¨©è¡¨è±¡ã‹ã‚‰ä½“ç³»çš„ã«è§£é‡ˆã—ãŸ1930å¹´è«–æ–‡ã€‚é›‘èªŒåˆå‡ºæœ¬æ–‡ã€1931å¹´è¨‚æ­£ç¨¿ã€æœ¬æ–‡å›³11ç‚¹ã€å›³ç‰ˆ24è‘‰ä¸Šã®å›³27ç‚¹ã€å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-kunst-religion-band-ii-1931/cover.jpg",
-    pdf:
-      "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-kunst-religion-band-ii-1931/Dieseldorff_Kunst_und_Religion_Band_II_1931_Japanese_Complete_Translation.epub",
-    pageCount: 83,
-    figureCount: 38,
-    plateCount: 24,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "è¨˜å¿µç‰©ç ”ç©¶", "å›³åƒç ”ç©¶", "æš¦ç ”ç©¶"],
-    regions: ["ã‚³ãƒ‘ãƒ³", "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹", "ãƒãƒ¤åœ°åŸŸ", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["ã‚³ãƒ‘ãƒ³éºè·¡", "ãƒãƒ¤æ–‡å­—", "ãƒãƒ¤æš¦", "å¤©æ–‡å­¦", "çŸ³ç¢‘", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-kekchi-will-1583-1932",
-    title: "1583å¹´ã®ã‚±ã‚¯ãƒèªéºè¨€æ›¸",
-    originalTitle: "A Kekchi Will of 1583",
-    subtitle:
-      "1932å¹´åˆŠãƒ»åŸåˆŠ65â€“68é ãƒ»1583å¹´å†™æœ¬ãƒ»ç¾ä»£ã‚±ã‚¯ãƒèªãƒ»è‹±è¨³ãƒ»ç·¨è€…æ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "A KEKCHI WILL OF 1583 Â· THE MAYA SOCIETY QUARTERLY Â· 1932",
-    originalPublication:
-      "ã€The Maya Society Quarterlyã€ç¬¬1å·»ç¬¬2å·ã€1932å¹´3æœˆã€65â€“68é ",
-    year: 1932,
-    extent: "PDF 6é ãƒ»åŸåˆŠ65â€“68é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "1583å¹´ã®ã‚±ã‚¯ãƒèªéºè¨€æ›¸ã‚’ã€åŸç¶´ã‚Šã®ç¿»åˆ»ã€å½“æ™‚ã®ç¾ä»£ã‚±ã‚¯ãƒèªã«ã‚ˆã‚‹æ›¸ãæ›ãˆã€è‹±è¨³ã€è§£èª¬ã¨ã¨ã‚‚ã«åˆŠè¡Œã—ãŸå²æ–™ç´¹ä»‹ã€‚ç‰¹æ®Šå­—å½¢ã¨ç•°ç¶´ã‚Šã‚’ä¿æŒã—ã€Wãƒ»Gã®ç·¨è€…æ³¨ã¾ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/dieseldorff-kekchi-will-1583-1932/cover.jpg",
-    pdf:
-      "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-kekchi-will-1583-1932/Dieseldorff_A_Kekchi_Will_of_1583_1932_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "éºè¨€æ›¸", "å²æ–™ç´¹ä»‹"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["è‹±èª", "ã‚±ã‚¯ãƒèª"],
-    tags: ["ã‚±ã‚¯ãƒèª", "1583å¹´", "éºè¨€æ›¸", "æ¤æ°‘åœ°æœŸæ–‡æ›¸", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-cauac-thunderbolt-signs-1932",
-    title: "ã‚«ã‚¦ã‚¢ã‚¯ã¨é›·é›»è¨˜å·ã«ã¤ã„ã¦ã®è£œè¶³è³‡æ–™",
-    originalTitle:
-      "Further Data on the Cauac and Thunderbolt Signsï¼ˆâ€œGlyph Studiesâ€ æ‰€åï¼‰",
-    subtitle: "1932å¹´åˆŠãƒ»åŸåˆŠ68â€“70é ãƒ»ç·¨é›†è€…å°å…¥ãƒ»æ›¸ç°¡æŠ„ãƒ»è«–è©• æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ï¼ˆæ›¸ç°¡ï¼‰ï¼Wãƒ»ã‚²ã‚¤ãƒ„ï¼ˆç·¨é›†ãƒ»è«–è©•ï¼‰",
-    series: "CAUAC AND THUNDERBOLT SIGNS Â· THE MAYA SOCIETY QUARTERLY Â· 1932",
-    originalPublication:
-      "ã€The Maya Society Quarterlyã€ç¬¬1å·»ç¬¬2å·ã€1932å¹´3æœˆã€68â€“70é ",
-    year: 1932,
-    extent: "PDF 4é ãƒ»åŸåˆŠ68â€“70é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ãŒã‚³ãƒãƒ³ã‹ã‚‰é€ã£ãŸæ›¸ç°¡ã®ã†ã¡ã€ã‚«ã‚¦ã‚¢ã‚¯ã€é›·é›»è¨˜å·ã€ã‚±ã‚¯ãƒæš¦ã«é–¢ã™ã‚‹äºŒç®‡æ‰€ã‚’ã€Wãƒ»ã‚²ã‚¤ãƒ„ãŒå°å…¥ã¨è«–è©•ã‚’æ·»ãˆã¦æ²è¼‰ã—ãŸæ–‡å­—ç ”ç©¶è³‡æ–™ã€‚ç·¨é›†è€…ã®æŒ¿å…¥è©•ã‚’å«ã‚€åéŒ²ç¯„å›²ã‚’å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-cauac-thunderbolt-signs-1932/cover.jpg",
-    pdf:
-      "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-cauac-thunderbolt-signs-1932/Dieseldorff_Further_Data_on_Cauac_and_Thunderbolt_Signs_1932_Japanese_Complete_Translation.epub",
-    pageCount: 4,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ–‡å­—ç ”ç©¶", "æ›¸ç°¡", "ç·¨é›†è«–è©•"],
-    regions: ["ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["è‹±èª"],
-    tags: ["ãƒãƒ¤æ–‡å­—", "ã‚«ã‚¦ã‚¢ã‚¯", "é›·é›»è¨˜å·", "ã‚±ã‚¯ãƒæš¦", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-arqueologia-alta-verapaz-1936",
-    title: "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹ã®è€ƒå¤å­¦ã¨ãƒãƒ¤ç ”ç©¶ã®è«¸å•é¡Œ",
-    originalTitle:
-      "La arqueologÃ­a de la Alta Verapaz y los problemas de los estudios mayas",
-    subtitle: "1936å¹´åˆŠãƒ»åŸåˆŠ183â€“191é ãƒ»æœ¬æ–‡ãƒ»å†™çœŸ5ç‚¹ãƒ»åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "ARQUEOLOGÃA DE LA ALTA VERAPAZ Â· ANALES DE GUATEMALA Â· 1936",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€ç¬¬13å·»ç¬¬2å·ã€1936å¹´ã€183â€“191é ",
-    year: 1936,
-    extent: "PDF 12é ãƒ»åŸåˆŠ183â€“191é ãƒ»å†™çœŸ5ç‚¹",
-    description:
-      "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹ã®åœ°ç†çš„ä½ç½®ã¨å‡ºåœŸè³‡æ–™ã‚’æ‰‹æ›ã‹ã‚Šã«ã€ãƒãƒ¤æ–‡åŒ–ã®åœ°åŸŸé–¢ä¿‚ã€å¹´ä»£ã€æš¦ç›¸é–¢ã€è€ƒå¤è³‡æ–™ä¿å­˜ã‚’è«–ã˜ãŸç ”ç©¶ã€‚æœ¬æ–‡ã€å†™çœŸ5ç‚¹ã€å›³æ³¨ã€åŸæ³¨ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-arqueologia-alta-verapaz-1936/cover.jpg",
-    pdf:
-      "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-arqueologia-alta-verapaz-1936/Dieseldorff_Arqueologia_Alta_Verapaz_1936_Japanese_Complete_Translation.epub",
-    pageCount: 12,
-    figureCount: 5,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦è«–æ–‡", "åœ°åŸŸç ”ç©¶", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚³ãƒãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒãƒ¤è€ƒå¤å­¦", "æ–‡åŒ–ç·¨å¹´", "æš¦ç›¸é–¢", "æ–‡åŒ–è²¡ä¿å­˜", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-calendario-maya-quirigua-1936",
-    title: "ã‚­ãƒªã‚°ã‚¢ã®ãƒãƒ¤æš¦",
-    originalTitle: "El Calendario Maya de QuiriguÃ¡",
-    subtitle: "1936å¹´åˆŠãƒ»åŸåˆŠ272â€“277é ãƒ»è¬›æ¼”æœ¬æ–‡ãƒ»è¨ˆç®—ä¸€è¦§ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "EL CALENDARIO MAYA DE QUIRIGUÃ Â· ANALES DE GUATEMALA Â· 1936",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€ç¬¬12å·»ç¬¬3å·ã€1936å¹´ã€272â€“277é ",
-    year: 1936,
-    extent: "PDF 7é ãƒ»åŸåˆŠ272â€“277é ãƒ»è¨ˆç®—ä¸€è¦§ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ã‚­ãƒªã‚°ã‚¢è¨˜å¿µç‰©ã®é•·æœŸæš¦æ—¥ä»˜ã¨å¤©æ–‡å‘¨æœŸã‚’æ¯”è¼ƒã—ã€ãƒãƒ¤æš¦ã®èµ·ç‚¹ã¨ç›¸é–¢ã‚’è«–ã˜ãŸ1935å¹´å…¬é–‹è¬›æ¼”ã®åˆŠè¡Œç‰ˆã€‚è¬›æ¼”æœ¬æ–‡ã¨æœ«å°¾ã®è¨ˆç®—ä¸€è¦§ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-calendario-maya-quirigua-1936/cover.jpg",
-    pdf:
-      "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-calendario-maya-quirigua-1936/Dieseldorff_El_Calendario_Maya_de_Quirigua_1936_Japanese_Complete_Translation.epub",
-    pageCount: 7,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æš¦ç ”ç©¶", "è¬›æ¼”è¨˜éŒ²", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ã‚­ãƒªã‚°ã‚¢", "ã‚¤ã‚µãƒãƒ«", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒãƒ¤æš¦", "ã‚­ãƒªã‚°ã‚¢éºè·¡", "é•·æœŸæš¦", "å¤©æ–‡å­¦", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
-    title: "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹çœŒã®è–¬ç”¨æ¤ç‰©",
-    originalTitle: "Las plantas medicinales del departamento de Alta Verapaz",
-    subtitle: "1939â€“1940å¹´åˆŠãƒ»åŸåˆŠ2å›é€£è¼‰ãƒ»æ¤ç‰©å›³48ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "PLANTAS MEDICINALES DE ALTA VERAPAZ Â· ANALES DE GUATEMALA Â· 1939â€“1940",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€ç¬¬16å·»ç¬¬2â€“3å·ã€1939â€“1940å¹´ã€92â€“105é ãƒ»192â€“206é ",
-    year: 1939,
-    extent: "PDF 33é ãƒ»åŸåˆŠè¨ˆ29é ãƒ»æ¤ç‰©å›³48ç‚¹",
-    description:
-      "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹ã§ç”¨ã„ã‚‰ã‚ŒãŸè–¬ç”¨æ¤ç‰©ã‚’ã€ç¾åœ°åã€å­¦åã€å½¢æ…‹ã€æ¡å–æ³•ã€èª¿è£½æ³•ã€ç”¨é€”ã¨ã¨ã‚‚ã«è¨˜éŒ²ã—ãŸäºŒå›é€£è¼‰ã€‚ç¬¬ä¸€éƒ¨ãƒ»ç¶šç¯‡ãƒ»çµç¯‡ã€ãƒ‘ãƒ–ãƒ­ãƒ»ãƒ´ã‚£ãƒ«ã‚¸ãƒ³ã‚°ã‚‰ã«ã‚ˆã‚‹æ¤ç‰©å›³48ç‚¹ã€å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/cover.jpg",
-    pdf:
-      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-plantas-medicinales-alta-verapaz-1939-1940/Dieseldorff_Plantas_Medicinales_Alta_Verapaz_1939_1940_Japanese_Complete_Translation.epub",
-    pageCount: 33,
-    figureCount: 48,
-    plateCount: 0,
-    types: ["æ°‘æ—æ¤ç‰©å­¦", "è–¬ç”¨æ¤ç‰©èªŒ", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["è–¬ç”¨æ¤ç‰©", "æ°‘æ—æ¤ç‰©å­¦", "ã‚±ã‚¯ãƒ", "æ°‘é–“ç™‚æ³•", "æ¤ç‰©å›³", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "dieseldorff-causa-calendario-quirigua-1940",
-    title: "ã‚­ãƒªã‚°ã‚¢ã®ãƒãƒ¤äººãŒç´€å…ƒå‰3373å¹´9æœˆ22æ—¥ã«æš¦ã‚’é–‹å§‹ã—ãŸç†ç”±",
-    originalTitle:
-      "La causa por la cual los Mayas de QuiriguÃ¡ comenzaron su calendario en 22 de septiembre del aÃ±o 3373 A. J. C.",
-    subtitle: "1940å¹´åˆŠãƒ»åŸåˆŠ271â€“279é ãƒ»è¬›æ¼”æœ¬æ–‡ãƒ»ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•å›³A1â€“E7 æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¨ãƒ«ãƒ´ã‚£ãƒ³ãƒ»Pãƒ»ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•",
-    series: "CAUSA DEL CALENDARIO DE QUIRIGUÃ Â· ANALES DE GUATEMALA Â· 1940",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€ç¬¬16å·»ç¬¬4å·ã€1940å¹´ã€271â€“279é ",
-    year: 1940,
-    extent: "PDF 11é ãƒ»åŸåˆŠ271â€“279é ãƒ»ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•å›³A1â€“E7",
-    description:
-      "ã‚­ãƒªã‚°ã‚¢ã®ãƒãƒ¤æš¦èµ·ç‚¹ã‚’ç´€å…ƒå‰3373å¹´9æœˆ22æ—¥ã¨ã™ã‚‹è‘—è€…ã®ç›¸é–¢èª¬ã‚’ã€é•·æœŸæš¦ã€å¤ªé™½ãƒ»æœˆå‘¨æœŸã€ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•é…ç½®ã‹ã‚‰èª¬æ˜ã—ãŸè¬›æ¼”è«–æ–‡ã€‚æœ¬æ–‡ã€è¨ˆç®—ã€è¤‡åˆå›³A1â€“E7ã¨å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/dieseldorff-causa-calendario-quirigua-1940/cover.jpg",
-    pdf:
-      "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/dieseldorff-causa-calendario-quirigua-1940/Dieseldorff_Causa_Calendario_Quirigua_1940_Japanese_Complete_Translation.epub",
-    pageCount: 11,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æš¦ç ”ç©¶", "æ–‡å­—ç ”ç©¶", "è¬›æ¼”è¨˜éŒ²"],
-    regions: ["ã‚­ãƒªã‚°ã‚¢", "ã‚¤ã‚µãƒãƒ«", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: ["ãƒãƒ¤æš¦", "ã‚­ãƒªã‚°ã‚¢éºè·¡", "ãƒãƒ¤æ–‡å­—", "å¤©æ–‡å­¦", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "schellhas-virchow-deformierter-schaedel-ulpan-1894",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã‚³ãƒãƒ³è¿‘éƒŠã‚¦ãƒ«ãƒ‘ãƒ³ã®å¤‰å½¢é ­è“‹",
-    originalTitle: "Deformirter SchÃ¤del von Ulpan bei Coban, Guatemala",
-    subtitle: "1894å¹´åˆŠãƒ»åŸåˆŠ424â€“425é ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹å°å…¥ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦å ±å‘Š æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ã€ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦",
-    series: "DEFORMIRTER SCHÃ„DEL VON ULPAN Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1894",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬26å·»ã€1894å¹´ã€424â€“425é ",
-    year: 1894,
-    extent: "PDF 3é ãƒ»åŸåˆŠ424â€“425é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ãŒã‚¦ãƒ«ãƒ‘ãƒ³ã§ç™ºæ˜ã—ãŸé ­è“‹ã«ã¤ã„ã¦ã€ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹ãŒæ¥æ­´ã‚’ç´¹ä»‹ã—ã€ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦ãŒå¤‰å½¢ã¨å½¢æ…‹æ‰€è¦‹ã‚’å ±å‘Šã—ãŸä¼šè­°éŒ²é …ç›®ã€‚å°å…¥ã¨å ±å‘Šã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/cover.jpg",
-    pdf:
-      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/Schellhas_Virchow_Deformierter_Schaedel_Ulpan_1894_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å½¢è³ªäººé¡å­¦", "è³‡æ–™å ±å‘Š", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚¦ãƒ«ãƒ‘ãƒ³", "ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["å¤‰å½¢é ­è“‹", "ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦", "ãƒ‘ã‚¦ãƒ«ãƒ»ã‚·ã‚§ãƒ«ãƒã‚¹", "ç™ºæ˜è³‡æ–™", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "virchow-graeberschaedel-guatemala-1897",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å¢“è‘¬é ­è“‹",
-    originalTitle: "GrÃ¤berschÃ¤del von Guatemala",
-    subtitle: "1897å¹´åˆŠãƒ»åŸåˆŠ324â€“328é ãƒ»è¨ˆæ¸¬è³‡æ–™ãƒ»æœ¬æ–‡å›³1â€“2 æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦",
-    series: "GRÃ„BERSCHÃ„DEL VON GUATEMALA Â· ZEITSCHRIFT FÃœR ETHNOLOGIE Â· 1897",
-    originalPublication:
-      "ãƒ™ãƒ«ãƒªãƒ³ã€ã€Zeitschrift fÃ¼r Ethnologieã€ç¬¬29å·»ã€1897å¹´ã€324â€“328é ",
-    year: 1897,
-    extent: "PDF 8é ãƒ»åŸåˆŠ324â€“328é ãƒ»æœ¬æ–‡å›³2ç‚¹",
-    description:
-      "ãƒ‡ã‚£ãƒ¼ã‚¹ãƒ«ãƒ‰ãƒ«ãƒ•ãŒã‚³ãƒãƒ³è¿‘éƒŠã®å¢³ä¸˜å¢“ã‹ã‚‰æ¡é›†ã—ãŸè¤‡æ•°ã®é ­è“‹ã‚’ã€å¾©å…ƒçŠ¶æ…‹ã€äººå·¥å¤‰å½¢ã€ç¸«åˆã€è¨ˆæ¸¬å€¤ã‹ã‚‰è¨˜è¼‰ã—ãŸãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦ã®è³‡æ–™å ±å‘Šã€‚ä¼šè­°éŒ²æœ¬æ–‡ã€åˆ—æŒ™è³‡æ–™ã€å›³1â€“2ã¨å›³æ³¨ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/virchow-graeberschaedel-guatemala-1897/cover.jpg",
-    pdf:
-      "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/virchow-graeberschaedel-guatemala-1897/Virchow_Graeberschaedel_Guatemala_1897_Japanese_Complete_Translation.epub",
-    pageCount: 8,
-    figureCount: 2,
-    plateCount: 0,
-    types: ["å½¢è³ªäººé¡å­¦", "è³‡æ–™å ±å‘Š", "å­¦ä¼šä¼šå ±"],
-    regions: ["ã‚³ãƒãƒ³", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹", "ã‚°ã‚¢ãƒ†ãƒãƒ©"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª"],
-    tags: ["å¤‰å½¢é ­è“‹", "ãƒ«ãƒ‰ãƒ«ãƒ•ãƒ»ãƒ´ã‚£ãƒ«ãƒ’ãƒ§ã‚¦", "äººéª¨è¨ˆæ¸¬", "å¢³ä¸˜å¢“", "ä¸€æ¬¡å²æ–™"],
-  },
-  {
-    slug: "romero-bosquejo-chiapas-soconusco-1877",
-    title:
-      "ãƒã‚¢ãƒ‘ã‚¹ãŠã‚ˆã³ã‚½ã‚³ãƒŒã‚¹ã‚³ã®ãƒ¡ã‚­ã‚·ã‚³ç·¨å…¥å²æ¦‚èª¬ï¼šãƒ¡ã‚­ã‚·ã‚³ã¨ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ãƒ»ã‚°ã‚¢ãƒ†ãƒãƒ©ã¨ã®å›½å¢ƒäº¤æ¸‰",
-    originalTitle:
-      "Bosquejo histÃ³rico de la agregaciÃ³n Ã¡ MÃ©xico de Chiapas y Soconusco y de las negociaciones sobre lÃ­mites entabladas por MÃ©xico con Centro-AmÃ©rica y Guatemala",
-    subtitle:
-      "1877å¹´åˆç‰ˆç¬¬Iå·»ï¼ˆ1821â€“1831å¹´ï¼‰ãƒ»å…¬å¼æ–‡æ›¸é›†ãƒ»æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ãƒ­ãƒ¡ãƒ­",
-    series: "BOSQUEJO HISTÃ“RICO Â· TOMO I Â· 1877",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€Imprenta del Gobierno, en Palacio, a cargo de Filomeno Mataã€1877å¹´",
-    year: 1877,
-    extent:
-      "PDF 1,568é ãƒ»åŸåˆŠå‰ä»˜iâ€“xxivé ãƒ»æœ¬æ–‡3â€“798é ãƒ»å…¨3éƒ¨43ç« ãƒ»è¡¨10ç‚¹ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»æ­£èª¤è¡¨",
-    description:
-      "ãƒã‚¢ãƒ‘ã‚¹ãŠã‚ˆã³ã‚½ã‚³ãƒŒã‚¹ã‚³ã®ãƒ¡ã‚­ã‚·ã‚³ç·¨å…¥ã¨ã€ãƒ¡ã‚­ã‚·ã‚³ãƒ»ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«ãƒ»ã‚°ã‚¢ãƒ†ãƒãƒ©é–“ã®å›½å¢ƒäº¤æ¸‰ã‚’ã€1821å¹´ã‹ã‚‰1831å¹´ã¾ã§ã®å…¬æ–‡æ›¸ãƒ»è­°äº‹éŒ²ãƒ»å¤–äº¤å¾€å¾©æ–‡æ›¸ã«ã‚ˆã£ã¦æ¤œè¨¼ã—ãŸãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ãƒ­ãƒ¡ãƒ­ã®å¤§éƒ¨ãªå²æ–™é›†ã€‚1877å¹´åˆŠç¬¬Iå·»ã®å‰ä»˜ã€æœ¬æ–‡å…¨3éƒ¨43ç« ã€åŸæ³¨ã€äººå£è¡¨ãƒ»æŠ•ç¥¨è¡¨ã€æ­£èª¤è¡¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/romero-bosquejo-chiapas-soconusco-1877/japanese-cover.jpg",
-    pdf:
-      "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
-    pageCount: 1568,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¤–äº¤å²", "å›½å¢ƒå²", "å…¬å¼æ–‡æ›¸é›†", "ä¸€æ¬¡å²æ–™"],
-    regions: [
-      "ãƒã‚¢ãƒ‘ã‚¹",
-      "ã‚½ã‚³ãƒŒã‚¹ã‚³",
-      "ãƒ¡ã‚­ã‚·ã‚³",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ¡ã‚­ã‚·ã‚³ç·¨å…¥",
-      "å›½å¢ƒäº¤æ¸‰",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«é€£é‚¦",
-      "ãƒãƒ†ã‚£ã‚¢ã‚¹ãƒ»ãƒ­ãƒ¡ãƒ­",
-      "ã‚¢ãƒ³ãƒ‰ãƒ¬ã‚¹ãƒ»ãƒ€ãƒ«ãƒ‰ãƒ³",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "perigny-yucatan-inconnu-1908",
-    title: "æœªçŸ¥ã®ãƒ¦ã‚«ã‚¿ãƒ³",
-    originalTitle: "Yucatan inconnu",
-    subtitle: "1908å¹´åˆŠãƒ»åŸåˆŠ66â€“84é ãƒ»æœ¬æ–‡ãƒ»åœ°å›³ãƒ»å›³ç‰ˆ6ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "YUCATAN INCONNU Â· JOURNAL DE LA SOCIÃ‰TÃ‰ DES AMÃ‰RICANISTES Â· 1908",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Journal de la SociÃ©tÃ© des AmÃ©ricanistesã€ç¬¬5å·»ã€1908å¹´ã€66â€“84é ",
-    year: 1908,
-    extent: "PDF 23é ãƒ»åŸåˆŠ66â€“84é ãƒ»åœ°å›³ãƒ»å›³ç‰ˆ6ç‚¹",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒãƒªã‚ªãƒ»ã‚ªãƒ³ãƒ‰ã‹ã‚‰ã‚¤ã‚«ã‚¤ãƒã‚§ã‚’çµŒã¦ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼å†…é™¸ã¸å…¥ã£ãŸç¬¬äºŒæ¬¡æ¢æ¤œã®è©³ç´°å ±å‘Šã€‚ãƒãƒ§ã‚³ãƒã€ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯ãªã©ã®éºè·¡ã€ãƒãƒ¤è«¸é›†è½ã€æ£®æ—äº¤é€šã‚’æ‰±ã†æœ¬æ–‡ã€åŸåˆŠé å¢ƒç•Œã€åœ°å›³ãƒ»å¹³é¢å›³ãƒ»å†™çœŸå›³ç‰ˆ6ç‚¹ã¨å…¨ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-yucatan-inconnu-1908/cover.jpg",
-    pdf:
-      "publications/perigny-yucatan-inconnu-1908/Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-yucatan-inconnu-1908/Maurice_de_Perigny_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
-    pageCount: 23,
-    figureCount: 6,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "æ¢æ¤œå ±å‘Š", "å­¦è¡“èªŒè«–æ–‡"],
-    regions: ["ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-      "ã‚¤ã‚«ã‚¤ãƒã‚§",
-      "ãƒãƒ§ã‚³ãƒéºè·¡",
-      "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-maler-discoveries-yucatan-1908",
-    title: "ãƒãƒ¼ãƒ©ãƒ¼æ°ã®ãƒ¦ã‚«ã‚¿ãƒ³ã«ãŠã‘ã‚‹æœ€æ–°ã®ç™ºè¦‹",
-    originalTitle: "Les derniÃ¨res dÃ©couvertes de M. Maler dans le Yucatan",
-    subtitle: "1908å¹´åˆŠãƒ»åŸåˆŠ95â€“98é ãƒ»æœ¬æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "LES DERNIÃˆRES DÃ‰COUVERTES DE M. MALER DANS LE YUCATAN Â· JOURNAL DE LA SOCIÃ‰TÃ‰ DES AMÃ‰RICANISTES Â· 1908",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Journal de la SociÃ©tÃ© des AmÃ©ricanistesã€ç¬¬5å·»ã€1908å¹´ã€95â€“98é ",
-    year: 1908,
-    extent: "PDF 6é ãƒ»åŸåˆŠ95â€“98é ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ†ã‚ªãƒ™ãƒ«ãƒˆãƒ»ãƒãƒ¼ãƒ©ãƒ¼ãŒã‚¢ãƒ«ã‚¿ãƒ«ãƒ»ãƒ‡ãƒ»ã‚µã‚¯ãƒªãƒ•ã‚£ã‚·ã‚ªã‚¹ã€ã‚»ã‚¤ãƒãƒ«ã€ã‚¤ãƒ„ã‚£ãƒ ãƒ†ã€ã‚«ãƒ³ã‚¯ã‚¨ãƒ³ã§è¨˜éŒ²ã—ãŸéºæ§‹ãƒ»çŸ³ç¢‘ãƒ»ç¥­å£‡ãƒ»ãƒ’ã‚¨ãƒ­ã‚°ãƒªãƒ•ã‚’ã€ãƒšãƒªãƒ‹ãƒ¼ãŒç´¹ä»‹ã—ãŸçŸ­å ±ã€‚åŸåˆŠ95â€“98é ã®æœ¬æ–‡ã¨åŸåˆŠé å¢ƒç•Œã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-maler-discoveries-yucatan-1908/cover.jpg",
-    pdf:
-      "publications/perigny-maler-discoveries-yucatan-1908/Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-maler-discoveries-yucatan-1908/Maurice_de_Perigny_Les_dernieres_decouvertes_de_Maler_dans_le_Yucatan_1908_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "æ–‡çŒ®ç´¹ä»‹", "å­¦è¡“èªŒçŸ­å ±"],
-    regions: ["ã‚¦ã‚¹ãƒã‚·ãƒ³ã‚¿å·æµåŸŸ", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒ†ã‚ªãƒ™ãƒ«ãƒˆãƒ»ãƒãƒ¼ãƒ©ãƒ¼",
-      "ã‚»ã‚¤ãƒãƒ«éºè·¡",
-      "ã‚¢ãƒ«ã‚¿ãƒ«ãƒ»ãƒ‡ãƒ»ã‚µã‚¯ãƒªãƒ•ã‚£ã‚·ã‚ªã‚¹éºè·¡",
-      "ã‚¤ãƒ„ã‚£ãƒ ãƒ†éºè·¡",
-      "ã‚«ãƒ³ã‚¯ã‚¨ãƒ³éºè·¡",
-      "çŸ³ç¢‘",
-    ],
-  },
-  {
-    slug: "perigny-yucatan-inconnu-geographie-1908",
-    title: "æœªçŸ¥ã®ãƒ¦ã‚«ã‚¿ãƒ³ï¼ˆã€ãƒ©ãƒ»ã‚¸ã‚§ã‚ªã‚°ãƒ©ãƒ•ã‚£ã€ç‰ˆï¼‰",
-    originalTitle: "Le Yucatan inconnu",
-    subtitle: "1908å¹´åˆŠãƒ»åŸåˆŠ227â€“238é ãƒ»æœ¬æ–‡ãƒ»åŸæ³¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "LE YUCATAN INCONNU Â· LA GÃ‰OGRAPHIE Â· 1908",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€La GÃ©ographieã€ç¬¬18å·»ã€1908å¹´ã€227â€“238é ",
-    year: 1908,
-    extent: "PDF 16é ãƒ»åŸåˆŠ227â€“238é ãƒ»åŸæ³¨1ç‚¹ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ã®ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œã‚’ã€La GÃ©ographieã€ã«æ²è¼‰ã—ãŸåˆ¥ç¨¿ã€‚ã‚¤ã‚«ã‚¤ãƒã‚§ã€ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯ã€ãƒãƒ›ãƒãƒŠã€ã‚¦ã‚ªãƒ«ãƒˆã‚¥ãƒ‹ãƒã€ãƒ¤ã‚¢ãƒ“ãƒãƒŠã€ãƒã‚«ã‚«ãƒ–ã®å„éºè·¡ã‚’æ‰±ã†æœ¬æ–‡ã€åŸæ³¨ã€ç¯€è¦‹å‡ºã—ã€ç½²åã€åŸåˆŠé å¢ƒç•Œã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-yucatan-inconnu-geographie-1908/cover.jpg",
-    pdf:
-      "publications/perigny-yucatan-inconnu-geographie-1908/Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-yucatan-inconnu-geographie-1908/Maurice_de_Perigny_Le_Yucatan_inconnu_1908_Japanese_Complete_Translation.epub",
-    pageCount: 16,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "æ¢æ¤œå ±å‘Š", "åœ°ç†å­¦ä¼šèªŒè«–æ–‡"],
-    regions: ["ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-      "ãƒãƒ›ãƒãƒŠéºè·¡",
-      "ãƒ¤ã‚¢ãƒ“ãƒãƒŠéºè·¡",
-      "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-villes-mortes-amerique-centrale-1909",
-    title: "ä¸­éƒ¨ã‚¢ãƒ¡ãƒªã‚«ã®æ­»éƒ½",
-    originalTitle: "Villes mortes de lâ€™AmÃ©rique centrale",
-    subtitle: "1909å¹´åˆŠãƒ»åŸåˆŠ445â€“480é ãƒ»ä¸‰å›é€£è¼‰ãƒ»å›³ç‰ˆ41ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "VILLES MORTES DE Lâ€™AMÃ‰RIQUE CENTRALE Â· LE TOUR DU MONDE Â· 1909",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Le Tour du Mondeã€æ–°ã‚·ãƒªãƒ¼ã‚ºç¬¬15å·»ã€ç¬¬38â€“40å·ã€1909å¹´ã€445â€“480é ",
-    year: 1909,
-    extent: "PDF 73é ãƒ»åŸåˆŠ445â€“480é ãƒ»ä¸‰å›é€£è¼‰ãƒ»å›³ç‰ˆ41ç‚¹",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ã®ãƒ¦ã‚«ã‚¿ãƒ³ãƒ»ãƒšãƒ†ãƒ³æ¢æ¤œã‚’è±Šå¯Œãªå†™çœŸã¨å›³ã§ç´¹ä»‹ã—ãŸä¸‰å›é€£è¼‰ã€‚è¡Œç¨‹ã€ãƒãƒ¤è«¸é›†è½ã€æ£®æ—ã€éºè·¡ç™ºè¦‹ã¨ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯å»ºç¯‰ã‚’æ‰±ã†æœ¬æ–‡ã€å„å›è¦‹å‡ºã—ãƒ»ç¶™ç¶šè¡¨ç¤ºãƒ»ç½²åãƒ»æ¨©åˆ©è¡¨ç¤ºã€å€‹åˆ¥åˆ‡å‡ºã—å›³ç‰ˆ41ç‚¹ã¨å…¨ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-villes-mortes-amerique-centrale-1909/cover.jpg",
-    pdf:
-      "publications/perigny-villes-mortes-amerique-centrale-1909/Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-villes-mortes-amerique-centrale-1909/Maurice_de_Perigny_Villes_mortes_de_l_Amerique_centrale_1909_Japanese_Complete_Translation.epub",
-    pageCount: 73,
-    figureCount: 41,
-    plateCount: 0,
-    types: ["æ¢æ¤œè¨˜", "è€ƒå¤å­¦å ±å‘Š", "æŒ¿çµµå…¥ã‚Šé›‘èªŒé€£è¼‰"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯", "ãƒšãƒ†ãƒ³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-      "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼æ¢æ¤œ",
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "å†™çœŸå›³ç‰ˆ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-ruines-rio-bec-1909",
-    title: "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-    originalTitle: "Ruines de Rio Beque",
-    subtitle: "1909å¹´åˆŠãƒ»åŸåˆŠ300â€“301é ãƒ»æœ¬æ–‡ãƒ»è„šæ³¨ãƒ»å›³ç‰ˆ2ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series: "RUINES DE RIO BEQUE Â· LA NATURE Â· 1909",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€La Natureã€ç¬¬1872å·ã€1909å¹´4æœˆ10æ—¥ã€300â€“301é ",
-    year: 1909,
-    extent: "PDF 6é ãƒ»åŸåˆŠ300â€“301é ãƒ»åŸæ³¨1ç‚¹ãƒ»è¨³æ³¨2ç‚¹ãƒ»å›³ç‰ˆ2ç‚¹",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒç™ºè¦‹ã—ãŸãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡ã®å»ºç¯‰ã‚’å ±å‘Šã—ãŸè¨˜äº‹ã€‚åŒå¡”ã‚’å‚™ãˆã‚‹ä¸»å»ºç‰©ã€å†…éƒ¨å®¤ã€è£…é£¾çŸ³ã€ãƒšãƒ†ãƒ³ã¨åŒ—ãƒ¦ã‚«ã‚¿ãƒ³ã®å»ºç¯‰çš„é–¢ä¿‚ã‚’æ‰±ã†æœ¬æ–‡ã€è„šæ³¨ã€å›³ç‰ˆ2ç‚¹ã¨å…¨ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã€ç½²åã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-ruines-rio-bec-1909/cover.jpg",
-    pdf:
-      "publications/perigny-ruines-rio-bec-1909/Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-ruines-rio-bec-1909/Maurice_de_Perigny_Ruines_de_Rio_Beque_1909_Japanese_Complete_Translation.epub",
-    pageCount: 6,
-    figureCount: 2,
-    plateCount: 0,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "éºè·¡å ±å‘Š", "é›‘èªŒè¨˜äº‹"],
-    regions: ["ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯", "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯éºè·¡",
-      "ãƒªã‚ªãƒ»ãƒ™ãƒƒã‚¯æ§˜å¼",
-      "ãƒãƒ¤å»ºç¯‰",
-      "åŒå¡”å»ºç¯‰",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-lettre-costa-rica-1910",
-    title: "ã‚³ã‚¹ã‚¿ãƒªã‚«ã‹ã‚‰ã®æ›¸ç°¡",
-    originalTitle: "Lettre de Costa Rica",
-    subtitle: "1910å¹´åˆŠãƒ»åŸåˆŠ39â€“40é ãƒ»æœ¬æ–‡ãƒ»çµ±è¨ˆè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "LETTRE DE COSTA RICA Â· BULLETIN DE LA SOCIÃ‰TÃ‰ DE GÃ‰OGRAPHIE COMMERCIALE DE PARIS Â· 1910",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Bulletin de la SociÃ©tÃ© de GÃ©ographie Commerciale de Parisã€ç¬¬32å·»ç¬¬1å·ã€1910å¹´1æœˆã€39â€“40é ",
-    year: 1910,
-    extent: "PDF 3é ãƒ»åŸåˆŠ39â€“40é ãƒ»çµ±è¨ˆè¡¨1ç‚¹",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒã‚³ã‚¹ã‚¿ãƒªã‚«ã®è¼¸å…¥ãƒ»è¼¸å‡ºæ§‹é€ ã¨ãƒ•ãƒ©ãƒ³ã‚¹å•†æ¥­ã®ä½ç½®ã‚’å ±å‘Šã—ãŸæ›¸ç°¡ã€‚ã‚¢ãƒ¡ãƒªã‚«ãƒ»ã‚¤ã‚®ãƒªã‚¹ãƒ»ãƒ‰ã‚¤ãƒ„ã¨ã®ç«¶äº‰ã€ãƒ¯ã‚¤ãƒ³ãƒ»åŒ»è–¬å“ãƒ»ç¹”ç‰©ã®è¼¸å…¥ã€ãƒãƒŠãƒŠã¨ã‚³ãƒ¼ãƒ’ãƒ¼ã®è¼¸å‡ºã‚’æ‰±ã†æœ¬æ–‡ã€åŸåˆŠé å¢ƒç•Œã€è²¿æ˜“é¡è¡¨ã€ç½²åã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-lettre-costa-rica-1910/cover.jpg",
-    pdf:
-      "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-lettre-costa-rica-1910/Maurice_de_Perigny_Lettre_de_Costa_Rica_1910_Japanese_Complete_Translation.epub",
-    pageCount: 3,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["çµŒæ¸ˆåœ°ç†", "è²¿æ˜“å ±å‘Š", "å­¦ä¼šèªŒè¨˜äº‹"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«çµŒæ¸ˆ",
-      "è²¿æ˜“",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼",
-      "ãƒãƒŠãƒŠ",
-      "ãƒ•ãƒ©ãƒ³ã‚¹å•†æ¥­",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-costa-rica-pays-habitants-ressources-1910",
-    title: "ã‚³ã‚¹ã‚¿ãƒªã‚«â€”â€”å›½åœŸã€ä½æ°‘ã€è³‡æº",
-    originalTitle: "Costa-Rica. Le pays, ses habitants et ses ressources",
-    subtitle: "1910å¹´åˆŠãƒ»åŸåˆŠ693â€“714é ãƒ»æœ¬æ–‡ãƒ»çµ±è¨ˆè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "COSTA-RICA Â· BULLETIN DE LA SOCIÃ‰TÃ‰ DE GÃ‰OGRAPHIE COMMERCIALE DE PARIS Â· 1910",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Bulletin de la SociÃ©tÃ© de GÃ©ographie Commerciale de Parisã€ç¬¬32å·»ç¬¬10å·ã€1910å¹´11æœˆã€693â€“714é ",
-    year: 1910,
-    extent: "PDF 17é ãƒ»åŸåˆŠ693â€“714é ãƒ»çµ±è¨ˆè¡¨",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒã‚³ã‚¹ã‚¿ãƒªã‚«ã®åœ°å½¢ãƒ»æ°—å€™ãƒ»äººå£ãƒ»äº¤é€šãƒ»è¾²æ¥­ãƒ»é‰±æ¥­ãƒ»è²¡æ”¿ãƒ»è²¿æ˜“ã‚’ä½“ç³»çš„ã«æ¦‚èª¬ã—ãŸåœ°èªŒã€‚é¦–éƒ½ã‚µãƒ³ãƒ»ãƒ›ã‚»ã€é‰„é“ã¨æ¸¯æ¹¾ã€ã‚³ãƒ¼ãƒ’ãƒ¼ãƒ»ãƒãƒŠãƒŠç”Ÿç”£ã€ç§»æ°‘ã¨åŠ´åƒã€è¼¸å‡ºå…¥çµ±è¨ˆã‚’æ‰±ã†æœ¬æ–‡ã€åŸåˆŠé å¢ƒç•Œã€çµ±è¨ˆè¡¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/perigny-costa-rica-pays-habitants-ressources-1910/cover.jpg",
-    pdf:
-      "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-costa-rica-pays-habitants-ressources-1910/Maurice_de_Perigny_Costa_Rica_Le_pays_1910_Japanese_Complete_Translation.epub",
-    pageCount: 17,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°èªŒ", "çµŒæ¸ˆåœ°ç†", "å­¦ä¼šèªŒè«–æ–‡"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«åœ°èªŒ",
-      "äººå£",
-      "é‰„é“",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼",
-      "ãƒãƒŠãƒŠ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-ruines-nakcun-1911",
-    title: "ãƒŠã‚¯ãƒ³éºè·¡",
-    originalTitle: "Les ruines de Nakcun",
-    subtitle: "1911å¹´åˆŠãƒ»åŸåˆŠ4â€“22é ãƒ»æœ¬æ–‡ãƒ»åŸæ³¨ãƒ»å›³ç‰ˆ6ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "LES RUINES DE NAKCUN Â· JOURNAL DE LA SOCIÃ‰TÃ‰ DES AMÃ‰RICANISTES Â· 1911",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Journal de la SociÃ©tÃ© des AmÃ©ricanistes de Parisã€ç¬¬8å·»ã€1911å¹´ã€4â€“22é ",
-    year: 1911,
-    extent: "PDF 21é ãƒ»åŸåˆŠ4â€“22é ãƒ»å›³ç‰ˆIâ€“IIIãƒ»è¡Œç¨‹å›³ãƒ»å¹³é¢å›³ãƒ»å£ç”»å›³",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒ1909â€“1910å¹´ã«å†è¨ªã—ãŸãƒŠã‚¯ãƒ³ï¼ˆç¾ãƒŠã‚¯ãƒ ï¼‰éºè·¡ã®æœ¬æ ¼çš„èª¿æŸ»å ±å‘Šã€‚ã‚°ã‚¢ãƒ†ãƒãƒ©å¸‚ã‹ã‚‰ã‚³ãƒãƒ³ã€ã‚«ã‚¢ãƒœãƒ³ã€ã‚µãƒ³ãƒ»ãƒ«ã‚¤ã‚¹ã‚’çµŒã¦ãƒšãƒ†ãƒ³ã¸å…¥ã‚‹è¡Œç¨‹ã€éºè·¡ã®ä¼é–‹ã€å»ºç¯‰ç¾¤ã€çŸ³ç¢‘ã€å£ç”»ã‚’æ‰±ã†æœ¬æ–‡ã¨åŸæ³¨ã€å›³ç‰ˆIâ€“IIIã€è¡Œç¨‹å›³ã€å¹³é¢å›³ã€å£ç”»å›³ã€å…¨ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-ruines-nakcun-1911/cover.jpg",
-    pdf:
-      "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-ruines-nakcun-1911/Maurice_de_Perigny_Les_ruines_de_Nakcun_1911_Japanese_Complete_Translation.epub",
-    pageCount: 21,
-    figureCount: 3,
-    plateCount: 3,
-    types: ["è€ƒå¤å­¦å ±å‘Š", "éºè·¡å ±å‘Š", "å­¦è¡“èªŒè«–æ–‡"],
-    regions: ["ãƒŠã‚¯ãƒ ", "ãƒšãƒ†ãƒ³", "ã‚°ã‚¢ãƒ†ãƒãƒ©", "ã‚¢ãƒ«ã‚¿ãƒ»ãƒ™ãƒ©ãƒ‘ã‚¹"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ãƒãƒ¤è€ƒå¤å­¦",
-      "ãƒŠã‚¯ãƒ éºè·¡",
-      "ãƒšãƒ†ãƒ³æ¢æ¤œ",
-      "ãƒãƒ¤å»ºç¯‰",
-      "å£ç”»",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-costa-rica-nantes-1911",
-    title: "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-    originalTitle: "Costa-Rica",
-    subtitle: "1911å¹´åˆŠãƒ»åŸåˆŠ18â€“35é ãƒ»åœ°ç†å­¦ä¼šè¬›æ¼”ãƒ»çµ±è¨ˆè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "COSTA-RICA Â· SOCIÃ‰TÃ‰ DE GÃ‰OGRAPHIE COMMERCIALE DE NANTES Â· 1911",
-    originalPublication:
-      "ãƒŠãƒ³ãƒˆã€ã€Bulletin trimestriel de la SociÃ©tÃ© de GÃ©ographie Commerciale de Nantesã€ç¬¬29å¹´ã€1911å¹´ç¬¬1å››åŠæœŸã€18â€“35é ",
-    year: 1911,
-    extent: "PDF 12é ãƒ»åŸåˆŠ18â€“35é ãƒ»1911å¹´1æœˆ14æ—¥è¬›æ¼”ãƒ»çµ±è¨ˆè¡¨",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒãƒŠãƒ³ãƒˆåœ°ç†å­¦ä¼šã§è¡Œã£ãŸã‚³ã‚¹ã‚¿ãƒªã‚«è¬›æ¼”ã®è¨˜éŒ²ã€‚å›½åœŸã¨æ°—å€™ã€ä½æ°‘ã€ã‚µãƒ³ãƒ»ãƒ›ã‚»ã€é‰„é“ãƒ»æ¸¯æ¹¾ã€ã‚³ãƒ¼ãƒ’ãƒ¼ãƒ»ãƒãƒŠãƒŠãƒ»ã‚«ã‚«ã‚ªãªã©ã®ç”£æ¥­ã€è²¡æ”¿ã¨å¤–å›½è²¿æ˜“ã‚’æ‰±ã†æœ¬æ–‡ã€åŸåˆŠé å¢ƒç•Œã€çµ±è¨ˆè¡¨ã€é–‰ä¼šéƒ¨ã‚’çœç•¥ãªãè¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-costa-rica-nantes-1911/cover.jpg",
-    pdf:
-      "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-costa-rica-nantes-1911/Maurice_de_Perigny_Costa_Rica_Nantes_1911_Japanese_Complete_Translation.epub",
-    pageCount: 12,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°èªŒ", "çµŒæ¸ˆåœ°ç†", "è¬›æ¼”è¨˜éŒ²"],
-    regions: ["ã‚³ã‚¹ã‚¿ãƒªã‚«", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«åœ°èªŒ",
-      "åœ°ç†å­¦ä¼š",
-      "é‰„é“",
-      "ã‚³ãƒ¼ãƒ’ãƒ¼",
-      "ãƒãƒŠãƒŠ",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "perigny-amerique-centrale-1911",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    originalTitle: "Lâ€™AmÃ©rique centrale",
-    subtitle:
-      "1911å¹´åˆŠãƒ»ä¸‰å›é€£è¼‰ãƒ»åŸåˆŠ297â€“307ãƒ»357â€“363ãƒ»407â€“413é ãƒ»åœ°å›³ãƒ»çµ±è¨ˆè¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼",
-    series:
-      "Lâ€™AMÃ‰RIQUE CENTRALE Â· QUESTIONS DIPLOMATIQUES ET COLONIALES Â· 1911",
-    originalPublication:
-      "ãƒ‘ãƒªã€ã€Questions diplomatiques et colonialesã€ç¬¬15å¹´ãƒ»ç¬¬31å·»ã€1911å¹´3æœˆ1æ—¥ãƒ»3æœˆ16æ—¥ãƒ»4æœˆ1æ—¥ã€297â€“307ãƒ»357â€“363ãƒ»407â€“413é ",
-    year: 1911,
-    extent: "PDF 23é ãƒ»ä¸‰å›é€£è¼‰25é ãƒ»æŠ˜è¾¼åœ°å›³1ç‚¹ãƒ»çµ±è¨ˆè¡¨",
-    description:
-      "ãƒšãƒªãƒ‹ãƒ¼ãŒã‚³ã‚¹ã‚¿ãƒªã‚«ã€ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹ã€ã‚°ã‚¢ãƒ†ãƒãƒ©ã€ã‚µãƒ«ãƒãƒ‰ãƒ«ã®æ”¿æ²»ãƒ»äººå£ãƒ»äº¤é€šãƒ»è¾²æ¥­ãƒ»è²¡æ”¿ãƒ»è²¿æ˜“ã‚’æ¯”è¼ƒã—ãŸä¸‰å›é€£è¼‰ã€‚å„å…±å’Œå›½ã®åœ°èªŒã¨çµŒæ¸ˆçµ±è¨ˆã€é‰„é“ãƒ»é‹æ²³æ§‹æƒ³ã€å¤–å›½è³‡æœ¬ã¨ãƒ•ãƒ©ãƒ³ã‚¹å•†æ¥­ã‚’æ‰±ã†æœ¬æ–‡ã€é€£è¼‰åŒºåˆ†ã€åŸåˆŠé å¢ƒç•Œã€çµ±è¨ˆè¡¨ã€ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«åœ°å›³ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/perigny-amerique-centrale-1911/cover.jpg",
-    pdf:
-      "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
-    pageCount: 23,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["åœ°åŸŸç ”ç©¶", "çµŒæ¸ˆåœ°ç†", "å¤–äº¤ãƒ»æ¤æ°‘åœ°å•é¡ŒèªŒè¨˜äº‹"],
-    regions: [
-      "ã‚³ã‚¹ã‚¿ãƒªã‚«",
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒ›ãƒ³ã‚¸ãƒ¥ãƒ©ã‚¹",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ã‚µãƒ«ãƒãƒ‰ãƒ«",
-    ],
-    languages: ["ãƒ•ãƒ©ãƒ³ã‚¹èª"],
-    tags: [
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«åœ°èªŒ",
-      "å›½éš›é–¢ä¿‚",
-      "é‰„é“",
-      "è¾²æ¥­",
-      "è²¿æ˜“",
-      "ä¸€æ¬¡å²æ–™",
-    ],
-  },
-  {
-    slug: "coronel-arte-maya-1620",
-    title: "ãƒãƒ¤èªæ–‡æ³•",
-    originalTitle: "Arte en lengua de Maya",
-    subtitle:
-      "1620å¹´åˆç‰ˆãƒ»åŸåˆŠæ¨™é¡Œç´™ãƒ»å››æ´»ç”¨ãƒ»å°è¾ãƒ»æ•°è©ãƒ»äººä½“éƒ¨ä½èªå½™ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ã‚³ãƒ­ãƒãƒ«",
-    series: "ARTE EN LENGUA DE MAYA Â· 1620",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ã‚¬ãƒªãƒ¼ãƒ‰å°åˆ·æ‰€ã€ã‚¢ãƒ‰ãƒªã‚¢ãƒãƒ»ã‚»ã‚µãƒ«å°åˆ·ã€1620å¹´",
-    year: 1620,
-    extent:
-      "PDF 82é ãƒ»åŸåˆŠæ—§ä»˜ç•ª2â€“56é ãƒ»æ´»ç”¨è¡¨21ç‚¹ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»äººä½“éƒ¨ä½èªå½™",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼šå£«ãƒ•ã‚¢ãƒ³ãƒ»ã‚³ãƒ­ãƒãƒ«ãŒã€ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èªã®ä»£åè©ã€å››æ´»ç”¨ã€å‹•è©å½¢æˆã€æ”¯é…ã€å°è¾ã€æ•°è©ã€èªå½¢æˆã€äººä½“éƒ¨ä½èªå½™ã‚’ä½“ç³»åŒ–ã—ãŸ1620å¹´åˆŠæ–‡æ³•æ›¸ã€‚BYUå…¬é–‹ã®1620å¹´åˆç‰ˆå†™çœŸè¤‡è£½ã‚’åº•æœ¬ã¨ã—ã€åŸåˆŠæ¨™é¡Œç´™ã€æœ¬æ–‡å…¨52ç¯€ã€æ´»ç”¨è¡¨21ç‚¹ã€èªå½™ã€åŸåˆŠæ—§ä»˜ç•ªã€æ¬ è‘‰è¡¨ç¤ºã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/coronel-arte-maya-1620/cover.jpg",
-    pdf:
-      "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/coronel-arte-maya-1620/Juan_Coronel_Arte_en_lengua_de_Maya_1620_Japanese_Complete_Translation.epub",
-    pageCount: 82,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "æ–‡æ³•æ›¸", "èªå½™é›†", "å®£æ•™å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š",
-      "æ¤æ°‘åœ°æœŸ",
-      "æ´»ç”¨",
-      "å°è¾",
-      "èªå½™",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "beltran-arte-idioma-maya-1746",
-    title: "ãƒãƒ¤èªæ–‡æ³•ãƒ»ãƒ¦ã‚«ãƒ†ã‚³èªå°è¾å…¸",
-    originalTitle:
-      "Arte de el idioma Maya reducido a succintas reglas, y semilexicon yucateco",
-    subtitle:
-      "1746å¹´ãƒ¡ã‚­ã‚·ã‚³åˆç‰ˆãƒ»å‰ä»˜ãƒ»æœ¬æ–‡p. 1â€“187ãƒ»è‘—è€…è‡ªç­†è¨‚æ­£ãƒ»æŠ˜è¾¼å›³2è‘‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒšãƒ‰ãƒ­ãƒ»ãƒ™ãƒ«ãƒˆãƒ©ãƒ³ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ã‚¿ãƒ»ãƒ­ã‚µãƒ»ãƒãƒªã‚¢",
-    series: "ARTE DE EL IDIOMA MAYA Â· 1746",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€ãƒ‰ãƒ³ãƒ»ãƒ›ã‚»ãƒ•ãƒ»ãƒ™ãƒ«ãƒŠãƒ«ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚ªã‚¬ãƒ«æœªäº¡äººå°åˆ·æ‰€ã€1746å¹´",
-    year: 1746,
-    extent:
-      "PDF 372é ãƒ»å‰ä»˜16é ãƒ»æœ¬æ–‡1â€“187é ãƒ»ç„¡ç•ªå·æœ€çµ‚é 1é ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»æŠ˜è¾¼å›³2è‘‰ãƒ»æ´»ç”¨è¡¨ãƒ»èªå½™è¡¨ãƒ»æ•°è©è¡¨",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼šå£«ãƒšãƒ‰ãƒ­ãƒ»ãƒ™ãƒ«ãƒˆãƒ©ãƒ³ãŒãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èªã®ç™ºéŸ³ã€å“è©ã€ä»£åè©ã€å››æ´»ç”¨ã€æ™‚åˆ¶ã€å‹•è©å½¢æˆã€å°è¾ã€æ•°è©ã€äººä½“ãƒ»ç–¾ç—…ãƒ»è¦ªæ—ãƒ»å‹•æ¤ç‰©ãƒ»å®¶è²¡ã®èªå½™ã‚’ä½“ç³»åŒ–ã—ãŸ1746å¹´åˆŠæ–‡æ³•æ›¸ãƒ»å°è¾å…¸ã€‚JCBæ‰€è”µåˆç‰ˆã®å‰ä»˜ã€æœ¬æ–‡ã€ç„¡ç•ªå·æœ€çµ‚é ã€æŠ˜è¾¼å›³2è‘‰ã‚’åŸåˆŠé †ã«åéŒ²ã—ã€ãƒãƒ¤èªå½¢ãƒ»ä¾‹æ–‡ã®åŸç¶´ã€åŸåˆŠé æ¨™è­˜ã€1750å¹´ã®è‘—è€…è‡ªç­†è¨‚æ­£ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚è™«æã§ç‰©ç†çš„ã«å¤±ã‚ã‚ŒãŸ1èªã ã‘ã‚’1859å¹´å†ç‰ˆã§è£œåˆã—ã€ãã®ç®‡æ‰€ã‚’æ˜ç¤ºã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/beltran-arte-idioma-maya-1746/cover.jpg",
-    pdf:
-      "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
-    pageCount: 372,
-    figureCount: 1,
-    plateCount: 2,
-    types: ["æ–‡æ³•æ›¸", "è¾æ›¸", "è¨€èªè³‡æ–™", "å®£æ•™å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ãƒªãƒ€", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒ¦ã‚«ãƒ†ã‚³ãƒ»ãƒãƒ¤èª",
-      "æ¤æ°‘åœ°æœŸãƒãƒ¤èª",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ä¼š",
-      "å®£æ•™è¨€èªå­¦",
-      "æ´»ç”¨",
-      "å°è¾",
-      "æ•°è©",
-      "è¦ªæ—èªå½™",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "gemelli-careri-giro-del-mondo-nuova-spagna-1700",
-    title: "ä¸–ç•Œå‘¨éŠã€€ç¬¬å…­éƒ¨ã€€æ–°ã‚¹ãƒšã‚¤ãƒ³",
-    originalTitle:
-      "Giro del mondo del dottor D. Gio. Francesco Gemelli Careri. Parte sesta, contenente le cose piÃ¹ ragguardevoli vedute nella Nuova Spagna",
-    subtitle:
-      "1700å¹´ãƒŠãƒãƒªåˆç‰ˆãƒ»å…¨å››æ›¸å››åç« ãƒ»ãƒã‚»ãƒƒãƒˆæ›¸ç°¡ãƒ»äº‹é …ç´¢å¼•ãƒ»æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚¸ãƒ§ãƒ´ã‚¡ãƒ³ãƒ‹ãƒ»ãƒ•ãƒ©ãƒ³ãƒã‚§ã‚¹ã‚³ãƒ»ã‚¸ã‚§ãƒ¡ãƒªãƒ»ã‚«ãƒ¬ãƒª",
-    series: "GIRO DEL MONDO Â· PARTE SESTA Â· 1700",
-    originalPublication:
-      "ãƒŠãƒãƒªã€ã‚¸ãƒ¥ã‚¼ãƒƒãƒšãƒ»ãƒ­ã‚¼ãƒƒãƒªå°åˆ·æ‰€ã€1700å¹´",
-    year: 1700,
-    extent:
-      "PDF 342é ãƒ»å‰ä»˜ãƒ»å…¨4æ›¸40ç« ãƒ»åŸåˆŠ1â€“496é ãƒ»ãƒã‚»ãƒƒãƒˆæ›¸ç°¡ãƒ»äº‹é …ç´¢å¼•184é …ãƒ»æ­£èª¤è¡¨48é …ãƒ»åŸåˆŠç•¥æ¨™é¡Œç´™ãŠã‚ˆã³æ¨™é¡Œç´™2ç‚¹ãƒ»å†…å®¹å›³ç‰ˆ15ç‚¹",
-    description:
-      "ã‚¤ã‚¿ãƒªã‚¢äººæ—…è¡Œè€…ã‚¸ã‚§ãƒ¡ãƒªãƒ»ã‚«ãƒ¬ãƒªãŒ1697å¹´ã«ã‚¢ã‚«ãƒ—ãƒ«ã‚³ã¸åˆ°ç€ã—ã¦ã‹ã‚‰ã€ãƒ¡ã‚­ã‚·ã‚³å¸‚ã€ãƒ‘ãƒãƒ¥ãƒ¼ã‚«ã€ãƒ†ã‚ªãƒ†ã‚£ãƒ¯ã‚«ãƒ³ã€ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã€ãƒãƒãƒŠã‚’çµŒã¦ãƒ¨ãƒ¼ãƒ­ãƒƒãƒ‘ã¸å¸°é‚„ã™ã‚‹ã¾ã§ã‚’è¨˜ã—ãŸã€ä¸–ç•Œå‘¨éŠã€ç¬¬å…­éƒ¨ã€‚æ–°ã‚¹ãƒšã‚¤ãƒ³ã®éƒ½å¸‚ã€é‰±å±±ã€æš¦ã€ç¥­ç¥€ã€å‹•æ¤ç‰©ã€å¾æœå²ã‚’æ‰±ã†å…¨å››æ›¸å››åç« ã«åŠ ãˆã€çŒ®è¾ã€ç« ç›®æ¬¡ã€ãƒã‚»ãƒƒãƒˆæ›¸ç°¡ã€äº‹é …ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’çœç•¥ãªãåéŒ²ã—ã¦ã„ã¾ã™ã€‚1700å¹´åˆç‰ˆã®ç•¥æ¨™é¡Œç´™ãƒ»æ¨™é¡Œç´™2ç‚¹ã¨å†…å®¹å›³ç‰ˆ15ç‚¹ã‚’æ²ã’ã€è£…é£¾å›³ã¯çœç•¥ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/cover.jpg",
-    pdf:
-      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/Gemelli_Careri_Giro_del_Mondo_Parte_VI_Nuova_Spagna_Japanese_Complete_Translation.epub",
-    pageCount: 342,
-    figureCount: 17,
-    plateCount: 0,
-    types: ["æ—…è¡Œè¨˜", "æ­´å²æ›¸", "åœ°èªŒ", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ã‚­ãƒ¥ãƒ¼ãƒ", "ã‚¹ãƒšã‚¤ãƒ³", "ã‚¤ã‚¿ãƒªã‚¢"],
-    languages: ["ã‚¤ã‚¿ãƒªã‚¢èª", "ãƒ©ãƒ†ãƒ³èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ä¸–ç•Œå‘¨èˆª",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚",
-      "ãƒ‘ãƒãƒ¥ãƒ¼ã‚«é‰±å±±",
-      "ãƒ†ã‚ªãƒ†ã‚£ãƒ¯ã‚«ãƒ³",
-      "æ¤æ°‘åœ°æœŸ",
-      "å¾æœå²",
-      "17ä¸–ç´€",
-      "æ—…è¡Œè¨˜",
-    ],
-  },
-  {
-    slug: "fuentes-guzman-recordacion-florida-1882-1883",
-    title: "ã‚°ã‚¢ãƒ†ãƒãƒ©å²ã€ã¾ãŸã¯ãƒ•ãƒ­ãƒªãƒ€ã®å›æƒ³",
-    originalTitle: "Historia de Guatemala Ã³ RecordaciÃ³n Florida",
-    subtitle:
-      "1882â€“1883å¹´ã‚µãƒ©ã‚´ã‚µåˆåˆŠæœ¬ãƒ»å…¨2å·»ãƒ»å‰ä»˜ã€æœ¬æ–‡å…¨16æ›¸ã€å¢—è£œãƒ»æ³¨ãƒ»ç´¢å¼•ãƒ»åˆŠè¡Œä»˜å±è³‡æ–™ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ»ãƒ•ã‚¨ãƒ³ãƒ†ã‚¹ãƒ»ã‚¤ãƒ»ã‚°ã‚¹ãƒãƒ³",
-    series: "HISTORIA DE GUATEMALA Ã“ RECORDACIÃ“N FLORIDA Â· 1882â€“1883",
-    originalPublication:
-      "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€ãƒ«ã‚¤ã‚¹ãƒ»ãƒŠãƒãƒ­ã€1882â€“1883å¹´ã€å…¨2å·»ï¼ˆãƒ•ã‚¹ãƒˆãƒ»ã‚µãƒ©ã‚´ã‚µç·¨ï¼‰",
-    year: 1882,
-    extent:
-      "PDF 992é ãƒ»å…¨2å·»ãƒ»å…¨16æ›¸ãƒ»å¢—è£œã¨æ³¨ãƒ»åœ°ç†æ³¨è¨˜ãƒ»ä¼è¨˜äº‹é …ãƒ»èªå½™é›†ãƒ»ç´¢å¼•ãƒ»è³¼èª­è€…åç°¿ãƒ»åˆŠè¡Œæ¡ˆå†…ãƒ»è¡¨78ç‚¹ãƒ»è³‡æ–™ç”»åƒ11ç‚¹",
-    description:
-      "17ä¸–ç´€ã‚°ã‚¢ãƒ†ãƒãƒ©ã®å¹´ä»£è¨˜ä½œè€…ãƒ•ã‚¨ãƒ³ãƒ†ã‚¹ãƒ»ã‚¤ãƒ»ã‚°ã‚¹ãƒãƒ³ãŒã€å…ˆä½è«¸æ°‘æ—ã®æ­´å²ã€å¾æœã€éƒ½å¸‚ãƒ»æ‘è½ã€åœ°ç†ã€åˆ¶åº¦ã€å®¶ç³»ã¨åŒæ™‚ä»£ç¤¾ä¼šã‚’è¨˜ã—ãŸå¤§è‘—ã€‚ãƒ•ã‚¹ãƒˆãƒ»ã‚µãƒ©ã‚´ã‚µç·¨1882â€“1883å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆŠæœ¬ã®å‰ä»˜ã€æœ¬æ–‡å…¨16æ›¸ã€å¢—è£œã¨æ³¨ã€åœ°ç†æ³¨è¨˜ã€ä¼è¨˜äº‹é …ã€èªå½™é›†ã€ç´¢å¼•ã€è³¼èª­è€…åç°¿ã€åˆŠè¡Œæ¡ˆå†…ã‚’åŸåˆŠé †ã«åéŒ²ã—ã€åŸåˆŠé æ¨™è­˜ã€è¡¨78ç‚¹ã€è³‡æ–™ç”»åƒ11ç‚¹ã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/fuentes-guzman-recordacion-florida-1882-1883/cover.jpg",
-    pdf:
-      "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
-    pageCount: 992,
-    figureCount: 11,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "æ¤æ°‘åœ°å²", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ã‚°ã‚¢ãƒ†ãƒãƒ©", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒãƒ¤åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ©ãƒ†ãƒ³èª", "ãƒãƒ¤è«¸èª"],
-    tags: [
-      "æ¤æ°‘åœ°æœŸ",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ç‹å›½",
-      "å¾æœå²",
-      "ãƒãƒ¤è«¸æ°‘æ—",
-      "ã‚µãƒ©ã‚´ã‚µæ³¨",
-      "åœ°ç†æ³¨è¨˜",
-      "èªå½™é›†",
-      "17ä¸–ç´€",
-      "19ä¸–ç´€åˆŠè¡Œ",
-    ],
-  },
-  {
-    slug: "ixtlilxochitl-sumaria-todas",
-    title: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£è«¸äº‹ç•¥å ±",
-    originalTitle:
-      "Sumaria relaciÃ³n de todas las cosas que han sucedido en la Nueva EspaÃ±aâ€¦",
-    subtitle:
-      "è‡ªç­†ç¨¿ f.1râ€“81vãƒ»ä¸–ç•Œå‰µé€ ã‹ã‚‰ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã¾ã§ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«",
-    series: "CÃ“DICE CHIMALPAHIN Â· AUTÃ“GRAFO Â· I",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1600å¹´é ƒã€è‡ªç­†ç¨¿ï¼ˆæœªåˆŠï¼‰",
-    year: 1600,
-    extent:
-      "PDF 179é ãƒ»CÃ³dice Chimalpahinç¬¬1å·» f.1râ€“81vï¼ˆ162é¢ï¼‰ãƒ»äº”å ±å‘Šãƒ»ãƒãƒãƒ¡ã‚«è«¸ä¾¯å²ãƒ»è‡ªç­†ç¨¿folioæ¨™162ä»¶ãƒ»é–¢é€£å›³ç‰ˆ1ç‚¹",
-    description:
-      "ä¸–ç•Œå‰µé€ ã¨å››ã¤ã®æ™‚ä»£ã€ãƒˆãƒ«ãƒ†ã‚«äººã®ç§»ä½ãƒ»ç‹çµ±ãƒ»æ»…äº¡ã€ã‚·ãƒ§ãƒ­ãƒˆãƒ«ä»¥å¾Œã®ãƒãƒãƒ¡ã‚«è«¸ä¾¯ã€ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±ã€ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã¨å¾æœã¾ã§ã‚’å™è¿°ã™ã‚‹è‡ªç­†ç¨¿ã€‚å¾Œä»£åˆŠæœ¬ã§å‡ã•ã‚Œã¦ããŸä½œå“å¢ƒç•Œã€è¦‹å‡ºã—ã€folioé †ã€æŠ¹æ¶ˆãƒ»æ¬„å¤–è¿½è¨˜ãƒ»æ¬ æã®æ³¨è¨˜ã‚’ä¿æŒã—ã€CÃ³dice Chimalpahinç¬¬1å·» f.1râ€“81vã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ixtlilxochitl-sumaria-todas/cover.jpg",
-    pdf:
-      "publications/ixtlilxochitl-sumaria-todas/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Todas_Cosas_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ixtlilxochitl-sumaria-todas/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Todas_Cosas_Japanese_Complete_Translation.epub",
-    pageCount: 179,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "è‡ªç­†ç¨¿", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒ„ã‚³ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒˆãƒ«ãƒ†ã‚«",
-      "ãƒãƒãƒ¡ã‚«",
-      "ã‚¢ã‚³ãƒ«ãƒ¯",
-      "ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±",
-      "å¾æœå²",
-      "CÃ³dice Chimalpahin",
-      "è‡ªç­†ç¨¿",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ixtlilxochitl-relacion-sucinta",
-    title: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£å²ç°¡ç•¥å ±å‘Š",
-    originalTitle:
-      "RelaciÃ³n sucinta en forma de memorial de las historias de la Nueva EspaÃ±a y sus seÃ±orÃ­os hasta el ingreso de los espaÃ±oles",
-    subtitle:
-      "è‡ªç­†ç¨¿ f.177râ€“185vãƒ»è¦šæ›¸å½¢å¼ãƒ»ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã¾ã§ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«",
-    series: "CÃ“DICE CHIMALPAHIN Â· AUTÃ“GRAFO Â· II",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1600å¹´é ƒã€è‡ªç­†ç¨¿ï¼ˆæœªåˆŠï¼‰",
-    year: 1600,
-    extent:
-      "PDF 34é ãƒ»CÃ³dice Chimalpahinç¬¬1å·» f.177râ€“185vï¼ˆ18é¢ï¼‰ãƒ»ç¾å­˜å†’é ­éƒ¨ãŠã‚ˆã³ç¬¬ä¸‰å ±å‘Šâ€•ç¬¬åäºŒå ±å‘Šãƒ»ç³»è­œãƒ»è‡ªç­†ç¨¿folioæ¨™18ä»¶ãƒ»é–¢é€£å›³ç‰ˆ1ç‚¹",
-    description:
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã®è«¸æ°‘æ—ãƒ»è«¸ç‹å›½ã®æ¥æ­´ã‚’è¦šæ›¸å½¢å¼ã§ã¾ã¨ã‚ã€ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ä»¥å‰ã¾ã§ã‚’ãŸã©ã‚‹ç°¡æ½”ãªè‡ªç­†ç¨¿ã€‚ç¾å­˜å†’é ­éƒ¨ã‹ã‚‰ç¬¬åäºŒå ±å‘Šã€ãƒ¡ã‚·ã‚³è«¸ä¾¯ã®ç³»çµ±ãƒ»ç³»è­œã€ãã®ä»–ã®è«¸ä¾¯ã«é–¢ã™ã‚‹è¨˜è¿°ã¾ã§ã‚’ã€æ¬ ã‘ãŸå†’é ­ã¨åŸç¨¿ä¸Šã®ä¸é€£ç¶šã‚’è£œä½œã›ãšã€CÃ³dice Chimalpahinç¬¬1å·» f.177râ€“185vã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ixtlilxochitl-relacion-sucinta/cover.jpg",
-    pdf:
-      "publications/ixtlilxochitl-relacion-sucinta/Fernando_de_Alva_Ixtlilxochitl_Relacion_Sucinta_Memorial_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ixtlilxochitl-relacion-sucinta/Fernando_de_Alva_Ixtlilxochitl_Relacion_Sucinta_Memorial_Japanese_Complete_Translation.epub",
-    pageCount: 34,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "è¦šæ›¸", "è‡ªç­†ç¨¿", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒ„ã‚³ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ç‹çµ±",
-      "ç³»è­œ",
-      "ãƒ¡ã‚·ã‚³",
-      "ãƒ†ãƒ„ã‚³ã‚³",
-      "CÃ³dice Chimalpahin",
-      "è‡ªç­†ç¨¿",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ixtlilxochitl-compendio-tetzcoco",
-    title: "ãƒ†ãƒ„ã‚³ã‚³è«¸ç‹ã®æ­´å²ç¶±è¦",
-    originalTitle: "Compendio histÃ³rico de los reyes de Tetzcoco",
-    subtitle:
-      "1608å¹´é ƒè‡ªç­†ç¨¿ f.147râ€“214rãƒ»ç¬¬ä¸€å ±å‘Šâ€•ç¬¬åä¸‰å ±å‘Š æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«",
-    series: "CÃ“DICE CHIMALPAHIN Â· AUTÃ“GRAFO Â· III",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1608å¹´é ƒã€è‡ªç­†ç¨¿ï¼ˆæœªåˆŠï¼‰",
-    year: 1608,
-    extent:
-      "PDF 147é ãƒ»CÃ³dice Chimalpahinç¬¬2å·» f.147râ€“214rï¼ˆ135é¢ï¼‰ãƒ»å…¨13å ±å‘Šãƒ»è‡ªç­†ç¨¿folioæ¨™135ä»¶ãƒ»é–¢é€£å›³ç‰ˆ1ç‚¹",
-    description:
-      "è«¸æ°‘æ—ã®å…¥æ¤ã€å·¨äººãƒ»ãƒˆãƒ«ãƒ†ã‚«äººã€ã‚·ãƒ§ãƒ­ãƒˆãƒ«ä»¥å¾Œã®å¤§ãƒãƒãƒ¡ã‚«è«¸ç‹ã€ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«ã‚’ä¸­å¿ƒã¨ã™ã‚‹ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±ã€ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã¨å¾æœã¾ã§ã‚’å…¨åä¸‰å ±å‘Šã§å™è¿°ã™ã‚‹æ­´å²ç¶±è¦ã€‚è‡ªç­†ç¨¿å›ºæœ‰ã®ç« ç«‹ã¦ã€ç•°ç¶´ã‚Šã€æŠ¹æ¶ˆãƒ»æŒ¿å…¥ãƒ»æœ¬æ–‡ä¸­æ–­ã‚’ä¿æŒã—ã€CÃ³dice Chimalpahinç¬¬2å·» f.147râ€“214rã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ixtlilxochitl-compendio-tetzcoco/cover.jpg",
-    pdf:
-      "publications/ixtlilxochitl-compendio-tetzcoco/Fernando_de_Alva_Ixtlilxochitl_Compendio_Historico_Reyes_Tetzcoco_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ixtlilxochitl-compendio-tetzcoco/Fernando_de_Alva_Ixtlilxochitl_Compendio_Historico_Reyes_Tetzcoco_Japanese_Complete_Translation.epub",
-    pageCount: 147,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "è‡ªç­†ç¨¿", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒ„ã‚³ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±",
-      "ã‚·ãƒ§ãƒ­ãƒˆãƒ«",
-      "ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«",
-      "ã‚¢ã‚³ãƒ«ãƒ¯",
-      "å¾æœå²",
-      "CÃ³dice Chimalpahin",
-      "è‡ªç­†ç¨¿",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ixtlilxochitl-sumaria-general",
-    title: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£é€šå²ç•¥å ±",
-    originalTitle:
-      "Sumaria relaciÃ³n de la historia general de esta Nueva EspaÃ±a desde el origen del mundo hasta la hora de agoraâ€¦",
-    subtitle:
-      "1625å¹´é ƒè‡ªç­†ç¨¿ f.161râ€“175vãƒ»ä¸–ç•Œã®èµ·æºã‹ã‚‰ç¾åœ¨ã¾ã§ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«",
-    series: "CÃ“DICE CHIMALPAHIN Â· AUTÃ“GRAFO Â· IV",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1625å¹´é ƒã€è‡ªç­†ç¨¿ï¼ˆæœªåˆŠï¼‰",
-    year: 1625,
-    extent:
-      "PDF 29é ãƒ»CÃ³dice Chimalpahinç¬¬1å·» f.161râ€“175vï¼ˆ30é¢ï¼‰ãƒ»è‡ªç­†ç¨¿folioæ¨™30ä»¶ãƒ»é–¢é€£å›³ç‰ˆ1ç‚¹",
-    description:
-      "å…ˆä½æ°‘ã®æ­´å²ãƒ»çµµæ–‡æ›¸ãƒ»æ–‡å­—ãƒ»å¤æ­Œã‹ã‚‰ã€ä¸–ç•Œã®èµ·æºã€ãƒˆãƒ«ãƒ†ã‚«äººã€ãƒãƒãƒ¡ã‚«äººã€è«¸ç‹çµ±ã‚’è‘—è€…ã®æ™‚ä»£ã¾ã§åœ§ç¸®ã—ã¦è¿°ã¹ã‚‹é€šå²ç•¥å ±ã€‚é€£ç¶šã™ã‚‹ç‹¬ç«‹ä½œå“ã¨ã—ã¦ã®å¢ƒç•Œã‚’ä¿ã¡ã€è‡ªç­†ç¨¿ã®è¦‹å‡ºã—ã€folioé †ã€æŠ¹æ¶ˆãƒ»æ¬„å¤–è¿½è¨˜ãƒ»æ¬ ææ³¨è¨˜ã‚’æ®‹ã—ã¦ã€CÃ³dice Chimalpahinç¬¬1å·» f.161râ€“175vã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ixtlilxochitl-sumaria-general/cover.jpg",
-    pdf:
-      "publications/ixtlilxochitl-sumaria-general/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Historia_General_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ixtlilxochitl-sumaria-general/Fernando_de_Alva_Ixtlilxochitl_Sumaria_Relacion_Historia_General_Japanese_Complete_Translation.epub",
-    pageCount: 29,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "è‡ªç­†ç¨¿", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒ„ã‚³ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "é€šå²",
-      "ãƒˆãƒ«ãƒ†ã‚«",
-      "ãƒãƒãƒ¡ã‚«",
-      "ç‹çµ±",
-      "CÃ³dice Chimalpahin",
-      "è‡ªç­†ç¨¿",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "ixtlilxochitl-historia-chichimeca",
-    title: "ãƒãƒãƒ¡ã‚«æ°‘æ—å²",
-    originalTitle: "Historia de la naciÃ³n chichimeca",
-    subtitle:
-      "1640å¹´é ƒè‡ªç­†ç¨¿ f.1râ€“143vãƒ»çŒ®è¾ãƒ»èª­è€…ã¸ã®åºãƒ»æœ¬æ–‡ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«",
-    series: "CÃ“DICE CHIMALPAHIN Â· AUTÃ“GRAFO Â· V",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1640å¹´é ƒã€è‡ªç­†ç¨¿ï¼ˆæœªåˆŠï¼‰",
-    year: 1640,
-    extent:
-      "PDF 319é ãƒ»CÃ³dice Chimalpahinç¬¬2å·» f.1râ€“143vï¼ˆ286é¢ï¼‰ãƒ»çŒ®è¾ãƒ»èª­è€…ã¸ã®åºãƒ»æœ¬æ–‡ãƒ»è‡ªç­†ç¨¿folioæ¨™286ä»¶ãƒ»é–¢é€£å›³ç‰ˆ1ç‚¹",
-    description:
-      "ä¸–ç•Œå‰µé€ ã¨ãƒˆãƒ«ãƒ†ã‚«äººã®æ™‚ä»£ã‹ã‚‰ã€ã‚·ãƒ§ãƒ­ãƒˆãƒ«ã®å…¥æ¤ã€ã‚¢ã‚³ãƒ«ãƒ¯ï¼ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±ã€ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«ã¨ãƒã‚µãƒ¯ãƒ«ãƒ”ãƒªã€ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã€ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³åŒ…å›²ã¾ã§ã‚’å™è¿°ã™ã‚‹å¤§éƒ¨ã®è‡ªç­†ç¨¿ã€‚å¾Œä»£ç‰ˆã®å†é…åˆ—ã‚’é€€ã‘ã€æœ«å°¾ã®æŒ¿å…¥ç´™ã‚’ f.140vâ†’142vâ†’142râ†’141vâ†’141râ†’143râ†’143v ã®è«–ç†é †ã§æç¤ºã—ã€CÃ³dice Chimalpahinç¬¬2å·» f.1râ€“143vã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/ixtlilxochitl-historia-chichimeca/cover.jpg",
-    pdf:
-      "publications/ixtlilxochitl-historia-chichimeca/Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/ixtlilxochitl-historia-chichimeca/Fernando_de_Alva_Ixtlilxochitl_Historia_Nacion_Chichimeca_Japanese_Complete_Translation.epub",
-    pageCount: 319,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "è‡ªç­†ç¨¿", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒ„ã‚³ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒãƒãƒ¡ã‚«",
-      "ã‚¢ã‚³ãƒ«ãƒ¯",
-      "ãƒ†ãƒ„ã‚³ã‚³ç‹çµ±",
-      "ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³",
-      "å¾æœå²",
-      "CÃ³dice Chimalpahin",
-      "è‡ªç­†ç¨¿",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "castillo-historias-mexicanos-conquista-1908",
-    title: "ãƒ¡ã‚·ã‚«äººã¨è«¸æ°‘æ—ã®åˆ°æ¥å²ï¼ãƒ¡ã‚·ã‚³å¾æœå²",
-    originalTitle:
-      "Historia de la venida de los mexicanos y otros pueblos e Historia de la conquista",
-    subtitle: "16ä¸–ç´€ãƒŠãƒ¯ãƒˆãƒ«èªå²æ–™ãƒ»ç¾å­˜æ–­ç‰‡å…¨è¨³",
-    author: "ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ‡ãƒ«ãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ§",
-    series: "HISTORIAS DE CRISTÃ“BAL DEL CASTILLO Â· SIGLO XVI",
-    originalPublication:
-      "16ä¸–ç´€æœ«ãƒŠãƒ¯ãƒˆãƒ«èªåŸè‘—ã€ãƒ•ã‚£ãƒ¬ãƒ³ãƒ„ã‚§ã€ã‚µãƒ«ãƒ´ã‚¡ãƒ‰ãƒ¼ãƒ«ãƒ»ãƒ©ãƒ³ãƒ‡ã‚£å°åˆ·æ‰€ã€1908å¹´åˆŠ",
-    year: 1599,
-    extent:
-      "PDF 62é ãƒ»ä¸‰éƒ¨30ç« ãŠã‚ˆã³ç¾å­˜æ–­ç‰‡ãƒ»åŸåˆŠï¼å†™æœ¬å‡ºæ‰€æ¨™è­˜43ä»¶ãƒ»åŸåˆŠæ¨™é¡Œç´™1ç‚¹ãƒ»è¨³æ³¨8é …",
-    description:
-      "16ä¸–ç´€æœ«ã«ãƒŠãƒ¯ãƒˆãƒ«èªã§è‘—ã•ã‚ŒãŸã€ãƒ¡ã‚·ã‚«äººã¨è«¸æ°‘æ—ã®ç§»ä½ä¼æ‰¿ã€ãƒ¡ã‚·ã‚³ã®å¾æœæˆ¦äº‰ã€æš¦ã«é–¢ã™ã‚‹æ­´å²æ–­ç‰‡ã®æ—¥æœ¬èªå…¨è¨³ã€‚1908å¹´ãƒ‘ã‚½ãƒ»ã‚¤ãƒ»ãƒˆãƒ­ãƒ³ã‚³ã‚½ç‰ˆã‚’ä¸»åº•æœ¬ã¨ã—ã€åŒç‰ˆæœªåéŒ²æ–­ç‰‡ã¨ç–‘å•ç®‡æ‰€ã‚’ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨æ‰€è”µã®Fonds mexicainè«¸å†™æœ¬ã§ç…§åˆã—ã¦ã„ã¾ã™ã€‚ãƒŠãƒ¯ãƒˆãƒ«èªæœ¬æ–‡ãŒå¤±ã‚ã‚ŒãŸç« ã¯ã€ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ”ãƒãƒ£ãƒ«ãƒ‰ã®ç¾å­˜ã‚¹ãƒšã‚¤ãƒ³èªè¨³ãƒ»è¦ç´„ã‹ã‚‰è¨³ã—ã¾ã—ãŸã€‚",
-    cover:
-      "publications/castillo-historias-mexicanos-conquista-1908/cover.jpg",
-    pdf:
-      "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/castillo-historias-mexicanos-conquista-1908/Cristobal_del_Castillo_Historias_Japanese_Complete_Translation.epub",
-    pageCount: 62,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "å†™æœ¬å²æ–™", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°", "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³", "ã‚¢ãƒŠãƒ¯ã‚¯"],
-    languages: ["ãƒŠãƒ¯ãƒˆãƒ«èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ¡ã‚·ã‚«",
-      "ã‚¢ã‚¹ãƒ†ã‚«",
-      "ç§»ä½ä¼æ‰¿",
-      "ãƒ¡ã‚·ã‚³å¾æœå²",
-      "ã‚¯ãƒªã‚¹ãƒˆãƒãƒ«ãƒ»ãƒ‡ãƒ«ãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ§",
-      "ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ”ãƒãƒ£ãƒ«ãƒ‰",
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ«ãƒ»ãƒ‘ã‚½ãƒ»ã‚¤ãƒ»ãƒˆãƒ­ãƒ³ã‚³ã‚½",
-      "16ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "munoz-camargo-historia-tlaxcala-ms210",
-    title: "ãƒˆãƒ©ã‚¹ã‚«ãƒ©å¸‚ãƒ»å·ãŠã‚ˆã³ãã®å…±å’Œå›½ã®æ­´å²",
-    originalTitle:
-      "Historia de la ciudad y provincia de Tlaxcala y su repÃºblica",
-    subtitle: "BnFãƒ¡ã‚­ã‚·ã‚³å†™æœ¬210 f. 30râ€“93vï¼ˆæ¬ é¦–ãƒ»æ¬ å°¾ï¼‰",
-    author: "ãƒ‡ã‚£ã‚¨ã‚´ãƒ»ãƒ ãƒ‹ãƒ§ã‚¹ãƒ»ã‚«ãƒãƒ«ã‚´",
-    series: "HISTORIA DE TLAXCALA Â· MS. MEXICAIN 210",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€16ä¸–ç´€æœ«ã€å†™æœ¬ï¼ˆæœªåˆŠï¼‰",
-    year: 1585,
-    extent:
-      "PDF 184é ãƒ»å†™æœ¬ f. 30râ€“93vãƒ»è‘‰é¢æ¨™è­˜128ä»¶ï¼ˆæ¬ é¦–ãƒ»æ¬ å°¾ï¼‰",
-    description:
-      "ãƒˆãƒ©ã‚¹ã‚«ãƒ©ã®åœ°ç†ã€è‡ªç„¶ã€è«¸é›†å›£ã®ç”±æ¥ã€ç¤¾ä¼šã¨å®—æ•™ã€ãƒ¡ã‚·ã‚«ã¨ã®å¯¾ç«‹ã€ã‚¹ãƒšã‚¤ãƒ³äººã¨ã®åŒç›Ÿã€å¾æœæˆ¦äº‰ã‚’å™è¿°ã™ã‚‹æ¤æ°‘åœ°æœŸã®æ­´å²æ›¸ã€‚ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨æ‰€è”µãƒ¡ã‚­ã‚·ã‚³å†™æœ¬210ã®ç¾å­˜ç¯„å›² f. 30râ€“93vã‚’ã€æ¬ é¦–ãƒ»æ¬ å°¾ã‚’è£œã‚ãšè¨³å‡ºã—ã¦ã„ã¾ã™ã€‚å†™æœ¬ç”»åƒã‚’æœ€çµ‚æ ¹æ‹ ã¨ã—ã€ç¾ä»£ç‰ˆã®ç·¨è€…æ³¨ãƒ»æ³¨ç•ªå·ãƒ»æ³¨ãƒ‡ãƒ¼ã‚¿ã¯ä½¿ç”¨ã¾ãŸã¯åéŒ²ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    cover:
-      "publications/munoz-camargo-historia-tlaxcala-ms210/cover.jpg",
-    pdf:
-      "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.pdf",
-    epub:
-      "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.epub",
-    pageCount: 184,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒˆãƒ©ã‚¹ã‚«ãƒ©", "ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒˆãƒ©ã‚¹ã‚«ãƒ©",
-      "ãƒˆãƒ©ã‚¹ã‚«ãƒ«ãƒ†ã‚«",
-      "ãƒ¡ã‚·ã‚«",
-      "ã‚¢ã‚¹ãƒ†ã‚«",
-      "ã‚¨ãƒ«ãƒŠãƒ³ãƒ»ã‚³ãƒ«ãƒ†ã‚¹",
-      "å¾æœå²",
-      "ãƒ¡ã‚­ã‚·ã‚³å†™æœ¬210",
-      "16ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "tezozomoc-cronica-mexicana-kraus-117",
-    title: "ãƒ¡ã‚­ã‚·ã‚³å¹´ä»£è¨˜",
-    originalTitle: "CrÃ³nica mexicana",
-    subtitle:
-      "ã‚¯ãƒ©ã‚¦ã‚¹117å†™æœ¬ f.1râ€“160vãƒ»å…¨111ç« ï¼ˆç¬¬4ç« æ¬ è‘‰ï¼‰ æ—¥æœ¬èªå…¨è¨³",
-    author: "ä¼ã‚¨ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ã‚¢ãƒ«ãƒãƒ©ãƒ¼ãƒ‰ãƒ»ãƒ†ã‚½ã‚½ãƒ¢ã‚¯",
-    series: "CRÃ“NICA MEXICANA Â· KRAUS MS 117",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€1600å¹´é ƒã€ã‚¯ãƒ©ã‚¦ã‚¹117å†™æœ¬ï¼ˆæœªåˆŠï¼‰",
-    year: 1600,
-    extent:
-      "PDF 513é ãƒ»å†™æœ¬ f.1râ€“160vãƒ»å…¨111ç« ï¼ˆç¬¬4ç« æ¬ è‘‰ï¼‰ãƒ»å†™æœ¬è‘‰æ¨™316é¢ãƒ»æ¬ è‘‰è¡¨ç¤º1ä»¶ãƒ»å†™æœ¬ç‰©ç†è¦ç´ 217ä»¶",
-    description:
-      "ãƒ¡ã‚·ã‚«äººã®ã‚¢ã‚¹ãƒˆãƒ©ãƒ³å‡ºç«‹ã€ãƒ¡ã‚­ã‚·ã‚³ï¼ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³å»ºè¨­ã€å‘¨è¾ºè«¸å›½ã¨ã®æˆ¦äº‰ã¨å¾æœã€ãƒ¢ã‚¯ãƒ†ã‚¹ãƒ2ä¸–ã®æ²»ä¸–ã€ã‚¹ãƒšã‚¤ãƒ³äººåˆ°æ¥ã¾ã§ã‚’å™è¿°ã™ã‚‹æ¤æ°‘åœ°æœŸã®å¹´ä»£è¨˜ã€‚ã‚¯ãƒ©ã‚¦ã‚¹117å†™æœ¬ã®ç« é †ã€ç« é¡Œã€è‘‰æ¨™ã€æ¬ è‘‰ã€æŠ¹æ¶ˆã€æ¬„å¤–æ›¸å…¥ã‚Œã€æŒ‡ç¤ºæ‰‹ãªã©ã‚’ä¿æŒã—ã€å†™æœ¬ f.1râ€“160vã‹ã‚‰å…¨è¨³ã—ã¦ã„ã¾ã™ã€‚åº¦é‡è¡¡èªå½™ã¯å†™æœ¬ç”»åƒã¸ç‹¬è‡ªã«å†ç…§åˆã—ã€braÃ§a 32ä¾‹ã‚’ã€Œãƒ–ãƒ©ã‚µã€ã«çµ±ä¸€ã™ã‚‹ãªã©ã€å†™æœ¬ã«å³ã—ã¦æ ¡è¨‚ã—ã¾ã—ãŸã€‚å†™æœ¬è¦‹å‡ºã—111ä»¶ã¯ãƒ•ã‚¡ãƒ³ã‚³ãƒ¼ãƒˆæ¯ç‰ˆã®æ”¹ãƒšãƒ¼ã‚¸æŒ‡å®šã«å¾“ã„ã€ã™ã¹ã¦ãƒšãƒ¼ã‚¸å†’é ­ã‹ã‚‰é–‹å§‹ã—ã¾ã™ã€‚",
-    cover: "publications/tezozomoc-cronica-mexicana-kraus-117/cover.jpg",
-    pdf:
-      "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/tezozomoc-cronica-mexicana-kraus-117/Hernando_Alvarado_Tezozomoc_Cronica_Mexicana_Kraus117_Japanese_Complete_Translation.epub",
-    pageCount: 513,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "å¹´ä»£è¨˜", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒ¡ã‚·ã‚«",
-      "ã‚¢ã‚¹ãƒ†ã‚«",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³",
-      "ã‚¦ã‚£ãƒ„ã‚£ãƒ­ãƒãƒãƒˆãƒª",
-      "ãƒ¢ã‚¯ãƒ†ã‚¹ãƒ2ä¸–",
-      "å¾æœå²",
-      "ã‚¯ãƒ©ã‚¦ã‚¹117",
-      "16ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "pineda-sublevaciones-indigenas-chiapas-1888",
-    title: "ãƒã‚¢ãƒ‘ã‚¹å·ã§èµ·ããŸå…ˆä½æ°‘èœ‚èµ·ã®æ­´å²",
-    originalTitle:
-      "Historia de las sublevaciones indÃ­genas habidas en el Estado de Chiapas",
-    subtitle:
-      "1888å¹´åˆç‰ˆãƒ»åŸåˆŠ3â€“132é ãƒ»åŸæ³¨ãƒ»æ¨™é¡Œç´™æ–‡å­—è»¢è¨˜ æ—¥æœ¬èªå…¨è¨³ãƒ»æ ¡è¨‚ç‰ˆ",
-    author: "ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ”ãƒãƒ€",
-    series: "HISTORIA DE LAS SUBLEVACIONES INDÃGENAS Â· 1888",
-    originalPublication:
-      "ãƒã‚¢ãƒ‘ã‚¹ã€J. J. ãƒ’ãƒ¡ãƒã‚¹ä¸»å®°å·æ”¿åºœå°åˆ·æ‰€ã€1888å¹´",
-    year: 1888,
-    extent:
-      "PDF 107é ãƒ»åŸåˆŠæ¨™é¡Œç´™æ–‡å­—è»¢è¨˜ãƒ»åŸåˆŠæœ¬æ–‡3â€“132é ãƒ»åºè«–ãƒ»å…¨7ç« ãƒ»åŸæ³¨ãƒ»èªå½¢ä¸€è¦§ãƒ»æš¦å",
-    description:
-      "ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒ”ãƒãƒ€ãŒã€å¾æœæœŸã‹ã‚‰1870å¹´ã¾ã§ã«ãƒã‚¢ãƒ‘ã‚¹å·ã§èµ·ããŸå››åº¦ã®å…ˆä½æ°‘èœ‚èµ·ã‚’å™è¿°ã—ãŸ1888å¹´åˆŠã®åœ°æ–¹å²ã€‚ã‚½ã‚¯ãƒˆãƒ³ï¼ˆãƒã‚¢ãƒ‘ãƒã‚«ï¼‰ã€ãƒ„ã‚§ãƒ«ã‚¿ãƒ«ã€ãƒ„ã‚©ãƒ„ã‚£ãƒ«ï¼ãƒãƒ£ãƒ ãƒ©ã®èœ‚èµ·ã€ã‚·ã‚¦ãƒ€ãƒ¼ãƒ»ãƒ¬ã‚¢ãƒ«å»ºè¨­ã€1869â€“1870å¹´ã®æˆ¦é—˜ã‚’æ‰±ã„ã€å¾ŒåŠã«ã¯ã€Œãƒã‚¢ãƒ‘ã‚¹ã€ã®èªæºè«–ã€ãƒ„ã‚§ãƒ«ã‚¿ãƒ«èªã¨ãƒ„ã‚©ãƒ„ã‚£ãƒ«èªã®é–¢ä¿‚ã€ãƒ„ã‚§ãƒ«ã‚¿ãƒ«æš¦ã‚’åã‚ã¦ã„ã¾ã™ã€‚åŸåˆŠæœ¬æ–‡3â€“132é ã‚’çœç•¥ã›ãšè¨³ã—ã€åŒã˜æ‰€è”µå†Šã«åˆ¥æ¨™é¡Œç´™ã§åˆå†Šã•ã‚ŒãŸæ–‡æ³•æ›¸ãƒ»è¾æ›¸ã¯åˆ¥è‘—ä½œã¨ã—ã¦åéŒ²å¯¾è±¡å¤–ã¨ã—ã¾ã—ãŸã€‚",
-    cover:
-      "publications/pineda-sublevaciones-indigenas-chiapas-1888/cover.jpg",
-    pdf:
-      "publications/pineda-sublevaciones-indigenas-chiapas-1888/Vicente_Pineda_Historia_de_las_sublevaciones_indigenas_1888_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/pineda-sublevaciones-indigenas-chiapas-1888/Vicente_Pineda_Historia_de_las_sublevaciones_indigenas_1888_Japanese_Complete_Translation.epub",
-    pageCount: 107,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "åœ°æ–¹å²", "å…ˆä½æ°‘å²", "è¨€èªè³‡æ–™"],
-    regions: ["ãƒã‚¢ãƒ‘ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒ„ã‚§ãƒ«ã‚¿ãƒ«åœ°åŸŸ", "ãƒ„ã‚©ãƒ„ã‚£ãƒ«åœ°åŸŸ"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ„ã‚§ãƒ«ã‚¿ãƒ«èª"],
-    tags: [
-      "å…ˆä½æ°‘èœ‚èµ·",
-      "ãƒã‚¢ãƒ‘ã‚¹èœ‚èµ·",
-      "ãƒ„ã‚§ãƒ«ã‚¿ãƒ«",
-      "ãƒ„ã‚©ãƒ„ã‚£ãƒ«",
-      "ãƒãƒ£ãƒ ãƒ©",
-      "ã‚·ã‚¦ãƒ€ãƒ¼ãƒ»ãƒ¬ã‚¢ãƒ«",
-      "ã‚«ãƒ¼ã‚¹ãƒˆæˆ¦äº‰",
-      "æ¤æ°‘åœ°å²",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "codice-chimalpahin-volumen-3",
-    title: "ã‚³ãƒ¼ãƒ‡ãƒƒã‚¯ã‚¹ãƒ»ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ ç¬¬3å·»â€•â€•ãƒŠãƒ¯ãƒˆãƒ«èªãƒ»ã‚¹ãƒšã‚¤ãƒ³èªæ­´å²å²æ–™é›†",
-    originalTitle: "CÃ³dice Chimalpahin, volumen 3",
-    subtitle: "åŸå†Š f.1râ€“202vãƒ»å…¨15å²æ–™ æ—¥æœ¬èªå…¨è¨³ãƒ»è¨³æ³¨ç‰ˆ",
-    author: "ãƒ‰ãƒŸãƒ³ã‚´ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒˆãƒ³ãƒ»ãƒ ãƒ‹ãƒ§ãƒ³ãƒ»ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ï¼ˆç·¨ï¼‰",
-    series: "CÃ“DICE CHIMALPAHIN Â· VOLUMEN 3",
-    originalPublication: "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€16â€“17ä¸–ç´€ã€å†™æœ¬é›†æˆï¼ˆæœªåˆŠï¼‰",
-    year: 1600,
-    extent:
-      "PDF 416é ãƒ»åŸå†Š f.1râ€“202vï¼ˆ404æœ¬æ–‡é¢ï¼‰ãƒ»å…¨15å²æ–™ãƒ»åŸå†Šè‘‰æ¨™è­˜251ä»¶ãƒ»ç¬¬15å²æ–™ç´™é¢ p.50â€“77ä½µè¨˜28ä»¶",
-    description:
-      "ãƒ‰ãƒŸãƒ³ã‚´ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒˆãƒ³ãƒ»ãƒ ãƒ‹ãƒ§ãƒ³ãƒ»ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ãŒç·¨çº‚ã—ãŸã€ã‚³ãƒ¼ãƒ‡ãƒƒã‚¯ã‚¹ãƒ»ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ã€ç¬¬3å·»ã®å…¨15å²æ–™ã‚’ã€ç¾è¡Œç¶´ã˜ã®åŸå†Šé †ã«å…¨è¨³ã—ãŸå²æ–™é›†ã§ã™ã€‚ãƒ¡ã‚·ã‚«ã®ç§»ä½ãƒ»å»ºéƒ½ãƒ»ç‹çµ±ãƒ»å¾æœã€ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³ã€ãƒˆãƒ©ãƒ†ãƒ­ãƒ«ã‚³ã€ãƒ†ãƒ„ã‚³ã‚³ã€ã‚³ãƒ«ãƒ¯ã‚«ãƒ³ã®æ­´å²ã¨ç³»è­œã‚’ä¸­å¿ƒã«ã€ãƒŸãƒãƒ¥ã‚¢ã‚«ãƒ³é–¢ä¿‚æ³•å‹™æ–‡æ›¸ã€æ›¸ç°¡ã€ç¥å­¦ï¼éœŠä¿®ãƒãƒ¼ãƒˆæ–­ç‰‡ã‚‚åéŒ²ã—ã¾ã™ã€‚å„å²æ–™ã‚¿ã‚¤ãƒˆãƒ«ã«ã¯åŸå†Šè‘‰ç¯„å›²ã¨è¨€èªã‚’æ²ã’ã€ç¬¬15å²æ–™ã¯åŸå†Šè‘‰ã¨æ‰‹ç¨¿ç´™é¢é ã‚’ä½µè¨˜ã—ã¦ã„ã¾ã™ã€‚",
-    majorSources: [
-      "ãƒ¡ã‚­ã‚·ã‚³å²ï¼å¹´ä»£è¨˜ï¼ˆåŸå†Š f. 1râ€“16vï¼ã‚¹ãƒšã‚¤ãƒ³èªï¼‰",
-      "ã€ãƒ¡ã‚·ã‚«ãƒ¨ãƒˆãƒ«å¹´ä»£è¨˜ã€ï¼ˆåŸå†Š f. 18râ€“63rï¼ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-      "ã‚¬ãƒ–ãƒªã‚¨ãƒ«ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ¤ãƒ©ã€ãƒ¡ã‚·ã‚«å¹´ä»£è¨˜ã€ï¼ˆåŸå†Š f. 74râ€“80vï¼ãƒŠãƒ¯ãƒˆãƒ«èªãƒ»ã‚¹ãƒšã‚¤ãƒ³èªï¼‰",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³ã€ãƒˆãƒ©ã‚³ãƒ‘ãƒ³ã€ãƒ†ãƒ„ã‚³ã‚³ä¸‰éƒ½ã®çµ±æ²»è€…ã¨ç¶™æ‰¿å¹´ç´€ï¼ˆåŸå†Š f. 82râ€“86vï¼ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-      "æš¦ã‚’ä¼´ã†ãƒ¡ã‚­ã‚·ã‚³å²ï¼å¹´ä»£è¨˜ï¼ˆåŸå†Š f. 87râ€“104rï¼ã‚¹ãƒšã‚¤ãƒ³èªãƒ»ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-      "ãƒ¡ã‚·ã‚«ã®æ¥ä½ã®è¨˜éŒ²ï¼ˆåŸå†Š f. 140râ€“144vï¼ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-      "æ­´å²ãƒ»ç³»è­œå²æ–™ç¾¤ IIï¼ˆåŸå†Š f. 145râ€“162vï¼ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-      "ã‚³ãƒ«ãƒ¯ã‚«ãƒ³ã®ç‹ä¾¯ãƒ»é ˜ä¸»ãƒ»ä½æ°‘ã®ç³»è­œã¨ä¸–ä»£ï¼ˆåŸå†Š f. 164râ€“172vï¼ãƒŠãƒ¯ãƒˆãƒ«èªï¼‰",
-    ],
-    cover: "publications/codice-chimalpahin-volumen-3/cover.jpg",
-    pdf:
-      "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
-    pageCount: 416,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å²æ–™é›†", "å¹´ä»£è¨˜", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "æ–°ã‚¹ãƒšã‚¤ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³ç›†åœ°", "ãƒŸãƒãƒ¥ã‚¢ã‚«ãƒ³"],
-    languages: ["ãƒŠãƒ¯ãƒˆãƒ«èª", "ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ©ãƒ†ãƒ³èª"],
-    tags: [
-      "ãƒ¡ã‚·ã‚«",
-      "ãƒ†ãƒãƒãƒ†ã‚£ãƒˆãƒ©ãƒ³",
-      "ãƒ†ãƒ„ã‚³ã‚³",
-      "ç³»è­œ",
-      "æ³•å‹™æ–‡æ›¸",
-      "CÃ³dice Chimalpahin",
-      "å†™æœ¬é›†æˆ",
-      "16ä¸–ç´€",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "pomar-relacion-tezcuco-1582",
-    title: "ãƒ†ã‚¹ã‚¯ã‚³å ±å‘Šæ›¸",
-    originalTitle:
-      "RelaÃ§ion q se enbio a su magestad (RelaciÃ³n de Tezcuco)",
-    subtitle:
-      "1582å¹´3æœˆ9æ—¥æˆç«‹ãƒ»Benson Latin American Collection Ms. G57â€“G58 æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ•ã‚¢ãƒ³ãƒ»ãƒã‚¦ãƒ†ã‚£ã‚¹ã‚¿ãƒ»ãƒ‡ãƒ»ãƒãƒãƒ¼ãƒ«",
-    originalAuthor: "Juan Bautista de Pomar",
-    series: "RELACIÃ“N DE TEZCUCO Â· 1582",
-    originalPublication:
-      "ãƒ†ã‚¹ã‚¯ã‚³ã€1582å¹´3æœˆ9æ—¥æˆç«‹ã€‚ç¾å­˜æœ¬ã¯17ä¸–ç´€åˆé ­ã®å†™æœ¬ã€‚",
-    year: 1582,
-    extent:
-      "PDF 87é ãƒ»Benson Latin American Collection Ms. G57 f. 1râ€“92rãƒ»Ms. G58 f. 92râ€“102vãƒ»å†™æœ¬è‘‰æ¨™è­˜205ä»¶ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒ•ã‚¢ãƒ³ãƒ»ãƒã‚¦ãƒ†ã‚£ã‚¹ã‚¿ãƒ»ãƒ‡ãƒ»ãƒãƒãƒ¼ãƒ«ãŒ1582å¹´ã«ä½œæˆã—ãŸãƒ†ã‚¹ã‚¯ã‚³ã®åœ°èªŒãƒ»æ­´å²ãƒ»ç¤¾ä¼šãƒ»å®—æ•™ãƒ»çµ±æ²»ãƒ»æˆ¦äº‰ãƒ»è¡£é£Ÿãƒ»è‡ªç„¶ç’°å¢ƒã«é–¢ã™ã‚‹å ±å‘Šæ›¸ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚ç¾å­˜ã™ã‚‹å›ç­”æœ¬æ–‡ï¼ˆç¬¬11é …ã‹ã‚‰ç¬¬27é …ã€ç¬¬30é …ã€ç¬¬31é …ï¼‰ã¨ã€åŒå†™æœ¬ã«ç¶šã1577å¹´ç‰ˆã€ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ã‚¹è¨˜è¿°ã®ãŸã‚ã«ä½œæˆã™ã¹ãå ±å‘Šæ›¸ã«ã¤ã„ã¦ã®æŒ‡ç¤ºã¨è¦šæ›¸ã€å…¨50é …ã‚’ã€Benson Latin American Collection Ms. G57ã€G58ã®ç‰©ç†çš„ãªç¶´ã˜é †ã«æˆ»ã—ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚G59ã®æ­Œè¬¡é›†ã¯åˆ¥ä½œå“ã®ãŸã‚å¯¾è±¡å¤–ã§ã™ã€‚",
-    cover: "publications/pomar-relacion-tezcuco-1582/cover.jpg",
-    pdf:
-      "publications/pomar-relacion-tezcuco-1582/Pomar_Relacion_de_Tezcuco_1582_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/pomar-relacion-tezcuco-1582/Pomar_Relacion_de_Tezcuco_1582_Japanese_Complete_Translation.epub",
-    pageCount: 87,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["åœ°èªŒ", "æ­´å²æ›¸", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£", "ãƒ†ã‚¹ã‚¯ã‚³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "ãƒãƒãƒ¼ãƒ«",
-      "ãƒ†ã‚¹ã‚¯ã‚³",
-      "ã‚¢ã‚³ãƒ«ãƒ¯",
-      "ãƒã‚µãƒ¯ãƒ«ã‚³ãƒ¨ãƒˆãƒ«",
-      "åœ°ç†å ±å‘Šæ›¸",
-      "å…ˆä½æ°‘å²",
-      "16ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "chimalpahin-diario-1577-1615",
-    title: "ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ã€æ—¥è¨˜ã€",
-    originalTitle: "Diario",
-    subtitle:
-      "BNAH MS 256B ff.17râ€“18vãƒ»BnF Mexicain 220 pp.1â€“282ãƒ»1577â€“1615å¹´ æ—¥æœ¬èªå…¨è¨³ãƒ»è¨³æ³¨ç‰ˆ",
-    author:
-      "ãƒ‰ãƒŸãƒ³ã‚´ãƒ»ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒˆãƒ³ãƒ»ãƒ ãƒ‹ãƒ§ãƒ³ãƒ»ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ãƒ»ã‚¯ã‚¢ã‚¦ãƒ†ãƒ¬ãƒ¯ãƒ‹ãƒ„ã‚£ãƒ³",
-    originalAuthor:
-      "Domingo Francisco de San AntÃ³n MuÃ±Ã³n Chimalpahin Cuauhtlehuanitzin",
-    series: "DIARIO Â· 1577â€“1615",
-    originalPublication:
-      "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã€1577â€“1615å¹´ã€ãƒŠãƒ¯ãƒˆãƒ«èªå†™æœ¬ï¼ˆæœªåˆŠï¼‰",
-    year: 1615,
-    extent:
-      "PDF 266é ãƒ»BNAH MS 256B ff.17râ€“18vï¼ˆ4é¢ï¼‰ãƒ»BnF Mexicain 220 pp.1â€“282ãƒ»åŸåˆŠé ï¼è‘‰æ¨™è­˜291ä»¶ãƒ»å›³ç‰ˆãªã—",
-    description:
-      "ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³ãŒ1577å¹´ã‹ã‚‰1615å¹´ã¾ã§ã®ãƒ¡ã‚·ã‚³ã¨ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã®å‡ºæ¥äº‹ã‚’ãƒŠãƒ¯ãƒˆãƒ«èªã§è¨˜ã—ãŸåŒæ™‚ä»£æ—¥è¨˜ã€‚ç–«ç—…ã€åœ°éœ‡ã€æ´ªæ°´ã€å®—æ•™è¡Œåˆ—ã€æ•™ä¼šãƒ»å‰¯ç‹æ”¿ãƒ»å…ˆä½æ°‘å…±åŒä½“ã®å‹•å‘ã«åŠ ãˆã€ãƒ­ãƒ‰ãƒªã‚´ãƒ»ãƒ‡ãƒ»ãƒ“ãƒ™ãƒ­ã®å¸°é‚„ã€ã‚»ãƒã‚¹ãƒ†ã‚£ã‚¢ãƒ³ãƒ»ãƒ“ã‚¹ã‚«ã‚¤ãƒã®æ—¥æœ¬æ¸¡èˆªã€æ…¶é•·é£æ¬§ä½¿ç¯€ã¨æ—¥æœ¬äººä¸€è¡Œã®ãƒ¡ã‚·ã‚³æ»åœ¨ã‚‚åéŒ²ã—ã¾ã™ã€‚",
-    cover: "publications/chimalpahin-diario-1577-1615/cover.jpg",
-    pdf:
-      "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/chimalpahin-diario-1577-1615/Chimalpahin_Diario_1577_1615_Japanese_Complete_Translation.epub",
-    pageCount: 266,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["å¹´ä»£è¨˜", "æ—¥è¨˜", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£", "ãƒ¡ã‚­ã‚·ã‚³å¸‚", "æ—¥æœ¬"],
-    languages: ["ãƒŠãƒ¯ãƒˆãƒ«èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒãƒãƒ«ãƒ‘ã‚¤ãƒ³",
-      "ãƒ¡ã‚·ã‚³",
-      "ãƒˆãƒ©ãƒ†ãƒ­ãƒ«ã‚³",
-      "æ…¶é•·é£æ¬§ä½¿ç¯€",
-      "æ”¯å€‰å¸¸é•·",
-      "ãƒ­ãƒ‰ãƒªã‚´ãƒ»ãƒ‡ãƒ»ãƒ“ãƒ™ãƒ­",
-      "ã‚»ãƒã‚¹ãƒ†ã‚£ã‚¢ãƒ³ãƒ»ãƒ“ã‚¹ã‚«ã‚¤ãƒ",
-      "æ¤æ°‘åœ°å²",
-      "16ä¸–ç´€",
-      "17ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "boturini-idea-catalogo-1746",
-    title: "åŒ—ã‚¢ãƒ¡ãƒªã‚«ä¸€èˆ¬å²ã®æ–°æ§‹æƒ³ï¼ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ã‚¹æ­´å²åšç‰©é¤¨ç›®éŒ²",
-    originalTitle:
-      "Idea de una nueva historia general de la AmÃ©rica Septentrional / CatÃ¡logo del Museo HistÃ³rico Indiano",
-    subtitle:
-      "1746å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆãƒ»å‰ä»˜ãƒ»Ideaæœ¬æ–‡1â€“167é ãƒ»CatÃ¡logoæœ¬æ–‡1â€“96é  æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ­ãƒ¬ãƒ³ã‚½ãƒ»ãƒœãƒˆã‚¥ãƒªãƒ¼ãƒ‹ãƒ»ãƒ™ãƒŠãƒ‰ã‚¥ãƒ",
-    originalAuthor: "Lorenzo Boturini Benaduci",
-    series: "IDEA DE UNA NUEVA HISTORIA GENERAL Â· 1746",
-    originalPublication: "ãƒãƒ‰ãƒªãƒ¼ãƒ‰ã€Juan de ZÃºÃ±igaã€1746å¹´åˆç‰ˆ",
-    year: 1746,
-    extent:
-      "PDF 264é ãƒ»åŸåˆŠå‰ä»˜36é ãƒ»Ideaæœ¬æ–‡167é ãƒ»CatÃ¡logoå‰ä»˜8é ãŠã‚ˆã³æœ¬æ–‡96é ãƒ»éŠ…ç‰ˆå£çµµ2ç‚¹ãƒ»æ¨™é¡Œç´™2ç‚¹",
-    description:
-      "ãƒ­ãƒ¬ãƒ³ã‚½ãƒ»ãƒœãƒˆã‚¥ãƒªãƒ¼ãƒ‹ãƒ»ãƒ™ãƒŠãƒ‰ã‚¥ãƒãŒãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£ã®å…ˆä½æ°‘å²æ–™ã¨æ­´å²å™è¿°ã®æ§‹æƒ³ã‚’ã¾ã¨ã‚ãŸã€åŒ—ã‚¢ãƒ¡ãƒªã‚«ä¸€èˆ¬å²ã®æ–°æ§‹æƒ³ã€ã¨ã€è‡ªã‚‰åé›†ã—ãŸçµµæ–‡æ›¸ãƒ»å†™æœ¬ãƒ»å°åˆ·ç‰©ã‚’è¨˜éŒ²ã™ã‚‹ã€ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ã‚¹æ­´å²åšç‰©é¤¨ç›®éŒ²ã€ã‚’ã€1746å¹´åˆç‰ˆã®é…åˆ—ã©ãŠã‚Šä¸€å†Šã«åéŒ²ã—ãŸæ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    cover: "publications/boturini-idea-catalogo-1746/japanese-cover.jpg",
-    pdf:
-      "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.pdf",
-    epub:
-      "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.epub",
-    pageCount: 264,
-    figureCount: 0,
-    plateCount: 4,
-    types: ["æ­´å²æ›¸", "å²æ–™ç›®éŒ²", "å²å­¦å²", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ©ãƒ†ãƒ³èª", "ã‚¤ã‚¿ãƒªã‚¢èª"],
-    tags: [
-      "ãƒœãƒˆã‚¥ãƒªãƒ¼ãƒ‹",
-      "çµµæ–‡æ›¸",
-      "ãƒŠãƒ¯ãƒˆãƒ«å²æ–™",
-      "å…ˆä½æ°‘å²æ–™",
-      "å²æ–™ç›®éŒ²",
-      "ãƒ“ã‚³",
-      "18ä¸–ç´€",
-    ],
-  },
-  {
-    "slug": "flint-antiquities-nicaragua-palenque-builders-1882",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®å¤ç‰©â€•â€•ãƒ‘ãƒ¬ãƒ³ã‚±å»ºè¨­è€…ã®èµ·æº",
-    "originalTitle": "Antiquities of Nicaraguaâ€”Origin of the Palenque Builders",
-    "subtitle": "1882å¹´åˆŠãƒ»åŸåˆŠ289â€“302é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "ANTIQUITIES OF NICARAGUAâ€”ORIGIN OF THE PALENQUE BUILDERS Â· 1882",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬4å·»ç¬¬4å·ã€1882å¹´10æœˆã€289â€“302é ",
-    "year": 1882,
-    "extent": "PDF 16é ãƒ»åŸåˆŠ289â€“302é ",
-    "description": "ãƒãƒ§ãƒ³ã‚¿ãƒ¬ã‚¹ã€ãƒ†ã‚¦ã‚¹ãƒ†ãƒšå‘¨è¾ºã®æ´çªŸãƒ»åŸ‹è‘¬ãƒ»é ­è“‹ãƒ»çŸ³å™¨ãƒ»å²©åˆ»ã¨ã€å—åŒ—ã‚¢ãƒ¡ãƒªã‚«ã®æ–‡åŒ–ç§»å‹•ã€ãƒ‘ãƒ¬ãƒ³ã‚±å»ºè¨­è€…ã®èµ·æºã‚’è«–ã˜ãŸã€ã‚¨ãƒ³ã‚²ãƒ«ãƒãƒ³å®›é•·ç¯‡æ›¸ç°¡ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚åŸåˆŠé æ¨™è­˜ã€ç·¨é›†éƒ¨å‰æ–‡ã€åŸæ³¨ã€ç½²åã‚’ä¿æŒã—ã¦ã„ã¾ã™ã€‚",
-    "cover": "publications/flint-antiquities-nicaragua-palenque-builders-1882/cover.jpg",
-    "pdf": "publications/flint-antiquities-nicaragua-palenque-builders-1882/Earl_Flint_Antiquities_of_Nicaragua_Origin_of_the_Palenque_Builders_1882_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-antiquities-nicaragua-palenque-builders-1882/Earl_Flint_Antiquities_of_Nicaragua_Origin_of_the_Palenque_Builders_1882_Japanese_Complete_Translation.epub",
-    "pageCount": 16,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "æ›¸ç°¡",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒ§ãƒ³ã‚¿ãƒ¬ã‚¹",
-      "ãƒ†ã‚¦ã‚¹ãƒ†ãƒš",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢è€ƒå¤å­¦",
-      "æ´çªŸ",
-      "åŸ‹è‘¬",
-      "çŸ³å™¨",
-      "å²©åˆ»ç”»",
-      "ãƒ‘ãƒ¬ãƒ³ã‚±"
-    ]
-  },
-  {
-    "slug": "flint-human-foot-prints-nicaragua-1884",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡",
-    "originalTitle": "Human Foot Prints in Nicaragua",
-    "subtitle": "1884å¹´åˆŠãƒ»åŸåˆŠ112â€“114é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "HUMAN FOOT PRINTS IN NICARAGUA Â· 1884",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬6å·»ç¬¬2å·ã€1884å¹´3æœˆã€112â€“114é ",
-    "year": 1884,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ112â€“114é ",
-    "description": "ãƒãƒŠã‚°ã‚¢è¿‘éƒŠã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«ã®æ¡çŸ³å ´ã«ç¾ã‚ŒãŸè¤‡æ•°åˆ—ã®äººè¶³è·¡ã€ç«å±±æ€§æ³¥æµãƒ»å‡ç°å²©å±¤ã€å‹•ç‰©è¶³è·¡ã€æ¨™æœ¬ã®åˆ‡ã‚Šå‡ºã—ã‚’å ±å‘Šã—ãŸç·¨é›†è€…å®›æ›¸ç°¡ã®æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/flint-human-foot-prints-nicaragua-1884/cover.jpg",
-    "pdf": "publications/flint-human-foot-prints-nicaragua-1884/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1884_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-human-foot-prints-nicaragua-1884/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1884_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "åœ°è³ªå­¦å ±å‘Š",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ç«å±±ç°",
-      "å‡ç°å²©",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-human-foot-prints-nicaragua-1885",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡ã€”ç¶šå ±ã€•",
-    "originalTitle": "Human Foot Prints in Nicaragua",
-    "subtitle": "1885å¹´åˆŠãƒ»åŸåˆŠ156â€“158é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "HUMAN FOOT PRINTS IN NICARAGUA Â· 1885",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬7å·»ç¬¬3å·ã€1885å¹´5æœˆã€156â€“158é ",
-    "year": 1885,
-    "extent": "PDF 5é ãƒ»åŸåˆŠ156â€“158é ",
-    "description": "1884å¹´å ±å‘Šã®ç¶šå ±ã€‚ãƒãƒŠã‚°ã‚¢å±±åœ°å—è¥¿æ–œé¢ã€ã‚µãƒ³ãƒ»ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«åœ°åŒºã€å‡ç°å²©å±¤ã€æ´çªŸå†…è¨˜å·ã€æµ·æˆåŒ–çŸ³ã¨è¶³è·¡å±¤ã®åœ°è³ªè§£é‡ˆã‚’è¿½åŠ ã—ã€ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨ã¨ã®èª¿æŸ»é–¢ä¿‚ã«ã‚‚è§¦ã‚Œã¾ã™ã€‚",
-    "cover": "publications/flint-human-foot-prints-nicaragua-1885/cover.jpg",
-    "pdf": "publications/flint-human-foot-prints-nicaragua-1885/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1885_Continuation_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-human-foot-prints-nicaragua-1885/Earl_Flint_Human_Foot_Prints_in_Nicaragua_1885_Continuation_Japanese_Complete_Translation.epub",
-    "pageCount": 5,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "åœ°è³ªå­¦å ±å‘Š",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚µãƒ³ãƒ»ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "æ´çªŸ",
-      "æµ·æˆåŒ–çŸ³",
-      "ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-pre-adamite-foot-prints-1886",
-    "title": "ã‚¢ãƒ€ãƒ ä»¥å‰ã®äººè¶³è·¡",
-    "originalTitle": "Pre-Adamite Foot-Prints",
-    "subtitle": "1886å¹´åˆŠãƒ»åŸåˆŠ230â€“233é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "PRE-ADAMITE FOOT-PRINTS Â· 1886",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬8å·»ç¬¬4å·ã€1886å¹´7æœˆã€230â€“233é ",
-    "year": 1886,
-    "extent": "PDF 6é ãƒ»åŸåˆŠ230â€“233é ",
-    "description": "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«è¶³è·¡ã‚’19ä¸–ç´€æœ«ã®å…ˆã‚¢ãƒ€ãƒ äººãƒ»ç¬¬ä¸‰ç´€äººé¡è«–äº‰ã¸ä½ç½®ã¥ã‘ãŸè«–è€ƒã€‚ç•ªå·ä»˜ãåè«–ã€å®›åã€ç½²åã€æ—¥ä»˜ã€åŸæ³¨ã‚’å«ã‚€å…¨è¨³ã§ã€å½“æ™‚ã®åœ°è³ªå­¦å²ãƒ»äººé¡èµ·æºè«–ã‚’ä¼ãˆã¾ã™ã€‚",
-    "cover": "publications/flint-pre-adamite-foot-prints-1886/cover.jpg",
-    "pdf": "publications/flint-pre-adamite-foot-prints-1886/Earl_Flint_Pre_Adamite_Foot_Prints_1886_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-pre-adamite-foot-prints-1886/Earl_Flint_Pre_Adamite_Foot_Prints_1886_Japanese_Complete_Translation.epub",
-    "pageCount": 6,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "åœ°è³ªå­¦è«–æ–‡",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "å…ˆã‚¢ãƒ€ãƒ äºº",
-      "ç¬¬ä¸‰ç´€äººé¡",
-      "ç§‘å­¦å²",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-human-footprints-eocene-1888",
-    "title": "å§‹æ–°ä¸–ã®äººè¶³è·¡",
-    "originalTitle": "Human Footprints in the Eocene",
-    "subtitle": "1888å¹´åˆŠãƒ»åŸåˆŠ252â€“254é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "HUMAN FOOTPRINTS IN THE EOCENE Â· 1888",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬10å·»ç¬¬4å·ã€1888å¹´7æœˆã€252â€“254é ",
-    "year": 1888,
-    "extent": "PDF 5é ãƒ»åŸåˆŠ252â€“254é ",
-    "description": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡ã‚’å§‹æ–°ä¸–ã¸é¡ã‚‰ã›ã‚ˆã†ã¨ã—ãŸãƒ•ãƒªãƒ³ãƒˆã®åœ°è³ªå­¦çš„æ¨è«–ã‚’ç¤ºã™çŸ­è«–ã€‚å½“æ™‚ã®ã‚¢ãƒ¡ãƒªã‚«ç¬¬ä¸‰ç´€äººé¡è«–ã‚’æ¤œè¨ã™ã‚‹ä¸€æ¬¡å²æ–™ã¨ã—ã¦ã€åŸåˆŠé æ¨™è­˜ã¨æ›¸ç°¡æœ«å°¾ã‚’ä¿æŒã—ã¾ã—ãŸã€‚",
-    "cover": "publications/flint-human-footprints-eocene-1888/cover.jpg",
-    "pdf": "publications/flint-human-footprints-eocene-1888/Earl_Flint_Human_Footprints_in_the_Eocene_1888_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-human-footprints-eocene-1888/Earl_Flint_Human_Footprints_in_the_Eocene_1888_Japanese_Complete_Translation.epub",
-    "pageCount": 5,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "åœ°è³ªå­¦è«–æ–‡",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "å§‹æ–°ä¸–",
-      "ç¬¬ä¸‰ç´€äººé¡",
-      "ç§‘å­¦å²",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-paleolithics-nicaragua-1888",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®æ—§çŸ³å™¨éºç‰©",
-    "originalTitle": "Paleolithics in Nicaragua",
-    "subtitle": "1888å¹´åˆŠãƒ»åŸåˆŠ381â€“382é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "PALEOLITHICS IN NICARAGUA Â· 1888",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬10å·»ç¬¬6å·ã€1888å¹´11æœˆã€381â€“382é ",
-    "year": 1888,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ381â€“382é ",
-    "description": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®çŸ³å™¨åˆ†é¡ã€ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒ‰ãƒ¬ã‚¹æ´çªŸè¿‘ãã®å±¤åºã€æ—§çŸ³å™¨ãƒ»æ–°çŸ³å™¨ã¨ã„ã†ç”¨èªã¸ã®ç–‘ç¾©ã‚’è«–ã˜ãŸçŸ­å ±ã€‚ãƒ™ãƒ¬ãƒ³ãƒˆã€ãƒ‘ãƒƒãƒˆãƒŠãƒ ã€ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨ã€ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³ã¸ã®è¨€åŠã‚’å«ã¿ã¾ã™ã€‚",
-    "cover": "publications/flint-paleolithics-nicaragua-1888/cover.jpg",
-    "pdf": "publications/flint-paleolithics-nicaragua-1888/Earl_Flint_Paleolithics_in_Nicaragua_1888_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-paleolithics-nicaragua-1888/Earl_Flint_Paleolithics_in_Nicaragua_1888_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "çŸ³å™¨ç ”ç©¶",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ã‚µãƒ³ãƒ»ã‚¢ãƒ³ãƒ‰ãƒ¬ã‚¹"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "æ—§çŸ³å™¨",
-      "æ–°çŸ³å™¨",
-      "çŸ³å™¨",
-      "æ´çªŸ",
-      "ãƒ™ãƒ¬ãƒ³ãƒˆ",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-nicaragua-foot-prints-1889",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡",
-    "originalTitle": "Nicaragua Foot-prints",
-    "subtitle": "1889å¹´åˆŠãƒ»åŸåˆŠ306â€“311é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "NICARAGUA FOOT-PRINTS Â· 1889",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬11å·»ç¬¬5å·ã€1889å¹´9æœˆã€306â€“311é ",
-    "year": 1889,
-    "extent": "PDF 10é ãƒ»åŸåˆŠ306â€“311é ",
-    "description": "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«è¶³è·¡ã«ã¤ã„ã¦ã€åœ°å±¤ã€æ¨™æœ¬ã€æ­©è¡Œæ–¹å‘ã€ç«å±±æ´»å‹•ã€å¹´ä»£è«–ã‚’å†æ•´ç†ã—ãŸå…­é ã®ç·æ‹¬è«–æ–‡ã€‚1884â€“1888å¹´ã®çŸ­å ±ç¾¤ã‚’å—ã‘ãŸãƒ•ãƒªãƒ³ãƒˆã®æœ€çµ‚çš„ãªè€ƒå¤ãƒ»åœ°è³ªè«–ã‚’å…¨è¨³ã—ã¾ã—ãŸã€‚",
-    "cover": "publications/flint-nicaragua-foot-prints-1889/cover.jpg",
-    "pdf": "publications/flint-nicaragua-foot-prints-1889/Earl_Flint_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-nicaragua-foot-prints-1889/Earl_Flint_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
-    "pageCount": 10,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "åœ°è³ªå­¦è«–æ–‡",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ç«å±±æ´»å‹•",
-      "åœ°å±¤",
-      "å¹´ä»£è«–",
-      "ç·æ‹¬è«–æ–‡"
-    ]
-  },
-  {
-    "slug": "flint-what-dr-flint-says-nicaragua-footprints-1890",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡ã«ã¤ã„ã¦ãƒ•ãƒªãƒ³ãƒˆåšå£«ãŒè¿°ã¹ã‚‹ã“ã¨",
-    "originalTitle": "What Dr. Flint Has to Say about the Nicaragua Footprints",
-    "subtitle": "1890å¹´åˆŠãƒ»åŸåˆŠ30â€“32é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "WHAT DR. FLINT HAS TO SAY ABOUT THE NICARAGUA FOOTPRINTS Â· 1890",
-    "originalPublication": "ã€Scienceã€new seriesç¬¬15å·»ç¬¬362å·ã€1890å¹´1æœˆ10æ—¥ã€30â€“32é ",
-    "year": 1890,
-    "extent": "PDF 8é ãƒ»åŸåˆŠ30â€“32é ",
-    "description": "ãƒ’ãƒ«ãƒœãƒ¼ãƒ³ãƒ»Tãƒ»ã‚¯ãƒ¬ã‚½ãƒ³å®›ãƒ•ãƒªãƒ³ãƒˆæ›¸ç°¡ã®æŠœç²‹ã¨ã—ã¦ã€Scienceã€ã«æ²è¼‰ã•ã‚ŒãŸè¶³è·¡å ±å‘Šã€‚åœ°å±¤ã€æ¡å–æ¨™æœ¬ã€è¶³è·¡ã®å‘ãã¨ä¿å­˜çŠ¶æ…‹ã‚’è«–ã˜ã‚‹æœ¬æ–‡ã‚’ã€ç·¨é›†ä¸Šã®è¦‹å‡ºã—ã¨åŸåˆŠé æ¨™è­˜ã‚’å«ã‚ã¦è¨³ã—ã¾ã—ãŸã€‚",
-    "cover": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/cover.jpg",
-    "pdf": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-what-dr-flint-says-nicaragua-footprints-1890/Earl_Flint_What_Dr_Flint_Has_to_Say_about_the_Nicaragua_Footprints_1890_Japanese_Complete_Translation.epub",
-    "pageCount": 8,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "åœ°è³ªå­¦å ±å‘Š",
-      "æ›¸ç°¡"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "Science",
-      "ã‚¯ãƒ¬ã‚½ãƒ³",
-      "åœ°å±¤",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-prehistoric-horse-america-1891",
-    "title": "ã‚¢ãƒ¡ãƒªã‚«ã®å…ˆå²æ™‚ä»£ã®é¦¬",
-    "originalTitle": "Prehistoric Horse in America",
-    "subtitle": "1891å¹´åˆŠãƒ»åŸåˆŠ13299é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "PREHISTORIC HORSE IN AMERICA Â· 1891",
-    "originalPublication": "ã€Scientific American Supplementã€ç¬¬32å·»ç¬¬832å·ã€1891å¹´12æœˆ12æ—¥ã€13299é ",
-    "year": 1891,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ13299é ãƒ»å›³1ç‚¹",
-    "description": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®å²©é¢ã«åˆ»ã¾ã‚ŒãŸé¨ä¹—äººç‰©ã‚‰ã—ã„å›³åƒã‚’ã€åœ¨æ¥ã®åŒ–çŸ³é¦¬ã¨çµã³ã¤ã‘ã¦è«–ã˜ãŸå›³å…¥ã‚ŠçŸ­å ±ã€‚åŸåˆŠå›³ä¸€ç‚¹ã€å¯¸æ³•ãƒ»æ¥æ­´ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ã€ãƒªãƒã‚¹ç™º1891å¹´10æœˆ27æ—¥ä»˜ç½²åã‚’åéŒ²ã—ã¾ã—ãŸã€‚",
-    "cover": "publications/flint-prehistoric-horse-america-1891/cover.jpg",
-    "pdf": "publications/flint-prehistoric-horse-america-1891/Earl_Flint_Prehistoric_Horse_in_America_1891_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-prehistoric-horse-america-1891/Earl_Flint_Prehistoric_Horse_in_America_1891_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦å ±å‘Š",
-      "å²©åˆ»ç”»ç ”ç©¶",
-      "å¤ç”Ÿç‰©å­¦å²"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒªãƒã‚¹",
-      "ã‚µãƒ³ãƒ»ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«ãƒ»ãƒ‡ãƒ«ãƒ»ã‚¹ãƒ«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "å²©åˆ»ç”»",
-      "åŒ–çŸ³é¦¬",
-      "é¨ä¹—äººç‰©",
-      "Scientific American",
-      "ä¸€æ¬¡å²æ–™"
-    ]
-  },
-  {
-    "slug": "flint-rainfall-rivas-nicaragua-1898",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€ãƒªãƒã‚¹ã®é™æ°´é‡",
-    "originalTitle": "Rainfall at Rivas, Nicaragua",
-    "subtitle": "1898å¹´åˆŠãƒ»åŸåˆŠ304â€“305é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "RAINFALL AT RIVAS, NICARAGUA Â· 1898",
-    "originalPublication": "ã€Monthly Weather Reviewã€ç¬¬26å·»ç¬¬7å·ã€1898å¹´7æœˆã€304â€“305é ",
-    "year": 1898,
-    "extent": "PDF 3é ãƒ»åŸåˆŠ304â€“305é ",
-    "description": "ãƒªãƒã‚¹ã§1880å¹´ä»£ä»¥é™ã«è“„ç©ã•ã‚ŒãŸæœˆåˆ¥ãƒ»å¹´åˆ¥é™æ°´é‡ã‚’å ±å‘Šã™ã‚‹è¡¨ä»˜ãè³‡æ–™ã€‚åŸåˆŠã®æ•°å€¤ã€ç©ºæ¬„ã€T.ï¼ˆtraceï¼‰ã€å¹´è¨ˆã‚’ä¿æŒã—ã¦è¡¨ã‚’çµ„ã¿ç›´ã—ã€æœ¬æ–‡ã¨è¡¨ã®æœŸé–“ä¸ä¸€è‡´ã‚„é›†è¨ˆä¸Šã®æ³¨æ„ã‚’ç·¨é›†æ³¨ã«ã¾ã¨ã‚ã¾ã—ãŸã€‚",
-    "cover": "publications/flint-rainfall-rivas-nicaragua-1898/cover.jpg",
-    "pdf": "publications/flint-rainfall-rivas-nicaragua-1898/Earl_Flint_Rainfall_at_Rivas_Nicaragua_1898_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-rainfall-rivas-nicaragua-1898/Earl_Flint_Rainfall_at_Rivas_Nicaragua_1898_Japanese_Complete_Translation.epub",
-    "pageCount": 3,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ°—è±¡å ±å‘Š",
-      "çµ±è¨ˆè³‡æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒªãƒã‚¹"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "é™æ°´é‡",
-      "æ°—è±¡è¦³æ¸¬",
-      "æœˆåˆ¥çµ±è¨ˆ",
-      "Monthly Weather Review",
-      "ç±³å›½æ°—è±¡å±€"
-    ]
-  },
-  {
-    "slug": "flint-rainfall-central-western-nicaragua-1899",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ä¸­éƒ¨ãŠã‚ˆã³è¥¿éƒ¨ã®é™æ°´é‡",
-    "originalTitle": "Rainfall in Central and Western Nicaragua",
-    "subtitle": "1899å¹´åˆŠãƒ»åŸåˆŠ587é ãƒ»æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-    "series": "RAINFALL IN CENTRAL AND WESTERN NICARAGUA Â· 1899",
-    "originalPublication": "ã€Monthly Weather Reviewã€ç¬¬27å·»è£œéºç¬¬13å·ã€1899å¹´ã€587é ",
-    "year": 1899,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ587é ",
-    "description": "ãƒã‚µãƒ¤ã€ã‚°ãƒ©ãƒŠãƒ€ã€ãƒªãƒã‚¹ã®é™æ°´è¨˜éŒ²ã‚’æ¯”è¼ƒã—ã€æ¹–æ°´ä½ãƒ»æ£®æ—ä¼æ¡ãƒ»é‹æ²³çµ¦æ°´ã¨ã®é–¢ä¿‚ã‚’è«–ã˜ãŸçŸ­å ±ã€‚1863å¹´ä»¥å¾Œã®å°‘é›¨ã€ãƒ†ã‚£ãƒ”ã‚¿ãƒ‘æµå‡ºå£ã®é–‰å¡ã€æ¤æ—ã«ã‚ˆã‚‹è’¸ç™ºæŠ‘åˆ¶ã«ã¤ã„ã¦ã®é•·æœŸè¦³å¯Ÿã‚’åéŒ²ã—ã¾ã™ã€‚",
-    "cover": "publications/flint-rainfall-central-western-nicaragua-1899/cover.jpg",
-    "pdf": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.pdf",
-    "epub": "publications/flint-rainfall-central-western-nicaragua-1899/Earl_Flint_Rainfall_in_Central_and_Western_Nicaragua_1899_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "æ°—è±¡å ±å‘Š",
-      "æ°´æ–‡è³‡æ–™",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒã‚µãƒ¤",
-      "ã‚°ãƒ©ãƒŠãƒ€",
-      "ãƒªãƒã‚¹",
-      "ãƒãƒŠã‚°ã‚¢æ¹–"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "é™æ°´é‡",
-      "æ¹–æ°´ä½",
-      "ãƒ†ã‚£ãƒ”ã‚¿ãƒ‘",
-      "é‹æ²³",
-      "æ£®æ—ä¿å…¨",
-      "Monthly Weather Review"
-    ]
-  },
-  {
-    slug: "historia-tolteca-chichimeca",
-    title: "ãƒˆãƒ«ãƒ†ã‚«ãƒ»ãƒãƒãƒ¡ã‚«å²",
-    originalTitle: "Historia Tolteca-Chichimeca",
-    subtitle: "å…¨å››ç™¾å››åäºŒæ®µè½ãƒ»åŸå†Šç”»åƒç™¾ç‚¹ãƒ»ä»˜å±åˆ¥è³‡æ–™ä¸€ç‚¹",
-    author: "ç·¨è€…ä¸è©³",
-    series: "HISTORIA TOLTECA-CHICHIMECA",
-    originalPublication: "16ä¸–ç´€ã€ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³ã€ãƒŠãƒ¯ãƒˆãƒ«èªå†™æœ¬",
-    year: "16ä¸–ç´€",
-    extent:
-      "PDF 190é ãƒ»å…¨442æ®µè½ãƒ»åŸå†Šç”»åƒ100ç‚¹ãƒ»ä»˜å±åˆ¥è³‡æ–™1ç‚¹ãƒ»æ¬ è‘‰ç¬¬34è‘‰ï¼ç¬¬52è‘‰",
-    description:
-      "ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³ã«ä¼ã‚ã‚‹èµ·æºã€ç§»ä½ã€åŒç›Ÿã€æŠ—äº‰ã€çµ±æ²»ã€ç³»è­œã€è²¢ç´ã‚’ã€ãƒŠãƒ¯ãƒˆãƒ«èªæœ¬æ–‡ã¨çµµæ–‡æ›¸ã§è¨˜ã—ãŸ16ä¸–ç´€å†™æœ¬ã§ã™ã€‚å…¨å››ç™¾å››åäºŒæ®µè½ã‚’åéŒ²ã—ã€å„åŸå†Šç”»åƒã®ç›´å¾Œã«å¯¾å¿œè¨³æ–‡ã¨æ®µè½ç•ªå·ã‚’ç½®ãã¾ã—ãŸã€‚ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³ãƒ»ãƒˆãƒˆãƒŸãƒ¯ã‚«ãƒ³å¢ƒç•Œå›³ã¯æœ¬æ–‡å›³ç‰ˆã«æ•°ãˆãšã€æœ¬ä½“ã¨ã¯åˆ¥ã®é–¢é€£æ–‡æ›¸ã§ã‚ã‚‹ä»˜å±åˆ¥è³‡æ–™ã¨ã—ã¦åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/historia-tolteca-chichimeca/cover.jpg",
-    pdf:
-      "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.epub",
-    pageCount: 190,
-    figureCount: 100,
-    plateCount: 0,
-    types: ["æ­´å²æ›¸", "çµµæ–‡æ›¸", "å†™æœ¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒ—ã‚¨ãƒ–ãƒ©", "ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³", "ãƒ¡ã‚½ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ãƒŠãƒ¯ãƒˆãƒ«èª", "ãƒãƒãƒ­ã‚«èª"],
-    tags: [
-      "ãƒˆãƒ«ãƒ†ã‚«ãƒ»ãƒãƒãƒ¡ã‚«",
-      "ãƒãƒãƒ¯ãƒ«ã‚«",
-      "ãƒãƒ§ãƒ­ãƒ©",
-      "ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³",
-      "ç³»è­œ",
-      "è²¢ç´",
-      "æš¦æ—¥",
-      "16ä¸–ç´€",
-    ],
-  },
-  {
-    "slug": "putnam-antiquity-man-america-1884",
-    "title": "ã‚¢ãƒ¡ãƒªã‚«ã«ãŠã‘ã‚‹äººé¡ã®å¤ã•",
-    "originalTitle": "[Remarks on the Antiquity of Man in America]",
-    "subtitle": "1884å¹´ä¼šè­°éŒ²ãƒ»åŸåˆŠ92â€“93é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»Wãƒ»ãƒ‘ãƒƒãƒˆãƒŠãƒ ",
-    "series": "PROCEEDINGS OF THE AMERICAN ANTIQUARIAN SOCIETY Â· 1884",
-    "originalPublication": "ã€Proceedings of the American Antiquarian Societyã€ç¬¬3å·»ç¬¬2éƒ¨ã€1884å¹´10æœˆã€ä¼šè­°éŒ²77â€“93é ä¸­92â€“93é ",
-    "year": 1884,
-    "extent": "PDF 2é ãƒ»ä¼šè­°éŒ²åŸåˆŠ92â€“93é ",
-    "description": "ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨ãŒå—ã‘å…¥ã‚ŒãŸã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«ã®è¶³è·¡æ¨™æœ¬ã¨ä¸Šè¼‰åœ°å±¤ã‚’ç´¹ä»‹ã—ã€åŒã˜ç™ºè¨€ã§ãƒˆãƒ¬ãƒ³ãƒˆãƒ³ç ‚ç¤«å±¤å‡ºåœŸã®äººé–“ä¸‹é¡éª¨ãƒ»æ­¯ãƒ»æ‰“è£½çŸ³å™¨ã«ã‚‚è§¦ã‚ŒãŸãƒ•ãƒ¬ãƒ‡ãƒªãƒƒã‚¯ãƒ»Wãƒ»ãƒ‘ãƒƒãƒˆãƒŠãƒ ã®1884å¹´ä¼šè­°ç™ºè¨€è¨˜éŒ²ã€‚åŸåˆŠã«ç‹¬ç«‹è¡¨é¡ŒãŒãªã„ãŸã‚ä¾¿å®œçš„è‹±é¡Œã‚’ä»˜ã—ãŸæ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/putnam-antiquity-man-america-1884/cover.jpg",
-    "pdf": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.pdf",
-    "epub": "publications/putnam-antiquity-man-america-1884/Frederick_W_Putnam_Remarks_on_the_Antiquity_of_Man_in_America_1884_Japanese_Complete_Translation.epub",
-    "pageCount": 2,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦ä¼šè­°éŒ²",
-      "åšç‰©é¤¨å ±å‘Š",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ãƒ‹ãƒ¥ãƒ¼ã‚¸ãƒ£ãƒ¼ã‚¸ãƒ¼",
-      "ãƒˆãƒ¬ãƒ³ãƒˆãƒ³"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨",
-      "ãƒˆãƒ¬ãƒ³ãƒˆãƒ³ç ‚ç¤«å±¤",
-      "äººéª¨",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    "slug": "mca-pre-adamite-track-1885",
-    "title": "ã‚¢ãƒ€ãƒ ä»¥å‰ã®è¶³è·¡",
-    "originalTitle": "The Pre-Adamite Track",
-    "subtitle": "1885å¹´åˆŠãƒ»åŸåˆŠ364â€“367é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "Aãƒ»McA",
-    "series": "THE PRE-ADAMITE TRACK Â· 1885",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬7å·»ç¬¬6å·ã€1885å¹´11æœˆã€364â€“367é ï¼ˆCorrespondenceæ¬„ï¼‰",
-    "year": 1885,
-    "extent": "PDF 5é ãƒ»åŸåˆŠ364â€“367é ",
-    "description": "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆãŒå ±å‘Šã—ãŸã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«äººè¶³è·¡ã‚’äººå·¥å½«åˆ»ã¨ã¿ãªã—ã€åŒ—ç±³å„åœ°ã®å²©é¢è¶³è·¡èª¬ã‚’çš®è‚‰ã‚’äº¤ãˆã¦æ‰¹åˆ¤ã—ãŸA. Mc A.ã®1885å¹´æ›¸ç°¡ã€‚BradfordãŠã‚ˆã³Priestã‹ã‚‰ã®å¼•ç”¨ã‚’å«ã‚€æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/mca-pre-adamite-track-1885/cover.jpg",
-    "pdf": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.pdf",
-    "epub": "publications/mca-pre-adamite-track-1885/A_McA_The_Pre_Adamite_Track_1885_Japanese_Complete_Translation.epub",
-    "pageCount": 5,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦æ›¸ç°¡",
-      "è€ƒå¤å­¦è«–èª¬",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "åŒ—ã‚¢ãƒ¡ãƒªã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "å…ˆã‚¢ãƒ€ãƒ äºº",
-      "å²©é¢å½«åˆ»",
-      "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    "slug": "unsigned-nicaragua-footprints-again-1886",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡ã€ãµãŸãŸã³",
-    "originalTitle": "The Nicaragua Foot-Prints Again",
-    "subtitle": "1886å¹´åˆŠãƒ»åŸåˆŠ373â€“374é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ç„¡ç½²åï¼ˆâ€œThe Museumâ€æ¬„ï¼‰",
-    "series": "THE NICARAGUA FOOT-PRINTS AGAIN Â· 1886",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬8å·»ç¬¬6å·ã€1886å¹´11æœˆã€373â€“374é ï¼ˆThe Museumæ¬„ï¼‰",
-    "year": 1886,
-    "extent": "PDF 2é ãƒ»åŸåˆŠ373â€“374é ãƒ»ç·¨é›†è€…æ³¨1ç‚¹",
-    "description": "ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯ãƒ»ãƒ˜ãƒ©ãƒ«ãƒ‰ã®è¨˜äº‹ã‚’å¼•ãã€Hãƒ»Hãƒ»ãƒ¬ãƒ´ã‚£ãƒƒãƒˆãŒç±³å›½ã¸é‹ã‚“ã ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«è¶³è·¡æ¨™æœ¬ã¨ä¸Šä½åœ°å±¤ã®æ¨™æœ¬ãƒ»è¨ˆæ¸¬å€¤ã‚’ç´¹ä»‹ã—ãŸ1886å¹´ã®ç„¡ç½²åè¨˜äº‹ã€‚ç·¨é›†è€…æ³¨ã‚’å«ã‚€æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/unsigned-nicaragua-footprints-again-1886/cover.jpg",
-    "pdf": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.pdf",
-    "epub": "publications/unsigned-nicaragua-footprints-again-1886/Unsigned_The_Nicaragua_Foot_Prints_Again_1886_Japanese_Complete_Translation.epub",
-    "pageCount": 2,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è¨˜äº‹",
-      "æ–°èè»¢è¼‰",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ã‚¦ã‚£ãƒ¼ãƒ³"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "Hãƒ»Hãƒ»ãƒ¬ãƒ´ã‚£ãƒƒãƒˆ",
-      "åœ°å±¤",
-      "åšç‰©é¤¨",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    "slug": "brinton-ancient-human-footprint-nicaragua-1887",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®å¤ä»£äººè¶³è·¡ã«ã¤ã„ã¦",
-    "originalTitle": "On an Ancient Human Footprint from Nicaragua",
-    "subtitle": "1887å¹´åˆŠãƒ»åŸåˆŠ437â€“444é ãƒ»å›³ç‰ˆ2ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³",
-    "series": "ON AN ANCIENT HUMAN FOOTPRINT FROM NICARAGUA Â· 1887",
-    "originalPublication": "ã€Proceedings of the American Philosophical Societyã€ç¬¬24å·»ç¬¬126å·ã€1887å¹´ã€437â€“444é ",
-    "year": 1887,
-    "extent": "PDF 9é ãƒ»åŸåˆŠ437â€“444é ãƒ»å›³ç‰ˆ2ç‚¹ãƒ»åœ°å±¤æ–­é¢å…¨17å±¤",
-    "description": "ãƒãƒŠã‚°ã‚¢æ¹–å²¸ã®ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«äººè¶³è·¡ã«ã¤ã„ã¦ã€ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆã®æ›¸ç°¡ã€æ¡çŸ³å ´ã®åœ°å±¤æ–­é¢å…¨17å±¤ã€è¶³è·¡æ¨™æœ¬ã€å‹•æ¤ç‰©åŒ–çŸ³ã€å¹´ä»£è«–ã‚’æ¤œè¨ã—ãŸãƒ€ãƒ‹ã‚¨ãƒ«ãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³ã®1887å¹´è«–æ–‡ã€‚åŸåˆŠå‰ç½®å›³ç‰ˆã¨åœ°å±¤æ–­é¢å›³ã‚’å«ã‚€æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
-    "pdf": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.pdf",
-    "epub": "publications/brinton-ancient-human-footprint-nicaragua-1887/Daniel_G_Brinton_On_an_Ancient_Human_Footprint_from_Nicaragua_1887_Japanese_Complete_Translation.epub",
-    "pageCount": 9,
-    "figureCount": 2,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "åœ°è³ªå­¦è«–æ–‡",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "å‡ç°å²©",
-      "ç«å±±åœ°è³ª",
-      "ãƒ”ãƒ¼ãƒœãƒ‡ã‚£åšç‰©é¤¨",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    "slug": "editorial-age-nicaragua-footprints-1889",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®äººè¶³è·¡ã®å¹´ä»£",
-    "originalTitle": "The Age of the Nicaragua Foot-Prints",
-    "subtitle": "1889å¹´åˆŠãƒ»åŸåˆŠ120â€“121é ãƒ»å‰æ‰‰å›³ç‰ˆ1ç‚¹ æ—¥æœ¬èªå…¨è¨³",
-    "author": "ç·¨é›†éƒ¨ï¼ˆã‚¹ãƒ†ã‚£ãƒ¼ãƒ´ãƒ³ãƒ»Dãƒ»ãƒ”ãƒ¼ãƒˆç·¨é›†ï¼‰",
-    "series": "THE AGE OF THE NICARAGUA FOOT-PRINTS Â· 1889",
-    "originalPublication": "ã€The American Antiquarian and Oriental Journalã€ç¬¬11å·»ç¬¬2å·ã€1889å¹´3æœˆã€120â€“121é ï¼ˆEditorialæ¬„ï¼‰",
-    "year": 1889,
-    "extent": "PDF 4é ãƒ»åŸåˆŠ120â€“121é ãƒ»å‰æ‰‰å›³ç‰ˆ1ç‚¹",
-    "description": "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«è¶³è·¡ã®å¹´ä»£ã‚’ã‚ãã‚‹ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆã¨Dãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³ã®è¦‹è§£ã€è²æ®»ãƒ»åŒ–çŸ³è‘‰ãƒ»ã‚µãƒ³ãƒ€ãƒ«ä½¿ç”¨ã®è«–ç‚¹ã‚’æ•´ç†ã—ãŸ1889å¹´ã®ç„¡ç½²åç·¨é›†è¨˜äº‹ã€‚æœ¬æ–‡ãŒå‚ç…§ã™ã‚‹å‰æ‰‰å›³ç‰ˆã‚’å«ã‚€æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/editorial-age-nicaragua-footprints-1889/cover.jpg",
-    "pdf": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.pdf",
-    "epub": "publications/editorial-age-nicaragua-footprints-1889/Editorial_The_Age_of_the_Nicaragua_Foot_Prints_1889_Japanese_Complete_Translation.epub",
-    "pageCount": 4,
-    "figureCount": 1,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–èª¬",
-      "ç·¨é›†è¨˜äº‹",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ã‚µãƒ³ãƒ»ãƒ©ãƒ•ã‚¡ã‚¨ãƒ«"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ã‚¢ãƒ¼ãƒ«ãƒ»ãƒ•ãƒªãƒ³ãƒˆ",
-      "Dãƒ»Gãƒ»ãƒ–ãƒªãƒ³ãƒˆãƒ³",
-      "å‰æ‰‰å›³ç‰ˆ",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    "slug": "crawford-neolithic-man-nicaragua-1891",
-    "title": "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®æ–°çŸ³å™¨æ™‚ä»£äºº",
-    "originalTitle": "Neolithic Man in Nicaragua",
-    "subtitle": "1891å¹´åˆŠãƒ»åŸåˆŠ160â€“166é  æ—¥æœ¬èªå…¨è¨³",
-    "author": "ã‚¸ãƒ§ãƒ³ãƒ»ã‚¯ãƒ­ãƒ•ã‚©ãƒ¼ãƒ‰",
-    "series": "NEOLITHIC MAN IN NICARAGUA Â· 1891",
-    "originalPublication": "ã€The American Geologistã€ç¬¬8å·»ç¬¬3å·ã€1891å¹´9æœˆã€160â€“166é ",
-    "year": 1891,
-    "extent": "PDF 7é ãƒ»åŸåˆŠ160â€“166é ãƒ»åœ°å±¤åˆ—æŒ™ï¼ˆaï¼‰â€“ï¼ˆkï¼‰ãƒ»åŸæ³¨7ç‚¹",
-    "description": "ãƒãƒŠã‚°ã‚¢åœ°ä¸‹ã®ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«è¶³è·¡å±¤ã«ã¤ã„ã¦ã€äººé–“ã¨å®¶ç•œã®è¶³è·¡ã€ç«å±±æ€§æ³¥æµã«ã‚ˆã‚‹æˆå±¤ã€1876å¹´ã®æ³¥æµã€ãƒã‚µãƒ¤ç«å±±ã®æ´»å‹•ã€åœ°è³ªå¹´ä»£ã‚’è«–ã˜ãŸã‚¸ãƒ§ãƒ³ãƒ»ã‚¯ãƒ­ãƒ•ã‚©ãƒ¼ãƒ‰ã®1891å¹´è«–æ–‡ã€‚åœ°å±¤åˆ—æŒ™ï¼ˆaï¼‰â€“ï¼ˆkï¼‰ã€ç•ªå·åŸæ³¨5ç‚¹ã€è¨˜å·åŸæ³¨2ç‚¹ã‚’å«ã‚€æ—¥æœ¬èªå…¨è¨³ã§ã™ã€‚",
-    "cover": "publications/crawford-neolithic-man-nicaragua-1891/cover.jpg",
-    "pdf": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.pdf",
-    "epub": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
-    "pageCount": 7,
-    "figureCount": 0,
-    "plateCount": 0,
-    "types": [
-      "è€ƒå¤å­¦è«–æ–‡",
-      "åœ°è³ªå­¦è«–æ–‡",
-      "ä¸€æ¬¡å²æ–™"
-    ],
-    "regions": [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢",
-      "ãƒãƒŠã‚°ã‚¢",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "ãƒã‚µãƒ¤"
-    ],
-    "languages": [
-      "è‹±èª"
-    ],
-    "tags": [
-      "äººè¶³è·¡",
-      "ã‚¢ã‚«ã‚¦ã‚¢ãƒªãƒ³ã‚«",
-      "æ³¥æµ",
-      "ç«å±±ç¤«å²©",
-      "æ–°çŸ³å™¨æ™‚ä»£",
-      "ç§‘å­¦å²"
-    ]
-  },
-  {
-    slug: "cervantes-salazar-mexico-en-1554-1875",
-    title: "1554å¹´ã®ãƒ¡ã‚­ã‚·ã‚³",
-    originalTitle: "MÃ©xico en 1554",
-    subtitle:
-      "1875å¹´ç‰ˆãƒ»ãƒ©ãƒ†ãƒ³èªåŸæ–‡ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿è¥¿è¨³ã®æ—¥æœ¬èªè¨³",
-    author:
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚»ãƒ«ãƒãƒ³ãƒ†ã‚¹ãƒ»ãƒ‡ãƒ»ã‚µãƒ©ã‚µãƒ¼ãƒ«ï¼ˆç·¨è¨³ï¼šãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ï¼‰",
-    series: "MÃ‰XICO EN 1554 Â· 1875",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€Antigua LibrerÃ­a de Andrade y Moralesã€1875å¹´",
-    year: 1875,
-    extent:
-      "PDF 402é ãƒ»åŸåˆŠå‰ä»˜Iâ€“Lé ãƒ»æœ¬æ–‡1â€“344é ãƒ»ãƒ©ãƒ†ãƒ³èªå¯¾è©±3ç¯‡ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿è¥¿è¨³3ç¯‡ãƒ»è„šæ³¨527ä»¶ãƒ»å›³ç‰ˆ3ç‚¹",
-    description:
-      "ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚»ãƒ«ãƒãƒ³ãƒ†ã‚¹ãƒ»ãƒ‡ãƒ»ã‚µãƒ©ã‚µãƒ¼ãƒ«ãŒ1554å¹´ã®ãƒ¡ã‚­ã‚·ã‚³å¸‚ã‚’æã„ãŸãƒ©ãƒ†ãƒ³èªå¯¾è©±ä¸‰ç¯‡ã‚’ã€ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ãŒä¼è¨˜ã€æ­´å²ãƒ»æ›¸èªŒæ³¨ã€ã‚¹ãƒšã‚¤ãƒ³èªè¨³ã€æ–‡çŒ®ç›®éŒ²ã¨ã¨ã‚‚ã«åˆŠè¡Œã—ãŸ1875å¹´ç‰ˆã€‚ãƒ©ãƒ†ãƒ³èªåŸæ–‡ã‚’ä¿æŒã—ã€ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã®ã‚¹ãƒšã‚¤ãƒ³èªæœ¬æ–‡ã‚’æ—¥æœ¬èªã¸è¨³ã—ã¦ã€å‰ä»˜ã€ä¸‰å¯¾è©±ã€åŸæ³¨ã€æ–‡çŒ®ç›®éŒ²ã‚’åŸåˆŠé †ã«åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
-    pdf:
-      "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.pdf",
-    epub:
-      "publications/cervantes-salazar-mexico-en-1554-1875/Francisco_Cervantes_de_Salazar_Mexico_en_1554_1875_Latin_Japanese.epub",
-    pageCount: 402,
-    figureCount: 0,
-    plateCount: 3,
-    types: ["å¯¾è©±ç¯‡", "éƒ½å¸‚å²", "æ¤æ°‘åœ°å²", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³ã‚·ãƒ†ã‚£", "ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£"],
-    languages: ["ãƒ©ãƒ†ãƒ³èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "16ä¸–ç´€ãƒ¡ã‚­ã‚·ã‚³",
-      "ãƒ¡ã‚­ã‚·ã‚³å¸‚",
-      "ãƒ¡ã‚­ã‚·ã‚³ç‹ç«‹å¤§å­¦",
-      "éƒ½å¸‚èªŒ",
-      "äººæ–‡ä¸»ç¾©",
-      "åˆæœŸå°åˆ·",
-      "ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿",
-      "1554å¹´",
-    ],
-  },
-  {
-    slug: "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
-    title: "ã‚¢ãƒ¡ãƒªã‚«å…ˆä½æ°‘è«¸èªè‘—è¿°å®¶ç›®éŒ²ã®ãŸã‚ã®è¦šæ›¸",
-    originalTitle:
-      "Apuntes para un catÃ¡logo de escritores en lenguas indÃ­genas de AmÃ©rica",
-    subtitle:
-      "1866å¹´åˆç‰ˆãƒ»å‰ä»˜ãƒ»ç¬¬Iéƒ¨ã€ç¬¬IIéƒ¨ã€ä»˜éŒ²å…¨175é …ç›®ãƒ»è¿½åŠ è¨‚æ­£ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿",
-    series: "APUNTES PARA UN CATÃLOGO Â· 1866",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³ã€è‘—è€…ç§è¨­å°åˆ·æ‰€ã€1866å¹´",
-    year: 1866,
-    extent:
-      "PDF 178é ãƒ»åŸåˆŠå‰ä»˜Vâ€“XIIIé ãƒ»æœ¬æ–‡1â€“157é ãƒ»å…¨175é …ç›®ãƒ»è¿½åŠ è¨‚æ­£ãƒ»åŸåˆŠæ¨™é¡Œç´™ç”»åƒ1ç‚¹",
-    description:
-      "ã‚¢ãƒ¡ãƒªã‚«å…ˆä½æ°‘è«¸èªã§è‘—ã•ã‚ŒãŸã€ã¾ãŸã¯ãã‚Œã‚‰ã‚’æ‰±ã†æ–‡æ³•æ›¸ãƒ»è¾æ›¸ãƒ»æ•™ç†æ›¸ãƒ»èª¬æ•™é›†ãƒ»æ‰‹å†™æœ¬ãªã©ã‚’è¨˜éŒ²ã—ãŸã€ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã®1866å¹´åˆŠæ›¸èªŒã€‚è‘—è€…è”µæ›¸ã‚’åã‚ã‚‹ç¬¬Iéƒ¨82é …ç›®ã€ä»–ã®è”µæ›¸ãƒ»æ‰€åœ¨è³‡æ–™ã‚’åã‚ã‚‹ç¬¬IIéƒ¨88é …ç›®ã€ä»˜éŒ²5é …ç›®ã€è¿½åŠ ãƒ»è¨‚æ­£ã‚’çœç•¥ãªãåéŒ²ã—ã€å„é …ç›®ã®è‘—è€…åã¨æ›¸åã‚’åŸèªãƒ»æ—¥æœ¬èªä½µè¨˜ã§æ²è¼‰ã—ã¦ã„ã¾ã™ã€‚",
-    majorSources: [
-      "Manuel Aguirreï¼ˆãƒãƒŒã‚¨ãƒ«ãƒ»ã‚¢ã‚®ãƒ¼ãƒ¬ï¼‰ã€Doctrina Christiana, y PlÃ¡ticas doctrinalesï¼ˆã‚­ãƒªã‚¹ãƒˆæ•™æ•™ç†ãŠã‚ˆã³æ•™ç†è¬›è©±ï¼‰ã€ï¼ˆ1765å¹´ãƒ»ç¬¬1é …ï¼‰",
-      "Felipe Arroyo de la Cuestaï¼ˆãƒ•ã‚§ãƒªãƒšãƒ»ã‚¢ãƒ­ãƒ¨ãƒ»ãƒ‡ãƒ»ãƒ©ãƒ»ã‚¯ã‚¨ã‚¹ã‚¿ï¼‰ã€Grammar of the Mutsun Languageï¼ˆãƒ ãƒ„ãƒ³èªæ–‡æ³•ï¼‰ã€ï¼ˆ1861å¹´ãƒ»ç¬¬7é …ï¼‰",
-      "Juan Bautistaï¼ˆãƒ•ã‚¢ãƒ³ãƒ»ãƒã‚¦ãƒ†ã‚£ã‚¹ã‚¿ï¼‰ã€Confessionario en lengua Mexicana y Castellanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªè´ç½ªå¸«ç”¨æ›¸ï¼‰ã€ï¼ˆ1599å¹´ãƒ»ç¬¬10é …ï¼‰",
-      "Juan Baptista de Lagunasï¼ˆãƒ•ã‚¢ãƒ³ãƒ»ãƒã‚¦ãƒ†ã‚£ã‚¹ã‚¿ãƒ»ãƒ‡ãƒ»ãƒ©ã‚°ãƒŠã‚¹ï¼‰ã€Arte y Dictionario en lengua Michuacanaï¼ˆãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³èªã®æ–‡æ³•ã¨è¾æ›¸ï¼‰ã€ï¼ˆ1574å¹´ãƒ»ç¬¬14é …ï¼‰",
-      "Gabriel de San Buenaventuraï¼ˆã‚¬ãƒ–ãƒªã‚¨ãƒ«ãƒ»ãƒ‡ãƒ»ã‚µãƒ³ãƒ»ãƒ–ã‚¨ãƒŠãƒ™ãƒ³ãƒˆã‚¥ãƒ©ï¼‰ã€Arte de la lengua Mayaï¼ˆãƒãƒ¤èªæ–‡æ³•ï¼‰ã€ï¼ˆ1684å¹´ãƒ»ç¬¬15é …ï¼‰",
-      "Horacio Carochiï¼ˆã‚ªãƒ©ã‚·ã‚ªãƒ»ã‚«ãƒ­ãƒï¼‰ã€Arte de la Lengua Mexicanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªæ–‡æ³•ï¼‰ã€ï¼ˆ1645å¹´ãƒ»ç¬¬16é …ï¼‰",
-      "Fray Alonso de Molinaï¼ˆã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ‡ãƒ»ãƒ¢ãƒªãƒŠä¿®é“å£«ï¼‰ã€Vocabulario en la lengua Castellana y Mexicanaï¼ˆã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªãƒ»ãƒ¡ã‚­ã‚·ã‚³èªèªå½™é›†ï¼‰ã€ï¼ˆ1555å¹´ãƒ»ç¬¬48é …ï¼‰",
-      "Ignacio de Paredesï¼ˆã‚¤ã‚°ãƒŠã‚·ã‚ªãƒ»ãƒ‡ãƒ»ãƒ‘ãƒ¬ãƒ‡ã‚¹ï¼‰ã€Catecismo Mexicanoï¼ˆãƒ¡ã‚­ã‚·ã‚³èªæ•™ç†å•ç­”ï¼‰ã€ï¼ˆ1758å¹´ãƒ»ç¬¬56é …ï¼‰",
-      "Fray Antonio de los Reyesï¼ˆã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ»ãƒ­ã‚¹ãƒ»ãƒ¬ã‚¤ã‚§ã‚¹ä¿®é“å£«ï¼‰ã€Arte en Lengua Mixtecaï¼ˆãƒŸã‚·ãƒ¥ãƒ†ã‚«èªæ–‡æ³•ï¼‰ã€ï¼ˆ1593å¹´ãƒ»ç¬¬63é …ï¼‰",
-      "Padre Antonio del Rinconï¼ˆã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ«ãƒ»ãƒªãƒ³ã‚³ãƒ³ç¥çˆ¶ï¼‰ã€Arte Mexicanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªæ–‡æ³•ï¼‰ã€ï¼ˆ1593å¹´ãƒ»ç¬¬64é …ï¼‰",
-      "Buckingham Smithï¼ˆãƒãƒƒã‚­ãƒ³ã‚¬ãƒ ãƒ»ã‚¹ãƒŸã‚¹ï¼‰ã€A grammatical Sketch of the Heve Languageï¼ˆã‚¨ãƒ™èªæ–‡æ³•æ¦‚èª¬ï¼‰ã€ï¼ˆ1861å¹´ãƒ»ç¬¬72é …ï¼‰",
-      "Fray Juan de CÃ³rdobaï¼ˆãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ã‚³ãƒ«ãƒ‰ãƒä¿®é“å£«ï¼‰ã€Arte en Lengua Zapotecaï¼ˆã‚µãƒãƒ†ã‚«èªæ–‡æ³•ï¼‰ã€ï¼ˆ1578å¹´ãƒ»ç¬¬99é …ï¼‰",
-      "Fr. Maturino Gilbertiï¼ˆãƒãƒˆã‚¥ãƒªãƒãƒ»ãƒ’ãƒ«ãƒ™ãƒ«ãƒ†ã‚£ä¿®é“å£«ï¼‰ã€Arte en lengua de Michoacanï¼ˆãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³èªæ–‡æ³•ï¼‰ã€ï¼ˆ1558å¹´ãƒ»ç¬¬113é …ï¼‰",
-      "Fray Bernardino de Sahagunï¼ˆãƒ™ãƒ«ãƒŠãƒ«ãƒ‡ã‚£ãƒãƒ»ãƒ‡ãƒ»ã‚µã‚¢ã‚°ãƒ³ä¿®é“å£«ï¼‰ã€Sermones en mexicanoï¼ˆãƒ¡ã‚­ã‚·ã‚³èªèª¬æ•™é›†ï¼‰ã€ï¼ˆ1540â€“1563å¹´ãƒ»ç¬¬158é …ï¼‰",
-    ],
-    cover:
-      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/cover.jpg",
-    pdf:
-      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866/Joaquin_Garcia_Icazbalceta_Apuntes_Catalogo_1866_Japanese_Complete_Translation.epub",
-    pageCount: 178,
-    figureCount: 1,
-    plateCount: 0,
-    types: ["æ›¸èªŒ", "è¨€èªè³‡æ–™", "æ›¸ç‰©å²", "ç ”ç©¶è³‡æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "åŒ—ã‚¢ãƒ¡ãƒªã‚«", "ä¸­éƒ¨ã‚¢ãƒ¡ãƒªã‚«", "å—ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: [
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒ©ãƒ†ãƒ³èª",
-      "è‹±èª",
-      "ãƒ•ãƒ©ãƒ³ã‚¹èª",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ãƒãƒ¤èª",
-      "ãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³èª",
-      "ãƒŸã‚·ãƒ¥ãƒ†ã‚«èª",
-      "ã‚µãƒãƒ†ã‚«èª",
-      "ã‚ªãƒ‘ã‚¿èª",
-      "ãƒ ãƒ„ãƒ³èª",
-      "ãƒ”ãƒèª",
-    ],
-    tags: [
-      "ã‚¢ãƒ¡ãƒªã‚«å…ˆä½æ°‘è«¸èª",
-      "æ›¸èªŒå­¦",
-      "å®£æ•™è¨€èªå­¦",
-      "æ–‡æ³•æ›¸",
-      "è¾æ›¸",
-      "æ•™ç†æ›¸",
-      "ç¨€è¦¯æ›¸",
-      "19ä¸–ç´€",
-    ],
-  },
-  {
-    slug: "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886",
-    title: "16ä¸–ç´€ãƒ¡ã‚­ã‚·ã‚³æ›¸èªŒ",
-    originalTitle: "BibliografÃ­a mexicana del siglo XVI",
-    subtitle:
-      "1886å¹´åˆç‰ˆãƒ»å‰ä»˜ãƒ»æœ¬æ–‡1â€“419é ãƒ»è¿½è£œãƒ»ç´¢å¼•ãƒ»æ­£èª¤è¡¨ æ—¥æœ¬èªå…¨è¨³",
-    author: "ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿",
-    series: "BIBLIOGRAFÃA MEXICANA Â· 1886",
-    originalPublication:
-      "ãƒ¡ã‚­ã‚·ã‚³ã€LibrerÃ­a de Andrade y Morales, Sucesoresã€1886å¹´",
-    year: 1886,
-    extent:
-      "PDF 921é ãƒ»åŸåˆŠå‰ä»˜Vâ€“XXIXé ãƒ»æœ¬æ–‡1â€“419é ãƒ»æœ¬ç·¨116é …ç›®ãƒ»åˆŠè¡Œç›´å‰è¿½è¨˜2é …ç›®ãƒ»åŸæ³¨520ä»¶ãƒ»åŸåˆŠå›³ç‰ˆ50ç‚¹ãƒ»æœ¬æ–‡ç‰ˆç”»7ç‚¹",
-    description:
-      "ãƒ¡ã‚­ã‚·ã‚³ã«ãŠã‘ã‚‹å°åˆ·è¡“å°å…¥ã®çµŒç·¯ã‚’è«–ã˜ã€1539å¹´ã‹ã‚‰1600å¹´ã¾ã§ã«åŒåœ°ã§åˆŠè¡Œã•ã‚ŒãŸæ›¸ç±ã‚’è‘—è€…ä¼ãƒ»æ›¸èªŒè§£èª¬ã¨ã¨ã‚‚ã«åéŒ²ã—ãŸã€ãƒ›ã‚¢ã‚­ãƒ³ãƒ»ã‚¬ãƒ«ã‚·ã‚¢ãƒ»ã‚¤ã‚«ã‚¹ãƒãƒ«ã‚»ã‚¿ã®1886å¹´åˆŠæ›¸èªŒã€‚å‰ä»˜ã€åºè«–ã€æœ¬ç·¨å…¨116é …ç›®ã€åˆŠè¡Œç›´å‰è¿½è¨˜2é …ç›®ã€åŸæ³¨520ä»¶ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã€åŸåˆŠå›³ç‰ˆãƒ»æœ¬æ–‡ç‰ˆç”»ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    majorSources: [
-      "AnÃ³nimoï¼ˆç„¡ç½²åï¼‰ã€Breve y mÃ¡s compendiosa doctrina christiana en lengua mexicana y castellanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªã«ã‚ˆã‚‹ç°¡æ½”ã«ã—ã¦ã€ã‚ˆã‚Šè¦ç´„ã•ã‚ŒãŸã‚­ãƒªã‚¹ãƒˆæ•™æ•™ç†ï¼‰ã€ï¼ˆ1539å¹´ãƒ»ç¬¬1ç•ªï¼‰",
-      "Francisco Cervantes de Salazarï¼ˆãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚»ãƒ«ãƒãƒ³ãƒ†ã‚¹ãƒ»ãƒ‡ãƒ»ã‚µãƒ©ã‚µãƒ¼ãƒ«ï¼‰ã€DiÃ¡logosï¼ˆå¯¾è©±ç¯‡ï¼‰ã€ï¼ˆ1554å¹´ãƒ»ç¬¬22ç•ªï¼‰",
-      "Fray Alonso de Molinaï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ‡ãƒ»ãƒ¢ãƒªãƒŠï¼‰ã€Vocabulario en la lengua Castellana y Mexicanaï¼ˆã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªãƒ»ãƒ¡ã‚­ã‚·ã‚³èªè¾å…¸ï¼‰ã€ï¼ˆ1555å¹´ãƒ»ç¬¬23ç•ªï¼‰",
-      "Fray Maturino Gilbertiï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ãƒãƒˆã‚¥ãƒªãƒãƒ»ãƒ’ãƒ«ãƒ™ãƒ«ãƒ†ã‚£ï¼‰ã€Arte en Lengua de MichoacÃ¡nï¼ˆãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³èªæ–‡æ³•ï¼‰ã€ã€Tesoro Espiritual en Lengua de MechuacÃ¡nï¼ˆãƒŸãƒãƒ§ã‚¢ã‚«ãƒ³èªéœŠçš„å®åº«ï¼‰ã€ï¼ˆ1558å¹´ãƒ»ç¬¬31â€“32ç•ªï¼‰",
-      "Francisco Cervantes de Salazarï¼ˆãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ã‚»ãƒ«ãƒãƒ³ãƒ†ã‚¹ãƒ»ãƒ‡ãƒ»ã‚µãƒ©ã‚µãƒ¼ãƒ«ï¼‰ã€TÃºmulo Imperial de la gran Ciudad de MÃ©xicoï¼ˆå¤§ãƒ¡ã‚­ã‚·ã‚³å¸‚çš‡å¸ã®éœŠå»Ÿï¼‰ã€ï¼ˆ1560å¹´ãƒ»ç¬¬39ç•ªã€å…¨æ–‡å†éŒ²ï¼‰",
-      "Doctor Francisco Bravoï¼ˆãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ–ãƒ©ãƒœåšå£«ï¼‰ã€Opera medicinaliaï¼ˆåŒ»å­¦è‘—ä½œé›†ï¼‰ã€ï¼ˆ1570å¹´ãƒ»ç¬¬57ç•ªï¼‰",
-      "Fray Alonso de Molinaï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ã‚¢ãƒ­ãƒ³ã‚½ãƒ»ãƒ‡ãƒ»ãƒ¢ãƒªãƒŠï¼‰ã€Arte de la lengua Mexicana y Castellanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªæ–‡æ³•ï¼‰ã€ã€Vocabulario en lengua Castellana y Mexicana / Mexicana y Castellanaï¼ˆã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªãƒ»ãƒ¡ã‚­ã‚·ã‚³èªï¼ãƒ¡ã‚­ã‚·ã‚³èªãƒ»ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªèªå½™é›†ï¼‰ã€ï¼ˆ1571å¹´ãƒ»ç¬¬58â€“60ç•ªï¼‰",
-      "Fray Juan de CÃ³rdobaï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ã‚³ãƒ«ãƒ‰ãƒï¼‰ã€Arte en Lengua Zapotecaï¼ˆã‚µãƒãƒ†ã‚«èªæ–‡æ³•ï¼‰ã€ã€Vocabulario en Lengua Zapotecaï¼ˆã‚µãƒãƒ†ã‚«èªèªå½™é›†ï¼‰ã€ï¼ˆ1578å¹´ãƒ»ç¬¬78â€“79ç•ªï¼‰",
-      "Fray Bernardino de SahagÃºnï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ãƒ™ãƒ«ãƒŠãƒ«ãƒ‡ã‚£ãƒãƒ»ãƒ‡ãƒ»ã‚µã‚¢ã‚°ãƒ³ï¼‰ã€Psalmodia Cristiana y Sermonario de los Santos del aÃ±o, en lengua Mexicanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªã«ã‚ˆã‚‹ã‚­ãƒªã‚¹ãƒˆæ•™è©©ç·¨ãƒ»ä¸€å¹´ã®è–äººèª¬æ•™é›†ï¼‰ã€ï¼ˆ1583å¹´ãƒ»ç¬¬92ç•ªï¼‰",
-      "Doctor Juan de CÃ¡rdenasï¼ˆãƒ•ã‚¢ãƒ³ãƒ»ãƒ‡ãƒ»ã‚«ãƒ«ãƒ‡ãƒŠã‚¹åšå£«ï¼‰ã€Primera Parte de los Problemas y Secretos Maravillosos de las Indiasï¼ˆã‚¤ãƒ³ãƒ‡ã‚£ã‚¢ã‚¹ã®é©šãã¹ãå•é¡Œã¨ç§˜å¯†ãƒ»ç¬¬ä¸€éƒ¨ï¼‰ã€ï¼ˆ1591å¹´ãƒ»ç¬¬101ç•ªï¼‰",
-      "Fray Antonio de los Reyesï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ»ãƒ­ã‚¹ãƒ»ãƒ¬ã‚¤ã‚§ã‚¹ï¼‰ã€Arte en Lengua Mixtecaï¼ˆãƒŸã‚·ãƒ¥ãƒ†ã‚«èªæ–‡æ³•ï¼‰ã€ï¼Fray Francisco de Alvaradoï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ©ãƒ‰ï¼‰ã€Vocabulario en Lengua Mistecaï¼ˆãƒŸã‚·ãƒ¥ãƒ†ã‚«èªèªå½™é›†ï¼‰ã€ï¼ˆ1593å¹´ãƒ»ç¬¬103â€“104ç•ªï¼‰",
-      "Padre Antonio del RincÃ³nï¼ˆã‚¢ãƒ³ãƒˆãƒ‹ã‚ªãƒ»ãƒ‡ãƒ«ãƒ»ãƒªãƒ³ã‚³ãƒ³å¸«ï¼‰ã€Arte Mexicanaï¼ˆãƒ¡ã‚­ã‚·ã‚³èªæ–‡æ³•ï¼‰ã€ï¼ˆ1595å¹´ãƒ»ç¬¬109ç•ªï¼‰",
-      "Fray Joan Baptistaï¼ˆãƒ•ãƒ©ã‚¤ãƒ»ãƒ•ã‚¢ãƒ³ãƒ»ãƒã‚¦ãƒ†ã‚£ã‚¹ã‚¿ï¼‰ã€Advertencias para los confessores de los Naturalesï¼ˆå…ˆä½æ°‘ã®å‘Šè§£è´èå¸ç¥­ã®ãŸã‚ã®æ³¨æ„ï¼‰ã€ï¼ˆ1600å¹´ãƒ»ç¬¬115ç•ªï¼‰",
-    ],
-    cover:
-      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/cover.jpg",
-    pdf:
-      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886/Joaquin_Garcia_Icazbalceta_Bibliografia_Mexicana_del_Siglo_XVI_1886_Japanese_Complete_Translation.epub",
-    pageCount: 921,
-    figureCount: 7,
-    plateCount: 50,
-    types: ["æ›¸èªŒ", "å°åˆ·å²", "æ›¸ç‰©å²", "ç ”ç©¶è³‡æ–™"],
-    regions: ["ãƒ¡ã‚­ã‚·ã‚³", "ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£", "ãƒ¡ã‚½ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒ©ãƒ†ãƒ³èª", "ãƒŠãƒ¯ãƒˆãƒ«èª"],
-    tags: [
-      "16ä¸–ç´€ãƒ¡ã‚­ã‚·ã‚³",
-      "æ›¸èªŒå­¦",
-      "åˆæœŸå°åˆ·",
-      "ãƒ•ã‚¢ãƒ³ãƒ»ãƒ‘ãƒ–ãƒ­ã‚¹",
-      "æ¤æ°‘åœ°æœŸãƒ¡ã‚­ã‚·ã‚³",
-      "è‘—è€…ä¼",
-      "åˆç‰ˆ",
-    ],
-  },
-  {
-    slug: "baqueiro-ensayo-revoluciones-yucatan-1878-1887",
-    title: "ãƒ¦ã‚«ã‚¿ãƒ³é©å‘½å²è©¦è«–",
-    originalTitle:
-      "Ensayo histÃ³rico sobre las revoluciones de YucatÃ¡n desde el aÃ±o de 1840 hasta 1864",
-    subtitle: "1840å¹´ã‹ã‚‰1864å¹´ã¾ã§ãƒ»æ”¹è¨‚å…¨3å·»ç‰ˆ æ—¥æœ¬èªå…¨è¨³",
-    author: "ã‚»ãƒ©ãƒ”ã‚ªãƒ»ãƒã‚±ã‚¤ãƒ­",
-    series: "ENSAYO HISTÃ“RICO Â· YUCATÃN Â· 1878â€“1887",
-    originalPublication:
-      "ãƒ¡ãƒªãƒ€ã€ç¬¬1å·»1878å¹´ãƒ»ç¬¬2å·»1879å¹´ãƒ»ç¬¬3å·»1887å¹´",
-    year: 1878,
-    extent:
-      "PDF 1,251é ãƒ»æ”¹è¨‚å…¨3å·»ãƒ»åŸåˆŠå‰ä»˜IIIâ€“XVIIé ãƒ»æœ¬æ–‡ï¼è¨¼æ‹ æ–‡æ›¸ï¼ç´¢å¼•5â€“605é ã€5â€“588é ã€5â€“340é ãƒ»åŸæ³¨75ä»¶ãƒ»è‚–åƒå›³ç‰ˆ1ç‚¹",
-    description:
-      "1840å¹´é©å‘½ã€ãƒ¡ã‚­ã‚·ã‚³ä¸­å¤®æ”¿åºœã¨ã®é–¢ä¿‚ã€ã‚«ã‚¹ã‚¿æˆ¦äº‰ã€ãƒ¦ã‚«ã‚¿ãƒ³ã¨ã‚«ãƒ³ãƒšãƒã‚§ã®æ”¿äº‰ã‚’1864å¹´ã¾ã§å™è¿°ã—ãŸã‚»ãƒ©ãƒ”ã‚ªãƒ»ãƒã‚±ã‚¤ãƒ­ã®æ­´å²æ›¸ã€‚1878å¹´ã€1879å¹´ã€1887å¹´åˆŠã®æ”¹è¨‚å…¨3å·»ç‰ˆã‹ã‚‰ã€å·»é ­è³‡æ–™ã€å…¨24ç« ã€çµã³ã€è¨¼æ‹ æ–‡æ›¸ã€åŸæ³¨ã€å„å·»ç´¢å¼•ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/cover.jpg",
-    pdf:
-      "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_1878_1887_Japanese_Complete_Translation.pdf",
-    epub:
-      "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_1878_1887_Japanese_Complete_Translation.epub",
-    pageCount: 1251,
-    figureCount: 0,
-    plateCount: 1,
-    types: ["æ­´å²æ›¸", "æ”¿æ²»å²", "æˆ¦äº‰å²", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ¦ã‚«ã‚¿ãƒ³", "ã‚«ãƒ³ãƒšãƒã‚§", "ã‚­ãƒ³ã‚¿ãƒŠãƒ»ãƒ­ãƒ¼", "ãƒ¡ã‚­ã‚·ã‚³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚«ã‚¹ã‚¿æˆ¦äº‰",
-      "ãƒ¦ã‚«ã‚¿ãƒ³é©å‘½",
-      "ãƒ¦ã‚«ã‚¿ãƒ³å…±å’Œå›½",
-      "ãƒŸã‚²ãƒ«ãƒ»ãƒãƒ«ãƒãƒãƒ£ãƒ",
-      "ã‚µãƒ³ãƒ†ã‚£ã‚¢ã‚´ãƒ»ãƒ¡ãƒ³ãƒ‡ã‚¹",
-      "ã‚»ã‚·ãƒªã‚ªãƒ»ãƒ",
-      "ãƒã‚·ãƒ³ãƒˆãƒ»ãƒ‘ãƒƒãƒˆ",
-      "ã‚«ãƒ³ãƒšãƒã‚§åˆ†é›¢",
-    ],
-  },
-  {
-    slug: "berendt-veracruz-correspondence-1861-1862",
-    title: "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹é€šä¿¡ãƒ»è«–èª¬é›†â€•â€•ä¸‰å›½å¹²æ¸‰ã®åˆæœŸã€ä¸€å…«å…­ä¸€â€•ä¸€å…«å…­äºŒå¹´",
-    originalTitle:
-      "Correspondenz [und] Artikel aus Veracruz (erste Zeit der Intervention), 1861â€“1862",
-    subtitle:
-      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 245",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "BERENDT-BRINTON LINGUISTIC COLLECTION Â· ITEM 245",
-    originalPublication: "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã€1861â€“1862å¹´ï¼ˆPennå†™æœ¬ãƒ»åˆ‡æŠœãè³‡æ–™ï¼‰",
-    year: 1861,
-    extent: "PDF 45é ãƒ»Penn PDF 140é ãƒ»æŒ¿å›³4ç‚¹",
-    description:
-      "ä¸‰å›½å¹²æ¸‰åˆæœŸã®ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹ã‹ã‚‰é€ã‚‰ã‚ŒãŸé€šä¿¡ã€æ™‚äº‹è«–èª¬ã€è«‹é¡˜æ›¸ã€æ¼”èª¬å†™ã—ã€è©©ã€é¢¨åˆºç”»ã€å¾Œå¹´ã®æ³¨è¨˜ã‚’ã¾ã¨ã‚ãŸè³‡æ–™é›†ã€‚ãƒ‰ã‚¤ãƒ„èªãƒ»ãƒ•ãƒ©ãƒ³ã‚¹èªãƒ»ã‚¹ãƒšã‚¤ãƒ³èªã®å°åˆ·ç‰©ã¨è‡ªç­†ç¨¿ã‚’ã€æ–‡æ›¸å¢ƒç•Œã¨Pennç”»åƒé ã‚’ä¿æŒã—ã¦è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-veracruz-correspondence-1861-1862/cover.jpg",
-    pdf:
-      "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.pdf",
-    epub:
-      "publications/berendt-veracruz-correspondence-1861-1862/C_Hermann_Berendt_Veracruz_Correspondence_1861_1862_Japanese_Translation.epub",
-    pageCount: 45,
-    figureCount: 4,
-    plateCount: 0,
-    types: ["æ›¸ç°¡é›†", "æ™‚äº‹è«–èª¬", "ä¸€æ¬¡å²æ–™"],
-    regions: ["ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹", "ãƒ¡ã‚­ã‚·ã‚³", "ã‚«ãƒªãƒ–æµ·"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ãƒ•ãƒ©ãƒ³ã‚¹èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ä¸‰å›½å¹²æ¸‰",
-      "ãƒ•ãƒ©ãƒ³ã‚¹å¹²æ¸‰æˆ¦äº‰",
-      "ãƒ™ãƒ‹ãƒ¼ãƒˆãƒ»ãƒ•ã‚¢ãƒ¬ã‚¹",
-      "ãƒ™ãƒ©ã‚¯ãƒ«ã‚¹",
-      "æ–°èåˆ‡æŠœã",
-      "è‡ªç­†ç¨¿",
-    ],
-  },
-  {
-    slug: "berendt-drei-tage-cuba-1860",
-    title: "ã‚­ãƒ¥ãƒ¼ãƒå³¶ã®ä¸‰æ—¥é–“",
-    originalTitle:
-      "Drei Tage auf der Insel Cuba. Reise Fragment fÃ¼r meine Tochter Helene",
-    subtitle:
-      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 230",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "BERENDT-BRINTON LINGUISTIC COLLECTION Â· ITEM 230",
-    originalPublication: "ãƒ¡ã‚­ã‚·ã‚³æ¹¾ãƒ»ã‚­ãƒ¥ãƒ¼ãƒã€1860å¹´é ƒï¼ˆPennè‡ªç­†ç¨¿ï¼‰",
-    year: 1860,
-    extent: "PDF 32é ãƒ»åŸå†™æœ¬68é ãƒ»Penn PDF 160é ",
-    description:
-      "ãƒ™ãƒ¬ãƒ³ãƒˆãŒå¨˜ãƒ˜ãƒ¬ãƒ¼ãƒã®ãŸã‚ã«è¨˜ã—ãŸãƒ‰ã‚¤ãƒ„èªæ—…è¡Œè¨˜æ–­ç‰‡ã€‚ãƒ¦ã‚«ã‚¿ãƒ³æ²¿å²¸ã‹ã‚‰ãƒãƒãƒŠã¸å‘ã‹ã†èˆ¹æ—…ã€ã‚­ãƒ¥ãƒ¼ãƒã®éƒ½å¸‚ç”Ÿæ´»ãƒ»è¾²åœ’ãƒ»å¥´éš·åˆ¶ãƒ»ä¸­å›½äººå¥‘ç´„åŠ´åƒã€è‡ªç„¶ã¨é¢¨ä¿—ã®è¦³å¯Ÿã‚’ã€åŸå†™æœ¬é ã¨Pennç”»åƒé ã‚’ä»˜ã—ã¦è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover: "publications/berendt-drei-tage-cuba-1860/cover.jpg",
-    pdf:
-      "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.pdf",
-    epub:
-      "publications/berendt-drei-tage-cuba-1860/C_Hermann_Berendt_Drei_Tage_auf_der_Insel_Cuba_Japanese_Translation.epub",
-    pageCount: 32,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["æ—…è¡Œè¨˜", "æ°‘æ—èªŒ", "è‡ªç­†ç¨¿"],
-    regions: ["ã‚­ãƒ¥ãƒ¼ãƒ", "ãƒãƒãƒŠ", "ãƒã‚¿ãƒ³ã‚µã‚¹", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒ¡ã‚­ã‚·ã‚³æ¹¾"],
-    languages: ["ãƒ‰ã‚¤ãƒ„èª", "ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ã‚­ãƒ¥ãƒ¼ãƒæ—…è¡Œ",
-      "æµ·ä¸Šèˆªè¡Œ",
-      "å¥´éš·åˆ¶",
-      "ä¸­å›½äººå¥‘ç´„åŠ´åƒ",
-      "ç ‚ç³–è¾²åœ’",
-      "19ä¸–ç´€ä¸­è‘‰",
-    ],
-  },
-  {
-    slug: "berendt-acasaguastlan-jilotepec-1878",
-    title:
-      "ã‚¢ã‚«ã‚µã‚°ã‚¢ã‚¹ãƒˆãƒ©ãƒ³ãŠã‚ˆã³ãƒ’ãƒ­ãƒ†ãƒšã‚±ã¸ã®é å¾â€•â€•ã‚¢ãƒ©ã‚®ãƒ©ã‚¯ï¼ãƒãƒ§ãƒ«ãƒ†ã‚£èªèª¿æŸ»ãƒ»é–¢é€£æ›¸ç°¡ãƒ»ã‚µãƒ³ãƒ»ã‚¢ã‚°ã‚¹ãƒ†ã‚£ãƒ³å¤æ–‡æ›¸ï¼ˆä¸€å…«ä¸ƒå…«å¹´ï¼‰",
-    originalTitle:
-      "Expedition nach Acasaguastlan und Jilotepec; Letter to JosÃ© Inocenta Cordon and related papers from the expedition of Franz Bromowicz, 1878; Nahuatl de San Agustin Acasaguastlan",
-    subtitle:
-      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 90, 244, 149",
-    author:
-      "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆã€ãƒ•ãƒ©ãƒ³ãƒ„ãƒ»ãƒ–ãƒ­ãƒ¢ãƒ´ã‚£ãƒã€ãƒ›ã‚»ãƒ»ã‚¤ãƒã‚»ãƒ³ãƒ†ãƒ»ã‚³ãƒ«ãƒ‰ãƒ³ã»ã‹",
-    series:
-      "BERENDT-BRINTON LINGUISTIC COLLECTION Â· ITEMS 90, 244, 149",
-    originalPublication:
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©ã€1878å¹´ï¼ˆPennå†™æœ¬è³‡æ–™ã€‚Item 149ã«17ä¸–ç´€æ–‡æ›¸ã‚’å«ã‚€ï¼‰",
-    year: 1878,
-    extent: "PDF 33é ãƒ»PennåŸè³‡æ–™PDFè¨ˆ81é ãƒ»èªå½™è¡¨13ç‚¹ãƒ»åŸè³‡æ–™ç”»åƒ3ç‚¹",
-    description:
-      "1878å¹´2æœˆã®ã‚¢ã‚«ã‚µã‚°ã‚¢ã‚¹ãƒˆãƒ©ãƒ³â€•ãƒ’ãƒ­ãƒ†ãƒšã‚±è¨€èªèª¿æŸ»ã«é–¢ã™ã‚‹ä¸‰ã¤ã®Pennãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’ã€å‡ºå…¸å¢ƒç•Œã‚’ä¿æŒã—ã¦åã‚ãŸè³‡æ–™ç¯‡ã€‚äºŒçµ„ã®èªå½™è¡¨ã€æ—…ç¨‹ã€è¨¼æ˜æ›¸ã€ãƒ™ãƒ¬ãƒ³ãƒˆã¨ã‚³ãƒ«ãƒ‰ãƒ³ã®æ›¸ç°¡ã€éºè·¡å ±å‘Šã€17ä¸–ç´€ãƒŠãƒ¯ãƒˆãƒ«èªä¼šè¨ˆæ–‡æ›¸æ–­ç‰‡ã€ã‚µãƒ³ãƒ»ã‚¢ã‚°ã‚¹ãƒ†ã‚£ãƒ³æ¡éŒ²èªå½™ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-acasaguastlan-jilotepec-1878/cover.jpg",
-    pdf:
-      "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.pdf",
-    epub:
-      "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.epub",
-    pageCount: 33,
-    figureCount: 3,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "èªå½™é›†", "æ›¸ç°¡è³‡æ–™", "å¤æ–‡æ›¸"],
-    regions: [
-      "ã‚¢ã‚«ã‚µã‚°ã‚¢ã‚¹ãƒˆãƒ©ãƒ³",
-      "ãƒ’ãƒ­ãƒ†ãƒšã‚±",
-      "ã‚°ã‚¢ãƒ†ãƒãƒ©",
-      "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«",
-    ],
-    languages: [
-      "ãƒ‰ã‚¤ãƒ„èª",
-      "ã‚¹ãƒšã‚¤ãƒ³èª",
-      "ãƒãƒ§ãƒ«ãƒ†ã‚£èª",
-      "ãƒŠãƒ¯ãƒˆãƒ«èª",
-      "ãƒã‚³ãƒãƒ³èª",
-      "ã‚¢ãƒ©ã‚®ãƒ©ã‚¯èª",
-    ],
-    tags: [
-      "è¨€èªèª¿æŸ»",
-      "èªå½™è¡¨",
-      "ã‚¢ãƒ©ã‚®ãƒ©ã‚¯",
-      "ãƒãƒ§ãƒ«ãƒ†ã‚£",
-      "ãƒŠãƒ¯ãƒˆãƒ«",
-      "ãƒ•ãƒ©ãƒ³ãƒ„ãƒ»ãƒ–ãƒ­ãƒ¢ãƒ´ã‚£ãƒ",
-      "ãƒ›ã‚»ãƒ»ã‚¤ãƒã‚»ãƒ³ãƒ†ãƒ»ã‚³ãƒ«ãƒ‰ãƒ³",
-    ],
-  },
-  {
-    slug: "berendt-indigenas-america-central-1877",
-    title: "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«å…ˆä½æ°‘ã¨ãã®è«¸è¨€èª",
-    originalTitle: "Los indÃ­genas de la AmÃ©rica Central y sus idiomas",
-    subtitle:
-      "William Gates papers, MSS 279, Series 10, Box 109, Folder 3",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "WILLIAM GATES PAPERS Â· MSS 279 Â· SERIES 10 Â· BOX 109 Â· FOLDER 3",
-    originalPublication: "1877å¹´ï¼ˆBYUæ‰€è”µã‚¹ãƒšã‚¤ãƒ³èªè‰ç¨¿è¤‡å†™ï¼‰",
-    year: 1877,
-    extent: "PDF 14é ãƒ»BYUå…¬é–‹45é ãƒ»ç•ªå·ä»˜è‰ç¨¿æœ¬æ–‡35é ",
-    description:
-      "ãƒãƒ¤äººã€ã‚¿ãƒã‚¹ã‚³ã®ãƒãƒ§ãƒ³ã‚¿ãƒ«äººã€ãƒãƒ§ãƒ«äººã‚’åœ°ç†ãƒ»æ­´å²ãƒ»æ–‡çŒ®ãƒ»è¨€èªã®è«¸é¢ã‹ã‚‰è«–ã˜ãŸãƒ™ãƒ¬ãƒ³ãƒˆã®è‰ç¨¿ã€‚ç•ªå·ä»˜æœ¬æ–‡1â€“35é ã‚’å¾©å…ƒé…åˆ—ã—ã€åœ°åã¨è¨€èªæ¥è§¦ã®è€ƒå¯Ÿã€1618å¹´ãƒãƒªãƒ£ãƒ‰ãƒªãƒ¼ãƒ‰è¨¼è¨€ã®æŠœæ›¸ã¾ã§ã‚’è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-indigenas-america-central-1877/cover.jpg",
-    pdf:
-      "publications/berendt-indigenas-america-central-1877/C_Hermann_Berendt_Los_indigenas_America_Central_1877_Japanese_Translation.pdf",
-    epub:
-      "publications/berendt-indigenas-america-central-1877/C_Hermann_Berendt_Los_indigenas_America_Central_1877_Japanese_Translation.epub",
-    pageCount: 14,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "æ°‘æ—èªŒ", "è‡ªç­†ç¨¿"],
-    regions: ["ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«", "ãƒ¦ã‚«ã‚¿ãƒ³", "ãƒã‚¢ãƒ‘ã‚¹", "ã‚¿ãƒã‚¹ã‚³"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ¤è«¸èª", "ãƒãƒ§ãƒ³ã‚¿ãƒ«èª", "ãƒãƒ§ãƒ«èª"],
-    tags: [
-      "ãƒãƒ¤äºº",
-      "ãƒãƒ§ãƒ³ã‚¿ãƒ«",
-      "ãƒãƒ§ãƒ«",
-      "æ­´å²è¨€èªå­¦",
-      "åœ°å",
-      "1618å¹´ãƒãƒªãƒ£ãƒ‰ãƒªãƒ¼ãƒ‰è¨¼è¨€",
-    ],
-  },
-  {
-    slug: "berendt-palabras-modismos-nicaragua-1874",
-    title: "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã§è©±ã•ã‚Œã‚‹ã‚«ã‚¹ãƒ†ã‚£ãƒ¼ãƒªãƒ£èªã®èªå½™ã¨æ…£ç”¨è¡¨ç¾",
-    originalTitle:
-      "Palabras y modismos de la lengua castellana segÃºn se habla en Nicaragua",
-    subtitle:
-      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Item 178",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "BERENDT-BRINTON LINGUISTIC COLLECTION Â· ITEM 178",
-    originalPublication: "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€1874å¹´ï¼ˆPennè‡ªç­†ç¨¿ï¼‰",
-    year: 1874,
-    extent: "PDF 112é ãƒ»Pennå…¬é–‹425é ãƒ»æœ¬æ–‡1,346é …ç›®ï¼‹è¿½è£œ273é …ç›®",
-    description:
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã®åœ°æ–¹èªã€èªæ³•ã€å‹•æ¤ç‰©åã€æ°‘ä¿—èªå½™ã‚’é›†æˆã—ãŸè‡ªç­†è¾æ›¸ã€‚æœ¬æ–‡1,346é …ç›®ã¨è¿½è£œ273é …ç›®ã€è¨ˆ1,619é …ç›®ã«ã¤ã„ã¦ã€è¦‹å‡ºã—èªã®åŸç¶´ã€å®šç¾©ã€ç”¨ä¾‹ã€ç›¸äº’å‚ç…§ã€ä½™ç™½è¿½è¨˜ã‚’ä¿æŒã—ã¦è¨³ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-palabras-modismos-nicaragua-1874/cover.jpg",
-    pdf:
-      "publications/berendt-palabras-modismos-nicaragua-1874/C_Hermann_Berendt_Palabras_modismos_Nicaragua_1874_Japanese_Translation.pdf",
-    epub:
-      "publications/berendt-palabras-modismos-nicaragua-1874/C_Hermann_Berendt_Palabras_modismos_Nicaragua_1874_Japanese_Translation.epub",
-    pageCount: 112,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è¾æ›¸", "è¨€èªè³‡æ–™", "è‡ªç­†ç¨¿"],
-    regions: ["ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª"],
-    tags: [
-      "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ãƒ»ã‚¹ãƒšã‚¤ãƒ³èª",
-      "åœ°æ–¹èªå½™",
-      "æ…£ç”¨è¡¨ç¾",
-      "å‹•æ¤ç‰©å",
-      "æ°‘ä¿—èªå½™",
-      "æ­´å²è¾æ›¸å­¦",
-    ],
-  },
-  {
-    slug: "berendt-mangue-subtiaba-dossier-1874",
-    title:
-      "ãƒãƒ§ãƒ­ãƒ†ã‚¬ï¼ãƒãƒ³ã‚°ã‚¨èªã¨ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒèªâ€•â€•æ¯”è¼ƒèªå½™ãƒ»æ–‡æ³•è¦šæ›¸ãƒ»æ¡é›†è³‡æ–™",
-    originalTitle:
-      "Lengua chorotega o mangue; Apuntes sobre la lengua de subtiaba; The Mangues (Chorotegans or Dirians), Nicaragua",
-    subtitle:
-      "Berendt-Brinton Linguistic Collection, Ms. Coll. 700, Items 144, 242, 247",
-    author: "ã‚«ãƒ¼ãƒ«ãƒ»ãƒ˜ãƒ«ãƒãƒ³ãƒ»ãƒ™ãƒ¬ãƒ³ãƒˆ",
-    series: "BERENDT-BRINTON LINGUISTIC COLLECTION Â· ITEMS 144, 242, 247",
-    originalPublication: "ãƒ‹ã‚«ãƒ©ã‚°ã‚¢ã€1874å¹´é ƒï¼ˆPennå†™æœ¬è³‡æ–™ï¼‰",
-    year: 1874,
-    extent: "PDF 60é ãƒ»PennåŸè³‡æ–™PDFè¨ˆ103é ãƒ»æ¯”è¼ƒèªå½™ï¼æ–‡æ³•è¦šæ›¸ï¼æ¡é›†ç¥¨",
-    description:
-      "ç›¸äº’å‚ç…§é–¢ä¿‚ã«ã‚ã‚‹ä¸‰ã¤ã®Pennãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’ä¸€è³‡æ–™ç¯‡ã«ã¾ã¨ã‚ãŸç ”ç©¶ç”¨è¨³ç¨¿ã€‚ãƒã‚¢ãƒ‘ãƒã‚³èªã€ãƒãƒ³ã‚°ã‚¨èªã€ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒèªã®æ¯”è¼ƒèªå½™ã€ç™ºéŸ³ãƒ»æ–‡æ³•ãƒ»ä¼šè©±ä¾‹ã€è©±è€…åˆ¥æ¡é›†ç¥¨ã€æ°‘æ—èªŒãƒ»åœ°åãƒ»æ›¸èªŒãƒ¡ãƒ¢ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    cover:
-      "publications/berendt-mangue-subtiaba-dossier-1874/cover.jpg",
-    pdf:
-      "publications/berendt-mangue-subtiaba-dossier-1874/C_Hermann_Berendt_Mangue_Subtiaba_Dossier_1874_Japanese_Translation.pdf",
-    epub:
-      "publications/berendt-mangue-subtiaba-dossier-1874/C_Hermann_Berendt_Mangue_Subtiaba_Dossier_1874_Japanese_Translation.epub",
-    pageCount: 60,
-    figureCount: 0,
-    plateCount: 0,
-    types: ["è¨€èªè³‡æ–™", "æ¯”è¼ƒèªå½™", "è‡ªç­†ç¨¿"],
-    regions: ["ãƒ‹ã‚«ãƒ©ã‚°ã‚¢", "ãƒã‚¢ãƒ‘ã‚¹", "ä¸­å¤®ã‚¢ãƒ¡ãƒªã‚«"],
-    languages: ["ã‚¹ãƒšã‚¤ãƒ³èª", "ãƒãƒ³ã‚°ã‚¨èª", "ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒèª", "ãƒã‚¢ãƒ‘ãƒã‚³èª"],
-    tags: [
-      "ãƒãƒ§ãƒ­ãƒ†ã‚¬",
-      "ãƒãƒ³ã‚°ã‚¨èª",
-      "ã‚¹ãƒ–ãƒ†ã‚£ã‚¢ãƒèª",
-      "ãƒã‚¢ãƒ‘ãƒã‚³èª",
-      "æ¯”è¼ƒèªå½™",
-      "æ­´å²è¨€èªè³‡æ–™",
-    ],
-  },
-  ...squierBatch03PublicationRecords,
-  ...squierRetainedPublicationRecords,
-  ...seitzPublicationRecords,
-  ...vallePublicationRecords,
-  ...carranzaPublicationRecords,
-  ...bailyPublicationRecords,
-  ...childsPublicationRecords,
-  ...thompsonOfficialVisitPublicationRecords,
-  ...waiknaPublicationRecords,
-  ...perignyRemainingPublicationRecords,
-];
-
-const publicDomainRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const gettyArchiveRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Getty Libraryã¯ã€é …ç›®åˆ¥ã®Use Restrictionsã®ç¢ºèªã€éãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ç”»åƒã®å€‹äººç ”ç©¶ãƒ»éå•†ç”¨åˆ©ç”¨ã¾ãŸã¯ç±³å›½æ³•ä¸Šã®ãƒ•ã‚§ã‚¢ãƒ¦ãƒ¼ã‚¹ä»¥å¤–ã®å…¬é–‹åˆ©ç”¨ã«å¯¾ã™ã‚‹ç”³è«‹ã€å¿…è¦ãªç¬¬ä¸‰è€…è¨±è«¾ã®ç¢ºèªã‚’åˆ©ç”¨è€…ã«æ±‚ã‚ã¦ã„ã¾ã™ã€‚å½“è©²Internet Archiveé …ç›®ã«å€‹åˆ¥ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¾ãŸã¯Use Restrictionsè¡¨ç¤ºã¯ã‚ã‚Šã¾ã›ã‚“ã€‚é–²è¦§å¯èƒ½ã§ã‚ã‚‹ã“ã¨ã‚’åº•æœ¬ç”»åƒã®è»¢è¼‰ãƒ»æ”¹å¤‰è¨±è«¾ã¨ã¯æ‰±ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const robartsArchiveRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚å½“è©²Internet Archiveé …ç›®ã«ã¯ã€Robarts Libraryã¾ãŸã¯University of Toronto Librariesã«ã‚ˆã‚‹å€‹åˆ¥ã®å†åˆ©ç”¨æ¡ä»¶ã€Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã€ãã®ä»–ã®è»¢è¼‰ãƒ»æ”¹å¤‰è¨±è«¾ãŒè¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚é–²è¦§ãƒ»ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã§ãã‚‹ã“ã¨ã‚’åº•æœ¬ç”»åƒã®åŒ…æ‹¬çš„ãªå†åˆ©ç”¨è¨±è«¾ã¨ã¯æ‰±ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const googleArchiveRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ã«ä»˜ã—ãŸåˆ©ç”¨æŒ‡é‡ã¯ã€å€‹äººçš„ãƒ»éå•†æ¥­çš„åˆ©ç”¨ã€è‡ªå‹•ç…§ä¼šã®å›é¿ã€Googleè¡¨ç¤ºã®ä¿æŒã€åˆ©ç”¨åœ°ã§ã®é©æ³•æ€§ç¢ºèªã‚’æ±‚ã‚ã¦ã„ã¾ã™ã€‚å½“è©²Internet Archiveé …ç›®ã«è¿½åŠ ã®å€‹åˆ¥ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¯è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const newberryArchiveRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Newberry Libraryã®Open Access Policyã¯ã€åˆæ³•ãªç›®çš„ã§ã‚ã‚Œã°å•†ç”¨ãƒ»éå•†ç”¨ã‚’å•ã‚ãšåŒé¤¨ã¸ã®è¨±è«¾æ–™ãƒ»ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æ–™ãªã—ã§æ‰€è”µè³‡æ–™ã®è¤‡è£½ã‚’åˆ©ç”¨å¯èƒ½ã¨ã™ã‚‹ä¸€æ–¹ã€ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã€è‘—ä½œæ¨©ã€ãƒ•ã‚§ã‚¢ãƒ¦ãƒ¼ã‚¹ãã®ä»–ã®åˆ¶é™ã®ç¢ºèªã¨åˆ©ç”¨è²¬ä»»ã‚’åˆ©ç”¨è€…ã«èª²ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const iaCcByNcNdRights =
-  "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²åº•æœ¬é …ç›®ã«ã¯CC BY-NC-ND 4.0ãŒè¡¨ç¤ºã•ã‚Œã€ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆè¡¨ç¤ºã€éå•†ç”¨ã€æ”¹å¤‰ç‰©ã®é…å¸ƒç¦æ­¢ãŒæ¡ä»¶ã¨ã•ã‚Œã¦ã„ã¾ã™ã€‚ã“ã®é …ç›®è¡¨ç¤ºã¨åŸè‘—ãã®ã‚‚ã®ã®æ¨©åˆ©çŠ¶æ…‹ã¯åŒºåˆ¥ã—ã¦è¨˜éŒ²ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚";
-
-const digiHubCcByNcSaRights =
-  "UniversitÃ¤tsbibliothek / Humboldt-UniversitÃ¤t zu BerlinãŒdigi-hub / EVIFA Digitalã§å…¬é–‹ã™ã‚‹åŸè¼‰èªŒã‚¹ã‚­ãƒ£ãƒ³ã®é …ç›®ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã¯CC BY-NC-SA 4.0ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚åŸè¼‰èªŒç”»åƒã‹ã‚‰ã®åˆ‡ã‚Šå‡ºã—ãƒ»èª¿æ•´ã€æ—¥æœ¬èªè¨³ã€ç·¨é›†ã€çµ„ç‰ˆã‚’å«ã‚€æœ¬ç‰ˆå…¨ä½“ã‚‚CC BY-NC-SA 4.0ã§å…¬é–‹ã—ã¾ã™ã€‚ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆè¡¨ç¤ºã€éå•†ç”¨ã€åŒä¸€æ¡ä»¶ã§ã®ç¶™æ‰¿ãŒå¿…è¦ã§ã™ã€‚åŸè‘—ãƒ»å›³åƒã«åˆ¥ã®æ¨©åˆ©ãŒæ®‹ã‚‹æ³•åŸŸã§ã¯ã€ãã®æ¨©åˆ©ã‚‚å°Šé‡ã—ã¦ãã ã•ã„ã€‚";
-const JapaneseEditionNoReuseRights =
-  "æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚å…¬é–‹ãƒšãƒ¼ã‚¸ã‹ã‚‰ã®é–²è¦§ãƒ»ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã¯å¯èƒ½ã§ã™ãŒã€æ³•ä»¤ä¸Šèªã‚ã‚‰ã‚Œã‚‹å¼•ç”¨ãã®ä»–ã®åˆ©ç”¨ã‚’é™¤ãã€æ—¥æœ¬èªè¨³ã€è¨³æ³¨ã€ç·¨é›†ãƒ»çµ„ç‰ˆã®è»¢è¼‰ã€å†é…å¸ƒã€æ”¹å¤‰ç‰ˆã®å…¬é–‹ã‚’è¨±è«¾ã™ã‚‹ã‚‚ã®ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚";
-
-const ixtlilxochitlRights =
-  "ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ‡ãƒ»ã‚¢ãƒ«ãƒãƒ»ã‚¤ã‚·ãƒ¥ãƒˆãƒªãƒ«ã‚·ãƒ§ãƒãƒˆãƒ«ã®åŸè‘—æœ¬æ–‡ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ãŸãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã§ã™ã€‚æ—¥æœ¬èªè¨³ãƒ»æ ¡è¨‚ãƒ»çµ„ç‰ˆã¯åŸè‘—æœ¬æ–‡ã®ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³çŠ¶æ…‹ã¨ã¯åˆ¥ã§ã‚ã‚Šã€å†åˆ©ç”¨è¨±è«¾ã‚’ä»˜ä¸ã—ã¦ã„ã¾ã›ã‚“ã€‚æœ¬æ–‡ã®è»¢è¨˜ãƒ»æ ¡åˆã«ç”¨ã„ãŸINAHå…¬é–‹ã®CÃ³dice Chimalpahinè‡ªç­†ç¨¿ç”»åƒã¯CC BY-NC-ND 4.0ã§æä¾›ã•ã‚Œã¦ã„ã¾ã™ãŒã€æœ¬ç‰ˆã«ã¯å½“è©²è‡ªç­†ç¨¿ç”»åƒã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚å„å†Šã«åéŒ²ã—ãŸåˆ¥ç³»çµ±ã®çµµæ–‡æ›¸ãƒ»åˆæœŸåˆŠæœ¬å›³ç‰ˆã«ã¤ã„ã¦ã¯ã€åŸæ‰€è”µæ©Ÿé–¢ã€ãƒ‡ã‚¸ã‚¿ãƒ«æä¾›å…ƒã€å€‹åˆ¥ã®æ¨©åˆ©è¡¨ç¤ºãƒ»åˆ©ç”¨æ¡ä»¶ã‚’å†Šå†…ã«æ˜è¨˜ã—ã¦ã„ã¾ã™ã€‚";
-
-const perseePublicDomainRights =
-  "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼ã®åŸåˆŠæœ¬æ–‡ãŠã‚ˆã³è‘—è€…ä½œæˆã®å›³ãƒ»å†™çœŸã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ç¬¬ä¸‰è€…åç¾©ã®å›³ç‰ˆã¯å€‹åˆ¥ã®æ¨©åˆ©è¡¨ç¤ºãŒå„ªå…ˆã—ã¾ã™ã€‚PersÃ©eç”±æ¥ã®ç”»åƒãƒ»ãƒ‡ãƒ¼ã‚¿ã¯ã€ç¾è¡ŒCGUã«ã‚ˆã‚Šã€ç§çš„ãƒ»ç§‘å­¦ãƒ»æ•™è‚²ç›®çš„ç­‰ã®éå–¶åˆ©ç”¨é€”ã«é™ã‚Šã€PersÃ©eåã€å‡ºå…¸ãŠã‚ˆã³åŸãƒšãƒ¼ã‚¸ã¸ã®ãƒªãƒ³ã‚¯ã‚’è¡¨ç¤ºã—ã¦åˆ©ç”¨ã§ãã¾ã™ã€‚å•†ç”¨åˆ©ç”¨ã«ã¯PersÃ©eã®æ˜ç¤ºçš„è¨±è«¾ãŒå¿…è¦ã§ã™ã€‚" +
-  JapaneseEditionNoReuseRights;
-
-const gallicaPublicDomainRights =
-  "ãƒ¢ãƒ¼ãƒªã‚¹ãƒ»ãƒ‰ãƒ»ãƒšãƒªãƒ‹ãƒ¼ã®åŸåˆŠæœ¬æ–‡ãŠã‚ˆã³è‘—è€…ä½œæˆã®å›³ãƒ»å†™çœŸã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ç¬¬ä¸‰è€…åç¾©ã®å›³ç‰ˆã¯å€‹åˆ¥ã®æ¨©åˆ©è¡¨ç¤ºãŒå„ªå…ˆã—ã¾ã™ã€‚Gallica/BnFç”±æ¥ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã¯ã€éå•†ç”¨åˆ©ç”¨ã¾ãŸã¯å­¦è¡“ãƒ»ç§‘å­¦å‡ºç‰ˆã§ã¯ã€ŒSource gallica.bnf.fr / BibliothÃ¨que nationale de Franceã€ã®è¡¨ç¤ºã‚’æ¡ä»¶ã«ç„¡å„Ÿã§å†åˆ©ç”¨ã§ãã€å•†ç”¨åˆ©ç”¨ã¯BnFã®è¨±è«¾ãŠã‚ˆã³åˆ©ç”¨æ–™ã®å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚" +
-  JapaneseEditionNoReuseRights;
-
-const publicationMetadata = {
-  "bury-bishop-amongst-bananas-1911": {
-    "sourceEdition": "Herbert Bury, A Bishop amongst Bananas, London: Wells Gardner, Darton & Co., Ltd., [1911].",
-    "sourceProvider": "University of California Librariesæ‰€è”µæœ¬ã‚’Internet ArchiveãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ãŸè³‡æ–™ï¼ˆè­˜åˆ¥å­ bishopamongstban00buryrichï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚Wikimedia CommonsãŒåŒæœ¬ã‚’298é ã®PDFã¨ã—ã¦å…¬é–‹ã—ã¦ã„ã¾ã™ã€‚",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_bishop_amongst_bananas_(IA_bishopamongstban00buryrich).pdf",
-    "rights": "åŸè‘—ãŠã‚ˆã³åŸåˆŠå›³ç‰ˆã¯Public Domainï¼ˆPD-US-expiredï¼‰ã§ã™ã€‚University of California Librariesæ‰€è”µæœ¬ã‚’Internet ArchiveãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Wikimedia Commonsã¯å½“è©²298é PDFã‚’Public Domainã¨ã—ã¦å…¬é–‹ã—ã¦ã„ã¾ã™ã€‚",
-    "publishedDate": "2026-08-27",
-    "updatedDate": "2026-08-27"
-  },
-  "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880": {
-    "sourceEdition": "Alejandro Prieto and R. Piatkowski, Ideas generales sobre el Ferrocarril InteroceÃ¡nico de Guatemala, Guatemala: Imprenta de Taracena Ã© Hijos, 1880.",
-    "sourceProvider": "Universidad Francisco MarroquÃ­nã®Biblioteca Ludwig von Misesæ‰€è”µColecciÃ³n Luis LujÃ¡n MuÃ±ozæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹ã‚¹ã‚­ãƒ£ãƒ³ï¼ˆè­˜åˆ¥å­ ideasgeneralesso00alejguatï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/ideasgeneralesso00alejguat",
-    "rights": "åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã«å±ã—ã¾ã™ã€‚Internet Archiveã®å…¬é–‹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã¯Possible copyright statusã‚’ã€ŒNOT IN COPYRIGHTã€ã¨ã—ã¦ã„ã¾ã™ã€‚æ¨™é¡Œç´™ãŠã‚ˆã³è£è¡¨ç´™ç”»åƒã¯åŒå…¬é–‹ã‚¹ã‚­ãƒ£ãƒ³ã‹ã‚‰æ¡éŒ²ã—ã¾ã—ãŸã€‚",
-    "publishedDate": "2026-08-26",
-    "updatedDate": "2026-08-26"
-  },
-  "baz-gallo-historia-ferrocarril-mexicano-1874": {
-    "sourceEdition": "Gustavo Baz and Eduardo L. Gallo, Historia del Ferrocarril Mexicano: riqueza de MÃ©xico en la zona del Golfo Ã¡ la Mesa Central, bajo su aspecto geolÃ³gico, agrÃ­cola, manufacturero y comercial, MÃ©xico: Gallo y CompaÃ±Ã­a, 1874.",
-    "sourceProvider": "University of Michigan Libraryæ‰€è”µæœ¬ã‚’Google Booksã¨HathiTrustãŒå…¬é–‹ã™ã‚‹1874å¹´åˆç‰ˆï¼ˆGoogle Books 2lYzAQAAMAAJï¼HathiTrust mdp.39015046460427ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚åˆ¤èª­å›°é›£ãªä¸€éƒ¨å›³ç‰ˆã¯ã€Google Booksã§å…¬é–‹ã•ã‚Œã‚‹1875å¹´ç‰ˆï¼ˆx6CEcgMw1IACï¼‰ã®åŒä¸€å›³ç‰ˆã§è£œã„ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://books.google.com/books?id=2lYzAQAAMAAJ",
-    "rights": "1874å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãƒ»å›³ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ä¸»åº•æœ¬ã¯HathiTrustã§Public Domainã€”pdã€•ï¼Full viewã€è£œåŠ©ç‰ˆã¯Google Booksã§Public domainï¼Full viewã¨è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã™ã€‚å…¬é–‹æ©Ÿé–¢ã«ã‚ˆã‚‹åˆ¥å€‹ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ä»˜ä¸ã¯ç¢ºèªã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-26",
-    "updatedDate": "2026-08-26"
-  },
-  "squier-davis-ancient-monuments-mississippi-valley-1848": {
-    "sourceEdition": "Ephraim George Squier and Edwin Hamilton Davis, Ancient Monuments of the Mississippi Valley: Comprising the Results of Extensive Original Surveys and Explorations, Smithsonian Contributions to Knowledge, Vol. I, Washington: Smithsonian Institution, 1848.",
-    "sourceProvider": "ç±³å›½è­°ä¼šå›³æ›¸é¤¨æ‰€è”µã®1848å¹´åˆç‰ˆãƒ‡ã‚¸ã‚¿ãƒ«å€‹ä½“ï¼ˆitem 16012309ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚ã‚¹ãƒŸã‚½ãƒ‹ã‚¢ãƒ³å›³æ›¸é¤¨ãƒ»ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–æ‰€è”µåŒå¹´ç‰ˆã‚’æ ¡åˆã«ã€Project Gutenberg ebook 49668ã®æ ¡æ­£æ¸ˆã¿è»¢å†™ã¨å›³ç‰ˆã‚’åˆ¤èª­ãƒ»ç…§åˆè£œåŠ©ã«ç”¨ã„ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://www.loc.gov/item/16012309/",
-    "rights": "1848å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãƒ»å›³ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ç±³å›½è­°ä¼šå›³æ›¸é¤¨ã¯å½“è©²ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã®æ›¸ç±ã‚’è‡ªç”±ã«åˆ©ç”¨ãƒ»å†åˆ©ç”¨ã§ãã‚‹ã‚‚ã®ã¨ã—ã¦æ¡ˆå†…ã—ã¦ã„ã¾ã™ã€‚Project Gutenbergè»¢å†™ã¯åˆ¤èª­ãƒ»ç…§åˆè£œåŠ©ã«é™ã£ã¦ä½¿ç”¨ã—ã¾ã—ãŸã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-26",
-    "updatedDate": "2026-08-26"
-  },
-  "squier-nicaragua-1852": {
-    "sourceEdition": "E. G. Squier, Nicaragua: Its People, Scenery, Monuments, and the Proposed Interoceanic Canal. With Numerous Original Maps and Illustrations, 2 vols., London: Longman, Brown, Green, and Longmans, 1852.",
-    "sourceProvider": "Getty Research Instituteæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹å…¨é ç”»åƒï¼ˆidentifiers: gri_nicaraguaits01squi, gri_nicaraguaits02squiï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚æ¬ è½ã™ã‚‹ç¬¬1å·»321é ã¨å¯¾å‘å½©è‰²å›³ã€ç¬¬2å·»93é ãƒ»450â€“451é ã¯ã€Government of Maharashtra / Public Library of Indiaå…¬é–‹æœ¬ï¼ˆindia.history.resource.52994, 52995ï¼‰ãŠã‚ˆã³University of Torontoå…¬é–‹æœ¬ï¼ˆnicaraguaitspeop02squiï¼‰ã§è£œå®Œã—ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/gri_nicaraguaits01squi",
-    "rights": "1852å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãƒ»å›³ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Gettyæœ¬ã®Internet Archiveé …ç›®ã¯ã€ŒPossible copyright status: NOT_IN_COPYRIGHTã€ã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚è£œå®Œå›³ç‰ˆã‚’å«ã‚€Public Library of Indiaæœ¬ãŠã‚ˆã³Torontoæœ¬ã®å½“è©²é …ç›®ã«ã¯ã€é …ç›®å›ºæœ‰ã®rightsã€licenseurlã€usageç­‰ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹è¡¨ç¤ºãŒã‚ã‚Šã¾ã›ã‚“ã€‚ã“ã®é …ç›®è¡¨ç¤ºã¨åŸè‘—ã®ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³æ€§ã¯åŒºåˆ¥ã—ã¦è¨˜éŒ²ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-26",
-    "updatedDate": "2026-08-26"
-  },
-  "otis-isthmus-panama-railroad-1867": {
-    "sourceEdition": "F. N. Otis, Isthmus of Panama: History of the Panama Railroad; and of the Pacific Mail Steamship Company, New York: Harper & Brothers, 1867.",
-    "sourceProvider": "University of California Librariesæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹å…¨é ç”»åƒï¼ˆidentifier: isthmusofpanamah00otisrichï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚HathiTrust Record 001353545ã§ã‚‚åŒç‰ˆã‚’Full Viewã§ç¢ºèªã§ãã¾ã™ã€‚",
-    "sourceUrl": "https://archive.org/details/isthmusofpanamah00otisrich",
-    "rights": "1867å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãƒ»å›³ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²é …ç›®ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã¯ã€ŒPossible copyright status: NOT_IN_COPYRIGHTã€ã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-25",
-    "updatedDate": "2026-08-25"
-  },
-  "siguenza-parayso-occidental-1684": {
-    "sourceEdition": "Carlos de SigÃ¼enza y GÃ³ngora, Parayso occidental, plantado, y cultivado por la liberal benefica mano de los muy catholicos, y poderosos Reyes de EspaÃ±a Nuestros SeÃ±ores en su magnifico Real Convento de Jesus Maria de Mexico, MÃ©xico: Juan de Ribera, 1684.",
-    "sourceProvider": "ãƒã‚¤ã‚¨ãƒ«ãƒ³å·ç«‹å›³æ›¸é¤¨æ‰€è”µæœ¬ã‚’Google BooksãŒå…¬é–‹ã™ã‚‹1684å¹´ãƒ¡ã‚­ã‚·ã‚³åˆŠæœ¬ï¼ˆvolume ID: m0s_AAAAcAAJï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€Biblioteca Virtual Miguel de Cervanteså…¬é–‹ã®åŒç‰ˆåˆ¥æœ¬ã‚’æ–‡å­—æ ¡åˆã«ç”¨ã„ã¾ã—ãŸã€‚åŸåˆŠæ¨™é¡Œç´™ã¯ä¸»åº•æœ¬ç”»åƒã‹ã‚‰åéŒ²ã—ã¦ã„ã¾ã™ã€‚",
-    "sourceUrl": "https://books.google.com/books?id=m0s_AAAAcAAJ",
-    "rights": "1684å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¨æ¨™é¡Œç´™ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Google Booksã®æä¾›ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯åŒã‚µãƒ¼ãƒ“ã‚¹ã®ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã«é–¢ã™ã‚‹åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã€æœ¬ç‰ˆã§ã¯Google Booksã¨ãƒã‚¤ã‚¨ãƒ«ãƒ³å·ç«‹å›³æ›¸é¤¨ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚Biblioteca Virtual Miguel de Cervantesã®ç”»åƒã¯è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-25",
-    "updatedDate": "2026-08-25"
-  },
-  "gonzalez-compendio-geografia-centro-america-1881": {
-    "sourceEdition": "DarÃ­o GonzÃ¡lez, Compendio de geografÃ­a de Centro-AmÃ©rica, segunda ediciÃ³n, corregida y aumentada, Guatemala: LibrerÃ­a y PapelerÃ­a de Emilio Goubaud, 1881.",
-    "sourceProvider": "ãƒ†ã‚­ã‚µã‚¹å¤§å­¦ã‚ªãƒ¼ã‚¹ãƒ†ã‚£ãƒ³æ ¡æ‰€è”µæœ¬ã‚’Google BooksãŒ2008å¹´7æœˆ22æ—¥ã«ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ãŸå…¨é ç”»åƒï¼ˆGoogle Books ID: zGVqAAAAMAAJã€HathiTrust Record: 101131937ï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://books.google.com/books?id=zGVqAAAAMAAJ",
-    "rights": "1881å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãŠã‚ˆã³å›³ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Google Booksã®ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯åŒã‚µãƒ¼ãƒ“ã‚¹ã®åˆ©ç”¨æŒ‡é‡ãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚æœ¬ç‰ˆã¯Google Booksã‚’ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ãƒ»å…¬é–‹å…ƒã¨ã—ã¦æ˜è¨˜ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-25",
-    "updatedDate": "2026-08-25"
-  },
-  "leonard-don-carlos-de-siguenza-y-gongora-1929": {
-    "sourceEdition": "Irving A. Leonard, Don Carlos de SigÃ¼enza y GÃ³ngora: A Mexican Savant of the Seventeenth Century, University of California Publications in History, Volume XVIII, Berkeley: University of California Press, issued September 1929.",
-    "sourceProvider": "University of Florida, George A. Smathers Librariesæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹1929å¹´åˆç‰ˆã‚¹ã‚­ãƒ£ãƒ³ï¼ˆidentifier: doncarlosdesigen18berkï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚åŸåˆŠé ç”»åƒã¨OCRã‚’ç…§åˆã—ã€åŸåˆŠ84é ç›´å¾Œã®ã‚·ã‚°ã‚¨ãƒ³ã‚µä½œãƒ¡ã‚­ã‚·ã‚³ç›†åœ°å›³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚ç„¡å†…å®¹ã®ç™½ç´™è‘‰ã¯åéŒ²ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "sourceUrl": "https://archive.org/details/doncarlosdesigen18berk",
-    "rights": "ç±³å›½ã§1929å¹´ã«åˆå‡ºã—ãŸåŸè‘—ã¯2025å¹´1æœˆ1æ—¥ã‹ã‚‰ç±³å›½ã®ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã«å±ã—ã¾ã™ã€‚æ—¥æœ¬ã§ã¯çŸ­æœŸä¿è­·ã®ç›¸äº’ä¸»ç¾©ãŠã‚ˆã³æˆ¦å‰ã®æ—¥ç±³é–“ã§ç¿»è¨³ãŒç›¸äº’ã«è‡ªç”±ã¨ã•ã‚ŒãŸå–æ‰±ã„ã«åŸºã¥ãç¿»è¨³å…¬é–‹ã—ã¾ã™ã€‚ã‚·ã‚°ã‚¨ãƒ³ã‚µä½œãƒ¡ã‚­ã‚·ã‚³ç›†åœ°å›³ã®åŸå›³ãŠã‚ˆã³1929å¹´æ²è¼‰ç‰ˆã‚‚ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚å…¬é–‹ãƒšãƒ¼ã‚¸ã‹ã‚‰ã®é–²è¦§ãƒ»ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã¯å¯èƒ½ã§ã™ãŒã€æ³•ä»¤ä¸Šèªã‚ã‚‰ã‚Œã‚‹å¼•ç”¨ãã®ä»–ã®åˆ©ç”¨ã‚’é™¤ãã€æ—¥æœ¬èªè¨³ã€è¨³æ³¨ã€ç·¨é›†ãƒ»çµ„ç‰ˆã®è»¢è¼‰ã€å†é…å¸ƒã€æ”¹å¤‰ç‰ˆã®å…¬é–‹ã‚’è¨±è«¾ã™ã‚‹ã‚‚ã®ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-25",
-    "updatedDate": "2026-08-25"
-  },
-  "gonzalez-ruinas-tehuacan-1892": {
-    "sourceEdition": "DarÃ­o GonzÃ¡lez, â€œRuinas de TehuacÃ¡n. Objetos precolombinos,â€ La Universidad: Ã³rgano del Instituto Nacional del mismo nombre, serie III, nÃºm. 6, San Salvador, junio de 1892, pp. 203â€“206.",
-    "sourceProvider": "ãƒ“ãƒ–ãƒªã‚ªãƒ†ã‚«ãƒ»ãƒ«ãƒ¼ãƒˆãƒ´ã‚£ãƒ’ãƒ»ãƒ•ã‚©ãƒ³ãƒ»ãƒŸãƒ¼ã‚¼ã‚¹ï¼ˆãƒ•ãƒ©ãƒ³ã‚·ã‚¹ã‚³ãƒ»ãƒãƒ­ã‚­ãƒ³å¤§å­¦ï¼‰æ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹åŸåˆŠã‚¹ã‚­ãƒ£ãƒ³ï¼ˆidentifier: launi36guatï¼‰ã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚åŸåˆŠ203â€“206é ã®æœ¬æ–‡ã¨åŸæ³¨ã‚’èªŒé¢ç”»åƒãŠã‚ˆã³OCRã§ç…§åˆã—ã€åº•æœ¬ç”»åƒãã®ã‚‚ã®ã¯è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "sourceUrl": "https://archive.org/details/launi36guat",
-    "rights": "1892å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚è‘—è€…ãƒ€ãƒªã‚ªãƒ»ã‚´ãƒ³ã‚µãƒ¬ã‚¹ã¯1911å¹´ã«æ²¡ã—ã¦ã„ã¾ã™ã€‚Internet Archiveã®å½“è©²é …ç›®ã«ã¯å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¯è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚æœ¬ç‰ˆã¯åº•æœ¬ç”»åƒã‚’é–²è¦§ãƒ»æ ¡åˆã«ã®ã¿ç”¨ã„ã€ç”»åƒãã®ã‚‚ã®ã¯è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚å…¬é–‹ãƒšãƒ¼ã‚¸ã‹ã‚‰ã®é–²è¦§ãƒ»ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰ã¯å¯èƒ½ã§ã™ãŒã€æ³•ä»¤ä¸Šèªã‚ã‚‰ã‚Œã‚‹å¼•ç”¨ãã®ä»–ã®åˆ©ç”¨ã‚’é™¤ãã€æ—¥æœ¬èªè¨³ã€è¨³æ³¨ã€ç·¨é›†ãƒ»çµ„ç‰ˆã®è»¢è¼‰ã€å†é…å¸ƒã€æ”¹å¤‰ç‰ˆã®å…¬é–‹ã‚’è¨±è«¾ã™ã‚‹ã‚‚ã®ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-25",
-    "updatedDate": "2026-08-25"
-  },
-  "barberena-fonseca-monografias-departamentales-1909-1914": {
-    "sourceEdition": "Santiago I. Barberena and Pedro S. Fonseca, MonografÃ­as departamentales, vols. II, IV, V, VI, VIII, X and XI, San Salvador: Imprenta Nacional, 1909â€“1914. Vols. VI and XI are taken from the reprint in Anales del Museo Nacional â€œDavid J. GuzmÃ¡nâ€, tomo VI, nos. 23â€“24, 1955.",
-    "sourceProvider": "ç¬¬2ãƒ»4ãƒ»5ãƒ»8ãƒ»10å†Šã¯ã‚¹ãƒšã‚¤ãƒ³å›½ç«‹ç ”ç©¶è©•è­°ä¼šï¼ˆCSICï¼‰ã‚·ãƒ ãƒ«ã‚°ã§å…¬é–‹ã•ã‚Œã‚‹ã‚»ãƒ“ãƒªã‚¢ãƒ»ã‚¢ãƒ¡ãƒªã‚«ãƒ‹ã‚¹ãƒˆå›³æ›¸é¤¨æ‰€è”µåŸåˆŠç”»åƒï¼ˆè¦ªãƒ¬ã‚³ãƒ¼ãƒ‰990002354020204201ï¼‰ã€‚ç¬¬6ãƒ»11å†Šã¯ã‚¤ãƒ™ãƒ­ã‚¢ãƒ¡ãƒªã‚«éºç”£ãƒ‡ã‚¸ã‚¿ãƒ«å›³æ›¸é¤¨ï¼ˆBDPIï¼‰ï¼ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«ç§‘å­¦æ–‡åŒ–ãƒªãƒã‚¸ãƒˆãƒªï¼ˆREDICCESï¼‰ã§å…¬é–‹ã•ã‚Œã‚‹ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å›½ç«‹å›³æ›¸é¤¨æ‰€è”µã€å›½ç«‹åšç‰©é¤¨å¹´å ±ã€Œãƒ€ãƒ“ãƒ‰ãƒ»Jãƒ»ã‚°ã‚¹ãƒãƒ³ã€ã€ç¬¬6å·»ç¬¬23â€“24å·ï¼ˆ1955å¹´ï¼‰å†éŒ²ï¼ˆhttp://hdl.handle.net/10972/2951ï¼‰ã‚’ç”¨ã„ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://simurg.csic.es/view/990002354020204201_V2/",
-    "rights": "ç¬¬2ãƒ»4ãƒ»5ãƒ»8ãƒ»10å†Šã®åº•æœ¬ç”»åƒã¯CSICã‚·ãƒ ãƒ«ã‚°ã®è¡¨ç¤ºâ€”éå–¶åˆ©â€”ç¶™æ‰¿4.0å›½éš›ï¼ˆCC BY-NC-SA 4.0ï¼‰è¡¨ç¤ºã«å¾“ã„ã¾ã™ã€‚ç¬¬6ãƒ»11å†Šã®1955å¹´å†éŒ²ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ»ãƒ‰ãƒ¡ã‚¤ãƒ³ãƒ»ãƒãƒ¼ã‚¯1.0ã§å…¬é–‹ã•ã‚Œã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªè¨³ãƒ»ç·¨æ³¨ã¯CC BY-NC-SA 4.0ã§æä¾›ã—ã¾ã™ã€‚",
-    "publishedDate": "2026-08-24",
-    "updatedDate": "2026-08-24"
-  },
-  "siguenza-infortunios-alonso-ramirez-1690": {
-    "sourceEdition": "Carlos de SigÃ¼enza y GÃ³ngora, Infortunios de Alonso RamÃ­rez, in ColecciÃ³n de libros raros o curiosos que tratan de AmÃ©rica, tomo XX, ed. Pedro Vindel, Madrid: Imprenta de la viuda de Gabriel Pedraza, 1902, pp. 17â€“132.",
-    "sourceProvider": "University of Torontoã€Robarts Libraryæ‰€è”µæœ¬ã‚’Internet ArchiveãŒè­˜åˆ¥å­ infortuniosdealo00siguoft ã§å…¬é–‹ã™ã‚‹1902å¹´å¾©åˆ»ç‰ˆç”»åƒã‚’åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚åŒç‰ˆã¯1690å¹´åˆç‰ˆæ¨™é¡Œç´™ã®è¤‡è£½ã‚’ä¼´ã„ã¾ã™ã€‚",
-    "sourceUrl": "https://archive.org/details/infortuniosdealo00siguoft",
-    "rights": "1690å¹´åŸè‘—ãŠã‚ˆã³1902å¹´å¾©åˆ»ç‰ˆã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å…¬é–‹è¨˜éŒ²ã¯å½“è©²è³‡æ–™ã‚’NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æœ¬æ—¥æœ¬èªè¨³ã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-24",
-    "updatedDate": "2026-08-24"
-  },
-  "torquemada-monarquia-indiana-1615": {
-    "sourceEdition": "Juan de Torquemada, Los veinte y un libros rituales y MonarquÃ­a indiana, 3 vols., Sevilla: MatÃ­as Clavijo, 1615. John Carter Brown Library, call number 1-SIZE B615 .T687v.",
-    "sourceProvider": "John Carter Brown Libraryæ‰€è”µã®1615å¹´åˆç‰ˆä¸‰å·»æœ¬ã‚’ã€åŒé¤¨è³‡æ–™ã®Internet Archiveå…¬é–‹ç‰ˆï¼ˆç¬¬1å·» iaiiiapartedelos01torqã€ç¬¬2å·» iaiiiapartedelos02torqã€ç¬¬3å·» iaiiiapartedelos03torqï¼‰ã‹ã‚‰ç”»åƒåº•æœ¬ãŠã‚ˆã³OCRå–å¾—å…ƒã¨ã—ã¦ç”¨ã„ã¾ã—ãŸã€‚Internet Archiveã¯é–²è¦§ãƒ»é…å¸ƒãƒ—ãƒ©ãƒƒãƒˆãƒ•ã‚©ãƒ¼ãƒ ã§ã‚ã‚Šã€æ‰€è”µãƒ»ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒæä¾›æ©Ÿé–¢ã¯John Carter Brown Libraryã§ã™ã€‚Wikimedia Commonsã¯åº•æœ¬ã«ç”¨ã„ã¦ã„ã¾ã›ã‚“ã€‚",
-    "sourceUrl": "https://archive.org/details/iaiiiapartedelos01torq",
-    "rights": "1615å¹´åŸåˆŠã®å†…å®¹ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚John Carter Brown Libraryã¯ã€Internet Archiveã‚’å«ã‚€åŒé¤¨ãƒ‡ã‚¸ã‚¿ãƒ«ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã‚’Creative Commons Attribution 4.0 Internationalï¼ˆCC BY 4.0ï¼‰ã§æä¾›ã—ã€ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆè¡¨è¨˜ã¨ã—ã¦ã€ŒCourtesy of the John Carter Brown Libraryã€ã‚’æ±‚ã‚ã¦ã„ã¾ã™ã€‚æœ¬ç‰ˆã¯åŒé¤¨æ‰€è”µæœ¬ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒãŠã‚ˆã³OCRã‚’åŸæ–‡ç¢ºèªã«ç”¨ã„ã€åº•æœ¬ç”»åƒãã®ã‚‚ã®ã¯è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æœ¬æ—¥æœ¬èªè¨³ã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-24",
-    "updatedDate": "2026-08-24"
-  },
-  "guzman-apuntamientos-topografia-salvador-1883": {
-    "sourceEdition": "David JoaquÃ­n GuzmÃ¡n, Apuntamientos sobre la topografÃ­a fÃ­sica de la RepÃºblica del Salvador, comprendiendo su historia natural, sus producciones, industria, comercio e inmigraciÃ³n, climas, estadÃ­stica, etc., San Salvador: TipografÃ­a de Â«El CometaÂ», 1883, 525 pp.",
-    "sourceProvider": "Google BooksãŒå…¨é å…¬é–‹ã™ã‚‹1883å¹´åˆç‰ˆç”»åƒï¼ˆGoogle Books ID: yZzaN6j2O_gCã€å…¨550ç”»åƒã€åŸåˆŠæœ¬æ–‡525é ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚Google Booksã®æ›¸èªŒã¯è‘—è€…ã€åˆŠè¡Œæ‰€ã€åˆŠå¹´ãŠã‚ˆã³525é ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚",
-    "sourceUrl": "https://books.google.com/books?id=yZzaN6j2O_gC",
-    "rights": "1883å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Google Booksã®åº•æœ¬è¡¨ç¤ºã‚‚å½“è©²è³‡æ–™ã‚’ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã¨ã—ã¦ãŠã‚Šã€ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã«ã¯åŒã‚µãƒ¼ãƒ“ã‚¹ãŒè¡¨ç¤ºã™ã‚‹éå•†æ¥­åˆ©ç”¨ã€å¸°å±è¡¨ç¤ºã®ä¿æŒç­‰ã®æ¡ä»¶ãŒã‚ã‚Šã¾ã™ã€‚æœ¬ç‰ˆã¯Google Booksã‚’ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ãƒ»å…¬é–‹å…ƒã¨ã—ã¦æ˜è¨˜ã—ã€åº•æœ¬ç”»åƒã¾ãŸã¯åŒã‚µãƒ¼ãƒ“ã‚¹å›ºæœ‰ã®çµ„ç‰ˆã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æœ¬æ—¥æœ¬èªè¨³ã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-24",
-    "updatedDate": "2026-08-24"
-  },
-  "fernandez-historia-costa-rica-1889": {
-    "sourceEdition": "LeÃ³n FernÃ¡ndez, Historia de Costa Rica durante la dominaciÃ³n espaÃ±ola, 1502â€“1821, publicado por Ricardo FernÃ¡ndez Guardia, Madrid: TipografÃ­a de Manuel GinÃ©s HernÃ¡ndez, 1889ã€‚",
-    "sourceProvider": "ãƒãƒ¼ãƒãƒ¼ãƒ‰å¤§å­¦æ‰€è”µæœ¬ã‚’GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Internet ArchiveãŒå…¬é–‹ã™ã‚‹1889å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆç”»åƒï¼ˆInternet Archive identifier: historiadecosta00ferngoogï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã¾ã—ãŸã€‚åŒå…¬é–‹è¨˜éŒ²ã¯NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚åˆ¤èª­ã®æ ¡åˆã«ã¯ãƒ‹ãƒ¥ãƒ¼ãƒ¨ãƒ¼ã‚¯å…¬å…±å›³æ›¸é¤¨æ‰€è”µã®åŒç‰ˆç”»åƒãŠã‚ˆã³ã‚³ã‚¹ã‚¿ãƒªã‚«å›½ç«‹å›³æ›¸é¤¨ã‚’å«ã‚€SINABIå…¬é–‹ç”»åƒã‚’å‚ç…§ã—ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/historiadecosta00ferngoog",
-    "rights": "åŸè‘—è€…ãƒ¬ã‚ªãƒ³ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ï¼ˆ1840â€“1887ï¼‰ãŠã‚ˆã³å…¬åˆŠè€…ãƒªã‚«ãƒ«ãƒ‰ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‡ã‚¹ãƒ»ã‚°ã‚¢ãƒ«ãƒ‡ã‚£ã‚¢ï¼ˆ1867â€“1950ï¼‰ã®è‘—ä½œæ¨©ä¿è­·æœŸé–“ã¯æº€äº†ã—ã¦ãŠã‚Šã€åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®ä¸»åº•æœ¬å…¬é–‹è¨˜éŒ²ã¯NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-24",
-    "updatedDate": "2026-08-24"
-  },
-  "strangeways-mosquito-shore-1822": {
-    "sourceEdition": "Thomas Strangeways, Sketch of the Mosquito Shore, Including the Territory of Poyais: Descriptive of the Country; with Some Information as to Its Productions, the Best Mode of Culture, &c. Chiefly Intended for the Use of Settlers, Edinburgh: William Blackwood; London: T. Caddell, 1822, viii + 355 pp.",
-    "sourceProvider": "Library of Congressæ‰€è”µæœ¬ï¼ˆLCCN 05009918ï¼‰ã®å…¨å·»ç”»åƒã‚’Internet Archiveè­˜åˆ¥å­ sketchofmosquito00stra ã‹ã‚‰å‚ç…§ã€‚å£çµµã¨æŠ˜è¾¼åœ°å›³ã¯åŒé¤¨å…¬é–‹ç”»åƒã€ãƒ–ãƒ©ãƒƒã‚¯ãƒ»ãƒªãƒ´ã‚¡ãƒ¼æ¸¯æ™¯ã¯åŒé¤¨ãƒªã‚½ãƒ¼ã‚¹20é ã‹ã‚‰Wikimedia Commonsã¸åˆ‡ã‚Šå‡ºã•ã‚ŒãŸãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ç”»åƒã‚’ä½¿ç”¨ã€‚",
-    "sourceUrl": "https://archive.org/details/sketchofmosquito00stra",
-    "rights": "1822å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã‚ã‚‹ã€‚Library of Congressæ‰€è”µæœ¬ã®å…¬é–‹ç”»åƒãŠã‚ˆã³Wikimedia Commonsä¸Šã®åŒæ›¸ãƒ–ãƒ©ãƒƒã‚¯ãƒ»ãƒªãƒ´ã‚¡ãƒ¼æ¸¯æ™¯ã¯ã„ãšã‚Œã‚‚å…¬é–‹ãƒšãƒ¼ã‚¸ä¸Šã§ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã¨è¡¨ç¤ºã•ã‚Œã¦ã„ã‚‹ã€‚æœ¬æ—¥æœ¬èªè¨³ã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ãªã„ã€‚",
-    "publishedDate": "2026-08-23",
-    "updatedDate": "2026-08-23"
-  },
-  "barraza-anastasio-aquino-2001": {
-    "sourceEdition": "Jorge Barraza Ibarra, La gesta de Anastasio Aquino: una aproximaciÃ³n histÃ³rica, San Salvador: Universidad TecnolÃ³gica de El Salvador, junio de 2001ã€‚ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å·¥ç§‘å¤§å­¦æ©Ÿé–¢ãƒªãƒã‚¸ãƒˆãƒªåéŒ²ç‰ˆã€‚",
-    "sourceProvider": "Universidad TecnolÃ³gica de El Salvadorï¼ˆUTECï¼‰æ©Ÿé–¢ãƒªãƒã‚¸ãƒˆãƒªã®2001å¹´ç‰ˆPDFã€‚ãƒªãƒã‚¸ãƒˆãƒªé …ç›®ID 16710037-9250-4d19-84aa-c9f319a7546aã€ãƒãƒ³ãƒ‰ãƒ« http://hdl.handle.net/11298/1290ã€PDF 149é ã€åº•æœ¬PDF SHA-256 fce6be683a623d4985c2fef02164d07069e62ef8daca9c71136ce83a3f83a3cfã€‚",
-    "sourceUrl": "https://repositorio.utec.edu.sv/items/16710037-9250-4d19-84aa-c9f319a7546a",
-    "rights": "UTECæ©Ÿé–¢ãƒªãƒã‚¸ãƒˆãƒªã®æ›¸èªŒãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã¯æœ¬æ›¸ã‚’Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Internationalï¼ˆCC BY-NC-SA 4.0ï¼‰ã§æä¾›ã—ã¦ã„ã¾ã™ã€‚æœ¬æ—¥æœ¬èªç‰ˆã¯åŒãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«åŸºã¥ãç¿»æ¡ˆç‰©ã¨ã—ã¦åŒã˜CC BY-NC-SA 4.0ã§å…¬é–‹ã—ã¾ã™ã€‚å†åˆ©ç”¨æ™‚ã¯åŸè‘—è€…Jorge Barraza Ibarraã€åŸé¡Œã€ã‚¨ãƒ«ã‚µãƒ«ãƒãƒ‰ãƒ«å·¥ç§‘å¤§å­¦ã€2001å¹´ã€åº•æœ¬URLã‚’è¡¨ç¤ºã—ã€éå–¶åˆ©åˆ©ç”¨ã¨åŒä¸€æ¡ä»¶ã§ã®ç¶™æ‰¿ãŒå¿…è¦ã§ã™ã€‚æ”¹å¤‰å†…å®¹ã¯ã‚¹ãƒšã‚¤ãƒ³èªã‹ã‚‰æ—¥æœ¬èªã¸ã®ç¿»è¨³ã€åŸåˆŠé æ¨™è­˜ã®ä»˜ä¸ã€çµ„ç‰ˆå¤‰æ›´ã€åŸåˆŠå›³ç‰ˆã®åˆ‡ã‚Šå‡ºã—ãƒ»å†é…ç½®ã§ã™ã€‚ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æœ¬æ–‡ï¼šhttps://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "publishedDate": "2026-08-23",
-    "updatedDate": "2026-08-23"
-  },
-  "roberts-voyages-central-america-1827": {
-    "sourceEdition": "Orlando W. Roberts, Narrative of Voyages and Excursions on the East Coast and in the Interior of Central America, Edinburgh: Constable & Co.; London: Hurst, Chance, & Co., 1827ã€‚ä¸»åº•æœ¬ã¯Getty Research Instituteæ‰€è”µåˆç‰ˆæœ¬ã€‚",
-    "sourceProvider": "Getty Research Instituteæ‰€è”µæœ¬ã®Internet Archiveå…¬é–‹ç”»åƒï¼ˆgri_33125013633827ã€314ç”»åƒé ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€Library of Congressæ‰€è”µåŒå¹´åˆç‰ˆæœ¬ã®Internet Archiveå…¬é–‹ç”»åƒï¼ˆnarrativesofvoya00robeã€310ç”»åƒé ï¼‰ã‚’æœ¬æ–‡æ ¡åˆã«ç”¨ã„ã¾ã—ãŸã€‚ä¸»åº•æœ¬æ‰€åã®æŠ˜è¾¼åœ°å›³ã‚’æ¡ç”¨ã—ã¦ã„ã¾ã™ã€‚",
-    "sourceUrl": "https://archive.org/details/gri_33125013633827",
-    "rights": "1827å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ä¸»åº•æœ¬ã®Internet Archiveå…¬é–‹ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã¯æ¨©åˆ©çŠ¶æ…‹ã‚’NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯ç‹¬è‡ªã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-22",
-    "updatedDate": "2026-08-22"
-  },
-  "villavicencio-luz-metodo-idolatras-1692": {
-    "sourceEdition": "Diego Jaimes Ricardo Villavicencioã€Luz y mÃ©todo de confesar idÃ³latras y destierro de idolatrÃ­asã€ã€Puebla de los Ãngeles: Imprenta de Diego FernÃ¡ndez de LeÃ³nã€1692å¹´ã€‚ä¸»åº•æœ¬ã¯ãƒãƒªå›½ç«‹å›³æ›¸é¤¨æ‰€è”µæœ¬ã€Memoria Chilena MC0042352ã€‚",
-    "sourceProvider": "ãƒãƒªå›½ç«‹å›³æ›¸é¤¨ï¼Memoria ChilenaãŒå…¬é–‹ã™ã‚‹MC0042352ï¼ˆ210ç”»åƒé ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€ãƒãƒƒã‚¯ã‚¹ãƒ»ãƒ—ãƒ©ãƒ³ã‚¯æ³•å²ãƒ»æ³•ç†è«–ç ”ç©¶æ‰€ãƒªãƒ³ã‚¬æ–‡åº«Bc 86ï¼ˆDOI 10.48644/mpirg_escidoc_71443ï¼‰ã‚’æ ¡åˆã«ç”¨ã„ã¾ã—ãŸã€‚åˆç‰ˆç•°çŠ¶æ…‹ã®æ›¸ç°¡ã¯ç•°çŠ¶æ…‹ç ”ç©¶ã¨æ ¡è¨‚ç‰ˆã§è£œå®Œã—ã¾ã—ãŸã€‚",
-    "sourceUrl": "https://www.memoriachilena.gob.cl/602/w3-article-10029.html",
-    "rights": "1692å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Memoria Chilenaã¯ä¸»åº•æœ¬ã‚’ã€å…±é€šæ–‡åŒ–éºç”£ã€ã¨ã—ã¦è‡ªç”±ãªåˆ©ç”¨ãƒ»è¤‡è£½ã‚’èªã‚ã¦ã„ã¾ã™ã€‚æ ¡åˆæœ¬Bc 86ã¯Public Domain Mark 1.0ã§å…¬é–‹ã•ã‚Œã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯ç‹¬è‡ªã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-22",
-    "updatedDate": "2026-08-22"
-  },
-  "alva-confessionario-mayor-menor-1634": {
-    "sourceEdition": "BartolomÃ© de Alvaã€Confessionario mayor, y menor en lengua mexicanaã€ã€MÃ©xico: Francisco Salbagoã€1634å¹´ã€‚John Carter Brown Libraryã€è«‹æ±‚è¨˜å· BA634 .A472cã€‚",
-    "sourceProvider": "ã‚¸ãƒ§ãƒ³ãƒ»ã‚«ãƒ¼ã‚¿ãƒ¼ãƒ»ãƒ–ãƒ©ã‚¦ãƒ³å›³æ›¸é¤¨ï¼ˆJohn Carter Brown Libraryã€JCBï¼‰æ‰€è”µæœ¬ã®å…¨122ç”»åƒã€‚Internet ArchiveãŒè­˜åˆ¥å­ confessionarioma00alva ã¨ã—ã¦å…¬é–‹ã€‚",
-    "sourceUrl": "https://archive.org/details/confessionarioma00alva",
-    "rights": "1634å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚åº•æœ¬ç”»åƒã¯ã‚¸ãƒ§ãƒ³ãƒ»ã‚«ãƒ¼ã‚¿ãƒ¼ãƒ»ãƒ–ãƒ©ã‚¦ãƒ³å›³æ›¸é¤¨ãŒã‚¯ãƒªã‚¨ã‚¤ãƒ†ã‚£ãƒ–ãƒ»ã‚³ãƒ¢ãƒ³ã‚ºè¡¨ç¤º4.0å›½éš›ï¼ˆCC BY 4.0ï¼‰ã§å…¬é–‹ã—ã¦ãŠã‚Šã€æœ¬ç‰ˆã§ã¯ Courtesy of the John Carter Brown Library ã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯ç‹¬è‡ªã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-22",
-    "updatedDate": "2026-08-22"
-  },
-  "duran-historia-indias-nueva-espana-1581": {
-    "sourceEdition": "Diego DurÃ¡nã€Historia de las Indias de Nueva EspaÃ±a e islas de la tierra firmeã€ã€Biblioteca Nacional de EspaÃ±aã€Vitr/26/11ã€è‡ªç­†ç¨¿ï¼ˆã€å„€ç¤¼ã¨ç¥­å¼ã®æ›¸ã€1570å¹´ã€ã€å¤æš¦ã€1579å¹´ã€ã€ãƒŒã‚¨ãƒãƒ»ã‚¨ã‚¹ãƒ‘ãƒ¼ãƒ‹ãƒ£è«¸ã‚¤ãƒ³ãƒ‡ã‚£ã‚¢å²ã€1581å¹´ï¼‰ã€‚",
-    "sourceProvider": "ã‚¹ãƒšã‚¤ãƒ³å›½ç«‹å›³æ›¸é¤¨ï¼ˆBiblioteca Nacional de EspaÃ±aã€BNEï¼‰ãŒBNE Digitalã§å…¬é–‹ã™ã‚‹Vitr/26/11ã®å…¨354ç”»åƒã€‚BNE Alma MMS ID 991054889969708606ã€BNE Digital UUID 19ca8a23-e58a-4e27-979f-86b6242e15dfã€‚ãƒ›ã‚»ãƒ»ãƒ•ã‚§ãƒ«ãƒŠãƒ³ãƒ‰ãƒ»ãƒ©ãƒŸãƒ¬ã‚¹ç·¨1867â€“1880å¹´ç‰ˆã¯åˆ¤èª­ãƒ»ç« å¢ƒç•Œãƒ»ç•°èª­ã®ç…§åˆã«ã®ã¿ç”¨ã„ãŸã€‚",
-    "sourceUrl": "https://bnedigital.bne.es/bd/es/viewer?id=19ca8a23-e58a-4e27-979f-86b6242e15df",
-    "rights": "16ä¸–ç´€æˆç«‹ã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚BNEã¯ã€åŒé¤¨ãŒå…¬é–‹ã™ã‚‹ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã®ç”»åƒã‚’ã€ã‚¯ãƒªã‚¨ã‚¤ãƒ†ã‚£ãƒ–ãƒ»ã‚³ãƒ¢ãƒ³ã‚ºè¡¨ç¤º4.0å›½éš›ï¼ˆCC BY 4.0ï¼‰ã¾ãŸã¯åŒç­‰ã®æ¡ä»¶ã§ã€å‡ºå…¸è¡¨ç¤ºã®ã†ãˆå†åˆ©ç”¨ã§ãã‚‹ã¨æ¡ˆå†…ã—ã¦ã„ã¾ã™ã€‚æœ¬ç‰ˆã®å„å›³ç‰ˆã«ã¯ã‚¹ãƒšã‚¤ãƒ³å›½ç«‹å›³æ›¸é¤¨ï¼ˆBNEï¼‰Vitr/26/11æ‰€è”µã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯ç‹¬è‡ªã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-22",
-    "updatedDate": "2026-08-22"
-  },
-  "romero-cultivo-cafe-chiapas-1893": {
-      "sourceEdition": "MatÃ­as Romeroã€Cultivo del cafÃ© en la Costa Meridional de Chiapasã€ï¼ˆMÃ©xico: Oficina TipogrÃ¡fica de la SecretarÃ­a de Fomento, Calle de San AndrÃ©s nÃºm. 15ã€1893å¹´ç¬¬å››ç‰ˆï¼‰ã€‚",
-      "sourceProvider": "Stanford University Librariesæ‰€è”µæœ¬ã€‚GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Internet ArchiveãŒè­˜åˆ¥å­ cultivodelcafen00romegoog ã¨ã—ã¦å…¬é–‹ã€‚",
-      "sourceUrl": "https://archive.org/details/cultivodelcafen00romegoog",
-      "rights": "åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²é …ç›®ã¯æ¨©åˆ©çŠ¶æ…‹ã‚’ã€ŒNOT_IN_COPYRIGHTã€ï¼ˆcopyright-region: USï¼‰ã¨è¡¨ç¤ºã—ã€å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã¯è¡¨ç¤ºã—ã¦ã„ã¾ã›ã‚“ã€‚GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ã«ä»˜ã—ãŸåˆ©ç”¨æŒ‡é‡ã¯ã€å€‹äººçš„ãƒ»éå•†æ¥­çš„åˆ©ç”¨ã€è‡ªå‹•ç…§ä¼šã®å›é¿ã€Googleè¡¨ç¤ºã®ä¿æŒã€åˆ©ç”¨åœ°ã§ã®é©æ³•æ€§ç¢ºèªã‚’æ±‚ã‚ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯ã“ã‚Œã‚‰å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-      "publishedDate": "2026-08-21",
-      "updatedDate": "2026-08-21"
-    },
-  "g59-romances-senores-nueva-espana": {
-    "sourceEdition": "Romances de los seÃ±ores de la Nueva EspaÃ±a, Benson Latin American Collection, Genaro GarcÃ­a Collection, Ms. G59, f. 1râ€“42vï¼ˆf. 33æ¬ ï¼‰, 17ä¸–ç´€å†™æœ¬ï¼ˆç·¨çº‚1582å¹´é ƒï¼‰ã€‚",
-    "sourceProvider": "LLILAS Benson Latin American Studies and Collections, The University of Texas at Austinã€‚å…¬é–‹ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒªã¯Biblioteca Digital Mexicanaã‚’å‚ç…§ã—ã€åˆ¤èª­ç…§åˆã«ã¯John Bierhorst, Ballads of the Lords of New Spainï¼ˆ2009ï¼‰ã‚’ç”¨ã„ãŸã€‚",
-    "sourceUrl": "https://bdmx.mx/documento/romances-senores-nueva-espana",
-    "rights": "åº•æœ¬å†™æœ¬ã®æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚å…¬é–‹ç”»åƒã¨ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã®åˆ©ç”¨æ¡ä»¶ã¯å„å…¬é–‹æ©Ÿé–¢ã®è¡¨ç¤ºã«å¾“ã„ã¾ã™ã€‚ç¾ä»£ã®æ ¡è¨‚ãƒ»ç¿»è¨³ã¯ç…§åˆã«ã®ã¿ç”¨ã„ã€è¨³æ–‡ãƒ»æ³¨é‡ˆã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-21",
-    "updatedDate": "2026-08-21"
-  },
-  "cantares-mexicanos-ms-1628-bis": {
-    "sourceEdition": "Cantares Mexicanos, Biblioteca Nacional de MÃ©xico, Ms. 1628 bis, f. 1râ€“85rã€‚Antonio PeÃ±afiel (ed.), Cantares en idioma mexicanoï¼ˆ1904ï¼‰ãŠã‚ˆã³UNAMæ ¡è¨‚ç‰ˆï¼ˆ2016ï¼‰ã‚’ç…§åˆã€‚",
-    "sourceProvider": "Biblioteca Nacional de MÃ©xicoãŠã‚ˆã³Universidad Nacional AutÃ³noma de MÃ©xico, Instituto de Investigaciones HistÃ³ricasã€‚æ­Œè¬¡é›†éƒ¨åˆ†ã¯è¤‡åˆå†™æœ¬å…¨295è‘‰ã®ã†ã¡f. 1râ€“85rã€‚",
-    "sourceUrl": "https://historicas.unam.mx/publicaciones/publicadigital/libros/cantares/cm02.html",
-    "rights": "åŸå†™æœ¬æœ¬æ–‡ã¨PeÃ±afielã®1904å¹´åˆŠæœ¬ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚UNAMç‰ˆã¯å…¬é–‹è¡¨ç¤ºã®æ¡ä»¶ã«å¾“ã„ç…§åˆã«ç”¨ã„ã€é ç”»åƒã€ç¾ä»£ã‚¹ãƒšã‚¤ãƒ³èªè¨³ã€æ³¨é‡ˆã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚ç¾ä»£ã®æ ¡è¨‚ãƒ»æ³¨é‡ˆã®æ¨©åˆ©ã¯å„æ¨©åˆ©è€…ã«ç•™ä¿ã•ã‚Œã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-21",
-    "updatedDate": "2026-08-21"
-  },
-  "bancroft-history-central-america-1886-1887": {
-    sourceEdition:
-      "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vols. VIâ€“VIII, History of Central America, vols. Iâ€“III (San Francisco: The History Company, 1886â€“1887).",
-    sourceProvider:
-      "Universidad Francisco MarroquÃ­nã®Biblioteca Ludwig von Misesæ‰€è”µæœ¬ï¼ˆLuis LujÃ¡n MuÃ±ozå¯„è´ˆï¼‰ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹3å†Šã®ç”»åƒï¼ˆè­˜åˆ¥å­ histofcenthoweguatã€histoofcen07howeguatguatã€historyofcenthoweguatï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚Project Gutenberg eBooks 58658ãƒ»58669ãƒ»62657ã¯æ–‡å­—ç…§åˆã«ç”¨ã„ã€æœ¬æ–‡ãƒ»é å¢ƒç•Œãƒ»å›³ç‰ˆã¯åº•æœ¬ç”»åƒã§ç¢ºå®šã—ãŸã€‚",
-    sourceUrl: "https://archive.org/details/histofcenthoweguat",
-    rights:
-      "1886â€“1887å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®ä¸Šè¨˜3é …ç›®ã¯æ¨©åˆ©çŠ¶æ…‹ã‚’NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã€åˆ¥å€‹ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹URLã¯æ²ç¤ºã—ã¦ã„ã¾ã›ã‚“ã€‚Project Gutenbergã®3é›»å­æœ¬ã¯ç±³å›½ã§Public domainã¨è¡¨ç¤ºã•ã‚Œã€Project Gutenberg Licenseã®æ¡ä»¶ã§é…å¸ƒã•ã‚Œã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯ç‹¬è‡ªã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-21",
-    updatedDate: "2026-08-21",
-  },
-  "cervantes-salazar-mexico-en-1554-1875": {
-    sourceEdition:
-      "Francisco Cervantes de Salazar, MÃ©xico en 1554: Tres diÃ¡logos latinos que Francisco Cervantes Salazar escribiÃ³ e imprimiÃ³ en MÃ©xico en dicho aÃ±o, ediciÃ³n, traducciÃ³n castellana y notas de JoaquÃ­n GarcÃ­a Icazbalceta (MÃ©xico: Antigua LibrerÃ­a de Andrade y Morales, 1875).",
-    sourceProvider:
-      "Brown University Libraryæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹1875å¹´ç‰ˆã‚¹ã‚­ãƒ£ãƒ³ï¼ˆè­˜åˆ¥å­mxicoen1554tre00cervã€408ç”»åƒï¼‰ã‚’æ­£åº•æœ¬ã¨ã—ãŸã€‚åŒæœ¬ã§æ¬ ã‘ã‚‹å‰ä»˜åŸåˆŠXIVâ€“XVé ã«é™ã‚Šã€Real Academia EspaÃ±olaæ‰€è”µæœ¬ï¼ˆè«‹æ±‚è¨˜å·5-IV-28ï¼‰ã§æœ¬æ–‡ã‚’è£œå®Œã—ãŸã€‚RAEç”»åƒã¯ç…§åˆã¨æ¬ æ–‡å¾©å…ƒã«ã®ã¿ç”¨ã„ã€æœ¬ç‰ˆã«ã¯è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl: "https://archive.org/details/mxicoen1554tre00cerv",
-    rights:
-      "åŸè‘—ãŠã‚ˆã³1875å¹´ç‰ˆã®æœ¬æ–‡ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ãŸãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã§ã™ã€‚Internet Archiveã®å½“è©²é …ç›®ã¯ã€Brown University Libraryã‚’æ‰€è”µãƒ»æä¾›æ©Ÿé–¢ã¨ã—ã€æ¨©åˆ©çŠ¶æ…‹ã‚’NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚Real Academia EspaÃ±olaæ‰€è”µæœ¬ã¯å‰ä»˜XIVâ€“XVé ã®ç…§åˆã¨æ¬ æ–‡å¾©å…ƒã«ã®ã¿ç”¨ã„ã€åŒé¤¨ç”»åƒã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-15",
-    updatedDate: "2026-08-15",
-  },
-  "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866": {
-    sourceEdition:
-      "JoaquÃ­n GarcÃ­a Icazbalcetaã€Apuntes para un catÃ¡logo de escritores en lenguas indÃ­genas de AmÃ©ricaã€ï¼ˆMÃ©xico: Imprenta particular del autorã€1866å¹´åˆç‰ˆã€60éƒ¨é™å®šå°åˆ·ï¼‰ã€‚",
-    sourceProvider:
-      "ã‚¹ãƒšã‚¤ãƒ³ç‹ç«‹ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼ï¼ˆReal Academia EspaÃ±olaï¼‰æ‰€è”µã®è‘—è€…ç½²åå…¥ã‚Šç¬¬21å·æœ¬ï¼ˆè«‹æ±‚è¨˜å·40-IX-75ï¼‰ã®å…¨é ç”»åƒã‚’æœ¬æ–‡ã®èª­è§£ãƒ»ç…§åˆã«ç”¨ã„ã€åŒé¤¨ç”»åƒã¯è»¢è¼‰ã—ã¦ã„ãªã„ã€‚åŸåˆŠæ¨™é¡Œç´™ç”»åƒ1ç‚¹ã®ã¿ã€å¤§è‹±å›³æ›¸é¤¨æ‰€è”µæœ¬ã‚’Google BooksãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ãŸ1866å¹´åˆç‰ˆæœ¬ï¼ˆID: 94paAAAAcAAJï¼‰ã‹ã‚‰ã€é€ã‹ã—ã‚’ä¿æŒã—ã¦åéŒ²ã—ãŸã€‚1898å¹´ç¬¬äºŒç‰ˆã¯åˆ¤èª­ç–‘ç¾©ã®é™å®šç…§åˆã«ã®ã¿ç”¨ã„ãŸã€‚",
-    sourceUrl:
-      "https://books.google.com/books/about/Apuntes_para_un_Cat%C3%A1logo_de_Escritores.html?id=94paAAAAcAAJ",
-    rights:
-      "1866å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ã‚¹ãƒšã‚¤ãƒ³ç‹ç«‹ã‚¢ã‚«ãƒ‡ãƒŸãƒ¼ã®é ç”»åƒã¯èª­è§£ãƒ»ç…§åˆã«ã®ã¿ä½¿ç”¨ã—ã€æœ¬ç‰ˆã«ã¯è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚Google BooksãŒå¤§è‹±å›³æ›¸é¤¨æ‰€è”µæœ¬ã‹ã‚‰ä½œæˆã—ãŸåŸåˆŠæ¨™é¡Œç´™ç”»åƒ1ç‚¹ã¯ã€å…¬é–‹å…ƒã®è¡¨ç¤ºã¨é€ã‹ã—ã‚’ä¿æŒã—ã€éå•†ç”¨ã§åéŒ²ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-15",
-    updatedDate: "2026-08-15",
-  },
-  "baqueiro-ensayo-revoluciones-yucatan-1878-1887": {
-    sourceEdition:
-      "Serapio Baqueiroã€Ensayo histÃ³rico sobre las revoluciones de YucatÃ¡n desde el aÃ±o de 1840 hasta 1864ã€æ”¹è¨‚å…¨3å·»ç‰ˆï¼ˆMÃ©rida: Imprenta de Manuel Heredia ArgÃ¼elles, 1878â€“1879; TipografÃ­a de G. Canto, 1887ï¼‰ã€‚",
-    sourceProvider:
-      "British Libraryæ‰€è”µæœ¬ï¼ˆè«‹æ±‚è¨˜å·9781.dd.11ã€ã‚·ã‚¹ãƒ†ãƒ ç•ªå·000192443ï¼‰ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒãŠã‚ˆã³ALTO OCRã€‚ç¬¬1å·»ã®çŒ®è¾é ã¨ãƒ“ã‚»ãƒ³ãƒ†ãƒ»ãƒªãƒãƒ»ãƒ‘ãƒ©ã‚·ã‚ªè‚–åƒã¯ã€Google Booksæ‰€åã®Columbia Universityæ‰€è”µæœ¬ï¼ˆvolume ID OWpKAAAAYAAJï¼‰ã§ã‚‚ç…§åˆã—ãŸã€‚",
-    sourceUrl:
-      "https://bl.iro.bl.uk/collections/b7fd2482-debd-4495-9494-72aa2ead00bb",
-    rights:
-      "1878å¹´ã‹ã‚‰1887å¹´åˆŠã®ã‚¹ãƒšã‚¤ãƒ³èªåŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚British Libraryã®æ›¸èªŒã¯Out of Copyrightã¨è¡¨ç¤ºã—ã€ä½¿ç”¨ã—ãŸãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆã«ã¯Public Domain Dedication and Certificationï¼Public Domain MarkãŒç¤ºã•ã‚Œã¦ã„ã¾ã™ã€‚" +
-      JapaneseEditionNoReuseRights,
-    publishedDate: "2026-08-15",
-    updatedDate: "2026-08-15",
-  },
-  "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886": {
-    sourceEdition:
-      "JoaquÃ­n GarcÃ­a Icazbalcetaã€BibliografÃ­a mexicana del siglo XVI. Primera parte: catÃ¡logo razonado de libros impresos en MÃ©xico de 1539 Ã¡ 1600, con biografÃ­as de autores y otras ilustraciones, precedido de una noticia acerca de la introducciÃ³n de la imprenta en MÃ©xicoã€ï¼ˆMÃ©xico: LibrerÃ­a de Andrade y Morales, Sucesoresã€1886å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "ç±³å›½å›½ç«‹åŒ»å­¦å›³æ›¸é¤¨ï¼ˆU.S. National Library of Medicineï¼‰æ‰€è”µã®1886å¹´åˆç‰ˆæœ¬ï¼ˆNLM UID: 58330430Rï¼‰ã‚’åº•æœ¬ã¨ã—ã€NLMãŒå…¬é–‹ã—Medical Heritage Libraryï¼Internet Archiveã‚’çµŒã¦Wikimedia Commonsã«ã‚‚åéŒ²ã•ã‚ŒãŸå…¨556é ã‚«ãƒ©ãƒ¼ç”»åƒã‚’æœ¬æ–‡ãƒ»æ¨™é¡Œç´™ãƒ»å›³ç‰ˆã®ç…§åˆã«ç”¨ã„ãŸã€‚OCRã¯æ¤œç´¢ãƒ»è»¢è¨˜è£œåŠ©ã«é™ã‚Šã€æœ¬æ–‡ã€å›ºæœ‰åè©ã€æ›¸èªŒè»¢è¨˜ã€åŸåˆŠé å¢ƒç•Œã€åŸæ³¨ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã€å›³ç‰ˆã¯åˆç‰ˆç”»åƒã§ç¢ºå®šã—ãŸã€‚",
-    sourceUrl:
-      "https://collections.nlm.nih.gov/catalog/nlm:nlmuid-58330430R-bk",
-    rights:
-      "1886å¹´åˆŠã®åŸè‘—ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚NLM Digital Collectionsã¯å½“è©²è³‡æ–™ã‚’Public domainã¨è¡¨ç¤ºã—ã€Wikimedia Commonsä¸Šã®åº•æœ¬ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚‚Creative Commons Public Domain Mark 1.0ãŒä»˜ã•ã‚Œã¦ã„ã¾ã™ã€‚åº•æœ¬ç”»åƒã®ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã¯ â€œCourtesy of the National Library of Medicine.â€ ã¨ã—ã¦ã„ã¾ã™ã€‚",
-    publishedDate: "2026-08-15",
-    updatedDate: "2026-08-15",
-  },
-  "historia-tolteca-chichimeca": {
-    sourceEdition:
-      "BibliothÃ¨que nationale de France, DÃ©partement des manuscritsæ‰€è”µã€Historia Tolteca-Chichimecaã€ï¼ˆMexicain 46â€“58ï¼‰ã€16ä¸–ç´€ãƒŠãƒ¯ãƒˆãƒ«èªå†™æœ¬ã€‚æœ¬ä½“50è‘‰ãŒç¾å­˜ã—ã€ç¬¬34è‘‰ã¨ç¬¬52è‘‰ã‚’æ¬ ãã€‚",
-    sourceProvider:
-      "ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨ã‚¬ãƒªã‚«å…¬é–‹ã®ãƒ¡ã‚­ã‚·ã‚³å†™æœ¬46â€“58åŸå†Šç”»åƒã‚’æœ¬æ–‡ã¨çµµæ–‡æ›¸ã®åº•æœ¬ã¨ã—ã€åŸå†Šç”»åƒ100ç‚¹ã‚’åéŒ²ã—ãŸã€‚ã‚¯ãƒ¯ã‚¦ãƒ†ã‚£ãƒ³ãƒãƒ£ãƒ³ãƒ»ãƒˆãƒˆãƒŸãƒ¯ã‚«ãƒ³å¢ƒç•Œå›³ã®ã¿ã‚¢ãƒ¢ã‚·ãƒ¥ã‚«ãƒªå…¬é–‹ã®è³‡æ–™46â€“58ã‚’ç”¨ã„ã€æœ¬ä½“ã¨ã¯åˆ¥ã®é–¢é€£æ–‡æ›¸ã§ã‚ã‚‹ä»˜å±åˆ¥è³‡æ–™ã¨ã—ã¦åéŒ²ã—ãŸã€‚è£œåŠ©è³‡æ–™ã¯å†…éƒ¨æ¤œè¨¼ã«é™å®šã—ãŸã€‚",
-    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b84559448",
-    rights:
-      "16ä¸–ç´€ã®åŸè‘—æœ¬æ–‡ã¨çµµæ–‡æ›¸ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ã‚¬ãƒªã‚«ï¼ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨ç”±æ¥ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã¯ã€éå•†ç”¨åˆ©ç”¨ã§ã¯ã€ŒSource gallica.bnf.fr / BibliothÃ¨que nationale de Franceã€ã®è¡¨ç¤ºã‚’æ¡ä»¶ã«ç„¡å„Ÿã§å†åˆ©ç”¨ã§ãã€å•†ç”¨åˆ©ç”¨ã¯ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨ã®è¨±è«¾ãŠã‚ˆã³åˆ©ç”¨æ–™ã®å¯¾è±¡ã¨ãªã‚Šã¾ã™ã€‚æœ¬ç‰ˆã¯åŒè¡¨ç¤ºã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚ã‚¢ãƒ¢ã‚·ãƒ¥ã‚«ãƒªå…¬é–‹è¤‡è£½ã«ã¯å€‹åˆ¥ã®å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹è¡¨ç¤ºã‚’ç¢ºèªã§ããªã„ãŸã‚ã€å‡ºå…¸ã‚’æ˜è¨˜ã—ãŸéå–¶åˆ©ã®ä»˜å±åˆ¥è³‡æ–™ã¨ã—ã¦ã®ã¿æ²è¼‰ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»æ ¡è¨‚ãƒ»çµ„ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-14",
-    updatedDate: "2026-08-14",
-  },
-  "ixtlilxochitl-sumaria-todas": {
-    sourceEdition:
-      "Fernando de Alva IxtlilxÃ³chitlã€Sumaria relaciÃ³n de todas las cosas que han sucedido en la Nueva EspaÃ±a, y de muchas cosas que los Tultecas alcanzaron y supieronâ€¦ã€è‡ªç­†ç¨¿ã€Biblioteca Nacional de AntropologÃ­a e Historiaæ‰€è”µ CÃ³dice Chimalpahinã€ç¬¬1å·» f.1râ€“81vã€‚",
-    sourceProvider:
-      "Instituto Nacional de AntropologÃ­a e Historiaï¼ˆINAHï¼‰å…¬å¼ã‚µã‚¤ãƒˆãŒå…¬é–‹ã™ã‚‹CÃ³dice Chimalpahinç¬¬1å·»ç”»åƒã‚’æœ¬æ–‡æ­£æœ¬ã¨ã—ã€162é¢ã™ã¹ã¦ã‚’è»¢è¨˜ãƒ»æ ¡åˆã—ãŸã€‚å¾Œä»£åˆŠæœ¬ãƒ»æ ¡è¨‚ç‰ˆã¯é›£èª­ç®‡æ‰€ã¨ç•°èª­ã®ç¢ºèªè£œåŠ©ã«é™ã‚Šã€è‡ªç­†ç¨¿ã«ãªã„æœ¬æ–‡ã‚„å¾Œä»£ã®ä½œå“é…åˆ—ã‚’æ¡ç”¨ã—ã¦ã„ãªã„ã€‚è‡ªç­†ç¨¿ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl:
-      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
-    rights: ixtlilxochitlRights,
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "ixtlilxochitl-relacion-sucinta": {
-    sourceEdition:
-      "Fernando de Alva IxtlilxÃ³chitlã€RelaciÃ³n sucinta en forma de memorial de las historias de la Nueva EspaÃ±a y sus seÃ±orÃ­os hasta el ingreso de los espaÃ±olesã€è‡ªç­†ç¨¿ã€Biblioteca Nacional de AntropologÃ­a e Historiaæ‰€è”µ CÃ³dice Chimalpahinã€ç¬¬1å·» f.177râ€“185vã€‚",
-    sourceProvider:
-      "Instituto Nacional de AntropologÃ­a e Historiaï¼ˆINAHï¼‰å…¬å¼ã‚µã‚¤ãƒˆãŒå…¬é–‹ã™ã‚‹CÃ³dice Chimalpahinç¬¬1å·»ç”»åƒã‚’æœ¬æ–‡æ­£æœ¬ã¨ã—ã€18é¢ã™ã¹ã¦ã‚’è»¢è¨˜ãƒ»æ ¡åˆã—ãŸã€‚å†’é ­æ¬ æã€å ±å‘Šç•ªå·ã€æŠ¹æ¶ˆãƒ»æ¬„å¤–è¿½è¨˜ã¯è‡ªç­†ç¨¿ã©ãŠã‚Šè¨˜éŒ²ã—ã€éš£æ¥ã™ã‚‹ç©ºç™½è‘‰ãŠã‚ˆã³NuÃ±o de GuzmÃ¡né–¢ä¿‚ã®åˆ¥æ–‡æ›¸ã‚’åéŒ²ã—ã¦ã„ãªã„ã€‚è‡ªç­†ç¨¿ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl:
-      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
-    rights: ixtlilxochitlRights,
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "ixtlilxochitl-compendio-tetzcoco": {
-    sourceEdition:
-      "Fernando de Alva IxtlilxÃ³chitlã€Compendio histÃ³rico de los reyes de Tetzcocoã€è‡ªç­†ç¨¿ã€Biblioteca Nacional de AntropologÃ­a e Historiaæ‰€è”µ CÃ³dice Chimalpahinã€ç¬¬2å·» f.147râ€“214rã€‚",
-    sourceProvider:
-      "Instituto Nacional de AntropologÃ­a e Historiaï¼ˆINAHï¼‰å…¬å¼ã‚µã‚¤ãƒˆãŒå…¬é–‹ã™ã‚‹CÃ³dice Chimalpahinç¬¬2å·»ç”»åƒã‚’æœ¬æ–‡æ­£æœ¬ã¨ã—ã€135é¢ã™ã¹ã¦ã‚’è»¢è¨˜ãƒ»æ ¡åˆã—ãŸã€‚å¾Œä»£åˆŠæœ¬ãƒ»æ ¡è¨‚ç‰ˆã¯é›£èª­ç®‡æ‰€ã¨ç•°èª­ã®ç¢ºèªè£œåŠ©ã«é™ã‚Šã€f.145â€“146ã®ç©ºç™½è‘‰ã‚’ä½œå“ã¸å«ã‚ã¦ã„ãªã„ã€‚è‡ªç­†ç¨¿ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl:
-      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_2/index.php",
-    rights: ixtlilxochitlRights,
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "ixtlilxochitl-sumaria-general": {
-    sourceEdition:
-      "Fernando de Alva IxtlilxÃ³chitlã€Sumaria relaciÃ³n de la historia general de esta Nueva EspaÃ±a desde el origen del mundo hasta la hora de agoraâ€¦ã€è‡ªç­†ç¨¿ã€Biblioteca Nacional de AntropologÃ­a e Historiaæ‰€è”µ CÃ³dice Chimalpahinã€ç¬¬1å·» f.161râ€“175vã€‚",
-    sourceProvider:
-      "Instituto Nacional de AntropologÃ­a e Historiaï¼ˆINAHï¼‰å…¬å¼ã‚µã‚¤ãƒˆãŒå…¬é–‹ã™ã‚‹CÃ³dice Chimalpahinç¬¬1å·»ç”»åƒã‚’æœ¬æ–‡æ­£æœ¬ã¨ã—ã€30é¢ã™ã¹ã¦ã‚’è»¢è¨˜ãƒ»æ ¡åˆã—ãŸã€‚ç¬¬1ä½œå“ã¨ã®é–“ã®åˆ¥ç´™ã‚„å¾Œç¶šä½œå“ã‚’æ··å…¥ã•ã›ãšã€ç‹¬ç«‹ä½œå“ã¨ã—ã¦ã®é€£ç¶šç¯„å›²ã‚’ä¿æŒã—ãŸã€‚è‡ªç­†ç¨¿ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl:
-      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_1/index.php",
-    rights: ixtlilxochitlRights,
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "ixtlilxochitl-historia-chichimeca": {
-    sourceEdition:
-      "Fernando de Alva IxtlilxÃ³chitlã€Historia de la naciÃ³n chichimecaã€è‡ªç­†ç¨¿ã€Biblioteca Nacional de AntropologÃ­a e Historiaæ‰€è”µ CÃ³dice Chimalpahinã€ç¬¬2å·» f.1râ€“143vã€‚",
-    sourceProvider:
-      "Instituto Nacional de AntropologÃ­a e Historiaï¼ˆINAHï¼‰å…¬å¼ã‚µã‚¤ãƒˆãŒå…¬é–‹ã™ã‚‹CÃ³dice Chimalpahinç¬¬2å·»ç”»åƒã‚’æœ¬æ–‡æ­£æœ¬ã¨ã—ã€286é¢ã™ã¹ã¦ã‚’è»¢è¨˜ãƒ»æ ¡åˆã—ãŸã€‚å¾Œä»£ç‰ˆã«ã‚ˆã‚‹æœ«å°¾æŒ¿å…¥ç´™ã®å†é…åˆ—ã‚’æ¡ã‚‰ãšã€ç­†è·¡ãƒ»æ–‡è„ˆãƒ»æ¥ç¶šã«åŸºã¥ãè«–ç†é †ã‚’è¨³æ³¨ã¨ã¨ã‚‚ã«æ˜ç¤ºã—ãŸã€‚f.144râ€“144vã®é–¢é€£è³‡æ–™ã¯æœ¬æ–‡å¤–ã¨ã—ã€è‡ªç­†ç¨¿ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl:
-      "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_2/index.php",
-    rights: ixtlilxochitlRights,
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "castillo-historias-mexicanos-conquista-1908": {
-    sourceEdition:
-      "CristÃ³bal del Castilloã€Fragmentos de la obra general sobre historia de los mexicanos, escrita en lengua nÃ¡huatl por CristÃ³bal del Castillo, siglo XVIã€ã€Francisco del Paso y Troncosoã‚¹ãƒšã‚¤ãƒ³èªè¨³ï¼ˆFlorencia: TipografÃ­a de Salvador Landiã€1908å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®ãƒ†ã‚­ã‚µã‚¹å¤§å­¦å›³æ›¸é¤¨æ—§è”µ1908å¹´ç‰ˆï¼ˆidentifier: fragmentosdelao00castgoogï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€åŒç‰ˆæœªåéŒ²æ–­ç‰‡ã¨åˆ¤èª­ä¸Šã®ç–‘å•ç®‡æ‰€ã‚’BibliothÃ¨que nationale de France, Gallicaå…¬é–‹ã®Fonds mexicain 262ãƒ»263ãƒ»294ãƒ»297ãƒ»304ãƒ»305ãƒ»306ãƒ»310ã§ç…§åˆã—ãŸã€‚å†™æœ¬ã®æ‰€åœ¨ãƒ»é…åˆ—ãƒ»å¸°å±åˆ¤æ–­ã«ã¯RamÃ³n Troncoso PÃ©rezã€CrÃ³nica del Nepantlaã€ï¼ˆ2011å¹´åšå£«è«–æ–‡ã€UABãƒªãƒã‚¸ãƒˆãƒª2012å¹´å…¬é–‹ï¼‰ã‚’ä¸»è¦å…¸æ‹ ã¨ã—ã€Federico Navarrete Linaresç·¨è¨³ï¼ˆ1991ï¼2001å¹´ï¼‰ã¨Antonio de LeÃ³n y Gamaï¼ˆ1792å¹´ï¼‰ã‚’è£œåŠ©çš„ã«å‚ç…§ã—ãŸã€‚ã“ã‚Œã‚‰ç¾ä»£ç ”ç©¶ã®æ ¡è¨‚æœ¬æ–‡ãƒ»ç¾ä»£è¨³ã¯è»¢è¼‰ã›ãšã€æ—¥æœ¬èªæœ¬æ–‡ã®é‡è¨³å…ƒã«ã‚‚ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl: "https://archive.org/details/fragmentosdelao00castgoog",
-    rights:
-      "16ä¸–ç´€åŸè‘—æœ¬æ–‡ã¨1908å¹´åˆŠæœ¬ã®æœ¬æ–‡ãƒ»ç¿»è¨³ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã€Internet Archiveã®å½“è©²é …ç›®ã¯NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚åŸåˆŠæ¨™é¡Œç´™ç”»åƒã¯åŒå…¬é–‹ã‚¹ã‚­ãƒ£ãƒ³ã‹ã‚‰å‡ºæ‰€è¡¨ç¤ºã‚’ä¿æŒã—ã¦åéŒ²ã—ã¾ã—ãŸã€‚BnF Gallicaã®å†™æœ¬ç”»åƒã¯æœ¬æ–‡ç…§åˆã«é™ã£ã¦ç”¨ã„ã€æœ¬ç‰ˆã¸è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚RamÃ³n Troncoso PÃ©rezè«–æ–‡ã¯UABãƒªãƒã‚¸ãƒˆãƒªä¸Šã§è‘—ä½œæ¨©ãƒ»é–¢é€£æ¨©ã«ã‚ˆã‚‹ä¿è­·å¯¾è±¡ã¨è¡¨ç¤ºã•ã‚Œã‚‹ãŸã‚ã€ç ”ç©¶ä¸Šã®åˆ¤æ–­ã®ã¿ã‚’å‚ç…§ã—ã€æœ¬æ–‡ãƒ»ç¾ä»£è¨³ã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-13",
-    updatedDate: "2026-08-13",
-  },
-  "munoz-camargo-historia-tlaxcala-ms210": {
-    sourceEdition:
-      "Diego MuÃ±oz Camargoã€Historia de la ciudad y provincia de Tlaxcala y su repÃºblicaã€ã€BibliothÃ¨que nationale de France, DÃ©partement des Manuscrits, Fonds mexicain, Ms. mexicain 210ã€f. 30râ€“93vã€‚",
-    sourceProvider:
-      "ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨Gallicaå…¬é–‹ã®Ms. mexicain 210å†™æœ¬ç”»åƒã‚’æœ¬æ–‡åº•æœ¬ã¨ã—ã€ç¾å­˜ã™ã‚‹f. 30râ€“93vã®128è‘‰é¢ã‚’ç…§åˆã—ã¾ã—ãŸã€‚è£œåŠ©è»¢å†™ã¯æ–‡å­—åˆ¤èª­ã¨æœ¬æ–‡ä½ç½®ã®è¿½è·¡ã«é™å®šã—ã€1998å¹´ç‰ˆã‚’å«ã‚€ç¾ä»£ç‰ˆã®ç·¨è€…æ³¨ãƒ»æ³¨ç•ªå·ãƒ»æ³¨ãƒ‡ãƒ¼ã‚¿ã€ãªã‚‰ã³ã«æ—§ä»è¨³ã®è§£é‡ˆã¯æœ¬æ–‡ã¸ç§»å…¥ã—ã¦ã„ã¾ã›ã‚“ã€‚å†™æœ¬ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b100875153",
-    rights:
-      "16ä¸–ç´€ã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Gallicaï¼ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨ã®å†™æœ¬ç”»åƒã¯æœ¬æ–‡ã®èª­è§£ãƒ»ç…§åˆã«ç”¨ã„ã€æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-21",
-    updatedDate: "2026-08-21",
-  },
-  "tezozomoc-cronica-mexicana-kraus-117": {
-    sourceEdition:
-      "Fernando Alvarado Tezozomoc [attributed]ã€La corÃ³nica Mexicanaã€ã€Hans Peter Kraus Collectionã€mss31013-11700ã€Library of Congressã€ãƒ¡ã‚­ã‚·ã‚³ã€1600å¹´é ƒã€‚",
-    sourceProvider:
-      "ã‚¢ãƒ¡ãƒªã‚«è­°ä¼šå›³æ›¸é¤¨ãŒå…¬é–‹ã™ã‚‹ã‚¯ãƒ©ã‚¦ã‚¹117å†™æœ¬ç”»åƒã‚’æœ¬æ–‡åº•æœ¬ã¨ã—ã€ç¾å­˜ã™ã‚‹ f.1râ€“160v ã®316é¢ã‚’ç…§åˆã—ãŸã€‚Gonzalo DÃ­az Migoyoã«ã‚ˆã‚‹2021å¹´ã®å¤æ–‡æ›¸å­¦çš„è»¢å†™ã¯åˆ¤èª­ã¨ä½ç½®ç…§åˆã®è£œåŠ©ã«é™ã‚Šã€ç¾ä»£ç·¨é›†è€…ã«ã‚ˆã‚‹è¨³ãƒ»è§£é‡ˆãƒ»è£œè¶³ãƒ»èªç¾©èª¬æ˜ã¯ç§»å…¥ã—ã¦ã„ãªã„ã€‚å†™æœ¬ç”»åƒã¯æ—¥æœ¬èªç‰ˆã¸è»¢è¼‰ã—ã¦ã„ãªã„ã€‚",
-    sourceUrl: "https://www.loc.gov/item/mss31013-11700/",
-    rights:
-      "åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ã‚¢ãƒ¡ãƒªã‚«è­°ä¼šå›³æ›¸é¤¨ã¯å½“è©²å†™æœ¬ã«ã¤ã„ã¦ã€åˆ©ç”¨ãƒ»è¤‡è£½ã«æ—¢çŸ¥ã®åˆ¶é™ãªã—ã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-13",
-  },
-  "remesal-historia-general-1619": {
-    sourceEdition:
-      "Antonio de Remesalã€Historia de la Provincia de S. Vicente de Chiapa y Guatemala de la Orden de nro. glorioso Padre Sancto Domingo: escrÃ­bense juntamente los principios de las demÃ¡s provincias de esta religiÃ³n de las Indias Occidentales, y lo secular de la gobernaciÃ³n de Guatemalaã€ï¼ˆMadrid: Francisco de Anguloã€1619å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Biblioteca Ludwig von Mises, Universidad Francisco MarroquÃ­næ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆè­˜åˆ¥å­ historiadelaprov00remeã€784å°åˆ·é ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚1932å¹´åˆŠã®äºŒå·»æœ¬ã¯æ–‡å­—åˆ¤èª­ã¨ç…§åˆã®è£œåŠ©ã«é™ã£ã¦ç”¨ã„ã€ãã®ç·¨é›†è€…åºæ–‡ãƒ»ç·¨é›†æ³¨ãƒ»ä»˜éŒ²ã¯è¨³æ–‡ã¸æ··å…¥ã•ã›ã¦ã„ãªã„ã€‚",
-    sourceUrl: "https://archive.org/details/historiadelaprov00reme",
-    rights:
-      "1619å¹´åŸåˆŠæœ¬æ–‡ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚Internet Archiveã«æ²è¼‰ã•ã‚ŒãŸæ‰€è”µæœ¬ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯ã€å…¬é–‹å…ƒãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-09",
-    updatedDate: "2026-08-09",
-  },
-  "san-buenaventura-arte-lengua-maya-1684": {
-    sourceEdition:
-      "Gabriel de San Buenaventuraã€Arte de la lengua Mayaã€ï¼ˆMÃ©xico: por la viuda de Bernardo CalderÃ³nã€1684å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Biblioteca Nazionale Centrale di Romaæ‰€è”µã®1684å¹´åˆç‰ˆã‚’GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Internet ArchiveãŒå…¬é–‹ã—ãŸå…¨102ãƒ‡ã‚¸ã‚¿ãƒ«é ï¼ˆè­˜åˆ¥å­ bub_gb_AFgIgt-jnXoCã€ARK ark:/13960/t7sn35s0xï¼‰ã‚’åº•æœ¬ã¨ã—ãŸã€‚1888å¹´Francisco DÃ­az de LeÃ³nå†ç‰ˆã¯ç”¨ã„ã¦ã„ãªã„ã€‚",
-    sourceUrl: "https://archive.org/details/bub_gb_AFgIgt-jnXoC",
-    rights:
-      "1684å¹´åŸåˆŠæœ¬æ–‡ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚Internet Archiveã®å½“è©²è¨˜éŒ²ã¯Usageæ¬„ã«Creative Commons Public Domain Mark 1.0ï¼ˆPDM 1.0ï¼‰ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚PDM 1.0ã¯ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã§ã¯ãªãã€æ—¢çŸ¥ã®è‘—ä½œæ¨©ä¸Šã®åˆ¶ç´„ãŒãªã„ã“ã¨ã‚’ç¤ºã™æ¨™ç« ã§ã‚ã‚Šã€è¨±è«¾ã‚’æ±‚ã‚ãšå•†ç”¨åˆ©ç”¨ã‚’å«ã‚€è¤‡è£½ãƒ»æ”¹å¤‰ãƒ»é…å¸ƒç­‰ãŒå¯èƒ½ã§ã‚ã‚‹æ—¨ã‚’ç¤ºã™ä¸€æ–¹ã€æ³•åŸŸå·®ã€è‘—ä½œè€…äººæ ¼æ¨©ã€ç„¡ä¿è¨¼ç­‰ã®ç•™ä¿ãŒã‚ã‚Šã¾ã™ã€‚",
-    publishedDate: "2026-08-11",
-    updatedDate: "2026-08-11",
-  },
-  "gemelli-careri-giro-del-mondo-nuova-spagna-1700": {
-    sourceEdition:
-      "Giovanni Francesco Gemelli Careriã€Giro del mondo del dottor D. Gio. Francesco Gemelli Careri. Parte sesta, contenente le cose piÃ¹ ragguardevoli vedute nella Nuova Spagnaã€ï¼ˆNapoli: Giuseppe Roselliã€1700å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Getty Research Instituteæ‰€è”µã®1700å¹´ãƒŠãƒãƒªåˆç‰ˆæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ã®å…¨552ç”»åƒï¼ˆè­˜åˆ¥å­ girodelmondodeld06gemeï¼‰ã‚’æœ¬æ–‡åº•æœ¬ã¨ã—ãŸã€‚ã‚¤ã‚¿ãƒªã‚¢èªWikisourceã®æœªæ ¡äº†è»¢å†™ã¯èª­è§£ãƒ»æ¤œç´¢è£œåŠ©ã«é™å®šã—ã€æœ¬æ–‡ã€å›ºæœ‰åè©ã€æ•°å€¤ã€åŸåˆŠé å¢ƒç•Œã€ç´¢å¼•ã€æ­£èª¤è¡¨ã¯åˆç‰ˆç”»åƒã§ç¢ºå®šã—ãŸã€‚ç•¥æ¨™é¡Œç´™ãƒ»æ¨™é¡Œç´™2ç‚¹ã¯Gettyæœ¬ã®Wikimedia Commonsãƒ¬ãƒ³ãƒ€ãƒªãƒ³ã‚°ã€å†…å®¹å›³ç‰ˆ10ç‚¹ã¯ã‚»ãƒ“ãƒ¼ãƒªãƒ£å¤§å­¦å›³æ›¸é¤¨å¤æ›¸éƒ¨é–€ã€æ®‹ã‚‹5ç‚¹ã¯1704å¹´è‹±è¨³ç‰ˆãƒ»1700å¹´ç‰ˆãƒ»1719å¹´ä»è¨³ç‰ˆã®å…¬é–‹ç”»åƒã«åŸºã¥ãã€‚",
-    sourceUrl:
-      "https://archive.org/details/girodelmondodeld06geme",
-    rights:
-      "1700å¹´åŸåˆŠæœ¬æ–‡ãŠã‚ˆã³åŸåˆŠå›³åƒã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚åº•æœ¬åŸæœ¬ã®æ‰€è”µãƒ»ã‚¹ã‚­ãƒ£ãƒ³æä¾›æ©Ÿé–¢ã¯Getty Research Instituteã€ãƒ‡ã‚¸ã‚¿ãƒ«å…¬é–‹æ©Ÿé–¢ã¯Internet Archiveã§ã™ã€‚å½“è©²Internet Archiveé …ç›®ã«å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹è¡¨ç¤ºã¯ãªãã€Getty Open Content Programã®CC0ãŒã“ã®å€‹åˆ¥è³‡æ–™ã¸é©ç”¨ã•ã‚Œã‚‹ã¨ã¯æ‰±ã£ã¦ã„ã¾ã›ã‚“ã€‚ç•¥æ¨™é¡Œç´™ãƒ»æ¨™é¡Œç´™2ç‚¹ã¯Wikimedia Commonsã®PD-old-70-expiredè¡¨ç¤ºã€ã‚»ãƒ“ãƒ¼ãƒªãƒ£å¤§å­¦å›³æ›¸é¤¨å¤æ›¸éƒ¨é–€ç”±æ¥ã®å†…å®¹å›³ç‰ˆ10ç‚¹ã¯CC BY 2.0ã€1704å¹´è‹±è¨³ç‰ˆã®ã‚¢ã‚¹ãƒ†ã‚«ç§»ä½å›³1ç‚¹ã¨1700å¹´ç‰ˆã®æ¤ç‰©å›³3ç‚¹ã¯Public Domain Mark 1.0ã€1719å¹´ä»è¨³ç‰ˆã®ãƒ¡ã‚·ã‚«æš¦å›³1ç‚¹ã¯CC0 1.0ã®è¡¨ç¤ºã«å¾“ã£ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-12",
-    updatedDate: "2026-08-12",
-  },
-  "fuentes-guzman-recordacion-florida-1882-1883": {
-    sourceEdition:
-      "Francisco Antonio de Fuentes y GuzmÃ¡nã€Historia de Guatemala Ã³ RecordaciÃ³n Floridaã€ï¼ˆJusto Zaragozaç·¨ã€Madrid: Luis Navarroã€1882â€“1883å¹´ã€å…¨2å·»ï¼‰ã€‚",
-    sourceProvider:
-      "ç¬¬1å·»ã¯ãƒãƒ¼ãƒãƒ¼ãƒ‰å¤§å­¦æ‰€è”µæœ¬ã‚’Wikimedia CommonsãŒå…¬é–‹ã—ãŸå…¨564ç”»åƒã€ç¬¬2å·»ã¯ãƒãƒ¼ãƒãƒ¼ãƒ‰å¤§å­¦æ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã—ãŸå…¨456ç”»åƒï¼ˆè­˜åˆ¥å­ historiadeguate02zaragoogï¼‰ã‚’åº•æœ¬ã¨ã—ãŸã€‚æœ¬æ–‡ã€å›ºæœ‰åè©ã€æ•°å€¤ã€åŸåˆŠé å¢ƒç•Œã€è¡¨ã€æ³¨ã€ç´¢å¼•ã€è³¼èª­è€…åç°¿ã€åˆŠè¡Œæ¡ˆå†…ã¯å„å·»ã®åŸåˆŠç”»åƒã§ç¢ºå®šã—ãŸã€‚",
-    sourceUrl:
-      "https://commons.wikimedia.org/wiki/File:Recordacion_Florida_Tomo_I.pdf",
-    rights:
-      "17ä¸–ç´€ã®åŸè‘—æœ¬æ–‡ãŠã‚ˆã³1882â€“1883å¹´åˆŠã®ã‚µãƒ©ã‚´ã‚µç·¨çº‚è³‡æ–™ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚åº•æœ¬ç”»åƒã«ã¯Wikimedia Commonsã€Internet ArchiveãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-14",
-    updatedDate: "2026-08-14",
-  },
-  "atkins-voyage-guinea-1735": {
-    sourceEdition:
-      "John Atkinsã€A Voyage to Guinea, Brasil, and the West-Indies; in His Majesty's Ships, the Swallow and Weymouthã€ï¼ˆLondon: printed for Caesar Ward and Richard Chandlerã€1735å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "ãƒãƒ¼ãƒãƒ¼ãƒ‰å¤§å­¦ãƒ•ãƒ©ãƒ³ã‚·ã‚¹ãƒ»Aãƒ»ã‚«ã‚¦ãƒ³ãƒˆã‚¦ã‚§ã‚¤åŒ»å­¦å›³æ›¸é¤¨æ‰€è”µã®1735å¹´åˆç‰ˆå®Œæœ¬ã‚’åã‚ã‚‹Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­ voyagetoguineabr00atkiï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŒç‰ˆã®Internet Archive OCRã¨Project Gutenberg eBook No. 72102ã®æ ¡è¨‚è»¢å†™ã‚’æ¤œç´¢ãƒ»è»¢è¨˜ã®è£œåŠ©ã«ç”¨ã„ã€æœ¬æ–‡ã€å›ºæœ‰åè©ã€æ•°å€¤ã€æ­£èª¤è¡¨ã€åºƒå‘Šã€åŸåˆŠé å¢ƒç•Œã¯åˆç‰ˆç”»åƒã§ç¢ºå®šã—ãŸã€‚",
-    sourceUrl: "https://archive.org/details/voyagetoguineabr00atki",
-    rights:
-      "1735å¹´åŸåˆŠã®è‘—è€…ã‚¸ãƒ§ãƒ³ãƒ»ã‚¢ãƒˆã‚­ãƒ³ã‚ºã¯1757å¹´ã«æ²¡ã—ã¦ãŠã‚Šã€åŸåˆŠæœ¬æ–‡ãŠã‚ˆã³åŸåˆŠå›³åƒã¯ç±³å›½ãƒ»æ—¥æœ¬ã¨ã‚‚ã«è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚Internet Archiveã«æ²è¼‰ã•ã‚ŒãŸæ‰€è”µæœ¬ã®ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯ã€å…¬é–‹å…ƒãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-08",
-    updatedDate: "2026-08-08",
-  },
-  "wafer-new-voyage-isthmus-america-1699": {
-    sourceEdition:
-      "Lionel Waferã€A New Voyage and Description of the Isthmus of Americaã€ï¼ˆLondon: Printed for James Knaptonã€1699å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®Early English Books 1641â€“1700ãƒã‚¤ã‚¯ãƒ­ãƒ•ã‚£ãƒ«ãƒ ç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚å¯†ç€ç¶´ã˜ãƒ»æ¬ æç®‡æ‰€ã¨å›³ç‰ˆã¯Getty Research Instituteæ‰€è”µ1903å¹´è¦†åˆ»æœ¬ã§ç…§åˆã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/bim_early-english-books-1641-1700_a-new-voyage-and-descrip_wafer-lionel_1699",
-    rights:
-      "1699å¹´åŸåˆŠã¨1903å¹´è¦†åˆ»æœ¬ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Wikimedia Commonsã®1699å¹´ç‰ˆè³‡æ–™ãƒšãƒ¼ã‚¸ã¯Public Domain Mark 1.0ã‚’è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-13",
-    updatedDate: "2026-08-13",
-  },
-  "marimon-lacandones-1695": {
-    sourceEdition:
-      "Sebastian Marimon y TudÃ³ã€ŒFray Antonio Margil Ã¼ber die Lacandones, 1695ã€ã€Zeitschrift fÃ¼r Ethnologieã€Bd. 14ï¼ˆBerlinã€1882å¹´ï¼‰pp. 130â€“132ã€‚",
-    sourceProvider:
-      "ãƒ™ãƒ«ãƒªãƒ³å›½ç«‹åšç‰©é¤¨ç¾¤Digi-Hubå…¬é–‹ã®åŸèªŒç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ã€Internet Archiveå…¬é–‹è¤‡æœ¬ã®OCRã‚’æ¤œç´¢ãƒ»ç…§åˆã®è£œåŠ©ã«ç”¨ã„ãŸã€‚è¡¨é¡Œã€è‘—è€…ã®å°å…¥ã€æ›¸ç°¡æŠ„è¨³ã€ç½²åã€åŸæ³¨2ä»¶ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl:
-      "https://www.digi-hub.de/viewer/fullscreen/1604511489407/367/",
-    rights:
-      "1882å¹´åŸåˆŠæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-03",
-    updatedDate: "2026-08-03",
-  },
-  "figueroa-color-notebooks": {
-    sourceEdition:
-      "Junta Administrativa del Archivo Nacionalã€El Cuaderno Rojoã€ã€El Cuaderno Verdeã€ã€El Cuaderno Azulã€ã€El Cuaderno CafÃ©: JosÃ© MarÃ­a Figueroa Oreamunoã€ï¼ˆSan JosÃ©: Archivo Nacional de Costa Ricaã€2023å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "DirecciÃ³n General del Archivo Nacional de Costa RicaãŒå…¬å¼å…¬é–‹ã™ã‚‹2023å¹´ç‰ˆPDFå››å†Šã‚’åº•æœ¬ã¨ã—ãŸã€‚åŸè³‡æ–™éƒ¨åˆ†ã¯èµ¤270ç”»åƒãƒ»ç·‘106ç”»åƒãƒ»é’64ç”»åƒãƒ»èŒ¶26ç”»åƒã€è¨ˆ466ç”»åƒã€‚å€‹ã€…ã®äººç‰©ãƒ»äº‹ä»¶ãƒ»ä½œå“ã®æ–°ãŸãªåŒå®šã¯è¡Œã‚ãšã€åˆ¤èª­ä¸èƒ½ç®‡æ‰€ã‚’æ˜ç¤ºã—ãŸã€‚",
-    sourceUrl:
-      "https://www.archivonacional.go.cr/index.php/component/quix/page/114",
-    rights:
-      "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚ªãƒ¬ã‚¢ãƒ ãƒ¼ãƒã®åŸä½œå“ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚å›½ç«‹å…¬æ–‡æ›¸é¤¨ã®ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ç”»åƒãŠã‚ˆã³2023å¹´ç‰ˆã®ç¾ä»£å‰ä»˜ãƒ»è§£èª¬ãƒ»ç›®éŒ²è¨˜è¿°ã«ã¯ã€åŒé¤¨å…¬å¼ã‚µã‚¤ãƒˆã®Creative Commons Attribution-ShareAlike 4.0 Internationalï¼ˆCC BY-SA 4.0ï¼‰è¡¨ç¤ºã‚’é©ç”¨ã—ã¾ã™ã€‚æœ¬ç‰ˆã®æ—¥æœ¬èªè¨³ãƒ»æ—¥æœ¬èªè¨³æ³¨ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆä¸Šã®å¯„ä¸ã‚‚CC BY-SA 4.0ã§æä¾›ã—ã¾ã™ã€‚",
-    publishedDate: "2026-08-03",
-    updatedDate: "2026-08-03",
-  },
-  "figueroa-album": {
-    sourceEdition:
-      "Junta Administrativa del Archivo Nacionalã€El polifacÃ©tico Figueroa. BiografÃ­a y catÃ¡logo completo del Ãlbumã€ï¼ˆSan JosÃ©: Archivo Nacional de Costa Ricaã€2021å¹´ã€ISBN 978-9968-690-12-6ï¼‰ã€‚",
-    sourceProvider:
-      "DirecciÃ³n General del Archivo Nacional de Costa RicaãŒå…¬å¼å…¬é–‹ã™ã‚‹A001â€“A293ã€S001â€“S008ã€P001â€“P006ã®è¨ˆ307ä»¶ã‚’åº•æœ¬ã¨ã—ãŸã€‚PDFã‚’å±•é–‹ã—ãŸå½±å°ã¯345ç”»åƒé ã€‚å€‹ã€…ã®äººç‰©ãƒ»äº‹ä»¶ãƒ»ä½œå“ã®æ–°ãŸãªåŒå®šã¯è¡Œã‚ãšã€åˆ¤èª­ä¸èƒ½ç®‡æ‰€ã‚’æ˜ç¤ºã—ãŸã€‚",
-    sourceUrl:
-      "https://www.archivonacional.go.cr/index.php/component/quix/page/114",
-    rights:
-      "ãƒ›ã‚»ãƒ»ãƒãƒªã‚¢ãƒ»ãƒ•ã‚£ã‚²ãƒ­ã‚¢ãƒ»ã‚ªãƒ¬ã‚¢ãƒ ãƒ¼ãƒã®åŸä½œå“ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚å›½ç«‹å…¬æ–‡æ›¸é¤¨ã®ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ç”»åƒãŠã‚ˆã³2021å¹´ç‰ˆã®ç¾ä»£å‰ä»˜ãƒ»è§£èª¬ãƒ»ç›®éŒ²è¨˜è¿°ã«ã¯ã€åŒé¤¨å…¬å¼ã‚µã‚¤ãƒˆã®Creative Commons Attribution-ShareAlike 4.0 Internationalï¼ˆCC BY-SA 4.0ï¼‰è¡¨ç¤ºã‚’é©ç”¨ã—ã¾ã™ã€‚æœ¬ç‰ˆã®æ—¥æœ¬èªè¨³ãƒ»æ—¥æœ¬èªè¨³æ³¨ãƒ»ç·¨é›†ãƒ»çµ„ç‰ˆä¸Šã®å¯„ä¸ã‚‚CC BY-SA 4.0ã§æä¾›ã—ã¾ã™ã€‚",
-    publishedDate: "2026-08-09",
-    updatedDate: "2026-08-09",
-  },
-  "ximenez-ayer-ms-1515-volume-1": {
-    sourceEdition:
-      "Francisco XimÃ©nezã€Arte de las tres lenguas cakchiquel, quichÃ© y tzutuhil; Tratado segundo de todo lo que debe saber un ministro para la buena administraciÃ³n de estos naturalesã€Newberry Library, Edward E. Ayer Collection, Vault Ayer MS 1515, vol. 1, æœªä¸ä»˜4è‘‰ãŠã‚ˆã³ç¬¬1è‘‰è¡¨â€“ç¬¬119è‘‰è£ã€‚",
-    sourceProvider:
-      "ãƒ‹ãƒ¥ãƒ¼ãƒ™ãƒªãƒ¼å›³æ›¸é¤¨æ‰€è”µå†™æœ¬ã®å…¬é–‹ç”»åƒã‚’åº•æœ¬ã¨ã—ã€ç±³å›½è­°ä¼šå›³æ›¸é¤¨ãŒæ—§World Digital Libraryè³‡æ–™19996ã¨ã—ã¦å…¬é–‹ã™ã‚‹ç”»åƒ1â€“240ã‚’ä½¿ç”¨ã—ãŸã€‚ã€ä¸‰è¨€èªæ–‡æ³•ã€ã®åˆ¤èª­ç…§åˆã«ã¯Rosa Helena Chinchilla Mazariegosç·¨ã®1993å¹´ç¿»åˆ»ç‰ˆã‚’è£œåŠ©çš„ã«å‚ç…§ã—ãŸã€‚",
-    sourceUrl: "https://hdl.loc.gov/loc.wdl/wdl.19996",
-    rights:
-      "18ä¸–ç´€å†™æœ¬ã®æœ¬æ–‡ã¯ç±³å›½ãƒ»æ—¥æœ¬ã¨ã‚‚ã«è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ç±³å›½è­°ä¼šå›³æ›¸é¤¨ã¯World Digital Libraryã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã«ã¤ã„ã¦æŠŠæ¡ã™ã‚‹è‘—ä½œæ¨©ãã®ä»–ã®åˆ¶é™ã¯ãªã„ã¨æ¡ˆå†…ã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-02",
-    updatedDate: "2026-08-02",
-  },
-  "williams-anglo-american-isthmian-diplomacy-1916": {
-    sourceEdition:
-      "Mary Wilhelmine Williams, Anglo-American Isthmian Diplomacy, 1815â€“1915ï¼ˆWashington: American Historical Association; London: Humphrey Milford, Oxford University Pressã€1916å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "ã‚«ãƒªãƒ•ã‚©ãƒ«ãƒ‹ã‚¢å¤§å­¦æ—§è”µæœ¬ã‚’ãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ãŸInternet Archiveå…¬é–‹ã®å…¨384ç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚å‰ä»˜ã€æœ¬æ–‡1â€“330é ã€å‚è€ƒæ–‡çŒ®331â€“345é ã€ç´¢å¼•347â€“356é ã€åŸåˆŠ198é ç›´å¾Œã®è‰²åˆ·æŠ˜è¾¼åœ°å›³ã‚’å®Œå‚™ã™ã‚‹ã€‚æœ¬æ–‡æ ¡åˆã«ã¯ãƒˆãƒ­ãƒ³ãƒˆå¤§å­¦æœ¬ãŠã‚ˆã³Cornellå¤§å­¦æœ¬ã‚’ç”¨ã„ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/angloamericanist00willrich",
-    rights:
-      "1916å¹´åŸåˆŠæœ¬æ–‡ã¯ç±³å›½ã§ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚è‘—è€…ãƒ¡ã‚¢ãƒªãƒ¼ãƒ»ã‚¦ã‚£ãƒ«ãƒ˜ãƒ«ãƒŸãƒ³ãƒ»ã‚¦ã‚£ãƒªã‚¢ãƒ ã‚ºã¯1944å¹´ã«æ²¡ã—ã¦ãŠã‚Šã€æ—¥æœ¬ã§ã‚‚è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-02",
-    updatedDate: "2026-08-02",
-  },
-  "valenzuela-lacandon-chol-1695": {
-    sourceEdition:
-      "GÃ¶tz Freiherr von Houwald ç·¨ã€NicolÃ¡s de Valenzuela: Conquista del LacandÃ³n y Conquista del Cholã€Tomo I: Textoï¼ˆColloquium Verlagã€1979å¹´ï¼‰ã€‚ãƒ™ãƒ«ãƒªãƒ³å†™æœ¬ Y 796 [4Â°] ã®æœ¬æ–‡è»¢å†™ã€‚",
-    sourceProvider:
-      "1979å¹´åˆŠè»¢å†™ç‰ˆã€‚ç¾ä»£ç·¨è€…ã«ã‚ˆã‚‹æ³¨ãƒ»è§£èª¬ãƒ»ä»˜éŒ²ãƒ»ç´¢å¼•ã¯ç¿»è¨³å¯¾è±¡å¤–ã€‚",
-    rights:
-      "1695å¹´åŸå²æ–™ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚1979å¹´åˆŠã®è»¢å†™ãƒ»ç·¨é›†éƒ¨åˆ†ã«ã¯ç·¨è€…ãƒ»å‡ºç‰ˆç¤¾ã®æ¨©åˆ©ãŒæ®‹ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚ã€æœ¬ç‰ˆã¯åŸå²æ–™æœ¬æ–‡ã®ã¿ã‚’å¯¾è±¡ã¨ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "charnay-cites-et-ruines-americaines-1863": {
-    sourceEdition:
-      "DÃ©sirÃ© Charnayï¼EugÃ¨ne-Emmanuel Viollet-le-Ducã€CitÃ©s et ruines amÃ©ricainesã€ï¼ˆParisã€1863å¹´ï¼‰ã€‚æœ¬æ–‡å·»ã¨ã‚¢ãƒˆãƒ©ã‚¹ã‚’çµ±åˆã€‚",
-    sourceProvider:
-      "Internet Archiveãƒ»Project Gutenbergï¼ˆæœ¬æ–‡ï¼‰ã€New York Public Libraryï¼ˆã‚¢ãƒˆãƒ©ã‚¹ï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "dupaix-antiquites-mexicaines-1834": {
-    sourceEdition:
-      "Henri BaradÃ¨re ç·¨ã€AntiquitÃ©s mexicaines : relation des trois expÃ©ditions du capitaine Dupaixã€ï¼ˆParisã€1834â€“1836å¹´ï¼‰ã€‚æœ¬æ–‡å…¨2å·»ã¨ã‚¢ãƒˆãƒ©ã‚¹ã‚’çµ±åˆã€‚",
-    sourceProvider:
-      "BibliothÃ¨que nationale de France, Gallicaï¼ˆæœ¬æ–‡ï¼‰ã€The Metropolitan Museum of Art Librariesï¼ˆã‚¢ãƒˆãƒ©ã‚¹ï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "cogolludo-yucatan-1688": {
-    sourceEdition:
-      "Diego LÃ³pez de Cogolludoã€Historia de Yucathanã€ï¼ˆMadridã€1688å¹´åˆç‰ˆï¼‰ã€‚å‰ä»˜ã€å…¨12å·»223ç« ã€å·»ç« ç´¢å¼•ã€ä¸»è¦äº‹é …ç´¢å¼•ã‚’å¯¾è±¡ã€‚",
-    sourceProvider: "1688å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆã®å…¬é–‹ç”»åƒã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-26",
-    updatedDate: "2026-07-26",
-  },
-  "villagutierre-itza-1701": {
-    sourceEdition:
-      "Juan de Villagutierre Soto-Mayorã€Historia de la conquista de la provincia de el Itza, reducciÃ³n y progressos de la de el LacandÃ³nã€ï¼ˆMadridã€1701å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider: "1701å¹´ãƒãƒ‰ãƒªãƒ¼ãƒ‰åˆç‰ˆã®å…¬é–‹ç”»åƒã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-26",
-    updatedDate: "2026-07-26",
-  },
-  "maler-usumacinta": {
-    sourceEdition:
-      "Teobert Malerã€Researches in the Central Portion of the Usumatsintla Valleyã€Peabody Museum Memoirs, Vol. II, Nos. 1â€“2ï¼ˆ1901â€“1903å¹´ï¼‰ã€‚",
-    sourceProvider: "Getty Research Institute è”µæœ¬ã€Internet Archive å…¬é–‹ç”»åƒã€‚",
-    sourceUrl: "https://archive.org/details/gri_33125001333521",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "maler-upper-usumacinta": {
-    sourceEdition:
-      "Teobert Malerã€Explorations of the Upper Usumatsintla and Adjacent Regionã€Peabody Museum Memoirs, Vol. IV, No. 1ï¼ˆ1908å¹´ï¼‰ã€‚",
-    sourceProvider: "Peabody Museum Memoirs, Vol. IV, No. 1 ã®å…¬é–‹åŸåˆŠç”»åƒã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "morelet-1857": {
-    sourceEdition:
-      "Arthur Moreletã€Voyage dans lâ€™AmÃ©rique centrale, lâ€™Ãle de Cuba et le Yucatanã€å…¨2å·»ï¼ˆParisã€1857å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "University of Michiganï¼ˆä¸»åº•æœ¬ï¼‰ã€University of Californiaãƒ»Harvard Universityï¼ˆç…§åˆï¼‰ã€University of Californiaï¼ˆæŠ˜è¾¼åœ°å›³ï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "morelet-exploration-guatemala-1850": {
-    sourceEdition:
-      "Arthur Moreletã€Voyage scientifique. Exploration du Guatemalaã€ï¼ˆDijon: Imprimerie de Loireau-Feuchotã€1850å¹´ã€6é ï¼‰ã¨åŒæ–‡ã®å§”å“¡ä¼šå ±å‘Šã€ŒRapport sur les travaux et les recherches dâ€™histoire naturelle faits par M. Morelet pendant son voyage dans lâ€™AmÃ©rique centraleã€ã€Comptes rendus hebdomadaires des sÃ©ances de lâ€™AcadÃ©mie des sciencesã€tome XXXï¼ˆ1850å¹´ï¼‰pp. 430â€“433ã€‚",
-    sourceProvider:
-      "Natural History Museum Library, Londonæ‰€è”µã®ã€Comptes rendusã€ç¬¬30å·»ã‚’Biodiversity Heritage Libraryï¼Internet ArchiveãŒå…¬é–‹ã—ãŸãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­ comptesrendusheb30acadï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚BnFã®ç‹¬ç«‹æŠœåˆ·æ›¸èªŒï¼ˆark:/12148/cb30979025wï¼‰ã§é¡Œåãƒ»åˆŠè¡Œäº‹é …ã‚’ç…§åˆã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/comptesrendusheb30acad",
-    rights:
-      "åŸè‘—ãŠã‚ˆã³1850å¹´åˆŠè¡Œæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚åº•æœ¬æä¾›æ©Ÿé–¢ã¯Natural History Museum Library, Londonã€‚Biodiversity Heritage Libraryï¼ˆBHLï¼‰å…¬é–‹å·»ã®æ©Ÿé–¢è¡¨ç¤ºã¯Copyright Status: NOT_IN_COPYRIGHTã€License: Not Applicableã€Reuse: Yesã§ã‚ã‚Šã€BHLãŠã‚ˆã³æä¾›æ©Ÿé–¢ã¯å½“è©²ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã®ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã«æ¨©åˆ©ã‚’ä¸»å¼µã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-10",
-    updatedDate: "2026-08-10",
-  },
-  "morelet-testacea-novissima-pars-i-1849": {
-    sourceEdition:
-      "Arthur Moreletã€Testacea novissima insulae Cubanae et Americae Centralis. Pars Iã€ï¼ˆParis: J.-B. BailliÃ¨reï¼London: H. BailliÃ¨reã€1849å¹´ã€Dijon: Imprimerie Loireau-Feuchotï¼‰ã€‚",
-    sourceProvider:
-      "Smithsonian Libraries and Archivesæ‰€è”µã€ç¬¬Iãƒ»IIéƒ¨åˆç¶´æœ¬ã‚’Biodiversity Heritage Libraryï¼Internet ArchiveãŒå…¬é–‹ã—ãŸãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­ testaceanovissim00moreï¼‰ã‚’åº•æœ¬ã¨ã—ãŸã€‚æ¨™é¡Œç´™ã€åºæ–‡ã€åŸåˆŠ5â€“31é ã®ç¬¬1â€“85ç•ªã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/testaceanovissim00more",
-    rights:
-      "åŸè‘—ãŠã‚ˆã³1849å¹´åˆŠè¡Œæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚åº•æœ¬æä¾›æ©Ÿé–¢ã¯Smithsonian Libraries and Archivesã€‚Biodiversity Heritage Libraryï¼ˆBHLï¼‰å…¬é–‹æœ¬ã®æ©Ÿé–¢è¡¨ç¤ºã¯Copyright Status: NOT_IN_COPYRIGHTã€License: Not Applicableã€Reuse: Yesã§ã‚ã‚Šã€BHLãŠã‚ˆã³æä¾›æ©Ÿé–¢ã¯å½“è©²ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã®ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã«æ¨©åˆ©ã‚’ä¸»å¼µã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-10",
-    updatedDate: "2026-08-10",
-  },
-  "morelet-testacea-novissima-pars-ii-1851": {
-    sourceEdition:
-      "Arthur Moreletã€Testacea novissima insulae Cubanae et Americae Centralis. Pars IIã€ï¼ˆParis: J.-B. BailliÃ¨reï¼London: H. BailliÃ¨reã€1851å¹´ã€Dijon: Imprimerie Loireau-Feuchotï¼‰ã€‚",
-    sourceProvider:
-      "Smithsonian Libraries and Archivesæ‰€è”µã€ç¬¬Iãƒ»IIéƒ¨åˆç¶´æœ¬ã‚’Biodiversity Heritage Libraryï¼Internet ArchiveãŒå…¬é–‹ã—ãŸãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­ testaceanovissim00moreï¼‰ã‚’åº•æœ¬ã¨ã—ãŸã€‚åºæ–‡ã€åŸåˆŠ5â€“30é ã®ç¬¬86â€“150ç•ªã€ç¬¬Iéƒ¨è¨‚æ­£è¡¨ã€å…¨150ç¨®ç´¢å¼•ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/testaceanovissim00more",
-    rights:
-      "åŸè‘—ãŠã‚ˆã³1851å¹´åˆŠè¡Œæœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚åº•æœ¬æä¾›æ©Ÿé–¢ã¯Smithsonian Libraries and Archivesã€‚Biodiversity Heritage Libraryï¼ˆBHLï¼‰å…¬é–‹æœ¬ã®æ©Ÿé–¢è¡¨ç¤ºã¯Copyright Status: NOT_IN_COPYRIGHTã€License: Not Applicableã€Reuse: Yesã§ã‚ã‚Šã€BHLãŠã‚ˆã³æä¾›æ©Ÿé–¢ã¯å½“è©²ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³è³‡æ–™ã®ãƒ‡ã‚¸ã‚¿ãƒ«ãƒ•ã‚¡ã‚¤ãƒ«ã«æ¨©åˆ©ã‚’ä¸»å¼µã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-10",
-    updatedDate: "2026-08-10",
-  },
-  "rockstroh-ukes": {
-    sourceEdition:
-      "Jan de Vos ç·¨ã€Viajes al desierto de la soledad: un retrato hablado de la Selva Lacandonaã€ï¼ˆCIESASï¼Miguel Ãngel PorrÃºaã€2003å¹´ï¼‰pp. 90â€“129ã€‚",
-    sourceProvider:
-      "2003å¹´åˆŠè»¢å†™ç‰ˆã€‚ç·¨è€…ã«ã‚ˆã‚‹å°å…¥æ–‡ã¯ç¿»è¨³å¯¾è±¡å¤–ã§ã€ç¢ºèªã§ããŸæœ¬æ–‡ç¯„å›²ã®ã¿ã‚’åéŒ²ã€‚",
-    rights:
-      "1881å¹´åŸæ–‡ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚2003å¹´åˆŠã®è»¢å†™ãƒ»ç·¨é›†éƒ¨åˆ†ã«ã¯ç·¨è€…ãƒ»å‡ºç‰ˆç¤¾ã®æ¨©åˆ©ãŒæ®‹ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚ã€æœ¬ç‰ˆã¯åŸæ–‡æœ¬æ–‡ã®ã¿ã‚’å¯¾è±¡ã¨ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "chambon-mexique": {
-    sourceEdition:
-      "Ludovic Chambonã€Un Gascon au Mexiqueã€ï¼ˆParisã€1892å¹´ï¼‰ã€‚Zentralbibliothek ZÃ¼rich, BR 846 è”µæœ¬ã€‚",
-    sourceProvider: "Zentralbibliothek ZÃ¼richï¼Google Booksã€‚",
-    sourceUrl: "https://books.google.com/books?id=U63rzj7xGEYC",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "arthes-peten-1893": {
-    sourceEdition:
-      "Federico Guillermo ArthÃ©sã€ŒBreve descripciÃ³n del departamento del PetÃ©nã€ã€El Guatemaltecoã€tomo XXIII, nÃºm. 16ï¼ˆ1893å¹´5æœˆ31æ—¥ï¼‰pp. 97â€“103ã€‚",
-    sourceProvider: "ã€El Guatemaltecoã€åŸè¼‰ç´™é¢ã®å…¬é–‹ç”»åƒã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-25",
-    updatedDate: "2026-07-26",
-  },
-  "del-rio-palenque": {
-    sourceEdition:
-      "Antonio del RÃ­oï¼Pablo FÃ©lix Cabreraã€Description of the Ruins of an Ancient City, Discovered near Palenqueã€ï¼ˆLondonã€1822å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "John Carter Brown Libraryãƒ»Getty Research Instituteï¼ˆæœ¬æ–‡ï¼‰ã€Library of Congress Kislak Collectionï¼ˆå›³ç‰ˆï¼‰ã€‚",
-    sourceUrl: "https://www.loc.gov/item/05008020/",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "bourbourg-palenque-1866": {
-    sourceEdition:
-      "Charles-Ã‰tienne Brasseur de Bourbourgã€Monuments anciens du Mexiqueã€ï¼ˆParisã€1866å¹´ï¼‰ã€‚æœ¬æ–‡ã€ç›®æ¬¡ã€å›³ç‰ˆè§£èª¬ã€åŸåˆŠå›³ç‰ˆã‚’å¯¾è±¡ã€‚",
-    sourceProvider:
-      "BibliothÃ¨que nationale de France, Gallicaï¼ˆä¸»åº•æœ¬ï¼‰ã€Biblioteca Virtual Miguel de Cervantesï¼ˆæœ¬æ–‡ç…§åˆï¼‰ã€‚",
-    sourceUrl: "https://gallica.bnf.fr/ark:/12148/bpt6k130466g",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-25",
-    updatedDate: "2026-07-26",
-  },
-  "esquinca-usumacinta": {
-    sourceEdition:
-      "Jan de Vos ç·¨ã€Viajes al desierto de la soledad: un retrato hablado de la Selva Lacandonaã€æ”¹è¨‚å¢—è£œç‰ˆï¼ˆCIESASï¼Miguel Ãngel PorrÃºaã€2003å¹´ï¼‰pp. 54â€“57ã€‚1988å¹´ç‰ˆã‚‚ç…§åˆã€‚",
-    sourceProvider:
-      "2003å¹´åˆŠè»¢å†™ç‰ˆã€‚æœ¬è³‡æ–™ã¯åˆŠæœ¬ã§å…¬é–‹ç¢ºèªã§ãã‚‹æ—¥èªŒéƒ¨åˆ†ã®ã¿ã®å…¨è¨³ã€‚",
-    rights:
-      "1826å¹´åŸå²æ–™ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚1988å¹´ãƒ»2003å¹´åˆŠã®è»¢å†™ãƒ»ç·¨é›†éƒ¨åˆ†ã«ã¯ç·¨è€…ãƒ»å‡ºç‰ˆç¤¾ã®æ¨©åˆ©ãŒæ®‹ã‚‹å¯èƒ½æ€§ãŒã‚ã‚‹ãŸã‚ã€æœ¬ç‰ˆã¯å…¬åˆŠã•ã‚ŒãŸåŸå²æ–™æœ¬æ–‡ã®ã¿ã‚’å¯¾è±¡ã¨ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "galindo-ruins-palenque-literary-gazette-1831": {
-    sourceEdition:
-      "Juan Galindoã€ŒRuins of Palenqueã€ã€The Literary Gazette; and Journal of the Belles Lettres, Arts, Sciences, &c.ã€no. 769ï¼ˆ1831å¹´10æœˆ15æ—¥ï¼‰pp. 665â€“666ã€ãŠã‚ˆã³ç·¨é›†éƒ¨è¿½è£œã€ŒPalenqueã€no. 770ï¼ˆ1831å¹´10æœˆ22æ—¥ï¼‰p. 683ã€‚1831å¹´4æœˆ26æ—¥ä»˜ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®ç¬¬769å·ãƒ»ç¬¬770å·åŸåˆŠç”»åƒã‚’åº•æœ¬ã¨ã—ãŸã€‚ç¬¬769å·ã®æ›¸ç°¡æœ¬æ–‡ã€ç·¨é›†éƒ¨æ³¨ã€æœ¬æ–‡å†…äºŒå›³ã€åŸåˆŠèªŒé¢äºŒé ã€ãŠã‚ˆã³ç¬¬770å·ã®è¨‚æ­£ãƒ»è£œè¶³è¨˜äº‹ã¨ãã®æ³¨ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/sim_literary-gazette_1831-10-15_769",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-noticias-peten-1831": {
-    sourceEdition:
-      "Juan Galindoã€ŒNoticias del PetÃ©n recogidas por su comandante, el C. J. Galindoã€ã€Gaceta Federalã€no. 35ï¼ˆGuatemalaã€1831å¹´9æœˆ29æ—¥ï¼‰pp. 257â€“260ã€‚",
-    sourceProvider:
-      "BibliothÃ¨que nationale de France, SociÃ©tÃ© de gÃ©ographie, SG MS4-8 (1111)æ‰€è”µã®åŸåˆŠåˆ‡æŠœãï¼ˆGallica f79â€“f82ï¼‰ã‚’åº•æœ¬ã¨ã—ãŸã€‚åŸåˆŠå››é ã®æœ¬æ–‡ã€æ—…ç¨‹è¡¨ã€äººå£è¡¨ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b525153172/f79.item",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-palenque-1832": {
-    sourceEdition:
-      "Juan Galindoã€ŒMÃ©moire â€¦ sur les ruines de Palenqueã€ã€Bulletin de la SociÃ©tÃ© de gÃ©ographieã€tome XVIII, no 114ï¼ˆ1832å¹´10æœˆï¼‰pp. 198â€“214ï¼‹åˆ¥è‘‰å›³ç‰ˆã€ãŠã‚ˆã³Perfecto Baezoã€ŒVocabulario de las lenguas castellana y maiaã€pp. 215â€“217ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®åŸåˆŠå†Šå­ã‚’ä¸»åº•æœ¬ã¨ã—ã€BibliothÃ¨que nationale de France, Gallicaå…¬é–‹ã®ã‚¬ãƒªãƒ³ãƒ‰é–¢ä¿‚ç¨¿æœ¬ã‚’åˆ¤èª­ç…§åˆã«ç”¨ã„ãŸã€‚ã‚¬ãƒªãƒ³ãƒ‰æœ¬æ–‡ã€ç·¨é›†éƒ¨è„šæ³¨ã€æœ¬æ–‡å†…æ¨¡å¼å›³ã€åˆ¥è‘‰å›³ç‰ˆã€ãŠã‚ˆã³ç›´å¾Œã«æ²è¼‰ã•ã‚ŒãŸãƒã‚¨ã‚½ã®èªå½™è¡¨ã‚’åéŒ²ã—ãŸã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-usumacinta-1833": {
-    sourceEdition:
-      "Juan Galindoã€ŒA Description of the River Usumasinta, in Guatemalaã€ã€The Journal of the Royal Geographical Society of Londonã€vol. 3ï¼ˆ1833å¹´ï¼‰pp. 59â€“64ï¼‹ç„¡ç•ªå·åœ°å›³ã€‚",
-    sourceProvider: "JSTORï¼ˆåˆå‡ºè«–æ–‡ï¼‰ã€Internet Archiveï¼ˆå…¬é–‹ç”»åƒï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "galindo-caribs-central-america-1833": {
-    sourceEdition:
-      "Juan Galindoã€ŒNotice of the Caribs in Central Americaã€ã€The Journal of the Royal Geographical Society of Londonã€vol. 3ï¼ˆ1833å¹´ï¼‰pp. 290â€“291ã€‚",
-    sourceProvider:
-      "ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒç¬¬3å·»ã®å…¬é–‹åŸåˆŠç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ã€JSTORå˜ç‹¬ç‰ˆã§æœ¬æ–‡ã¨é ç¯„å›²ã‚’ç…§åˆã—ãŸã€‚åŸåˆŠæœ¬æ–‡äºŒé ã€ã‚«ãƒªãƒ–èªå½™ã€æ•°è©è¡¨ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://www.jstor.org/stable/1797617",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-antiquities-peten-1834": {
-    sourceEdition:
-      "Juan Galindoã€ŒA short Account of some Antiquities discovered in the District of Peten, in Central Americaã€ã€Archaeologiaã€vol. 25ï¼ˆ1834å¹´ï¼‰pp. 570â€“571ã€plates LIXâ€“LXã€‚1831å¹´10æœˆ28æ—¥ä»˜ã€1832å¹´6æœˆ7æ—¥æœ—èª­ã€‚",
-    sourceProvider:
-      "Internet Archiveï¼Wikimedia Commonså…¬é–‹ã®å›³ç‰ˆå…¥ã‚Šå…¨å·»ç‰ˆã‚’ä¸»åº•æœ¬ã¨ã—ã€Cambridge Coreå˜ç‹¬è«–æ–‡ç‰ˆã§æœ¬æ–‡ã‚’ç…§åˆã—ãŸã€‚æœ¬æ–‡ã€å®›å…ˆãƒ»ç½²åã€å›³ç‰ˆLIXãƒ»LXã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://archive.org/details/s2id13276840",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-copan-full-report-1834": {
-    sourceEdition:
-      "Juan Galindoã€ŒInforme de la comisiÃ³n cientÃ­fica formada para el reconocimiento de las antigÃ¼edades de CopÃ¡nã€ã€Anales de la Sociedad de GeografÃ­a e Historia de Guatemalaã€tomo XX, no. 3ï¼ˆ1945å¹´9æœˆï¼‰pp. 217â€“228ã€ãŠã‚ˆã³ã€ŒRapport sur les ruines de Copan et le pays voisinã€BibliothÃ¨que nationale de France, SociÃ©tÃ© de gÃ©ographie, SG MS4-8 (1111), document 4, f101â€“f136ï¼‹å›³é¢f137â€“f161ã€‚1834å¹´6æœˆ19æ—¥ä»˜ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®1945å¹´åˆŠã‚¹ãƒšã‚¤ãƒ³èªæœ¬æ–‡ã¨ã€BnF Gallicaå…¬é–‹ã®ãƒ•ãƒ©ãƒ³ã‚¹èªç¨¿ãƒ»åœ°å›³ãƒ»å¹³é¢å›³ãƒ»æ°´å½©å…¨æ™¯ãƒ»å›³1â€“26ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚ä¸¡æœ¬æ–‡ã‚’ç‹¬ç«‹ã—ã¦å…¨è¨³ã—ã€BnFå›³ç‰ˆ13é¢ã‚’åéŒ²ã—ãŸã€‚Sylvanus G. Morleyã€The Inscriptions at Copanã€ï¼ˆ1920å¹´ï¼‰ä»˜éŒ²XIã¯ç•°åŒç…§åˆã«ã®ã¿ç”¨ã„ãŸã€‚",
-    sourceUrl: "https://gallica.bnf.fr/ark:/12148/btv1b525153172",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-copan-literary-gazette-1835": {
-    sourceEdition:
-      "Juan Galindoã€ŒCentral Americaã€ã€The Literary Gazette; and Journal of the Belles Lettres, Arts, Sciences, &c.ã€no. 965ï¼ˆ1835å¹´7æœˆ18æ—¥ï¼‰pp. 456â€“457ã€‚1834å¹´6æœˆ19æ—¥ä»˜ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®ç¬¬965å·åŸåˆŠç”»åƒã‚’åº•æœ¬ã¨ã—ãŸã€‚ç·¨é›†éƒ¨æ³¨ã€æ›¸ç°¡æœ¬æ–‡ã€ç½²åã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/sim_literary-gazette_1835-07-18_965",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-eruption-cosiguina-1835": {
-    sourceEdition:
-      "Juan Galindoã€ŒOn the Eruption of the Volcano of CosigÃ¼ina, in Nicaragua, 17th January, 1835ã€ã€The Journal of the Royal Geographical Society of Londonã€vol. 5ï¼ˆ1835å¹´ï¼‰pp. 387â€“392ã€‚",
-    sourceProvider:
-      "ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒç¬¬5å·»ã®å…¬é–‹åŸåˆŠç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ã€JSTORå˜ç‹¬ç‰ˆã§æœ¬æ–‡ã¨é ç¯„å›²ã‚’ç…§åˆã—ãŸã€‚åŸåˆŠ387â€“392é ã®æœ¬æ–‡ã€å…¬å¼å ±å‘Šã€æ›¸ç°¡ã€åŸæ³¨ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://www.jstor.org/stable/1797892",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-ruins-copan-aas-1836": {
-    sourceEdition:
-      "Juan Galindoã€ŒThe Ruins of Copan, in Central Americaã€ã€Archaeologia Americana: Transactions and Collections of the American Antiquarian Societyã€vol. 2ï¼ˆCambridge, Massachusettsã€1836å¹´ï¼‰pp. 543â€“550ã€‚1835å¹´6æœˆ19æ—¥ä»˜ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ã®ã‚¢ãƒ¡ãƒªã‚«å¤ç‰©å”ä¼šç´€è¦ç¬¬2å·»ã‚’åº•æœ¬ã¨ã—ãŸã€‚åˆŠè¡Œå§”å“¡ä¼šæ³¨ã€æ›¸ç°¡æœ¬æ–‡ã€å®›å…ˆã€ç½²åãƒ»è‚©æ›¸ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://archive.org/details/archaeologiaamer2183amer",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "galindo-on-central-america-1836": {
-    sourceEdition:
-      "Juan Galindoã€ŒOn Central Americaã€ã€The Journal of the Royal Geographical Society of Londonã€vol. 6ï¼ˆ1836å¹´ï¼‰pp. 119â€“135ï¼‹äºŒè‘‰åœ°å›³ã€ŒSketch of the State of Costarrica in Central Americaã€ã€‚1836å¹´5æœˆ9æ—¥æœ—èª­ã€‚",
-    sourceProvider:
-      "ç‹ç«‹åœ°ç†å­¦å”ä¼šèªŒç¬¬6å·»ã®å…¬é–‹åŸåˆŠç”»åƒã‚’ä¸»åº•æœ¬ã¨ã—ã€JSTORå˜ç‹¬ç‰ˆã§æœ¬æ–‡ã€åŸåˆŠé ç¯„å›²ã€åœ°å›³äºŒè‘‰ã‚’ç…§åˆã—ãŸã€‚ç·¨é›†éƒ¨å‰æ›¸ããƒ»æ³¨ã€æœ¬æ–‡ã€è¡¨ã€åœ°å›³ã‚’åéŒ²ã—ãŸã€‚",
-    sourceUrl: "https://www.jstor.org/stable/1797561",
-    rights: publicDomainRights,
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "societe-geographie-central-america-report-1836": {
-    sourceEdition:
-      "Baron Walckenaerã€de La RenaudiÃ¨reã€Jomardï¼ˆå ±å‘Šè€…ï¼‰ã€ŒRapport sur le concours relatif Ã  la gÃ©ographie et aux antiquitÃ©s de lâ€™AmÃ©rique centraleã€ã€Bulletin de la SociÃ©tÃ© de gÃ©ographieã€ç¬¬2ã‚·ãƒªãƒ¼ã‚ºç¬¬5å·»ï¼ˆParis: Arthus-Bertrandã€1836å¹´4æœˆï¼‰253â€“291é ã€‚",
-    sourceProvider:
-      "ãƒ•ãƒ©ãƒ³ã‚¹å›½ç«‹å›³æ›¸é¤¨ï¼ˆBnFï¼‰ãŠã‚ˆã³Internet Archiveã§å…¬é–‹ã•ã‚Œã¦ã„ã‚‹åŸåˆŠç”»åƒã‚’åº•æœ¬ã¨ã—ãŸã€‚å ±å‘Šæ¨™é¡Œã€æœ¬æ–‡ã€è„šæ³¨ã€çµè«–äº”é …ã€å§”å“¡ç½²åã‚’åéŒ²ã—ã€åŸåˆŠ253â€“291é ã®é å¢ƒã‚’ä¿æŒã—ãŸã€‚",
-    rights:
-      "1836å¹´åŸåˆŠæœ¬æ–‡ã¯ç±³å›½ãƒ»æ—¥æœ¬ã¨ã‚‚ã«è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒãŠã‚ˆã³æ‰€è”µé¤¨ã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-08-01",
-    updatedDate: "2026-08-01",
-  },
-  "tribes-and-temples-vol-1": {
-    sourceEdition:
-      "Frans Blomï¼Oliver La Fargeã€Tribes and Templesã€Volume Iï¼ˆTulane University of Louisianaã€1926å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Tulane Universityï¼ˆå…¬å¼PDFï¼‰ã€Internet Archiveãƒ»Library of Congressï¼ˆæ¬ è½åœ°å›³ã®è£œå®Œï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "tribes-and-temples-vol-2": {
-    sourceEdition:
-      "Frans Blomï¼Oliver La Fargeã€Tribes and Templesã€Volume IIï¼ˆTulane University of Louisianaã€1927å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Tulane Universityï¼ˆå…¬å¼PDFï¼‰ã€Internet Archiveï¼ˆåŸåˆŠæ§‹æˆã®ç…§åˆï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-24",
-    updatedDate: "2026-07-26",
-  },
-  "egan-wyer-1930": {
-    sourceEdition:
-      "T. Egan-Wyer, Topographical Map and Accompanying Documentsï¼ˆ1930â€“1931å¹´ï¼‰ã€‚Penn Museum Archives, PU-Mu.1105, Box 1, Folder 6ã€‚",
-    sourceProvider:
-      "University of Pennsylvania Museum of Archaeology and Anthropology, Penn Museum Archivesã€‚",
-    sourceUrl:
-      "https://collections.penn.museum/collections/archives/findingaid/552866",
-    rights:
-      "Penn Museumã‚¦ã‚§ãƒ–ã‚µã‚¤ãƒˆã®å…¬é–‹ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–æ–‡æ›¸ã‚¹ã‚­ãƒ£ãƒ³ã‚’ã€åŒé¤¨ã®åˆ©ç”¨æ¡ä»¶ã«åŸºã¥ãã€éå–¶åˆ©ã®ç ”ç©¶ãƒ»æ•™è‚²ç›®çš„ã§ä½¿ç”¨ã—ã¦ã„ã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ãƒ»çµ„ç‰ˆãƒ»æ³¨è¨˜ã¯æœ¬ã‚¢ãƒ¼ã‚«ã‚¤ãƒ–ã«ã‚ˆã‚‹å¤‰æ›´ã§ã™ã€‚æœ¬ç‰ˆã®å•†ç”¨åˆ©ç”¨ã¯ç¦æ­¢ã—ã€å†åˆ©ç”¨ã¯Penn Museumã®åˆ©ç”¨æ¡ä»¶ã®ç¯„å›²ã«é™ã‚Šã¾ã™ã€‚PU-Mu.1105, Box 1, Folder 6. Courtesy of the Penn Museum.",
-    publishedDate: "2026-07-25",
-    updatedDate: "2026-07-29",
-  },
-  "sapper-eastern-lacandons-1891": {
-    sourceEdition:
-      "Karl Sapperã€ŒEin Besuch bei den Ã¶stlichen Lacandonenã€ã€Das Auslandã€Nr. 45ï¼ˆ1891å¹´ï¼‰S. 892â€“895ã€‚",
-    sourceProvider: "ã€Das Auslandã€åŸè¼‰4é ã®å…¬é–‹åŸèªŒç”»åƒã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-25",
-    updatedDate: "2026-07-26",
-  },
-  "friedrichsthal-yucatan-1841": {
-    sourceEdition:
-      "Emanuel von Friedrichsthalã€ŒLes Monuments de lâ€™Yucatanã€ã€Nouvelles Annales des Voyages et des Sciences GÃ©ographiquesã€tome quatriÃ¨me, annÃ©e 1841, tome 92 de la collection, quatriÃ¨me sÃ©rie, deuxiÃ¨me annÃ©eï¼ˆParisã€dÃ©cembre 1841å¹´ï¼‰pp. 291-314ã€‚",
-    sourceProvider:
-      "New York Public Library æ‰€è”µæœ¬ï¼ˆä¸»åº•æœ¬ã€Google Bookså…¬é–‹ç”»åƒï¼‰ã€‚Harvard University æ‰€è”µæœ¬ãŠã‚ˆã³2006å¹´ã®ã‚¹ãƒšã‚¤ãƒ³èªæ ¡è¨‚ç ”ç©¶ã¯åˆ¤èª­ç¢ºèªã«ä½¿ç”¨ã€‚",
-    sourceUrl: "https://books.google.com/books?id=0tgBAAAAYAAJ",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "means-yucatan-itzas-1917": {
-    sourceEdition:
-      "Philip Ainsworth Meansã€History of the Spanish Conquest of Yucatan and of the Itzasã€Papers of the Peabody Museum of American Archaeology and Ethnology, Harvard University, Vol. VIIï¼ˆCambridge, Massachusettsã€1917å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Harvard Universityæ‰€è”µãƒ»Googleãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã®å…¨253ç”»åƒç‰ˆï¼ˆä¸»åº•æœ¬ï¼‰ã€‚Internet Archiveæ‰€è”µåŒç‰ˆã§å›³ç‰ˆã‚’è£œå®Œã—ã€Project Gutenbergæ ¡æ­£æ¸ˆã¿è»¢è¨˜ãŠã‚ˆã³Wikisourceé åˆ¥è»¢è¨˜ã‚’åˆ¤èª­ç…§åˆã«ä½¿ç”¨ã€‚",
-    sourceUrl: "https://archive.org/details/historyspanishc01canogoog",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "dunlop-central-america-1847": {
-    sourceEdition:
-      "Robert Glasgow Dunlopã€Travels in Central America: Being a Journal of Nearly Three Yearsâ€™ Residence in the Country: Together with a Sketch of the History of the Republic, and an Account of Its Climate, Productions, Commerce, Etc.ã€ï¼ˆLondon: Longman, Brown, Green, and Longmansã€1847å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "ç±³å›½è­°ä¼šå›³æ›¸é¤¨æ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveã®ãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆä¸»åº•æœ¬ï¼‰ã€‚åˆ¤èª­ç–‘ç¾©ã¯åŒå¹´åˆŠã®åˆ¥è¤‡è£½ã§ç…§åˆã—ã€ä¸»åº•æœ¬å€‹ä½“ã§æ¬ ã‘ã‚‹åŠæ¨™é¡Œç´™ã¨å°åˆ·è€…è¡¨ç¤ºã¯ç±³å›½è­°ä¼šå›³æ›¸é¤¨æ‰€è”µã®åˆ¥å€‹ä½“ã§è£œå®Œã€‚",
-    sourceUrl: "https://archive.org/details/travelsincentral00dunl",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-27",
-    updatedDate: "2026-07-27",
-  },
-  "bandelier-yucatan-central-america-1881": {
-    sourceEdition:
-      "Adolph F. Bandelierã€Notes on the Bibliography of Yucatan and Central America; Comprising Yucatan, Chiapas, Guatemala (the Ruins of Palenque, Ocosingo, and Copan), and Oaxaca (Ruins of Mitla)ã€ï¼ˆWorcester: Press of Charles Hamiltonã€1881å¹´åˆ¥åˆ·ï¼‰ã€‚",
-    sourceProvider:
-      "University of California Librariesæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒã€‚",
-    sourceUrl:
-      "https://archive.org/details/notesonbibliogra00bandrich",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "rau-palenque-tablet-1879": {
-    sourceEdition:
-      "Charles Rauã€The Palenque Tablet in the United States National Museum, Washington, D. C.ã€Smithsonian Contributions to Knowledge, No. 331ï¼ˆWashington Cityã€1879å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Getty Research Instituteæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆä¸»åº•æœ¬ï¼‰ã€‚Smithsonian Research Onlineã®å…¬é–‹å€‹ä½“ãŠã‚ˆã³æ›¸èªŒè¨˜éŒ²ã‚’ç…§åˆã€‚",
-    sourceUrl: "https://archive.org/details/palenquetabletin00rauc",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "charencey-votan-1871": {
-    sourceEdition:
-      "Hyacinthe de Charenceyã€Le mythe de Votan : Ã©tude sur les origines asiatiques de la civilisation amÃ©ricaineã€ï¼ˆAlenÃ§on: Imprimerie de E. de Broiseã€1871å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "BibliothÃ¨que municipale de Lyonæ‰€è”µæœ¬ã‚’åã‚ã‚‹Google Bookså…¬é–‹ç”»åƒï¼ˆä¸»åº•æœ¬ï¼‰ã€‚",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "ordonez-creation-1907": {
-    sourceEdition:
-      "RamÃ³n de OrdÃ³Ã±ez y Aguiarã€Historia de la creaciÃ³n del cielo y de la tierra conforme al sistema de la gentilidad americanaã€NicolÃ¡s LeÃ³nåˆŠï¼ˆMÃ©xicoã€1907å¹´ã€ç¾å­˜æœªå®Œæœ¬ï¼‰ã€‚",
-    sourceProvider:
-      "Brigham Young University, Harold B. Lee Libraryæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒã€‚",
-    sourceUrl: "https://archive.org/details/historiadelacrea00ord",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "le-plongeon-yucatan-1889": {
-    sourceEdition:
-      "Alice D. Le Plongeonã€Here and There in Yucatan: Miscellaniesã€ï¼ˆNew York: John W. Lovell Companyã€1889å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "ç±³å›½è­°ä¼šå›³æ›¸é¤¨æ‰€è”µãƒ»å…¨196ç”»åƒç‰ˆï¼ˆä¸»åº•æœ¬ï¼‰ã€‚1886å¹´J. W. Boutonåˆç‰ˆã‚’æœ¬æ–‡ç…§åˆã«ä½¿ç”¨ã€‚",
-    sourceUrl:
-      "https://www.loc.gov/resource/gdcmassbookdig.herethereinyucat00lepl/",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "fancourt-history-yucatan-1854": {
-    sourceEdition:
-      "Charles St. John Fancourtã€The History of Yucatan, from Its Discovery to the Close of the Seventeenth Centuryã€ï¼ˆLondon: John Murrayã€1854å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "University of Illinois Libraryæ‰€è”µæœ¬ã‚’åã‚ã‚‹Brittle Bookså…¬é–‹ç”»åƒï¼ˆå…¨390ç”»åƒï¼‰ã€‚",
-    sourceUrl:
-      "https://brittlebooks.library.illinois.edu/brittlebooks_open/Books2009-05/fancch0001hisyuc/fancch0001hisyuc.pdf",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-28",
-    updatedDate: "2026-07-28",
-  },
-  "humboldt-vues-cordilleres-1810-1813": {
-    sourceEdition:
-      "Alexander von Humboldtã€Vues des CordillÃ¨res, et monumens des peuples indigÃ¨nes de lâ€™AmÃ©riqueã€ï¼ˆParis: F. Schoellã€1810ï¼1813å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Getty Research Instituteæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆå…¨524ç”»åƒï¼‰ã€‚",
-    sourceUrl: "https://archive.org/details/gri_33125012643553",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "tozzer-mayas-lacandones-1907": {
-    sourceEdition:
-      "Alfred M. Tozzerã€A Comparative Study of the Mayas and the Lacandonesã€ï¼ˆNew York: The Macmillan Company for the Archaeological Institute of Americaã€1907å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "University of California Librariesæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆä¸»åº•æœ¬ï¼‰ã€‚Getty Research Instituteã€Harvard Universityã€Claremont School of Theologyå„æ‰€è”µæœ¬ã‚’åˆ¤èª­ãƒ»é æ§‹æˆã®ç…§åˆã«ä½¿ç”¨ã€‚",
-    sourceUrl:
-      "https://archive.org/details/comparativestudy00tozzrich",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "frias-mexico-guatemala-boundary-1883": {
-    sourceEdition:
-      "HilariÃ³n FrÃ­as y Sotoã€CuestiÃ³n de lÃ­mites entre MÃ©xico y Guatemala: ediciÃ³n especial tomada del tomo VI de El Anuario Universalã€ï¼ˆMÃ©xico: TipografÃ­a Literaria de Filomeno Mataã€1883å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "ãƒ¡ã‚­ã‚·ã‚³å›½ç«‹å›³æ›¸é¤¨æ‰€è”µåˆç‰ˆæœ¬ã‚’åã‚ã‚‹Biblioteca Nacional Digital de MÃ©xicoï¼ˆUNAMï¼‰å…¬é–‹è¤‡è£½ã€ã‚·ã‚¹ãƒ†ãƒ ç•ªå·000279871ã€‚",
-    sourceUrl: "https://repositorio.unam.mx/3687",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "pastrana-mexico-guatemala-boundary-1897": {
-    sourceEdition:
-      "Manuel E. Pastranaã€Informe que el jefe de la ComisiÃ³n mexicana de lÃ­mites con Guatemala, C. Manuel E. Pastrana, rinde Ã¡ la SecretarÃ­a de Fomento, sobre los puntos que tocÃ³ el ingeniero Alberto Amador en sus â€œApuntes crÃ­ticos acerca de algunas de las operaciones cientÃ­ficas de la ComisiÃ³n mexicana de lÃ­mites con Guatemalaâ€ã€ï¼ˆMÃ©xico: Oficina TipogrÃ¡fica de la SecretarÃ­a de Fomentoã€1897å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Harvard Law Libraryæ‰€è”µåˆç‰ˆæœ¬ã‚’åã‚ã‚‹Google Bookså…¬é–‹è¤‡è£½ã€è­˜åˆ¥å­F98KAAAAYAAJã€‚",
-    sourceUrl: "https://books.google.com/books?id=F98KAAAAYAAJ",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "urrutia-guatemala-mexico-boundary-1900": {
-    sourceEdition:
-      "Claudio Urrutiaã€Memoria sobre la cuestiÃ³n de lÃ­mites entre Guatemala y MÃ©xico: presentada al seÃ±or Ministro de Relaciones Exteriores por el jefe de la ComisiÃ³n Guatemaltecaã€ï¼ˆGuatemala: TipografÃ­a Nacionalã€1900å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "University of Texasæ‰€è”µåˆç‰ˆæœ¬ã‚’åã‚ã‚‹Google Bookså…¬é–‹è¤‡è£½ã€è­˜åˆ¥å­5nFVAAAAMAAJã€‚",
-    sourceUrl: "https://books.google.com/books?id=5nFVAAAAMAAJ",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "seler-sachs-auf-alten-wegen-1900": {
-    sourceEdition:
-      "Caecilie Selerã€Auf alten Wegen in Mexiko und Guatemala: Reiseerinnerungen und EindrÃ¼cke aus den Jahren 1895-1897ã€ï¼ˆBerlin: Dietrich Reimer (Ernst Vohsen)ã€1900å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Getty Research Instituteæ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆä¸»åº•æœ¬ï¼‰ã€‚ä¸»åº•æœ¬ã§æ¬ è½ã™ã‚‹åŸåˆŠæœ¬æ–‡321é ã®ã¿ã€Harvard Universityæ‰€è”µåˆç‰ˆæœ¬ã®å…¬é–‹ç”»åƒã§è£œå®Œã€‚",
-    sourceUrl:
-      "https://archive.org/details/aufaltenwegeninm00sele",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "byam-chiapas-1897": {
-    sourceEdition:
-      "William W. Byamã€A Sketch of the State of Chiapas, Mexicoã€ï¼ˆLos Angeles: Press of G. Rice & Sons, Incorporatedã€1897å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Library of Congressæ‰€è”µåˆç‰ˆæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆä¸»åº•æœ¬ï¼‰ã€‚åŒã˜æ‰€è”µæœ¬ã®Wikimedia Commonså…¬é–‹PDFã‚’é–²è¦§ãƒ»é ç…§åˆã«ä½¿ç”¨ã€‚",
-    sourceUrl: "https://archive.org/details/sketchofstateofc00byam",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "robles-memoria-historica-chiapa-1813": {
-    sourceEdition:
-      "Mariano Robles DomÃ­nguez de Mazariegosã€Memoria histÃ³rica de la provincia de Chiapa, una de las de Guatemalaã€ï¼ˆCÃ¡diz: Imprenta Tormentaria, a cargo de D. J. D. Villegasã€1813å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Universitat de ValÃ¨ncia, Biblioteca HistÃ²ricaæ‰€è”µæœ¬BH Var. 325(06)ã®ãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆå…¨74ç”»åƒï¼‰ã€‚Biblioteca Virtual Miguel de Cervantesã®æ›¸èªŒè¨˜éŒ²ãŠã‚ˆã³åˆŠæœ¬ã®æŠ˜ä¸è¨˜è¿°ã¨ç…§åˆã€‚",
-    sourceUrl:
-      "https://www.cervantesvirtual.com/obra/memoria-historica-de-la-provincia-de-chiapa-una-de-las-de-guatemala/",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "brinton-nagualism-1894": {
-    sourceEdition:
-      "Daniel G. Brintonã€Nagualism: A Study in Native American Folk-lore and Historyã€ï¼ˆPhiladelphia: MacCalla & Company, Printersã€1894å¹´ï¼‰ã€‚ã€Proceedings of the American Philosophical Societyã€ç¬¬33å·»ã‹ã‚‰ä½œæˆã•ã‚ŒãŸç‹¬ç«‹æŠœåˆ·ã€‚",
-    sourceProvider:
-      "Cornell University Libraryæ‰€è”µã®1894å¹´ç‹¬ç«‹æŠœåˆ·ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆå…¨78ç”»åƒï¼‰ã€‚Project Gutenberg eBook No. 26426ã¯é å¢ƒç•Œã€ç¶´å­—ã€åŸæ³¨ã®ç…§åˆã«é™ã£ã¦ä½¿ç”¨ã€‚",
-    sourceUrl: "https://archive.org/details/cu31924020427542",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "pineda-chiapas-soconusco-1845": {
-    sourceEdition:
-      "Emeterio Pinedaã€DescripciÃ³n geogrÃ¡fica del Departamento de Chiapas y Soconuscoã€ï¼ˆMÃ©xico: Imprenta de Ignacio Cumplido, Calle de los Rebeldes nÃºm. 2ã€1845å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "University of Minnesotaæ‰€è”µæœ¬ã®Google Booksï¼HathiTrustãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆå…¨155ç”»åƒã€è­˜åˆ¥å­UusxAQAAMAAJï¼umn.31951p00340248yï¼‰ã€‚æŠ˜ã‚Šç•³ã¾ã‚ŒãŸã¾ã¾æ’®å½±ã•ã‚ŒãŸ2è¡¨ã¯ã€1854å¹´ã€ãƒ¡ã‚­ã‚·ã‚³åœ°ç†çµ±è¨ˆå­¦ä¼šå ±ã€å†éŒ²ç‰ˆã®å±•é–‹æ¸ˆã¿è¡¨ã‚’åˆç‰ˆã®å¯èª­éƒ¨åˆ†ã¨ç…§åˆã—ã¦è£œå®Œã€‚",
-    sourceUrl: "https://books.google.com/books?id=UusxAQAAMAAJ",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "paniagua-catecismo-chiapas-1876": {
-    sourceEdition:
-      "Flavio Antonio Paniaguaã€Catecismo elemental de historia y estadÃ­stica de Chiapasã€ï¼ˆSan CristÃ³bal Las-Casas: Imprenta del â€œPorvenirâ€ a cargo de Manuel M. Trujilloã€1876å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "University of Michiganæ‰€è”µåˆç‰ˆæœ¬ã®Google Booksãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆå…¨123ç”»åƒã€è­˜åˆ¥å­w7w3AAAAMAAJï¼‰ã€‚åŸåˆŠæ¨™é¡Œç´™ã€å‚ç…§è‘—è€…ä¸€è¦§ã€åºè¨€ã€çŒ®è¾ã€æœ¬æ–‡1â€“108é ã€ç´¢å¼•ã€æ­£èª¤è¡¨ã‚’åº•æœ¬ã¨ã—ãŸã€‚",
-    sourceUrl: "https://books.google.com/books?id=w7w3AAAAMAAJ",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "morris-colony-british-honduras-1883": {
-    sourceEdition:
-      "Daniel Morrisã€The Colony of British Honduras: Its Resources and Prospects; with Particular Reference to Its Indigenous Plants and Economic Productionsã€ï¼ˆLondon: Edward Stanfordã€1883å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "New York Botanical Garden LuEsther T. Mertz Libraryæ‰€è”µåˆç‰ˆæœ¬ã®Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­colonybritishho00morrï¼‰ã‚’åº•æœ¬ã¨ã—ã€University of Toronto Robarts Libraryæ‰€è”µæœ¬ï¼ˆè­˜åˆ¥å­colonyofbritishh00morruoftï¼‰ã‚’ç…§åˆã«ç”¨ã„ãŸã€‚Biodiversity Heritage Libraryã¯æœ¬æ›¸ã‚’ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã¨è¡¨ç¤ºã—ã¦ã„ã‚‹ã€‚",
-    sourceUrl: "https://archive.org/details/colonybritishho00morr",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "henderson-british-honduras-1811": {
-    sourceEdition:
-      "George Hendersonã€An Account of the British Settlement of Hondurasã€ï¼ˆSecond Edition, Enlarged, London: Printed for R. Baldwin, Paternoster Rowã€1811å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Harvard Universityæ‰€è”µæœ¬ã®Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­anaccountbritis00hendgoogï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€New York Public Libraryæ‰€è”µæœ¬ï¼ˆè­˜åˆ¥å­anaccountbritis01hendgoogï¼‰ã‚’ç…§åˆã«ç”¨ã„ãŸã€‚åŸåˆŠæ¨™é¡Œç´™ã€çŒ®è¾ã€åºæ–‡ã€ç¬¬2ç‰ˆåºƒå‘Šã€ç›®æ¬¡ã€æŠ˜è¾¼åœ°å›³ã€æœ¬æ–‡1â€“237é ã€å·»æœ«å°è¨˜ã‚’åéŒ²ã€‚",
-    sourceUrl:
-      "https://archive.org/details/anaccountbritis00hendgoog",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "gann-maya-indians-1918": {
-    sourceEdition:
-      "Thomas W. F. Gannã€The Maya Indians of Southern Yucatan and Northern British Hondurasã€ï¼ˆSmithsonian Institution, Bureau of American Ethnology, Bulletin 64, Washington: Government Printing Officeã€1918å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "ç±³å›½è­°ä¼šå›³æ›¸é¤¨ã‚¸ã‚§ã‚¤ãƒ»Iãƒ»ã‚­ã‚¹ãƒ©ãƒƒã‚¯å‚è€ƒã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³æ‰€è”µæœ¬ã‚’åã‚ã‚‹Internet Archiveå…¬é–‹ç”»åƒï¼ˆè­˜åˆ¥å­mayaindiansofsou00gannï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚Project Gutenberg eBook No. 46973ã¯æ§‹æˆã€æ¤œç´¢ã€é å¢ƒç•ŒãŠã‚ˆã³å…¬é–‹ç”»åƒãƒ•ã‚¡ã‚¤ãƒ«ã®ç…§åˆã«é™ã£ã¦ä½¿ç”¨ã€‚",
-    sourceUrl:
-      "https://archive.org/details/mayaindiansofsou00gann",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "uring-voyages-travels-1928": {
-    sourceEdition:
-      "Nathaniel Uringã€The Voyages and Travels of Captain Nathaniel Uringã€Captain Alfred Dewar, O.B.E., R.N., B.Litt. (Oxon.) åºèª¬ãƒ»æ³¨ï¼ˆThe Seafarers' Library, London: Cassell and Company Ltd.ã€1928å¹´ï¼‰ã€‚1726å¹´åˆç‰ˆæœ¬æ–‡ã®é€å­—å†åˆŠã«åºèª¬ã€æ³¨ã€ç´¢å¼•ã€åŠèª¿å†™çœŸå›³ç‰ˆ8è‘‰ã‚’åŠ ãˆãŸç‰ˆã€‚",
-    sourceProvider:
-      "Trent Universityæ‰€è”µæœ¬ã®Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­voyagestravelsof0000urinã€å…¨312ç”»åƒï¼‰ã€‚1928å¹´ç‰ˆã«å«ã¾ã‚Œãªã„1726å¹´åˆç‰ˆã®å›³ç‰ˆã¯è£œã‚ãšã€åŒç‰ˆæ‰€åã®åˆŠè¡Œç‰©æœ¬æ–‡ã¨å›³ç‰ˆã‚’åéŒ²ã€‚",
-    sourceUrl: "https://archive.org/details/voyagestravelsof0000urin",
-    rights:
-      "1726å¹´åŸè‘—ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚1928å¹´ç‰ˆã¯ç±³å›½ã§ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã‚ã‚Šã€ã‚ªãƒ¼ã‚¹ãƒˆãƒ©ãƒªã‚¢å›½ç«‹å›³æ›¸é¤¨ã‚‚å½“è©²ç‰ˆã‚’ã€ŒEdition Out of Copyrightã€ã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "cook-balise-merida-1769": {
-    sourceEdition:
-      "Lieutenant Cookã€Remarks on a Passage from the River Balise, in the Bay of Honduras, to Merida; the Capital of the Province of Jucatan, in the Spanish West Indiesã€ï¼ˆLondon: Printed for C. Parker, 1769å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "John Carter Brown Libraryæ‰€è”µåˆç‰ˆæœ¬ã®Internet Archiveé«˜ç²¾ç´°ãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­remarksonpassage00cookï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚Project Gutenberg eBook No. 74378ã®è»¢å†™ã¯æ¤œç´¢ã€é åŒºåˆ†ã€åˆ¤èª­ã®è£œåŠ©ã«é™ã£ã¦å‚ç…§ã—ã€æœ¬æ–‡ç¢ºå®šã«ã¯åŸåˆŠç”»åƒã‚’ç”¨ã„ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/remarksonpassage00cook",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "swett-british-honduras-san-pedro-1868": {
-    sourceEdition:
-      "Charles Swettã€A Trip to British Honduras, and to San Pedro, Republic of Hondurasã€ï¼ˆNew Orleans: Price Current Print, 1868å¹´åˆç‰ˆï¼‰ã€‚",
-    sourceProvider:
-      "Library of Congressæ‰€è”µåˆç‰ˆæœ¬ã®Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­triptobritishhon00swetï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŒæœ¬ã§æ¬ ã‘ã‚‹ã€Œåºèª¬ã€å†’é ­ã®ç„¡ãƒãƒ³ãƒ–ãƒ«é ï¼ˆæ›¸èªŒä¸Šã®åŸåˆŠ3é ï¼‰ã¯ã€Harvard Universityæ‰€è”µæœ¬ï¼ˆè­˜åˆ¥å­atriptobritishh01swetgoogï¼‰ã§è£œå®Œã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/triptobritishhon00swet",
-    rights: publicDomainRights,
-    publishedDate: "2026-07-29",
-    updatedDate: "2026-07-29",
-  },
-  "gann-discoveries-central-america-1928": {
-    sourceEdition:
-      "Thomas Gannã€Discoveries and Adventures in Central Americaã€ï¼ˆLondon: Duckworthã€1928å¹´åˆç‰ˆï¼‰ã€‚ãƒˆãƒ¼ãƒã‚¹ãƒ»Aãƒ»ã‚¸ãƒ§ã‚¤ã‚¹ã«ã‚ˆã‚‹åºæ–‡ã‚’å«ã‚€ã€‚",
-    sourceProvider:
-      "Internet Archiveå…¬é–‹ç”»åƒï¼ˆè­˜åˆ¥å­discoveriesadven0000thomï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŸåˆŠç”»åƒã‚’ç›´æ¥èª­ã¿ã€åŒæ‰€ã®OCRã¯æ¤œç´¢ã€é åˆ†å‰²ã€é›£èª­ç®‡æ‰€ã®ä½ç½®ç¢ºèªã«ã®ã¿ä½¿ç”¨ã€‚HathiTrustã®æ›¸èªŒãŠã‚ˆã³1929å¹´Charles Scribner's Sonsç‰ˆã¯æ§‹æˆã¨é›£èª­ç®‡æ‰€ã®ç…§åˆã«é™ã£ã¦å‚ç…§ã—ãŸã€‚",
-    sourceUrl:
-      "https://archive.org/details/discoveriesadven0000thom",
-    rights:
-      "1928å¹´åˆç‰ˆã¯ç±³å›½ã€è‹±å›½ãŠã‚ˆã³æ—¥æœ¬ã§ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-30",
-    updatedDate: "2026-07-30",
-  },
-  "juarros-compendio-guatemala-1857": {
-    sourceEdition:
-      "Domingo Juarrosã€Compendio de la historia de la ciudad de Guatemalaã€å…¨2å·»ï¼ˆEdiciÃ³n del Museo Guatemalteco, Guatemala: Imprenta de Luna, Calle de la Providencia nÃºm. 2ã€1857å¹´ï¼‰ã€‚",
-    sourceProvider:
-      "Biblioteca Ludwig von Misesï¼ˆUniversidad Francisco MarroquÃ­nï¼‰æ‰€è”µ1857å¹´ç‰ˆã‚’ä¸»åº•æœ¬ã¨ã—ã€Harvard Universityæ‰€è”µæœ¬ã®Google Booksï¼Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­compendiodelahi00juargoogï¼‰ã‚’å…¨å·»ã®æ§‹æˆã€åŸåˆŠé ã€æ•°å€¤ãŠã‚ˆã³é›£èª­ç®‡æ‰€ã®ç…§åˆã«ç”¨ã„ãŸã€‚",
-    sourceUrl:
-      "https://biblioteca.ufm.edu/opac/record/1072319",
-    rights:
-      "1857å¹´åŸåˆŠã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-30",
-    updatedDate: "2026-07-30",
-  },
-  "moran-cholti-1695": {
-    sourceEdition:
-      "Francisco MorÃ¡nã€Arte en lengua Cholti que quiere decir lengua de milperosã€ï¼ˆ1685â€“1695å¹´å†™æœ¬ï¼‰ã€William Gates papers, MSS 279 Series 8 Subseries 2 Subseries 5, box 42, folder 1ã€‚",
-    sourceProvider:
-      "Brigham Young University, L. Tom Perry Special Collectionsæ‰€è”µå†™æœ¬ã®å…¨182é ãƒ»188ç”»åƒãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆitem 53990ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŒé¤¨ã®æ–‡æ³•ã‚¿ã‚¤ãƒ—ç¨¿ï¼ˆitem 52917ï¼‰ãƒ»èªå½™è»¢è¨˜ï¼ˆitem 54344ï¼‰ãŠã‚ˆã³University of Pennsylvaniaæ‰€è”µC. Hermann Berendtå†™æœ¬ï¼ˆMs. Coll. 700 Item 84ï¼‰ã‚’é å¯¾å¿œã¨é›£èª­ç®‡æ‰€ã®ç…§åˆã«ç”¨ã„ãŸã€‚",
-    sourceUrl:
-      "https://contentdm.lib.byu.edu/digital/collection/p15999coll16/id/53990/",
-    rights:
-      "1695å¹´å†™æœ¬ã¯è‘—ä½œæ¨©ä¿è­·æœŸé–“ã‚’æº€äº†ã—ã¦ãŠã‚Šã€Brigham Young Universityã®æ›¸èªŒã§ã‚‚ã€ŒPublic domainã€ã¨è¡¨ç¤ºã•ã‚Œã¦ã„ã¾ã™ã€‚ãƒ‡ã‚¸ã‚¿ãƒ«ç”»åƒã«ã¯å…¬é–‹å…ƒã®åˆ©ç”¨æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚æ—¥æœ¬èªç¿»è¨³ç‰ˆã«ã¯å†åˆ©ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã‚’è¨­å®šã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    publishedDate: "2026-07-30",
-    updatedDate: "2026-07-30",
-  },
-  "thompson-ethnology-mayas-1930": {
-    sourceEdition:
-      "J. Eric S. Thompsonã€Ethnology of the Mayas of Southern and Central British Hondurasã€ï¼ˆField Museum of Natural History, Publication 274, Anthropological Series, Vol. XVII, No. 2, Chicago: Field Museum Pressã€1930å¹´ï¼‰ã€‚åŸåˆŠ27â€“213é ã€åœ°å›³1è‘‰ã€å†™çœŸå›³ç‰ˆ24è‘‰ã€‚",
-    sourceProvider:
-      "Biodiversity Heritage Libraryï¼Field Museum of Natural History Libraryã®Internet Archiveãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆè­˜åˆ¥å­ethnologyofmayas172thomï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŒè¤‡è£½ã«æ¬ ã‘ã‚‹åŸåˆŠå›³ç‰ˆXVã¯ã€University of Texasæ‰€è”µæœ¬ã®Google Booksãƒ‡ã‚¸ã‚¿ãƒ«è¤‡è£½ï¼ˆvolume ID NV1qAAAAMAAJï¼‰ã‹ã‚‰è£œå®Œã—ãŸã€‚",
-    sourceUrl: "https://doi.org/10.5962/bhl.title.3491",
-    rights:
-      "åŸè‘—ã®ãƒ‡ã‚¸ã‚¿ãƒ«å…¬é–‹ç‰ˆã¯ã€æ¨©åˆ©è€…Field Museum of Natural Historyã®è¨±è«¾ã«ã‚ˆã‚Šã€Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unportedï¼ˆCC BY-NC-SA 3.0ï¼‰ã§æä¾›ã•ã‚Œã¦ã„ã¾ã™ã€‚æœ¬æ—¥æœ¬èªç‰ˆã¯åŸè‘—ã®ç¿»æ¡ˆç‰©ã¨ã—ã¦åŒä¸€ã®CC BY-NC-SA 3.0ã§æä¾›ã—ã¾ã™ã€‚åˆ©ç”¨ã«ã¯åŸè‘—è€…ãƒ»åŸé¡Œãƒ»åŸåˆŠæƒ…å ±ãƒ»æ¨©åˆ©è€…ãƒ»åº•æœ¬ã®è¡¨ç¤ºã€éå–¶åˆ©åˆ©ç”¨ã€æ”¹å¤‰ç‰©ã¸ã®åŒä¸€ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã®ç¶™æ‰¿ãŒå¿…è¦ã§ã™ã€‚è¿½åŠ ã®åˆ¶é™ã¯è¨­ã‘ã¾ã›ã‚“ã€‚æœ¬ç¿»è¨³ãƒ»ç·¨é›†ã¯Field Museum of Natural Historyã¾ãŸã¯Biodiversity Heritage Libraryã®æ‰¿èªã‚’æ„å‘³ã—ã¾ã›ã‚“ã€‚ãƒ©ã‚¤ã‚»ãƒ³ã‚¹æœ¬æ–‡ï¼šhttps://creativecommons.org/licenses/by-nc-sa/3.0/",
-    publishedDate: "2026-07-30",
-    updatedDate: "2026-07-30",
-  },
-  "berendt-baumwollenbau-yucatan-1863": {
-    "sourceEdition": "Dr. H. Berendt, â€œBaumwollenbau in Yucatan,â€ Petermanns Geographische Mittheilungen, 9. Band, 1863, S. 389.",
-    "sourceProvider": "New York Public Libraryæ‰€è”µæœ¬ã‚’GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Internet Archiveã§å…¬é–‹ã—ãŸ1863å¹´åŸèªŒç”»åƒï¼ˆè­˜åˆ¥å­petermannsgeogr09haacgoogï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚OCRã¯æ¤œç´¢ãƒ»åˆ¤èª­ã®è£œåŠ©ã«ã®ã¿ç”¨ã„ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/petermannsgeogr09haacgoog",
-    "rights": "1863å¹´åŸåˆŠæœ¬æ–‡ãŠã‚ˆã³èªŒé¢ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚åº•æœ¬ã¯New York Public Libraryæ‰€è”µæœ¬ã‚’GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ã€Internet Archiveã§å…¬é–‹ã—ãŸè³‡æ–™ã§ã€å½“è©²ã‚¢ã‚¤ãƒ†ãƒ ã¯NOT_IN_COPYRIGHTï¼ˆç±³å›½ï¼‰ã€å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹æŒ‡å®šãªã—ã§ã™ã€‚ç”»åƒãƒ»ãƒ¡ã‚¿ãƒ‡ãƒ¼ã‚¿ã®åˆ©ç”¨ã«ã¯Internet Archiveã®TermsãŠã‚ˆã³Rights & Accessè¡¨ç¤ºãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚å†åˆ©ç”¨æ™‚ã¯åŸè‘—åã€è­˜åˆ¥å­petermannsgeogr09haacgoogã€åŸåˆŠé ãŠã‚ˆã³å„æ©Ÿé–¢åã‚’è¡¨ç¤ºã—ã¾ã™ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-analytical-alphabet-1869": {
-    "sourceEdition": "Dr. C. H. Berendt, Analytical Alphabet for the Mexican & Central American Languages, New York: American Ethnological Society / American Photo-Lithographic Co., 1869, è‡ªç­†ç¨¿ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒª1â€“8é ã€‚",
-    "sourceProvider": "Library of Congressæ‰€è”µåˆç‰ˆç”»åƒï¼ˆè«‹æ±‚è¨˜å·ãƒ»è­˜åˆ¥å­21020706ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€Internet Archiveå…¬é–‹ã®åŒä¸€æ‰€è”µæœ¬ï¼ˆè­˜åˆ¥å­analyticalalphab00bereï¼‰ã‚’ç”»åƒå–å¾—ãƒ»ç…§åˆã«ç”¨ã„ãŸã€‚",
-    "sourceUrl": "https://www.loc.gov/item/21020706/",
-    "rights": "1869å¹´åˆŠã®åŸè‘—æœ¬æ–‡ãŠã‚ˆã³ãƒ•ã‚¡ã‚¯ã‚·ãƒŸãƒªã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Library of Congressã¯å½“è©²è³‡æ–™ã‚’Public Domainï¼Free to Use and Reuseã¨ã—ã¦å…¬é–‹ã—ã¦ã„ã¾ã™ã€‚Internet Archiveã®åŒä¸€è³‡æ–™ã«ã¯å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹æŒ‡å®šãŒã‚ã‚Šã¾ã›ã‚“ã€‚å†åˆ©ç”¨æ™‚ã¯åŸè‘—åã€åŸåˆŠé ã€Library of Congressæ‰€è”µãƒ»å…¬é–‹ã€Internet Archiveè­˜åˆ¥å­analyticalalphab00bereã‚’è¡¨ç¤ºã—ã¾ã™ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-escritos-garcia-icazbalceta-1870": {
-    "sourceEdition": "C. A. B. [Carl Hermann Berendt], â€œLos escritos de D. JoaquÃ­n GarcÃ­a Icazbalceta,â€ Revista de MÃ©rida 2 (1870); å†æ² BoletÃ­n de la Sociedad Mexicana de GeografÃ­a y EstadÃ­stica, 2Âª Ã©poca, tomo II, 1870, pp. 642â€“647.",
-    "sourceProvider": "UNAMãƒ»Instituto de Investigaciones HistÃ³ricasã€Fuentes para el estudio de la historia moderna de los pueblos indÃ­genas de MÃ©xicoã€å…¬é–‹ã®BoletÃ­nå†æ²æœ¬æ–‡ãŠã‚ˆã³å·»PDFï¼ˆæ‰€è”µè¡¨ç¤ºIGg Fondo Reservadoï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚",
-    "sourceUrl": "https://hmpi.historicas.unam.mx/fuentes/boletin-smge/los-escritos-d-joaquin-garcia-icazbalceta",
-    "rights": "1870å¹´åŸè‘—æœ¬æ–‡ãŠã‚ˆã³åŸèªŒèªŒé¢ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚UNAMãƒ»Instituto de Investigaciones HistÃ³ricasã®å…¬é–‹ãƒšãƒ¼ã‚¸ã¯ã€éå–¶åˆ©ç›®çš„ã€ç„¡æ”¹å¤‰ãƒ»ç„¡åˆ‡é™¤ã€å®Œå…¨ãªå‡ºå…¸ã¨é›»å­ã‚¢ãƒ‰ãƒ¬ã‚¹ã®è¡¨ç¤ºç­‰ã‚’æ¡ä»¶ã¨ã—ã€ãã‚Œä»¥å¤–ã«ã¯äº‹å‰ã®æ›¸é¢è¨±å¯ã‚’æ±‚ã‚ã¾ã™ï¼ˆDR Â© 2019â€“2022ï¼‰ã€‚å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹æŒ‡å®šã¯ã‚ã‚Šã¾ã›ã‚“ã€‚æœ¬ç‰ˆã¯UNAMã®ãƒšãƒ¼ã‚¸ã¾ãŸã¯èªŒé¢ç”»åƒã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-trabajos-linguisticos-juan-pio-perez-1871": {
-    "sourceEdition": "Dr. C. Hermann Berendt, â€œLos trabajos lingÃ¼Ã­sticos de D. Juan PÃ­o PÃ©rez,â€ BoletÃ­n de la Sociedad Mexicana de GeografÃ­a y EstadÃ­stica, 2Âª Ã©poca, tomo III, nÃºms. 1â€“6, 1871, pp. 58â€“61; åˆ¥åˆ·6é ã€‚",
-    "sourceProvider": "UNAMãƒ»Instituto de Investigaciones HistÃ³ricaså…¬é–‹ã®åŸèªŒæœ¬æ–‡ãƒ»å·»PDFã‚’ä¸»åº•æœ¬ã¨ã—ã€University of Pennsylvania Libraries, Kislak Center, Berendt-Brinton Linguistic Collection, Ms. Coll. 700 Item 5ã®åˆ¥åˆ·ï¼ˆARK 81431/p3bz61p4bï¼‰ã‚’æ ¡åˆæœ¬ã¨ã—ãŸã€‚",
-    "sourceUrl": "https://hmpi.historicas.unam.mx/fuentes/boletin-smge/los-trabajos-linguisticos-d-juan-pio-perez",
-    "rights": "1871å¹´åŸè‘—æœ¬æ–‡ãŠã‚ˆã³åŸèªŒãƒ»åˆ¥åˆ·ã®å°åˆ·é¢ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚UNAMå…¬é–‹ãƒšãƒ¼ã‚¸ã¯éå–¶åˆ©ã€ç„¡æ”¹å¤‰ãƒ»ç„¡åˆ‡é™¤ã€å®Œå…¨ãªå‡ºå…¸è¡¨ç¤ºç­‰ã®æ¡ä»¶ã‚’æ²ã’ã€å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹æŒ‡å®šã¯ã‚ã‚Šã¾ã›ã‚“ã€‚Pennã®æ ¡åˆæœ¬ã¯RightsStatements.orgã®No Copyrightâ€”United Statesï¼ˆNoC-US 1.0ï¼‰è¡¨ç¤ºã§ã™ã€‚æœ¬ç‰ˆã¯ä¸¡æ©Ÿé–¢ã®ç”»åƒã‚’è»¢è¼‰ã—ã¦ã„ã¾ã›ã‚“ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-el-ramie-1871": {
-    "sourceEdition": "Dr. C. H. Berendt, El ramiÃ©. Tratado sobre el cultivo y algunas noticias de esta planta, MÃ©rida: Imprenta de M. Aldana Rivas, 1871, 39 + [1] pp.ï¼ˆRevista de MÃ©ridaæ²è¼‰æ–‡ã®åˆ¥åˆ·ï¼‰ã€‚",
-    "sourceProvider": "Princeton Universityæ‰€è”µæœ¬ã‚’GoogleãŒãƒ‡ã‚¸ã‚¿ãƒ«åŒ–ã—ãŸå…¨æ–‡ã‚’ä¸»åº•æœ¬ã¨ã—ã€HathiTrust Digital Libraryã®åŒä¸€æ‰€è”µè­˜åˆ¥å­njp.32101078193446ã€æ¨©åˆ©ã‚³ãƒ¼ãƒ‰pdã€Full Viewã®æ›¸èªŒãƒ»ç”»åƒã§ç…§åˆã—ãŸã€‚",
-    "sourceUrl": "https://catalog.hathitrust.org/Record/009037780",
-    "rights": "1871å¹´åŸè‘—æœ¬æ–‡ãŠã‚ˆã³å°åˆ·é¢ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚HathiTrustã¯æœ¬æ›¸ã‚’Public Domainï¼Full Viewï¼ˆæ¨©åˆ©ã‚³ãƒ¼ãƒ‰pdï¼‰ã¨ã—ã¦å…¬é–‹ã—ã€å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹æŒ‡å®šã¯ã‚ã‚Šã¾ã›ã‚“ã€‚Googleï¼HathiTrustã®ç”»åƒãŠã‚ˆã³OCRã¯è»¢è¼‰ã›ãšã€ç”»åƒç…§åˆã—ã¦ä½œæˆã—ãŸç‹¬è‡ªç¿»åˆ»ã®æ—¥æœ¬èªè¨³ã‚’åéŒ²ã—ã¦ã„ã¾ã™ã€‚åº•æœ¬ç”»åƒã®åˆ©ç”¨ã«ã¯Google BooksãŠã‚ˆã³HathiTrustã®æ¡ä»¶ãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-mexico-1872": {
-    "sourceEdition": "Carl Hermann Berendt, â€œMexico,â€ Deutsch-amerikanisches Conversations-Lexikon, Bd. 7, New York: F. Gerhard, 1872, pp. 261â€“288.",
-    "sourceProvider": "University of Michiganæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹ç¬¬7å·»ï¼ˆè­˜åˆ¥å­bub_gb_uXdMAAAAMAAJ_2ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŸåˆŠ261â€“288é ã®ç”»åƒã€ãƒ†ã‚­ã‚¹ãƒˆå±¤ãŠã‚ˆã³é å˜ä½ã®å†OCRã‚’ç…§åˆã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/bub_gb_uXdMAAAAMAAJ_2",
-    "rights": "1872å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²ã‚¢ã‚¤ãƒ†ãƒ ã¯contributorã‚’University of Michiganã€licenseurlã‚’Public Domain Mark 1.0ï¼ˆhttp://creativecommons.org/publicdomain/mark/1.0/ï¼‰ã¨è¡¨ç¤ºã—ã€rightsæ¬„ã«ã¯å€‹åˆ¥æŒ‡å®šãŒã‚ã‚Šã¾ã›ã‚“ã€‚å…¬é–‹ç”»åƒã®åˆ©ç”¨ã«ã¯Internet Archiveã®Terms of UseãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-indianer-tehuantepec-1873": {
-    "sourceEdition": "H. Berendt, â€œDie Indianer des Isthmus von Tehuantepec,â€ Zeitschrift fÃ¼r Ethnologie, Bd. 5, 1873, pp. 146â€“153.",
-    "sourceProvider": "Getty Research Instituteæ‰€è”µæœ¬ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹ç¬¬5å·»ï¼ˆè­˜åˆ¥å­zeitschriftfre05berlï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ãŸã€‚åŸåˆŠ146â€“153é ã®ç”»åƒã€ãƒ†ã‚­ã‚¹ãƒˆå±¤ãŠã‚ˆã³é å˜ä½ã®å†OCRã‚’ç…§åˆã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/zeitschriftfre05berl",
-    "rights": "1873å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²ã‚¢ã‚¤ãƒ†ãƒ ã¯contributorã‚’Getty Research Instituteã€possible-copyright-statusã‚’NOT_IN_COPYRIGHTã¨è¡¨ç¤ºã—ã¦ã„ã¾ã™ã€‚å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãŠã‚ˆã³rightsæ¬„ã®æŒ‡å®šã¯ã‚ã‚Šã¾ã›ã‚“ã€‚å…¬é–‹ç”»åƒã®åˆ©ç”¨ã«ã¯Internet Archiveã®Terms of UseãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚",
-    "publishedDate": "2026-08-14",
-    "updatedDate": "2026-08-14"
-  },
-  "berendt-carib-karif-language-1873": {
-    "sourceEdition": "C. H. Berendt, â€œOn a Grammar and Dictionary of the Carib or Karif Language, with Some Account of the People by Whom It Is Spoken,â€ Annual Report of the Board of Regents of the Smithsonian Institution for 1873, Washington: Government Printing Office, 1874, pp. 363â€“364.",
-    "sourceProvider": "Smithsonian Institutionå¹´å ±1873å¹´å·»ã‚’Internet ArchiveãŒå…¬é–‹ã™ã‚‹ç”»åƒï¼ˆè­˜åˆ¥å­annual-report-board-of-regents-smithsonian_1873ï¼‰ã‚’ä¸»åº•æœ¬ã¨ã—ã€åŸåˆŠ363â€“364é ã®ç”»åƒã¨OCRã‚’ç…§åˆã—ãŸã€‚",
-    "sourceUrl": "https://archive.org/details/annual-report-board-of-regents-smithsonian_1873",
-    "rights": "1874å¹´åˆŠã®åŸè‘—æœ¬æ–‡ã¯ç±³å›½ã«ãŠã„ã¦ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²ã‚¢ã‚¤ãƒ†ãƒ ã«ã¯å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã€rightsæ¬„ã€possible-copyright-statusæ¬„ã®æŒ‡å®šãŒã‚ã‚Šã¾ã›ã‚“ã€‚å…¬é–‹ç”»åƒã®åˆ©ç”¨ã«ã¯Internet Archiveã®Terms of UseãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚",
+™XÛÜ™
+HOˆÜ™XÛÜ™œÛYË™XÛÜ™JKŠNÂšYˆ
+Ø[›ÛšXØ[šX›[ÙÜ˜\KœÚ^™HOOHšX›[ÙÜ˜\XÓX[šY™\İœ™XÛÜ™Ë›[™İ
+HÂˆ›İÈ™]È\œ›ÜŠ‘\XØ]HØ[›ÛšXØ[šX›[ÙÜ˜\XÈ™XÛÜ™ÛYÈŠNÂŸB‚˜ÛÛœİX›XØ][Û”™XÛÜ™ÈHÂˆÂˆœÛYÈˆ˜\KXš\ÚÜX[[Û™ÜİX˜[˜[˜\ËLNLLH‹ˆ]Hˆ¸àä8àâ¸àâ¸àk¹.+xàk¹..ù¥fH‹ˆ›ÜšYÚ[˜[]HˆHš\ÚÜ[[Û™Üİ˜[˜[˜\È‹ˆœİX]Hˆ¸à#9.ì8àcº)¢øà¢øà#xàîÌNLLynm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àãøàï8àä8àï8àâ8àîøàæxàê¸àï‹ˆ›ÜšYÚ[˜[]]Üˆˆ’\˜™\\H‹ˆœÙ\šY\ÈˆH’TÒÔSSÓ‘ÔÕSSTÈ0­ÈNLLH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àëxàìøàâxàìøà UÙ[ÈØ\™™\‹\Ûˆ	ˆÛË‹¸à VÌNLLynmH‹ˆYX\ˆˆNLLKˆ™^[ˆŒymîøàîÔˆNºh xàîùc§ùb"¹§+9¥¡ÌŒÍºh xàîùc§ùb"¹fìùâbMz$bxàîùmîúh+yå.ù`ãÍ9à®H‹ˆ™\ØÜš\[Ûˆˆº"ìyfïyfïy¥fy/&¹..ù¥fxàãøàï8àä8àï8àâ8àîøàæxàê¸àï8àc8à z"ìzh&8àæøàìøà®8àéxàêxà®xàbøà¢xà¬8à¨¸àá¸àç¸àêxà xàâøàªøàêxà¬8à¨¸à xà¬øà®xà¯øàê¸àªøà xàäxàâ¸àç¸à xà®8àèøàç¸à©8àªøàn:-m8àa8àgùmèykçù¥áz(c8à¤º*&8àeøàgÌNLLynm9b"¸àk¹¥áz(c:*&8àiøàfxà ¸àä8àâ¸àâº/¬¹g$¸àj:ba:`døà y­*¹¬-8àîùg,:g!øàîùàjùllxà xàäxàâ¸àçº`bù¬¬ùméy.¢øà yd!9g,8àk¹¥fy/&¸àj9é/¹/&¸à¤¹ajM¹êè8àiù£ãøàcxào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØ\KXš\ÚÜX[[Û™ÜİX˜[˜[˜\ËLNLLKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØ\KXš\ÚÜX[[Û™ÜİX˜[˜[˜\ËLNLLKÒ\˜™\Ğ\WĞWĞš\ÚÜØ[[Û™ÜİĞ˜[˜[˜\×ÌNLLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØ\KXš\ÚÜX[[Û™ÜİX˜[˜[˜\ËLNLLKÒ\˜™\Ğ\WĞWĞš\ÚÜØ[[Û™ÜİĞ˜[˜[˜\×ÌNLLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆN‹ˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆMKˆ\\ÈˆÂˆ¹¥áz(c:*&‹ˆ¹k¥ù¥fycìˆ‹ˆ¹é/¹/&¹cìˆ‹ˆ¹©#y¬$yg,9cìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆº"ìzh&8àæøàìøà®8àéxàêxà®H‹ˆ¸àæxàê¸àï8à®ˆ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¸àäxàâ¸àçˆ‹ˆ¸à®8àèøàç¸à©8àªÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ¸àãøàï8àä8àï8àâ8àîøàæxàê¸àï‹ˆº"ìyfïyfïy¥fy/&ˆ‹ˆ¸àä8àâ¸àâ¹å(ù©kH‹ˆ¸àé¸àâ¸à©8àá¸ààøàâxàîøàåxàêøàï8àá8àîøàªøàìøàäxàâøàï‹ˆ¸àäxàâ¸àçº`bù¬¬È‹ˆºba:`dÈ‹ˆŒŒ9.%¹í 9b'zh+H‚ˆKˆœÙX\˜ÚÚ\™ˆŒˆ‚ˆKˆÂˆœÛYÈˆœšY]Ë\X]ÛİÜÚÚKY™\œ›ØØ\œš[Z[\›ØÙX[šXÛËYİX][X[KLN‹ˆ]Hˆ¸à¬8à¨¸àá¸àç¸àêyi)ù­"úe¤úba:`døàjúe¨¸àfxà¢ù© º*«‹ˆ›ÜšYÚ[˜[]Hˆ’YX\ÈÙ[™\˜[\ÈÛØœ™H[™\œ›ØØ\œš[[\›ØÙpè[šXÛÈHİX][X[H‹ˆœİX]HˆŒN9nm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸à¨¸àë8àãøàìøàâxàëxàîøàåøàê¸àª8àâ;ï#Ô¸àîøàå8à¨¸àâ8à¬øàåxà®xà«H‹ˆ›ÜšYÚ[˜[]]Üˆˆ[Z˜[™›ÈšY]ÈÈ‹ˆX]ÛİÜÚÚH‹ˆœÙ\šY\Èˆ‘‘T”“ĞĞT”’SS•T“ĞÑpàS’PÓÈ0­ÈN‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à¬8à¨¸àá¸àç¸àêxà xà¯øàêxà®øàâ¹â-¹kd9cl9b-ù¢`8à LN9nm‹ˆYX\ˆˆNˆ™^[ˆ”ˆÍúh xàîùc§ùb"¹§+9¥¡Íx $ÍŒ:h xàîú(jM9à®xàîùfìùâb¹à®xàîù¬ê9.íˆ‹ˆ™\ØÜš\[Ûˆˆ¸à¬8à¨¸àá¸àç¸àêxà¤¹i)ú)où­"ùl®8àj9i*¹nlù­"ùl®8àiùíd8àm¹i)ù­"úe¤úba:`døàjøài8àa8ài¸à z-ëùíæ¸à z.ã:e¤øà ynîº*+z,®øà z,áúaäz*¯ú`e8à z/.:` zg :) xà y¥/ùn§9idyí!8à¤¹©':*#¸àeøà xà­xàìøàîøàæøà®ø %xàª8à®xà«øà©8àìøàâ8àêyíæ¸àk¹cã¹¥+ú)¢ùêcxà¢¸àj9d!9fïxàkº`bù¬¬ú*"9å.øà¤¹.æ:c,¸àjùcã¸à xàgÌN9nm9b"¸àkºba:`dú*"9å.ù¦î8àiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜšY]Ë\X]ÛİÜÚÚKY™\œ›ØØ\œš[Z[\›ØÙX[šXÛËYİX][X[KLNØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜšY]Ë\X]ÛİÜÚÚKY™\œ›ØØ\œš[Z[\›ØÙX[šXÛËYİX][X[KLNĞ[Z˜[™›×ÔšY]×Ô—ÔX]ÛİÜÚÚWÒYX\×ÙÙ[™\˜[\×ÜÛØœ™WÙ[Ñ™\œ›ØØ\œš[Ò[\›ØÙX[šXÛ×ÙWÑİX][X[WÌNÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜšY]Ë\X]ÛİÜÚÚKY™\œ›ØØ\œš[Z[\›ØÙX[šXÛËYİX][X[KLNĞ[Z˜[™›×ÔšY]×Ô—ÔX]ÛİÜÚÚWÒYX\×ÙÙ[™\˜[\×ÜÛØœ™WÙ[Ñ™\œ›ØØ\œš[Ò[\›ØÙX[šXÛ×ÙWÑİX][X[WÌNÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÍËˆ™šYİ\™PÛİ[ˆ‹ˆœ]PÛİ[ˆˆ\\ÈˆÂˆºba:`dùcìˆ‹ˆ¹.©:`&¹cìˆ‹ˆ¹íc9®"9cìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸à­xàìøàîøàæøà®È‹ˆ¸àª8à®xà«øà©8àìøàâ8àêH‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¬8à¨¸àá¸àç¸àêyi)ù­"úe¤úba:`dÈ‹ˆºba:`dùnîº*+H‹ˆºba:`dú.ã:e¤È‹ˆº/.:` H‹ˆº,áúaäz*¯ú`e‹ˆº`bù¬¬ú*"9å.È‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ˜˜^‹YØ[ËZ\İÜšXKY™\œ›ØØ\œš[[Y^XØ[›ËLNÍ‹ˆ]Hˆ¸àèxà«xà­øà¬úba:`dùcìˆ‹ˆ›ÜšYÚ[˜[]Hˆ’\İÜšXH[™\œ›ØØ\œš[Y^XØ[›È‹ˆœİX]Hˆ¹®o¹l®9g,9n+øàbøà¢y.+yi+ºjæ9c§øàjøàa8àgøà¢øàèxà«xà­øà¬øàk¹kã8àîÌNÍ9nm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸à¬8à®xà¯øàç8àîøàä8à®{ï#øàª8àâxà©xà¨¸àêøàâxàîÓ8àîøà«8àê¸àéÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘İ\İ]›È˜^ˆÈYX\™ÈˆØ[È‹ˆœÙ\šY\Èˆ’TÕÔ’PHS‘T”“ĞĞT”’SQVPĞS“È0­ÈNÍ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àèxà«xà­øà¬øà QØ[ÈHÛÛ\pìpëXxà LNÍ9nm‹ˆYX\ˆˆNÍˆ™^[ˆ”ˆŒºh xàîùc§ùb"¹bcy.æú$bxàîù§+9¥¡Íx $ÌMºh xàîùfìùâb9ëbLÎ9à®xàîú(jMùà®xàîù¬êù.íˆ‹ˆ™\ØÜš\[Ûˆˆ¸àä8à®xàj8à«8àê¸àéøàc8àæxàêxà«øàêøà®x %xàèxà«xà­øà¬úba:`døàk¹¢$9êâøà ynîº*+xà z-ëùíæ¸à yªbù¨ xàîøàâ8àìøàãxàêøàîúiáxà¤º*&:c,¸àeøà y®o¹l®9g,9n+øàbøà¢y.+yi+ºjæ9c§øàjú!ìøà¢ùd!9g,8àk¹g,:,ê¸à z/¬¹©kxà yméy©kxà yea¹©kxà z`ïyn ¸àj9.®¹cèøà¤¹ílz*":(j8àîùfìùâb8àj8àj8à ¸àjú*å¸àf8àgÌNÍ9nm9b"¸àkºba:`dùcì¸àîùg,:*£8àiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØ˜^‹YØ[ËZ\İÜšXKY™\œ›ØØ\œš[[Y^XØ[›ËLNÍØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØ˜^‹YØ[ËZ\İÜšXKY™\œ›ØØ\œš[[Y^XØ[›ËLNÍÑİ\İ]›×Ğ˜^—ÑYX\™×ÓÑØ[×Ò\İÜšXWÙ[Ñ™\œ›ØØ\œš[ÓY^XØ[›×ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØ˜^‹YØ[ËZ\İÜšXKY™\œ›ØØ\œš[[Y^XØ[›ËLNÍÑİ\İ]›×Ğ˜^—ÑYX\™×ÓÑØ[×Ò\İÜšXWÙ[Ñ™\œ›ØØ\œš[ÓY^XØ[›×ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒ‹ˆ™šYİ\™PÛİ[ˆÎˆœ]PÛİ[ˆˆ\\ÈˆÂˆºba:`dùcìˆ‹ˆ¹.©:`&¹cìˆ‹ˆ¹g,:*£‹ˆ¹íc9®"9cìˆ‹ˆ¹å(ù©kycìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àæxàêxà«øàêøà®H‹ˆ¸àåøàª8àå¸àêH‹ˆ¸àèxà«xà­øà¬ùn ˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àèxà«xà­øà¬úba:`dÈ‹ˆ¸àæxàêxà«øàêøà®H‹ˆ¸àèxà«xà­øà¬ùn ˆ‹ˆºba:`dùnîº*+H‹ˆ¹ªbù¨ H‹ˆ¸àâ8àìøàãxàêÈ‹ˆ¹å(ù©kyílz*"‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœÜ]ZY\‹Y]š\ËX[˜ÚY[[[Û[Y[Ë[Z\ÜÚ\ÜÚ\K]˜[^KLN‹ˆ]Hˆ¸àçøà­øà­øààøàå9mçy­`ygçøàk¹cé9.èú`n¹©âÈ‹ˆ›ÜšYÚ[˜[]Hˆ[˜ÚY[[Û[Y[ÈÙˆHZ\ÜÚ\ÜÚ\H˜[^H‹ˆœİX]Hˆ¹n ùëá8àj¹âë:!ê¹®+:aãøàb¸à¢8àlú.#ù§îøàk¹¢$9§§8à¤¹cãºc,¸àîÌN9nm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨»ï#ÑxàîÒ8àîøàáøà©8àí8à¨øà®H‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆÈYÚ[ˆ[Z[Ûˆ]š\È‹ˆœÙ\šY\ÈˆSÒQS•SÓ•SQS•È0­ÈN‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àëøà­øàìøàâ8àìøà TÛZ]ÛÛšX[ˆ[œİ]][Û¸à LN9nm‹ˆYX\ˆˆNˆ™^[ˆŒymîøàîùc§ùb"¹§+9¥¡ÌÌºh xàîùfìùâb9§¦¸àîù§*9cèù§*9âb9fìÌŒùà®xàîú(jM9à®H‹ˆ™\ØÜš\[Ûˆˆ¸à®xà«øàëøà©8à¨¸àj8àáøà©8àí8à¨øà®xàc8à xàª¸àãøà©8àª¸àb¸à¢8àløàçøà­øà­øààøàå9mçy­`ygçøàk¹g'ùh`xà yfìº`ëxà xàç¸à©¸àìøàâxà z`n¹âjxà¤¹®+:aãøàîùæn¹£¦:*&:c,¸àj9fìùâb8àjøà¢8àhøài¹/dùìîùc%¸àeøàgøà xà®xàçøà¯xàâøà¨¸àìùçéz+f9cè¹¦î9ë+ymîûï"N9nm;ï"xàiøàfxà º`n¹©âøàk¹b!ºhg¸àj9b!¹n øà ygâú$k9ïä¹/åøà yçìøàîújª8àîúaäylg¸àîú,§z(ïydàxà yojùb.øà zh+z$âú*"9®+8à ylªyb.ùå.øà¤¹ajNyêè8àjùcã¸à xào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹Y]š\ËX[˜ÚY[[[Û[Y[Ë[Z\ÜÚ\ÜÚ\K]˜[^KLNØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹Y]š\ËX[˜ÚY[[[Û[Y[Ë[Z\ÜÚ\ÜÚ\K]˜[^KLNÔÜ]ZY\—Ñ]š\×Ğ[˜ÚY[Ó[Û[Y[×ÛÙ—İWÓZ\ÜÚ\ÜÚ\WÕ˜[^WÌNÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹Y]š\ËX[˜ÚY[[[Û[Y[Ë[Z\ÜÚ\ÜÚ\K]˜[^KLNÔÜ]ZY\—Ñ]š\×Ğ[˜ÚY[Ó[Û[Y[×ÛÙ—İWÓZ\ÜÚ\ÜÚ\WÕ˜[^WÌNÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆˆ™šYİ\™PÛİ[ˆŒËˆœ]PÛİ[ˆˆ\\ÈˆÂˆº  ùcé9kiˆ‹ˆº`nº-èz*¯ù§îÈ‹ˆº  ùcé9ki¹cìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸à¨¸àèxàê¸àªùd":(a¹fïH‹ˆ¸àçøà­øà­øààøàå9mçy­`ygçÈ‹ˆ¸àª¸àãøà©8àª¹mçy­`ygçÈ‹ˆ¸àª¸àãøà©8àª¹mçˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ‘xàîÒ8àîøàáøà©8àí8à¨øà®H‹ˆ¸àç¸à©¸àìøàâxàîøàäøàêøàà8àï‹ˆ¹g'ùh`z`n¹©âÈ‹ˆ¸àç¸à©¸àìøàâH‹ˆ¸à®xàçøà¯xàâøà¨¸àìùce9/&ˆ‹ˆ¹c%ùìlú  ùcé9kiˆ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœÜ]ZY\‹[šXØ\˜YİXKLNLˆ‹ˆ]Hˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ›ÜšYÚ[˜[]Hˆ“šXØ\˜YİXNˆ]È[ÜKØÙ[™\K[Û[Y[Ë[™H›ÜÜÙY[\›ØÙX[šXÈØ[˜[‹ˆœİX]Hˆ¸àgxàk¹.®¹¬$xà y¦kú)¬øà z*&9oíyâjxà xàb¸à¢8àlú*"9å.ù.+xàk¹i)ù­"úe¤ú`bù¬¬øàîÌNL¹nm9b"ˆ9aj9.£9mîù¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆœÙ\šY\Èˆ“’PĞTQÕPH0­ÈNLˆ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àëxàìøàâxàìøà SÛ™ÛX[‹œ›İÛ‹Ü™Y[‹[™Û™ÛX[œøà LNL¹nm‹ˆYX\ˆˆNL‹ˆ™^[ˆ¹aj¹mîùd"9a¢¸àîÔˆÎºh xàîùc§ùb"¹ë+ymîÍ:h {ï#ùë+¹mîÍLºh xàîùfìùâb9ëbNM9à®xàîú(jyà®H‹ˆ™\ØÜš\[Ûˆˆ¹ìlùfïyi%¹.©9k¦8àîù£¨¹©'9k­¸à®xà«øàëøà©8à¨¸àc8à xàâøàªøàêxà¬8à¨¸àk¹g,9ä!¸àîùé/¹/&¸àîù¥/ù¬®øàîùk¥ù¥fxàîùab9/cù¬$y¥¡ùc%¸àîùcé9.èú`n¹âjxà¤¹¥áz(c:*&8àj:*¯ù§îùh,ydb¸àj8àeøàiº*&8àeøà yi)ù­"úe¤ú`bù¬¬øàk¹`&z(ç:-ëùíæ¸à y§hyí!8à yea¹©kxàîùéîù¬$yílz*"8à yab9/cù¬$z*î:*§¸à yâë9êâùo£9¥/ù¬®ùcì¸à¤¹cã¸à xàgÌNL¹nm9b"¸àk¹aj9.£9mîøàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹[šXØ\˜YİXKLNL‹ØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹[šXØ\˜YİXKLNL‹ÑWÑ×ÔÜ]ZY\—ÓšXØ\˜YİXWÌNL—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹[šXØ\˜YİXKLNL‹ÑWÑ×ÔÜ]ZY\—ÓšXØ\˜YİXWÌNL—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÎ‹ˆ™šYİ\™PÛİ[ˆMˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹í :(c‹ˆ¹g,:*£‹ˆ¹¬$y¥ãú*£‹ˆº  ùcé9kiˆ‹ˆº`bù¬¬ùcìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¸àæøàìøà®8àéxàêxà®H‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ¸àâøàªøàêxà¬8à¨º`bù¬¬È‹ˆ¹i)ù­"úe¤ú`bù¬¬È‹ˆ¸à­xàìøàîøàåxà¨¸àìùmçH‹ˆ¸àë8àª¸àìÈ‹ˆ¸à¬8àêxàâ¸àà‹ˆ¹ab9/cù¬$z*î:*§ˆ‹ˆ¹cé9.èú`n¹âjH‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœÜ]ZY\‹YÜ™X]XØ[[™\‹\İÛ™KLNH‹ˆ]Hˆ¹cé9.èøàèxà«xà­øà¬ù.®¸àk¹i)ù¦©¹çìøàjú*&8àexà£8àgù¥éy.æ8àjúe¨¸àfxà¢ú"éynl¸àk¹¥¬9ænº)¢È‹ˆ›ÜšYÚ[˜[]Hˆ”ÛÛYH™]È\ØÛİ™\šY\È™\ÜXİ[™ÈH]\ÈÛˆHÜ™X]Ø[[™\ˆİÛ™HÙˆH[˜ÚY[Y^XØ[œËÚ]ØœÙ\˜][ÛœÈÛˆHY^XØ[ˆŞXÛHÙˆšYK]ÛÈYX\œÈ‹ˆœİX]Hˆ¸àèxà«xà­øà¬øàk¹.¥9c`y.£9nm9dj9§'øàjúe¨¸àfxà¢ú  ùkçøàîÌNynm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆœÙ\šY\ÈˆSQT’PĞSˆ“ÕT“SÑˆĞÒQSÑHS‘T•È0­ÈNH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ“™]È]™[¸à xà#•H[Y\šXØ[ˆ›İ\›˜[ÙˆØÚY[˜ÙH[™\øà#ÔÙXÛÛ™Ù\šY\øà yë+ùmîùë+Œ9cíøà LNynmù§"8à LMLø $ÌMMúh H‹ˆYX\ˆˆNKˆ™^[ˆ”ˆzh xàîùc§ùb"ŒMLø $ÌMMúh xàîùfìÌ¹à®H‹ˆ™\ØÜš\[Ûˆˆ¸à®xà«øàëøà©8à¨¸àc8àèxà«xà­øà¬øàk¸à¨¸à®xàá¸àªùi)ù¦©¹çìøà¤¹©':*#¸àeøà xà«8àç¸àj8àãxàæxàêøàk¹fìøà¤¹«å:/ øàeøài¹a«:!ìøàk¹¥éy.æ8à¤¹é.¸àfz*&9cíøà¤º*å¸àf8à xà¨¸à®xàá¸àªù¦©¸àk¹.¥9c`y.£9nm9dj9§'øàj9ékyo#øàj8àkºe¨¹/à¸à¤º  ùkçøàeøàgÌNynm9b"º*å¹¥¡øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]XØ[[™\‹\İÛ™KLNKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]XØ[[™\‹\İÛ™KLNKÑWÑ×ÔÜ]ZY\—ÑÜ™X]ĞØ[[™\—ÔİÛ™WÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]XØ[[™\‹\İÛ™KLNKÑWÑ×ÔÜ]ZY\—ÑÜ™X]ĞØ[[™\—ÔİÛ™WÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆKˆ™šYİ\™PÛİ[ˆ‹ˆœ]PÛİ[ˆˆ\\ÈˆÈº  ùcé9kiˆ‹¹¦©¹kiˆ‹¹i*y¥¡ùki¹cìˆ‹º*å¹¥¡È‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¸àèxà«xà­øà¬È‹¸àèxà«xà­øà¬ùn ˆ—Kˆ›[™İXYÙ\ÈˆÈº"ìz*§ˆ—KˆYÜÈˆÈ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹¸à¨¸à®xàá¸àªù¦©ˆ‹¹i*ºfoxàk¹çìÈ‹¹¦©¹çìÈ‹¹.¥9c`y.£9nm9dj9§'È‹ŒNy.%¹í —BˆKˆÂˆœÛYÈˆœÜ]ZY\‹Xœš]\ÚY[˜Ü›ØXÚY[Ë[[ÜÜ]Z]Ë\]Y\İ[Û‹LNL‹ˆ]Hˆ¹.+yi+¸à¨¸àèxàê¸àªøàjøàb¸àdxà¢øà©8à«¸àê¸à®xàkº&¥zhçøàj9/­yåix %8 %8àè¸à®xà«xàï8àâ9ecúhc‹ˆ›ÜšYÚ[˜[]Hˆœš]\Ú[˜Ü›ØXÚY[È[™YÙÜ™\ÜÚ[ÛœÈ[ˆÙ[˜[[Y\šXØNˆH[ÜÜ]Z]È]Y\İ[Ûˆ‹ˆœİX]Hˆ¸à#•H[Y\šXØ[ˆÚYÈ™]šY]øà#ÌNL9nm9.£9b!º/"H9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆœÙ\šY\Èˆ•HSQT’PĞSˆÒQÈ‘U’QUÈ0­ÈNL‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àâøàéxàï8àê8àï8à«øà xà#•H[Y\šXØ[ˆÚYÈ™]šY]øà#Ó™]ÈÙ\šY\øà yë+ymîùë+¸ $Ìùcíøà LNL9nm8à LN8 $ÌŒúh xàîÌŒÍx $Ì:h H‹ˆYX\ˆˆNLˆ™^[ˆ”ˆÍzh xàîùc§ùb"ŒN8 $ÌŒúh {ï#ÌŒÍx $Ì:h xàîùg,9fìÌyà®H‹ˆ™\ØÜš\[Ûˆˆ¹.+yi+¸à¨¸àèxàê¸àªøàjøàb¸àdxà¢øà©8à«¸àê¸à®xàkº`,¹aî¸à xàè¸à®xà«xàï8àâ9/çz+mùfïxà¤¸à xàd8à¢ù..ùo-xà xà­xàìøàîøàåxà¨¸àìøàîøàáøàîøàâøàªøàêxà¬8à¨¸à xàåxàªxàìøà®øàªù®o¸àj8àá¸à¨øà¬8àë9lí¸à yi)ù­"úe¤ú`bù¬¬øà¤¸à xàd8à¢ùi%¹.©9ecúhc8à¤º*å¸àf8àgÌNL9nm8àk¹.£9b!º/"z*å¹¥¡øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹Xœš]\ÚY[˜Ü›ØXÚY[Ë[[ÜÜ]Z]Ë\]Y\İ[Û‹LNLØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹Xœš]\ÚY[˜Ü›ØXÚY[Ë[[ÜÜ]Z]Ë\]Y\İ[Û‹LNLÑWÑ×ÔÜ]ZY\—Ğœš]\ÚÑ[˜Ü›ØXÚY[×Ó[ÜÜ]Z]×Ô]Y\İ[Û—ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹Xœš]\ÚY[˜Ü›ØXÚY[Ë[[ÜÜ]Z]Ë\]Y\İ[Û‹LNLÑWÑ×ÔÜ]ZY\—Ğœš]\ÚÑ[˜Ü›ØXÚY[×Ó[ÜÜ]Z]×Ô]Y\İ[Û—ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÍKˆ™šYİ\™PÛİ[ˆKˆœ]PÛİ[ˆˆ\\ÈˆÈ¹i%¹.©9cìˆ‹¹¥/ù¬®ú*åˆ‹º`bù¬¬ùcìˆ‹º*å¹¥¡È‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àâøàªøàêxà¬8à¨ˆ‹¸àæøàìøà®8àéxàêxà®H‹¸àè¸à®xà«xàï8àâ9­mùl®‹¸àåxàªxàìøà®øàªù®oˆ—Kˆ›[™İXYÙ\ÈˆÈº"ìz*§ˆ—KˆYÜÈˆÈ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹¸àè¸à®xà«xàï8àâ9ecúhc‹¸à©8à«¸àê¸à®H‹¸à­xàìøàîøàåxà¨¸àìùmçH‹¹i)ù­"úe¤ú`bù¬¬È‹ŒNy.%¹í —BˆKˆÂˆœÛYÈˆœÜ]ZY\‹\Ü[š\ÚX[Y\šXØ[‹\™\X›XÜËLNL‹ˆ]Hˆ¸à®xàæ¸à©8àìùìîøà¨¸àèxàê¸àªú*î9alyd£9fïxàj8àgxàk¹i,y¥eøàk¹c§ùfè8 %x %y.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ›ÜšYÚ[˜[]Hˆ•HÜ[š\Ú[Y\šXØ[ˆ™\X›XÜË[™HØ]\Ù\ÈÙˆZ\ˆ˜Z[\™KˆÙ[˜[[Y\šXØH‹ˆœİX]Hˆ¸à#•H[Y\šXØ[ˆÚYÈ™]šY]øà#ÌNL9nmL9§"9cíÈ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¹á(yïl¹d#H‹ˆ›ÜšYÚ[˜[]]Üˆˆ[›Û[[İ\È‹ˆ˜]šX]YÈˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆ˜]šX][Û”İ]\Èˆ[]]™H‹ˆ˜]šX][Û“›İHˆ¹c§ùb"¸àkùá(yïl¹d#xàiøàfxà ‘ÛˆËˆÙZ]ˆ
+NLLJKˆL¸àb¸à¢8àlĞÚ\›\ÈYHİ[œÚY™\ˆ
+NM
+Kˆ8àkù§+9ê/øà¤‘\˜Z[HÙ[Ü™ÙHÜ]ZY\¸àjùn,9lg¸àexàføào¸àfxàc8à y§+8à­xà©8àâ8àiøàkùo£9.%¸àk¹¦ªùk¦¹n,9lg¸àj8àeøài¹¢lxàa8à y..ú$eú !z(j9é.¸àjøàkù£¨yå*8àeøào¸àføà¤øà ˆ‹ˆœÙ\šY\Èˆ•HSQT’PĞSˆÒQÈ‘U’QUÈ0­ÈNL‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à#•H[Y\šXØ[ˆÚYÈ™]šY]øà#ùë+L¹mîùë+Í9cíøà LNL9nmL9§"8à LÌÍø $ÌÍ:h H‹ˆYX\ˆˆNLˆ™^[ˆ”ˆLúh xàîùc§ùb"ŒÌÍø $ÌÍ:h H‹ˆ™\ØÜš\[Ûˆˆ¸à®xàæ¸à©8àìùìîøà¨¸àèxàê¸àªú*î9alyd£9fïxàk¹âë9êâùo£8àk¹¥/ù¬®ùæ¡9­íù.lxà¤¸à y©#y¬$yg,9íly¬®øàkº`n¹å(øà z!ê¹å,y­/¸àj9/çyk¢9­/¸àk¹kï¹êâøà y.+yi+¸à¨¸àèxàê¸àªøàk¸àèxà«xà­øà¬ùn'yfïyíê9aixàjN9nm9¡¬¹¬åxàk¹íc:`c¸àbøà¢z*å¸àf8àgÌNL9nm9b"¸àk¹á(yïl¹d#z*å¹¥¡øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹\Ü[š\ÚX[Y\šXØ[‹\™\X›XÜËLNLØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹\Ü[š\ÚX[Y\šXØ[‹\™\X›XÜËLNLÑWÑ×ÔÜ]ZY\—ÔÜ[š\ÚĞ[Y\šXØ[—Ô™\X›XÜ×ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹\Ü[š\ÚX[Y\šXØ[‹\™\X›XÜËLNLÑWÑ×ÔÜ]ZY\—ÔÜ[š\ÚĞ[Y\šXØ[—Ô™\X›XÜ×ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆLËˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÈ¹¥/ù¬®ùcìˆ‹¹¥/ù¬®ú*åˆ‹º*å¹¥¡È‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àèxà«xà­øà¬È‹¸à¬8à¨¸àá¸àç¸àêH‹¸àª8àêøàîøà­xàêøàä8àâxàêÈ—Kˆ›[™İXYÙ\ÈˆÈº"ìz*§ˆ—KˆYÜÈˆÈ¹á(yïl¹d#H‹‘xàîÑøàîøà®xà«øàëøà©8à¨¹¦ªùk¦¹n,9lgˆ‹¸à®xàæ¸à©8àìùìîøà¨¸àèxàê¸àªÈ‹¹.+yi+¸à¨¸àèxàê¸àªú`(ú`©ˆ‹¸à©8àâ8à©xàêøàäøàáÈ‹º!ê¹å,y­/ˆ‹ŒNy.%¹í —BˆKˆÂˆœÛYÈˆœÜ]ZY\‹YÜ™X]\Ú\XØ[˜[\]Y\İ[Û‹LNL‹ˆ]Hˆ¹i)ú".z"-º`bù¬¬ùecúhc8 %8 %8à©8à«¸àê¸à®xàb¸à¢8àløà¬øà®xà¯øàê¸àªùkï¸à¨¸àèxàê¸àªùd":(a¹fïxàb¸à¢8àløàâøàªøàêxà¬8à¨ˆ‹ˆ›ÜšYÚ[˜[]Hˆ•HÜ™X]Ú\Ø[˜[]Y\İ[Ûˆ[™Û[™[™ÛÜİHšXØH™\œİ\ÈH[š]Yİ]\È[™šXØ\˜YİXH‹ˆœİX]Hˆ¸à#•H[Y\šXØ[ˆÚYÈ™]šY]øà#ÌNL9nmLy§"9cíÈ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆœÙ\šY\Èˆ•HSQT’PĞSˆÒQÈ‘U’QUÈ0­ÈNL‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àâøàéxàï8àê8àï8à«øà xà#•H[Y\šXØ[ˆÚYÈ™]šY]øà#Ó™]ÈÙ\šY\øà yë+¹mîùë+ycíøà LNL9nmLy§"8à Mx $ÍMzh H‹ˆYX\ˆˆNLˆ™^[ˆ”ˆŒúh xàîùc§ùb"x $ÍMzh xàîùg,9fìÌyà®H‹ˆ™\ØÜš\[Ûˆˆ¸àâøàªøàêxà¬8à¨¹g,9lèxàk¹i)ú".z"-º`bù¬¬ú*"9å.øà¤¸à xàd8à¢¸à xà©8à«¸àê¸à®xàk¸àè¸à®xà«xàï8àâ9..ùo-xà xà¬øà®xà¯øàê¸àªøàkºh&9g'ú) y¬`¸à xà¨¸àèxàê¸àªùd":(a¹fïxàj8àâøàªøàêxà¬8à¨¸àk¹êâùh-8à xà«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!8à¤º*å¸àf8àgÌNL9nm9b"º*å¹¥¡øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]\Ú\XØ[˜[\]Y\İ[Û‹LNLØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]\Ú\XØ[˜[\]Y\İ[Û‹LNLÑWÑ×ÔÜ]ZY\—ÑÜ™X]ÔÚ\ĞØ[˜[Ô]Y\İ[Û—ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹YÜ™X]\Ú\XØ[˜[\]Y\İ[Û‹LNLÑWÑ×ÔÜ]ZY\—ÑÜ™X]ÔÚ\ĞØ[˜[Ô]Y\İ[Û—ÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒËˆ™šYİ\™PÛİ[ˆKˆœ]PÛİ[ˆˆ\\ÈˆÈ¹i%¹.©9cìˆ‹º`bù¬¬ùcìˆ‹¹¥/ù¬®ú*åˆ‹º*å¹¥¡È‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¸àâøàªøàêxà¬8à¨ˆ‹¸à¬øà®xà¯øàê¸àªÈ‹¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àè¸à®xà«xàï8àâ9­mùl®—Kˆ›[™İXYÙ\ÈˆÈº"ìz*§ˆ—KˆYÜÈˆÈ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹¸àâøàªøàêxà¬8à¨º`bù¬¬È‹¸à«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!‹¸àè¸à®xà«xàï8àâ9ecúhc‹¸à¬øà®xà¯øàê¸àªÈ‹ŒNy.%¹í —BˆKˆÂˆœÛYÈˆœÜ]ZY\‹ZYÛY[XKYY˜][LNLH‹ˆ]Hˆ¹«(9n+yb)9¬n¸ %8 %9.+yi+¸à¨¸àèxàê¸àªøàj9¥/ùª*H‹ˆ›ÜšYÚ[˜[]Hˆ’YÛY[HY˜][ˆÙ[˜[[Y\šXØH[™HYZ[š\İ˜][Ûˆ‹ˆœİX]Hˆ¸à#•H[Y\šXØ[ˆÚYÈ™]šY]øà#ÌNLynmù§"9cíÈ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\˜Z[HÙ[Ü™ÙHÜ]ZY\ˆ‹ˆœÙ\šY\Èˆ•HSQT’PĞSˆÒQÈ‘U’QUÈ0­ÈNLH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àâøàéxàï8àê8àï8à«øà xà#•H[Y\šXØ[ˆÚYÈ™]šY]øà#Ó™]ÈÙ\šY\øà yë+ùmîùë+ùcíøà LNLynmù§"8à LÍ¸ $Ì:h H‹ˆYX\ˆˆNLKˆ™^[ˆ”ˆzh xàîùc§ùb"ŒÍ¸ $Ì:h H‹ˆ™\ØÜš\[Ûˆˆ¹.+yi+¸à¨¸àèxàê¸àªù¥/ùëe¸à¤¸à xàd8à¢øà¨¸àèxàê¸àªù¥/ùª*xàk¹kï¹oç8à¤¹¢nyb)8àeøà xàè¸à®xà«xàï8àâ9­mùl®8àj8à­xàìøàîøàåxà¨¸àìøà xààxàèøààøàâ8àåxà¨øàï8àêøàâxàj8àå¸àêøàëøàï8à xà«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!8à y."ºfh¸àiøàk¹kêz+l8à¤º*å¸àf8àgÌNLynm9b"º*å¹¥¡øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÜ]ZY\‹ZYÛY[XKYY˜][LNLKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÜ]ZY\‹ZYÛY[XKYY˜][LNLKÑWÑ×ÔÜ]ZY\—ÒYÛY[ØWÑY˜][ÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÜ]ZY\‹ZYÛY[XKYY˜][LNLKÑWÑ×ÔÜ]ZY\—ÒYÛY[ØWÑY˜][ÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆKˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÈ¹i%¹.©9cìˆ‹¹¥/ù¬®ú*åˆ‹º`bù¬¬ùcìˆ‹º*å¹¥¡È‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àâøàªøàêxà¬8à¨ˆ‹¸àè¸à®xà«xàï8àâ9­mùl®‹¸à¨¸àèxàê¸àªùd":(a¹fïH‹¸à©8à«¸àê¸à®H—Kˆ›[™İXYÙ\ÈˆÈº"ìz*§ˆ—KˆYÜÈˆÈ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹¸àè¸à®xà«xàï8àâ9ecúhc‹¸à«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!‹¸ààxàèøààøàâ8àåxà¨øàï8àêøàâH‹¸à¨¸àèxàê¸àªùi%¹.©‹ŒNy.%¹í —BˆKˆÂˆœÛYÈˆ›İ\ËZ\İ]\Ë\[˜[XK\˜Z[›ØYLNÈ‹ˆ]Hˆ¸àäxàâ¸àç¹g,9lèxà 8àäxàâ¸àçºba:`dùcìˆ‹ˆ›ÜšYÚ[˜[]Hˆ’\İ]\ÈÙˆ[˜[XNˆ\İÜHÙˆH[˜[XH˜Z[›ØYÈ[™ÙˆHXÚYšXÈXZ[İX[\Ú\ÛÛ\[H‹ˆœİX]Hˆ¹i*¹nlù­"ú`íz".y/&¹é/¹cì¸àj¸à¢xàløàjù¥áz(c: !xàîùk§ù©kyk­¹/¯ú)©øàîÌNùnm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ‘¸àîÓ¸àîøàª¸àï8àá¸à¨øà®H‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘™\ÜÙ[™[ˆ›İİ\È‹ˆœÙ\šY\Èˆ’TÕUTÈÑˆSSPH0­ÈNÈ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àâøàéxàï8àê8àï8à«øà R\œ\ˆ	ˆœ›İ\œøà LNùnm‹ˆYX\ˆˆNËˆ™^[ˆ”ˆÌÍ:h xàîùc§ùb"š^ÌMúh xàîùfìùâbÎ9à®xàîú(jŒùà®H‹ˆ™\ØÜš\[Ûˆˆ¸àäxàâ¸àçºba:`døàkº*"9å.øàîùnîº*+xàîú`bùe­¸àj:,¨ybæxà yg,9lèyª*¹¥«y¥áz(c9¨b9a¡xà xàäxàâ¸àç¸àjù£©yí¦¸àfxà¢ù¬oz".y/&¹é/¸àîú"*º-ëøàîú`bú,àøàîú,ª9âjz)£ùbaøà y.+yi+¸àîùceøà¨¸àèxàê¸àªùd!9fïxàb¸à¢8àløàèxà«xà­øà¬øàk¹g,:*£8àj9ea¹©ky áyh,xà¤¹cã¸à xàgøà LNùnm9b"¸àkºba:`dùcì¹ao9¥áz(c8àîùk§ùbæy/¯ú)©øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÛİ\ËZ\İ]\Ë\[˜[XK\˜Z[›ØYLNËØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÛİ\ËZ\İ]\Ë\[˜[XK\˜Z[›ØYLNËÑ—Ó—Óİ\×Ò\İ]\×ÛÙ—Ô[˜[XWÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÛİ\ËZ\İ]\Ë\[˜[XK\˜Z[›ØYLNËÑ—Ó—Óİ\×Ò\İ]\×ÛÙ—Ô[˜[XWÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÌÍˆ™šYİ\™PÛİ[ˆÎˆœ]PÛİ[ˆˆ\\ÈˆÂˆºba:`dùcìˆ‹ˆ¹.©:`&¹cìˆ‹ˆ¹¥áz(c9¨b9a¡H‹ˆ¹ea¹©ky/¯ú)©È‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àäxàâ¸àçˆ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¹ceøà¨¸àèxàê¸àªÈ‹ˆ¸àèxà«xà­øà¬È‹ˆ¸àªøàê¸àå¹­mÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ¸àäxàâ¸àçºba:`dÈ‹ˆ¸àäxàâ¸àç¹g,9lèH‹ˆ¹i*¹nlù­"ú`íz".y/&¹é/ˆ‹ˆ¹¬oz".z"*º-ëÈ‹ˆ¹i)ú)où­"ùª*¹¥«y.©:`&ˆ‹ˆº`bú,àÈ‹ˆº,ª9âjH‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœÚYİY[˜K\\˜^\ÛË[ØØÚY[[LM‹ˆ]Hˆº)où¥®xàk¹©oyg$ˆ‹ˆ›ÜšYÚ[˜[]Hˆ”\˜^\ÛÈØØÚY[[‹ˆœİX]Hˆ¸àèxà«xà­øà¬ùã¢ùêâøàæ8à®xà®xàîøàç¸àê¸à¨¹/ëº`dúfh¸àk¹bmz*+xàj9æn¹lexàîÌM9nm8àèxà«xà­øà¬ùb"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àªøàêøàëxà®xàîøàáøàîøà­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ›ÜšYÚ[˜[]]ÜˆˆØ\›ÜÈHÚYğï[˜HHğìÛ™ÛÜ˜H‹ˆœÙ\šY\Èˆ”TVTÓÈĞĞÒQS•S0­ÈM‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àèxà«xà­øà¬øà xàåxà¨¸àìøàîøàáøàîøàê¸àæxàêxà LM9nm‹ˆYX\ˆˆMˆ™^[ˆ”ˆÍL:h xàîùajùmîÍ¹êè8àîùc§ùb"¹bcy.æLz$bxàîù§+9¥¡Ù›Ûˆ\¸ $ÌŒ¸àîù«hú*©:(j‹ˆ™\ØÜš\[Ûˆˆ¸àèxà«xà­øà¬ùã¢ùêâøàæ8à®xà®xàîøàç¸àê¸à¨¹ilùkd9/ëº`dúfh¸àk¹bmz*+xàj9æn¹lexà¤¸àgøàjxà¢¸à yl"º !xàç¸àê¸àâ¸àîøàáøàîøàêxàîøà«øàêøà®xà xà©8àãxà®xàîøàáøàîøàêxàîøà«øàêøà®xà¤¸àkøàf8à xàj8àfxà¢ù/ëº`dùiløàgøàhxàk¹å'ù­«øà yo¬ú(c8à ynnú)¥¸à yiaú.gøà¤º*&8àeøàgÌM9nm9b"¸àk¹/ëº`dúfh¹cì¸àîù/'z*&:fá¸àiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÚYİY[˜K\\˜^\ÛË[ØØÚY[[LMØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÚYİY[˜K\\˜^\ÛË[ØØÚY[[LMĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÔ\˜^\Û×ÓØØÚY[[ÌMÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÚYİY[˜K\\˜^\ÛË[ØØÚY[[LMĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÔ\˜^\Û×ÓØØÚY[[ÌMÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÍLˆ™šYİ\™PÛİ[ˆKˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹/ëº`dúfh¹cìˆ‹ˆ¹ilù )ùk¥ù¥fycìˆ‹ˆ¹/'z*&:fáˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àèxà«xà­øà¬ùn ˆ‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ¸àæ8à®xà®xàîøàç¸àê¸à¨¹/ëº`dúfhˆ‹ˆ¹ilù )ù/ëº`dú !H‹ˆ¸àç¸àê¸àâ¸àîøàáøàîøàêxàîøà«øàêøà®H‹ˆ¸à©8àãxà®xàîøàáøàîøàêxàîøà«øàêøà®H‹ˆ¹©#y¬$yg,9§'øàèxà«xà­øà¬È‹ˆ¸àªøàâ8àê¸ààøà«È‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ™ÛÛ˜[^‹XÛÛ\[™[ËYÙ[ÙÜ˜YšXKXÙ[›ËX[Y\šXØKLNH‹ˆ]Hˆ¹.+yi+¸à¨¸àèxàê¸àªùg,9ä!º) yí¬H‹ˆ›ÜšYÚ[˜[]HˆÛÛ\[™[ÈHÙ[ÙÜ˜Y°ëXHHÙ[›ËP[pê\šXØH‹ˆœİX]Hˆ¹.+yëbyki¹¨(xàîùb'yëbyki¹¨(yå*:* ¹«hùh¥ú(ç9ë+9.£9âb8àîÌNynm9b"ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àà8àê¸àª¸àîøà­8àìøà­xàë8à®H‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\°ë[ÈÛÛ°è[^ˆ‹ˆœÙ\šY\ÈˆÓÓTS‘SÈHÑSÑÔQ°ãPHHÑS•“ËPSpâT’PĞH0­ÈNH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à¬8à¨¸àá¸àç¸àêxà xàª8àçøàê¸àª¸àîøà¬8àç8àï9¦î9n¥øàîù¥¡ù¢/ùamùn¥øà LNynm‹ˆYX\ˆˆNKˆ™^[ˆ”ˆLŒúh xàîùc§ùb"¹§+9¥¡Ìx $ÌLÌzh xàîùí(¹o%LLÌø $ÌLÍzh xàîùfìùâbÌ¹à®xàîú(jŒ9à®H‹ˆ™\ØÜš\[Ûˆˆ¹.+yi+¸à¨¸àèxàê¸àªù.¥9alyd£9fïxàk¹h ùåc8à yg,9bè¸à y¬%ù`&xà y¬¬ùmçxàîù®e¹¬¯8à yå(ùâjxà y.®¹cèøà z(c9¥/øà z`ïyn ¸à y.©:`&¸à yå(ù©kxà¤¹ecùëe9oh¹o#øàiù© º*«8àeøàgùg,9ä!¹¥fyéäy¦î8à ¸à¬8à¨¸àá¸àç¸àêxà¤¹§ 8à º*løàeøàcù¢lxàa8à xàª8àêøàîøà­xàêøàä8àâxàêøà xàæøàìøà®8àéxàêxà®xà xàâøàªøàêxà¬8à¨¸à xà¬øà®xà¯øàîøàê¸àªøàb¸à¢8àløàæxàê¸àï8à®¸àk¹g,:*£8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙÛÛ˜[^‹XÛÛ\[™[ËYÙ[ÙÜ˜YšXKXÙ[›ËX[Y\šXØKLNKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙÛÛ˜[^‹XÛÛ\[™[ËYÙ[ÙÜ˜YšXKXÙ[›ËX[Y\šXØKLNKÑ\š[×ÑÛÛ˜[^—ĞÛÛ\[™[×ÙWÙÙ[ÙÜ˜YšXWÙWĞÙ[›×Ğ[Y\šXØWÌNWÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙÛÛ˜[^‹XÛÛ\[™[ËYÙ[ÙÜ˜YšXKXÙ[›ËX[Y\šXØKLNKÑ\š[×ÑÛÛ˜[^—ĞÛÛ\[™[×ÙWÙÙ[ÙÜ˜YšXWÙWĞÙ[›×Ğ[Y\šXØWÌNWÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆLŒËˆ™šYİ\™PÛİ[ˆÌ‹ˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹g,:*£‹ˆ¹g,9ä!¹¥fyéäy¦î‹ˆ¹ílz*":,áù¥¦H‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àª8àêøàîøà­xàêøàä8àâxàêÈ‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬øà®xà¯øàîøàê¸àªÈ‹ˆ¸àæxàê¸àï8à®ˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªùg,9ä!ˆ‹ˆ¹g,9ä!¹¥fz ¬ˆ‹ˆº!ê¹á-¹g,9ä!ˆ‹ˆ¹.®¹cèùílz*"‹ˆ¹å(ù©kH‹ˆ¹.©:`&ˆ‹ˆº`ïyn ˆ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ›[Û˜\™YÛ‹XØ\›ÜËYK\ÚYİY[˜K^KYÛÛ™ÛÜ˜KLNLH‹ˆ]Hˆ¸àâxàìøàîøàªøàêøàëxà®xàîøàáøàîøà­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ›ÜšYÚ[˜[]Hˆ‘ÛˆØ\›ÜÈHÚYğï[˜HHğìÛ™ÛÜ˜NˆHY^XØ[ˆØ]˜[ÙˆHÙ]™[Y[Ù[\H‹ˆœİX]HˆŒMù.%¹í 8àèxà«xà­øà¬øàk¹èªyki¸àîÌNLynm9b'yâb9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸à¨¸àï8àí8à¨øàìøà¬8àîĞxàîøàë8àâ¸àï8àâH‹ˆ›ÜšYÚ[˜[]]Üˆˆ’\š[™ÈKˆ[Û˜\™‹ˆœÙ\šY\Èˆ‘ÓˆĞT“ÔÈHÒQğçS–HHğäÓ‘ÓÔH0­ÈNLH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àä8àï8à«øàë8àï8à U[š]™\œÚ]HÙˆØ[Y›Ü›šXH™\Üøà LNLynm‹ˆYX\ˆˆNLKˆ™^[ˆ”ˆÌN:h xàîùc§ùb"¹bcy.æ8àîù§+9¥¡Ìx $Ìúh xàîú!&¹¬êŒ¹.í¸àîù.æ:c,KĞ¸àîùí(¹o%xàîù£/ùfìÌz$bH‹ˆ™\ØÜš\[ÛˆˆŒMù.%¹í 8àã8àª8àä8àîøàª8à®xàäxàï8àâøàèøàk¹kiº !xàªøàêøàëxà®xàîøàáøàîøà­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêxàk¹å'ù­«øàj:$eù/g8à¤¸àgøàjxà¢ùè%9êm¹¦î8à º*jy/g8à yi*y¥¡ùki¸à yg,9fìù/g9¢$8à ycé9.èùcì¹è%9êm¸à LML¹nm8àèxà«xà­øà¬ùn ¹¦­9båxà y£¨¹©'9.¢ù©kxà¤º*å¸àf8à ybcy.æ8à yajL9êè8à ycàº  ù¥¡ùã+¸à z$eù/g9æëºc,¸à y.æ:c,xàîĞ¸à yí(¹o%xà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ¹c§ùb"¸àk¹á(ya¡yk®xàk¹æoyí&z$bxàkùcãºc,¸àeøài¸àa8ào¸àføà¤øà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÛ[Û˜\™YÛ‹XØ\›ÜËYK\ÚYİY[˜K^KYÛÛ™ÛÜ˜KLNLKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÛ[Û˜\™YÛ‹XØ\›ÜËYK\ÚYİY[˜K^KYÛÛ™ÛÜ˜KLNLKÒ\š[™×ĞWÓ[Û˜\™ÑÛ—ĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÛ[Û˜\™YÛ‹XØ\›ÜËYK\ÚYİY[˜K^KYÛÛ™ÛÜ˜KLNLKÒ\š[™×ĞWÓ[Û˜\™ÑÛ—ĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÌNˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆKˆ\\ÈˆÂˆ¹/'z*&‹ˆ¹kiº(dùcìˆ‹ˆ¸àèxà«xà­øà¬ùcìˆ‹ˆ¹©#y¬$yg,9cìˆ‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹ˆ¸àèxà«xà­øà¬ùn ˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ¸à­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ¸à¯xàêøàîøàåxà¨¸àâˆ‹ˆ¹i*y¥¡ùkiˆ‹ˆ¹g,9fìùcìˆ‹ˆŒML¹nm8àèxà«xà­øà¬ùn ¹¦­9båH‹ˆ¸à®xàæ¸à©8àìù©#y¬$yg,9§'È‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆ\Hˆœ\\ˆ‹ˆœÛYÈˆ™ÛÛ˜[^‹\Z[˜\Ë]ZXXØ[‹LNLˆ‹ˆ]Hˆ¸àá¸àëøàªøàìú`nº-èx %x %yab8à¬øàëxàìøàå¸à®y§'øàkº`n¹âjH‹ˆ›ÜšYÚ[˜[]Hˆ”Z[˜\ÈHZXXğè[‹ˆØš™]ÜÈ™XÛÛÛXš[›ÜÈ‹ˆœİX]HˆŒNL¹nm9b"¸àîùc§ùb"ŒŒø $ÌŒºh H9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àà8àê¸àª¸àîøà­8àìøà­xàë8à®H‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘\°ë[ÈÛÛ°è[^ˆ‹ˆœÙ\šY\Èˆ”•RSTÈHRPPğàSˆ0­ÈHS’U‘T”ÒQQ0­ÈNLˆ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à­xàìøàîøà­xàêøàä8àâxàêøà xà#“H[š]™\œÚYY8à#ùë+RRyìîùb%ùë+¹cíøà LNL¹nm¹§"8à LŒø $ÌŒºh H‹ˆYX\ˆˆNL‹ˆ™^[ˆ”ˆzh xàîùc§ùb"ŒŒø $ÌŒºh xàîùc§ù¬ê9.íˆ‹ˆ™\ØÜš\[Ûˆˆ¸àà8àê¸àª¸àîøà­8àìøà­xàë8à®xàc8àª8àêøà­xàêøàä8àâxàêøàk¸àá¸àëøàªøàìú`nº-èxà¤º*&:/ì8àeøàgÌNL¹nm8àkº  ùcé9ki¹h,ydb¸à º`(9¢$9cì9g,8à yçìùhàxà xàå8àêxàçøààøàâxà yçìùojøàîùg'ùfj8àj¸àjxàk¹aî¹g'ùdàxà¤¹í.y.âøàeøà yodù¦`¸àk¸àâ8àêøàá¸àªùìîøàîøàå8àå8àêùìîùéîù/cú*«8àj9g,9d#z*§¹®¤8à¤º*å¸àf8ào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙÛÛ˜[^‹\Z[˜\Ë]ZXXØ[‹LNL‹ØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙÛÛ˜[^‹\Z[˜\Ë]ZXXØ[‹LNL‹ÑÛÛ˜[^—ÔZ[˜\×ÙWÕZXXØ[—ÌNL—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙÛÛ˜[^‹\Z[˜\Ë]ZXXØ[‹LNL‹ÑÛÛ˜[^—ÔZ[˜\×ÙWÕZXXØ[—ÌNL—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆKˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆº  ùcé9ki¹h,ydbˆ‹ˆº`nº-èyh,ydbˆ‹ˆ¹kiº(dú*£:*å¹¥¡È‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àá¸àëøàªøàìÈ‹ˆ¸à­xàìøàîøàäøà®øàìøàáˆ‹ˆ¸àª8àêøà­xàêøàä8àâxàêÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àá¸àëøàªøàìú`nº-èH‹ˆ¸àª8àêøà­xàêøàä8àâxàêú  ùcé9kiˆ‹ˆ¸àå8àå8àêÈ‹ˆ¸àâ8àêøàá¸àªÈ‹ˆ¹ab8à¬øàëxàìøàå¸à®y§'È‹ˆ¹. 9«(ycì¹¥¦H‚ˆBˆKˆÂˆœÛYÈˆ˜˜\˜™\™[˜KY›ÛœÙXØK[[Û›ÙÜ˜YšX\ËY\\[Y[[\ËLNLKLNLM‹ˆ]Hˆ¹ç#9b)xàè¸àã¸à¬8àêxàå{ï"9. ùa¢¹d"9a¢»ï"H‹ˆ›ÜšYÚ[˜[]Hˆ“[Û›ÙÜ˜Y°ëX\È\\[Y[[\È‹ˆœİX]Hˆ¸àª8àêøà­xàêøàä8àâxàêù. ùç#8àk¹g,9ä!¸àîùílz*":,áù¥¦H9¥éy§+:*§º*,È‹ˆ˜]]Üˆˆ¸à­xàìøàá¸à¨øà¨¸à­8àîÒxàîøàä8àêøàæxàë8àâ»ï#øàæ¸àâxàëxàîÔøàîøàåxàªxàìøà®øàªÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ”Ø[XYÛÈKˆ˜\˜™\™[˜HÈY›ÈËˆ›ÛœÙXØH‹ˆœÙ\šY\Èˆ“SÓ“ÑÔQ°ãPTÈTT•SQS•STÈ0­ÈNLx $ÌNLM‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à­xàìøàîøà­xàêøàä8àâxàêøà yfïyêâùcl9b-ù¢`8à LNLx $ÌNLM9nm‹ˆYX\ˆˆNLKˆ™^[ˆ”ˆÌN:h xàîùë+¸àîÍ8àîÍxàîÍ¸àîÎ8àîÌL8àîÌLya¢¸àîùc§ùb"º(j9í&Myà®xàîùç#9h ù© ¹åiyfìÌyà®H‹ˆ™\ØÜš\[Ûˆˆ¸àª8àêøà­xàêøàä8àâxàêùílz*"9íãùl`8àcNLx $ÌNLM9nm8àjùb"º(c8àeøàgùajM9a¢¸àk¹ç#9b)yg,:*£8àk¸àa¸àhxà xàè¸àêxà­xàìøà xààxàèøàêxàá¸àâ¸àìøà­8à xàªøàä8àâøàèøà®xà xà­xàìøà¯øàîøà¨¸àâ¸à xà­xàìøàîøàçøà¬¸àêøà xàêxàîøà©¸àâøàª¸àìøà xà¨¸àëøààxàèøàäxàìøàkùç#8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ¹g,9oh¸à y¬¬ùmçxà zfáº$/xà y.®¹cèøà z/¬¹©kxà zbly©kxà y.©:`&¸à y¥fz ¬¸à z(c9¥/øà¤¹n ¹å.¹§dycf9/cxàiú*&:/ì8àeøàgøà LŒ9.%¹í 9b'zh+xàª8àêøà­xàêøàä8àâxàêøàk¹g,9gçú,áù¥¦xàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØ˜\˜™\™[˜KY›ÛœÙXØK[[Û›ÙÜ˜YšX\ËY\\[Y[[\ËLNLKLNLMØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØ˜\˜™\™[˜KY›ÛœÙXØK[[Û›ÙÜ˜YšX\ËY\\[Y[[\ËLNLKLNLMĞ˜\˜™\™[˜WÓ[Û›ÙÜ˜YšX\×Ñ\\[Y[[\×Íİ›Û×Ò˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØ˜\˜™\™[˜KY›ÛœÙXØK[[Û›ÙÜ˜YšX\ËY\\[Y[[\ËLNLKLNLMĞ˜\˜™\™[˜WÓ[Û›ÙÜ˜YšX\×Ñ\\[Y[[\×Íİ›Û×Ò˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÌNˆ™šYİ\™PÛİ[ˆ‹ˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹g,:*£‹ˆ¹ílz*":,áù¥¦H‹ˆ¹g,9gçùcìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¸àè¸àêxà­xàìùç#‹ˆ¸ààxàèøàêxàá¸àâ¸àìøà­9ç#‹ˆ¸àªøàä8àâøàèøà®yç#‹ˆ¸à­xàìøà¯øàîøà¨¸àâ¹ç#‹ˆ¸à­xàìøàîøàçøà¬¸àêùç#‹ˆ¸àêxàîøà©¸àâøàª¸àìùç#‹ˆ¸à¨¸àëøààxàèøàäxàìùç#‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à­xàìøàá¸à¨øà¨¸à­8àîÒxàîøàä8àêøàæxàë8àâˆ‹ˆ¸àæ¸àâxàëxàîÔøàîøàåxàªxàìøà®øàªÈ‹ˆ¹ç#9b)xàè¸àã¸à¬8àêxàåH‹ˆ¹.®¹cèùílz*"‹ˆ¹g,9ä!ˆ‹ˆº/¬¹©kH‹ˆºbly©kH‹ˆ¹¥fz ¬ˆ‹ˆŒŒ9.%¹í 9b'zh+H‚ˆBˆKˆÂˆœÛYÈˆœÚYİY[˜KZ[™›Ü[š[ÜËX[ÛœÛË\˜[Z\™^‹LML‹ˆ]Hˆ¸à¨¸àëxàìøà¯xàîøàêxàçøàë8à®xàk¹.#z`bÈ‹ˆ›ÜšYÚ[˜[]Hˆ’[™›Ü[š[ÜÈH[ÛœÛÈ˜[pë\™^ˆ‹ˆœİX]HˆŒML9nm8àèxà«xà­øà¬ùb"¸àîù.%¹åc9dj:"*¸àj9­mú,â¹£eyfæ¸àkº*&:c,ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àªøàêøàëxà®xàîøàáøàîøà­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ›ÜšYÚ[˜[]]ÜˆˆØ\›ÜÈHÚYğï[˜HHğìÛ™ÛÜ˜H‹ˆœÙ\šY\Èˆ’S‘“Ô•S’SÔÈHSÓ”ÓÈSpãT‘Vˆ0­ÈML‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àèxà«xà­øà¬øà xàæxàêøàâ¸àêøàâxàîøàªøàêøàáøàëxàìù§*¹.¨y.®¹æî9í¦¹.®¹cl9b-ù¢`8à LML9nm‹ˆYX\ˆˆMLˆ™^[ˆ¹¥éy§+:*§¹âbˆ:h xàîùajùëà‹ˆ™\ØÜš\[Ûˆˆ¸àåøàª8àêøàâ8àê¸à¬ùå'øào¸à£8àk¸à¨¸àëxàìøà¯xàîøàêxàçøàë8à®xàc8à xàåxà¨øàê¸àå8àìøàiøà©8àìøà¬8àêxàìøàây.®¹­mú,â¸àjù£exà¢xàb8à¢xà£8à yi*¹nlù­"øàîøà©8àìøàây­"øàîùi)ú)où­"øà¤¹íc8ài¸àé¸àªøà¯øàìù­mùl®8àjùn©ùé xàfxà¢øào¸àiøàkº`cy«m8à¤¸à xà­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêxàcML9nm8àjøào¸àj8à xàgùâjz*§¹æ¡9h,ydb¸àk¹¥éy§+:*§¹aj:*,øàiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜÚYİY[˜KZ[™›Ü[š[ÜËX[ÛœÛË\˜[Z\™^‹LMLØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜÚYİY[˜KZ[™›Ü[š[ÜËX[ÛœÛË\˜[Z\™^‹LMLĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÒ[™›Ü[š[Ü×ÙWĞ[ÛœÛ×Ô˜[Z\™^—ÌMLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜÚYİY[˜KZ[™›Ü[š[ÜËX[ÛœÛË\˜[Z\™^‹LMLĞØ\›Ü×ÙWÔÚYİY[˜WŞWÑÛÛ™ÛÜ˜WÒ[™›Ü[š[Ü×ÙWĞ[ÛœÛ×Ô˜[Z\™^—ÌMLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆˆ™šYİ\™PÛİ[ˆKˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹¥áz(c:*&‹ˆ¹­mù.¢ùcìˆ‹ˆ¹£eyfæº*&‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àåøàª8àêøàâ8àê¸à¬È‹ˆ¸àåxà¨øàê¸àå8àìÈ‹ˆ¸àèxà«xà­øà¬È‹ˆ¸àé¸àªøà¯øàìÈ‹ˆ¸àªøàê¸àå¹­mÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¨¸àëxàìøà¯xàîøàêxàçøàë8à®H‹ˆ¸à­øà¬8àª8àìøà­xàîøà©8àîøà­8àìøà­8àêH‹ˆ¹­mú,âˆ‹ˆ¹.%¹åc9dj:"*ˆ‹ˆ¹­múfèÈ‹ˆ¸à®xàæ¸à©8àìúh&8àåxà¨øàê¸àå8àìÈ‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆœÛYÈˆÜœ]Y[XYK[[Û˜\œ]ZXKZ[™X[˜KLMŒMH‹ˆ]Hˆ¸à©8àìøàáøà¨øà¨¹ã¢ùfïz*£‹ˆ›ÜšYÚ[˜[]Hˆ“ÜÈ™Z[HH[ˆXœ›ÜÈš]X[\ÈH[Û˜\œ]pëXH[™X[˜H‹ˆœİX]HˆŒMŒMynm8à®øàäøàï8àê¸àèùb'yâb8àîùaj9."ymîù.£9c`y. 9¦î9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àåxà¨¸àìøàîøàáøàîøàâ8àêøà¬xàç¸àà‹ˆ›ÜšYÚ[˜[]]Üˆˆ’X[ˆHÜœ]Y[XYH‹ˆœÙ\šY\Èˆ“SÓT”UpãPHS‘PSH0­ÈMŒMH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à®øàäøàï8àê¸àèøà xàç¸àá¸à¨øà¨¸à®xàîøà«øàêxàäøàæøà LMŒMynm‹ˆYX\ˆˆMŒMKˆ™^[ˆ¹¥éy§+:*§¹âbˆÍÌzh xàîùajùmîøàîùajŒy¦î‹ˆ™\ØÜš\[Ûˆˆ¸àåxà¨¸àìøàîøàáøàîøàâ8àêøà¬xàç¸àà8àcMŒMynm8àjùb"º(c8àeøàgùaj9."ymîù.£9c`y. 9¦î8àk¸àã8àª8àä8àîøàª8à®xàäxàâøàèùcì¸àîù¬$y¥ãú*£8àîùk¨ù¥fycì¸àk¹¥éy§+:*§¹aj:*,øàiøàfxà ’›ÚˆØ\\ˆœ›İÛˆXœ˜\y¢`:%-yb'yâb9§+8à¤’[\›™]\˜Ú]™yak:e¢ùå.ù`ãøàbøà¢yn¥y§+8àj8àeøài¹å*8àa8ào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËİÜœ]Y[XYK[[Û˜\œ]ZXKZ[™X[˜KLMŒMKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËİÜœ]Y[XYK[[Û˜\œ]ZXKZ[™X[˜KLMŒMKÒX[—ÙWÕÜœ]Y[XYWÓ[Û˜\œ]ZXWÚ[™X[˜WÌMŒMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËİÜœ]Y[XYK[[Û˜\œ]ZXKZ[™X[˜KLMŒMKÒX[—ÙWÕÜœ]Y[XYWÓ[Û˜\œ]ZXWÚ[™X[˜WÌMŒMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÍÌKˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹«m9cì¹¦î‹ˆ¹¬$y¥ãú*£‹ˆ¹k¨ù¥fycìˆ‹ˆ¹©#y¬$yg,9cìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàâøàèÈ‹ˆ¸àèxà¯xà¨¸àèxàê¸àªÈ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆº)oøà©8àìøàâz*î9líˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àèxà«xà­øà¬ùcìˆ‹ˆ¹ab9/cù¬$ycìˆ‹ˆ¸àâ¸àëù¥ãÈ‹ˆ¸à¨¸à®xàá¸àªÈ‹ˆ¸àåxàêxàìøà­øà®xà¬ù/&ˆ‹ˆ¸à«xàê¸à®xàâ9¥fyk¨ù¥fH‹ˆ¸à®xàæ¸à©8àìùo y§#H‹ˆŒM¹.%¹í ‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ™İ^›X[‹X\[[ZY[ÜË]ÜÙÜ˜YšXK\Ø[˜YÜ‹LNÈ‹ˆ]Hˆ¸à­xàêøàä8àâxàêùalyd£9fïz!ê¹á-¹g,9ä!º)¦¹¦î‹ˆ›ÜšYÚ[˜[]Hˆ\[[ZY[ÜÈÛØœ™HHÜÙÜ˜Y°ëXH°ë\ÚXØHHH™\0î˜›XØH[Ø[˜YÜ‹ÛÛ\™[™Y[™ÈİH\İÜšXH˜]\˜[İ\È›ÙXØÚ[Û™\Ë[™\İšXKÛÛY\˜Ú[ÈH[›ZYÜ˜XÚpìÛ‹Û[X\Ë\İY0ë\İXØK]Ëˆ‹ˆœİX]Hˆ¹cf¹âjz*£8à yå'ùå(ùâjxà yå(ù©kxà yea¹©kxà yéîù¬$xà y¬%ù`&xà yílz*"8ànøàbÈ‹ˆ˜]]Üˆˆ¸àà8àäøààøàâxàîøàæøà¨¸à«xàìøàîøà¬8à®xàç¸àìÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘]šY›Ø\]pë[ˆİ^›pè[ˆ‹ˆœÙ\šY\ÈˆTS•SRQS•ÔÈÓĞ”‘HSĞSQÔˆ0­ÈNÈ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à­xàìøà­xàêøàä8àâxàêøà xà#8àª8àêøàîøà¬øàèxà¯øà#ycl9b-ù¢`8à LNùnm‹ˆYX\ˆˆNËˆ™^[ˆ¹¥éy§+:*§¹âbˆMzh xàîùc§ùb"¹ª&zhc9í&xàîùbcy.æZZx $ŞZzh xàîù§+9¥¡ÌŒø $ÍLzh xàîùn¥y§+9/cyïk¹ª&z+fLŒù.í¸àîú(jyà®xàîù¬êM9.íˆ‹ˆ™\ØÜš\[ÛˆˆŒNùnm8àjùb"º(c8àexà£8àgøàª8àêøà­xàêøàä8àâxàêøàk¹íãùd"9g,:*£8àk¹¥éy§+:*§¹aj:*,øàiøàfxà º!ê¹á-¹g,9ä!¸à y¬-9ä!¹g,9ä!¸à yg,:,ê¸à zblyâjxà y©#yâjxà ybåyâjxà z/¬¹©kxà yméy©kxà yea¹©kxà yéîù¬$xà y¬%ù`&xà yílz*"8à yab9/cù¬$ycì¸àîú*î:*§¸à¤¹¢lxàa8à yª&zhc9í&xà ybcy.æ8à z*lùí,9æë¹«(xà yã+º/§¸à yiå9dèy/&¹h,ydb¸à y¥¬: gº*exà y¥/ùn§9¬n¹k¦¸à y§+9¥¡øà y¬ê8à z(j8à z*§¹ofzfá¸à y.æ:c,¸à¤¹cãºc,¸àeøào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙİ^›X[‹X\[[ZY[ÜË]ÜÙÜ˜YšXK\Ø[˜YÜ‹LNËØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙİ^›X[‹X\[[ZY[ÜË]ÜÙÜ˜YšXK\Ø[˜YÜ‹LNËÑ]šYÒ—Ñİ^›X[—Ğ\[[ZY[Ü×ÕÜÙÜ˜YšXWÔØ[˜YÜ—ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙİ^›X[‹X\[[ZY[ÜË]ÜÙÜ˜YšXK\Ø[˜YÜ‹LNËÑ]šYÒ—Ñİ^›X[—Ğ\[[ZY[Ü×ÕÜÙÜ˜YšXWÔØ[˜YÜ—ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆMKˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹g,:*£‹ˆº!ê¹á-¹cìˆ‹ˆ¹ílz*":,áù¥¦H‹ˆ¹íc9®"9cì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à­xàìøàîøà­xàêøàä8àâxàêÈ‹ˆ¸àë8àìøàäymçH‹ˆ¸àåxàªxàìøà®øàªù®oˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àª8àêøà­xàêøàä8àâxàêùcìˆ‹ˆº!ê¹á-¹g,9ä!ˆ‹ˆ¹cf¹âjz*£‹ˆº/¬¹©kH‹ˆºbly©kH‹ˆ¹ea¹©kH‹ˆ¹éîù¬$H‹ˆ¹¬%ù`&H‹ˆ¹ílz*"‹ˆ¸àå8àå8àêú*§ˆ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ™™\›˜[™^‹Z\İÜšXKXÛÜİK\šXØKLNH‹ˆ]Hˆ¸à®xàæ¸à©8àìùíly¬®ù."øàk¸à¬øà®xà¯øàê¸àªùcìˆ‹ˆ›ÜšYÚ[˜[]Hˆ’\İÜšXHHÛÜİHšXØH\˜[HHÛZ[˜XÚpìÛˆ\Üpì[ÛKML¸ $ÌNŒH‹ˆœİX]HˆŒML¸ $ÌNŒynm8àîÌNynm8àç¸àâxàê¸àï8àâyb'yâb9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àë8àª¸àìøàîøàåxà©øàêøàâ¸àìøàáøà®H‹ˆ›ÜšYÚ[˜[]]Üˆˆ“pìÛˆ™\›°è[™^ˆ‹ˆœÙ\šY\Èˆ’TÕÔ’PHHÓÔÕH’PĞH0­ÈNH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àç¸àâxàê¸àï8àâxà xàç¸àã8àª8àêøàîøàä¸àãxà®xàîøàª8àêøàâ¸àìøàáøà®ycl9b-ù¢`8à LNynm‹ˆYX\ˆˆNKˆ™^[ˆ”ˆŒLúh xàîùc§ùb"¹bcy.æ¸ $Õ’Rzh xàîù§+9¥¡Ìx $Í:h xàîù¬êù.í¸àîú(j9à®xàîú!ê¹ëa¹ïl¹d#z)¢ù§+:$bxàîùd#yì/øàîùí(¹o%xàîù«hú*©:(j‹ˆ™\ØÜš\[Ûˆˆ¸àë8àª¸àìøàîøàåxà©øàêøàâ¸àìøàáøà®xàc8à xà¬øàëxàìøàjøà¢8à¢ÌML¹nm8àk¸à¬øà®xà¯øàê¸àªù¬¯ùl®9b,:`e8àbøà¢LNŒynm8àk¹âë9êâøào¸àiøà¤¸à yo y§#xà y©#y¬$yg,:(c9¥/øà yíãùçhøà yab9/cù¬$yé/¹/&¸à yk¨ù¥fxà y­múf,¸à xàè¸à®xà«xàï8àâ9­mùl®8àj8àkºe¨¹/à¸à yíc9®"8àj9.®¹cèøàk¹£ª9éîøàjù¬¯øàhøài¹nm9.èúh!¸àjøào¸àj8à xàgøà¬øà®xà¯øàê¸àªù©#y¬$yg,9cì¸àk¹cé9an8àiøàfxà ¸àê¸àªøàêøàâxàîøàåxà©øàêøàâ¸àìøàáøà®xàîøà¬8à¨¸àêøàáøà¨øà¨¸àc9ak9b"¸àeøàgÌNynm9b'yâb8àk¹bcy.æ8à y§+9¥¡Ìx $Í:h xà y¬ê8à z!ê¹ëa¹ïl¹d#z)¢ù§+:$bxàj9d#yì/øà yí(¹o%xà y«hú*©:(j8à¤¹cãºc,¸àeøà yc§ùb"¸àk¹«­z$/xà yo%yå*8à z(j8à y¬ê8à zh zh!¸à¤¹/çy£ xàeøài¸àa8ào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙ™\›˜[™^‹Z\İÜšXKXÛÜİK\šXØKLNKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙ™\›˜[™^‹Z\İÜšXKXÛÜİK\šXØKLNKÓ[Û—Ñ™\›˜[™^—Ò\İÜšXWÙWĞÛÜİWÔšXØWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙ™\›˜[™^‹Z\İÜšXKXÛÜİK\šXØKLNKÓ[Û—Ñ™\›˜[™^—Ò\İÜšXWÙWĞÛÜİWÔšXØWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒLËˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹«m9cì¹¦î‹ˆº`&¹cìˆ‹ˆ¹©#y¬$yg,9cìˆ‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àªøàê¸àå¹­mù¬¯ùl®‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸àäxàâ¸àçˆ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¬øà®xà¯øàê¸àªùcìˆ‹ˆ¸à®xàæ¸à©8àìùíly¬®È‹ˆ¹©#y¬$yg,:(c9¥/È‹ˆ¹ab9/cù¬$ycìˆ‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¸à¯øàêxàç¸àìøàªÈ‹ˆ¹âë9êâÈ‹ˆŒM¹.%¹í ‹ˆŒMù.%¹í ‹ˆŒN9.%¹í ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœİ˜[™Ù]Ø^\Ë[[ÜÜ]Z]Ë\ÚÜ™KLNŒˆ‹ˆ]Hˆ¸àè¸à®xà«xàï8àâ9­mùl®9© º*«8 %x %xàçxàé8à©8à®zh&8à¤¹d*øà ‹ˆ›ÜšYÚ[˜[]Hˆ”ÚÙ]ÚÙˆH[ÜÜ]Z]ÈÚÜ™K[˜ÛY[™ÈH\œš]ÜHÙˆŞXZ\È‹ˆœİX]HˆŒNŒ¹nm9b'yâb8àîù¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àâ8àç¸à®xàîøà®xàâ8àë8àìøà®8à©¸à©øà©8à®ˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ•ÛX\Èİ˜[™Ù]Ø^\È‹ˆœÙ\šY\Èˆ”ÒÑUÒÑˆHSÔÔURUÈÒÔ‘H0­ÈNŒˆ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àª8àáøà¨øàìøàä8àêxà UÚ[X[H›XÚİÛÛÙ;ï#øàëxàìøàâxàìøà UˆØY[8à LNŒ¹nm‹ˆYX\ˆˆNŒ‹ˆ™^[ˆ¹c§ùb"¹bcy.æšZZzh xàîù§+9¥¡ÌÍMzh xàîù¥éy§+:*§¹âbˆŒÎzh xàîùc§ùb"¹/cyïk¹ª&z+fÍÍ9.í¸àîú!&¹¬ê9.í¸àîú(jÌyà®xàîùfìùâbùà®H‹ˆ™\ØÜš\[ÛˆˆŒNŒ¹nm8àjùb"º(c8àexà£8àgøàè¸à®xà«xàï8àâ9­mùl®8àj8àçxàé8à©8à®zh&8àk¹g,:*£8àîùaiy©#y¨b9a¡xàk¹aj:*,øàiøàfxà º!ê¹á-¹ä¬9h øà y/cù¬$xà z/¬¹©kxà y.©9¦$øà y®+ù®o¸à z(c9¥/øàb¸à¢8àlùaiy©#xàk¹k§ùbæxà¤¹¢lxàa8à yc§ùb"¸àk¹bcy.æ8à y§+9¥¡ù§*ùl/ŒÍMzh xà z!&¹¬ê8à z(j8à ycèùímxà y¢¦:/¯9g,9fìøà xàå¸àêxààøà«øàîøàê¸àí8à¨xàï9®+ù¦køà¤¹cãºc,¸àeøào¸àeøàgøà ¹c§ùb"¹/cyïk¹ª&z+fÍÍ9.í¸à¤¹/çy£ xàeøà Q˜[˜Ûİ\9fî¹k¦¹«ãyâb8àiùía9âb8àeøàgÌŒÎzh yâb8àiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜİ˜[™Ù]Ø^\Ë[[ÜÜ]Z]Ë\ÚÜ™KLNŒ‹ØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜİ˜[™Ù]Ø^\Ë[[ÜÜ]Z]Ë\ÚÜ™KLNŒ‹ÕÛX\×Ôİ˜[™Ù]Ø^\×ÔÚÙ]ÚÛÙ—İWÓ[ÜÜ]Z]×ÔÚÜ™WÌNŒ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜİ˜[™Ù]Ø^\Ë[[ÜÜ]Z]Ë\ÚÜ™KLNŒ‹ÕÛX\×Ôİ˜[™Ù]Ø^\×ÔÚÙ]ÚÛÙ—İWÓ[ÜÜ]Z]×ÔÚÜ™WÌNŒ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒÎKˆ™šYİ\™PÛİ[ˆËˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹g,:*£‹ˆ¹©#y¬$yg,:,áù¥¦H‹ˆ¹éîù¬$y¨b9a¡H‹ˆ¹.©9¦$ùcì¹¥¦H‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¸àçxàé8à©8à®H‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸àªøàê¸àå¹­mùl®‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¬8àë8à­8àï8àêøàîøàç¸à«øàë8à«8àï‹ˆ¸àçxàé8à©8à®H‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¹©#y¬$H‹ˆº/¬¹©kH‹ˆ¹.©9¦$È‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ˜˜\œ˜^˜KX[˜\İ\Ú[ËX\]Z[›ËLŒH‹ˆ]Hˆ¸à¨¸àâ¸à®xà¯øà­øàª¸àîøà¨¸à«xàã¸àk¹hë¹£&{ï&¹«m9cì¹æ¡9. :  ùkçÈ‹ˆ›ÜšYÚ[˜[]Hˆ“HÙ\İHH[˜\İ\Ú[È\]Z[›Îˆ[˜H\›Ş[XXÚpìÛˆ\İ0ìÜšXØH‹ˆœİX]HˆŒŒynm8àª8àêøà­xàêøàä8àâxàêùméyéäyi)ùki¹âb8àîù¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àæøàêøàæ8àîøàä8àêxà­xàîøà©8àä8àêH‹ˆ›ÜšYÚ[˜[]]Üˆˆ’›Ü™ÙH˜\œ˜^˜HX˜\œ˜H‹ˆœÙ\šY\Èˆ“HÑTÕHHSTÕTÒSÈTURS“È0­ÈŒH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸à­xàìøàîøà­xàêøàä8àâxàêøà xàª8àêøà­xàêøàä8àâxàêùméyéäyi)ùki¸à LŒynm¹§"‹ˆYX\ˆˆŒKˆ™^[ˆ”ˆŒL:h xàîùbcy.æzh xàîùc§ùb"ŒMzh xàb¸à¢8àlÌMø $ÌM:h xàîù.æ:c,ºh xàîú(ãú(j9í&xàîùn¥y§+9/cyïk¹ª&z+fMy.í¸àîùc§ù¬êLÌy.í¸àîú(jyà®xàîùc§ùb"¹å.ù`ãÌNyà®H‹ˆ™\ØÜš\[ÛˆˆŒNÌùnm8àjøàª8àêøà­xàêøàä8àâxàêøàk¸àã¸àã8à¨¸àêøà¬ùg,9¥®xàiú-møàcxàgøà¨¸àâ¸à®xà¯øà­øàª¸àîøà¨¸à«xàã¸àk¹cãy.lxà¤¸à y©#y¬$yg,9éêyn£øà y.+yi+¸à¨¸àèxàê¸àªùâë9êâøàj:`(ú`©¹alyd£9fïxà LNÌ¹nm8àk¹mç¹¥/ù¬®øà yab9/cù¬$yé/¹/&¸àj9g'ùg,8àîùb­9`ãyb-¹n©¸àkºemù§'ùæ¡: ã9¦køàbøà¢y©':*#¸àeøàgù«m9cì¹è%9êm¸àk¹aj:*,øàiøàfxà ¹aj:`ê8à yn£ù¥¡øà yå*:*§ºfá¸à ycàº  ù¥¡ùã+¸à y.æ:c,¸à¤¹cãºc,¸àeøà yc§ùb"¸àk¹êè9êâøài¸à y«­z$/xà yc§ù¬ê8à z(j8à yfìùâb8à zh zh!¸à¤¹/çy£ xàeøào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØ˜\œ˜^˜KX[˜\İ\Ú[ËX\]Z[›ËLŒKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØ˜\œ˜^˜KX[˜\İ\Ú[ËX\]Z[›ËLŒKÒ›Ü™ÙWĞ˜\œ˜^˜WÒX˜\œ˜WÓWÙÙ\İWÙWĞ[˜\İ\Ú[×Ğ\]Z[›×ÌŒWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØ˜\œ˜^˜KX[˜\İ\Ú[ËX\]Z[›ËLŒKÒ›Ü™ÙWĞ˜\œ˜^˜WÒX˜\œ˜WÓWÙÙ\İWÙWĞ[˜\İ\Ú[×Ğ\]Z[›×ÌŒWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒLˆ™šYİ\™PÛİ[ˆNKˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹«m9cì¹è%9êmˆ‹ˆ¹ab9/cù¬$ycìˆ‹ˆ¹cãy.lycìˆ‹ˆ¹é/¹/&¹cìˆ‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àã¸àã8à¨¸àêøà¬ùg,9¥®H‹ˆ¸à­xàìøàîøàäøà®øàìøàáˆ‹ˆ¸à­xàìøàîøà­xàêøàä8àâxàêÈ‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¨¸àâ¸à®xà¯øà­øàª¸àîøà¨¸à«xàãˆ‹ˆ¸àã¸àã8à¨¸àêøà¬ù¥ãÈ‹ˆŒNÌùnm9cãy.lH‹ˆ¹©#y¬$yg,9éêyn£È‹ˆ¹.+yi+¸à¨¸àèxàê¸àªú`(ú`©¹alyd£9fïH‹ˆ¹ab9/cù¬$y¢­y¢¥È‹ˆ¸àª8àêøà­xàêøàä8àâxàêùcìˆ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœ›Ø™\Ë]›ŞXYÙ\ËXÙ[˜[X[Y\šXØKLNÈ‹ˆ]Hˆ¹.+yi+¸à¨¸àèxàê¸àªù§lyl®8àb¸à¢8àlùa¡zfn:`ê:"*¹­mù¥áz(c:*&‹ˆ›ÜšYÚ[˜[]Hˆ“˜\œ˜]]™HÙˆ›ŞXYÙ\È[™^İ\œÚ[ÛœÈÛˆHX\İÛØ\İ[™[ˆH[\š[ÜˆÙˆÙ[˜[[Y\šXØH‹ˆœİX]Hˆ¸à­xàìøàîøàåxà¨¸àìùmçxàîøàâøàªøàêxà¬8à¨¹®e¸àîøàë8àª¸àìøàn8àk¹¥áH‹ˆ˜]]Üˆˆ¸àª¸àï8àêxàìøàâxàîÕøàîøàëxàä8àï8àá‹ˆ›ÜšYÚ[˜[]]Üˆˆ“Ü›[™ÈËˆ›Ø™\È‹ˆœÙ\šY\Èˆ“Ô“S‘ÈËˆ“Ğ‘T•È0­ÈNÈ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àª8àáøà¨øàìøàä8àêxà xà¬øàìøà®xà¯øàå¸àêùé/¹b"¸à ¸àëxàìøàâxàìøà xàãøàï8à®xàâ8àîøààxàèøàìøà®yé/¹cå¹«(xà LNùnm‹ˆYX\ˆˆNËˆ™^[ˆ”ˆŒºh xàîùbcy.æ8àîùn£ù¥¡ŞZZx $ŞZZzh xàîù§+9¥¡Ìx $ÌM:h xàîù.æ:c,ŒMx $ÌÌºh xàîùc§ùb"ºh yª&z+fy.í¸àîùc§ùb"¹å.ù`ãÌ¹à®xàîù¢¦:/¯9g,9fìÌyà®H‹ˆ™\ØÜš\[Ûˆˆ¹.+yi+¸à¨¸àèxàê¸àªù§lyl®8à¤º"*¹­møàeøà xà­xàìøàîøàåxà¨¸àìùmçxà¤º`hxàhøài¸àâøàªøàêxà¬8à¨¹®e¸à¤¹ª*¹¥«xàeøà xàë8àª¸àìøàn:!ìøàhøàgù.©9¦$ú !xàª¸àï8àêxàìøàâxàîÕøàîøàëxàä8àï8àá8àk¹¥áz(c:*&8àk¹aj:*,øàiøàfxà ¹bcy.æ8à xàª8àâxàëøàï8àâxàîøà¨¸àï8àí8à¨øàìøà¬8àk¹n£ù¥¡øà y§+9¥¡ùajM9êè8à y¢¦:/¯9g,9fìøà y.æ:c,¹¬êxàbøà¢U’RRxà yiiy.æ8à¤¹cãºc,¸àeøà xàè¸à®xà«xàï8àâ9­mùl®8à xàäxàâ¸àç¸à xà¬øà®xà¯øàê¸àªøà xàâøàªøàêxà¬8à¨¸à xàæøàìøà®8àéxàêxà®xàk¹g,9gçøàîù.©9¦$øàîùab9/cù¬$yé/¹/&¸à¤º*&:c,¸àeøào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜ›Ø™\Ë]›ŞXYÙ\ËXÙ[˜[X[Y\šXØKLNËØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜ›Ø™\Ë]›ŞXYÙ\ËXÙ[˜[X[Y\šXØKLNËÓÜ›[™×Õ×Ô›Ø™\×Ó˜\œ˜]]™WÛÙ—Õ›ŞXYÙ\×Ø[™Ñ^İ\œÚ[Ûœ×ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜ›Ø™\Ë]›ŞXYÙ\ËXÙ[˜[X[Y\šXØKLNËÓÜ›[™×Õ×Ô›Ø™\×Ó˜\œ˜]]™WÛÙ—Õ›ŞXYÙ\×Ø[™Ñ^İ\œÚ[Ûœ×ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒ‹ˆ™šYİ\™PÛİ[ˆËˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹¥áz(c:*&‹ˆ¹g,:*£‹ˆ¹.©9¦$ùcì¹¥¦H‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àäxàâ¸àçˆ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àªøàê¸àå¹­mùl®‚ˆKˆ›[™İXYÙ\ÈˆÂˆº"ìz*§ˆ‚ˆKˆYÜÈˆÂˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¸à­xàìøàîøàåxà¨¸àìùmçH‹ˆ¸àâøàªøàêxà¬8à¨¹®eˆ‹ˆ¸àë8àª¸àìÈ‹ˆ¹ab9/cù¬$y.©9¦$È‹ˆº"*¹­mÈ‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆš[]šXÙ[˜Ú[Ë[^‹[Y]ÙËZYÛ]˜\ËLMLˆ‹ˆ]Hˆ¹`m¹`ãùm!ù¢çz !xà¤¹dbº)èøàexàføà y`m¹`ãùm!ù¢çxà¤¹¨.yím¸àfxà¢øàgøà xàk¹abxàj9¥®y¬åH‹ˆ›ÜšYÚ[˜[]Hˆ“^ˆHpê]ÙÈHÛÛ™™\Ø\ˆY0ìÛ]˜\ÈH\İY\œ›ÈHYÛ]°ëX\È‹ˆœİX]HˆŒML¹nm8àåøàª8àå¸àêyb'yâb8àîùbcy.æ8àîùë+9. :`êŒ¹êè8àîøàâ¸àëøàâ8àêú*§¹dbº)èÍÍ¹ecøàîú*«9¥fM9ëáøàîù§*ùl/¹í(¹o%H‹ˆ˜]]Üˆˆ¸àáøà¨øàª8à­8àîøàãøà©8àèxà®xàîøàê¸àªøàêøàâxàîøàäøàê¸àèøàäøà®øàìøà­øàªˆ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘YYÛÈ˜Z[Y\ÈšXØ\™Èš[]šXÙ[˜Ú[È‹ˆœÙ\šY\Èˆ“VˆHpâUÑÈ0­ÈQP“HMLˆ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àåøàª8àå¸àêxàîøàáøàîøàëxà®xàîøà¨¸àìøàæ8àë8à®xà xàáøà¨øàª8à­8àîøàåxà©øàêøàâ¸àìøàáøà®xàîøàáøàîøàë8àª¸àìùcl9b-ù¢`8à LML¹nm‹ˆYX\ˆˆML‹ˆ™^[ˆ”ˆŒN:h xàîùbcy.æŒúh xàîùë+9. :`êx $ÌLÍºh {ï"Íø $ÌÎzh xàîÌLÌºh y«(9åj»ï"xàîùë+9.£:`êx $ÍLzh xàîù§*ùl/¹í(¹o%xàîùn¥y§+9/cyïk¹ª&z+fŒLù.í¸àîùc§ùb"¹å.ù`ãÌ¹à®H‹ˆ™\ØÜš\[Ûˆˆ¹`m¹`ãùm!ù¢çz !xàk¹dbº)èøàj9`m¹`ãùm!ù¢çxàk¹¨.yím¸à¤¹æë¹æ¡8àj8àeøài¸à ycî9âiú !xàîú m9ïj¹cî9ékyd$xàdxàjùíê8ào¸à£8àgÌML¹nm9b"¹k¥ù¥fy¦î8àk¹aj:*,øàiøàfxà ¹bcy.æ8à yë+9. :`êŒ¹êè8à xàâ¸àëøàâ8àêú*§¸àjøà¢8à¢ùdbº)èú,ê¹ecÍÍ¹ecøà z*«9¥fM9ëáøà y/¦ùâ¨8àîú/íù/èy. :)©ÌÍzh!xà z+i¹db¸à y§*ùl/¹í(¹o%xà¤¹c§ùb"ºh!¸àjùcãºc,¸àeøào¸àeøàgøà ¹o£9b-øà¢¸àk¹. :`ê8àjøàk¸àoùb¨8àb8à¢xà£8àgøàåxàêxàìøà­øà®xà¬øàîøàã8àâøà©øà®xàîøàáøàîøàêxàîøàæxà«9¦î9ì(xàkøà z(ç9aixàiøà`¸à¢øàdøàj8à¤¹¦#¹é.¸àeøài¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËİš[]šXÙ[˜Ú[Ë[^‹[Y]ÙËZYÛ]˜\ËLML‹ØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËİš[]šXÙ[˜Ú[Ë[^‹[Y]ÙËZYÛ]˜\ËLML‹ÑYYÛ×Ò˜Z[Y\×ÔšXØ\™×Õš[]šXÙ[˜Ú[×Ó^—ŞWÛY]Ù×ÌML—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËİš[]šXÙ[˜Ú[Ë[^‹[Y]ÙËZYÛ]˜\ËLML‹ÑYYÛ×Ò˜Z[Y\×ÔšXØ\™×Õš[]šXÙ[˜Ú[×Ó^—ŞWÛY]Ù×ÌML—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆŒNˆ™šYİ\™PÛİ[ˆ‹ˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹k¥ù¥fy¦î‹ˆ¹dbº)èùecùëe‹ˆ¹k¨ù¥fz,áù¥¦H‹ˆº* :*§º,áù¥¦H‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹ˆ¸àåøàª8àå¸àêH‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‹ˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¸àêxàá¸àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¹`m¹`ãùm!ù¢çH‹ˆ¹dbº)èÈ‹ˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆº/íù/èH‹ˆ¹ab9/cù¬$yk¥ù¥fH‹ˆ¹k¨ù¥fH‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ˜[˜KXÛÛ™™\ÜÚ[Û˜\š[Ë[X^[Ü‹[Y[›Ü‹LMŒÍ‹ˆ]Hˆ¸àâ¸àëøàâ8àêú*§¹i)øàîùl#ùdbº)èùecùëe‹ˆ›ÜšYÚ[˜[]HˆÛÛ™™\ÜÚ[Û˜\š[ÈX^[Ü‹HY[›Üˆ[ˆ[™İXHY^XØ[˜KˆH0è]XØ\ÈÛÛ˜H\Èİ\\œİXÚ[Û™\ÈHYÛ]°ëXK]YH[0ëXHHŞH[ˆ]YYYÈHÜÈ˜]\˜[\È\İHY]˜H\ÜpìXKH[œİXØÚpìÛˆHÜÈØ[ÜÈØXÜ˜[Y[Üø )ˆ‹ˆœİX]HˆŒMŒÍ9nm8àèxà«xà­øà¬ùb'yâb8àîùbcy.æ8àîùi)ùdbº)èùecùëe8àîùl#ùdbº)èùecùëe8àîùéæ:-èz+&ú*lxàîùfæøài8àk¹éb8à¢ˆ9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àä8àêøàâ8àëxàèxàîøàáøàîøà¨¸àêøàä‹ˆ›ÜšYÚ[˜[]]Üˆˆ˜\ÛÛpêHH[˜H‹ˆœÙ\šY\ÈˆÓÓ‘‘TÔÒSÓT’SÈPVSÔˆHQS“Ôˆ0­ÈMŒÍ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àèxà«xà­øà¬øà xàåxàêxàìøà­øà®xà¬øàîøà­xàêøàä8à­8à LMŒÍ9nm‹ˆYX\ˆˆMŒÍˆ™^[ˆ”ˆºh xàîùc§ùb"¹ë+x $ÍLz$bxàîùá(z$byåj¹cíù§ 9í`º$bxàîùn¥y§+9/cyïk¹ª&z+fMù.í¸àîùc§ùb"¹å.ù`ãÌL¹à®H‹ˆ™\ØÜš\[Ûˆˆ¸àä8àêøàâ8àëxàèxàîøàáøàîøà¨¸àêøàä8àc8àâ¸àëøàâ8àêú*§¸àj8à®xàæ¸à©8àìú*§¸àk¹kï¹d$y.£9«!8àiùíê8à¤øàh9dbº)èøàîùéæ:-èy£!ùceù¦î8àk¹¥éy§+:*§¹aj:*,øàiøàfxà ¹c§ùª&zhc9í&xà ycl9b-ùânz*,xàîú*,ycëøàîú*£ycëøà yã+º/§¸à yi)ùdbº)èùecùëe8à yl#ùdbº)èùecùëe8à y. øài8àk¹éæ:-èxàjúe¨¸àfxà¢ú+&ú*lxà z* :*§¹."¸àk¹¬ê:*&8à yfæøài8àk¹éb8à¢¸à yiiy.æ8à¤¹c§ùb"ºh!¸àjùcãºc,¸àeøà y«!9i%º+&ú*lxàj9«!9i%¹¬ê8à ¹kï¹oç9/cyïk¸àn9éîøàeøài¹¦#¹é.¸àeøào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØ[˜KXÛÛ™™\ÜÚ[Û˜\š[Ë[X^[Ü‹[Y[›Ü‹LMŒÍØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØ[˜KXÛÛ™™\ÜÚ[Û˜\š[Ë[X^[Ü‹[Y[›Ü‹LMŒÍĞ˜\ÛÛYWÙWĞ[˜WĞÛÛ™™\ÜÚ[Û˜\š[×ÌMŒÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØ[˜KXÛÛ™™\ÜÚ[Û˜\š[Ë[X^[Ü‹[Y[›Ü‹LMŒÍĞ˜\ÛÛYWÙWĞ[˜WĞÛÛ™™\ÜÚ[Û˜\š[×ÌMŒÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆ‹ˆ™šYİ\™PÛİ[ˆL‹ˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹k¥ù¥fy¦î‹ˆ¹dbº)èùecùëe‹ˆº* :*§º,áù¥¦H‹ˆ¹k¨ù¥fz,áù¥¦H‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹ˆ¹.+yi+¸àèxà«xà­øà¬È‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¸à®xàæ¸à©8àìú*§ˆ‹ˆ¸àêxàá¸àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¹dbº)èÈ‹ˆ¹`m¹`ãùm!ù¢çH‹ˆº/íù/èH‹ˆ¹éæ:-èH‹ˆ¹k¨ù¥fH‹ˆŒMù.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ™\˜[‹Z\İÜšXKZ[™X\Ë[Y]˜KY\Ü[˜KLMNH‹ˆ]Hˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèú*î8à©8àìøàáøà¨øà¨¹cìˆ‹ˆ›ÜšYÚ[˜[]Hˆ’\İÜšXHH\È[™X\ÈHY]˜H\ÜpìXHH\Û\ÈHHY\œ˜Hš\›YH‹ˆœİX]Hˆ“‘Hš]‹Ì‹ÌLH:!ê¹ëa¹ê/øàîùaj9."z`ê8àîùfìùâbLMùà®H9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àáøà¨øàª8à­8àîøàáøàéxàêxàìÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ‘YYÛÈ\°è[ˆ‹ˆœÙ\šY\Èˆ’TÕÔ’PHHTÈS‘PTÈ0­È“‘H’U‹Ì‹ÌLH‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèøà LMMÌ8 $ÌMNynm9¢$9êâøà P“‘Hš]‹Ì‹ÌLH:!ê¹ëa¹ê/È‹ˆYX\ˆˆMNKˆ™^[ˆ”ˆLLúh xàîú!ê¹ëa¹ê/È‹Œ]¸ $Ù‹ŒÍ]¸àîùaj9."z`ê8àîú!ê¹ëa¹ê/ù/cyïk¹ª&z+fŒy.í¸àîùojz"l¹fìùâbLMùà®H‹ˆ™\ØÜš\[Ûˆˆ¸àáøà¨øàª8à­8àîøàáøàéxàêxàìøàc8àèxà­øàªøàkº-mù®¤8à yéîù/cøà z*î:`ïyn ¸àj8àk¹¢)¹.¢xàj9¥+úacxà yég¸à!xà yékyé`8à y¦©¹¬åxà¤º*&8àeøàgú!ê¹ëa¹ê/øàk¹¥éy§+:*§¹aj:*,øàiøàfxà “‘Hš]‹Ì‹ÌLxàkº$bzh!¸à yêè:acyïk¸à y«­z$/xà yfìù`ãù/cyïk¸àjùo¤øàa8à xà#¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèú*î8à©8àìøàáøà¨øà¨¹cì¸à#øà#¹a 9é/8àj9ékyo#øàk¹¦î8à#øà#¹cé9¦©¸à#øàk¹aj9."z`ê8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ¹ajLMùfìøàkù.®¹âjxàîùfj9âjxàîù¥¡ùkeøàîùd#yª&xàîùojz"l¹§¨8à¤¹«(8àbøàexàj¸àa9çêyoh¸àk¹aj9fìøàj8àeøài¹cãºc,¸àeøào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙ\˜[‹Z\İÜšXKZ[™X\Ë[Y]˜KY\Ü[˜KLMNKØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙ\˜[‹Z\İÜšXKZ[™X\Ë[Y]˜KY\Ü[˜KLMNKÑYYÛ×Ñ\˜[—Ò\İÜšXWÙWÛ\×Ò[™X\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙ\˜[‹Z\İÜšXKZ[™X\Ë[Y]˜KY\Ü[˜KLMNKÑYYÛ×Ñ\˜[—Ò\İÜšXWÙWÛ\×Ò[™X\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆLLËˆ™šYİ\™PÛİ[ˆLMËˆœ]PÛİ[ˆˆ\\ÈˆÈ¹«m9cì¹¦î‹¹nm9.èú*&‹¹a¦y§+‹¹k¥ù¥fycìˆ‹¹. 9«(ycì¹¥¦H—Kˆœ™YÚ[ÛœÈˆÈ¸àèxà«xà­øà¬È‹¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹¹.+yi+¸àèxà«xà­øà¬È—Kˆ›[™İXYÙ\ÈˆÈ¸à®xàæ¸à©8àìú*§ˆ‹¸àâ¸àëøàâ8àêú*§ˆ—KˆYÜÈˆÂˆ¸àèxà­øàªÈ‹ˆ¸à¨¸à®xàá¸àªÈ‹ˆ¸àá¸àã¸ààxàá¸à¨øàâ8àêxàìÈ‹ˆ¹ég¸à!H‹ˆ¹ékyé`‹ˆ¹¦©ˆ‹ˆ“‘Hš]‹Ì‹ÌLH‹ˆŒM¹.%¹í ‚ˆBˆKˆÂˆœÛYÈˆœ›ÛY\›ËXİ[]›ËXØY™KXÚX\\ËLNLÈ‹ˆ]Hˆ¸ààxà¨¸àäxà®yceú`ê9¬¯ùl®8àjøàb¸àdxà¢øà¬øàï8àä¸àï9¨/ygîH‹ˆ›ÜšYÚ[˜[]Hˆİ[]›È[ØY°êH[ˆHÛÜİHY\šY[Û˜[HÚX\\È‹ˆœİX]HˆŒNLùnm9ë+9fæùâb8àîùbcy.æ8àîù§+9¥¡Íx $ÌMŒúh xàîù.æ:c,¸àîùí(¹o%H9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¸àç¸àá¸à¨øà¨¸à®xàîøàëxàèxàëH‹ˆ›ÜšYÚ[˜[]]Üˆˆ“X]0ëX\È›ÛY\›È‹ˆœÙ\šY\ÈˆÕSU“ÈSĞQ°âH0­ÈNLÈ‹ˆ›ÜšYÚ[˜[X›XØ][Ûˆˆ¸àèxà«xà­øà¬øà ybéù©kyç ycl9b-ùl`8à LNLùnm9ë+9fæùâb‹ˆYX\ˆˆNLËˆ™^[ˆ”ˆMN:h xàîùc§ùb"¹ª&zhc9í&xàîùë+9."yâb9n£øàîù§+9¥¡Íx $ÌMŒúh xàîù.æ:c,¸àîùí(¹o%xàîùc§ùb"ºh yª&z+fMù.í¸àîú(jÌyà®xàîùc§ùb"¹å.ù`ãÌyà®H‹ˆ™\ØÜš\[Ûˆˆ¸àç¸àá¸à¨øà¨¸à®xàîøàëxàèxàëxàc8à xààxà¨¸àäxà®yceú`ê9¬¯ùl®8à xàj8à¢¸à£øàdxà¯xà¬øàã8à®xà¬øàjøàb¸àdxà¢øà¬øàï8àä¸àï9¨/ygîxàkº!ê¹á-¹§hy.í¸à yg'ùg,9cå¹o¥øà yb­9`ãxà z`(9¢$8à ycã¹êjøà yb¨9méxà z/.:` xà z,®ùå*8àj9cã¹æâ¸à¤º*å¸àf8àgùk§ùå*9¦î8àiøàfxà ŒNLùnm9ë+9fæùâb8àk¹c§ùb"¹ª&zhc9í&xà yë+9."yâb9n£øà y§+9¥¡Íx $ÌMŒúh xà y.æ:c,¸à yí(¹o%y§*ùl/¸ào¸àiøà¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÜ›ÛY\›ËXİ[]›ËXØY™KXÚX\\ËLNLËØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÜ›ÛY\›ËXİ[]›ËXØY™KXÚX\\ËLNLËÓX]X\×Ô›ÛY\›×ĞØY™WĞÚX\\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÜ›ÛY\›ËXİ[]›ËXØY™KXÚX\\ËLNLËÓX]X\×Ô›ÛY\›×ĞØY™WĞÚX\\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆMNˆ™šYİ\™PÛİ[ˆKˆœ]PÛİ[ˆˆ\\ÈˆÂˆº/¬¹©ky¦î‹ˆ¹íc9®"9cìˆ‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸ààxà¨¸àäxà®H‹ˆ¸à¯xà¬øàã8à®xà¬È‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸à¬øàï8àä¸àï‹ˆ¸à¬øàï8àä¸àï9¨/ygîH‹ˆº/¬¹©kH‹ˆ¸à¯xà¬øàã8à®xà¬È‹ˆ¸ààxà¨¸àäxà®H‹ˆ¹b­9`ãH‹ˆŒNy.%¹í ‚ˆBˆKˆÂˆœÛYÈˆ™ÍNK\›ÛX[˜Ù\Ë\Ù[›Ü™\Ë[Y]˜KY\Ü[˜H‹ˆ]Hˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèú*î9/«øàk¹«c:+(H‹ˆ›ÜšYÚ[˜[]Hˆ”›ÛX[˜Ù\ÈHÜÈÙpì[Ü™\ÈHHY]˜H\ÜpìXH‹ˆœİX]Hˆ™[œÛÛˆ][ˆ[Y\šXØ[ˆÛÛXİ[Ûˆ\ËˆÍNH‹ˆ\¸ $Í»ï"‹ˆÌù«(;ï"y¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¹/g: !y§*º*lÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ[°ìÛš[[È‹ˆœÙ\šY\Èˆ”“ÓPSÑTÈHÔÈÑpäSÔ‘TÈ0­ÈTËˆÍNH‹ˆ›ÜšYÚ[˜[X›XØ][ÛˆˆŒMN¹nm:h ùíê9î ¸à ¹ãï¹kf9§+8àkÌMù.%¹í 9a¦y§+8à ˆ‹ˆYX\ˆˆMN‹ˆ™^[ˆ”ˆÍúh xàîĞ™[œÛÛˆ][ˆ[Y\šXØ[ˆÛÛXİ[Û‹\ËˆÍNH0­È‹ˆ\¸ $Í»ï"‹ˆÌù«(;ï"xàîùa¦y§+9/cyïk¹ª&z+fNy.í¸àîùfìùâb8àj¸àeÈ‹ˆ™\ØÜš\[Ûˆˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèøàk¸àâ¸àëøàâ8àêú*§¹«c:+(xà¤¹cã¸à xà¢Ó\ËˆÍNxàk¹¥éy§+:*§¹aj:*,øàiøàfxà ¹¡hù/¢ù."¸àk¹ajÍ¹«c8à¤¹a¦y§+:h!¸àjùcãºc,¸àeøà yë+V9«c9o£8àk¹âë9êâùcf9/cxà¤–VPxàj8àeøài¹é.¸àeøài¸àa8ào¸àfxà ¹ãï¹kf8àeøàj¸àa9ë+Ìú$bxàjøà¢8àhøài¹i,xà£øà£8àgùë+’RRy«c9o£9cb¸àkøà y.)º(c9§+9¥¡øà#Ø[\™\ÈY^XØ[›Üøà#ùë+9«c8àbøà¢z(ç8àa8à y..ùn¥y§+8àj:(ç9k£9n¥y§+8àk¹ëá9fì¸à¤¹¦#¹é.¸àeøào¸àeøàgøà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËÙÍNK\›ÛX[˜Ù\Ë\Ù[›Ü™\Ë[Y]˜KY\Ü[˜KØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËÙÍNK\›ÛX[˜Ù\Ë\Ù[›Ü™\Ë[Y]˜KY\Ü[˜KÑÍNWÔ›ÛX[˜Ù\×ÙWÛÜ×ÜÙ[›Ü™\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËÙÍNK\›ÛX[˜Ù\Ë\Ù[›Ü™\Ë[Y]˜KY\Ü[˜KÑÍNWÔ›ÛX[˜Ù\×ÙWÛÜ×ÜÙ[›Ü™\×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÍËˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹«c:+(zfáˆ‹ˆ¹a¦y§+‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹ˆ¹.+yi+¸àèxà«xà­øà¬È‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¸à®xàæ¸à©8àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¹«c:+(H‹ˆ¸àãxà­xàëøàêøà¬øàê8àâ8àêÈ‹ˆ¸àèxà­øàªÈ‹ˆŒM¹.%¹í ‹ˆ“\ËˆÍNH‚ˆBˆKˆÂˆœÛYÈˆ˜Ø[\™\Ë[Y^XØ[›ÜË[\ËLMŒXš\È‹ˆ]Hˆ¸àèxà­øà¬øàk¹«c:+(H‹ˆ›ÜšYÚ[˜[]HˆØ[\™\ÈY^XØ[›ÜÈ‹ˆœİX]HˆšX›[İXØH˜XÚ[Û˜[Hpê^XÛÈ\ËˆMŒš\È‹ˆ\¸ $Î\¸àîùajL¹«c9¥éy§+:*§¹aj:*,È‹ˆ˜]]Üˆˆ¹/g: !z)!ù¥l8àîùíê: !y§*º*lÈ‹ˆ›ÜšYÚ[˜[]]Üˆˆ]]Ü™\Èpî›\\ÎÈÛÛ\[YÜˆ[°ìÛš[[È‹ˆœÙ\šY\ÈˆĞS•T‘TÈQVPĞS“ÔÈ0­ÈTËˆMŒ’TÈ‹ˆ›ÜšYÚ[˜[X›XØ][ÛˆˆŒM¹.%¹í 9o£9cb¹¢$9êâøà ¹a¦y§+8àkº.è¹a¦ynm:*&8àkÌMNMùnm8àj:)èøàexà£8à¢øà ˆ‹ˆYX\ˆˆMNMËˆ™^[ˆ”ˆÌzh xàîĞšX›[İXØH˜XÚ[Û˜[Hpê^XÛË\ËˆMŒš\È0­È‹ˆ\¸ $Î\ˆ0­È9ajL¹«c8àîùa¦y§+9/cyïk¹ª&z+fMy.í¸àîùfìùâb8àj¸àeÈ‹ˆ™\ØÜš\[Ûˆˆº)!ùd"9a¦y§+8à#Ø[\™\ÈY^XØ[›Üøà#øàk¹«c:+(zfáº`ê9b!¸à Y‹ˆ\¸ $Î\¸àk¹ajL¹«c8àîùë+yëà8àbøà¢yë+MÌNyëà8ào¸àiøà¤¹cã¸à xà¢ù¥éy§+:*§¹aj:*,øàiøàfxà ¹«c:hc8à z`ê9êâøài¸à y¯%9icù£!ùé.¸à ycãyoªxà y«c9e,zgìùëà8à xàêxàá¸àìú*§¹céxà yfî¹§"yd#xà yëà9åj¹cíøà¤¹/çy£ xàeøà yajMz$bzgh¸àk¹/cyïk¹ª&z+f8à¤¹.æ8àeøào¸àeøàgøà ¹a¦y§+8àk™‹ˆ]¹.ézfcxàjùí¦¸àcúgg¹«c:+(z*î9ëáøàkù§+9¦î8àk¹ëá9fì¹i%¸àiøàfxà ˆ‹ˆ˜Ûİ™\ˆˆœX›XØ][ÛœËØØ[\™\Ë[Y^XØ[›ÜË[\ËLMŒXš\ËØÛİ™\‹šœÈ‹ˆœˆˆœX›XØ][ÛœËØØ[\™\Ë[Y^XØ[›ÜË[\ËLMŒXš\ËĞØ[\™\×ÓY^XØ[›Ü×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ™\XˆˆœX›XØ][ÛœËØØ[\™\Ë[Y^XØ[›ÜË[\ËLMŒXš\ËĞØ[\™\×ÓY^XØ[›Ü×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆœYÙPÛİ[ˆÌKˆ™šYİ\™PÛİ[ˆˆœ]PÛİ[ˆˆ\\ÈˆÂˆ¹«c:+(zfáˆ‹ˆ¹a¦y§+‹ˆ¹. 9«(ycì¹¥¦H‚ˆKˆœ™YÚ[ÛœÈˆÂˆ¸àèxà«xà­øà¬È‹ˆ¸àã8àª8àä8àîøàª8à®xàäxàï8àâøàèÈ‹ˆ¹.+yi+¸àèxà«xà­øà¬È‚ˆKˆ›[™İXYÙ\ÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¸à®xàæ¸à©8àìú*§ˆ‹ˆ¸àêxàá¸àìú*§ˆ‚ˆKˆYÜÈˆÂˆ¸àâ¸àëøàâ8àêú*§ˆ‹ˆ¹«c:+(H‹ˆ¸àèxà­øàªÈ‹ˆ¸àá¸àã¸ààxàá¸à¨øàâ8àêxàìÈ‹ˆŒM¹.%¹í ‹ˆ“\ËˆMŒš\È‚ˆBˆKˆÂˆÛYÎˆ˜˜[˜Ü›ÙZ\İÜKXÙ[˜[X[Y\šXØKLN‹LNÈ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªùcìˆ‹ˆÜšYÚ[˜[]Nˆ’\İÜHÙˆÙ[˜[[Y\šXØH‹ˆİX]Nˆ¹aj9."ymîùd"9§+9âb8àîÌMLx $ÌNùnm9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àä¸àéxàï8àä8àï8àâ8àîøàãøà©¸àîøàä8àìøà«øàëxàåxàâ‹ˆÜšYÚ[˜[]]Üˆ’X™\İÙH˜[˜Ü›Ù‹ˆÙ\šY\Îˆ’TÕÔ–HÑˆÑS•SSQT’PĞH0­ÈN¸ $ÌNÈ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à­xàìøàåxàêxàìøà­øà®xà¬øà UH\İÜHÛÛ\[xà LN¸ $ÌNùnm‹ˆYX\ˆN‹ˆ^[‚ˆ”ˆ‹Nzh xàîùajùmîÎN9êè8àîùc§ùb"ºh yª&z+f‹ÌÍ9.í¸àîùc§ù¬êÌy.í¸àîùfìùâbÍyà®xàîùë+ymîùo%yå*9an9¢è9. :)©øàîùë+RRymîùí(¹o%H‹ˆ\ØÜš\[Û‚ˆ¸àä¸àéxàï8àä8àï8àâ8àîøàãøà©¸àîøàä8àìøà«øàëxàåxàâ8àc8à xà®xàæ¸à©8àìùbè¹b¦øàk¹b,9§ixàj9b'y§'ùo y§#xàbøà¢y©#y¬$yg,9íly¬®øà yâë9êâøà y.+yi+¸à¨¸àèxàê¸àªú`(ú`©¸àkº)èù/døà yd!9alyd£9fïxàkŒNùnm8ào¸àiøà¤¹."ymîøàiùcæz/ì8àeøàgú`&¹cì¸à ¹c§ùb"¹bcy.æ8à yajN9êè8à yc§ù¬êÌy.í¸à yfìú(j8à yë+ymîùo%yå*9an9¢è9. :)©øà yë+RRymîùí(¹o%xà¤¹. 9a¢¸àjøào¸àj8à xà yc§ùb"ºh yª&z+f‹ÌÍ9.í¸à¤¹/çy£ xàeøàgù¥éy§+:*§¹aj:*,øàîùaj9."ymîùd"9§+9âb8àiøàfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËØ˜[˜Ü›ÙZ\İÜKXÙ[˜[X[Y\šXØKLN‹LNËØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËØ˜[˜Ü›ÙZ\İÜKXÙ[˜[X[Y\šXØKLN‹LNËÒX™\ÒİÙWĞ˜[˜Ü›ÙÒ\İÜWÛÙ—ĞÙ[˜[Ğ[Y\šXØWÌN—ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËØ˜[˜Ü›ÙZ\İÜKXÙ[˜[X[Y\šXØKLN‹LNËÒX™\ÒİÙWĞ˜[˜Ü›ÙÒ\İÜWÛÙ—ĞÙ[˜[Ğ[Y\šXØWÌN—ÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆNKˆšYİ\™PÛİ[ˆÌ‹ˆ]PÛİ[ˆËˆ\\ÎˆÈ¹«m9cì¹¦î‹º`&¹cìˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¸àäxàâ¸àçˆ‹ˆKˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ‹¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àä8àìøà«øàëxàåxàâ‹ˆ¹.+yi+¸à¨¸àèxàê¸àªùcìˆ‹ˆ¹©#y¬$yg,9cìˆ‹ˆ¹âë9êâùcìˆ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¸àäxàâ¸àçˆ‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆœ™[Y\Ø[Z\İÜšXKYÙ[™\˜[LMŒNH‹ˆ]Nˆº)oøà©8àìøàâyíãùcìˆ‹ˆÜšYÚ[˜[]N‚ˆ’\İÜšXHÙ[™\˜[H\È[™X\ÈØØÚY[[\ÈH\Xİ[\ˆHHÛØ™\›˜XÚpìÛˆHÚX\HHİX][X[H‹ˆİX]N‚ˆŒMŒNynm9b'yâb8àîùbcy.æ8à yajLymîøà ymîù§*ùkêy§îøà yêè:hc:(j9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à¨¸àìøàâ8àâøàª¸àîøàáøàîøàë8àèxà­xàêÈ‹ˆÙ\šY\Îˆ’TÕÔ’PHÑS‘TS0­ÈMŒNH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àç¸àâxàê¸àï8àâxà xàåxàêxàìøà­øà®xà¬øàîøàáøàîøà¨¸àìøà¬8àëxà LMŒNynm‹ˆYX\ˆMŒNKˆ^[‚ˆ”ˆ‹LÌ:h xàîùc§ùb"¹§+9¥¡ÍÍLºh xàîùajLymîÌ¹êè8àîùbcy.æ8àîù«hú*©:(j8àîùmîù§*ùkêy§îøàîùêè:hc:(jÌºh xàîùc§ùb"¹ª&zhc9í&Lyà®H‹ˆ\ØÜš\[Û‚ˆ¸àâxàçøàâøà¬ù/&º e¸àäøà®øàìøàá¸àîøàáøàîøààxà¨¸àäxàb¸à¢8àløà¬8à¨¸àá¸àç¸àêyë¨yc.¸àk¹¢$9êâøàj9­.ùbåxà xààxà¨¸àäxàîøà¬8à¨¸àá¸àç¸àêyíly¬®úh&8àk¹¥/ù¬®øàîùé/¹/&¸àîùo y§#xàîùk¨ù¥fxà¤¹cæz/ì8àeøàgÌMŒNynm9b"¸àk¹i)ú$eøà º*,ycëøà yânz*,xà yk¦¹/¨z*/9¦#¸à y«hú*©:(j8à yã+º/§¸à z$eú !yn£øà yajLymîÌ¹êè8à y«!9i%¹¬ê8à ybáy¦î8àîù¦î9ì(xàj¸àjxàk¹o%yå*9¥¡ù¦î8à ymîù§*ùkêy§îøà yêè:hc:(j8à¤¹cãºc,¸àeøà LMŒNynm9b'yâb8àk¹cl9b-úh yª&z+f8àj9c§ùb"¹fî¹§"xàk¹«(9åj¸àîúaãz)!øàîú`!º(c8à¤¹/çy£ xàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÜ™[Y\Ø[Z\İÜšXKYÙ[™\˜[LMŒNKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÜ™[Y\Ø[Z\İÜšXKYÙ[™\˜[LMŒNKĞ[Ûš[×ÙWÔ™[Y\Ø[Ò\İÜšXWÑÙ[™\˜[ÌMŒNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÜ™[Y\Ø[Z\İÜšXKYÙ[™\˜[LMŒNKĞ[Ûš[×ÙWÔ™[Y\Ø[Ò\İÜšXWÑÙ[™\˜[ÌMŒNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒLÌˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈ¹«m9cì¹¦î‹¹nm9.èú*&‹¹¥fy/&¹cìˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÂˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸ààxà¨¸àäxà®H‹ˆ¸àæxàêxàäxà®H‹ˆ¹.+z`ê8à¨¸àèxàê¸àªÈ‹ˆ¸àèxà«xà­øà¬È‹ˆKˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ‹¸àêxàá¸àìú*§ˆ—KˆYÜÎˆÂˆ¸àâxàçøàâøà¬ù/&ˆ‹ˆ¸àêxà®xàîøàªøà­xà®H‹ˆ¸ààxà¨¸àäH‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àæxàêxàäxà®H‹ˆ¹©#y¬$yg,9cìˆ‹ˆ¹k¨ù¥fycìˆ‹ˆŒMù.%¹í ‹ˆKˆKˆÂˆÛYÎˆœØ[‹XY[˜]™[\˜KX\K[[™İXK[X^XKLM‹ˆ]Nˆ¸àç¸àé:*§¹¥¡ù¬åH‹ˆÜšYÚ[˜[]Nˆ\HHH[™İXHX^XH‹ˆİX]N‚ˆŒM9nm8àèxà«xà­øà¬ùb'yâb8àîùª&zhc9í&xàîùã+¹db8àîú*£ycëøàîù©':e¬¸àîù§+9¥¡Üˆx $ÍÍˆ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à«8àå¸àê¸àª8àêøàîøàáøàîøà­xàìøàîøàå¸àª8àâ¸àæxàìøàâ8à©xàêH‹ˆÙ\šY\ÎˆT•HHHS‘ÕPHPVPH0­ÈM‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àèxà«xà­øà¬øà xàæxàêøàâ¸àêøàâxàîøàªøàêøàáøàëxàìù§*¹.¨y.®¹cl9b-ù¢`8à LM9nm‹ˆYX\ˆMˆ^[‚ˆ”ˆLÌzh xàîùá(zh y¥l9bcy.æN:gh¸àîù§+9¥¡Ìx $ÍÍºh xàîùc§ùb"¹ª&zhc9í&Lyà®xàîù¥¡ù¬åz(j8àîùéb9émùk¦¹g¢È‹ˆ\ØÜš\[Û‚ˆ¹©#y¬$yg,9§'øàé¸àªøàá¸à¬øàîøàç¸àé:*§¸àk¹b"¹§+9¥¡ù¬åy¦î8à ¹ª&zhc9í&xà yã+¹db8à z*£ycëøàîù©':e¬¸à yfæù­.ùå*8à ybåz*g¸àk¹i"yål8à y.èùd#z*g¸àîùl#ú/§¸à \İ[yæî9odùbåz*g¸à y­/¹å'ú)£ùbaøà z e¹/dù¢çzh&8àîùdbº)èøàîù­%ùé/8àîùjf¹iîøàîùí`¹¬®xàk¹k¦¹g¢ù¥¡øào¸àiøà LM9nm9b'yâb8àk¹c§ùb"ºh!¸àjùcãºc,¸àeøà xàç¸àé:*§¹oh¸àîù/¢ù¥¡øàk¹c§ùí­8àj9c§ùb"ºh yª&z+f8à¤¹/çy£ xàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËÜØ[‹XY[˜]™[\˜KX\K[[™İXK[X^XKLMØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÜØ[‹XY[˜]™[\˜KX\K[[™İXK[X^XKLMÑØXœšY[ÙWÔØ[—ĞY[˜]™[\˜WĞ\WÙWÛWÛ[™İXWÓX^XWÌMÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÜØ[‹XY[˜]™[\˜KX\K[[™İXK[X^XKLMÑØXœšY[ÙWÔØ[—ĞY[˜]™[\˜WĞ\WÙWÛWÛ[™İXWÓX^XWÌMÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÌKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈ¹¥¡ù¬åy¦î‹º* :*§º,áù¥¦H‹¹k¨ù¥fz,áù¥¦H‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àé¸àªøà¯øàìÈ‹¸àªøàìøàæ¸ààxà©È‹¸àèxà«xà­øà¬È‹¸àç¸àé9g,9gçÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ‹¸àç¸àé:*§ˆ‹¸àêxàá¸àìú*§ˆ—KˆYÜÎˆÂˆ¸àé¸àªøàá¸à¬øàîøàç¸àé:*§ˆ‹ˆ¹©#y¬$yg,9§'øàç¸àé:*§ˆ‹ˆ¸àåxàêxàìøà­øà®xà¬ù/&ˆ‹ˆ¹k¨ù¥fz* :*§¹kiˆ‹ˆ¹­.ùå*‹ˆ¹l#ú/§ˆ‹ˆ¹éb9émù¥¡È‹ˆŒMù.%¹í ‹ˆKˆKˆÂˆÛYÎˆ˜]Ú[œË]›ŞXYÙKYİZ[™XKLMÌÍH‹ˆ]Nˆ¸à«¸àâøà¨¸à xàå¸àêxà®8àêøà z)oøà©8àìøàâz*î9lí¸àn8àkº"*¹­mÈ‹ˆÜšYÚ[˜[]N‚ˆH›ŞXYÙHÈİZ[™XKœ˜\Ú[[™HÙ\İR[™Y\ÎÈ[ˆ\ÈXZ™\İIÜÈÚ\ËHİØ[İÈ[™Ù^[[İ]‹ˆİX]N‚ˆŒMÌÍynm9b'yâb8àîùn£ù¥¡øà y§+9¥¡øà yc§ù¬ê8à y«hú*©:(j8à ymîù§*ùn ùdbˆ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à®8àéøàìøàîøà¨¸àâ8à«xàìøà®ˆ‹ˆÙ\šY\ÎˆH“ÖPQÑHÈÕRS‘PH0­ÈMÌÍH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àëxàìøàâxàìøà LMÌÍynm‹ˆYX\ˆMÌÍKˆ^[‚ˆ”ˆŒúh xàîùc§ùb"¹a¤ºh+yn ùdbŒzh xàîùn£ù¥¡Úx $Şºh xàîù§+9¥¡Ìx $Ìºh xà LNx $Ìzh xàîùc§ù¬êÎy.í¸àîú(jMùà®xàîù«hú*©:(j8àîùmîù§*ùn ùdbºh xàîùc§ùb"¹fìù`ãÌ¹à®H‹ˆ\ØÜš\[Û‚ˆ¹ã¢ùêâù­mú.ãyi%¹éäyc.øà®8àéøàìøàîøà¨¸àâ8à«xàìøà®¸àc8à z.ãz"i¸à®xàëøàëxàï9cíøàîøà©¸à©øà©8àç¸à®ycíøàjøà¢8à¢ÌMÌŒx $ÌMÌŒùnm8àkº"*¹­møà¤º*&8àeøàgÌMÌÍynm9b"º(c9¦î8à ¸àç¸àáøà©8àêxà xàªøàâ¸àê¸à¨º*î9lí¸à xàªøàï8àç8àæxàêøàáøà xà«¸àâøà¨¹­mùl®8à xàå¸àêxà®8àêøà z)oøà©8àìøàâz*î9lí¸à¤¸à xàd8à¢ú"*¹­møà yd!9g,8àk¹é/¹/&¸àîù.©9¦$øàîú!ê¹á-¸àîùå¯¹åáxàjúe¨¸àfxà¢ú)¬ùkçøà¤¹cã¸à xào¸àfxà ¹a¤ºh+yn ùdb¸à yª&zhc9í&xà yn£ù¥¡øà y§+9¥¡øà yc§ù¬ê8à z(j8à y«hú*©:(j8à ymîù§*ùn ùdb¸à¤¹ç yåixàj¸àcú*,øàeøà yc§ùb"¸àk¹ª&zhc9í&xàj:".yfìøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØ]Ú[œË]›ŞXYÙKYİZ[™XKLMÌÍKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËØ]Ú[œË]›ŞXYÙKYİZ[™XKLMÌÍKÒ›Ú—Ğ]Ú[œ×ĞWÕ›ŞXYÙWİ×ÑİZ[™XWĞœ˜\Ú[Ø[™İWÕÙ\İÒ[™Y\×ÌMÌÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËØ]Ú[œË]›ŞXYÙKYİZ[™XKLMÌÍKÒ›Ú—Ğ]Ú[œ×ĞWÕ›ŞXYÙWİ×ÑİZ[™XWĞœ˜\Ú[Ø[™İWÕÙ\İÒ[™Y\×ÌMÌÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒËˆšYİ\™PÛİ[ˆ‹ˆ]PÛİ[ˆˆ\\ÎˆÈº"*¹­mú*&‹¹¥áz(c:*&‹¹©#y¬$yg,9cìˆ‹¹¬$y¥ãú*£—Kˆ™YÚ[ÛœÎˆÂˆº)oøà¨¸àåxàê¸àªÈ‹ˆ¸à«¸àâøà¨¹®oˆ‹ˆ¸àå¸àêxà®8àêÈ‹ˆ¸àªøàê¸àå¹­mÈ‹ˆº)oøà©8àìøàâz*î9líˆ‹ˆ¸àä8àêøàä8àâxà®H‹ˆ¸à®8àèøàç¸à©8àªÈ‹ˆKˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¹i)ú)où­"ù.%¹åc‹ˆ¹im:f­ú,¯ù¦$È‹ˆ¹ã¢ùêâù­mú.ãH‹ˆº"*¹­mùcìˆ‹ˆ¸à«¸àâøà¨¹­mùl®‹ˆ¸àå¸àêxà®8àêÈ‹ˆº)oøà©8àìøàâz*î9líˆ‹ˆŒN9.%¹í ‹ˆKˆKˆÂˆÛYÎˆØY™\‹[™]Ë]›ŞXYÙKZ\İ]\ËX[Y\šXØKLMNH‹ˆ]Nˆ¸à¨¸àèxàê¸àªùg,9lèy¥¬:"*¹­mú*&8àîùg,:*£‹ˆÜšYÚ[˜[]NˆH™]È›ŞXYÙH[™\ØÜš\[ÛˆÙˆH\İ]\ÈÙˆ[Y\šXØH‹ˆİX]N‚ˆ¸àà8àê¸àª8àìù®ç¹g*8à yab9/cù¬$yé/¹/&¸à z!ê¹á-º*£8à yceù­mú"*¹­møàîÌMNynm9b'yâb9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àêxà©8àª¸àãxàêøàîøà©¸à©øà©8àåxà¨xàï‹ˆÙ\šY\ÎˆH‘UÈ“ÖPQÑHS‘TĞÔ’TSÓˆÑˆHTÕUTÈÑˆSQT’PĞH0­ÈMNH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àëxàìøàâxàìøà LMNynm‹ˆYX\ˆMNKˆ^[‚ˆ”ˆLÍ:h xàîùbcy.æ8àîù§+9¥¡Ìx $ÌŒ:h xàîùí(¹o%Mú$bxàîù«hú*©:(j8àîùc§ùb"ºb¡yâb9fìÍ9à®xàîù.æ:/"yn ùdbˆ‹ˆ\ØÜš\[Û‚ˆ¹éày£¨:".z"*¹­møàkº`%9."¸àiøàà8àê¸àª8àìùg,9lèxàjùcå¸à¢¹«¢øàexà£8àgøàêxà©8àª¸àãxàêøàîøà©¸à©øà©8àåxà¨xàï8àc8à yãï¹g,8àiøàk¹®ç¹g*8à yab9/cù¬$yé/¹/&¸àkºhª9/åøàîú* :*§¸àîùc.ùæ`¸à yg,9oh¸à ybåy©#yâjxà yceù­mú"*¹­møà¤º*&8àeøàgÌMNynm9b'yâb8àk¹¥éy§+:*§¹aj:*,øà ¹c§ùb"¹ª&zhc9í&xà yã+º/§¸à z*«z !yn£øà y«hú*©:(j8à y§+9¥¡øà yí(¹o%xà ymîù§*ù¦î9ìcyn ùdb¸à y¢¦:/¯9g,9fìøàj:b¡yâb9fìøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËİØY™\‹[™]Ë]›ŞXYÙKZ\İ]\ËX[Y\šXØKLMNKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËİØY™\‹[™]Ë]›ŞXYÙKZ\İ]\ËX[Y\šXØKLMNKÓ[Û™[ÕØY™\—ĞWÓ™]×Õ›ŞXYÙWÌMNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËİØY™\‹[™]Ë]›ŞXYÙKZ\İ]\ËX[Y\šXØKLMNKÓ[Û™[ÕØY™\—ĞWÓ™]×Õ›ŞXYÙWÌMNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÍˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº"*¹­mú*&‹¹g,:*£‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àà8àê¸àª8àìÈ‹¸àäxàâ¸àçˆ‹¸àªøàê¸àå¹­mÈ‹¹i*¹nlù­"È—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸à«øàâ¹¥ãÈ‹¸àà8àê¸àª8àìùg,9lèH‹¹éày£¨:".H‹º!ê¹á-º*£‹¹¢¦:/¯9g,9fìÈ‹ºb¡yâb9fìÈ—KˆKˆÂˆÛYÎˆ›X\š[[Û‹[XØ[™Û™\ËLMMH‹ˆ]Nˆ¸à¨¸àìøàâ8àâøàª¸àîøàç¸àêøàä¸àêù/ëº`dùhêøàk¸àêxàªøàìøàâxàìù.®¹h,ydb»ï"MMynm;ï"H‹ˆÜšYÚ[˜[]Nˆ‘œ˜^H[Ûš[ÈX\™Ú[0ï™\ˆYHXØ[™Û™\ËMMH‹ˆİX]N‚ˆŒN¹nm9b"¸àîùc§ùb"ŒLÌ8 $ÌLÌºh xàîùl#¹aixàîù¦î9ì(y¢¡:*,øàîùc§ù¬ê9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à®øàä8à®xàá¸à¨øà¨¸àìøàîøàç¸àê¸àè¸àìøàîøà©8àîøàâ8à©xàâxàï‹ˆÙ\šY\Îˆ–‘RUĞÒ’Q•°çˆU“ÓÑÒQH0­ÈNˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àæxàêøàê¸àìøà xà#–™Z]ØÚšY°ïˆ]›ÛÙÚYxà#ùë+M9mîøà LN¹nm8à LLÌ8 $ÌLÌºh H‹ˆYX\ˆN‹ˆ^[ˆ”ˆúh xàîùc§ùb"ŒLÌ8 $ÌLÌºh xàîùc§ù¬ê¹.í¸àîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸à®øàäøàï8àê¸àèøàk¸à©8àìøàáøà¨øà¨¸à®yíãù¥¡ù¦î:i*8àiùè®º*£xàexà£8àgÌMMynmù§"y¥éy.æ9¦î9ì(xà¤¹í.y.âøàfxà¢ùçëyh,xà ¸àêxàªøàìøàâxàìù.®¸àk¹k¥ù¥fya 9é/8à y¥¬9àjøà y/¦ùã+¸à xàªøà­øà¬xàk¹onybl¸à¤º*&8àfyl#¹aixàîøàâxà©8àá:*§¹¢¡:*,øàîùc§ù¬ê8à¤¹ç yåixàj¸àcú*,øàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛX\š[[Û‹[XØ[™Û™\ËLMMKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÛX\š[[Û‹[XØ[™Û™\ËLMMKÓX\š[[Û—Ñœ—Ğ[Ûš[×ÓX\™Ú[ÓXØ[™Û™\×ÌMMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÛX\š[[Û‹[XØ[™Û™\ËLMMKÓX\š[[Û—Ñœ—Ğ[Ûš[×ÓX\™Ú[ÓXØ[™Û™\×ÌMMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹¬$y¥ãú*£‹¹cì¹¥¦yí.y.âÈ‹¹çëyh,H—Kˆ™YÚ[ÛœÎˆÈ¸àêxàªøàìøàâxàìùg,9¥®H‹¸ààxà¨¸àäxà®H‹¸àæ¸àá¸àìÈ‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈ¸àâxà©8àá:*§ˆ‹¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àêxàªøàìøàâxàìù.®ˆ‹ˆ¸ààxàéøàêù.®ˆ‹ˆ¸à¨¸àìøàâ8àâøàª¸àîøàç¸àêøàä¸àêÈ‹ˆ¹k¥ù¥fya 9é/‹ˆ¹¥¬9àjÈ‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ™šYİY\›ØKXÛÛÜ‹[›İX›ÛÚÜÈ‹ˆ]Nˆ¸àåxà¨øà¬¸àëxà¨¹¢bùê/øàã¸àï8àâ‹ˆÜšYÚ[˜[]N‚ˆÛÛXØÚpìÛˆİXY\››ÜÈHÛÛÜ™\ÈH›ÜğêHX\°ëXHšYİY\›ØHÜ™X[][›È‹ˆİX]N‚ˆº-i8àîùíäxàîúgd¸àîú#-¸àã¸àï8àâ8àîùc§ú,áù¥¦yå.ù`ãÍ¹à®H9¥éy§+:*§º*,øàîù¥éy§+:*§º*,ù¬ê8àîùolycl9âb‹ˆ]]Üˆ¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨¸àîøàª¸àë8à¨¸àè8àï8àãˆ‹ˆÙ\šY\ÎˆÕPQT““ÔÈHÓÓÔ‘TÈ0­ÈNÌ8 $ÌNL‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à­xàìøàîøàæøà®øà xà¬øà®xà¯øàê¸àªùfïyêâùak9¥¡ù¦î:i*:`bùe­¹iå9dèy/&¸à LŒŒùnm8àáøà®8à¯øàêùâb;ï"9c§ù¢bùê/øà LNy.%¹í 9o£9cb»ï"H‹ˆYX\ˆNÌˆ^[ˆ¹ak:e¢ùå*ˆKMºh xàîùc§ú,áù¥¦yå.ù`ãÍ¹à®xàîùak9o#Ô9a¢L:h H‹ˆ\ØÜš\[Û‚ˆ¸à¬øà®xà¯øàê¸àªøàkºhª9b.¹å.ùk­¸àîùìîú+g9è%9êmº !xàîù£¨¹©'9k­¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨¸àc9«¢øàeøàgùojz"l¹¢bùê/øàã¸àï8àâ8àk¸àa¸àhxà yfïyêâùak9¥¡ù¦î:i*8àcŒŒùnm8àjùak:e¢øàeøàgú-i8àîùíäxàîúgd¸àîú#-¸àã¸àï8àâ9aj¹å.ù`ãøà¤¹cãºc,¸àfxà¢ù¥éy§+:*§º*,øàîùolycl9âb8à ¹ak9o#ùbcy.æ8à yc§ú,áù¥¦yå.ù`ãøà yb):*«y.#z ïyë¡ù¢`8à¤¹¦#¹é.¸àeøàgù¥éy§+:*§º*,øà y¥éy§+:*§¹âb9`m8àk¹íê:fá¹¬ê8àiøà`¸à¢ù¥éy§+:*§º*,ù¬ê8à¤¹cã¸à xài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙšYİY\›ØKXÛÛÜ‹[›İX›ÛÚÜËØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙšYİY\›ØKXÛÛÜ‹[›İX›ÛÚÜËÒ›ÜÙWÓX\šXWÑšYİY\›ØWĞÛÛÜ—Ó›İX›ÛÚÜ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙšYİY\›ØKXÛÛÜ‹[›İX›ÛÚÜËÒ›ÜÙWÓX\šXWÑšYİY\›ØWĞÛÛÜ—Ó›İX›ÛÚÜ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLM‹ˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆ‹ˆ\\ÎˆÈ¹¢bùê/È‹ºhª9b.¹å.úfáˆ‹¹«m9cìº,áù¥¦H‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸à¬øà®xà¯øàê¸àªÈ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨ˆ‹ˆ¹ojz"l¸àã¸àï8àâ‹ˆ¹¥/ù¬®úhª9b.ˆ‹ˆºhª9b.¹å.È‹ˆº*jy«c‹ˆ¹ìîú+g‹ˆ¹c§ú,áù¥¦yå.ù`ãÈ‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆ™šYİY\›ØKX[[H‹ˆ]Nˆ¸àåxà¨øà¬¸àëxà¨¸àîøà¨¸àêøàä8àè‹ˆÜšYÚ[˜[]N‚ˆ‘[ÛY˜Xğê]XÛÈšYİY\›ØKˆš[ÙÜ˜Y°ëXHHØ]0è[ÙÛÈÛÛ\]È[0à[[H‹ˆİX]Nˆ¹c§ú,áù¥¦LÌù.í¸àîùolyclÍyå.ù`ãúh H9¥éy§+:*§¹aj:*,øàîù¥éy§+:*§º*,ù¬ê‹ˆ]]Üˆ¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨¸àîøàª¸àë8à¨¸àè8àï8àãˆ‹ˆÙ\šY\Îˆ°àS•SHH’QÕQT“ĞH0­ÈNy.%¹í 9o£9cbˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à­xàìøàîøàæøà®øà xà¬øà®xà¯øàê¸àªùfïyêâùak9¥¡ù¦î:i*:`bùe­¹iå9dèy/&¸à LŒŒynm8àáøà®8à¯øàêùâb;ï"9c§ù¢bùê/øà LNy.%¹í 9o£9cb»ï"H‹ˆYX\ˆNÌˆ^[ˆ¹ak:e¢ùå*:.ïzaãÔˆKÍ:h xàîùc§ú,áù¥¦LÌù.í¸àîùolyclÍyå.ù`ãúh H‹ˆ\ØÜš\[Û‚ˆ¸à¬øà®xà¯øàê¸àªøàk¹£¨¹©'9k­¸àîùìîú+g9è%9êmº !xàîúhª9b.¹å.ùk­¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨¸àc9íê8à¤øàh8à"¸à¨¸àêøàä8àè8à"øàk¹¥éy§+:*§¹aj:*,øàîùolycl9âb8à ¹g,9fìøà y¥áz(c:*&8à y«m9cìº)¦¹¦î8à y¥¬: g¹b!ù¢§8àcxà z ¥¹`ãøà yìîú+g9fìøàj¸àjxà yak9o#ùak:e¢øàk¹c§ú,áù¥¦LÌù.í¸àj8à T¸à¤¹leze¢øàeøàgùolyclÍyå.ù`ãúh xà¤¹cãºc,¸à ¹b):*«y.#z ïyë¡ù¢`8à¤¹¦#¹é.¸àeøàgù¥éy§+:*§º*,øàj8à y¥éy§+:*§¹âb9`m8àk¹íê:fá¹¬ê8àiøà`¸à¢ù¥éy§+:*§º*,ù¬ê8à¤¹cã¸à xài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙšYİY\›ØKX[[KØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙšYİY\›ØKX[[KÒ›ÜÙWÓX\šXWÑšYİY\›ØWĞ[[WÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙšYİY\›ØKX[[KÒ›ÜÙWÓX\šXWÑšYİY\›ØWĞ[[WÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÍˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆÍKˆ\\ÎˆÈ¹¢bùê/È‹¹g,9fìúfáˆ‹¹ìîú+g:,áù¥¦H‹¹«m9cìº,áù¥¦H‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸à¬øà®xà¯øàê¸àªÈ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àæøà®øàîøàç¸àê¸à¨¸àîøàåxà¨øà¬¸àëxà¨ˆ‹ˆ¸àåxà¨øà¬¸àëxà¨¸àîøà¨¸àêøàä8àè‹ˆ¹g,9fìÈ‹ˆ¹¥áz(c:*&‹ˆ¹ìîú+g‹ˆºhª9b.¹å.È‹ˆ¹c§ú,áù¥¦yå.ù`ãÈ‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆ\Ë\Ù[˜]KXÙ[˜[X[Y\šXØKXÛÜœ™\ÜÛ™[˜ÙKLNLÈ‹ˆ]Nˆ¹ë+Ìº+l9/&¹ë+¹/&¹§'ù."ºfhº(c9¥/ù¥¡ù¦î9ë+ùcíÈ‹ˆÜšYÚ[˜[]N‚ˆ“Y\ÜØYÙHœ›ÛHH™\ÚY[ÙˆH[š]Yİ]\ËÛÛ[][šXØ][™Ë[ˆÛÛ\X[˜ÙHÚ]H™\ÛÛ][ÛˆÙˆHÙ[˜]KÙ\Z[ˆÛÜœ™\ÜÛ™[˜ÙH[ˆ™[][ÛˆÈÙ[˜[[Y\šXØH‹ˆİX]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøàjúe¨¸àfxà¢ùo 9oªy¦î9ì(H‹ˆ]]Üˆ¸à¨¸àèxàê¸àªùd":(a¹fïyfïybæyç {ï"9íê;ï"H‹ˆÙ\šY\Îˆ”ÑSUHVPÕUU‘HĞÕSQS•“ËˆÈ0­ÈNLÈ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëøà­øàìøàâ8àìøà yë+Ìº+l9/&¹ë+¹/&¹§'øà y."ºfhº(c9¥/ù¥¡ù¦î9ë+ùcíøà LNLùnm‹ˆYX\ˆNLËˆ^[‚ˆ”ˆLN:h xàîùc§ùb"¹ajLºh xàîùi)ùílzh&9¥fy¦î8àîùfïybæzemùk¦9h,ydb¸àîù.æ9lg¹¥¡ù¦îy.í¸àîù«å:/ ú(j¹à®H‹ˆ\ØÜš\[Û‚ˆŒNLùnm8à xàåxà¨øàêøàè¸à¨¹i)ùílzh&8àc9."ºfh¹¬nº+l8àjùoç8àf8ài¹£ä9aî¸àeøàgù.+yi+¸à¨¸àèxàê¸àªúe¨¹/à¹i%¹.©9¥¡ù¦î:fá¸à ŒNÍ9nm8àbøà¢LNLynm8ào¸àiøàk¹.æ9lg¹¥¡ù¦îy.í¸à¤¹cã¸à xà xàåxà¨¸àìøàîøà«8àê¸àìøàâxàk¹i%¹.©:,áù¨/8àj9.îùbæxà xàæxàê¸àï8à®¹h ùåc9ecúhc8à xàè¸à®xà«xàï8àâ9­mùl®8à xàâøàªøàêxà¬8à¨º`bù¬¬øàj9i)ù­"úe¤ù.©:`&¸à xà«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!8à¤¸à xàd8à¢ú"ìyìlù.©9®"xà¤º*&:c,¸àeøài¸àa8ào¸àfxà ¹i)ùílzh&9¥fy¦î8à yfïybæzemùk¦9h,ydb¸à y.æ9lg¹¥¡ù¦î9. :)©øà yc§ùb"¹§+9¥¡øà¤¹ç yåixàj¸àcú*,øàeøào¸àeøàgøà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËİ\Ë\Ù[˜]KXÙ[˜[X[Y\šXØKXÛÜœ™\ÜÛ™[˜ÙKLNLËØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËİ\Ë\Ù[˜]KXÙ[˜[X[Y\šXØKXÛÜœ™\ÜÛ™[˜ÙKLNLËÕT×ÔÙ[˜]WÑ^Xİ]]™WÑØİ[Y[Ì×ĞÙ[˜[Ğ[Y\šXØWĞÛÜœ™\ÜÛ™[˜ÙWÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËİ\Ë\Ù[˜]KXÙ[˜[X[Y\šXØKXÛÜœ™\ÜÛ™[˜ÙKLNLËÕT×ÔÙ[˜]WÑ^Xİ]]™WÑØİ[Y[Ì×ĞÙ[˜[Ğ[Y\šXØWĞÛÜœ™\ÜÛ™[˜ÙWÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLNˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹¥¡ù¦î:fáˆ‹¹i%¹.©9cìˆ‹¹¥/ù¬®ùcìˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸àæxàê¸àï8à®ˆ‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¸àé¸àªøà¯øàìÈ‹ˆKˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆ¸àæxàê¸àï8à®¹h ùåc9ecúhc‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¸àâøàªøàêxà¬8à¨º`bù¬¬È‹ˆ¹i)ù­"úe¤ù.©:`&ˆ‹ˆ¸à«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!‹ˆº"ìyìlúe¨¹/àˆ‹ˆ¹ìlùfïz+l9/&¹¥¡ù¦î‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆÚ[X[\ËX[™ÛËX[Y\šXØ[‹Z\İZX[‹Y\ÛXXŞKLNLMˆ‹ˆ]Nˆ¹.+yìlùg,9lèxà¤¸à xàd8à¢ú"ìyìlùi%¹.©‹ˆÜšYÚ[˜[]Nˆ[™ÛËP[Y\šXØ[ˆ\İZX[ˆ\ÛXXŞKNMx $ÌNLMH‹ˆİX]NˆŒNLM¹nm9b"¸àîùajLyêè8à ycàº  ù¥¡ùã+¸à yí(¹o%H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àèxà¨¸àê¸àï8àîøà©¸à¨øàêøàæ8àêøàçøàìøàîøà©¸à¨øàê¸à¨¸àè8à®ˆ‹ˆÙ\šY\ÎˆS‘ÓËPSQT’PĞSˆTÕRPSˆTÓPPÖH0­ÈNLMˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëøà­øàìøàâ8àìøà P[Y\šXØ[ˆ\İÜšXØ[\ÜÛØÚX][Û»ï#øàëxàìøàâxàìøà SŞ›Ü™[š]™\œÚ]H™\Üøà LNLM¹nm‹ˆYX\ˆNLM‹ˆ^[‚ˆ”ˆÌN:h xàîùc§ùb"¹bcy.æšZx $ŞZZzh xàîù§+9¥¡Ìx $ÌÌÌ:h xàîùcàº  ù¥¡ùã+ŒÌÌx $ÌÍzh xàîùí(¹o%LÍø $ÌÍMºh xàîù¢¦:/¯9g,9fìÌyà®H‹ˆ\ØÜš\[Û‚ˆº"ìyfïxàj9ìlùfïxàc9.+yi+¸à¨¸àèxàê¸àªøàk¹g,9lèy.©:`&¸à xàæxàê¸àï8à®¸à xàæxà©:*î9lí¸à xàè¸à®xà«xàï8àâ9­mùl®8à xàâøàªøàêxà¬8à¨º`bù¬¬øà xàäxàâ¸àçº`bù¬¬øà¤¸à xàd8àhøài¹leze¢øàeøàgÌNMynm8àbøà¢LNLMynm8ào¸àiøàk¹i%¹.©9cì¸à ¹bcy.æ8à yajLyêè8à yc§ù¬ê8à ycàº  ù¥¡ùã+¸à yí(¹o%xà¤¹ç yåixàj¸àcú*,øàeøà yc§ùb"ŒNN:h yæí9o£8àkº"l¹b-ù¢¦:/¯9g,9fìøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËİÚ[X[\ËX[™ÛËX[Y\šXØ[‹Z\İZX[‹Y\ÛXXŞKLNLM‹ØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËİÚ[X[\ËX[™ÛËX[Y\šXØ[‹Z\İZX[‹Y\ÛXXŞKLNLM‹ÓX\WÕÚ[[Z[™WÕÚ[X[\×Ğ[™Û×Ğ[Y\šXØ[—Ò\İZX[—Ñ\ÛXXŞWÌNLM—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËİÚ[X[\ËX[™ÛËX[Y\šXØ[‹Z\İZX[‹Y\ÛXXŞKLNLM‹ÓX\WÕÚ[[Z[™WÕÚ[X[\×Ğ[™Û×Ğ[Y\šXØ[—Ò\İZX[—Ñ\ÛXXŞWÌNLM—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÌNˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈ¹i%¹.©9cìˆ‹¹fïzf¦úe¨¹/à¹cìˆ‹º`bù¬¬ùcìˆ‹¹«m9cì¹è%9êmˆ—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àæxàê¸àï8à®ˆ‹¸àâøàªøàêxà¬8à¨ˆ‹¸àäxàâ¸àçˆ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸à«øàë8à©8àâ8àìûï'xàå¸àêøàëøàï9§hyí!‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆº"ìzh&8àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨º`bù¬¬È‹ˆ¸àäxàâ¸àçº`bù¬¬È‹ˆ¸àè¸àìøàëxàï9..ùïªH‹ˆ¸à«8àê¸àìøàâH‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆ›[Û[˜KXÛÜİK\šXØK[™]ËYÜ˜[˜YKLNLÈ‹ˆ]Nˆ¸à¬øà®xà¯øàê¸àªøàj8àã8àª8àä8àîøà¬8àêxàâ¸àà‹ˆÜšYÚ[˜[]N‚ˆÛÜİHšXØH[™™]ÈÜ˜[˜YNˆ[ˆ[œ]Z\H[ÈH]Y\İ[ÛˆÙˆ›İ[™\šY\È‹ˆİX]NˆŒNLùnm9b'yâb8àîùajyêè8à y¥¡ù¦î¹à®xà y.æ:c,ˆ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà©øàê¸àæ¸àîøàè¸àê¸àï8àâˆ‹ˆÙ\šY\ÎˆÓÔÕH’PĞH0­ÈNLÈ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àëøà­øàìøàâ8àìøà LNLùnm‹ˆYX\ˆNLËˆ^[‚ˆ”ˆNzh xàîùbcy.æ8àîù§+9¥¡Íø $ÍM:h xàîùajyêè8àîù¥¡ù¦î¹à®xàîù.æ:c,¸àîùc§ùb"¹ª&zhc9í&xàîù¢¦:/¯9g,9fìÌyà®H‹ˆ\ØÜš\[Û‚ˆ¸à¬øà®xà¯øàê¸àªùi%¹.©9k¦8àåxà©øàê¸àæ¸àîøàè¸àê¸àï8àâ¸àc8à xàã8àª8àä8àîøà¬8àêxàâ¸àà8àj8àk¸àç8àªøàîøàâ8àëxàîøààxàê¸à«yh ùåc9ecúhc8àj8à xàâøàªøàêxà¬8à¨¸àj8àk¹fïyh øàîú`bù¬¬ùecúhc8à¤º*å¸àf8àgÌNLùnm8àk¹i%¹.©9l#ùa¢¹kd8à ¹bcy.æ8à y«hú*©:(j8à yí(¹o%xà yajyêè8à yã¢ùk©9¥¡ù¦î¹à®xà y.æ:c,¸à yc§ù¬ê8à¤¹ç yåixàj¸àcú*,øàeøà yc§ùb"¹ª&zhc9í&xàj9¢¦:/¯9g,9fìøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛ[Û[˜KXÛÜİK\šXØK[™]ËYÜ˜[˜YKLNLËØÛİ™\‹œİ™È‹ˆ‚ˆœX›XØ][ÛœËÛ[Û[˜KXÛÜİK\šXØK[™]ËYÜ˜[˜YKLNLËÑ™[\WÓ[Û[˜WĞÛÜİWÔšXØWØ[™Ó™]×ÑÜ˜[˜YWÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÛ[Û[˜KXÛÜİK\šXØK[™]ËYÜ˜[˜YKLNLËÑ™[\WÓ[Û[˜WĞÛÜİWÔšXØWØ[™Ó™]×ÑÜ˜[˜YWÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆNKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆKˆ\\ÎˆÈ¹i%¹.©9cìˆ‹¹fïyh ùcìˆ‹¹¥/ù¬®ú*åˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸à¬øà®xà¯øàê¸àªÈ‹¸àäxàâ¸àçˆ‹¸àâøàªøàêxà¬8à¨ˆ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¹fïyh ùecúhc‹ˆ¸àç8àªøàîøàâ8àëH‹ˆ¸ààxàê¸à«H‹ˆ¸àè¸à®xà«xàï8àâ9­mùl®‹ˆ¹i)ù­"úe¤ù.©:`&ˆ‹ˆ¸à¬øàëxàìøàäøà¨»ï'y.+yi+¸à¨¸àèxàê¸àªù§hyí!‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆœÜ]ZY\‹[›İ\ËXÙ[˜[X[Y\šXØKLNMH‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªú)¦¹¦î‹ˆÜšYÚ[˜[]N‚ˆ“›İ\ÈÛˆÙ[˜[[Y\šXØNÈ\Xİ[\›HHİ]\ÈÙˆÛ™\˜\È[™Ø[ˆØ[˜YÜˆ‹ˆİX]NˆŒNMynm9b'yâb8àîùajM¹êè8à zfäzc,x $Ñxà y¥¡ùã+¹æëºc,¸à yí(¹o%H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ‘xàîÑøàîøà®xà«øàëøà©8à¨ˆ‹ˆÙ\šY\Îˆ““ÕTÈÓˆÑS•SSQT’PĞH0­ÈNMH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àâøàéxàï8àê8àï8à«øà LNMynm‹ˆYX\ˆNMKˆ^[ˆ”ˆÌÎ:h xàîùajM¹êè8àîúfäzc,x $Ñxàîù¥¡ùã+¹æëºc,¸àîùí(¹o%xàîùfìùâb;ï#ùg,9fìÌN9à®xàîú(j9à®H‹ˆ\ØÜš\[Û‚ˆ¸àæøàìøà®8àéxàêxà®xàj8à­xàìøà­xàêøàä8àâxàêøà¤¹.+yoàøàjøà y.+z`ê8à¨¸àèxàê¸àªøàk¹g,9ä!¸àîùg,9oh¸àîù¬%ù`&xàîù.®¹cèøàîú,áù®¤8àîùå(ù©kxàîùab9/cù¬$yé/¹/&¸àîùcé9.èú`nº-èxà¤¸ào¸àj8à xà z*"9å.ù.+xàk¸àæøàìøà®8àéxàêxà®yi)ù­"úe¤úba:`døà¤º*lú/ì8àeøàgÌNMynm9b"º(c9¦î8à ¹bcy.æ8à yajM¹êè8à zfäzc,x $Ñxà y¥¡ùã+¹æëºc,¸à yí(¹o%xà yc§ù¬ê8à yaj:(j8à¤¹ç yåixàj¸àcú*,øàeøà y§+9¥¡ùfìùâb8à y¢¦:/¯9fìøà yg,9fìøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÜÜ]ZY\‹[›İ\ËXÙ[˜[X[Y\šXØKLNMKØÛİ™\‹œİ™È‹ˆ‚ˆœX›XØ][ÛœËÜÜ]ZY\‹[›İ\ËXÙ[˜[X[Y\šXØKLNMKÔÜ]ZY\—Ó›İ\×ÛÛ—ĞÙ[˜[Ğ[Y\šXØWÌNMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÜÜ]ZY\‹[›İ\ËXÙ[˜[X[Y\šXØKLNMKÔÜ]ZY\—Ó›İ\×ÛÛ—ĞÙ[˜[Ğ[Y\šXØWÌNMWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÌÎˆšYİ\™PÛİ[ˆNˆ]PÛİ[ˆˆ\\ÎˆÈ¹g,:*£‹¹g,9ä!¹¦î‹¹.©:`&¹cìˆ‹¹¬$y¥ãú*£—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àæøàìøà®8àéxàêxà®H‹¸àª8àêøà­xàêøàä8àâxàêÈ‹¸àâøàªøàêxà¬8à¨ˆ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àæøàìøà®8àéxàêxà®yi)ù­"úe¤úba:`dÈ‹ˆ¸àåxàªxàìøà®øàªù®oˆ‹ˆ¸à­xàìøà­xàêøàä8àâxàêÈ‹ˆ¸àá¸à¬8à­øà«8àêøàäH‹ˆ¹.®¹cèùílz*"‹ˆ¹ab9/cù¬$H‹ˆ¹cé9.èú`nº-èH‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆ˜[[Y[K[XØ[™Û‹XÚÛLMMH‹ˆ]Nˆ¸àêxàªøàìøàâxàìùo y§#xàb¸à¢8àløààxàéøàêùo y§#H‹ˆÜšYÚ[˜[]NˆÛÛœ]Z\İH[XØ[™0ìÛˆHÛÛœ]Z\İH[ÚÛ‹ˆİX]NˆŒMMynm8àæxàêøàê¸àìùa¦y§+8àîùajÎ9êè9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àâøà¬øàêxà®xàîøàáøàîøàä8àë8àìøà®xàª8àêH‹ˆÙ\šY\Îˆ”‘SPÒpäÓˆTÕ0äÔ’PĞH‘T‘QTH0­ÈMMH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸à¬8à¨¸àá¸àç¸àêxà LMMynm;ï"9a¦y§+;ï"H‹ˆYX\ˆMMKˆ^[ˆ”ˆL:h xàîùajùa¢ŒÎ9êè8àîùa¦y§+›Û[ú(j9é.ÎMy.íˆ‹ˆ\ØÜš\[Û‚ˆŒMMynm8à xà¬8à¨¸àá¸àç¸àêyã¢ùfïyíãú(àxàãøà­øàìøàâ8àîøàáøàîøàä8àê¸àª¸à®xàîøàë8à¨¸àêøàjøà¢8à¢øàêxàªøàìøàâxàìøà xààxàéøàêøànøàbøàk¹n,:h!º`h9o xà¤¸à zf£ú(c8àeøàgøàâøà¬øàêxà®xàîøàáøàîøàä8àë8àìøà®xàª8àêxàc:*&:c,¸àeøàgùh,ydb¸à ¸àæxàêøàê¸àìù¢`:%-ya¦y§+HÎMˆÍ0¬H8àk¹ª&zhc8à yã+º/§¸à yajùa¢ŒÎ9êè8à yêè9æë¹«(xà¤¹¥éy§+:*§¹c%¸àeøà ya¦y§+8àk™›Û[ú(j9é.¸à ybbºfi8àîù£/ùaixàîù«!9i%¹¬ê8àjúe¨¸àfxà¢ú.è¹a¦y¬ê8à¤¹/çy£ xàeøài¸àa8ào¸àfxà ¹ãï¹.èùíê: !xàjøà¢8à¢ù¬ê8à z)èú*«8à y.æ:c,¸à yí(¹o%xàkùcãºc,¸àeøài¸àa8ào¸àføà¤øà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËİ˜[[Y[K[XØ[™Û‹XÚÛLMMKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËİ˜[[Y[K[XØ[™Û‹XÚÛLMMKİ˜[[Y[WÛXØ[™Û—ØÚÛÚ˜Kœˆ‹ˆ\XˆœX›XØ][ÛœËİ˜[[Y[K[XØ[™Û‹XÚÛLMMKİ˜[[Y[WÛXØ[™Û—ØÚÛÚ˜K™\Xˆ‹ˆYÙPÛİ[ˆLˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹«m9cì¹¦î‹¹. 9«(ycì¹¥¦H‹¹o y§#ycìˆ—Kˆ™YÚ[ÛœÎˆÈ¸àêxàªøàìøàâxàìÈ‹¸ààxà¨¸àäxà®H‹¸à¬8à¨¸àá¸àç¸àêH‹¸àæ¸àá¸àìÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àêxàªøàìøàâxàìù.®ˆ‹ˆ¸ààxàéøàêù.®ˆ‹ˆ¹©#y¬$yg,9§'È‹ˆŒMù.%¹í ‹ˆ¸àæxàêøàê¸àìùa¦y§+‹ˆKˆKˆÂˆÛYÎˆ˜Ú\›˜^KXÚ]\ËY]\Z[™\ËX[Y\šXØZ[™\ËLNŒÈ‹ˆ]Nˆ¸à¨¸àèxàê¸àªøàkº`ïyn ¸àj9nàùh§È‹ˆÜšYÚ[˜[]NˆÚ]0ê\È]Z[™\È[pê\šXØZ[™\È‹ˆİX]NˆŒNŒùnm9b"¸àîù§+9¥¡øà y¬ê8à yfìùâb:)èú*«9¥éy§+:*§¹aj:*,È‹ˆ]]Ü‚ˆ¸àáøà®8àë8àîøà­øàèøàêøàã{ï#øà©¸à®8à©øàï8àã8àîøàª8àç¸àâøàéxàª8àêøàîøàí8à¨øàª¸àë;ï'xàêûï'xàáøàéxà«È‹ˆÙ\šY\ÎˆÒU0âTÈU•RS‘TÈSpâT’PĞRS‘TÈ0­ÈNŒÈ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àäxàê¸à LNŒùnm‹ˆYX\ˆNŒËˆ^[‚ˆ”ˆÎLzh xàîùc§ùb"¹bcy.æx $Ş:h xàîù§+9¥¡Ìx $ÍMúh xàîù§+9¥¡ù£/ùfìÌLùà®xàîùc§ùb"¹fìùâbyà®H‹ˆ\ØÜš\[Û‚ˆ¸àåxàêxàìøà®y.®¹a¦yç'ùk­¸àáøà®8àë8àîøà­øàèøàêøàãxàcNN9nm8àbøà¢LNŒynm8àk¸àèxà«xà­øà¬ù¥áz(c8àj:`nº-èz*¯ù§îøà¤¸ào¸àj8à xà xàí8à¨øàª¸àë;ï'xàêûï'xàáøàéxà«øàk¹nî¹ëâz*å¸à¤¹.æ8àeøàgÌNŒùnm9b"º(c9¦î8à ¹n£ù¥¡øà ynî¹ëâz*å¸à yajMùêè8àk¹¥áz(c:*&8à yc§ù¬ê8à yfìùâb:)èú*«8à yæë¹«(xà¤¹aj:*,øàeøà y§+9¥¡ù£/ùfìÌLùà®xàj9c§ùb"¹fìùâbyà®xà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ¹fìùâb8àkùåj¹cíøà yl.¹n©¸à y¥¡ùkeøà yïl¹d#xà y/fyæoxà¤¹«¢øàeøài¹á(z(ày¥«xàiùcãºc,¸àeøà yfìùâb¸ $Õ’xàj¸ $Ö’xàkº`(ùíd8àäxàã¸àêxàç¸àkùb!¹bl¸àeøài¸àa8ào¸àføà¤øà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØÚ\›˜^KXÚ]\ËY]\Z[™\ËX[Y\šXØZ[™\ËLNŒËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØÚ\›˜^KXÚ]\ËY]\Z[™\ËX[Y\šXØZ[™\ËLNŒËĞÚ\›˜^WĞÚ]\×Ù]ÔZ[™\×Ğ[Y\šXØZ[™\×ÌNŒ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØÚ\›˜^KXÚ]\ËY]\Z[™\ËX[Y\šXØZ[™\ËLNŒËĞÚ\›˜^WĞÚ]\×Ù]ÔZ[™\×Ğ[Y\šXØZ[™\×ÌNŒ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÎLKˆšYİ\™PÛİ[ˆLËˆ]PÛİ[ˆKˆ\\ÎˆÈ¹¥áz(c:*&‹¹£¨¹©':*&‹º  ùcé9ki¹è%9êmˆ‹¹fìùâb:fáˆ—Kˆ™YÚ[ÛœÎˆÈ¸àèxà«xà­øà¬È‹¸àª¸à¨¸àãøàªÈ‹¸àäxàë8àìøà¬H‹¸àé¸àªøà¯øàìÈ—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÂˆ¸àèxà«xà­øà¬ú  ùcé9kiˆ‹ˆ¹a¦yç'ùcìˆ‹ˆ¸àçøàâ8àêH‹ˆ¸ààxààxà©øàìøàîøà©8àá8à¨H‹ˆ¸à©¸à­øàéxàç¸àêÈ‹ˆº`(ùíd8àäxàã¸àêxàçˆ‹ˆ¹c§ùb"¹fìùâb‹ˆKˆKˆÂˆÛYÎˆ™\Z^X[\]Z]\Ë[Y^XØZ[™\ËLNÍ‹ˆ]Nˆ¸àèxà«xà­øà¬ùcé9.èú`n¹âjH‹ˆÜšYÚ[˜[]N‚ˆ[\]Z]0ê\ÈY^XØZ[™\Èˆ™[][Ûˆ\È›Ú\È^0êY][ÛœÈHØ\]Z[™H\Z^‹ˆİX]NˆŒNÍ8 $ÌNÍ¹nm9b"¸àîùaj¹mîøàb¸à¢8àløà¨¸àâ8àêxà®H9¥éy§+:*§¹aj:*,È‹ˆ]]Ü‚ˆ¸à«¸àê8àï8àè8àîøàáøàéxàæ»ï#øà¨¸àë8à«øà­xàìøàâxàêøàîøàêøàã¸àëøàï8àêûï#øàáøà©8àí8à¨øààøàâxàîøàæxà©8àê¸àï8àîøà©¸àªxàï8àáøàìøànøàbÈ‹ˆÙ\šY\ÎˆS•TURU0âTÈQVPĞRS‘TÈ0­ÈNÍ8 $ÌNÍˆ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àäxàê¸à LNÍ8 $ÌNÍ¹nm‹ˆYX\ˆNÍˆ^[ˆ”ˆLNzh xàîù§+9¥¡ùaj¹mîøàîùc§ùb"¸à¨¸àâ8àêxà®LMÍ9í&z$bxàîùcèùímLyà®H‹ˆ\ØÜš\[Û‚ˆ¸à®xàæ¸à©8àìùã¢øàk¹doxàjøà¢8à¢ŒNynm8àbøà¢LNùnm8àjùk§ù¥¯xàexà£8àgøàáøàéxàæ¹i)ùl"xàk¹."yfç¸àk¸àèxà«xà­øà¬ùcé9.èú`n¹âjz*¯ù§îøàj8à xàêøàã¸àëøàï8àêøà xà©¸àªxàï8àáøàìøànøàbøàkº*åº  øà¤¹cã¸à xà¢ùi)ú$eøà ¹§+9¥¡øà y¬ê8à z*î9¥¡ù¦î8à yæë¹«(xà¤¹aj:*,øàeøà ycèùímxàj9c§ùb"¸à¨¸àâ8àêxà®LMÍ9í&z$bxà¤¹åj¹cíøàîùc§ú*§¸à«xàèøàåøà­øàéøàìøàîùî+¹l.¸àîù/fyæoxàe8àj9á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙ\Z^X[\]Z]\Ë[Y^XØZ[™\ËLNÍØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙ\Z^X[\]Z]\Ë[Y^XØZ[™\ËLNÍÑ\Z^Ğ[\]Z]\×ÓY^XØZ[™\×ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙ\Z^X[\]Z]\Ë[Y^XØZ[™\ËLNÍÑ\Z^Ğ[\]Z]\×ÓY^XØZ[™\×ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLNKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆMÍˆ\\ÎˆÈº  ùcé9ki¹è%9êmˆ‹¹£¨¹©':*&‹¹fìùâb:fáˆ—Kˆ™YÚ[ÛœÎˆÈ¸àèxà«xà­øà¬È‹¸àäxàë8àìøà¬H‹¸àª¸à¨¸àãøàªÈ—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ‹¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àèxà«xà­øà¬ú  ùcé9kiˆ‹ˆ¸àäxàë8àìøà¬z`nº-èH‹ˆ¸àçøàâ8àêH‹ˆ¹c§ùb"¸à¨¸àâ8àêxà®H‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ˜ÛÙÛÛYË^]XØ][‹LM‹ˆ]Nˆ¸àé¸àªøà¯øàìùcìˆ‹ˆÜšYÚ[˜[]Nˆ’\İÜšXHH]XØ][ˆ‹ˆİX]NˆŒM9nm9b'yâb8àîù§+9¥¡øà ybcy.æ8à ymîùêè9í(¹o%xà y..ú) y.¢úh!yí(¹o%H9¥éy§+:*§º*,È‹ˆ]]Üˆ¸àáøà¨øàª8à­8àîøàëxàæ¸à®xàîøàáøàîøà¬øà­8àê¸àéxàï8àâH‹ˆÙ\šY\Îˆ’TÕÔ’PHHUPĞUSˆ0­ÈM‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àç¸àâxàê¸àï8àâxà LM9nm‹ˆYX\ˆMˆ^[ˆ”ˆLÌL:h xàîùajL¹mîÌŒŒùêè8àîù..ú) y.¢úh!yí(¹o%MÎzh!yæë¸àîùc§ùb"¹fìùâb¹à®H‹ˆ\ØÜš\[Û‚ˆŒM9nm8àç¸àâxàê¸àï8àâyb'yâb8à¤¹gî¹®¥¸àjøà ybcy.æ8à yajL¹mîÌŒŒùêè8àk¹§+9¥¡øà ymîùêè9í(¹o%xà y..ú) y.¢úh!yí(¹o%MÎzh!yæë¸à¤¹¥éy§+:*§¹c%¸à ¹c§ùb"¹§+9¥¡Ìx $ÍÍŒ:h xàk¹¥.zh y/cyïk¸àj9b)yb.ù¢bxàîù§*9âb9fìøà¤¹cãºc,¸àeøà xàê¸àåxàëxàï9g¢ÑTP¸à ¹/mz/"xàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØÛÙÛÛYË^]XØ][‹LMØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØÛÙÛÛYË^]XØ][‹LMĞÛÙÛÛY×Ò\İÜšXWÙWÖ]XØ][—ÌMÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØÛÙÛÛYË^]XØ][‹LMĞÛÙÛÛY×Ò\İÜšXWÙWÖ]XØ][—ÌMÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÌLˆšYİ\™PÛİ[ˆ‹ˆ]PÛİ[ˆˆ\\ÎˆÈ¹«m9cì¹¦î‹¹nm9.èú*&‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àé¸àªøà¯øàìÈ‹¸àªøàìøàæ¸ààxà©È‹¸àèxà«xà­øà¬È—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÈ¸àç¸àé9cìˆ‹¹©#y¬$yg,9§'È‹¸àåxàêxàìøà­øà®xà¬ù/&ˆ‹ŒMù.%¹í ‹¹mîù§*ùí(¹o%H—KˆKˆÂˆÛYÎˆš[Yİ]Y\œ™KZ]˜KLMÌH‹ˆ]Nˆ¸à©8àá8à¨yg,9¥®yo y§#ycìˆ‹ˆÜšYÚ[˜[]N‚ˆ’\İÜšXHHHÛÛœ]Z\İHHH›İš[˜ÚXHH[]˜K™YXØÚpìÛˆH›ÙÜ™\ÜÛÜÈHHH[XØ[™0ìÛˆ‹ˆİX]NˆŒMÌynm8àç¸àâxàê¸àï8àâyb'yâb8àîùë+9. :`ê‹ˆ]]Üˆ¸àåxà¨¸àìøàîøàáøàîøàäøà®8àèøà¬8àá¸à¨øàª8àë8àîøà¯xàâ;ï'xàç¸àê8àï8àêÈ‹ˆÙ\šY\Îˆ’TÕÔ’PHHHÓÓ”URTÕH0­ÈMÌH‹ˆÜšYÚ[˜[X›XØ][ÛˆŒMÌynm‹ˆYX\ˆMÌKˆ^[ˆŒzh xàîù§+9¥¡ÌL9mîÌL9êè8àîùc§ùb"¹§+9¥¡ÍŒ:h xàîùc§ù¬êNLy.í¸àîùí(¹o%NLÍúh!xàîùcèùímLyà®H‹ˆ\ØÜš\[Û‚ˆ¸à¬8à¨¸àá¸àç¸àêyã¢ùfïxàj8àé¸àªøà¯øàìú*î9mç¸àj8àk¹.+ze¤ùg,9gçøàjøàb¸àdxà¢øà©8àá8à¨xà xàêxàªøàìøàâxàìøàj¸àjxàk¹o y§#xàîùn,:h!¸à¤º*&8àeøàgÌMÌynm9b"¸àk¹«m9cì¹¦î8à ¹¢bxà yã+º/§¸à yaî¹âb9kêy§îøàîú*,ycëøà yaj9mîùêè9æëºc,¸à yégz/§¸àîú*jxà y§+9¥¡ÌL9mîÌL9êè8à yc§ù¬ê8à ymîù§*øàk¹..ú) y.¢úh!yí(¹o%xàj9iiy.æ8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËİš[Yİ]Y\œ™KZ]˜KLMÌKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËİš[Yİ]Y\œ™KZ]˜KLMÌKİš[Yİ]Y\œ™WÚ]˜WÌMÌWÚ˜Kœˆ‹ˆ\XˆœX›XØ][ÛœËİš[Yİ]Y\œ™KZ]˜KLMÌKİš[Yİ]Y\œ™WÚ]˜WÌMÌWÚ˜K™\Xˆ‹ˆYÙPÛİ[ˆŒKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆKˆ\\ÎˆÈ¹«m9cì¹¦î‹¹. 9«(ycì¹¥¦H‹¹o y§#ycìˆ—Kˆ™YÚ[ÛœÎˆÈ¸àæ¸àá¸àìÈ‹¸àêxàªøàìøàâxàìÈ‹¸àé¸àªøà¯øàìÈ‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸à©8àá8à¨y¥ãÈ‹ˆ¸àêxàªøàìøàâxàìù.®ˆ‹ˆ¸àªøàãxà«È‹ˆ¸àâxàìøàîøàç¸àêøàá¸à¨øàìøàîøàáøàîøà©¸àêøà®xà¨ˆ‹ˆŒMù.%¹í ‹ˆKˆKˆÂˆÛYÎˆ›X[\‹]\İ[XXÚ[H‹ˆ]Nˆ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçù.+z`ê8àkº*¯ù§îÈ‹ˆÜšYÚ[˜[]N‚ˆ”™\ÙX\˜Ú\È[ˆHÙ[˜[Ü[ÛˆÙˆH\İ[X]Ú[H˜[^Nˆ™\ÜÙˆ^Ü˜][ÛœÈ›ÜˆH]\Ù][KNN8 $ÌNL‹ˆİX]Nˆ¹cf¹âjzi*8àk¸àgøà xàjùk§ù¥¯xàeøàgÌNN8à'NL9nm8àkº.#ù§îùh,ydbˆ‹ˆ]]Üˆ¸àá¸àª¸àæxàêøàâ8àîøàç¸àï8àêxàï‹ˆÙ\šY\Îˆ”PP“ÑHUTÑUSHQSSÒT”È0­È“ÓˆRH‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNLxàîÌNLùnm‹ˆYX\ˆNLKˆ^[ˆ¹aj¹b!¹a¢¸àîÌÎ:h xàîù£/ùfìÍ9à®xàîùfìùâb9à®H‹ˆ\ØÜš\[Û‚ˆ¸àå8àª8àâxàêxà®xàîøàãxà¬8àêxà®xà xàé8à­øàéxààxàêxàìøà¤¸àkøàf8à xàj8àfxà¢øà©¸à®xàç¸à­øàìøà¯ùmçy­`ygçøàkº`nº-èz.#ù§îú*&:c,¸à ¹ak:e¢ú"ìz*§¹b"¹§+8àbøà¢xàk¹¥éy§+:*§ºaãz*,øàiøà yc§ùb"¸àk¹§+9¥¡ù£/ùfìøàj9a¦yç'ùfìùâb8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛX[\‹]\İ[XXÚ[KØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÛX[\‹]\İ[XXÚ[KÓX[\—Õ\İ[XXÚ[WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÛX[\‹]\İ[XXÚ[KÓX[\—Õ\İ[XXÚ[WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÎˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹º`nº-èz.#ù§îÈ—Kˆ™YÚ[ÛœÎˆÈ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ‹¸àèxà«xà­øà¬È‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹¸àå8àª8àâxàêxà®xàîøàãxà¬8àêxà®H‹¸àé8à­øàéxààxàêxàìÈ‹¹a¦yç'ùfìùâb—KˆKˆÂˆÛYÎˆ›X[\‹]\\‹]\İ[XXÚ[H‹ˆ]Nˆ¸à©¸à®xàç¸à­øàìøà¯ù."¹­`z`ê8àb¸à¢8àlúf¨ù£©yg,9gçøàk¹£¨¹©'‹ˆÜšYÚ[˜[]N‚ˆ‘^Ü˜][ÛœÈÙˆH\\ˆ\İ[X]Ú[H[™Y˜XÙ[™YÚ[Ûˆ[\ˆHØXÜšYšXÚ[ÜÎÈÙZX˜[È]Ú[]0êKTğèXÛZÎÈØ[šİY[ˆ‹ˆİX]N‚ˆ¸à¨¸àêøà¯øàêøàîøàáøàîøà­xà«øàê¸àåxà¨øà­øàª¸à®{ï#øà®øà©8àä8àêûï#øà©8àá8à¨øàè8àá»ï'xà­xà«øàêøà«ûï#øàªøàìøà«øàª8àìÈ‹ˆ]]Üˆ¸àá¸àª¸àæxàêøàâ8àîøàç¸àï8àêxàï‹ˆÙ\šY\Îˆ”PP“ÑHUTÑUSHQSSÒT”È0­È“ÓˆUˆ0­È“ËˆH‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNL9nm‹ˆYX\ˆNLˆ^[ˆúh xàîù§+9¥¡ùfìÎ9à®xàîù© ¹åiyfìÌyà®xàîùfìùâbLú$bH‹ˆ\ØÜš\[Û‚ˆ¸à©¸à®xàç¸à­øàìøà¯ùmçy."¹­`z`ê8àj:f¨ù£©yg,9gçøàjøàb¸àdxà¢ÌNL8à'NLynm8àkº.#ù§îùh,ydb¸à :`nº-èxàk¹§+9¥¡ùaj:*,øàjùb¨8àb8à yc§ùb"¸àk¹§+9¥¡ùfìøà y© ¹åiyfìøà ya¦yç'ùfìùâbxà'RRxà¤¹k£9aj9cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛX[\‹]\\‹]\İ[XXÚ[KØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÛX[\‹]\\‹]\İ[XXÚ[KÓX[\—Õ\\—Õ\İ[XXÚ[WÌNLĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÛX[\‹]\\‹]\İ[XXÚ[KÓX[\—Õ\\—Õ\İ[XXÚ[WÌNLĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆËˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆLËˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹º`nº-èz.#ù§îÈ—Kˆ™YÚ[ÛœÎˆÈ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ‹¸àæ¸àá¸àìÈ‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹¸à®øà©8àä8àêÈ‹¸àªøàìøà«øàª8àìÈ‹¹a¦yç'ùfìùâb—KˆKˆÂˆÛYÎˆ›[Ü™[]LNMÈ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøà xà«xàéxàï8àä9lí¸àb¸à¢8àløàé¸àªøà¯øàìùí :(c‹ˆÜšYÚ[˜[]N‚ˆ•›ŞXYÙH[œÈ8 &P[pê\š\]YHÙ[˜[K8 &pã›HHİX˜H]H]XØ][ˆ‹ˆİX]NˆŒNMùnm9b"¸àîùaj¹mîÈ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àå8àª8àï8àêûï'xàç¸àê¸àï;ï'xà¨¸àêøàá¸àéxàï8àêøàîøàè¸àêøàë‹ˆÙ\šY\Îˆ•“ÖPQÑHS”È8 &PSpâT’TUQHÑS•SH0­ÈNMÈ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNMùnm‹ˆYX\ˆNMËˆ^[ˆ¹aj¹mîøàîÍLÎ:h xàîùêè:h+yfìùâbŒ¹à®xàîù©oz+gºh xàîù¢¦:/¯9g,9fìÌyà®H‹ˆ\ØÜš\[Û‚ˆ¸à«xàéxàï8àä8àbøà¢xàæxàê¸àï8à®¸à xàæ¸àá¸àìøà xà¬8à¨¸àá¸àç¸àêxà xàé¸àªøà¯øàìøàn:!ìøà¢ù¥áz(c:*&8à ¹c§ùb"Œ¹mîøàk¹§+9¥¡øà yc§ù¬ê8à ymîù§*ù¬ê8à y.æ:c,¸à yc§ùb"¹æë¹«(xà¤¹aj:*,øàeøà yêè:h+yfìùâb8à y¬$y¥ãù¥âùo¢ú+g8à y¢¦:/¯9g,9fìøà¤¹k£9aj9cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛ[Ü™[]LNMËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÛ[Ü™[]LNMËÓ[Ü™[]ÌNM×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÛ[Ü™[]LNMËÓ[Ü™[]ÌNM×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÎˆšYİ\™PÛİ[ˆŒ‹ˆ]PÛİ[ˆËˆ\\ÎˆÈ¹¥áz(c:*&‹¹£¨¹©':*&‹¹cf¹âjz*£—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸à«xàéxàï8àä‹¸àé¸àªøà¯øàìÈ‹¸àæ¸àá¸àìÈ—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÈ¹¬$y¥ãú*£‹º!ê¹á-º*£‹¹¢¦:/¯9g,9fìÈ‹¹©oz+g—KˆKˆÂˆÛYÎˆ›[Ü™[]Y^Ü˜][Û‹YİX][X[KLNL‹ˆ]Nˆ¸à¬8à¨¸àá¸àç¸àêy£¨¹©'‹ˆÜšYÚ[˜[]Nˆ•›ŞXYÙHØÚY[Yš\]YKˆ^Ü˜][ÛˆHİX][X[H‹ˆİX]N‚ˆŒNL9nm9b"¸àîøà¨¸àªøàáøàçøàï9iå9dèy/&¹h,ydb¸àîùc§ùb"Ì8 $ÍÌúh H9¥éy§+:*§¹aj:*,È‹ˆ]]Ü‚ˆ¸àå8àª8àï8àêûï'xàç¸àê¸àï;ï'xà¨¸àêøàá¸àéxàï8àêøàîøàè¸àêøàë;ï#øà¨¸à­øàêøàîøàí8à¨xàêxàìøà­øàª8àìøàã‹ˆÙ\šY\Îˆ‘VÔUSÓˆHÕPUSPSH0­ÈPĞQ0âSRQHTÈĞÒQSÑTÈ0­ÈNL‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àäxàê¸à xà#ÛÛ\\È™[™\ÈX™ÛXYZ\™\È\ÈğêX[˜Ù\ÈH8 &PXØY0ê[ZYH\ÈØÚY[˜Ù\øà#ùë+Ì9mîøà LNL9nm8à MÌ8 $ÍÌúh {ï"8àáøà¨øà®8àéøàìùb"¹âë9êâù¢§9b-Íºh {ï"H‹ˆYX\ˆNLˆ^[ˆ”ˆzh xàîùc§ùb"Ì8 $ÍÌúh xàîùiå9dèy/&¹h,ydb¸àîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸àè¸àêøàë8àk¹.+yi+¸à¨¸àèxàê¸àªù¥áz(c8àiù£¨zfá¸àexà£8àgùg,:,ê¸àîùbåyâjxàîù©#yâjyª&y§+8àj9fìùå.øà¤¸à xàåxàêxàìøà®yéäyki¸à¨¸àªøàáøàçøàï9iå9dèy/&¸àc9kêy§îøàeøàgùh,ydb¸à ¸àí8à¨xàêxàìøà­øàª8àìøàã8àc9h,ydbº !xà¤¹bæxà xàgÌNL9nm¹§"y¥éy/&¹d"8àk¹§+9¥¡øà yiå9dèyd#xà y¥l9`)8à yb!ºhg¹ï©9d#xà¤¹ç yåixàj¸àcú*,øàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛ[Ü™[]Y^Ü˜][Û‹YİX][X[KLNLØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÛ[Ü™[]Y^Ü˜][Û‹YİX][X[KLNLÓ[Ü™[]Ñ^Ü˜][Û—ÙWÑİX][X[WÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÛ[Ü™[]Y^Ü˜][Û‹YİX][X[KLNLÓ[Ü™[]Ñ^Ü˜][Û—ÙWÑİX][X[WÌNLÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº!ê¹á-¹cì¹h,ydbˆ‹¹£¨¹©'9h,ydbˆ‹¹ki¹/&¹h,ydbˆ—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸à¬8à¨¸àá¸àç¸àêH‹¸àæ¸àá¸àìÈ‹¸à«xàéxàï8àä‹¸àé¸àªøà¯øàìÈ—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÂˆ¸à¨¸àêøàá¸àéxàï8àêøàîøàè¸àêøàë‹ˆ¸à¨¸à­øàêøàîøàí8à¨xàêxàìøà­øàª8àìøàã‹ˆ¸àåxàêxàìøà®yéäyki¸à¨¸àªøàáøàçøàï‹ˆº!ê¹á-¹cìˆ‹ˆ¹ª&y§+‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ›[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZKLNH‹ˆ]Nˆ¸à«xàéxàï8àä9lí¸àb¸à¢8àlù.+yi+¸à¨¸àèxàê¸àªøàk¹¥¬:,§zhg»ï"9ë+z`ê;ï"H‹ˆÜšYÚ[˜[]N‚ˆ•\İXÙXH›İš\ÜÚ[XH[œİ[YHİX˜[˜YH][Y\šXØYHÙ[˜[\Ëˆ\œÈH‹ˆİX]NˆŒNynm9b"¸àîùª&zhc8àîùn£ù¥¡øàîùë+x $Îyåjˆ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àå8àª8àï8àêûï'xàç¸àê¸àï;ï'xà¨¸àêøàá¸àéxàï8àêøàîøàè¸àêøàë‹ˆÙ\šY\Îˆ•TÕPÑPH“Õ’TÔÒSPH0­ÈT”ÈH0­ÈNH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àäxàê¸à R‹‹P‹ˆ˜Z[pê™{ï#øàëxàìøàâxàìøà Rˆ˜Z[pê™xà LNynm;ï"8àáøà¨øà®8àéøàìøà R[\š[Y\šYHÚ\™X]KQ™]XÚİ;ï"H‹ˆYX\ˆNKˆ^[ˆ”ˆŒúh xàîùc§ùb"x $ÌÌzh xàîú,§zhgyê+¸àîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸àè¸àêøàë8àc8à«xàéxàï8àä9lí¸à xàé¸àªøà¯øàìøà xà¬8à¨¸àá¸àç¸àêxàj¸àjxàiù£¨zfá¸àeøàgúfn9å(øàîù­èy¬-9å(ú,§zhgyê+¸à¤º*&:/"xàeøàgùë+z`ê8à ¹ª&zhc8à yn£ù¥¡øà ylgº)¢ùaî¸àeøà yajyê+¸àk¹oh¹¡bú*&:/"xà ykî9¬åxà yå(ùg,8à y«å:/ ù¬ê8à yí`º*&8à¤¹ç yåixàj¸àcú*,øàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZKLNKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZKLNKÓ[Ü™[]Õ\İXÙXWÓ›İš\ÜÚ[XWÔ\œ×ÒWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZKLNKÓ[Ü™[]Õ\İXÙXWÓ›İš\ÜÚ[XWÔ\œ×ÒWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº,§zhg¹kiˆ‹º!ê¹á-¹cìˆ‹¹b!ºhg¹kiˆ‹¹kiº(dùb"º(c9âjH—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àæxàêxàäxà®H‹ˆ¸àæ¸àá¸àìÈ‹ˆ¸à«xàéxàï8àä‹ˆ¸àé¸àªøà¯øàìÈ‹ˆKˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ‹¸àêxàá¸àìú*§ˆ—KˆYÜÎˆÂˆº.çù/dùbåyâjH‹ˆºfn9å(ú,§zhgˆ‹ˆ¹­èy¬-9å(ú,§zhgˆ‹ˆ¹¥¬9ê+º*&:/"H‹ˆº!ê¹á-¹cì¹ª&y§+‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ›[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZZKLNLH‹ˆ]Nˆ¸à«xàéxàï8àä9lí¸àb¸à¢8àlù.+yi+¸à¨¸àèxàê¸àªøàk¹¥¬:,§zhg»ï"9ë+Rz`ê;ï"H‹ˆÜšYÚ[˜[]N‚ˆ•\İXÙXH›İš\ÜÚ[XH[œİ[YHİX˜[˜YH][Y\šXØYHÙ[˜[\Ëˆ\œÈRH‹ˆİX]N‚ˆŒNLynm9b"¸àîùn£ù¥¡øàîùë+¸ $ÌML9åj¸àîú* ¹«hú(j8àîùíãùí(¹o%H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àå8àª8àï8àêûï'xàç¸àê¸àï;ï'xà¨¸àêøàá¸àéxàï8àêøàîøàè¸àêøàë‹ˆÙ\šY\Îˆ•TÕPÑPH“Õ’TÔÒSPH0­ÈT”ÈRH0­ÈNLH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àäxàê¸à R‹‹P‹ˆ˜Z[pê™{ï#øàëxàìøàâxàìøà Rˆ˜Z[pê™xà LNLynm;ï"8àáøà¨øà®8àéøàìøà R[\š[Y\šYHÚ\™X]KQ™]XÚİ;ï"H‹ˆYX\ˆNLKˆ^[‚ˆ”ˆŒzh xàîùc§ùb"x $ÌÌ:h xàîú,§zhgyê+¸àîùë+z`ê:* ¹«hú(j8àîùajML9ê+¹í(¹o%xàîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸àè¸àêøàë8àk¹¥¬:,§zhgº*&:/"xà¤¹k£9íd8àfxà¢ùë+Rz`ê8à ¹n£ù¥¡øà ylgº)¢ùaî¸àeøà yë+¸ $ÌML9åj¸àkyê+¸àk¹oh¹¡bú*&:/"xà ykî9¬åxà yå(ùg,8à y«å:/ ù¬ê8à yë+z`ê:* ¹«hú(j8à yajML9ê+¹í(¹o%xà¤¹ç yåixàj¸àcú*,øàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZZKLNLKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZZKLNLKÓ[Ü™[]Õ\İXÙXWÓ›İš\ÜÚ[XWÔ\œ×ÒRWÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÛ[Ü™[]]\İXÙXK[›İš\ÜÚ[XK\\œËZZKLNLKÓ[Ü™[]Õ\İXÙXWÓ›İš\ÜÚ[XWÔ\œ×ÒRWÌNLWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº,§zhg¹kiˆ‹º!ê¹á-¹cìˆ‹¹b!ºhg¹kiˆ‹¹kiº(dùb"º(c9âjH—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àæxàêxàäxà®H‹ˆ¸àæ¸àá¸àìÈ‹ˆ¸à«xàéxàï8àä‹ˆ¸àé¸àªøà¯øàìÈ‹ˆKˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ‹¸àêxàá¸àìú*§ˆ—KˆYÜÎˆÂˆº.çù/dùbåyâjH‹ˆºfn9å(ú,§zhgˆ‹ˆ¹­èy¬-9å(ú,§zhgˆ‹ˆ¹¥¬9ê+º*&:/"H‹ˆº* ¹«hú(j‹ˆ¹íãùí(¹o%H‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆœ›ØÚÜİ›Ú]ZÙ\È‹ˆ]Nˆ¸à©¸à¬y. 9¥ãøàk¹g,8àn8àk¹¥áH‹ˆÜšYÚ[˜[]Nˆ•šXZ™H[pë\ÈHÜÈZÙ\È‹ˆİX]NˆŒNynm9ænº(j8àîùãï¹kf:`ê9b!¹aj:*,È‹ˆ]]Üˆ¸àª8àâxà©¸à¨øàìøàîøàëxààøà«øà®xàâ8àëxàï‹ˆÙ\šY\Îˆ•’PR‘HSpãTÈHÔÈRÑTÈ0­ÈNH‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNynm‹ˆYX\ˆNKˆ^[ˆÌzh xàîùn¥y§+ˆL8 $ÌL{ï":.èº/"yë+9fç¸ào¸àiûï"H‹ˆ\ØÜš\[Û‚ˆ¸àæ¸àá¸àìùç#8àêxàîøàê¸àæxàêøà¯øàï8àâxà¤¹æn¸àhxà xàêxàªøàìøàâxàìùg,9¥®xàn9d$xàbøàhøàgùkiº(dù£¨¹©'8àk¹¥áz(c:*&8à ¹ãï¹g*9è®º*£xàiøàcxà¢ù¥¬: gº.èº/"yë+9fç¸ào¸àiøà¤¹ç yåixàj¸àcú*,øàeøà yi,xà£øà£8àgùo£9cb¸àkùoªya`øàføàf¸à ycì¹¥¦xàk¹«¢ùkf9ëá9fì¸à¤¹¦#¹é.¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÜ›ØÚÜİ›Ú]ZÙ\ËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÜ›ØÚÜİ›Ú]ZÙ\ËÔ›ØÚÜİ›ÚÕZÙ\×ÌNWÑ^[Ò˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÜ›ØÚÜİ›Ú]ZÙ\ËÔ›ØÚÜİ›ÚÕZÙ\×ÌNWÑ^[Ò˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÌKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹£¨¹©':*&‹¹¥áz(c:*&—Kˆ™YÚ[ÛœÎˆÈ¸àæ¸àá¸àìÈ‹¸àêxàªøàìøàâxàìÈ‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÈ¹¥¬: gº`(ú/"H‹¹ãï¹kf:`ê9b!ˆ‹¹¬$y¥ãú*£—KˆKˆÂˆÛYÎˆ˜Ú[X›Û‹[Y^\]YH‹ˆ]Nˆ¸àèxà«xà­øà¬øàk¸à«8à®xà¬øàï8àâøàéy.®ˆ‹ˆÜšYÚ[˜[]Nˆ•[ˆØ\ØÛÛˆ]HY^\]YH‹ˆİX]NˆŒNL¹nm9b"¸àîùc§ùb"¹ajÍzh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àêøàâxàí8à¨øà«øàîøà­øàèøàìøàç8àìÈ‹ˆÙ\šY\Îˆ•SˆĞTĞÓÓˆUHQVTUQH0­ÈNLˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNL¹nm‹ˆYX\ˆNL‹ˆ^[ˆŒNzh xàîùc§ùb"¹¢bLzh xàîú+g9/¢Ìºh xàîùn ùdb¹/dú(àLzh H‹ˆ\ØÜš\[Û‚ˆ¸àåxàêxàìøà®xà¤¹æn¸àhxà xà«xàéxàï8àä8à xàé¸àªøà¯øàìøà xà¯øàä8à®xà¬øà xààxà¨¸àäxà®xà xàæxàêxà«øàêøà®xàbøà¢xàèxà«xà­øà¬ùd!9g,8àn:`,¸à 9¥áz(c:*&8à ¹c§ùb"ŒÍzh xàk¹§+9¥¡øà yc§ù¬ê8à yo%yå*8à y«c:*g¸à yc§ùb"¹æë¹«(xà¤¹aj:*,øàeøà y¢bxàj:+g9/¢øàîùn ùdb¸àk¹c§úh yå.ù`ãøà¤¹á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØÚ[X›Û‹[Y^\]YKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØÚ[X›Û‹[Y^\]YKĞÚ[X›Û—Õ[—ÑØ\ØÛÛ—Ø]WÓY^\]YWÌNL—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØÚ[X›Û‹[Y^\]YKĞÚ[X›Û—Õ[—ÑØ\ØÛÛ—Ø]WÓY^\]YWÌNL—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆNKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹¥áz(c:*&—Kˆ™YÚ[ÛœÎˆÈ¸àèxà«xà­øà¬È‹¸àé¸àªøà¯øàìÈ‹¸à¯øàä8à®xà¬È‹¸ààxà¨¸àäxà®H—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÈ¹í :(c9¥¡ùkiˆ‹º+g9/¢È‹ŒNy.%¹í 8àèxà«xà­øà¬È—KˆKˆÂˆÛYÎˆ˜\\Ë\][‹LNLÈ‹ˆ]Nˆ¸àæ¸àá¸àìùç#9© º*«‹ˆÜšYÚ[˜[]Nˆœ™]™H\ØÜš\ÚpìÛˆ[\\[Y[È[]0ê[ˆ‹ˆİX]NˆŒNLùnm9c§ú/"xàîù§+9¥¡øàb¸à¢8àlù.æ:c,ˆ‹ˆ]]Üˆ¸àåxà©øàáøàê¸à¬øàîøà«¸à®8à©øàêøàè¸àîøà¨¸àêøàá¸à®H‹ˆÙ\šY\Îˆ‘ÑSÑÔTPĞSTĞÔ’TSÓˆ0­ÈNLÈ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNLùnm‹ˆYX\ˆNLËˆ^[ˆŒzh xàîùc§ùb"MËLLúh xàîù§+9¥¡ÍMy«­z$/xàîù.æ:c,ŒŒúh!yæëˆ‹ˆ\ØÜš\[Û‚ˆ¸àæ¸àá¸àìùç#8àk¹g,9bè¸à y¬¬ùmçxàîù®e¹¬¯8à yg,:,ê¸à y¨ë¹§¥ú,áù®¤8à z  ùcé:`nº-èxà y/cù¬$xàj9å(ù©kxà¤¹© º*«8àeøàgÌNLùnm8àk¹g,9ä!¹h,ydb¸à ¹§+9¥¡ÍMy«­z$/xàjùb¨8àb8à xà­øàªøà­9.!ùfïycfº)©ù/&¸àn:` y.æ8àexà£8àgùâjydàxàîùi*yá-¹å(ùâjxàk¹aî¹dàyæëºc,ŒŒúh!yæë¸à¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØ\\Ë\][‹LNLËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØ\\Ë\][‹LNLËØ\\×Ü][—ÌNL×Ú˜Kœˆ‹ˆ\XˆœX›XØ][ÛœËØ\\Ë\][‹LNLËØ\\×Ü][—ÌNL×Ú˜K™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹g,9ä!¹h,ydbˆ‹¹cf¹âjz*£‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àæ¸àá¸àìÈ‹¸à¬8à¨¸àá¸àç¸àêH‹¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¸àæ¸àá¸àìùç#‹ˆº!ê¹á-º*£‹ˆ¹¨ë¹§¥ú,áù®¤‹ˆº  ùcé9kiˆ‹ˆ¸à­øàªøà­9.!ùfïycfº)©ù/&ˆ‹ˆ¹aî¹dàyæëºc,ˆ‹ˆKˆKˆÂˆÛYÎˆ™[\š[Ë\[[œ]YH‹ˆ]Nˆ¸àäxàë8àìøà¬z/äz`â¸àiùænº)¢øàexà£8àgùcé9.èú`ïyn º`nº-èxàkº*&:/ì‹ˆÜšYÚ[˜[]N‚ˆ‘\ØÜš\[ÛˆÙˆHZ[œÈÙˆ[ˆ[˜ÚY[Ú]K\ØÛİ™\™Y™X\ˆ[[œ]YK[ˆHÚ[™ÙÛHÙˆİX][X[H‹ˆİX]NˆŒNŒ¹nm:"ìz*§¹b'yâb8àîùaj9mîù¥éy§+:*§º*,È‹ˆ]]Üˆ¸à¨¸àìøàâ8àâøàª¸àîøàáøàêøàîøàê¸àª»ï#øàäxàå¸àëxàîøàåxà©øàê¸à«øà®xàîøàªøàå¸àë8àêH‹ˆÙ\šY\ÎˆTÒQSÓÑÒPĞS‘TÔ•	ˆTÕÔ’PĞSTÔĞVH0­ÈNŒˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNŒ¹nm‹ˆYX\ˆNŒ‹ˆ^[ˆŒMzh xàîùc§ùb"¹§+9¥¡ÈZZ{ï"ÌL:h xàîùfìùâbMùà®H‹ˆ\ØÜš\[Û‚ˆŒMÎùnm8àjùk§ù¥¯xàexà£8àgøàáøàêøàîøàê¸àª¸àk¸àäxàë8àìøà¬z`nº-èz*¯ù§îùh,ydb¸àj8à xàªøàå¸àë8àêxàk¹«m9cìº*åº  øà¤¹/mzc,¸àeøàgÌNŒ¹nm8àëxàìøàâxàìùb"º"ìz*§¹âb8àk¹aj9mîù¥éy§+:*§º*,øà ¹bcy.æ8à y§+9¥¡øà y.æ:c,¸à xàèxà«xà­øà¬ùnm8àkº(j8à z(ç:`n¸à yaj9¬ê:*&8àjùb¨8àb8à yc§ùb"¹fìùâbMùà®xà¤¹í&z$bxàk¹dj9î xàe8àj9á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙ[\š[Ë\[[œ]YKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙ[\š[Ë\[[œ]YKÑ[Ôš[×Ô[[œ]YWÔZ[œ×ÌNŒ—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙ[\š[Ë\[[œ]YKÑ[Ôš[×Ô[[œ]YWÔZ[œ×ÌNŒ—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆMKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆMËˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹¹«m9cìº*åº  È—Kˆ™YÚ[ÛœÎˆÈ¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H‹¸àèxà«xà­øà¬È—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹ŒN9.%¹í :*¯ù§îÈ‹¹çìùâb9fìùâb‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ˜›İ\˜›İ\™Ë\[[œ]YKLNˆ‹ˆ]N‚ˆ¸àèxà«xà­øà¬ùcé9.èú`nº-èx %x %xàäxàë8àìøà¬xàb¸à¢8àløàèxà«xà­øà¬ùcé9.èù¥¡ù¦#¸àk¸àgxàk¹.å¸àkº`nº-èH‹ˆÜšYÚ[˜[]N‚ˆ“[Û[Y[È[˜ÚY[œÈHY^\]YHˆ[[œ]pêH]]]™\ÈZ[™\ÈH8 &X[˜ÚY[›™HÚ]š[\Ø][ÛˆHY^\]YH8 %™XÚ\˜Ú\Èİ\ˆ\ÈZ[™\ÈH[[œ]pêH]İ\ˆ\ÈÜšYÚ[™\ÈHHÚ]š[\Ø][ÛˆHY^\]YH‹ˆİX]NˆŒN¹nm9b"¸àîù§+9¥¡øà yæë¹«(xà yfìùâb:)èú*«9¥éy§+:*§¹aj:*,È‹ˆ]]Ü‚ˆ¸à­øàèøàêøàêûï'xàª8àá¸à¨øàª8àìøàã8àîøàå¸àêxààøà®xàï8àêøàîøàâxàîøàå¸àï8àêøàå¸àï8àêûï#øà®8àèøàìûï'xàåxàë8àáøàê¸ààøà«øàîøàâxàîøàí8à¨xàêøàáøààøà«È‹ˆÙ\šY\Îˆ“SÓ•SQS•ÈSÒQS”ÈHQVTUQH0­ÈNˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒN¹nm‹ˆYX\ˆN‹ˆ^[‚ˆŒºh xàîùc§ùfìùâbMº$bxàîù§+9¥¡ù£/ùfìÌyà®xàîù.£:$byí¦¸àcyaj9/dùfìÍyà®xàîù.æ9lg¹cl9b-ùâjLº$bH‹ˆ\ØÜš\[Û‚ˆ¸àå¸àêxààøà®xàï8àêøàîøàâxàîøàå¸àï8àêøàå¸àï8àêøàc8àäxàë8àìøà¬z`nº-èxàj8àèxà«xà­øà¬ù¥¡ù¦#¸àkº-mù®¤8à¤º*å¸àf8à xàí8à¨xàêøàáøààøà«øàk¹fìùâb8à¤¹/-8àhøài¹b"º(c8àeøàgùi)ú$eøà ¹n£ù¥¡øà y§+9¥¡øà yæë¹«(xà yfìùâb:)èú*«8à y¬ê8à¤¹ç yåixàj¸àcú*,øàeøà yc§ùfìùâbMº$bxà y§+9¥¡ù£/ùfìøà y.æ9lg¹cl9b-ùâjxà¤¹á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØ›İ\˜›İ\™Ë\[[œ]YKLN‹ØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØ›İ\˜›İ\™Ë\[[œ]YKLN‹Ğ›İ\˜›İ\™×Ô[[œ]YWĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØ›İ\˜›İ\™Ë\[[œ]YKLN‹Ğ›İ\˜›İ\™×Ô[[œ]YWĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆ‹ˆšYİ\™PÛİ[ˆËˆ]PÛİ[ˆŒKˆ\\ÎˆÈº  ùcé9ki¹è%9êmˆ‹º`nº-èyh,ydbˆ‹¹fìùâb:fáˆ—Kˆ™YÚ[ÛœÎˆÈ¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H‹¸àèxà«xà­øà¬È—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆ¸àäxàë8àìøà¬z`nº-èH‹ˆ¸àí8à¨xàêøàáøààøà«È‹ˆ¹c§ùb"¹fìùâb‹ˆ¹çìùâb9fìùâb‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ™\Ü]Z[˜ØK]\İ[XXÚ[H‹ˆ]Nˆ¸à©¸à®xàç¸à­øàìøà¯ùmçz`h9o y¥éz*£‹ˆÜšYÚ[˜[]N‚ˆ‘X\š[ÈÙYİZYÈ[ˆH^YXÚpìÛˆ[°ë[È\İ[XXÚ[K\ÙH[YX›È[[[œ]YH\İHİH™YÜ™\ÛÈ‹ˆİX]Nˆ¸àäxàë8àìøà¬y§dyaî¹æn¸àbøà¢yn,:`¡8ào¸àiøàîÌN¹nm‹ˆ]]Üˆ¸àæøà®øàîøàç¸àê¸à¨¸àîøàª8à®xà«xàìøàªÈ‹ˆÙ\šY\Îˆ‘PT’SÈHHVQPÒpäÓˆS°ãSÈTÕSPPÒS•H0­ÈNˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒN¹nm:*&:c,»ï#ÌNN8àîÌŒùnm:.è¹a¦yb"º(c‹ˆYX\ˆN‹ˆ^[ˆŒL:h xàîÌŒùnm9âbˆM8 $ÍMù¢`9cã¸àîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆŒN¹nm8àkº`h9o y¥éz*£8àbøà¢xà xàé8àìøàîøàáøàîøàåxàªxà®xàc9ak9b"¸àeøàgøàäxàë8àìøà¬x %xà©¸à®xàç¸à­øàìøà¯ùc.ºe¤øà¤¹ç yåixàj¸àcùïîú*,øà ŒNN9nm9âb8àjŒùnm9âb8à¤¹áiùd"8àeøài¹¥éy.æ8àkº*©9©#xàj9§*ùl/¹ïl¹d#xà¤¹¨(z* ¸àeøà yc§ú`h9o y¥éz*£9aj9/døàiøàkøàj¸àcùb"¹§+9cãºc,º`ê9b!¸àk¹aj:*,øàiøà`¸à¢øàdøàj8à¤¹¦#¹é.¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙ\Ü]Z[˜ØK]\İ[XXÚ[KØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙ\Ü]Z[˜ØK]\İ[XXÚ[KÑ\Ü]Z[˜ØWÕ\İ[XXÚ[WÑ^Y][Û—ÌN—ÔX›\ÚYÕ˜[œØÜš\[Û—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙ\Ü]Z[˜ØK]\İ[XXÚ[KÑ\Ü]Z[˜ØWÕ\İ[XXÚ[WÑ^Y][Û—ÌN—ÔX›\ÚYÕ˜[œØÜš\[Û—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº`h9o y¥éz*£‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ‹¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÈ¹¥éz*£‹¹cì¹¥¦y¨(z* ˆ‹¹ak9b"º`ê9b!ˆ—KˆKˆÂˆÛYÎˆ™Ø[[™Ë\Z[œË\[[œ]YK[]\˜\KYØ^™]KLNÌH‹ˆ]Nˆ¸àäxàë8àìøà¬z`nº-èH‹ˆÜšYÚ[˜[]Nˆ”Z[œÈÙˆ[[œ]YH‹ˆİX]N‚ˆŒNÌynm9b"¸àîùc§ùb"x $Íºh {ï"ùïã9cíÍúh xàîù§+9¥¡øàîù.£9fìøàîùíê:fáº`ê:/ïz(ç9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ”•RS”ÈÑˆSS”UQH0­ÈHUTT–HĞV‘UH0­ÈNÌH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#•H]\˜\HØ^™]xà#ùë+Íycíøàîùë+ÍÌ9cíøà LNÌynmL9§"My¥éxàîÌŒ¹¥éH‹ˆYX\ˆNÌKˆ^[‚ˆ”ˆLúh xàîùc§ùb"x $Íºh {ï"ùïã9cíÍúh xàîùc§ùb"º*£:ghŒºh xàîù§+9¥¡ùa¡yfìÌ¹à®H‹ˆ\ØÜš\[Û‚ˆ¸à«8àê¸àìøàâxàcNÌynm9§"¹¥éy.æ8àiú` xàhøàgøàäxàë8àìøà¬z`nº-èy¦î9ì(xà ¹ë+ÍycíÍx $Íºh xàk¹§+9¥¡øà yc§ùb"º*£:gh¸à y§+9¥¡ùa¡y.£9fìøà yíê:fáº`ê9¬ê8à¤¹ç yåixàj¸àcú*,øàeøà yë+ÍÌ9cíÍúh xàkº* ¹«høàîú(ç:-¬ú*&9.¢øàj8àgxàk¹¬ê8à ¹b)zh!xàj8àeøài¹cãºc,¸àeøài¸àa8ào¸àfxà ŒNÌ¹nm8àk¸àåxàêxàìøà®z*§¹âb8àj8àkù©âù¢$8àj9a¡yk®xàk¹ål8àj¸à¢ùâë9êâøàeøàgú"ìz*§¹í&yâb8àiøàfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œË\[[œ]YK[]\˜\KYØ^™]KLNÌKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œË\[[œ]YK[]\˜\KYØ^™]KLNÌKÑØ[[™×ÔZ[œ×ÛÙ—Ô[[œ]YWÓ]\˜\WÑØ^™]WÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œË\[[œ]YK[]\˜\KYØ^™]KLNÌKÑØ[[™×ÔZ[œ×ÛÙ—Ô[[œ]YWÓ]\˜\WÑØ^™]WÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLËˆšYİ\™PÛİ[ˆ‹ˆ]PÛİ[ˆ‹ˆ\\ÎˆÈº`nº-èyh,ydbˆ‹¹¦î9ì(H‹¹¥¬: gº*&9.¢È—Kˆ™YÚ[ÛœÎˆÈ¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H‹¸àæ¸àá¸àìÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆ¸àäxàë8àìøà¬z`nº-èH‹ˆ¸àê¸àá¸àêxàê¸àï8àîøà«8à¯8ààøàâ‹ˆ¹c§ùb"º*£:ghˆ‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ™Ø[[™Ë[›İXÚX\Ë\][‹LNÌH‹ˆ]Nˆ¸àæ¸àá¸àìøàjúe¨¸àfxà¢ùh,ydbˆ‹ˆÜšYÚ[˜[]N‚ˆ“›İXÚX\È[]0ê[ˆ™XÛÙÚY\ÈÜˆİHÛÛX[™[K[Ëˆ‹ˆØ[[™È‹ˆİX]N‚ˆŒNÌynm9b"¸àîùc§ùb"ŒMø $ÌŒ:h xàîù§+9¥¡øàîù¥áyê"ú(j8àîù.®¹cèú(j9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ““ÕPÒPTÈSU0âSˆ0­ÈĞPÑUH‘QTS0­ÈNÌH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à¬8à¨¸àá¸àç¸àêxà xà#‘ØXÙ]H™Y\˜[8à#ùë+Íycíøà LNÌynmy§"y¥éxà LMø $ÌŒ:h H‹ˆYX\ˆNÌKˆ^[ˆ”ˆzh xàîùc§ùb"ŒMø $ÌŒ:h xàîùc§ùb"¹a¤ºh+yå.ù`ãÌyà®xàîú(j¹à®H‹ˆ\ØÜš\[Û‚ˆ¸à«8àê¸àìøàâxàc8àæ¸àá¸àìøàk¹g,9ä!¸à yh ùåc8à y¬¬ùmçxàîù®e¹¬¯8à y.©:`&º-ëøà y.®¹cèøà y.©9¦$øà yo y§#ycì¸à¤¸ào¸àj8à xàgùfæúh xàk¹h,ydb¸à ¹c§ùb"¹§+9¥¡øà xà¬8à¨¸àá¸àç¸àêx %xàæxàê¸àï8à®ºe¤øàk¹¥áyê"ú(j8à y.®¹cèú(j8à¤¹ç yåixàj¸àcú*,øàeøà xàåxàêxàìøà®yfïyêâùfìù¦î:i*9¢`:%-xàk¹c§ùb"¹b!ù¢§8àcLMúh yå.ù`ãøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™Ë[›İXÚX\Ë\][‹LNÌKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™Ë[›İXÚX\Ë\][‹LNÌKÑØ[[™×Ó›İXÚX\×Ù[Ô][—ÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™Ë[›İXÚX\Ë\][‹LNÌKÑØ[[™×Ó›İXÚX\×Ù[Ô][—ÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈ¹g,9ä!¹h,ydbˆ‹¹ílz*":,áù¥¦H‹¹¥¬: gº*&9.¢È—Kˆ™YÚ[ÛœÎˆÈ¸àæ¸àá¸àìÈ‹¸à¬8à¨¸àá¸àç¸àêH‹¸àæxàê¸àï8à®ˆ‹¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÈ¸àæ¸àá¸àìùcìˆ‹¹.©:`&º-ëÈ‹¹.®¹cèú(j‹¸à«8à®øà¯øàîøàåxà©øàáøàêxàêÈ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™Ë\[[œ]YKLNÌˆ‹ˆ]Nˆ¸àäxàë8àìøà¬z`nº-èxàjúe¨¸àfxà¢ú)¦¹¦î‹ˆÜšYÚ[˜[]N‚ˆ“pê[[Ú\™HHKˆØ[[™ËÙ™šXÚY\ˆİ\0ê\šY]\ˆHH°ê\X›\]YHH8 &P[pê\š\]YHÙ[˜[KY™\ÜğêH0èKˆHÙXÜ°ê]Z\™HHHÛØÚpê]0êHHğê[ÙÜ˜\YHH\š\È‹ˆİX]NˆŒNÌ¹nm9b"¸àîùc§ùb"ŒNN8 $ÌŒMúh {ï"ùb)z$byfìùâb9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ“pâSSÒT‘HÕTˆTÈ•RS‘TÈHSS”UQH0­ÈNÌˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNÌ¹nm‹ˆYX\ˆNÌ‹ˆ^[‚ˆ”ˆzh xàîøà«8àê¸àìøàây§+9¥¡ÌNN8 $ÌŒM:h xàîøàä8àª8à¯y.æ:c,ŒŒMx $ÌŒMúh xàîù§+9¥¡ùa¡yª(yo#ùfìÌyà®xàîùb)z$byfìùâbz$b{ï"9fìÌx $ÌL»ï"H‹ˆ\ØÜš\[Û‚ˆ¸à«8àê¸àìøàâxàc8àäxàê¹g,9ä!¹ki¹ce9/&¸àn:` xàhøàgøàäxàë8àìøà¬z`nº-èyh,ydb¸à ¹c§ùb"ŒNN8 $ÌŒM:h xàk¹§+9¥¡øàîùíê:fáº`ê:!&¹¬ê8àîùéb9émù¥¡øàîú*§¹ofxàîù¥l:*g¸à¤¹ç yåixàj¸àcú*,øàeøà y§+9¥¡ùa¡yª(yo#ùfìøàj9fìÌx $ÌL¸à¤¹d*øà 9b)z$byfìùâb8à¤¹i%¹§¨8àe8àj9á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ¹c§ùb"ŒŒMx $ÌŒMúh xàk¸àæ¸àêøàåxà©øà«øàâ8àîøàä8àª8à¯xàjøà¢8à¢øàªøà®xàá¸à¨øàï8àê¸àèú*§¸àîøàç¸àé:*§º*§¹ofz(j8à ¸à yb)z$eú !xàk¹b"¹§+9.æ:c,¸àj8àeøài¹/mz/"xàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™Ë\[[œ]YKLNÌ‹ØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙØ[[™Ë\[[œ]YKLNÌ‹ÑØ[[™×Ô[[œ]YWÓY[[Ú\—ÌNÌ—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙØ[[™Ë\[[œ]YKLNÌ‹ÑØ[[™×Ô[[œ]YWÓY[[Ú\—ÌNÌ—ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆKˆ\\ÎˆÈº`nº-èyh,ydbˆ‹º)¦¹¦î—Kˆ™YÚ[ÛœÎˆÈ¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H‹¸àèxà«xà­øà¬È—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ‹¸à®xàæ¸à©8àìú*§ˆ‹¸àç¸àé:*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹¹g,9ä!¹ki¹ce9/&ˆ‹¹b)z$byfìùâb‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™Ë]\İ[XXÚ[KLNÌÈ‹ˆ]Nˆ¸à¬8à¨¸àá¸àç¸àêxàk¸à©¸à®xàç¸à­øàìøà¯ùmçxàkº*&:/ì‹ˆÜšYÚ[˜[]NˆH\ØÜš\[ÛˆÙˆHš]™\ˆ\İ[X\Ú[K[ˆİX][X[H‹ˆİX]NˆŒNÌùnm9b"¸àîùc§ùb"Nx $Í:h {ï"ùaj:gh¹g,9fìÈ9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\ÎˆHTĞÔ’TSÓˆÑˆH’U‘TˆTÕSPTÒS•H0­ÈNÌÈ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNÌùnm‹ˆYX\ˆNÌËˆ^[ˆŒMzh xàîùaj:gh¹g,9fìÌyà®xàîù§+9¥¡ùa¡yíæ¹å.Ìùà®H‹ˆ\ØÜš\[Û‚ˆ¸à©¸à®xàç¸à­øàìøà¯ùmçxàk¹­`z-ëøàîù¥+ù­`xàîù¬¯ùl®9g,9gçøà¤º*&8àeøàgùã¢ùêâùg,9ä!¹ki¹ce9/&º*£9£¬º/"z*å¹¥¡øà ¹§+9¥¡ÌL¹«­z$/xàj8àäxàë8àìøà¬z`nº-èxà¤¹¢lxàaºemùi)ú!&¹¬êLy«­z$/xà¤¹aj:*,øàeøà yg,9fìøàêxàæxàêÎù.í¸à yaj:gh¹g,9fìøà y§+9¥¡ùa¡yíæ¹å.Ìùà®xà¤¹k£9aj9cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™Ë]\İ[XXÚ[KLNÌËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙØ[[™Ë]\İ[XXÚ[KLNÌËÑØ[[™×Ôš]™\—Õ\İ[X\Ú[WÌNÌ×ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙØ[[™Ë]\İ[XXÚ[KLNÌËÑØ[[™×Ôš]™\—Õ\İ[X\Ú[WÌNÌ×ĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆMKˆšYİ\™PÛİ[ˆËˆ]PÛİ[ˆKˆ\\ÎˆÈ¹g,9ä!¹h,ydbˆ‹¹¬¬ùmçz*&:/ì—Kˆ™YÚ[ÛœÎˆÈ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ‹¸à¬8à¨¸àá¸àç¸àêH‹¸àäxàë8àìøà¬H—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¹g,9ä!¹ki¹ce9/&ˆ‹¹¬¬ùmçyg,9ä!ˆ‹¹aj:gh¹g,9fìÈ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™ËXØ\šXœËXÙ[˜[X[Y\šXØKLNÌÈ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøàk¸àªøàê¸àå¹.®¸àjøài8àa8ài¸àk¹h,ydbˆ‹ˆÜšYÚ[˜[]Nˆ“›İXÙHÙˆHØ\šXœÈ[ˆÙ[˜[[Y\šXØH‹ˆİX]NˆŒNÌùnm9b"¸àîùc§ùb"ŒL8 $ÌLzh xàîù§+9¥¡øàîú*§¹of{ï#ù¥l:*gº(j9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ““ÕPÑHÑˆHĞT’P”ÈSˆÑS•SSQT’PĞH0­ÈNÌÈ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#¹ã¢ùêâùg,9ä!¹ki¹ce9/&º*£8à#ùë+ùmîøà LNÌùnm8à LL8 $ÌLzh H‹ˆYX\ˆNÌËˆ^[ˆ”ˆúh xàîùc§ùb"ŒL8 $ÌLzh xàîøàªøàê¸àåº*§¹ofLN:h!yæë¸àîù¥l:*g’x $Ö‹ˆ\ØÜš\[Û‚ˆ¸àâ8àêøàä¸àï8à®8àéøà¤¹.+yoàøàj8àfxà¢ù.+yi+¸à¨¸àèxàê¸àªøàk¸àªøàê¸àå¹.®¸àjøài8àa8ài¸à yéîù/cøà ylay/cùg,8à z* :*§¸à¤º*&8àeøàgùçëyh,xà ¹c§ùb"ŒL8 $ÌLzh xàk¹§+9¥¡øà¤¹ç yåixàj¸àcú*,øàeøà y§*ùl/¸àk¸àªøàê¸àåº*§¹ofLN:h!yæë¸àj9¥l:*g’x $Ö8à¤º(j9oh¹o#øàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™ËXØ\šXœËXÙ[˜[X[Y\šXØKLNÌËØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™ËXØ\šXœËXÙ[˜[X[Y\šXØKLNÌËÑØ[[™×Ó›İXÙWÛÙ—İWĞØ\šXœ×ĞÙ[˜[Ğ[Y\šXØWÌNÌ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™ËXØ\šXœËXÙ[˜[X[Y\šXØKLNÌËÑØ[[™×Ó›İXÙWÛÙ—İWĞØ\šXœ×ĞÙ[˜[Ğ[Y\šXØWÌNÌ×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹¬$y¥ãú*£‹º* :*§º,áù¥¦H‹¹h,ydbˆ—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àæøàìøà®8àéxàêxà®H‹¸àæxàê¸àï8à®ˆ‹¸àªøàê¸àå¹­mÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ‹¸àªøàê¸àåº*§ˆ—KˆYÜÎˆÈ¸à«8àê¸àåxàâˆ‹¸àªøàê¸àå¹.®ˆ‹º*§¹ofH‹¹¥l:*gˆ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™ËX[\]Z]Y\Ë\][‹LNÍ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøà xàæ¸àá¸àìùg,9¥®xàiùænº)¢øàexà£8àgú"éynl¸àk¹cé9âjxàjøài8àa8ài¸àk¹çëyh,H‹ˆÜšYÚ[˜[]N‚ˆHÚÜXØÛİ[ÙˆÛÛYH[\]Z]Y\È\ØÛİ™\™Y[ˆH\İšXİÙˆ][‹[ˆÙ[˜[[Y\šXØH‹ˆİX]N‚ˆŒNÍ9nm9b"¸àîÌNÌynm9¦î9ì(xàîùc§ùb"MÌ8 $ÍMÌzh {ï"ùfìùâbV8 $Ó9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\ÎˆS•TURUQTÈTĞÓÕ‘T‘QSˆUSˆ0­ÈNÍ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#\˜ÚY[ÛÙÚXxà#ùë+ymîøà LNÍ9nm8à MMÌ8 $ÍMÌzh H‹ˆYX\ˆNÍˆ^[ˆ”ˆzh xàîùc§ùb"MÌ8 $ÍMÌzh xàîùfìùâbº$b{ï"V8 $Ó;ï"H‹ˆ\ØÜš\[Û‚ˆŒNÌynmL9§"9¥éy.æ8àiøà«8àê¸àìøàâxàc8àëxàìøàâxàìùcé9âjyce9/&¸àn:` xàhøàgù¦î9ì(xà ¸àæ¸àá¸àìùg,9¥®xàiùcãºfá¸àeøàgøàäxàë8àìøà¬xàk¹¯!¹e¬9­k¹ojøàj8à xàé8à­øàéøàï9®e»ï"9c§ùb"ˆX\Ú]ûï"xàk¹lí¸àkº`n¹©âøàîú`n¹âjxà¤º*&:/ì8àeøào¸àfxà ¹§+9¥¡øà yk¦ùab8àîùïl¹d#xà yfìùâbV8àîÓ8àk¹ª&zhc8àj9¬ê:*&8à¤¹ç yåixàj¸àcú*,øàeøà yfìùâb9.£:$bxà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™ËX[\]Z]Y\Ë\][‹LNÍØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™ËX[\]Z]Y\Ë\][‹LNÍÑØ[[™×Ğ[\]Z]Y\×Ô][—ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™ËX[\]Z]Y\Ë\][‹LNÍÑØ[[™×Ğ[\]Z]Y\×Ô][—ÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆ‹ˆ\\ÎˆÈº  ùcé9ki¹h,ydbˆ‹¹¦î9ì(H‹¹fìùâb:,áù¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àæ¸àá¸àìÈ‹¸àäxàë8àìøà¬H‹¸àé8à­øàéøàï9®eˆ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆ¸à©8àá8à¨H‹ˆ¸àäxàë8àìøà¬H‹ˆ¸àé8à­øàéøàï9®eˆ‹ˆ¹c§ùb"¹fìùâb‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ™Ø[[™ËXÛÜ[‹Y[\™\ÜLNÍ‹ˆ]Nˆ¸à¬øàäxàìùcé9.èú`nº-èz*¯ù§îùh,ydb»ï"NÍ9nm;ï"H‹ˆÜšYÚ[˜[]N‚ˆ’[™›Ü›YHHHÛÛZ\ÚpìÛˆÚY[0ëYšXØH›Ü›XYH\˜H[™XÛÛ›ØÚ[ZY[ÈH\È[YğïYY\ÈHÛÜ0è[ˆÈ˜\Üİ\ˆ\ÈZ[™\ÈHÛÜ[ˆ]H^\È›Ú\Ú[ˆ‹ˆİX]N‚ˆ¸à®xàæ¸à©8àìú*§¹b"¹§+;ï"Ğ›‘¸àåxàêxàìøà®z*§¹ê/ûï"ùfìùâbLúgh¸àîùål9d#:(j9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ’S‘“Ô“QHÓĞ”‘HTÈS•QğçQQTÈHÓÔ0àSˆ0­ÈNÍ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à¬øàäxàìøà LNÍ9nm¹§"Ny¥é{ï#øà®xàæ¸à©8àìú*§¹§+9¥¡ÌNMynm9b"¸àîøàåxàêxàìøà®z*§¹ê/ÌNÍ9nm‹ˆYX\ˆNÍˆ^[‚ˆ”ˆ:h xàîøà®xàæ¸à©8àìú*§¹b"¹§+ŒMø $ÌŒ:h xàîĞ›‘¹ê/ÙŒLx $ÙŒLÍ¸àîùfìùâbLúgh¸àîùål9d#:(j‹ˆ\ØÜš\[Û‚ˆŒNÍ9nmy§"8àk¸à¬8à¨¸àá¸àç¸àêymç¹¥/ùn§9doy.é8àjùgî¸àixàcxà«8àê¸àìøàâxàc9k§ù¥¯xàeøàgøà¬øàäxàìú`nº-èz*¯ù§îøàk¹k£9aj9h,ydb¸à ŒNMynm9b"¸à®xàæ¸à©8àìú*§¹§+9¥¡øàj8à P›‘¹¢`:%-xàk¸àåxàêxàìøà®z*§¹ê/øà¤¹æî9.¤¸àjùílyd"8àføàf¹b)y§+9¥¡øàj8àeøài¹aj:*,øàeøà yg,9fìøà ynlúgh¹fìøà y¬-9ojyaj9¦køà yfìÌx $Ì¸à¤¹d*øà 9fìùâbLúgh¸àj8à y.(yìîùílxàk¹..ú) yål9d#:(j8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ¸àè¸àï8àê¸àïNLŒ9nm:"ìz*,øàkùål9d#9áiùd"8àjøàk¸àoùå*8àa8ài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹Y[\™\ÜLNÍØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹Y[\™\ÜLNÍÑØ[[™×ĞÛÜ[—Ñ[Ô™\ÜÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹Y[\™\ÜLNÍÑØ[[™×ĞÛÜ[—Ñ[Ô™\ÜÌNÍÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆLËˆ\\ÎˆÈº`nº-èyh,ydbˆ‹¹¥/ùn§9h,ydbˆ‹¹a¦y§+:,áù¥¦H‹¹fìùâb:,áù¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸à¬øàäxàìÈ‹¸àæøàìøà®8àéxàêxà®H‹¸à¬8à¨¸àá¸àç¸àêH‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ‹¸àåxàêxàìøà®z*§ˆ‹¸ààxàéøàêøàá¸à¨ú*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆ¸à¬øàäxàìú`nº-èH‹ˆ¸àåxàêxàìøà®yfïyêâùfìù¦î:i*‹ˆ¹c§ùê/ùfìùâb‹ˆ¹ål9d#:(j‹ˆ¹. 9«(ycì¹¥¦H‹ˆKˆKˆÂˆÛYÎˆ™Ø[[™ËXÛÜ[‹[]\˜\KYØ^™]KLNÍH‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªø %x %xà¬øàäxàìú`nº-èz`&¹/èH‹ˆÜšYÚ[˜[]NˆÙ[˜[[Y\šXØH‹ˆİX]NˆŒNÍynm9b"¸àîùc§ùb"M¸ $ÍMúh xàîùíê:fáº`ê9¬ê8àîù§+9¥¡øàîùïl¹d#H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\ÎˆÑS•SSQT’PĞH0­ÈHUTT–HĞV‘UH0­ÈNÍH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#•H]\˜\HØ^™]xà#ùë+Mycíøà LNÍynmù§"N9¥éxà MM¸ $ÍMúh H‹ˆYX\ˆNÍKˆ^[ˆ”ˆúh xàîùc§ùb"M¸ $ÍMúh xàîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸à¬øàäxàìú`nº-èxàbøà¢LNÍ9nm¹§"Ny¥éy.æ8àiú` xà¢xà£8à xà#¸àê¸àá¸àêxàê¸àï8àîøà«8à¯8ààøàâ8à#øàk¸à#9c§ú`&¹/èxà#y«!8àjù£¬º/"xàexà£8àgù¦î9ì(xà º`nº-èxàk¹/cyïk¸à ynî¹ëâxà yæn¹£¦8à yçìùè¤xà xà«8àê¸àìøàâz!êº.ªøàk¹¥¡ù¦#¹cìº)¬øà¤º*&8àeøàgù§+9¥¡øàj8à y§*ùl/¸àk¹íê:fáº`ê9¬ê8à¤¹ç yåixàj¸àcú*,øàeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹[]\˜\KYØ^™]KLNÍKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹[]\˜\KYØ^™]KLNÍKÑØ[[™×ĞÛÜ[—Ó]\˜\WÑØ^™]WÌNÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™ËXÛÜ[‹[]\˜\KYØ^™]KLNÍKÑØ[[™×ĞÛÜ[—Ó]\˜\WÑØ^™]WÌNÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº`nº-èyh,ydbˆ‹¹¦î9ì(H‹¹¥¬: gº*&9.¢È—Kˆ™YÚ[ÛœÎˆÈ¸à¬øàäxàìÈ‹¸àæøàìøà®8àéxàêxà®H‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹¸à¬øàäxàìú`nº-èH‹¸àê¸àá¸àêxàê¸àï8àîøà«8à¯8ààøàâ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™ËY\\[Û‹XÛÜÚYİZ[˜KLNÍH‹ˆ]Nˆ¸àâøàªøàêxà¬8à¨¸à xà¬øà­øà¬8à©8àâ¹àjùllxàk¹fm9àjøàjøài8àa8ài¸ %x %LNÍynmy§"Mù¥éH‹ˆÜšYÚ[˜[]N‚ˆ“ÛˆH\\[ÛˆÙˆH›ÛØ[›ÈÙˆÛÜÚYğï[˜K[ˆšXØ\˜YİXKMİ˜[X\KNÍH‹ˆİX]NˆŒNÍynm9b"¸àîùc§ùb"ŒÎø $ÌÎLºh xàîù§+9¥¡øàîùc§ù¬ê9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ‘T•TSÓˆÑˆH“ÓĞS“ÈÑˆÓÔÒQğçSH0­ÈNÍH‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#¹ã¢ùêâùg,9ä!¹ki¹ce9/&º*£8à#ùë+ymîøà LNÍynm8à LÎø $ÌÎLºh H‹ˆYX\ˆNÍKˆ^[ˆ”ˆ:h xàîùc§ùb"ŒÎø $ÌÎLºh xàîùc§ùb"¹a¤ºh+yå.ù`ãÌyà®H‹ˆ\ØÜš\[Û‚ˆŒNÍynmy§"8àk¸à¬øà­øà¬8à©8àâ¹àjùllyi)ùfm9àjøàjøài8àa8ài¸à xà«8àê¸àìøàâz!êº.ªøàkº)¬ù®+9¦î9ì(xà xàë8àª¸àìøàk¹ak9o#ùh,ydb¸à xàêxàîøà©¸àâøàª¸àìùcî9.é9k¦8àk¹h,ydb¸à yd!9g,8àkºfcyàl8àîù¦¥úeáøàîùg,:g!øàkº*&:c,¸à¤¸ào¸àj8à xàgú*å¹¥¡øà ¹c§ùb"ŒÎø $ÌÎLºh xàj9c§ù¬ê8à¤¹ç yåixàj¸àcú*,øàeøà z*å¹¥¡ùa¤ºh+xàk¹c§ùb"¹å.ù`ãøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™ËY\\[Û‹XÛÜÚYİZ[˜KLNÍKØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™ËY\\[Û‹XÛÜÚYİZ[˜KLNÍKÑØ[[™×Ñ\\[Û—ĞÛÜÚYİZ[˜WÌNÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™ËY\\[Û‹XÛÜÚYİZ[˜KLNÍKÑØ[[™×Ñ\\[Û—ĞÛÜÚYİZ[˜WÌNÍWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈ¹àjùllyh,ydbˆ‹º!ê¹á-¹àoyk¬ú*&:c,ˆ‹¹g,9ä!¹ki¹ce9/&º*£—Kˆ™YÚ[ÛœÎˆÈ¸à¬øà­øà¬8à©8àâ¹àjùllH‹¸àâøàªøàêxà¬8à¨ˆ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¹àjùllyfm9àjÈ‹ºfcyàl‹¹g,:g!È‹¹ã¢ùêâùg,9ä!¹ki¹ce9/&ˆ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™Ë\Z[œËXÛÜ[‹XX\ËLNÍˆ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøàk¸à¬øàäxàìú`nº-èH‹ˆÜšYÚ[˜[]Nˆ•HZ[œÈÙˆÛÜ[‹[ˆÙ[˜[[Y\šXØH‹ˆİX]N‚ˆŒNÍ¹nm9b"¸àîùc§ùb"Mø $ÍML:h xàîùb"º(c9iå9dèy/&¹¬ê8àîù¦î9ì(y§+9¥¡È9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ•H•RS”ÈÑˆÓÔSˆ0­ÈTÒQSÓÑÒPHSQT’PĞSH0­ÈNÍˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸à¬xàìøàå¸àê¸ààøà®;ï"8àç¸à­xààxàéxàï8à®øààøàá;ï"xà xà#\˜ÚY[ÛÙÚXH[Y\šXØ[˜xà#ùë+¹mîøà LNÍ¹nm8à MMø $ÍML:h H‹ˆYX\ˆNÍ‹ˆ^[ˆ”ˆzh xàîùc§ùb"Mø $ÍML:h xàîùc§ùb"¹a¤ºh+yå.ù`ãÌyà®H‹ˆ\ØÜš\[Û‚ˆ¸à¨¸àèxàê¸àªùcé9âjyce9/&¹í :) xàjù£¬º/"xàexà£8àgøà¬øàäxàìú`nº-èyh,ydb¸à ŒNÍynm¹§"Ny¥éy.æ9¦î9ì(xàk¹§+9¥¡øà yb"º(c9iå9dèy/&¹¬ê8à yk¦ùab8à yïl¹d#xàîú ªy¦î8à¤¹ç yåixàj¸àcú*,øàeøà yc§ùb"Múh xàkº*å¹¥¡ùª&zhc9å.ù`ãøà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ŒNÍ9nm8àjù¥/ùn§8àn9£ä9aî¸àexà£8àgøà®xàæ¸à©8àìú*§¸àîøàåxàêxàìøà®z*§¸àk¹k£9aj9h,ydb¸àj8àkùb)y`"øàkº"ìz*§¹çëyh,xàiøàfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œËXÛÜ[‹XX\ËLNÍ‹ØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œËXÛÜ[‹XX\ËLNÍ‹ÑØ[[™×ÔZ[œ×ÛÙ—ĞÛÜ[—ĞPT×ÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™Ë\Z[œËXÛÜ[‹XX\ËLNÍ‹ÑØ[[™×ÔZ[œ×ÛÙ—ĞÛÜ[—ĞPT×ÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆˆ\\ÎˆÈº`nº-èyh,ydbˆ‹¹¦î9ì(H‹¹ki¹/&¹í :) H—Kˆ™YÚ[ÛœÎˆÈ¸à¬øàäxàìÈ‹¸àæøàìøà®8àéxàêxà®H‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àç¸àé:  ùcé9kiˆ‹¸à¬øàäxàìú`nº-èH‹¸à¨¸àèxàê¸àªùcé9âjyce9/&ˆ‹¹. 9«(ycì¹¥¦H—KˆKˆÂˆÛYÎˆ™Ø[[™Ë[Û‹XÙ[˜[X[Y\šXØKLNÍˆ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøàjøài8àa8àiˆ‹ˆÜšYÚ[˜[]Nˆ“ÛˆÙ[˜[[Y\šXØH‹ˆİX]N‚ˆŒNÍ¹nm9b"¸àîùc§ùb"ŒLNx $ÌLÍzh xàîùílz*":(j8àîú(c9¥/ùc.¹å.ú(j8àîùg,9fìù.£:$bH9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆÙ\šY\Îˆ“ÓˆÑS•SSQT’PĞH0­ÈNÍˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àëxàìøàâxàìøà xà#¹ã¢ùêâùg,9ä!¹ki¹ce9/&º*£8à#ùë+¹mîøà LNÍ¹nm8à LLNx $ÌLÍzh H‹ˆYX\ˆNÍ‹ˆ^[ˆ”ˆzh xàîùc§ùb"ŒLNx $ÌLÍzh xàîùc§ùb"¹a¤ºh+yå.ù`ãÌyà®xàîùg,9fìÌº$bxàîú(j9à®H‹ˆ\ØÜš\[Û‚ˆ¹ã¢ùêâùg,9ä!¹ki¹ce9/&º*£8àjù£¬º/"xàexà£8àgù.+yi+¸à¨¸àèxàê¸àªøàk¹g,9ä!¸àîù¥/ù¬®øàîù.®¹cèøàîù.©:`&¸àîùå(ù©kxàk¹íãú*«8àj8à¬øà®xà¯øàê¸àªùd!:*å¸à ¹íê:fáº`ê9bcy¦î8àcxàîù¬ê8à xà«8àê¸àìøàây§+9¥¡øà yílz*":(j8àîú(c9¥/ùc.¹å.ú(j8à¤¹ç yåixàj¸àcú*,øàeøà yc§ùb"¹.æ9fìøà#¹.+yi+¸à¨¸àèxàê¸àªøàk¸à¬øà®xà¯øàê¸àªùfïyåiyfìøà#ù.£:$bxà¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙØ[[™Ë[Û‹XÙ[˜[X[Y\šXØKLNÍ‹ØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÙØ[[™Ë[Û‹XÙ[˜[X[Y\šXØKLNÍ‹ÑØ[[™×ÓÛ—ĞÙ[˜[Ğ[Y\šXØWÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÙØ[[™Ë[Û‹XÙ[˜[X[Y\šXØKLNÍ‹ÑØ[[™×ÓÛ—ĞÙ[˜[Ğ[Y\šXØWÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆKˆšYİ\™PÛİ[ˆKˆ]PÛİ[ˆ‹ˆ\\ÎˆÈ¹g,9ä!¹h,ydbˆ‹¹ílz*":,áù¥¦H‹¹g,9fìú,áù¥¦H—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸à¬øà®xà¯øàê¸àªÈ‹¸àâøàªøàêxà¬8à¨ˆ‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªùg,9ä!ˆ‹ˆ¸à¬øà®xà¯øàê¸àªÈ‹ˆ¹ílz*":(j‹ˆ¹c§ùb"¹g,9fìÈ‹ˆ¹ã¢ùêâùg,9ä!¹ki¹ce9/&ˆ‹ˆKˆKˆÂˆÛYÎˆœÛØÚY]KYÙ[ÙÜ˜\YKXÙ[˜[X[Y\šXØK\™\ÜLNÍˆ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªøàk¹g,9ä!¸àb¸à¢8àlùcé9âjxàjúe¨¸àfxà¢ù¡î:,ç¸àjøài8àa8ài¸àk¹h,ydbˆ‹ˆÜšYÚ[˜[]N‚ˆ”˜\Üİ\ˆHÛÛ˜Ûİ\œÈ™[]Yˆ0èHğê[ÙÜ˜\YH]]^[\]Z]0ê\ÈH8 &P[pê\š\]YHÙ[˜[H‹ˆİX]N‚ˆŒNÍ¹nm9§"8àîùc§ùb"ŒLø $ÌLzh xàîù§+9¥¡øàîú!&¹¬ê8àîùíd:*å¹.¥:h!H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxàêxàìøà®yg,9ä!¹ki¹/&¹iå9dèy/&ˆ‹ˆÙ\šY\Îˆ”TÔ•ÕTˆHÓÓÓÕT”È0­ÈNÍˆ‹ˆÜšYÚ[˜[X›XØ][Û‚ˆ¸àäxàê¸à xà#¸àåxàêxàìøà®yg,9ä!¹ki¹/&¹í :) xà#ùë+¸à­øàê¸àï8à®¹ë+ymîøà LNÍ¹nm9§"8à LLø $ÌLzh H‹ˆYX\ˆNÍ‹ˆ^[ˆ”ˆÌzh xàîùc§ùb"ŒLø $ÌLzh xàîùc§ùb"ºh z(j9é.ŒÎy.í¸àîùíd:*åzh!xàîùfìùâb8àj¸àeÈ‹ˆ\ØÜš\[Û‚ˆ¸àåxàêxàìøà®yg,9ä!¹ki¹/&¸àcNynm8àjú*+yk¦¸àeøàgù.+yi+¸à¨¸àèxàê¸àªøàk¹g,9ä!¸àîùcé9âjy¡î:,ç¸àjøài8àa8ài¸à y¥è¹o 8àk¹£¨¹©'8àîùb"º(c9âjxàj9oç9bçú,áù¥¦xà¤¹©':*#¸àeøàgÌNÍ¹nm8àk¹iå9dèy/&¹h,ydb¸à ¸àåxàìøàç8àêøàâ8à xàáøàêøàîøàê¸àª¸à xà©¸àªxàêøàáøààøà«øà xàáøàéxàæ¸à xà«8àê¸àìøàâxà¢xàkº*¯ù§îøà yg,9fìøàîùfìúgh¸à¤¹«å:/ øàeøà y¡î:,ç¸àk¹b)9¥«xàj9.â¹o£8àkº*¯ù§îù¥®zaçxà¤¹íd:*å¹.¥:h!xàjøào¸àj8à xài¸àa8ào¸àfxà ¸àåxà¨¸àìøàîøà«8àê¸àìøàây§+9.®¸àkº$eù/g8àiøàkøàj¸àcøà yiå9dèy/&¸àjøà¢8à¢ùâë9êâøàeøàgùd#9¦`¹.èú,áù¥¦xàiøàfxà ˆ‹ˆÛİ™\‚ˆœX›XØ][ÛœËÜÛØÚY]KYÙ[ÙÜ˜\YKXÙ[˜[X[Y\šXØK\™\ÜLNÍ‹ØÛİ™\‹šœÈ‹ˆ‚ˆœX›XØ][ÛœËÜÛØÚY]KYÙ[ÙÜ˜\YKXÙ[˜[X[Y\šXØK\™\ÜLNÍ‹ÔÛØÚY]WÙWÑÙ[ÙÜ˜\YWĞÛÛ[Z]YWÔ™\ÜĞÙ[˜[Ğ[Y\šXØWÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\X‚ˆœX›XØ][ÛœËÜÛØÚY]KYÙ[ÙÜ˜\YKXÙ[˜[X[Y\šXØK\™\ÜLNÍ‹ÔÛØÚY]WÙWÑÙ[ÙÜ˜\YWĞÛÛ[Z]YWÔ™\ÜĞÙ[˜[Ğ[Y\šXØWÌNÍ—Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÌKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹iå9dèy/&¹h,ydbˆ‹º  ùcé9ki¹cìˆ‹¹g,9ä!¹ki¹cìˆ—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸ààxà¨¸àäxà®H‹ˆ¸àé¸àªøà¯øàìÈ‹ˆ¸àæ¸àá¸àìÈ‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àèxà«xà­øà¬È‹ˆKˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÂˆ¹g,9ä!¹ki¹/&ˆ‹ˆ¹¡î:,çˆ‹ˆ¸àäxàë8àìøà¬H‹ˆ¸à¬øàäxàìÈ‹ˆ¸àåxà¨¸àìøàîøà«8àê¸àìøàâH‹ˆ¸àåxàë8àáøàê¸ààøà«øàîøà©¸àªxàêøàáøààøà«È‹ˆ¸à«¸àê8àï8àè8àîøàáøàéxàæˆ‹ˆŒNy.%¹í ‹ˆKˆKˆÂˆÛYÎˆšX™\ËX[™][\\Ë]›ÛLH‹ˆ]Nˆº`ê9¥ãøàj9ég¹«¯øà 9ë+ymîÈ‹ˆÜšYÚ[˜[]N‚ˆ•šX™\È[™[\\ÎˆH™XÛÜ™ÙˆH^Y][ÛˆÈZYH[Y\šXØHÛÛ™XİYH[[™H[š]™\œÚ]H[ˆNLK›Û[YHH‹ˆİX]NˆŒNL¹nm9b"¸àîùc§ùb"¹§+9¥¡Ìx $ÌŒÎ:h H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxàêxàìøà®xàîøàå¸àëxàè;ï#øàª¸àê¸àí8à¨xàï8àîøàêxàîøàåxà¨xàï8à®‹ˆÙ\šY\Îˆ•’P‘TÈS‘STTÈ0­È“ÓSQHH0­ÈNLˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNL¹nm‹ˆYX\ˆNL‹ˆ^[ˆÎzh xàîùc§ùb"¹§+9¥¡Ìx $ÌŒÎ:h xàîùåj¹cíù.æ9£/ùfìÌNM9à®xàîùg,9fìÍ9à®xàîùfìùâb¹à®H‹ˆ\ØÜš\[Û‚ˆ¸ààxàéxàë8àï8àìùi)ùki¸àcNLynm8àjùk§ù¥¯xàeøàgù.+yi+¸à¨¸àèxàê¸àªú*¯ù§îøàkº*&:c,¸à yë+ymîøà ¹c§ùb"¹§+9¥¡Ìx $ÌŒÎ:h xà¤¹ç yåixàj¸àcú*,øàeøà yåj¹cíù.æ9£/ùfìÌx $ÌNM8à yg,9fìÒx $ÒU¸à yfìùâbx $Õ’xà yc§ùb"¹¢bxàb¸à¢8àlùêè9§*øàªøààøàâ8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛLKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛLKÕšX™\×Ø[™Õ[\\×Õ›ÛÒWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛLKÕšX™\×Ø[™Õ[\\×Õ›ÛÒWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÎKˆšYİ\™PÛİ[ˆNMˆ]PÛİ[ˆLˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹¹£¨¹©':*&‹¹¬$y¥ãú*£—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àèxà«xà­øà¬È‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆŒNLynm:*¯ù§îÈ‹ˆ¸ààxàéxàë8àï8àìùi)ùkiˆ‹ˆ¹c§ùb"¹fìùâb‹ˆ¹g,9fìÈ‹ˆ¸àåxàêxàìøà®xàîøàå¸àëxàè‹ˆ¸àª¸àê¸àí8à¨xàï8àîøàêxàîøàåxà¨xàï8à®‹ˆKˆKˆÂˆÛYÎˆšX™\ËX[™][\\Ë]›ÛLˆ‹ˆ]Nˆº`ê9¥ãøàj9ég¹«¯øà 9ë+RymîÈ‹ˆÜšYÚ[˜[]N‚ˆ•šX™\È[™[\\ÎˆH™XÛÜ™ÙˆH^Y][ÛˆÈZYH[Y\šXØHÛÛ™XİYH[[™H[š]™\œÚ]H[ˆNLK›Û[YHRH‹ˆİX]NˆŒNLùnm9b"¸àîùc§ùb"¹§+9¥¡ÌŒÎx $ÍMLºh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxàêxàìøà®xàîøàå¸àëxàè;ï#øàª¸àê¸àí8à¨xàï8àîøàêxàîøàåxà¨xàï8à®‹ˆÙ\šY\Îˆ•’P‘TÈS‘STTÈ0­È“ÓSQHRH0­ÈNLÈ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNLùnm‹ˆYX\ˆNLËˆ^[ˆMM:h xàîùc§ùb"¹§+9¥¡ÌŒÎx $ÍMLºh xàîùåj¹cíù.æ9£/ùfìÌN9à®xàîùg,9fìÌyà®xàîùfìùâbyà®H‹ˆ\ØÜš\[Û‚ˆ¸ààxàéxàë8àï8àìùi)ùki¸àcNLynm8àjùk§ù¥¯xàeøàgù.+yi+¸à¨¸àèxàê¸àªú*¯ù§îøàkº*&:c,¸à yë+Rymîøà ¹c§ùb"¹§+9¥¡ÌŒÎx $ÍMLºh xà¤¹ç yåixàj¸àcú*,øàeøà yåj¹cíù.æ9£/ùfìÌNMx $ÌÍÍ8à yg,9fìÕ¸à yfìùâb’Rxà yc§ùb"¹¢bxàb¸à¢8àlùêè9§*øàªøààøàâ8à¤¹cãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛL‹ØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛL‹ÕšX™\×Ø[™Õ[\\×Õ›ÛÒRWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËİšX™\ËX[™][\\Ë]›ÛL‹ÕšX™\×Ø[™Õ[\\×Õ›ÛÒRWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆMMˆšYİ\™PÛİ[ˆNˆ]PÛİ[ˆ‹ˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹¹£¨¹©':*&‹¹¬$y¥ãú*£—Kˆ™YÚ[ÛœÎˆÈ¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸àèxà«xà­øà¬È‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆŒNLynm:*¯ù§îÈ‹ˆ¸ààxàéxàë8àï8àìùi)ùkiˆ‹ˆ¹c§ùb"¹fìùâb‹ˆ¹g,9fìÈ‹ˆ¸àåxàêxàìøà®xàîøàå¸àëxàè‹ˆ¸àª¸àê¸àí8à¨xàï8àîøàêxàîøàåxà¨xàï8à®‹ˆKˆKˆÂˆÛYÎˆ™YØ[‹]ŞY\‹LNLÌ‹ˆ]N‚ˆ¸àá¸àã¸à­øà¬xàîøàå8àª8àâxàêxà®xàîøàãxà¬8àêxà®ze¤øàk¹g,9oh¹fìøàj9.æ9lg¹¥¡ù¦î‹ˆÜšYÚ[˜[]N‚ˆ•ÜÙÜ˜\XØ[X\Ùˆ[™™]ÙY[ˆ[›ÜÚ\]YH	ˆYY˜\È™YÜ˜\ËÚİÚ[™È˜Z[È	ˆ›Ú™XİYØ\›ØYÈ‹ˆİX]NˆŒNLÌ8 $ÌNLÌynm8àîùajLùå.ù`ãúh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ•8àîøà©8àï8à«8àìûï'xàëøà©8à¨¸àï‹ˆÙ\šY\Îˆ”S“ˆUTÑUSHTÒU‘TÈ0­ÈKSUKŒLLH0­È“ÖH0­È“ÓTˆˆ‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNLÌ8 $ÌNLÌynm9/g9¢$;ï"9§*¹b"¸à¨¸àï8àªøà©8àåº,áù¥¦{ï"H‹ˆYX\ˆNLÌˆ^[‚ˆŒŒzh xàîú*,ù¥¡ÎLúh xàîùc§ú,áù¥¦xàåxà¨xà«øà­øàçøàêŒLúh xàîùfìùâbL9í&z$bH‹ˆ\ØÜš\[Û‚ˆ¸àæ¸àìùcf¹âjzi*8à¨¸àï8àªøà©8àå¸àjù«¢øà¢ù¢bù£ãøàcyg,9oh¹fìøàj9.æ9lg¹¥¡ù¦î9ï©8à ºfáùå*9idyí!8à y¦î9ì(xà zfîùh,xà z`dú-ëù.¢9`¦z.#ù§îùh,ydb¸à z,®ùå*:)¢ùêcxà y©âú`(9åiyfìøà yg'ùfj9fìøàj¸àjxà xàåxàªxàêøàà8àï9ajLùå.ù`ãúh xà¤ºh!¹n£øàjxàb¸à¢¹ïîú*,øàeøà yfìùâbL9í&z$bxàj9c§ú,áù¥¦xàåxà¨xà«øà­øàçøàê¸à¤¹á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙYØ[‹]ŞY\‹LNLÌØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙYØ[‹]ŞY\‹LNLÌÑYØ[—ÕŞY\—ÕÜÙÜ˜\XØ[ÓX\Ø[™ĞXØÛÛ\[Z[™×ÑØİ[Y[×Ò˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙYØ[‹]ŞY\‹LNLÌÑYØ[—ÕŞY\—ÕÜÙÜ˜\XØ[ÓX\Ø[™ĞXØÛÛ\[Z[™×ÑØİ[Y[×Ò˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒKˆÙX\˜ÚØÜ”YÙS[Z]ˆLËˆšYİ\™PÛİ[ˆLˆ]PÛİ[ˆˆ\\ÎˆÈ¹g,9oh¹fìÈ‹º*¯ù§îùh,ydbˆ‹¹. 9«(ycì¹¥¦H‹¹¦î9ì(H—Kˆ™YÚ[ÛœÎˆÂˆ¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ‹ˆ¸àá¸àã¸à­øà¬H‹ˆ¸àå8àª8àâxàêxà®xàîøàãxà¬8àêxà®H‹ˆ¸à¯øàä8à®xà¬È‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆKˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ‹¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆº`dú-ëú*¯ù§îÈ‹ˆº*"9å.ú#mú.âº`dÈ‹ˆ¸àæ¸àìùcf¹âjzi*‹ˆ¸à¨¸àï8àªøà©8àåº,áù¥¦H‹ˆ¹c§ú,áù¥¦xàåxà¨xà«øà­øàçøàêˆ‹ˆ¹á(z(ày¥«yfìùâb‹ˆKˆKˆÂˆÛYÎˆœØ\\‹YX\İ\›‹[XØ[™ÛœËLNLH‹ˆ]Nˆ¹§lz`ê8àêxàªøàìøàâxàìù.®¸à¤º**¸àkxàiˆ‹ˆÜšYÚ[˜[]Nˆ‘Z[ˆ™\İXÚ™ZH[ˆ0íœİXÚ[ˆXØ[™Û™[ˆ‹ˆİX]NˆŒNLynm9ænº(j8àîøà#‘\È]\Û[™8à#ù£¬º/"z*å¹¥¡È9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àªøàï8àêøàîøà­¸ààøàäxàï‹ˆÙ\šY\Îˆ‘TÈUTÓS‘0­È”‹ˆH0­ÈNLH‹ˆÜšYÚ[˜[X›XØ][ÛˆŒNLynm‹ˆYX\ˆNLKˆ^[ˆŒL:h xàîù§+9¥¡ÌLy«­z$/xàîùc§ù¬êù.í¸àîùc§ú*£8àåxà¨xà«øà­øàçøàê:h H‹ˆ\ØÜš\[Û‚ˆ¸ààxà¨¸àäxà®y§lz`ê8àj8àæ¸àá¸àìú)oú`ê8àk¸àêxàªøàìøàâxàìù.®¸àjøài8àa8ài¸à xà­¸ààøàäxàï8àc8à©8à­xàìúfáº$/xàj8àç¸àìøààxà©øàîøàá¸àâ¸àçøàâ:**¹ecøà¤¹.©8àb8ài¹h,ydb¸àeøàgù¬$y¥ãú*£9æ¡:*&:c,¸à ¹§+9¥¡ÌLy«­z$/xà yc§ù¬êù.í¸à y§*ùl/¹¥éy.æ8à¤¹ç yåixàj¸àcú*,øàeøà yc§ú*£L¸ $ÎMzh xàk¹aj:h xà¤¹í&zgh¹aj9/døàk¸ào¸ào¹á(z(ày¥«xàiùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÜØ\\‹YX\İ\›‹[XØ[™ÛœËLNLKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÜØ\\‹YX\İ\›‹[XØ[™ÛœËLNLKÔØ\\—ÑX\İ\›—ÓXØ[™Ûœ×ÌNLWĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÜØ\\‹YX\İ\›‹[XØ[™ÛœËLNLKÔØ\\—ÑX\İ\›—ÓXØ[™Ûœ×ÌNLWĞÛÛ\]WÒ˜\[™\ÙWÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹£¨¹©':*&‹¹¬$y¥ãú*£‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àêxàªøàìøàâxàìÈ‹¸ààxà¨¸àäxà®H‹¸àæ¸àá¸àìÈ‹¸à©¸à®xàç¸à­øàìøà¯ùmçy­`ygçÈ—Kˆ[™İXYÙ\ÎˆÈ¸àâxà©8àá:*§ˆ—KˆYÜÎˆÂˆ¸àêxàªøàìøàâxàìù.®ˆ‹ˆ¸à©8à­xàìÈ‹ˆ¸àç¸àìøààxà©øàîøàá¸àâ¸àçøàâ‹ˆ¸àê¸àª¸àîøàáøàîøàêxàîøàäxà­øàª¸àìÈ‹ˆŒNy.%¹í 9¬$y¥ãú*£‹ˆ¹c§ú*£8àåxà¨xà«øà­øàçøàêˆ‹ˆKˆKˆÂˆÛYÎˆ™œšYYšXÚİ[^]XØ][‹LNH‹ˆ]Nˆ¸àé¸àªøà¯øàìøàkº*&9oíyâjH‹ˆÜšYÚ[˜[]Nˆ“\È[Û[Y[ÈH8 &V]XØ][ˆ‹ˆİX]NˆŒNynm9b'yaîº*£8àîù§+9¥¡øàb¸à¢8àlùc§ù¬ê9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àª8àç¸àã8àª8àêøàîøàåxàªxàìøàîøàåxàê¸àï8àâxàê¸àä¸à®xà¯øàï8àêÈ‹ˆÙ\šY\ÎˆTÒQSÓÑÒPĞS‘TÔ•0­ÈNH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àäxàê¸à LNynm‹ˆYX\ˆNKˆ^[ˆ”ˆNzh xàîùc§ùb"ŒLKLÌM:h xàîùc§ù¬ê9.íˆ‹ˆ\ØÜš\[Û‚ˆ¸àª¸àï8à®xàâ8àê¸à¨¸àk¹i%¹.©9k¦8àåxàê¸àï8àâxàê¸àä¸à®xà¯øàï8àêøàc8à y.+yi+¸à¨¸àèxàê¸àªøàk¹g,9ä!¸àj9àjùllxà xàé¸àªøà¯øàìùcb¹lí¸àkº!ê¹á-¹ä¬9h øà xààxààxà©øàìøàîøà©8àá8à¨xàb¸à¢8àløà©¸à­øàéxàç¸àêøàk¹nî¹ëâxà yb'y§'øàà8à¬¸àë8àª¸à¯øà©8àåù¤«¹olxàk¹.¢ù áxà¤¹h,ydb¸àeøàgÌNynm8àkº  ùcé9ki¸àîùg,9ä!¹h,ydb¸à ¹b'yaîº*£LKLÌM:h xàk¹§+9¥¡øà yïl¹d#xà yc§ù¬ê9.í¸à¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙœšYYšXÚİ[^]XØ][‹LNKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙœšYYšXÚİ[^]XØ][‹LNKÑœšYYšXÚİ[Ó\×Ó[Û[Y[×ÙWÛÖ]XØ][—ÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙœšYYšXÚİ[^]XØ][‹LNKÑœšYYšXÚİ[Ó\×Ó[Û[Y[×ÙWÛÖ]XØ][—ÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆNKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈº*¯ù§îùh,ydbˆ‹º  ùcé9ki¹è%9êmˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸àé¸àªøà¯øàìÈ‹¸ààxààxà©øàìøàîøà©8àá8à¨H‹¸à©¸à­øàéxàç¸àêÈ‹¸àèxà«xà­øà¬È—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÂˆ¸àç¸àé:  ùcé9kiˆ‹ˆ¸ààxààxà©øàìøàîøà©8àá8à¨H‹ˆ¸à©¸à­øàéxàç¸àêÈ‹ˆ¸àà8à¬¸àë8àª¸à¯øà©8àåÈ‹ˆŒNy.%¹í ‹ˆ¹c§ú*£9b'yaîˆ‹ˆKˆKˆÂˆÛYÎˆ›YX[œË^]XØ][‹Z]˜\ËLNLMÈ‹ˆ]Nˆ¸à®xàæ¸à©8àìøàjøà¢8à¢øàé¸àªøà¯øàìøàb¸à¢8àløà©8àá8à¨yo y§#ycìˆ‹ˆÜšYÚ[˜[]Nˆ’\İÜHÙˆHÜ[š\ÚÛÛœ]Y\İÙˆ]XØ][ˆ[™ÙˆH]˜\È‹ˆİX]Nˆ¸àç¸àé:*î9fïxàk¹oh¹¢$8àbøà¢xà¯øàé8à­xàêúfiz$/xào¸àiøàîÌNLMùnm9b'yâb9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àåxà¨øàê¸ààøàåøàîøàª8à©8àìøà®¸àëøàï8à®xàîøàçøàï8àìøà®ˆ‹ˆÙ\šY\Îˆ’TÕÔ–H0­ÈNLMÈ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àç¸à­xààxàéxàï8à®øààøàá9mç¸à¬xàìøàå¸àê¸ààøà®8à LNLMùnm‹ˆYX\ˆNLMËˆ^[ˆ”ˆúh xàîùc§ùb"¹bcy.æ8àîù§+9¥¡ÌKLŒºh xàîùc§ù¬êL9à®xàîùfìùâbùà®H‹ˆ\ØÜš\[Û‚ˆ¸àç¸àé8àîøà©8àá8à¨z*î9fïxàk¹oh¹¢$8à xàè¸àìøàá¸àæùâ-¹kd8àjøà¢8à¢øàé¸àªøà¯øàìùo y§#xà xàåxàêxàìøà­øà®xà¬ù/&¹hêøàk¹n ù¥fz`h9o xà xà¨¸àæxàìøàà8àï8àâøàéøàk¹¥áz(c:*&8à LMMùnm8àk¸à¯øàé8à­xàêúfiz$/xà¤¹¢lxàa¸àçøàï8àìøà®¸àk¹«m9cì¹è%9êm¸à ¹b'yâb8àk¹bcy.æ8à y§+9¥¡ÌKLŒºh xà y.æ:c,¸à y¥¡ùã+¹. :)©øà yc§ù¬êL9à®xà yfìùâbùà®xà¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛYX[œË^]XØ][‹Z]˜\ËLNLMËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÛYX[œË^]XØ][‹Z]˜\ËLNLMËÔ[\ĞZ[œİÛÜÓYX[œ×Ò\İÜWÛÙ—İWÔÜ[š\ÚĞÛÛœ]Y\İÛÙ—Ö]XØ][—Ø[™ÛÙ—İWÒ]˜\×ÌNLM×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÛYX[œË^]XØ][‹Z]˜\ËLNLMËÔ[\ĞZ[œİÛÜÓYX[œ×Ò\İÜWÛÙ—İWÔÜ[š\ÚĞÛÛœ]Y\İÛÙ—Ö]XØ][—Ø[™ÛÙ—İWÒ]˜\×ÌNLM×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆËˆ\\ÎˆÈ¹«m9cì¹¦î‹¹o y§#ycìˆ‹¹«m9cìº*åº  È—Kˆ™YÚ[ÛœÎˆÈ¸àé¸àªøà¯øàìÈ‹¸àæ¸àá¸àìÈ‹¸à¬8à¨¸àá¸àç¸àêH‹¸àèxà«xà­øà¬È‹¸àªøàìøàæ¸ààxà©È‹¸àêxàªøàìøàâxàìÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¸à©8àá8à¨H‹ˆ¸à¯øàé8à­xàêÈ‹ˆ¸à¨¸àæxàìøàà8àï8àâøàéÈ‹ˆ¸àè¸àìøàá¸àæÈ‹ˆ¸àç¸àé9cìˆ‹ˆ¸àåxàêxàìøà­øà®xà¬ù/&ˆ‹ˆ¸à®xàæ¸à©8àìùo y§#H‹ˆKˆKˆÂˆÛYÎˆ™[›ÜXÙ[˜[X[Y\šXØKLNÈ‹ˆ]Nˆ¹.+yi+¸à¨¸àèxàê¸àªù¥áz(c:*&‹ˆÜšYÚ[˜[]Nˆ•˜]™[È[ˆÙ[˜[[Y\šXØH‹ˆİX]Nˆ¹í!ùnm:e¤øàk¹®ç¹g*9¥éz*£8à yalyd£9fïycì¸à xàb¸à¢8àlù¬%ù`&xàîùå(ùâjxàîú`&¹eaˆ‹ˆ]]Üˆ¸àëxàä8àï8àâ8àîøà¬8àêxà®xà­8àï8àîøàà8àìøàëxààøàåÈ‹ˆÙ\šY\Îˆ’TÕÔ’PĞSU‘ST”UU‘H0­ÈNÈ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àëxàìøàâxàìøà LNùnm‹ˆYX\ˆNËˆ^[ˆ”ˆÌÎzh xàîùc§ùb"¹bcy.æ8àîù§+9¥¡ÌKLÍN:h xàîù¢¦:/¯9g,9fìÌyà®H‹ˆ\ØÜš\[Û‚ˆŒN9nm8àbøà¢LN¹nm8ào¸àiøàk¹.+yi+¸à¨¸àèxàê¸àªù¥áz(c8àîù®ç¹g*9¥éz*£8àj8à y.+yi+¸à¨¸àèxàê¸àªùalyd£9fïxàk¹âë9êâøàbøà¢z`(ú`©º)èù/dùo£8ào¸àiøàk¹«m9cì¸à y¬%ù`&xàîùå(ùâjxàîùbåyâjxàîùg,:,ê¸àîúblyâjxàîùàjùllxàîùg,:g!øà zhçùå'ù­.øàîù/cùlaxàîú`&¹ea¸àîú,¨y¥/øàîù.©:`&¸à y.®¹cèøàîù¥fz ¬¸àîùk¥ù¥fxàîùcî9¬åxàjøài8àa8ài¸àkº*&:c,¸à ŒNùnm9b'yâb8àk¹bcy.æ8à y§+9¥¡ÌKLÍN:h xà y¢¦:/¯9g,9fìÌyà®xà¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÙ[›ÜXÙ[˜[X[Y\šXØKLNËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÙ[›ÜXÙ[˜[X[Y\šXØKLNËÔ›Ø™\ÑÛ\ÙÛİ×Ñ[›ÜÕ˜]™[×Ú[—ĞÙ[˜[Ğ[Y\šXØWÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÙ[›ÜXÙ[˜[X[Y\šXØKLNËÔ›Ø™\ÑÛ\ÙÛİ×Ñ[›ÜÕ˜]™[×Ú[—ĞÙ[˜[Ğ[Y\šXØWÌN×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆÌÎKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆKˆ\\ÎˆÈ¹¥áz(c:*&‹¹«m9cì¹¦î‹¹cf¹âjz*£—Kˆ™YÚ[ÛœÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªÈ‹ˆ¸à¬8à¨¸àá¸àç¸àêH‹ˆ¸àª8àêøà­xàêøàä8àâxàêÈ‹ˆ¸àæøàìøà®8àéxàêxà®H‹ˆ¸àâøàªøàêxà¬8à¨ˆ‹ˆ¸à¬øà®xà¯øàîøàê¸àªÈ‹ˆKˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÂˆ¹.+yi+¸à¨¸àèxàê¸àªùalyd£9fïH‹ˆŒNy.%¹í ‹ˆ¹¥áz(c9¥éz*£‹ˆ¹alyd£9fïycìˆ‹ˆº!ê¹á-º*£‹ˆ¹¢¦:/¯9g,9fìÈ‹ˆKˆKˆÂˆÛYÎˆ˜˜[™[Y\‹^]XØ][‹XÙ[˜[X[Y\šXØKLNH‹ˆ]Nˆ¸àé¸àªøà¯øàìøàb¸à¢8àlù.+yi+¸à¨¸àèxàê¸àªù¥¡ùã+º)èúhc‹ˆÜšYÚ[˜[]Nˆ“›İ\ÈÛˆHšX›[ÙÜ˜\HÙˆ]XØ][ˆ[™Ù[˜[[Y\šXØH‹ˆİX]NˆŒNynm9b)yb-øàîùc§ùb"¹§+9¥¡Ìø $ÌÎzh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à¨¸àâxàêøàåxàîÑ¸àîøàä8àìøàáøàê¸à¨ˆ‹ˆÙ\šY\Îˆ’P“SÑÔTPĞSÕQH0­ÈNH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àç¸à­xààxàéxàï8à®øààøàá9mç¸à©¸à®xà¯øàï8à LNynm‹ˆYX\ˆNKˆ^[ˆ”ˆŒúh xàîùc§ùb"¹§+9¥¡Ìø $ÌÎzh xàîùc§ù¬êy.í¸àîùc§ùb"¹å.ù`ãÌ¹à®H‹ˆ\ØÜš\[Û‚ˆ¸àé¸àªøà¯øàìøà xààxà¨¸àäxà®xà xà¬8à¨¸àá¸àç¸àêxà xàª¸à¨¸àãøàªøà¤¹kïº,hxàjøà LM¹.%¹í 8àbøà¢LNy.%¹í 9o£9cb¸ào¸àiøàk¹¥áz(c:*&8à ynm9.èú*&8à yh,ydb¹¦î8à yg,9fìøà z  ùcé9ki¸àîú* :*§¹ki¹¥¡ùã+¸à¤¹nm9.èùb)xàjú*åº*exàeøàgù¥¡ùã+º)èúhc8à ŒNynm9b)yb-øàk¹i%º(áz(j9í&xà yª&zhc9í&xà y§+9¥¡Ìø $ÌÎzh xà yc§ù¬êy.í¸à¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØ˜[™[Y\‹^]XØ][‹XÙ[˜[X[Y\šXØKLNKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØ˜[™[Y\‹^]XØ][‹XÙ[˜[X[Y\šXØKLNKĞYÛÑ—Ğ˜[™[Y\—Ó›İ\×ÛÛ—İWĞšX›[ÙÜ˜\WÛÙ—Ö]XØ][—Ø[™ĞÙ[˜[Ğ[Y\šXØWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØ˜[™[Y\‹^]XØ][‹XÙ[˜[X[Y\šXØKLNKĞYÛÑ—Ğ˜[™[Y\—Ó›İ\×ÛÛ—İWĞšX›[ÙÜ˜\WÛÙ—Ö]XØ][—Ø[™ĞÙ[˜[Ğ[Y\šXØWÌNWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆŒËˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆ‹ˆ\\ÎˆÈ¹¦î:*£‹¹è%9êm¹cìˆ—Kˆ™YÚ[ÛœÎˆÈ¸àé¸àªøà¯øàìÈ‹¸ààxà¨¸àäxà®H‹¸à¬8à¨¸àá¸àç¸àêH‹¸àª¸à¨¸àãøàªÈ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¹¥¡ùã+¹æëºc,ˆ‹¸àäxàë8àìøà¬H‹¸à¬øàäxàìÈ‹¸àçøàâ8àêH‹ŒNy.%¹í —KˆKˆÂˆÛYÎˆœ˜]K\[[œ]YK]X›]LNÎH‹ˆ]Nˆ¹d":(a¹fïyfïyêâùcf¹âjzi*9¢`:%-xàäxàë8àìøà¬yçìù§oÈ‹ˆÜšYÚ[˜[]N‚ˆ•H[[œ]YHX›][ˆH[š]Yİ]\È˜][Û˜[]\Ù][H‹ˆİX]NˆŒNÎynm9b'yâb8àîùc§ùb"¹§+9¥¡Ìx $Îzh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸ààxàèøàï8àêøà®¸àîøàêxà©ˆ‹ˆÙ\šY\Îˆ”ÓRUÓÓ’PSˆÓÓ•’P•USÓ”ÈÈÓ“ÕÓQÑH0­È“ËˆÌÌH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àëøà­øàìøàâ8àìÑË¸à LNÎynm‹ˆYX\ˆNÎKˆ^[ˆ”ˆLÌ:h xàîùc§ùb"¹§+9¥¡Ìx $Îzh xàîùc§ù¬êMLy.í¸àîùc§ùb"¹å.ù`ãÌŒ¹à®H‹ˆ\ØÜš\[Û‚ˆ¹d":(a¹fïyfïyêâùcf¹âjzi*8àjùcãº%-xàexà£8àgøàäxàë8àìøà¬yçìù§oøàk¹§iy«m8àj9fìù`ãøà¤¹.+yoàøàjøà xàäxàë8àìøà¬y£¨¹§îùcì¸à yc`ykeù§­¸àk¹ég¹«¯øà xàèxà«xà­øà¬øàîøàé¸àªøà¯øàìøàîù.+yi+¸à¨¸àèxàê¸àªøàk¹ab9/cù¬$y¥¡ùkeøà¤º*å¸àf8àgùè%9êm¸à ŒNÎynm9b'yâb8àk¹bcy.æ8à y§+9¥¡Ìx $Îzh xà yc§ù¬êMLy.í¸à yí(¹o%xà yc§ùb"¹å.ù`ãÌŒ¹à®xà¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÜ˜]K\[[œ]YK]X›]LNÎKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÜ˜]K\[[œ]YK]X›]LNÎKĞÚ\›\×Ô˜]WÕWÔ[[œ]YWÕX›]Ú[—İWÕ[š]YÔİ]\×Ó˜][Û˜[Ó]\Ù][WÌNÎWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÜ˜]K\[[œ]YK]X›]LNÎKĞÚ\›\×Ô˜]WÕWÔ[[œ]YWÕX›]Ú[—İWÕ[š]YÔİ]\×Ó˜][Û˜[Ó]\Ù][WÌNÎWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆLÌˆšYİ\™PÛİ[ˆŒˆ]PÛİ[ˆ‹ˆ\\ÎˆÈº  ùcé9ki¹è%9êmˆ‹º*¯ù§îùh,ydbˆ‹¹fìùâb:fáˆ—Kˆ™YÚ[ÛœÎˆÈ¸àäxàë8àìøà¬H‹¸ààxà¨¸àäxà®H‹¸àèxà«xà­øà¬È‹¸àé¸àªøà¯øàìÈ‹¹.+yi+¸à¨¸àèxàê¸àªÈ—Kˆ[™İXYÙ\ÎˆÈº"ìz*§ˆ—KˆYÜÎˆÈ¸àäxàë8àìøà¬yçìù§oÈ‹¹c`ykeù§­¸àk¹ég¹«¯È‹¸àç¸àé9¥¡ùkeÈ‹¸à®xàçøà¯xàâøà¨¸àìÈ‹ŒNy.%¹í —KˆKˆÂˆÛYÎˆ˜Ú\™[˜Ù^K]›İ[‹LNÌH‹ˆ]Nˆ¸àí8àªxà¯øàìùégº*lH‹ˆÜšYÚ[˜[]N‚ˆ“H^]HH›İ[ˆˆ0ê]YHİ\ˆ\ÈÜšYÚ[™\È\ÚX]\]Y\ÈHHÚ]š[\Ø][Ûˆ[pê\šXØZ[™H‹ˆİX]NˆŒNÌynm9b"¸àîù§+9¥¡øà yæë¹«(xà z/ïz(ç8à y«hú*©:(j9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à©8à¨¸à­xàìøàâ8àîøàâxàîøà­øàèøàêxàìøà®È‹ˆÙ\šY\ÎˆÓÓTTUU‘HVUÓÑÖH0­ÈNÌH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸à¨¸àêxàìøà¯xàìøà LNÌynm‹ˆYX\ˆNÌKˆ^[ˆ”ˆMzh xàîùc§ùb"¹§+9¥¡Íø $ÌM:h xàîùc§ù¬ê¹.í¸àîùc§ùb"¹å.ù`ãÍ9à®H‹ˆ\ØÜš\[Û‚ˆ¸àí8àªxà¯øàìù/'y¢oøà¤¹.+yoàøàjøà xàèxà¯xà¨¸àèxàê¸àªøà y§lyceøà¨¸à®8à¨¸à xà©8àìøàâxà xà«¸àê¸à­øà¨¸àk¹égº*lxàj9ïä¹/åøà¤¹«å:/ øàeøà xà¨¸àèxàê¸àªù¥¡ù¦#¸àk¸à¨¸à®8à¨º-mù®¤8à¤º*å¸àf8àgÌNy.%¹í 8àk¹«å:/ ùégº*lyè%9êm¸à ¹bcy.æ8à y§+9¥¡øà yc§ù¬ê¹.í¸à yæë¹«(xà z/ïz(ç8à y«hú*©:(j8à¤¹ç yåixàj¸àcùcãºc,¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËØÚ\™[˜Ù^K]›İ[‹LNÌKØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËØÚ\™[˜Ù^K]›İ[‹LNÌKÒXXÚ[WÙWĞÚ\™[˜Ù^WÓWÛ^]WÙWÕ›İ[—ÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËØÚ\™[˜Ù^K]›İ[‹LNÌKÒXXÚ[WÙWĞÚ\™[˜Ù^WÓWÛ^]WÙWÕ›İ[—ÌNÌWÒ˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆMKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆˆ\\ÎˆÈ¹«å:/ ùégº*lH‹¹«m9cìº*åº  È—Kˆ™YÚ[ÛœÎˆÈ¸ààxà¨¸àäxà®H‹¸àäxàë8àìøà¬H‹¹.+yi+¸à¨¸àèxàê¸àªÈ‹¸à¨¸à®8à¨ˆ—Kˆ[™İXYÙ\ÎˆÈ¸àåxàêxàìøà®z*§ˆ—KˆYÜÎˆÈ¸àí8àªxà¯øàìÈ‹¹«å:/ ùégº*lH‹¹¥¡ù¦#º-mù®¤:*åˆ‹ŒNy.%¹í —KˆKˆÂˆÛYÎˆ›Ü™Û™^‹XÜ™X][Û‹LNLÈ‹ˆ]Nˆ¸à¨¸àèxàê¸àªùål9¥fy/dùìîøàjøà¢8à¢ùi*yg,9bmz`(9cìˆ‹ˆÜšYÚ[˜[]N‚ˆ’\İÜšXHHHÜ™XXÚpìÛˆ[ÚY[ÈHHHY\œ˜HÛÛ™›Ü›YH[Ú\İ[XHHHÙ[[YY[Y\šXØ[˜H‹ˆİX]NˆŒNLùnm9b"¹ãï¹kf9§*¹k£9§+8àîùbcy.æ8àb¸à¢8àlù§+9¥¡Ìx $ÌLŒ:h H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸àêxàè¸àìøàîøàáøàîøàª¸àêøàâxàâøà©øà®xàîøà©8àîøà¨¸à«¸à¨¸àêÈ‹ˆÙ\šY\Îˆ’TÕÔ’PHHHÔ‘PPÒpäÓˆ0­ÈNLÈ‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àèxà«xà­øà¬øà LNLùnm‹ˆYX\ˆNLËˆ^[‚ˆ”ˆMzh xàîùbcy.æRRx $Õ’RRzh xàîù§+9¥¡Ìx $ÌLŒ:h xàîùc§ù¬êMy.í¸àîùc§ùb"¹å.ù`ãÌ¹à®H‹ˆ\ØÜš\[Û‚ˆº$eú !xàc8à#:&áù¥ãøà#xàk¹/'y¢oøàj9éì8àfxà¢ù¥¡ù¦î8à xàçxàçxàêøàîøàí8àï9ìîøàk¹âjz*§¸à y©#y¬$yg,9§'ùnm9.èú*&8à z e¹¦î8àîùcé9an9¥¡ùã+¸à¤¹íd8àløài8àdxà yi*yg,9bmz`(8à y­*¹¬-8à z*î9¬$y¥ãøàkºfè¹¥høà yab9/cù¬$xàkº-mù®¤8à xàäxàë8àìøà¬xà¤º*å¸àf8àgù«m9cì¹æ¡:$eù/g8à ¸àâøà¬øàêxà®xàîøàë8àª¸àìùb"º(c8àkŒNLùnm9âb8àjøài8àa8ài¸à ybcy.æ8à y§+9¥¡Ìx $ÌLŒ:h xà yc§ù¬êMy.í¸à¤¹ç yåixàj¸àcùcãºc,¸àeøà yë+yêè:`%9.+xàiú`%9b!øà£8à¢ùc§ùb"¹§*ùl/¸à¤º(ç9/g8àføàf¹¦#¹é.¸àeøài¸àa8ào¸àfxà ˆ‹ˆÛİ™\ˆœX›XØ][ÛœËÛÜ™Û™^‹XÜ™X][Û‹LNLËØÛİ™\‹šœÈ‹ˆˆœX›XØ][ÛœËÛÜ™Û™^‹XÜ™X][Û‹LNLËÔ˜[[Û—ÙWÓÜ™Û™^—ŞWĞYİZX\—Ò\İÜšXWÙWÛWØÜ™XXÚ[Û—Ù[ØÚY[×ŞWÙWÛWİY\œ˜WÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹œˆ‹ˆ\XˆœX›XØ][ÛœËÛÜ™Û™^‹XÜ™X][Û‹LNLËÔ˜[[Û—ÙWÓÜ™Û™^—ŞWĞYİZX\—Ò\İÜšXWÙWÛWØÜ™XXÚ[Û—Ù[ØÚY[×ŞWÙWÛWİY\œ˜WÌNL×Ò˜\[™\ÙWĞÛÛ\]WÕ˜[œÛ][Û‹™\Xˆ‹ˆYÙPÛİ[ˆMKˆšYİ\™PÛİ[ˆˆ]PÛİ[ˆ‹ˆ\\ÎˆÈ¹«m9cì¹¦î‹¹égº*lyè%9êmˆ‹¹. 9«(ycì¹¥¦H—Kˆ™YÚ[ÛœÎˆÈ¸ààxà¨¸àäxà®H‹¸àäxàë8àìøà¬H‹¸àèxà«xà­øà¬È‹¸à¬8à¨¸àá¸àç¸àêH—Kˆ[™İXYÙ\ÎˆÈ¸à®xàæ¸à©8àìú*§ˆ—KˆYÜÎˆÂˆ¹i*yg,9bmz`(9égº*lH‹ˆ¸àçxàçxàêøàîøàí8àï‹ˆ¸àí8àªxà¯øàìÈ‹ˆ¹ab9/cù¬$z-mù®¤:*åˆ‹ˆ¹ãï¹kf9§*¹k£9§+‹ˆKˆKˆÂˆÛYÎˆ›K\Û™Ù[Û‹^]XØ][‹LNH‹ˆ]Nˆ¸àé¸àªøà¯øàìøàk¸à`¸àhxàdøàhH‹ˆÜšYÚ[˜[]Nˆ’\™H[™\™H[ˆ]XØ][ˆZ\ØÙ[[šY\È‹ˆİX]Nˆºfäzc,¸àîÌNynm9âb9§+9¥¡Ìx $ÌMºh H9¥éy§+:*§¹aj:*,È‹ˆ]]Üˆ¸à¨¸àê¸à®xàîÑ8àîøàêøàîøàåøàëxàìøà®8àéøàìÈ‹ˆÙ\šY\Îˆ’T‘HS‘T‘HSˆUPĞUSˆ0­ÈNH‹ˆÜšYÚ[˜[X›XØ][Ûˆ¸àâøàéxàï8àê8àï8à«øà LNynm‹ˆYX\ˆNKˆ^5ã}½öÚ$z{-®éÜj×Ÿè‘—æœ¬æ–‡ã¯ç±³å›½ã«ãŠã„ã¦ãƒ‘ãƒ–ãƒªãƒƒã‚¯ãƒ‰ãƒ¡ã‚¤ãƒ³ã§ã™ã€‚Internet Archiveã®å½“è©²ã‚¢ã‚¤ãƒ†ãƒ ã«ã¯å€‹åˆ¥ã®Creative Commonsãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã€rightsæ¬„ã€possible-copyright-statusæ¬„ã®æŒ‡å®šãŒã‚ã‚Šã¾ã›ã‚“ã€‚å…¬é–‹ç”»åƒã®åˆ©ç”¨ã«ã¯Internet Archiveã®Terms of UseãŒé©ç”¨ã•ã‚Œã¾ã™ã€‚",
     "publishedDate": "2026-08-14",
     "updatedDate": "2026-08-14"
   },
@@ -11585,6 +1332,7 @@ const publicationMetadata = {
   ...carranzaPublicationMetadata,
   ...bailyPublicationMetadata,
   ...childsPublicationMetadata,
+  ...usNavyNicaraguaCanalPublicationMetadata,
   ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
