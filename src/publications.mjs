@@ -4,6 +4,10 @@ import {
   bailyPublicationRecords,
 } from "./baily-publication.mjs";
 import {
+  thompsonOfficialVisitPublicationMetadata,
+  thompsonOfficialVisitPublicationRecords,
+} from "./thompson-official-visit-publication.mjs";
+import {
   carranzaPublicationMetadata,
   carranzaPublicationRecords,
 } from "./carranza-publication.mjs";
@@ -9038,6 +9042,7 @@ const publicationRecords = [
   ...vallePublicationRecords,
   ...carranzaPublicationRecords,
   ...bailyPublicationRecords,
+  ...thompsonOfficialVisitPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
 ];
@@ -11574,6 +11579,7 @@ const publicationMetadata = {
   ...vallePublicationMetadata,
   ...carranzaPublicationMetadata,
   ...bailyPublicationMetadata,
+  ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
 };

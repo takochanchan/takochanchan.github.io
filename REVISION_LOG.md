@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-27 — ジョージ・アレグザンダー・トンプソン『メキシコからグアテマラへの公式訪問記』新規公開
+
+- 1829年刊 *Narrative of an Official Visit to Guatemala from Mexico* の原刊前付、序論、本文1–528頁、附録、折込地図1葉を日本語全訳として収録した。ファンコート母版により公開PDF 267頁、EPUBはリフロー型EPUB 3とした。
+- 原刊位置標識543件を本文から独立した右寄せブロックとして収録した。PDF全頁を承認版と比較し、公開直前の修正差分は序論6標識と原刊508頁標識だけで、本文・改頁・表・地図には差分がないことを確認した。
+- 主底本はUniversidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵本のInternet Archive公開画像（`narratiofof00thomguat`）。欠落する序論iv–vはAsiatic Society of Mumbai所蔵同版、折込地図はBibliothèque nationale de France所蔵GE D-2366で補った。
+- 公開PDFのSHA-256は `58effe913ed358c7ec7c21eb465fedc790d4c4d476d82203d797dfe905ee3cca`、EPUBは `2398f7630014b8aa2832760a4874c166ab96a0fdcfdf4f4d65313f0971c578a5`。編集可能正本は非公開原本アーカイブのコミット `0166ae56e2cb15373be36dc6dc36af5527071bf8` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`thompson-official-visit-guatemala-1829`。
+
 ## 2026-08-27 — E・G・スクワイア関連論文5本を新規公開
 
 - 1851年から1870年に刊行されたスクワイア署名論文2本と、後世の著作目録でスクワイアに帰属される原刊無署名論文3本の日本語全訳を公開した。原刊無署名論文は主著者を「無署名」とし、スクワイアへの帰属は暫定帰属として表示する。

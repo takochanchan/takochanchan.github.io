@@ -5587,6 +5587,25 @@
       "rights": "1870年刊の原著本文と原刊図版はパブリックドメインです。Biodiversity Heritage Libraryは当該巻をNOT_IN_COPYRIGHTと表示しています。Internet Archiveの別刷項目には個別の再利用ライセンス表示がありません。",
       "publishedDate": "2026-08-27",
       "updatedDate": "2026-08-27"
+    },
+    {
+      "slug": "thompson-official-visit-guatemala-1829",
+      "recordClass": "major-work",
+      "title": "メキシコからグアテマラへの公式訪問記",
+      "originalTitle": "Narrative of an Official Visit to Guatemala from Mexico",
+      "author": "ジョージ・アレグザンダー・トンプソン",
+      "originalAuthor": "George Alexander Thompson",
+      "year": 1829,
+      "originalPublication": "ロンドン、John Murray、1829年",
+      "sourceEdition": "George Alexander Thompson, Narrative of an Official Visit to Guatemala from Mexico, London: John Murray, Albemarle Street, 1829.",
+      "sourceProvider": "Universidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵本をInternet Archiveが公開する1829年版を主底本とし、主底本で欠落する序論iv–vをAsiatic Society of Mumbai所蔵同版で補いました。折込地図はBibliothèque nationale de France所蔵GE D-2366を用いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/narratiofof00thomguat"
+      },
+      "rights": "1829年刊の原著本文と折込地図はパブリックドメインです。Internet Archiveの主底本とWikimedia Commonsの補完底本はPublic Domain Mark 1.0で公開されています。折込地図はBibliothèque nationale de France所蔵GE D-2366です。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
     }
   ],
   "works": [

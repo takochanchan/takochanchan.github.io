@@ -4448,6 +4448,24 @@
       "sha256": "9af54d91c814fcafe41d0b3ad788401445b7503328dd56101599728927eb049d"
     },
     {
+      "path": "publications/squier-ancient-peru-1853/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.epub",
+      "size": 9064588,
+      "sha256": "3af45aca5861a72ea08cd92adccb9729d670903ba557554712e0f9ffe33e829b"
+    },
+    {
+      "path": "publications/squier-ancient-peru-1853/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.pdf",
+      "size": 4888996,
+      "sha256": "133a53bffa53f5bb0145219e0eee1994d98f7250076506be16118e809d071656"
+    },
+    {
+      "path": "publications/squier-ancient-peru-1853/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-ancient-peru-1853/cover.jpg",
+      "size": 98729,
+      "sha256": "9e4afbc1dfed448610091248f249738435bb1881a14083884ea453fd4e81d0c3"
+    },
+    {
       "path": "publications/squier-british-encroachments-mosquito-question-1850/E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_British_Encroachments_Mosquito_Question_1850_Japanese_Complete_Translation.epub",
       "size": 962676,
@@ -4464,6 +4482,42 @@
       "url": "https://takochanchan.github.io/publications/squier-british-encroachments-mosquito-question-1850/cover.jpg",
       "size": 142681,
       "sha256": "7ce46355f1b894f4690a1204d58db67898c99c3cb7c1c448d9b395111528bea9"
+    },
+    {
+      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.epub",
+      "size": 3953892,
+      "sha256": "f6652bf659dfd1118267b597e64658502bd6b4fd6081642bef316f9d99a90dc3"
+    },
+    {
+      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.pdf",
+      "size": 4230562,
+      "sha256": "35ed0161bdf5fb7a0b9f7c87fe14056a4231dfc74c13f15f8a8e86b1a25e0a75"
+    },
+    {
+      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-chalchihuitls-mexico-central-america-1870/cover.jpg",
+      "size": 123886,
+      "sha256": "4b28fe9b4550f8878ff93d0870f7e4fe384b93d41ae82120e7f34f2a483b64f1"
+    },
+    {
+      "path": "publications/squier-crampton-webster-project-1852/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.epub",
+      "size": 132372,
+      "sha256": "4d19f5c81ea89d6d888b213c414d97438cfe6602a8a7bc80e9830988e81b260f"
+    },
+    {
+      "path": "publications/squier-crampton-webster-project-1852/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.pdf",
+      "size": 626381,
+      "sha256": "9db772f97a3b04953e9873546a0b00e82578d6d4cf440a50562483cce09796cc"
+    },
+    {
+      "path": "publications/squier-crampton-webster-project-1852/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-crampton-webster-project-1852/cover.jpg",
+      "size": 116918,
+      "sha256": "9f155746b3f1c5f202ff2759fa1e032667841b47c8baf767f6355fb1b660c546"
     },
     {
       "path": "publications/squier-davis-ancient-monuments-mississippi-valley-1848/Squier_Davis_Ancient_Monuments_of_the_Mississippi_Valley_1848_Japanese_Complete_Translation.epub",
@@ -4518,6 +4572,24 @@
       "url": "https://takochanchan.github.io/publications/squier-great-ship-canal-question-1850/cover.jpg",
       "size": 181684,
       "sha256": "01d9437091081e995c417afcb4b86b1a903f0b6092aef085fa90f7a813264dbb"
+    },
+    {
+      "path": "publications/squier-great-south-american-earthquakes-1869/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.epub",
+      "size": 8465066,
+      "sha256": "d9d7026ef23aced532a3421f6188e963e3badb1a298c7da1100ca7f90da25b75"
+    },
+    {
+      "path": "publications/squier-great-south-american-earthquakes-1869/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.pdf",
+      "size": 4109672,
+      "sha256": "a8c03210ea27a006cd7d2364f395d8ddd6e9e0274ba37d205b2a7ba2d08757b1"
+    },
+    {
+      "path": "publications/squier-great-south-american-earthquakes-1869/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-great-south-american-earthquakes-1869/cover.jpg",
+      "size": 100625,
+      "sha256": "40bd84af44275b6c40249d9907c22de9a71d38dffe895010526ae9c105ffdf8f"
     },
     {
       "path": "publications/squier-hunting-pass-tropical-adventure-1860/E_G_Squier_Hunting_a_Pass_1860_Japanese_Complete_Translation.epub",
@@ -4608,6 +4680,24 @@
       "url": "https://takochanchan.github.io/publications/squier-notes-central-america-1855/cover.svg",
       "size": 76036,
       "sha256": "ffc851af7744565ac65b3fb8b67fa94904b669f3aa537cfb876616af0a7433ab"
+    },
+    {
+      "path": "publications/squier-observations-zestermann-1851/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.epub",
+      "size": 133047,
+      "sha256": "e76b9456a49ef6f0b6c649920b53ade7758582200e5f063193308ec16d1f8525"
+    },
+    {
+      "path": "publications/squier-observations-zestermann-1851/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.pdf",
+      "size": 361064,
+      "sha256": "7d5870503e2ff0d58c2c6649028d0bc4e79457228568bea20c7816236d17487e"
+    },
+    {
+      "path": "publications/squier-observations-zestermann-1851/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/squier-observations-zestermann-1851/cover.jpg",
+      "size": 127693,
+      "sha256": "f998139696b049719bfa8e38efb1e64d71b17d2ba394354bafe4ad756c803f48"
     },
     {
       "path": "publications/squier-spanish-american-republics-1850/E_G_Squier_Spanish_American_Republics_1850_Japanese_Complete_Translation.epub",
@@ -4842,6 +4932,24 @@
       "url": "https://takochanchan.github.io/publications/thompson-ethnology-mayas-1930/cover.jpg",
       "size": 60961,
       "sha256": "46cd70177488feaa3a027f0670b45c2634833cea85a1e19609e10a53e1a6233c"
+    },
+    {
+      "path": "publications/thompson-official-visit-guatemala-1829/George_Alexander_Thompson_Narrative_Official_Visit_Guatemala_1829_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/George_Alexander_Thompson_Narrative_Official_Visit_Guatemala_1829_Japanese_Complete_Translation.epub",
+      "size": 19245968,
+      "sha256": "2398f7630014b8aa2832760a4874c166ab96a0fdcfdf4f4d65313f0971c578a5"
+    },
+    {
+      "path": "publications/thompson-official-visit-guatemala-1829/George_Alexander_Thompson_Narrative_Official_Visit_Guatemala_1829_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/George_Alexander_Thompson_Narrative_Official_Visit_Guatemala_1829_Japanese_Complete_Translation.pdf",
+      "size": 5061990,
+      "sha256": "58effe913ed358c7ec7c21eb465fedc790d4c4d476d82203d797dfe905ee3cca"
+    },
+    {
+      "path": "publications/thompson-official-visit-guatemala-1829/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/thompson-official-visit-guatemala-1829/cover.jpg",
+      "size": 74631,
+      "sha256": "23ec9de2e9e509d124fe70f6e21945268e8b65f33c096afccfe9ff67517b063d"
     },
     {
       "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub",
@@ -5184,96 +5292,6 @@
       "url": "https://takochanchan.github.io/publications/young-black-charaibs-st-vincent-1795/cover.jpg",
       "size": 74503,
       "sha256": "c30dce2433ab1f7375f3c0e49292f894cc04a46ec4ef305ce25b8f6d3f8faae9"
-    },
-    {
-      "path": "publications/squier-observations-zestermann-1851/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.epub",
-      "size": 133047,
-      "sha256": "e76b9456a49ef6f0b6c649920b53ade7758582200e5f063193308ec16d1f8525"
-    },
-    {
-      "path": "publications/squier-observations-zestermann-1851/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Observations_on_Zestermann_1851_Japanese_Complete_Translation.pdf",
-      "size": 361064,
-      "sha256": "7d5870503e2ff0d58c2c6649028d0bc4e79457228568bea20c7816236d17487e"
-    },
-    {
-      "path": "publications/squier-observations-zestermann-1851/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/squier-observations-zestermann-1851/cover.jpg",
-      "size": 127693,
-      "sha256": "f998139696b049719bfa8e38efb1e64d71b17d2ba394354bafe4ad756c803f48"
-    },
-    {
-      "path": "publications/squier-crampton-webster-project-1852/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.epub",
-      "size": 132372,
-      "sha256": "4d19f5c81ea89d6d888b213c414d97438cfe6602a8a7bc80e9830988e81b260f"
-    },
-    {
-      "path": "publications/squier-crampton-webster-project-1852/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Crampton_Webster_Project_1852_Japanese_Complete_Translation.pdf",
-      "size": 626381,
-      "sha256": "9db772f97a3b04953e9873546a0b00e82578d6d4cf440a50562483cce09796cc"
-    },
-    {
-      "path": "publications/squier-crampton-webster-project-1852/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/squier-crampton-webster-project-1852/cover.jpg",
-      "size": 116918,
-      "sha256": "9f155746b3f1c5f202ff2759fa1e032667841b47c8baf767f6355fb1b660c546"
-    },
-    {
-      "path": "publications/squier-ancient-peru-1853/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.epub",
-      "size": 9064588,
-      "sha256": "3af45aca5861a72ea08cd92adccb9729d670903ba557554712e0f9ffe33e829b"
-    },
-    {
-      "path": "publications/squier-ancient-peru-1853/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Ancient_Peru_1853_Japanese_Complete_Translation.pdf",
-      "size": 4888996,
-      "sha256": "133a53bffa53f5bb0145219e0eee1994d98f7250076506be16118e809d071656"
-    },
-    {
-      "path": "publications/squier-ancient-peru-1853/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/squier-ancient-peru-1853/cover.jpg",
-      "size": 98729,
-      "sha256": "9e4afbc1dfed448610091248f249738435bb1881a14083884ea453fd4e81d0c3"
-    },
-    {
-      "path": "publications/squier-great-south-american-earthquakes-1869/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.epub",
-      "size": 8465066,
-      "sha256": "d9d7026ef23aced532a3421f6188e963e3badb1a298c7da1100ca7f90da25b75"
-    },
-    {
-      "path": "publications/squier-great-south-american-earthquakes-1869/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anonymous_Great_South_American_Earthquakes_1868_1869_Japanese_Complete_Translation.pdf",
-      "size": 4109672,
-      "sha256": "a8c03210ea27a006cd7d2364f395d8ddd6e9e0274ba37d205b2a7ba2d08757b1"
-    },
-    {
-      "path": "publications/squier-great-south-american-earthquakes-1869/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/squier-great-south-american-earthquakes-1869/cover.jpg",
-      "size": 100625,
-      "sha256": "40bd84af44275b6c40249d9907c22de9a71d38dffe895010526ae9c105ffdf8f"
-    },
-    {
-      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.epub",
-      "size": 3953892,
-      "sha256": "f6652bf659dfd1118267b597e64658502bd6b4fd6081642bef316f9d99a90dc3"
-    },
-    {
-      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/E_G_Squier_Chalchihuitls_Mexico_Central_America_1870_Japanese_Complete_Translation.pdf",
-      "size": 4230562,
-      "sha256": "35ed0161bdf5fb7a0b9f7c87fe14056a4231dfc74c13f15f8a8e86b1a25e0a75"
-    },
-    {
-      "path": "publications/squier-chalchihuitls-mexico-central-america-1870/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/squier-chalchihuitls-mexico-central-america-1870/cover.jpg",
-      "size": 123886,
-      "sha256": "4b28fe9b4550f8878ff93d0870f7e4fe384b93d41ae82120e7f34f2a483b64f1"
     }
   ]
 }
