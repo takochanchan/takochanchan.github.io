@@ -40,6 +40,25 @@
       "updatedDate": "2026-08-27"
     },
     {
+      "slug": "valle-george-ephraim-squier-1922",
+      "recordClass": "short-work",
+      "title": "ジョージ・エフレイム・スクワイア",
+      "originalTitle": "George Ephraim Squier (Notas bio-bibliográficas)",
+      "author": "ラファエル・エリオドロ・バリェ",
+      "originalAuthor": "Rafael Heliodoro Valle",
+      "year": 1922,
+      "originalPublication": "『The Hispanic American Historical Review』第5巻第4号、1922年11月、777–784頁",
+      "sourceEdition": "Rafael Heliodoro Valle, “George Ephraim Squier (Notas bio-bibliográficas),” The Hispanic American Historical Review, vol. 5, no. 4 (November 1922), pp. 777–784. DOI: 10.2307/2506078.",
+      "sourceProvider": "JSTORのOpen JSTOR Collectionで公開される原刊スペイン語誌面（stable 2506078）を底本とし、Internet Archive収録のJSTOR Early Journal Content（identifier: jstor-2506078）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/2506078"
+      },
+      "rights": "原著本文は1922年刊であり、パブリックドメインに属します。JSTORは当該掲載号をOpen JSTOR Collectionでパブリックドメイン資料として表示しています。Internet Archive収録PDFはJSTOR Early Journal Contentの利用表示を含み、非商用目的での共有・再配布時に著者・論文名・原刊誌・stable番号等の帰属表示を求めています。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
+    },
+    {
       "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
       "recordClass": "major-work",
       "title": "グアテマラ大洋間鉄道に関する概説",

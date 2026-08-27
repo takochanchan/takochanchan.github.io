@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-27 — ラファエル・エリオドロ・バリェ「ジョージ・エフレイム・スクワイア」新規公開
+
+- 1922年刊 “George Ephraim Squier (Notas bio-bibliográficas)” の標題、副題、題辞、本文、年次別の書籍・パンフレット目録、論文・モノグラフ目録、署名と執筆地・年を日本語全訳として収録した。
+- 著作目録53項目は日本語題名に加えて原題53件をすべて併記した。原刊頁777–784の位置標識8件を収録し、PDFは13頁、EPUBはリフロー型EPUB 3とした。
+- 底本はJSTORのOpen JSTOR Collectionで公開される原刊スペイン語誌面（stable 2506078）。Internet Archive収録のJSTOR Early Journal Content（`jstor-2506078`）で照合した。
+- 公開PDFのSHA-256は `a6acc79f23dfe7a9716996a8ee2101392210d88648891e163d500f4317965a61`、EPUBは `3ae8e7252a5c165065ba99ec42b4ccfd21b40911eff6c0b9a17baf2baf127357`。編集可能正本は非公開原本アーカイブのコミット `74f894d475263135072bb43fba33b7c30e504b23` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`valle-george-ephraim-squier-1922`。
+
 ## 2026-08-27 — ドン・C・サイツ『フランシス・パークマンからE・G・スクワイアへの書簡』新規公開
 
 - 1911年刊 *Letters from Francis Parkman to E. G. Squier, with Biographical Notes and a Bibliography of E. G. Squier* の標題紙、E・G・スクワイア略歴、献辞、序文、1849–1870年の書簡24通、著作目録95項目を日本語全訳として収録した。

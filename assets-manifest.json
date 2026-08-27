@@ -4988,6 +4988,24 @@
       "sha256": "0c55184b97b7f95f370eb160114adaeba977d9e7b2cd8125e97c66f2b5211748"
     },
     {
+      "path": "publications/valle-george-ephraim-squier-1922/Rafael_Heliodoro_Valle_George_Ephraim_Squier_1922_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_George_Ephraim_Squier_1922_Japanese_Complete_Translation.epub",
+      "size": 122743,
+      "sha256": "3ae8e7252a5c165065ba99ec42b4ccfd21b40911eff6c0b9a17baf2baf127357"
+    },
+    {
+      "path": "publications/valle-george-ephraim-squier-1922/Rafael_Heliodoro_Valle_George_Ephraim_Squier_1922_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_George_Ephraim_Squier_1922_Japanese_Complete_Translation.pdf",
+      "size": 470088,
+      "sha256": "a6acc79f23dfe7a9716996a8ee2101392210d88648891e163d500f4317965a61"
+    },
+    {
+      "path": "publications/valle-george-ephraim-squier-1922/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/valle-george-ephraim-squier-1922/cover.jpg",
+      "size": 107470,
+      "sha256": "472e0529c2c2985745db4c8284fe00786a80b88871e0183c6e81b24a01f23394"
+    },
+    {
       "path": "publications/villagutierre-itza-1701/cover.jpg",
       "url": "https://takochanchan.github.io/publications/villagutierre-itza-1701/cover.jpg",
       "size": 78804,
