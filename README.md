@@ -8,7 +8,8 @@ GitHub Pages 用の静的アーカイブです。
 
 ## 構成
 
-- `src/publications.mjs` — 書誌情報、分類、タグ
+- `bibliographic-manifest.json` — 全資料の正本書誌（題名、著者、原刊、底本、公開元、権利、公開日）
+- `src/publications.mjs` — 解説、分類、タグ、配布ファイル情報
 - `src/archive.js` — 検索、絞り込み、並べ替え、ページ送り
 - `src/styles.css` — 共通デザイン
 - `scripts/build.mjs` — 一覧・個別ページの生成
@@ -25,8 +26,11 @@ PDF・EPUB本体はGitHub Release
 で配布し、Gitリポジトリには収録しません。同じファイル名の改訂版はRelease資産を
 置き換えるため、公開URLは変わりません。
 
-新しい資料は `src/publications.mjs` に1件追加すると、一覧カード、検索対象、
-分類、個別ページ、関連資料、サイトマップへ自動的に反映されます。
+新しい資料は `src/publications.mjs` に解説・分類・配布ファイル情報を、
+`bibliographic-manifest.json` の `records` に正本書誌を1件ずつ追加します。
+両者のslug集合と書誌内容が一致しない場合は `npm run verify:bibliography` が失敗します。
+検証を通過した資料は、一覧カード、検索対象、分類、個別ページ、サイトマップへ
+自動的に反映されます。
 
 トップページの一覧内検索と資料種別・地域・原刊言語・年代の絞り込みは、
 書籍と論文の両方を対象にします。検索条件に該当する件数を分類別に示し、

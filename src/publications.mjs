@@ -1,3 +1,4 @@
+import { createRequire } from "node:module";
 import {
   perignyRemainingPublicationMetadata,
   perignyRemainingPublicationRecords,
@@ -12,6 +13,21 @@ import {
   waiknaPublicationMetadata,
   waiknaPublicationRecords,
 } from "./waikna-publication.mjs";
+
+const require = createRequire(import.meta.url);
+const bibliographicManifest = require("../bibliographic-manifest.json");
+if (
+  bibliographicManifest.schemaVersion !== 2 ||
+  !Array.isArray(bibliographicManifest.records)
+) {
+  throw new Error("Unsupported canonical bibliographic manifest");
+}
+const canonicalBibliography = new Map(
+  bibliographicManifest.records.map((record) => [record.slug, record]),
+);
+if (canonicalBibliography.size !== bibliographicManifest.records.length) {
+  throw new Error("Duplicate canonical bibliographic record slug");
+}
 
 const publicationRecords = [
   {
@@ -11684,17 +11700,47 @@ export const publications = publicationRecords.map((item) => {
   if (!metadata) {
     throw new Error(`Missing publication metadata: ${item.slug}`);
   }
+  const bibliography = canonicalBibliography.get(item.slug);
+  if (!bibliography) {
+    throw new Error(`Missing canonical bibliography: ${item.slug}`);
+  }
   const shortWorkAuthorKey = shortWorkAuthorBySlug[item.slug] ?? null;
+  const recordClass = shortWorkAuthorKey ? "short-work" : "major-work";
+  if (bibliography.recordClass !== recordClass) {
+    throw new Error(
+      `Bibliographic record class differs for ${item.slug}: ` +
+        `${bibliography.recordClass} / ${recordClass}`,
+    );
+  }
+  const { sourceAccess, attribution, ...canonicalFields } = bibliography;
   return {
     ...item,
     ...metadata,
-    recordClass: shortWorkAuthorKey ? "short-work" : "major-work",
+    ...canonicalFields,
+    recordClass,
     authorKey: shortWorkAuthorKey,
+    sourceAccessStatus: sourceAccess.status,
+    sourceAccessNote: sourceAccess.note ?? null,
+    sourceUrl: sourceAccess.status === "online" ? sourceAccess.url : null,
+    ...(attribution
+      ? {
+          attributedTo: attribution.attributedTo,
+          attributionStatus: attribution.status,
+          attributionNote: attribution.note,
+        }
+      : {}),
     searchShard: item.searchShard ?? "001",
     pdfUrl: releaseAssetUrl(item.pdf),
     epubUrl: releaseAssetUrl(item.epub),
   };
 });
+
+if (canonicalBibliography.size !== publications.length) {
+  throw new Error(
+    `Canonical bibliography coverage differs: ` +
+      `${canonicalBibliography.size} / ${publications.length}`,
+  );
+}
 
 export const majorPublications = publications.filter(
   (item) => item.recordClass === "major-work",

@@ -957,6 +957,14 @@ ${header({
             <dt>公開元</dt>
             <dd>${sourceProvider}</dd>
           </div>
+          ${
+            item.sourceAccessNote
+              ? `<div class="publication-info__wide">
+            <dt>閲覧情報</dt>
+            <dd>${escapeHtml(item.sourceAccessNote)}</dd>
+          </div>`
+              : ""
+          }
           <div class="publication-info__wide">
             <dt>権利・利用条件</dt>
             <dd>${escapeHtml(item.rights)}</dd>
