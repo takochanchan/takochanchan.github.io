@@ -5477,6 +5477,116 @@
       "rights": "原著はパブリックドメインに属する。底本画像は Gallica／フランス国立図書館（BnF）による。非商用の学術・教育目的で画像を利用する場合は「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示が求められ、商用利用には許諾・料金が必要となる場合がある。本版は最終タイプ稿21葉と、同資料に綴じ込まれた掲載版3頁の本文・編集部前文・図版7点・全キャプションを含む日本語全訳である。タイプ稿の手書き修正は訂正後の本文へ反映した。歴史的な人種分類、植民地主義的な価値判断は著者の言説として省略・現代化せず訳し、地名・人名・数値は原資料の形を尊重した。OCRは抽出補助にのみ用いて原画像と照合した。本文中の〔原稿 p. X〕はタイプ稿の葉、〔原刊 p. X（掲載版）〕は掲載版の頁を示す。",
       "publishedDate": "2026-08-11",
       "updatedDate": "2026-08-11"
+    },
+    {
+      "slug": "squier-observations-zestermann-1851",
+      "recordClass": "short-work",
+      "title": "ゼスターマン『先史時代におけるヨーロッパ人のアメリカ植民』への批判的考察",
+      "originalTitle": "Observations on the Memoir of Dr. Zestermann, relating to the Colonization of America in Pre-Historic Times",
+      "author": "E・G・スクワイア",
+      "originalAuthor": "E. G. Squier",
+      "year": 1851,
+      "originalPublication": "C・A・A・ゼスターマン『Memoir on the European Colonization of America, in Ante-Historic Times』別刷、1851年、20–32頁",
+      "sourceEdition": "E. G. Squier, “Observations on the Memoir of Dr. Zestermann, relating to the Colonization of America in Pre-Historic Times,” in C. A. Adolph Zestermann, Memoir on the European Colonization of America, in Ante-Historic Times, from the Proceedings of the American Ethnological Society, April 1851, pp. 20–32.",
+      "sourceProvider": "Internet Archive公開原本に由来するWikimedia Commons公開PDFを底本としました。原刊はAmerican Ethnological Society会報からの別刷です。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://commons.wikimedia.org/wiki/File:Memoir_on_the_European_colonization_of_America,_in_ante-historic_times_(IA_memoironeuropean00zest).pdf"
+      },
+      "rights": "1851年刊の原著本文と原刊誌面はパブリックドメインです。底本画像はInternet Archive由来の公開資料です。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
+    },
+    {
+      "slug": "squier-crampton-webster-project-1852",
+      "recordClass": "short-work",
+      "title": "わが国の対外関係——中央アメリカ、クランプトン＝ウェブスター構想",
+      "originalTitle": "Our Foreign Relations: Central America—the Crampton and Webster Project",
+      "author": "無署名",
+      "originalAuthor": "Anonymous",
+      "year": 1852,
+      "originalPublication": "ニューヨーク、『The United States Democratic Review』第31巻第172号、1852年10月、337–352頁",
+      "sourceEdition": "Anonymous [attributed to E. G. Squier], “Our Foreign Relations: Central America—the Crampton and Webster Project,” The United States Democratic Review, vol. 31, no. 172, October 1852, pp. 337–352.",
+      "sourceProvider": "Internet Archive公開の原刊画像（The United States Democratic Review, October 1852）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/sim_united-states-democratic-review_1852-10_31_172"
+      },
+      "rights": "1852年刊の原著本文と原刊誌面はパブリックドメインです。Internet Archiveの当該項目には個別の再利用ライセンス表示がありません。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27",
+      "attribution": {
+        "attributedTo": "Ephraim George Squier",
+        "status": "tentative",
+        "note": "原刊は無署名です。後世のスクワイア著作目録では本稿をEphraim George Squierに帰属させますが、本サイトでは暫定帰属として扱い、主著者表示には採用しません。"
+      }
+    },
+    {
+      "slug": "squier-ancient-peru-1853",
+      "recordClass": "short-work",
+      "title": "古代ペルー——その人々と遺構",
+      "originalTitle": "Ancient Peru—Its People and Its Monuments",
+      "author": "無署名",
+      "originalAuthor": "Anonymous",
+      "year": 1853,
+      "originalPublication": "ニューヨーク、『Harper’s New Monthly Magazine』第7巻第37号、1853年6月、7–38頁",
+      "sourceEdition": "Anonymous [attributed to E. G. Squier], “Ancient Peru—Its People and Its Monuments,” Harper’s New Monthly Magazine, vol. 7, no. 37, June 1853, pp. 7–38.",
+      "sourceProvider": "Internet Archive公開の原刊画像（Harper’s New Monthly Magazine, June 1853）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/sim_harpers-magazine_1853-06_7_37"
+      },
+      "rights": "1853年刊の原著本文と原刊図版はパブリックドメインです。Internet Archiveの当該項目には個別の再利用ライセンス表示がありません。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27",
+      "attribution": {
+        "attributedTo": "Ephraim George Squier",
+        "status": "tentative",
+        "note": "原刊は無署名です。後世のスクワイア著作目録では本稿をEphraim George Squierに帰属させますが、本サイトでは暫定帰属として扱い、主著者表示には採用しません。"
+      }
+    },
+    {
+      "slug": "squier-great-south-american-earthquakes-1869",
+      "recordClass": "short-work",
+      "title": "一八六八年南アメリカ大地震",
+      "originalTitle": "The Great South-American Earthquakes of 1868",
+      "author": "無署名",
+      "originalAuthor": "Anonymous",
+      "year": 1869,
+      "originalPublication": "ニューヨーク、『Harper’s New Monthly Magazine』第38巻第227号、1869年4月、603–623頁",
+      "sourceEdition": "Anonymous [attributed to E. G. Squier], “The Great South-American Earthquakes of 1868,” Harper’s New Monthly Magazine, vol. 38, no. 227, April 1869, pp. 603–623.",
+      "sourceProvider": "Internet Archive公開の原刊画像（Harper’s New Monthly Magazine, April 1869）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/sim_harpers-magazine_1869-04_38_227"
+      },
+      "rights": "1869年刊の原著本文と原刊図版はパブリックドメインです。Internet Archiveの当該項目には個別の再利用ライセンス表示がありません。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27",
+      "attribution": {
+        "attributedTo": "Ephraim George Squier",
+        "status": "tentative",
+        "note": "原刊は無署名です。後世のスクワイア著作目録では本稿をEphraim George Squierに帰属させますが、本サイトでは暫定帰属として扱い、主著者表示には採用しません。"
+      }
+    },
+    {
+      "slug": "squier-chalchihuitls-mexico-central-america-1870",
+      "recordClass": "short-work",
+      "title": "メキシコおよび中央アメリカ産チャルチウィトル標本群に関する考察",
+      "originalTitle": "Observations on a Collection of Chalchihuitls from Mexico and Central America",
+      "author": "E・G・スクワイア",
+      "originalAuthor": "E. G. Squier",
+      "year": 1870,
+      "originalPublication": "ニューヨーク、『Annals of the Lyceum of Natural History of New York』第9巻、1870年、246–265頁（底本別刷3–22頁）",
+      "sourceEdition": "E. G. Squier, “Observations on a Collection of Chalchihuitls from Mexico and Central America,” Annals of the Lyceum of Natural History of New York, vol. 9 (1870), pp. 246–265; separate issue, pp. 3–22.",
+      "sourceProvider": "Library of Congress提供・Internet Archive公開の別刷画像を底本とし、Biodiversity Heritage Library公開のAnnals of the Lyceum of Natural History of New York第9巻で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/observationsonch00squi"
+      },
+      "rights": "1870年刊の原著本文と原刊図版はパブリックドメインです。Biodiversity Heritage Libraryは当該巻をNOT_IN_COPYRIGHTと表示しています。Internet Archiveの別刷項目には個別の再利用ライセンス表示がありません。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
     }
   ],
   "works": [

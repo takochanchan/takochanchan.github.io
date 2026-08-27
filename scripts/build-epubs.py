@@ -59,6 +59,21 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "squier-observations-zestermann-1851": SOURCES
+    / "翻訳サイト"
+    / "SQ-ART-027_Observations_on_Zestermann_Japanese_Prepublication.docx",
+    "squier-crampton-webster-project-1852": SOURCES
+    / "翻訳サイト"
+    / "SQ-ART-029_Our_Foreign_Relations_Central_America_Japanese_Prepublication_Corrected.docx",
+    "squier-ancient-peru-1853": SOURCES
+    / "翻訳サイト"
+    / "SQ-ART-031_Ancient_Peru_Japanese_Prepublication_Corrected.docx",
+    "squier-great-south-american-earthquakes-1869": SOURCES
+    / "翻訳サイト"
+    / "SQ-ART-057_Great_South_American_Earthquakes_1868_Japanese_Prepublication_Corrected.docx",
+    "squier-chalchihuitls-mexico-central-america-1870": SOURCES
+    / "翻訳サイト"
+    / "SQ-ART-058_Observations_on_Chalchihuitls_Japanese_Prepublication_Corrected.docx",
     "baily-central-america-1850": SOURCES
     / "翻訳サイト"
     / "John_Baily_Central_America_1850_Japanese_Complete_Translation.docx",
