@@ -42,6 +42,7 @@ test("catalogue metadata is complete and unique", () => {
       "title",
       "originalTitle",
       "author",
+      "originalAuthor",
       "description",
       "cover",
       "pdf",
@@ -61,6 +62,12 @@ test("catalogue metadata is complete and unique", () => {
     ]) {
       assert.ok(item[key] && item[key].length !== 0, `${item.slug}: ${key}`);
     }
+    assert.ok(item.sourceUrl || item.sourceAccessNote, `${item.slug}: source access`);
+    assert.doesNotMatch(
+      item.rights,
+      /(?:日本語|本版|本訳).*(?:再利用|転載).*(?:設定してい(?:ません|ない)|付与し(?:ていません|ない)|許諾するものではありません)/u,
+      `${item.slug}: obsolete Japanese-edition rights boilerplate`,
+    );
   }
   assert.ok(taxonomy.types.length >= 8);
   assert.ok(taxonomy.regions.includes("ウスマシンタ川流域"));
@@ -189,7 +196,7 @@ test("Strangeways Mosquito Shore retains the approved complete scope", () => {
   assert.match(item.extent, /原刊前付viii頁・本文355頁/);
   assert.match(item.description, /原刊位置標識374件/);
   assert.match(item.sourceProvider, /Library of Congress/);
-  assert.match(item.rights, /再利用ライセンスを設定していない/);
+  assert.match(item.rights, /パブリックドメイン/);
 });
 
 test("Fernández Costa Rica history retains the approved complete scope", () => {
@@ -203,7 +210,7 @@ test("Fernández Costa Rica history retains the approved complete scope", () => 
   assert.match(item.extent, /原刊前付V–VII頁・本文1–640頁/);
   assert.match(item.description, /原刊の段落、引用、表、注、頁順/);
   assert.match(item.sourceProvider, /Internet Archive/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
 });
 
 test("century-only catalogue dates sort at each century's final year", async () => {
@@ -321,7 +328,6 @@ test("Apuntes catalogo 1866 preserves bilingual authors and titles", () => {
   assert.match(item.sourceProvider, /請求記号40-IX-75/);
   assert.match(item.sourceProvider, /Google Books/);
   assert.match(item.rights, /頁画像.*転載していません/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("Bibliografia mexicana lists representative included works bilingually", () => {
@@ -361,7 +367,6 @@ test("Baqueiro Yucatan history retains the approved three-volume scope", () => {
   assert.match(item.description, /全24章/);
   assert.match(item.sourceProvider, /British Library/);
   assert.match(item.sourceProvider, /9781\.dd\.11/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("Alva confessionary metadata retains the approved complete scope", () => {
@@ -387,7 +392,6 @@ test("Roberts voyage metadata retains the approved complete scope", () => {
   assert.match(item.description, /付録注IからVIII/);
   assert.match(item.sourceProvider, /Getty Research Institute/);
   assert.match(item.sourceProvider, /Library of Congress/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
 });
 
 test("Barraza Aquino study metadata retains the approved complete scope", () => {
@@ -438,7 +442,6 @@ test("González Tehuacán paper retains its approved article scope", () => {
   assert.match(item.sourceProvider, /launi36guat/);
   assert.match(item.sourceUrl, /archive\.org\/details\/launi36guat/);
   assert.match(item.rights, /パブリックドメイン/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-25");
   assert.equal(item.updatedDate, "2026-08-25");
 });
@@ -486,7 +489,6 @@ test("Sigüenza Parayso occidental retains its approved complete scope", () => {
   assert.match(item.sourceProvider, /m0s_AAAAcAAJ/);
   assert.match(item.sourceUrl, /books\.google\.com\/books\?id=m0s_AAAAcAAJ/);
   assert.match(item.rights, /パブリックドメイン/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-25");
   assert.equal(item.updatedDate, "2026-08-25");
 });
@@ -515,7 +517,6 @@ test("Baz and Gallo Mexican Railroad history retains its approved complete scope
   assert.match(item.rights, /Public Domain〔pd〕／Full view/);
   assert.match(item.rights, /Public domain／Full view/);
   assert.match(item.rights, /別個のライセンス付与は確認していません/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-26");
   assert.equal(item.updatedDate, "2026-08-26");
 });
@@ -554,7 +555,7 @@ test("Otis Panama Railroad history retains its approved complete scope and insti
   assert.ok(item);
   assert.equal(item.recordClass, "major-work");
   assert.equal(item.author, "F・N・オーティス");
-  assert.equal(item.originalAuthor, "Fessenden Nott Otis");
+  assert.equal(item.originalAuthor, "F. N. Otis");
   assert.equal(item.pageCount, 334);
   assert.equal(item.figureCount, 38);
   assert.equal(item.plateCount, 0);
@@ -565,7 +566,6 @@ test("Otis Panama Railroad history retains its approved complete scope and insti
   assert.match(item.sourceUrl, /archive\.org\/details\/isthmusofpanamah00otisrich/);
   assert.match(item.rights, /パブリックドメイン/);
   assert.match(item.rights, /Possible copyright status: NOT_IN_COPYRIGHT/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-25");
   assert.equal(item.updatedDate, "2026-08-25");
 });
@@ -629,7 +629,7 @@ test("Squier Nicaragua retains its approved complete scope and supplementary-sou
   assert.ok(item);
   assert.equal(item.recordClass, "major-work");
   assert.equal(item.author, "E・G・スクワイア");
-  assert.equal(item.originalAuthor, "Ephraim George Squier");
+  assert.equal(item.originalAuthor, "E. G. Squier");
   assert.equal(item.pageCount, 782);
   assert.equal(item.figureCount, 94);
   assert.equal(item.plateCount, 0);
@@ -644,7 +644,6 @@ test("Squier Nicaragua retains its approved complete scope and supplementary-sou
     item.rights,
     /項目固有のrights、licenseurl、usage等のライセンス表示がありません/,
   );
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-26");
   assert.equal(item.updatedDate, "2026-08-26");
 });
@@ -660,7 +659,7 @@ test("Squier and Davis Ancient Monuments retains its approved complete scope and
   assert.equal(item.author, "E・G・スクワイア／E・H・デイヴィス");
   assert.equal(
     item.originalAuthor,
-    "Ephraim George Squier / Edwin Hamilton Davis",
+    "E. G. Squier / E. H. Davis",
   );
   assert.equal(item.pageCount, 468);
   assert.equal(item.figureCount, 207);
@@ -674,7 +673,6 @@ test("Squier and Davis Ancient Monuments retains its approved complete scope and
   assert.match(item.sourceUrl, /loc\.gov\/item\/16012309/);
   assert.match(item.rights, /パブリックドメイン/);
   assert.match(item.rights, /自由に利用・再利用/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-26");
   assert.equal(item.updatedDate, "2026-08-26");
 });
@@ -698,7 +696,6 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
   assert.match(item.sourceProvider, /doncarlosdesigen18berk/);
   assert.match(item.sourceUrl, /archive\.org\/details\/doncarlosdesigen18berk/);
   assert.match(item.rights, /パブリックドメイン/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-25");
   assert.equal(item.updatedDate, "2026-08-25");
 });
@@ -1053,7 +1050,6 @@ test("Tezozomoc Kraus 117 keeps the manuscript scope and concise rights statemen
   assert.match(item.sourceProvider, /判読と位置照合の補助/);
   assert.match(item.rights, /パブリックドメイン/);
   assert.match(item.rights, /利用・複製に既知の制限なし/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.doesNotMatch(item.sourceProvider, /翻訳プロジェクト/);
   assert.doesNotMatch(item.rights, /CC BY|Creative Commons/);
 });
@@ -1324,7 +1320,6 @@ test("Penn Berendt batch 05 uses Japanese titles and collection subtitles", () =
     assert.match(item.sourceUrl, /^https:\/\/colenda\.library\.upenn\.edu\/catalog\//, slug);
     assert.doesNotMatch(item.subtitle, /日本語全訳/, slug);
     assert.match(item.rights, /No Copyright - United States/, slug);
-    assert.match(item.rights, /再利用ライセンスを設定していません/, slug);
   }
 });
 
@@ -1392,7 +1387,6 @@ test("México en 1554 retains its bilingual 1875 edition scope", () => {
   assert.match(item.sourceProvider, /Internet Archive/);
   assert.match(item.sourceProvider, /Real Academia Española/);
   assert.match(item.rights, /NOT_IN_COPYRIGHT/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.doesNotMatch(item.subtitle, /日本語全訳/);
 });
 
@@ -1584,7 +1578,6 @@ test("Pineda 1888 sublevaciones publication metadata stays fixed", () => {
   assert.match(item.sourceProvider, /1080013829/);
   assert.match(item.sourceProvider, /転載・切り抜きせず/);
   assert.match(item.rights, /CC BY-NC-ND 2\.5 MX/);
-  assert.match(item.rights, /再利用ライセンスを設定していません/);
   assert.equal(item.publishedDate, "2026-08-14");
   assert.equal(item.updatedDate, "2026-08-14");
 });
