@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-27 — ヘスス・E・カランサ『ロス・アルトスの一つの町』新規公開
+
+- 1897年刊 *Un pueblo de Los Altos: apuntamientos para su historia* の原刊標題紙、著者宛書簡、序論、本文1–329頁、文書35点、表24点、主要正誤表を日本語全訳として収録した。公開PDFは397頁、EPUBはリフロー型EPUB 3とした。
+- トトニカパンの地理・統計、キチェ系住民の古代史と暦、植民地期から独立後・ロス・アルトス州を経て19世紀末に至る政治・社会史、地域の人物略伝、憲法・議会文書を収める。
+- 底本はUniversidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵本をInternet Archiveが公開する全頁画像（`totonicapanunpue00guat`）。当該項目メタデータはPossible copyright statusを「NOT IN COPYRIGHT」と表示する。
+- 公開PDFのSHA-256は `c78b0268a78e4652712ad52c84cc5188335bee06ecf5759ff6e6831be35f9d0b`、EPUBは `41fc4e5a0a6c405377c7b18b7289a6c67985c549ed779a697a41f2a32138b32a`。編集可能正本は非公開原本アーカイブのコミット `0643f714b74c2c9d7531bc274a871150c350bcac` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`carranza-un-pueblo-los-altos-1897`。
+
 ## 2026-08-27 — ラファエル・エリオドロ・バリェ「ジョージ・エフレイム・スクワイア」新規公開
 
 - 1922年刊 “George Ephraim Squier (Notas bio-bibliográficas)” の標題、副題、題辞、本文、年次別の書籍・パンフレット目録、論文・モノグラフ目録、署名と執筆地・年を日本語全訳として収録した。
