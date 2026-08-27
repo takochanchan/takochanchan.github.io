@@ -14,6 +14,11 @@ import {
   seitzPublicationRecords,
 } from "./seitz-publication.mjs";
 import {
+  vallePublicationMetadata,
+  vallePublicationRecords,
+  valleShortWorkAuthors,
+} from "./valle-publication.mjs";
+import {
   waiknaPublicationMetadata,
   waiknaPublicationRecords,
 } from "./waikna-publication.mjs";
@@ -9016,6 +9021,7 @@ const publicationRecords = [
   },
   ...squierBatch03PublicationRecords,
   ...seitzPublicationRecords,
+  ...vallePublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
 ];
@@ -11548,6 +11554,7 @@ const publicationMetadata = {
   },
   ...squierBatch03PublicationMetadata,
   ...seitzPublicationMetadata,
+  ...vallePublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
 };
@@ -11680,6 +11687,7 @@ const shortWorkAuthorBySlug = {
   "brinton-ancient-human-footprint-nicaragua-1887": "daniel-g-brinton",
   "editorial-age-nicaragua-footprints-1889": "american-antiquarian-editorial",
   "crawford-neolithic-man-nicaragua-1891": "john-crawford",
+  ...valleShortWorkAuthors,
   ...squierBatch03ShortWorkAuthors,
   ...perignyRemainingShortWorkAuthors,
 };

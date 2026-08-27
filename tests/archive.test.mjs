@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 285);
+  assert.equal(publications.length, 286);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 8);
+  assert.equal(counts.get("002"), 9);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -98,6 +98,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-lake-yojoa-taulebe-1860",
       "squier-unexplored-regions-central-america-1868",
       "seitz-parkman-squier-letters-1911",
+      "valle-george-ephraim-squier-1922",
       "squier-waikna-mosquito-shore-1855",
     ],
   );
@@ -619,6 +620,34 @@ test("Seitz Parkman-to-Squier letters retain the approved booklet scope and publ
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Valle George Ephraim Squier retains all 53 bibliography entries and public-source terms", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "valle-george-ephraim-squier-1922",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "short-work");
+  assert.equal(item.author, "ラファエル・エリオドロ・バリェ");
+  assert.equal(item.originalAuthor, "Rafael Heliodoro Valle");
+  assert.equal(
+    item.originalTitle,
+    "George Ephraim Squier (Notas bio-bibliográficas)",
+  );
+  assert.equal(item.pageCount, 13);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊777–784頁/);
+  assert.match(item.extent, /著作目録53項目/);
+  assert.match(item.sourceProvider, /Open JSTOR Collection/);
+  assert.match(item.sourceProvider, /jstor-2506078/);
+  assert.match(item.sourceUrl, /jstor\.org\/stable\/2506078/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /JSTOR Early Journal Content/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -728,8 +757,8 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 137);
-  assert.equal(shortPublications.length, 148);
-  assert.equal(shortPublicationAuthors.length, 35);
+  assert.equal(shortPublications.length, 149);
+  assert.equal(shortPublicationAuthors.length, 36);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -743,6 +772,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "squier-hunting-pass-tropical-adventure-1860",
       "squier-lake-yojoa-taulebe-1860",
       "squier-unexplored-regions-central-america-1868",
+      "valle-george-ephraim-squier-1922",
       "gonzalez-ruinas-tehuacan-1892",
       "esquinca-usumacinta",
       "sapper-eastern-lacandons-1891",
@@ -1832,7 +1862,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">137<\/strong>件/);
-  assert.match(html, /id="paper-match-count">148<\/strong>件/);
+  assert.match(html, /id="paper-match-count">149<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
