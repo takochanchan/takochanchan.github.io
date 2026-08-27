@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-27 — ジョン・ベイリー『中央アメリカ』新規公開
+
+- 1850年刊 *Central America; Describing Each of the States of Guatemala, Honduras, Salvador, Nicaragua, and Costa Rica* の標題紙、前付、本文1–164頁、原刊図版3葉、別刷付図1点、巻頭画像1点、本文図1点、表9点、脚注21件を日本語全訳として収録した。ファンコート母版により公開PDF 134頁、EPUBはリフロー型EPUB 3とした。
+- 原刊位置標識172件を本文から独立した右寄せブロックとして保持した。PDF全134頁と標識周辺を独立レビューし、未解決の誤訳・段落組・標識混入は0件とした。表題および本文表記は「中央アメリカ」に統一した。
+- 底本はSmithsonian Libraries所蔵本を同館Digital LibraryがCC0で公開する全190画像（`centralamericade00bail`）。別刷付図は米国議会図書館地理・地図部所蔵本（G4800 1850 .B3／digital ID `g4800.ma001000`）をWikimedia Commons公開画像で補った。
+- 公開PDFのSHA-256は `6210f0f2acf05be2b57bd22aefa0c3b3966327e9aec6b9334db7965998f5a600`、EPUBは `ebd52e3be04e6a9f15d7632579ce71b282775826e1459d57fec2f7e72c9bd57c`。編集可能正本は非公開原本アーカイブのコミット `48c386a41b86f551395d6f0564e0ee04f5ea1d3c` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`baily-central-america-1850`。
+
 ## 2026-08-27 — ヘスス・E・カランサ『ロス・アルトスの一つの町』新規公開
 
 - 1897年刊 *Un pueblo de Los Altos: apuntamientos para su historia* の原刊標題紙、著者宛書簡、序論、本文1–329頁、文書35点、表24点、主要正誤表を日本語全訳として収録した。公開PDFは397頁、EPUBはリフロー型EPUB 3とした。

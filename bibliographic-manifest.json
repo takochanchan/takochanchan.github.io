@@ -78,6 +78,25 @@
       "updatedDate": "2026-08-27"
     },
     {
+      "slug": "baily-central-america-1850",
+      "recordClass": "major-work",
+      "title": "中央アメリカ",
+      "originalTitle": "Central America; Describing Each of the States of Guatemala, Honduras, Salvador, Nicaragua, and Costa Rica; Their Natural Features, Products, Population, and Remarkable Capacity for Colonization",
+      "author": "ジョン・ベイリー",
+      "originalAuthor": "John Baily",
+      "year": 1850,
+      "originalPublication": "ロンドン、Trelawney Saunders、1850年",
+      "sourceEdition": "John Baily, Central America; Describing Each of the States of Guatemala, Honduras, Salvador, Nicaragua, and Costa Rica; Their Natural Features, Products, Population, and Remarkable Capacity for Colonization, London: Trelawney Saunders, 1850.",
+      "sourceProvider": "Smithsonian Libraries所蔵本を同館Digital LibraryがCC0で公開する全190画像（identifier: centralamericade00bail）を底本としました。別刷付図は米国議会図書館地理・地図部所蔵本（G4800 1850 .B3／digital ID g4800.ma001000）をWikimedia Commonsが公開する画像で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://library.si.edu/digital-library/book/centralamericade00bail"
+      },
+      "rights": "1850年刊の原著本文・原刊図版・別刷地図はパブリックドメインです。Smithsonian Librariesは底本項目をCC0として公開しています。別刷地図画像は米国議会図書館所蔵資料に由来し、Wikimedia Commonsはパブリックドメイン資料として公開しています。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
+    },
+    {
       "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
       "recordClass": "major-work",
       "title": "グアテマラ大洋間鉄道に関する概説",

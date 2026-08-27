@@ -145,7 +145,19 @@ function Header(element)
 end
 
 function Div(element)
-  return normalize_custom_style(element)
+  local style = element.attributes["custom-style"]
+  element = normalize_custom_style(element)
+  if (
+      style == "Source Page"
+      or style == "Original Page"
+      or style == "Page Marker"
+    )
+    and #element.content == 1
+    and element.content[1].t == "Div"
+  then
+    element.content = element.content[1].content
+  end
+  return element
 end
 
 function Span(element)
@@ -175,7 +187,8 @@ end
 function Para(element)
   element = label_inline_images(element)
   local text = pandoc.utils.stringify(element)
-  if text:match("^〔原刊 [pf]%..+〕$") ~= nil then
+  local marker_text = text:gsub("\194\160", " "):gsub("\226\129\160", "")
+  if marker_text:match("^〔原刊%s+[pf]%.%s*.+〕$") ~= nil then
     return pandoc.Div(
       {element},
       pandoc.Attr("", {"source-page", "page-marker"}, {})

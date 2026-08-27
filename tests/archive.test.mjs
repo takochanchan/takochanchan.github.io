@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 287);
+  assert.equal(publications.length, 288);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 10);
+  assert.equal(counts.get("002"), 11);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -100,6 +100,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "seitz-parkman-squier-letters-1911",
       "valle-george-ephraim-squier-1922",
       "carranza-un-pueblo-los-altos-1897",
+      "baily-central-america-1850",
       "squier-waikna-mosquito-shore-1855",
     ],
   );
@@ -680,6 +681,37 @@ test("Carranza Totonicapan history retains the approved complete scope and publi
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Baily Central America retains the approved complete scope and source-marker edition", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "baily-central-america-1850",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "中央アメリカ");
+  assert.equal(item.author, "ジョン・ベイリー");
+  assert.equal(item.originalAuthor, "John Baily");
+  assert.match(item.originalTitle, /^Central America; Describing Each of the States/);
+  assert.equal(item.pageCount, 134);
+  assert.equal(item.figureCount, 2);
+  assert.equal(item.plateCount, 4);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊前付xii頁/);
+  assert.match(item.extent, /本文164頁/);
+  assert.match(item.extent, /表9点/);
+  assert.match(item.description, /中央アメリカ五国/);
+  assert.match(item.description, /ニカラグア運河計画/);
+  assert.match(item.sourceProvider, /Smithsonian Libraries/);
+  assert.match(item.sourceProvider, /centralamericade00bail/);
+  assert.match(item.sourceProvider, /g4800\.ma001000/);
+  assert.match(item.sourceUrl, /library\.si\.edu\/digital-library\/book\/centralamericade00bail/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /CC0/);
+  assert.doesNotMatch(item.title, /中米/);
+  assert.doesNotMatch(item.description, /中米/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -788,7 +820,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 138);
+  assert.equal(majorPublications.length, 139);
   assert.equal(shortPublications.length, 149);
   assert.equal(shortPublicationAuthors.length, 36);
   assert.deepEqual(
@@ -1893,7 +1925,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">138<\/strong>件/);
+  assert.match(html, /id="book-match-count">139<\/strong>件/);
   assert.match(html, /id="paper-match-count">149<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
