@@ -1,5 +1,9 @@
 import { createRequire } from "node:module";
 import {
+  carranzaPublicationMetadata,
+  carranzaPublicationRecords,
+} from "./carranza-publication.mjs";
+import {
   perignyRemainingPublicationMetadata,
   perignyRemainingPublicationRecords,
   perignyRemainingShortWorkAuthors,
@@ -9022,6 +9026,7 @@ const publicationRecords = [
   ...squierBatch03PublicationRecords,
   ...seitzPublicationRecords,
   ...vallePublicationRecords,
+  ...carranzaPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
 ];
@@ -11555,6 +11560,7 @@ const publicationMetadata = {
   ...squierBatch03PublicationMetadata,
   ...seitzPublicationMetadata,
   ...vallePublicationMetadata,
+  ...carranzaPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
 };

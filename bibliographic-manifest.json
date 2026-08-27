@@ -59,6 +59,25 @@
       "updatedDate": "2026-08-27"
     },
     {
+      "slug": "carranza-un-pueblo-los-altos-1897",
+      "recordClass": "major-work",
+      "title": "ロス・アルトスの一つの町",
+      "originalTitle": "Un pueblo de Los Altos: apuntamientos para su historia",
+      "author": "ヘスス・E・カランサ",
+      "originalAuthor": "Jesús E. Carranza",
+      "year": 1897,
+      "originalPublication": "トトニカパン／ケサルテナンゴ、Establecimiento Tipográfico «Popular»、1897年",
+      "sourceEdition": "Jesús E. Carranza, Un pueblo de Los Altos: apuntamientos para su historia, Totonicapán / Quezaltenango: Establecimiento Tipográfico “Popular”, 1897.",
+      "sourceProvider": "Universidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵本をInternet Archiveが公開する全頁画像（identifier: totonicapanunpue00guat）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/totonicapanunpue00guat"
+      },
+      "rights": "1897年刊の原著本文はパブリックドメインです。Internet Archiveの当該項目メタデータはPossible copyright statusを「NOT IN COPYRIGHT」と表示しています。同項目に個別のCreative Commonsライセンスは表示されていません。原刊標題紙画像は同公開スキャンから採録しました。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
+    },
+    {
       "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
       "recordClass": "major-work",
       "title": "グアテマラ大洋間鉄道に関する概説",

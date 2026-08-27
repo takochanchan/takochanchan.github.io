@@ -812,6 +812,24 @@
       "sha256": "2e132492a5ba51144726845cbe382c822e7f85ee188a87250120e35ab5365d19"
     },
     {
+      "path": "publications/carranza-un-pueblo-los-altos-1897/Jesus_E_Carranza_Un_pueblo_de_Los_Altos_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jesus_E_Carranza_Un_pueblo_de_Los_Altos_1897_Japanese_Complete_Translation.epub",
+      "size": 17855143,
+      "sha256": "41fc4e5a0a6c405377c7b18b7289a6c67985c549ed779a697a41f2a32138b32a"
+    },
+    {
+      "path": "publications/carranza-un-pueblo-los-altos-1897/Jesus_E_Carranza_Un_pueblo_de_Los_Altos_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jesus_E_Carranza_Un_pueblo_de_Los_Altos_1897_Japanese_Complete_Translation.pdf",
+      "size": 4740446,
+      "sha256": "c78b0268a78e4652712ad52c84cc5188335bee06ecf5759ff6e6831be35f9d0b"
+    },
+    {
+      "path": "publications/carranza-un-pueblo-los-altos-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/carranza-un-pueblo-los-altos-1897/cover.jpg",
+      "size": 51938,
+      "sha256": "b07023174c782b809451c4d8747470821611956c4307565742faebaf645ba373"
+    },
+    {
       "path": "publications/carrera-memorias-1837-1840-1906/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Carrera_Memorias_del_General_Carrera_1906_Japanese_Complete_Translation.epub",
       "size": 1080152,

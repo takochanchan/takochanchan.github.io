@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 286);
+  assert.equal(publications.length, 287);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 9);
+  assert.equal(counts.get("002"), 10);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -99,6 +99,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-unexplored-regions-central-america-1868",
       "seitz-parkman-squier-letters-1911",
       "valle-george-ephraim-squier-1922",
+      "carranza-un-pueblo-los-altos-1897",
       "squier-waikna-mosquito-shore-1855",
     ],
   );
@@ -648,6 +649,37 @@ test("Valle George Ephraim Squier retains all 53 bibliography entries and public
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Carranza Totonicapan history retains the approved complete scope and public-domain display", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "carranza-un-pueblo-los-altos-1897",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "ヘスス・E・カランサ");
+  assert.equal(item.originalAuthor, "Jesús E. Carranza");
+  assert.equal(
+    item.originalTitle,
+    "Un pueblo de Los Altos: apuntamientos para su historia",
+  );
+  assert.equal(item.pageCount, 397);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 1);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /本文1–329頁/);
+  assert.match(item.extent, /文書35点/);
+  assert.match(item.extent, /主要正誤表/);
+  assert.match(item.description, /トトニカパンの地方史/);
+  assert.match(item.description, /ロス・アルトス州/);
+  assert.match(item.sourceProvider, /Universidad Francisco Marroquín/);
+  assert.match(item.sourceProvider, /totonicapanunpue00guat/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/totonicapanunpue00guat/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT IN COPYRIGHT/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -756,7 +788,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 137);
+  assert.equal(majorPublications.length, 138);
   assert.equal(shortPublications.length, 149);
   assert.equal(shortPublicationAuthors.length, 36);
   assert.deepEqual(
@@ -1861,7 +1893,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">137<\/strong>件/);
+  assert.match(html, /id="book-match-count">138<\/strong>件/);
   assert.match(html, /id="paper-match-count">149<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
