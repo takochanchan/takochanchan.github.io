@@ -21,6 +21,25 @@
       "updatedDate": "2026-08-27"
     },
     {
+      "slug": "seitz-parkman-squier-letters-1911",
+      "recordClass": "major-work",
+      "title": "フランシス・パークマンからE・G・スクワイアへの書簡",
+      "originalTitle": "Letters from Francis Parkman to E. G. Squier, with Biographical Notes and a Bibliography of E. G. Squier",
+      "author": "ドン・C・サイツ",
+      "originalAuthor": "Don C. Seitz",
+      "year": 1911,
+      "originalPublication": "アイオワ州シーダーラピッズ、The Torch Press、1911年",
+      "sourceEdition": "Don C. Seitz, Letters from Francis Parkman to E. G. Squier, with Biographical Notes and a Bibliography of E. G. Squier, Cedar Rapids, Iowa: The Torch Press, 1911.",
+      "sourceProvider": "University of California Libraries所蔵本をInternet Archiveがデジタル化した資料（識別子 parkmantoegsqui00franrich）を底本としました。Wikimedia Commonsが同本を70画像頁のPDFとして公開しています。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://commons.wikimedia.org/wiki/File:Letters_from_Francis_Parkman_to_E.G._Squier,_with_bibliographical_notes_and_a_bibliography_of_E.G._Squier_(IA_parkmantoegsqui00franrich).pdf"
+      },
+      "rights": "原著は1911年刊であり、パブリックドメインに属します。University of California Libraries所蔵本をInternet Archiveがデジタル化し、Wikimedia Commonsは当該70画像頁PDFを米国パブリックドメイン資料として公開しています。",
+      "publishedDate": "2026-08-27",
+      "updatedDate": "2026-08-27"
+    },
+    {
       "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
       "recordClass": "major-work",
       "title": "グアテマラ大洋間鉄道に関する概説",

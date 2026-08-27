@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-27 — ドン・C・サイツ『フランシス・パークマンからE・G・スクワイアへの書簡』新規公開
+
+- 1911年刊 *Letters from Francis Parkman to E. G. Squier, with Biographical Notes and a Bibliography of E. G. Squier* の標題紙、E・G・スクワイア略歴、献辞、序文、1849–1870年の書簡24通、著作目録95項目を日本語全訳として収録した。
+- 冊子用のファンコート母版でPDF 48頁に組み、前付の底本画像標識6件と原刊頁標識45件を収録した。EPUBはリフロー型EPUB 3とした。
+- 底本はUniversity of California Libraries所蔵本をInternet Archiveがデジタル化した70画像頁PDF（`parkmantoegsqui00franrich`）。Wikimedia Commonsは同ファイルを米国パブリックドメイン資料として公開している。
+- 公開PDFのSHA-256は `76ac37965274cf1eb7418e95d12a28bf3e5729fa5e27497f0afc0d948631bc3b`、EPUBは `09c2e8d06b5ecf440aaa0ddcadca7c07db56d2b5c798b2bc277143cbe6c66e93`。編集可能正本は非公開原本アーカイブのコミット `639a1b6e9f145c22fa2ce397851a633f2e12e9b0` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`seitz-parkman-squier-letters-1911`。
+
 ## 2026-08-27 — サミュエル・A・バード『ワイクナ――モスキート海岸での冒険』新規公開
 
 - 1855年ニューヨーク刊『Waikna; or, Adventures on the Mosquito Shore』の前付、本文全16章、付録A–C、語彙表、地図・挿絵を日本語全訳とし、PDF 285頁・EPUBで公開した。原刊位置標識347件、図版等57点、表4点を収録した。

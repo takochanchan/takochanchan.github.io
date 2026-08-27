@@ -10,6 +10,10 @@ import {
   squierBatch03ShortWorkAuthors,
 } from "./squier-batch03-publications.mjs";
 import {
+  seitzPublicationMetadata,
+  seitzPublicationRecords,
+} from "./seitz-publication.mjs";
+import {
   waiknaPublicationMetadata,
   waiknaPublicationRecords,
 } from "./waikna-publication.mjs";
@@ -9011,6 +9015,7 @@ const publicationRecords = [
     ],
   },
   ...squierBatch03PublicationRecords,
+  ...seitzPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
 ];
@@ -11542,6 +11547,7 @@ const publicationMetadata = {
     "updatedDate": "2026-08-26"
   },
   ...squierBatch03PublicationMetadata,
+  ...seitzPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
 };

@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 284);
+  assert.equal(publications.length, 285);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 7);
+  assert.equal(counts.get("002"), 8);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -97,6 +97,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-hunting-pass-tropical-adventure-1860",
       "squier-lake-yojoa-taulebe-1860",
       "squier-unexplored-regions-central-america-1868",
+      "seitz-parkman-squier-letters-1911",
       "squier-waikna-mosquito-shore-1855",
     ],
   );
@@ -593,6 +594,31 @@ test("Bury Bishop amongst Bananas retains its approved complete scope and public
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Seitz Parkman-to-Squier letters retain the approved booklet scope and public-domain display", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "seitz-parkman-squier-letters-1911",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.author, "ドン・C・サイツ");
+  assert.equal(item.originalAuthor, "Don C. Seitz");
+  assert.equal(item.pageCount, 48);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /書簡24通/);
+  assert.match(item.extent, /著作目録95項目/);
+  assert.match(item.description, /1849年から1870年/);
+  assert.match(item.sourceProvider, /University of California Libraries/);
+  assert.match(item.sourceProvider, /parkmantoegsqui00franrich/);
+  assert.match(item.sourceProvider, /Wikimedia Commons/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-27");
+  assert.equal(item.updatedDate, "2026-08-27");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -701,7 +727,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 136);
+  assert.equal(majorPublications.length, 137);
   assert.equal(shortPublications.length, 148);
   assert.equal(shortPublicationAuthors.length, 35);
   assert.deepEqual(
@@ -1805,7 +1831,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">136<\/strong>件/);
+  assert.match(html, /id="book-match-count">137<\/strong>件/);
   assert.match(html, /id="paper-match-count">148<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

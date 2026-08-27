@@ -4286,6 +4286,24 @@
       "sha256": "43d6ac4f1439f016b98bef57108b7db6bf00c79f32f6b40fbd0e325c026b8679"
     },
     {
+      "path": "publications/seitz-parkman-squier-letters-1911/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
+      "size": 108322,
+      "sha256": "09c2e8d06b5ecf440aaa0ddcadca7c07db56d2b5c798b2bc277143cbe6c66e93"
+    },
+    {
+      "path": "publications/seitz-parkman-squier-letters-1911/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.pdf",
+      "size": 1358279,
+      "sha256": "76ac37965274cf1eb7418e95d12a28bf3e5729fa5e27497f0afc0d948631bc3b"
+    },
+    {
+      "path": "publications/seitz-parkman-squier-letters-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/seitz-parkman-squier-letters-1911/cover.jpg",
+      "size": 53655,
+      "sha256": "c87ba1767da0a954259779a2051a61a327c61ef55e1fe592d70eb5977d6c3bc5"
+    },
+    {
       "path": "publications/seler-sachs-auf-alten-wegen-1900/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Caecilie_Seler_Sachs_Auf_alten_Wegen_in_Mexiko_und_Guatemala_1900_Japanese_Complete_Translation.epub",
       "size": 54531859,
