@@ -5606,6 +5606,25 @@
       "rights": "1829年刊の原著本文と折込地図はパブリックドメインです。Internet Archiveの主底本とWikimedia Commonsの補完底本はPublic Domain Mark 1.0で公開されています。折込地図はBibliothèque nationale de France所蔵GE D-2366です。",
       "publishedDate": "2026-08-27",
       "updatedDate": "2026-08-27"
+    },
+    {
+      "slug": "childs-nicaragua-canal-survey-1852",
+      "recordClass": "major-work",
+      "title": "ニカラグア両洋間船舶運河",
+      "originalTitle": "Report of the Survey and Estimates of the Cost of Constructing the Inter-oceanic Ship Canal, from the Harbor of San Juan del Norte, on the Atlantic, to the Harbor of Brito, on the Pacific, in the State of Nicaragua, Central America",
+      "author": "オーヴィル・W・チャイルズ",
+      "originalAuthor": "Orville W. Childs",
+      "year": 1852,
+      "originalPublication": "ニューヨーク、W. C. Bryant, Printers、1852年",
+      "sourceEdition": "Orville W. Childs, Report of the Survey and Estimates of the Cost of Constructing the Inter-oceanic Ship Canal, from the Harbor of San Juan del Norte, on the Atlantic, to the Harbor of Brito, on the Pacific, in the State of Nicaragua, Central America, Made for the American, Atlantic and Pacific Ship Canal Co., in the Years 1850–51, J. D. Fay, principal assistant, New York: W. C. Bryant, Printers, 1852.",
+      "sourceProvider": "Harvard University所蔵本をGoogleがデジタル化し、Internet Archiveが公開する1852年版（reportsurveyand00compgoog）を底本としました。原刊は折込5葉を伴いますが、公開画像には折り畳まれた外側しかなく展開面を判読できないため、他資料の図版による補完は行っていません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/reportsurveyand00compgoog"
+      },
+      "rights": "1852年刊の原著本文はパブリックドメインです。Internet Archiveの書誌メタデータは当該項目をNOT_IN_COPYRIGHTと表示しています。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [

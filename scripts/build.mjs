@@ -30,7 +30,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260827-thompson-official-visit";
+const assetVersion = "20260828-childs-nicaragua-canal";
 
 const escapeHtml = (value = "") =>
   String(value)

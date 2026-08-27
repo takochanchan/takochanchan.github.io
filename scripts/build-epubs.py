@@ -77,6 +77,9 @@ DOCX_SOURCES = {
     "baily-central-america-1850": SOURCES
     / "翻訳サイト"
     / "John_Baily_Central_America_1850_Japanese_Complete_Translation.docx",
+    "childs-nicaragua-canal-survey-1852": SOURCES
+    / "翻訳サイト"
+    / "Orville_W_Childs_Nicaragua_Canal_1852_Japanese_Complete_Translation.docx",
     "squier-nicaragua-1852": SOURCES
     / "翻訳サイト"
     / "Squier_Nicaragua_1852_Japanese_Complete_Translation.docx",

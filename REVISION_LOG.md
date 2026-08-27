@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-28 — オーヴィル・W・チャイルズ『ニカラグア両洋間船舶運河』新規公開
+
+- 1852年刊 *Report of the Survey and Estimates of the Cost of Constructing the Inter-oceanic Ship Canal* の標題紙、目次、正誤表、印刷頁i–iiおよび3–153、全表、注、引用、署名を日本語全訳として収録した。公開PDFは151頁、EPUBはリフロー型EPUB 3とした。
+- 原刊頁標識153件と折込位置・状態標識5件を収録した。原刊折込5葉は底本画像に折り畳まれた外側しかなく展開面を判読できないため、他資料の図版による補完を行わず、本文図版は0点とした。
+- 底本はHarvard University所蔵本をGoogleがデジタル化しInternet Archiveが公開する1852年版（`reportsurveyand00compgoog`）。同項目の書誌メタデータは `possible-copyright-status: NOT_IN_COPYRIGHT` と表示する。
+- 公開PDFのSHA-256は `87d0bfc284fe53d197cdaffaed2357a033db0a1c1b45ea826181c30bb48bcb4a`、EPUBは `359164ce139aea5ea106024fc588f8266728c8d67340a656bff20c4f9f94d908`。編集可能正本は非公開原本アーカイブのコミット `ead00ea8d0a4cef4c46dd96b2abd1ef76d78da01` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`childs-nicaragua-canal-survey-1852`。
+
 ## 2026-08-27 — ジョージ・アレグザンダー・トンプソン『メキシコからグアテマラへの公式訪問記』新規公開
 
 - 1829年刊 *Narrative of an Official Visit to Guatemala from Mexico* の原刊前付、序論、本文1–528頁、附録、折込地図1葉を日本語全訳として収録した。ファンコート母版により公開PDF 267頁、EPUBはリフロー型EPUB 3とした。

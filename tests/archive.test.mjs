@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 294);
+  assert.equal(publications.length, 295);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 17);
+  assert.equal(counts.get("002"), 18);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -106,6 +106,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "valle-george-ephraim-squier-1922",
       "carranza-un-pueblo-los-altos-1897",
       "baily-central-america-1850",
+      "childs-nicaragua-canal-survey-1852",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
     ],
@@ -753,6 +754,39 @@ test("Thompson Official Visit retains the approved complete scope and source rol
   assert.equal(item.updatedDate, "2026-08-27");
 });
 
+test("Childs Nicaragua canal survey retains the approved complete scope and source limits", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "childs-nicaragua-canal-survey-1852",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "ニカラグア両洋間船舶運河");
+  assert.equal(item.author, "オーヴィル・W・チャイルズ");
+  assert.equal(item.originalAuthor, "Orville W. Childs");
+  assert.match(item.originalTitle, /^Report of the Survey and Estimates/);
+  assert.equal(item.pageCount, 151);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊前付ii頁/);
+  assert.match(item.extent, /本文3–153頁/);
+  assert.match(item.extent, /表118点/);
+  assert.match(item.extent, /原刊折込5葉/);
+  assert.match(item.description, /1850–51年/);
+  assert.match(item.description, /総工費/);
+  assert.match(item.sourceProvider, /Harvard University/);
+  assert.match(item.sourceProvider, /reportsurveyand00compgoog/);
+  assert.match(item.sourceProvider, /他資料の図版による補完は行っていません/);
+  assert.match(item.sourceUrl, /archive\.org\/details\/reportsurveyand00compgoog/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+  assert.doesNotMatch(item.sourceProvider, /1866|Rumsey|第IV図/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-28");
+  assert.equal(item.updatedDate, "2026-08-28");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -861,7 +895,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 140);
+  assert.equal(majorPublications.length, 141);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -1955,10 +1989,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260827-thompson-official-visit/);
-  assert.match(html, /\/archive\.js\?v=20260827-thompson-official-visit/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260827-thompson-official-visit/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260827-thompson-official-visit/);
+  assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
+  assert.match(html, /\/archive\.js\?v=20260828-childs-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260828-childs-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260828-childs-nicaragua-canal/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -1971,7 +2005,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">140<\/strong>件/);
+  assert.match(html, /id="book-match-count">141<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2055,7 +2089,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260827-thompson-official-visit/);
+  assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2189,17 +2223,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260827-thompson-official-visit/);
-    assert.match(html, /\/archive\.js\?v=20260827-thompson-official-visit/);
+    assert.match(html, /\/archive\.css\?v=20260828-childs-nicaragua-canal/);
+    assert.match(html, /\/archive\.js\?v=20260828-childs-nicaragua-canal/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260827-thompson-official-visit#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260828-childs-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260827-thompson-official-visit#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260828-childs-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
