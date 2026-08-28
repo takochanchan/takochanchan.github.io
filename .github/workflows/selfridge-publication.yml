@@ -39,8 +39,8 @@ jobs:
           test "$(git -C site diff --name-only f901e5e880de0099ac0b103aea80b3f1feebcc41 HEAD)" = ".github/workflows/selfridge-publication.yml"
           git -C site apply --check ../staged/publication-staging/site-changes.patch
           git -C site apply ../staged/publication-staging/site-changes.patch
-          mkdir -p site/publications/selfridge-darien-ship-canal-1874
-          cp staged/publication-staging/cover.jpg site/publications/selfridge-darien-ship-canal-1874/cover.jpg
+          mkdir -p site/static/publications/selfridge-darien-ship-canal-1874
+          cp staged/publication-staging/cover.jpg site/static/publications/selfridge-darien-ship-canal-1874/cover.jpg
           rm site/.github/workflows/selfridge-publication.yml
 
       - name: Set up Node
