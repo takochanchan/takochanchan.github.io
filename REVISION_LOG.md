@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-28 — フェリックス・ベリー『ニカラグア運河によるパナマ地峡の開削』新規公開
+
+- 1858年刊 *Percement de l’isthme de Panama par le canal de Nicaragua. Exposé de la question* の標題紙、前言、原刊本文5–177頁、目次、折込地図3点、表30点を日本語全訳として収録した。公開PDFは172頁、EPUBはリフロー型EPUB 3とした。
+- 底本はUniversidade de Santiago de CompostelaのMinervaリポジトリ公開本（b1294465.pdf）。原著はパブリックドメインで、Minervaは当該所蔵本に「Dominio público (PDM)」／Public Domain Markを表示している。
+- 公開PDFのSHA-256は `8cdb57f9ea7da605759509f6922e7b67cbef664bd4e2e4dba45c41e705cd793b`、EPUBは `9077f1588bc49e8755428888bcd27af8cc52e2937ca8aadab70bb3aadc827a04`。編集可能正本は非公開原本アーカイブの検証済みコミット `033339e1c569e367aa09aba82a496eb253512e04` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`belly-percement-isthme-panama-canal-nicaragua-1858`。
+
 ## 2026-08-28 — ナポレオン・ガレラ『パナマ地峡を横断する太平洋・大西洋連絡運河計画』新規公開
 
 - 1845年刊 *Projet d’un canal de jonction de l’Océan Pacifique et de l’Océan Atlantique à travers l’isthme de Panama* の標題紙、正誤表、刊行に関する注記、原刊目次、本文1–233頁、巻末折込図2葉、表89点を日本語全訳として収録した。公開PDFは168頁、EPUBはリフロー型EPUB 3とした。

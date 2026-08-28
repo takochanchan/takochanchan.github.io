@@ -182,6 +182,24 @@
       "sha256": "016195b9e851348a34a714cfe8d2cc3aa2ca789437fa5f59913490e9f36fc50e"
     },
     {
+      "path": "publications/belly-percement-isthme-panama-canal-nicaragua-1858/Felix_Belly_Percement_de_l_isthme_de_Panama_par_le_canal_de_Nicaragua_1858_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Felix_Belly_Percement_de_l_isthme_de_Panama_par_le_canal_de_Nicaragua_1858_Japanese_Complete_Translation.epub",
+      "size": 23236648,
+      "sha256": "9077f1588bc49e8755428888bcd27af8cc52e2937ca8aadab70bb3aadc827a04"
+    },
+    {
+      "path": "publications/belly-percement-isthme-panama-canal-nicaragua-1858/Felix_Belly_Percement_de_l_isthme_de_Panama_par_le_canal_de_Nicaragua_1858_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Felix_Belly_Percement_de_l_isthme_de_Panama_par_le_canal_de_Nicaragua_1858_Japanese_Complete_Translation.pdf",
+      "size": 3918121,
+      "sha256": "8cdb57f9ea7da605759509f6922e7b67cbef664bd4e2e4dba45c41e705cd793b"
+    },
+    {
+      "path": "publications/belly-percement-isthme-panama-canal-nicaragua-1858/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/belly-percement-isthme-panama-canal-nicaragua-1858/cover.jpg",
+      "size": 49549,
+      "sha256": "70a9574d6e341419ca2b621e25860b8be41baa75ac8ce0b00753eee86f2d42a0"
+    },
+    {
       "path": "publications/beltran-arte-idioma-maya-1746/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pedro_Beltran_Arte_Idioma_Maya_1746_Japanese_Complete_Translation.epub",
       "size": 52562155,
@@ -5150,24 +5168,6 @@
       "sha256": "feab73fdd9c59a0505d6f322d198612c2a7cb0c85640e33ff1bc214a0b15231d"
     },
     {
-      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
-      "size": 361661,
-      "sha256": "1a2f003b522066def638d9ccd65d83fdb488312059536716ffb43895fb9775b6"
-    },
-    {
-      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
-      "size": 1592953,
-      "sha256": "28a8ee41eb098095d0a390e96f3f1eacd34225888be61357c01000592e09f1c9"
-    },
-    {
-      "path": "publications/us-senate-central-america-correspondence-1853/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/us-senate-central-america-correspondence-1853/cover.jpg",
-      "size": 255191,
-      "sha256": "8ac4ea162f22be5abef7ad3482b160ae12624908ef013bdd09556a43ede125f8"
-    },
-    {
       "path": "publications/us-navy-nicaragua-ship-canal-survey-1874/U_S_Navy_Reports_of_Explorations_and_Surveys_Nicaragua_1874_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/U_S_Navy_Reports_of_Explorations_and_Surveys_Nicaragua_1874_Japanese_Complete_Translation.epub",
       "size": 59230356,
@@ -5184,6 +5184,24 @@
       "url": "https://takochanchan.github.io/publications/us-navy-nicaragua-ship-canal-survey-1874/cover.jpg",
       "size": 78940,
       "sha256": "83df8751585296b7f99a6c8e4d8251b9ad2b6fb36ac2efb6b8029928c7a7d6a3"
+    },
+    {
+      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.epub",
+      "size": 361661,
+      "sha256": "1a2f003b522066def638d9ccd65d83fdb488312059536716ffb43895fb9775b6"
+    },
+    {
+      "path": "publications/us-senate-central-america-correspondence-1853/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/US_Senate_Executive_Document_27_Central_America_Correspondence_1853_Japanese_Complete_Translation.pdf",
+      "size": 1592953,
+      "sha256": "28a8ee41eb098095d0a390e96f3f1eacd34225888be61357c01000592e09f1c9"
+    },
+    {
+      "path": "publications/us-senate-central-america-correspondence-1853/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/us-senate-central-america-correspondence-1853/cover.jpg",
+      "size": 255191,
+      "sha256": "8ac4ea162f22be5abef7ad3482b160ae12624908ef013bdd09556a43ede125f8"
     },
     {
       "path": "publications/valenzuela-lacandon-chol-1695/cover.jpg",

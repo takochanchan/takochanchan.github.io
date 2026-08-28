@@ -20,6 +20,10 @@ import {
   bonaparteNicaraguaCanalPublicationRecords,
 } from "./bonaparte-nicaragua-canal-publication.mjs";
 import {
+  bellyPercementPublicationMetadata,
+  bellyPercementPublicationRecords,
+} from "./belly-percement-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9067,6 +9071,7 @@ const publicationRecords = [
   ...usNavyNicaraguaCanalPublicationRecords,
   ...selfridgeDarienPublicationRecords,
   ...bonaparteNicaraguaCanalPublicationRecords,
+  ...bellyPercementPublicationRecords,
   ...garellaPanamaCanalPublicationRecords,
   ...thompsonOfficialVisitPublicationRecords,
   ...waiknaPublicationRecords,
@@ -11609,6 +11614,7 @@ const publicationMetadata = {
   ...usNavyNicaraguaCanalPublicationMetadata,
   ...selfridgeDarienPublicationMetadata,
   ...bonaparteNicaraguaCanalPublicationMetadata,
+  ...bellyPercementPublicationMetadata,
   ...garellaPanamaCanalPublicationMetadata,
   ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,

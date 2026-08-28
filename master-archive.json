@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "8a0bacfcf5e9726eb70b5aba230986ffe1764bed",
+  "archive_commit": "033339e1c569e367aa09aba82a496eb253512e04",
   "publications": {
     "bury-bishop-amongst-bananas-1911": "publications/bury-bishop-amongst-bananas-1911/master.docx",
     "seitz-parkman-squier-letters-1911": "publications/seitz-parkman-squier-letters-1911/master.docx",
@@ -244,7 +244,8 @@
     "virchow-graeberschaedel-guatemala-1897": "publications/virchow-graeberschaedel-guatemala-1897/master.docx",
     "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
-    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx"
+    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
+    "belly-percement-isthme-panama-canal-nicaragua-1858": "publications/belly-percement-isthme-panama-canal-nicaragua-1858/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
