@@ -5758,6 +5758,25 @@
       "rights": "1885年刊の原著はパブリックドメインです（著者José Carlos Rodriguesは1922年没）。Internet Archiveの当該項目は possible-copyright-status: NOT_IN_COPYRIGHT（copyright-region: US）と表示し、同一PDFを収録するWikimedia Commonsは Public domain in the United States（PD-US / PD-1923）と表示しています。Internet Archiveの利用には同サービスのTerms of Useが適用され、当該項目には個別のCreative Commons等のライセンス表示はありません。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "congres-international-canal-interoceanique-1879",
+      "recordClass": "major-work",
+      "title": "国際洋間運河研究会議 会議録",
+      "originalTitle": "Compte rendu des séances du Congrès international d’études du canal interocéanique",
+      "author": "国際洋間運河研究会議",
+      "originalAuthor": "Congrès international d’études du canal interocéanique",
+      "year": 1879,
+      "originalPublication": "パリ、Imprimerie Émile Martinet、1879年",
+      "sourceEdition": "Congrès international d’études du canal interocéanique tenu à l’Hôtel de la Société de Géographie, du 15 au 29 mai 1879 : compte rendu des séances, Paris: Imprimerie Émile Martinet, 1879.",
+      "sourceProvider": "ミシガン大学所蔵本をGoogle Booksが公開する1879年版（ID t0YxAQAAMAAJ、PDF 687頁）を主底本としました。主底本で欠ける目次末尾、正誤表、折込図版I–IVは、フランス国立図書館（BnF）がGallicaで公開するÉcole nationale des ponts et chaussées所蔵本（請求記号4°14202、ark:/12148/bpt6k1092509q）で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=t0YxAQAAMAAJ"
+      },
+      "rights": "1879年刊の原著はパブリックドメインです。Gallica補完画像の権利表示は No Copyright - Other Known Legal Restrictions（NoC-OKLR 1.0）です。非商用利用および学術・科学出版は「Source gallica.bnf.fr / Bibliothèque nationale de France」の出典表示を条件に無償です。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [

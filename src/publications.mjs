@@ -36,6 +36,10 @@ import {
   rodriguesPanamaCanalPublicationRecords,
 } from "./rodrigues-panama-canal-publication.mjs";
 import {
+  congresInternationalCanalInteroceaniquePublicationMetadata,
+  congresInternationalCanalInteroceaniquePublicationRecords,
+} from "./congres-international-canal-interoceanique-publication.mjs";
+import {
   thompsonOfficialVisitPublicationMetadata,
   thompsonOfficialVisitPublicationRecords,
 } from "./thompson-official-visit-publication.mjs";
@@ -9083,6 +9087,7 @@ const publicationRecords = [
   ...garellaPanamaCanalPublicationRecords,
   ...reclusPanamaDarienPublicationRecords,
   ...rodriguesPanamaCanalPublicationRecords,
+  ...congresInternationalCanalInteroceaniquePublicationRecords,
   ...thompsonOfficialVisitPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
@@ -11628,6 +11633,7 @@ const publicationMetadata = {
   ...garellaPanamaCanalPublicationMetadata,
   ...reclusPanamaDarienPublicationMetadata,
   ...rodriguesPanamaCanalPublicationMetadata,
+  ...congresInternationalCanalInteroceaniquePublicationMetadata,
   ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,

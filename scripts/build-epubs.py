@@ -59,6 +59,9 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "congres-international-canal-interoceanique-1879": SOURCES
+    / "翻訳サイト"
+    / "Congres_International_Canal_Interoceanique_1879_Japanese_Complete_Translation.docx",
     "squier-observations-zestermann-1851": SOURCES
     / "翻訳サイト"
     / "SQ-ART-027_Observations_on_Zestermann_Japanese_Prepublication.docx",
