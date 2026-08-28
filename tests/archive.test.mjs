@@ -916,7 +916,7 @@ test("Garella Panama canal plan retains the approved complete scope and source r
   assert.equal(item.author, "ナポレオン・ガレラ");
   assert.equal(item.originalAuthor, "Napoléon Garella");
   assert.match(item.originalTitle, /^Projet d’un canal de jonction/);
-  assert.equal(item.pageCount, 168);
+  assert.equal(item.pageCount, 166);
   assert.equal(item.figureCount, 0);
   assert.equal(item.plateCount, 2);
   assert.equal(item.searchShard, "002");

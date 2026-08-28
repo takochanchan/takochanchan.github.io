@@ -11,7 +11,7 @@ export const garellaPanamaCanalPublicationRecords = [
     originalPublication: "パリ、Carilian-Gœury et V. Dalmont、1845年",
     year: 1845,
     extent:
-      "1巻・PDF 168頁・原刊前付VIII頁・本文1–233頁・巻末折込図2葉・表89点",
+      "1巻・PDF 166頁・原刊前付VIII頁・本文1–233頁・巻末折込図2葉・表89点",
     description:
       "フランスの鉱山技師ナポレオン・ガレラが1843–44年の現地調査に基づいて作成したパナマ運河計画です。パナマ地峡の地形・地質・建設材料を検討し、閘門式運河の線形、分水区間の隧道案と切通し案、給水、港湾、工費、収入、実施方法を示し、テワンテペク案・ニカラグア案との比較も行います。",
     cover: "publications/garella-panama-canal-1845/cover.jpg",
@@ -19,7 +19,7 @@ export const garellaPanamaCanalPublicationRecords = [
       "publications/garella-panama-canal-1845/Napoleon_Garella_Projet_Canal_Panama_1845_Japanese_Complete_Translation.pdf",
     epub:
       "publications/garella-panama-canal-1845/Napoleon_Garella_Projet_Canal_Panama_1845_Japanese_Complete_Translation.epub",
-    pageCount: 168,
+    pageCount: 166,
     figureCount: 0,
     plateCount: 2,
     types: ["工学報告", "運河史", "探検報告", "測量", "交通史", "一次史料"],
