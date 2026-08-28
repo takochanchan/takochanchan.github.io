@@ -5644,6 +5644,25 @@
       "rights": "1874年刊の原著本文および図版はアメリカ合衆国政府の著作物であり、17 U.S.C. § 105によりパブリックドメインです。GovInfoのPublic Domain and Copyright Noticeも、合衆国政府が作成した文書についてこの原則を示しています。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "selfridge-darien-ship-canal-1874",
+      "recordClass": "major-work",
+      "title": "ダリエン地峡船舶運河",
+      "originalTitle": "Reports of Explorations and Surveys to Ascertain the Practicability of a Ship-Canal between the Atlantic and Pacific Oceans by the Way of the Isthmus of Darien",
+      "author": "トマス・オリヴァー・セルフリッジ",
+      "originalAuthor": "Thomas O. Selfridge",
+      "year": 1874,
+      "originalPublication": "ワシントン、Government Printing Office、1874年（第42議会第3会期・下院雑文書第113号）",
+      "sourceEdition": "Thomas O. Selfridge, Reports of Explorations and Surveys to Ascertain the Practicability of a Ship-Canal between the Atlantic and Pacific Oceans by the Way of the Isthmus of Darien, Washington: Government Printing Office, 1874, 42d Congress, 3d Session, House Miscellaneous Document No. 113, Congressional Serial Set 1575.",
+      "sourceProvider": "U.S. Government Publishing Office（GovInfo）が公開するCongressional Serial Set 1575所収、第42議会第3会期・下院雑文書第113号（SERIALSET-01575_00_00-001-0113-0000）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.govinfo.gov/app/details/SERIALSET-01575_00_00-001-0113-0000"
+      },
+      "rights": "1874年刊の原著本文および図版はアメリカ合衆国政府の著作物であり、17 U.S.C. § 105によりパブリックドメインです。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [

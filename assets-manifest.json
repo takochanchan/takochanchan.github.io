@@ -4376,6 +4376,24 @@
       "sha256": "48f36c12f70bebe8c4745e08167683ff655523b3d5ebf1d762f34732df34cda8"
     },
     {
+      "path": "publications/selfridge-darien-ship-canal-1874/Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.epub",
+      "size": 105528786,
+      "sha256": "804c03eeac364be3140ed0ffcb6657e3bfedc3299f83970ab770efa2409bee17"
+    },
+    {
+      "path": "publications/selfridge-darien-ship-canal-1874/Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.pdf",
+      "size": 37062085,
+      "sha256": "c7f1381cbda3ff8d0e6a2ad3aaf92e8eca42608fd39f80fb45c9989a07455888"
+    },
+    {
+      "path": "publications/selfridge-darien-ship-canal-1874/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/selfridge-darien-ship-canal-1874/cover.jpg",
+      "size": 52796,
+      "sha256": "e4c6abdc14daf3f0fa6f3a47a67478abeeeff9a9edb304261a936ce59ba2281c"
+    },
+    {
       "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "size": 804001,

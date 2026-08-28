@@ -83,6 +83,9 @@ DOCX_SOURCES = {
     "us-navy-nicaragua-ship-canal-survey-1874": SOURCES
     / "翻訳サイト"
     / "U_S_Navy_Reports_of_Explorations_and_Surveys_Nicaragua_1874_Japanese_Complete_Translation.docx",
+    "selfridge-darien-ship-canal-1874": SOURCES
+    / "翻訳サイト"
+    / "Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.docx",
     "squier-nicaragua-1852": SOURCES
     / "翻訳サイト"
     / "Squier_Nicaragua_1852_Japanese_Complete_Translation.docx",

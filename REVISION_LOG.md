@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-28 — トマス・O・セルフリッジ『ダリエン地峡船舶運河』新規公開
+
+- 1874年刊 *Reports of Explorations and Surveys to Ascertain the Practicability of a Ship-Canal between the Atlantic and Pacific Oceans by the Way of the Isthmus of Darien* の本文1–268頁、本文図版14葉、巻末折込図版17葉を日本語全訳として収録した。公開PDFは652頁、EPUBはリフロー型EPUB 3とした。
+- 底本はU.S. Government Publishing Office（GovInfo）公開のCongressional Serial Set 1575・第42議会第3会期・下院雑文書第113号（`SERIALSET-01575_00_00-001-0113-0000`）。合衆国政府の著作物であり、17 U.S.C. § 105によりパブリックドメインである。
+- 原刊頁標262件、表70点、画像95点、脚注1件を収録した。前文と本文を別頁とし、本文から全折込図版までの構造、画像、頁順、書体、枝落ち、再取得後のSHA-256を検証した。
+- 公開PDFのSHA-256は `c7f1381cbda3ff8d0e6a2ad3aaf92e8eca42608fd39f80fb45c9989a07455888`、EPUBは `804c03eeac364be3140ed0ffcb6657e3bfedc3299f83970ab770efa2409bee17`。編集可能正本は非公開原本アーカイブの検証済みコミット `f0f698746e0c580b0fbf9a447bb864ae7f7ac0b7` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`selfridge-darien-ship-canal-1874`。
+
 ## 2026-08-28 — アメリカ合衆国海軍省『ニカラグア船舶運河位置選定のための探検・測量報告書』新規公開
 
 - 1874年刊 *Reports of Explorations and Surveys for the Location of a Ship-Canal between the Atlantic and Pacific Oceans, through Nicaragua. 1872-'73* の前付、本文7–143頁、表71点、挿図5点、折込図版20葉を日本語全訳として収録した。公開PDFは309頁、EPUBはリフロー型EPUB 3とした。

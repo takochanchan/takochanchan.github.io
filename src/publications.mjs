@@ -12,6 +12,10 @@ import {
   usNavyNicaraguaCanalPublicationRecords,
 } from "./us-navy-nicaragua-canal-publication.mjs";
 import {
+  selfridgeDarienPublicationMetadata,
+  selfridgeDarienPublicationRecords,
+} from "./selfridge-darien-publication.mjs";
+import {
   thompsonOfficialVisitPublicationMetadata,
   thompsonOfficialVisitPublicationRecords,
 } from "./thompson-official-visit-publication.mjs";
@@ -9052,6 +9056,7 @@ const publicationRecords = [
   ...bailyPublicationRecords,
   ...childsPublicationRecords,
   ...usNavyNicaraguaCanalPublicationRecords,
+  ...selfridgeDarienPublicationRecords,
   ...thompsonOfficialVisitPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
@@ -11591,6 +11596,7 @@ const publicationMetadata = {
   ...bailyPublicationMetadata,
   ...childsPublicationMetadata,
   ...usNavyNicaraguaCanalPublicationMetadata,
+  ...selfridgeDarienPublicationMetadata,
   ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
