@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 22);
+  assert.equal(counts.get("002"), 23);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -110,6 +110,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "us-navy-nicaragua-ship-canal-survey-1874",
       "selfridge-darien-ship-canal-1874",
       "bonaparte-nicaragua-canal-1846",
+      "belly-percement-isthme-panama-canal-nicaragua-1858",
       "garella-panama-canal-1845",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
@@ -1044,7 +1045,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 145);
+  assert.equal(majorPublications.length, 146);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2138,10 +2139,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260828-garella-panama-canal/);
-  assert.match(html, /\/archive\.js\?v=20260828-garella-panama-canal/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260828-garella-panama-canal/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260828-garella-panama-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
+  assert.match(html, /\/archive\.js\?v=20260828-belly-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260828-belly-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260828-belly-nicaragua-canal/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2238,7 +2239,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260828-garella-panama-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2372,17 +2373,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260828-garella-panama-canal/);
-    assert.match(html, /\/archive\.js\?v=20260828-garella-panama-canal/);
+    assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
+    assert.match(html, /\/archive\.js\?v=20260828-belly-nicaragua-canal/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260828-garella-panama-canal#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260828-belly-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260828-garella-panama-canal#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260828-belly-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
