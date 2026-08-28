@@ -559,7 +559,7 @@ test("Prieto and Piatkowski Guatemala interoceanic railroad retains its approved
   assert.match(item.rights, /標題紙および裏表紙画像/);
   assert.doesNotMatch(item.rights, /日本語翻訳版|再利用許諾|再利用ライセンス/);
   assert.equal(item.publishedDate, "2026-08-26");
-  assert.equal(item.updatedDate, "2026-08-26");
+  assert.equal(item.updatedDate, "2026-08-28");
 });
 
 test("Otis Panama Railroad history retains its approved complete scope and institutional rights display", () => {
