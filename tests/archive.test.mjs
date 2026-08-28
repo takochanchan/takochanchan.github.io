@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 300);
+  assert.equal(publications.length, 301);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 23);
+  assert.equal(counts.get("002"), 24);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -112,6 +112,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "bonaparte-nicaragua-canal-1846",
       "belly-percement-isthme-panama-canal-nicaragua-1858",
       "garella-panama-canal-1845",
+      "reclus-panama-darien-1881",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
     ],
@@ -937,6 +938,42 @@ test("Garella Panama canal plan retains the approved complete scope and source r
   assert.equal(item.updatedDate, "2026-08-28");
 });
 
+test("Reclus Panama and Darien retains the approved complete scope and same-edition supplements", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "reclus-panama-darien-1881",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "パナマとダリエン");
+  assert.equal(item.author, "アルマン・ルクリュ");
+  assert.equal(item.originalAuthor, "Armand Reclus");
+  assert.match(item.originalTitle, /^Panama et Darien/);
+  assert.equal(item.pageCount, 300);
+  assert.equal(item.figureCount, 60);
+  assert.equal(item.plateCount, 3);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊本文1–422頁/);
+  assert.match(item.extent, /挿絵60点/);
+  assert.match(item.extent, /固有地図図版3面/);
+  assert.match(item.description, /1876–78年/);
+  assert.match(item.description, /サン・ブラス/);
+  assert.match(item.description, /ダリエン南部/);
+  assert.match(item.sourceProvider, /panamaetdarienv00reclgoog/);
+  assert.match(item.sourceProvider, /1qXUAAAAMAAJ/);
+  assert.match(item.sourceProvider, /bpt6k775176/);
+  assert.match(item.sourceProvider, /同一版/);
+  assert.match(
+    item.sourceUrl,
+    /archive\.org\/details\/panamaetdarienv00reclgoog/,
+  );
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+  assert.match(item.rights, /Gallica/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-28");
+  assert.equal(item.updatedDate, "2026-08-28");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -1045,7 +1082,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 146);
+  assert.equal(majorPublications.length, 147);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2139,10 +2176,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
-  assert.match(html, /\/archive\.js\?v=20260828-belly-nicaragua-canal/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260828-belly-nicaragua-canal/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260828-belly-nicaragua-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-reclus-panama-darien/);
+  assert.match(html, /\/archive\.js\?v=20260828-reclus-panama-darien/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260828-reclus-panama-darien/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260828-reclus-panama-darien/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2155,7 +2192,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">146<\/strong>件/);
+  assert.match(html, /id="book-match-count">147<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2239,7 +2276,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-reclus-panama-darien/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2373,17 +2410,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260828-belly-nicaragua-canal/);
-    assert.match(html, /\/archive\.js\?v=20260828-belly-nicaragua-canal/);
+    assert.match(html, /\/archive\.css\?v=20260828-reclus-panama-darien/);
+    assert.match(html, /\/archive\.js\?v=20260828-reclus-panama-darien/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260828-belly-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260828-reclus-panama-darien#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260828-belly-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260828-reclus-panama-darien#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

@@ -4106,6 +4106,24 @@
       "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
     },
     {
+      "path": "publications/reclus-panama-darien-1881/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.epub",
+      "size": 26685416,
+      "sha256": "ed37e5ca085c9090285953eb6c1ec6000f25b3557f3dfbb3f5d65391fd71ae3c"
+    },
+    {
+      "path": "publications/reclus-panama-darien-1881/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.pdf",
+      "size": 11779671,
+      "sha256": "cdbbd038fa59774d1f48372b0b6f86f642fb950dd850e4329852ca9238b0210a"
+    },
+    {
+      "path": "publications/reclus-panama-darien-1881/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/reclus-panama-darien-1881/cover.jpg",
+      "size": 52901,
+      "sha256": "0479c235920f38ed1e1bba3d57e5d19313e63134b75b1336dd6fb4bd3bde3a6a"
+    },
+    {
       "path": "publications/remesal-historia-general-1619/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_de_Remesal_Historia_General_1619_Japanese_Complete_Translation.epub",
       "size": 11395673,

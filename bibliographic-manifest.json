@@ -5720,6 +5720,25 @@
       "rights": "1845年刊の原著本文はパブリックドメインです。BnF/Gallica画像の再利用はGallicaの利用条件に従います。Internet Archive項目は possible-copyright-status: NOT_IN_COPYRIGHT と表示し、University of Florida Digital Collectionsの当該項目はパブリックドメインと推定される資料として公開されています。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "reclus-panama-darien-1881",
+      "recordClass": "major-work",
+      "title": "パナマとダリエン",
+      "originalTitle": "Panama et Darien : Voyages d’exploration (1876–1878)",
+      "author": "アルマン・ルクリュ",
+      "originalAuthor": "Armand Reclus",
+      "year": 1881,
+      "originalPublication": "パリ、Librairie Hachette et Cie.、1881年",
+      "sourceEdition": "Armand Reclus, Panama et Darien : Voyages d’exploration (1876–1878), Paris: Librairie Hachette et Cie., 1881.",
+      "sourceProvider": "ミシガン大学所蔵本をGoogleがデジタル化し、Internet Archiveが公開する1881年Hachette版（panamaetdarienv00reclgoog）を主底本としました。主底本で欠ける原刊124–125頁および343–344頁は、ペンシルベニア州立大学所蔵の同一版（Google Books 1qXUAAAAMAAJ）で補い、不完全に開かれた本文後折込地図2面は、フランス国立図書館所蔵の同一版（Gallica bpt6k775176）の完全展開画像で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/panamaetdarienv00reclgoog"
+      },
+      "rights": "1881年刊の原著本文・原刊図版はパブリックドメインです。Internet Archiveの当該項目は possible-copyright-status: NOT_IN_COPYRIGHT と表示しています。Google由来の主底本・補完画像にはGoogle Booksの利用指針が、BnF/Gallica由来の折込地図2面にはGallicaの利用条件が適用されます。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [
