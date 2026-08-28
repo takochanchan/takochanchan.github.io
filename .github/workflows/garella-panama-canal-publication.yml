@@ -171,3 +171,4 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Fgarella-panama-canal-publication-20260828-v1"
+# Retry with canonical base blob fidelity.
