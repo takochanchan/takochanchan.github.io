@@ -60,4 +60,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Spanish American Republics bibliography deployment: 2026-08-27
+# Rodrigues bibliography deployment: 2026-08-28
