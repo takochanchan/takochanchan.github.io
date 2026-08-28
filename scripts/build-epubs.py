@@ -89,6 +89,9 @@ DOCX_SOURCES = {
     "bonaparte-nicaragua-canal-1846": SOURCES
     / "翻訳サイト"
     / "Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.docx",
+    "garella-panama-canal-1845": SOURCES
+    / "翻訳サイト"
+    / "Napoleon_Garella_Projet_Canal_Panama_1845_Japanese_Complete_Translation.docx",
     "squier-nicaragua-1852": SOURCES
     / "翻訳サイト"
     / "Squier_Nicaragua_1852_Japanese_Complete_Translation.docx",

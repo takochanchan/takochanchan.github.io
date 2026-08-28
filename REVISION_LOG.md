@@ -1,5 +1,13 @@
 # 改訂記録
 
+## 2026-08-28 — ナポレオン・ガレラ『パナマ地峡を横断する太平洋・大西洋連絡運河計画』新規公開
+
+- 1845年刊 *Projet d’un canal de jonction de l’Océan Pacifique et de l’Océan Atlantique à travers l’isthme de Panama* の標題紙、正誤表、刊行に関する注記、原刊目次、本文1–233頁、巻末折込図2葉、表89点を日本語全訳として収録した。公開PDFは168頁、EPUBはリフロー型EPUB 3とした。
+- 公開前の最終修正では、翻訳版前文に編集上付加していた目次のみを削除し、原著に含まれる目次は保持した。修正版PDFの全168頁を再描画・再検証し、原刊頁標識233件、折込図2葉、表89点、埋込フォントおよび文字境界を確認した。
+- 書誌的主底本はフランス国立図書館（BnF）Gallica公開の1845年版（`ark:/12148/bpt6k5328134w`）。同一版のInternet Archive複本（`projetduncanald00garegoog`）で本文を照合し、折込図2はUniversity of Florida Digital Collections（`UF00100942/00001`）の全図画像で補った。
+- 公開PDFのSHA-256は `82289dea8d2f22a3c155cb617ee5c70b9c6bbe59f888bea9137935f7578da27c`、EPUBは `e3953077fc7e8304cf2bb27e7a0fa6a2b0a7985d4a06b5333fd170029bed45cf`。編集可能正本は非公開原本アーカイブの検証済みコミット `8a0bacfcf5e9726eb70b5aba230986ffe1764bed` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`garella-panama-canal-1845`。
+
 ## 2026-08-28 — N・L・B（ルイ＝ナポレオン・ボナパルト）『ニカラグア運河』新規公開
 
 - 1846年刊 *Canal of Nicaragua: Or, a Project to Connect the Atlantic and Pacific Oceans by Means of a Canal* の標題紙、目次、序文i–viii、本文1–70頁、表66点、原刊28頁の運河断面図を日本語全訳として収録した。公開PDFは78頁、EPUBはリフロー型EPUB 3とした。
