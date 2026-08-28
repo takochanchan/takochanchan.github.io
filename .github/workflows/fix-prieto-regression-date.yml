@@ -1,0 +1,53 @@
+name: Update Prieto regression date
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/fix-prieto-regression-date.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Update the scoped regression expectation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path("tests/archive.test.mjs")
+          text = path.read_text(encoding="utf-8")
+          title = "Prieto and Piatkowski Guatemala interoceanic railroad retains its approved scope and rights display"
+          pos = text.find(title)
+          if pos < 0:
+              raise SystemExit("Prieto regression test not found")
+          start = text.rfind("test(", 0, pos)
+          end = text.find("\n});", pos)
+          if start < 0 or end < 0:
+              raise SystemExit("Prieto regression test block not bounded")
+          end += len("\n});")
+          block = text[start:end]
+          old = 'assert.equal(record.updatedDate, "2026-08-26");'
+          new = 'assert.equal(record.updatedDate, "2026-08-28");'
+          if old in block:
+              block = block.replace(old, new, 1)
+              text = text[:start] + block + text[end:]
+          elif new not in block:
+              raise SystemExit("Unexpected Prieto updatedDate assertion")
+          path.write_text(text, encoding="utf-8")
+          PY
+      - name: Commit and remove this workflow
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          rm .github/workflows/fix-prieto-regression-date.yml
+          git add tests/archive.test.mjs .github/workflows/fix-prieto-regression-date.yml
+          git commit -m "Prieto書誌修正の回帰テスト日付を更新"
+          git pull --rebase origin main
+          git push origin HEAD:main
