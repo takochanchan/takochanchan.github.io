@@ -5663,6 +5663,25 @@
       "rights": "1874年刊の原著本文および図版はアメリカ合衆国政府の著作物であり、17 U.S.C. § 105によりパブリックドメインです。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "bonaparte-nicaragua-canal-1846",
+      "recordClass": "major-work",
+      "title": "ニカラグア運河――運河によって大西洋と太平洋を結ぶ計画",
+      "originalTitle": "Canal of Nicaragua: Or, a Project to Connect the Atlantic and Pacific Oceans by Means of a Canal",
+      "author": "N・L・B（ルイ＝ナポレオン・ボナパルト）",
+      "originalAuthor": "N. L. B. (Louis-Napoléon Bonaparte)",
+      "year": 1846,
+      "originalPublication": "ロンドン、Mills & Son、1846年",
+      "sourceEdition": "N. L. B. [Louis-Napoléon Bonaparte], Canal of Nicaragua: Or, a Project to Connect the Atlantic and Pacific Oceans by Means of a Canal, London: Mills & Son, Crane-Court, Fleet-Street, 1846.",
+      "sourceProvider": "スタンフォード大学Cecil H. Green Library所蔵本をGoogleがデジタル化し、Internet Archiveが公開する画像（識別子 canalnicaraguao00napogoog）を底本としました。折込地図3点は底本画像に折畳み外面・縁だけが写り、展開面は収録されていません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/canalnicaraguao00napogoog"
+      },
+      "rights": "1846年刊の原著はパブリックドメインです。Internet Archiveのメタデータは possible-copyright-status: NOT_IN_COPYRIGHT と表示し、個別のCreative Commonsライセンスは掲示していません。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [

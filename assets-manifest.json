@@ -650,6 +650,24 @@
       "sha256": "cca5c41550563b275868ff7f97c88559de419ea8418627f90f9f10103f18a42e"
     },
     {
+      "path": "publications/bonaparte-nicaragua-canal-1846/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.epub",
+      "size": 234931,
+      "sha256": "2c2934a134f2c0b5ec4ee2ea68b11696696ec1d0e022286a156582608cbcd589"
+    },
+    {
+      "path": "publications/bonaparte-nicaragua-canal-1846/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.pdf",
+      "size": 2109134,
+      "sha256": "6b82c3977db571bee97b07aa274afd1b82009622970251c0c473580215a1886a"
+    },
+    {
+      "path": "publications/bonaparte-nicaragua-canal-1846/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bonaparte-nicaragua-canal-1846/cover.jpg",
+      "size": 35657,
+      "sha256": "d11d106ac4ffe752cf361fdea5842c79f5e50278f16d079bffa378f5931c57b0"
+    },
+    {
       "path": "publications/boturini-idea-catalogo-1746/Boturini_Idea_y_Catalogo_1746_JA.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Boturini_Idea_y_Catalogo_1746_JA.epub",
       "size": 8912877,

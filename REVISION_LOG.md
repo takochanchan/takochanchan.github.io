@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-28 — N・L・B（ルイ＝ナポレオン・ボナパルト）『ニカラグア運河』新規公開
+
+- 1846年刊 *Canal of Nicaragua: Or, a Project to Connect the Atlantic and Pacific Oceans by Means of a Canal* の標題紙、目次、序文i–viii、本文1–70頁、表66点、原刊28頁の運河断面図を日本語全訳として収録した。公開PDFは78頁、EPUBはリフロー型EPUB 3とした。
+- 底本はスタンフォード大学Cecil H. Green Library所蔵・Googleデジタル化・Internet Archive公開本（`canalnicaraguao00napogoog`）。原刊末尾の折込地図3点は底本画像に折畳み外面・縁だけが写るため、題名・物理的位置・底本状態を記録し、判読不能な展開面を他版で補っていない。
+- 公開PDFのSHA-256は `6b82c3977db571bee97b07aa274afd1b82009622970251c0c473580215a1886a`、EPUBは `2c2934a134f2c0b5ec4ee2ea68b11696696ec1d0e022286a156582608cbcd589`。編集可能正本は非公開原本アーカイブの検証済みコミット `c7207ed1ec9020e8ba7c1f752f9f996f95ecf755` に保存した。
+- 全文検索索引は `002` に追加し、277件で封印済みの `001` は変更していない。公開識別子：`bonaparte-nicaragua-canal-1846`。
+
 ## 2026-08-28 — トマス・O・セルフリッジ『ダリエン地峡船舶運河』新規公開
 
 - 1874年刊 *Reports of Explorations and Surveys to Ascertain the Practicability of a Ship-Canal between the Atlantic and Pacific Oceans by the Way of the Isthmus of Darien* の本文1–268頁、本文図版14葉、巻末折込図版17葉を日本語全訳として収録した。公開PDFは652頁、EPUBはリフロー型EPUB 3とした。

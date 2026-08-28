@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 297);
+  assert.equal(publications.length, 298);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 20);
+  assert.equal(counts.get("002"), 21);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -109,6 +109,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "childs-nicaragua-canal-survey-1852",
       "us-navy-nicaragua-ship-canal-survey-1874",
       "selfridge-darien-ship-canal-1874",
+      "bonaparte-nicaragua-canal-1846",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
     ],
@@ -857,6 +858,48 @@ test("Selfridge Darien canal survey retains the approved complete scope and offi
   assert.equal(item.updatedDate, "2026-08-28");
 });
 
+test("Bonaparte Nicaragua canal plan retains the approved complete scope and source-scan rights", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "bonaparte-nicaragua-canal-1846",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(
+    item.title,
+    "ニカラグア運河――運河によって大西洋と太平洋を結ぶ計画",
+  );
+  assert.equal(item.author, "N・L・B（ルイ＝ナポレオン・ボナパルト）");
+  assert.equal(
+    item.originalAuthor,
+    "N. L. B. (Louis-Napoléon Bonaparte)",
+  );
+  assert.match(item.originalTitle, /^Canal of Nicaragua:/);
+  assert.equal(item.pageCount, 78);
+  assert.equal(item.figureCount, 1);
+  assert.equal(item.plateCount, 3);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊前付i–viii頁/);
+  assert.match(item.extent, /本文1–70頁/);
+  assert.match(item.extent, /折込地図3点/);
+  assert.match(item.extent, /表66点/);
+  assert.match(item.description, /サン・フアン川/);
+  assert.match(item.description, /ニカラグア湖/);
+  assert.match(item.description, /会社組織/);
+  assert.match(item.sourceProvider, /Cecil H\. Green Library/);
+  assert.match(item.sourceProvider, /canalnicaraguao00napogoog/);
+  assert.match(item.sourceProvider, /展開面は収録されていません/);
+  assert.match(
+    item.sourceUrl,
+    /archive\.org\/details\/canalnicaraguao00napogoog/,
+  );
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-28");
+  assert.equal(item.updatedDate, "2026-08-28");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -965,7 +1008,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 143);
+  assert.equal(majorPublications.length, 144);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2059,10 +2102,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260828-selfridge-darien-canal/);
-  assert.match(html, /\/archive\.js\?v=20260828-selfridge-darien-canal/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260828-selfridge-darien-canal/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260828-selfridge-darien-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-bonaparte-nicaragua-canal/);
+  assert.match(html, /\/archive\.js\?v=20260828-bonaparte-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260828-bonaparte-nicaragua-canal/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260828-bonaparte-nicaragua-canal/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2075,7 +2118,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">143<\/strong>件/);
+  assert.match(html, /id="book-match-count">144<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2159,7 +2202,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260828-selfridge-darien-canal/);
+  assert.match(html, /\/archive\.css\?v=20260828-bonaparte-nicaragua-canal/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2293,17 +2336,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260828-selfridge-darien-canal/);
-    assert.match(html, /\/archive\.js\?v=20260828-selfridge-darien-canal/);
+    assert.match(html, /\/archive\.css\?v=20260828-bonaparte-nicaragua-canal/);
+    assert.match(html, /\/archive\.js\?v=20260828-bonaparte-nicaragua-canal/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260828-selfridge-darien-canal#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260828-bonaparte-nicaragua-canal#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260828-selfridge-darien-canal#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260828-bonaparte-nicaragua-canal#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

@@ -86,6 +86,9 @@ DOCX_SOURCES = {
     "selfridge-darien-ship-canal-1874": SOURCES
     / "翻訳サイト"
     / "Thomas_O_Selfridge_Darien_Ship_Canal_1874_Japanese_Complete_Translation.docx",
+    "bonaparte-nicaragua-canal-1846": SOURCES
+    / "翻訳サイト"
+    / "Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.docx",
     "squier-nicaragua-1852": SOURCES
     / "翻訳サイト"
     / "Squier_Nicaragua_1852_Japanese_Complete_Translation.docx",
