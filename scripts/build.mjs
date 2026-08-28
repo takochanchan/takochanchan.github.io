@@ -860,6 +860,7 @@ const publicationStructuredData = (item, isShortWork) => {
 const detailPage = (item) => {
   const related = relatedFor(item);
   const visualTotal = item.figureCount + item.plateCount;
+  const visualLabel = item.visualLabel ?? "図版・挿図";
   const isShortWork = item.recordClass === "short-work";
   const recordClassLabel = isShortWork ? "論文" : "書籍";
   const pdfViewerUrl =
@@ -917,7 +918,7 @@ ${header({
           <dl class="fact-grid">
             <div><dt>原刊</dt><dd>${escapeHtml(item.originalPublication)}</dd></div>
             <div><dt>翻訳版</dt><dd>${item.pageCount}頁</dd></div>
-            <div><dt>図版・挿図</dt><dd>${visualTotal}点</dd></div>
+            <div><dt>${escapeHtml(visualLabel)}</dt><dd>${visualTotal}点</dd></div>
             <div><dt>原刊言語</dt><dd>${escapeHtml(item.languages.join("・"))}</dd></div>
           </dl>
         </div>

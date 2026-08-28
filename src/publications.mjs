@@ -135,7 +135,8 @@ const publicationRecords = [
     "series": "FERROCARRIL INTEROCEÁNICO · 1880",
     "originalPublication": "グアテマラ、タラセナ父子印刷所、1880年",
     "year": 1880,
-    "extent": "PDF 37頁・原刊本文5–60頁・表14点・図版2点・注4件",
+    "extent": "PDF 37頁・原刊本文5–60頁・表14点・原刊画像2点・注4件",
+    "visualLabel": "原刊画像",
     "description": "グアテマラを大西洋岸と太平洋岸で結ぶ大洋間鉄道について、路線、軌間、建設費、資金調達、輸送需要、政府契約を検討し、サン・ホセ―エスクイントラ線の収支見積りと各国の運河計画を付録に収めた1880年刊の鉄道計画書です。",
     "cover": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/cover.jpg",
     "pdf": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.pdf",
@@ -9121,7 +9122,7 @@ const publicationMetadata = {
     "sourceUrl": "https://archive.org/details/ideasgeneralesso00alejguat",
     "rights": "原著はパブリックドメインに属します。Internet Archiveの公開メタデータはPossible copyright statusを「NOT IN COPYRIGHT」としています。標題紙および裏表紙画像は同公開スキャンから採録しました。",
     "publishedDate": "2026-08-26",
-    "updatedDate": "2026-08-26"
+    "updatedDate": "2026-08-28"
   },
   "baz-gallo-historia-ferrocarril-mexicano-1874": {
     "sourceEdition": "Gustavo Baz and Eduardo L. Gallo, Historia del Ferrocarril Mexicano: riqueza de México en la zona del Golfo á la Mesa Central, bajo su aspecto geológico, agrícola, manufacturero y comercial, México: Gallo y Compañía, 1874.",
