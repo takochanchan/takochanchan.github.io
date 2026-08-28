@@ -5777,6 +5777,25 @@
       "rights": "1879年刊の原著はパブリックドメインです。Gallica補完画像の権利表示は No Copyright - Other Known Legal Restrictions（NoC-OKLR 1.0）です。非商用利用および学術・科学出版は「Source gallica.bnf.fr / Bibliothèque nationale de France」の出典表示を条件に無償です。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "siguenza-obras-1928",
+      "recordClass": "major-work",
+      "title": "カルロス・デ・シグエンサ・イ・ゴンゴラ著作集",
+      "originalTitle": "Obras de Carlos de Sigüenza y Góngora, con una biografía escrita por Francisco Pérez Salazar",
+      "author": "カルロス・デ・シグエンサ・イ・ゴンゴラ／フランシスコ・ペレス・サラサール",
+      "originalAuthor": "Carlos de Sigüenza y Góngora / Francisco Pérez Salazar",
+      "year": 1928,
+      "originalPublication": "メキシコ、Sociedad de Bibliófilos Mexicanos、1928年",
+      "sourceEdition": "Carlos de Sigüenza y Góngora, Obras, con una biografía escrita por Francisco Pérez Salazar, México: Sociedad de Bibliófilos Mexicanos, 1928.",
+      "sourceProvider": "Biblioteca Americanista de Sevilla（CSIC）所蔵本を、CSICのSimurgが公開する全頁画像（record 990003958150204201）で底本化しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/990003958150204201/obras"
+      },
+      "rights": "カルロス・デ・シグエンサ・イ・ゴンゴラの17世紀原著はパブリックドメインです。1928年版の伝記・編集物および底本画像は、CSICのSimurgが表示—非営利—継承4.0国際（CC BY-NC-SA 4.0）で公開しています。本日本語訳も同ライセンスの継承条件に従い、CC BY-NC-SA 4.0で提供します。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
     }
   ],
   "works": [

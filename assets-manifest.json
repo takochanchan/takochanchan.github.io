@@ -4520,6 +4520,24 @@
       "sha256": "8b2f3e552b00acbf91b6fd0d55a8968952efaad39f5efeb3465d316e47370b24"
     },
     {
+      "path": "publications/siguenza-obras-1928/Carlos_de_Siguenza_y_Gongora_Obras_1928_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Obras_1928_Japanese_Complete_Translation.epub",
+      "size": 3324290,
+      "sha256": "bf78b211e84a434823ee2128b8ee53d1297cd90cfdce41675a91ed4c1201d10f"
+    },
+    {
+      "path": "publications/siguenza-obras-1928/Carlos_de_Siguenza_y_Gongora_Obras_1928_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Obras_1928_Japanese_Complete_Translation.pdf",
+      "size": 7044116,
+      "sha256": "18b0c20dea4c7cef187bcedd28b45baadc72e6c8367fc6073fe5f7202e47dff5"
+    },
+    {
+      "path": "publications/siguenza-obras-1928/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/siguenza-obras-1928/cover.jpg",
+      "size": 244774,
+      "sha256": "83ca20352d6008391af51aec24feae4b3c9543c156fc7f108f270400e5e7368c"
+    },
+    {
       "path": "publications/siguenza-parayso-occidental-1684/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Parayso_Occidental_1684_Japanese_Complete_Translation.epub",
       "size": 505217,
