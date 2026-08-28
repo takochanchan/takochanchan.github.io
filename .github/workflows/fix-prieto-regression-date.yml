@@ -33,8 +33,8 @@ jobs:
               raise SystemExit("Prieto regression test block not bounded")
           end += len("\n});")
           block = text[start:end]
-          old = 'assert.equal(record.updatedDate, "2026-08-26");'
-          new = 'assert.equal(record.updatedDate, "2026-08-28");'
+          old = 'assert.equal(item.updatedDate, "2026-08-26");'
+          new = 'assert.equal(item.updatedDate, "2026-08-28");'
           if old in block:
               block = block.replace(old, new, 1)
               text = text[:start] + block + text[end:]
