@@ -172,4 +172,4 @@ jobs:
         run: |
           gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Fbonaparte-nicaragua-canal-publication-20260828-v1"
 
-# Retry after preserving the staged patch EOF.\n
+# Retry after preserving the staged patch EOF.\n# Retry against canonical site blob hashes.\n
