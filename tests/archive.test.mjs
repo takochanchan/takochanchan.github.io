@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 301);
+  assert.equal(publications.length, 302);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 24);
+  assert.equal(counts.get("002"), 25);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -113,6 +113,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "belly-percement-isthme-panama-canal-nicaragua-1858",
       "garella-panama-canal-1845",
       "reclus-panama-darien-1881",
+      "rodrigues-panama-canal-1885",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
     ],
@@ -974,6 +975,46 @@ test("Reclus Panama and Darien retains the approved complete scope and same-edit
   assert.equal(item.updatedDate, "2026-08-28");
 });
 
+test("Rodrigues Panama Canal retains the approved complete scope and rights record", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "rodrigues-panama-canal-1885",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(
+    item.title,
+    "パナマ運河――その歴史、政治的側面および財政上の困難",
+  );
+  assert.equal(item.author, "ジョゼ・カルロス・ロドリゲス");
+  assert.equal(item.originalAuthor, "José Carlos Rodrigues");
+  assert.match(item.originalTitle, /^The Panama Canal:/);
+  assert.equal(item.pageCount, 220);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊序文iii–vi頁/);
+  assert.match(item.extent, /目次vii–viii頁/);
+  assert.match(item.extent, /本文1–248頁/);
+  assert.match(item.extent, /表32点/);
+  assert.match(item.description, /パナマ運河会社/);
+  assert.match(item.description, /モンロー主義/);
+  assert.match(item.description, /クレイトン＝ブルワー条約/);
+  assert.match(item.sourceProvider, /University of California Libraries/);
+  assert.match(item.sourceProvider, /panamacanalitshi00rodriala/);
+  assert.match(
+    item.sourceUrl,
+    /archive\.org\/details\/panamacanalitshi00rodriala/,
+  );
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /NOT_IN_COPYRIGHT/);
+  assert.match(item.rights, /PD-US \/ PD-1923/);
+  assert.match(item.rights, /Terms of Use/);
+  assert.match(item.rights, /個別のCreative Commons等のライセンス表示はありません/);
+  assert.doesNotMatch(item.rights, /再利用許諾|再利用ライセンス/);
+  assert.equal(item.publishedDate, "2026-08-28");
+  assert.equal(item.updatedDate, "2026-08-28");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -1082,7 +1123,7 @@ test("Leonard Sigüenza monograph retains its approved complete scope", () => {
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 147);
+  assert.equal(majorPublications.length, 148);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2192,7 +2233,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">147<\/strong>件/);
+  assert.match(html, /id="book-match-count">148<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

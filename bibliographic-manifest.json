@@ -5739,6 +5739,25 @@
       "rights": "1881年刊の原著本文・原刊図版はパブリックドメインです。Internet Archiveの当該項目は possible-copyright-status: NOT_IN_COPYRIGHT と表示しています。Google由来の主底本・補完画像にはGoogle Booksの利用指針が、BnF/Gallica由来の折込地図2面にはGallicaの利用条件が適用されます。",
       "publishedDate": "2026-08-28",
       "updatedDate": "2026-08-28"
+    },
+    {
+      "slug": "rodrigues-panama-canal-1885",
+      "recordClass": "major-work",
+      "title": "パナマ運河――その歴史、政治的側面および財政上の困難",
+      "originalTitle": "The Panama Canal: Its History, Its Political Aspects, and Financial Difficulties",
+      "author": "ジョゼ・カルロス・ロドリゲス",
+      "originalAuthor": "José Carlos Rodrigues",
+      "year": 1885,
+      "originalPublication": "ロンドン、Sampson Low, Marston, Searle, and Rivington、1885年",
+      "sourceEdition": "José Carlos Rodrigues, The Panama Canal: Its History, Its Political Aspects, and Financial Difficulties, London: Sampson Low, Marston, Searle, and Rivington, 1885.",
+      "sourceProvider": "University of California Libraries所蔵本をInternet Archiveが公開する1885年版全264画像（識別子 panamacanalitshi00rodriala）を底本としました。同一PDFをWikimedia Commonsでも確認しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/panamacanalitshi00rodriala"
+      },
+      "rights": "1885年刊の原著はパブリックドメインです（著者José Carlos Rodriguesは1922年没）。Internet Archiveの当該項目は possible-copyright-status: NOT_IN_COPYRIGHT（copyright-region: US）と表示し、同一PDFを収録するWikimedia Commonsは Public domain in the United States（PD-US / PD-1923）と表示しています。Internet Archiveの利用には同サービスのTerms of Useが適用され、当該項目には個別のCreative Commons等のライセンス表示はありません。",
+      "publishedDate": "2026-08-28",
+      "updatedDate": "2026-08-28"
     }
   ],
   "works": [
