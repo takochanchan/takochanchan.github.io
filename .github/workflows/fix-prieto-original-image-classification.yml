@@ -1,0 +1,132 @@
+name: Fix Prieto original-image classification
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/fix-prieto-original-image-classification.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-prieto-original-image-classification
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out current site
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply the scoped metadata and display correction
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          slug = "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880"
+
+          publications_path = Path("src/publications.mjs")
+          publications = publications_path.read_text(encoding="utf-8")
+          old_extent = '    "extent": "PDF 37頁・原刊本文5–60頁・表14点・図版2点・注4件",\n'
+          new_extent = '    "extent": "PDF 37頁・原刊本文5–60頁・表14点・原刊画像2点・注4件",\n    "visualLabel": "原刊画像",\n'
+          if old_extent in publications:
+              if publications.count(old_extent) != 1:
+                  raise SystemExit("Unexpected Prieto extent match count")
+              publications = publications.replace(old_extent, new_extent, 1)
+          elif '    "visualLabel": "原刊画像",\n' not in publications:
+              raise SystemExit("Prieto visual label could not be located")
+
+          metadata_marker = f'  "{slug}": {{'
+          metadata_start = publications.find(metadata_marker)
+          if metadata_start < 0:
+              raise SystemExit("Prieto publication metadata block not found")
+          metadata_end = publications.find('\n  },\n  "', metadata_start)
+          if metadata_end < 0:
+              raise SystemExit("Prieto publication metadata block end not found")
+          metadata_block = publications[metadata_start:metadata_end]
+          if '"updatedDate": "2026-08-26"' in metadata_block:
+              metadata_block = metadata_block.replace('"updatedDate": "2026-08-26"', '"updatedDate": "2026-08-28"', 1)
+              publications = publications[:metadata_start] + metadata_block + publications[metadata_end:]
+          elif '"updatedDate": "2026-08-28"' not in metadata_block:
+              raise SystemExit("Unexpected Prieto updatedDate")
+          publications_path.write_text(publications, encoding="utf-8")
+
+          build_path = Path("scripts/build.mjs")
+          build = build_path.read_text(encoding="utf-8")
+          old_declaration = "  const visualTotal = item.figureCount + item.plateCount;\n  const isShortWork"
+          new_declaration = "  const visualTotal = item.figureCount + item.plateCount;\n  const visualLabel = item.visualLabel ?? \"図版・挿図\";\n  const isShortWork"
+          if old_declaration in build:
+              if build.count(old_declaration) != 1:
+                  raise SystemExit("Unexpected detail-page declaration match count")
+              build = build.replace(old_declaration, new_declaration, 1)
+          elif 'const visualLabel = item.visualLabel ?? "図版・挿図";' not in build:
+              raise SystemExit("Visual-label display hook could not be located")
+
+          old_fact = '            <div><dt>図版・挿図</dt><dd>${visualTotal}点</dd></div>'
+          new_fact = '            <div><dt>${escapeHtml(visualLabel)}</dt><dd>${visualTotal}点</dd></div>'
+          if old_fact in build:
+              if build.count(old_fact) != 1:
+                  raise SystemExit("Unexpected visual fact-row match count")
+              build = build.replace(old_fact, new_fact, 1)
+          elif new_fact not in build:
+              raise SystemExit("Visual fact-row display hook could not be located")
+          build_path.write_text(build, encoding="utf-8")
+
+          manifest_path = Path("bibliographic-manifest.json")
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+          matches = [record for record in manifest["records"] if record.get("slug") == slug]
+          if len(matches) != 1:
+              raise SystemExit("Unexpected canonical Prieto record count")
+          matches[0]["updatedDate"] = "2026-08-28"
+          manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and test
+        run: |
+          npm run build
+          npm test
+          python3 - <<'PY'
+          from pathlib import Path
+          slug = "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880"
+          page = Path("dist/publications") / slug / "index.html"
+          html = page.read_text(encoding="utf-8")
+          if "<dt>原刊画像</dt><dd>2点</dd>" not in html:
+              raise SystemExit("Published Prieto page does not show 原刊画像 2点")
+          if "PDF 37頁・原刊本文5–60頁・表14点・原刊画像2点・注4件" not in Path("src/publications.mjs").read_text(encoding="utf-8"):
+              raise SystemExit("Prieto extent was not corrected")
+          PY
+
+      - name: Commit the correction and remove this workflow
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          rm .github/workflows/fix-prieto-original-image-classification.yml
+          git add -A
+          git diff --cached --check
+          git commit -m "グアテマラ大洋間鉄道の画像種別を原刊画像に修正"
+          pushed=false
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              pushed=true
+              break
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 3
+          done
+          test "$pushed" = true
