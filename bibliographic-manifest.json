@@ -5853,6 +5853,82 @@
       "rights": "1886年刊の原著はパブリックドメインです。公開元はGoogle Books、所蔵機関はBibliothèque municipale de Lyonです。底本PDFに掲げられたGoogle Booksの利用条件は、非商用・個人利用、自動リクエストの禁止、Google帰属表示の保持および利用地法令への準拠を求めるもので、オープンライセンスではありません。リヨン市立図書館は出版掲載について事前許可と「cliché Bibliothèque municipale de Lyon, cote 1G 538/66」の表示を求めています。",
       "publishedDate": "2026-08-29",
       "updatedDate": "2026-08-29"
+    },
+    {
+      "slug": "larde-cronologia-arqueologica-el-salvador-1926",
+      "recordClass": "short-work",
+      "title": "エル・サルバドル考古学編年",
+      "originalTitle": "Cronología arqueológica de El Salvador",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1926,
+      "originalPublication": "サンサルバドル、『Revista de Etnología, Arqueología y Lingüística』第1巻、1926年、153–162頁",
+      "sourceEdition": "Jorge Lardé, “Cronología arqueológica de El Salvador,” Revista de Etnología, Arqueología y Lingüística, tomo I, 1926, pp. 153–162; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo I, no. 3 (julio–septiembre 1950), pp. 72–79.",
+      "sourceProvider": "Biblioteca Nacional de El Salvador “Francisco Gavidia”所蔵の1950年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2929）から本文照合に使用しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://redicces.org.sv/jspui/handle/10972/2929"
+      },
+      "rights": "1926年初出の原著本文はパブリックドメインです。REDICCES/BINAESは照合に用いた1950年再録号を「Obra en dominio público」とし、Public Domain Mark 1.0を表示しています。本版は原著本文の文字情報のみを用い、同再録の誌面画像・編集的要素を収録していません。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
+    },
+    {
+      "slug": "larde-indice-provisional-arqueologico-el-salvador-1926",
+      "recordClass": "short-work",
+      "title": "エル・サルバドル考古遺跡等所在地点暫定索引",
+      "originalTitle": "Índice provisional de los lugares del territorio salvadoreño en donde se encuentran ruinas u otros objetos de interés arqueológico (Apuntes de investigación)",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1926,
+      "originalPublication": "サンサルバドル、『Revista de Etnología, Arqueología y Lingüística』第1巻第3–4号、1926年、213–221頁",
+      "sourceEdition": "Jorge Lardé, “Índice provisional de los lugares del territorio salvadoreño en donde se encuentran ruinas u otros objetos de interés arqueológico (Apuntes de investigación),” Revista de Etnología, Arqueología y Lingüística, tomo I, nos. 3–4, 1926, pp. 213–221; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo I, no. 1 (1950), pp. 44–50.",
+      "sourceProvider": "Biblioteca Nacional de El Salvador “Francisco Gavidia”所蔵の1950年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2931）から本文照合に使用しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://redicces.org.sv/jspui/handle/10972/2931"
+      },
+      "rights": "1926年初出の原著本文はパブリックドメインです。REDICCES/BINAESは照合に用いた1950年再録号を「Obra en dominio público」とし、Public Domain Mark 1.0を表示しています。本版は原著本文の文字情報のみを用い、同再録の誌面画像・編集的要素を収録していません。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
+    },
+    {
+      "slug": "lothrop-museum-central-american-expedition-1927",
+      "recordClass": "short-work",
+      "title": "当館中央アメリカ遠征、1925–1926年",
+      "originalTitle": "The Museum Central American Expedition, 1925–1926",
+      "author": "サミュエル・カークランド・ロスロップ",
+      "originalAuthor": "Samuel Kirkland Lothrop",
+      "year": 1927,
+      "originalPublication": "ニューヨーク、Museum of the American Indian, Heye Foundation、『Indian Notes』第4巻、1927年、12–33頁",
+      "sourceEdition": "Samuel Kirkland Lothrop, “The Museum Central American Expedition, 1925–1926,” Indian Notes, vol. IV, 1927, pp. 12–33.",
+      "sourceProvider": "Museum of the American Indian, Heye Foundation刊行本を、Smithsonian Libraries and Archives／Internet Archive公開資料（identifier: indiannotes41927muse）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/indiannotes41927muse"
+      },
+      "rights": "1927年刊の原著本文は米国でパブリックドメインです。Smithsonian Libraries and Archivesの公開ページはデジタル資料を「In Copyright」と表示し、Internet Archiveのitem metadataは「Permission to digitize granted by the rights holder」と記録しています。本版は原著本文とキャプションの文字情報のみを用い、原刊画像・誌面画像を収録していません。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
+    },
+    {
+      "slug": "lothrop-pottery-types-el-salvador-1927",
+      "recordClass": "major-work",
+      "title": "エル・サルバドルの土器型式とその編年",
+      "originalTitle": "Pottery Types and Their Sequence in El Salvador",
+      "author": "サミュエル・カークランド・ロスロップ",
+      "originalAuthor": "Samuel Kirkland Lothrop",
+      "year": 1927,
+      "originalPublication": "ニューヨーク、Museum of the American Indian, Heye Foundation、『Indian Notes and Monographs』第1巻第4号、1927年、165–220頁",
+      "sourceEdition": "Samuel Kirkland Lothrop, Pottery Types and Their Sequence in El Salvador, Indian Notes and Monographs, vol. I, no. 4, New York: Museum of the American Indian, Heye Foundation, 1927, pp. 165–220.",
+      "sourceProvider": "Museum of the American Indian, Heye Foundation刊行本を、Smithsonian Libraries and Archives／Internet Archive公開資料（identifier: potterytypesthei00loth）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://library.si.edu/digital-library/book/potterytypesthei00loth"
+      },
+      "rights": "1927年刊の原著本文は米国でパブリックドメインです。Smithsonian Libraries and Archivesの公開ページはデジタル資料を「In Copyright」と表示する一方、Internet Archiveのitem metadataは「No known copyright restrictions as determined by scanning institution」と記録しています。これは標準化された再利用ライセンスとはみなさず、本版は原著本文とキャプションの文字情報のみを用い、原刊画像・誌面画像を収録していません。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
     }
   ],
   "works": [

@@ -74,6 +74,11 @@ import {
   squierBatch03ShortWorkAuthors,
 } from "./squier-batch03-publications.mjs";
 import {
+  salvadorArchaeologyBatch02PublicationMetadata,
+  salvadorArchaeologyBatch02PublicationRecords,
+  salvadorArchaeologyBatch02ShortWorkAuthors,
+} from "./salvador-archaeology-batch02-publications.mjs";
+import {
   squierRetainedPublicationMetadata,
   squierRetainedPublicationRecords,
   squierRetainedShortWorkAuthors,
@@ -9090,6 +9095,7 @@ const publicationRecords = [
     ],
   },
   ...squierBatch03PublicationRecords,
+  ...salvadorArchaeologyBatch02PublicationRecords,
   ...squierRetainedPublicationRecords,
   ...seitzPublicationRecords,
   ...vallePublicationRecords,
@@ -11640,6 +11646,7 @@ const publicationMetadata = {
     "updatedDate": "2026-08-26"
   },
   ...squierBatch03PublicationMetadata,
+  ...salvadorArchaeologyBatch02PublicationMetadata,
   ...squierRetainedPublicationMetadata,
   ...seitzPublicationMetadata,
   ...vallePublicationMetadata,
@@ -11793,6 +11800,7 @@ const shortWorkAuthorBySlug = {
   "crawford-neolithic-man-nicaragua-1891": "john-crawford",
   ...valleShortWorkAuthors,
   ...squierBatch03ShortWorkAuthors,
+  ...salvadorArchaeologyBatch02ShortWorkAuthors,
   ...squierRetainedShortWorkAuthors,
   ...perignyRemainingShortWorkAuthors,
 };

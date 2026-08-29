@@ -250,7 +250,7 @@ def main() -> None:
     PUBLIC_ROOT = args.public_root.resolve()
 
     items = catalogue()
-    assert len(items) == 307, f"expected 307 publications, found {len(items)}"
+    assert len(items) == 311, f"expected 311 publications, found {len(items)}"
     if args.slugs:
         selected = set(args.slugs)
         known = {item["slug"] for item in items}
