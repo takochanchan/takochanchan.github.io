@@ -1172,6 +1172,20 @@ test("Sigüenza Obras retains the approved license inheritance and blank-page po
   assert.equal(item.updatedDate, "2026-08-29");
 });
 
+test("Sigüenza Obras bibliography uses the Japanese translation cover", async () => {
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const cover = manifest.assets.find(
+    (asset) => asset.path === "publications/siguenza-obras-1928/cover.jpg",
+  );
+  assert.ok(cover);
+  assert.equal(
+    cover.sha256,
+    "a61ebddc412ce1d28df65d00a361af5b25fdf64e77b376d3d5e1ed687548ac2f",
+  );
+});
+
 test("International interoceanic canal congress retains the approved source and rights record", () => {
   const item = publications.find(
     (publication) => publication.slug === "congres-international-canal-interoceanique-1879",
