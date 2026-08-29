@@ -5420,6 +5420,24 @@
       "sha256": "14433b99cb5654cda5388ff54d73c3e81f680025b3fcf1b4a701510772ba181f"
     },
     {
+      "path": "publications/wyse-canal-panama-isthme-americain-1886/cover.png",
+      "url": "https://takochanchan.github.io/publications/wyse-canal-panama-isthme-americain-1886/cover.png",
+      "size": 104046,
+      "sha256": "0db8c1fbfd6c6b85b6bcade8638def16c4a772e2051542dc535d28f1b3df79f3"
+    },
+    {
+      "path": "publications/wyse-canal-panama-isthme-americain-1886/Lucien_N_B_Wyse_Le_Canal_de_Panama_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lucien_N_B_Wyse_Le_Canal_de_Panama_1886_Japanese_Complete_Translation.epub",
+      "size": 128704967,
+      "sha256": "abe0f63738600e3fb93d88d0a1c03449c5dcf3f54076bcc75653a99624ed64d2"
+    },
+    {
+      "path": "publications/wyse-canal-panama-isthme-americain-1886/Lucien_N_B_Wyse_Le_Canal_de_Panama_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lucien_N_B_Wyse_Le_Canal_de_Panama_1886_Japanese_Complete_Translation.pdf",
+      "size": 64233565,
+      "sha256": "dafdbf28b7bd57160d95a09d5804690c1fce0319ccb4761e6bb9991df963c015"
+    },
+    {
       "path": "publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
       "url": "https://takochanchan.github.io/publications/ximenez-ayer-ms-1515-volume-1/cover.jpg",
       "size": 69631,

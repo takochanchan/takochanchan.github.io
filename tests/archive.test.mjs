@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 304);
+  assert.equal(publications.length, 305);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 27);
+  assert.equal(counts.get("002"), 28);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -114,6 +114,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "garella-panama-canal-1845",
       "reclus-panama-darien-1881",
       "rodrigues-panama-canal-1885",
+      "wyse-canal-panama-isthme-americain-1886",
       "congres-international-canal-interoceanique-1879",
       "siguenza-obras-1928",
       "thompson-official-visit-guatemala-1829",
@@ -1017,6 +1018,35 @@ test("Rodrigues Panama Canal retains the approved complete scope and rights reco
   assert.equal(item.updatedDate, "2026-08-28");
 });
 
+test("Wyse Panama Canal retains the approved scope, source, and access conditions", () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug === "wyse-canal-panama-isthme-americain-1886",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.title, "パナマ運河―アメリカ地峡");
+  assert.equal(item.author, "リュシアン・N・B・ワイズ");
+  assert.equal(item.originalAuthor, "Lucien N. B. Wyse");
+  assert.equal(item.pageCount, 325);
+  assert.equal(item.figureCount, 86);
+  assert.equal(item.plateCount, 3);
+  assert.equal(item.searchShard, "002");
+  assert.match(item.extent, /原刊本文1–399頁/);
+  assert.match(item.extent, /木口木版86点/);
+  assert.match(item.extent, /折込3点/);
+  assert.match(item.description, /探検・測量結果/);
+  assert.match(item.sourceProvider, /Bibliothèque municipale de Lyon/);
+  assert.match(item.sourceProvider, /1G 538\/66/);
+  assert.match(item.sourceProvider, /Z2b4DYQpPvoC/);
+  assert.match(item.sourceUrl, /books\.google\.com\/books\?id=Z2b4DYQpPvoC/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.match(item.rights, /オープンライセンスではありません/);
+  assert.match(item.rights, /cliché Bibliothèque municipale de Lyon/);
+  assert.equal(item.publishedDate, "2026-08-29");
+  assert.equal(item.updatedDate, "2026-08-29");
+});
+
 test("Waikna retains its approved complete scope, initialed attribution, and Library of Congress rights display", () => {
   const item = publications.find(
     (publication) =>
@@ -1159,7 +1189,7 @@ test("International interoceanic canal congress retains the approved source and 
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 150);
+  assert.equal(majorPublications.length, 151);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2253,10 +2283,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260829-siguenza-obras/);
-  assert.match(html, /\/archive\.js\?v=20260829-siguenza-obras/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260829-siguenza-obras/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260829-siguenza-obras/);
+  assert.match(html, /\/archive\.css\?v=20260829-wyse-canal-panama/);
+  assert.match(html, /\/archive\.js\?v=20260829-wyse-canal-panama/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260829-wyse-canal-panama/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260829-wyse-canal-panama/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2269,7 +2299,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">150<\/strong>件/);
+  assert.match(html, /id="book-match-count">151<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2353,7 +2383,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260829-siguenza-obras/);
+  assert.match(html, /\/archive\.css\?v=20260829-wyse-canal-panama/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2487,17 +2517,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260829-siguenza-obras/);
-    assert.match(html, /\/archive\.js\?v=20260829-siguenza-obras/);
+    assert.match(html, /\/archive\.css\?v=20260829-wyse-canal-panama/);
+    assert.match(html, /\/archive\.js\?v=20260829-wyse-canal-panama/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260829-siguenza-obras#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260829-wyse-canal-panama#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260829-siguenza-obras#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260829-wyse-canal-panama#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

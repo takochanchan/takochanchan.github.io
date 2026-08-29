@@ -227,6 +227,26 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_unpaginated_printed_components_are_preserved_as_locations(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔原刊 無頁付目次〕",
+                "目次本文。",
+                "〔原刊 巻末折込〕",
+                "折込本文。",
+                "〔原刊 奥付〕",
+                "奥付本文。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("原刊 無頁付目次", "目次本文。"),
+                ("原刊 巻末折込", "折込本文。"),
+                ("原刊 奥付", "奥付本文。"),
+            ],
+        )
+
     def test_manuscript_japanese_folio_marker_is_preserved(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             ["〔原冊第12葉表〕", "本文。", "〔原冊第12葉裏〕", "続き。"]
