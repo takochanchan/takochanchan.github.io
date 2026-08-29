@@ -5722,6 +5722,25 @@
       "updatedDate": "2026-08-29"
     },
     {
+      "slug": "keasbey-nicaragua-canal-monroe-doctrine-1896",
+      "recordClass": "major-work",
+      "title": "ニカラグア運河とモンロー主義",
+      "originalTitle": "The Nicaragua Canal and the Monroe Doctrine: A Political History of Isthmus Transit, with Special Reference to the Nicaragua Canal Project and the Attitude of the United States Government Thereto",
+      "author": "リンドリー・ミラー・キーズビー",
+      "originalAuthor": "Lindley Miller Keasbey",
+      "year": 1896,
+      "originalPublication": "ニューヨーク／ロンドン、G. P. Putnam's Sons、1896年",
+      "sourceEdition": "Lindley Miller Keasbey, The Nicaragua Canal and the Monroe Doctrine: A Political History of Isthmus Transit, with Special Reference to the Nicaragua Canal Project and the Attitude of the United States Government Thereto, New York and London: G. P. Putnam's Sons, 1896.",
+      "sourceProvider": "コーネル大学図書館所蔵本をInternet Archiveが公開する1896年版のデジタル画像およびOCR（identifier: cu31924022883544）を主底本とし、HathiTrust所収のGoogleデジタル化本（hdl: 2027/mdp.39015003743708）を本文照合に使用しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cu31924022883544"
+      },
+      "rights": "1896年刊の原著は米国でパブリックドメインです。コーネル大学図書館所蔵本のデジタル化資料には、米国内で既知の著作権上の制限はない旨が表示されています。HathiTrustの対照本は Public Domain, Google-digitized と表示されますが、その画像は転載せず本文照合にのみ使用しています。収録した地図・図表は1896年原刊所収資料です。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
+    },
+    {
       "slug": "garella-panama-canal-1845",
       "recordClass": "major-work",
       "title": "パナマ地峡を横断する太平洋・大西洋連絡運河計画",
