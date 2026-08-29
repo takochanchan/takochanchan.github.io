@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 30);
+  assert.equal(counts.get("002"), 34);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -97,6 +97,10 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-hunting-pass-tropical-adventure-1860",
       "squier-lake-yojoa-taulebe-1860",
       "squier-unexplored-regions-central-america-1868",
+      "larde-cronologia-arqueologica-el-salvador-1926",
+      "larde-indice-provisional-arqueologico-el-salvador-1926",
+      "lothrop-museum-central-american-expedition-1927",
+      "lothrop-pottery-types-el-salvador-1927",
       "squier-observations-zestermann-1851",
       "squier-crampton-webster-project-1852",
       "squier-ancient-peru-1853",
@@ -1288,9 +1292,9 @@ test("Keasbey Nicaragua Canal retains its approved publication record", async ()
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 153);
-  assert.equal(shortPublications.length, 154);
-  assert.equal(shortPublicationAuthors.length, 37);
+  assert.equal(majorPublications.length, 154);
+  assert.equal(shortPublications.length, 157);
+  assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -1309,6 +1313,9 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "squier-ancient-peru-1853",
       "squier-great-south-american-earthquakes-1869",
       "squier-chalchihuitls-mexico-central-america-1870",
+      "larde-cronologia-arqueologica-el-salvador-1926",
+      "larde-indice-provisional-arqueologico-el-salvador-1926",
+      "lothrop-museum-central-american-expedition-1927",
       "valle-george-ephraim-squier-1922",
       "gonzalez-ruinas-tehuacan-1892",
       "esquinca-usumacinta",
@@ -2398,8 +2405,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">153<\/strong>件/);
-  assert.match(html, /id="paper-match-count">154<\/strong>件/);
+  assert.match(html, /id="book-match-count">154<\/strong>件/);
+  assert.match(html, /id="paper-match-count">157<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
