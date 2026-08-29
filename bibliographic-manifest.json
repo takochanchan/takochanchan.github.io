@@ -5703,6 +5703,25 @@
       "updatedDate": "2026-08-28"
     },
     {
+      "slug": "belly-a-travers-amerique-centrale-1867",
+      "recordClass": "major-work",
+      "title": "中央アメリカを横断して――ニカラグアと大洋間運河",
+      "originalTitle": "À travers l’Amérique centrale : le Nicaragua et le canal interocéanique",
+      "author": "フェリックス・ベリー",
+      "originalAuthor": "Félix Belly",
+      "year": 1867,
+      "originalPublication": "パリ、Librairie de la Suisse romande、1867年",
+      "sourceEdition": "Félix Belly, À travers l’Amérique centrale : le Nicaragua et le canal interocéanique, 2 vols., Paris: Librairie de la Suisse romande, 1867.",
+      "sourceProvider": "ハーバード大学所蔵本をGoogle Booksが公開する1867年版全2巻（第1巻ID VU8uAAAAYAAJ、第2巻ID caE9AAAAcAAJ）を主底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=VU8uAAAAYAAJ"
+      },
+      "rights": "1867年刊の原著はパブリックドメインです。Google Booksは両巻の所蔵本をパブリックドメイン資料として公開しています。",
+      "publishedDate": "2026-08-29",
+      "updatedDate": "2026-08-29"
+    },
+    {
       "slug": "garella-panama-canal-1845",
       "recordClass": "major-work",
       "title": "パナマ地峡を横断する太平洋・大西洋連絡運河計画",

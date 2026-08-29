@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 305);
+  assert.equal(publications.length, 306);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 28);
+  assert.equal(counts.get("002"), 29);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -111,6 +111,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "selfridge-darien-ship-canal-1874",
       "bonaparte-nicaragua-canal-1846",
       "belly-percement-isthme-panama-canal-nicaragua-1858",
+      "belly-a-travers-amerique-centrale-1867",
       "garella-panama-canal-1845",
       "reclus-panama-darien-1881",
       "rodrigues-panama-canal-1885",
@@ -1202,8 +1203,49 @@ test("International interoceanic canal congress retains the approved source and 
   assert.doesNotMatch(item.rights, /商用利用.*(?:許諾|利用料)/);
 });
 
+test("Belly À travers l’Amérique centrale retains its approved two-volume publication record", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "belly-a-travers-amerique-centrale-1867",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 795);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 2);
+  assert.match(item.extent, /全2巻合冊/);
+  assert.match(item.extent, /表75点/);
+  assert.match(item.description, /ニカラグア湖とサン・フアン川/);
+  assert.match(item.sourceProvider, /VU8uAAAAYAAJ/);
+  assert.match(item.sourceProvider, /caE9AAAAcAAJ/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.publishedDate, "2026-08-29");
+  assert.equal(item.updatedDate, "2026-08-29");
+
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const assets = new Map(
+    manifest.assets
+      .filter((asset) => asset.path.includes(item.slug))
+      .map((asset) => [path.extname(asset.path), asset]),
+  );
+  assert.equal(
+    assets.get(".pdf").sha256,
+    "4dece61d44847acd06ddefb9d1ee49ad5a025c6e5452110517deaea984b4b9a3",
+  );
+  assert.equal(
+    assets.get(".epub").sha256,
+    "31ff766a7675b23a737fdac45901af33a48a2c31bc1a6cf4f0335aa86a443ff4",
+  );
+  assert.equal(
+    assets.get(".jpg").sha256,
+    "8c6933b5b5c8eee5d36a118474be16a3af13a189388e03c3fe056bb8885ca863",
+  );
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 151);
+  assert.equal(majorPublications.length, 152);
   assert.equal(shortPublications.length, 154);
   assert.equal(shortPublicationAuthors.length, 37);
   assert.deepEqual(
@@ -2313,7 +2355,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">151<\/strong>件/);
+  assert.match(html, /id="book-match-count">152<\/strong>件/);
   assert.match(html, /id="paper-match-count">154<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
