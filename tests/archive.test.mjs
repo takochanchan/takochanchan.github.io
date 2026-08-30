@@ -1422,7 +1422,8 @@ test("Lothrop pottery chronology uses the approved paper classification", () => 
   );
   assert.ok(item);
   assert.equal(item.recordClass, "short-work");
-  assert.equal(item.type, "paper");
+  assert.ok(item.types.includes("論文"));
+  assert.ok(!item.types.includes("モノグラフ"));
   assert.equal(item.pageCount, 29);
   assert.equal(item.authorKey, "samuel-kirkland-lothrop");
 });
