@@ -94,7 +94,7 @@ jobs:
               if asset['kind'] == 'pdf':
                   assert data.startswith(b'%PDF-') and b'%%EOF' in data[-4096:]
                   info = subprocess.check_output(['pdfinfo', str(path)], text=True)
-                  assert re.search(r'^Pages:\s+151
+                  assert re.search(r'^Pages:\\s+151$', info, re.MULTILINE)
                   assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
                   assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
                   assert re.search(r'^Page size:\s+612 x 792 pts \(letter\)$', info, re.MULTILINE)
