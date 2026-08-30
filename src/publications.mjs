@@ -40,6 +40,10 @@ import {
   arceMemoriaPublicationRecords,
 } from "./arce-memoria-publication.mjs";
 import {
+  mezaPublicationMetadata,
+  mezaPublicationRecords,
+} from "./meza-publication.mjs";
+import {
   pimSeemannDottingsPublicationMetadata,
   pimSeemannDottingsPublicationRecords,
 } from "./pim-seemann-dottings-publication.mjs";
@@ -9131,6 +9135,7 @@ const publicationRecords = [
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
+  ...mezaPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
 ];
 
@@ -11685,6 +11690,7 @@ const publicationMetadata = {
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
+  ...mezaPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
 };
 

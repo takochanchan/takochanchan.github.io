@@ -5969,6 +5969,25 @@
       "updatedDate": "2026-08-30"
     },
     {
+      "slug": "meza-centro-america-campana-nacional-1885-1911",
+      "recordClass": "major-work",
+      "title": "中央アメリカ――1885年国民戦役",
+      "originalTitle": "Centro América: Campaña Nacional de 1885",
+      "author": "ラファエル・メサ",
+      "originalAuthor": "Rafael Meza",
+      "year": 1911,
+      "originalPublication": "サン・サルバドル、Tipografía La Unión、1911年",
+      "sourceEdition": "Rafael Meza, Centro América: Campaña Nacional de 1885, San Salvador: Tipografía La Unión, 1911.",
+      "sourceProvider": "University of Texas at Austin所蔵本をGoogle Booksが2008年7月26日にデジタル化・公開した1911年版全冊PDF（Google Books ID: qtdqAAAAMAAJ）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=qtdqAAAAMAAJ"
+      },
+      "rights": "1911年刊の原著はパブリックドメインです。Google Booksは当該巻を全文閲覧可能なパブリックドメイン資料として公開しています。収録した原刊画像はGoogle Booksの表示・透かしを保持しています。利用にはGoogle Booksの利用案内が適用されます。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
+    },
+    {
       "slug": "pim-seemann-dottings-roadside-1869",
       "recordClass": "major-work",
       "title": "パナマ、ニカラグア、モスキート路傍点描",

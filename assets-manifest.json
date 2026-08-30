@@ -3062,6 +3062,24 @@
       "sha256": "ece6c1d047c9cb0ee7c1ff2137e8cc44b52a62bbc2695fc2faabd2d424cc99a6"
     },
     {
+      "path": "publications/meza-centro-america-campana-nacional-1885-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/meza-centro-america-campana-nacional-1885-1911/cover.jpg",
+      "size": 45905,
+      "sha256": "4639b444fc7a763b233738e0f25bc854ea1176ebf37e20496f61199849ab34f8"
+    },
+    {
+      "path": "publications/meza-centro-america-campana-nacional-1885-1911/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.epub",
+      "size": 5652920,
+      "sha256": "34dcdce7374342d83e9fb8674eb04ad0e63a05ec8bd95131b0811b83f92288b0"
+    },
+    {
+      "path": "publications/meza-centro-america-campana-nacional-1885-1911/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.pdf",
+      "size": 3718061,
+      "sha256": "5571c1615396eb6506ac77f7416b9e960d68bd16e9c39cb1581582b06dd84764"
+    },
+    {
       "path": "publications/molina-costa-rica-new-granada-1853/cover.svg",
       "url": "https://takochanchan.github.io/publications/molina-costa-rica-new-granada-1853/cover.svg",
       "size": 78617,
