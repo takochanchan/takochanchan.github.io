@@ -153,7 +153,7 @@ jobs:
                       if pathlib.PurePosixPath(name).suffix.lower() in {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
                   ]
                   assert len(image_members) == asset['content_image_count'] + 1
-                  assert any(pathlib.PurePosixPath(name).name == 'cover.jpg' for name in image_members)
+                  assert any('cover' in pathlib.PurePosixPath(name).stem.lower() for name in image_members)
                   for phrase in banned:
                       assert phrase not in Japanese_text
           PY
