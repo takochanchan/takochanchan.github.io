@@ -32,6 +32,10 @@ import {
   keasbeyNicaraguaCanalPublicationRecords,
 } from "./keasbey-nicaragua-canal-publication.mjs";
 import {
+  conzemiusMiskitoSumuPublicationMetadata,
+  conzemiusMiskitoSumuPublicationRecords,
+} from "./conzemius-miskito-sumu-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9108,6 +9112,7 @@ const publicationRecords = [
   ...bellyPercementPublicationRecords,
   ...bellyATraversAmeriqueCentralePublicationRecords,
   ...keasbeyNicaraguaCanalPublicationRecords,
+  ...conzemiusMiskitoSumuPublicationRecords,
   ...garellaPanamaCanalPublicationRecords,
   ...reclusPanamaDarienPublicationRecords,
   ...rodriguesPanamaCanalPublicationRecords,
@@ -11659,6 +11664,7 @@ const publicationMetadata = {
   ...bellyPercementPublicationMetadata,
   ...bellyATraversAmeriqueCentralePublicationMetadata,
   ...keasbeyNicaraguaCanalPublicationMetadata,
+  ...conzemiusMiskitoSumuPublicationMetadata,
   ...garellaPanamaCanalPublicationMetadata,
   ...reclusPanamaDarienPublicationMetadata,
   ...rodriguesPanamaCanalPublicationMetadata,

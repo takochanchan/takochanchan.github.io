@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 311);
+  assert.equal(publications.length, 312);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 34);
+  assert.equal(counts.get("002"), 35);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -117,6 +117,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "belly-percement-isthme-panama-canal-nicaragua-1858",
       "belly-a-travers-amerique-centrale-1867",
       "keasbey-nicaragua-canal-monroe-doctrine-1896",
+      "conzemius-miskito-sumu-1932",
       "garella-panama-canal-1845",
       "reclus-panama-darien-1881",
       "rodrigues-panama-canal-1885",
@@ -1291,8 +1292,47 @@ test("Keasbey Nicaragua Canal retains its approved publication record", async ()
   );
 });
 
+test("Conzemius Miskito and Sumu survey retains the approved publication record", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "conzemius-miskito-sumu-1932",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 307);
+  assert.equal(item.figureCount, 1);
+  assert.equal(item.plateCount, 10);
+  assert.match(item.sourceProvider, /bulletin1061932smit/);
+  assert.match(item.rights, /No Copyright - United States/);
+  assert.match(item.rights, /NoC-US 1\.0/);
+  assert.match(item.rights, /オープンライセンスではなく/);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.publishedDate, "2026-08-30");
+  assert.equal(item.updatedDate, "2026-08-30");
+
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const assets = new Map(
+    manifest.assets
+      .filter((asset) => asset.path.includes(item.slug))
+      .map((asset) => [path.extname(asset.path), asset]),
+  );
+  assert.equal(
+    assets.get(".pdf").sha256,
+    "f68433314d1c09f71119875be7b99620b2bb0fc5b72d6eed35362b1c705066f5",
+  );
+  assert.equal(
+    assets.get(".epub").sha256,
+    "95508d4004c2ed92634cfcf87b84930ce36eb355bffef4fbe066ce2eb58f1182",
+  );
+  assert.equal(
+    assets.get(".jpg").sha256,
+    "d10a2a0d4dd193fda06bd8dc6638fba46be365f172da91e3ba84ab8b79eff174",
+  );
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 154);
+  assert.equal(majorPublications.length, 155);
   assert.equal(shortPublications.length, 157);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
@@ -2405,7 +2445,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">154<\/strong>件/);
+  assert.match(html, /id="book-match-count">155<\/strong>件/);
   assert.match(html, /id="paper-match-count">157<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

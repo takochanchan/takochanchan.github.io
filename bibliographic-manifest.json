@@ -5929,6 +5929,25 @@
       "rights": "1927年刊の原著本文は米国でパブリックドメインです。Smithsonian Libraries and Archivesの公開ページはデジタル資料を「In Copyright」と表示する一方、Internet Archiveのitem metadataは「No known copyright restrictions as determined by scanning institution」と記録しています。これは標準化された再利用ライセンスとはみなさず、本版は原著本文とキャプションの文字情報のみを用い、原刊画像・誌面画像を収録していません。",
       "publishedDate": "2026-08-29",
       "updatedDate": "2026-08-29"
+    },
+    {
+      "slug": "conzemius-miskito-sumu-1932",
+      "recordClass": "major-work",
+      "title": "ホンジュラスおよびニカラグアのミスキート族とスム族の民族誌的調査",
+      "originalTitle": "Ethnographical Survey of the Miskito and Sumu Indians of Honduras and Nicaragua",
+      "author": "エドゥアルト・コンツェミウス",
+      "originalAuthor": "Eduard Conzemius",
+      "year": 1932,
+      "originalPublication": "ワシントン、United States Government Printing Office、1932年",
+      "sourceEdition": "Eduard Conzemius, Ethnographical Survey of the Miskito and Sumu Indians of Honduras and Nicaragua, Smithsonian Institution, Bureau of American Ethnology, Bulletin 106, Washington: United States Government Printing Office, 1932.",
+      "sourceProvider": "Smithsonian Libraries and Archivesがデジタル化・公開するBureau of American Ethnology Bulletin 106（Internet Archive identifier: bulletin1061932smit）の全頁スキャンを底本とし、書誌と権利表示はSmithsonian Research Onlineの項目（handle 10088/15412）で確認しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repository.si.edu/handle/10088/15412"
+      },
+      "rights": "Smithsonian Research Onlineは本項目に「No Copyright - United States」（NoC-US 1.0）を表示しています。これは公開機関が本項目を米国法上パブリックドメインと判断していることを示す権利表示であり、オープンライセンスではなく、米国外の著作権状態を判断しません。底本・図版の公開機関はSmithsonian Libraries and Archivesです。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
     }
   ],
   "works": [
