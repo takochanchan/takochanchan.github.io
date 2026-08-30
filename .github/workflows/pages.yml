@@ -61,3 +61,5 @@ jobs:
         uses: actions/deploy-pages@v4
 
 # Rodrigues bibliography deployment: 2026-08-28
+
+# Doubleday publication deployment: 2026-08-30
