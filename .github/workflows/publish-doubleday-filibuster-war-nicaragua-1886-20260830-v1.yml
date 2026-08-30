@@ -82,7 +82,8 @@ jobs:
           assert actual == expected
 
           banned = ('確認用校正刷', '日本語全訳版（確認用）', '承認前非公開', '公開前確認用')
-          marker_re = re.compile(r'〔原刊 p\. ([0-9]+)〕')
+          numeric_marker_re = re.compile(r'〔原刊 p\. ([0-9]+)〕')
+          roman_marker_re = re.compile(r'〔原刊 p\. ([ivxlcdm]+)〕')
 
           for asset in manifest['assets']:
               path = root / 'assets' / asset['filename']
@@ -93,7 +94,174 @@ jobs:
               if asset['kind'] == 'pdf':
                   assert data.startswith(b'%PDF-') and b'%%EOF' in data[-4096:]
                   info = subprocess.check_output(['pdfinfo', str(path)], text=True)
-                  assert re.search(r'^Pages:\s+225$', info, re.MULTILINE)
+                  assert re.search(r'^Pages:\s+151
+                  assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
+                  assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
+                  assert re.search(r'^Page size:\s+612 x 792 pts \(letter\)$', info, re.MULTILINE)
+                  text = subprocess.check_output(['pdftotext', str(path), '-'], text=True).replace('\u00a0', ' ')
+                  markers = [int(value) for value in numeric_marker_re.findall(text)]
+                  assert markers == list(range(1, 226)), (markers[:3], markers[-3:], len(markers))
+                  assert roman_marker_re.findall(text) == ['iii', 'iv', 'v']
+                  assert 'ニカラグア「フィリバスター」' in text
+                  assert '戦争回想録' in text
+                  image_listing = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
+                  image_rows = [line for line in image_listing.splitlines()[2:] if line.strip()]
+                  assert len(image_rows) == asset['image_count'], len(image_rows)
+                  for phrase in banned:
+                      assert phrase not in text
+                  continue
+
+              with zipfile.ZipFile(path) as archive:
+                  assert archive.testzip() is None
+                  members = archive.namelist()
+                  first = archive.infolist()[0]
+                  assert first.filename == 'mimetype' and first.compress_type == zipfile.ZIP_STORED
+                  assert archive.read('mimetype') == b'application/epub+zip'
+                  container = ET.fromstring(archive.read('META-INF/container.xml'))
+                  rootfile = next(node for node in container.iter() if node.tag.endswith('}rootfile'))
+                  opf_path = rootfile.attrib['full-path']
+                  opf = ET.fromstring(archive.read(opf_path))
+                  assert opf.attrib.get('version', '').startswith('3')
+                  opf_text = ' '.join(node.text or '' for node in opf.iter())
+                  assert asset['title'] in opf_text
+                  language = next((node.text or '' for node in opf.iter() if node.tag.endswith('}language')), '')
+                  assert language.lower().startswith('ja')
+                  manifest_items = [node for node in opf.iter() if node.tag.endswith('}item')]
+                  assert sum('cover-image' in node.attrib.get('properties', '').split() for node in manifest_items) == 1
+                  assert sum('nav' in node.attrib.get('properties', '').split() for node in manifest_items) == 1
+
+                  html_names = [name for name in members if name.endswith(('.xhtml', '.html'))]
+                  html_sources = [archive.read(name).decode('utf-8') for name in html_names]
+                  html = '\n'.join(html_sources).replace('\u00a0', ' ')
+                  markers = [int(value) for value in numeric_marker_re.findall(html)]
+                  assert markers == list(range(1, 226)), (markers[:3], markers[-3:], len(markers))
+                  assert roman_marker_re.findall(html) == ['iii', 'iv', 'v']
+                  documents = [ET.fromstring(source) for source in html_sources]
+                  Japanese_text = ''.join(''.join(document.itertext()) for document in documents)
+                  Japanese_count = len(re.findall(r'[\u3040-\u30ff\u3400-\u9fff]', Japanese_text))
+                  assert Japanese_count >= 90000, Japanese_count
+                  image_nodes = [
+                      node
+                      for document in documents
+                      for node in document.iter()
+                      if node.tag.endswith('}img')
+                  ]
+                  assert len(image_nodes) == asset['content_image_count'], len(image_nodes)
+                  assert all(node.attrib.get('alt', '').strip() for node in image_nodes)
+                  image_members = [
+                      name for name in members
+                      if pathlib.PurePosixPath(name).suffix.lower() in {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
+                  ]
+                  assert len(image_members) == asset['content_image_count'] + 1
+                  assert any(pathlib.PurePosixPath(name).name == 'cover.jpg' for name in image_members)
+                  for phrase in banned:
+                      assert phrase not in Japanese_text
+          PY
+
+      - name: Merge shared release checksum ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-checksums
+          if gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/current-checksums; then
+            cp /tmp/current-checksums/SHA256SUMS.txt /tmp/SHA256SUMS.previous.txt
+          else
+            : > /tmp/SHA256SUMS.previous.txt
+          fi
+          python - <<'PY'
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/doubleday-filibuster-war-nicaragua-1886-20260830-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          new = {asset['filename']: asset['sha256'] for asset in manifest['assets']}
+          old = {}
+          for line in pathlib.Path('/tmp/SHA256SUMS.previous.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  old[parts[1].lstrip('* ')] = parts[0]
+          old.update(new)
+          pathlib.Path('/tmp/SHA256SUMS.txt').write_text(
+              ''.join(f'{sha}  {name}\n' for name, sha in sorted(old.items())),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload assets to the shared public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$RELEASE_TAG" "$STAGING_ROOT/payload/assets"/* /tmp/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and byte-verify public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify
+          python - <<'PY' > /tmp/public-assets.txt
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/doubleday-filibuster-war-nicaragua-1886-20260830-v1/payload')
+          for asset in json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['assets']:
+              print(asset['filename'])
+          PY
+          while IFS= read -r filename; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$filename" --dir verify --clobber
+            cmp "$STAGING_ROOT/payload/assets/$filename" "verify/$filename"
+          done < /tmp/public-assets.txt
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir verify --clobber
+          cmp /tmp/SHA256SUMS.txt verify/SHA256SUMS.txt
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          root = pathlib.Path('.release-staging/doubleday-filibuster-war-nicaragua-1886-20260830-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          ledger = {}
+          for line in pathlib.Path('verify/SHA256SUMS.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  ledger[parts[1].lstrip('* ')] = parts[0]
+          for asset in manifest['assets']:
+              data = (pathlib.Path('verify') / asset['filename']).read_bytes()
+              assert len(data) == asset['size']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256']
+              assert ledger[asset['filename']] == asset['sha256']
+          PY
+
+      - name: Remove one-shot workflow
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repository
+          fetch-depth: 0
+
+      - name: Commit workflow cleanup
+        shell: bash
+        run: |
+          set -euo pipefail
+          git -C repository config user.name "github-actions[bot]"
+          git -C repository config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C repository rm -f --ignore-unmatch "$WORKFLOW_PATH"
+          git -C repository commit -m "Verify Doubleday publication assets"
+          git -C repository pull --rebase origin main
+          git -C repository push origin HEAD:main
+
+      - name: Remove staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH" >/dev/null
+, info, re.MULTILINE)
                   assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
                   assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
                   assert re.search(r'^Page size:\s+612 x 792 pts \(letter\)$', info, re.MULTILINE)
