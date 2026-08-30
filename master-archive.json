@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "688d5dbc5204d5f45d9405c7970eac75cd40dd37",
+  "archive_commit": "e03a773733ef3edfdee2600601afd6c1267f2680",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -184,6 +184,7 @@
     "perigny-villes-mortes-nakcun-1911": "publications/perigny-villes-mortes-nakcun-1911/master.docx",
     "perigny-yucatan-inconnu-1908": "publications/perigny-yucatan-inconnu-1908/master.docx",
     "perigny-yucatan-inconnu-geographie-1908": "publications/perigny-yucatan-inconnu-geographie-1908/master.docx",
+    "pim-seemann-dottings-roadside-1869": "publications/pim-seemann-dottings-roadside-1869/master.docx",
     "pineda-chiapas-soconusco-1845": "publications/pineda-chiapas-soconusco-1845/master.docx",
     "pineda-sublevaciones-indigenas-chiapas-1888": "publications/pineda-sublevaciones-indigenas-chiapas-1888/master.md",
     "pineda-traslado-poderes-chiapas-1892": "publications/pineda-traslado-poderes-chiapas-1892/master.docx",

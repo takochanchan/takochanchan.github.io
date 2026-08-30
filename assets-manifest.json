@@ -4142,6 +4142,24 @@
       "sha256": "1935d60baec1507030680b0bc2a94652386009da1509e79e2476af672de33e5e"
     },
     {
+      "path": "publications/pim-seemann-dottings-roadside-1869/Bedford_Pim_Berthold_Seemann_Dottings_on_the_Roadside_1869_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bedford_Pim_Berthold_Seemann_Dottings_on_the_Roadside_1869_Japanese_Complete_Translation.epub",
+      "size": 39263198,
+      "sha256": "24558650a7b426b082666047e19116692820cbe93b8df99536cf6ee5edc361e9"
+    },
+    {
+      "path": "publications/pim-seemann-dottings-roadside-1869/Bedford_Pim_Berthold_Seemann_Dottings_on_the_Roadside_1869_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bedford_Pim_Berthold_Seemann_Dottings_on_the_Roadside_1869_Japanese_Complete_Translation.pdf",
+      "size": 10587324,
+      "sha256": "f85a4a4abd3914013da922c064cad3fbbf5e34e74c27389b5be5940349bccd69"
+    },
+    {
+      "path": "publications/pim-seemann-dottings-roadside-1869/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pim-seemann-dottings-roadside-1869/cover.jpg",
+      "size": 86040,
+      "sha256": "cd331aee204d05f659f40cf097f539370040682f43c51c83c75e231badfa93d7"
+    },
+    {
       "path": "publications/pineda-chiapas-soconusco-1845/cover.jpg",
       "url": "https://takochanchan.github.io/publications/pineda-chiapas-soconusco-1845/cover.jpg",
       "size": 27611,

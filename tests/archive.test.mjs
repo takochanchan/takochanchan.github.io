@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 313);
+  assert.equal(publications.length, 314);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 36);
+  assert.equal(counts.get("002"), 37);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -127,6 +127,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
       "arce-memoria-presidency-1830",
+      "pim-seemann-dottings-roadside-1869",
     ],
   );
   assert.equal(
@@ -1374,8 +1375,49 @@ test("Arce presidential memoir retains the approved Fancourt-template publicatio
   );
 });
 
+test("Pim and Seemann Dottings retains the approved publication record", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "pim-seemann-dottings-roadside-1869",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 371);
+  assert.equal(item.figureCount, 4);
+  assert.equal(item.plateCount, 8);
+  assert.match(item.extent, /原刊前付xviii頁/);
+  assert.match(item.extent, /口絵1点/);
+  assert.match(item.extent, /図版5点/);
+  assert.match(item.extent, /地図2点/);
+  assert.match(item.sourceProvider, /dottingsonroads00pimb/);
+  assert.match(item.rights, /Public Domain/);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.publishedDate, "2026-08-30");
+  assert.equal(item.updatedDate, "2026-08-30");
+
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const assets = new Map(
+    manifest.assets
+      .filter((asset) => asset.path.includes(item.slug))
+      .map((asset) => [path.extname(asset.path), asset]),
+  );
+  assert.equal(
+    assets.get(".pdf").sha256,
+    "f85a4a4abd3914013da922c064cad3fbbf5e34e74c27389b5be5940349bccd69",
+  );
+  assert.equal(
+    assets.get(".epub").sha256,
+    "24558650a7b426b082666047e19116692820cbe93b8df99536cf6ee5edc361e9",
+  );
+  assert.equal(
+    assets.get(".jpg").sha256,
+    "cd331aee204d05f659f40cf097f539370040682f43c51c83c75e231badfa93d7",
+  );
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 156);
+  assert.equal(majorPublications.length, 157);
   assert.equal(shortPublications.length, 157);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
@@ -2488,7 +2530,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">156<\/strong>件/);
+  assert.match(html, /id="book-match-count">157<\/strong>件/);
   assert.match(html, /id="paper-match-count">157<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

@@ -5967,6 +5967,25 @@
       "rights": "1830年刊の原著はパブリックドメインです。Google Booksは当該巻を全文閲覧可能なパブリックドメイン資料として公開しています。本版には原刊本文と原刊紙面に属する要素のみを収録し、Googleが付加した案内頁等は使用していません。",
       "publishedDate": "2026-08-30",
       "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "pim-seemann-dottings-roadside-1869",
+      "recordClass": "major-work",
+      "title": "パナマ、ニカラグア、モスキート路傍点描",
+      "originalTitle": "Dottings on the Roadside, in Panama, Nicaragua, and Mosquito",
+      "author": "ベッドフォード・ピム／ベルトルト・ゼーマン",
+      "originalAuthor": "Bedford Pim and Berthold Seemann",
+      "year": 1869,
+      "originalPublication": "ロンドン、Chapman and Hall、1869年",
+      "sourceEdition": "Bedford Pim and Berthold Seemann, Dottings on the Roadside, in Panama, Nicaragua, and Mosquito, London: Chapman and Hall, 1869.",
+      "sourceProvider": "New York Botanical Garden, LuEsther T. Mertz Library所蔵本をBiodiversity Heritage Libraryがデジタル化・公開した全頁スキャン（Internet Archive identifier: dottingsonroads00pimb）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.biodiversitylibrary.org/page/58551124"
+      },
+      "rights": "Biodiversity Heritage Libraryは当該デジタル資料の権利状態を「Public Domain」と表示しています。本公開版の本文画像、口絵、図版、地図は、この公開機関の表示に基づいて収録しています。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
     }
   ],
   "works": [

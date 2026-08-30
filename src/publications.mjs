@@ -40,6 +40,10 @@ import {
   arceMemoriaPublicationRecords,
 } from "./arce-memoria-publication.mjs";
 import {
+  pimSeemannDottingsPublicationMetadata,
+  pimSeemannDottingsPublicationRecords,
+} from "./pim-seemann-dottings-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9127,6 +9131,7 @@ const publicationRecords = [
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
+  ...pimSeemannDottingsPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11680,6 +11685,7 @@ const publicationMetadata = {
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
+  ...pimSeemannDottingsPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
