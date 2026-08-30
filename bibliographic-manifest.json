@@ -6119,6 +6119,25 @@
       "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1924年刊本文の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録号の表紙・目次・編集部記事・広告・意匠を収録していません。",
       "publishedDate": "2026-08-30",
       "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "peralta-costa-rica-costa-mosquitos-1898",
+      "recordClass": "major-work",
+      "title": "コスタリカとモスキート海岸",
+      "originalTitle": "Costa Rica y Costa de Mosquitos: documentos para la historia de la jurisdicción territorial de Costa Rica y Colombia",
+      "author": "マヌエル・マリア・デ・ペラルタ",
+      "originalAuthor": "Manuel María de Peralta",
+      "year": 1898,
+      "originalPublication": "パリ、Imprimerie Générale Lahure（コスタリカ公使館のために印刷）、1898年",
+      "sourceEdition": "Manuel M. de Peralta, Costa Rica y Costa de Mosquitos: documentos para la historia de la jurisdicción territorial de Costa Rica y Colombia, Paris: Imprimerie Générale Lahure, 1898.",
+      "sourceProvider": "Google Booksが公開するミシガン大学所蔵本（volume ID: szvBRzzIc10C）を主底本とし、HathiTrustのミシガン大学本（mdp.39015028313172）およびハーバード大学本（hvd.hxthb6）、Biblioteca Nacional de Españaの書誌（bdh0000239537）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=szvBRzzIc10C"
+      },
+      "rights": "1898年刊の原著はパブリックドメインです。HathiTrustはミシガン大学本とハーバード大学本を権利コード「pd」で公開しています。Biblioteca Nacional de Españaのパブリックドメイン・コレクションは、収録作品を同館の条件に従って自由かつ無償で再利用できるとしています。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
     }
   ],
   "works": [

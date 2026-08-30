@@ -3458,6 +3458,24 @@
       "sha256": "69da7049f7e89e17fa3f08de2e63d76c9f298b16acacf9b39ce3525dc710c809"
     },
     {
+      "path": "publications/peralta-costa-rica-costa-mosquitos-1898/Peralta_Costa_Rica_Costa_Mosquitos_1898_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Peralta_Costa_Rica_Costa_Mosquitos_1898_Japanese_Complete_Translation.epub",
+      "size": 15443576,
+      "sha256": "960b559f048e8a86f04ad2b717daa4a2cc82ad63204a5cc4e70c8e9436d5f7c2"
+    },
+    {
+      "path": "publications/peralta-costa-rica-costa-mosquitos-1898/Peralta_Costa_Rica_Costa_Mosquitos_1898_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Peralta_Costa_Rica_Costa_Mosquitos_1898_Japanese_Complete_Translation.pdf",
+      "size": 4990868,
+      "sha256": "2d9d3c3de2e190a89e5bf629627133de5807aa6c2036f77ccb25e75aa9b126bb"
+    },
+    {
+      "path": "publications/peralta-costa-rica-costa-mosquitos-1898/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/peralta-costa-rica-costa-mosquitos-1898/cover.jpg",
+      "size": 63390,
+      "sha256": "57650416d27b4fded80e365ace1f89d136bd4405163306b242b21b59e26a9b12"
+    },
+    {
       "path": "publications/perigny-amerique-centrale-1911/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_L_Amerique_centrale_1911_Japanese_Complete_Translation.epub",
       "size": 7428748,

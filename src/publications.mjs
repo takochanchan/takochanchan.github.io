@@ -52,6 +52,10 @@ import {
   pimSeemannDottingsPublicationRecords,
 } from "./pim-seemann-dottings-publication.mjs";
 import {
+  peraltaCostaRicaMosquitosPublicationMetadata,
+  peraltaCostaRicaMosquitosPublicationRecords,
+} from "./peralta-costa-rica-costa-mosquitos-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9148,6 +9152,7 @@ const publicationRecords = [
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
+  ...peraltaCostaRicaMosquitosPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11705,6 +11710,7 @@ const publicationMetadata = {
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
+  ...peraltaCostaRicaMosquitosPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
