@@ -1416,9 +1416,20 @@ test("Pim and Seemann Dottings retains the approved publication record", async (
   );
 });
 
+test("Lothrop pottery chronology uses the approved paper classification", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "lothrop-pottery-types-el-salvador-1927",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "short-work");
+  assert.equal(item.type, "paper");
+  assert.equal(item.pageCount, 29);
+  assert.equal(item.authorKey, "samuel-kirkland-lothrop");
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 157);
-  assert.equal(shortPublications.length, 157);
+  assert.equal(majorPublications.length, 156);
+  assert.equal(shortPublications.length, 158);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -1441,6 +1452,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "larde-cronologia-arqueologica-el-salvador-1926",
       "larde-indice-provisional-arqueologico-el-salvador-1926",
       "lothrop-museum-central-american-expedition-1927",
+      "lothrop-pottery-types-el-salvador-1927",
       "valle-george-ephraim-squier-1922",
       "gonzalez-ruinas-tehuacan-1892",
       "esquinca-usumacinta",
@@ -2530,8 +2542,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">157<\/strong>件/);
-  assert.match(html, /id="paper-match-count">157<\/strong>件/);
+  assert.match(html, /id="book-match-count">156<\/strong>件/);
+  assert.match(html, /id="paper-match-count">158<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

@@ -146,19 +146,19 @@ export const salvadorArchaeologyBatch02PublicationRecords = [
     "series": "INDIAN NOTES AND MONOGRAPHS · 1927",
     "originalPublication": "ニューヨーク、Museum of the American Indian, Heye Foundation、『Indian Notes and Monographs』第1巻第4号、1927年、165–220頁",
     "year": 1927,
-    "extent": "PDF 33頁・原刊165–220頁・図1–25のキャプション・参考文献・原注1件",
-    "description": "サミュエル・K・ロスロップが、エル・サルバドルの層位資料と土器型式を整理し、マヤ、ピピル、アルカイック、チョロテガ、レンカ、マタガルパ各文化の関係と編年を論じた1927年刊の考古学モノグラフです。",
+    "extent": "PDF 29頁・原刊165–220頁・図1–25のキャプション・参考文献・原注1件",
+    "description": "サミュエル・K・ロスロップが、エル・サルバドルの層位資料と土器型式を整理し、マヤ、ピピル、アルカイック、チョロテガ、レンカ、マタガルパ各文化の関係と編年を論じた1927年刊の考古学論文です。",
     "cover": "publications/lothrop-pottery-types-el-salvador-1927/cover.jpg",
     "pdf": "publications/lothrop-pottery-types-el-salvador-1927/Samuel_K_Lothrop_Pottery_Types_El_Salvador_1927_Japanese_Complete_Translation.pdf",
     "epub": "publications/lothrop-pottery-types-el-salvador-1927/Samuel_K_Lothrop_Pottery_Types_El_Salvador_1927_Japanese_Complete_Translation.epub",
-    "pageCount": 33,
+    "pageCount": 29,
     "figureCount": 0,
     "plateCount": 0,
     "types": [
       "考古学",
       "土器研究",
       "編年研究",
-      "モノグラフ",
+      "論文",
       "一次史料"
     ],
     "regions": [
@@ -215,12 +215,13 @@ export const salvadorArchaeologyBatch02PublicationMetadata = {
     "sourceUrl": "https://library.si.edu/digital-library/book/potterytypesthei00loth",
     "rights": "1927年刊の原著本文は米国でパブリックドメインです。Smithsonian Libraries and Archivesの公開ページはデジタル資料を「In Copyright」と表示する一方、Internet Archiveのitem metadataは「No known copyright restrictions as determined by scanning institution」と記録しています。これは標準化された再利用ライセンスとはみなさず、本版は原著本文とキャプションの文字情報のみを用い、原刊画像・誌面画像を収録していません。",
     "publishedDate": "2026-08-29",
-    "updatedDate": "2026-08-29"
+    "updatedDate": "2026-08-30"
   }
 };
 
 export const salvadorArchaeologyBatch02ShortWorkAuthors = {
   "larde-cronologia-arqueologica-el-salvador-1926": "jorge-larde",
   "larde-indice-provisional-arqueologico-el-salvador-1926": "jorge-larde",
-  "lothrop-museum-central-american-expedition-1927": "samuel-kirkland-lothrop"
+  "lothrop-museum-central-american-expedition-1927": "samuel-kirkland-lothrop",
+  "lothrop-pottery-types-el-salvador-1927": "samuel-kirkland-lothrop"
 };
