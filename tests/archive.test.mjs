@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 312);
+  assert.equal(publications.length, 313);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 35);
+  assert.equal(counts.get("002"), 36);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -126,6 +126,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "siguenza-obras-1928",
       "thompson-official-visit-guatemala-1829",
       "squier-waikna-mosquito-shore-1855",
+      "arce-memoria-presidency-1830",
     ],
   );
   assert.equal(
@@ -1331,8 +1332,50 @@ test("Conzemius Miskito and Sumu survey retains the approved publication record"
   );
 });
 
+test("Arce presidential memoir retains the approved Fancourt-template publication record", async () => {
+  const item = publications.find(
+    (publication) => publication.slug === "arce-memoria-presidency-1830",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 311);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 0);
+  assert.match(item.extent, /原刊前付11葉/);
+  assert.match(item.extent, /本文1–140頁/);
+  assert.match(item.extent, /文書編1–65頁/);
+  assert.match(item.extent, /表7点/);
+  assert.match(item.extent, /原注63件/);
+  assert.match(item.sourceProvider, /GzrKpa1aOTIC/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.publishedDate, "2026-08-30");
+  assert.equal(item.updatedDate, "2026-08-30");
+
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const assets = new Map(
+    manifest.assets
+      .filter((asset) => asset.path.includes(item.slug))
+      .map((asset) => [path.extname(asset.path), asset]),
+  );
+  assert.equal(
+    assets.get(".pdf").sha256,
+    "edb13a097d37f78d42406fe68d498cc1eb002bb24dcef1f26a3cc936df6875fe",
+  );
+  assert.equal(
+    assets.get(".epub").sha256,
+    "1c388ba64e43f0d854f6ff678b76db1b3560ec1958ba16c58dc04f4c2a84710d",
+  );
+  assert.equal(
+    assets.get(".jpg").sha256,
+    "6634bacd04b9de79a3982ec89063d7f2e0835a5da2f3089b74c18e8b5bbe91e8",
+  );
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 155);
+  assert.equal(majorPublications.length, 156);
   assert.equal(shortPublications.length, 157);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
@@ -2429,10 +2472,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260829-salvador-archaeology-02/);
-  assert.match(html, /\/archive\.js\?v=20260829-salvador-archaeology-02/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260829-salvador-archaeology-02/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260829-salvador-archaeology-02/);
+  assert.match(html, /\/archive\.css\?v=20260830-arce-memoria/);
+  assert.match(html, /\/archive\.js\?v=20260830-arce-memoria/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260830-arce-memoria/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260830-arce-memoria/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2529,7 +2572,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260829-salvador-archaeology-02/);
+  assert.match(html, /\/archive\.css\?v=20260830-arce-memoria/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2663,17 +2706,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260829-salvador-archaeology-02/);
-    assert.match(html, /\/archive\.js\?v=20260829-salvador-archaeology-02/);
+    assert.match(html, /\/archive\.css\?v=20260830-arce-memoria/);
+    assert.match(html, /\/archive\.js\?v=20260830-arce-memoria/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260829-salvador-archaeology-02#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260830-arce-memoria#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260829-salvador-archaeology-02#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260830-arce-memoria#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [

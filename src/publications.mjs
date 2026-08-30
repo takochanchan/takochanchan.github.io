@@ -36,6 +36,10 @@ import {
   conzemiusMiskitoSumuPublicationRecords,
 } from "./conzemius-miskito-sumu-publication.mjs";
 import {
+  arceMemoriaPublicationMetadata,
+  arceMemoriaPublicationRecords,
+} from "./arce-memoria-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9122,6 +9126,7 @@ const publicationRecords = [
   ...thompsonOfficialVisitPublicationRecords,
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
+  ...arceMemoriaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11674,6 +11679,7 @@ const publicationMetadata = {
   ...thompsonOfficialVisitPublicationMetadata,
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
+  ...arceMemoriaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

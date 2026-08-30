@@ -5948,6 +5948,25 @@
       "rights": "Smithsonian Research Onlineは本項目に「No Copyright - United States」（NoC-US 1.0）を表示しています。これは公開機関が本項目を米国法上パブリックドメインと判断していることを示す権利表示であり、オープンライセンスではなく、米国外の著作権状態を判断しません。底本・図版の公開機関はSmithsonian Libraries and Archivesです。",
       "publishedDate": "2026-08-30",
       "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "arce-memoria-presidency-1830",
+      "recordClass": "major-work",
+      "title": "大統領在任期間におけるマヌエル・ホセ・アルセの公的・行政上の行動に関する回想録",
+      "originalTitle": "Memoria de la conducta pública y administrativa de Manuel José Arce durante el período de su presidencia",
+      "author": "マヌエル・ホセ・アルセ",
+      "originalAuthor": "Manuel José Arce",
+      "year": 1830,
+      "originalPublication": "メキシコ、マリアノ・アレバロ管理下ガルバン印刷所、1830年",
+      "sourceEdition": "Manuel José Arce, Memoria de la conducta pública y administrativa de Manuel José Arce durante el período de su presidencia, México: Imprenta de Galván a cargo de Mariano Arévalo, 1830.",
+      "sourceProvider": "大英図書館旧蔵本をGoogle Booksが全文公開する1830年版（volume ID: GzrKpa1aOTIC）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=GzrKpa1aOTIC"
+      },
+      "rights": "1830年刊の原著はパブリックドメインです。Google Booksは当該巻を全文閲覧可能なパブリックドメイン資料として公開しています。本版には原刊本文と原刊紙面に属する要素のみを収録し、Googleが付加した案内頁等は使用していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
     }
   ],
   "works": [
