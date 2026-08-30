@@ -87,7 +87,8 @@ jobs:
                   text = subprocess.check_output(['pdftotext', str(path), '-'], text=True).replace('\u00a0', ' ')
                   markers = [int(value) for value in marker_re.findall(text)]
                   assert markers == list(range(7, 205)), (markers[:3], markers[-3:], len(markers))
-                  assert asset['title'] in text
+                  assert '中央アメリカ' in text
+                  assert '1885 年国民戦役' in text
                   image_listing = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
                   image_rows = [line for line in image_listing.splitlines()[2:] if line.strip()]
                   assert len(image_rows) == asset['image_count'], len(image_rows)
