@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "11b4975a7964cbea3e688ca678a11ea303681886",
+  "archive_commit": "7bf8659a81296e9b240d47834abc27f6ed9d1038",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -260,7 +260,8 @@
     "williams-anglo-american-isthmian-diplomacy-1916": "publications/williams-anglo-american-isthmian-diplomacy-1916/master.docx",
     "wyse-canal-panama-isthme-americain-1886": "publications/wyse-canal-panama-isthme-americain-1886/master.docx",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
-    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx"
+    "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
+    "doubleday-filibuster-war-nicaragua-1886": "publications/doubleday-filibuster-war-nicaragua-1886/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
