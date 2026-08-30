@@ -44,6 +44,10 @@ import {
   mezaPublicationRecords,
 } from "./meza-publication.mjs";
 import {
+  doubledayPublicationMetadata,
+  doubledayPublicationRecords,
+} from "./doubleday-filibuster-war-publication.mjs";
+import {
   pimSeemannDottingsPublicationMetadata,
   pimSeemannDottingsPublicationRecords,
 } from "./pim-seemann-dottings-publication.mjs";
@@ -9136,6 +9140,7 @@ const publicationRecords = [
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
   ...mezaPublicationRecords,
+  ...doubledayPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
 ];
 
@@ -11691,6 +11696,7 @@ const publicationMetadata = {
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
   ...mezaPublicationMetadata,
+  ...doubledayPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
 };
 

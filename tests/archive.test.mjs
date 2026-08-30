@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 315);
+  assert.equal(publications.length, 316);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 38);
+  assert.equal(counts.get("002"), 39);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -128,6 +128,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "squier-waikna-mosquito-shore-1855",
       "arce-memoria-presidency-1830",
       "meza-centro-america-campana-nacional-1885-1911",
+      "doubleday-filibuster-war-nicaragua-1886",
       "pim-seemann-dottings-roadside-1869",
     ],
   );
@@ -1430,7 +1431,7 @@ test("Lothrop pottery chronology uses the approved paper classification", () => 
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 157);
+  assert.equal(majorPublications.length, 158);
   assert.equal(shortPublications.length, 158);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
@@ -2544,7 +2545,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">157<\/strong>件/);
+  assert.match(html, /id="book-match-count">158<\/strong>件/);
   assert.match(html, /id="paper-match-count">158<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

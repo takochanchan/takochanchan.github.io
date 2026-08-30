@@ -1694,6 +1694,18 @@
       "sha256": "834fd90c8c41bca2e881ea16b3ffa8416abc034cee0fc4a1b5524e5c1c4a6e09"
     },
     {
+      "path": "publications/doubleday-filibuster-war-nicaragua-1886/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
+      "size": 1523845,
+      "sha256": "c2ede1f63074357b500df974689c24a203ba37ab394fd65142bea36821c04c9a"
+    },
+    {
+      "path": "publications/doubleday-filibuster-war-nicaragua-1886/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.pdf",
+      "size": 2011416,
+      "sha256": "fe18a958f19dcab229b65d9dcb083c0bd1a364f659a96d6bce021fe999573682"
+    },
+    {
       "path": "publications/dunlop-central-america-1847/cover.jpg",
       "url": "https://takochanchan.github.io/publications/dunlop-central-america-1847/cover.jpg",
       "size": 31431,
