@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 316);
+  assert.equal(publications.length, 321);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 39);
+  assert.equal(counts.get("002"), 44);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -101,6 +101,11 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "larde-indice-provisional-arqueologico-el-salvador-1926",
       "lothrop-museum-central-american-expedition-1927",
       "lothrop-pottery-types-el-salvador-1927",
+      "larde-arqueologia-cuzcatleca-1924",
+      "larde-region-arqueologica-chalchuapa-1926",
+      "larde-volcan-izalco-1923",
+      "larde-poblacion-el-salvador-1921",
+      "larde-geologia-general-centro-america-el-salvador-1924",
       "squier-observations-zestermann-1851",
       "squier-crampton-webster-project-1852",
       "squier-ancient-peru-1853",
@@ -1430,9 +1435,26 @@ test("Lothrop pottery chronology uses the approved paper classification", () => 
   assert.equal(item.authorKey, "samuel-kirkland-lothrop");
 });
 
+test("Lardé batch keeps three papers and two books in their approved classes", () => {
+  const expected = new Map([
+    ["larde-arqueologia-cuzcatleca-1924", "short-work"],
+    ["larde-region-arqueologica-chalchuapa-1926", "short-work"],
+    ["larde-volcan-izalco-1923", "major-work"],
+    ["larde-poblacion-el-salvador-1921", "short-work"],
+    ["larde-geologia-general-centro-america-el-salvador-1924", "major-work"],
+  ]);
+  for (const [slug, recordClass] of expected) {
+    const item = publications.find((publication) => publication.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.recordClass, recordClass, slug);
+    assert.ok(item.subtitle, `${slug}: subtitle`);
+    assert.match(item.rights, /公開|Public Domain Mark|パブリックドメイン/u);
+  }
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 158);
-  assert.equal(shortPublications.length, 158);
+  assert.equal(majorPublications.length, 160);
+  assert.equal(shortPublications.length, 161);
   assert.equal(shortPublicationAuthors.length, 39);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -1456,6 +1478,9 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "larde-indice-provisional-arqueologico-el-salvador-1926",
       "lothrop-museum-central-american-expedition-1927",
       "lothrop-pottery-types-el-salvador-1927",
+      "larde-arqueologia-cuzcatleca-1924",
+      "larde-region-arqueologica-chalchuapa-1926",
+      "larde-poblacion-el-salvador-1921",
       "valle-george-ephraim-squier-1922",
       "gonzalez-ruinas-tehuacan-1892",
       "esquinca-usumacinta",
@@ -2545,8 +2570,8 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">158<\/strong>件/);
-  assert.match(html, /id="paper-match-count">158<\/strong>件/);
+  assert.match(html, /id="book-match-count">160<\/strong>件/);
+  assert.match(html, /id="paper-match-count">161<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');

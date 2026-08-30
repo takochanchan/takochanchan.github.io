@@ -329,6 +329,21 @@ DOCX_SOURCES = {
     "barberena-fonseca-monografias-departamentales-1909-1914": SOURCES
     / "翻訳サイト"
     / "Barberena_Monografias_7vols_Fancourt_Mother.docx",
+    "larde-arqueologia-cuzcatleca-1924": SOURCES
+    / "翻訳サイト"
+    / "Jorge_Larde_Arqueologia_cuzcatleca_1924_Japanese_Complete_Translation.docx",
+    "larde-region-arqueologica-chalchuapa-1926": SOURCES
+    / "翻訳サイト"
+    / "Jorge_Larde_Region_arqueologica_Chalchuapa_1926_Japanese_Complete_Translation.docx",
+    "larde-volcan-izalco-1923": SOURCES
+    / "翻訳サイト"
+    / "Jorge_Larde_El_volcan_de_Izalco_1923_Japanese_Complete_Translation.docx",
+    "larde-poblacion-el-salvador-1921": SOURCES
+    / "翻訳サイト"
+    / "Jorge_Larde_La_poblacion_de_El_Salvador_1921_Japanese_Complete_Translation.docx",
+    "larde-geologia-general-centro-america-el-salvador-1924": SOURCES
+    / "翻訳サイト"
+    / "Jorge_Larde_Geologia_general_de_Centro_America_y_especial_de_El_Salvador_1924_Japanese_Complete_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {

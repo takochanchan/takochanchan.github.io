@@ -6024,6 +6024,101 @@
       "rights": "Biodiversity Heritage Libraryは当該デジタル資料の権利状態を「Public Domain」と表示しています。本公開版の本文画像、口絵、図版、地図は、この公開機関の表示に基づいて収録しています。",
       "publishedDate": "2026-08-30",
       "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "larde-arqueologia-cuzcatleca-1924",
+      "recordClass": "short-work",
+      "title": "クスカトラン考古学",
+      "originalTitle": "Arqueología cuzcatleca: vestigios de una población pre-máyica en el valle de San Salvador, C. A., sepultados bajo una potente capa de productos volcánicos: antigüedad del hombre en dicho valle",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1924,
+      "originalPublication": "サン・サルバドル、Imprenta Nacional、1924年、3–17頁",
+      "sourceEdition": "Jorge Lardé, Arqueología cuzcatleca: vestigios de una población pre-máyica en el valle de San Salvador, C. A., sepultados bajo una potente capa de productos volcánicos: antigüedad del hombre en dicho valle, San Salvador: Imprenta Nacional, 1924, pp. 3–17.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España, BNE）所蔵・BNE Digital公開の1924年刊分冊版（BNE Digital識別子 bdh0000079496、請求記号 VC/943/20）を底本とし、BINAES所蔵・REDICCES公開の1953年再録（handle 10972/2941）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.iberoamericadigital.net/BDPI/Search.do?advanced=true&field1=docId&field1Op=AND&field1val=bdh0000079496&numfields=1"
+      },
+      "rights": "BNE Digitalは底本を「Obra en dominio público」と表示し、公開条件を「CC BY 4.0 o equivalente／Atribución a la Biblioteca Nacional de España」としています。照合資料についてREDICCESは「Obra en dominio público」およびPublic Domain Mark 1.0を表示しています。本版は原著本文の文字情報のみを用い、両機関のスキャン画像や後代の編集的要素を収録していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "larde-region-arqueologica-chalchuapa-1926",
+      "recordClass": "short-work",
+      "title": "チャルチュアパ考古学地域",
+      "originalTitle": "Región arqueológica de Chalchuapa: Tazumal, Pampe, Casa Blanca, El Trapiche, Cuzcachapa",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1926,
+      "originalPublication": "サン・サルバドル、『Revista de Etnología, Arqueología y Lingüística』第1巻第3–4号、1926年、163–173頁",
+      "sourceEdition": "Jorge Lardé, “Región arqueológica de Chalchuapa: Tazumal, Pampe, Casa Blanca, El Trapiche, Cuzcachapa,” Revista de Etnología, Arqueología y Lingüística, tomo I, nos. 3–4, 1926, pp. 163–173; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo II, no. 7 (julio–septiembre de 1951), pp. 22–30.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1951年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2934）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2934"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、権利URIとしてPublic Domain Mark 1.0を表示しています。本版はパブリックドメインの1926年初出本文と原注の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1951年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "larde-volcan-izalco-1923",
+      "recordClass": "major-work",
+      "title": "イサルコ火山",
+      "originalTitle": "El volcán de Izalco",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1923,
+      "originalPublication": "サン・サルバドル、Imprenta Nacional、1923年、120頁",
+      "sourceEdition": "Jorge Lardé, El volcán de Izalco: viaje geológico a ese volcán; descripción del mismo y de sus contornos; sus últimas erupciones; origen e historia documentada y crítica de ese volcán desde el año 1524 hasta nuestros días (año 1923), San Salvador: Imprenta Nacional, 1923, 120 pp.",
+      "sourceProvider": "Biblioteca del Congreso Nacional de Chile（チリ国会図書館）「Estantería Digital」Folletosコレクション公開の1923年国立印刷所刊原刊本（資料識別子 10221.1/55467、PDF 254849）を底本とし、BINAES所蔵・REDICCES公開の1953年再録（handle 10972/2941）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.bcn.cl/obtienearchivo?id=documentos/10221.1/55467/1/254849.pdf&origen=BDigital"
+      },
+      "rights": "1923年刊の原著本文はパブリックドメインです。チリ国会図書館の当該資料公開画面には標準化された資料個別ライセンス表示を確認できないため、同館のスキャン画像に再利用許諾があるとは扱っていません。照合資料についてREDICCESは「Obra en dominio público」およびPublic Domain Mark 1.0を表示しています。本版は原著本文と図版キャプションの文字情報のみを用い、原刊画像、写真4点、装丁・意匠を収録していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "larde-poblacion-el-salvador-1921",
+      "recordClass": "short-work",
+      "title": "エル・サルバドルの人口",
+      "originalTitle": "La población de El Salvador: su origen y su distribución geográfica",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1921,
+      "originalPublication": "Pedro S. Fonseca『Demografía salvadoreña』第1章、サン・サルバドル、1921年9月",
+      "sourceEdition": "Jorge Lardé, “La población de El Salvador: su origen y su distribución geográfica,” capítulo I in Pedro S. Fonseca, Demografía salvadoreña, San Salvador, septiembre de 1921; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo IV, no. 12 (marzo de 1953), pp. 73–92.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1953年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2940）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2940"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、権利URIとしてPublic Domain Mark 1.0を表示しています。本版はパブリックドメインの1921年初出本文の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1953年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "larde-geologia-general-centro-america-el-salvador-1924",
+      "recordClass": "major-work",
+      "title": "中米一般地質・エルサルバドル特殊地質",
+      "originalTitle": "Geología general de Centro América y especial de El Salvador",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé y Arthés",
+      "year": 1924,
+      "originalPublication": "サン・サルバドル、Imprenta Nacional、1924年、82頁",
+      "sourceEdition": "Jorge Lardé y Arthés, Geología general de Centro América y especial de El Salvador, San Salvador: Imprenta Nacional, 1924, 82 pp.; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo IV, no. 14 (septiembre de 1953), pp. 10–54.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1953年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2954）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2954"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1924年刊本文の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録号の表紙・目次・編集部記事・広告・意匠を収録していません。",
+      "publishedDate": "2026-08-30",
+      "updatedDate": "2026-08-30"
     }
   ],
   "works": [

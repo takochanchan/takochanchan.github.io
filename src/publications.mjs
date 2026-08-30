@@ -99,6 +99,11 @@ import {
   salvadorArchaeologyBatch02ShortWorkAuthors,
 } from "./salvador-archaeology-batch02-publications.mjs";
 import {
+  lardeBatch01PublicationMetadata,
+  lardeBatch01PublicationRecords,
+  lardeBatch01ShortWorkAuthors,
+} from "./larde-batch01-publications.mjs";
+import {
   squierRetainedPublicationMetadata,
   squierRetainedPublicationRecords,
   squierRetainedShortWorkAuthors,
@@ -9116,6 +9121,7 @@ const publicationRecords = [
   },
   ...squierBatch03PublicationRecords,
   ...salvadorArchaeologyBatch02PublicationRecords,
+  ...lardeBatch01PublicationRecords,
   ...squierRetainedPublicationRecords,
   ...seitzPublicationRecords,
   ...vallePublicationRecords,
@@ -11672,6 +11678,7 @@ const publicationMetadata = {
   },
   ...squierBatch03PublicationMetadata,
   ...salvadorArchaeologyBatch02PublicationMetadata,
+  ...lardeBatch01PublicationMetadata,
   ...squierRetainedPublicationMetadata,
   ...seitzPublicationMetadata,
   ...vallePublicationMetadata,
@@ -11831,6 +11838,7 @@ const shortWorkAuthorBySlug = {
   ...valleShortWorkAuthors,
   ...squierBatch03ShortWorkAuthors,
   ...salvadorArchaeologyBatch02ShortWorkAuthors,
+  ...lardeBatch01ShortWorkAuthors,
   ...squierRetainedShortWorkAuthors,
   ...perignyRemainingShortWorkAuthors,
 };
