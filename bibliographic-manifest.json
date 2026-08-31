@@ -6252,6 +6252,101 @@
       "rights": "原著本文はパブリックドメインです。第I部底本のInternet Archive項目は NOT_IN_COPYRIGHT と表示されています。第II部原刊はHathiTrustでFull Viewとして公開されています。1975年版はペレスの著者本文の校合だけに用い、後世の編集・注釈・画像・組版は再利用していません。本公開版には1883年原刊第2版標題紙の機械的複製1点を収録しています。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "larde-terremoto-septiembre-1915-1916",
+      "recordClass": "major-work",
+      "title": "1915年9月6日の地震とエル・サルバドルのその他の地震",
+      "originalTitle": "El terremoto del 6 de septiembre de 1915 y los demás terremotos de El Salvador",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1916,
+      "originalPublication": "サン・サルバドル、Imprenta Nacional、1916年",
+      "sourceEdition": "Jorge Lardé, El terremoto del 6 de septiembre de 1915 y los demás terremotos de El Salvador, San Salvador: Imprenta Nacional, 1916 (publicado el 30 de agosto de 1916); reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo IV, no. 12 (marzo de 1953), pp. 6–73.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1953年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2940）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2940"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1916年刊本文、著者注、数表の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1953年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "larde-origenes-san-salvador-cuzcatlan-1925",
+      "recordClass": "major-work",
+      "title": "サン・サルバドル・クスカトランの起源",
+      "originalTitle": "Orígenes de San Salvador Cuzcatlán: hoy capital de El Salvador",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1925,
+      "originalPublication": "1925年刊；1953年『Anales del Museo Nacional “David J. Guzmán”』第IV巻第14–15号に分載再録",
+      "sourceEdition": "Jorge Lardé, Orígenes de San Salvador Cuzcatlán: hoy capital de El Salvador, 1925; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo IV, no. 14 (septiembre de 1953), pp. 55–95, and tomo IV, no. 15 (diciembre de 1953), pp. 5–14.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1953年分載再録を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handles 10972/2954、10972/2955）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2954"
+      },
+      "rights": "REDICCESの両底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1925年刊本文、引用、注記の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1953年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "larde-boqueron-grietas-volcanicas-el-pinar-1917",
+      "recordClass": "short-work",
+      "title": "ボケロンとエル・ピナールの火山性亀裂",
+      "originalTitle": "El Boquerón y las grietas volcánicas en El Pinar",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1917,
+      "originalPublication": "『Diario Latino』、1917年7月；1954年再録58–59頁",
+      "sourceEdition": "Jorge Lardé, “El Boquerón y las grietas volcánicas en El Pinar,” Diario Latino, julio de 1917; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo V, no. 16 (marzo de 1954), pp. 58–59.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1954年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2957）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2957"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1917年初出本文と末尾の初出紙表示の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1954年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "larde-ruinas-cihuatan-1927",
+      "recordClass": "short-work",
+      "title": "シワタン遺跡",
+      "originalTitle": "Las ruinas de Cihuatán",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1927,
+      "originalPublication": "1927年稿；『Anales del Museo Nacional “David J. Guzmán”』第II巻第8号、1951年、87–88頁に没後刊行",
+      "sourceEdition": "Jorge Lardé, “Las ruinas de Cihuatán,” texto fechado en 1927; published posthumously in Anales del Museo Nacional “David J. Guzmán”, tomo II, no. 8 (octubre–diciembre de 1951), pp. 87–88.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1951年初出版を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2935）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2935"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1927年稿、1951年の編者前書き、末尾年記の文字情報のみを用い、BINAES／REDICCESのスキャン画像と再録誌面を収録していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "larde-volcan-izalco-1922-1925",
+      "recordClass": "short-work",
+      "title": "イサルコ火山",
+      "originalTitle": "El Volcán de Izalco (En El Salvador, América Central). De 1922 a 1925",
+      "author": "ホルヘ・ラルデ",
+      "originalAuthor": "Jorge Lardé",
+      "year": 1925,
+      "originalPublication": "『Bulletin volcanologique』第2巻、1925年、209–211頁",
+      "sourceEdition": "Jorge Lardé, “El Volcán de Izalco (En El Salvador, América Central), de 1922 a 1925,” Bulletin volcanologique, vol. 2 (1925), pp. 209–211, DOI: 10.1007/BF02719506; reprinted in Anales del Museo Nacional “David J. Guzmán”, tomo V, no. 16 (marzo de 1954), pp. 18–19.",
+      "sourceProvider": "エルサルバドル国立図書館「フランシスコ・ガビディア」（BINAES）所蔵の1954年再録号を、Repositorio Digital de Ciencia y Cultura de El Salvador（REDICCES）公開資料（handle 10972/2957）から底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10972/2957"
+      },
+      "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1925年刊本文と末尾の原掲載誌表示の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1954年の編集的要素を収録していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
     }
   ],
   "works": [
