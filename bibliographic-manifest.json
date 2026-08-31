@@ -6157,6 +6157,25 @@
       "rights": "1898年刊の原著はパブリックドメインです。HathiTrustはミシガン大学本とハーバード大学本を権利コード「pd」で公開しています。Biblioteca Nacional de Españaのパブリックドメイン・コレクションは、収録作品を同館の条件に従って自由かつ無償で再利用できるとしています。",
       "publishedDate": "2026-08-30",
       "updatedDate": "2026-08-30"
+    },
+    {
+      "slug": "rabasa-estado-chiapas-1895",
+      "recordClass": "major-work",
+      "title": "チアパス州――地理と統計",
+      "originalTitle": "El estado de Chiapas: geografía y estadística",
+      "author": "ラモン・ラバサ",
+      "originalAuthor": "Ramón Rabasa",
+      "year": 1895,
+      "originalPublication": "メキシコ、Tipografía del Cuerpo Especial de Estado Mayor、1895年",
+      "sourceEdition": "Ramón Rabasa, El estado de Chiapas: geografía y estadística, recursos del estado, sus elementos, condiciones de riqueza, porvenir agrícola, etc., etc., México: Tipografía del Cuerpo Especial de Estado Mayor, 1895, 198 pp.",
+      "sourceProvider": "Google BooksおよびGoogle Play Booksが全頁画像を公開する巻（volume ID: A89kAAAAMAAJ）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://play.google.com/store/books/details?id=A89kAAAAMAAJ"
+      },
+      "rights": "1895年刊の原著本文は刊行年により米国でパブリックドメインです。Google Books／Google Play Booksの当該公開頁は本巻を無料取得、DRMフリー、エクスポート可能と表示しますが、Creative Commonsその他のオープンライセンスは表示していません。本版は米国外の著作権状態について判断しません。半扉・標題紙画像は、底本に収録された1895年原刊頁の機械的複製を使用しています。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
     }
   ],
   "works": [

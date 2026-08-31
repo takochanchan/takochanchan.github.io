@@ -5814,6 +5814,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.pdf",
       "size": 2342992,
       "sha256": "434f04ca39cab581e1375fdd7503266dacaf1de6c29e819a51c15f4d225ef09c"
+    },
+    {
+      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
+      "size": 15221041,
+      "sha256": "7fc4f431b100ddc32e6a34a6943d1343e249d6a379210e5bacfecc7ffe53d623"
+    },
+    {
+      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
+      "size": 5847198,
+      "sha256": "65cde9ab6cea218ac07595d935b45f7b158427eac822ca8f0186f21a856d2ce7"
+    },
+    {
+      "path": "publications/rabasa-estado-chiapas-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rabasa-estado-chiapas-1895/cover.jpg",
+      "size": 46764,
+      "sha256": "b2fb3f8a9f5386f4cde4435d2a74a64eaa9068bb442b91ce2be01e46c9cc0b08"
     }
   ]
 }

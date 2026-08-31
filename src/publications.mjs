@@ -60,6 +60,10 @@ import {
   peraltaCostaRicaMosquitosPublicationRecords,
 } from "./peralta-costa-rica-costa-mosquitos-publication.mjs";
 import {
+  rabasaEstadoChiapasPublicationMetadata,
+  rabasaEstadoChiapasPublicationRecords,
+} from "./rabasa-estado-chiapas-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9158,6 +9162,7 @@ const publicationRecords = [
   ...procesoWilliamWalkerPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
   ...peraltaCostaRicaMosquitosPublicationRecords,
+  ...rabasaEstadoChiapasPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11717,6 +11722,7 @@ const publicationMetadata = {
   ...procesoWilliamWalkerPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
   ...peraltaCostaRicaMosquitosPublicationMetadata,
+  ...rabasaEstadoChiapasPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
