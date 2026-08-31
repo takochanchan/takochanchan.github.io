@@ -1,0 +1,330 @@
+name: Publish Jorge Larde batch 02 assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-larde-batch02-20260831-v1.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publications-current-release
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_BRANCH: agent/larde-batch02-assets-20260831-v1
+      STAGING_ROOT: .release-staging/larde-batch02-20260831-v1
+      RELEASE_TAG: publications-current
+      BUNDLE_SIZE: "2469044"
+      BUNDLE_SHA256: f833399f089a62f5e7991f797dfc5dee813b345cdd4bcceee7eea158959b7412
+      SOURCE_PATCH_SIZE: "706704"
+      SOURCE_PATCH_SHA256: 05257b574cfcd79de1fc27df2176266ea7f5dab653b6a4f5c24dfa459df9e1b9
+
+    steps:
+      - name: Check out checksum-pinned staging bytes
+        uses: actions/checkout@v4
+        with:
+          ref: agent/larde-batch02-assets-20260831-v1
+
+      - name: Restore checksum-pinned publication bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat "$STAGING_ROOT"/bundle.tar.gz.part-* > /tmp/publication-bundle.tar.gz
+          test "$(stat -c %s /tmp/publication-bundle.tar.gz)" = "$BUNDLE_SIZE"
+          echo "$BUNDLE_SHA256  /tmp/publication-bundle.tar.gz" | sha256sum -c -
+          mkdir -p "$STAGING_ROOT/payload"
+          tar -xzf /tmp/publication-bundle.tar.gz -C "$STAGING_ROOT/payload" --no-same-owner
+
+      - name: Restore checksum-pinned site source patch
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat "$STAGING_ROOT"/source-patch.tar.gz.part-* > /tmp/source-patch.tar.gz
+          test "$(stat -c %s /tmp/source-patch.tar.gz)" = "$SOURCE_PATCH_SIZE"
+          echo "$SOURCE_PATCH_SHA256  /tmp/source-patch.tar.gz" | sha256sum -c -
+          mkdir -p /tmp/source-patch
+          tar -xzf /tmp/source-patch.tar.gz -C /tmp/source-patch --no-same-owner
+          test "$(find /tmp/source-patch -type f | wc -l)" = "12"
+          if find /tmp/source-patch -type f \( -name '*.pdf' -o -name '*.epub' \) | grep -q .; then
+            echo 'PDF or EPUB found in the site source patch' >&2
+            exit 1
+          fi
+
+      - name: Check out public site source
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repository
+          fetch-depth: 0
+
+      - name: Test and commit catalogue metadata and covers
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -a /tmp/source-patch/. repository/
+          cd repository
+          npm ci
+          npm run build
+          npm test
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish Jorge Larde batch 02 metadata and covers"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Verify canonical master archive gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import pathlib
+
+          archive = json.loads(pathlib.Path('repository/master-archive.json').read_text(encoding='utf-8'))
+          assert archive['archive_commit'] == '736748350d5318d3094170413f2b66d5c6e731d8'
+          expected = {
+              'larde-terremoto-septiembre-1915-1916',
+              'larde-origenes-san-salvador-cuzcatlan-1925',
+              'larde-boqueron-grietas-volcanicas-el-pinar-1917',
+              'larde-ruinas-cihuatan-1927',
+              'larde-volcan-izalco-1922-1925',
+          }
+          for slug in expected:
+              assert archive['publications'][slug] == f'publications/{slug}/master.docx'
+          PY
+
+      - name: Validate final PDF and EPUB bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! command -v pdfinfo >/dev/null 2>&1 || ! command -v pdftotext >/dev/null 2>&1 || ! command -v pdfimages >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+          import re
+          import subprocess
+          import zipfile
+          from xml.etree import ElementTree as ET
+
+          root = pathlib.Path('.release-staging/larde-batch02-20260831-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          expected = {
+              'larde-terremoto-septiembre-1915-1916': {
+                  'title': '1915年9月6日の地震とエル・サルバドルのその他の地震',
+                  'subtitle': 'フアユア地震の現地調査・震度分布・耐震建築',
+                  'pages': 82, 'markers': list(range(6, 74)), 'ja': 70000,
+              },
+              'larde-origenes-san-salvador-cuzcatlan-1925': {
+                  'title': 'サン・サルバドル・クスカトランの起源',
+                  'subtitle': '今日のエル・サルバドル首都',
+                  'pages': 68, 'markers': list(range(55, 96)) + list(range(5, 15)), 'ja': 57000,
+              },
+              'larde-boqueron-grietas-volcanicas-el-pinar-1917': {
+                  'title': 'ボケロンとエル・ピナールの火山性亀裂',
+                  'subtitle': 'サン・サルバドル火山火口湖とエル・ピナール亀裂の観察',
+                  'pages': 4, 'markers': [58, 59], 'ja': 1500,
+              },
+              'larde-ruinas-cihuatan-1927': {
+                  'title': 'シワタン遺跡',
+                  'subtitle': '球戯場・テオカリ・石造都市の踏査記録',
+                  'pages': 3, 'markers': [87, 88], 'ja': 1500,
+              },
+              'larde-volcan-izalco-1922-1925': {
+                  'title': 'イサルコ火山',
+                  'subtitle': 'エル・サルバドル（中央アメリカ）にて、1922年から1925年',
+                  'pages': 5, 'markers': [18, 19], 'ja': 1500,
+              },
+          }
+          assert manifest['schema_version'] == 1
+          assert manifest['batch'] == 'larde-batch02-20260831-v1'
+          assert manifest['release_tag'] == 'publications-current'
+          assert manifest['archive_commit'] == '736748350d5318d3094170413f2b66d5c6e731d8'
+          assert len(manifest['assets']) == 10
+          assert {asset['slug'] for asset in manifest['assets']} == set(expected)
+          actual = {path.name for path in (root / 'assets').iterdir() if path.is_file()}
+          recorded = {asset['filename'] for asset in manifest['assets']}
+          assert actual == recorded
+
+          banned = ('確認用', '承認前', '公開前', 'Prepublication', '校正刷')
+
+          def compact(text: str) -> str:
+              return re.sub(r'\s+', '', text.replace('\u00a0', ' '))
+
+          def validate_text(text: str, asset: dict, item: dict) -> None:
+              joined = compact(text)
+              assert compact(item['title']) in joined
+              marker_re = re.compile(r'〔\s*再録(?:（[^〕]*?）)?\s*p\.\s*([0-9]+)\s*〕')
+              markers = [int(value) for value in marker_re.findall(text)]
+              assert markers == item['markers'], (asset['slug'], markers[:3], markers[-3:], len(markers))
+              for phrase in banned:
+                  assert phrase not in text
+
+          for asset in manifest['assets']:
+              item = expected[asset['slug']]
+              assert asset['title'] == item['title']
+              assert asset['subtitle'] == item['subtitle']
+              assert asset['page_count'] == item['pages']
+              path = root / 'assets' / asset['filename']
+              data = path.read_bytes()
+              assert len(data) == asset['size'], asset['filename']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256'], asset['filename']
+
+              if asset['kind'] == 'pdf':
+                  assert data.startswith(b'%PDF-') and b'%%EOF' in data[-4096:]
+                  info = subprocess.check_output(['pdfinfo', str(path)], text=True)
+                  assert re.search(rf'^Pages:\s+{item["pages"]}$', info, re.MULTILINE)
+                  assert re.search(r'^Tagged:\s+yes$', info, re.MULTILINE)
+                  assert re.search(r'^Encrypted:\s+no$', info, re.MULTILINE)
+                  assert re.search(r'^Page size:\s+612 x 792 pts \(letter\)$', info, re.MULTILINE)
+                  text = subprocess.check_output(['pdftotext', str(path), '-'], text=True)
+                  validate_text(text, asset, item)
+                  Japanese_count = len(re.findall(r'[\u3040-\u30ff\u3400-\u9fff]', text))
+                  assert Japanese_count >= item['ja'], (asset['slug'], Japanese_count)
+                  image_listing = subprocess.check_output(['pdfimages', '-list', str(path)], text=True)
+                  image_rows = [line for line in image_listing.splitlines()[2:] if line.strip()]
+                  assert not image_rows, (asset['slug'], image_rows)
+                  continue
+
+              with zipfile.ZipFile(path) as archive:
+                  assert archive.testzip() is None
+                  first = archive.infolist()[0]
+                  assert first.filename == 'mimetype' and first.compress_type == zipfile.ZIP_STORED
+                  assert archive.read('mimetype') == b'application/epub+zip'
+                  container = ET.fromstring(archive.read('META-INF/container.xml'))
+                  rootfile = next(node for node in container.iter() if node.tag.endswith('}rootfile'))
+                  opf_path = rootfile.attrib['full-path']
+                  opf = ET.fromstring(archive.read(opf_path))
+                  assert opf.attrib.get('version', '').startswith('3')
+                  opf_text = ' '.join(node.text or '' for node in opf.iter())
+                  assert compact(item['title']) in compact(opf_text)
+                  language = next((node.text or '' for node in opf.iter() if node.tag.endswith('}language')), '')
+                  assert language.lower().startswith('ja')
+                  manifest_items = [node for node in opf.iter() if node.tag.endswith('}item')]
+                  assert sum('cover-image' in node.attrib.get('properties', '').split() for node in manifest_items) == 1
+                  assert sum('nav' in node.attrib.get('properties', '').split() for node in manifest_items) == 1
+
+                  html_names = [name for name in archive.namelist() if name.endswith(('.xhtml', '.html'))]
+                  html_sources = [archive.read(name).decode('utf-8') for name in html_names]
+                  html = '\n'.join(html_sources)
+                  validate_text(html, asset, item)
+                  documents = [ET.fromstring(source) for source in html_sources]
+                  Japanese_text = ''.join(''.join(document.itertext()) for document in documents)
+                  Japanese_count = len(re.findall(r'[\u3040-\u30ff\u3400-\u9fff]', Japanese_text))
+                  assert Japanese_count >= item['ja'], (asset['slug'], Japanese_count)
+                  image_nodes = [
+                      node
+                      for document in documents
+                      for node in document.iter()
+                      if node.tag.endswith('}img')
+                  ]
+                  assert not image_nodes
+                  image_members = [
+                      name for name in archive.namelist()
+                      if pathlib.PurePosixPath(name).suffix.lower()
+                      in {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'}
+                  ]
+                  assert len(image_members) == 1
+                  assert pathlib.PurePosixPath(image_members[0]).name == 'cover.jpg'
+          PY
+
+      - name: Merge shared release checksum ledger
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/current-checksums
+          if gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir /tmp/current-checksums; then
+            cp /tmp/current-checksums/SHA256SUMS.txt /tmp/SHA256SUMS.previous.txt
+          else
+            : > /tmp/SHA256SUMS.previous.txt
+          fi
+          python - <<'PY'
+          import json
+          import pathlib
+
+          root = pathlib.Path('.release-staging/larde-batch02-20260831-v1/payload')
+          new = {
+              asset['filename']: asset['sha256']
+              for asset in json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['assets']
+          }
+          old = {}
+          for line in pathlib.Path('/tmp/SHA256SUMS.previous.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  old[parts[1].lstrip('* ')] = parts[0]
+          old.update(new)
+          pathlib.Path('/tmp/SHA256SUMS.txt').write_text(
+              ''.join(f'{sha}  {name}\n' for name, sha in sorted(old.items())),
+              encoding='utf-8',
+          )
+          PY
+
+      - name: Upload assets to the shared public release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$RELEASE_TAG" "$STAGING_ROOT/payload/assets"/* /tmp/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Re-download and byte-verify public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verify
+          python - <<'PY' > /tmp/public-assets.txt
+          import json
+          import pathlib
+
+          root = pathlib.Path('.release-staging/larde-batch02-20260831-v1/payload')
+          for asset in json.loads((root / 'manifest.json').read_text(encoding='utf-8'))['assets']:
+              print(asset['filename'])
+          PY
+          while IFS= read -r filename; do
+            gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$filename" --dir verify --clobber
+            cmp "$STAGING_ROOT/payload/assets/$filename" "verify/$filename"
+          done < /tmp/public-assets.txt
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern SHA256SUMS.txt --dir verify --clobber
+          cmp /tmp/SHA256SUMS.txt verify/SHA256SUMS.txt
+          python - <<'PY'
+          import hashlib
+          import json
+          import pathlib
+
+          root = pathlib.Path('.release-staging/larde-batch02-20260831-v1/payload')
+          manifest = json.loads((root / 'manifest.json').read_text(encoding='utf-8'))
+          ledger = {}
+          for line in pathlib.Path('verify/SHA256SUMS.txt').read_text(encoding='utf-8').splitlines():
+              parts = line.split(maxsplit=1)
+              if len(parts) == 2:
+                  ledger[parts[1].lstrip('* ')] = parts[0]
+          for asset in manifest['assets']:
+              data = (pathlib.Path('verify') / asset['filename']).read_bytes()
+              assert len(data) == asset['size']
+              assert hashlib.sha256(data).hexdigest() == asset['sha256']
+              assert ledger[asset['filename']] == asset['sha256']
+          PY
+
+      - name: Remove staging branch
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$STAGING_BRANCH" >/dev/null
