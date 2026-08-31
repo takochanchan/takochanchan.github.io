@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-31 — ロレンソ・モントゥファル『中部アメリカのウォーカー』新規公開
+
+- 1887年刊 *Walker en Centro-América* の標題紙、前付I–V頁、本文3–1062頁、正誤について、目次・索引、図版3葉を日本語全訳として収録した。原刊の空白裏面は除外し、公開PDFは998頁、EPUBはリフロー型EPUB 3とした。
+- 主底本はBiblioteca Americanista de Sevilla（CSIC）のSimurg公開画像「Reseña histórica de Centroamérica, vol. 7」。同画像で欠落する原刊296–299頁および302–303頁はGoogle Books所収本（volume ID: `5osdjR2UWaIC`）で補完した。デジタル画像はCC BY-NC-SA 4.0で提供されている。
+- 原刊印刷頁標識1060件のうち807件を独立段落、頁をまたぐ原刊段落内の253件を同一段落内に置き、前付標識5件を収録した。表26点、脚注60件、埋込画像4点を収録し、独立段落レビュー6件で未解決所見0件、PDF全998頁の機械監査で破損・白紙・準白紙・端接触0件を確認した。
+- 公開PDFのSHA-256は `f2b5e8ed5b4e4a4bb13d0d672be82b8f0aca7c136e291ed2b85689b5120cb5ea`、EPUBは `cbefb0d1931bce9c61a796900698abdd6c3ef5d0b5db17b79ada3d9d6a4d5977`。編集可能DOCX正本は非公開原本アーカイブの検証済みコミット `24d72fad20171ba79998a4ba788afc319cf23f0f` に保存した。全文検索索引は `002` に追加する。公開識別子：`montufar-walker-centro-america-1887`。
+
 ## 2026-08-31 — ラモン・ラバサ『チアパス州――地理と統計』新規公開
 
 - 1895年刊 *El estado de Chiapas: geografía y estadística* の半扉・標題紙、本文5–195頁、終端索引を日本語全訳として収録した。原刊の空白丁（半扉裏、標題紙裏、印刷頁62・112・124・126）は除外し、公開PDFは191頁、EPUBはリフロー型EPUB 3とした。

@@ -6176,6 +6176,25 @@
       "rights": "1895年刊の原著本文は刊行年により米国でパブリックドメインです。Google Books／Google Play Booksの当該公開頁は本巻を無料取得、DRMフリー、エクスポート可能と表示しますが、Creative Commonsその他のオープンライセンスは表示していません。本版は米国外の著作権状態について判断しません。半扉・標題紙画像は、底本に収録された1895年原刊頁の機械的複製を使用しています。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "montufar-walker-centro-america-1887",
+      "recordClass": "major-work",
+      "title": "中部アメリカのウォーカー",
+      "originalTitle": "Walker en Centro-América",
+      "author": "ロレンソ・モントゥファル",
+      "originalAuthor": "Lorenzo Montúfar",
+      "year": 1887,
+      "originalPublication": "グアテマラ、Tipografía «La Unión»、1887年",
+      "sourceEdition": "Lorenzo Montúfar, Walker en Centro-América, Guatemala: Tipografía “La Unión,” Octava Calle Poniente núm. 6, 1887, [2], V, 1062 pp., [3] plates; 25 cm.",
+      "sourceProvider": "Biblioteca Americanista de Sevilla（CSIC）のSimurg公開画像「Reseña histórica de Centroamérica, vol. 7」を主底本とし、同画像で欠落する原刊296–299頁および302–303頁をGoogle Books所収本（volume ID: 5osdjR2UWaIC）で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://simurg.csic.es/view/990002355030204201_V07/resena-historica-de-centroamerica-vol-07"
+      },
+      "rights": "原著本文はパブリックドメインです。Biblioteca Americanista de Sevilla（CSIC）のデジタル画像はCC BY-NC-SA 4.0で提供され、所蔵・提供機関の表示が求められています。本日本語版は同条件の下で提供します。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
     }
   ],
   "works": [
