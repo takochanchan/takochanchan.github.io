@@ -29,15 +29,18 @@ jobs:
         run: |
           git fetch origin "$STAGING_BRANCH:refs/remotes/origin/$STAGING_BRANCH"
           mkdir -p "$RUNNER_TEMP/release-assets"
-          files=(
-            "Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf"
-            "Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub"
-            "Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf"
-            "Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub"
-          )
-          for file in "${files[@]}"; do
-            git show "origin/$STAGING_BRANCH:$STAGING_PREFIX/$file" > "$RUNNER_TEMP/release-assets/$file"
-          done
+          earth_pdf="Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf"
+          earth_epub="Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub"
+          cuz_pdf="Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf"
+          cuz_epub="Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub"
+          git ls-tree -r --name-only "origin/$STAGING_BRANCH" "$STAGING_PREFIX/earth-pdf-parts" |
+            sort |
+            while IFS= read -r part; do git show "origin/$STAGING_BRANCH:$part"; done             > "$RUNNER_TEMP/release-assets/$earth_pdf"
+          git ls-tree -r --name-only "origin/$STAGING_BRANCH" "$STAGING_PREFIX/cuz-pdf-parts" |
+            sort |
+            while IFS= read -r part; do git show "origin/$STAGING_BRANCH:$part"; done             > "$RUNNER_TEMP/release-assets/$cuz_pdf"
+          git show "origin/$STAGING_BRANCH:$STAGING_PREFIX/$earth_epub" > "$RUNNER_TEMP/release-assets/$earth_epub"
+          git show "origin/$STAGING_BRANCH:$STAGING_PREFIX/$cuz_epub" > "$RUNNER_TEMP/release-assets/$cuz_epub"
           cd "$RUNNER_TEMP/release-assets"
           sha256sum -c <<'CHECKSUMS'
           ce6541f1b0dd342e741cc0465d7a3c66bce9825cca6c6fa333bf0557c1de4911  Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf
