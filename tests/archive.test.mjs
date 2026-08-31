@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 50);
+  assert.equal(counts.get("002"), 51);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
