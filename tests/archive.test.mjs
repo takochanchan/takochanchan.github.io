@@ -134,9 +134,9 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "arce-memoria-presidency-1830",
       "meza-centro-america-campana-nacional-1885-1911",
       "doubleday-filibuster-war-nicaragua-1886",
+      "proceso-contra-william-walker-1860",
       "pim-seemann-dottings-roadside-1869",
       "peralta-costa-rica-costa-mosquitos-1898",
-      "proceso-contra-william-walker-1860",
     ],
   );
   assert.equal(
