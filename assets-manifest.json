@@ -5868,6 +5868,24 @@
       "url": "https://takochanchan.github.io/publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
       "size": 64920,
       "sha256": "de4421d755e09d79377fb43e13d368132557efe77b03b935699f5442a83f2bf4"
+    },
+    {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
+      "size": 4762732,
+      "sha256": "e67b5f6881c79cfc72c3565408e235cf1a0364202ec180e8b8fa244b5428cd0c"
+    },
+    {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
+      "size": 1902352,
+      "sha256": "6e28479299a83f2d93e41626341574270087f14783558d8c90150adcc04a70ec"
+    },
+    {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
+      "size": 125138,
+      "sha256": "dc9f4d887c4bb1726303e55c0e202e632ba4e1f96b516dba7faaead983588043"
     }
   ]
 }

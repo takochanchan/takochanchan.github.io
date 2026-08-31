@@ -72,6 +72,10 @@ import {
   barberenaHistoriaElSalvadorPublicationRecords,
 } from "./barberena-historia-el-salvador-publication.mjs";
 import {
+  stoneLencaPublicationMetadata,
+  stoneLencaPublicationRecords,
+} from "./stone-lenca-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9173,6 +9177,7 @@ const publicationRecords = [
   ...rabasaEstadoChiapasPublicationRecords,
   ...montufarWalkerCentroAmericaPublicationRecords,
   ...barberenaHistoriaElSalvadorPublicationRecords,
+  ...stoneLencaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11735,6 +11740,7 @@ const publicationMetadata = {
   ...rabasaEstadoChiapasPublicationMetadata,
   ...montufarWalkerCentroAmericaPublicationMetadata,
   ...barberenaHistoriaElSalvadorPublicationMetadata,
+  ...stoneLencaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -11742,6 +11748,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "stone-northern-highland-tribes-lenca-1948": "doris-stone",
   "squier-great-calendar-stone-1849": "ephraim-george-squier",
   "squier-british-encroachments-mosquito-question-1850":
     "ephraim-george-squier",
