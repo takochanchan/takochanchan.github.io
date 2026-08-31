@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "9e10520d74eb84a5990c9dc16de068f415d878bd",
+  "archive_commit": "03696cdc696dbdacf97c1b7f54738bc568d2c116",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -267,7 +267,8 @@
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "doubleday-filibuster-war-nicaragua-1886": "publications/doubleday-filibuster-war-nicaragua-1886/master.docx",
-    "peralta-costa-rica-costa-mosquitos-1898": "publications/peralta-costa-rica-costa-mosquitos-1898/master.docx"
+    "peralta-costa-rica-costa-mosquitos-1898": "publications/peralta-costa-rica-costa-mosquitos-1898/master.docx",
+    "proceso-contra-william-walker-1860": "publications/proceso-contra-william-walker-1860/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

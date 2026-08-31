@@ -6007,6 +6007,25 @@
       "updatedDate": "2026-08-30"
     },
     {
+      "slug": "proceso-contra-william-walker-1860",
+      "recordClass": "major-work",
+      "title": "フィリバスター、ウィリアム・ウォーカーに対する訴訟",
+      "originalTitle": "Proceso contra el filibustero William Walker",
+      "author": "無署名",
+      "originalAuthor": "Anonymous",
+      "year": 1860,
+      "originalPublication": "トルヒーヨ、1860年9月、無署名手稿",
+      "sourceEdition": "Proceso contra el filibustero William Walker, Trujillo, Honduras, September 1860, anonymous manuscript, 46 pages.",
+      "sourceProvider": "ホンジュラス国立自治大学（UNAH）Repositorio Tzibalnaahが公開するデジタル資料（Lba00003.pdf、handle 123456789/469）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://tzibalnaah.unah.edu.hn/xmlui/handle/123456789/469"
+      },
+      "rights": "1860年作成の無署名本文はパブリックドメインです。UNAHの公開アイテムにはCC BY-NC-ND 4.0が表示されています。本日本語版には底本または照合先の画像を転載していません。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
+    },
+    {
       "slug": "pim-seemann-dottings-roadside-1869",
       "recordClass": "major-work",
       "title": "パナマ、ニカラグア、モスキート路傍点描",

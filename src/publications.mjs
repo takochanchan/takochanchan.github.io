@@ -48,6 +48,10 @@ import {
   doubledayPublicationRecords,
 } from "./doubleday-filibuster-war-publication.mjs";
 import {
+  procesoWilliamWalkerPublicationMetadata,
+  procesoWilliamWalkerPublicationRecords,
+} from "./proceso-contra-william-walker-publication.mjs";
+import {
   pimSeemannDottingsPublicationMetadata,
   pimSeemannDottingsPublicationRecords,
 } from "./pim-seemann-dottings-publication.mjs";
@@ -9151,6 +9155,7 @@ const publicationRecords = [
   ...arceMemoriaPublicationRecords,
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
+  ...procesoWilliamWalkerPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
   ...peraltaCostaRicaMosquitosPublicationRecords,
 ];
@@ -11709,6 +11714,7 @@ const publicationMetadata = {
   ...arceMemoriaPublicationMetadata,
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,
+  ...procesoWilliamWalkerPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
   ...peraltaCostaRicaMosquitosPublicationMetadata,
 };
