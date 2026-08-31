@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-08-31 — ドリス・ストーン「北部高地諸族―レンカ」新規公開
+
+- 1948年刊 *Handbook of South American Indians* 第4巻所収論文の原刊205–217頁、図48–49、図版33–34、参考文献を日本語全訳として収録した。公開PDFは18頁、EPUBはリフロー型EPUB 3とした。
+- 底本はSmithsonian Libraries and Archives／Smithsonian Research Online公開のBureau of American Ethnology Bulletin 143, vol. 4（hdl:10088/34600）。同館の項目はPublic Domain／CC0 1.0を表示している。
+- 原刊頁標識13件、図・図版4点、固有名詞、数値、否定、段落境界を独立原文対照し、未解決所見0件とした。機械監査71/71項目、PDF全18頁の描画・フォント・文字抽出、EPUBのXML、表紙、目次、画像、代替テキストを検証した。
+- 公開PDFのSHA-256は `6e28479299a83f2d93e41626341574270087f14783558d8c90150adcc04a70ec`、EPUBは `e67b5f6881c79cfc72c3565408e235cf1a0364202ec180e8b8fa244b5428cd0c`。編集可能DOCX正本は非公開原本アーカイブの検証済みコミット `9faadb82fd03449efe94d2d21bf35a740ae02f4b` に保存した。全文検索索引は `002` に追加する。公開識別子：`stone-northern-highland-tribes-lenca-1948`。
+
 ## 2026-08-31 — サンティアゴ・I・バルベレーナ『エル・サルバドル史』新規公開
 
 - 1914年刊第1巻『古代および征服時代』と1917年刊第2巻『植民地時代』の前付、本文1–372頁／1–457頁、正誤表、図3点、表33点を日本語全訳として収録した。公開PDFは886頁、EPUBはリフロー型EPUB 3とした。
