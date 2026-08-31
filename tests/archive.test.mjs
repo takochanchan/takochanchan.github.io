@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 327);
+  assert.equal(publications.length, 328);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -141,6 +141,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "montufar-walker-centro-america-1887",
       "barberena-historia-el-salvador-1914-1917",
       "stone-northern-highland-tribes-lenca-1948",
+      "perez-memorias-nicaragua-guerra-nacional-1854-1857",
     ],
   );
   assert.equal(
@@ -1459,7 +1460,7 @@ test("Lardé batch keeps three papers and two books in their approved classes", 
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 165);
+  assert.equal(majorPublications.length, 166);
   assert.equal(shortPublications.length, 162);
   assert.equal(shortPublicationAuthors.length, 40);
   assert.deepEqual(
@@ -2577,7 +2578,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">165<\/strong>件/);
+  assert.match(html, /id="book-match-count">166<\/strong>件/);
   assert.match(html, /id="paper-match-count">162<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

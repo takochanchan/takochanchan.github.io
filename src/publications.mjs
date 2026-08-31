@@ -76,6 +76,10 @@ import {
   stoneLencaPublicationRecords,
 } from "./stone-lenca-publication.mjs";
 import {
+  perezMemoriasPublicationMetadata,
+  perezMemoriasPublicationRecords,
+} from "./perez-memorias-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9178,6 +9182,7 @@ const publicationRecords = [
   ...montufarWalkerCentroAmericaPublicationRecords,
   ...barberenaHistoriaElSalvadorPublicationRecords,
   ...stoneLencaPublicationRecords,
+  ...perezMemoriasPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11741,6 +11746,7 @@ const publicationMetadata = {
   ...montufarWalkerCentroAmericaPublicationMetadata,
   ...barberenaHistoriaElSalvadorPublicationMetadata,
   ...stoneLencaPublicationMetadata,
+  ...perezMemoriasPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

@@ -6233,6 +6233,25 @@
       "rights": "1948年刊の原著本文・図・図版は米国でパブリックドメインです。Smithsonian Libraries and Archives／Smithsonian Research Onlineは当該デジタル資料をPublic Domain／CC0 1.0として公開しています。底本・図版の公開機関はSmithsonian Libraries and Archivesです。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "perez-memorias-nicaragua-guerra-nacional-1854-1857",
+      "recordClass": "major-work",
+      "title": "ニカラグア革命史およびフィリバスターに対する国民戦争史のための回想録",
+      "originalTitle": "Memorias para la historia de la revolución de Nicaragua y de la guerra nacional contra los filibusteros, 1854 a 1857",
+      "author": "ヘロニモ・ペレス",
+      "originalAuthor": "Jerónimo Pérez",
+      "year": 1883,
+      "originalPublication": "第I部第2版：マサヤ、Imprenta del Orden、1883年。第II部：マナグア、Imprenta del Gobierno、1865–1873年。全2部合冊。",
+      "sourceEdition": "第I部：Jerónimo Pérez, Memorias para la historia de la revolución de Nicaragua y de la guerra nacional contra los filibusteros, 1854 a 1857, 2.ª ed., Masaya: Imprenta del Orden, 1883. 第II部：Managua: Imprenta del Gobierno, 1865–1873, 2 parts in 1 volume.",
+      "sourceProvider": "第I部はUniversidad Francisco Marroquín, Biblioteca Ludwig von Mises, Colección Luis Luján Muñoz所蔵本のInternet Archive公開画像（memoparalahi00pereguat）を底本としました。第II部はHathiTrustのUniversity of California所蔵本（uc1.31158012814835、Full View）とGoogle Books（t2YvAQAAMAAJ）で確認しました。著者本文はFundación Enrique Bolaños刊『Obras históricas completas』（1975年）でも校合し、同版の後世の編集・注釈・画像・組版は再利用していません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/memoparalahi00pereguat"
+      },
+      "rights": "原著本文はパブリックドメインです。第I部底本のInternet Archive項目は NOT_IN_COPYRIGHT と表示されています。第II部原刊はHathiTrustでFull Viewとして公開されています。1975年版はペレスの著者本文の校合だけに用い、後世の編集・注釈・画像・組版は再利用していません。本公開版には1883年原刊第2版標題紙の機械的複製1点を収録しています。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
     }
   ],
   "works": [
