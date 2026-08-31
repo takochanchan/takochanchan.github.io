@@ -1,7 +1,7 @@
 export const montufarWalkerCentroAmericaPublicationRecords = [
   {
     slug: "montufar-walker-centro-america-1887",
-    title: "中部アメリカのウォーカー",
+    title: "中央アメリカのウォーカー",
     originalTitle: "Walker en Centro-América",
     subtitle:
       "ニカラグア内戦からフィリバスター戦争、ウォーカーの最期まで・1887年刊 日本語全訳",
