@@ -1,0 +1,85 @@
+name: Publish Barberena Historia de El Salvador assets once
+
+on:
+  push:
+    branches:
+      - agent/publish-barberena-historia-el-salvador-1914-1917-20260831
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: publications-current
+      SLUG: barberena-historia-el-salvador-1914-1917
+      PDF_NAME: Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf
+      EPUB_NAME: Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub
+      PDF_SHA256: 4401283c30260dd9790ffffe724df3238c420f4606856ae63f4ed389c894c9c2
+      EPUB_SHA256: 93d4551b474e1c3a1f4693e784d1f247178f11dadc8a08e4e819778d0b86b353
+      PDF_SIZE: "9189401"
+      EPUB_SIZE: "1095360"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+
+      - name: Reconstruct and verify assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p release
+          cat ".release-staging/$SLUG/pdf/"chunk-* > "release/$PDF_NAME"
+          cat ".release-staging/$SLUG/epub/"chunk-* > "release/$EPUB_NAME"
+          test "$(stat -c %s "release/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "release/$EPUB_NAME")" = "$EPUB_SIZE"
+          echo "$PDF_SHA256  release/$PDF_NAME" | sha256sum --check --strict
+          echo "$EPUB_SHA256  release/$EPUB_NAME" | sha256sum --check --strict
+          unzip -t "release/$EPUB_NAME"
+
+      - name: Upload release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release upload "$TAG" "release/$PDF_NAME" "release/$EPUB_NAME" --clobber
+
+      - name: Redownload and verify uploaded assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloaded
+          gh release download "$TAG" -p "$PDF_NAME" -p "$EPUB_NAME" -D downloaded --clobber
+          test "$(stat -c %s "downloaded/$PDF_NAME")" = "$PDF_SIZE"
+          test "$(stat -c %s "downloaded/$EPUB_NAME")" = "$EPUB_SIZE"
+          echo "$PDF_SHA256  downloaded/$PDF_NAME" | sha256sum --check --strict
+          echo "$EPUB_SHA256  downloaded/$EPUB_NAME" | sha256sum --check --strict
+
+      - name: Update release checksum manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p manifest manifest-check
+          if ! gh release download "$TAG" -p SHA256SUMS.txt -D manifest --clobber; then
+            : > manifest/SHA256SUMS.txt
+          fi
+          grep -v -F "  $PDF_NAME" manifest/SHA256SUMS.txt \
+            | grep -v -F "  $EPUB_NAME" \
+            > manifest/SHA256SUMS.next || true
+          {
+            cat manifest/SHA256SUMS.next
+            echo "$PDF_SHA256  $PDF_NAME"
+            echo "$EPUB_SHA256  $EPUB_NAME"
+          } | LC_ALL=C sort > manifest/SHA256SUMS.txt
+          gh release upload "$TAG" manifest/SHA256SUMS.txt --clobber
+          gh release download "$TAG" -p SHA256SUMS.txt -D manifest-check --clobber
+          grep -Fqx "$PDF_SHA256  $PDF_NAME" manifest-check/SHA256SUMS.txt
+          grep -Fqx "$EPUB_SHA256  $EPUB_NAME" manifest-check/SHA256SUMS.txt

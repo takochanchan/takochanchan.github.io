@@ -68,6 +68,10 @@ import {
   montufarWalkerCentroAmericaPublicationRecords,
 } from "./montufar-walker-centro-america-publication.mjs";
 import {
+  barberenaHistoriaElSalvadorPublicationMetadata,
+  barberenaHistoriaElSalvadorPublicationRecords,
+} from "./barberena-historia-el-salvador-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9168,6 +9172,7 @@ const publicationRecords = [
   ...peraltaCostaRicaMosquitosPublicationRecords,
   ...rabasaEstadoChiapasPublicationRecords,
   ...montufarWalkerCentroAmericaPublicationRecords,
+  ...barberenaHistoriaElSalvadorPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11729,6 +11734,7 @@ const publicationMetadata = {
   ...peraltaCostaRicaMosquitosPublicationMetadata,
   ...rabasaEstadoChiapasPublicationMetadata,
   ...montufarWalkerCentroAmericaPublicationMetadata,
+  ...barberenaHistoriaElSalvadorPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

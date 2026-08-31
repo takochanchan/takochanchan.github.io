@@ -5850,6 +5850,24 @@
       "url": "https://takochanchan.github.io/publications/montufar-walker-centro-america-1887/cover.jpg",
       "size": 29676,
       "sha256": "4d7288901f5dd615438aa7baad5c74da311d1c6213fa39229f22d57ca4b1c658"
+    },
+    {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
+      "size": 1095360,
+      "sha256": "93d4551b474e1c3a1f4693e784d1f247178f11dadc8a08e4e819778d0b86b353"
+    },
+    {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
+      "size": 9189401,
+      "sha256": "4401283c30260dd9790ffffe724df3238c420f4606856ae63f4ed389c894c9c2"
+    },
+    {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
+      "size": 64920,
+      "sha256": "de4421d755e09d79377fb43e13d368132557efe77b03b935699f5442a83f2bf4"
     }
   ]
 }

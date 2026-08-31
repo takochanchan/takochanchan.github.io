@@ -6195,6 +6195,25 @@
       "rights": "原著本文はパブリックドメインです。Biblioteca Americanista de Sevilla（CSIC）のデジタル画像はCC BY-NC-SA 4.0で提供され、所蔵・提供機関の表示が求められています。本日本語版は同条件の下で提供します。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "barberena-historia-el-salvador-1914-1917",
+      "recordClass": "major-work",
+      "title": "エル・サルバドル史",
+      "originalTitle": "Historia de El Salvador",
+      "author": "サンティアゴ・I・バルベレーナ",
+      "originalAuthor": "Santiago Ignacio Barberena",
+      "year": 1917,
+      "originalPublication": "サン・サルバドル、Imprenta Nacional、第1巻1914年・第2巻1917年",
+      "sourceEdition": "Santiago Ignacio Barberena, Historia de El Salvador, Tomo I, Época antigua y de la conquista, San Salvador: Imprenta Nacional, 1914; Tomo II, Época colonial, San Salvador: Imprenta Nacional, 1917.",
+      "sourceProvider": "第1巻はGetty Research Institute所蔵本をInternet Archiveが公開する全頁画像、第2巻はBiblioteca Tomás Navarro Tomás（CSIC）所蔵本をCSIC Simurgが公開する画像を底本としました。第2巻で欠ける原刊82–83頁および220–221頁は、Google Books公開の同じ1917年版で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadeelsalv01barb"
+      },
+      "rights": "両原著はHathiTrust書誌で Public Domain in the United States（pdus）と表示されています。この表示は原著の米国内の権利状態を示し、Getty Research Institute／Internet Archive、CSIC Simurg、Google Booksの各デジタル画像に独自のオープンライセンスが付与されたことを意味しません。本公開版には原刊標題紙の図章2点と本文の数詞図1点を原刊画像から収録しています。",
+      "publishedDate": "2026-08-31",
+      "updatedDate": "2026-08-31"
     }
   ],
   "works": [
