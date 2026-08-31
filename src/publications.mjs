@@ -64,6 +64,10 @@ import {
   rabasaEstadoChiapasPublicationRecords,
 } from "./rabasa-estado-chiapas-publication.mjs";
 import {
+  montufarWalkerCentroAmericaPublicationMetadata,
+  montufarWalkerCentroAmericaPublicationRecords,
+} from "./montufar-walker-centro-america-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9163,6 +9167,7 @@ const publicationRecords = [
   ...pimSeemannDottingsPublicationRecords,
   ...peraltaCostaRicaMosquitosPublicationRecords,
   ...rabasaEstadoChiapasPublicationRecords,
+  ...montufarWalkerCentroAmericaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11723,6 +11728,7 @@ const publicationMetadata = {
   ...pimSeemannDottingsPublicationMetadata,
   ...peraltaCostaRicaMosquitosPublicationMetadata,
   ...rabasaEstadoChiapasPublicationMetadata,
+  ...montufarWalkerCentroAmericaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

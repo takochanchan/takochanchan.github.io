@@ -5832,6 +5832,24 @@
       "url": "https://takochanchan.github.io/publications/rabasa-estado-chiapas-1895/cover.jpg",
       "size": 46764,
       "sha256": "b2fb3f8a9f5386f4cde4435d2a74a64eaa9068bb442b91ce2be01e46c9cc0b08"
+    },
+    {
+      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
+      "size": 2744641,
+      "sha256": "cbefb0d1931bce9c61a796900698abdd6c3ef5d0b5db17b79ada3d9d6a4d5977"
+    },
+    {
+      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
+      "size": 11083966,
+      "sha256": "f2b5e8ed5b4e4a4bb13d0d672be82b8f0aca7c136e291ed2b85689b5120cb5ea"
+    },
+    {
+      "path": "publications/montufar-walker-centro-america-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-walker-centro-america-1887/cover.jpg",
+      "size": 29676,
+      "sha256": "4d7288901f5dd615438aa7baad5c74da311d1c6213fa39229f22d57ca4b1c658"
     }
   ]
 }
