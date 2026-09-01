@@ -36,6 +36,10 @@ import {
   conzemiusMiskitoSumuPublicationRecords,
 } from "./conzemius-miskito-sumu-publication.mjs";
 import {
+  youngMosquitoShorePublicationMetadata,
+  youngMosquitoShorePublicationRecords,
+} from "./young-mosquito-shore-publication.mjs";
+import {
   arceMemoriaPublicationMetadata,
   arceMemoriaPublicationRecords,
 } from "./arce-memoria-publication.mjs";
@@ -9169,6 +9173,7 @@ const publicationRecords = [
   ...bellyATraversAmeriqueCentralePublicationRecords,
   ...keasbeyNicaraguaCanalPublicationRecords,
   ...conzemiusMiskitoSumuPublicationRecords,
+  ...youngMosquitoShorePublicationRecords,
   ...garellaPanamaCanalPublicationRecords,
   ...reclusPanamaDarienPublicationRecords,
   ...rodriguesPanamaCanalPublicationRecords,
@@ -11734,6 +11739,7 @@ const publicationMetadata = {
   ...bellyATraversAmeriqueCentralePublicationMetadata,
   ...keasbeyNicaraguaCanalPublicationMetadata,
   ...conzemiusMiskitoSumuPublicationMetadata,
+  ...youngMosquitoShorePublicationMetadata,
   ...garellaPanamaCanalPublicationMetadata,
   ...reclusPanamaDarienPublicationMetadata,
   ...rodriguesPanamaCanalPublicationMetadata,

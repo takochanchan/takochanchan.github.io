@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 333);
+  assert.equal(publications.length, 334);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 56);
+  assert.equal(counts.get("002"), 57);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -128,6 +128,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "belly-a-travers-amerique-centrale-1867",
       "keasbey-nicaragua-canal-monroe-doctrine-1896",
       "conzemius-miskito-sumu-1932",
+      "young-mosquito-shore-1847",
       "garella-panama-canal-1845",
       "reclus-panama-darien-1881",
       "rodrigues-panama-canal-1885",
@@ -1483,7 +1484,7 @@ test("Lardé second batch keeps three papers and two books in their approved cla
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 168);
+  assert.equal(majorPublications.length, 169);
   assert.equal(shortPublications.length, 165);
   assert.equal(shortPublicationAuthors.length, 40);
   assert.deepEqual(
@@ -2604,7 +2605,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">168<\/strong>件/);
+  assert.match(html, /id="book-match-count">169<\/strong>件/);
   assert.match(html, /id="paper-match-count">165<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

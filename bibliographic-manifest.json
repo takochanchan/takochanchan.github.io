@@ -6347,6 +6347,25 @@
       "rights": "REDICCESの底本号個別書誌は「Obra en dominio público」と明記し、Public Domain Mark 1.0を表示しています。本版はパブリックドメインの1925年刊本文と末尾の原掲載誌表示の文字情報のみを用い、BINAES／REDICCESのスキャン画像、再録誌面、1954年の編集的要素を収録していません。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "slug": "young-mosquito-shore-1847",
+      "recordClass": "major-work",
+      "title": "モスキート海岸滞在記",
+      "originalTitle": "Narrative of a Residence on the Mosquito Shore: with an Account of Truxillo, and the Adjacent Islands of Bonacca and Roatan; and a Vocabulary of the Mosquitian Language",
+      "author": "トマス・ヤング",
+      "originalAuthor": "Thomas Young",
+      "year": 1847,
+      "originalPublication": "ロンドン、Smith, Elder, and Co.、1847年増補第2版",
+      "sourceEdition": "Thomas Young, Narrative of a Residence on the Mosquito Shore: with an Account of Truxillo, and the Adjacent Islands of Bonacca and Roatan; and a Vocabulary of the Mosquitian Language, Second Edition, London: Smith, Elder, and Co., 1847.",
+      "sourceProvider": "米国議会図書館所蔵本（Call No. 6842171、LCCN 18005184）をInternet Archiveが全頁画像として公開する資料（identifier: narrativeofresid00youn）を底本とし、1842年初版を本文照合に用いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/narrativeofresid00youn"
+      },
+      "rights": "原著はパブリックドメインです。米国議会図書館は当該資料について著作権上の制限が存在することを認識していないと表示しています。公開画像には米国議会図書館およびInternet Archiveの表示・条件が適用されます。",
+      "publishedDate": "2026-09-01",
+      "updatedDate": "2026-09-01"
     }
   ],
   "works": [

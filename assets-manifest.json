@@ -5994,6 +5994,24 @@
       "url": "https://takochanchan.github.io/publications/larde-volcan-izalco-1922-1925/cover.jpg",
       "size": 36852,
       "sha256": "311af465158bf7cf7af19b2d3be81bc701c9d2a30f1c4e47d3f23a04d3b2d781"
+    },
+    {
+      "path": "publications/young-mosquito-shore-1847/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.epub",
+      "size": 1079858,
+      "sha256": "a0408c52d688f2504f4a61ab9ee1aaa59b3237c55273e3dc49495f8ff582d71d"
+    },
+    {
+      "path": "publications/young-mosquito-shore-1847/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
+      "size": 2224031,
+      "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/young-mosquito-shore-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
+      "size": 96496,
+      "sha256": "c718ec73c604830cf52ee86045890feae2d8f28ef65afe1da10db23b9303fc12"
     }
   ]
 }
