@@ -1,0 +1,77 @@
+name: Upload Walker release assets
+
+on:
+  push:
+    branches: ["agent/release-walker-20260902"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: upload-walker-release-assets
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      STAGING_PREFIX: .release-staging/walker-20260902
+      PDF_NAME: William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf
+      EPUB_NAME: William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub
+      PDF_SHA256: fcc5670c7f02dbb46a257777340c4a04e5272e810c1a9e7456596c9f1f478973
+      EPUB_SHA256: 133affc973edd3a07778b0b785a36ab5f3ebe0c2424ce85beb23f48e85d9b7b6
+    steps:
+      - name: Check out release staging branch
+        uses: actions/checkout@v4
+
+      - name: Reconstruct and verify release assets
+        run: |
+          mkdir -p "$RUNNER_TEMP/release-assets"
+          cat "$STAGING_PREFIX/pdf"/part-* > "$RUNNER_TEMP/release-assets/$PDF_NAME"
+          cat "$STAGING_PREFIX/epub"/part-* > "$RUNNER_TEMP/release-assets/$EPUB_NAME"
+          test "$(stat -c %s "$RUNNER_TEMP/release-assets/$PDF_NAME")" -eq 3814537
+          test "$(stat -c %s "$RUNNER_TEMP/release-assets/$EPUB_NAME")" -eq 4435074
+          cd "$RUNNER_TEMP/release-assets"
+          sha256sum -c <<CHECKSUMS
+          $PDF_SHA256  $PDF_NAME
+          $EPUB_SHA256  $EPUB_NAME
+          CHECKSUMS
+
+      - name: Refresh aggregate checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/checksums"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$RUNNER_TEMP/checksums" --repo "$GITHUB_REPOSITORY"
+          grep -v "  $PDF_NAME$" "$RUNNER_TEMP/checksums/SHA256SUMS.txt" |
+            grep -v "  $EPUB_NAME$" > "$RUNNER_TEMP/SHA256SUMS.txt"
+          printf '%s  %s\n' "$PDF_SHA256" "$PDF_NAME" >> "$RUNNER_TEMP/SHA256SUMS.txt"
+          printf '%s  %s\n' "$EPUB_SHA256" "$EPUB_NAME" >> "$RUNNER_TEMP/SHA256SUMS.txt"
+          LC_ALL=C sort -k2,2 -o "$RUNNER_TEMP/SHA256SUMS.txt" "$RUNNER_TEMP/SHA256SUMS.txt"
+
+      - name: Upload release assets and checksums
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload publications-current \
+            "$RUNNER_TEMP/release-assets/$PDF_NAME" \
+            "$RUNNER_TEMP/release-assets/$EPUB_NAME" \
+            "$RUNNER_TEMP/SHA256SUMS.txt" \
+            --clobber --repo "$GITHUB_REPOSITORY"
+
+      - name: Download and verify published bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/release-verify"
+          gh release download publications-current --pattern "$PDF_NAME" --dir "$RUNNER_TEMP/release-verify" --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern "$EPUB_NAME" --dir "$RUNNER_TEMP/release-verify" --repo "$GITHUB_REPOSITORY"
+          gh release download publications-current --pattern SHA256SUMS.txt --dir "$RUNNER_TEMP/release-verify" --repo "$GITHUB_REPOSITORY"
+          cd "$RUNNER_TEMP/release-verify"
+          sha256sum -c <<CHECKSUMS
+          $PDF_SHA256  $PDF_NAME
+          $EPUB_SHA256  $EPUB_NAME
+          CHECKSUMS
+          grep -Fx "$PDF_SHA256  $PDF_NAME" SHA256SUMS.txt
+          grep -Fx "$EPUB_SHA256  $EPUB_NAME" SHA256SUMS.txt
