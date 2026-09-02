@@ -150,6 +150,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "perez-memorias-nicaragua-guerra-nacional-1854-1857",
       "wells-walkers-expedition-nicaragua-1856",
       "walker-war-nicaragua-1860",
+      "brinton-essays-americanist-1890",
     ],
   );
   assert.equal(
@@ -196,6 +197,25 @@ test("public bibliography omits production boilerplate", () => {
   assert.equal(
     torquemada.description,
     "フアン・デ・トルケマダが1615年に刊行した全三巻二十一書のヌエバ・エスパニャ史・民族誌・宣教史の日本語全訳です。John Carter Brown Library所蔵初版本をInternet Archive公開画像から底本として用いました。",
+  );
+});
+
+test("Brinton Essays of an Americanist retains the approved public scope", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "brinton-essays-americanist-1890",
+  );
+  assert.ok(item);
+  assert.equal(item.pageCount, 415);
+  assert.equal(item.figureCount, 36);
+  assert.equal(item.plateCount, 1);
+  assert.match(item.extent, /原刊前付iii–xii頁＋本文17–489頁/);
+  assert.match(item.description, /ナグアリズム/);
+  assert.match(item.sourceProvider, /Mugar Memorial Library/);
+  assert.match(item.sourceProvider, /Internet Archive/);
+  assert.match(item.rights, /パブリックドメイン/);
+  assert.doesNotMatch(
+    item.rights,
+    /日本語翻訳版には再利用ライセンスを設定していません/,
   );
 });
 

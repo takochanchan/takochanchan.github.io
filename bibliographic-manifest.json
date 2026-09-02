@@ -6404,6 +6404,25 @@
       "rights": "1860年刊の原著本文・原刊図版はパブリックドメインです。Brandeis University Libraries所蔵本はInternet Archiveから公開されています。当該Internet Archive項目に個別のCreative Commons等のライセンス表示はなく、利用には同館の利用規約が適用されます。Project Gutenberg eBook no. 76898は米国でパブリックドメインとして公開されています。",
       "publishedDate": "2026-09-02",
       "updatedDate": "2026-09-02"
+    },
+    {
+      "slug": "brinton-essays-americanist-1890",
+      "recordClass": "major-work",
+      "title": "アメリカ研究者論集",
+      "originalTitle": "Essays of an Americanist",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1890,
+      "originalPublication": "フィラデルフィア、Porter & Coates、1890年",
+      "sourceEdition": "Daniel G. Brinton, Essays of an Americanist: I. Ethnologic and Archaeologic; II. Mythology and Folk Lore; III. Graphic Systems and Literature; IV. Linguistic, Philadelphia: Porter & Coates, 1890.",
+      "sourceProvider": "Mugar Memorial Library, Boston University所蔵本をInternet Archiveが公開する全頁スキャン（identifier: essaysofamerican00brin）を主底本としました。判読困難箇所の校合にCornell University所蔵本のHathiTrust公開画像を、検索とOCR訂正の補助にProject Gutenberg eBook no. 58464を用いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/essaysofamerican00brin"
+      },
+      "rights": "1890年刊の原著本文・原刊図版は米国においてパブリックドメインです。Mugar Memorial Library, Boston University所蔵本はInternet Archiveから公開され、同項目は「Possible copyright status: NOT_IN_COPYRIGHT」と表示しています。この表示はスキャン画像にCreative Commonsその他のオープンライセンスを付与するものではなく、画像の再利用にはInternet Archiveその他の公開元の利用条件および適用法が適用されます。米国外の権利状態については判断しません。",
+      "publishedDate": "2026-09-02",
+      "updatedDate": "2026-09-02"
     }
   ],
   "works": [

@@ -6048,6 +6048,24 @@
       "url": "https://takochanchan.github.io/publications/walker-war-nicaragua-1860/cover.jpg",
       "size": 75890,
       "sha256": "31a9d6c5fad647a00cb8d07022b9a57f27010703e2a08605446f54abdb14695a"
+    },
+    {
+      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
+      "size": 13833184,
+      "sha256": "cc6fc4365dc4bf2e85257311e6c89bdf7d21b30dd03ef5654822989e3d7a9c33"
+    },
+    {
+      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
+      "size": 11066103,
+      "sha256": "66d248f617221b445d7d4fe09e04859818f3b6c685d7edf927c9d6d505d348c3"
+    },
+    {
+      "path": "publications/brinton-essays-americanist-1890/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-essays-americanist-1890/cover.jpg",
+      "size": 34704,
+      "sha256": "09b228b617275b4790fcd60edade5d24d43a0b8ead756f8eb482afee487e09f7"
     }
   ]
 }

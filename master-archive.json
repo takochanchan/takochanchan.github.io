@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "6d5ddedba20fd002ea750742e64ef190e26ceee2",
+  "archive_commit": "b9a41f26505700043eb5a4fb8917abb625fc2c49",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -281,7 +281,8 @@
     "stone-northern-highland-tribes-lenca-1948": "publications/stone-northern-highland-tribes-lenca-1948/master.docx",
     "perez-memorias-nicaragua-guerra-nacional-1854-1857": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/master.docx",
     "wells-walkers-expedition-nicaragua-1856": "publications/wells-walkers-expedition-nicaragua-1856/master.docx",
-    "walker-war-nicaragua-1860": "publications/walker-war-nicaragua-1860/master.docx"
+    "walker-war-nicaragua-1860": "publications/walker-war-nicaragua-1860/master.docx",
+    "brinton-essays-americanist-1890": "publications/brinton-essays-americanist-1890/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

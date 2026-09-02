@@ -92,6 +92,10 @@ import {
   walkerWarNicaraguaPublicationRecords,
 } from "./walker-war-nicaragua-publication.mjs";
 import {
+  brintonEssaysAmericanistPublicationMetadata,
+  brintonEssaysAmericanistPublicationRecords,
+} from "./brinton-essays-americanist-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9204,6 +9208,7 @@ const publicationRecords = [
   ...perezMemoriasPublicationRecords,
   ...wellsWalkersExpeditionPublicationRecords,
   ...walkerWarNicaraguaPublicationRecords,
+  ...brintonEssaysAmericanistPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11772,6 +11777,7 @@ const publicationMetadata = {
   ...perezMemoriasPublicationMetadata,
   ...wellsWalkersExpeditionPublicationMetadata,
   ...walkerWarNicaraguaPublicationMetadata,
+  ...brintonEssaysAmericanistPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
