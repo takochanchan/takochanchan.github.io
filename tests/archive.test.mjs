@@ -1485,7 +1485,7 @@ test("Lardé second batch keeps three papers and two books in their approved cla
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 169);
+  assert.equal(majorPublications.length, 170);
   assert.equal(shortPublications.length, 165);
   assert.equal(shortPublicationAuthors.length, 40);
   assert.deepEqual(
@@ -2606,7 +2606,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">169<\/strong>件/);
+  assert.match(html, /id="book-match-count">170<\/strong>件/);
   assert.match(html, /id="paper-match-count">165<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
