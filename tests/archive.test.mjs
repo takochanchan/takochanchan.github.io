@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 334);
+  assert.equal(publications.length, 335);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 57);
+  assert.equal(counts.get("002"), 58);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -148,6 +148,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "barberena-historia-el-salvador-1914-1917",
       "stone-northern-highland-tribes-lenca-1948",
       "perez-memorias-nicaragua-guerra-nacional-1854-1857",
+      "wells-walkers-expedition-nicaragua-1856",
     ],
   );
   assert.equal(

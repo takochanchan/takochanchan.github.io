@@ -6366,6 +6366,25 @@
       "rights": "原著はパブリックドメインです。米国議会図書館は当該資料について著作権上の制限が存在することを認識していないと表示しています。公開画像には米国議会図書館およびInternet Archiveの表示・条件が適用されます。",
       "publishedDate": "2026-09-01",
       "updatedDate": "2026-09-01"
+    },
+    {
+      "slug": "wells-walkers-expedition-nicaragua-1856",
+      "recordClass": "major-work",
+      "title": "ウォーカーのニカラグア遠征",
+      "originalTitle": "Walker's Expedition to Nicaragua",
+      "author": "ウィリアム・V・ウェルズ",
+      "originalAuthor": "William V. Wells",
+      "year": 1856,
+      "originalPublication": "ニューヨーク、Stringer and Townsend、1856年",
+      "sourceEdition": "William V. Wells, Walker's Expedition to Nicaragua: A History of the Central American War; and the Sonora and Kinney Expeditions, Including All the Recent Diplomatic Correspondence, Together with a New and Accurate Map of Central America, and a Memoir and Portrait of General William Walker, New York: Stringer and Townsend, 1856.",
+      "sourceProvider": "Stanford University Libraries所蔵本をGoogle Books／Internet Archiveが公開する全頁スキャン（identifier: walkersexpediti00wellgoog）を主底本としました。欠ける折込彩色地図および原刊180–183頁はHarvard University所蔵本（identifier: walkersexpediti01wellgoog）で補いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/walkersexpediti00wellgoog"
+      },
+      "rights": "1856年刊の原著本文・原刊図版はパブリックドメインです。Stanford University LibrariesおよびHarvard University所蔵本はGoogle Books／Internet Archiveから公開されています。各Internet Archive項目に個別のCreative Commons等のライセンス表示はなく、Google Booksの冒頭告知は当該デジタルコピーをパブリックドメイン本として扱う旨を示します。Internet Archiveの利用には同館の利用規約が適用されます。",
+      "publishedDate": "2026-09-02",
+      "updatedDate": "2026-09-02"
     }
   ],
   "works": [

@@ -1,5 +1,12 @@
 # 改訂記録
 
+## 2026-09-02 — ウィリアム・V・ウェルズ『ウォーカーのニカラグア遠征』新規公開
+
+- 1856年版の前付、本文11–316頁、著者肖像、折込彩色地図、付録の外交文書および中央アメリカ年表を日本語全訳として収録した。公開PDFは256頁、EPUBはリフロー型EPUB 3とした。
+- Stanford University Libraries所蔵本（Internet Archive identifier: `walkersexpediti00wellgoog`）を主底本とし、欠ける折込彩色地図と原刊180–183頁をHarvard University所蔵本（`walkersexpediti01wellgoog`）で補った。
+- 原著本文・原刊図版は1856年刊行物としてパブリックドメインである。公開元はGoogle Books／Internet Archiveで、Internet Archiveの利用には同館の利用規約が適用される。
+- 正本は非公開アーカイブのコミット `ac687b03577627516a7bea3fa746ce9d9fe3de15` に収蔵した。
+
 ## 2026-09-01 — トマス・ヤング『モスキート海岸滞在記』新規公開
 
 - 1847年増補第2版の初版評、序文、本文全12章、原注、韻文、ミスキート語彙集および原刊標題紙を日本語全訳として収録した。公開PDFは173頁、EPUBはリフロー型EPUB 3とした。

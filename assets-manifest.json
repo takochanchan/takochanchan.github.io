@@ -6012,6 +6012,24 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 96496,
       "sha256": "c718ec73c604830cf52ee86045890feae2d8f28ef65afe1da10db23b9303fc12"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
+      "size": 5223139,
+      "sha256": "368df580496a80b665b3ee2ff6935b1ac7eb62da561cbec7de504e9b00873e38"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
+      "size": 4239074,
+      "sha256": "e2eda234949301ceee04d1bc8cb990fbca34abc03fb6a24af2b5db2634a291d7"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
+      "size": 70117,
+      "sha256": "15586dfd580f7bd7218355e097016153383e9039d123ab74484545e220113b91"
     }
   ]
 }
