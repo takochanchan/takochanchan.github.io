@@ -1,0 +1,30 @@
+name: Test Walker publication staging
+
+on:
+  push:
+    branches: ["agent/publish-walker-20260902"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out staging branch
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build archive pages
+        run: npm run build
+
+      - name: Run archive tests
+        run: npm test

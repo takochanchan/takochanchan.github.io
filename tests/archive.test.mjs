@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 335);
+  assert.equal(publications.length, 336);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 58);
+  assert.equal(counts.get("002"), 59);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -149,6 +149,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "stone-northern-highland-tribes-lenca-1948",
       "perez-memorias-nicaragua-guerra-nacional-1854-1857",
       "wells-walkers-expedition-nicaragua-1856",
+      "walker-war-nicaragua-1860",
     ],
   );
   assert.equal(
@@ -1484,8 +1485,34 @@ test("Lardé second batch keeps three papers and two books in their approved cla
   }
 });
 
+test("Walker 1860 keeps the Fancourt edition metadata and institutional rights notice", () => {
+  const item = publications.find(
+    (publication) => publication.slug === "walker-war-nicaragua-1860",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 314);
+  assert.match(item.extent, /原刊前付xii頁＋本文1–431頁/u);
+  assert.match(item.sourceProvider, /Brandeis University Libraries/u);
+  assert.match(item.sourceProvider, /Internet Archive/u);
+  assert.match(item.sourceProvider, /Project Gutenberg.*76898/u);
+  assert.match(item.rights, /個別のCreative Commons等のライセンス表示はなく/u);
+  assert.match(item.rights, /Internet Archive.*利用規約/u);
+  assert.match(item.rights, /パブリックドメイン/u);
+  const publicText = [
+    item.description,
+    item.sourceEdition,
+    item.sourceProvider,
+    item.rights,
+  ].join("\n");
+  assert.doesNotMatch(
+    publicText,
+    /独立レビュー|別エージェント|監査|公開前校閲用|再利用許諾を付与しない/u,
+  );
+});
+
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 170);
+  assert.equal(majorPublications.length, 171);
   assert.equal(shortPublications.length, 165);
   assert.equal(shortPublicationAuthors.length, 40);
   assert.deepEqual(
@@ -2606,7 +2633,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">170<\/strong>件/);
+  assert.match(html, /id="book-match-count">171<\/strong>件/);
   assert.match(html, /id="paper-match-count">165<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

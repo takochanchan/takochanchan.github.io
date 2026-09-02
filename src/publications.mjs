@@ -88,6 +88,10 @@ import {
   wellsWalkersExpeditionPublicationRecords,
 } from "./wells-walkers-expedition-publication.mjs";
 import {
+  walkerWarNicaraguaPublicationMetadata,
+  walkerWarNicaraguaPublicationRecords,
+} from "./walker-war-nicaragua-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9199,6 +9203,7 @@ const publicationRecords = [
   ...stoneLencaPublicationRecords,
   ...perezMemoriasPublicationRecords,
   ...wellsWalkersExpeditionPublicationRecords,
+  ...walkerWarNicaraguaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11766,6 +11771,7 @@ const publicationMetadata = {
   ...stoneLencaPublicationMetadata,
   ...perezMemoriasPublicationMetadata,
   ...wellsWalkersExpeditionPublicationMetadata,
+  ...walkerWarNicaraguaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
