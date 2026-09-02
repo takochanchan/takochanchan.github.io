@@ -6030,6 +6030,24 @@
       "url": "https://takochanchan.github.io/publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
       "size": 70117,
       "sha256": "15586dfd580f7bd7218355e097016153383e9039d123ab74484545e220113b91"
+    },
+    {
+      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
+      "size": 4435074,
+      "sha256": "133affc973edd3a07778b0b785a36ab5f3ebe0c2424ce85beb23f48e85d9b7b6"
+    },
+    {
+      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
+      "size": 3814537,
+      "sha256": "fcc5670c7f02dbb46a257777340c4a04e5272e810c1a9e7456596c9f1f478973"
+    },
+    {
+      "path": "publications/walker-war-nicaragua-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/walker-war-nicaragua-1860/cover.jpg",
+      "size": 75890,
+      "sha256": "31a9d6c5fad647a00cb8d07022b9a57f27010703e2a08605446f54abdb14695a"
     }
   ]
 }
