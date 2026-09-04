@@ -1,0 +1,56 @@
+name: Upload Brinton fourth five-paper assets
+
+on:
+  push:
+    branches: ["agent/brinton-fourth-five-release"]
+
+permissions:
+  contents: write
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reassemble, upload, and verify release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED: |
+            4adab70ebb50f78e330d364b72b7dfd023d4c82065181947dd1e0d28a056c2c4  Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.epub
+            8e72b12afe2574adf13b69c1d33eeadc9dcdac2b8cdaa24fe6f1b4b706d91620  Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.pdf
+            72486449cccbec27b5e9ca09b335b43ecb3055bd32ae3240d6d65630632c8111  Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.epub
+            4a491a4bc57e5fe7ecaa45725f81cfed31c0ff8715b4e52f9075c73310d0f113  Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.pdf
+            4a731d5d3343cf8d9146b0f76965bac4812d0fe2e1424e47a00fc98604eac690  Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.epub
+            7892aa3feb13ec6bc3630ef8f3fbffce95d6e6a303b87e33178cae76cdc99e73  Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.pdf
+            202aad2b71bafec44ab59ce8ad840978e9277c0c952c21fa29ceadc5a78195de  Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.epub
+            68530ffff352c2bcf1e547102562b815c5a4dde1736f88b6139264c7cfecd0e5  Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.pdf
+            ca2a6e1354d57b73d71ffa4d499ab78396072c68acee7218f51cd4afa39a2aeb  Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.epub
+            cb805029960725ebf230a7845ec8bbbde93b6c54c7a454634ed5015dc460d90b  Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.pdf
+        run: |
+          mkdir -p release-output verified
+          for name in \
+            Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.epub \\
+            Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.pdf \\
+            Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.epub \\
+            Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.pdf \\
+            Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.epub \\
+            Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.pdf \\
+            Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.epub \\
+            Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.pdf \\
+            Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.epub \\
+            Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.pdf
+          do
+            cat release-staging/chunks/"$name".part* > release-output/"$name"
+          done
+          (
+            cd release-output
+            printf '%s\n' "$EXPECTED" | sha256sum -c -
+          )
+          gh release upload publications-current release-output/* --clobber
+          while read -r checksum name; do
+            gh release download publications-current --pattern "$name" --dir verified
+          done <<< "$EXPECTED"
+          (
+            cd verified
+            printf '%s\n' "$EXPECTED" | sha256sum -c -
+          )
