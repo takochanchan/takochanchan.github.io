@@ -41,11 +41,14 @@ jobs:
           sleep 25
           gh release view publications-current --json assets --jq '.assets[].name'
           release_json="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current")"
-          while read -r checksum name; do
+          mapfile -t expected_entries <<< "$EXPECTED"
+          test "${#expected_entries[@]}" -eq 10
+          for entry in "${expected_entries[@]}"; do
+            read -r checksum name <<< "$entry"
             actual_digest="$(jq -r --arg name "$name" '.assets[] | select(.name == $name) | .digest' <<< "$release_json")"
             actual_state="$(jq -r --arg name "$name" '.assets[] | select(.name == $name) | .state' <<< "$release_json")"
             test "$actual_digest" = "sha256:$checksum"
             test "$actual_state" = "uploaded"
             echo "$name: remote GitHub digest OK"
-          done <<< "$EXPECTED"
+          done
           echo "All ten Brinton release assets verified by GitHub SHA-256 digest."
