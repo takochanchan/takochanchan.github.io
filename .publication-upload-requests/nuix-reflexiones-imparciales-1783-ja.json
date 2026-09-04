@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "slug": "nuix-reflexiones-imparciales-1783-ja",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "4e595e53c39625ca06c839b7c0946a83161f62ef",
+  "bundle": {
+    "size": 4353456,
+    "sha256": "a113c85e6a32380388d0c0eef9d4dd44c58e4f8bfdea420a40b87dd6552c5e09",
+    "chunks": [
+      "d8af93fd95eb0ae6e9ad14db27ebdf17a506f55c",
+      "79e2ec92c31d0b9346abaa9fb9c3d5d9eeb39b61",
+      "8a8bbcc8d1e589bbc651084ded1b04dd82644f06",
+      "a14a15e45071c0c80f0aa306a6b288cb01c0bebb",
+      "2588e8e9cf9cb468d7639e5ff5beec47322f67ba",
+      "3f027b89155ac53989f9667b1e36ac410951361e",
+      "d9a6cfaf511ea0d48e1f448496871ef6f10433f2",
+      "d8c9c1ff6917ccf4b4b2a63a76adb96656904f0b",
+      "400617df0369ea8348f1e23101e75a7e08c30685",
+      "03aedee80d2a890aa0119805a1c8be8f912414c2",
+      "b0edb30e1740c2febbef443fa3ea392c96858a15"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.pdf",
+      "size": 2699447,
+      "sha256": "9b231aeb17a3e6a3e6b8358fa4c4acd867c7d684e76136b336943203270a6724"
+    },
+    {
+      "filename": "Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.epub",
+      "size": 2369917,
+      "sha256": "ab34c1bc945959cd709d6348d5b21e6ba01c66f2064c2288eb859b0be3525269"
+    }
+  ]
+}

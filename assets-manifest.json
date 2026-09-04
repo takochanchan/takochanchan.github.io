@@ -3944,6 +3944,24 @@
       "sha256": "59d56b3f18ad4e10850dc44e86e4998a728db37bfb4c9a6df0a6afe65c514e50"
     },
     {
+      "path": "publications/nuix-reflexiones-imparciales-1783-ja/Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.epub",
+      "size": 2369917,
+      "sha256": "ab34c1bc945959cd709d6348d5b21e6ba01c66f2064c2288eb859b0be3525269"
+    },
+    {
+      "path": "publications/nuix-reflexiones-imparciales-1783-ja/Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Nuix_Reflexiones_imparciales_1783_Japanese_Complete_Translation.pdf",
+      "size": 2699447,
+      "sha256": "9b231aeb17a3e6a3e6b8358fa4c4acd867c7d684e76136b336943203270a6724"
+    },
+    {
+      "path": "publications/nuix-reflexiones-imparciales-1783-ja/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/nuix-reflexiones-imparciales-1783-ja/cover.jpg",
+      "size": 74018,
+      "sha256": "22d4426fba638d5650a58114e6c71a56937aecd0b4e5ff6223bdab8e0ffe0c69"
+    },
+    {
       "path": "publications/ordonez-creation-1907/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_de_Ordonez_y_Aguiar_Historia_de_la_creacion_del_cielo_y_de_la_tierra_1907_Japanese_Complete_Translation.epub",
       "size": 11743016,

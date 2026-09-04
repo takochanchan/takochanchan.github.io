@@ -1,0 +1,32 @@
+name: Transfer checksum-pinned Nuix publication assets
+on:
+  push:
+    branches: [agent/nuix-publish-20260905]
+    paths: ['.publication-upload-requests/nuix-reflexiones-imparciales-1783-ja.json']
+permissions:
+  contents: write
+concurrency:
+  group: nuix-publication-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build archive pages and verify catalogue
+        run: npm run build
+      - name: Test archive and search code
+        run: npm test
+      - name: Reconstruct, verify, upload, and download final assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-nuix.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nuix-release-byte-verification
+          path: release-byte-verification.json

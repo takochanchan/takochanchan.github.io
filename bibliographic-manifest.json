@@ -6879,6 +6879,25 @@
       "rights": "1879–1905年刊の原著・原刊はパブリックドメインです。Biblioteca Ludwig von Mises, Universidad Francisco Marroquín所蔵本を公開するInternet Archiveの各記録は「NOT IN COPYRIGHT」または「NOT_IN_COPYRIGHT」と表示しています。本版には同館所蔵本の原刊標題紙5点を収録しています。第5巻索引の欠落補完に用いたGoogle由来別本は文字照合に限り、その画像は収録していません。",
       "publishedDate": "2026-09-05",
       "updatedDate": "2026-09-05"
+    },
+    {
+      "slug": "nuix-reflexiones-imparciales-1783-ja",
+      "title": "インディアスにおけるスペイン人の人道性についての公平な考察",
+      "originalTitle": "Reflexiones imparciales sobre la humanidad de los españoles en las Indias",
+      "author": "フアン・デ・ヌイクス・イ・デ・ペルピニャー",
+      "originalAuthor": "Juan de Nuix y de Perpiñá",
+      "year": 1783,
+      "originalPublication": "セルベラ、教皇庁立王立大学印刷所、1783年",
+      "recordClass": "major-work",
+      "sourceEdition": "Juan de Nuix y de Perpiñá, Reflexiones imparciales sobre la humanidad de los españoles en las Indias, traducidas del italiano con algunas adiciones del autor por Josef de Nuix y de Perpiñá, Cervera: Imprenta de la Pontificia y Real Universidad, 1783.",
+      "sourceProvider": "ビスカヤ県立図書館（Biblioteca Foral de Bizkaia）所蔵、電子図書館 Lau Haizeetara 公開の1783年スペイン語増補版（全556画像）。",
+      "rights": "原著および1783年スペイン語増補版はパブリックドメインです。原刊標題紙画像を含むデジタル底本は、ビスカヤ県立図書館（Biblioteca Foral de Bizkaia）の電子図書館 Lau Haizeetara が Public Domain Mark（PDM、既知の著作権制限なし）として公開しています。出典：https://liburutegibiltegi.bizkaia.eus/handle/20.500.11938/77172。公開機関の利用案内：https://liburutegibiltegi.bizkaia.eus/page/userights。",
+      "publishedDate": "2026-09-05",
+      "updatedDate": "2026-09-05",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://liburutegibiltegi.bizkaia.eus/handle/20.500.11938/77172"
+      }
     }
   ],
   "works": [

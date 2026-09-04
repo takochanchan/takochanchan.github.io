@@ -1,5 +1,9 @@
 import { createRequire } from "node:module";
 import {
+  nuixPublicationMetadata,
+  nuixPublicationRecords,
+} from "./nuix-publication.mjs";
+import {
   bailyPublicationMetadata,
   bailyPublicationRecords,
 } from "./baily-publication.mjs";
@@ -9249,6 +9253,7 @@ const publicationRecords = [
   ...brintonFourthFivePapersPublicationRecords,
   ...brintonExtraTwoPapersPublicationRecords,
   ...millaGomezCarrilloPublicationRecords,
+  ...nuixPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11825,6 +11830,7 @@ const publicationMetadata = {
   ...brintonFourthFivePapersPublicationMetadata,
   ...brintonExtraTwoPapersPublicationMetadata,
   ...millaGomezCarrilloPublicationMetadata,
+  ...nuixPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
