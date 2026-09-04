@@ -250,7 +250,13 @@ def main() -> None:
     PUBLIC_ROOT = args.public_root.resolve()
 
     items = catalogue()
-    assert len(items) == 333, f"expected 333 publications, found {len(items)}"
+    bibliography_path = ROOT / "bibliographic-manifest.json"
+    bibliography = json.loads(bibliography_path.read_text(encoding="utf-8"))
+    expected_count = len(bibliography["records"])
+    assert len(items) == expected_count, (
+        f"expected {expected_count} publications from the canonical bibliography, "
+        f"found {len(items)}"
+    )
     if args.slugs:
         selected = set(args.slugs)
         known = {item["slug"] for item in items}

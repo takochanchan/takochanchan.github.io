@@ -59,6 +59,21 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "brinton-ancient-phonetic-alphabet-yucatan-1870": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.docx",
+    "brinton-nahuatl-version-sahagun-historia-1890": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_On_the_Nahuatl_Version_of_Sahaguns_Historia_1890_Japanese_Complete_Translation.docx",
+    "brinton-chontales-popolucas-1892": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Chontales_and_Popolucas_1892_Japanese_Complete_Translation.docx",
+    "brinton-words-anahuac-nahuatl-1893": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_On_the_Words_Anahuac_and_Nahuatl_1893_Japanese_Complete_Translation.docx",
+    "brinton-written-language-ancient-mexicans-1889": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_The_Written_Language_of_the_Ancient_Mexicans_1889_Japanese_Complete_Translation.docx",
     "brinton-cintla-1896": SOURCES
     / "翻訳サイト"
     / "Daniel_G_Brinton_The_Battle_and_the_Ruins_of_Cintla_1896_Japanese_Complete_Translation.docx",

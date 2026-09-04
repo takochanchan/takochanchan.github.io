@@ -6632,6 +6632,101 @@
       "rights": "1894年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの提供画像には同機関の利用条件が適用されます。本版は原著の文字情報のみを用い、誌面画像を収録していません。",
       "publishedDate": "2026-09-04",
       "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-ancient-phonetic-alphabet-yucatan-1870",
+      "recordClass": "short-work",
+      "title": "ユカタンの古代表音アルファベット",
+      "originalTitle": "The Ancient Phonetic Alphabet of Yucatan",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1870,
+      "originalPublication": "ニューヨーク、『The American Bibliopolist』第2巻、1870年、143–148頁；J. Sabin & Sons刊の個別抜刷3–8頁",
+      "sourceEdition": "Daniel G. Brinton, “The Ancient Phonetic Alphabet of Yucatan,” The American Bibliopolist, vol. 2, 1870, pp. 143–148; separate issue, New York: J. Sabin & Sons, 1870, pp. 3–8.",
+      "sourceProvider": "Cornell University Library所蔵の1870年個別抜刷をInternet Archiveが公開する画像（identifier: cu31924104087618）を底本としました。本文中の原刊頁標識3–8は、この抜刷の印刷頁を示します。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cu31924104087618"
+      },
+      "rights": "1870年刊の原著本文と文字標本はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 当該項目に個別のCreative Commonsライセンス表示はありません。本版には原刊文字標本6点を収録しています。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-nahuatl-version-sahagun-historia-1890",
+      "recordClass": "short-work",
+      "title": "サアグン『ヌエバ・エスパーニャ史』ナワトル語版について",
+      "originalTitle": "On the Nahuatl Version of Sahagun’s Historia de la Nueva España",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1890,
+      "originalPublication": "ベルリン、第7回国際アメリカニスト会議録（1888年会期）、W. H. Kühl、1890年、83–89頁",
+      "sourceEdition": "Daniel G. Brinton, “On the Nahuatl version of Sahugun’s Historia de la Nueva España,” Congrès International des Américanistes, Compte-rendu de la septième session, Berlin 1888, Berlin: Librairie W. H. Kühl, 1890, pp. 83–89.",
+      "sourceProvider": "Google Booksがデジタル化し、Internet Archiveが公開する第7回国際アメリカニスト会議録（identifier: compterendudela09unkngoog）を底本としました。原刊見出しのSahugunは同巻目次のSahagunと異なり、誤植とみられます。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/compterendudela09unkngoog"
+      },
+      "rights": "1890年刊の原著本文はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-chontales-popolucas-1892",
+      "recordClass": "short-work",
+      "title": "チョンタルとポポルカ――メキシコ民族誌への一寄与",
+      "originalTitle": "Chontales and Popolucas: A Contribution to Mexican Ethnography",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1892,
+      "originalPublication": "パリ、第8回国際アメリカニスト会議録（1890年会期）、Ernest Leroux、1892年、556–564頁",
+      "sourceEdition": "Daniel G. Brinton, “Chontales and Popolucas: A Contribution to Mexican Ethnography,” Congrès international des Américanistes, Compte-rendu de la huitième session, tenue à Paris en 1890, Paris: Ernest Leroux, 1892, pp. 556–564.",
+      "sourceProvider": "University of Illinois Urbana-Champaign所蔵の第8回国際アメリカニスト会議録をInternet Archiveが公開する全冊画像（identifier: proceedings1890inte）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/proceedings1890inte"
+      },
+      "rights": "1892年刊の原著本文はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-words-anahuac-nahuatl-1893",
+      "recordClass": "short-work",
+      "title": "「アナワク」と「ナワトル」という語について",
+      "originalTitle": "On the Words “Anahuac” and “Nahuatl”",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1893,
+      "originalPublication": "シカゴ、『The American Antiquarian and Oriental Journal』第15巻第6号、1893年11月、377–382頁",
+      "sourceEdition": "Daniel G. Brinton, “On the Words ‘Anahuac’ and ‘Nahuatl’,” The American Antiquarian and Oriental Journal, vol. 15, no. 6, November 1893, pp. 377–382.",
+      "sourceProvider": "Internet Archiveが公開する同誌第15巻第6号の逐号画像（identifier: sim_american-antiquarian-and-oriental-journal_1893-11_15_6）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/sim_american-antiquarian-and-oriental-journal_1893-11_15_6"
+      },
+      "rights": "1893年刊の原著本文はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-written-language-ancient-mexicans-1889",
+      "recordClass": "short-work",
+      "title": "古代メキシコ人の書記言語",
+      "originalTitle": "The Written Language of the Ancient Mexicans",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1889,
+      "originalPublication": "フィラデルフィア、『Transactions of the American Philosophical Society』第17巻、53–58頁；1892年5月20日再録の独立抜刷",
+      "sourceEdition": "Daniel G. Brinton, “The Written Language of the Ancient Mexicans,” Transactions of the American Philosophical Society, vol. 17, pp. 53–58; separate reprint dated May 20, 1892.",
+      "sourceProvider": "University of Toronto, Robarts Library所蔵の独立抜刷をInternet Archiveが公開する画像（identifier: writtenlanguageo00brinuoft）を底本としました。ブリントン自身は本論文の発表年を1889年としています。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/writtenlanguageo00brinuoft"
+      },
+      "rights": "原著本文と1892年再録の独立抜刷はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
     }
   ],
   "works": [

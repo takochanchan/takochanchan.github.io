@@ -848,6 +848,24 @@
       "sha256": "2dc6da08d2ac7f643629d6da88c1f39953b80f90b2defe4cf609a37b78424b29"
     },
     {
+      "path": "publications/brinton-ancient-phonetic-alphabet-yucatan-1870/Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.epub",
+      "size": 369097,
+      "sha256": "34cfbe8274ebce1c32fadea74a4455ed52e15eb40108b5b641e9aaa56ceba34f"
+    },
+    {
+      "path": "publications/brinton-ancient-phonetic-alphabet-yucatan-1870/Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.pdf",
+      "size": 744619,
+      "sha256": "a7b00292d8027fbfd9d8201e6ff08339d3b0fc87f91b6ab62b682a93e383423e"
+    },
+    {
+      "path": "publications/brinton-ancient-phonetic-alphabet-yucatan-1870/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-ancient-phonetic-alphabet-yucatan-1870/cover.jpg",
+      "size": 125995,
+      "sha256": "b9bdb038cbf01a580d2547d4d6c79b79a7d8cfc68e73392fc4d617d180c6d33b"
+    },
+    {
       "path": "publications/brinton-chane-abal-1888/Daniel_G_Brinton_On_the_Chane_Abal_Tribe_and_Dialect_of_Chiapas_1888_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Chane_Abal_Tribe_and_Dialect_of_Chiapas_1888_Japanese_Complete_Translation.epub",
       "size": 95630,
@@ -882,6 +900,24 @@
       "url": "https://takochanchan.github.io/publications/brinton-chilan-balam-1882/cover.jpg",
       "size": 62610,
       "sha256": "b594a1810ab7eed3797dc27ea80ff1e7a1d9609c0453567580b160248457e9fd"
+    },
+    {
+      "path": "publications/brinton-chontales-popolucas-1892/Daniel_G_Brinton_Chontales_and_Popolucas_1892_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Chontales_and_Popolucas_1892_Japanese_Complete_Translation.epub",
+      "size": 115800,
+      "sha256": "503b8d28bf5d5638db53dbd5063e6940133c4c7ac0bb6700d3cfba8599ea9811"
+    },
+    {
+      "path": "publications/brinton-chontales-popolucas-1892/Daniel_G_Brinton_Chontales_and_Popolucas_1892_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Chontales_and_Popolucas_1892_Japanese_Complete_Translation.pdf",
+      "size": 477647,
+      "sha256": "0a87e2a961c13b1d733b010e1a539db7dd660a78a68446d0d760bfe5c98d635f"
+    },
+    {
+      "path": "publications/brinton-chontales-popolucas-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-chontales-popolucas-1892/cover.jpg",
+      "size": 125511,
+      "sha256": "185b18c57ec3bf64408d914c8f765aefdcda8ed2e2251b8847b2a187bb333cd4"
     },
     {
       "path": "publications/brinton-cintla-1896/Daniel_G_Brinton_The_Battle_and_the_Ruins_of_Cintla_1896_Japanese_Complete_Translation.epub",
@@ -1028,6 +1064,24 @@
       "sha256": "239ec2e086d45147f52a885cf456679a1f0779cf9e44e708c479c3c9cea76652"
     },
     {
+      "path": "publications/brinton-nahuatl-version-sahagun-historia-1890/Daniel_G_Brinton_On_the_Nahuatl_Version_of_Sahaguns_Historia_1890_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Nahuatl_Version_of_Sahaguns_Historia_1890_Japanese_Complete_Translation.epub",
+      "size": 146950,
+      "sha256": "fa53093d48a6edeb8508514658849603e33eee275c1e6007d43ae6e1e581eacc"
+    },
+    {
+      "path": "publications/brinton-nahuatl-version-sahagun-historia-1890/Daniel_G_Brinton_On_the_Nahuatl_Version_of_Sahaguns_Historia_1890_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Nahuatl_Version_of_Sahaguns_Historia_1890_Japanese_Complete_Translation.pdf",
+      "size": 514907,
+      "sha256": "09628e8af5b1b6bc36858582cd0f46eaa5167f27b7e405171afc652f292b2f38"
+    },
+    {
+      "path": "publications/brinton-nahuatl-version-sahagun-historia-1890/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-nahuatl-version-sahagun-historia-1890/cover.jpg",
+      "size": 158330,
+      "sha256": "fe74feeaee4787e67d306331f4a359db77e4dcf0a40c9606da4de58b9936fe77"
+    },
+    {
       "path": "publications/brinton-native-calendar-1893/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.epub",
       "size": 136546,
@@ -1044,6 +1098,42 @@
       "url": "https://takochanchan.github.io/publications/brinton-native-calendar-1893/cover.jpg",
       "size": 81653,
       "sha256": "3e3b2da0a87aa5ca9aa95ee23edaf13b308a415c7ff799acb06a701bfa9bba9c"
+    },
+    {
+      "path": "publications/brinton-words-anahuac-nahuatl-1893/Daniel_G_Brinton_On_the_Words_Anahuac_and_Nahuatl_1893_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Words_Anahuac_and_Nahuatl_1893_Japanese_Complete_Translation.epub",
+      "size": 101446,
+      "sha256": "77bf69f5e348372ea9d6004fed5c53f48daa6a4cd33e8c9ce5a370f7c65b9f8c"
+    },
+    {
+      "path": "publications/brinton-words-anahuac-nahuatl-1893/Daniel_G_Brinton_On_the_Words_Anahuac_and_Nahuatl_1893_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Words_Anahuac_and_Nahuatl_1893_Japanese_Complete_Translation.pdf",
+      "size": 453748,
+      "sha256": "ee89cd4b1bb436c947cc5b7414f5db912fab4ed0ccb34f898f28f66f1f17a6af"
+    },
+    {
+      "path": "publications/brinton-words-anahuac-nahuatl-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-words-anahuac-nahuatl-1893/cover.jpg",
+      "size": 112955,
+      "sha256": "c556f2bc1049101f357dfd5c07ff1fe7498978fea5319ed7cc6fe6bb3f2f19d3"
+    },
+    {
+      "path": "publications/brinton-written-language-ancient-mexicans-1889/Daniel_G_Brinton_The_Written_Language_of_the_Ancient_Mexicans_1889_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Written_Language_of_the_Ancient_Mexicans_1889_Japanese_Complete_Translation.epub",
+      "size": 105764,
+      "sha256": "1fe7b1447f34f0fb92dcb42e8b44efff71065bfab535a231f03c8f1aaa823dbb"
+    },
+    {
+      "path": "publications/brinton-written-language-ancient-mexicans-1889/Daniel_G_Brinton_The_Written_Language_of_the_Ancient_Mexicans_1889_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Written_Language_of_the_Ancient_Mexicans_1889_Japanese_Complete_Translation.pdf",
+      "size": 393938,
+      "sha256": "e23e6294290f8fc03ab2e11d1073160cb28ec0606e77eac881a1a278a620c8ed"
+    },
+    {
+      "path": "publications/brinton-written-language-ancient-mexicans-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-written-language-ancient-mexicans-1889/cover.jpg",
+      "size": 119661,
+      "sha256": "5dc4fd7206adda915cc61f784e2494f3ffa34e6f8a6e9396ee66eff73b5a1344"
     },
     {
       "path": "publications/brinton-xinca-1885/Daniel_G_Brinton_On_the_Xinca_Indians_of_Guatemala_1885_Japanese_Complete_Translation.epub",

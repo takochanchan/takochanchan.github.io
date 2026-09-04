@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 348);
+  assert.equal(publications.length, 353);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 71);
+  assert.equal(counts.get("002"), 76);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -162,6 +162,11 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "brinton-chane-abal-1888",
       "brinton-mangue-1886",
       "brinton-maya-inscriptions-1894",
+      "brinton-ancient-phonetic-alphabet-yucatan-1870",
+      "brinton-nahuatl-version-sahagun-historia-1890",
+      "brinton-chontales-popolucas-1892",
+      "brinton-words-anahuac-nahuatl-1893",
+      "brinton-written-language-ancient-mexicans-1889",
     ],
   );
   assert.equal(
@@ -1544,7 +1549,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 172);
-  assert.equal(shortPublications.length, 176);
+  assert.equal(shortPublications.length, 181);
   assert.equal(shortPublicationAuthors.length, 41);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -1688,6 +1693,11 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "brinton-chane-abal-1888",
       "brinton-mangue-1886",
       "brinton-maya-inscriptions-1894",
+      "brinton-ancient-phonetic-alphabet-yucatan-1870",
+      "brinton-nahuatl-version-sahagun-historia-1890",
+      "brinton-chontales-popolucas-1892",
+      "brinton-words-anahuac-nahuatl-1893",
+      "brinton-written-language-ancient-mexicans-1889",
       "editorial-age-nicaragua-footprints-1889",
       "crawford-neolithic-man-nicaragua-1891",
       "stone-northern-highland-tribes-lenca-1948",
@@ -2676,7 +2686,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">172<\/strong>件/);
-  assert.match(html, /id="paper-match-count">176<\/strong>件/);
+  assert.match(html, /id="paper-match-count">181<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
