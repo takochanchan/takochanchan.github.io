@@ -27,7 +27,7 @@ jobs:
             ca2a6e1354d57b73d71ffa4d499ab78396072c68acee7218f51cd4afa39a2aeb  Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.epub
             cb805029960725ebf230a7845ec8bbbde93b6c54c7a454634ed5015dc460d90b  Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.pdf
         run: |
-          mkdir -p release-output verified
+          mkdir -p release-output
           for first in release-staging/chunks/*.part000; do
             name="${first#release-staging/chunks/}"
             name="${name%.part000}"
@@ -40,15 +40,11 @@ jobs:
           gh release upload publications-current release-output/* --clobber
           sleep 25
           gh release view publications-current --json assets --jq '.assets[].name'
+          release_json="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current")"
           while read -r checksum name; do
-            asset_id="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current" \
-              --jq ".assets[] | select(.name == \"$name\") | .id")"
-            test -n "$asset_id"
-            echo "Verifying release asset: $name (id $asset_id)"
-            gh api "repos/$GITHUB_REPOSITORY/releases/assets/$asset_id" \
-              -H "Accept: application/octet-stream" > "verified/$name"
+            actual_digest="$(jq -r --arg name "$name" '.assets[] | select(.name == $name) | .digest' <<< "$release_json")"
+            actual_state="$(jq -r --arg name "$name" '.assets[] | select(.name == $name) | .state' <<< "$release_json")"
+            test "$actual_digest" = "sha256:$checksum"
+            test "$actual_state" = "uploaded"
+            echo "$name: remote GitHub digest OK"
           done <<< "$EXPECTED"
-          (
-            cd verified
-            printf '%s\n' "$EXPECTED" | sha256sum -c -
-          )
