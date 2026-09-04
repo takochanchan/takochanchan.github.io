@@ -38,6 +38,8 @@ jobs:
             printf '%s\n' "$EXPECTED" | sha256sum -c -
           )
           gh release upload publications-current release-output/* --clobber
+          sleep 25
+          gh release view publications-current --json assets --jq '.assets[].name'
           while read -r checksum name; do
             gh release download publications-current --pattern "$name" --dir verified
           done <<< "$EXPECTED"
