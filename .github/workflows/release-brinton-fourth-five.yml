@@ -28,18 +28,9 @@ jobs:
             cb805029960725ebf230a7845ec8bbbde93b6c54c7a454634ed5015dc460d90b  Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.pdf
         run: |
           mkdir -p release-output verified
-          for name in \
-            Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.epub \\
-            Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.pdf \\
-            Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.epub \\
-            Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.pdf \\
-            Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.epub \\
-            Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.pdf \\
-            Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.epub \\
-            Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.pdf \\
-            Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.epub \\
-            Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.pdf
-          do
+          for first in release-staging/chunks/*.part000; do
+            name="${first#release-staging/chunks/}"
+            name="${name%.part000}"
             cat release-staging/chunks/"$name".part* > release-output/"$name"
           done
           (
