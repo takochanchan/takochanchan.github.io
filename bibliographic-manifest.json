@@ -6442,6 +6442,101 @@
       "rights": "1857年に米国で刊行された原著本文はパブリックドメインです。Latin American Studiesの紙面画像には明示的な再利用許諾を確認できないため、本版には画像を収録していません。",
       "publishedDate": "2026-09-04",
       "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-native-calendar-1893",
+      "recordClass": "short-work",
+      "title": "中央アメリカおよびメキシコの先住民暦",
+      "originalTitle": "The Native Calendar of Central America and Mexico",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1893,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第31巻第142号、1893年、258–314頁",
+      "sourceEdition": "Daniel G. Brinton, “The Native Calendar of Central America and Mexico,” Proceedings of the American Philosophical Society, vol. 31, no. 142, 1893, pp. 258–314; separate issue, Philadelphia: MacCalla & Company, 1893.",
+      "sourceProvider": "American Philosophical Society刊本のJSTOR収録画像（stable 982967）を主底本とし、Brigham Young University, Harold B. Lee Library所蔵の独立抜刷をInternet Archive公開画像（identifier: nativecalendarof00brin）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/982967"
+      },
+      "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-xinca-1885",
+      "recordClass": "short-work",
+      "title": "グアテマラのシンカ・インディアンの言語と民族学的位置について",
+      "originalTitle": "On the Language and Ethnologic Position of the Xinca Indians of Guatemala",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1885,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第22巻第118号、1885年、89–97頁",
+      "sourceEdition": "Daniel G. Brinton, “On the Language and Ethnologic Position of the Xinca Indians of Guatemala,” Proceedings of the American Philosophical Society, vol. 22, no. 118, 1885, pp. 89–97; separate issue titled On the Xinca Indians of Guatemala.",
+      "sourceProvider": "American Philosophical Society刊本のJSTOR収録画像（stable 982669）を主底本とし、University of California Libraries／Bancroft Library所蔵の独立抜刷をInternet Archive公開画像（identifier: onxincaindiansof00brinrich）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/982669"
+      },
+      "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-matagalpan-1895",
+      "recordClass": "short-work",
+      "title": "中央アメリカのマタガルパ語族",
+      "originalTitle": "The Matagalpan Linguistic Stock of Central America",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1895,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第34巻第149号、1895年、403–415頁",
+      "sourceEdition": "Daniel G. Brinton, “The Matagalpan Linguistic Stock of Central America,” Proceedings of the American Philosophical Society, vol. 34, no. 149, 1895, pp. 403–415.",
+      "sourceProvider": "American Philosophical Society刊本のJSTOR収録画像（stable 982898）を主底本とし、BioStor書誌 reference 203505から提供されるInternet Archive論文別画像（identifier: biostor-203505）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/982898"
+      },
+      "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-alaguilac-1887",
+      "recordClass": "short-work",
+      "title": "グアテマラのいわゆるアラグイラック語について",
+      "originalTitle": "On the So-Called Alaguilac Language of Guatemala",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1887,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第24巻第126号、1887年、366–377頁",
+      "sourceEdition": "Daniel G. Brinton, “On the So-Called Alaguilac Language of Guatemala,” Proceedings of the American Philosophical Society, vol. 24, no. 126, 1887, pp. 366–377.",
+      "sourceProvider": "American Philosophical Society刊本のJSTOR収録画像（stable 983080）を主底本とし、BioStor書誌 reference 203251から提供されるInternet Archive論文別画像（identifier: biostor-203251）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/983080"
+      },
+      "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-landa-editions-1887",
+      "recordClass": "short-work",
+      "title": "ディエゴ・デ・ランダ著作諸版への批判的考察",
+      "originalTitle": "Critical Remarks on the Editions of Diego de Landa’s Writings",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1887,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第24巻第125号、1887年、1–8頁",
+      "sourceEdition": "Daniel G. Brinton, “Critical Remarks on the Editions of Diego de Landa’s Writings,” Proceedings of the American Philosophical Society, vol. 24, no. 125, 1887, pp. 1–8.",
+      "sourceProvider": "American Philosophical Society刊本のJSTOR収録画像（stable 983120）を主底本とし、Library of Congress所蔵の独立抜刷をInternet Archive公開画像（identifier: criticalremarkso00brin）で照合しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.jstor.org/stable/983120"
+      },
+      "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
     }
   ],
   "works": [

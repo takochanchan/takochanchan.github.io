@@ -164,6 +164,24 @@
       "sha256": "82ce9c607f6508a6ca6bad2f498d125371b4d930f2cbec883e3c20e543da9f64"
     },
     {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
+      "size": 64920,
+      "sha256": "de4421d755e09d79377fb43e13d368132557efe77b03b935699f5442a83f2bf4"
+    },
+    {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
+      "size": 1095360,
+      "sha256": "93d4551b474e1c3a1f4693e784d1f247178f11dadc8a08e4e819778d0b86b353"
+    },
+    {
+      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
+      "size": 9189401,
+      "sha256": "4401283c30260dd9790ffffe724df3238c420f4606856ae63f4ed389c894c9c2"
+    },
+    {
       "path": "publications/barraza-anastasio-aquino-2001/cover.jpg",
       "url": "https://takochanchan.github.io/publications/barraza-anastasio-aquino-2001/cover.jpg",
       "size": 63661,
@@ -794,6 +812,24 @@
       "sha256": "670f3bfb433134efc7ce34acf79a0dcdd7fd21c18a25802bdd445ad53591ff10"
     },
     {
+      "path": "publications/brinton-alaguilac-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-alaguilac-1887/cover.jpg",
+      "size": 84384,
+      "sha256": "037631e8c961bd53807c84c0db7146317ebfdfb1c13622e2046aa4e70e741e72"
+    },
+    {
+      "path": "publications/brinton-alaguilac-1887/Daniel_G_Brinton_On_the_So_Called_Alaguilac_Language_of_Guatemala_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_So_Called_Alaguilac_Language_of_Guatemala_1887_Japanese_Complete_Translation.epub",
+      "size": 95704,
+      "sha256": "422f14988ada8db217c86aab0d7c65b1a778e9052d970810ae061cec3f04f7be"
+    },
+    {
+      "path": "publications/brinton-alaguilac-1887/Daniel_G_Brinton_On_the_So_Called_Alaguilac_Language_of_Guatemala_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_So_Called_Alaguilac_Language_of_Guatemala_1887_Japanese_Complete_Translation.pdf",
+      "size": 713586,
+      "sha256": "231cd0100550779e88f10ad633b070e663aaa7b239a3ce8bf44a8f34a2861ca6"
+    },
+    {
       "path": "publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
       "url": "https://takochanchan.github.io/publications/brinton-ancient-human-footprint-nicaragua-1887/cover.jpg",
       "size": 155198,
@@ -830,6 +866,60 @@
       "sha256": "5dd87285de177c1148bba3ec53d1af9ca4e10257ea36f8f5717c3d388eb2c031"
     },
     {
+      "path": "publications/brinton-essays-americanist-1890/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-essays-americanist-1890/cover.jpg",
+      "size": 34704,
+      "sha256": "09b228b617275b4790fcd60edade5d24d43a0b8ead756f8eb482afee487e09f7"
+    },
+    {
+      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
+      "size": 13833184,
+      "sha256": "cc6fc4365dc4bf2e85257311e6c89bdf7d21b30dd03ef5654822989e3d7a9c33"
+    },
+    {
+      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
+      "size": 11066103,
+      "sha256": "66d248f617221b445d7d4fe09e04859818f3b6c685d7edf927c9d6d505d348c3"
+    },
+    {
+      "path": "publications/brinton-landa-editions-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-landa-editions-1887/cover.jpg",
+      "size": 78879,
+      "sha256": "bf8b2a86d3fca5f6c7242e8d41cf8fcd0c697156b9ab0314b89b7a6768651ff2"
+    },
+    {
+      "path": "publications/brinton-landa-editions-1887/Daniel_G_Brinton_Critical_Remarks_on_the_Editions_of_Diego_de_Landa_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Critical_Remarks_on_the_Editions_of_Diego_de_Landa_1887_Japanese_Complete_Translation.epub",
+      "size": 88019,
+      "sha256": "9d508884a9feeded54cb2be571b0fd7220bf11248e76658f6569f19bbd1f9b1e"
+    },
+    {
+      "path": "publications/brinton-landa-editions-1887/Daniel_G_Brinton_Critical_Remarks_on_the_Editions_of_Diego_de_Landa_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Critical_Remarks_on_the_Editions_of_Diego_de_Landa_1887_Japanese_Complete_Translation.pdf",
+      "size": 458869,
+      "sha256": "f71991d635411f6bd3a87f435615d3ecff1b75a77a3e6be6a24286b577ab9630"
+    },
+    {
+      "path": "publications/brinton-matagalpan-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-matagalpan-1895/cover.jpg",
+      "size": 75331,
+      "sha256": "3a0e09a4ba097704c1a0b3931ffa9ef598b4315d8107191e71641c564e6becb8"
+    },
+    {
+      "path": "publications/brinton-matagalpan-1895/Daniel_G_Brinton_The_Matagalpan_Linguistic_Stock_of_Central_America_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Matagalpan_Linguistic_Stock_of_Central_America_1895_Japanese_Complete_Translation.epub",
+      "size": 88982,
+      "sha256": "740d803d7f65d241a6e42d6756d78b2887b919f90789ba291dd856aaf1ba8ddd"
+    },
+    {
+      "path": "publications/brinton-matagalpan-1895/Daniel_G_Brinton_The_Matagalpan_Linguistic_Stock_of_Central_America_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Matagalpan_Linguistic_Stock_of_Central_America_1895_Japanese_Complete_Translation.pdf",
+      "size": 964501,
+      "sha256": "cf95718c496d47e1a08323bf2585cad7492ac6ce5045197e5e6eeb02266b6078"
+    },
+    {
       "path": "publications/brinton-nagualism-1894/cover.jpg",
       "url": "https://takochanchan.github.io/publications/brinton-nagualism-1894/cover.jpg",
       "size": 25800,
@@ -846,6 +936,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Nagualism_1894_Japanese_Complete_Translation.pdf",
       "size": 1916781,
       "sha256": "49fbd019cc65e881ee2d8479a6ebab129b7cb5fb727db06535094879a6ebdda9"
+    },
+    {
+      "path": "publications/brinton-native-calendar-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-native-calendar-1893/cover.jpg",
+      "size": 81653,
+      "sha256": "3e3b2da0a87aa5ca9aa95ee23edaf13b308a415c7ff799acb06a701bfa9bba9c"
+    },
+    {
+      "path": "publications/brinton-native-calendar-1893/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.epub",
+      "size": 136546,
+      "sha256": "ea7db54b61d6935410292f2939f900dcee5230ffdebb5ac68828535f26f27efb"
+    },
+    {
+      "path": "publications/brinton-native-calendar-1893/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Native_Calendar_of_Central_America_and_Mexico_1893_Japanese_Complete_Translation.pdf",
+      "size": 1750322,
+      "sha256": "919a542210929131649e0ecdf96f920a969ee74ca942d25035fb9b30ece1d831"
+    },
+    {
+      "path": "publications/brinton-xinca-1885/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-xinca-1885/cover.jpg",
+      "size": 86044,
+      "sha256": "ee60f20c7668e7997d926c071a7b55bc706ffefa66fc9b24d189f69b73e75693"
+    },
+    {
+      "path": "publications/brinton-xinca-1885/Daniel_G_Brinton_On_the_Xinca_Indians_of_Guatemala_1885_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Xinca_Indians_of_Guatemala_1885_Japanese_Complete_Translation.epub",
+      "size": 97002,
+      "sha256": "77e9a6085f2296daa043e1eb9518a43c362fa5d43c00797120373f3fbb9e4266"
+    },
+    {
+      "path": "publications/brinton-xinca-1885/Daniel_G_Brinton_On_the_Xinca_Indians_of_Guatemala_1885_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_On_the_Xinca_Indians_of_Guatemala_1885_Japanese_Complete_Translation.pdf",
+      "size": 704847,
+      "sha256": "a06d5c046201ade7513a8da42dd6007bc5b09319d60c7eda5fa96ad487de334a"
     },
     {
       "path": "publications/bury-bishop-amongst-bananas-1911/cover.jpg",
@@ -2630,6 +2756,24 @@
       "sha256": "76d178bda0be52bd0d83d7c46a68b3fc147f9ffea3f866f7bd62cdfc9ad76850"
     },
     {
+      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
+      "size": 180530,
+      "sha256": "2d9f1554bda9277b950708cc66a3436a79e9236c1eb82be767ca74e19fa5681e"
+    },
+    {
+      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
+      "size": 565742,
+      "sha256": "7de3a58e31ccfb86387dd37d7bdcd6349eda0769593cf67abcc176e5001a1af3"
+    },
+    {
+      "path": "publications/henningsen-official-report-granada-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/henningsen-official-report-granada-1857/cover.jpg",
+      "size": 180797,
+      "sha256": "124a80ae270bd9c76375185f1607e2486aa3fade964f1f76badbb316aee7c93e"
+    },
+    {
       "path": "publications/historia-tolteca-chichimeca/cover.jpg",
       "url": "https://takochanchan.github.io/publications/historia-tolteca-chichimeca/cover.jpg",
       "size": 37842,
@@ -2828,6 +2972,24 @@
       "sha256": "5e848c0c7df26415cea5eaccb0f0796de2c65a87f406b386fd09cd4b94f4aee3"
     },
     {
+      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/cover.jpg",
+      "size": 38056,
+      "sha256": "1bb0137f332ab6140224b5c01c27495b06c559943734552d5cc77a9d53309dd7"
+    },
+    {
+      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.epub",
+      "size": 32007,
+      "sha256": "1370acdad829b43824f29716106f221bc828b79e9a816605c9c5bdb6537b740b"
+    },
+    {
+      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.pdf",
+      "size": 186572,
+      "sha256": "c0695c959dfc7663f3183f7d8399d8fd31906e0f5ba70d4c5c590d34fbfca012"
+    },
+    {
       "path": "publications/larde-cronologia-arqueologica-el-salvador-1926/cover.jpg",
       "url": "https://takochanchan.github.io/publications/larde-cronologia-arqueologica-el-salvador-1926/cover.jpg",
       "size": 67653,
@@ -2882,6 +3044,24 @@
       "sha256": "3723a59a437a611c75ce3e231f2f9e8a9eec36492199db58661dea94eb270217"
     },
     {
+      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larde-origenes-san-salvador-cuzcatlan-1925/cover.jpg",
+      "size": 64394,
+      "sha256": "37d5c85b097a3ff0c0909bba78dc8cfe4c00716fdf89f60b4651e0575799fc47"
+    },
+    {
+      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub",
+      "size": 132373,
+      "sha256": "6b04589c22b84ac9de355ecc07349c4ddce0a785908746a7c00e119724b714b9"
+    },
+    {
+      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf",
+      "size": 1287012,
+      "sha256": "75d2557c9c2536db1f9e7c8ec8edac41d70b89a37eeac5cbcc91536ad7844872"
+    },
+    {
       "path": "publications/larde-poblacion-el-salvador-1921/cover.jpg",
       "url": "https://takochanchan.github.io/publications/larde-poblacion-el-salvador-1921/cover.jpg",
       "size": 82119,
@@ -2916,6 +3096,60 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Region_arqueologica_Chalchuapa_1926_Japanese_Complete_Translation.pdf",
       "size": 470210,
       "sha256": "9fde4e3acc9b1e8ebbaaf159671dc2643ce1d806ac431551bd163c6d4b5be882"
+    },
+    {
+      "path": "publications/larde-ruinas-cihuatan-1927/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larde-ruinas-cihuatan-1927/cover.jpg",
+      "size": 81993,
+      "sha256": "03ceba0436e4e46da3330f4aff4afa18360f06daf0aa9f13986c2132594b2d48"
+    },
+    {
+      "path": "publications/larde-ruinas-cihuatan-1927/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.epub",
+      "size": 79213,
+      "sha256": "0e6fecbcd4045e9d52917c41a6bf8b10585de61a73b039bcfe60a1c69000539e"
+    },
+    {
+      "path": "publications/larde-ruinas-cihuatan-1927/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.pdf",
+      "size": 191748,
+      "sha256": "7d15c7512de04e913f6da41d4c5a7ad7396c3d07691f205d22e63059700601dd"
+    },
+    {
+      "path": "publications/larde-terremoto-septiembre-1915-1916/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larde-terremoto-septiembre-1915-1916/cover.jpg",
+      "size": 81817,
+      "sha256": "e2eabb11799cbf3fa386b30087117b26f9145d8382644c04674ffa46ba80c5d7"
+    },
+    {
+      "path": "publications/larde-terremoto-septiembre-1915-1916/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub",
+      "size": 156399,
+      "sha256": "757f4df2c0c6d870269394e4bddf1a03281bb96824bafeb666f53714323a558e"
+    },
+    {
+      "path": "publications/larde-terremoto-septiembre-1915-1916/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf",
+      "size": 1434354,
+      "sha256": "ce6541f1b0dd342e741cc0465d7a3c66bce9825cca6c6fa333bf0557c1de4911"
+    },
+    {
+      "path": "publications/larde-volcan-izalco-1922-1925/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larde-volcan-izalco-1922-1925/cover.jpg",
+      "size": 36852,
+      "sha256": "311af465158bf7cf7af19b2d3be81bc701c9d2a30f1c4e47d3f23a04d3b2d781"
+    },
+    {
+      "path": "publications/larde-volcan-izalco-1922-1925/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.epub",
+      "size": 30662,
+      "sha256": "23f4ca8c4c1f55be1b314349dba45a4b29714a85c89e4cb4a729629140831fe8"
+    },
+    {
+      "path": "publications/larde-volcan-izalco-1922-1925/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.pdf",
+      "size": 195478,
+      "sha256": "6132c1e0cbc5bef1af9c8ac7e2a7f31ecf3adcfdd8db1b0520e26e5e3993dc19"
     },
     {
       "path": "publications/larde-volcan-izalco-1923/cover.jpg",
@@ -3242,6 +3476,24 @@
       "sha256": "8efe000f65c35509237b5ffce39b3fbdc0f5e5fc8fed98e969657cfac8f37d1c"
     },
     {
+      "path": "publications/montufar-walker-centro-america-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-walker-centro-america-1887/cover.jpg",
+      "size": 31231,
+      "sha256": "8257487ba01d10cd116c94388ef85669fddd516e57ceef458e6f6243b9345b7f"
+    },
+    {
+      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
+      "size": 2746773,
+      "sha256": "488c3c4d00f4693b9e215b40576ada419d92b86759c4ed1268535d59e885809e"
+    },
+    {
+      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
+      "size": 11084867,
+      "sha256": "ded6b843a85849c3f460f23ec62be11f6ce79cbc532ffe331e70b16df30af9a7"
+    },
+    {
       "path": "publications/moran-cholti-1695/cover.jpg",
       "url": "https://takochanchan.github.io/publications/moran-cholti-1695/cover.jpg",
       "size": 49874,
@@ -3474,6 +3726,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Peralta_Costa_Rica_Costa_Mosquitos_1898_Japanese_Complete_Translation.pdf",
       "size": 4990868,
       "sha256": "2d9d3c3de2e190a89e5bf629627133de5807aa6c2036f77ccb25e75aa9b126bb"
+    },
+    {
+      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/cover.jpg",
+      "size": 55504,
+      "sha256": "3e8e2f58b9c41bb6cb333a9504d4229dfd5c5c256d539a0b7cff0c8abb2f20ee"
+    },
+    {
+      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.epub",
+      "size": 389442,
+      "sha256": "3d0efd081dd67339d7c95006b22bc42c3806aca9975b2ae391965eaa3657941f"
+    },
+    {
+      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.pdf",
+      "size": 4321006,
+      "sha256": "d79d711429fa0558d70c668b672b4815661d0b52a76f71795ffc8abe2400b982"
     },
     {
       "path": "publications/perigny-amerique-centrale-1911/cover.jpg",
@@ -4430,6 +4700,24 @@
       "sha256": "7152f60968561e9631b534f69e1a04a8aff7accc42334feb772e60cb0f4c2e2a"
     },
     {
+      "path": "publications/rabasa-estado-chiapas-1895/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rabasa-estado-chiapas-1895/cover.jpg",
+      "size": 46764,
+      "sha256": "b2fb3f8a9f5386f4cde4435d2a74a64eaa9068bb442b91ce2be01e46c9cc0b08"
+    },
+    {
+      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
+      "size": 15221041,
+      "sha256": "7fc4f431b100ddc32e6a34a6943d1343e249d6a379210e5bacfecc7ffe53d623"
+    },
+    {
+      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
+      "size": 5847198,
+      "sha256": "65cde9ab6cea218ac07595d935b45f7b158427eac822ca8f0186f21a856d2ce7"
+    },
+    {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
       "size": 17224938,
@@ -5348,6 +5636,24 @@
       "sha256": "40973204ef7e2bd048deebd193d2494210aeb26128a29978a820a89eba2a26ad"
     },
     {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
+      "size": 125138,
+      "sha256": "dc9f4d887c4bb1726303e55c0e202e632ba4e1f96b516dba7faaead983588043"
+    },
+    {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
+      "size": 4762732,
+      "sha256": "e67b5f6881c79cfc72c3565408e235cf1a0364202ec180e8b8fa244b5428cd0c"
+    },
+    {
+      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
+      "size": 1902352,
+      "sha256": "6e28479299a83f2d93e41626341574270087f14783558d8c90150adcc04a70ec"
+    },
+    {
       "path": "publications/strangeways-mosquito-shore-1822/cover.jpg",
       "url": "https://takochanchan.github.io/publications/strangeways-mosquito-shore-1822/cover.jpg",
       "size": 42272,
@@ -5726,6 +6032,42 @@
       "sha256": "011a69a6c4145965043b1ec79622a4d37958fd0fb5bceefd5be1dfb82c02992e"
     },
     {
+      "path": "publications/walker-war-nicaragua-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/walker-war-nicaragua-1860/cover.jpg",
+      "size": 75890,
+      "sha256": "31a9d6c5fad647a00cb8d07022b9a57f27010703e2a08605446f54abdb14695a"
+    },
+    {
+      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
+      "size": 4435074,
+      "sha256": "133affc973edd3a07778b0b785a36ab5f3ebe0c2424ce85beb23f48e85d9b7b6"
+    },
+    {
+      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
+      "size": 3814537,
+      "sha256": "fcc5670c7f02dbb46a257777340c4a04e5272e810c1a9e7456596c9f1f478973"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
+      "size": 70117,
+      "sha256": "15586dfd580f7bd7218355e097016153383e9039d123ab74484545e220113b91"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
+      "size": 5223139,
+      "sha256": "368df580496a80b665b3ee2ff6935b1ac7eb62da561cbec7de504e9b00873e38"
+    },
+    {
+      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
+      "size": 4239074,
+      "sha256": "e2eda234949301ceee04d1bc8cb990fbca34abc03fb6a24af2b5db2634a291d7"
+    },
+    {
       "path": "publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
       "url": "https://takochanchan.github.io/publications/williams-anglo-american-isthmian-diplomacy-1916/cover.jpg",
       "size": 64513,
@@ -5816,184 +6158,10 @@
       "sha256": "434f04ca39cab581e1375fdd7503266dacaf1de6c29e819a51c15f4d225ef09c"
     },
     {
-      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.epub",
-      "size": 15221041,
-      "sha256": "7fc4f431b100ddc32e6a34a6943d1343e249d6a379210e5bacfecc7ffe53d623"
-    },
-    {
-      "path": "publications/rabasa-estado-chiapas-1895/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ramon_Rabasa_El_Estado_de_Chiapas_1895_Japanese_Complete_Translation.pdf",
-      "size": 5847198,
-      "sha256": "65cde9ab6cea218ac07595d935b45f7b158427eac822ca8f0186f21a856d2ce7"
-    },
-    {
-      "path": "publications/rabasa-estado-chiapas-1895/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/rabasa-estado-chiapas-1895/cover.jpg",
-      "size": 46764,
-      "sha256": "b2fb3f8a9f5386f4cde4435d2a74a64eaa9068bb442b91ce2be01e46c9cc0b08"
-    },
-    {
-      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.epub",
-      "size": 2746773,
-      "sha256": "488c3c4d00f4693b9e215b40576ada419d92b86759c4ed1268535d59e885809e"
-    },
-    {
-      "path": "publications/montufar-walker-centro-america-1887/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Lorenzo_Montufar_Walker_en_Centro_America_1887_Japanese_Complete_Translation.pdf",
-      "size": 11084867,
-      "sha256": "ded6b843a85849c3f460f23ec62be11f6ce79cbc532ffe331e70b16df30af9a7"
-    },
-    {
-      "path": "publications/montufar-walker-centro-america-1887/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/montufar-walker-centro-america-1887/cover.jpg",
-      "size": 31231,
-      "sha256": "8257487ba01d10cd116c94388ef85669fddd516e57ceef458e6f6243b9345b7f"
-    },
-    {
-      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.epub",
-      "size": 1095360,
-      "sha256": "93d4551b474e1c3a1f4693e784d1f247178f11dadc8a08e4e819778d0b86b353"
-    },
-    {
-      "path": "publications/barberena-historia-el-salvador-1914-1917/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Santiago_I_Barberena_Historia_de_El_Salvador_1914_1917_Japanese_Complete_Translation.pdf",
-      "size": 9189401,
-      "sha256": "4401283c30260dd9790ffffe724df3238c420f4606856ae63f4ed389c894c9c2"
-    },
-    {
-      "path": "publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/barberena-historia-el-salvador-1914-1917/cover.jpg",
-      "size": 64920,
-      "sha256": "de4421d755e09d79377fb43e13d368132557efe77b03b935699f5442a83f2bf4"
-    },
-    {
-      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.epub",
-      "size": 4762732,
-      "sha256": "e67b5f6881c79cfc72c3565408e235cf1a0364202ec180e8b8fa244b5428cd0c"
-    },
-    {
-      "path": "publications/stone-northern-highland-tribes-lenca-1948/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Doris_Stone_The_Northern_Highland_Tribes_The_Lenca_1948_Japanese_Complete_Translation.pdf",
-      "size": 1902352,
-      "sha256": "6e28479299a83f2d93e41626341574270087f14783558d8c90150adcc04a70ec"
-    },
-    {
-      "path": "publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/stone-northern-highland-tribes-lenca-1948/cover.jpg",
-      "size": 125138,
-      "sha256": "dc9f4d887c4bb1726303e55c0e202e632ba4e1f96b516dba7faaead983588043"
-    },
-    {
-      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.epub",
-      "size": 389442,
-      "sha256": "3d0efd081dd67339d7c95006b22bc42c3806aca9975b2ae391965eaa3657941f"
-    },
-    {
-      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jeronimo_Perez_Memorias_Nicaragua_Guerra_Nacional_1854_1857_Japanese_Complete_Translation.pdf",
-      "size": 4321006,
-      "sha256": "d79d711429fa0558d70c668b672b4815661d0b52a76f71795ffc8abe2400b982"
-    },
-    {
-      "path": "publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/perez-memorias-nicaragua-guerra-nacional-1854-1857/cover.jpg",
-      "size": 55504,
-      "sha256": "3e8e2f58b9c41bb6cb333a9504d4229dfd5c5c256d539a0b7cff0c8abb2f20ee"
-    },
-    {
-      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.epub",
-      "size": 32007,
-      "sha256": "1370acdad829b43824f29716106f221bc828b79e9a816605c9c5bdb6537b740b"
-    },
-    {
-      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Boqueron_y_las_grietas_volcanicas_en_El_Pinar_1917_Japanese_Complete_Translation.pdf",
-      "size": 186572,
-      "sha256": "c0695c959dfc7663f3183f7d8399d8fd31906e0f5ba70d4c5c590d34fbfca012"
-    },
-    {
-      "path": "publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larde-boqueron-grietas-volcanicas-el-pinar-1917/cover.jpg",
-      "size": 38056,
-      "sha256": "1bb0137f332ab6140224b5c01c27495b06c559943734552d5cc77a9d53309dd7"
-    },
-    {
-      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.epub",
-      "size": 132373,
-      "sha256": "6b04589c22b84ac9de355ecc07349c4ddce0a785908746a7c00e119724b714b9"
-    },
-    {
-      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Origenes_de_San_Salvador_Cuzcatlan_hoy_capital_de_El_Salvador_1925_Japanese_Complete_Translation.pdf",
-      "size": 1287012,
-      "sha256": "75d2557c9c2536db1f9e7c8ec8edac41d70b89a37eeac5cbcc91536ad7844872"
-    },
-    {
-      "path": "publications/larde-origenes-san-salvador-cuzcatlan-1925/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larde-origenes-san-salvador-cuzcatlan-1925/cover.jpg",
-      "size": 64394,
-      "sha256": "37d5c85b097a3ff0c0909bba78dc8cfe4c00716fdf89f60b4651e0575799fc47"
-    },
-    {
-      "path": "publications/larde-ruinas-cihuatan-1927/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.epub",
-      "size": 79213,
-      "sha256": "0e6fecbcd4045e9d52917c41a6bf8b10585de61a73b039bcfe60a1c69000539e"
-    },
-    {
-      "path": "publications/larde-ruinas-cihuatan-1927/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Las_ruinas_de_Cihuatan_1927_1951_Japanese_Complete_Translation.pdf",
-      "size": 191748,
-      "sha256": "7d15c7512de04e913f6da41d4c5a7ad7396c3d07691f205d22e63059700601dd"
-    },
-    {
-      "path": "publications/larde-ruinas-cihuatan-1927/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larde-ruinas-cihuatan-1927/cover.jpg",
-      "size": 81993,
-      "sha256": "03ceba0436e4e46da3330f4aff4afa18360f06daf0aa9f13986c2132594b2d48"
-    },
-    {
-      "path": "publications/larde-terremoto-septiembre-1915-1916/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.epub",
-      "size": 156399,
-      "sha256": "757f4df2c0c6d870269394e4bddf1a03281bb96824bafeb666f53714323a558e"
-    },
-    {
-      "path": "publications/larde-terremoto-septiembre-1915-1916/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_terremoto_del_6_de_septiembre_de_1915_1916_Japanese_Complete_Translation.pdf",
-      "size": 1434354,
-      "sha256": "ce6541f1b0dd342e741cc0465d7a3c66bce9825cca6c6fa333bf0557c1de4911"
-    },
-    {
-      "path": "publications/larde-terremoto-septiembre-1915-1916/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larde-terremoto-septiembre-1915-1916/cover.jpg",
-      "size": 81817,
-      "sha256": "e2eabb11799cbf3fa386b30087117b26f9145d8382644c04674ffa46ba80c5d7"
-    },
-    {
-      "path": "publications/larde-volcan-izalco-1922-1925/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.epub",
-      "size": 30662,
-      "sha256": "23f4ca8c4c1f55be1b314349dba45a4b29714a85c89e4cb4a729629140831fe8"
-    },
-    {
-      "path": "publications/larde-volcan-izalco-1922-1925/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_El_Volcan_de_Izalco_1922_a_1925_1925_Japanese_Complete_Translation.pdf",
-      "size": 195478,
-      "sha256": "6132c1e0cbc5bef1af9c8ac7e2a7f31ecf3adcfdd8db1b0520e26e5e3993dc19"
-    },
-    {
-      "path": "publications/larde-volcan-izalco-1922-1925/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larde-volcan-izalco-1922-1925/cover.jpg",
-      "size": 36852,
-      "sha256": "311af465158bf7cf7af19b2d3be81bc701c9d2a30f1c4e47d3f23a04d3b2d781"
+      "path": "publications/young-mosquito-shore-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
+      "size": 93074,
+      "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
     },
     {
       "path": "publications/young-mosquito-shore-1847/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.epub",
@@ -6006,84 +6174,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
-    },
-    {
-      "path": "publications/young-mosquito-shore-1847/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
-      "size": 93074,
-      "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
-    },
-    {
-      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
-      "size": 5223139,
-      "sha256": "368df580496a80b665b3ee2ff6935b1ac7eb62da561cbec7de504e9b00873e38"
-    },
-    {
-      "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.pdf",
-      "size": 4239074,
-      "sha256": "e2eda234949301ceee04d1bc8cb990fbca34abc03fb6a24af2b5db2634a291d7"
-    },
-    {
-      "path": "publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/wells-walkers-expedition-nicaragua-1856/cover.jpg",
-      "size": 70117,
-      "sha256": "15586dfd580f7bd7218355e097016153383e9039d123ab74484545e220113b91"
-    },
-    {
-      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
-      "size": 4435074,
-      "sha256": "133affc973edd3a07778b0b785a36ab5f3ebe0c2424ce85beb23f48e85d9b7b6"
-    },
-    {
-      "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.pdf",
-      "size": 3814537,
-      "sha256": "fcc5670c7f02dbb46a257777340c4a04e5272e810c1a9e7456596c9f1f478973"
-    },
-    {
-      "path": "publications/walker-war-nicaragua-1860/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/walker-war-nicaragua-1860/cover.jpg",
-      "size": 75890,
-      "sha256": "31a9d6c5fad647a00cb8d07022b9a57f27010703e2a08605446f54abdb14695a"
-    },
-    {
-      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.epub",
-      "size": 13833184,
-      "sha256": "cc6fc4365dc4bf2e85257311e6c89bdf7d21b30dd03ef5654822989e3d7a9c33"
-    },
-    {
-      "path": "publications/brinton-essays-americanist-1890/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_Essays_of_an_Americanist_1890_Japanese_Complete_Translation.pdf",
-      "size": 11066103,
-      "sha256": "66d248f617221b445d7d4fe09e04859818f3b6c685d7edf927c9d6d505d348c3"
-    },
-    {
-      "path": "publications/brinton-essays-americanist-1890/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brinton-essays-americanist-1890/cover.jpg",
-      "size": 34704,
-      "sha256": "09b228b617275b4790fcd60edade5d24d43a0b8ead756f8eb482afee487e09f7"
-    },
-    {
-      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
-      "size": 180530,
-      "sha256": "2d9f1554bda9277b950708cc66a3436a79e9236c1eb82be767ca74e19fa5681e"
-    },
-    {
-      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
-      "size": 565742,
-      "sha256": "7de3a58e31ccfb86387dd37d7bdcd6349eda0769593cf67abcc176e5001a1af3"
-    },
-    {
-      "path": "publications/henningsen-official-report-granada-1857/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/henningsen-official-report-granada-1857/cover.jpg",
-      "size": 180797,
-      "sha256": "124a80ae270bd9c76375185f1607e2486aa3fade964f1f76badbb316aee7c93e"
     }
   ]
 }
