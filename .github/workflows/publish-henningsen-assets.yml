@@ -1,0 +1,76 @@
+name: Publish Henningsen release assets
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/publish-henningsen-assets.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-henningsen-assets
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out publication site
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify assets
+        run: |
+          git fetch origin agent/release-upload-henningsen-20260904
+          mkdir -p "$RUNNER_TEMP/henningsen"
+          for part in 00 01 02 03 04 05; do
+            git show "origin/agent/release-upload-henningsen-20260904:staging/henningsen/pdf.part-$part" >> "$RUNNER_TEMP/henningsen/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf"
+          done
+          for part in 00 01; do
+            git show "origin/agent/release-upload-henningsen-20260904:staging/henningsen/epub.part-$part" >> "$RUNNER_TEMP/henningsen/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub"
+            git show "origin/agent/release-upload-henningsen-20260904:staging/henningsen/cover.part-$part" >> "$RUNNER_TEMP/henningsen/cover.jpg"
+          done
+          cd "$RUNNER_TEMP/henningsen"
+          printf '%s  %s\n' '7de3a58e31ccfb86387dd37d7bdcd6349eda0769593cf67abcc176e5001a1af3' 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf' | sha256sum -c -
+          printf '%s  %s\n' '2d9f1554bda9277b950708cc66a3436a79e9236c1eb82be767ca74e19fa5681e' 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub' | sha256sum -c -
+          printf '%s  %s\n' '124a80ae270bd9c76375185f1607e2486aa3fade964f1f76badbb316aee7c93e' 'cover.jpg' | sha256sum -c -
+
+      - name: Upload release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload publications-current \
+            "$RUNNER_TEMP/henningsen/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf" \
+            "$RUNNER_TEMP/henningsen/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub" \
+            --clobber
+
+      - name: Verify uploaded assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/verify"
+          gh release download publications-current \
+            --pattern 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf' \
+            --pattern 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub' \
+            --dir "$RUNNER_TEMP/verify"
+          cd "$RUNNER_TEMP/verify"
+          printf '%s  %s\n' '7de3a58e31ccfb86387dd37d7bdcd6349eda0769593cf67abcc176e5001a1af3' 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf' | sha256sum -c -
+          printf '%s  %s\n' '2d9f1554bda9277b950708cc66a3436a79e9236c1eb82be767ca74e19fa5681e' 'C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub' | sha256sum -c -
+
+      - name: Commit cover and remove one-shot workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p publications/henningsen-official-report-granada-1857
+          cp "$RUNNER_TEMP/henningsen/cover.jpg" publications/henningsen-official-report-granada-1857/cover.jpg
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add publications/henningsen-official-report-granada-1857/cover.jpg
+          git rm .github/workflows/publish-henningsen-assets.yml
+          git commit -m "Publish Henningsen release assets"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh api --method DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/agent%2Frelease-upload-henningsen-20260904"
