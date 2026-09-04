@@ -6860,6 +6860,25 @@
       "rights": "1897年刊の原著本文および原刊図1–3はパブリックドメインです。Google Booksの利用案内は、デジタル化ファイルの非商業的・個人的利用と、Googleの帰属表示および透かしの維持を求めています。本版は原刊図1–3を収録し、「Googleによるデジタル化」の表示を保持しています。Internet Archiveは公開資料の著作権状態を保証せず、利用者自身の責任で適用法を確認し、権利を侵害しない利用またはフェアユースの範囲で利用するよう求めています。個別項目にCreative Commons等の表示がある場合は、その表示を信頼する範囲で当該条件に従うとしています。",
       "publishedDate": "2026-09-05",
       "updatedDate": "2026-09-05"
+    },
+    {
+      "slug": "milla-gomez-carrillo-historia-america-central-1879-1905",
+      "recordClass": "major-work",
+      "title": "中央アメリカ史――全5巻（1502–1786年）",
+      "originalTitle": "Historia de la América Central",
+      "author": "ホセ・ミリャ・イ・ビダウレ／アグスティン・ゴメス・カリーリョ",
+      "originalAuthor": "José Milla y Vidaurre and Agustín Gómez Carrillo",
+      "year": 1879,
+      "originalPublication": "グアテマラ、「エル・プログレソ」印刷所／国立印刷所、1879–1905年",
+      "sourceEdition": "José Milla y Vidaurre, Historia de la América Central, tomos I–II, Guatemala: Establecimiento Tipográfico de «El Progreso», 1879, 1882; Agustín Gómez Carrillo, Historia de la América Central, tomos III–V, Guatemala: Tipografía Nacional, 1895, 1897, 1905.",
+      "sourceProvider": "Biblioteca Ludwig von Mises, Universidad Francisco Marroquín所蔵本をInternet Archiveが公開する原刊全5巻（historiadelaamer01jos、historiadelaamer02jos、historiadelaamer03agus、historiadelaam00agusguat、historiadelaam05agusguat）を主底本としました。第1巻の欠損標題紙と序文1–2頁は同館所蔵の同版合冊本 historiadel00joseguat、第5巻末索引の欠損7–20頁は同版別本 historiadelaame01machgoog で補完しました。後者の画像は収録していません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaamer01jos"
+      },
+      "rights": "1879–1905年刊の原著・原刊はパブリックドメインです。Biblioteca Ludwig von Mises, Universidad Francisco Marroquín所蔵本を公開するInternet Archiveの各記録は「NOT IN COPYRIGHT」または「NOT_IN_COPYRIGHT」と表示しています。本版には同館所蔵本の原刊標題紙5点を収録しています。第5巻索引の欠落補完に用いたGoogle由来別本は文字照合に限り、その画像は収録していません。",
+      "publishedDate": "2026-09-05",
+      "updatedDate": "2026-09-05"
     }
   ],
   "works": [

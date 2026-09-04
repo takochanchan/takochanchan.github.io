@@ -125,6 +125,10 @@ import {
   brintonExtraTwoPapersShortWorkAuthors,
 } from "./brinton-extra-two-papers-publications.mjs";
 import {
+  millaGomezCarrilloPublicationMetadata,
+  millaGomezCarrilloPublicationRecords,
+} from "./milla-gomez-carrillo-publication.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9244,6 +9248,7 @@ const publicationRecords = [
   ...brintonThirdFivePapersPublicationRecords,
   ...brintonFourthFivePapersPublicationRecords,
   ...brintonExtraTwoPapersPublicationRecords,
+  ...millaGomezCarrilloPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11819,6 +11824,7 @@ const publicationMetadata = {
   ...brintonThirdFivePapersPublicationMetadata,
   ...brintonFourthFivePapersPublicationMetadata,
   ...brintonExtraTwoPapersPublicationMetadata,
+  ...millaGomezCarrilloPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

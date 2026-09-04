@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 360);
+  assert.equal(publications.length, 361);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 83);
+  assert.equal(counts.get("002"), 84);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -174,6 +174,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "brinton-central-american-language-manuscripts-1869",
       "brinton-missing-authorities-mayan-antiquities-1897",
       "brinton-pillars-of-ben-1897",
+      "milla-gomez-carrillo-historia-america-central-1879-1905",
     ],
   );
   assert.equal(
@@ -1481,6 +1482,48 @@ test("Pim and Seemann Dottings retains the approved publication record", async (
   );
 });
 
+test("Milla and Gómez Carrillo Central America history retains the approved publication record", async () => {
+  const item = publications.find(
+    (publication) =>
+      publication.slug ===
+      "milla-gomez-carrillo-historia-america-central-1879-1905",
+  );
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.equal(item.pageCount, 1727);
+  assert.equal(item.figureCount, 0);
+  assert.equal(item.plateCount, 5);
+  assert.match(item.extent, /全5巻/u);
+  assert.match(item.description, /1786年/u);
+  assert.match(item.sourceProvider, /historiadelaamer01jos/u);
+  assert.match(item.sourceProvider, /historiadelaame01machgoog/u);
+  assert.match(item.rights, /NOT IN COPYRIGHT/u);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.publishedDate, "2026-09-05");
+  assert.equal(item.updatedDate, "2026-09-05");
+
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "assets-manifest.json"), "utf8"),
+  );
+  const assets = new Map(
+    manifest.assets
+      .filter((asset) => asset.path.includes(item.slug))
+      .map((asset) => [path.extname(asset.path), asset]),
+  );
+  assert.equal(
+    assets.get(".pdf").sha256,
+    "778f1f4220a83862da69a605efb5452755c7fa3c4ece86b632e46a4f43f4bb8d",
+  );
+  assert.equal(
+    assets.get(".epub").sha256,
+    "ae59f40053238d07ed90643dfcd93588b410e9a646bf6d4545d6b0aa05337bbe",
+  );
+  assert.equal(
+    assets.get(".jpg").sha256,
+    "06b3afde494d65f56d32def1cc788c1faafddd261e43e4b9e810a757a12c6474",
+  );
+});
+
 test("Lothrop pottery chronology uses the approved paper classification", () => {
   const item = publications.find(
     (publication) => publication.slug === "lothrop-pottery-types-el-salvador-1927",
@@ -1555,7 +1598,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 172);
+  assert.equal(majorPublications.length, 173);
   assert.equal(shortPublications.length, 188);
   assert.equal(shortPublicationAuthors.length, 41);
   assert.deepEqual(
@@ -2683,10 +2726,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
-  assert.match(html, /\/archive\.js\?v=20260905-brinton-extra-two-papers/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260905-brinton-extra-two-papers/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260905-brinton-extra-two-papers/);
+  assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
+  assert.match(html, /\/archive\.js\?v=20260905-milla-history-central-america/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260905-milla-history-central-america/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260905-milla-history-central-america/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2699,7 +2742,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">172<\/strong>件/);
+  assert.match(html, /id="book-match-count">173<\/strong>件/);
   assert.match(html, /id="paper-match-count">188<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2783,7 +2826,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
+  assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2917,17 +2960,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
-    assert.match(html, /\/archive\.js\?v=20260905-brinton-extra-two-papers/);
+    assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
+    assert.match(html, /\/archive\.js\?v=20260905-milla-history-central-america/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260905-brinton-extra-two-papers#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260905-milla-history-central-america#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260905-brinton-extra-two-papers#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260905-milla-history-central-america#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
