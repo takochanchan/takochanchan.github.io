@@ -1,0 +1,27 @@
+name: Upload Brinton extra two release assets
+on:
+  push:
+    branches: ["agent/brinton-extra-two-release-20260905"]
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload publications-current release-staging/* --clobber
+          mkdir verify
+          gh release download publications-current \
+            -p 'Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.epub' \
+            -p 'Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.pdf' \
+            -p 'Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.epub' \
+            -p 'Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.pdf' \
+            -D verify
+          test "$(sha256sum 'verify/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.epub' | cut -d ' ' -f1)" = "7393efbdaace6a39fccdb7052d73d6442c8c4f1f8f787ef561c8f77a7c80d13c"
+          test "$(sha256sum 'verify/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.pdf' | cut -d ' ' -f1)" = "441d6eb71a12f0410b9bc7d05e581236dd3536d88d3b5fbc217c3c13dfd699c5"
+          test "$(sha256sum 'verify/Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.epub' | cut -d ' ' -f1)" = "875116481439d8ea0b9bc527a5da48a88605fd5d182996a78078b71ac25b93a9"
+          test "$(sha256sum 'verify/Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.pdf' | cut -d ' ' -f1)" = "2293f7bfdda2e3a77c73c77ed7d972185ded4735a8906e46df8a28f2af9c4c3d"
