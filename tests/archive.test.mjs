@@ -1520,7 +1520,7 @@ test("Milla and Gómez Carrillo Central America history retains the approved pub
   );
   assert.equal(
     assets.get(".jpg").sha256,
-    "06b3afde494d65f56d32def1cc788c1faafddd261e43e4b9e810a757a12c6474",
+    "a5806038a39201acb15108e3285cfc9af4f29d73c4d6991289b5a4771c36eaaa",
   );
 });
 
