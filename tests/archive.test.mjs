@@ -152,6 +152,11 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "wells-walkers-expedition-nicaragua-1856",
       "walker-war-nicaragua-1860",
       "brinton-essays-americanist-1890",
+      "brinton-native-calendar-1893",
+      "brinton-xinca-1885",
+      "brinton-matagalpan-1895",
+      "brinton-alaguilac-1887",
+      "brinton-landa-editions-1887",
     ],
   );
   assert.equal(
@@ -1668,6 +1673,11 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "mca-pre-adamite-track-1885",
       "unsigned-nicaragua-footprints-again-1886",
       "brinton-ancient-human-footprint-nicaragua-1887",
+      "brinton-native-calendar-1893",
+      "brinton-xinca-1885",
+      "brinton-matagalpan-1895",
+      "brinton-alaguilac-1887",
+      "brinton-landa-editions-1887",
       "editorial-age-nicaragua-footprints-1889",
       "crawford-neolithic-man-nicaragua-1891",
       "stone-northern-highland-tribes-lenca-1948",
