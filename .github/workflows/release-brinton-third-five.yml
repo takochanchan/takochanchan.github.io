@@ -9,10 +9,27 @@ permissions:
 
 jobs:
   upload:
+    if: ${{ !contains(github.event.head_commit.message, '[release-ok]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Upload PDF and EPUB files
+      - name: Upload and verify PDF and EPUB files
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release upload publications-current release-staging/* --clobber
+        run: |
+          gh release upload publications-current release-staging/*.pdf release-staging/*.epub --clobber
+          mkdir verify
+          while read -r checksum filename
+          do
+            gh release download publications-current --pattern "$filename" --dir verify
+          done < release-staging/SHA256SUMS
+          cd verify
+          sha256sum -c ../release-staging/SHA256SUMS
+      - name: Record success
+        run: |
+          printf '%s\n' "verified release upload for commit $GITHUB_SHA" > release-staging/upload-ok.txt
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add release-staging/upload-ok.txt
+          git commit -m "[release-ok] Verify Brinton third five-paper assets"
+          git push
