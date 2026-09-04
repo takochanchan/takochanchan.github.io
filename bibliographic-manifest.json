@@ -6822,6 +6822,44 @@
       "rights": "1869年刊の原著本文はパブリックドメインです。Zenodo APIは当該スキャンファイルをopen access、CC0と表示していますが、本版は原著の文字情報のみを用い、誌面画像を収録していないため、その表示を新規翻訳・組版へ適用する趣旨ではありません。Biodiversity Heritage Libraryはパブリックドメイン資料を商用を含め再利用可能とし、デジタルファイルに著作権を主張せず、BHLと提供館への出典表示を推奨しています。",
       "publishedDate": "2026-09-04",
       "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-missing-authorities-mayan-antiquities-1897",
+      "recordClass": "short-work",
+      "title": "マヤ古代研究に関する失われた典拠",
+      "originalTitle": "The Missing Authorities on Mayan Antiquities",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1897,
+      "originalPublication": "『American Anthropologist』旧系列第10巻第6号、1897年6月、183–191頁",
+      "sourceEdition": "Daniel G. Brinton, “The Missing Authorities on Mayan Antiquities,” American Anthropologist, old series, vol. 10, no. 6, June 1897, pp. 183–191. DOI: 10.1525/aa.1897.10.6.02a00020.",
+      "sourceProvider": "Internet ArchiveのCrossref Pre-1909 Scholarly Works項目が公開する論文別PDFを底本としました。翻訳範囲は原刊183–191頁の全体で、191頁の横罫以下に始まるWalter Houghの別稿は含みません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/download/crossref-pre-1909-scholarly-works/10.1525%252Faa.1888.1.1.02a00020.zip/10.1525%252Faa.1897.10.6.02a00020.pdf"
+      },
+      "rights": "1897年刊の原著本文はパブリックドメインです。Internet Archiveは公開資料の著作権状態を保証せず、利用者自身の責任で適用法を確認し、権利を侵害しない利用またはフェアユースの範囲で利用するよう求めています。個別項目にCreative Commons等の表示がある場合は、その表示を信頼する範囲で当該条件に従うとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-05",
+      "updatedDate": "2026-09-05"
+    },
+    {
+      "slug": "brinton-pillars-of-ben-1897",
+      "recordClass": "short-work",
+      "title": "ベンの石柱",
+      "originalTitle": "The Pillars of Ben",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1897,
+      "originalPublication": "ペンシルヴェニア大学『Bulletin of the Free Museum of Science and Art』第1巻第1号、1897年5月、3–10頁",
+      "sourceEdition": "Daniel G. Brinton, “The Pillars of Ben,” Bulletin of the Free Museum of Science and Art of the University of Pennsylvania, vol. 1, no. 1, May 1897, pp. 3–10.",
+      "sourceProvider": "Harvard University, Peabody Museum Library原蔵のGoogle Booksデジタル化本をInternet Archiveが公開する全冊画像（identifier: bulletin183unkngoog）を底本としました。翻訳範囲は原刊3–10頁の全体で、10頁後半に始まる別稿は含みません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bulletin183unkngoog"
+      },
+      "rights": "1897年刊の原著本文および原刊図1–3はパブリックドメインです。Google Booksの利用案内は、デジタル化ファイルの非商業的・個人的利用と、Googleの帰属表示および透かしの維持を求めています。本版は原刊図1–3を収録し、「Googleによるデジタル化」の表示を保持しています。Internet Archiveは公開資料の著作権状態を保証せず、利用者自身の責任で適用法を確認し、権利を侵害しない利用またはフェアユースの範囲で利用するよう求めています。個別項目にCreative Commons等の表示がある場合は、その表示を信頼する範囲で当該条件に従うとしています。",
+      "publishedDate": "2026-09-05",
+      "updatedDate": "2026-09-05"
     }
   ],
   "works": [

@@ -35,7 +35,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 358);
+  assert.equal(publications.length, 360);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -81,7 +81,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 81);
+  assert.equal(counts.get("002"), 83);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -172,6 +172,8 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "brinton-guetares-costa-rica-1897",
       "brinton-musquito-coast-vocabularies-1891",
       "brinton-central-american-language-manuscripts-1869",
+      "brinton-missing-authorities-mayan-antiquities-1897",
+      "brinton-pillars-of-ben-1897",
     ],
   );
   assert.equal(
@@ -1554,7 +1556,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 172);
-  assert.equal(shortPublications.length, 186);
+  assert.equal(shortPublications.length, 188);
   assert.equal(shortPublicationAuthors.length, 41);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
@@ -1708,6 +1710,8 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "brinton-guetares-costa-rica-1897",
       "brinton-musquito-coast-vocabularies-1891",
       "brinton-central-american-language-manuscripts-1869",
+      "brinton-missing-authorities-mayan-antiquities-1897",
+      "brinton-pillars-of-ben-1897",
       "editorial-age-nicaragua-footprints-1889",
       "crawford-neolithic-man-nicaragua-1891",
       "stone-northern-highland-tribes-lenca-1948",
@@ -2679,10 +2683,10 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortPublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260904-brinton-fourth-five-papers/);
-  assert.match(html, /\/archive\.js\?v=20260904-brinton-fourth-five-papers/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260904-brinton-fourth-five-papers/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260904-brinton-fourth-five-papers/);
+  assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
+  assert.match(html, /\/archive\.js\?v=20260905-brinton-extra-two-papers/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260905-brinton-extra-two-papers/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260905-brinton-extra-two-papers/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2696,7 +2700,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">172<\/strong>件/);
-  assert.match(html, /id="paper-match-count">186<\/strong>件/);
+  assert.match(html, /id="paper-match-count">188<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
@@ -2779,7 +2783,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260904-brinton-fourth-five-papers/);
+  assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2913,17 +2917,17 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
     assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260904-brinton-fourth-five-papers/);
-    assert.match(html, /\/archive\.js\?v=20260904-brinton-fourth-five-papers/);
+    assert.match(html, /\/archive\.css\?v=20260905-brinton-extra-two-papers/);
+    assert.match(html, /\/archive\.js\?v=20260905-brinton-extra-two-papers/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260904-brinton-fourth-five-papers#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260905-brinton-extra-two-papers#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260904-brinton-fourth-five-papers#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260905-brinton-extra-two-papers#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
