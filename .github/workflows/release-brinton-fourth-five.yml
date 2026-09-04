@@ -48,3 +48,4 @@ jobs:
             test "$actual_state" = "uploaded"
             echo "$name: remote GitHub digest OK"
           done <<< "$EXPECTED"
+          echo "All ten Brinton release assets verified by GitHub SHA-256 digest."
