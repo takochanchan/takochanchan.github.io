@@ -41,7 +41,10 @@ jobs:
           sleep 25
           gh release view publications-current --json assets --jq '.assets[].name'
           while read -r checksum name; do
-            gh release download publications-current --pattern "$name" --dir verified
+            asset_url="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current" \
+              --jq ".assets[] | select(.name == \"$name\") | .url")"
+            test -n "$asset_url"
+            gh api "$asset_url" -H "Accept: application/octet-stream" > "verified/$name"
           done <<< "$EXPECTED"
           (
             cd verified
