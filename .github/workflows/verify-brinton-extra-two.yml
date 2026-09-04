@@ -24,7 +24,7 @@ jobs:
           test "$(stat -c %s pillars.jpg)" = "159228"
       - name: Verify sitemap
         run: |
-          curl -fsSL https://takochanchan.github.io/sitemap.xml -o sitemap.xml
+          curl -fsSL https://takochanchan.github.io/sitemap-papers.xml -o sitemap.xml
           grep -q 'brinton-missing-authorities-mayan-antiquities-1897' sitemap.xml
           grep -q 'brinton-pillars-of-ben-1897' sitemap.xml
       - name: Verify search shard
