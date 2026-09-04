@@ -30,7 +30,7 @@ jobs:
           node-version: 22
 
       - name: Install build dependencies
-        run: npm ci
+        run: npm ci --no-audit --no-fund
 
       - name: Build archive pages
         run: npm run build
