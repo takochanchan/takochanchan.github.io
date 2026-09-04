@@ -6727,6 +6727,101 @@
       "rights": "原著本文と1892年再録の独立抜刷はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
       "publishedDate": "2026-09-04",
       "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-chinantec-mazatec-languages-1892",
+      "recordClass": "short-work",
+      "title": "メキシコのチナンテク語についての考察、ならびにマサテク語とその類縁関係",
+      "originalTitle": "Observations on the Chinantec Language of Mexico: and on the Mazatec Language and its Affinities",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1892,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第30巻第137号、1892年、22–39頁；個別抜刷3–20頁",
+      "sourceEdition": "Daniel G. Brinton, “Observations on the Chinantec Language of Mexico: and on the Mazatec Language and its Affinities,” individual offprint from Proceedings of the American Philosophical Society, vol. 30, no. 137, 1892, offprint pp. 3–20; journal pp. 22–39.",
+      "sourceProvider": "Newberry Library, Edward E. Ayer Collection所蔵の1892年個別抜刷をInternet Archiveが公開する画像（identifier: ayer_1452_b8_1892）を底本としました。本文中の原刊頁標識3–20は抜刷の印刷頁を示し、誌面頁22–39とは改頁位置が一対一に対応しません。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/ayer_1452_b8_1892"
+      },
+      "rights": "1892年刊の原著本文はパブリックドメインです。Newberry Libraryは、適法な商用・非商用目的で所蔵資料を許諾料なしに利用できるとする一方、著作権その他の制限確認を利用者の責任としています。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-otomi-athabascan-affinities-1894-1897",
+      "recordClass": "short-work",
+      "title": "オトミ語とアサバスカ諸方言の親縁関係について",
+      "originalTitle": "On the Affinities of the Otomi Language with Athabascan Dialects",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1897,
+      "originalPublication": "ストックホルム、第10回国際アメリカニスト会議録（1894年会期）、Imprimerie Ivar Hæggström、1897年、151–162頁",
+      "sourceEdition": "Daniel G. Brinton, “On the affinities of the Otomi language with Athabascan dialects,” Congrès international des Américanistes, Compte rendu de la dixième session, Stockholm 1894, Stockholm: Imprimerie Ivar Hæggström, 1897, pp. 151–162.",
+      "sourceProvider": "Harvard University原蔵のGoogle Booksデジタル化本をInternet Archiveが公開する全冊画像（identifier: compterendudela12unkngoog）を底本としました。1897年刊会議録の本文標題と刊年を採用し、ブリントンの1898年業績目録にある略題と会議年1894を補記しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/compterendudela12unkngoog"
+      },
+      "rights": "1897年刊の原著本文はパブリックドメインです。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 当該項目に個別のCreative Commonsライセンス表示はありません。本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-guetares-costa-rica-1897",
+      "recordClass": "short-work",
+      "title": "コスタリカのグエタル人の民族的類縁",
+      "originalTitle": "The Ethnic Affinities of the Guetares of Costa Rica",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1897,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第36巻第156号、1897年12月、496–498頁",
+      "sourceEdition": "Daniel G. Brinton, “The Ethnic Affinities of the Guetares of Costa Rica,” Proceedings of the American Philosophical Society, vol. 36, no. 156, December 1897, pp. 496–498.",
+      "sourceProvider": "Biodiversity Heritage Library公開の原刊全頁画像（item 31433; page IDs 7110077–7110079）を主底本とし、Internet Archiveの論文別PDF（identifier: biostor-203580）を補助照合に用いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.biodiversitylibrary.org/item/31433"
+      },
+      "rights": "1897年刊の原著本文はパブリックドメインです。Biodiversity Heritage Libraryはデジタル化資料の著作権を保有しないとし、項目単位の権利確認を利用者に求め、BHLと提供館への出典表示を推奨しています。Internet Archiveの補助資料項目はスキャンにCC BY-NC 3.0と表示していますが、本版は原著の文字情報のみを用い、誌面画像を収録していないため、その表示を新規翻訳・組版へ適用する趣旨ではありません。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-musquito-coast-vocabularies-1891",
+      "recordClass": "short-work",
+      "title": "モスキート海岸の諸語彙",
+      "originalTitle": "Vocabularies from the Musquito Coast",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1891,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第29巻第135号、1891年、1–4頁",
+      "sourceEdition": "Daniel G. Brinton, “Vocabularies from the Musquito Coast,” Proceedings of the American Philosophical Society, vol. 29, no. 135, January–June 1891, pp. 1–4.",
+      "sourceProvider": "University of Toronto, Gerstein Science Information Centre原蔵のInternet Archive全冊画像（identifier: proceedingsofame2830ameruoft）を底本とし、Wikimedia Commons公開PDFとBiodiversity Heritage Library item 86372で全頁を照合しました。原刊標題を採用し、後年の業績目録にある“Some Vocabularies from the Mosquito Coast”は異題として扱いました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/proceedingsofame2830ameruoft"
+      },
+      "rights": "1891年刊の原著本文はパブリックドメインです。Biodiversity Heritage Libraryはパブリックドメイン資料を商用を含め再利用可能とし、デジタルファイルに著作権を主張せず、BHLと提供館への出典表示を推奨しています。Internet Archiveは所蔵資料の著作権状態を保証せず、利用者に、自己責任で適用法を遵守し、利用を権利非侵害またはフェアユースの範囲に限るよう求めています。個別資料にCreative Commons等のライセンス表示がある場合は、その表示を信頼する範囲で当該条件によるとしています。 本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-central-american-language-manuscripts-1869",
+      "recordClass": "short-work",
+      "title": "中央アメリカ諸言語の若干の写本についての報告",
+      "originalTitle": "A Notice of some Manuscripts in Central American Languages",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1869,
+      "originalPublication": "ニューヘイブン、『The American Journal of Science and Arts』第2系列第47巻第140号、1869年3月、222–230頁",
+      "sourceEdition": "Daniel G. Brinton, “A Notice of some Manuscripts in Central American Languages,” The American Journal of Science and Arts, Second Series, vol. 47, no. 140, March 1869, pp. 222–230. DOI: 10.2475/ajs.s2-47.140.222.",
+      "sourceProvider": "Zenodo record 2247147の論文別PDFを底本とし、Biodiversity Heritage Library item 177958の誌面画像を補助照合に用いました。開始頁は一部後代書誌の223ではなく、誌面とDOIに一致する222を採用しました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://zenodo.org/records/2247147"
+      },
+      "rights": "1869年刊の原著本文はパブリックドメインです。Zenodo APIは当該スキャンファイルをopen access、CC0と表示していますが、本版は原著の文字情報のみを用い、誌面画像を収録していないため、その表示を新規翻訳・組版へ適用する趣旨ではありません。Biodiversity Heritage Libraryはパブリックドメイン資料を商用を含め再利用可能とし、デジタルファイルに著作権を主張せず、BHLと提供館への出典表示を推奨しています。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
     }
   ],
   "works": [

@@ -59,6 +59,21 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "brinton-chinantec-mazatec-languages-1892": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Chinantec_and_Mazatec_Languages_1892_Japanese_Complete_Translation.docx",
+    "brinton-otomi-athabascan-affinities-1894-1897": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Otomi_and_Athabascan_Affinities_1894_1897_Japanese_Complete_Translation.docx",
+    "brinton-guetares-costa-rica-1897": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.docx",
+    "brinton-musquito-coast-vocabularies-1891": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Vocabularies_from_the_Musquito_Coast_1891_Japanese_Complete_Translation.docx",
+    "brinton-central-american-language-manuscripts-1869": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Notice_of_Manuscripts_in_Central_American_Languages_1869_Japanese_Complete_Translation.docx",
     "brinton-ancient-phonetic-alphabet-yucatan-1870": SOURCES
     / "翻訳サイト"
     / "Daniel_G_Brinton_The_Ancient_Phonetic_Alphabet_of_Yucatan_1870_Japanese_Complete_Translation.docx",

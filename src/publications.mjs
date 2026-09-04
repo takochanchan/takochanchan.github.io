@@ -115,6 +115,11 @@ import {
   brintonThirdFivePapersShortWorkAuthors,
 } from "./brinton-third-five-papers-publications.mjs";
 import {
+  brintonFourthFivePapersPublicationMetadata,
+  brintonFourthFivePapersPublicationRecords,
+  brintonFourthFivePapersShortWorkAuthors,
+} from "./brinton-fourth-five-papers-publications.mjs";
+import {
   garellaPanamaCanalPublicationMetadata,
   garellaPanamaCanalPublicationRecords,
 } from "./garella-panama-canal-publication.mjs";
@@ -9232,6 +9237,7 @@ const publicationRecords = [
   ...brintonFivePapersPublicationRecords,
   ...brintonSecondFivePapersPublicationRecords,
   ...brintonThirdFivePapersPublicationRecords,
+  ...brintonFourthFivePapersPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11805,6 +11811,7 @@ const publicationMetadata = {
   ...brintonFivePapersPublicationMetadata,
   ...brintonSecondFivePapersPublicationMetadata,
   ...brintonThirdFivePapersPublicationMetadata,
+  ...brintonFourthFivePapersPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -11947,6 +11954,7 @@ const shortWorkAuthorBySlug = {
   ...brintonFivePapersShortWorkAuthors,
   ...brintonSecondFivePapersShortWorkAuthors,
   ...brintonThirdFivePapersShortWorkAuthors,
+  ...brintonFourthFivePapersShortWorkAuthors,
 };
 
 export const publicationReleaseTag = "publications-current";

@@ -30,7 +30,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260904-brinton-second-five-papers";
+const assetVersion = "20260904-brinton-fourth-five-papers";
 
 const escapeHtml = (value = "") =>
   String(value)
