@@ -16,8 +16,8 @@ jobs:
           search=https://takochanchan.github.io/takochan-search-index-002
           curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-missing-authorities-mayan-antiquities-1897/" -o missing.html
           curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-pillars-of-ben-1897/" -o pillars.html
-          grep -q 'マヤ古代研究に欠けている典拠' missing.html
-          grep -q 'ベンの柱' pillars.html
+          grep -q 'マヤ古代研究に関する失われた典拠' missing.html
+          grep -q 'ベンの石柱' pillars.html
           grep -q 'brinton-missing-authorities-mayan-antiquities-1897' missing.html
           grep -q 'brinton-pillars-of-ben-1897' pillars.html
           curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-missing-authorities-mayan-antiquities-1897/cover.jpg" -o missing.jpg
