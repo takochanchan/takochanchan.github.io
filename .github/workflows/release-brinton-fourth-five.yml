@@ -41,7 +41,7 @@ jobs:
           sleep 25
           gh release view publications-current --json assets --jq '.assets[].name'
           release_json="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current")"
-          mapfile -t expected_entries <<< "$EXPECTED"
+          mapfile -t expected_entries < <(printf '%s' "$EXPECTED")
           test "${#expected_entries[@]}" -eq 10
           for entry in "${expected_entries[@]}"; do
             read -r checksum name <<< "$entry"
