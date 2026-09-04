@@ -15,7 +15,7 @@ export const millaGomezCarrilloPublicationRecords = [
     description:
       "ホセ・ミリャが著し、その死後、アグスティン・ゴメス・カリーリョが公式の委嘱により継続した中央アメリカ植民地期の通史です。先住民諸社会の概観、1502年以後の接触・征服から1786年までの政治、行政、教会、社会、経済、都市、自然災害、カリブ海岸を扱います。Biblioteca Ludwig von Mises（Universidad Francisco Marroquín）所蔵の原刊全5巻を底本としました。",
     cover:
-      "publications/milla-gomez-carrillo-historia-america-central-1879-1905/cover-japanese.jpg",
+      "publications/milla-gomez-carrillo-historia-america-central-1879-1905/japanese-cover.jpg",
     pdf:
       "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_1879_1905_Japanese_Complete_Translation.pdf",
     epub:
