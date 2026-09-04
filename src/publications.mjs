@@ -52,6 +52,10 @@ import {
   doubledayPublicationRecords,
 } from "./doubleday-filibuster-war-publication.mjs";
 import {
+  henningsenOfficialReportPublicationMetadata,
+  henningsenOfficialReportPublicationRecords,
+} from "./henningsen-official-report-publication.mjs";
+import {
   procesoWilliamWalkerPublicationMetadata,
   procesoWilliamWalkerPublicationRecords,
 } from "./proceso-contra-william-walker-publication.mjs";
@@ -9198,6 +9202,7 @@ const publicationRecords = [
   ...arceMemoriaPublicationRecords,
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
+  ...henningsenOfficialReportPublicationRecords,
   ...procesoWilliamWalkerPublicationRecords,
   ...pimSeemannDottingsPublicationRecords,
   ...peraltaCostaRicaMosquitosPublicationRecords,
@@ -11767,6 +11772,7 @@ const publicationMetadata = {
   ...arceMemoriaPublicationMetadata,
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,
+  ...henningsenOfficialReportPublicationMetadata,
   ...procesoWilliamWalkerPublicationMetadata,
   ...pimSeemannDottingsPublicationMetadata,
   ...peraltaCostaRicaMosquitosPublicationMetadata,
@@ -11785,6 +11791,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "henningsen-official-report-granada-1857": "c-f-henningsen",
   "stone-northern-highland-tribes-lenca-1948": "doris-stone",
   "squier-great-calendar-stone-1849": "ephraim-george-squier",
   "squier-british-encroachments-mosquito-question-1850":

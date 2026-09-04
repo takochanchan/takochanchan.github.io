@@ -6066,6 +6066,24 @@
       "url": "https://takochanchan.github.io/publications/brinton-essays-americanist-1890/cover.jpg",
       "size": 34704,
       "sha256": "09b228b617275b4790fcd60edade5d24d43a0b8ead756f8eb482afee487e09f7"
+    },
+    {
+      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.epub",
+      "size": 180530,
+      "sha256": "2d9f1554bda9277b950708cc66a3436a79e9236c1eb82be767ca74e19fa5681e"
+    },
+    {
+      "path": "publications/henningsen-official-report-granada-1857/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/C_F_Henningsen_Official_Report_1857_Japanese_Complete_Translation.pdf",
+      "size": 565742,
+      "sha256": "7de3a58e31ccfb86387dd37d7bdcd6349eda0769593cf67abcc176e5001a1af3"
+    },
+    {
+      "path": "publications/henningsen-official-report-granada-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/henningsen-official-report-granada-1857/cover.jpg",
+      "size": 180797,
+      "sha256": "124a80ae270bd9c76375185f1607e2486aa3fade964f1f76badbb316aee7c93e"
     }
   ]
 }

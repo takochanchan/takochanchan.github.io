@@ -6423,6 +6423,25 @@
       "rights": "1890年刊の原著本文・原刊図版は米国においてパブリックドメインです。Mugar Memorial Library, Boston University所蔵本はInternet Archiveから公開され、同項目は「Possible copyright status: NOT_IN_COPYRIGHT」と表示しています。この表示はスキャン画像にCreative Commonsその他のオープンライセンスを付与するものではなく、画像の再利用にはInternet Archiveその他の公開元の利用条件および適用法が適用されます。米国外の権利状態については判断しません。",
       "publishedDate": "2026-09-02",
       "updatedDate": "2026-09-02"
+    },
+    {
+      "slug": "henningsen-official-report-granada-1857",
+      "recordClass": "short-work",
+      "title": "ニカラグア――ヘニングセン将軍公式報告",
+      "originalTitle": "Nicaragua: Official Report of Gen. Henningsen",
+      "author": "C・F・ヘニングセン",
+      "originalAuthor": "C. F. Henningsen",
+      "year": 1857,
+      "originalPublication": "ニューオーリンズ、『The Daily Picayune』、1857年1月17日、1頁",
+      "sourceEdition": "C. F. Henningsen, “Nicaragua: Official Report of Gen. Henningsen,” The Daily Picayune (New Orleans), January 17, 1857, p. 1.",
+      "sourceProvider": "Latin American Studiesが公開する新聞紙面画像PDF（全2頁）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.latinamericanstudies.org/nicaragua/Times-Picayune-1-17-1857-1.pdf"
+      },
+      "rights": "1857年に米国で刊行された原著本文はパブリックドメインです。Latin American Studiesの紙面画像には明示的な再利用許諾を確認できないため、本版には画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
     }
   ],
   "works": [
