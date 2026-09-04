@@ -59,6 +59,21 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "brinton-cintla-1896": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_The_Battle_and_the_Ruins_of_Cintla_1896_Japanese_Complete_Translation.docx",
+    "brinton-codex-troano-maya-chronology-1881": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Notes_on_the_Codex_Troano_and_Maya_Chronology_1881_Japanese_Complete_Translation.docx",
+    "brinton-chane-abal-1888": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_On_the_Chane_Abal_Tribe_and_Dialect_of_Chiapas_1888_Japanese_Complete_Translation.docx",
+    "brinton-mangue-1886": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_Notes_on_the_Mangue_1886_Japanese_Complete_Translation.docx",
+    "brinton-maya-inscriptions-1894": SOURCES
+    / "翻訳サイト"
+    / "Daniel_G_Brinton_What_the_Maya_Inscriptions_Tell_About_1894_Japanese_Complete_Translation.docx",
     "congres-international-canal-interoceanique-1879": SOURCES
     / "翻訳サイト"
     / "Congres_International_Canal_Interoceanique_1879_Japanese_Complete_Translation.docx",

@@ -6537,6 +6537,101 @@
       "rights": "原著本文は米国においてパブリックドメインです。JSTORは当該号を、同サービスの知る限りパブリックドメインであり、それに従って利用できるものと表示しています。JSTORおよびInternet Archive／BioStorのデジタル画像には各公開元の利用条件が適用されます。本版は原著の文字情報のみを用い、公開機関の誌面画像は収録していません。",
       "publishedDate": "2026-09-04",
       "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-cintla-1896",
+      "recordClass": "short-work",
+      "title": "シントラの戦いと遺跡",
+      "originalTitle": "The Battle and the Ruins of Cintla",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1896,
+      "originalPublication": "シカゴ、『The American Antiquarian and Oriental Journal』第18巻第5号、1896年9月、259–268頁",
+      "sourceEdition": "Daniel G. Brinton, “The Battle and the Ruins of Cintla,” The American Antiquarian and Oriental Journal, vol. 18, no. 5, September 1896, pp. 259–268; separate issue, Chicago, 1896.",
+      "sourceProvider": "University of California Libraries所蔵の独立抜刷をInternet Archiveが公開する画像（identifier: battleruinsofcin00brin）を底本としました。原載誌第18巻はRobarts Library, University of Toronto所蔵本（identifier: americanantiquar18chicuoft）です。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/battleruinsofcin00brin"
+      },
+      "rights": "1896年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの各デジタル画像には同機関の利用条件が適用されます。本版には原刊図1–9を収録しています。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-codex-troano-maya-chronology-1881",
+      "recordClass": "short-work",
+      "title": "トロアノ絵文書およびマヤ年代学に関する覚え書き",
+      "originalTitle": "Notes on the Codex Troano, and Maya Chronology",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1881,
+      "originalPublication": "フィラデルフィア、『The American Naturalist』第15巻第9号、1881年9月、719–724頁",
+      "sourceEdition": "Daniel G. Brinton, “Notes on the Codex Troano, and Maya Chronology,” The American Naturalist, vol. 15, no. 9, September 1881, pp. 719–724.",
+      "sourceProvider": "Missouri Botanical Garden, Peter H. Raven Library所蔵のThe American Naturalist第15巻をBiodiversity Heritage Libraryが公開する刊本画像（item 129370; Internet Archive identifier: mobot31753002156450）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.biodiversitylibrary.org/item/129370"
+      },
+      "rights": "1881年刊の原著本文は米国においてパブリックドメインです。Biodiversity Heritage Libraryは当該巻をPublic Domainと表示しています。本版には原刊の小図「Sign of day.」を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-chane-abal-1888",
+      "recordClass": "short-work",
+      "title": "チアパスのチャネアバル（四言語）族とその方言について",
+      "originalTitle": "On the Chane-Abal (Four-Language) Tribe and Dialect of Chiapas",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1888,
+      "originalPublication": "ワシントンD.C.、『American Anthropologist』第1巻第1号、1888年1月、77–96頁",
+      "sourceEdition": "Daniel G. Brinton, “On the Chane-Abal (Four-Language) Tribe and Dialect of Chiapas,” American Anthropologist, vol. 1, no. 1, January 1888, pp. 77–96.",
+      "sourceProvider": "University of Michigan所蔵のAmerican Anthropologist第1巻をGoogle Booksが公開する刊本画像（ID: 3JAdjprVmaUC）を底本としました。JSTOR収録論文はstable 658460です。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=3JAdjprVmaUC"
+      },
+      "rights": "1888年刊の原著本文は米国においてパブリックドメインです。Google Booksの画像には同サービスの利用条件が適用されます。本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-mangue-1886",
+      "recordClass": "short-work",
+      "title": "マンゲ語覚書――かつてニカラグアで話されていた消滅方言",
+      "originalTitle": "Notes on the Mangue; An Extinct Dialect Formerly Spoken in Nicaragua",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1886,
+      "originalPublication": "フィラデルフィア、『Proceedings of the American Philosophical Society』第23巻第122号、1886年、238–257頁",
+      "sourceEdition": "Daniel G. Brinton, “Notes on the Mangue; An Extinct Dialect Formerly Spoken in Nicaragua,” Proceedings of the American Philosophical Society, vol. 23, no. 122, 1886, pp. 238–257; separate issue, Philadelphia: McCalla & Stavely, 1886.",
+      "sourceProvider": "BioStor／Biodiversity Heritage Libraryが提供し、Internet Archiveが公開する論文別画像（BioStor reference 203183; BHL page 6898937; identifier: biostor-203183）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/biostor-203183"
+      },
+      "rights": "1886年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの当該BioStor項目は提供画像にCC BY-NC 3.0を表示しています。本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
+    },
+    {
+      "slug": "brinton-maya-inscriptions-1894",
+      "recordClass": "short-work",
+      "title": "マヤ碑文は何を物語るか",
+      "originalTitle": "What the Maya Inscriptions Tell About",
+      "author": "ダニエル・G・ブリントン",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1894,
+      "originalPublication": "ウォータールー（インディアナ州）、『The Archaeologist』第2巻第11号、1894年11月、325–328頁",
+      "sourceEdition": "Daniel G. Brinton, “What the Maya Inscriptions Tell About,” The Archaeologist, vol. 2, no. 11, November 1894, pp. 325–328.",
+      "sourceProvider": "Robert S. Peabody Museum of Archaeology, Phillips Academy Andover所蔵のThe Archaeologist第2巻をInternet Archiveが公開する全冊画像（identifier: archaeologist02ohio）を底本としました。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/archaeologist02ohio"
+      },
+      "rights": "1894年刊の原著本文は米国においてパブリックドメインです。Internet Archiveの提供画像には同機関の利用条件が適用されます。本版は原著の文字情報のみを用い、誌面画像を収録していません。",
+      "publishedDate": "2026-09-04",
+      "updatedDate": "2026-09-04"
     }
   ],
   "works": [
