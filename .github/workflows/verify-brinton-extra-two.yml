@@ -1,0 +1,42 @@
+name: Verify Brinton extra two publication
+on:
+  push:
+    branches: ["agent/brinton-extra-two-verify-20260905"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify pages, downloads, and search shard
+        run: |
+          set -euo pipefail
+          site=https://takochanchan.github.io
+          release=https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current
+          search=https://takochanchan.github.io/takochan-search-index-002
+          curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-missing-authorities-mayan-antiquities-1897/" -o missing.html
+          curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-pillars-of-ben-1897/" -o pillars.html
+          grep -q 'マヤ古代研究に欠けている典拠' missing.html
+          grep -q 'ベンの柱' pillars.html
+          grep -q 'brinton-missing-authorities-mayan-antiquities-1897' missing.html
+          grep -q 'brinton-pillars-of-ben-1897' pillars.html
+          curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-missing-authorities-mayan-antiquities-1897/cover.jpg" -o missing.jpg
+          curl -fsSL --retry 5 --retry-delay 5 "$site/publications/brinton-pillars-of-ben-1897/cover.jpg" -o pillars.jpg
+          test "$(stat -c %s missing.jpg)" = "140544"
+          test "$(stat -c %s pillars.jpg)" = "159228"
+          curl -fsSL --retry 5 --retry-delay 5 "$site/sitemap.xml" -o sitemap.xml
+          grep -q 'brinton-missing-authorities-mayan-antiquities-1897' sitemap.xml
+          grep -q 'brinton-pillars-of-ben-1897' sitemap.xml
+          curl -fsSL --retry 5 --retry-delay 5 "$search/document-map.json" -o document-map.json
+          grep -q 'brinton-missing-authorities-mayan-antiquities-1897' document-map.json
+          grep -q 'brinton-pillars-of-ben-1897' document-map.json
+          curl -fsSL --retry 5 --retry-delay 5 "$search/search-meta.json" -o search-meta.json
+          grep -q '"workCount": 83' search-meta.json
+          curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.epub" -o missing.epub
+          curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.pdf" -o missing.pdf
+          curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.epub" -o pillars.epub
+          curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.pdf" -o pillars.pdf
+          test "$(sha256sum missing.epub | cut -d ' ' -f1)" = "7393efbdaace6a39fccdb7052d73d6442c8c4f1f8f787ef561c8f77a7c80d13c"
+          test "$(sha256sum missing.pdf | cut -d ' ' -f1)" = "441d6eb71a12f0410b9bc7d05e581236dd3536d88d3b5fbc217c3c13dfd699c5"
+          test "$(sha256sum pillars.epub | cut -d ' ' -f1)" = "875116481439d8ea0b9bc527a5da48a88605fd5d182996a78078b71ac25b93a9"
+          test "$(sha256sum pillars.pdf | cut -d ' ' -f1)" = "2293f7bfdda2e3a77c73c77ed7d972185ded4735a8906e46df8a28f2af9c4c3d"
