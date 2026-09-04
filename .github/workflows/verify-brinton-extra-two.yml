@@ -31,7 +31,7 @@ jobs:
           grep -q 'brinton-missing-authorities-mayan-antiquities-1897' document-map.json
           grep -q 'brinton-pillars-of-ben-1897' document-map.json
           curl -fsSL --retry 5 --retry-delay 5 "$search/search-meta.json" -o search-meta.json
-          grep -q '"workCount": 83' search-meta.json
+          grep -q '"works":83' search-meta.json
           curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.epub" -o missing.epub
           curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.pdf" -o missing.pdf
           curl -fsSL --retry 5 --retry-delay 5 "$release/Daniel_G_Brinton_The_Pillars_of_Ben_1897_Japanese_Complete_Translation.epub" -o pillars.epub
