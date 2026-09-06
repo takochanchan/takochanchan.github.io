@@ -65,7 +65,8 @@ test("sealed shards keep per-work verification without requiring current global 
 
 test("combined compatibility pages link to the matching public volume", () => {
   assert.match(browserScript, /const pdfTargetFor = \(slug, pdfPage, fallbackUrl\)/);
-  assert.match(browserScript, /pdfPage \+ volume\.searchPdfPageOffset/);
+  assert.match(browserScript, /candidate\.searchPdfPageSegments\.find/);
+  assert.match(browserScript, /matchedSegment\?\.offset \?\? volume\.searchPdfPageOffset/);
   assert.match(browserScript, /target\.pdfUrl \+ "#page=" \+ target\.pdfPage/);
   assert.match(browserScript, /target\.volumeLabel \+ " PDF "/);
 });

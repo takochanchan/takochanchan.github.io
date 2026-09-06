@@ -371,8 +371,15 @@
   const pdfTargetFor = (slug, pdfPage, fallbackUrl) => {
     const canonicalSlug = window.BIBLIOGRAPHIC_ALIASES?.[slug] || slug;
     const publication = catalogueBySlug.get(canonicalSlug);
+    let matchedSegment = null;
     const volume = publication?.volumes?.find((candidate) => {
       if (candidate.searchSlug !== slug) return false;
+      if (Array.isArray(candidate.searchPdfPageSegments)) {
+        matchedSegment = candidate.searchPdfPageSegments.find(
+          (segment) => pdfPage >= segment.start && pdfPage <= segment.end,
+        );
+        return Boolean(matchedSegment);
+      }
       const afterStart =
         candidate.searchPdfPageStart === null ||
         pdfPage >= candidate.searchPdfPageStart;
@@ -384,7 +391,7 @@
     if (!volume) return { pdfUrl: fallbackUrl, pdfPage, volumeLabel: null };
     return {
       pdfUrl: volume.pdfUrl,
-      pdfPage: pdfPage + volume.searchPdfPageOffset,
+      pdfPage: pdfPage + (matchedSegment?.offset ?? volume.searchPdfPageOffset),
       volumeLabel: volume.volumeLabel,
     };
   };

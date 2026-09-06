@@ -84,7 +84,7 @@ test("catalogue metadata is complete and unique", () => {
 
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 2);
-  assert.equal(publicationFileSplitDefinitions.length, 1);
+  assert.equal(publicationFileSplitDefinitions.length, 8);
   assert.equal(cataloguePublications.length, 362);
   assert.equal(majorCataloguePublications.length, 174);
   assert.equal(shortCataloguePublications.length, 188);
@@ -130,6 +130,33 @@ test("split volumes share one canonical bibliography record", () => {
     bancroft.volumes.map((volume) => volume.searchPdfPageOffset),
     [0, -922, -1686],
   );
+
+  const splitVolumeCounts = Object.fromEntries(
+    publicationFileSplitDefinitions.map((definition) => [
+      definition.slug,
+      definition.volumes.length,
+    ]),
+  );
+  assert.deepEqual(splitVolumeCounts, {
+    "bancroft-history-central-america-1886-1887": 3,
+    "torquemada-monarquia-indiana-1615": 3,
+    "valle-anexion-centro-america-mexico-1924-1949": 6,
+    "southey-chronological-history-west-indies-1827": 3,
+    "milla-gomez-carrillo-historia-america-central-1879-1905": 5,
+    "baqueiro-ensayo-revoluciones-yucatan-1878-1887": 3,
+    "dupaix-antiquites-mexicaines-1834": 3,
+    "garcia-pelaez-memorias-guatemala-1851-1852": 3,
+  });
+  const dupaix = cataloguePublications.find(
+    (publication) => publication.slug === "dupaix-antiquites-mexicaines-1834",
+  );
+  assert.ok(dupaix);
+  assert.deepEqual(
+    dupaix.volumes.map((volume) => volume.pageCount),
+    [361, 648, 176],
+  );
+  assert.equal(dupaix.volumes[0].searchPdfPageSegments.length, 4);
+  assert.equal(dupaix.volumes[2].searchPdfPageSegments.length, 5);
 });
 
 test("full-text search assignments stay inside stable Pages shards", async () => {
@@ -1570,7 +1597,7 @@ test("Milla and Gómez Carrillo Central America history retains the approved pub
   );
   const assets = new Map(
     manifest.assets
-      .filter((asset) => asset.path.includes(item.slug))
+      .filter((asset) => [item.pdf, item.epub, item.cover].includes(asset.path))
       .map((asset) => [path.extname(asset.path), asset]),
   );
   assert.equal(
@@ -2800,10 +2827,10 @@ test("home page contains scalable archive controls", async () => {
     ]),
     [[3, 924, 0], [925, 1688, -922], [1689, 2585, -1686]],
   );
-  assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
-  assert.match(html, /\/archive\.js\?v=20260906-bancroft-volume-files/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260906-bancroft-volume-files/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260906-bancroft-volume-files/);
+  assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
+  assert.match(html, /\/archive\.js\?v=20260906-multivolume-files/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260906-multivolume-files/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260906-multivolume-files/);
   assert.match(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
@@ -2901,7 +2928,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
+  assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -3054,17 +3081,17 @@ test("every bibliographic work has one detail page, local cover, and volume link
       assert.ok(html.includes(escapeHtml(volume.epubUrl)), `${volume.slug}: EPUB URL`);
     }
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
-    assert.match(html, /\/archive\.js\?v=20260906-bancroft-volume-files/);
+    assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
+    assert.match(html, /\/archive\.js\?v=20260906-multivolume-files/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260906-bancroft-volume-files#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260906-multivolume-files#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260906-bancroft-volume-files#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260906-multivolume-files#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
