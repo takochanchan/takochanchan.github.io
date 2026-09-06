@@ -2843,9 +2843,16 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
   assert.match(html, /\/archive\.js\?v=20260906-multivolume-files/);
   assert.match(html, /\/fulltext-search\.css\?v=20260906-multivolume-files/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260906-multivolume-files/);
+  assert.match(
+    html,
+    /\/fulltext-search\.js\?v=20260906-multivolume-files-bibliographic-counts/,
+  );
   assert.match(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
+  assert.match(
+    html,
+    /bibliographicCounts:\{"books":175,"papers":188\}/,
+  );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
   assert.doesNotMatch(html, /"\/search\/pagefind\//);

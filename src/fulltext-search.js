@@ -656,17 +656,33 @@
               slugs.add(slug);
             }
           }
+          const indexedBooks = allMetadata.reduce(
+            (sum, metadata) => sum + metadata.books,
+            0,
+          );
+          const indexedPapers = allMetadata.reduce(
+            (sum, metadata) => sum + metadata.papers,
+            0,
+          );
+          const configuredCounts = config.bibliographicCounts;
+          const hasBibliographicCounts =
+            Number.isInteger(configuredCounts?.books) &&
+            configuredCounts.books >= 0 &&
+            Number.isInteger(configuredCounts?.papers) &&
+            configuredCounts.papers >= 0 &&
+            configuredCounts.books + configuredCounts.papers <= slugs.size;
+          const books = hasBibliographicCounts
+            ? configuredCounts.books
+            : indexedBooks;
+          const papers = hasBibliographicCounts
+            ? configuredCounts.papers
+            : indexedPapers;
           return {
             schemaVersion: 1,
-            works: slugs.size,
-            books: allMetadata.reduce(
-              (sum, metadata) => sum + metadata.books,
-              0,
-            ),
-            papers: allMetadata.reduce(
-              (sum, metadata) => sum + metadata.papers,
-              0,
-            ),
+            works: books + papers,
+            searchUnits: slugs.size,
+            books,
+            papers,
             chunks: allMetadata.reduce(
               (sum, metadata) => sum + metadata.chunks,
               0,

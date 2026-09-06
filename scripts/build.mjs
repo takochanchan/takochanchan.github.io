@@ -597,11 +597,15 @@ ${footer()}`,
 <script>
 window.FULLTEXT_SEARCH_CONFIG={
   shards:${jsonForScript(searchClientShards)},
+  bibliographicCounts:${jsonForScript({
+    books: majorPublications.length,
+    papers: shortPublications.length,
+  })},
   preferEmbedded:false
 };
 </script>
 <script src="/archive.js?v=${assetVersion}" defer></script>
-<script src="/fulltext-search.js?v=${assetVersion}" defer></script>`,
+<script src="/fulltext-search.js?v=${assetVersion}-bibliographic-counts" defer></script>`,
 });
 
 const aboutPage = documentShell({
