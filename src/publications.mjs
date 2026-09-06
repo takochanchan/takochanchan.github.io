@@ -1,3 +1,4 @@
+import { herreraPublicationRecords, herreraPublicationMetadata } from "./herrera-publication.mjs";
 import { createRequire } from "node:module";
 import {
   nuixPublicationMetadata,
@@ -9254,6 +9255,7 @@ const publicationRecords = [
   ...brintonExtraTwoPapersPublicationRecords,
   ...millaGomezCarrilloPublicationRecords,
   ...nuixPublicationRecords,
+  ...herreraPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11831,6 +11833,7 @@ const publicationMetadata = {
   ...brintonExtraTwoPapersPublicationMetadata,
   ...millaGomezCarrilloPublicationMetadata,
   ...nuixPublicationMetadata,
+  ...herreraPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.

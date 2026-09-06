@@ -6516,6 +6516,78 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.pdf",
+      "size": 12226370,
+      "sha256": "b7acfa3bc3433fb0424c33792adbd9a50c935df2f01423a680fc0e91279b8df1"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.epub",
+      "size": 8061463,
+      "sha256": "3e8d0867cb7fb15c730f1e671bdd5699611fadc47053a7b35d443a352eab2d38"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
+      "size": 68830,
+      "sha256": "7e78f2cb95979e9251ce21566238015289f8c75491967744fde956af4b97e66a"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.pdf",
+      "size": 12235557,
+      "sha256": "29d1fbeca662b2b4712d428ba773cdc1589e2cfb2b5ec85213b4d0ec99c55e6c"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.epub",
+      "size": 14141569,
+      "sha256": "82fa6791ab9ba96c3d44caa7fc380e84fd47d1b50b4bb469acd2801ce7e88f2d"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
+      "size": 68779,
+      "sha256": "0e7bdc967d50f2ad5aeebcb87c6b414238b3aa0eadb9f070e9ddf0eb2b9fd97e"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.pdf",
+      "size": 11846622,
+      "sha256": "259a539adc752f50f875640284d318b23e5e92fcbfaaf260d98dba422e34c27f"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.epub",
+      "size": 16639198,
+      "sha256": "c639458ef5f5b5cc3e53b7a71b499da0ad61d2bf48d34e05d926f2de5ced3faa"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
+      "size": 68867,
+      "sha256": "3a8dd7deadc569d1f3ec86a665a0f270aa18ff6bbff48cfb33b145a9adb04c00"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.pdf",
+      "size": 9526660,
+      "sha256": "fcfdecd60751dc2f115c756ab8d5dba2db6828b6195fa4a41b7f1061c14e5f43"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.epub",
+      "size": 13742669,
+      "sha256": "99a09af565044b67c5e050d855f3379e8bbdb882a03ac2d2f370a466d5978d26"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
+      "size": 68825,
+      "sha256": "ce38d98f65dceef30748163b8ce11994bd3ab9358830bf40760146d5d689e26c"
     }
   ]
 }
