@@ -51,25 +51,15 @@ jobs:
           echo 'dff723ba59d57d136764a04b9b2d03205544f7cd785a711442d6d2d085ac5073  tmp/bancroft/fonts-full/NotoSansJP-Regular.otf' | sha256sum -c -
           echo '1b0edfb500b73a4fa8a4fcaae1bbbd403994e08e73e3e0da37e70d3853f42c5f  tmp/bancroft/fonts-full/NotoSansJP-Bold.otf' | sha256sum -c -
 
-          gh release download version_2_37 --repo dejavu-fonts/dejavu-fonts \
-            --pattern 'dejavu-fonts-ttf-2.37.zip' --dir tmp/bancroft/downloads
-          unzip -q tmp/bancroft/downloads/dejavu-fonts-ttf-2.37.zip -d tmp/bancroft/dejavu
-          LATIN_FONT=$(find tmp/bancroft/dejavu -name DejaVuSans.ttf -print -quit)
-          ITALIC_FONT=$(find tmp/bancroft/dejavu -name DejaVuSerif-Italic.ttf -print -quit)
-          test -n "$LATIN_FONT" -a -n "$ITALIC_FONT"
-          echo "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280  $LATIN_FONT" | sha256sum -c -
-          echo "2e39b1d50f90b933b00c7bb54a96afd3f86419b3d717c7cf202e36f2d4973e47  $ITALIC_FONT" | sha256sum -c -
-          printf '%s\n' "$LATIN_FONT" > tmp/bancroft/latin-font.path
-          printf '%s\n' "$ITALIC_FONT" > tmp/bancroft/italic-font.path
+          echo 'ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280  tmp/bancroft/fonts-latin/DejaVuSans.ttf' | sha256sum -c -
+          echo '2e39b1d50f90b933b00c7bb54a96afd3f86419b3d717c7cf202e36f2d4973e47  tmp/bancroft/fonts-latin/DejaVuSerif-Italic.ttf' | sha256sum -c -
 
       - name: Generate and validate the three PDF and EPUB pairs
         env:
-          BANCROFT_LATIN_FONT: ${{ github.workspace }}/tmp/bancroft/dejavu/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf
-          BANCROFT_LATIN_ITALIC_FONT: ${{ github.workspace }}/tmp/bancroft/dejavu/dejavu-fonts-ttf-2.37/ttf/DejaVuSerif-Italic.ttf
+          BANCROFT_LATIN_FONT: ${{ github.workspace }}/tmp/bancroft/fonts-latin/DejaVuSans.ttf
+          BANCROFT_LATIN_ITALIC_FONT: ${{ github.workspace }}/tmp/bancroft/fonts-latin/DejaVuSerif-Italic.ttf
         run: |
           set -euo pipefail
-          test "$BANCROFT_LATIN_FONT" = "${{ github.workspace }}/$(cat tmp/bancroft/latin-font.path)"
-          test "$BANCROFT_LATIN_ITALIC_FONT" = "${{ github.workspace }}/$(cat tmp/bancroft/italic-font.path)"
           python tmp/bancroft/split_publication_volumes.py
           (cd output && sha256sum -c ../tmp/bancroft/public-volume-SHA256SUMS.txt)
           test "$(stat -c %s output/pdf/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf)" = 23262511
