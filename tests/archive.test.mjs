@@ -116,7 +116,7 @@ test("split volumes share one canonical bibliography record", () => {
       publication.slug === "bancroft-native-races-pacific-states-1883",
   );
   assert.ok(nativeRaces);
-  assert.equal(nativeRaces.pageCount, 4002);
+  assert.equal(nativeRaces.pageCount, 4102);
   assert.equal(nativeRaces.volumes.length, 5);
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),

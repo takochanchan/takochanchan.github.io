@@ -16,7 +16,7 @@ export const bancroftNativeRacesPublicationRecords = [
     extent: "第I巻・日本語版PDF 971頁・図版・挿図7点",
     visualLabel: "日本語訳表紙",
     description:
-      "北アメリカ太平洋岸の先住諸民族について、居住域、社会、生活、習俗、信仰などを地域別に叙述した第一巻です。アラスカからカリフォルニア、内陸盆地、北西海岸に及ぶ諸集団を扱います。1883年サンフランシスコ刊第五版に基づく日本語全訳です。",
+      "北アメリカ太平洋岸の先住諸民族について、居住域、社会、生活、習俗、信仰などを地域別に叙述した第一巻です。アラスカからカリフォルニア、内陸盆地、北西海岸に及ぶ諸集団を扱います。1883年サンフランシスコ刊行版に基づく日本語全訳です。",
     cover: "publications/bancroft-native-races-volume-i-1883/cover.jpg",
     pdf: "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.pdf",
     epub: "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.epub",
@@ -43,7 +43,7 @@ export const bancroftNativeRacesPublicationRecords = [
     extent: "第II巻・日本語版PDF 748頁・図版・挿図32点",
     visualLabel: "日本語訳表紙",
     description:
-      "メキシコと中央アメリカの諸社会を、政治組織、法、宗教、暦、教育、産業、交易、都市生活などの主題から叙述した第二巻です。ナワ、マヤ、ミシュテカ、サポテカほかの諸民族を扱います。1883年サンフランシスコ刊第五版に基づく日本語全訳です。",
+      "メキシコと中央アメリカの諸社会を、政治組織、法、宗教、暦、教育、産業、交易、都市生活などの主題から叙述した第二巻です。ナワ、マヤ、ミシュテカ、サポテカほかの諸民族を扱います。1883年サンフランシスコ刊行版に基づく日本語全訳です。",
     cover: "publications/bancroft-native-races-volume-ii-1883/cover.jpg",
     pdf: "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.pdf",
     epub: "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.epub",
@@ -70,7 +70,7 @@ export const bancroftNativeRacesPublicationRecords = [
     extent: "第III巻・日本語版PDF 769頁",
     visualLabel: "日本語訳表紙",
     description:
-      "太平洋諸州の先住諸民族に伝わる創世・洪水・英雄神話を比較し、北アメリカ西部からメキシコ、中央アメリカに及ぶ諸言語の語彙と文法を整理した第三巻です。1883年サンフランシスコ刊第五版に基づく日本語全訳です。",
+      "太平洋諸州の先住諸民族に伝わる創世・洪水・英雄神話を比較し、北アメリカ西部からメキシコ、中央アメリカに及ぶ諸言語の語彙と文法を整理した第三巻です。1883年サンフランシスコ刊行版に基づく日本語全訳です。",
     cover: "publications/bancroft-native-races-volume-iii-1883/cover.jpg",
     pdf: "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.pdf",
     epub: "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.epub",
@@ -97,7 +97,7 @@ export const bancroftNativeRacesPublicationRecords = [
     extent: "第IV巻・日本語版PDF 855頁・図版・挿図365点",
     visualLabel: "日本語訳表紙",
     description:
-      "北アメリカ西部、メキシコ、中央アメリカの遺跡、建築、彫刻、石碑、土器、墳墓などを地域別に記述した第四巻です。遺構の平面図や古代遺物の図像を多数収録します。1883年サンフランシスコ刊第五版に基づく日本語全訳です。",
+      "北アメリカ西部、メキシコ、中央アメリカの遺跡、建築、彫刻、石碑、土器、墳墓などを地域別に記述した第四巻です。遺構の平面図や古代遺物の図像を多数収録します。1883年サンフランシスコ刊行版に基づく日本語全訳です。",
     cover: "publications/bancroft-native-races-volume-iv-1883/cover.jpg",
     pdf: "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.pdf",
     epub: "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.epub",
@@ -124,7 +124,7 @@ export const bancroftNativeRacesPublicationRecords = [
     extent: "第V巻・日本語版PDF 759頁・図版・挿図2点",
     visualLabel: "日本語訳表紙",
     description:
-      "メキシコと中央アメリカの諸王朝、移住伝承、年代記、征服以前の政治史を検討し、各地域の歴史叙述を再構成した第五巻です。巻末に全五巻の総索引を収録します。1883年サンフランシスコ刊第五版に基づく日本語全訳です。",
+      "メキシコと中央アメリカの諸王朝、移住伝承、年代記、征服以前の政治史を検討し、各地域の歴史叙述を再構成した第五巻です。巻末に全五巻の総索引を収録します。1883年サンフランシスコ刊行版に基づく日本語全訳です。",
     cover: "publications/bancroft-native-races-volume-v-1883/cover.jpg",
     pdf: "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.pdf",
     epub: "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.epub",
@@ -142,7 +142,7 @@ export const bancroftNativeRacesPublicationRecords = [
 export const bancroftNativeRacesPublicationMetadata = {
   "bancroft-native-races-volume-i-1883": {
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. I, The Wild Tribes, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. I, The Wild Tribes, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBook 41070。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images generously made available by 1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/41070",
@@ -152,7 +152,7 @@ export const bancroftNativeRacesPublicationMetadata = {
   },
   "bancroft-native-races-volume-ii-1883": {
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. II, The Civilized Nations, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. II, The Civilized Nations, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBook 42808。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/42808",
@@ -162,7 +162,7 @@ export const bancroftNativeRacesPublicationMetadata = {
   },
   "bancroft-native-races-volume-iii-1883": {
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. III, Myths and Languages, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. III, Myths and Languages, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBook 43123。制作クレジット：Produced by Melissa McDaniel and The Online Distributed Proofreading Team at http://www.pgdp.net (1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/43123",
@@ -172,7 +172,7 @@ export const bancroftNativeRacesPublicationMetadata = {
   },
   "bancroft-native-races-volume-iv-1883": {
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. IV, Antiquities, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. IV, Antiquities, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBook 44104。制作クレジット：E-text prepared by Melissa McDaniel and the Online Distributed Proofreading Team (http://www.pgdp.net) from page images generously made available by Internet Archive (https://archive.org)。原画像提供元の表示はInternet Archiveです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/44104",
@@ -182,7 +182,7 @@ export const bancroftNativeRacesPublicationMetadata = {
   },
   "bancroft-native-races-volume-v-1883": {
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. V, Primitive History, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. V, Primitive History, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBook 45268。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images generously made available by The Internet Archive)。原画像提供元の表示はThe Internet Archiveです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/45268",

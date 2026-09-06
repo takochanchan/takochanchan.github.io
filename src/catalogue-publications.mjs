@@ -24,11 +24,11 @@ export const publicationGroupDefinitions = [
     originalPublication:
       "サンフランシスコ、A. L. Bancroft & Company、1883年",
     year: 1883,
-    extent: "全5巻・巻別PDF計4,002頁・図版・挿図406点",
+    extent: "全5巻・巻別PDF計4,102頁・図版・挿図406点",
     description:
       "ヒューバート・ハウ・バンクロフトが、北アメリカ太平洋岸からメキシコ、中央アメリカに及ぶ先住諸民族を、生活と社会、文明、神話と言語、古代遺物、征服以前の歴史という五つの領域から叙述した全五巻です。1883年版に基づく日本語全訳を、各巻のPDF・EPUBで収録しています。",
     sourceEdition:
-      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vols. I–V, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vols. I–V, San Francisco: A. L. Bancroft & Company, 1883.",
     sourceProvider:
       "Project Gutenberg eBooks 41070・42808・43123・44104・45268の画像入りHTML版を電子底本・画像取得元とし、CIHM／Canadiana公開の1883年版画像で原刊頁・図版・疑義箇所を照合しました。",
     sourceUrl: "https://www.gutenberg.org/ebooks/41070",
