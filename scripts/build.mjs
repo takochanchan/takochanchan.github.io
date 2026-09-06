@@ -2,11 +2,15 @@ import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
-  majorPublications,
-  publications,
+  publications as publicationUnits,
   shortPublicationAuthors,
-  shortPublications,
 } from "../src/publications.mjs";
+import {
+  bibliographicAliases,
+  cataloguePublications as publications,
+  majorCataloguePublications as majorPublications,
+  shortCataloguePublications as shortPublications,
+} from "../src/catalogue-publications.mjs";
 import {
   browserSearchShards,
   readSearchShardConfig,
@@ -30,7 +34,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260905-milla-history-central-america";
+const assetVersion = "20260906-multivolume-bibliography";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -78,9 +82,9 @@ const assetSizes = new Map(
   assetManifest.assets.map((asset) => [asset.path, asset.size]),
 );
 const searchShardConfig = await readSearchShardConfig(projectRoot);
-validateSearchShardAssignments(publications, searchShardConfig);
+validateSearchShardAssignments(publicationUnits, searchShardConfig);
 const searchClientShards = browserSearchShards(searchShardConfig);
-for (const item of publications) {
+for (const item of publicationUnits) {
   const pdfBytes = assetSizes.get(item.pdf);
   const epubBytes = assetSizes.get(item.epub);
   if (!Number.isFinite(pdfBytes) || !Number.isFinite(epubBytes)) {
@@ -90,6 +94,26 @@ for (const item of publications) {
   item.epubBytes = epubBytes;
   item.pdfSize = formatFileSize(pdfBytes);
   item.epubSize = formatFileSize(epubBytes);
+}
+for (const item of publications) {
+  for (const volume of item.volumes) {
+    const pdfBytes = assetSizes.get(volume.pdf);
+    const epubBytes = assetSizes.get(volume.epub);
+    if (!Number.isFinite(pdfBytes) || !Number.isFinite(epubBytes)) {
+      throw new Error(`Missing volume asset size: ${volume.slug}`);
+    }
+    volume.pdfBytes = pdfBytes;
+    volume.epubBytes = epubBytes;
+    volume.pdfSize = formatFileSize(pdfBytes);
+    volume.epubSize = formatFileSize(epubBytes);
+  }
+  if (item.volumes.length === 1) {
+    const [volume] = item.volumes;
+    item.pdfBytes = volume.pdfBytes;
+    item.epubBytes = volume.epubBytes;
+    item.pdfSize = volume.pdfSize;
+    item.epubSize = volume.epubSize;
+  }
 }
 
 const options = (values, label) =>
@@ -132,6 +156,52 @@ const catalogueAttributionMarkup = (item, className) =>
     ? `<p class="${className}">後世の暫定帰属：${escapeHtml(item.attributedTo)}</p>`
     : "";
 
+const isMultiVolume = (item) => item.volumes.length > 1;
+
+const archivePublications = publications.map((item) => ({
+  slug: item.slug,
+  title: item.title,
+  originalTitle: item.originalTitle,
+  subtitle: item.subtitle,
+  author: item.author,
+  description: item.description,
+  originalPublication: item.originalPublication,
+  types: item.types,
+  regions: item.regions,
+  languages: item.languages,
+  tags: item.tags,
+  year: item.year,
+  series: item.series,
+  extent: item.extent,
+  cover: item.cover,
+  recordClass: item.recordClass,
+  authorKey: item.authorKey,
+  pageCount: item.pageCount,
+  ...(isMultiVolume(item)
+    ? {
+        volumes: item.volumes.map((volume) => ({
+          title: volume.title,
+          originalTitle: volume.originalTitle,
+          subtitle: volume.subtitle,
+        })),
+      }
+    : {
+        pdfUrl: item.pdfUrl,
+        pdfSize: item.pdfSize,
+        epubUrl: item.epubUrl,
+        epubSize: item.epubSize,
+      }),
+}));
+
+const publicationCardActions = (item) =>
+  isMultiVolume(item)
+    ? `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・全巻</a>
+        <p class="record-card__volume-note">PDF・EPUBを${item.volumes.length}分冊で収録</p>`
+    : `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
+        <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF保存（${escapeHtml(item.pdfSize)}）</a>
+        <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+          type="application/epub+zip" download>EPUB保存（${escapeHtml(item.epubSize)}）</a>`;
+
 const publicationCard = (item) => `
   <article class="record-card">
     <a class="record-card__cover" href="/publications/${escapeHtml(item.slug)}/">
@@ -157,10 +227,7 @@ const publicationCard = (item) => `
         <div><dt>構成</dt><dd>${escapeHtml(item.extent)}</dd></div>
       </dl>
       <div class="record-card__actions">
-        <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
-        <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF保存（${escapeHtml(item.pdfSize)}）</a>
-        <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
-          type="application/epub+zip" download>EPUB保存（${escapeHtml(item.epubSize)}）</a>
+        ${publicationCardActions(item)}
       </div>
     </div>
   </article>`;
@@ -518,7 +585,8 @@ ${header()}
 ${fulltextDialog()}
 ${footer()}`,
   scripts: `
-<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(publications)};</script>
+<script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(archivePublications)};</script>
+<script>window.BIBLIOGRAPHIC_ALIASES=${jsonForScript(bibliographicAliases)};</script>
 <script>
 window.FULLTEXT_SEARCH_CONFIG={
   shards:${jsonForScript(searchClientShards)},
@@ -776,6 +844,26 @@ const tagList = (item) =>
 const publicationStructuredData = (item, isShortWork) => {
   const canonical = `${site.url}/publications/${item.slug}/`;
   const workType = isShortWork ? "ScholarlyArticle" : "Book";
+  const encodingsFor = (volume) => [
+    {
+      "@type": "MediaObject",
+      name: volume.volumeLabel
+        ? `${volume.volumeLabel} PDF`
+        : `${item.title} PDF`,
+      contentUrl: volume.pdfUrl,
+      encodingFormat: "application/pdf",
+      contentSize: volume.pdfSize,
+    },
+    {
+      "@type": "MediaObject",
+      name: volume.volumeLabel
+        ? `${volume.volumeLabel} EPUB`
+        : `${item.title} EPUB`,
+      contentUrl: volume.epubUrl,
+      encodingFormat: "application/epub+zip",
+      contentSize: volume.epubSize,
+    },
+  ];
   const originalWork = {
     "@type": workType,
     name: item.originalTitle,
@@ -820,20 +908,17 @@ const publicationStructuredData = (item, isShortWork) => {
       ...(isShortWork
         ? { pagination: `${item.pageCount}頁` }
         : { numberOfPages: item.pageCount }),
-      encoding: [
-        {
-          "@type": "MediaObject",
-          contentUrl: item.pdfUrl,
-          encodingFormat: "application/pdf",
-          contentSize: item.pdfSize,
-        },
-        {
-          "@type": "MediaObject",
-          contentUrl: item.epubUrl,
-          encodingFormat: "application/epub+zip",
-          contentSize: item.epubSize,
-        },
-      ],
+      encoding: item.volumes.flatMap(encodingsFor),
+      ...(isMultiVolume(item)
+        ? {
+            hasPart: item.volumes.map((volume) => ({
+              "@type": "Book",
+              name: `${item.title}（${volume.volumeLabel}）`,
+              numberOfPages: volume.pageCount,
+              encoding: encodingsFor(volume),
+            })),
+          }
+        : {}),
       translationOfWork: originalWork,
     },
     {
@@ -857,14 +942,95 @@ const publicationStructuredData = (item, isShortWork) => {
   ];
 };
 
+const volumeSourceProviderMarkup = (volume) =>
+  volume.sourceUrl
+    ? `<a href="${escapeHtml(volume.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(volume.sourceProvider)} ↗</a>`
+    : escapeHtml(volume.sourceProvider);
+
+const volumeBibliographyMarkup = (item) =>
+  isMultiVolume(item)
+    ? `<div class="publication-info__wide">
+        <dt>各分冊の底本・公開条件</dt>
+        <dd>
+          <div class="volume-bibliography-list">
+            ${item.volumes
+              .map(
+                (volume) => `
+              <article class="volume-bibliography">
+                <p class="volume-bibliography__label">${escapeHtml(volume.volumeLabel)}</p>
+                <h3>${escapeHtml(volume.title)}</h3>
+                <p class="volume-bibliography__original"><cite>${escapeHtml(volume.originalTitle)}</cite></p>
+                <dl>
+                  <div><dt>原刊</dt><dd>${escapeHtml(volume.originalPublication)}</dd></div>
+                  <div><dt>構成</dt><dd>${escapeHtml(volume.extent)}</dd></div>
+                  <div><dt>底本</dt><dd>${escapeHtml(volume.sourceEdition)}</dd></div>
+                  <div><dt>公開元</dt><dd>${volumeSourceProviderMarkup(volume)}</dd></div>
+                  ${
+                    volume.sourceAccessNote
+                      ? `<div><dt>閲覧情報</dt><dd>${escapeHtml(volume.sourceAccessNote)}</dd></div>`
+                      : ""
+                  }
+                  <div><dt>権利・利用条件</dt><dd>${escapeHtml(volume.rights)}</dd></div>
+                </dl>
+              </article>`,
+              )
+              .join("")}
+          </div>
+        </dd>
+      </div>`
+    : "";
+
+const heroFileActions = (item) =>
+  isMultiVolume(item)
+    ? `<div class="publication-actions publication-actions--multi">
+        <a class="button button--quiet" href="#reader">各分冊のPDF・EPUBを見る</a>
+      </div>`
+    : `<div class="publication-actions">
+        <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDFを保存（${escapeHtml(item.pdfSize)}）</a>
+        <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+          type="application/epub+zip" download>リフロー型EPUBを保存（${escapeHtml(item.epubSize)}）</a>
+      </div>`;
+
+const volumeFileControls = (item) =>
+  isMultiVolume(item)
+    ? `<div class="volume-file-list" aria-label="分冊別ファイル">
+        ${item.volumes
+          .map((volume, index) => {
+            const pdfViewerUrl =
+              `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(volume.pdfUrl)}`;
+            return `
+          <article class="volume-file" id="volume-${index + 1}">
+            <div class="volume-file__heading">
+              <p>${escapeHtml(volume.volumeLabel)}</p>
+              <h3>${escapeHtml(volume.title)}</h3>
+              <span>${volume.pageCount.toLocaleString("ja-JP")}頁</span>
+            </div>
+            <div class="volume-file__actions">
+              <button class="button button--primary" type="button" data-pdf-load
+                data-pdf-src="${escapeHtml(pdfViewerUrl)}"
+                data-pdf-label="${escapeHtml(volume.volumeLabel)}"
+                aria-controls="pdf-reader-frame" aria-pressed="false">
+                PDFを読み込む（${escapeHtml(volume.pdfSize)}）
+              </button>
+              <a class="button button--quiet" href="${escapeHtml(volume.pdfUrl)}" download>PDFを保存（${escapeHtml(volume.pdfSize)}）</a>
+              <a class="button button--quiet" href="${escapeHtml(volume.epubUrl)}"
+                type="application/epub+zip" download>EPUBを保存（${escapeHtml(volume.epubSize)}）</a>
+            </div>
+          </article>`;
+          })
+          .join("")}
+      </div>`
+    : "";
+
 const detailPage = (item) => {
   const related = relatedFor(item);
   const visualTotal = item.figureCount + item.plateCount;
   const visualLabel = item.visualLabel ?? "図版・挿図";
   const isShortWork = item.recordClass === "short-work";
   const recordClassLabel = isShortWork ? "論文" : "書籍";
-  const pdfViewerUrl =
-    `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(item.pdfUrl)}`;
+  const pdfViewerUrl = !isMultiVolume(item)
+    ? `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(item.pdfUrl)}`
+    : null;
   const sourceProvider = item.sourceUrl
     ? `<a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(item.sourceProvider)} ↗</a>`
     : escapeHtml(item.sourceProvider);
@@ -907,11 +1073,7 @@ ${header({
           ${catalogueAttributionMarkup(item, "publication-hero__attribution")}
           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
-          <div class="publication-actions">
-            <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDFを保存（${escapeHtml(item.pdfSize)}）</a>
-            <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
-              type="application/epub+zip" download>リフロー型EPUBを保存（${escapeHtml(item.epubSize)}）</a>
-          </div>
+          ${heroFileActions(item)}
           <p class="epub-note">
             EPUBは本文リフロー型です。読書アプリの画面幅・文字サイズ・縦横表示に合わせて組み替わります。
           </p>
@@ -970,6 +1132,7 @@ ${header({
             <dt>権利・利用条件</dt>
             <dd>${escapeHtml(item.rights)}</dd>
           </div>
+          ${volumeBibliographyMarkup(item)}
           <div>
             <dt>公開日</dt>
             <dd><time datetime="${escapeHtml(item.publishedDate)}">${formatDate(item.publishedDate)}</time></dd>
@@ -987,27 +1150,37 @@ ${header({
     </section>
 
     <section class="reader-section" id="reader">
-      <div class="reader-section__inner">
+      <div class="reader-section__inner" data-pdf-reader>
         <div class="reader-heading">
           <div>
             <p class="eyebrow">DOCUMENT READER</p>
-            <h2>日本語翻訳版 PDF</h2>
+            <h2>${isMultiVolume(item) ? `日本語翻訳版 PDF・EPUB（全${item.volumes.length}分冊）` : "日本語翻訳版 PDF"}</h2>
+            ${isMultiVolume(item) ? `<p class="reader-heading__current" data-pdf-current>読み込む分冊を選択してください。</p>` : ""}
           </div>
         </div>
-        <div class="pdf-frame" data-pdf-reader>
+        ${volumeFileControls(item)}
+        <div class="pdf-frame">
           <div class="pdf-placeholder" data-pdf-placeholder>
-            <p>PDFは自動では読み込みません。閲覧するときだけ下のボタンを押してください。</p>
-            <button class="pdf-load-button" type="button" data-pdf-load
+            <p>${isMultiVolume(item) ? "PDFは自動では読み込みません。上の分冊一覧から読み込むPDFを選んでください。" : "PDFは自動では読み込みません。閲覧するときだけ下のボタンを押してください。"}</p>
+            ${
+              isMultiVolume(item)
+                ? ""
+                : `<button class="pdf-load-button" type="button" data-pdf-load
               data-pdf-src="${escapeHtml(pdfViewerUrl)}"
               aria-controls="pdf-reader-frame">
               PDFを読み込む（${escapeHtml(item.pdfSize)}）
-            </button>
+            </button>`
+            }
           </div>
           <iframe id="pdf-reader-frame" data-pdf-frame hidden
             title="${escapeHtml(item.title)} 日本語翻訳版PDF"></iframe>
           <noscript>
             <p class="pdf-noscript">
-              JavaScriptが無効です。<a href="${escapeHtml(item.pdfUrl)}" download>PDFを保存してください</a>。
+              ${
+                isMultiVolume(item)
+                  ? "JavaScriptが無効です。上の分冊一覧からPDFを保存してください。"
+                  : `JavaScriptが無効です。<a href="${escapeHtml(item.pdfUrl)}" download>PDFを保存してください</a>。`
+              }
             </p>
           </noscript>
         </div>
@@ -1058,6 +1231,26 @@ ${header({ detail: true })}
 ${footer()}`,
 });
 
+const redirectPage = (item, canonicalSlug) => {
+  const target = `/publications/${canonicalSlug}/`;
+  return `<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="refresh" content="0;url=${escapeHtml(target)}">
+  <link rel="canonical" href="${site.url}${escapeHtml(target)}">
+  <title>${escapeHtml(item.title)}｜書誌ページへ移動</title>
+</head>
+<body>
+  <p><a href="${escapeHtml(target)}">全巻を収めた書誌ページへ移動します。</a></p>
+  <script>location.replace(${jsonForScript(target)}+location.search+location.hash);</script>
+</body>
+</html>
+`;
+};
+
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await mkdir(path.join(dist, "about"), { recursive: true });
@@ -1095,10 +1288,27 @@ await Promise.all(
     const directory = path.join(dist, "publications", item.slug);
     await mkdir(directory, { recursive: true });
     await writeFile(path.join(directory, "index.html"), detailPage(item));
+  }),
+);
 
+await Promise.all(
+  publicationUnits.map(async (item) => {
     const coverTarget = path.join(dist, item.cover);
     await mkdir(path.dirname(coverTarget), { recursive: true });
     await cp(path.join(projectRoot, "static", item.cover), coverTarget);
+  }),
+);
+
+await Promise.all(
+  Object.entries(bibliographicAliases).map(async ([memberSlug, canonicalSlug]) => {
+    const item = publicationUnits.find((publication) => publication.slug === memberSlug);
+    if (!item) throw new Error(`Missing redirect publication unit: ${memberSlug}`);
+    const directory = path.join(dist, "publications", memberSlug);
+    await mkdir(directory, { recursive: true });
+    await writeFile(
+      path.join(directory, "index.html"),
+      redirectPage(item, canonicalSlug),
+    );
   }),
 );
 
@@ -1179,5 +1389,5 @@ if (localAssets) {
 }
 
 console.log(
-  `Built ${publications.length + 2} pages in ${path.relative(projectRoot, dist)}`,
+  `Built ${publications.length + Object.keys(bibliographicAliases).length + 2} pages in ${path.relative(projectRoot, dist)}`,
 );

@@ -3,6 +3,7 @@ import { access, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../src/publications.mjs";
+import { cataloguePublicationByMemberSlug } from "../src/catalogue-publications.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
@@ -143,7 +144,17 @@ for (const record of manifest.records) {
     throw new Error(`${record.slug}: Squier must use the signed initials`);
   }
 
-  const detail = path.join(root, "dist", "publications", record.slug, "index.html");
+  const bibliographicPublication = cataloguePublicationByMemberSlug.get(record.slug);
+  if (!bibliographicPublication) {
+    throw new Error(`${record.slug}: public bibliography group is missing`);
+  }
+  const detail = path.join(
+    root,
+    "dist",
+    "publications",
+    bibliographicPublication.slug,
+    "index.html",
+  );
   try {
     const html = await readFile(detail, "utf8");
     for (const value of [

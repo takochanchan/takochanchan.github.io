@@ -11,6 +11,13 @@ import {
   shortPublications,
   taxonomy,
 } from "../src/publications.mjs";
+import {
+  bibliographicAliases,
+  cataloguePublications,
+  majorCataloguePublications,
+  publicationGroupDefinitions,
+  shortCataloguePublications,
+} from "../src/catalogue-publications.mjs";
 import { perignyRemainingSlugs } from "../src/perigny-remaining-publications.mjs";
 import {
   readSearchShardConfig,
@@ -72,6 +79,39 @@ test("catalogue metadata is complete and unique", () => {
   assert.ok(taxonomy.types.length >= 8);
   assert.ok(taxonomy.regions.includes("ウスマシンタ川流域"));
   assert.ok(taxonomy.languages.includes("フランス語"));
+});
+
+test("split volumes share one canonical bibliography record", () => {
+  assert.equal(publicationGroupDefinitions.length, 2);
+  assert.equal(cataloguePublications.length, 362);
+  assert.equal(majorCataloguePublications.length, 174);
+  assert.equal(shortCataloguePublications.length, 188);
+
+  const blom = cataloguePublications.find(
+    (publication) => publication.slug === "tribes-and-temples-1926-1927",
+  );
+  assert.ok(blom);
+  assert.equal(blom.title, "部族と神殿");
+  assert.equal(blom.pageCount, 993);
+  assert.deepEqual(
+    blom.volumes.map((volume) => volume.slug),
+    ["tribes-and-temples-vol-1", "tribes-and-temples-vol-2"],
+  );
+
+  const herrera = cataloguePublications.find(
+    (publication) => publication.slug === "herrera-historia-general-1601-1615",
+  );
+  assert.ok(herrera);
+  assert.equal(
+    herrera.title,
+    "大洋の島嶼および大陸におけるカスティーリャ人の事績総史",
+  );
+  assert.equal(herrera.pageCount, 4910);
+  assert.equal(herrera.volumes.length, 4);
+  assert.deepEqual(
+    new Set(Object.values(bibliographicAliases)),
+    new Set([blom.slug, herrera.slug]),
+  );
 });
 
 test("full-text search assignments stay inside stable Pages shards", async () => {
@@ -2722,19 +2762,20 @@ test("home page contains scalable archive controls", async () => {
   const embeddedPublications = JSON.parse(
     html.slice(embeddedStart, embeddedEnd),
   );
-  assert.equal(embeddedPublications.length, publications.length);
+  assert.equal(embeddedPublications.length, cataloguePublications.length);
   assert.equal(
     embeddedPublications.filter((item) => item.recordClass === "major-work").length,
-    majorPublications.length,
+    majorCataloguePublications.length,
   );
   assert.equal(
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
-    shortPublications.length,
+    shortCataloguePublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
-  assert.match(html, /\/archive\.js\?v=20260905-milla-history-central-america/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260905-milla-history-central-america/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260905-milla-history-central-america/);
+  assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
+  assert.match(html, /\/archive\.js\?v=20260906-multivolume-bibliography/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260906-multivolume-bibliography/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260906-multivolume-bibliography/);
+  assert.match(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2747,7 +2788,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">178<\/strong>件/);
+  assert.match(html, /id="book-match-count">174<\/strong>件/);
   assert.match(html, /id="paper-match-count">188<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -2785,11 +2826,11 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /底本位置標識（原刊頁・写本葉丁・画像番号など）と日本語版PDFの物理頁を併記/);
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
-    majorPublications.length,
+    majorCataloguePublications.length,
   );
   assert.equal(
     (html.match(/class="short-work-card"/g) || []).length,
-    shortPublications.length,
+    shortCataloguePublications.length,
   );
   assert.equal(
     (html.match(/class="short-author"/g) || []).length,
@@ -2831,7 +2872,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
+  assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2850,6 +2891,7 @@ test("catalogue search stays within publication metadata", async () => {
   assert.match(script, /controls\.paperMatch\.textContent = String\(filteredShort\.length\)/);
   assert.doesNotMatch(script, /google-site-search|www\.google\.com\/search|site:\$\{location\.hostname\}/);
   assert.match(script, /frame\.src = button\.dataset\.pdfSrc/);
+  assert.match(script, /item\.volumes\?\.length > 1/);
   assert.match(script, /const defaultPageSize = "12"/);
   assert.match(script, /const paginationItems = \(pages\) =>/);
   assert.match(script, /localStorage\.setItem\(pageSizeStorageKey, state\.perPage\)/);
@@ -2874,8 +2916,8 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
   assert.match(books, /https:\/\/takochanchan\.github\.io\/about\//);
 
   for (const [item, sitemap] of [
-    ...majorPublications.map((item) => [item, books]),
-    ...shortPublications.map((item) => [item, papers]),
+    ...majorCataloguePublications.map((item) => [item, books]),
+    ...shortCataloguePublications.map((item) => [item, papers]),
   ]) {
     const loc = `https://takochanchan.github.io/publications/${item.slug}/`;
     const marker = `<loc>${loc}</loc>`;
@@ -2900,14 +2942,27 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
       `${item.slug}: cover image`,
     );
     assert.doesNotMatch(entry, /github\.com/);
-    assert.doesNotMatch(entry, new RegExp(escapeHtml(item.pdfUrl)));
+    for (const volume of item.volumes) {
+      assert.doesNotMatch(entry, new RegExp(escapeHtml(volume.pdfUrl)));
+    }
+  }
+
+  for (const memberSlug of Object.keys(bibliographicAliases)) {
+    assert.doesNotMatch(books, new RegExp(`<loc>[^<]*/${memberSlug}/</loc>`));
   }
 
   await assert.rejects(access(path.join(dist, "sitemap-authors.xml")));
 });
 
 test("publication pages expose Google-readable metadata and schema.org records", async () => {
-  for (const item of [majorPublications[0], shortPublications[0]]) {
+  const grouped = cataloguePublications.find(
+    (publication) => publication.slug === "herrera-historia-general-1601-1615",
+  );
+  for (const item of [
+    majorCataloguePublications[0],
+    shortCataloguePublications[0],
+    grouped,
+  ]) {
     const html = await readFile(
       path.join(dist, "publications", item.slug, "index.html"),
       "utf8",
@@ -2942,13 +2997,16 @@ test("publication pages expose Google-readable metadata and schema.org records",
     assert.equal(work.translationOfWork.name, item.originalTitle);
     assert.deepEqual(
       work.encoding.map((encoding) => encoding.encodingFormat),
-      ["application/pdf", "application/epub+zip"],
+      item.volumes.flatMap(() => ["application/pdf", "application/epub+zip"]),
     );
+    if (item.volumes.length > 1) {
+      assert.equal(work.hasPart.length, item.volumes.length);
+    }
   }
 });
 
-test("every publication has a detail page, local cover, and release links", async () => {
-  for (const item of publications) {
+test("every bibliographic work has one detail page, local cover, and volume links", async () => {
+  for (const item of cataloguePublications) {
     const detail = path.join(dist, "publications", item.slug, "index.html");
     assert.ok(await exists(detail));
     const html = await readFile(detail, "utf8");
@@ -2962,20 +3020,22 @@ test("every publication has a detail page, local cover, and release links", asyn
         ),
       ),
     );
-    assert.ok(html.includes(escapeHtml(item.pdfUrl)), `${item.slug}: PDF URL`);
-    assert.ok(html.includes(escapeHtml(item.epubUrl)), `${item.slug}: EPUB URL`);
+    for (const volume of item.volumes) {
+      assert.ok(html.includes(escapeHtml(volume.pdfUrl)), `${volume.slug}: PDF URL`);
+      assert.ok(html.includes(escapeHtml(volume.epubUrl)), `${volume.slug}: EPUB URL`);
+    }
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260905-milla-history-central-america/);
-    assert.match(html, /\/archive\.js\?v=20260905-milla-history-central-america/);
+    assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
+    assert.match(html, /\/archive\.js\?v=20260906-multivolume-bibliography/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260905-milla-history-central-america#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260906-multivolume-bibliography#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260905-milla-history-central-america#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260906-multivolume-bibliography#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
@@ -2990,8 +3050,16 @@ test("every publication has a detail page, local cover, and release links", asyn
     }
     assert.ok(html.includes(escapeHtml(item.sourceEdition)), item.slug);
     assert.ok(html.includes(escapeHtml(item.sourceProvider)), item.slug);
-    assert.match(html, /PDFを読み込む（\d+(?:\.\d+)? (?:KB|MB)）/);
-    assert.match(html, /PDFを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
+    assert.equal(
+      (html.match(/PDFを読み込む（\d+(?:\.\d+)? (?:KB|MB)）/g) || []).length,
+      item.volumes.length,
+      `${item.slug}: PDF reader controls`,
+    );
+    assert.equal(
+      (html.match(/PDFを保存（\d+(?:\.\d+)? (?:KB|MB)）/g) || []).length,
+      item.volumes.length,
+      `${item.slug}: PDF download controls`,
+    );
     assert.match(html, /EPUBを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
     assert.doesNotMatch(html, /PDFを開く|別画面で開く/);
     const iframeTags = html.match(/<iframe\b[^>]*>/g) || [];
@@ -2999,12 +3067,27 @@ test("every publication has a detail page, local cover, and release links", asyn
     assert.doesNotMatch(iframeTags[0], /\ssrc=/, `${item.slug}: eager PDF`);
     assert.match(iframeTags[0], /\sdata-pdf-frame(?:\s|>)/);
     assert.ok(await exists(path.join(dist, item.cover)));
-    await assert.rejects(access(path.join(dist, item.pdf)));
-    await assert.rejects(access(path.join(dist, item.epub)));
+    for (const volume of item.volumes) {
+      await assert.rejects(access(path.join(dist, volume.pdf)));
+      await assert.rejects(access(path.join(dist, volume.epub)));
+    }
     assert.match(
       html,
       /https:\/\/docs\.google\.com\/viewerng\/viewer\?embedded=true&amp;url=/,
     );
+  }
+});
+
+test("legacy volume URLs redirect to their shared bibliography page", async () => {
+  for (const [memberSlug, canonicalSlug] of Object.entries(bibliographicAliases)) {
+    const html = await readFile(
+      path.join(dist, "publications", memberSlug, "index.html"),
+      "utf8",
+    );
+    const target = `/publications/${canonicalSlug}/`;
+    assert.match(html, /<meta name="robots" content="noindex,follow">/);
+    assert.ok(html.includes(`<link rel="canonical" href="https://takochanchan.github.io${target}">`));
+    assert.ok(html.includes(`href="${target}"`));
   }
 });
 
@@ -3081,7 +3164,7 @@ test("repository source contains covers but no PDF, EPUB, or split parts", async
 });
 
 test("rendered public site does not expose the previous identifying host", async () => {
-  const textFiles = [
+  const textFiles = [...new Set([
     "index.html",
     "about/index.html",
     "404.html",
@@ -3091,8 +3174,11 @@ test("rendered public site does not expose the previous identifying host", async
     "sitemap.xml",
     "sitemap-books.xml",
     "sitemap-papers.xml",
-    ...publications.map((item) => `publications/${item.slug}/index.html`),
-  ];
+    ...cataloguePublications.map((item) => `publications/${item.slug}/index.html`),
+    ...Object.keys(bibliographicAliases).map(
+      (slug) => `publications/${slug}/index.html`,
+    ),
+  ])];
   for (const relative of textFiles) {
     const content = await readFile(path.join(dist, relative), "utf8");
     assert.doesNotMatch(content, /masaki1979|chatgpt\.site/i, relative);
@@ -3107,6 +3193,8 @@ test("current repository source does not reference the previous identifying host
     "scripts/fetch-assets.mjs",
     "scripts/make-manifest.mjs",
     "src/archive.js",
+    "src/catalogue-publications.mjs",
+    "src/fulltext-search.js",
     "src/publications.mjs",
     "src/styles.css",
   ]) {

@@ -355,10 +355,12 @@
   const resultLabel = ({ books, papers }) =>
     "書籍 " + books + "冊・論文 " + papers + "篇が該当";
 
-  const bibliographyUrlFor = (slug) =>
-    /^[a-z0-9-]+$/.test(slug || "")
-      ? "/publications/" + slug + "/"
+  const bibliographyUrlFor = (slug) => {
+    const canonicalSlug = window.BIBLIOGRAPHIC_ALIASES?.[slug] || slug;
+    return /^[a-z0-9-]+$/.test(canonicalSlug || "")
+      ? "/publications/" + canonicalSlug + "/"
       : "/";
+  };
 
   const blockIdFor = (subResult) => {
     const anchorId = subResult?.anchor?.id;

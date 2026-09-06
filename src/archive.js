@@ -1,19 +1,27 @@
 (() => {
   document.querySelectorAll("[data-pdf-reader]").forEach((reader) => {
-    const button = reader.querySelector("[data-pdf-load]");
+    const buttons = [...reader.querySelectorAll("[data-pdf-load]")];
     const frame = reader.querySelector("[data-pdf-frame]");
     const placeholder = reader.querySelector("[data-pdf-placeholder]");
-    if (!button || !frame || !placeholder) return;
+    const current = reader.querySelector("[data-pdf-current]");
+    if (!buttons.length || !frame || !placeholder) return;
 
-    button.addEventListener(
-      "click",
-      () => {
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
         frame.src = button.dataset.pdfSrc;
         frame.hidden = false;
         placeholder.hidden = true;
-      },
-      { once: true },
-    );
+        buttons.forEach((candidate) => {
+          candidate.setAttribute("aria-pressed", String(candidate === button));
+        });
+        if (button.dataset.pdfLabel) {
+          frame.title = button.dataset.pdfLabel + " 日本語翻訳版PDF";
+          if (current) {
+            current.textContent = button.dataset.pdfLabel + "を表示しています。";
+          }
+        }
+      });
+    });
   });
 
   const initialAnchor = location.hash.slice(1);
@@ -192,6 +200,11 @@
       ...item.regions,
       ...item.languages,
       ...item.tags,
+      ...(item.volumes || []).flatMap((volume) => [
+        volume.title,
+        volume.originalTitle,
+        volume.subtitle,
+      ]),
     ]
       .join(" ")
       .toLocaleLowerCase("ja");
@@ -227,6 +240,15 @@
     history.replaceState(null, "", `${target}${location.hash}`);
   };
 
+  const cardActions = (item) =>
+    item.volumes?.length > 1
+      ? `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・全巻</a>
+          <p class="record-card__volume-note">PDF・EPUBを${item.volumes.length}分冊で収録</p>`
+      : `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
+          <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF保存（${escapeHtml(item.pdfSize)}）</a>
+          <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+            type="application/epub+zip" download>EPUB保存（${escapeHtml(item.epubSize)}）</a>`;
+
   const card = (item) => `
     <article class="record-card">
       <a class="record-card__cover" href="/publications/${escapeHtml(item.slug)}/">
@@ -250,10 +272,7 @@
           <div><dt>構成</dt><dd>${escapeHtml(item.extent)}</dd></div>
         </dl>
         <div class="record-card__actions">
-          <a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
-          <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF保存（${escapeHtml(item.pdfSize)}）</a>
-          <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
-            type="application/epub+zip" download>EPUB保存（${escapeHtml(item.epubSize)}）</a>
+          ${cardActions(item)}
         </div>
       </div>
     </article>`;
