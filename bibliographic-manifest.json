@@ -6974,6 +6974,101 @@
         "status": "online",
         "url": "https://commons.wikimedia.org/wiki/File:Antonio_de_Herrera_D%C3%A9cadas_7_y_8.pdf"
       }
+    },
+    {
+      "slug": "bancroft-native-races-volume-i-1883",
+      "recordClass": "major-work",
+      "title": "北アメリカ太平洋諸州の先住諸民族　第一巻　未開諸部族",
+      "originalTitle": "The Native Races of the Pacific States of North America, Volume I: Wild Tribes",
+      "author": "ヒューバート・ハウ・バンクロフト",
+      "originalAuthor": "Hubert Howe Bancroft",
+      "year": 1883,
+      "originalPublication": "サンフランシスコ、A. L. Bancroft & Company、1883年",
+      "sourceEdition": "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. I, The Wild Tribes, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "sourceProvider": "Project Gutenberg eBook 41070。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images generously made available by 1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
+      "rights": "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの当該eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。照合に用いたCIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+      "publishedDate": "2026-09-06",
+      "updatedDate": "2026-09-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.gutenberg.org/ebooks/41070"
+      }
+    },
+    {
+      "slug": "bancroft-native-races-volume-ii-1883",
+      "recordClass": "major-work",
+      "title": "北アメリカ太平洋諸州の先住諸民族　第二巻　文明諸民族",
+      "originalTitle": "The Native Races of the Pacific States of North America, Volume II: Civilized Nations",
+      "author": "ヒューバート・ハウ・バンクロフト",
+      "originalAuthor": "Hubert Howe Bancroft",
+      "year": 1883,
+      "originalPublication": "サンフランシスコ、A. L. Bancroft & Company、1883年",
+      "sourceEdition": "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. II, The Civilized Nations, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "sourceProvider": "Project Gutenberg eBook 42808。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
+      "rights": "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの当該eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。照合に用いたCIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+      "publishedDate": "2026-09-06",
+      "updatedDate": "2026-09-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.gutenberg.org/ebooks/42808"
+      }
+    },
+    {
+      "slug": "bancroft-native-races-volume-iii-1883",
+      "recordClass": "major-work",
+      "title": "北アメリカ太平洋諸州の先住諸民族　第三巻　神話と言語",
+      "originalTitle": "The Native Races of the Pacific States of North America, Volume III: Myths and Languages",
+      "author": "ヒューバート・ハウ・バンクロフト",
+      "originalAuthor": "Hubert Howe Bancroft",
+      "year": 1883,
+      "originalPublication": "サンフランシスコ、A. L. Bancroft & Company、1883年",
+      "sourceEdition": "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. III, Myths and Languages, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "sourceProvider": "Project Gutenberg eBook 43123。制作クレジット：Produced by Melissa McDaniel and The Online Distributed Proofreading Team at http://www.pgdp.net (1st-hand-history.org)。原画像提供元の表示は1st-hand-history.orgです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
+      "rights": "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの当該eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。照合に用いたCIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+      "publishedDate": "2026-09-06",
+      "updatedDate": "2026-09-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.gutenberg.org/ebooks/43123"
+      }
+    },
+    {
+      "slug": "bancroft-native-races-volume-iv-1883",
+      "recordClass": "major-work",
+      "title": "北アメリカ太平洋諸州の先住諸民族　第四巻　古代遺物",
+      "originalTitle": "The Native Races of the Pacific States of North America, Volume IV: Antiquities",
+      "author": "ヒューバート・ハウ・バンクロフト",
+      "originalAuthor": "Hubert Howe Bancroft",
+      "year": 1883,
+      "originalPublication": "サンフランシスコ、A. L. Bancroft & Company、1883年",
+      "sourceEdition": "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. IV, Antiquities, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "sourceProvider": "Project Gutenberg eBook 44104。制作クレジット：E-text prepared by Melissa McDaniel and the Online Distributed Proofreading Team (http://www.pgdp.net) from page images generously made available by Internet Archive (https://archive.org)。原画像提供元の表示はInternet Archiveです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
+      "rights": "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの当該eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。照合に用いたCIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+      "publishedDate": "2026-09-06",
+      "updatedDate": "2026-09-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.gutenberg.org/ebooks/44104"
+      }
+    },
+    {
+      "slug": "bancroft-native-races-volume-v-1883",
+      "recordClass": "major-work",
+      "title": "北アメリカ太平洋諸州の先住諸民族　第五巻　原始史",
+      "originalTitle": "The Native Races of the Pacific States of North America, Volume V: Primitive History",
+      "author": "ヒューバート・ハウ・バンクロフト",
+      "originalAuthor": "Hubert Howe Bancroft",
+      "year": 1883,
+      "originalPublication": "サンフランシスコ、A. L. Bancroft & Company、1883年",
+      "sourceEdition": "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vol. V, Primitive History, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+      "sourceProvider": "Project Gutenberg eBook 45268。制作クレジット：Produced by Melissa McDaniel and the Online Distributed Proofreading Team at http://www.pgdp.net (This file was produced from images generously made available by The Internet Archive)。原画像提供元の表示はThe Internet Archiveです。CIHM／Canadiana公開の1883年版画像でも照合しました。",
+      "rights": "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの当該eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。照合に用いたCIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+      "publishedDate": "2026-09-06",
+      "updatedDate": "2026-09-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.gutenberg.org/ebooks/45268"
+      }
     }
   ],
   "works": [

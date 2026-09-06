@@ -83,10 +83,10 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("split volumes share one canonical bibliography record", () => {
-  assert.equal(publicationGroupDefinitions.length, 2);
+  assert.equal(publicationGroupDefinitions.length, 3);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 362);
-  assert.equal(majorCataloguePublications.length, 174);
+  assert.equal(cataloguePublications.length, 363);
+  assert.equal(majorCataloguePublications.length, 175);
   assert.equal(shortCataloguePublications.length, 188);
 
   const blom = cataloguePublications.find(
@@ -110,9 +110,17 @@ test("split volumes share one canonical bibliography record", () => {
   );
   assert.equal(herrera.pageCount, 4910);
   assert.equal(herrera.volumes.length, 4);
+
+  const nativeRaces = cataloguePublications.find(
+    (publication) =>
+      publication.slug === "bancroft-native-races-pacific-states-1883",
+  );
+  assert.ok(nativeRaces);
+  assert.equal(nativeRaces.pageCount, 4002);
+  assert.equal(nativeRaces.volumes.length, 5);
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),
-    new Set([blom.slug, herrera.slug]),
+    new Set([blom.slug, herrera.slug, nativeRaces.slug]),
   );
 
   const bancroft = cataloguePublications.find(
@@ -166,7 +174,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 89);
+  assert.equal(counts.get("002"), 94);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -265,6 +273,11 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "herrera-historia-general-decadas-3-4-1601",
       "herrera-historia-general-decadas-5-6-1615",
       "herrera-historia-general-decadas-7-8-1615",
+      "bancroft-native-races-volume-i-1883",
+      "bancroft-native-races-volume-ii-1883",
+      "bancroft-native-races-volume-iii-1883",
+      "bancroft-native-races-volume-iv-1883",
+      "bancroft-native-races-volume-v-1883",
     ],
   );
   assert.equal(
@@ -1688,7 +1701,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 178);
+  assert.equal(majorPublications.length, 183);
   assert.equal(shortPublications.length, 188);
   assert.equal(shortPublicationAuthors.length, 41);
   assert.deepEqual(
@@ -2844,7 +2857,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">174<\/strong>件/);
+  assert.match(html, /id="book-match-count">175<\/strong>件/);
   assert.match(html, /id="paper-match-count">188<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');

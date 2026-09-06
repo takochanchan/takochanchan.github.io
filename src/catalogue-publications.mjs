@@ -7,6 +7,37 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
   {
+    slug: "bancroft-native-races-pacific-states-1883",
+    memberSlugs: [
+      "bancroft-native-races-volume-i-1883",
+      "bancroft-native-races-volume-ii-1883",
+      "bancroft-native-races-volume-iii-1883",
+      "bancroft-native-races-volume-iv-1883",
+      "bancroft-native-races-volume-v-1883",
+    ],
+    volumeLabels: ["第I巻", "第II巻", "第III巻", "第IV巻", "第V巻"],
+    title: "北アメリカ太平洋諸州の先住諸民族",
+    originalTitle:
+      "The Native Races of the Pacific States of North America",
+    subtitle: "全5巻・1883年版 日本語全訳",
+    series: "THE NATIVE RACES · 1883",
+    originalPublication:
+      "サンフランシスコ、A. L. Bancroft & Company、1883年",
+    year: 1883,
+    extent: "全5巻・巻別PDF計4,002頁・図版・挿図406点",
+    description:
+      "ヒューバート・ハウ・バンクロフトが、北アメリカ太平洋岸からメキシコ、中央アメリカに及ぶ先住諸民族を、生活と社会、文明、神話と言語、古代遺物、征服以前の歴史という五つの領域から叙述した全五巻です。1883年版に基づく日本語全訳を、各巻のPDF・EPUBで収録しています。",
+    sourceEdition:
+      "Hubert Howe Bancroft, The Native Races of the Pacific States of North America, vols. I–V, 5th ed., San Francisco: A. L. Bancroft & Company, 1883.",
+    sourceProvider:
+      "Project Gutenberg eBooks 41070・42808・43123・44104・45268の画像入りHTML版を電子底本・画像取得元とし、CIHM／Canadiana公開の1883年版画像で原刊頁・図版・疑義箇所を照合しました。",
+    sourceUrl: "https://www.gutenberg.org/ebooks/41070",
+    rights:
+      "1883年刊の原著本文・図版は米国および日本でパブリックドメインです。Project Gutenbergの各eBook書誌は「Public domain in the USA.」と表示し、同公開版の利用にはProject Gutenberg License（https://www.gutenberg.org/license）が適用されます。本サイトはProject Gutenbergの公認・提携版ではありません。CIHM／Canadiana公開画像の利用には同提供元の条件が適用されます。",
+    publishedDate: "2026-09-06",
+    updatedDate: "2026-09-06",
+  },
+  {
     slug: "tribes-and-temples-1926-1927",
     memberSlugs: [
       "tribes-and-temples-vol-1",

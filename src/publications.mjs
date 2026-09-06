@@ -1,3 +1,4 @@
+import { bancroftNativeRacesPublicationMetadata, bancroftNativeRacesPublicationRecords } from "./bancroft-native-races-publication.mjs";
 import { herreraPublicationRecords, herreraPublicationMetadata } from "./herrera-publication.mjs";
 import { createRequire } from "node:module";
 import {
@@ -9256,6 +9257,7 @@ const publicationRecords = [
   ...millaGomezCarrilloPublicationRecords,
   ...nuixPublicationRecords,
   ...herreraPublicationRecords,
+  ...bancroftNativeRacesPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11834,6 +11836,7 @@ const publicationMetadata = {
   ...millaGomezCarrilloPublicationMetadata,
   ...nuixPublicationMetadata,
   ...herreraPublicationMetadata,
+  ...bancroftNativeRacesPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
