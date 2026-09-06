@@ -34,7 +34,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260906-multivolume-bibliography";
+const assetVersion = "20260906-bancroft-volume-files";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -180,9 +180,16 @@ const archivePublications = publications.map((item) => ({
   ...(isMultiVolume(item)
     ? {
         volumes: item.volumes.map((volume) => ({
+          slug: volume.slug,
+          volumeLabel: volume.volumeLabel,
           title: volume.title,
           originalTitle: volume.originalTitle,
           subtitle: volume.subtitle,
+          pdfUrl: volume.pdfUrl,
+          searchSlug: volume.searchSlug ?? volume.slug,
+          searchPdfPageStart: volume.searchPdfPageStart ?? null,
+          searchPdfPageEnd: volume.searchPdfPageEnd ?? null,
+          searchPdfPageOffset: volume.searchPdfPageOffset ?? 0,
         })),
       }
     : {

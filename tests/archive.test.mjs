@@ -15,6 +15,7 @@ import {
   bibliographicAliases,
   cataloguePublications,
   majorCataloguePublications,
+  publicationFileSplitDefinitions,
   publicationGroupDefinitions,
   shortCataloguePublications,
 } from "../src/catalogue-publications.mjs";
@@ -83,6 +84,7 @@ test("catalogue metadata is complete and unique", () => {
 
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 2);
+  assert.equal(publicationFileSplitDefinitions.length, 1);
   assert.equal(cataloguePublications.length, 362);
   assert.equal(majorCataloguePublications.length, 174);
   assert.equal(shortCataloguePublications.length, 188);
@@ -111,6 +113,22 @@ test("split volumes share one canonical bibliography record", () => {
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),
     new Set([blom.slug, herrera.slug]),
+  );
+
+  const bancroft = cataloguePublications.find(
+    (publication) =>
+      publication.slug === "bancroft-history-central-america-1886-1887",
+  );
+  assert.ok(bancroft);
+  assert.equal(bancroft.pageCount, 2589);
+  assert.equal(bancroft.volumes.length, 3);
+  assert.deepEqual(
+    bancroft.volumes.map((volume) => volume.pageCount),
+    [924, 766, 899],
+  );
+  assert.deepEqual(
+    bancroft.volumes.map((volume) => volume.searchPdfPageOffset),
+    [0, -922, -1686],
   );
 });
 
@@ -2771,10 +2789,21 @@ test("home page contains scalable archive controls", async () => {
     embeddedPublications.filter((item) => item.recordClass === "short-work").length,
     shortCataloguePublications.length,
   );
-  assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
-  assert.match(html, /\/archive\.js\?v=20260906-multivolume-bibliography/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260906-multivolume-bibliography/);
-  assert.match(html, /\/fulltext-search\.js\?v=20260906-multivolume-bibliography/);
+  const embeddedBancroft = embeddedPublications.find(
+    (item) => item.slug === "bancroft-history-central-america-1886-1887",
+  );
+  assert.deepEqual(
+    embeddedBancroft.volumes.map((volume) => [
+      volume.searchPdfPageStart,
+      volume.searchPdfPageEnd,
+      volume.searchPdfPageOffset,
+    ]),
+    [[3, 924, 0], [925, 1688, -922], [1689, 2585, -1686]],
+  );
+  assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
+  assert.match(html, /\/archive\.js\?v=20260906-bancroft-volume-files/);
+  assert.match(html, /\/fulltext-search\.css\?v=20260906-bancroft-volume-files/);
+  assert.match(html, /\/fulltext-search\.js\?v=20260906-bancroft-volume-files/);
   assert.match(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
@@ -2872,7 +2901,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   assert.match(html, /最終PDFの確認と承認を受けるまでは/);
   assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
   assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
+  assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -3025,17 +3054,17 @@ test("every bibliographic work has one detail page, local cover, and volume link
       assert.ok(html.includes(escapeHtml(volume.epubUrl)), `${volume.slug}: EPUB URL`);
     }
     assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260906-multivolume-bibliography/);
-    assert.match(html, /\/archive\.js\?v=20260906-multivolume-bibliography/);
+    assert.match(html, /\/archive\.css\?v=20260906-bancroft-volume-files/);
+    assert.match(html, /\/archive\.js\?v=20260906-bancroft-volume-files/);
     if (item.recordClass === "short-work") {
       assert.match(
         html,
-        /href="\/\?v=20260906-multivolume-bibliography#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20260906-bancroft-volume-files#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       assert.match(
         html,
-        /href="\/\?v=20260906-multivolume-bibliography#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20260906-bancroft-volume-files#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
@@ -3112,18 +3141,32 @@ test("local covers and release assets match the recorded manifest", async () => 
   const manifest = JSON.parse(
     await readFile(path.join(root, "assets-manifest.json"), "utf8"),
   );
-  assert.equal(manifest.assets.length, publications.length * 3);
+  const splitAssets = publicationFileSplitDefinitions.flatMap((definition) =>
+    definition.volumes.flatMap((volume) => [volume.pdf, volume.epub]),
+  );
+  assert.equal(
+    manifest.assets.length,
+    publications.length * 3 + splitAssets.length,
+  );
   assert.deepEqual(
     new Set(manifest.assets.map((asset) => asset.path)),
     new Set(
-      publications.flatMap((item) => [item.cover, item.pdf, item.epub]),
+      [
+        ...publications.flatMap((item) => [item.cover, item.pdf, item.epub]),
+        ...splitAssets,
+      ],
     ),
   );
   const publicationByPath = new Map(
-    publications.flatMap((item) => [
-      [item.pdf, item.pdfUrl],
-      [item.epub, item.epubUrl],
-    ]),
+    cataloguePublications.flatMap((item) =>
+      item.volumes.flatMap((volume) => [
+        [volume.pdf, volume.pdfUrl],
+        [volume.epub, volume.epubUrl],
+      ]),
+    ).concat(publications.flatMap((item) => [
+        [item.pdf, item.pdfUrl],
+        [item.epub, item.epubUrl],
+      ])),
   );
   for (const asset of manifest.assets.filter((item) =>
     /cover\.(?:jpg|png|svg)$/.test(item.path)

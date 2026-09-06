@@ -1,4 +1,7 @@
-import { publications as publicationUnits } from "./publications.mjs";
+import {
+  publicationReleaseUrl,
+  publications as publicationUnits,
+} from "./publications.mjs";
 
 const unique = (values) => [...new Set(values)];
 
@@ -70,10 +73,137 @@ export const publicationGroupDefinitions = [
   },
 ];
 
+const releaseAsset = (filename) =>
+  `${publicationReleaseUrl}/${encodeURIComponent(filename)}`;
+
+export const publicationFileSplitDefinitions = [
+  {
+    slug: "bancroft-history-central-america-1886-1887",
+    subtitle: "全3巻・1501–1887年 日本語全訳",
+    extent:
+      "全3巻・巻別PDF計2,589頁・全98章・原刊頁標識2,334件・原注4,325件・図版75点・第I巻引用典拠一覧・第III巻索引",
+    description:
+      "ヒューバート・ハウ・バンクロフトが、スペイン勢力の到来と初期征服から植民地統治、独立、中央アメリカ連邦の解体、各共和国の1887年までを三巻で叙述した通史です。原刊前付、全98章、原注4,325件、図表、第I巻引用典拠一覧、第III巻索引を備えた日本語全訳を、原著と同じ三巻のPDF・EPUBで収録しています。",
+    pageCount: 2589,
+    updatedDate: "2026-09-06",
+    volumes: [
+      {
+        slug: "bancroft-history-central-america-1886-1887-volume-i",
+        volumeLabel: "第I巻",
+        title: "中央アメリカ史　第一巻",
+        originalTitle: "History of Central America, Volume I",
+        subtitle: "1501–1530年 日本語全訳",
+        originalPublication:
+          "サンフランシスコ、The History Company、1886年",
+        extent: "前付・引用典拠一覧・全27章・原注・図表・PDF 924頁",
+        sourceEdition:
+          "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vol. VI, History of Central America, vol. I (San Francisco: The History Company, 1886).",
+        sourceProvider:
+          "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵本（Luis Luján Muñoz寄贈）をInternet Archiveが識別子 histofcenthoweguat として公開する画像を主底本としました。",
+        sourceUrl: "https://archive.org/details/histofcenthoweguat",
+        pdf:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
+        epub:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
+        pageCount: 924,
+        searchSlug: "bancroft-history-central-america-1886-1887",
+        searchPdfPageStart: 3,
+        searchPdfPageEnd: 924,
+        searchPdfPageOffset: 0,
+      },
+      {
+        slug: "bancroft-history-central-america-1886-1887-volume-ii",
+        volumeLabel: "第II巻",
+        title: "中央アメリカ史　第二巻",
+        originalTitle: "History of Central America, Volume II",
+        subtitle: "1530–1800年 日本語全訳",
+        originalPublication:
+          "サンフランシスコ、The History Company、1886年",
+        extent: "前付・全37章・原注・図表・PDF 766頁",
+        sourceEdition:
+          "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vol. VII, History of Central America, vol. II (San Francisco: The History Company, 1886).",
+        sourceProvider:
+          "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵本（Luis Luján Muñoz寄贈）をInternet Archiveが識別子 histoofcen07howeguatguat として公開する画像を主底本としました。",
+        sourceUrl: "https://archive.org/details/histoofcen07howeguatguat",
+        pdf:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.pdf",
+        epub:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.epub",
+        pageCount: 766,
+        searchSlug: "bancroft-history-central-america-1886-1887",
+        searchPdfPageStart: 925,
+        searchPdfPageEnd: 1688,
+        searchPdfPageOffset: -922,
+      },
+      {
+        slug: "bancroft-history-central-america-1886-1887-volume-iii",
+        volumeLabel: "第III巻",
+        title: "中央アメリカ史　第三巻",
+        originalTitle: "History of Central America, Volume III",
+        subtitle: "1801–1887年 日本語全訳",
+        originalPublication:
+          "サンフランシスコ、The History Company、1887年",
+        extent: "前付・全34章・原注・図表・索引・PDF 899頁",
+        sourceEdition:
+          "Hubert Howe Bancroft, The Works of Hubert Howe Bancroft, vol. VIII, History of Central America, vol. III (San Francisco: The History Company, 1887).",
+        sourceProvider:
+          "Universidad Francisco MarroquínのBiblioteca Ludwig von Mises所蔵本（Luis Luján Muñoz寄贈）をInternet Archiveが識別子 historyofcenthoweguat として公開する画像を主底本としました。",
+        sourceUrl: "https://archive.org/details/historyofcenthoweguat",
+        pdf:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
+        epub:
+          "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
+        pageCount: 899,
+        searchSlug: "bancroft-history-central-america-1886-1887",
+        searchPdfPageStart: 1689,
+        searchPdfPageEnd: 2585,
+        searchPdfPageOffset: -1686,
+      },
+    ],
+  },
+];
+
 const unitsBySlug = new Map(
   publicationUnits.map((publication) => [publication.slug, publication]),
 );
 const memberToGroup = new Map();
+const fileSplitsBySlug = new Map();
+
+for (const definition of publicationFileSplitDefinitions) {
+  const base = unitsBySlug.get(definition.slug);
+  if (!base) {
+    throw new Error(`File-split publication is missing: ${definition.slug}`);
+  }
+  if (definition.volumes.length < 2) {
+    throw new Error(`File-split publication needs at least two volumes: ${definition.slug}`);
+  }
+  const { volumes: volumeDefinitions, ...overrides } = definition;
+  const volumeSlugs = new Set();
+  const volumes = volumeDefinitions.map((volume) => {
+    if (volumeSlugs.has(volume.slug)) {
+      throw new Error(`Duplicate file-split volume slug: ${volume.slug}`);
+    }
+    volumeSlugs.add(volume.slug);
+    return {
+      ...base,
+      ...volume,
+      bibliographicSlug: base.slug,
+      sourceAccessStatus: "online",
+      sourceAccessNote: null,
+      pdfUrl: releaseAsset(volume.pdf.slice(volume.pdf.lastIndexOf("/") + 1)),
+      epubUrl: releaseAsset(volume.epub.slice(volume.epub.lastIndexOf("/") + 1)),
+    };
+  });
+  if (volumes.reduce((sum, volume) => sum + volume.pageCount, 0) !== overrides.pageCount) {
+    throw new Error(`File-split page count differs: ${definition.slug}`);
+  }
+  fileSplitsBySlug.set(definition.slug, {
+    ...base,
+    ...overrides,
+    memberSlugs: [base.slug],
+    volumes,
+  });
+}
 
 const groupedPublications = publicationGroupDefinitions.map((definition) => {
   if (unitsBySlug.has(definition.slug)) {
@@ -137,6 +267,11 @@ const emittedGroups = new Set();
 for (const publication of publicationUnits) {
   const groupSlug = memberToGroup.get(publication.slug);
   if (!groupSlug) {
+    const fileSplit = fileSplitsBySlug.get(publication.slug);
+    if (fileSplit) {
+      cataloguePublications.push(fileSplit);
+      continue;
+    }
     cataloguePublications.push({
       ...publication,
       memberSlugs: [publication.slug],

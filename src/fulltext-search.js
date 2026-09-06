@@ -11,6 +11,12 @@
   const config = window.FULLTEXT_SEARCH_CONFIG || {};
   const previewCorpus = window.SEARCH_PREVIEW_CORPUS || null;
   const previewMetadata = window.SEARCH_PREVIEW_META || null;
+  const catalogueBySlug = new Map(
+    (window.ARCHIVE_PUBLICATIONS || []).map((publication) => [
+      publication.slug,
+      publication,
+    ]),
+  );
 
   const form = document.querySelector("#fulltext-form");
   const input = document.querySelector("#fulltext-query");
@@ -362,6 +368,27 @@
       : "/";
   };
 
+  const pdfTargetFor = (slug, pdfPage, fallbackUrl) => {
+    const canonicalSlug = window.BIBLIOGRAPHIC_ALIASES?.[slug] || slug;
+    const publication = catalogueBySlug.get(canonicalSlug);
+    const volume = publication?.volumes?.find((candidate) => {
+      if (candidate.searchSlug !== slug) return false;
+      const afterStart =
+        candidate.searchPdfPageStart === null ||
+        pdfPage >= candidate.searchPdfPageStart;
+      const beforeEnd =
+        candidate.searchPdfPageEnd === null ||
+        pdfPage <= candidate.searchPdfPageEnd;
+      return afterStart && beforeEnd;
+    });
+    if (!volume) return { pdfUrl: fallbackUrl, pdfPage, volumeLabel: null };
+    return {
+      pdfUrl: volume.pdfUrl,
+      pdfPage: pdfPage + volume.searchPdfPageOffset,
+      volumeLabel: volume.volumeLabel,
+    };
+  };
+
   const blockIdFor = (subResult) => {
     const anchorId = subResult?.anchor?.id;
     if (/^b\d{5}$/.test(anchorId || "")) return anchorId;
@@ -400,18 +427,27 @@
       .sort((a, b) => a.pdfPage - b.pdfPage || a.order - b.order);
   };
 
-  const snippetItem = (snippet, pdfUrl) => {
+  const snippetItem = (snippet, meta) => {
     const item = node("li", "fulltext-snippet");
     const locationLine = node("p", "fulltext-snippet__location");
     locationLine.append(node("span", "", snippet.originalPage));
     locationLine.append(node("span", "fulltext-snippet__separator", "｜"));
-    const pdfLink = node("a", "", "PDF " + snippet.pdfPage + "頁");
-    pdfLink.href = pdfUrl + "#page=" + snippet.pdfPage;
+    const target = pdfTargetFor(
+      meta?.slug,
+      snippet.pdfPage,
+      meta?.pdfUrl || "",
+    );
+    const linkLabel = target.volumeLabel
+      ? target.volumeLabel + " PDF " + target.pdfPage + "頁"
+      : "PDF " + target.pdfPage + "頁";
+    const pdfLink = node("a", "", linkLabel);
+    pdfLink.href = target.pdfUrl + "#page=" + target.pdfPage;
     pdfLink.target = "_blank";
     pdfLink.rel = "noopener";
     pdfLink.setAttribute(
       "aria-label",
-      "日本語PDFの" + snippet.pdfPage + "頁を開く",
+      (target.volumeLabel ? target.volumeLabel + "の" : "日本語PDFの") +
+        target.pdfPage + "頁を開く",
     );
     locationLine.append(pdfLink);
     const excerpt = node("p", "fulltext-snippet__excerpt");
@@ -458,7 +494,7 @@
     const appendSnippets = (amount) => {
       const next = Math.min(visible + amount, snippets.length);
       for (const snippet of snippets.slice(visible, next)) {
-        list.append(snippetItem(snippet, result.meta?.pdfUrl || ""));
+        list.append(snippetItem(snippet, result.meta));
       }
       visible = next;
       const remaining = snippets.length - visible;

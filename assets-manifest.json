@@ -104,6 +104,42 @@
       "sha256": "dc53bfffb1d60236a866bf1d6ed62bc7d52f63f3f7e65f4df650fddff636de6d"
     },
     {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
+      "size": 6953852,
+      "sha256": "ca560cc27c61404cc1893cb5dab50d41c6e1f16a6dc0de41e0ced1125fc60296"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
+      "size": 23262511,
+      "sha256": "a24dced09b90b8081be4b07264f3d3b1052b0643ad31dc1d4e852252f36b1dcf"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.epub",
+      "size": 3639999,
+      "sha256": "0746438020518760f9ba2f1b13278088d9eb9c39a9a3b1e96703becb700cb84b"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.pdf",
+      "size": 22573229,
+      "sha256": "005aa3d74afc52c6436082ded5d055ab5bcb06c6fb6ecf28ad3eb4a51eaf5dbb"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "size": 8130175,
+      "sha256": "b4d245ab154360bddab1be8ee57fa6f186a042e9773f1606636bc466afed1a0a"
+    },
+    {
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "size": 28303247,
+      "sha256": "1e97275f91712e3d3f8e6edb85ed6cbc87bec5579fa7a17da9df94c6494228c3"
+    },
+    {
       "path": "publications/bancroft-history-central-america-1886-1887/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bancroft-history-central-america-1886-1887/cover.jpg",
       "size": 91302,
