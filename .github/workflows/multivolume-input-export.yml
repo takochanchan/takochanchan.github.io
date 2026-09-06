@@ -1,0 +1,55 @@
+name: Export oversized multi-volume inputs
+
+on:
+  push:
+    branches: [agent/multivolume-inputs-20260906]
+    paths: ['.publication-transfer/multivolume-inputs.request']
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download and verify approved combined editions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p transfer-inputs
+          cat > expected.tsv <<'EOF'
+          torquemada-monarquia-indiana-1615	pdf	Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.pdf	28811590	17916055e698be9ca64fec56b3a44686a45f5f9449dde8a554fb55977e1b5335
+          torquemada-monarquia-indiana-1615	epub	Juan_de_Torquemada_Monarquia_indiana_1615_Japanese_Complete_Translation.epub	9958534	fbb1d4cfda027fa7c6abdbd98c61059cb3aca60227a4f2273d5f24f77de67568
+          valle-anexion-centro-america-mexico-1924-1949	pdf	Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf	52057780	93c3b23efe9ead190d357fd73d5a6c64ad401f8f1931f6972b07bb0952bd1504
+          valle-anexion-centro-america-mexico-1924-1949	epub	Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.epub	19318192	b6675c725f504b74c813693596d4cda1e5d6d948bee9520703eef257681ebaae
+          southey-chronological-history-west-indies-1827	pdf	Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.pdf	7342115	70892db36f7f348019b545d1525ed2da3e73f9b834c80c82d490fc78325d3fa6
+          southey-chronological-history-west-indies-1827	epub	Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.epub	3915951	29d62d0124cccdafc3f35d54f0ac4d3c215e6c491eed564a136b5a4f8a12e295
+          milla-gomez-carrillo-historia-america-central-1879-1905	pdf	Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_1879_1905_Japanese_Complete_Translation.pdf	16578096	778f1f4220a83862da69a605efb5452755c7fa3c4ece86b632e46a4f43f4bb8d
+          milla-gomez-carrillo-historia-america-central-1879-1905	epub	Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_1879_1905_Japanese_Complete_Translation.epub	4529740	ae59f40053238d07ed90643dfcd93588b410e9a646bf6d4545d6b0aa05337bbe
+          baqueiro-ensayo-revoluciones-yucatan-1878-1887	pdf	Serapio_Baqueiro_Ensayo_historico_Yucatan_1878_1887_Japanese_Complete_Translation.pdf	10522184	5b70f159595a3610297c678e8f2418455aad60d3eadc3874e1d0c8af8f828658
+          baqueiro-ensayo-revoluciones-yucatan-1878-1887	epub	Serapio_Baqueiro_Ensayo_historico_Yucatan_1878_1887_Japanese_Complete_Translation.epub	15114987	5160027a21a0a289d35678850ad78715810ad7e017c11756a7279fff74e323ad
+          dupaix-antiquites-mexicaines-1834	pdf	Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf	175052249	722fe6eef2c07f1899d7b22261c5ef7ccad8729e1c270839aa8c749e87e9d7e5
+          dupaix-antiquites-mexicaines-1834	epub	Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub	83873010	4102d85ba3dcd6752d34480875f7c23f87e57dc1d40fdf4fefd6bc9813638434
+          garcia-pelaez-memorias-guatemala-1851-1852	pdf	Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.pdf	12792058	1ebeb06de8789a6dcca8eebf0d6b7b352172d5ec079d8091b83c4d6ceafa26c2
+          garcia-pelaez-memorias-guatemala-1851-1852	epub	Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub	1164384	691dcefc3611af0c95c06ef50935c2e376142675869437d58dc404337938cc4d
+          EOF
+          while IFS=$'\t' read -r slug kind name size digest; do
+            mkdir -p "transfer-inputs/$slug"
+            gh release download publications-current --repo "$GITHUB_REPOSITORY" \
+              --pattern "$name" --dir "transfer-inputs/$slug"
+            path="transfer-inputs/$slug/$name"
+            test "$(stat -c %s "$path")" = "$size"
+            echo "$digest  $path" | sha256sum -c -
+          done < expected.tsv
+          cp expected.tsv transfer-inputs/EXPECTED.tsv
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: oversized-multivolume-inputs
+          path: transfer-inputs
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
