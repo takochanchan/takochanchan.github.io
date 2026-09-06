@@ -35,6 +35,9 @@ jobs:
       - name: Build archive pages
         run: npm run build
 
+      - name: Add reasoning model comparison
+        run: node scripts/inject-model-comparison.mjs
+
       - name: Validate archive
         run: npm test
 
@@ -71,3 +74,5 @@ jobs:
 # Brinton extra two papers publication deployment: 2026-09-05
 
 # Milla five-volume history publication deployment: 2026-09-05
+
+# Reasoning model comparison policy update: 2026-09-06
