@@ -1,0 +1,147 @@
+name: Publish seven multivolume split editions
+
+on:
+  push:
+    branches: [agent/multivolume-assets-20260906]
+    paths: ['.publication-transfer/multivolume-volumes.request']
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install pinned production libraries
+        run: |
+          python -m pip install --disable-pip-version-check \
+            Pillow==12.3.0 lxml==6.1.1 PyMuPDF==1.26.6 reportlab==4.4.9
+
+      - name: Restore and verify the fourteen approved source files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p tmp/multivolume/downloads tmp/multivolume/inputs tmp/multivolume/fonts-full
+          python - <<'PY' > tmp/multivolume/source-files.tsv
+          import json
+          from pathlib import Path
+          config = json.loads(Path('tmp/multivolume/volume-split-config.json').read_text())
+          for work in config['publications']:
+              print(work['slug'], work['input_pdf'], work['input_epub'], sep='\t')
+          PY
+          while IFS=$'\t' read -r slug pdf epub; do
+            mkdir -p "tmp/multivolume/inputs/$slug"
+            gh release download publications-current --repo "$GITHUB_REPOSITORY" \
+              --pattern "$pdf" --pattern "$epub" --dir "tmp/multivolume/inputs/$slug"
+          done < tmp/multivolume/source-files.tsv
+
+          gh release download Sans2.004 --repo notofonts/noto-cjk \
+            --pattern '16_NotoSansJP.zip' --dir tmp/multivolume/downloads
+          echo '2bbdd2c20f30670b39ca735c96d75f1fdabdb348103e43b820cf17701fd22b18  tmp/multivolume/downloads/16_NotoSansJP.zip' | sha256sum -c -
+          unzip -q tmp/multivolume/downloads/16_NotoSansJP.zip -d tmp/multivolume/fonts-full
+          echo 'dff723ba59d57d136764a04b9b2d03205544f7cd785a711442d6d2d085ac5073  tmp/multivolume/fonts-full/NotoSansJP-Regular.otf' | sha256sum -c -
+          echo '1b0edfb500b73a4fa8a4fcaae1bbbd403994e08e73e3e0da37e70d3853f42c5f  tmp/multivolume/fonts-full/NotoSansJP-Bold.otf' | sha256sum -c -
+          echo 'ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280  tmp/multivolume/fonts-latin/DejaVuSans.ttf' | sha256sum -c -
+          echo '2e39b1d50f90b933b00c7bb54a96afd3f86419b3d717c7cf202e36f2d4973e47  tmp/multivolume/fonts-latin/DejaVuSerif-Italic.ttf' | sha256sum -c -
+
+      - name: Generate and validate all twenty-six PDF and EPUB pairs
+        env:
+          MULTIVOLUME_FONT_REGULAR: ${{ github.workspace }}/tmp/multivolume/fonts-full/NotoSansJP-Regular.otf
+          MULTIVOLUME_FONT_BOLD: ${{ github.workspace }}/tmp/multivolume/fonts-full/NotoSansJP-Bold.otf
+          MULTIVOLUME_FONT_LATIN: ${{ github.workspace }}/tmp/multivolume/fonts-latin/DejaVuSans.ttf
+          MULTIVOLUME_FONT_LATIN_ITALIC: ${{ github.workspace }}/tmp/multivolume/fonts-latin/DejaVuSerif-Italic.ttf
+        run: |
+          set -euo pipefail
+          python tmp/multivolume/split_publication_volumes.py
+          cmp tmp/multivolume/EXPECTED_PUBLIC_VOLUME_SHA256SUMS.txt tmp/multivolume/public-volume-SHA256SUMS.txt
+          (cd output/multivolume && sha256sum -c ../../tmp/multivolume/EXPECTED_PUBLIC_VOLUME_SHA256SUMS.txt)
+          python tmp/multivolume/verify_all_pdf_pages.py > tmp/multivolume/pdf-full-verification.stdout.json
+
+          gh release download v5.3.0 --repo w3c/epubcheck \
+            --pattern 'epubcheck-5.3.0.zip' --dir tmp/multivolume/downloads
+          echo '6c07e68584b2e2ce2f89fe06e1246dfead3eb36b46b340e7d93524f29dcff6c5  tmp/multivolume/downloads/epubcheck-5.3.0.zip' | sha256sum -c -
+          unzip -q tmp/multivolume/downloads/epubcheck-5.3.0.zip -d tmp/multivolume/epubcheck
+          mkdir -p tmp/multivolume/epubcheck-logs
+          find output/multivolume/epub -maxdepth 1 -type f -name '*.epub' -print0 | sort -z | \
+            xargs -0 -n1 -P6 bash -c 'file="$1"; base=$(basename "$file"); java -jar tmp/multivolume/epubcheck/epubcheck-5.3.0/epubcheck.jar "$file" > "tmp/multivolume/epubcheck-logs/$base.log" 2>&1' _
+          test "$(grep -l 'No errors or warnings detected' tmp/multivolume/epubcheck-logs/*.log | wc -l)" -eq 26
+          if grep -ERn 'ERROR|FATAL|WARNING|Check finished with errors' tmp/multivolume/epubcheck-logs; then
+            exit 1
+          fi
+
+      - name: Upload all checksum-approved public assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          find output/multivolume/pdf output/multivolume/epub -maxdepth 1 -type f \( -name '*.pdf' -o -name '*.epub' \) -print0 | sort -z | \
+            xargs -0 gh release upload publications-current --repo "$GITHUB_REPOSITORY" --clobber
+
+      - name: Redownload and verify every uploaded byte
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p release-check verification
+          while read -r digest relative; do
+            name=${relative#*/}
+            gh release download publications-current --repo "$GITHUB_REPOSITORY" \
+              --pattern "$name" --dir release-check
+            echo "$digest  release-check/$name" | sha256sum -c -
+          done < tmp/multivolume/EXPECTED_PUBLIC_VOLUME_SHA256SUMS.txt
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/publications-current" > release.json
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          release = json.loads(Path('release.json').read_text())
+          remote = {asset['name']: asset for asset in release['assets']}
+          expected_names = {
+              line.split('  ', 1)[1].split('/', 1)[1]
+              for line in Path('tmp/multivolume/EXPECTED_PUBLIC_VOLUME_SHA256SUMS.txt').read_text().splitlines()
+          }
+          actual = {}
+          for path in sorted(Path('release-check').iterdir()):
+              digest = hashlib.sha256(path.read_bytes()).hexdigest()
+              asset = remote[path.name]
+              assert path.stat().st_size == asset['size'], path.name
+              assert asset.get('digest') == 'sha256:' + digest, path.name
+              actual[path.name] = {'size': path.stat().st_size, 'sha256': digest}
+          assert set(actual) == expected_names
+          report = {
+              'repository': '${{ github.repository }}',
+              'release_tag': 'publications-current',
+              'workflow_run': '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}',
+              'works': 7,
+              'volume_pairs': 26,
+              'assets_verified': 52,
+              'all_downloaded_bytes_verified': True,
+              'approved_pdf_body_pages_verified': json.loads(Path('tmp/multivolume/pdf-full-verification.json').read_text())['approved_pages_verified'],
+              'epubcheck_5_3_0': '0 errors / 0 warnings for all twenty-six volumes',
+              'assets': actual,
+          }
+          Path('verification/multivolume-public-assets-verification.json').write_text(
+              json.dumps(report, ensure_ascii=False, indent=2) + '\n'
+          )
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: multivolume-public-assets-verification
+          path: |
+            verification/multivolume-public-assets-verification.json
+            tmp/multivolume/pdf-full-verification.json
+            tmp/multivolume/volume-split-generation-report.json
+          if-no-files-found: error
+          compression-level: 0
