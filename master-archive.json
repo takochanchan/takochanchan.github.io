@@ -1,13 +1,18 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "39e5d328e6ef453f1da0859ae41fa5e3088543fa",
+  "archive_commit": "9cfee251410f08a7ac88c29060c6db884a97792b",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
     "arthes-peten-1893": "publications/arthes-peten-1893/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "baily-central-america-1850": "publications/baily-central-america-1850/master.docx",
+    "bancroft-native-races-volume-i-1883": "publications/bancroft-native-races-volume-i-1883/master.docx",
+    "bancroft-native-races-volume-ii-1883": "publications/bancroft-native-races-volume-ii-1883/master.docx",
+    "bancroft-native-races-volume-iii-1883": "publications/bancroft-native-races-volume-iii-1883/master.docx",
+    "bancroft-native-races-volume-iv-1883": "publications/bancroft-native-races-volume-iv-1883/master.docx",
+    "bancroft-native-races-volume-v-1883": "publications/bancroft-native-races-volume-v-1883/master.docx",
     "bandelier-yucatan-central-america-1881": "publications/bandelier-yucatan-central-america-1881/master.docx",
     "barberena-fonseca-monografias-departamentales-1909-1914": "publications/barberena-fonseca-monografias-departamentales-1909-1914/master.docx",
     "barberena-historia-el-salvador-1914-1917": "publications/barberena-historia-el-salvador-1914-1917/master.docx",
@@ -127,6 +132,10 @@
     "guzman-apuntamientos-topografia-salvador-1883": "publications/guzman-apuntamientos-topografia-salvador-1883/master.docx",
     "henderson-british-honduras-1811": "publications/henderson-british-honduras-1811/master.docx",
     "henningsen-official-report-granada-1857": "publications/henningsen-official-report-granada-1857/master.md",
+    "herrera-historia-general-decadas-1-2-1601": "publications/herrera-historia-general-decadas-1-2-1601/master.docx",
+    "herrera-historia-general-decadas-3-4-1601": "publications/herrera-historia-general-decadas-3-4-1601/master.docx",
+    "herrera-historia-general-decadas-5-6-1615": "publications/herrera-historia-general-decadas-5-6-1615/master.docx",
+    "herrera-historia-general-decadas-7-8-1615": "publications/herrera-historia-general-decadas-7-8-1615/master.docx",
     "honduras-slaves-correspondence-1823": "publications/honduras-slaves-correspondence-1823/master.docx",
     "humboldt-vues-cordilleres-1810-1813": "publications/humboldt-vues-cordilleres-1810-1813/master.docx",
     "ixtlilxochitl-compendio-tetzcoco": "publications/ixtlilxochitl-compendio-tetzcoco/master.docx",
@@ -307,11 +316,7 @@
     "wyse-canal-panama-isthme-americain-1886": "publications/wyse-canal-panama-isthme-americain-1886/master.docx",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
-    "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
-    "herrera-historia-general-decadas-1-2-1601": "publications/herrera-historia-general-decadas-1-2-1601/master.docx",
-    "herrera-historia-general-decadas-3-4-1601": "publications/herrera-historia-general-decadas-3-4-1601/master.docx",
-    "herrera-historia-general-decadas-5-6-1615": "publications/herrera-historia-general-decadas-5-6-1615/master.docx",
-    "herrera-historia-general-decadas-7-8-1615": "publications/herrera-historia-general-decadas-7-8-1615/master.docx"
+    "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
