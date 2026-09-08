@@ -269,6 +269,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "brinton-pillars-of-ben-1897",
       "milla-gomez-carrillo-historia-america-central-1879-1905",
       "nuix-reflexiones-imparciales-1783-ja",
+      "palacio-carta-rey-espana-1860",
       "herrera-historia-general-decadas-1-2-1601",
       "herrera-historia-general-decadas-3-4-1601",
       "herrera-historia-general-decadas-5-6-1615",
