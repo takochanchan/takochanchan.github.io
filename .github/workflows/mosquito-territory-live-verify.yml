@@ -1,0 +1,95 @@
+name: Verify live Mosquito territory publication
+
+on:
+  push:
+    branches: [agent/mosquito-territory-publish-20260909]
+    paths: ['.github/workflows/mosquito-territory-live-verify.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 47afdeb79bd987a1503b8ce48c702335f067b7fc
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install verification dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Wait for the pinned catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochanchan.github.io/actions/runs/34284367051"
+          for attempt in range(90):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              if run["head_sha"] != "47afdeb79bd987a1503b8ce48c702335f067b7fc":
+                  raise SystemExit("Unexpected catalogue commit")
+              if run["status"] == "completed":
+                  if run["conclusion"] != "success":
+                      raise SystemExit("Catalogue deployment failed: " + str(run["conclusion"]))
+                  print("Pinned catalogue deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Catalogue deployment did not complete within 15 minutes")
+          PY
+      - name: Verify exact deployed catalogue and final asset checksums
+        run: npm run verify:remote-search
+      - name: Verify live bibliography, paper listing, downloads, and PDF page links
+        run: |
+          node --input-type=module -e 'import {publications} from "./src/publications.mjs"; import {writeFileSync} from "node:fs"; writeFileSync("publication-check-item.json",JSON.stringify(publications.find(p=>p.slug==="foreign-office-mosquito-territory-1848")));'
+          python3 - <<'PY'
+          import hashlib, html, json, re, time, urllib.request
+          from pathlib import Path
+          SLUG = "foreign-office-mosquito-territory-1848"
+          BASE = "https://takochanchan.github.io/"
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"Cache-Control":"no-cache", "User-Agent":"PublicationVerification/1.0"})
+              with urllib.request.urlopen(req, timeout=90) as response:
+                  assert response.status == 200, (url, response.status)
+                  return response.read()
+          item = json.loads(Path("publication-check-item.json").read_text())
+          detail = fetch(BASE + "publications/" + SLUG + "/").decode()
+          home = fetch(BASE).decode()
+          assert item["title"] in detail
+          assert "論文へ戻る" in detail
+          short_panel = home.split('id="short-works" role="tabpanel"',1)[1].split('<section class="about"',1)[0]
+          assert "/publications/" + SLUG + "/" in short_panel
+          assert 'id="author-great-britain-foreign-office"' in short_panel
+          assert SLUG in fetch(BASE + "sitemap-papers.xml").decode()
+          assets = json.loads(Path("assets-manifest.json").read_text())["assets"]
+          checks = []
+          for suffix in (".pdf", ".epub"):
+              asset = next(x for x in assets if x["path"] == item["pdf" if suffix == ".pdf" else "epub"])
+              assert html.escape(asset["url"], quote=True) in detail
+              data = fetch(asset["url"])
+              digest = hashlib.sha256(data).hexdigest()
+              assert len(data) == asset["size"] and digest == asset["sha256"], asset["path"]
+              checks.append({"format":suffix[1:], "size":len(data), "sha256":digest})
+          page_map = json.loads(fetch(BASE + "takochan-search-index-002/maps/" + SLUG + ".json"))
+          assert page_map["pdfSha256"] == checks[0]["sha256"]
+          blocks = page_map["blocks"]
+          assert blocks
+          assert all(1 <= x[1] <= 248 for x in blocks.values())
+          labels = sorted(set(str(x[0]) for x in blocks.values()))
+          source_pages = {int(n) for label in labels for n in re.findall(r"原刊 p\.\s*(\d+)", label)}
+          assert set(range(1,134)) <= source_pages
+          result = {"passed":True, "url":BASE+"publications/"+SLUG+"/", "classification":"short-work", "assets":checks, "search_blocks":len(blocks), "physical_pdf_pages":248, "source_page_labels":labels}
+          Path("mosquito-territory-live-verification.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n")
+          print(json.dumps(result,ensure_ascii=False))
+          
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mosquito-territory-live-publication-verification
+          path: mosquito-territory-live-verification.json
