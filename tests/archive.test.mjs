@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 374);
+  assert.equal(publications.length, 375);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,9 +85,9 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 3);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 366);
+  assert.equal(cataloguePublications.length, 367);
   assert.equal(majorCataloguePublications.length, 178);
-  assert.equal(shortCataloguePublications.length, 188);
+  assert.equal(shortCataloguePublications.length, 189);
 
   const blom = cataloguePublications.find(
     (publication) => publication.slug === "tribes-and-temples-1926-1927",
@@ -174,7 +174,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 97);
+  assert.equal(counts.get("002"), 98);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -1705,8 +1705,8 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 186);
-  assert.equal(shortPublications.length, 188);
-  assert.equal(shortPublicationAuthors.length, 41);
+  assert.equal(shortPublications.length, 189);
+  assert.equal(shortPublicationAuthors.length, 42);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
@@ -1866,6 +1866,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
       "stone-northern-highland-tribes-lenca-1948",
       "henningsen-official-report-granada-1857",
       ...perignyRemainingSlugs,
+      "rodriguez-relacion-espantable-terremoto-1541",
     ]),
   );
   const galindo = shortPublicationAuthors.find(
@@ -2854,7 +2855,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":178,"papers":188\}/,
+    /bibliographicCounts:\{"books":178,"papers":189\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2868,7 +2869,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">178<\/strong>件/);
-  assert.match(html, /id="paper-match-count">188<\/strong>件/);
+  assert.match(html, /id="paper-match-count">189<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
