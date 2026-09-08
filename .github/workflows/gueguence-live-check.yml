@@ -58,7 +58,7 @@ jobs:
           assert hashlib.sha256(cover).digest() == hashlib.sha256(pathlib.Path("static/" + cover_path).read_bytes()).digest()
           print("Live Japanese translation cover matches the approved cover.")
           for asset in assets:
-              with urllib.request.urlopen(asset["url"], timeout=60) as response:
+              with urllib.request.urlopen("https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/" + asset["filename"], timeout=60) as response:
                   data = response.read()
               assert len(data) == asset["size"], asset["filename"]
               assert hashlib.sha256(data).hexdigest() == asset["sha256"], asset["filename"]
