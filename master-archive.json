@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "2ddaf7b76341bade4430aeafea89b9668c03b656",
+  "archive_commit": "c3ffd3bc8800486fff2113a3df60153d5d680de4",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -320,7 +320,8 @@
     "palacio-carta-rey-espana-1860": "publications/palacio-carta-rey-espana-1860/master.docx",
     "brinton-gueguence-1883": "publications/brinton-gueguence-1883/master.docx",
     "benzoni-historia-mondo-nuovo-1565-ja": "publications/benzoni-historia-mondo-nuovo-1565-ja/master.docx",
-    "rodriguez-relacion-espantable-terremoto-1541": "publications/rodriguez-relacion-espantable-terremoto-1541/master.docx"
+    "rodriguez-relacion-espantable-terremoto-1541": "publications/rodriguez-relacion-espantable-terremoto-1541/master.docx",
+    "foreign-office-mosquito-territory-1848": "publications/foreign-office-mosquito-territory-1848/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

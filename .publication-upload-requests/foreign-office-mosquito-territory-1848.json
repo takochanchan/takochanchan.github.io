@@ -1,0 +1,48 @@
+{
+  "slug": "foreign-office-mosquito-territory-1848",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "c3ffd3bc8800486fff2113a3df60153d5d680de4",
+  "bundle": {
+    "size": 11074151,
+    "sha256": "c1912de182980727c690e769dfd3b6a46673c0dfd19691d89f30e51be9598ea6",
+    "chunks": [
+      "63f6a92c8ad51980370eb0f879f38441dfa92856",
+      "a26d556f0d2e3ad0f896975b546abb05cbb281f9",
+      "007798c08c6bfb0b7dfa33b1dd16defe43da8013",
+      "7666848df5e48f9488ac989d0cd64da52c2e6bab",
+      "22484a04a19410b669063357b8bb1c808cbfa898",
+      "eb5a01b46daac6e5b0069331992de16e16c8c85e",
+      "844055125a19cc745346e4a5cf3f1c5d0e5d29c0",
+      "e9febdec983cf910eee48e2607f41c60fd65408c",
+      "764f20c1fcbeb780fa4c191df07abcb9636d9a49",
+      "ab4ce82c490e697989371ab7d77b2801df713d95",
+      "c846da8c5a0aea4846d068bb7ef3f5d6d58f8928",
+      "3ef02ef5e7e19114442d66e13b1a92410ceed81a",
+      "d3eef5d4f35a22d199c7603b7ecaed91c3a4750d",
+      "b399d3a028c70fa49bbc1b36409cfb9b7e4ab07d",
+      "e91397aacb2882acbe626d836cc94e13969de2e7",
+      "205a2b4b32d4a6781e9819415ff6ae47cf2cee86",
+      "bdddb39f1373949907edaacb7f4b2a91267c7a45",
+      "ee762af269419ad5e58f80216b284177407013a2",
+      "430776feae642fc9eff66e3eab0da251c5e942e9",
+      "d323a7bf737be44f111e6e4a3948ae5edea7b05e",
+      "db432b61e3948c844d6dab4e4d18bf3fc94600d9",
+      "c54f2ddbdb37e0e98ad920f24db410e860ecab72",
+      "32874d0b94fd9c97e50d539ef8ed1b5e67628db8"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
+      "sha256": "2e2e3d951b66ba920a0437e31b9732a1e16f3acc41e91d0cca98b57cc307b2a1",
+      "size": 4113052,
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
+      "sha256": "c202fbf0060e67759088c3e8629a3834c128f67ad5a7f97842416444b9c59095",
+      "size": 8296084,
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub"
+    }
+  ]
+}

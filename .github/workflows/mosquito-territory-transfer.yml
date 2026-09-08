@@ -1,0 +1,29 @@
+name: Transfer approved Mosquito territory 1848 publication
+on:
+  push:
+    branches: [agent/mosquito-territory-publish-20260909]
+    paths: ['.publication-upload-requests/foreign-office-mosquito-territory-1848.json']
+permissions:
+  contents: write
+concurrency:
+  group: mosquito-territory-publication-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Upload and verify approved files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-mosquito-territory.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mosquito-territory-release-byte-verification
+          path: release-byte-verification.json
