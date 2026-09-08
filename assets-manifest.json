@@ -7080,6 +7080,24 @@
       "url": "https://takochanchan.github.io/publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
       "size": 83029,
       "sha256": "6cae5b8d8461728de36187e1a433fd28ca30e94d7a96b23dc21fad75a6ae8ae1"
+    },
+    {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
+      "size": 685258,
+      "sha256": "e3294729429a458f011c63e0529be3f7f2b0dfd332c12e2116ce83e33250d119"
+    },
+    {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
+      "size": 904301,
+      "sha256": "ba68ed66cd67a10f3c4e58536a23f93dbf61c1d81a7ce6a7972fb84a452d9576"
+    },
+    {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
+      "sha256": "c3f4c5725cd0e2c1c0d498bb7d5a0002f7c59f0a4e6e847a4e8fbcaeffa84908",
+      "size": 157722
     }
   ]
 }

@@ -7126,6 +7126,25 @@
         "status": "online",
         "url": "https://bnedigital.bne.es/bd/card?oid=0000014320&site=bdh"
       }
+    },
+    {
+      "slug": "rodriguez-relacion-espantable-terremoto-1541",
+      "recordClass": "short-work",
+      "title": "グアテマラの恐るべき大地震の報告",
+      "originalTitle": "Relación del espantable terremoto que agora nuevamente ha acontecido en las Indias en una ciudad llamada Guatimala",
+      "author": "フアン・ロドリゲス",
+      "originalAuthor": "Juan Rodríguez",
+      "year": 1541,
+      "originalPublication": "スペイン刊、刊地・印刷者・刊年未記載（1541年の災害報告）",
+      "publishedDate": "2026-09-09",
+      "rights": "原著本文・原刊図像はパブリックドメインです。所蔵・画像提供：Boston Public Library、デジタル化・公開：Internet Archive。BPLは原資料の権利を超える追加制限を複製画像に課さず、パブリックドメイン画像は出版を含め許可なく利用できるとしています。原刊標題紙1点を収録しています。利用方針：https://arts.bpl.org/faq/。",
+      "sourceEdition": "Juan Rodríguez, Relacion del espantable terremoto que agora nueuamente ha acontescido en las Yndias en vna ciudad llamada Guatimala. スペイン刊、刊地・印刷者・刊年未記載。Internet Archive書誌は1541年、［Madrid? : Juan de Villaquiran?］とする。",
+      "sourceProvider": "Boston Public Library所蔵、請求記号D.240a.32。Internet Archive公開の原刊画像（relaciondelespan00rodr）。",
+      "updatedDate": "2026-09-09",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/relaciondelespan00rodr"
+      }
     }
   ],
   "works": [

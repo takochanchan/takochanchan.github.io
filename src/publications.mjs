@@ -1,3 +1,4 @@
+import { rodriguezRelacionPublicationRecords, rodriguezRelacionPublicationMetadata } from "./rodriguez-relacion-publication.mjs";
 import { benzoniPublicationRecords, benzoniPublicationMetadata } from "./benzoni-publication.mjs";
 import { gueguencePublicationRecords, gueguencePublicationMetadata } from "./gueguence-publication.mjs";
 import { palacioPublicationRecords, palacioPublicationMetadata } from "./palacio-publication.mjs";
@@ -229,6 +230,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...rodriguezRelacionPublicationRecords,
   {
     "slug": "bury-bishop-amongst-bananas-1911",
     "title": "バナナの中の主教",
@@ -9301,6 +9303,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...rodriguezRelacionPublicationMetadata,
   "bury-bishop-amongst-bananas-1911": {
     "sourceEdition": "Herbert Bury, A Bishop amongst Bananas, London: Wells Gardner, Darton & Co., Ltd., [1911].",
     "sourceProvider": "University of California Libraries所蔵本をInternet Archiveがデジタル化した資料（識別子 bishopamongstban00buryrich）を底本としました。Wikimedia Commonsが同本を298頁のPDFとして公開しています。",
@@ -11853,6 +11856,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "rodriguez-relacion-espantable-terremoto-1541": "juan-rodriguez",
   "henningsen-official-report-granada-1857": "c-f-henningsen",
   "stone-northern-highland-tribes-lenca-1948": "doris-stone",
   "squier-great-calendar-stone-1849": "ephraim-george-squier",
