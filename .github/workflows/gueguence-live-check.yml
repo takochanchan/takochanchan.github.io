@@ -1,0 +1,66 @@
+name: Confirm live Gueguence publication
+
+on:
+  push:
+    branches: [agent/gueguence-publish-20260908]
+    paths: ['.github/workflows/gueguence-live-check.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live bibliography, cover, PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, time, urllib.request
+          run_url = "https://api.github.com/repos/takochanchan/takochanchan.github.io/actions/runs/34226055551"
+          for attempt in range(48):
+              request = urllib.request.Request(run_url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              if run["head_sha"] != "3fbc94d5dd29dedbb6b943c30b325d849d00f5e8":
+                  raise SystemExit("Unexpected site commit")
+              if run["status"] == "completed":
+                  if run["conclusion"] != "success":
+                      raise SystemExit("Site deployment failed: " + str(run["conclusion"]))
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Site deployment timed out")
+          base = "https://takochanchan.github.io/"
+          slug = "brinton-gueguence-1883"
+          page_url = base + "publications/" + slug + "/"
+          assets = json.loads(pathlib.Path(".publication-upload-requests/" + slug + ".json").read_text())["assets"]
+          for attempt in range(12):
+              try:
+                  with urllib.request.urlopen(page_url + "?verify=3fbc94d5", timeout=30) as response:
+                      page = response.read().decode("utf-8")
+                  assert "グエグエンセ" in page
+                  for asset in assets:
+                      assert asset["filename"] in page
+                  assert "cover.jpg" in page
+                  break
+              except Exception:
+                  if attempt == 11:
+                      raise
+                  time.sleep(5)
+          print("Live bibliography OK:", page_url)
+          cover_path = "publications/" + slug + "/cover.jpg"
+          with urllib.request.urlopen(base + cover_path + "?verify=3fbc94d5", timeout=30) as response:
+              cover = response.read()
+          assert hashlib.sha256(cover).digest() == hashlib.sha256(pathlib.Path("static/" + cover_path).read_bytes()).digest()
+          print("Live Japanese translation cover matches the approved cover.")
+          for asset in assets:
+              with urllib.request.urlopen(asset["url"], timeout=60) as response:
+                  data = response.read()
+              assert len(data) == asset["size"], asset["filename"]
+              assert hashlib.sha256(data).hexdigest() == asset["sha256"], asset["filename"]
+              print("Live asset OK:", asset["filename"], asset["sha256"])
+          PY
