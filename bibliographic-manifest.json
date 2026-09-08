@@ -7145,6 +7145,25 @@
         "status": "online",
         "url": "https://archive.org/details/relaciondelespan00rodr"
       }
+    },
+    {
+      "slug": "foreign-office-mosquito-territory-1848",
+      "recordClass": "short-work",
+      "title": "モスキート領に関する往復文書",
+      "originalTitle": "Correspondence respecting the Mosquito territory",
+      "author": "イギリス外務省",
+      "originalAuthor": "Great Britain. Foreign Office",
+      "year": 1848,
+      "originalPublication": "ロンドン：T. R. Harrison、1848年。1848年7月3日イギリス下院提出。",
+      "publishedDate": "2026-09-09",
+      "rights": "原著本文・原刊地図はパブリックドメインです。所蔵：University of Michigan。公開：HathiTrust Digital Library。底本PDFの権利表示はPublic Domainで、全部または一部の複製・利用・再配布を認めています。",
+      "sourceEdition": "Great Britain. Foreign Office, Correspondence respecting the Mosquito territory. Presented to the House of Commons, July 3, 1848, in pursuance of their address of April 3, 1848. London: Printed by T. R. Harrison, 1848. 本文1-133頁、付録i-ix頁、折込地図3点。",
+      "sourceProvider": "University of Michigan所蔵本。HathiTrust Digital Library公開（mdp.39015086610840）。同一のHathiTrust PDFをWikimedia Commons経由で取得。",
+      "updatedDate": "2026-09-09",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/2027/mdp.39015086610840"
+      }
     }
   ],
   "works": [

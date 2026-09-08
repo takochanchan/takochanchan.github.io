@@ -7098,6 +7098,24 @@
       "url": "https://takochanchan.github.io/publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
       "sha256": "c3f4c5725cd0e2c1c0d498bb7d5a0002f7c59f0a4e6e847a4e8fbcaeffa84908",
       "size": 157722
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
+      "size": 4113052,
+      "sha256": "2e2e3d951b66ba920a0437e31b9732a1e16f3acc41e91d0cca98b57cc307b2a1"
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
+      "size": 8296084,
+      "sha256": "c202fbf0060e67759088c3e8629a3834c128f67ad5a7f97842416444b9c59095"
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/foreign-office-mosquito-territory-1848/cover.jpg",
+      "size": 127147,
+      "sha256": "70b699dba3e2f76534bb145647aafca35bef767c478c647ec432f8afd4a8937d"
     }
   ]
 }

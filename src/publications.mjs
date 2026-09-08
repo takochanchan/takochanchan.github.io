@@ -1,3 +1,4 @@
+import { mosquitoTerritoryPublicationRecords, mosquitoTerritoryPublicationMetadata } from "./mosquito-territory-publication.mjs";
 import { rodriguezRelacionPublicationRecords, rodriguezRelacionPublicationMetadata } from "./rodriguez-relacion-publication.mjs";
 import { benzoniPublicationRecords, benzoniPublicationMetadata } from "./benzoni-publication.mjs";
 import { gueguencePublicationRecords, gueguencePublicationMetadata } from "./gueguence-publication.mjs";
@@ -230,6 +231,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...mosquitoTerritoryPublicationRecords,
   ...rodriguezRelacionPublicationRecords,
   {
     "slug": "bury-bishop-amongst-bananas-1911",
@@ -9303,6 +9305,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...mosquitoTerritoryPublicationMetadata,
   ...rodriguezRelacionPublicationMetadata,
   "bury-bishop-amongst-bananas-1911": {
     "sourceEdition": "Herbert Bury, A Bishop amongst Bananas, London: Wells Gardner, Darton & Co., Ltd., [1911].",
@@ -11856,6 +11859,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "foreign-office-mosquito-territory-1848": "great-britain-foreign-office",
   "rodriguez-relacion-espantable-terremoto-1541": "juan-rodriguez",
   "henningsen-official-report-granada-1857": "c-f-henningsen",
   "stone-northern-highland-tribes-lenca-1948": "doris-stone",
