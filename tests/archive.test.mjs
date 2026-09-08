@@ -1708,7 +1708,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 186);
   assert.equal(shortPublications.length, 190);
-  assert.equal(shortPublicationAuthors.length, 42);
+  assert.equal(shortPublicationAuthors.length, 43);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
