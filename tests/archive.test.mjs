@@ -1712,6 +1712,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
+      "foreign-office-mosquito-territory-1848",
       "squier-great-calendar-stone-1849",
       "squier-british-encroachments-mosquito-question-1850",
       "squier-spanish-american-republics-1850",
