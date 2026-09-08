@@ -184,6 +184,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "rodriguez-relacion-espantable-terremoto-1541",
       "bury-bishop-amongst-bananas-1911",
       "squier-visit-guajiquero-indians-1859",
       "squier-volcanoes-central-america-1859",
