@@ -2,18 +2,18 @@
   "schema_version": 1,
   "slug": "rodriguez-relacion-espantable-terremoto-1541",
   "release_tag": "publications-current",
-  "verified_archive_commit": "008aa8d01efc5a7fb32e66dbdec06bc407974d7c",
+  "verified_archive_commit": "2ddaf7b76341bade4430aeafea89b9668c03b656",
   "bundle": {
-    "size": 1559186,
-    "sha256": "16abf9eb71d50fe888750078db5429d15f067a64e3a05433c486c3310cc03f6d",
+    "size": 1559185,
+    "sha256": "9034584ad2cee8124e77638280b37b5097f897fb1b5f88d61c26589f286fb701",
     "chunks": [
-      "9f802b02828139ea5721432c3a87d03ac12a5e79",
-      "15ded0752d8678ede9ec8609e85b561d48122950",
-      "40de3bfdc520e729985a63b799b03052e8f1ab67",
-      "8ef98b614e4accd8687d8f793a81924c95971578",
-      "c8aa503af20e545e680a0d53e8b8b606385eeed1",
-      "8c4639800ba1cf1d8b5212f7bde7bdc42b87224c",
-      "3d504af6fee880d46beed39edd2bc339988afe20"
+      "8b9c6370f7726826e6387906eab78d9647feab22",
+      "74aea710abbc270a563efe408b048a91b5e33434",
+      "5ea47f416ef3e286c3753bca21f58108f364b729",
+      "d0c892c7f8ca5286d4ad13f45d2c6beb996b7abc",
+      "39c2ce8514f2d67bb2eb14d2c29a0d5e00518bb3",
+      "c71c99e7e88bdd44a22cf7893b778631edc30900",
+      "3382b094cc3c7218b0873663d4d3aedddb363cfd"
     ]
   },
   "assets": [
@@ -24,8 +24,8 @@
     },
     {
       "filename": "Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
-      "size": 904301,
-      "sha256": "ba68ed66cd67a10f3c4e58536a23f93dbf61c1d81a7ce6a7972fb84a452d9576"
+      "size": 904302,
+      "sha256": "0ef8cd9abc654384fa766d9f2db6bf9523bea87300ce679fc98c89a30aac4c9b"
     }
   ]
 }
