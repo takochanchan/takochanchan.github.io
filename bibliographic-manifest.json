@@ -7069,6 +7069,25 @@
         "status": "online",
         "url": "https://www.gutenberg.org/ebooks/45268"
       }
+    },
+    {
+      "slug": "palacio-carta-rey-espana-1860",
+      "recordClass": "major-work",
+      "title": "スペイン国王宛書簡",
+      "originalTitle": "Carta dirijida al Rey de España",
+      "author": "ディエゴ・ガルシア・デ・パラシオ",
+      "originalAuthor": "Diego García de Palacio",
+      "year": 1860,
+      "originalPublication": "ニューヨーク、C. B. Norton、1860年（報告成立1576年）",
+      "sourceEdition": "Diego García de Palacio, Carta dirijida al Rey de España (1576), edited with an English translation and notes by E. G. Squier, Collection of Rare and Original Documents and Relations, No. 1, New York: C. B. Norton, 1860.",
+      "sourceProvider": "Cornell University Library所蔵、Internet Archive公開の1860年刊本（cu31924021041268）。",
+      "rights": "1576年の著作および1860年刊本はパブリックドメインです。Internet Archiveの公開書誌は米国で本文の利用に関する既知の著作権制限がないと表示しています。所蔵元Cornell University Libraryは、同館のパブリックドメイン資料を無料・許可不要で利用できると案内しています。地図・叢書扉・標題紙画像も同所蔵本に拠ります。公開機関の利用案内：https://www.library.cornell.edu/libraries/policies/using-media-from-collections/。",
+      "publishedDate": "2026-09-08",
+      "updatedDate": "2026-09-08",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cu31924021041268"
+      }
     }
   ],
   "works": [

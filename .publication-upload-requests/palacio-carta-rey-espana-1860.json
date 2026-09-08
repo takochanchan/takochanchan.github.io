@@ -1,0 +1,32 @@
+{
+  "slug": "palacio-carta-rey-espana-1860",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "b4bd5c017bbb9ad8affe72ea3965bce1a04a9e97",
+  "bundle": {
+    "chunks": [
+      "8a0f9c65121c4f6dbe27b91244ce8491bcfbd5a5",
+      "338e4218aabf4147f43392d9b36a0abb729d5c8c",
+      "f590944141d9656c0dc76e54a79208100d9b0bd1",
+      "d63418d4525456d7787c79d0546745c64deeced9",
+      "fbadde352d4bd502132e94b917b4900735097662",
+      "2c26fa7aaa320e70b23a3a2d5e93b167e7686b59",
+      "ba6e35de84bdc3907558dde9076a305f1e2c7647"
+    ],
+    "sha256": "9861d24113b589e971f5938b7dc2830b9187f35b7484f451b1ba8cf4127a25df",
+    "size": 3995957
+  },
+  "assets": [
+    {
+      "filename": "Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "size": 2386781,
+      "sha256": "ee337e20e2e5aeeec6863ec4f7b7da68f27453193fd58057af82bd30f3837a4a"
+    },
+    {
+      "filename": "Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "size": 2077363,
+      "sha256": "aef537871bce3fdd80b1839786edfa04c4a0499dccaf235b6ec2b89e8b91337a"
+    }
+  ]
+}

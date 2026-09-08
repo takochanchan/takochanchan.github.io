@@ -7026,6 +7026,24 @@
       "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-v-1883/cover.jpg",
       "size": 34219,
       "sha256": "e700bc25156b707ce16cdc3b6c4e5cf2ee7a9750fe0b0cb6a7d572516af7c9c7"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "size": 2386781,
+      "sha256": "ee337e20e2e5aeeec6863ec4f7b7da68f27453193fd58057af82bd30f3837a4a"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "size": 2077363,
+      "sha256": "aef537871bce3fdd80b1839786edfa04c4a0499dccaf235b6ec2b89e8b91337a"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palacio-carta-rey-espana-1860/cover.jpg",
+      "size": 40887,
+      "sha256": "3f2f28a4ed6fbed36486f1bbd71d84eaa6f51c2c754647150cf46b38d5adaf6e"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { palacioPublicationRecords, palacioPublicationMetadata } from "./palacio-publication.mjs";
 import { bancroftNativeRacesPublicationMetadata, bancroftNativeRacesPublicationRecords } from "./bancroft-native-races-publication.mjs";
 import { herreraPublicationRecords, herreraPublicationMetadata } from "./herrera-publication.mjs";
 import { createRequire } from "node:module";
@@ -9256,6 +9257,7 @@ const publicationRecords = [
   ...brintonExtraTwoPapersPublicationRecords,
   ...millaGomezCarrilloPublicationRecords,
   ...nuixPublicationRecords,
+  ...palacioPublicationRecords,
   ...herreraPublicationRecords,
   ...bancroftNativeRacesPublicationRecords,
 ];
@@ -11835,6 +11837,7 @@ const publicationMetadata = {
   ...brintonExtraTwoPapersPublicationMetadata,
   ...millaGomezCarrilloPublicationMetadata,
   ...nuixPublicationMetadata,
+  ...palacioPublicationMetadata,
   ...herreraPublicationMetadata,
   ...bancroftNativeRacesPublicationMetadata,
 };
@@ -12092,3 +12095,4 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+

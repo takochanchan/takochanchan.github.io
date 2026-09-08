@@ -1,0 +1,33 @@
+name: Transfer checksum-pinned Palacio publication assets
+on:
+  push:
+    branches: [agent/palacio-release-20260908]
+    paths: ['.publication-upload-requests/palacio-carta-rey-espana-1860.json']
+permissions:
+  contents: write
+concurrency:
+  group: palacio-publication-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build archive pages and verify catalogue
+        run: npm run build
+      - name: Test archive and search code
+        run: npm test
+      - name: Reconstruct, verify, upload, and download final assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-palacio.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: palacio-release-byte-verification
+          path: release-byte-verification.json
+
