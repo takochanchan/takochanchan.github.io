@@ -7062,6 +7062,24 @@
       "url": "https://takochanchan.github.io/publications/brinton-gueguence-1883/cover.jpg",
       "size": 78492,
       "sha256": "007327001f17971c8c4aeeff8930d42c681e6f482bd71164964661934ebdfefe"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
+      "size": 4734428,
+      "sha256": "dfa468ce98cb647bd56c0ffad825cd2f429853aa8f000ddfc605ff067afe93db"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
+      "size": 4545958,
+      "sha256": "b47d7afade00e38cdf58098a928da017e5a668956b6314ea2f4859970657321c"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
+      "size": 83029,
+      "sha256": "6cae5b8d8461728de36187e1a433fd28ca30e94d7a96b23dc21fad75a6ae8ae1"
     }
   ]
 }

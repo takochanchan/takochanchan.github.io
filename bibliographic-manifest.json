@@ -7107,6 +7107,25 @@
         "status": "online",
         "url": "https://archive.org/details/cu31924021169804"
       }
+    },
+    {
+      "slug": "benzoni-historia-mondo-nuovo-1565-ja",
+      "recordClass": "major-work",
+      "title": "新世界史",
+      "originalTitle": "La historia del mondo nuovo",
+      "author": "ジローラモ・ベンゾーニ",
+      "originalAuthor": "Girolamo Benzoni",
+      "year": 1565,
+      "originalPublication": "ヴェネツィア、フランチェスコ・ランパツェット、1565年",
+      "sourceEdition": "Girolamo Benzoni, La historia del mondo nuovo, Venetia: Francesco Rampazetto, 1565.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España）所蔵R/293。主底本の公開画像に欠ける169葉表裏は、ローマ国立中央図書館所蔵の同じ1565年版（Google Books）で補充。",
+      "rights": "1565年刊の原著はパブリックドメインです。スペイン国立図書館の標題紙・木版画画像はCC BY 4.0で公開されています。Imágenes procedentes de los fondos de la Biblioteca Nacional de España. 本文図は外枠を残して切り出しています。利用案内：https://bnedigital.bne.es/fs/static/pdf/guia-de-uso-bne-digital.pdf。169葉表の図はローマ国立中央図書館所蔵本のGoogle Books公開画像を全頁で使用し、透かしを保持しています。補完底本：https://books.google.com/books?id=xfHCk1ELQ6MC&printsec=frontcover。",
+      "publishedDate": "2026-09-08",
+      "updatedDate": "2026-09-08",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bnedigital.bne.es/bd/card?oid=0000014320&site=bdh"
+      }
     }
   ],
   "works": [

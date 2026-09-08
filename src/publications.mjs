@@ -1,3 +1,4 @@
+import { benzoniPublicationRecords, benzoniPublicationMetadata } from "./benzoni-publication.mjs";
 import { gueguencePublicationRecords, gueguencePublicationMetadata } from "./gueguence-publication.mjs";
 import { palacioPublicationRecords, palacioPublicationMetadata } from "./palacio-publication.mjs";
 import { bancroftNativeRacesPublicationMetadata, bancroftNativeRacesPublicationRecords } from "./bancroft-native-races-publication.mjs";
@@ -9257,6 +9258,7 @@ const publicationRecords = [
   ...brintonFourthFivePapersPublicationRecords,
   ...brintonExtraTwoPapersPublicationRecords,
   ...millaGomezCarrilloPublicationRecords,
+  ...benzoniPublicationRecords,
   ...nuixPublicationRecords,
   ...palacioPublicationRecords,
   ...gueguencePublicationRecords,
@@ -11838,6 +11840,7 @@ const publicationMetadata = {
   ...brintonFourthFivePapersPublicationMetadata,
   ...brintonExtraTwoPapersPublicationMetadata,
   ...millaGomezCarrilloPublicationMetadata,
+  ...benzoniPublicationMetadata,
   ...nuixPublicationMetadata,
   ...palacioPublicationMetadata,
   ...gueguencePublicationMetadata,
