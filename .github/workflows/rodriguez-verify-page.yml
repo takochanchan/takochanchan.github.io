@@ -1,0 +1,59 @@
+name: Verify public Rodriguez page
+
+on:
+  push:
+    branches: [agent/rodriguez-publish-20260909]
+    paths: ['.github/workflows/rodriguez-verify-page.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the approved page deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochanchan.github.io/actions/runs/34241435721"
+          for attempt in range(90):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              if run["head_sha"] != "4b9824e2ce4f5c14109a63a25d3aa8c2db21f299":
+                  raise SystemExit("Unexpected publication commit")
+              if run["status"] == "completed":
+                  if run["conclusion"] != "success":
+                      raise SystemExit("Page deployment failed: " + str(run["conclusion"]))
+                  print("Approved page deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Page deployment did not complete within 15 minutes")
+          PY
+      - name: Confirm public bibliography and download links
+        run: |
+          python3 - <<'PY'
+          import time, urllib.request
+          url = "https://takochanchan.github.io/publications/rodriguez-relacion-espantable-terremoto-1541/"
+          stem = "Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation"
+          for attempt in range(12):
+              try:
+                  with urllib.request.urlopen(url + "?published=4b9824e2", timeout=30) as response:
+                      status = response.status
+                      html = response.read().decode("utf-8")
+                  assert status == 200
+                  assert "グアテマラの恐るべき大地震の報告" in html
+                  assert stem + ".pdf" in html and stem + ".epub" in html
+                  assert "2026-09-08" in html
+                  print("Public bibliography is available with the approved PDF and EPUB links: " + url)
+                  break
+              except Exception:
+                  if attempt == 11: raise
+                  time.sleep(10)
+          PY
