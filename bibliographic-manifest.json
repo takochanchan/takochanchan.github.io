@@ -7088,6 +7088,25 @@
         "status": "online",
         "url": "https://archive.org/details/cu31924021041268"
       }
+    },
+    {
+      "slug": "brinton-gueguence-1883",
+      "title": "グエグエンセ",
+      "originalTitle": "The Güegüence; A Comedy Ballet in the Nahuatl-Spanish Dialect of Nicaragua",
+      "author": "ダニエル・G・ブリントン 編",
+      "originalAuthor": "Daniel G. Brinton",
+      "year": 1883,
+      "originalPublication": "フィラデルフィア、D. G. Brinton、1883年",
+      "sourceEdition": "Daniel G. Brinton (ed.), The Güegüence; A Comedy Ballet in the Nahuatl-Spanish Dialect of Nicaragua, Brinton’s Library of Aboriginal American Literature, No. III, Philadelphia: D. G. Brinton, 1883. 前付lii頁・本文94頁。",
+      "sourceProvider": "Cornell University Library所蔵、Internet Archive公開の1883年初版（cu31924021169804）。転写・挿図の補助資料：Project Gutenberg第40559号。",
+      "rights": "原著本文・原挿図はパブリックドメインです。コーネル大学図書館所蔵本の公開画像は、米国で本文利用に既知の著作権制限なしと表示されています。Project Gutenberg第40559号も米国でパブリックドメインと表示されており、転写・挿図を補助資料に用いました。転写・画像制作者はAndrea Ball、David Starner、Distributed Proofreading Teamです。底本：https://archive.org/details/cu31924021169804。補助資料：https://www.gutenberg.org/ebooks/40559。利用案内：https://www.gutenberg.org/policy/permission.html。",
+      "publishedDate": "2026-09-08",
+      "updatedDate": "2026-09-08",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cu31924021169804"
+      }
     }
   ],
   "works": [

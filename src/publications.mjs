@@ -1,3 +1,4 @@
+import { gueguencePublicationRecords, gueguencePublicationMetadata } from "./gueguence-publication.mjs";
 import { palacioPublicationRecords, palacioPublicationMetadata } from "./palacio-publication.mjs";
 import { bancroftNativeRacesPublicationMetadata, bancroftNativeRacesPublicationRecords } from "./bancroft-native-races-publication.mjs";
 import { herreraPublicationRecords, herreraPublicationMetadata } from "./herrera-publication.mjs";
@@ -9258,6 +9259,7 @@ const publicationRecords = [
   ...millaGomezCarrilloPublicationRecords,
   ...nuixPublicationRecords,
   ...palacioPublicationRecords,
+  ...gueguencePublicationRecords,
   ...herreraPublicationRecords,
   ...bancroftNativeRacesPublicationRecords,
 ];
@@ -11838,6 +11840,7 @@ const publicationMetadata = {
   ...millaGomezCarrilloPublicationMetadata,
   ...nuixPublicationMetadata,
   ...palacioPublicationMetadata,
+  ...gueguencePublicationMetadata,
   ...herreraPublicationMetadata,
   ...bancroftNativeRacesPublicationMetadata,
 };

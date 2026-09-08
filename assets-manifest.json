@@ -7044,6 +7044,24 @@
       "url": "https://takochanchan.github.io/publications/palacio-carta-rey-espana-1860/cover.jpg",
       "size": 40887,
       "sha256": "3f2f28a4ed6fbed36486f1bbd71d84eaa6f51c2c754647150cf46b38d5adaf6e"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
+      "size": 2712124,
+      "sha256": "ad52cea376ce2e054c6a37856d402a37d3e30411ebea92e2e8affe874442f283"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
+      "size": 4503227,
+      "sha256": "d4b05f6f7679d4b89fe0eae6a8eca84e4e8fa731b08ba89d58db188f9baebdd3"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-gueguence-1883/cover.jpg",
+      "size": 78492,
+      "sha256": "007327001f17971c8c4aeeff8930d42c681e6f482bd71164964661934ebdfefe"
     }
   ]
 }
