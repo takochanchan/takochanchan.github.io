@@ -259,6 +259,29 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_plain_manuscript_folio_markers_are_preserved(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔底本画像 4〕",
+                "前付。",
+                "〔写本 f. 1r〕最初の本文。",
+                "同じ葉の続き。",
+                "〔写本 f. 1v〕",
+                "裏の本文。",
+            ]
+        )
+        self.assertEqual(
+            annotated,
+            [
+                ("底本画像 4", "前付。"),
+                ("写本 f. 1r", "最初の本文。"),
+                ("写本 f. 1r", "同じ葉の続き。"),
+                ("写本 f. 1v", "裏の本文。"),
+            ],
+        )
+        self.assertIsNone(extract_corpus.ORIGINAL_MARKER_RE.search("〔写本の本文はここで中断する〕"))
+        self.assertFalse(extract_corpus.is_original_page_marker("写本の本文はここで中断する"))
+
     def test_named_manuscript_folio_marker_is_preserved(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [
