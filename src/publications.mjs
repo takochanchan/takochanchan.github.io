@@ -1,3 +1,4 @@
+import { sahagunPublicationRecords, sahagunPublicationMetadata } from "./sahagun-publication.mjs";
 import { mosquitoTerritoryPublicationRecords, mosquitoTerritoryPublicationMetadata } from "./mosquito-territory-publication.mjs";
 import { rodriguezRelacionPublicationRecords, rodriguezRelacionPublicationMetadata } from "./rodriguez-relacion-publication.mjs";
 import { benzoniPublicationRecords, benzoniPublicationMetadata } from "./benzoni-publication.mjs";
@@ -9266,6 +9267,7 @@ const publicationRecords = [
   ...nuixPublicationRecords,
   ...palacioPublicationRecords,
   ...gueguencePublicationRecords,
+  ...sahagunPublicationRecords,
   ...herreraPublicationRecords,
   ...bancroftNativeRacesPublicationRecords,
 ];
@@ -11850,6 +11852,7 @@ const publicationMetadata = {
   ...nuixPublicationMetadata,
   ...palacioPublicationMetadata,
   ...gueguencePublicationMetadata,
+  ...sahagunPublicationMetadata,
   ...herreraPublicationMetadata,
   ...bancroftNativeRacesPublicationMetadata,
 };

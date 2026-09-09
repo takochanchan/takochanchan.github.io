@@ -7164,6 +7164,25 @@
         "status": "online",
         "url": "https://hdl.handle.net/2027/mdp.39015086610840"
       }
+    },
+    {
+      "slug": "sahagun-historia-general-nueva-espana",
+      "title": "ヌエバ・エスパーニャの事物に関する総史",
+      "originalTitle": "Historia general de las cosas de Nueva España",
+      "author": "ベルナルディーノ・デ・サアグン",
+      "originalAuthor": "Bernardino de Sahagún",
+      "year": "16世紀",
+      "originalPublication": "ヌエバ・エスパーニャ、16世紀の写本",
+      "sourceEdition": "Bernardino de Sahagún, Historia general de las cosas de Nueva España, siglo XVI. Real Biblioteca, II/3280. [1] h., 303 f., [1] h. 紙、320 × 220 mm。",
+      "sourceProvider": "Patrimonio Nacional／Real Biblioteca de Palacio。Real Biblioteca Digital公開の王立図書館本II/3280。",
+      "rights": "16世紀の原著本文はパブリックドメインです。写本画像の提供元はPatrimonio Nacional／Real Biblioteca de Palacio（II/3280）です。デジタル画像にはReal Biblioteca Digitalの利用条件が適用され、原内容を変える改変の回避、所蔵機関・請求記号の明記、20ページ以上の資料の全体複製に際する同サイトへのリンクまたは事前許可、各資料の20%までの無料利用等が定められています。底本：https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11203。利用条件：https://rbdigital.realbiblioteca.es/s/realbiblioteca/page/t-rminos-de-uso。",
+      "publishedDate": "2026-09-09",
+      "updatedDate": "2026-09-09",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11203"
+      }
     }
   ],
   "works": [

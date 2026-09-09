@@ -104,16 +104,16 @@
       "sha256": "dc53bfffb1d60236a866bf1d6ed62bc7d52f63f3f7e65f4df650fddff636de6d"
     },
     {
-      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
-      "size": 6953852,
-      "sha256": "ca560cc27c61404cc1893cb5dab50d41c6e1f16a6dc0de41e0ced1125fc60296"
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "size": 8130175,
+      "sha256": "b4d245ab154360bddab1be8ee57fa6f186a042e9773f1606636bc466afed1a0a"
     },
     {
-      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
-      "size": 23262511,
-      "sha256": "a24dced09b90b8081be4b07264f3d3b1052b0643ad31dc1d4e852252f36b1dcf"
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "size": 28303247,
+      "sha256": "1e97275f91712e3d3f8e6edb85ed6cbc87bec5579fa7a17da9df94c6494228c3"
     },
     {
       "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_II_1886_Japanese_Complete_Translation.epub",
@@ -128,22 +128,112 @@
       "sha256": "005aa3d74afc52c6436082ded5d055ab5bcb06c6fb6ecf28ad3eb4a51eaf5dbb"
     },
     {
-      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.epub",
-      "size": 8130175,
-      "sha256": "b4d245ab154360bddab1be8ee57fa6f186a042e9773f1606636bc466afed1a0a"
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.epub",
+      "size": 6953852,
+      "sha256": "ca560cc27c61404cc1893cb5dab50d41c6e1f16a6dc0de41e0ced1125fc60296"
     },
     {
-      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_III_1887_Japanese_Complete_Translation.pdf",
-      "size": 28303247,
-      "sha256": "1e97275f91712e3d3f8e6edb85ed6cbc87bec5579fa7a17da9df94c6494228c3"
+      "path": "publications/bancroft-history-central-america-1886-1887/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_History_of_Central_America_Volume_I_1886_Japanese_Complete_Translation.pdf",
+      "size": 23262511,
+      "sha256": "a24dced09b90b8081be4b07264f3d3b1052b0643ad31dc1d4e852252f36b1dcf"
     },
     {
       "path": "publications/bancroft-history-central-america-1886-1887/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bancroft-history-central-america-1886-1887/cover.jpg",
       "size": 91302,
       "sha256": "eefd50d68b5fe8109cf93bd738e6bf16b27ba49c00fac7c714bfcedd58be3264"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.epub",
+      "size": 26230011,
+      "sha256": "52cf8653cce098562c9228b68528ba2766dcfb9ae50d981c18eedf121ad3702c"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.pdf",
+      "size": 16858941,
+      "sha256": "da2312e690c920429537105433a1fd5fe5deb7f1a357e21bb2e2ea652fcd939b"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-i-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-i-1883/cover.jpg",
+      "size": 34516,
+      "sha256": "529c38d5cd03df0f93999a198b14b0dd9123c485940b542eeee5ee142fbdcbdd"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.epub",
+      "size": 18809669,
+      "sha256": "9db2cf9836561cd227c36b2e1a20a03f86e3b1485eecb86db888ccd9adf44a6f"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.pdf",
+      "size": 12127327,
+      "sha256": "df57393b21a070805b0180a42e9494c0bfa2496829d6ce071664f7ca0dd5465f"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-ii-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-ii-1883/cover.jpg",
+      "size": 34618,
+      "sha256": "347bb63103ab5e7337d26a3de7d9abc4b8df1d69cc48498c7513f12dea34ea9b"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.epub",
+      "size": 17812749,
+      "sha256": "e0366cb5aa18e8616977ed07d7cf4f1a5f61179fff91517b32d9210710935b14"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.pdf",
+      "size": 11593829,
+      "sha256": "c5298955d47d2f37b144dc70f2046a65ce0119c730078681dfbe408261ea677c"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iii-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-iii-1883/cover.jpg",
+      "size": 34540,
+      "sha256": "aaf616345c3170bc3a77be6f0357acb2e0d5fc7d5d0387387f04ebaa88af0d29"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.epub",
+      "size": 41034475,
+      "sha256": "3c9c36254061d26ca32a9b4c1bdf4601a47163509cda0509c32db5f50d11a4ea"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.pdf",
+      "size": 26826481,
+      "sha256": "1abc02a8ba898532c2851aa57ade6f9d577640ad7f280e3513c2d226ffcf7997"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-iv-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-iv-1883/cover.jpg",
+      "size": 34423,
+      "sha256": "5ad478bd456c16336cbdf823a9a21011b22fa7f83ca4f71e9c9ef2894a546b76"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.epub",
+      "size": 17959635,
+      "sha256": "cb6d400b6a1322e2a26df99b877bd79de331b0dbb1605075bf8cf7f3a705fd61"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.pdf",
+      "size": 9543379,
+      "sha256": "2400f81aece1bf1923c1f08e3b8a06d757faf2e522e4c30e151872b9ed93fab5"
+    },
+    {
+      "path": "publications/bancroft-native-races-volume-v-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-v-1883/cover.jpg",
+      "size": 34219,
+      "sha256": "e700bc25156b707ce16cdc3b6c4e5cf2ee7a9750fe0b0cb6a7d572516af7c9c7"
     },
     {
       "path": "publications/bandelier-yucatan-central-america-1881/Adolph_F_Bandelier_Notes_on_the_Bibliography_of_Yucatan_and_Central_America_1881_Japanese_Complete_Translation.epub",
@@ -174,6 +264,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_1878_1887_Japanese_Complete_Translation.pdf",
       "size": 10522184,
       "sha256": "5b70f159595a3610297c678e8f2418455aad60d3eadc3874e1d0c8af8f828658"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.epub",
+      "size": 371673,
+      "sha256": "bb03ca0ee9943a53bcff21ee13609a435235996a67af970ebcc443810bbda2ef"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.pdf",
+      "size": 2720438,
+      "sha256": "41e092cc588f12c54b28d0302e3c200d993a9ac44910de7790182cdd961b0ae5"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.epub",
+      "size": 495974,
+      "sha256": "01d221166b1b279ea7bcc530058d660cc35052771e69abf3b38b47eaa2d97620"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.pdf",
+      "size": 3328332,
+      "sha256": "3de4ab437a45503db74af3183f4333dc56b8b4cec82a539316560830b6160d83"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.epub",
+      "size": 589096,
+      "sha256": "bba4fcb61621a49f3a65a7b21db743f92b3f39b67f3b52a229670802d927b11b"
+    },
+    {
+      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.pdf",
+      "size": 3488449,
+      "sha256": "8ac0dff3c9619c6ea751ec3f6ecb1554b44f3358418c014e5e9dfee2f625e7ef"
     },
     {
       "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/cover.jpg",
@@ -306,6 +432,24 @@
       "url": "https://takochanchan.github.io/publications/beltran-arte-idioma-maya-1746/cover.jpg",
       "size": 59486,
       "sha256": "58f2e64c58133f7703e1475055780d223a182e2acdb106ae186bdac17dcda26a"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
+      "size": 4545958,
+      "sha256": "b47d7afade00e38cdf58098a928da017e5a668956b6314ea2f4859970657321c"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
+      "size": 4734428,
+      "sha256": "dfa468ce98cb647bd56c0ffad825cd2f429853aa8f000ddfc605ff067afe93db"
+    },
+    {
+      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
+      "size": 83029,
+      "sha256": "6cae5b8d8461728de36187e1a433fd28ca30e94d7a96b23dc21fad75a6ae8ae1"
     },
     {
       "path": "publications/berendt-acasaguastlan-jilotepec-1878/Berendt_Bromowicz_Acasaguastlan_Jilotepec_1878_Japanese_Annotated_Translation.epub",
@@ -1044,6 +1188,24 @@
       "url": "https://takochanchan.github.io/publications/brinton-essays-americanist-1890/cover.jpg",
       "size": 34704,
       "sha256": "09b228b617275b4790fcd60edade5d24d43a0b8ead756f8eb482afee487e09f7"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
+      "size": 4503227,
+      "sha256": "d4b05f6f7679d4b89fe0eae6a8eca84e4e8fa731b08ba89d58db188f9baebdd3"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
+      "size": 2712124,
+      "sha256": "ad52cea376ce2e054c6a37856d402a37d3e30411ebea92e2e8affe874442f283"
+    },
+    {
+      "path": "publications/brinton-gueguence-1883/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brinton-gueguence-1883/cover.jpg",
+      "size": 78492,
+      "sha256": "007327001f17971c8c4aeeff8930d42c681e6f482bd71164964661934ebdfefe"
     },
     {
       "path": "publications/brinton-guetares-costa-rica-1897/Daniel_G_Brinton_Ethnic_Affinities_of_the_Guetares_1897_Japanese_Complete_Translation.epub",
@@ -2216,6 +2378,18 @@
       "sha256": "8f98b6e2e07d3926f672e19474ad4407235ba05ac6f105b47777e06227320e2c"
     },
     {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.epub",
+      "size": 82227679,
+      "sha256": "a28b2da52e8066150de672c6d57a91a19caa00a77666c2e41e738fec8bfcaa50"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.pdf",
+      "size": 82461650,
+      "sha256": "77f856acd5260a10c26f72d1e934ea2768196f06376e851e1a9c3076af78db68"
+    },
+    {
       "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.epub",
       "size": 83873010,
@@ -2226,6 +2400,30 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Japanese_Complete_Translation.pdf",
       "size": 175052249,
       "sha256": "722fe6eef2c07f1899d7b22261c5ef7ccad8729e1c270839aa8c749e87e9d7e5"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.epub",
+      "size": 854752,
+      "sha256": "a31c812db913a88adc901fb768f2453063841fdf13ebd3cb66a960af26248317"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.pdf",
+      "size": 85278241,
+      "sha256": "9ff92b68c6769373014238cccf4f83483c47fcc7f240709501051667a728a0be"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.epub",
+      "size": 1032950,
+      "sha256": "51f192955220d17a4b86c88f3d806d56fdc29d0567aab3cf35bb5225037aba11"
+    },
+    {
+      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.pdf",
+      "size": 83802683,
+      "sha256": "7ace6fb7b3d0f8f792662cdfef0eebedb80c5d2763a2c06c93127cfcdf49a3a3"
     },
     {
       "path": "publications/dupaix-antiquites-mexicaines-1834/cover.jpg",
@@ -2592,6 +2790,24 @@
       "url": "https://takochanchan.github.io/publications/flint-what-dr-flint-says-nicaragua-footprints-1890/cover.jpg",
       "size": 249454,
       "sha256": "4bacea6d56e8dba47d251119a1eb0d97e5064deb33639dfdaa1e73537ccce5ab"
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
+      "size": 8296084,
+      "sha256": "c202fbf0060e67759088c3e8629a3834c128f67ad5a7f97842416444b9c59095"
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
+      "size": 4113052,
+      "sha256": "2e2e3d951b66ba920a0437e31b9732a1e16f3acc41e91d0cca98b57cc307b2a1"
+    },
+    {
+      "path": "publications/foreign-office-mosquito-territory-1848/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/foreign-office-mosquito-territory-1848/cover.jpg",
+      "size": 127147,
+      "sha256": "70b699dba3e2f76534bb145647aafca35bef767c478c647ec432f8afd4a8937d"
     },
     {
       "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
@@ -2966,6 +3182,42 @@
       "sha256": "1ebeb06de8789a6dcca8eebf0d6b7b352172d5ec079d8091b83c4d6ceafa26c2"
     },
     {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.epub",
+      "size": 495145,
+      "sha256": "19487ac9820cc81ed2c9a8e3341f237798174a1507f9ca9d16b1431dff2567bd"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.pdf",
+      "size": 3029431,
+      "sha256": "7a28f3d2e6ca693eba68c86126ebf61c12aa297ee4ed236c7785f574fb0ec5d7"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.epub",
+      "size": 488781,
+      "sha256": "83ce4c32b9950432db783a3be79b95a854b774410ac571b4efcadae182ca34dd"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.pdf",
+      "size": 3110219,
+      "sha256": "9acf420312e40a6169175207a94b5e8dc2c31baa089b8b4cc742e7bfb4b05b55"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.epub",
+      "size": 511679,
+      "sha256": "c0d8ed85cfc0ec8b6f556d0684666684ce5861ea670946647bcf1fdbbc14a63e"
+    },
+    {
+      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.pdf",
+      "size": 3145221,
+      "sha256": "143e7bc1b4fc67e202384cad0985f97e51e289ff16c7149c9ec788de5e8bd822"
+    },
+    {
       "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
       "url": "https://takochanchan.github.io/publications/garcia-pelaez-memorias-guatemala-1851-1852/cover.jpg",
       "size": 67174,
@@ -3114,6 +3366,78 @@
       "url": "https://takochanchan.github.io/publications/henningsen-official-report-granada-1857/cover.jpg",
       "size": 180797,
       "sha256": "124a80ae270bd9c76375185f1607e2486aa3fade964f1f76badbb316aee7c93e"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.epub",
+      "size": 8061463,
+      "sha256": "3e8d0867cb7fb15c730f1e671bdd5699611fadc47053a7b35d443a352eab2d38"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.pdf",
+      "size": 12226370,
+      "sha256": "b7acfa3bc3433fb0424c33792adbd9a50c935df2f01423a680fc0e91279b8df1"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
+      "size": 68830,
+      "sha256": "7e78f2cb95979e9251ce21566238015289f8c75491967744fde956af4b97e66a"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.epub",
+      "size": 14141569,
+      "sha256": "82fa6791ab9ba96c3d44caa7fc380e84fd47d1b50b4bb469acd2801ce7e88f2d"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.pdf",
+      "size": 12235557,
+      "sha256": "29d1fbeca662b2b4712d428ba773cdc1589e2cfb2b5ec85213b4d0ec99c55e6c"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
+      "size": 68779,
+      "sha256": "0e7bdc967d50f2ad5aeebcb87c6b414238b3aa0eadb9f070e9ddf0eb2b9fd97e"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.epub",
+      "size": 16639198,
+      "sha256": "c639458ef5f5b5cc3e53b7a71b499da0ad61d2bf48d34e05d926f2de5ced3faa"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.pdf",
+      "size": 11846622,
+      "sha256": "259a539adc752f50f875640284d318b23e5e92fcbfaaf260d98dba422e34c27f"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
+      "size": 68867,
+      "sha256": "3a8dd7deadc569d1f3ec86a665a0f270aa18ff6bbff48cfb33b145a9adb04c00"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.epub",
+      "size": 13742669,
+      "sha256": "99a09af565044b67c5e050d855f3379e8bbdb882a03ac2d2f370a466d5978d26"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.pdf",
+      "size": 9526660,
+      "sha256": "fcfdecd60751dc2f115c756ab8d5dba2db6828b6195fa4a41b7f1061c14e5f43"
+    },
+    {
+      "path": "publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
+      "size": 68825,
+      "sha256": "ce38d98f65dceef30748163b8ce11994bd3ab9358830bf40760146d5d689e26c"
     },
     {
       "path": "publications/historia-tolteca-chichimeca/Historia_Tolteca_Chichimeca_Japanese_Complete_Translation.epub",
@@ -3776,6 +4100,66 @@
       "sha256": "778f1f4220a83862da69a605efb5452755c7fa3c4ece86b632e46a4f43f4bb8d"
     },
     {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.epub",
+      "size": 923588,
+      "sha256": "f961f1fe167f5d7ab8577fa3aaf0ae64a30f6b1832b7d7738885eea1a11d30ef"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.pdf",
+      "size": 4578422,
+      "sha256": "cf7fcb55c6dc0f8b8c8afffc36094399158dcdf42451a86e2d236fadaeeea967"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.epub",
+      "size": 613722,
+      "sha256": "3ea8bc17662160ccbbe73068373b20fc71c90e23f3518546869d9c5fa4885435"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.pdf",
+      "size": 4915580,
+      "sha256": "63aa4ae9ce9c6c411c0409684083e3f081f7145087f0e0e6cefd7d62e6df8885"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.epub",
+      "size": 1635434,
+      "sha256": "b9e5cb311f9829bdde63f316dff10bc9a3cb3795c5b65e02f019787c61bd69fc"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.pdf",
+      "size": 4734044,
+      "sha256": "63fdb1c76346b2974ed7a64c1266fef95825caa4058c1387eed5e5cd5673623f"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.epub",
+      "size": 644122,
+      "sha256": "234daab99294dfa328432c231f242ed14c949eda72c24cd1c37ff858a48df8a8"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.pdf",
+      "size": 5037750,
+      "sha256": "465a2ffdc147c8f9aaacbaa3810fe490cb5d36fab9b74ee6f5c615691265e721"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.epub",
+      "size": 1264905,
+      "sha256": "778ddf12798c2381856cf281364d74ab95659b04836f4f4603766154f9daaf67"
+    },
+    {
+      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.pdf",
+      "size": 4934634,
+      "sha256": "f973b6c7d60cd0b7d39b738d60b5dcaa9bba243984fd6461824d7f4186c117a7"
+    },
+    {
       "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/japanese-cover.jpg",
       "url": "https://takochanchan.github.io/publications/milla-gomez-carrillo-historia-america-central-1879-1905/japanese-cover.jpg",
       "size": 58455,
@@ -4032,6 +4416,24 @@
       "url": "https://takochanchan.github.io/publications/otis-isthmus-panama-railroad-1867/cover.jpg",
       "size": 103012,
       "sha256": "733c34e6a60aa589301f43d0d0e4e773e7a5aea45e14c17aa1b5ab85a64711ff"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
+      "size": 2077363,
+      "sha256": "aef537871bce3fdd80b1839786edfa04c4a0499dccaf235b6ec2b89e8b91337a"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
+      "size": 2386781,
+      "sha256": "ee337e20e2e5aeeec6863ec4f7b7da68f27453193fd58057af82bd30f3837a4a"
+    },
+    {
+      "path": "publications/palacio-carta-rey-espana-1860/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palacio-carta-rey-espana-1860/cover.jpg",
+      "size": 40887,
+      "sha256": "3f2f28a4ed6fbed36486f1bbd71d84eaa6f51c2c754647150cf46b38d5adaf6e"
     },
     {
       "path": "publications/paniagua-catecismo-chiapas-1876/Paniagua_Catecismo_elemental_de_historia_y_estadistica_de_Chiapas_1876_Japanese_Complete_Translation.epub",
@@ -5240,6 +5642,24 @@
       "sha256": "e29bffc8d3c039507627d3d090fbc1961b25a322d5438f4ca0f1ecd77452a894"
     },
     {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
+      "size": 904302,
+      "sha256": "0ef8cd9abc654384fa766d9f2db6bf9523bea87300ce679fc98c89a30aac4c9b"
+    },
+    {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
+      "size": 685258,
+      "sha256": "e3294729429a458f011c63e0529be3f7f2b0dfd332c12e2116ce83e33250d119"
+    },
+    {
+      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
+      "sha256": "c3f4c5725cd0e2c1c0d498bb7d5a0002f7c59f0a4e6e847a4e8fbcaeffa84908",
+      "size": 157722
+    },
+    {
       "path": "publications/romero-bosquejo-chiapas-soconusco-1877/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Matias_Romero_Bosquejo_historico_1877_Japanese_Complete_Translation.epub",
       "size": 1288223,
@@ -5292,6 +5712,24 @@
       "url": "https://takochanchan.github.io/publications/roys-chilam-balam-chumayel-1933/cover.jpg",
       "size": 51550,
       "sha256": "433d6baae35274f8db683950cd44efbc53aeed6078fefdd8b1d8e273402e0bab"
+    },
+    {
+      "path": "publications/sahagun-historia-general-nueva-espana/Sahagun_Historia_General_Matritenses_I-VI_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sahagun_Historia_General_Matritenses_I-VI_Japanese.epub",
+      "size": 59638920,
+      "sha256": "bf1c5d70a09eed8138085294b8c5f37377004c7696fed9409ae659ad15f315de"
+    },
+    {
+      "path": "publications/sahagun-historia-general-nueva-espana/Sahagun_Historia_General_Matritenses_I-VI_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sahagun_Historia_General_Matritenses_I-VI_Japanese.pdf",
+      "size": 55039671,
+      "sha256": "0799e50f1f402f53f910630d5bd50c64c95d3ab2d4b225e165b4cd14912dedc6"
+    },
+    {
+      "path": "publications/sahagun-historia-general-nueva-espana/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sahagun-historia-general-nueva-espana/cover.jpg",
+      "size": 53977,
+      "sha256": "710589fa361b0130b2a8f99a32a4f202cfe6eeaeba3b929d2483909c2be9f1b1"
     },
     {
       "path": "publications/san-buenaventura-arte-lengua-maya-1684/Gabriel_de_San_Buenaventura_Arte_de_la_lengua_Maya_1684_Japanese_Complete_Translation.epub",
@@ -5592,6 +6030,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_1827_Japanese_Complete_Translation_All_Volumes.pdf",
       "size": 7342115,
       "sha256": "70892db36f7f348019b545d1525ed2da3e73f9b834c80c82d490fc78325d3fa6"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.epub",
+      "size": 851013,
+      "sha256": "6b4640efa202aeff7c729eaf72cb5833401c7d80ea85c0ec9e6a4613f3ab44e7"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.pdf",
+      "size": 3283626,
+      "sha256": "b5adf3f6f2022df9f83429dd045ec53f4d61c522078ee8bdbcd30d6d50f609e5"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.epub",
+      "size": 1993206,
+      "sha256": "bc7486771fb186d39a22a0477c9bf79f7e25fd13433fc3fd4d75ff60c6ab8bb8"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.pdf",
+      "size": 4112160,
+      "sha256": "6f50226c715c0ebc7b61a7c3f6a36c5f041aadaaf56ce3988446dc70152f2fc0"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.epub",
+      "size": 1363581,
+      "sha256": "ed743d2e9b40ced0725348ff1b1c49ba66c9003ae3d625ca77261fe985c02e0a"
+    },
+    {
+      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.pdf",
+      "size": 3088732,
+      "sha256": "8e0313102404c4adbc948ebcdecd87efa478dda62a796c1d9f8ee69ba371e7bb"
     },
     {
       "path": "publications/southey-chronological-history-west-indies-1827/cover.jpg",
@@ -6134,6 +6608,42 @@
       "sha256": "17916055e698be9ca64fec56b3a44686a45f5f9449dde8a554fb55977e1b5335"
     },
     {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.epub",
+      "size": 7838107,
+      "sha256": "31a50090ba35cbc9f8707f957dc98a289bd2826b46580ef05c3dc8a33efd1efa"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.pdf",
+      "size": 8445847,
+      "sha256": "80c51dd41b307bc9fe3ce6c2a177cdbf89d6372f2740ad14ccfb30768cad918d"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.epub",
+      "size": 7784893,
+      "sha256": "45fa69420731ce6dcef325c438780753d065ed1f5b9d8e691a527aaf2f512b83"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.pdf",
+      "size": 8381382,
+      "sha256": "4d287e23d303e54ec79f47164c1f0e3fbeaf8b9b921c88c39c06e816ac55e1e1"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.epub",
+      "size": 7923464,
+      "sha256": "18395f0e1fcbeb4f0c9f7f9bd2d007bb15117580e0f27684c3435360deba0bf5"
+    },
+    {
+      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.pdf",
+      "size": 8621274,
+      "sha256": "0bb338ed35bb96969ae995bcbffd8748e2a39a27f78aff44b2d3fffbcafd145c"
+    },
+    {
       "path": "publications/torquemada-monarquia-indiana-1615/cover.jpg",
       "url": "https://takochanchan.github.io/publications/torquemada-monarquia-indiana-1615/cover.jpg",
       "size": 72583,
@@ -6312,6 +6822,78 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_1924_1949_Japanese_Complete_Translation.pdf",
       "size": 52057780,
       "sha256": "93c3b23efe9ead190d357fd73d5a6c64ad401f8f1931f6972b07bb0952bd1504"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.epub",
+      "size": 946775,
+      "sha256": "4c34fbe1023ec75586632691dbe1057ad2c9e1997c604d973d17b1a1494d62f3"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.pdf",
+      "size": 5106376,
+      "sha256": "bf00b857e1b94e1e3f1599844e9f4d4878fe09262d3fcec19b36dee83853a9fa"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.epub",
+      "size": 810817,
+      "sha256": "e25c0cdb2655a4cb28209a13dee1ad4ba61efdfa29fdd0566939a304a348db0e"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.pdf",
+      "size": 4473234,
+      "sha256": "66e77334f538cc7ba64f043524a14da2a0fad0a5c86549197559524e6ef2b0a6"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.epub",
+      "size": 624500,
+      "sha256": "0f4b8d2b3dd648f4c8d202b4e3179b9c7a7cd331f2c526f8a77e6fafbe1fc079"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.pdf",
+      "size": 3991481,
+      "sha256": "d530bc86a9c90765b377c23c4f61845d10fd03f0363aec52a11adae257dc6727"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.epub",
+      "size": 1067093,
+      "sha256": "27fa42b7d0e53c8a0cd2993ae1337fc5f82558bc770f76b1818aa6b64e6f2277"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.pdf",
+      "size": 5538840,
+      "sha256": "8363c13e8880a48bff47aa19a17aeba854b79ebfb1ab03ec670c3745e13a5e92"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.epub",
+      "size": 16169740,
+      "sha256": "210469ffabf212a6abf5abf57efacece02a2ee26bbaa7e0071fa7468ecebcb9e"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.pdf",
+      "size": 28949303,
+      "sha256": "033a509fc440117f8aceaa250f3006dff8b2379cb922744c47dd8485ab6cf92c"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.epub",
+      "size": 442526,
+      "sha256": "c641a03d5880e4bd183fbe13f248a791f19d35c9ab8a645df7fc4f1a57f286d5"
+    },
+    {
+      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.pdf",
+      "size": 3289226,
+      "sha256": "61e59951582b30b36fd119a7fa39c28ebc701d9c9e4ce08ca624b01c16b2edf4"
     },
     {
       "path": "publications/valle-anexion-centro-america-mexico-1924-1949/cover.jpg",
@@ -6552,570 +7134,6 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.pdf",
-      "size": 12226370,
-      "sha256": "b7acfa3bc3433fb0424c33792adbd9a50c935df2f01423a680fc0e91279b8df1"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-1-2-1601/Herrera_Decadas_1_2_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_1_2_Japanese.epub",
-      "size": 8061463,
-      "sha256": "3e8d0867cb7fb15c730f1e671bdd5699611fadc47053a7b35d443a352eab2d38"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-1-2-1601/cover.jpg",
-      "size": 68830,
-      "sha256": "7e78f2cb95979e9251ce21566238015289f8c75491967744fde956af4b97e66a"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.pdf",
-      "size": 12235557,
-      "sha256": "29d1fbeca662b2b4712d428ba773cdc1589e2cfb2b5ec85213b4d0ec99c55e6c"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-3-4-1601/Herrera_Decadas_3_4_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_3_4_Japanese.epub",
-      "size": 14141569,
-      "sha256": "82fa6791ab9ba96c3d44caa7fc380e84fd47d1b50b4bb469acd2801ce7e88f2d"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-3-4-1601/cover.jpg",
-      "size": 68779,
-      "sha256": "0e7bdc967d50f2ad5aeebcb87c6b414238b3aa0eadb9f070e9ddf0eb2b9fd97e"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.pdf",
-      "size": 11846622,
-      "sha256": "259a539adc752f50f875640284d318b23e5e92fcbfaaf260d98dba422e34c27f"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-5-6-1615/Herrera_Decadas_5_6_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_5_6_Japanese.epub",
-      "size": 16639198,
-      "sha256": "c639458ef5f5b5cc3e53b7a71b499da0ad61d2bf48d34e05d926f2de5ced3faa"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-5-6-1615/cover.jpg",
-      "size": 68867,
-      "sha256": "3a8dd7deadc569d1f3ec86a665a0f270aa18ff6bbff48cfb33b145a9adb04c00"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.pdf",
-      "size": 9526660,
-      "sha256": "fcfdecd60751dc2f115c756ab8d5dba2db6828b6195fa4a41b7f1061c14e5f43"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-7-8-1615/Herrera_Decadas_7_8_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herrera_Decadas_7_8_Japanese.epub",
-      "size": 13742669,
-      "sha256": "99a09af565044b67c5e050d855f3379e8bbdb882a03ac2d2f370a466d5978d26"
-    },
-    {
-      "path": "publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/herrera-historia-general-decadas-7-8-1615/cover.jpg",
-      "size": 68825,
-      "sha256": "ce38d98f65dceef30748163b8ce11994bd3ab9358830bf40760146d5d689e26c"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.pdf",
-      "size": 8621274,
-      "sha256": "0bb338ed35bb96969ae995bcbffd8748e2a39a27f78aff44b2d3fffbcafd145c"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_I_Japanese_Complete_Translation.epub",
-      "size": 7923464,
-      "sha256": "18395f0e1fcbeb4f0c9f7f9bd2d007bb15117580e0f27684c3435360deba0bf5"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.pdf",
-      "size": 8381382,
-      "sha256": "4d287e23d303e54ec79f47164c1f0e3fbeaf8b9b921c88c39c06e816ac55e1e1"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_II_Japanese_Complete_Translation.epub",
-      "size": 7784893,
-      "sha256": "45fa69420731ce6dcef325c438780753d065ed1f5b9d8e691a527aaf2f512b83"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.pdf",
-      "size": 8445847,
-      "sha256": "80c51dd41b307bc9fe3ce6c2a177cdbf89d6372f2740ad14ccfb30768cad918d"
-    },
-    {
-      "path": "publications/torquemada-monarquia-indiana-1615/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_de_Torquemada_Monarquia_indiana_1615_Volume_III_Japanese_Complete_Translation.epub",
-      "size": 7838107,
-      "sha256": "31a50090ba35cbc9f8707f957dc98a289bd2826b46580ef05c3dc8a33efd1efa"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.pdf",
-      "size": 5538840,
-      "sha256": "8363c13e8880a48bff47aa19a17aeba854b79ebfb1ab03ec670c3745e13a5e92"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_I_1924_Japanese_Complete_Translation.epub",
-      "size": 1067093,
-      "sha256": "27fa42b7d0e53c8a0cd2993ae1337fc5f82558bc770f76b1818aa6b64e6f2277"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.pdf",
-      "size": 4473234,
-      "sha256": "66e77334f538cc7ba64f043524a14da2a0fad0a5c86549197559524e6ef2b0a6"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_II_1927_Japanese_Complete_Translation.epub",
-      "size": 810817,
-      "sha256": "e25c0cdb2655a4cb28209a13dee1ad4ba61efdfa29fdd0566939a304a348db0e"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.pdf",
-      "size": 5106376,
-      "sha256": "bf00b857e1b94e1e3f1599844e9f4d4878fe09262d3fcec19b36dee83853a9fa"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_III_1936_Japanese_Complete_Translation.epub",
-      "size": 946775,
-      "sha256": "4c34fbe1023ec75586632691dbe1057ad2c9e1997c604d973d17b1a1494d62f3"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.pdf",
-      "size": 3991481,
-      "sha256": "d530bc86a9c90765b377c23c4f61845d10fd03f0363aec52a11adae257dc6727"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_IV_1945_Japanese_Complete_Translation.epub",
-      "size": 624500,
-      "sha256": "0f4b8d2b3dd648f4c8d202b4e3179b9c7a7cd331f2c526f8a77e6fafbe1fc079"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.pdf",
-      "size": 3289226,
-      "sha256": "61e59951582b30b36fd119a7fa39c28ebc701d9c9e4ce08ca624b01c16b2edf4"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_V_1946_Japanese_Complete_Translation.epub",
-      "size": 442526,
-      "sha256": "c641a03d5880e4bd183fbe13f248a791f19d35c9ab8a645df7fc4f1a57f286d5"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.pdf",
-      "size": 28949303,
-      "sha256": "033a509fc440117f8aceaa250f3006dff8b2379cb922744c47dd8485ab6cf92c"
-    },
-    {
-      "path": "publications/valle-anexion-centro-america-mexico-1924-1949/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Heliodoro_Valle_La_anexion_de_Centro_America_a_Mexico_Volume_VI_1949_Japanese_Complete_Translation.epub",
-      "size": 16169740,
-      "sha256": "210469ffabf212a6abf5abf57efacece02a2ee26bbaa7e0071fa7468ecebcb9e"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.pdf",
-      "size": 3088732,
-      "sha256": "8e0313102404c4adbc948ebcdecd87efa478dda62a796c1d9f8ee69ba371e7bb"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_I_1827_Japanese_Complete_Translation.epub",
-      "size": 1363581,
-      "sha256": "ed743d2e9b40ced0725348ff1b1c49ba66c9003ae3d625ca77261fe985c02e0a"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.pdf",
-      "size": 4112160,
-      "sha256": "6f50226c715c0ebc7b61a7c3f6a36c5f041aadaaf56ce3988446dc70152f2fc0"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_II_1827_Japanese_Complete_Translation.epub",
-      "size": 1993206,
-      "sha256": "bc7486771fb186d39a22a0477c9bf79f7e25fd13433fc3fd4d75ff60c6ab8bb8"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.pdf",
-      "size": 3283626,
-      "sha256": "b5adf3f6f2022df9f83429dd045ec53f4d61c522078ee8bdbcd30d6d50f609e5"
-    },
-    {
-      "path": "publications/southey-chronological-history-west-indies-1827/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Southey_Chronological_History_West_Indies_Volume_III_1827_Japanese_Complete_Translation.epub",
-      "size": 851013,
-      "sha256": "6b4640efa202aeff7c729eaf72cb5833401c7d80ea85c0ec9e6a4613f3ab44e7"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.pdf",
-      "size": 5037750,
-      "sha256": "465a2ffdc147c8f9aaacbaa3810fe490cb5d36fab9b74ee6f5c615691265e721"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_I_1879_Japanese_Complete_Translation.epub",
-      "size": 644122,
-      "sha256": "234daab99294dfa328432c231f242ed14c949eda72c24cd1c37ff858a48df8a8"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.pdf",
-      "size": 4915580,
-      "sha256": "63aa4ae9ce9c6c411c0409684083e3f081f7145087f0e0e6cefd7d62e6df8885"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_II_1882_Japanese_Complete_Translation.epub",
-      "size": 613722,
-      "sha256": "3ea8bc17662160ccbbe73068373b20fc71c90e23f3518546869d9c5fa4885435"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.pdf",
-      "size": 4578422,
-      "sha256": "cf7fcb55c6dc0f8b8c8afffc36094399158dcdf42451a86e2d236fadaeeea967"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_III_1895_Japanese_Complete_Translation.epub",
-      "size": 923588,
-      "sha256": "f961f1fe167f5d7ab8577fa3aaf0ae64a30f6b1832b7d7738885eea1a11d30ef"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.pdf",
-      "size": 4734044,
-      "sha256": "63fdb1c76346b2974ed7a64c1266fef95825caa4058c1387eed5e5cd5673623f"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_IV_1897_Japanese_Complete_Translation.epub",
-      "size": 1635434,
-      "sha256": "b9e5cb311f9829bdde63f316dff10bc9a3cb3795c5b65e02f019787c61bd69fc"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.pdf",
-      "size": 4934634,
-      "sha256": "f973b6c7d60cd0b7d39b738d60b5dcaa9bba243984fd6461824d7f4186c117a7"
-    },
-    {
-      "path": "publications/milla-gomez-carrillo-historia-america-central-1879-1905/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_y_Vidaurre_Agustin_Gomez_Carrillo_Historia_de_la_America_Central_Volume_V_1905_Japanese_Complete_Translation.epub",
-      "size": 1264905,
-      "sha256": "778ddf12798c2381856cf281364d74ab95659b04836f4f4603766154f9daaf67"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.pdf",
-      "size": 3488449,
-      "sha256": "8ac0dff3c9619c6ea751ec3f6ecb1554b44f3358418c014e5e9dfee2f625e7ef"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_I_1878_Japanese_Complete_Translation.epub",
-      "size": 589096,
-      "sha256": "bba4fcb61621a49f3a65a7b21db743f92b3f39b67f3b52a229670802d927b11b"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.pdf",
-      "size": 3328332,
-      "sha256": "3de4ab437a45503db74af3183f4333dc56b8b4cec82a539316560830b6160d83"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_II_1879_Japanese_Complete_Translation.epub",
-      "size": 495974,
-      "sha256": "01d221166b1b279ea7bcc530058d660cc35052771e69abf3b38b47eaa2d97620"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.pdf",
-      "size": 2720438,
-      "sha256": "41e092cc588f12c54b28d0302e3c200d993a9ac44910de7790182cdd961b0ae5"
-    },
-    {
-      "path": "publications/baqueiro-ensayo-revoluciones-yucatan-1878-1887/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Serapio_Baqueiro_Ensayo_historico_Yucatan_Volume_III_1887_Japanese_Complete_Translation.epub",
-      "size": 371673,
-      "sha256": "bb03ca0ee9943a53bcff21ee13609a435235996a67af970ebcc443810bbda2ef"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.pdf",
-      "size": 83802683,
-      "sha256": "7ace6fb7b3d0f8f792662cdfef0eebedb80c5d2763a2c06c93127cfcdf49a3a3"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_I_Japanese_Complete_Translation.epub",
-      "size": 1032950,
-      "sha256": "51f192955220d17a4b86c88f3d806d56fdc29d0567aab3cf35bb5225037aba11"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.pdf",
-      "size": 85278241,
-      "sha256": "9ff92b68c6769373014238cccf4f83483c47fcc7f240709501051667a728a0be"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Text_Volume_II_Japanese_Complete_Translation.epub",
-      "size": 854752,
-      "sha256": "a31c812db913a88adc901fb768f2453063841fdf13ebd3cb66a960af26248317"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.pdf",
-      "size": 82461650,
-      "sha256": "77f856acd5260a10c26f72d1e934ea2768196f06376e851e1a9c3076af78db68"
-    },
-    {
-      "path": "publications/dupaix-antiquites-mexicaines-1834/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dupaix_Antiquites_Mexicaines_1834_Atlas_Japanese_Complete_Translation.epub",
-      "size": 82227679,
-      "sha256": "a28b2da52e8066150de672c6d57a91a19caa00a77666c2e41e738fec8bfcaa50"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.pdf",
-      "size": 3145221,
-      "sha256": "143e7bc1b4fc67e202384cad0985f97e51e289ff16c7149c9ec788de5e8bd822"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_I_1851_Japanese_Complete_Translation.epub",
-      "size": 511679,
-      "sha256": "c0d8ed85cfc0ec8b6f556d0684666684ce5861ea670946647bcf1fdbbc14a63e"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.pdf",
-      "size": 3110219,
-      "sha256": "9acf420312e40a6169175207a94b5e8dc2c31baa089b8b4cc742e7bfb4b05b55"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_II_1852_Japanese_Complete_Translation.epub",
-      "size": 488781,
-      "sha256": "83ce4c32b9950432db783a3be79b95a854b774410ac571b4efcadae182ca34dd"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.pdf",
-      "size": 3029431,
-      "sha256": "7a28f3d2e6ca693eba68c86126ebf61c12aa297ee4ed236c7785f574fb0ec5d7"
-    },
-    {
-      "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_Volume_III_1852_Japanese_Complete_Translation.epub",
-      "size": 495145,
-      "sha256": "19487ac9820cc81ed2c9a8e3341f237798174a1507f9ca9d16b1431dff2567bd"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.pdf",
-      "size": 16858941,
-      "sha256": "da2312e690c920429537105433a1fd5fe5deb7f1a357e21bb2e2ea652fcd939b"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-i-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_I_1883_Japanese_Complete_Translation.epub",
-      "size": 26230011,
-      "sha256": "52cf8653cce098562c9228b68528ba2766dcfb9ae50d981c18eedf121ad3702c"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-i-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-i-1883/cover.jpg",
-      "size": 34516,
-      "sha256": "529c38d5cd03df0f93999a198b14b0dd9123c485940b542eeee5ee142fbdcbdd"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.pdf",
-      "size": 12127327,
-      "sha256": "df57393b21a070805b0180a42e9494c0bfa2496829d6ce071664f7ca0dd5465f"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-ii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_II_1883_Japanese_Complete_Translation.epub",
-      "size": 18809669,
-      "sha256": "9db2cf9836561cd227c36b2e1a20a03f86e3b1485eecb86db888ccd9adf44a6f"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-ii-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-ii-1883/cover.jpg",
-      "size": 34618,
-      "sha256": "347bb63103ab5e7337d26a3de7d9abc4b8df1d69cc48498c7513f12dea34ea9b"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.pdf",
-      "size": 11593829,
-      "sha256": "c5298955d47d2f37b144dc70f2046a65ce0119c730078681dfbe408261ea677c"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iii-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_III_1883_Japanese_Complete_Translation.epub",
-      "size": 17812749,
-      "sha256": "e0366cb5aa18e8616977ed07d7cf4f1a5f61179fff91517b32d9210710935b14"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iii-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-iii-1883/cover.jpg",
-      "size": 34540,
-      "sha256": "aaf616345c3170bc3a77be6f0357acb2e0d5fc7d5d0387387f04ebaa88af0d29"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.pdf",
-      "size": 26826481,
-      "sha256": "1abc02a8ba898532c2851aa57ade6f9d577640ad7f280e3513c2d226ffcf7997"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iv-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_IV_1883_Japanese_Complete_Translation.epub",
-      "size": 41034475,
-      "sha256": "3c9c36254061d26ca32a9b4c1bdf4601a47163509cda0509c32db5f50d11a4ea"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-iv-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-iv-1883/cover.jpg",
-      "size": 34423,
-      "sha256": "5ad478bd456c16336cbdf823a9a21011b22fa7f83ca4f71e9c9ef2894a546b76"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.pdf",
-      "size": 9543379,
-      "sha256": "2400f81aece1bf1923c1f08e3b8a06d757faf2e522e4c30e151872b9ed93fab5"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-v-1883/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Hubert_Howe_Bancroft_The_Native_Races_Volume_V_1883_Japanese_Complete_Translation.epub",
-      "size": 17959635,
-      "sha256": "cb6d400b6a1322e2a26df99b877bd79de331b0dbb1605075bf8cf7f3a705fd61"
-    },
-    {
-      "path": "publications/bancroft-native-races-volume-v-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bancroft-native-races-volume-v-1883/cover.jpg",
-      "size": 34219,
-      "sha256": "e700bc25156b707ce16cdc3b6c4e5cf2ee7a9750fe0b0cb6a7d572516af7c9c7"
-    },
-    {
-      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.pdf",
-      "size": 2386781,
-      "sha256": "ee337e20e2e5aeeec6863ec4f7b7da68f27453193fd58057af82bd30f3837a4a"
-    },
-    {
-      "path": "publications/palacio-carta-rey-espana-1860/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Palacio_Carta_1860_Japanese_Complete_Translation.epub",
-      "size": 2077363,
-      "sha256": "aef537871bce3fdd80b1839786edfa04c4a0499dccaf235b6ec2b89e8b91337a"
-    },
-    {
-      "path": "publications/palacio-carta-rey-espana-1860/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/palacio-carta-rey-espana-1860/cover.jpg",
-      "size": 40887,
-      "sha256": "3f2f28a4ed6fbed36486f1bbd71d84eaa6f51c2c754647150cf46b38d5adaf6e"
-    },
-    {
-      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.pdf",
-      "size": 2712124,
-      "sha256": "ad52cea376ce2e054c6a37856d402a37d3e30411ebea92e2e8affe874442f283"
-    },
-    {
-      "path": "publications/brinton-gueguence-1883/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Daniel_G_Brinton_The_Gueguence_1883_Japanese_Complete_Translation.epub",
-      "size": 4503227,
-      "sha256": "d4b05f6f7679d4b89fe0eae6a8eca84e4e8fa731b08ba89d58db188f9baebdd3"
-    },
-    {
-      "path": "publications/brinton-gueguence-1883/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brinton-gueguence-1883/cover.jpg",
-      "size": 78492,
-      "sha256": "007327001f17971c8c4aeeff8930d42c681e6f482bd71164964661934ebdfefe"
-    },
-    {
-      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.pdf",
-      "size": 4734428,
-      "sha256": "dfa468ce98cb647bd56c0ffad825cd2f429853aa8f000ddfc605ff067afe93db"
-    },
-    {
-      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Girolamo_Benzoni_Historia_del_Mondo_Nuovo_1565_Japanese_Translation.epub",
-      "size": 4545958,
-      "sha256": "b47d7afade00e38cdf58098a928da017e5a668956b6314ea2f4859970657321c"
-    },
-    {
-      "path": "publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/benzoni-historia-mondo-nuovo-1565-ja/cover.jpg",
-      "size": 83029,
-      "sha256": "6cae5b8d8461728de36187e1a433fd28ca30e94d7a96b23dc21fad75a6ae8ae1"
-    },
-    {
-      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.pdf",
-      "size": 685258,
-      "sha256": "e3294729429a458f011c63e0529be3f7f2b0dfd332c12e2116ce83e33250d119"
-    },
-    {
-      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Juan_Rodriguez_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation.epub",
-      "size": 904302,
-      "sha256": "0ef8cd9abc654384fa766d9f2db6bf9523bea87300ce679fc98c89a30aac4c9b"
-    },
-    {
-      "path": "publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/rodriguez-relacion-espantable-terremoto-1541/cover.jpg",
-      "sha256": "c3f4c5725cd0e2c1c0d498bb7d5a0002f7c59f0a4e6e847a4e8fbcaeffa84908",
-      "size": 157722
-    },
-    {
-      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.pdf",
-      "size": 4113052,
-      "sha256": "2e2e3d951b66ba920a0437e31b9732a1e16f3acc41e91d0cca98b57cc307b2a1"
-    },
-    {
-      "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
-      "size": 8296084,
-      "sha256": "c202fbf0060e67759088c3e8629a3834c128f67ad5a7f97842416444b9c59095"
-    },
-    {
-      "path": "publications/foreign-office-mosquito-territory-1848/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/foreign-office-mosquito-territory-1848/cover.jpg",
-      "size": 127147,
-      "sha256": "70b699dba3e2f76534bb145647aafca35bef767c478c647ec432f8afd4a8937d"
     }
   ]
 }
