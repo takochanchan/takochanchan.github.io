@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "4d1e7b8f43677a0412ebc17e97bf0884b8fba053",
+  "archive_commit": "4e23cc7732929a613445fdb6bb1f1b6a6bd4a4bc",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -322,7 +322,8 @@
     "benzoni-historia-mondo-nuovo-1565-ja": "publications/benzoni-historia-mondo-nuovo-1565-ja/master.docx",
     "rodriguez-relacion-espantable-terremoto-1541": "publications/rodriguez-relacion-espantable-terremoto-1541/master.docx",
     "foreign-office-mosquito-territory-1848": "publications/foreign-office-mosquito-territory-1848/master.docx",
-    "sahagun-historia-general-nueva-espana": "publications/sahagun-historia-general-nueva-espana/master.docx"
+    "sahagun-historia-general-nueva-espana": "publications/sahagun-historia-general-nueva-espana/master.docx",
+    "galvao-tratado-descobrimentos-1563": "publications/galvao-tratado-descobrimentos-1563/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

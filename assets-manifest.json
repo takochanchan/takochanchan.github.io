@@ -3098,6 +3098,24 @@
       "sha256": "086bfd6b53e95882cfb14a666fc4370349c3a508f7f012fe78d49555b17de00a"
     },
     {
+      "path": "publications/galvao-tratado-descobrimentos-1563/Antonio_Galvao_Tratado_dos_Descobrimentos_1563_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Galvao_Tratado_dos_Descobrimentos_1563_Japanese_Complete_Translation.epub",
+      "size": 576762,
+      "sha256": "01a4c571e9bf62a5c1a6a0cf624105208b33aa65c49d53aceb321f2d4f8dd8f2"
+    },
+    {
+      "path": "publications/galvao-tratado-descobrimentos-1563/Antonio_Galvao_Tratado_dos_Descobrimentos_1563_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Galvao_Tratado_dos_Descobrimentos_1563_Japanese_Complete_Translation.pdf",
+      "size": 1633611,
+      "sha256": "06400865b4f92a556cac36515e990d59a8a4d8ebcf586b2d0390ecdfaaf4cd54"
+    },
+    {
+      "path": "publications/galvao-tratado-descobrimentos-1563/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/galvao-tratado-descobrimentos-1563/cover.jpg",
+      "size": 66940,
+      "sha256": "7bb13e8faa2d4e3679b9439d77c361611b0098454b2c9c6c72c53bcddbe74330"
+    },
+    {
       "path": "publications/gann-discoveries-central-america-1928/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gann_Discoveries_and_Adventures_in_Central_America_1928_Japanese_Complete_Translation.epub",
       "size": 13544296,

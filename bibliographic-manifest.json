@@ -7183,6 +7183,25 @@
         "status": "online",
         "url": "https://rbdigital.realbiblioteca.es/s/realbiblioteca/item/11203"
       }
+    },
+    {
+      "slug": "galvao-tratado-descobrimentos-1563",
+      "title": "発見誌",
+      "originalTitle": "Tratado dos Descobrimentos",
+      "author": "アントニオ・ガルヴァン",
+      "originalAuthor": "António Galvão",
+      "year": 1563,
+      "originalPublication": "リスボン、ジョアン・ダ・バレイラ、1563年",
+      "sourceEdition": "António Galvão, Tratado dos Descobrimentos, Lisboa: João da Barreira, 1563.",
+      "sourceProvider": "ポルトガル国立図書館（Biblioteca Nacional de Portugal）、Biblioteca Nacional Digital公開の1563年リスボン初版。",
+      "rights": "1563年刊の原著はパブリックドメインです。原刊標題紙画像を含むデジタル底本は、ポルトガル国立図書館のBiblioteca Nacional DigitalがPublic Domain Mark（PDM、既知の著作権制限なし）として公開しています。出典：https://purl.pt/15321。公開機関の権利表示：https://purl.pt/resources/public.html。",
+      "publishedDate": "2026-09-12",
+      "updatedDate": "2026-09-12",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://purl.pt/15321"
+      }
     }
   ],
   "works": [

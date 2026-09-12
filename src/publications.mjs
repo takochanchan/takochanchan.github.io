@@ -1,3 +1,4 @@
+import { galvaoPublicationRecords, galvaoPublicationMetadata } from "./galvao-publication.mjs";
 import { sahagunPublicationRecords, sahagunPublicationMetadata } from "./sahagun-publication.mjs";
 import { mosquitoTerritoryPublicationRecords, mosquitoTerritoryPublicationMetadata } from "./mosquito-territory-publication.mjs";
 import { rodriguezRelacionPublicationRecords, rodriguezRelacionPublicationMetadata } from "./rodriguez-relacion-publication.mjs";
@@ -9263,6 +9264,7 @@ const publicationRecords = [
   ...brintonFourthFivePapersPublicationRecords,
   ...brintonExtraTwoPapersPublicationRecords,
   ...millaGomezCarrilloPublicationRecords,
+  ...galvaoPublicationRecords,
   ...benzoniPublicationRecords,
   ...nuixPublicationRecords,
   ...palacioPublicationRecords,
@@ -11848,6 +11850,7 @@ const publicationMetadata = {
   ...brintonFourthFivePapersPublicationMetadata,
   ...brintonExtraTwoPapersPublicationMetadata,
   ...millaGomezCarrilloPublicationMetadata,
+  ...galvaoPublicationMetadata,
   ...benzoniPublicationMetadata,
   ...nuixPublicationMetadata,
   ...palacioPublicationMetadata,
@@ -12112,4 +12115,5 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
