@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 377);
+  assert.equal(publications.length, 378);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,7 +85,7 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 3);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 369);
+  assert.equal(cataloguePublications.length, 370);
   assert.equal(majorCataloguePublications.length, 179);
   assert.equal(shortCataloguePublications.length, 190);
 
@@ -174,7 +174,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 100);
+  assert.equal(counts.get("002"), 101);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -270,6 +270,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "brinton-missing-authorities-mayan-antiquities-1897",
       "brinton-pillars-of-ben-1897",
       "milla-gomez-carrillo-historia-america-central-1879-1905",
+      "galvao-tratado-descobrimentos-1563",
       "benzoni-historia-mondo-nuovo-1565-ja",
       "nuix-reflexiones-imparciales-1783-ja",
       "palacio-carta-rey-espana-1860",
@@ -1707,7 +1708,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 187);
+  assert.equal(majorPublications.length, 188);
   assert.equal(shortPublications.length, 190);
   assert.equal(shortPublicationAuthors.length, 43);
   assert.deepEqual(
@@ -2859,7 +2860,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":179,"papers":190\}/,
+    /bibliographicCounts:\{"books":180,"papers":190\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -3299,4 +3300,18 @@ test("current repository source does not reference the previous identifying host
     const content = await readFile(path.join(root, relative), "utf8");
     assert.doesNotMatch(content, /masaki1979|chatgpt\.site/i, relative);
   }
+});
+
+
+
+test("Galvao 1563 uses the approved Portuguese cover label and BNP source", () => {
+  const item = publications.find((item) => item.slug === "galvao-tratado-descobrimentos-1563");
+  assert.ok(item);
+  assert.equal(item.title, "発見誌");
+  assert.equal(item.pageCount, 109);
+  assert.equal(item.searchShard, "002");
+  assert.equal(item.series, "NAVEGAÇÕES E DESCOBRIMENTOS · 1563");
+  assert.equal(item.sourceUrl, "https://purl.pt/15321");
+  assert.match(item.rights, /Public Domain Mark/);
+  assert.equal(item.cover, "publications/galvao-tratado-descobrimentos-1563/cover.jpg");
 });
