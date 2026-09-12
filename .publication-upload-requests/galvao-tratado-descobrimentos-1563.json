@@ -30,5 +30,6 @@
       "size": 576762,
       "sha256": "01a4c571e9bf62a5c1a6a0cf624105208b33aa65c49d53aceb321f2d4f8dd8f2"
     }
-  ]
+  ],
+  "validation_retry": 2
 }
