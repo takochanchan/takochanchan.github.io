@@ -86,7 +86,7 @@ test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 3);
   assert.equal(publicationFileSplitDefinitions.length, 8);
   assert.equal(cataloguePublications.length, 370);
-  assert.equal(majorCataloguePublications.length, 179);
+  assert.equal(majorCataloguePublications.length, 180);
   assert.equal(shortCataloguePublications.length, 190);
 
   const blom = cataloguePublications.find(
@@ -2873,7 +2873,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">179<\/strong>件/);
+  assert.match(html, /id="book-match-count">180<\/strong>件/);
   assert.match(html, /id="paper-match-count">190<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
