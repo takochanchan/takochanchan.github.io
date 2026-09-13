@@ -1,3 +1,4 @@
+import { robertsonPublicationRecords, robertsonPublicationMetadata } from "./robertson-publication.mjs";
 import { galvaoPublicationRecords, galvaoPublicationMetadata } from "./galvao-publication.mjs";
 import { sahagunPublicationRecords, sahagunPublicationMetadata } from "./sahagun-publication.mjs";
 import { mosquitoTerritoryPublicationRecords, mosquitoTerritoryPublicationMetadata } from "./mosquito-territory-publication.mjs";
@@ -9272,6 +9273,7 @@ const publicationRecords = [
   ...sahagunPublicationRecords,
   ...herreraPublicationRecords,
   ...bancroftNativeRacesPublicationRecords,
+  ...robertsonPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -11858,6 +11860,7 @@ const publicationMetadata = {
   ...sahagunPublicationMetadata,
   ...herreraPublicationMetadata,
   ...bancroftNativeRacesPublicationMetadata,
+  ...robertsonPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -12115,5 +12118,6 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 

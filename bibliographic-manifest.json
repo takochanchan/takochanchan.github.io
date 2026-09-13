@@ -7202,6 +7202,63 @@
         "status": "online",
         "url": "https://purl.pt/15321"
       }
+    },
+    {
+      "slug": "robertson-history-america-volume-i-1777",
+      "title": "アメリカ史　第1巻",
+      "originalTitle": "The History of America, Volume I",
+      "author": "ウィリアム・ロバートソン",
+      "originalAuthor": "William Robertson",
+      "year": 1777,
+      "originalPublication": "ダブリン、1777年",
+      "sourceEdition": "William Robertson, The History of America, Volume I, Dublin, 1777.",
+      "sourceProvider": "Wellcome Library所蔵・提供、Internet Archive公開の1777年ダブリン刊本。",
+      "rights": "底本：1777年ダブリン刊第1巻。原著：保護期間満了（パブリックドメイン）。所蔵・提供：Wellcome Library／公開：Internet Archive。公開機関の権利表示：Public Domain Mark 1.0。底本：https://archive.org/details/b30414854_0001　権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-09-13",
+      "updatedDate": "2026-09-13",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/b30414854_0001"
+      }
+    },
+    {
+      "slug": "robertson-history-america-volume-ii-1777",
+      "title": "アメリカ史　第2巻",
+      "originalTitle": "The History of America, Volume II",
+      "author": "ウィリアム・ロバートソン",
+      "originalAuthor": "William Robertson",
+      "year": 1777,
+      "originalPublication": "ダブリン、1777年",
+      "sourceEdition": "William Robertson, The History of America, Volume II, Dublin, 1777.",
+      "sourceProvider": "Wellcome Library所蔵・提供、Internet Archive公開の1777年ダブリン刊本。",
+      "rights": "底本：1777年ダブリン刊第2巻。原著：保護期間満了（パブリックドメイン）。所蔵・提供：Wellcome Library／公開：Internet Archive。公開画像（口絵を含む）の権利表示：Public Domain Mark 1.0。底本：https://archive.org/details/b30414854_0002　権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-09-13",
+      "updatedDate": "2026-09-13",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/b30414854_0002"
+      }
+    },
+    {
+      "slug": "robertson-history-america-books-ix-x-1796",
+      "title": "アメリカ史　第9書および第10書",
+      "originalTitle": "The History of America, Books IX and X",
+      "author": "ウィリアム・ロバートソン",
+      "originalAuthor": "William Robertson",
+      "year": 1796,
+      "originalPublication": "ロンドン、1796年",
+      "sourceEdition": "William Robertson, The History of America. Books IX. and X. Containing the History of Virginia, to the Year 1688; and of New England, to the Year 1652. London: A. Strahan; T. Cadell Jun. and W. Davies; Edinburgh: E. Balfour, 1796.",
+      "sourceProvider": "Internet Archive公開の1796年ロンドン刊本。",
+      "rights": "底本：1796年ロンドン刊第9書・第10書。原著：保護期間満了（パブリックドメイン）。電子化・公開：Internet Archive。公開機関の個別ライセンス指定はない。本冊は原著本文の和訳で、原刊画像は転載していない。底本：https://archive.org/details/bim_eighteenth-century_the-history-of-america-_robertson-william_1796　公開機関の権利方針：https://help.archive.org/help/rights/",
+      "publishedDate": "2026-09-13",
+      "updatedDate": "2026-09-13",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bim_eighteenth-century_the-history-of-america-_robertson-william_1796"
+      }
     }
   ],
   "works": [

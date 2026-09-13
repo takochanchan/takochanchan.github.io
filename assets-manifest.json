@@ -7152,6 +7152,60 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-i-1777/William_Robertson_The_History_of_America_1777_Volume_I_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1777_Volume_I_Japanese.pdf",
+      "size": 4512348,
+      "sha256": "ec9914f281afd6236c151e19229b9804b7082cbf6b28f8c98444350a07513929"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-i-1777/William_Robertson_The_History_of_America_1777_Volume_I_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1777_Volume_I_Japanese.epub",
+      "size": 471829,
+      "sha256": "ebc252e53e09965d52b00491ab098d2c3ead4614e5715d9cf1f54cce3e0d61b5"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-i-1777/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/robertson-history-america-volume-i-1777/cover.jpg",
+      "size": 30677,
+      "sha256": "73c033b70916c8a2bda8e7cc7014d7b42c9c75295acf7459541be9b5cd60f06d"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-ii-1777/William_Robertson_The_History_of_America_1777_Volume_II_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1777_Volume_II_Japanese.pdf",
+      "size": 6250757,
+      "sha256": "fd64431b789c74730639e1d8b137c0dcdf51709205a464fa2b092be549581636"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-ii-1777/William_Robertson_The_History_of_America_1777_Volume_II_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1777_Volume_II_Japanese.epub",
+      "size": 4534276,
+      "sha256": "c4851d9f66801c5a2638e957843ef80ddecd00827e4601b131e96141cb4fe68e"
+    },
+    {
+      "path": "publications/robertson-history-america-volume-ii-1777/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/robertson-history-america-volume-ii-1777/cover.jpg",
+      "size": 33317,
+      "sha256": "6aa15c64c06db8897fbd9ab044d8f006bef6655af694e08fe0fb3a13e10c5973"
+    },
+    {
+      "path": "publications/robertson-history-america-books-ix-x-1796/William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.pdf",
+      "size": 1677820,
+      "sha256": "91a6cc721e58549c833e8caa2dedc7055daccaa8d8c4130efcdffa5883c8881f"
+    },
+    {
+      "path": "publications/robertson-history-america-books-ix-x-1796/William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.epub",
+      "size": 139186,
+      "sha256": "7e250422fe1478b94e0afb744878d801bf88ab1a116ba42335b72f1f60331396"
+    },
+    {
+      "path": "publications/robertson-history-america-books-ix-x-1796/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/robertson-history-america-books-ix-x-1796/cover.jpg",
+      "size": 33355,
+      "sha256": "0f24f824712a2161168c939bf8ad0e75b346b6c349b952840212ca6c46c5c278"
     }
   ]
 }

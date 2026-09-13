@@ -6,6 +6,33 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+{
+  "slug": "robertson-history-america-1777-1796",
+  "memberSlugs": [
+    "robertson-history-america-volume-i-1777",
+    "robertson-history-america-volume-ii-1777",
+    "robertson-history-america-books-ix-x-1796"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第9書および第10書"
+  ],
+  "title": "アメリカ史",
+  "originalTitle": "The History of America",
+  "subtitle": "1777年刊第1・第2巻／1796年刊第9書・第10書・日本語全訳",
+  "series": "HISTORY OF AMERICA · 1777–1796",
+  "originalPublication": "ダブリン、1777年／ロンドン、1796年",
+  "year": 1777,
+  "extent": "全10書・日本語版3冊・PDF計1,051頁・口絵1点",
+  "description": "ウィリアム・ロバートソンが、新大陸の発見、スペイン人によるメキシコとペルーの征服、先住民の社会、植民地統治と交易を叙述した『アメリカ史』です。1777年刊の第1・第2巻と、ヴァージニアおよびニューイングランドの歴史を扱う1796年刊の第9書・第10書を、3冊の日本語全訳PDF・EPUBで収録しています。",
+  "sourceEdition": "William Robertson, The History of America, vols. I–II, Dublin, 1777; Books IX and X, London, 1796.",
+  "sourceProvider": "1777年刊第1・第2巻はWellcome Library所蔵・提供、Internet Archive公開本。1796年刊第9書・第10書はInternet Archive公開本。",
+  "sourceUrl": "https://archive.org/details/b30414854_0001",
+  "rights": "原著は保護期間満了によりパブリックドメインです。1777年刊第1・第2巻のWellcome Library提供画像はPublic Domain Mark 1.0（https://creativecommons.org/publicdomain/mark/1.0/）。1796年刊本には公開機関の個別ライセンス指定がなく、本訳には同刊本の原刊画像を転載していません。Internet Archiveの権利方針：https://help.archive.org/help/rights/。各冊の前文に底本URLと権利表示を記載しています。",
+  "publishedDate": "2026-09-13",
+  "updatedDate": "2026-09-13"
+},
   {
     slug: "bancroft-native-races-pacific-states-1883",
     memberSlugs: [
@@ -475,3 +502,4 @@ export const majorCataloguePublications = cataloguePublications.filter(
 export const shortCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "short-work",
 );
+
