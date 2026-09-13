@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 381);
+  assert.equal(publications.length, 382);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 371);
-  assert.equal(majorCataloguePublications.length, 181);
+  assert.equal(cataloguePublications.length, 372);
+  assert.equal(majorCataloguePublications.length, 182);
   assert.equal(shortCataloguePublications.length, 190);
 
   const blom = cataloguePublications.find(
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 104);
+  assert.equal(counts.get("002"), 105);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "mendieta-historia-eclesiastica-indiana-1870",
       "foreign-office-mosquito-territory-1848",
       "rodriguez-relacion-espantable-terremoto-1541",
       "bury-bishop-amongst-bananas-1911",
@@ -1719,7 +1720,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 191);
+  assert.equal(majorPublications.length, 192);
   assert.equal(shortPublications.length, 190);
   assert.equal(shortPublicationAuthors.length, 43);
   assert.deepEqual(
@@ -2871,7 +2872,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":181,"papers":190\}/,
+    /bibliographicCounts:\{"books":182,"papers":190\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2884,7 +2885,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">181<\/strong>件/);
+  assert.match(html, /id="book-match-count">182<\/strong>件/);
   assert.match(html, /id="paper-match-count">190<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
