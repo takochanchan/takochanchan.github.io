@@ -1,26 +1,21 @@
 {
-  "slug": "mendieta-historia-eclesiastica-indiana-1870",
-  "release_tag": "publications-current",
-  "verified_archive_commit": "71882ba18226a4ea6c3fe2d71eaf72f80fdb4622",
   "assets": [
     {
-      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
       "filename": "Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
+      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
+      "sha256": "61b82e18f82ae3dcb8a3b72d9d1c8915849b982ff9122bb03d6249b5ead900a0",
       "size": 9056723,
-      "sha256": "61b82e18f82ae3dcb8a3b72d9d1c8915849b982ff9122bb03d6249b5ead900a0"
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf"
     },
     {
-      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
       "filename": "Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
+      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
+      "sha256": "e928b942d5b2805c4f595af03bddceda8de96ff558de0e77faa4fd559feca48f",
       "size": 1349775,
-      "sha256": "e928b942d5b2805c4f595af03bddceda8de96ff558de0e77faa4fd559feca48f"
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub"
     }
   ],
   "bundle": {
-    "size": 6975315,
-    "sha256": "ae3c0a1ccaaee4e054cd3cf409710d1e0832b2bb142bfcd106a0c5863b04e120",
     "chunks": [
       "1e4b1a32720e4f64bba7cef0d4199c6009068940",
       "2e8c3d7be05fbcc689717202ac5dd4c61da5588b",
@@ -49,6 +44,12 @@
       "6880645a358890d7438657b12f3c5b108b868e0e",
       "2682545de26a0a5c82e85a6686abe648eaebf2d1",
       "d4495d2b89182dd1052f9b31eaad858bb6c49718"
-    ]
-  }
+    ],
+    "sha256": "ae3c0a1ccaaee4e054cd3cf409710d1e0832b2bb142bfcd106a0c5863b04e120",
+    "size": 6975315
+  },
+  "catalogue_record_count": 382,
+  "release_tag": "publications-current",
+  "slug": "mendieta-historia-eclesiastica-indiana-1870",
+  "verified_archive_commit": "71882ba18226a4ea6c3fe2d71eaf72f80fdb4622"
 }
