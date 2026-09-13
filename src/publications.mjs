@@ -1,3 +1,4 @@
+import { mendietaPublicationRecords, mendietaPublicationMetadata } from "./mendieta-publication.mjs";
 import { robertsonPublicationRecords, robertsonPublicationMetadata } from "./robertson-publication.mjs";
 import { galvaoPublicationRecords, galvaoPublicationMetadata } from "./galvao-publication.mjs";
 import { sahagunPublicationRecords, sahagunPublicationMetadata } from "./sahagun-publication.mjs";
@@ -234,6 +235,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...mendietaPublicationRecords,
   ...mosquitoTerritoryPublicationRecords,
   ...rodriguezRelacionPublicationRecords,
   {
@@ -9311,6 +9313,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...mendietaPublicationMetadata,
   ...mosquitoTerritoryPublicationMetadata,
   ...rodriguezRelacionPublicationMetadata,
   "bury-bishop-amongst-bananas-1911": {
@@ -12118,6 +12121,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

@@ -1,0 +1,54 @@
+{
+  "slug": "mendieta-historia-eclesiastica-indiana-1870",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "71882ba18226a4ea6c3fe2d71eaf72f80fdb4622",
+  "assets": [
+    {
+      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
+      "filename": "Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.pdf",
+      "size": 9056723,
+      "sha256": "61b82e18f82ae3dcb8a3b72d9d1c8915849b982ff9122bb03d6249b5ead900a0"
+    },
+    {
+      "path": "publications/mendieta-historia-eclesiastica-indiana-1870/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
+      "filename": "Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mendieta_Historia_eclesiastica_indiana_1870_Japanese_Translation.epub",
+      "size": 1349775,
+      "sha256": "e928b942d5b2805c4f595af03bddceda8de96ff558de0e77faa4fd559feca48f"
+    }
+  ],
+  "bundle": {
+    "size": 6975315,
+    "sha256": "ae3c0a1ccaaee4e054cd3cf409710d1e0832b2bb142bfcd106a0c5863b04e120",
+    "chunks": [
+      "1e4b1a32720e4f64bba7cef0d4199c6009068940",
+      "2e8c3d7be05fbcc689717202ac5dd4c61da5588b",
+      "448a38d50470735546f6b2fc2681dbb616449ab5",
+      "6a023cad36a4be09b7a387b0184e1d3bd7f09093",
+      "fdd141f5a338f9d1d39e5ae94629699530a62792",
+      "21ea43f99e904ac3259edc8665385903715ed3c5",
+      "2b8db6781148f14eb83fbf28fb4b4e75f1fae17c",
+      "3409b853ec7faa6484b95416e1205cc786179cd6",
+      "56689ad1d9ec65de7825e13049b165c5c113ee2e",
+      "567d0d53a794ab2f8ef4657b09858423a15122c1",
+      "ac4f5bbec77daed2eda6408e0abc6eacea83712d",
+      "08e07925d03ca0f931e1e70f2a42d37a3fd304a5",
+      "a43f093191ff3aa664fd7c1241b96b4d4ed24bce",
+      "b6c763db4038970a948afb932d65172256615c30",
+      "693d188cc326ff5ba4fe07d393f5a307224d7599",
+      "7f5b26271b502c28abc8e91544206a3d4071ff17",
+      "03108d8b3d5bd1fc34de8cbc77fd0431c6280da8",
+      "d8b25f0a518e2f3713fe023674b965543dc76e54",
+      "8a7c3b62af95110cf75b8c2c115074c4661047e0",
+      "c43aad3b239912ff009a06eecbb0f41c0b79b2e3",
+      "bf68dd02f8db16f4f9a306d3fe5cfdab48776c08",
+      "d14af6749bb8c5f3725206921e82f735d076acda",
+      "97bf4754fe5e9291fb571c956102d3edd9b1c130",
+      "95b3cd96cedab6c4644abc9fa4d2254c1833d5fb",
+      "6880645a358890d7438657b12f3c5b108b868e0e",
+      "2682545de26a0a5c82e85a6686abe648eaebf2d1",
+      "d4495d2b89182dd1052f9b31eaad858bb6c49718"
+    ]
+  }
+}

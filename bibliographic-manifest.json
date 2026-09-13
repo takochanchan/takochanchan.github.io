@@ -7259,6 +7259,25 @@
         "status": "online",
         "url": "https://archive.org/details/bim_eighteenth-century_the-history-of-america-_robertson-william_1796"
       }
+    },
+    {
+      "slug": "mendieta-historia-eclesiastica-indiana-1870",
+      "recordClass": "major-work",
+      "title": "インディアス教会史",
+      "originalTitle": "Historia eclesiástica indiana",
+      "author": "ヘロニモ・デ・メンディエタ",
+      "originalAuthor": "Gerónimo de Mendieta",
+      "year": 1870,
+      "originalPublication": "メキシコ、フランシスコ・ディアス・デ・レオンおよびサンティアゴ・ホワイト印刷所、1870年",
+      "sourceEdition": "Gerónimo de Mendieta, Historia eclesiástica indiana, publicada por Joaquín García Icazbalceta, México: Antigua Librería, 1870. 前付XLV頁、本文790頁。",
+      "sourceProvider": "バイエルン州立図書館（Bayerische Staatsbibliothek）所蔵、ミュンヘン・デジタル化センター公開。請求記号4 H.eccl. 517、識別子bsb10985692。",
+      "rights": "原著および1870年刊本の本文は著作権保護期間を満了しています。バイエルン州立図書館の公開画像の権利表示は「No Copyright - Non-Commercial Use Only」です。権利表示：https://rightsstatements.org/vocab/NoC-NC/1.0/。",
+      "publishedDate": "2026-09-13",
+      "updatedDate": "2026-09-13",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.digitale-sammlungen.de/en/view/bsb10985692?page=5"
+      }
     }
   ],
   "works": [
