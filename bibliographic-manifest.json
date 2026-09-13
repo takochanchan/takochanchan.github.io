@@ -7278,6 +7278,25 @@
         "status": "online",
         "url": "https://www.digitale-sammlungen.de/en/view/bsb10985692?page=5"
       }
+    },
+    {
+      "slug": "serrano-archivo-indias-panama-1911",
+      "title": "インディアス文書館とパナマ地峡の探検 1527-1534年",
+      "originalTitle": "El Archivo de Indias y las exploraciones del Istmo de Panamá en los años de 1527 a 1534",
+      "author": "マヌエル・セラーノ・イ・サンス",
+      "originalAuthor": "Manuel Serrano y Sanz",
+      "year": 1911,
+      "originalPublication": "Madrid, 1911. Memorias de la Junta para Ampliación de Estudios e Investigaciones Científicas, tomo VII, memoria 2. 別刷61頁。",
+      "publishedDate": "2026-09-14",
+      "updatedDate": "2026-09-14",
+      "rights": "原著本文はパブリックドメインです。底本の電子複製はCSIC SimurgがCC BY-NC-SA 4.0で公開しています。本訳には電子複製の頁画像を転載していません。公開条件：http://simurg.csic.es/aviso-legal ／ https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "sourceEdition": "Manuel Serrano y Sanz, El Archivo de Indias y las exploraciones del Istmo de Panamá en los años de 1527 a 1534, Madrid, 1911. Memorias de la Junta para Ampliación de Estudios e Investigaciones Científicas, tomo VII, memoria 2. 別刷61頁（紀要通し頁417–475）。",
+      "sourceProvider": "Consejo Superior de Investigaciones Científicas（CSIC）、Biblioteca Americanista de Sevilla所蔵、Simurg公開。",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://simurg.csic.es/view/990002212430204201"
+      }
     }
   ],
   "works": [

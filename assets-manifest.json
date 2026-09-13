@@ -6020,6 +6020,24 @@
       "sha256": "e4c6abdc14daf3f0fa6f3a47a67478abeeeff9a9edb304261a936ce59ba2281c"
     },
     {
+      "path": "publications/serrano-archivo-indias-panama-1911/Manuel_Serrano_y_Sanz_El_Archivo_de_Indias_1911_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Serrano_y_Sanz_El_Archivo_de_Indias_1911_Japanese_Complete_Translation.epub",
+      "size": 205490,
+      "sha256": "59fdc607ba3cc6491d058a57c0be98ddbd327c6f07f61f2a96afe078a9707422"
+    },
+    {
+      "path": "publications/serrano-archivo-indias-panama-1911/Manuel_Serrano_y_Sanz_El_Archivo_de_Indias_1911_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Serrano_y_Sanz_El_Archivo_de_Indias_1911_Japanese_Complete_Translation.pdf",
+      "size": 919615,
+      "sha256": "f9024b044253f2caf9764b34b11ae1a297632c8ef24ee8718d762521c276860d"
+    },
+    {
+      "path": "publications/serrano-archivo-indias-panama-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/serrano-archivo-indias-panama-1911/cover.jpg",
+      "size": 167945,
+      "sha256": "7ed1991410f1eb432e7da6c91d2d58d19ba08343d979ac391b060d7835d75eff"
+    },
+    {
       "path": "publications/siguenza-infortunios-alonso-ramirez-1690/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_de_Siguenza_y_Gongora_Infortunios_de_Alonso_Ramirez_1690_Japanese_Complete_Translation.epub",
       "size": 804001,

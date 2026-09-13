@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 382);
+  assert.equal(publications.length, 383);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,9 +85,9 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 372);
+  assert.equal(cataloguePublications.length, 373);
   assert.equal(majorCataloguePublications.length, 182);
-  assert.equal(shortCataloguePublications.length, 190);
+  assert.equal(shortCataloguePublications.length, 191);
 
   const blom = cataloguePublications.find(
     (publication) => publication.slug === "tribes-and-temples-1926-1927",
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 105);
+  assert.equal(counts.get("002"), 106);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "serrano-archivo-indias-panama-1911",
       "mendieta-historia-eclesiastica-indiana-1870",
       "foreign-office-mosquito-territory-1848",
       "rodriguez-relacion-espantable-terremoto-1541",
@@ -1721,11 +1722,12 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 
 test("short works use explicit author groups instead of page-count rules", () => {
   assert.equal(majorPublications.length, 192);
-  assert.equal(shortPublications.length, 190);
-  assert.equal(shortPublicationAuthors.length, 43);
+  assert.equal(shortPublications.length, 191);
+  assert.equal(shortPublicationAuthors.length, 44);
   assert.deepEqual(
     new Set(shortPublications.map((item) => item.slug)),
     new Set([
+      "serrano-archivo-indias-panama-1911",
       "foreign-office-mosquito-territory-1848",
       "squier-great-calendar-stone-1849",
       "squier-british-encroachments-mosquito-question-1850",
@@ -2872,7 +2874,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":182,"papers":190\}/,
+    /bibliographicCounts:\{"books":182,"papers":191\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2886,7 +2888,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
   assert.match(html, /id="book-match-count">182<\/strong>件/);
-  assert.match(html, /id="paper-match-count">190<\/strong>件/);
+  assert.match(html, /id="paper-match-count">191<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
@@ -3326,4 +3328,15 @@ test("Galvao 1563 uses the approved Portuguese cover label and BNP source", () =
   assert.equal(item.sourceUrl, "https://purl.pt/15321");
   assert.match(item.rights, /Public Domain Mark/);
   assert.equal(item.cover, "publications/galvao-tratado-descobrimentos-1563/cover.jpg");
+});
+
+
+
+test("Serrano 1911 preserves the approved title and article classification", () => {
+  const item = publications.find(item => item.slug === "serrano-archivo-indias-panama-1911");
+  assert.equal(item.title, "インディアス文書館とパナマ地峡の探検 1527-1534年");
+  assert.equal(item.recordClass, "short-work");
+  assert.equal(item.authorKey, "manuel-serrano-y-sanz");
+  assert.equal(item.pageCount, 48);
+  assert.equal(item.searchShard, "002");
 });

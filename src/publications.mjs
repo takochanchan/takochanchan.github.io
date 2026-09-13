@@ -1,3 +1,4 @@
+import { serranoPublicationRecords, serranoPublicationMetadata } from "./serrano-publication.mjs";
 import { mendietaPublicationRecords, mendietaPublicationMetadata } from "./mendieta-publication.mjs";
 import { robertsonPublicationRecords, robertsonPublicationMetadata } from "./robertson-publication.mjs";
 import { galvaoPublicationRecords, galvaoPublicationMetadata } from "./galvao-publication.mjs";
@@ -235,6 +236,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...serranoPublicationRecords,
   ...mendietaPublicationRecords,
   ...mosquitoTerritoryPublicationRecords,
   ...rodriguezRelacionPublicationRecords,
@@ -9313,6 +9315,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,
   ...mosquitoTerritoryPublicationMetadata,
   ...rodriguezRelacionPublicationMetadata,
@@ -11871,6 +11874,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "serrano-archivo-indias-panama-1911": "manuel-serrano-y-sanz",
   "foreign-office-mosquito-territory-1848": "great-britain-foreign-office",
   "rodriguez-relacion-espantable-terremoto-1541": "juan-rodriguez",
   "henningsen-official-report-granada-1857": "c-f-henningsen",
