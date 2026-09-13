@@ -1,10 +1,37 @@
 {
-  "slug": "robertson-history-america-1777-1796",
-  "release_tag": "publications-current",
-  "verified_archive_commit": "8406d9a304334ef2511fa5c48af1875a0fd1bfd9",
+  "assets": [
+    {
+      "filename": "William_Robertson_The_History_of_America_1777_Volume_I_Japanese.pdf",
+      "sha256": "ec9914f281afd6236c151e19229b9804b7082cbf6b28f8c98444350a07513929",
+      "size": 4512348
+    },
+    {
+      "filename": "William_Robertson_The_History_of_America_1777_Volume_I_Japanese.epub",
+      "sha256": "ebc252e53e09965d52b00491ab098d2c3ead4614e5715d9cf1f54cce3e0d61b5",
+      "size": 471829
+    },
+    {
+      "filename": "William_Robertson_The_History_of_America_1777_Volume_II_Japanese.pdf",
+      "sha256": "fd64431b789c74730639e1d8b137c0dcdf51709205a464fa2b092be549581636",
+      "size": 6250757
+    },
+    {
+      "filename": "William_Robertson_The_History_of_America_1777_Volume_II_Japanese.epub",
+      "sha256": "c4851d9f66801c5a2638e957843ef80ddecd00827e4601b131e96141cb4fe68e",
+      "size": 4534276
+    },
+    {
+      "filename": "William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.pdf",
+      "sha256": "91a6cc721e58549c833e8caa2dedc7055daccaa8d8c4130efcdffa5883c8881f",
+      "size": 1677820
+    },
+    {
+      "filename": "William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.epub",
+      "sha256": "7e250422fe1478b94e0afb744878d801bf88ab1a116ba42335b72f1f60331396",
+      "size": 139186
+    }
+  ],
   "bundle": {
-    "size": 12514127,
-    "sha256": "e56214b3198571b8857d06ee845ea6821482255732e5a2d01189d20ca0977230",
     "chunks": [
       "b3979854b11b040212761dc3e571d866746d76b8",
       "657992dff7b37604de7d8a8b1be58252308b8bf7",
@@ -30,38 +57,12 @@
       "0089957215825bf959d0f7a86950881e92d7ebc2",
       "41216a10a603c0581baf43467416eb8969f0276d",
       "4afab39aaa6d85e96840a0daa7035057b81eeb2a"
-    ]
+    ],
+    "sha256": "e56214b3198571b8857d06ee845ea6821482255732e5a2d01189d20ca0977230",
+    "size": 12514127
   },
-  "assets": [
-    {
-      "filename": "William_Robertson_The_History_of_America_1777_Volume_I_Japanese.pdf",
-      "size": 4512348,
-      "sha256": "ec9914f281afd6236c151e19229b9804b7082cbf6b28f8c98444350a07513929"
-    },
-    {
-      "filename": "William_Robertson_The_History_of_America_1777_Volume_I_Japanese.epub",
-      "size": 471829,
-      "sha256": "ebc252e53e09965d52b00491ab098d2c3ead4614e5715d9cf1f54cce3e0d61b5"
-    },
-    {
-      "filename": "William_Robertson_The_History_of_America_1777_Volume_II_Japanese.pdf",
-      "size": 6250757,
-      "sha256": "fd64431b789c74730639e1d8b137c0dcdf51709205a464fa2b092be549581636"
-    },
-    {
-      "filename": "William_Robertson_The_History_of_America_1777_Volume_II_Japanese.epub",
-      "size": 4534276,
-      "sha256": "c4851d9f66801c5a2638e957843ef80ddecd00827e4601b131e96141cb4fe68e"
-    },
-    {
-      "filename": "William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.pdf",
-      "size": 1677820,
-      "sha256": "91a6cc721e58549c833e8caa2dedc7055daccaa8d8c4130efcdffa5883c8881f"
-    },
-    {
-      "filename": "William_Robertson_The_History_of_America_1796_Books_IX_X_Japanese.epub",
-      "size": 139186,
-      "sha256": "7e250422fe1478b94e0afb744878d801bf88ab1a116ba42335b72f1f60331396"
-    }
-  ]
+  "release_tag": "publications-current",
+  "slug": "robertson-history-america-1777-1796",
+  "verified_archive_commit": "8406d9a304334ef2511fa5c48af1875a0fd1bfd9",
+  "validation_revision": 1
 }

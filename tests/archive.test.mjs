@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 378);
+  assert.equal(publications.length, 381);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -83,10 +83,10 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("split volumes share one canonical bibliography record", () => {
-  assert.equal(publicationGroupDefinitions.length, 3);
+  assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 370);
-  assert.equal(majorCataloguePublications.length, 180);
+  assert.equal(cataloguePublications.length, 371);
+  assert.equal(majorCataloguePublications.length, 181);
   assert.equal(shortCataloguePublications.length, 190);
 
   const blom = cataloguePublications.find(
@@ -120,8 +120,16 @@ test("split volumes share one canonical bibliography record", () => {
   assert.equal(nativeRaces.volumes.length, 5);
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),
-    new Set([blom.slug, herrera.slug, nativeRaces.slug]),
+    new Set([blom.slug, herrera.slug, nativeRaces.slug, "robertson-history-america-1777-1796"]),
   );
+
+  const robertson = cataloguePublications.find(
+    (publication) => publication.slug === "robertson-history-america-1777-1796",
+  );
+  assert.ok(robertson);
+  assert.equal(robertson.title, "アメリカ史");
+  assert.equal(robertson.pageCount, 1051);
+  assert.deepEqual(robertson.volumes.map((volume) => volume.pageCount), [425, 501, 125]);
 
   const bancroft = cataloguePublications.find(
     (publication) =>
@@ -174,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 101);
+  assert.equal(counts.get("002"), 104);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -285,6 +293,9 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "bancroft-native-races-volume-iii-1883",
       "bancroft-native-races-volume-iv-1883",
       "bancroft-native-races-volume-v-1883",
+      "robertson-history-america-volume-i-1777",
+      "robertson-history-america-volume-ii-1777",
+      "robertson-history-america-books-ix-x-1796",
     ],
   );
   assert.equal(
@@ -1708,7 +1719,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 188);
+  assert.equal(majorPublications.length, 191);
   assert.equal(shortPublications.length, 190);
   assert.equal(shortPublicationAuthors.length, 43);
   assert.deepEqual(
@@ -2860,7 +2871,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":180,"papers":190\}/,
+    /bibliographicCounts:\{"books":181,"papers":190\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2873,7 +2884,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">180<\/strong>件/);
+  assert.match(html, /id="book-match-count">181<\/strong>件/);
   assert.match(html, /id="paper-match-count">190<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
