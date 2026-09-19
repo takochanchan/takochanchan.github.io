@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "vazquez-pedro-betancur-1962",
       "lobo-pedro-betancur-1667",
       "how-james-b-eads-1900",
       "serrano-archivo-indias-panama-1911",
