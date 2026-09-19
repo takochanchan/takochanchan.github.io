@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 383);
+  assert.equal(publications.length, 384);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 373);
-  assert.equal(majorCataloguePublications.length, 182);
+  assert.equal(cataloguePublications.length, 374);
+  assert.equal(majorCataloguePublications.length, 183);
   assert.equal(shortCataloguePublications.length, 191);
 
   const blom = cataloguePublications.find(
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 106);
+  assert.equal(counts.get("002"), 107);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -3340,3 +3340,4 @@ test("Serrano 1911 preserves the approved title and article classification", () 
   assert.equal(item.pageCount, 48);
   assert.equal(item.searchShard, "002");
 });
+

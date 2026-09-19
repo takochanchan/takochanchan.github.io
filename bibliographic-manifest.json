@@ -7297,6 +7297,25 @@
         "status": "online",
         "url": "http://simurg.csic.es/view/990002212430204201"
       }
+    },
+    {
+      "slug": "how-james-b-eads-1900",
+      "title": "ジェームズ・B・イーズ",
+      "originalTitle": "James B. Eads",
+      "author": "ルイス・ハウ",
+      "originalAuthor": "Louis How",
+      "year": 1900,
+      "originalPublication": "Boston・New York・Chicago: Houghton, Mifflin and Company, 1900. Riverside Biographical Series, No. 2.",
+      "publishedDate": "2026-09-19",
+      "updatedDate": "2026-09-19",
+      "sourceEdition": "Louis How, James B. Eads, Boston・New York・Chicago: Houghton, Mifflin and Company; Cambridge: The Riverside Press, 1900. Riverside Biographical Series, No. 2.",
+      "sourceProvider": "University of California Libraries所蔵・提供、Internet Archive公開（jamesbeads00howlrich）。",
+      "rights": "底本：パブリックドメイン（米国、1900年刊）。公開画像：Internet Archiveの資料表示はNOT_IN_COPYRIGHT（著作権保護対象外）。公開機関の利用条件：Internet Archive Terms of Use（https://archive.org/about/terms）。学術・研究目的のアクセス、法令・権利の遵守、出版時の出典明示を求めています。補助転写：Project Gutenberg第26052番、Online Distributed Proofreading Team。提供条件：Project Gutenberg License（https://www.gutenberg.org/policy/license.html）。",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/jamesbeads00howlrich"
+      }
     }
   ],
   "works": [

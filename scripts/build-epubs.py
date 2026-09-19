@@ -59,6 +59,7 @@ EPUB_NS = "http://www.idpf.org/2007/ops"
 NCX_NS = "http://www.daisy.org/z3986/2005/ncx/"
 
 DOCX_SOURCES = {
+    "how-james-b-eads-1900": SOURCES / "翻訳サイト" / "Louis_How_James_B_Eads_1900_Japanese_Translation.docx",
     "brinton-missing-authorities-mayan-antiquities-1897": SOURCES
     / "翻訳サイト"
     / "Daniel_G_Brinton_The_Missing_Authorities_on_Mayan_Antiquities_1897_Japanese_Complete_Translation.docx",
@@ -2146,3 +2147,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

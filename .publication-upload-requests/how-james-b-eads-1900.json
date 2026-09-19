@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "slug": "how-james-b-eads-1900",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "b92dc69ab240b090fe66c0d6721565a8b6e129f2",
+  "bundle": {
+    "size": 1687791,
+    "sha256": "5e41a120a317abc28aafd1b9771af8e27a778e359436168ee9c8cef7a9957c4f",
+    "chunks": [
+      "8525a833795d679dd666adf88b6323593acf6d18",
+      "705c5ef732989a1bb4e471d1792f80f9443b91af",
+      "7bd54bb3b1ee6fd14dbd666d3aca39e197ac6ef8",
+      "f1004cf7da78f1b3783c9b4c2d01d0c3ecad4aab",
+      "e43c352e2a0868acc6ffeaffe0140da9f2f4815d",
+      "53810280b7601ba4915b2e0aa93952f5a4b2319e",
+      "40ee84e793504f5afa19700363cf0eedd4aea4c9"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
+      "size": 1046384,
+      "sha256": "eba8e2731fbfe7df014712d895acf288530b4307296592dcb41c943e14efbba1"
+    },
+    {
+      "filename": "Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
+      "size": 853748,
+      "sha256": "03c94ea1a6d3585f36d97184d4a106d6255de5c4993cf927f001d4f9671350d8"
+    }
+  ]
+}
+

@@ -1,3 +1,4 @@
+import { howEadsPublicationRecords, howEadsPublicationMetadata } from "./how-eads-publication.mjs";
 import { serranoPublicationRecords, serranoPublicationMetadata } from "./serrano-publication.mjs";
 import { mendietaPublicationRecords, mendietaPublicationMetadata } from "./mendieta-publication.mjs";
 import { robertsonPublicationRecords, robertsonPublicationMetadata } from "./robertson-publication.mjs";
@@ -236,6 +237,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...howEadsPublicationRecords,
   ...serranoPublicationRecords,
   ...mendietaPublicationRecords,
   ...mosquitoTerritoryPublicationRecords,
@@ -9315,6 +9317,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...howEadsPublicationMetadata,
   ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,
   ...mosquitoTerritoryPublicationMetadata,
@@ -12125,6 +12128,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 
