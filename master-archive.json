@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "1f8702905f29ce8808bb3f6aff6465e333ab8136",
+  "archive_commit": "a8875f89eeeaf4e7eb787bba3ae5798270b97fcc",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -329,7 +329,8 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "serrano-archivo-indias-panama-1911": "publications/serrano-archivo-indias-panama-1911/master.docx",
-    "how-james-b-eads-1900": "publications/how-james-b-eads-1900/master.docx"
+    "how-james-b-eads-1900": "publications/how-james-b-eads-1900/master.docx",
+    "lobo-pedro-betancur-1667": "publications/lobo-pedro-betancur-1667/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

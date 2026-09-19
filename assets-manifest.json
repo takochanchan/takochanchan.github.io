@@ -7260,6 +7260,24 @@
       "url": "https://takochanchan.github.io/publications/how-james-b-eads-1900/cover-subtitle.jpg",
       "size": 30448,
       "sha256": "c19170bb9530f5af54f361d2274805dd9dc40c0c7dea8a5bf25c3a86e01f966c"
+    },
+    {
+      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
+      "size": 182975,
+      "sha256": "a57f1df7d3ef0713dd0a3a88dc45a9c8df1ad627693acd03272ccf0b07934473"
+    },
+    {
+      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
+      "size": 1336606,
+      "sha256": "5396ce257ada5d1efdf9103d1abd37e696a97d0d064a8fd06dc63546da417c53"
+    },
+    {
+      "path": "publications/lobo-pedro-betancur-1667/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lobo-pedro-betancur-1667/cover.jpg",
+      "size": 58745,
+      "sha256": "f2659a2a256ea411bf3cd3e84c8d2a670a9d2463a0b0186e368674899514345b"
     }
   ]
 }

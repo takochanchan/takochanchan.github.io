@@ -7316,6 +7316,25 @@
         "status": "online",
         "url": "https://archive.org/details/jamesbeads00howlrich"
       }
+    },
+    {
+      "slug": "lobo-pedro-betancur-1667",
+      "title": "ベタンクールの生涯と徳行",
+      "originalTitle": "Relacion de la vida, y virtudes del V. hermano Pedro de San Ioseph Betancur. De la Tercera Orden de Penitencia de N. seraphico P.S. Francisco. Primer fundador del Hispital de Convalecientes de N. Señora de Belen, en la ciudad de Guatemala",
+      "author": "マヌエル・ロボ",
+      "originalAuthor": "Manuel Lobo",
+      "year": 1667,
+      "originalPublication": "Guatemala: Ioseph de Pineda Ybarra, 1667.",
+      "publishedDate": "2026-09-19",
+      "updatedDate": "2026-09-19",
+      "sourceEdition": "Manuel Lobo, Relacion de la vida, y virtudes del V. hermano Pedro de San Ioseph Betancur. De la Tercera Orden de Penitencia de N. seraphico P.S. Francisco. Primer fundador del Hispital de Convalecientes de N. Señora de Belen, en la ciudad de Guatemala. Guatemala: Ioseph de Pineda Ybarra, 1667.",
+      "sourceProvider": "John Carter Brown Library所蔵・提供、Internet Archive公開。請求記号 BA667 .L799r、受入番号84-22。",
+      "rights": "底本：パブリックドメイン（1667年刊、著者1686年没）。公開画像：John Carter Brown Libraryの利用条件に基づくCC BY 4.0。Courtesy of the John Carter Brown Library。本訳では画像をもとに翻訳・組版を行いました。公開条件：https://jcblibrary.org/permissions/ ／ ライセンス：https://creativecommons.org/licenses/by/4.0/",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/relaciondelavida00lobo"
+      }
     }
   ],
   "works": [

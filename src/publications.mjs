@@ -1,3 +1,4 @@
+import { loboPublicationRecords, loboPublicationMetadata } from "./lobo-publication.mjs";
 import { howEadsPublicationRecords, howEadsPublicationMetadata } from "./how-eads-publication.mjs";
 import { serranoPublicationRecords, serranoPublicationMetadata } from "./serrano-publication.mjs";
 import { mendietaPublicationRecords, mendietaPublicationMetadata } from "./mendieta-publication.mjs";
@@ -237,6 +238,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...loboPublicationRecords,
   ...howEadsPublicationRecords,
   ...serranoPublicationRecords,
   ...mendietaPublicationRecords,
@@ -9317,6 +9319,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
   ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,

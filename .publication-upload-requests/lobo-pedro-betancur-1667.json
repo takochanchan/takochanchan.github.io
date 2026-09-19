@@ -1,0 +1,36 @@
+{
+  "slug": "lobo-pedro-betancur-1667",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "a8875f89eeeaf4e7eb787bba3ae5798270b97fcc",
+  "bundle": {
+    "size": 1190513,
+    "sha256": "7bb110990557181b010dbcf6313c445b7575b36ceccc81f5f3382de60bea1fbf",
+    "chunks": [
+      "340b4f8f2f91932b07d81767afedd4cc7adfc3cb",
+      "24c13d055f868fc18d91da6f58f6674ac402193a",
+      "3eb91586dd9fa80c1c31f6b9c2b21c0e43e3c2fa",
+      "4d098908d785abb1611d9b8652500995d3cd04f2",
+      "49d2c7482b9ff70e0226193e9049128f90b79689",
+      "f12eb745a80c059d7266e055cdf6e2c7bc4f9f94",
+      "82ccceae83588b64c00691b425dc87a687d2be91",
+      "28c7181914990d808e3f9d2c07a67cacfb5463f0",
+      "19f0e277e00ce355029bbbd4c24226d15fa22e82",
+      "643d397688127365ad1249d8faa54eef26efec26",
+      "03cd1d33622c6edbae4d713500467ae3dc607ccb",
+      "bc44fc421b6ab209fa0d33dde260dd6930e5e5e6",
+      "c89ae1b0f0aabe599eb3ef0b7d95f8d2c590359d"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
+      "size": 182975,
+      "sha256": "a57f1df7d3ef0713dd0a3a88dc45a9c8df1ad627693acd03272ccf0b07934473"
+    },
+    {
+      "filename": "Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
+      "size": 1336606,
+      "sha256": "5396ce257ada5d1efdf9103d1abd37e696a97d0d064a8fd06dc63546da417c53"
+    }
+  ]
+}
