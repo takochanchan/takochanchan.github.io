@@ -1,0 +1,40 @@
+name: Withdraw stopped Vazquez draft assets
+on:
+  push:
+    branches: [agent/vazquez-withdraw-20260919]
+permissions:
+  contents: write
+jobs:
+  withdraw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify and withdraw only the stopped draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: takochanchan/takochanchan.github.io
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir withdrawal
+          cd withdrawal
+          gh release download publications-current --pattern 'Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.*'
+          echo '667f618478f1674d763ea9a9eb5b5b6ed67a728b5dc674aa291bc21a90474005  Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf' | sha256sum -c -
+          echo '27b113e4366b65e4a42142c3a4026fed4048c9364fe9601c954a3acbf6b018cd  Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub' | sha256sum -c -
+          gh release delete-asset publications-current Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf --yes
+          gh release delete-asset publications-current Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub --yes
+          gh release download publications-current --pattern SHA256SUMS.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('SHA256SUMS.txt')
+          lines=p.read_text().splitlines(keepends=True)
+          targets={'Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf','Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub'}
+          retained=[s for s in lines if not (s.split() and s.split()[-1].lstrip('*') in targets)]
+          removed=[s for s in lines if s not in retained]
+          assert len(removed)<=2
+          p.write_text(''.join(retained))
+          print('Removed target manifest entries:',len(removed))
+          PY
+          gh release upload publications-current SHA256SUMS.txt --clobber
+          gh api repos/takochanchan/takochanchan.github.io/releases/tags/publications-current --jq '[.assets[].name | select(startswith("Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation"))] | length' > remaining.txt
+          test "$(cat remaining.txt)" = 0
+          echo 'Stopped draft PDF and EPUB withdrawn'
