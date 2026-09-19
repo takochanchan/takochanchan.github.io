@@ -1,0 +1,55 @@
+name: Verify published How Eads edition
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/how-eads-live-check.yml']
+permissions:
+  contents: write
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live bibliography, assets, checksums and search map
+        run: |
+          python3 - <<'PY'
+          import urllib.request, urllib.error, json, hashlib, time
+          slug='how-james-b-eads-1900'
+          site='https://takochanchan.github.io/'
+          def get(url):
+              with urllib.request.urlopen(url,timeout=90) as r:return r.read()
+          url=site+'publications/'+slug+'/'
+          for attempt in range(90):
+              try:
+                  body=get(url).decode()
+                  if 'Louis How' in body and 'cover-subtitle.jpg' in body:break
+              except urllib.error.HTTPError as e:
+                  if e.code!=404:raise
+              time.sleep(10)
+          else:raise RuntimeError('Bibliography deployment timed out')
+          for text in ['ジェームズ・B・イーズ','ルイス・ハウ','Internet Archive Terms of Use','67']:assert text in body,text
+          manifest=json.load(open('assets-manifest.json'))
+          records=[x for x in manifest['assets'] if '/'+slug+'/' in x['path']]
+          assert len(records)==3
+          release='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/'
+          sums=get(release+'SHA256SUMS.txt').decode()
+          for a in records:
+              data=get(a['url'])
+              assert len(data)==a['size'] and hashlib.sha256(data).hexdigest()==a['sha256'],a['path']
+              if not a['path'].endswith('.jpg'):
+                  assert a['sha256']+'  '+a['path'].split('/')[-1] in sums
+          mapping=json.loads(get(site+'takochan-search-index-002/maps/'+slug+'.json'))
+          assert mapping['canonicalUrl']=='/publications/'+slug+'/'
+          assert mapping['pdfSha256']=='c586a264a44504e3cf0b6f6da3f3c17650318c4b9781fb941023a8582b1e9247'
+          assert any('p. 120' in str(v[0]) for v in mapping['blocks'].values())
+          assert all(isinstance(v[1],int) and 1<=v[1]<=67 for v in mapping['blocks'].values())
+          print('PASS: live bibliography, PDF, EPUB, cover, SHA256SUMS, and source/PDF search page mapping')
+          PY
+      - name: Remove completed temporary branch and this one-shot workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method DELETE repos/$GITHUB_REPOSITORY/git/refs/heads/agent/how-eads-cover-20260919
+          current=$(gh api repos/$GITHUB_REPOSITORY/contents/.github/workflows/how-eads-live-check.yml?ref=main --jq .sha)
+          gh api --method DELETE repos/$GITHUB_REPOSITORY/contents/.github/workflows/how-eads-live-check.yml -f message="Remove completed How Eads publication verifier" -f sha="$current" -f branch=main >/dev/null
+
