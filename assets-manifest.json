@@ -7246,20 +7246,20 @@
     {
       "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
-      "size": 1046384,
-      "sha256": "eba8e2731fbfe7df014712d895acf288530b4307296592dcb41c943e14efbba1"
+      "size": 1052693,
+      "sha256": "c586a264a44504e3cf0b6f6da3f3c17650318c4b9781fb941023a8582b1e9247"
     },
     {
       "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
-      "size": 853748,
-      "sha256": "03c94ea1a6d3585f36d97184d4a106d6255de5c4993cf927f001d4f9671350d8"
+      "size": 860295,
+      "sha256": "b62471399264a29a67a71dc1e72a57a9981fbfc66bac64a618dbba28f3ca0b6c"
     },
     {
-      "path": "publications/how-james-b-eads-1900/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/how-james-b-eads-1900/cover.jpg",
-      "size": 24001,
-      "sha256": "f4b769cba4891afaf9f02e11f41073f379b142f6fd4de453b43177587861bee5"
+      "path": "publications/how-james-b-eads-1900/cover-subtitle.jpg",
+      "url": "https://takochanchan.github.io/publications/how-james-b-eads-1900/cover-subtitle.jpg",
+      "size": 30448,
+      "sha256": "c19170bb9530f5af54f361d2274805dd9dc40c0c7dea8a5bf25c3a86e01f966c"
     }
   ]
 }
