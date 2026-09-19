@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "how-james-b-eads-1900",
       "serrano-archivo-indias-panama-1911",
       "mendieta-historia-eclesiastica-indiana-1870",
       "foreign-office-mosquito-territory-1848",
@@ -1721,7 +1722,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 192);
+  assert.equal(majorPublications.length, 193);
   assert.equal(shortPublications.length, 191);
   assert.equal(shortPublicationAuthors.length, 44);
   assert.deepEqual(
@@ -2874,7 +2875,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":182,"papers":191\}/,
+    /bibliographicCounts:\{"books":183,"papers":191\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2887,7 +2888,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">182<\/strong>件/);
+  assert.match(html, /id="book-match-count">183<\/strong>件/);
   assert.match(html, /id="paper-match-count">191<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
