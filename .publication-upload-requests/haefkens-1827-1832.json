@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "slug": "haefkens-1827-1832",
+  "slugs": [
+    "haefkens-reize-guatemala-1827-1828",
+    "haefkens-centraal-amerika-1832"
+  ],
+  "release_tag": "publications-current",
+  "verified_archive_commit": "60e86888abf6597a5f40bbf39207b77a1154aaf8",
+  "bundle": {
+    "size": 5443466,
+    "sha256": "49c91a5033e7d4b0a0fbe8d42c37a02584a9d8ac28b85f1b8438db08928787c5",
+    "chunks": [
+      "fef3c4489e486536468a2bc23f39ecffe2fb61ea",
+      "80b46da08f3467cdbeb6e6eb72ff66ceeaf32582",
+      "573f382d66f0ce9eddfb04b139ff7ededfb0d6e8",
+      "cb49cfb0573598c7a13c608c0d5b3bd4fc7b502b",
+      "85791af4dbb36f4632fce37d4f0e71751e6ac88c",
+      "64ee5de5c5ce5e227812633d72ba41b98fde5418",
+      "54924a6ea0643e36776f1b4489451925bae05005",
+      "8bd69df6127e102bec2a42d236aa82f004d43f32",
+      "e145bba28557e5818a3b35660e71135d8e01a20a",
+      "6b0c769bdfea402a6dbcff97f7ff90f43c64881a",
+      "1dcec5fd39914ed050f66cd0b9bdca4b60cbaebc",
+      "18f48a9e442698d9185a791b769306d23e8f67a1",
+      "03ce20ebe13e573c962933f79ed24dfe3bf3b077",
+      "401b957fb81b645fd4a4fa639dd944636616ee1d",
+      "508ab1b003dee374814774e878ac79d4e998d9ac",
+      "a88d823154d9292ac3806c4970678761fecea315",
+      "dae8edc40705297f983a47c7253a8cbd24553dfc",
+      "8f9767776744c468233666ffebf1e80b2bfbbdeb",
+      "39fc69386e37abc1dc4d525475771cb882828525",
+      "aebceb291143aa7267721b81b41f4f50faf84969",
+      "1a0c0910e3f0f51d40dc70798eeeef855511a962",
+      "603df8fdc22fb6b6161acbed466e880d14dfe11f",
+      "087c0b64edd3b22b0925e4fb46ffb178329e6f82",
+      "59c3c3b8175c8c6fed6f85f89baf123038d41255",
+      "121141d60fdcbe7fb9919ce0e388ada458d1d3ea",
+      "d661a7af904514005caf61cd79718f29d396f189",
+      "57d50424f369dfc1d5a562dbfc2c0761ec3d781d",
+      "36d29fa0d9e47ccc4be80b2023f2b7989dcbed3e"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
+      "size": 1566011,
+      "sha256": "0a23ca468eee2cbf0d3bcb949292afa2c02df3f2c3935a76d191d12da8226631"
+    },
+    {
+      "filename": "J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
+      "size": 831730,
+      "sha256": "56ed61ccc3026c46c148d8310212aae604733783adcf6c04710619a89ff7ee44"
+    },
+    {
+      "filename": "J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
+      "size": 4321760,
+      "sha256": "969a368c3bae991843c25a7fee14a2315c2bbdbac7b7fccfac874311ec0917a9"
+    },
+    {
+      "filename": "J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
+      "size": 709235,
+      "sha256": "fed34fda6d7fac066c99aa734183ba570e16c2b7d4be549c376dc54890af3006"
+    }
+  ]
+}
