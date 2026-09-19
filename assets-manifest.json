@@ -7314,6 +7314,24 @@
       "url": "https://takochanchan.github.io/publications/haefkens-centraal-amerika-1832/cover.jpg",
       "size": 53030,
       "sha256": "fc75d5b0725427cfc18eb33b10ec96d52709589766e4b189807ada7c3966eed8"
+    },
+    {
+      "size": 3543405,
+      "sha256": "e4ead9df59a4883b1b4cdfafbc05d7eafb2cad70facc21089f31ddf9102e1465",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.pdf",
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.pdf"
+    },
+    {
+      "size": 364133,
+      "sha256": "4c2f4a0808b3b3925716cab6e331edf8b9d05a103eb550f37292615ebbae3bb8",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.epub",
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.epub"
+    },
+    {
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
+      "size": 149721,
+      "sha256": "263d0282411d7e3b08b799c569205305cc5d11a315d85ac0d5e2d6d955762c50"
     }
   ]
 }

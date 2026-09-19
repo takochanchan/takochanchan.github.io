@@ -1,3 +1,4 @@
+import { frusPublicationRecords, frusPublicationMetadata } from "./frus-publication.mjs";
 import { haefkensPublicationRecords, haefkensPublicationMetadata } from "./haefkens-publications.mjs";
 import { loboPublicationRecords, loboPublicationMetadata } from "./lobo-publication.mjs";
 import { howEadsPublicationRecords, howEadsPublicationMetadata } from "./how-eads-publication.mjs";
@@ -239,6 +240,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...frusPublicationRecords,
   ...haefkensPublicationRecords,
   ...loboPublicationRecords,
   ...howEadsPublicationRecords,
@@ -9324,6 +9326,7 @@ const publicationMetadata = {
   ...haefkensPublicationMetadata,
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
+  ...frusPublicationMetadata,
   ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,
   ...mosquitoTerritoryPublicationMetadata,
@@ -11883,6 +11886,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "frus-nicaragua-mosquito-territory-1894": "united-states-department-of-state",
   "serrano-archivo-indias-panama-1911": "manuel-serrano-y-sanz",
   "foreign-office-mosquito-territory-1848": "great-britain-foreign-office",
   "rodriguez-relacion-espantable-terremoto-1541": "juan-rodriguez",

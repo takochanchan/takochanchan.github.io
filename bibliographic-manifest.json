@@ -7373,6 +7373,25 @@
         "status": "online",
         "url": "https://archive.org/details/centraalamerika00haefgoog"
       }
+    },
+    {
+      "slug": "frus-nicaragua-mosquito-territory-1894",
+      "title": "米国外交文書集 1894年 ニカラグア（モスキート領）",
+      "originalTitle": "Papers Relating to the Foreign Relations of the United States, Nicaragua (Mosquito Territory), 1894",
+      "author": "アメリカ合衆国国務省（編）",
+      "originalAuthor": "United States, Department of State",
+      "year": 1895,
+      "originalPublication": "Washington: Government Printing Office, 1895. 底本207頁。",
+      "publishedDate": "2026-09-20",
+      "updatedDate": "2026-09-20",
+      "sourceEdition": "United States, Department of State. Papers Relating to the Foreign Relations of the United States, Nicaragua (Mosquito Territory), 1894. Washington: Government Printing Office, 1895. pp. 1–207.",
+      "sourceProvider": "米国国務省歴史局（Office of the Historian）。同局の公開画像および電子本文。",
+      "rights": "底本は米国連邦政府刊行物であり、パブリックドメインです。米国国務省歴史局が公開する電子本文（TEI XML）のライセンスはCC0 1.0 Universalです。https://github.com/HistoryAtState/frus/blob/master/LICENSE.md",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://history.state.gov/historicaldocuments/frus1894Nicaragua"
+      }
     }
   ],
   "works": [
