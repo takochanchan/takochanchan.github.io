@@ -1,0 +1,28 @@
+name: Publish approved Vazquez Betancur 1962 assets
+on:
+  push:
+    branches: [agent/vazquez-betancur-publish-20260919]
+permissions:
+  contents: write
+concurrency:
+  group: vazquez-betancur-publication
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Upload and re-download approved assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-vazquez.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vazquez-release-byte-verification
+          path: release-byte-verification.json
