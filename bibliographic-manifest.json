@@ -7337,6 +7337,44 @@
       }
     },
     {
+      "slug": "haefkens-reize-guatemala-1827-1828",
+      "title": "グアテマラへの旅",
+      "originalTitle": "Reize naar Guatemala",
+      "author": "J. ハーフケンス",
+      "originalAuthor": "J. Haefkens",
+      "year": 1827,
+      "originalPublication": "ハーグ、W. K. Mandemaker、1827年。全2部（1827-1828）のうち第I部。",
+      "publishedDate": "2026-09-19",
+      "updatedDate": "2026-09-19",
+      "sourceEdition": "J. Haefkens, Reize naar Guatemala. ハーグ、W. K. Mandemaker、1827年。全2部（1827-1828）のうち第I部。",
+      "sourceProvider": "ゲント大学所蔵・Googleデジタル化・Internet Archive公開。折込市街図はオランダ国立図書館所蔵、Google Books公開の別所蔵本（2yP6dLeQKj8C）で補完。",
+      "rights": "底本：パブリックドメイン（著作権保護期間満了）。Internet Archive公開画像の権利表示：Public Domain Mark 1.0（https://creativecommons.org/publicdomain/mark/1.0/）。折込市街図の補完画像：オランダ国立図書館所蔵・Google Books公開。",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_WhMOAAAAQAAJ"
+      }
+    },
+    {
+      "slug": "haefkens-centraal-amerika-1832",
+      "title": "中央アメリカ",
+      "originalTitle": "Centraal Amerika, uit een geschiedkundig, aardrijkskundig en statistiek oogpunt beschouwd",
+      "author": "J. ハーフケンス",
+      "originalAuthor": "J. Haefkens",
+      "year": 1832,
+      "originalPublication": "ドルドレヒト、Blussé en Van Braam、1832年。",
+      "publishedDate": "2026-09-19",
+      "updatedDate": "2026-09-19",
+      "sourceEdition": "J. Haefkens, Centraal Amerika, uit een geschiedkundig, aardrijkskundig en statistiek oogpunt beschouwd. ドルドレヒト、Blussé en Van Braam、1832年。",
+      "sourceProvider": "ハーバード大学所蔵・Googleデジタル化・Internet Archive公開。図版等はオランダ国立図書館所蔵、Google Books公開の同版（_qpOAAAAcAAJ）で補完。",
+      "rights": "底本：パブリックドメイン（著作権保護期間満了）。Internet Archiveの権利表示：NOT_IN_COPYRIGHT（米国で著作権保護の対象外）。底本PDF冒頭のGoogle Usage guidelinesは、個人・非営利利用、自動照会の禁止、Google透かし表示の保持を求めています。補完画像：オランダ国立図書館所蔵・Google Books公開。",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/centraalamerika00haefgoog"
+      }
+    },
+    {
       "slug": "vazquez-pedro-betancur-1962",
       "title": "ベタンクールの生涯と徳行",
       "originalTitle": "Vida y virtudes del venerable hermano Pedro de San José de Betancur",

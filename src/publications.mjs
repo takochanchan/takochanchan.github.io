@@ -1,4 +1,5 @@
 import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
+import { haefkensPublicationRecords, haefkensPublicationMetadata } from "./haefkens-publications.mjs";
 import { loboPublicationRecords, loboPublicationMetadata } from "./lobo-publication.mjs";
 import { howEadsPublicationRecords, howEadsPublicationMetadata } from "./how-eads-publication.mjs";
 import { serranoPublicationRecords, serranoPublicationMetadata } from "./serrano-publication.mjs";
@@ -239,6 +240,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...haefkensPublicationRecords,
   ...vazquezPublicationRecords,
   ...loboPublicationRecords,
   ...howEadsPublicationRecords,
@@ -9321,6 +9323,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...haefkensPublicationMetadata,
   ...vazquezPublicationMetadata,
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,

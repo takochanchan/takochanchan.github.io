@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 386);
+  assert.equal(publications.length, 388);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 376);
-  assert.equal(majorCataloguePublications.length, 185);
+  assert.equal(cataloguePublications.length, 378);
+  assert.equal(majorCataloguePublications.length, 187);
   assert.equal(shortCataloguePublications.length, 191);
 
   const blom = cataloguePublications.find(
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 109);
+  assert.equal(counts.get("002"), 111);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -192,6 +192,8 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "haefkens-reize-guatemala-1827-1828",
+      "haefkens-centraal-amerika-1832",
       "vazquez-pedro-betancur-1962",
       "lobo-pedro-betancur-1667",
       "how-james-b-eads-1900",
@@ -1724,7 +1726,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 195);
+  assert.equal(majorPublications.length, 197);
   assert.equal(shortPublications.length, 191);
   assert.equal(shortPublicationAuthors.length, 44);
   assert.deepEqual(
@@ -2877,7 +2879,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":185,"papers":191\}/,
+    /bibliographicCounts:\{"books":187,"papers":191\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2890,7 +2892,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">185<\/strong>件/);
+  assert.match(html, /id="book-match-count">187<\/strong>件/);
   assert.match(html, /id="paper-match-count">191<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -3344,3 +3346,19 @@ test("Serrano 1911 preserves the approved title and article classification", () 
   assert.equal(item.searchShard, "002");
 });
 
+
+test("Haefkens books remain separate and disclose unavailable source material", () => {
+  const reize = publications.find((item) => item.slug === "haefkens-reize-guatemala-1827-1828");
+  const centraal = publications.find((item) => item.slug === "haefkens-centraal-amerika-1832");
+  assert.ok(reize && centraal);
+  assert.equal(reize.pageCount, 82);
+  assert.equal(centraal.pageCount, 361);
+  assert.equal(reize.searchShard, "002");
+  assert.equal(centraal.searchShard, "002");
+  assert.match(reize.subtitle, /第I部/);
+  assert.match(reize.description, /第II部（1828年）は底本未入手のため未収録/);
+  assert.match(centraal.description, /折込図3葉.*未収録/);
+  assert.match(reize.rights, /Public Domain Mark 1.0/);
+  assert.match(centraal.rights, /NOT_IN_COPYRIGHT/);
+  assert.equal(cataloguePublications.filter((item) => [reize.slug, centraal.slug].includes(item.slug)).length, 2);
+});

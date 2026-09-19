@@ -3350,6 +3350,42 @@
       "sha256": "3cb5d25d7306d6d650c5d26c7d8972adeba3147e1cfa871d639472b8f9999022"
     },
     {
+      "path": "publications/haefkens-centraal-amerika-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/haefkens-centraal-amerika-1832/cover.jpg",
+      "size": 53030,
+      "sha256": "fc75d5b0725427cfc18eb33b10ec96d52709589766e4b189807ada7c3966eed8"
+    },
+    {
+      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
+      "size": 709235,
+      "sha256": "fed34fda6d7fac066c99aa734183ba570e16c2b7d4be549c376dc54890af3006"
+    },
+    {
+      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
+      "size": 4321760,
+      "sha256": "969a368c3bae991843c25a7fee14a2315c2bbdbac7b7fccfac874311ec0917a9"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
+      "size": 46540,
+      "sha256": "27a6b81ca5a6e7a4eebf3387a711ec4a4a2f7b50559548a5c550d2f7f12f3ad2"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
+      "size": 831730,
+      "sha256": "56ed61ccc3026c46c148d8310212aae604733783adcf6c04710619a89ff7ee44"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
+      "size": 1566011,
+      "sha256": "0a23ca468eee2cbf0d3bcb949292afa2c02df3f2c3935a76d191d12da8226631"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/cover.jpg",
       "url": "https://takochanchan.github.io/publications/henderson-british-honduras-1811/cover.jpg",
       "size": 69499,
