@@ -15,8 +15,11 @@ assert m["pdfSha256"]==next(a["sha256"] for a in assets if a["path"].endswith(".
 assert m["sourceSha256"]==next(a["sha256"] for a in assets if a["path"].endswith(".epub"))
 assert len(m["blocks"])>2000
 assert all(isinstance(v[1],int) and 1<=v[1]<=602 for v in m["blocks"].values())
-print(json.dumps({"labels_without_original_page": [[k,v] for k,v in m["blocks"].items() if not v[0].startswith("原刊")]},ensure_ascii=False))
-assert all(v[0].startswith("原刊") for v in m["blocks"].values())
+front = {k:v for k,v in m["blocks"].items() if not v[0].startswith("原刊")}
+assert set(front)=={f"b{i:05d}" for i in range(1,54)}
+assert all(v[0]=="底本位置なし（前付）" and 1<=v[1]<=4 for v in front.values())
+assert all(v[0].startswith("原刊 p. ") for k,v in m["blocks"].items() if k not in front)
+assert not any("底本 p." in v[0] for v in m["blocks"].values())
 assert any("原刊 p. XV" in v[0] for v in m["blocks"].values())
 assert any("原刊 p. 343" in v[0] for v in m["blocks"].values())
 print(json.dumps({"slug":slug,"search_blocks":len(m["blocks"]),"physical_pdf_pages_verified":True,"approved_asset_bytes_verified":True},ensure_ascii=False))
