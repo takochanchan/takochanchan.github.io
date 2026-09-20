@@ -1,0 +1,13 @@
+name: Verify live Vazquez publication
+on:
+  push:
+    branches: [agent/vazquez-live-check-20260920]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live publication page and cover
+        run: python3 .publication-transfer/check-live-vazquez.py
