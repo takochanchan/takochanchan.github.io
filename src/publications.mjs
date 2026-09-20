@@ -1,3 +1,4 @@
+import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
 import { frusPublicationRecords, frusPublicationMetadata } from "./frus-publication.mjs";
 import { haefkensPublicationRecords, haefkensPublicationMetadata } from "./haefkens-publications.mjs";
 import { loboPublicationRecords, loboPublicationMetadata } from "./lobo-publication.mjs";
@@ -240,6 +241,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...vazquezPublicationRecords,
   ...frusPublicationRecords,
   ...haefkensPublicationRecords,
   ...loboPublicationRecords,
@@ -9326,6 +9328,7 @@ const publicationMetadata = {
   ...haefkensPublicationMetadata,
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
+  ...vazquezPublicationMetadata,
   ...frusPublicationMetadata,
   ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,

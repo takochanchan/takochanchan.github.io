@@ -7332,6 +7332,24 @@
       "url": "https://takochanchan.github.io/publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
       "size": 149721,
       "sha256": "263d0282411d7e3b08b799c569205305cc5d11a315d85ac0d5e2d6d955762c50"
+    },
+    {
+      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
+      "size": 681164,
+      "sha256": "7baa7388254cc721d84f77c0dd678a426b1b4dd43df34800822aae37cf2d8194"
+    },
+    {
+      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
+      "size": 4626862,
+      "sha256": "a414df21138e344b2af4f1d32d1691c2db15fad8ad028982f525a3d623b29b08"
+    },
+    {
+      "path": "publications/vazquez-pedro-betancur-1962/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/cover.jpg",
+      "size": 41546,
+      "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
     }
   ]
 }
