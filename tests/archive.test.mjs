@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 378);
-  assert.equal(majorCataloguePublications.length, 186);
+  assert.equal(cataloguePublications.length, 379);
+  assert.equal(majorCataloguePublications.length, 187);
   assert.equal(shortCataloguePublications.length, 192);
 
   const blom = cataloguePublications.find(
@@ -1727,7 +1727,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 196);
+  assert.equal(majorPublications.length, 197);
   assert.equal(shortPublications.length, 192);
   assert.equal(shortPublicationAuthors.length, 44);
   assert.deepEqual(
@@ -2881,7 +2881,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":186,"papers":192\}/,
+    /bibliographicCounts:\{"books":187,"papers":192\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
