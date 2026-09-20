@@ -15,6 +15,7 @@ assert m["pdfSha256"]==next(a["sha256"] for a in assets if a["path"].endswith(".
 assert m["sourceSha256"]==next(a["sha256"] for a in assets if a["path"].endswith(".epub"))
 assert len(m["blocks"])>2000
 assert all(isinstance(v[1],int) and 1<=v[1]<=602 for v in m["blocks"].values())
+print(json.dumps({"labels_without_original_page": [[k,v] for k,v in m["blocks"].items() if not v[0].startswith("原刊")]},ensure_ascii=False))
 assert all(v[0].startswith("原刊") for v in m["blocks"].values())
 assert any("原刊 p. XV" in v[0] for v in m["blocks"].values())
 assert any("原刊 p. 343" in v[0] for v in m["blocks"].values())
