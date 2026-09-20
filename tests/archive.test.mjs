@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 388);
+  assert.equal(publications.length, 389);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 111);
+  assert.equal(counts.get("002"), 112);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "vazquez-pedro-betancur-1962",
       "frus-nicaragua-mosquito-territory-1894",
       "haefkens-reize-guatemala-1827-1828",
       "haefkens-centraal-amerika-1832",

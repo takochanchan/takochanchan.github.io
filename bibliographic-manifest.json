@@ -7392,6 +7392,25 @@
         "status": "online",
         "url": "https://history.state.gov/historicaldocuments/frus1894Nicaragua"
       }
+    },
+    {
+      "slug": "vazquez-pedro-betancur-1962",
+      "title": "ベタンクールの生涯と徳行",
+      "originalTitle": "Vida y virtudes del venerable hermano Pedro de San José de Betancur",
+      "author": "フランシスコ・バスケス",
+      "originalAuthor": "Francisco Vázquez de Herrera",
+      "year": 1962,
+      "originalPublication": "Guatemala: Sociedad de Geografía e Historia de Guatemala, 1962（18世紀初頭の写本の翻刻）.",
+      "sourceEdition": "Francisco Vázquez de Herrera, Vida y virtudes del venerable hermano Pedro de San José de Betancur, introducción y notas de Lázaro Lamadrid. Guatemala: Sociedad de Geografía e Historia de Guatemala, 1962. バスケスの序文・献辞・注解・補説・原注。",
+      "sourceProvider": "Princeton Theological Seminary Library所蔵本。Internet Archive公開画像（vidayvirtudesdel00vazq）。",
+      "rights": "翻訳対象のバスケス原著部分は著者1714年没により保護期間を満了しています。ラサロ・ラマドリによる1962年版の序論・独自の編者注・索引は翻訳対象外です。1962年版全体をパブリックドメインとは扱っていません。公開画像はPrinceton Theological Seminary Library所蔵本のInternet Archive版を利用。Theological Commonsは保護期間満了資料または権利者の許諾を得た資料を公開する方針ですが、本資料への個別の再利用ライセンスは確認できません。公開方針：https://commons.ptsem.edu/faq",
+      "publishedDate": "2026-09-20",
+      "updatedDate": "2026-09-20",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidayvirtudesdel00vazq"
+      }
     }
   ],
   "works": [

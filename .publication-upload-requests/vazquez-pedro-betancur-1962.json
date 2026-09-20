@@ -1,0 +1,44 @@
+{
+  "slug": "vazquez-pedro-betancur-1962",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "574db0fa3c50689a1b040211a3be2e1f55e91f21",
+  "bundle": {
+    "size": 3747819,
+    "sha256": "3096077f905fc85b9ea61350d5d81a85094f69ffeb9c876507b364f10870c8a1",
+    "chunks": [
+      "56b0c51e5fe648d034b208d5a15711140e94d257",
+      "20cfe1a2e447706befa4e9e6451b54a352084967",
+      "32c8764931587d8bfd901125190773b9c0b5599b",
+      "64c18876b5bd5742c464397ccfef1c4000f6f3ea",
+      "4a3571cfd7447f591a01618de2b8429ee287c201",
+      "10cce9c70136066c460a40f27635fcd0ae3a4300",
+      "0ca94bf75d1e9c7e4de2de6e30642ba6982e8318",
+      "2472e29dd008719bd0b513e85e36465c669d86f0",
+      "4bf117b3584590e16198b185b9ac6697fcc872e8",
+      "d858bcf20bbd68490277af8b1b7120c533ff5e73",
+      "e2618c94535b04b77de3052ce3ff4563fec5c7ff",
+      "4b926ed64f2ace2646d0b16cc14b8c438bd3221c",
+      "8bdcaf408997277e85b3f0c11e47bc974801aab1",
+      "587b032a8935e087dfd039df5eefcbdd8c4238a6",
+      "0d070a29f45b5898ba8822ce3efcafbff5fc1185",
+      "6d3b1be25cdb924398861189478a2e4d51d4cab5",
+      "3b8407c144c3eb067be97cd41a480d4a14a2012e",
+      "e86f38cc73e191394ec047bfe1d174a313d676ed",
+      "c9a73c63c5d8de6a0b840df751ff8b2ad641cb3c",
+      "8e0fa1b1b76a3f3e19db0179411b4f8d805ef03a",
+      "ea681f03b056499deee77738267f14931b1ede13"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
+      "size": 681164,
+      "sha256": "7baa7388254cc721d84f77c0dd678a426b1b4dd43df34800822aae37cf2d8194"
+    },
+    {
+      "filename": "Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
+      "size": 4626862,
+      "sha256": "a414df21138e344b2af4f1d32d1691c2db15fad8ad028982f525a3d623b29b08"
+    }
+  ]
+}
