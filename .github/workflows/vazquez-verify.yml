@@ -1,0 +1,28 @@
+name: Verify Vazquez publication before Pages deployment
+on:
+  push:
+    branches: [agent/vazquez-corrected-verify-20260920]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Verify deployed search after its current build completes
+        run: |
+          for attempt in $(seq 1 24); do
+            if npm run verify:remote-search; then
+              exit 0
+            fi
+            sleep 15
+          done
+          exit 1
+      - name: Check Vazquez source labels, PDF pages and byte identity
+        run: python3 .publication-transfer/verify-vazquez-search.py
