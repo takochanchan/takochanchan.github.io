@@ -1,0 +1,29 @@
+name: Transfer Montalvo PDF and EPUB
+on:
+  push:
+    branches: [agent/montalvo-betancur-publish-20260924]
+    paths: ['.publication-upload-requests/montalvo-betancur-1683.json']
+permissions:
+  contents: write
+concurrency:
+  group: montalvo-publication-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Upload and verify Montalvo assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-montalvo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: montalvo-release-byte-verification
+          path: release-byte-verification.json
