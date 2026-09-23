@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 392);
+  assert.equal(publications.length, 393);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 382);
-  assert.equal(majorCataloguePublications.length, 187);
+  assert.equal(cataloguePublications.length, 383);
+  assert.equal(majorCataloguePublications.length, 188);
   assert.equal(shortCataloguePublications.length, 195);
 
   const blom = cataloguePublications.find(
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 115);
+  assert.equal(counts.get("002"), 116);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -196,6 +196,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       "vle-panama-1831-article-2",
       "vle-interoceanic-1832-article-3",
       "vazquez-pedro-betancur-1962",
+      "montalvo-betancur-1683",
       "frus-nicaragua-mosquito-territory-1894",
       "haefkens-reize-guatemala-1827-1828",
       "haefkens-centraal-amerika-1832",
@@ -1730,7 +1731,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 197);
+  assert.equal(majorPublications.length, 198);
   assert.equal(shortPublications.length, 195);
   assert.equal(shortPublicationAuthors.length, 45);
   assert.deepEqual(
@@ -2887,7 +2888,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":187,"papers":195\}/,
+    /bibliographicCounts:\{"books":188,"papers":195\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
@@ -2900,7 +2901,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, />一覧内検索</);
   assert.match(html, /class="collection-tabs" role="tablist"/);
   assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">187<\/strong>件/);
+  assert.match(html, /id="book-match-count">188<\/strong>件/);
   assert.match(html, /id="paper-match-count">195<\/strong>件/);
   assert.match(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
@@ -3370,4 +3371,3 @@ test("Haefkens books remain separate and disclose unavailable source material", 
   assert.match(centraal.rights, /NOT_IN_COPYRIGHT/);
   assert.equal(cataloguePublications.filter((item) => [reize.slug, centraal.slug].includes(item.slug)).length, 2);
 });
-
