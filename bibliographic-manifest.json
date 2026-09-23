@@ -7411,6 +7411,63 @@
         "status": "online",
         "url": "https://archive.org/details/vidayvirtudesdel00vazq"
       }
+    },
+    {
+      "slug": "vle-panama-1831-article-1",
+      "title": "パナマ地峡の開削",
+      "originalTitle": "Doorgraving van de landengte van Panama.",
+      "author": "F.W.C.",
+      "originalAuthor": "F.W.C.",
+      "year": 1831,
+      "originalPublication": "Vaderlandsche Letteroefeningen, 1831年、第二部〈Mengelwerk〉、pp.670–674.",
+      "publishedDate": "2026-09-23",
+      "updatedDate": "2026-09-23",
+      "sourceEdition": "Vaderlandsche Letteroefeningen, 1831年、第二部〈Mengelwerk〉、pp.670–674.",
+      "sourceProvider": "DBNL（KB, nationale bibliotheek）。DBNL所蔵本による公開翻刻・本文PDF。",
+      "rights": "原著の著作権は満了しています。DBNLは当該年巻をパブリックドメインと表示し、目的を問わない再利用を認めています。公開機関の推奨する出典表示：geraadpleegd via DBNL (KB, nationale bibliotheek)。 利用条件：https://www.dbnl.org/titels/gebruiksvoorwaarden.php?id=_vad003183101",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.dbnl.org/tekst/_vad003183101_01/_vad003183101_01_0394.php"
+      }
+    },
+    {
+      "slug": "vle-panama-1831-article-2",
+      "title": "パナマ地峡の開削（第2回）",
+      "originalTitle": "Doorgraving van de landengte van Panama. (Tweede Artikel.)",
+      "author": "F.W.C.",
+      "originalAuthor": "F.W.C.",
+      "year": 1831,
+      "originalPublication": "Vaderlandsche Letteroefeningen, 1831年、第二部〈Mengelwerk〉、pp.761–765.",
+      "publishedDate": "2026-09-23",
+      "updatedDate": "2026-09-23",
+      "sourceEdition": "Vaderlandsche Letteroefeningen, 1831年、第二部〈Mengelwerk〉、pp.761–765.",
+      "sourceProvider": "DBNL（KB, nationale bibliotheek）。DBNL所蔵本による公開翻刻・本文PDF。",
+      "rights": "原著の著作権は満了しています。DBNLは当該年巻をパブリックドメインと表示し、目的を問わない再利用を認めています。公開機関の推奨する出典表示：geraadpleegd via DBNL (KB, nationale bibliotheek)。 利用条件：https://www.dbnl.org/titels/gebruiksvoorwaarden.php?id=_vad003183101",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.dbnl.org/tekst/_vad003183101_01/_vad003183101_01_0417.php"
+      }
+    },
+    {
+      "slug": "vle-interoceanic-1832-article-3",
+      "title": "大西洋と太平洋を結ぶ諸計画（第3回）",
+      "originalTitle": "Ontwerpen tot vereeniging van den Atlantischen oceaan met de Stille Zuidzee. (IIIde Artikel.)",
+      "author": "F.W.C.",
+      "originalAuthor": "F.W.C.",
+      "year": 1832,
+      "originalPublication": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678.",
+      "publishedDate": "2026-09-23",
+      "updatedDate": "2026-09-23",
+      "sourceEdition": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678.",
+      "sourceProvider": "DBNL（KB, nationale bibliotheek）。ライデン大学図書館所蔵本（V 309）による公開翻刻・本文PDF。",
+      "rights": "原著の著作権は満了しています。DBNLは当該年巻をパブリックドメインと表示し、目的を問わない再利用を認めています。公開機関の推奨する出典表示：geraadpleegd via DBNL (KB, nationale bibliotheek)。 利用条件：https://www.dbnl.org/titels/gebruiksvoorwaarden.php?id=_vad003183201",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.dbnl.org/tekst/_vad003183201_01/_vad003183201_01_0419.php"
+      }
     }
   ],
   "works": [

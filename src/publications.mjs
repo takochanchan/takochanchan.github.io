@@ -1,3 +1,4 @@
+import { vlePanamaPublicationRecords, vlePanamaPublicationMetadata } from "./vle-panama-publications.mjs";
 import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
 import { frusPublicationRecords, frusPublicationMetadata } from "./frus-publication.mjs";
 import { haefkensPublicationRecords, haefkensPublicationMetadata } from "./haefkens-publications.mjs";
@@ -241,6 +242,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...vlePanamaPublicationRecords,
   ...vazquezPublicationRecords,
   ...frusPublicationRecords,
   ...haefkensPublicationRecords,
@@ -9325,6 +9327,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...vlePanamaPublicationMetadata,
   ...haefkensPublicationMetadata,
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
@@ -11889,6 +11892,9 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "vle-panama-1831-article-1": "f-w-c",
+  "vle-panama-1831-article-2": "f-w-c",
+  "vle-interoceanic-1832-article-3": "f-w-c",
   "frus-nicaragua-mosquito-territory-1894": "united-states-department-of-state",
   "serrano-archivo-indias-panama-1911": "manuel-serrano-y-sanz",
   "foreign-office-mosquito-territory-1848": "great-britain-foreign-office",
@@ -12141,6 +12147,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

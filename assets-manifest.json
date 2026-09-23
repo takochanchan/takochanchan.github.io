@@ -7350,6 +7350,60 @@
       "url": "https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/cover.jpg",
       "size": 41546,
       "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.pdf",
+      "size": 370030,
+      "sha256": "cfa370cac4badee73dba1f766aa71f28faf4099bcad1aab2e7fb3b6840058e03"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.epub",
+      "size": 276742,
+      "sha256": "511b40031fb5c224b7d9a7e085a3269016977b64928f6fb9919249f24e9584fb"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-1/cover.jpg",
+      "size": 112242,
+      "sha256": "2f55942c48a2d91ab058736d9a0feca39271c162a3488b1ae8221cc250c1ce91"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.pdf",
+      "size": 256797,
+      "sha256": "5f2d375f0e6da1ce4513c6a0b0ca19ead22203f097ff40dabecbc4579deafbb4"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.epub",
+      "size": 103798,
+      "sha256": "399d8d4b2d54b1e0ffc9bbd396e8992af16dae840544ace8d7433fe4f0ce7bd7"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-2/cover.jpg",
+      "size": 101651,
+      "sha256": "70f79bc0a33811f7c3f42231ffef58f030462ced23abbc712bcc6ddbf3df97bc"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
+      "size": 248758,
+      "sha256": "592c32971dee2d8a2c08869c0db4691a4871d134b31ee4b635046319ca4cee24"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
+      "size": 119127,
+      "sha256": "1c6d3fc57ef596ea34cc88b4b6f486d97011919e2fe35bb4b199d6d707a2aab4"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-interoceanic-1832-article-3/cover.jpg",
+      "size": 116742,
+      "sha256": "347f5b3cf5b2605529fb1e50448567aacbcfab09d5318d55bcb3d863ce491da3"
     }
   ]
 }
