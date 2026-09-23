@@ -7468,6 +7468,25 @@
         "status": "online",
         "url": "https://www.dbnl.org/tekst/_vad003183201_01/_vad003183201_01_0419.php"
       }
+    },
+    {
+      "slug": "montalvo-betancur-1683",
+      "title": "尊敬すべき修道兄弟ペドロ・デ・サン・ホセ・ベタンクールの驚嘆すべき生涯と尊き死",
+      "originalTitle": "Vida admirable y muerte preciosa del venerable hermano Pedro de S. Ioseph Betancur, fundador de la Compañia Bethlemitica en las Yndias Occidentales",
+      "author": "フランシスコ・アントニオ・デ・モンタルボ",
+      "originalAuthor": "Francisco Antonio de Montalvo",
+      "year": 1683,
+      "originalPublication": "Roma: Nicolas Angel Tinassi, 1683.",
+      "publishedDate": "2026-09-24",
+      "updatedDate": "2026-09-24",
+      "sourceEdition": "Francisco Antonio de Montalvo, Vida admirable y muerte preciosa del venerable hermano Pedro de S. Ioseph Betancur, fundador de la Compañia Bethlemitica en las Yndias Occidentales. Roma: Nicolas Angel Tinassi, 1683.",
+      "sourceProvider": "ローマ国立中央図書館所蔵本をGoogleがデジタル化し、Internet Archiveが公開。",
+      "rights": "1683年刊の原著は著作権保護期間を満了しています。Internet Archiveの当該資料にはPublic Domain Mark 1.0が表示されています。これは権利状態の標識であり、CC BY等の利用許諾ライセンスではありません。https://creativecommons.org/publicdomain/mark/1.0/",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_L_RJmewk6jMC"
+      }
     }
   ],
   "works": [

@@ -2846,6 +2846,24 @@
       "sha256": "879c8a93841325e73e6f4e484d82d73dcd9b916e4243981fa09944e7a9d2fe70"
     },
     {
+      "size": 364133,
+      "sha256": "4c2f4a0808b3b3925716cab6e331edf8b9d05a103eb550f37292615ebbae3bb8",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.epub",
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.epub"
+    },
+    {
+      "size": 3543405,
+      "sha256": "e4ead9df59a4883b1b4cdfafbc05d7eafb2cad70facc21089f31ddf9102e1465",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.pdf",
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.pdf"
+    },
+    {
+      "path": "publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
+      "size": 149721,
+      "sha256": "263d0282411d7e3b08b799c569205305cc5d11a315d85ac0d5e2d6d955762c50"
+    },
+    {
       "path": "publications/fuentes-guzman-recordacion-florida-1882-1883/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Antonio_de_Fuentes_y_Guzman_Recordacion_Florida_1882_1883_Japanese_Complete_Translation.epub",
       "size": 1507415,
@@ -3350,6 +3368,42 @@
       "sha256": "085a53cb64ef3fb4ac78c46dee5e0c25ff5de512c3d268a0c7f687f042ea2861"
     },
     {
+      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
+      "size": 709235,
+      "sha256": "fed34fda6d7fac066c99aa734183ba570e16c2b7d4be549c376dc54890af3006"
+    },
+    {
+      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
+      "size": 4321760,
+      "sha256": "969a368c3bae991843c25a7fee14a2315c2bbdbac7b7fccfac874311ec0917a9"
+    },
+    {
+      "path": "publications/haefkens-centraal-amerika-1832/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/haefkens-centraal-amerika-1832/cover.jpg",
+      "size": 53030,
+      "sha256": "fc75d5b0725427cfc18eb33b10ec96d52709589766e4b189807ada7c3966eed8"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
+      "size": 831730,
+      "sha256": "56ed61ccc3026c46c148d8310212aae604733783adcf6c04710619a89ff7ee44"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
+      "size": 1566011,
+      "sha256": "0a23ca468eee2cbf0d3bcb949292afa2c02df3f2c3935a76d191d12da8226631"
+    },
+    {
+      "path": "publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
+      "size": 46540,
+      "sha256": "27a6b81ca5a6e7a4eebf3387a711ec4a4a2f7b50559548a5c550d2f7f12f3ad2"
+    },
+    {
       "path": "publications/henderson-british-honduras-1811/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Henderson_An_Account_of_the_British_Settlement_of_Honduras_1811_Japanese_Complete_Translation.epub",
       "size": 475891,
@@ -3492,6 +3546,24 @@
       "url": "https://takochanchan.github.io/publications/honduras-slaves-correspondence-1823/cover.jpg",
       "size": 59624,
       "sha256": "e61ce186642545c07dd7ef5d83967c588af69cb0807681d51e8e3170b0c04817"
+    },
+    {
+      "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
+      "size": 860295,
+      "sha256": "b62471399264a29a67a71dc1e72a57a9981fbfc66bac64a618dbba28f3ca0b6c"
+    },
+    {
+      "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
+      "size": 1052693,
+      "sha256": "c586a264a44504e3cf0b6f6da3f3c17650318c4b9781fb941023a8582b1e9247"
+    },
+    {
+      "path": "publications/how-james-b-eads-1900/cover-subtitle.jpg",
+      "url": "https://takochanchan.github.io/publications/how-james-b-eads-1900/cover-subtitle.jpg",
+      "size": 30448,
+      "sha256": "c19170bb9530f5af54f361d2274805dd9dc40c0c7dea8a5bf25c3a86e01f966c"
     },
     {
       "path": "publications/humboldt-vues-cordilleres-1810-1813/Humboldt_Vues_des_Cordilleres_1810_1813_ja.epub",
@@ -3908,6 +3980,24 @@
       "sha256": "23d9cde6c3a2a13bb507c295e2a4e7c0ea7351f2baa437022777fd36218c3ad5"
     },
     {
+      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
+      "size": 182975,
+      "sha256": "a57f1df7d3ef0713dd0a3a88dc45a9c8df1ad627693acd03272ccf0b07934473"
+    },
+    {
+      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
+      "size": 1336606,
+      "sha256": "5396ce257ada5d1efdf9103d1abd37e696a97d0d064a8fd06dc63546da417c53"
+    },
+    {
+      "path": "publications/lobo-pedro-betancur-1667/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lobo-pedro-betancur-1667/cover.jpg",
+      "size": 58745,
+      "sha256": "f2659a2a256ea411bf3cd3e84c8d2a670a9d2463a0b0186e368674899514345b"
+    },
+    {
       "path": "publications/lothrop-museum-central-american-expedition-1927/Samuel_K_Lothrop_Museum_Central_American_Expedition_1925_1926_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Samuel_K_Lothrop_Museum_Central_American_Expedition_1925_1926_Japanese_Complete_Translation.epub",
       "size": 58933,
@@ -4218,6 +4308,24 @@
       "url": "https://takochanchan.github.io/publications/molina-costa-rica-new-granada-1853/cover.svg",
       "size": 78617,
       "sha256": "aff1ebbc435633154c3605114148f1ffd039bc936139ba379042f41781c05ef5"
+    },
+    {
+      "path": "publications/montalvo-betancur-1683/Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.epub",
+      "size": 2034388,
+      "sha256": "0df58a955b3850ff28679778c1414aec57b0bac7b0d3495b7ca33ae92b0ee4ee"
+    },
+    {
+      "path": "publications/montalvo-betancur-1683/Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.pdf",
+      "size": 3118481,
+      "sha256": "cba06b9ce9c6a22c5d9941f9a592f36c9533151d108965ad4d577cae9f4d72e3"
+    },
+    {
+      "path": "publications/montalvo-betancur-1683/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montalvo-betancur-1683/cover.jpg",
+      "size": 53965,
+      "sha256": "57b630983f853c459f89a21c8b936930c03fa258f1761e0850becc38e0beead9"
     },
     {
       "path": "publications/montgomery-journey-guatemala-1839/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.epub",
@@ -7028,6 +7136,24 @@
       "sha256": "472e0529c2c2985745db4c8284fe00786a80b88871e0183c6e81b24a01f23394"
     },
     {
+      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
+      "size": 681164,
+      "sha256": "7baa7388254cc721d84f77c0dd678a426b1b4dd43df34800822aae37cf2d8194"
+    },
+    {
+      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
+      "size": 4626862,
+      "sha256": "a414df21138e344b2af4f1d32d1691c2db15fad8ad028982f525a3d623b29b08"
+    },
+    {
+      "path": "publications/vazquez-pedro-betancur-1962/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/cover.jpg",
+      "size": 41546,
+      "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
+    },
+    {
       "path": "publications/villagutierre-itza-1701/cover.jpg",
       "url": "https://takochanchan.github.io/publications/villagutierre-itza-1701/cover.jpg",
       "size": 78804,
@@ -7080,6 +7206,60 @@
       "url": "https://takochanchan.github.io/publications/virchow-graeberschaedel-guatemala-1897/cover.jpg",
       "size": 240947,
       "sha256": "a2dfa68b854c398c190314acc5ffb78fdbb92b2f19ac4f2f91203bb81526fe04"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
+      "size": 229512,
+      "sha256": "5affedc1c5f1ed20992d5cc6285321e2dc2508c701e6f6f2d24fef32ca15e318"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
+      "size": 319824,
+      "sha256": "323e6d11f0c149dba7f2a121f1a1d24f60f21f3d0a49137835c4736948dba788"
+    },
+    {
+      "path": "publications/vle-interoceanic-1832-article-3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-interoceanic-1832-article-3/cover.jpg",
+      "size": 101410,
+      "sha256": "8e2d758bcd3728bb3aaaa590b05c27fd5df0e0ed75a8284d75adfde621edc307"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.epub",
+      "size": 276742,
+      "sha256": "511b40031fb5c224b7d9a7e085a3269016977b64928f6fb9919249f24e9584fb"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.pdf",
+      "size": 370030,
+      "sha256": "cfa370cac4badee73dba1f766aa71f28faf4099bcad1aab2e7fb3b6840058e03"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-1/cover.jpg",
+      "size": 112242,
+      "sha256": "2f55942c48a2d91ab058736d9a0feca39271c162a3488b1ae8221cc250c1ce91"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.epub",
+      "size": 103798,
+      "sha256": "399d8d4b2d54b1e0ffc9bbd396e8992af16dae840544ace8d7433fe4f0ce7bd7"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.pdf",
+      "size": 256797,
+      "sha256": "5f2d375f0e6da1ce4513c6a0b0ca19ead22203f097ff40dabecbc4579deafbb4"
+    },
+    {
+      "path": "publications/vle-panama-1831-article-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-2/cover.jpg",
+      "size": 101651,
+      "sha256": "70f79bc0a33811f7c3f42231ffef58f030462ced23abbc712bcc6ddbf3df97bc"
     },
     {
       "path": "publications/wafer-new-voyage-isthmus-america-1699/Lionel_Wafer_A_New_Voyage_1699_Japanese_Complete_Translation.epub",
@@ -7242,168 +7422,6 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
-    },
-    {
-      "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.pdf",
-      "size": 1052693,
-      "sha256": "c586a264a44504e3cf0b6f6da3f3c17650318c4b9781fb941023a8582b1e9247"
-    },
-    {
-      "path": "publications/how-james-b-eads-1900/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_How_James_B_Eads_1900_Japanese_Translation.epub",
-      "size": 860295,
-      "sha256": "b62471399264a29a67a71dc1e72a57a9981fbfc66bac64a618dbba28f3ca0b6c"
-    },
-    {
-      "path": "publications/how-james-b-eads-1900/cover-subtitle.jpg",
-      "url": "https://takochanchan.github.io/publications/how-james-b-eads-1900/cover-subtitle.jpg",
-      "size": 30448,
-      "sha256": "c19170bb9530f5af54f361d2274805dd9dc40c0c7dea8a5bf25c3a86e01f966c"
-    },
-    {
-      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
-      "size": 182975,
-      "sha256": "a57f1df7d3ef0713dd0a3a88dc45a9c8df1ad627693acd03272ccf0b07934473"
-    },
-    {
-      "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.pdf",
-      "size": 1336606,
-      "sha256": "5396ce257ada5d1efdf9103d1abd37e696a97d0d064a8fd06dc63546da417c53"
-    },
-    {
-      "path": "publications/lobo-pedro-betancur-1667/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/lobo-pedro-betancur-1667/cover.jpg",
-      "size": 58745,
-      "sha256": "f2659a2a256ea411bf3cd3e84c8d2a670a9d2463a0b0186e368674899514345b"
-    },
-    {
-      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.pdf",
-      "size": 1566011,
-      "sha256": "0a23ca468eee2cbf0d3bcb949292afa2c02df3f2c3935a76d191d12da8226631"
-    },
-    {
-      "path": "publications/haefkens-reize-guatemala-1827-1828/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Reize_1827_Part_I_Japanese_Translation.epub",
-      "size": 831730,
-      "sha256": "56ed61ccc3026c46c148d8310212aae604733783adcf6c04710619a89ff7ee44"
-    },
-    {
-      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.pdf",
-      "size": 4321760,
-      "sha256": "969a368c3bae991843c25a7fee14a2315c2bbdbac7b7fccfac874311ec0917a9"
-    },
-    {
-      "path": "publications/haefkens-centraal-amerika-1832/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/J_Haefkens_Centraal_Amerika_1832_Japanese_Translation.epub",
-      "size": 709235,
-      "sha256": "fed34fda6d7fac066c99aa734183ba570e16c2b7d4be549c376dc54890af3006"
-    },
-    {
-      "path": "publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/haefkens-reize-guatemala-1827-1828/cover.jpg",
-      "size": 46540,
-      "sha256": "27a6b81ca5a6e7a4eebf3387a711ec4a4a2f7b50559548a5c550d2f7f12f3ad2"
-    },
-    {
-      "path": "publications/haefkens-centraal-amerika-1832/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/haefkens-centraal-amerika-1832/cover.jpg",
-      "size": 53030,
-      "sha256": "fc75d5b0725427cfc18eb33b10ec96d52709589766e4b189807ada7c3966eed8"
-    },
-    {
-      "size": 3543405,
-      "sha256": "e4ead9df59a4883b1b4cdfafbc05d7eafb2cad70facc21089f31ddf9102e1465",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.pdf",
-      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.pdf"
-    },
-    {
-      "size": 364133,
-      "sha256": "4c2f4a0808b3b3925716cab6e331edf8b9d05a103eb550f37292615ebbae3bb8",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/FRUS_1894_Nicaragua_Japanese_Translation.epub",
-      "path": "publications/frus-nicaragua-mosquito-territory-1894/FRUS_1894_Nicaragua_Japanese_Translation.epub"
-    },
-    {
-      "path": "publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/frus-nicaragua-mosquito-territory-1894/cover.jpg",
-      "size": 149721,
-      "sha256": "263d0282411d7e3b08b799c569205305cc5d11a315d85ac0d5e2d6d955762c50"
-    },
-    {
-      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
-      "size": 681164,
-      "sha256": "7baa7388254cc721d84f77c0dd678a426b1b4dd43df34800822aae37cf2d8194"
-    },
-    {
-      "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.pdf",
-      "size": 4626862,
-      "sha256": "a414df21138e344b2af4f1d32d1691c2db15fad8ad028982f525a3d623b29b08"
-    },
-    {
-      "path": "publications/vazquez-pedro-betancur-1962/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/cover.jpg",
-      "size": 41546,
-      "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.pdf",
-      "size": 370030,
-      "sha256": "cfa370cac4badee73dba1f766aa71f28faf4099bcad1aab2e7fb3b6840058e03"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-1/01_Panama_1831_Article_I_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/01_Panama_1831_Article_I_Japanese_Translation.epub",
-      "size": 276742,
-      "sha256": "511b40031fb5c224b7d9a7e085a3269016977b64928f6fb9919249f24e9584fb"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-1/cover.jpg",
-      "size": 112242,
-      "sha256": "2f55942c48a2d91ab058736d9a0feca39271c162a3488b1ae8221cc250c1ce91"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.pdf",
-      "size": 256797,
-      "sha256": "5f2d375f0e6da1ce4513c6a0b0ca19ead22203f097ff40dabecbc4579deafbb4"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-2/02_Panama_1831_Article_II_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/02_Panama_1831_Article_II_Japanese_Translation.epub",
-      "size": 103798,
-      "sha256": "399d8d4b2d54b1e0ffc9bbd396e8992af16dae840544ace8d7433fe4f0ce7bd7"
-    },
-    {
-      "path": "publications/vle-panama-1831-article-2/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/vle-panama-1831-article-2/cover.jpg",
-      "size": 101651,
-      "sha256": "70f79bc0a33811f7c3f42231ffef58f030462ced23abbc712bcc6ddbf3df97bc"
-    },
-    {
-      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
-      "size": 319824,
-      "sha256": "323e6d11f0c149dba7f2a121f1a1d24f60f21f3d0a49137835c4736948dba788"
-    },
-    {
-      "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
-      "size": 229512,
-      "sha256": "5affedc1c5f1ed20992d5cc6285321e2dc2508c701e6f6f2d24fef32ca15e318"
-    },
-    {
-      "path": "publications/vle-interoceanic-1832-article-3/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/vle-interoceanic-1832-article-3/cover.jpg",
-      "size": 101410,
-      "sha256": "8e2d758bcd3728bb3aaaa590b05c27fd5df0e0ed75a8284d75adfde621edc307"
     }
   ]
 }

@@ -1,5 +1,6 @@
 import { vlePanamaPublicationRecords, vlePanamaPublicationMetadata } from "./vle-panama-publications.mjs";
 import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
+import { montalvoPublicationRecords, montalvoPublicationMetadata } from "./montalvo-publication.mjs";
 import { frusPublicationRecords, frusPublicationMetadata } from "./frus-publication.mjs";
 import { haefkensPublicationRecords, haefkensPublicationMetadata } from "./haefkens-publications.mjs";
 import { loboPublicationRecords, loboPublicationMetadata } from "./lobo-publication.mjs";
@@ -244,6 +245,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 const publicationRecords = [
   ...vlePanamaPublicationRecords,
   ...vazquezPublicationRecords,
+  ...montalvoPublicationRecords,
   ...frusPublicationRecords,
   ...haefkensPublicationRecords,
   ...loboPublicationRecords,
@@ -9332,6 +9334,7 @@ const publicationMetadata = {
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
   ...vazquezPublicationMetadata,
+  ...montalvoPublicationMetadata,
   ...frusPublicationMetadata,
   ...serranoPublicationMetadata,
   ...mendietaPublicationMetadata,
