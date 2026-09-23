@@ -1,0 +1,32 @@
+{
+  "slug": "montalvo-betancur-1683",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "742cc5ead065f675053f3a7bb4fdbde7653f5e81",
+  "bundle": {
+    "size": 4240392,
+    "sha256": "d2b50cb26e98f8db6f85ef01fba238cffde2f11af1103497c975cfab5012881f",
+    "chunks": [
+      "d4e8a97e8aed4325b517aa0f9e929b3e8b8dacda",
+      "fea12e1a63d616b0b9c10d58dd5f798a4639fc76",
+      "9aff8d00fc8c5bca73f24e2ea99d29bba30db81f",
+      "b5d6a2e2f6a941bfec7c0c7c3d08912ad350e6f5",
+      "eb5e5edb74677bbfbd09ea737d7a8a308f5c7b5f",
+      "311438dacc67c37add9d7a0c08a1f89bb484d209",
+      "8caea4257955676845239ba3f49f6b0f6df3e404",
+      "a099b0c758385160139c5f5e2356f31c708fdbc3",
+      "34de7e808a77701189b68567a99cd5ead0ff0ad8"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.pdf",
+      "size": 3118481,
+      "sha256": "cba06b9ce9c6a22c5d9941f9a592f36c9533151d108965ad4d577cae9f4d72e3"
+    },
+    {
+      "filename": "Francisco_Antonio_de_Montalvo_Betancur_1683_Japanese_Translation.epub",
+      "size": 2034388,
+      "sha256": "0df58a955b3850ff28679778c1414aec57b0bac7b0d3495b7ca33ae92b0ee4ee"
+    }
+  ]
+}
