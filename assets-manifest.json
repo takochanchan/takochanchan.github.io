@@ -7390,20 +7390,20 @@
     {
       "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
-      "size": 248758,
-      "sha256": "592c32971dee2d8a2c08869c0db4691a4871d134b31ee4b635046319ca4cee24"
+      "size": 319824,
+      "sha256": "323e6d11f0c149dba7f2a121f1a1d24f60f21f3d0a49137835c4736948dba788"
     },
     {
       "path": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.epub",
-      "size": 119127,
-      "sha256": "1c6d3fc57ef596ea34cc88b4b6f486d97011919e2fe35bb4b199d6d707a2aab4"
+      "size": 229512,
+      "sha256": "5affedc1c5f1ed20992d5cc6285321e2dc2508c701e6f6f2d24fef32ca15e318"
     },
     {
       "path": "publications/vle-interoceanic-1832-article-3/cover.jpg",
       "url": "https://takochanchan.github.io/publications/vle-interoceanic-1832-article-3/cover.jpg",
-      "size": 116742,
-      "sha256": "347f5b3cf5b2605529fb1e50448567aacbcfab09d5318d55bcb3d863ce491da3"
+      "size": 101410,
+      "sha256": "8e2d758bcd3728bb3aaaa590b05c27fd5df0e0ed75a8284d75adfde621edc307"
     }
   ]
 }

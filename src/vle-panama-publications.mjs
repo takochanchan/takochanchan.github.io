@@ -89,14 +89,14 @@ export const vlePanamaPublicationRecords = [
     "author": "F.W.C.",
     "originalAuthor": "F.W.C.",
     "series": "VADERLANDSCHE LETTEROEFENINGEN · 1832",
-    "originalPublication": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678.",
+    "originalPublication": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678、別添地図1葉。",
     "year": 1832,
-    "extent": "PDF 6頁・原刊6頁（別添地図未収録）",
-    "description": "ハーフケンスの記述をもとに、ニカラグア湖とサン・フアン川を利用する両洋間運河の経路、水深、工事条件を検討した1832年の論考です。本文が参照する別添地図は未収録です。",
+    "extent": "PDF 7頁・原刊6頁・別添地図1葉",
+    "description": "ハーフケンスの記述をもとに、ニカラグア湖とサン・フアン川を利用する両洋間運河の経路、水深、工事条件を検討した1832年の論考です。ニカラグア湖・マナグア湖とサン・フアン川を示す別添地図を付しています。",
     "pdf": "publications/vle-interoceanic-1832-article-3/03_Atlantic_Pacific_1832_Article_III_Japanese_Translation.pdf",
-    "pageCount": 6,
+    "pageCount": 7,
     "figureCount": 0,
-    "plateCount": 0,
+    "plateCount": 1,
     "types": [
       "運河史",
       "交通史",
@@ -144,8 +144,8 @@ export const vlePanamaPublicationMetadata = {
   "vle-interoceanic-1832-article-3": {
     "publishedDate": "2026-09-23",
     "updatedDate": "2026-09-23",
-    "sourceEdition": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678.",
-    "sourceProvider": "DBNL（KB, nationale bibliotheek）。ライデン大学図書館所蔵本（V 309）による公開翻刻・本文PDF。",
+    "sourceEdition": "Vaderlandsche Letteroefeningen, 1832年、第二部〈Mengelwerk〉、pp.673–678、別添地図1葉。",
+    "sourceProvider": "DBNL（KB, nationale bibliotheek）。ライデン大学図書館所蔵本（V 309）による公開翻刻・本文PDF・別添地図。",
     "sourceUrl": "https://www.dbnl.org/tekst/_vad003183201_01/_vad003183201_01_0419.php",
     "rights": "原著の著作権は満了しています。DBNLは当該年巻をパブリックドメインと表示し、目的を問わない再利用を認めています。公開機関の推奨する出典表示：geraadpleegd via DBNL (KB, nationale bibliotheek)。 利用条件：https://www.dbnl.org/titels/gebruiksvoorwaarden.php?id=_vad003183201"
   }
