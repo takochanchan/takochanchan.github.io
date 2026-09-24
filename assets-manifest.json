@@ -7422,6 +7422,24 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
+    },
+    {
+      "path": "publications/garcia-historia-bethlehemitica-1723/Historia_Bethlehemitica_1723_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Bethlehemitica_1723_Japanese.pdf",
+      "size": 7805367,
+      "sha256": "65a833ba0623968589af5b0174b8fe4543fdaf08c8a2b5c4087742117e4f300c"
+    },
+    {
+      "path": "publications/garcia-historia-bethlehemitica-1723/Historia_Bethlehemitica_1723_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Bethlehemitica_1723_Japanese.epub",
+      "size": 12079191,
+      "sha256": "e5ad2db8d688e69b61a58379a3b083618c84819ae7b2325d8e55e45c88e430ad"
+    },
+    {
+      "path": "publications/garcia-historia-bethlehemitica-1723/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-historia-bethlehemitica-1723/cover.jpg",
+      "size": 103115,
+      "sha256": "6bbedc268435bdbc443c81267c955b5a1ea047ba92f2a2b25b96ee75d9aadec5"
     }
   ]
 }

@@ -43,7 +43,7 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 393);
+  assert.equal(publications.length, 394);
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -85,8 +85,8 @@ test("catalogue metadata is complete and unique", () => {
 test("split volumes share one canonical bibliography record", () => {
   assert.equal(publicationGroupDefinitions.length, 4);
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 383);
-  assert.equal(majorCataloguePublications.length, 188);
+  assert.equal(cataloguePublications.length, 384);
+  assert.equal(majorCataloguePublications.length, 189);
   assert.equal(shortCataloguePublications.length, 195);
 
   const blom = cataloguePublications.find(
@@ -182,7 +182,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 116);
+  assert.equal(counts.get("002"), 117);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
@@ -192,6 +192,7 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "garcia-historia-bethlehemitica-1723",
       "vle-panama-1831-article-1",
       "vle-panama-1831-article-2",
       "vle-interoceanic-1832-article-3",
@@ -1731,7 +1732,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 198);
+  assert.equal(majorPublications.length, 199);
   assert.equal(shortPublications.length, 195);
   assert.equal(shortPublicationAuthors.length, 45);
   assert.deepEqual(

@@ -7487,6 +7487,25 @@
         "status": "online",
         "url": "https://archive.org/details/bub_gb_L_RJmewk6jMC"
       }
+    },
+    {
+      "slug": "garcia-historia-bethlehemitica-1723",
+      "title": "ベレン会史",
+      "originalTitle": "Historia Bethlehemitica. Vida exemplar, y admirable del venerable siervo de Dios, y padre Pedro de San Joseph Betancur, fundador de el regular instituto de Bethlehen en las Indias Occidentales; frutos singulares de su fecundo espíritu, y sucessos varios de esta religión",
+      "author": "ホセ・ガルシア・デ・ラ・コンセプシオン",
+      "originalAuthor": "Joseph García de la Concepción",
+      "year": 1723,
+      "originalPublication": "Sevilla: Juan de la Puerta, 1723.",
+      "publishedDate": "2026-09-24",
+      "updatedDate": "2026-09-24",
+      "sourceEdition": "Joseph García de la Concepción, Historia Bethlehemitica. Sevilla, 1723. 全4書。",
+      "sourceProvider": "Universidad Francisco Marroquín, Biblioteca Ludwig von Mises所蔵、Luis Luján Muñoz寄贈本。Internet Archive公開画像。補完・照合：Biblioteca Virtual de Andalucía、Biblioteca de la Facultad de Teología de Granada所蔵本（A-G22j-1723）。",
+      "rights": "1723年刊の原著は保護期間を満了しています。主底本の公開メタデータは「NOT IN COPYRIGHT」と表示しています。原刊画像はUniversidad Francisco Marroquín所蔵本のInternet Archive版を利用し、第4書20・21頁をBiblioteca Virtual de Andalucíaの同版画像で補完しました。公開機関による個別のCCライセンスは確認されていません。補完資料：https://www.bibliotecadigitaldeandalucia.es/catalogo/es/consulta/registro.do?id=1019942",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiabethlehe00guat"
+      }
     }
   ],
   "works": [
