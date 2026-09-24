@@ -1,0 +1,20 @@
+name: Verify approved Bethlehemitica publication
+on:
+  push:
+    branches: [agent/bethlehemitica-verify-9f9f]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 14d73cfba58ebe09f4102a58f0b4892ab2fed669
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - run: npm run verify:remote-search
