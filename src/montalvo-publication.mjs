@@ -45,6 +45,6 @@ export const montalvoPublicationMetadata = {
     "sourceEdition": "Francisco Antonio de Montalvo, Vida admirable y muerte preciosa del venerable hermano Pedro de S. Ioseph Betancur, fundador de la Compañia Bethlemitica en las Yndias Occidentales. Roma: Nicolas Angel Tinassi, 1683.",
     "sourceProvider": "ローマ国立中央図書館所蔵本をGoogleがデジタル化し、Internet Archiveが公開。",
     "sourceUrl": "https://archive.org/details/bub_gb_L_RJmewk6jMC",
-    "rights": "1683年刊の原著は著作権保護期間を満了しています。Internet Archiveの当該資料にはPublic Domain Mark 1.0が表示されています。これは権利状態の標識であり、CC BY等の利用許諾ライセンスではありません。https://creativecommons.org/publicdomain/mark/1.0/"
+    "rights": "1683年刊の原著は著作権保護期間を満了しています。Internet Archiveの当該資料にはPublic Domain Mark 1.0が表示されています。https://creativecommons.org/publicdomain/mark/1.0/"
   }
 };
