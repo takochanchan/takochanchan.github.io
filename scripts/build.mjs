@@ -46,6 +46,8 @@ const escapeHtml = (value = "") =>
 
 const catalogueYearForSort = (year) => {
   if (Number.isInteger(year)) return year;
+  const range = String(year).match(/^(\d{4})[–-](\d{4})$/u);
+  if (range) return Number(range[2]);
   const century = String(year).match(/^(\d+)世紀$/u);
   if (!century) return null;
   const centuryNumber = Number(century[1]);

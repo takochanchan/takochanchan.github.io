@@ -6,9 +6,9 @@ export const vazquezPublicationRecords = [
     "subtitle": "マヌエル・ロボの伝記への注解と補説",
     "author": "フランシスコ・バスケス",
     "originalAuthor": "Francisco Vázquez de Herrera",
-    "series": "VIDA Y VIRTUDES · 1962",
-    "originalPublication": "Guatemala: Sociedad de Geografía e Historia de Guatemala, 1962（18世紀初頭の写本の翻刻）.",
-    "year": 1962,
+    "series": "VIDA Y VIRTUDES · 1705–1706",
+    "originalPublication": "グアテマラ、1705–1706年成立（未刊写本）。初刊：Guatemala: Sociedad de Geografía e Historia de Guatemala, 1962.",
+    "year": "1705–1706",
     "extent": "PDF 602頁",
     "description": "ペドロ・デ・サン・ホセ・ベタンクールの生涯をめぐり、フランシスコ会士フランシスコ・バスケスがマヌエル・ロボの伝記に加えた注解と補説です。グアテマラのベレン病院、慈善活動、祈りと悔悛、ベレン会の成立を、証言や書簡、遺言とともに論じます。1962年グアテマラ刊の翻刻本に収められたバスケスの著述部分を底本としました。",
     "cover": "publications/vazquez-pedro-betancur-1962/cover.jpg",
@@ -43,7 +43,7 @@ export const vazquezPublicationRecords = [
 export const vazquezPublicationMetadata = {
   "vazquez-pedro-betancur-1962": {
     "publishedDate": "2026-09-20",
-    "updatedDate": "2026-09-20",
+    "updatedDate": "2026-09-24",
     "sourceEdition": "Francisco Vázquez de Herrera, Vida y virtudes del venerable hermano Pedro de San José de Betancur, introducción y notas de Lázaro Lamadrid. Guatemala: Sociedad de Geografía e Historia de Guatemala, 1962. バスケスの序文・献辞・注解・補説・原注。",
     "sourceProvider": "Princeton Theological Seminary Library所蔵本。Internet Archive公開画像（vidayvirtudesdel00vazq）。",
     "sourceUrl": "https://archive.org/details/vidayvirtudesdel00vazq",
