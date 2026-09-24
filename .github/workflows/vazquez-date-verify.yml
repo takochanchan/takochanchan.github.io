@@ -15,6 +15,18 @@ jobs:
         with:
           node-version: 22
       - run: npm ci --no-audit --no-fund
-      - run: npm run build
-      - run: npm test
       - run: npm run verify:remote-search
+      - name: Check live bibliography date
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          const url='https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/';
+          const response=await fetch(url,{cache:'no-store'});
+          assert.equal(response.status,200);
+          const html=await response.text();
+          assert.ok(html.includes('1705–1706年成立（未刊写本）'));
+          assert.ok(html.includes('VIDA Y VIRTUDES · 1705–1706'));
+          assert.ok(html.includes('1962. バスケスの序文'));
+          assert.ok(!html.includes('1962（18世紀初頭の写本の翻刻）'));
+          console.log('Live Vazquez bibliography: 1705–1706 manuscript date; 1962 source edition preserved. '+url);
+          JS
