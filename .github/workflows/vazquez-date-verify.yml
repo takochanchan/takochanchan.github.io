@@ -1,0 +1,19 @@
+name: Verify Vazquez bibliography date
+on:
+  push:
+    branches: [agent/vazquez-date-9f9f]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 05abd25e357be9710bbcc405855c96c16278732f
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
