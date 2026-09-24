@@ -17,3 +17,4 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run build
       - run: npm test
+      - run: npm run verify:remote-search
