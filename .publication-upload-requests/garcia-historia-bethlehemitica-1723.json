@@ -1,0 +1,179 @@
+{
+  "slug": "garcia-historia-bethlehemitica-1723",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "df5467fa32e215dac821ba033a945b57ca0ca538",
+  "assets": [
+    {
+      "filename": "Historia_Bethlehemitica_1723_Japanese.pdf",
+      "size": 7805367,
+      "sha256": "65a833ba0623968589af5b0174b8fe4543fdaf08c8a2b5c4087742117e4f300c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Bethlehemitica_1723_Japanese.pdf",
+      "chunks": [
+        {
+          "sha": "ee1ff439ba5b1b810e7a13b32e0e6a0c8b0b916e",
+          "size": 524288
+        },
+        {
+          "sha": "918dafa84ccc11e58dc3e74e2b57bd4ddb6906c9",
+          "size": 524288
+        },
+        {
+          "sha": "c03dae82dc095db184a0b941944e637365063123",
+          "size": 524288
+        },
+        {
+          "sha": "dc726e205dea4602bf450cf83e2e8d7dfaed7119",
+          "size": 524288
+        },
+        {
+          "sha": "471ecc2756592acbe0c78052333b954fcae1d2b1",
+          "size": 524288
+        },
+        {
+          "sha": "deddfa6a96a7483a0109c60695308f0d7d18404d",
+          "size": 524288
+        },
+        {
+          "sha": "4db1aee7f5860d49c1e7c810c3ddeb68a8a91566",
+          "size": 524288
+        },
+        {
+          "sha": "913ae4a90b5f2f3a141f78475d40d0e4fa770f67",
+          "size": 524288
+        },
+        {
+          "sha": "6953b2679aa567115f2ca8985bbe3da7fc8ce600",
+          "size": 524288
+        },
+        {
+          "sha": "c4da969b12619a73eb5c5840f6050374662f1899",
+          "size": 524288
+        },
+        {
+          "sha": "a8eea805f0f991f965af24fc2fc0928a926dc34b",
+          "size": 524288
+        },
+        {
+          "sha": "19aec76da3c2c6ccfe832bca5e9d554350507781",
+          "size": 524288
+        },
+        {
+          "sha": "0ecdf035dc5797c66a01ac1681471289310bcacf",
+          "size": 524288
+        },
+        {
+          "sha": "c61b6bb1a26b6948bf98ddf71234dfae520d2402",
+          "size": 524288
+        },
+        {
+          "sha": "39e6568c5b7cd34b4aef095955ad85b11fd08d39",
+          "size": 465335
+        }
+      ]
+    },
+    {
+      "filename": "Historia_Bethlehemitica_1723_Japanese.epub",
+      "size": 12079191,
+      "sha256": "e5ad2db8d688e69b61a58379a3b083618c84819ae7b2325d8e55e45c88e430ad",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Bethlehemitica_1723_Japanese.epub",
+      "chunks": [
+        {
+          "sha": "eb4b547e529f18a7e9be32521988b5de71c562c2",
+          "size": 524288
+        },
+        {
+          "sha": "ae4f45a06a4d18b5ee33eebc5de7f0be1f675639",
+          "size": 524288
+        },
+        {
+          "sha": "d306bd5faa7f69b56ae6450dd8fbbc513f5f5320",
+          "size": 524288
+        },
+        {
+          "sha": "6c1c0fb4969525b84891607a33bbc90381280fe3",
+          "size": 524288
+        },
+        {
+          "sha": "2c62344fa9572762db3a057560e6b1b47419d7aa",
+          "size": 524288
+        },
+        {
+          "sha": "132c9b3549fcf63ed3972ffc344fc3fcb93bbda7",
+          "size": 524288
+        },
+        {
+          "sha": "13424d96ed981b2087e0dc4623e45d828c6e5a86",
+          "size": 524288
+        },
+        {
+          "sha": "bcecccc7848a596ff40a6340909b404d5f4f4373",
+          "size": 524288
+        },
+        {
+          "sha": "04f63045c4b9f7e4921c6b27d23d3c093d65e6ee",
+          "size": 524288
+        },
+        {
+          "sha": "1dbf548c95a12744ebe0999cd0ca48cf3f7c8ce1",
+          "size": 524288
+        },
+        {
+          "sha": "489a40cf6a2ac0d2f51f42ac5541742f568970f5",
+          "size": 524288
+        },
+        {
+          "sha": "f5a198dd96ff719adcd42744b4302b3aedfd2784",
+          "size": 524288
+        },
+        {
+          "sha": "92aec0d9511f6f45b42c7b5f4f69ebcf21ad246c",
+          "size": 524288
+        },
+        {
+          "sha": "372dc972b10cea5766d4b0e611c6c7e39a1a787d",
+          "size": 524288
+        },
+        {
+          "sha": "a03650bafb1e8b4052f01189e0159cd3e1917468",
+          "size": 524288
+        },
+        {
+          "sha": "485b86ec04007716327db54f76ae140b11855b6f",
+          "size": 524288
+        },
+        {
+          "sha": "8614fd93e8c473a5dee45495a1a1701ce73e3640",
+          "size": 524288
+        },
+        {
+          "sha": "72dd5909e999b6e2e39a51de2df150007a9b332b",
+          "size": 524288
+        },
+        {
+          "sha": "7b768e7593a1f54305e15b3e9f22dbff31d94a87",
+          "size": 524288
+        },
+        {
+          "sha": "6656edde754f921c2c50b9b436b094488379d5de",
+          "size": 524288
+        },
+        {
+          "sha": "073bd613d5d26d7e137718917a2e3e2e88469c5e",
+          "size": 524288
+        },
+        {
+          "sha": "ca94c17f5d64762dc93cab28bfb5eb9c43016b4c",
+          "size": 524288
+        },
+        {
+          "sha": "0bf169c8fd0a8307fb3e63422c75a3b5ab6c0d0e",
+          "size": 524288
+        },
+        {
+          "sha": "17b11c0cedc99351f9ba56025e53857ffc37d76e",
+          "size": 20567
+        }
+      ]
+    }
+  ]
+}
