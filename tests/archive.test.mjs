@@ -2889,7 +2889,7 @@ test("home page contains scalable archive controls", async () => {
   assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   assert.match(
     html,
-    /bibliographicCounts:\{"books":188,"papers":195\}/,
+    /bibliographicCounts:\{"books":189,"papers":195\}/,
   );
   assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   assert.match(html, /takochan-search-index-001\/document-map\.json/);
