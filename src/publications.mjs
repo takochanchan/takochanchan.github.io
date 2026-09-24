@@ -1,3 +1,4 @@
+import { bethlehemiticaPublicationRecords, bethlehemiticaPublicationMetadata } from "./bethlehemitica-publication.mjs";
 import { vlePanamaPublicationRecords, vlePanamaPublicationMetadata } from "./vle-panama-publications.mjs";
 import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
 import { montalvoPublicationRecords, montalvoPublicationMetadata } from "./montalvo-publication.mjs";
@@ -243,6 +244,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...bethlehemiticaPublicationRecords,
   ...vlePanamaPublicationRecords,
   ...vazquezPublicationRecords,
   ...montalvoPublicationRecords,
@@ -9329,6 +9331,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...bethlehemiticaPublicationMetadata,
   ...vlePanamaPublicationMetadata,
   ...haefkensPublicationMetadata,
   ...loboPublicationMetadata,
