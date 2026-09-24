@@ -14,8 +14,19 @@ This public repository is paired with the private working-master repository
   GitHub Actions workflows created through that app.
 - Repository-controlled commands executed inside a GitHub-hosted Actions runner
   are part of the approved remote workflow; they do not authorize local CLI use.
-- If the app or workflow is temporarily blocked, preserve the current state and
-  resume through the same approved path. Do not switch to local GitHub CLI.
+- If the app or workflow is temporarily blocked, stop unverified production
+  changes, not feasible diagnosis, minimal repair, or revalidation through the
+  approved path. Preserve verified progress and resume from the failed step.
+  Record an actual blocker when the required service or permission is unavailable.
+  Do not switch to local GitHub CLI.
+
+## Publication execution and recovery
+
+Follow [PUBLICATION_WORKFLOW.md: 公開作業の実行・復旧](PUBLICATION_WORKFLOW.md#execution-recovery)
+as the single canonical execution and recovery rule set. Reuse compatible,
+successful workflows, carry verified step evidence forward, and repair only the
+failed step and its affected dependants. Do not duplicate these rules here or
+weaken any publication gate below.
 
 ## Mandatory order for every new or revised publication
 
@@ -48,16 +59,18 @@ The release is incomplete if the working master or current external search
 shard is missing. The main Pages workflow deliberately fails before deployment
 when a shard is stale, so the previously complete live site remains in place.
 If archival, remote verification, page mapping, search coverage, or the master
-gate fails, stop the public release. Never publish first with a promise to
-archive or index later.
+gate fails, stop unverified public release changes and follow the recovery rules
+above. Never publish first with a promise to archive or index later.
 
-Search shards are append-stable. `001` is sealed at 277 works. The public
-`takochan-search-index-002` repository is reserved but remains dormant and
-unreferenced until the first later publication is ready. Assign every new
-publication explicitly to `searchShard: "002"`, activate and deploy `002`, then
-publish the main site. The per-shard `sealedWorks` guard must reject silent
-fallback additions to `001`. Later active shards accept at most 300 works; never
-rebalance old slugs merely because catalogue order changes.
+Search shards are append-stable. `001` is sealed at 277 works. Determine shard
+configuration from the current `search-shards.json` and each publication's
+`searchShard`, and verify deployment through the existing remote checks; do not
+infer dormant or active status from historical prose. Assign new publications
+explicitly to `searchShard: "002"` under the current allocation rule and update
+its existing configured repository rather than attempting first-time activation.
+The per-shard `sealedWorks` guard must reject silent fallback additions to `001`.
+Later active shards accept at most 300 works; never rebalance old slugs merely
+because catalogue order changes.
 
 Release fallback records and their assets are permanent provenance. After Git
 LFS becomes available, migrate the exact verified bytes to the canonical path,
