@@ -15,6 +15,41 @@ jobs:
         with:
           node-version: 22
       - run: npm ci --no-audit --no-fund
-      - run: npm run build
-      - run: npm test
       - run: npm run verify:remote-search
+      - name: Verify published page and exact final assets
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, subprocess, tempfile, urllib.request, zipfile, io
+          from xml.etree import ElementTree as ET
+          base='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/'
+          page='https://takochanchan.github.io/publications/garcia-historia-bethlehemitica-1723/'
+          def get(url):
+              with urllib.request.urlopen(url,timeout=120) as response:return response.read()
+          html=get(page).decode()
+          assert 'ベレン会史' in html
+          sums=get(base+'SHA256SUMS.txt').decode()
+          expected={
+          'Historia_Bethlehemitica_1723_Japanese.pdf':(7805367,'65a833ba0623968589af5b0174b8fe4543fdaf08c8a2b5c4087742117e4f300c'),
+          'Historia_Bethlehemitica_1723_Japanese.epub':(12079191,'e5ad2db8d688e69b61a58379a3b083618c84819ae7b2325d8e55e45c88e430ad')}
+          report={'page':page,'assets':{}}
+          for name,(size,digest) in expected.items():
+              assert name in html
+              data=get(base+name)
+              assert len(data)==size and hashlib.sha256(data).hexdigest()==digest
+              assert any(line.split()[0]==digest and line.split()[-1].lstrip('*').rsplit('/',1)[-1]==name for line in sums.splitlines() if line.strip())
+              report['assets'][name]={'size':len(data),'sha256':digest}
+              if name.endswith('.epub'):
+                  with zipfile.ZipFile(io.BytesIO(data)) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+                      container=ET.fromstring(z.read('META-INF/container.xml'))
+                      opf=container.find('.//{urn:oasis:names:tc:opendocument:xmlns:container}rootfile').attrib['full-path']
+                      assert ET.fromstring(z.read(opf)).attrib['version'].startswith('3')
+              else:
+                  with tempfile.TemporaryDirectory() as t:
+                      p=pathlib.Path(t)/name;p.write_bytes(data)
+                      info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                      assert any(line.startswith('Pages:') and line.split()[-1]=='768' for line in info.splitlines())
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          
+          PY
