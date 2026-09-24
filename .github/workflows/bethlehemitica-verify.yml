@@ -16,6 +16,10 @@ jobs:
           node-version: 22
       - run: npm ci --no-audit --no-fund
       - run: npm run verify:remote-search
+      - name: Install PDF inspection dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
       - name: Verify published page and exact final assets
         run: |
           python3 - <<'PY'
