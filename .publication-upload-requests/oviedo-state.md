@@ -15,3 +15,12 @@
 - Release SHA256SUMS.txt updated only for these eight assets and re-downloaded successfully.
 - Shard 002 requested from 4bdf2d48ab21699ef1b05d1bbbf4d85135a8f59c; controller commit eb73da42bae2e2f9650186986a694168648ea287.
 - Transfer workflow removed after successful completion. Awaiting shard deployment, Pages and live verification.
+
+## Publication completed and externally verified
+- Publication page: https://takochanchan.github.io/publications/oviedo-historia-general-natural-indias-1851-1855/
+- Public source: 320adac8eac0b16a3817ca426f836a59aae2bd9e.
+- Release build/tests/upload/re-download: run 36118787614, success.
+- Shard 002 build, source-page/PDF-page validation and Pages deployment: run 36118993218, success.
+- Main Pages including remote-search verification: run 36119609601, success.
+- Live page, all 8 PDF/EPUB hashes and sizes, Release SHA256SUMS, EPUB 3 structures, PDF page counts [1161, 831, 1091, 1046], all 4 covers, and remote search: run 36119736360, success; artifact oviedo-live-verification.
+- All required publication steps are complete. No retransmission or regeneration is needed.
