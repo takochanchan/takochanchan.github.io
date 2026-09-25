@@ -18,6 +18,10 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm run build
       - run: npm test
+      - name: Install PDF inspection dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
       - name: Upload and re-download approved assets
         env:
           GH_TOKEN: ${{ github.token }}
