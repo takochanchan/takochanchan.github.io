@@ -1,0 +1,18 @@
+name: Verify approved Fellechner 1845 publication
+on:
+  push:
+    branches: [agent/fellechner-verify-20260925]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 108ad763cecd5282e6ce15d9a63542794aa7c80b
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run verify:remote-search
