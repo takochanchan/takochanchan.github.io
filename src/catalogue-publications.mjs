@@ -7,6 +7,37 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "author": "ゴンサロ・フェルナンデス・デ・オビエド・イ・バルデス",
+  "originalAuthor": "Gonzalo Fernández de Oviedo y Valdés",
+  "series": "HISTORIA GENERAL Y NATURAL DE LAS INDIAS · 1851–1855",
+  "sourceUrl": "https://archive.org/details/historiageneraly01fern",
+  "publishedDate": "2026-09-24",
+  "updatedDate": "2026-09-24",
+  "slug": "oviedo-historia-general-natural-indias-1851-1855",
+  "memberSlugs": [
+    "oviedo-historia-general-natural-indias-volume-i-1851",
+    "oviedo-historia-general-natural-indias-volume-ii-1852",
+    "oviedo-historia-general-natural-indias-volume-iii-1853",
+    "oviedo-historia-general-natural-indias-volume-iv-1855"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第3巻",
+    "第4巻"
+  ],
+  "title": "インディアスの一般史・博物誌",
+  "originalTitle": "Historia general y natural de las Indias, islas y tierra-firme del mar océano",
+  "subtitle": "全4巻・1851-1855年刊",
+  "originalPublication": "マドリード、Real Academia de la Historia、1851-1855年",
+  "year": 1851,
+  "extent": "全4巻・PDF計4,129頁",
+  "description": "ゴンサロ・フェルナンデス・デ・オビエドが、新大陸の自然、先住民の社会と習俗、スペイン人の探検・征服・植民地統治を記した歴史書・博物誌です。ホセ・アマドール・デ・ロス・リオス編、1851-1855年マドリード刊の全4巻を底本としています。",
+  "sourceEdition": "Gonzalo Fernández de Oviedo y Valdés, Historia general y natural de las Indias, islas y tierra-firme del mar océano, ed. José Amador de los Ríos, tomos I-IV, Madrid: Real Academia de la Historia, 1851-1855.",
+  "sourceProvider": "New York Botanical GardenおよびMissouri Botanical Garden所蔵・提供、Biodiversity Heritage Library／Internet Archive公開本。",
+  "rights": "原著および1851-1855年刊本は保護期間満了（パブリックドメイン）。Biodiversity Heritage Libraryはパブリックドメイン資料の電子化に新たな著作権を主張せず、商用を含む再利用を認めています。利用方針：https://about.biodiversitylibrary.org/help/copyright-and-reuse/"
+},
+{
   "slug": "robertson-history-america-1777-1796",
   "memberSlugs": [
     "robertson-history-america-volume-i-1777",
@@ -502,4 +533,5 @@ export const majorCataloguePublications = cataloguePublications.filter(
 export const shortCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "short-work",
 );
+
 

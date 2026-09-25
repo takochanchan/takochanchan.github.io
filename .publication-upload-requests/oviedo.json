@@ -1,0 +1,74 @@
+{
+  "slug": "oviedo-historia-general-natural-indias-1851-1855",
+  "verified_archive_commit": "13305fe31483eea196474e98fde340a9cd5b85b8",
+  "release_tag": "publications-current",
+  "bundle": {
+    "size": 151274651,
+    "sha256": "477744305940ba56032ae7d4ce1c78805c7cb055981d8780fff74bb89f91b314",
+    "chunks": [
+      "04b254a35ea5b08a1f5f6ed452ec071c986160d4",
+      "18a4c1603fb77fab7111f9945969fff3f11b8135",
+      "ab5dd010bfa40301c79738c20cd29c2383da8b15",
+      "bab6231c53c463d467edf57b074e9230d80aabec",
+      "d778f53bdedbb51dbf308e87860df1513bac7ac5",
+      "467bf9a4ca30a038c742a22e9d5c90f30b3645cc",
+      "d5e8de506130c57e0e1b1269de683a584ba80b14",
+      "3d5de894dbbcc9d4514d1a782d84c68409929761",
+      "dae4f9ced145baa4afa3396bf60c3dfaca652ad8",
+      "2a91768744cc1420780b8b96c02c8e3a37f22b09",
+      "4b79420308a507765254670badf12642b0433a73",
+      "6f780cb98735d3f758b5a851adb6a0330e262501",
+      "05e4aebebdc310e9a2750f821ebfcb774cb33fb3",
+      "9d45c15c17153490bd928936f0ec5d011d459c2b",
+      "48040cc7ee78269174dadb7c0dabfdd1cd9d679b",
+      "da8b02cfafeb404cf5ace918e74fe60f638697a2",
+      "12521d963068dc1090ad385561071633659a9376",
+      "9b2ee61947375a1678089ecc4bce95f0ae27e196",
+      "c44ca8d239c9027ee2ffb9ad01b426822e8a95a2"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_I_1851_Japanese.pdf",
+      "size": 10091984,
+      "sha256": "c5cdb9cb6c0ac1a7e34de31c70c528a53d2f00b0e5fcc967a10112dddf196493"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_I_1851_Japanese.epub",
+      "size": 15750719,
+      "sha256": "2f254673e263c8a335a96dd1f86ba1c92bffb950702be036c5263f5538fe3a37"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_II_1852_Japanese.pdf",
+      "size": 8107876,
+      "sha256": "6e2154a9802de6a59d2c468ebc573dc713c14000b14faba95d4ebeaf49a78373"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_II_1852_Japanese.epub",
+      "size": 39871339,
+      "sha256": "11803288cbbd12676c4fbf672e9951987995f166c663edc5f05026bc3099ea6e"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_III_1853_Japanese.pdf",
+      "size": 7910149,
+      "sha256": "2632399f97b6985b0699a6aa75ddcd53e3d2dac4422bef15d7226b53461e1b3b"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_III_1853_Japanese.epub",
+      "size": 4134791,
+      "sha256": "291a41bdd6411111e31fadb5e1bb5df7a64328cb88bc3e71eb99a1e9df0cb46d"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_IV_1855_Japanese.pdf",
+      "size": 9648503,
+      "sha256": "1e99e8579aca8338a2a8924044445fd6504b48520d4a8c6012477bc61210bbe4"
+    },
+    {
+      "filename": "Oviedo_Historia_General_Natural_Indias_Volume_IV_1855_Japanese.epub",
+      "size": 65173725,
+      "sha256": "ee660741a17136bab9d8726b8fe4cdc66f7354ae610a5167a06de07f24a2ac9d"
+    }
+  ],
+  "completed": 19
+}
+

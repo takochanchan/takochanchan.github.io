@@ -105,6 +105,7 @@
     "elorza-conquista-ytza-1714": "publications/elorza-conquista-ytza-1714/master.docx",
     "esquinca-usumacinta": "publications/esquinca-usumacinta/master.md",
     "fancourt-history-yucatan-1854": "publications/fancourt-history-yucatan-1854/master.docx",
+    "fellechner-mueller-hesse-mosquitoland-1845": "publications/fellechner-mueller-hesse-mosquitoland-1845/master.docx",
     "fernandez-historia-costa-rica-1889": "publications/fernandez-historia-costa-rica-1889/master.docx",
     "figueroa-album": "publications/figueroa-album/master.docx",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
@@ -128,6 +129,7 @@
     "galvao-tratado-descobrimentos-1563": "publications/galvao-tratado-descobrimentos-1563/master.docx",
     "gann-discoveries-central-america-1928": "publications/gann-discoveries-central-america-1928/master.docx",
     "gann-maya-indians-1918": "publications/gann-maya-indians-1918/master.docx",
+    "garcia-historia-bethlehemitica-1723": "publications/garcia-historia-bethlehemitica-1723/master.docx",
     "garcia-pelaez-memorias-guatemala-1851-1852": "publications/garcia-pelaez-memorias-guatemala-1851-1852/master.md",
     "garella-panama-canal-1845": "publications/garella-panama-canal-1845/master.docx",
     "gemelli-careri-giro-del-mondo-nuova-spagna-1700": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/master.docx",
@@ -196,6 +198,10 @@
     "nuix-reflexiones-imparciales-1783-ja": "publications/nuix-reflexiones-imparciales-1783-ja/master.docx",
     "ordonez-creation-1907": "publications/ordonez-creation-1907/master.docx",
     "otis-isthmus-panama-railroad-1867": "publications/otis-isthmus-panama-railroad-1867/master.docx",
+    "oviedo-historia-general-natural-indias-volume-i-1851": "publications/oviedo-historia-general-natural-indias-volume-i-1851/master.docx",
+    "oviedo-historia-general-natural-indias-volume-ii-1852": "publications/oviedo-historia-general-natural-indias-volume-ii-1852/master.docx",
+    "oviedo-historia-general-natural-indias-volume-iii-1853": "publications/oviedo-historia-general-natural-indias-volume-iii-1853/master.docx",
+    "oviedo-historia-general-natural-indias-volume-iv-1855": "publications/oviedo-historia-general-natural-indias-volume-iv-1855/master.docx",
     "palacio-carta-rey-espana-1860": "publications/palacio-carta-rey-espana-1860/master.docx",
     "paniagua-catecismo-chiapas-1876": "publications/paniagua-catecismo-chiapas-1876/master.docx",
     "pastrana-mexico-guatemala-boundary-1897": "publications/pastrana-mexico-guatemala-boundary-1897/master.md",
@@ -338,9 +344,7 @@
     "wyse-canal-panama-isthme-americain-1886": "publications/wyse-canal-panama-isthme-americain-1886/master.docx",
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
-    "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
-    "garcia-historia-bethlehemitica-1723": "publications/garcia-historia-bethlehemitica-1723/master.docx",
-    "fellechner-mueller-hesse-mosquitoland-1845": "publications/fellechner-mueller-hesse-mosquitoland-1845/master.docx"
+    "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
