@@ -1,22 +1,40 @@
-# Fellechner 1845 publication — complete
+# Fellechner 1845 publication — cover revision complete
 
 Publication: https://takochanchan.github.io/publications/fellechner-mueller-hesse-mosquitoland-1845/
-Canonical archive commit: 227042772cc71714aff72af2b0a60c1cb6ea6af9
-Archive ingestion: run 36071895126 success.
-Public source commit: 108ad763cecd5282e6ce15d9a63542794aa7c80b
-Transfer and redownload verification: run 36088877747 success.
-PDF asset: 587391353, 7882482 bytes, SHA256 783130494b73c58206bd44f75ed7481f78bd9217f671f490f396ac4de920af95, 325 pages.
-EPUB asset: 587391352, 24902057 bytes, SHA256 7c9a575b3a7809186cb047ab76ae60d854d14ff0cd86089abea6ca9066b1f9ce.
-Shard 002 controller commit: 15ee8b309dbe586f3af5260cda7c5be0208be4f9.
-Shard build, verification and deployment: run 36088937600 success.
-Remote search verification before main promotion: run 36089310304 success.
-Pages build and deployment: run 36089365242 success.
-Post-publication page, PDF page count, EPUB3 ZIP structure, asset sizes/hashes, SHA256SUMS, remote search verification: run 36089471521 success.
 
-Reused transfer implementation: .publication-transfer/transfer-lobo.py at bd20e125797c0a8d954694cc7549467ef3df57ce, successful run 35441135173. Adapted to concatenate the already uploaded raw chunks per asset.
-Resolved: large local base64 output truncation by bounded reads; preserved the original blob IDs and bytes. Updated existing fallback ledger references after confirming their master hashes and sizes in the new archive commit.
-No further publication steps remain.
+## Current edition: 2026-09-25 cover correction
 
-## Cover correction 2026-09-25
+- Cover label: BERICHT · 1845. Corrected in the editable DOCX, PDF, EPUB and catalogue image.
+- Canonical archive commit: ae7ecd6743d24764640bc5524c59b1b6008118f9.
+- Archive validation and LFS save: run 36107555273 success.
+- Public revision commit: aef3dd54d682c58df1851cf60fa85b616e116efa.
+- PDF/EPUB replacement, formal EPUB 3 validation, redownload byte verification: run 36107819458 success.
+- Shard 002 controller commit: 711d97e71b9d2bf295c9a9a73342fad20f083212.
+- Search build, verification and deployment: run 36107976973 success.
+- Main Pages build, tests, remote search gate and deployment: run 36108519926 success.
+- Live bibliography, cover image, PDF, EPUB, SHA256SUMS and remote search verification: run 36108660351 success.
+- PDF has 325 pages. All 324 non-cover pages are raster-identical to the approved prior edition.
+- Immediate DOCX/PDF reproduction: pdfplumber 0.11.8; 201254 characters; maximum coordinate difference 0 pt.
+- Completed temporary public transfer workflow and temporary revision/verification branches were removed. Other publication branches and assets were preserved.
 
-Label: BERICHT · 1845. PDF: 325 pages; 324 non-cover pages are raster-identical to the approved edition. Immediate DOCX reproduction: pdfplumber 0.11.8, 201254 characters, maximum coordinate difference 0 pt. Canonical master: ae7ecd6743d24764640bc5524c59b1b6008118f9; archive run 36107555273 success. PDF/EPUB replacement, EPUB 3 validation and redownload byte verification: run 36107819458 success. Reused transfer flow from run 36088877747, with a checksum-pinned delta to reuse unchanged images. Shard 002 run 36107976973. Pending: main Pages and final live URL checks.
+## Final file identities
+
+- Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.pdf: 7882099 bytes; SHA-256 e4c96120f659dcbd8b3de77903926c8dbc7353e15ab579f05ecef2a554364c9b.
+- cover.jpg: 74365 bytes; SHA-256 48235f7cf4d8159507f87472c02091251d18c7a8c41d1e461991ed8e49b0c8ae.
+- Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub: 24918911 bytes; SHA-256 6158c82f12d08647d7d8d49122beb4c153509a4929204339c09138d92586f01f.
+- Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.docx: 26004277 bytes; SHA-256 c3d40298f5b6eee016ef7e693ee174a4e30ec3bf68145c46ce46af04d31fc81a.
+
+## Reused implementation and resolved failures
+
+Used the existing fellechner-transfer.yml route (successful run 36088877747) and existing search/Pages gates. Reused verified existing remote bytes with a checksum-pinned byte-copy delta for the PDF; rebuilt the EPUB cover entries from the corrected authoring-master label and PDF cover image. All reconstructed files matched the local corrected final files before upload.
+
+The private whitespace check initially treated the repository's existing TSV CRLF as trailing whitespace; enabled Git's cr-at-eol recognition while retaining whitespace checks. The transfer runner initially lacked pdfinfo; installed Poppler as in the prior successful remote verification workflow. No unverified asset was uploaded by either failed attempt.
+
+## Initial publication provenance
+
+Original archive commit: 227042772cc71714aff72af2b0a60c1cb6ea6af9.
+Initial archive ingestion: run 36071895126.
+Initial release transfer: run 36088877747.
+Initial live verification: run 36089471521.
+
+No publication or cover-replacement steps remain.
