@@ -16,3 +16,7 @@ Post-publication page, PDF page count, EPUB3 ZIP structure, asset sizes/hashes, 
 Reused transfer implementation: .publication-transfer/transfer-lobo.py at bd20e125797c0a8d954694cc7549467ef3df57ce, successful run 35441135173. Adapted to concatenate the already uploaded raw chunks per asset.
 Resolved: large local base64 output truncation by bounded reads; preserved the original blob IDs and bytes. Updated existing fallback ledger references after confirming their master hashes and sizes in the new archive commit.
 No further publication steps remain.
+
+## Cover correction 2026-09-25
+
+Corrected label: BERICHT · 1845. 325 pages; non-cover 324 pages are raster-identical to the approved edition. Canonical master saved at ae7ecd6743d24764640bc5524c59b1b6008118f9; run 36107555273 succeeded. Reusing fellechner-transfer.yml (run 36088877747) with checksum-pinned byte-copy delta input to avoid retransmitting unchanged images. PDF and EPUB reconstruction is checked against locally generated final bytes. Pending: public assets, shard 002, remote gate, Pages, live verification.

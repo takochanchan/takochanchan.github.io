@@ -42,7 +42,7 @@ export const fellechnerPublicationRecords = [
 export const fellechnerPublicationMetadata = {
   "fellechner-mueller-hesse-mosquitoland-1845": {
     "publishedDate": "2026-09-24",
-    "updatedDate": "2026-09-24",
+    "updatedDate": "2026-09-25",
     "sourceEdition": "A. Fellechner, Dr. Müller, C. L. C. Hesse, Bericht über die im höchsten Auftrage … bewirkte Untersuchung einiger Theile des Mosquitolandes. Berlin: Alexander Duncker, 1845. [5], 274 S., 3 Tafeln und 2 Karten.",
     "sourceProvider": "ポーランド科学アカデミー地理・空間組織研究所、地理・環境保護中央図書館所蔵本（請求記号24.431）をRCiNが公開した画像を底本としました。",
     "sourceUrl": "https://rcin.org.pl/dlibra/publication/90764/edition/69690/content",
