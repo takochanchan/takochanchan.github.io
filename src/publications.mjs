@@ -1,3 +1,4 @@
+import { fellechnerPublicationRecords, fellechnerPublicationMetadata } from "./fellechner-publication.mjs";
 import { bethlehemiticaPublicationRecords, bethlehemiticaPublicationMetadata } from "./bethlehemitica-publication.mjs";
 import { vlePanamaPublicationRecords, vlePanamaPublicationMetadata } from "./vle-panama-publications.mjs";
 import { vazquezPublicationRecords, vazquezPublicationMetadata } from "./vazquez-publication.mjs";
@@ -244,6 +245,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...fellechnerPublicationRecords,
   ...bethlehemiticaPublicationRecords,
   ...vlePanamaPublicationRecords,
   ...vazquezPublicationRecords,
@@ -9331,6 +9333,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...fellechnerPublicationMetadata,
   ...bethlehemiticaPublicationMetadata,
   ...vlePanamaPublicationMetadata,
   ...haefkensPublicationMetadata,

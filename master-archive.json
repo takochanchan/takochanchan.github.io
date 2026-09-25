@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "1064d73f4310004d04fd54b91471bf4f3644f723",
+  "archive_commit": "227042772cc71714aff72af2b0a60c1cb6ea6af9",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -339,7 +339,8 @@
     "ximenez-ayer-ms-1515-volume-1": "publications/ximenez-ayer-ms-1515-volume-1/master.docx",
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
-    "garcia-historia-bethlehemitica-1723": "publications/garcia-historia-bethlehemitica-1723/master.docx"
+    "garcia-historia-bethlehemitica-1723": "publications/garcia-historia-bethlehemitica-1723/master.docx",
+    "fellechner-mueller-hesse-mosquitoland-1845": "publications/fellechner-mueller-hesse-mosquitoland-1845/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

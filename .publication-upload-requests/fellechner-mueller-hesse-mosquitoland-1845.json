@@ -1,0 +1,342 @@
+{
+  "slug": "fellechner-mueller-hesse-mosquitoland-1845",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "227042772cc71714aff72af2b0a60c1cb6ea6af9",
+  "staging_branch": "agent/fellechner-assets-20260925",
+  "assets": [
+    {
+      "filename": "Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.pdf",
+      "size": 7882482,
+      "sha256": "783130494b73c58206bd44f75ed7481f78bd9217f671f490f396ac4de920af95",
+      "chunks": [
+        {
+          "offset": 0,
+          "size": 524288,
+          "sha": "c641e40b568d7a99245f563eae95115f20fb2e39"
+        },
+        {
+          "offset": 524288,
+          "size": 524288,
+          "sha": "2d97cde134d6b0f1f8f670f85ff63b6dff824fe3"
+        },
+        {
+          "offset": 1048576,
+          "size": 524288,
+          "sha": "fbc41286ce10765407ed1e4a2b001399fc512cc5"
+        },
+        {
+          "offset": 1572864,
+          "size": 524288,
+          "sha": "da6458973cbba7170b2b8fabe1e3ac3ef28016a5"
+        },
+        {
+          "offset": 2097152,
+          "size": 524288,
+          "sha": "3393e95d0607b1d36528272bd9a6572c9d8bd246"
+        },
+        {
+          "offset": 2621440,
+          "size": 524288,
+          "sha": "d5c84499b36b1ce93fe1ce8b36a3ed8d68c35e5c"
+        },
+        {
+          "offset": 3145728,
+          "size": 524288,
+          "sha": "d9d4f655199d7cc0883b332d26ebfa935432257a"
+        },
+        {
+          "offset": 3670016,
+          "size": 524288,
+          "sha": "c65c8e3dfe1fdc9f2bce27db7d83e502a2bdf007"
+        },
+        {
+          "offset": 4194304,
+          "size": 524288,
+          "sha": "f40947e545d46c452cd64cad0c4e63c91f493161"
+        },
+        {
+          "offset": 4718592,
+          "size": 524288,
+          "sha": "06aa956aa72de50af340e21a376863f7c3453f28"
+        },
+        {
+          "offset": 5242880,
+          "size": 524288,
+          "sha": "8d7d55f77eca0f291dacbd418b1db0e637800e07"
+        },
+        {
+          "offset": 5767168,
+          "size": 524288,
+          "sha": "dd7c152b68a767e3b7ac7b6d38195e8597648144"
+        },
+        {
+          "offset": 6291456,
+          "size": 524288,
+          "sha": "4257b8d123839dc2bd1e2a939d4f303aa5a182ed"
+        },
+        {
+          "offset": 6815744,
+          "size": 524288,
+          "sha": "d02fc878a0467efe3d5e2da83497477bf4d36237"
+        },
+        {
+          "offset": 7340032,
+          "size": 524288,
+          "sha": "7c638a115de0c8e78d0a97a691a9355832efe3d2"
+        },
+        {
+          "offset": 7864320,
+          "size": 18162,
+          "sha": "5a1bdfd7b65d577c8556e064cc39f857d52024cd"
+        }
+      ]
+    },
+    {
+      "filename": "Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub",
+      "size": 24902057,
+      "sha256": "7c9a575b3a7809186cb047ab76ae60d854d14ff0cd86089abea6ca9066b1f9ce",
+      "chunks": [
+        {
+          "offset": 0,
+          "size": 524288,
+          "sha": "680b659583c6de141ffa79a98410530bcee56886"
+        },
+        {
+          "offset": 524288,
+          "size": 524288,
+          "sha": "c957d533b901cc95d10d4abfd8ac6805aa8f80e3"
+        },
+        {
+          "offset": 1048576,
+          "size": 524288,
+          "sha": "12b66d33cb8be2f1b44b3638bed32d4fa65f9da4"
+        },
+        {
+          "offset": 1572864,
+          "size": 524288,
+          "sha": "490e36b712ce4d896f7cd469c6e143cf5384d715"
+        },
+        {
+          "offset": 2097152,
+          "size": 524288,
+          "sha": "f8c5ca79fbdb4d2add62794b344b22a154a74775"
+        },
+        {
+          "offset": 2621440,
+          "size": 524288,
+          "sha": "ad0939c33f5b0325bdb18680ffefee5dcd54d242"
+        },
+        {
+          "offset": 3145728,
+          "size": 524288,
+          "sha": "412488e1a66df393f0397781586b6324aae8bc07"
+        },
+        {
+          "offset": 3670016,
+          "size": 524288,
+          "sha": "29d86c924056617837ccad7c2aa0d7960e8c63ce"
+        },
+        {
+          "offset": 4194304,
+          "size": 524288,
+          "sha": "b971d7c3a790a1e085999dbe50e95d703488e668"
+        },
+        {
+          "offset": 4718592,
+          "size": 524288,
+          "sha": "cf86aae4e3762669d4bd0d45e42afe956f9f3140"
+        },
+        {
+          "offset": 5242880,
+          "size": 524288,
+          "sha": "046ec21fd3b722422d13031e9ef688474c337ad7"
+        },
+        {
+          "offset": 5767168,
+          "size": 524288,
+          "sha": "99db529c923eedc871ca97497f45c1f8ce7af5da"
+        },
+        {
+          "offset": 6291456,
+          "size": 524288,
+          "sha": "ae37b52159db91e948c5ff95a82a4966e6b1f287"
+        },
+        {
+          "offset": 6815744,
+          "size": 524288,
+          "sha": "22264b43eafb0dd454297644e2013bf831ac74c2"
+        },
+        {
+          "offset": 7340032,
+          "size": 524288,
+          "sha": "0577d874dc111010d4207798608dc4ceaa0f1c13"
+        },
+        {
+          "offset": 7864320,
+          "size": 524288,
+          "sha": "def879677cf019c5d17328a1eb3db674a72f7e9a"
+        },
+        {
+          "offset": 8388608,
+          "size": 524288,
+          "sha": "45eba5ca5a265f712e224f5793f942f3c03ac9ca"
+        },
+        {
+          "offset": 8912896,
+          "size": 524288,
+          "sha": "a4361260065040a64baf1d51b9b4a7e4c48abc5d"
+        },
+        {
+          "offset": 9437184,
+          "size": 524288,
+          "sha": "5ad7ab4c18103d729455e762c4c72e436d9847e7"
+        },
+        {
+          "offset": 9961472,
+          "size": 524288,
+          "sha": "7b6f7670c8d01c9d6d95446c8ababaa774310fd9"
+        },
+        {
+          "offset": 10485760,
+          "size": 524288,
+          "sha": "84db69e71cf037a736c9150c5b24c6e60d72de2a"
+        },
+        {
+          "offset": 11010048,
+          "size": 524288,
+          "sha": "b2c4598f1fc54331072c5af423454330582a20c0"
+        },
+        {
+          "offset": 11534336,
+          "size": 524288,
+          "sha": "2a0a13a5e221c5c2c4a25c938719be292e2707b6"
+        },
+        {
+          "offset": 12058624,
+          "size": 524288,
+          "sha": "cfe8c7e3c2d1825cfe59ad78b5c984014158018a"
+        },
+        {
+          "offset": 12582912,
+          "size": 524288,
+          "sha": "c9f2d24ce13b5dca0117a05fbab68970fd5e643c"
+        },
+        {
+          "offset": 13107200,
+          "size": 524288,
+          "sha": "8f01536759aab2003ffd52f9b51cdd08250a4b4a"
+        },
+        {
+          "offset": 13631488,
+          "size": 524288,
+          "sha": "7ff64ec1ddc05c70e9b28299b188d8db76e8eadb"
+        },
+        {
+          "offset": 14155776,
+          "size": 524288,
+          "sha": "1ca78322a29bca5e759ec92b01c1047d5cae6119"
+        },
+        {
+          "offset": 14680064,
+          "size": 524288,
+          "sha": "ef754f989eb7824d93b0df1c5ff79613cfc9d3c2"
+        },
+        {
+          "offset": 15204352,
+          "size": 524288,
+          "sha": "c64731374c97c538390e1dddcc06e08a3307af4b"
+        },
+        {
+          "offset": 15728640,
+          "size": 524288,
+          "sha": "7c6508f834d2c749c629096df1d831c3771a56d8"
+        },
+        {
+          "offset": 16252928,
+          "size": 524288,
+          "sha": "4916bcbb925c943541d7e8360bda466b4338c6b5"
+        },
+        {
+          "offset": 16777216,
+          "size": 524288,
+          "sha": "b11cb36aace0696a8aaf4aebb63a1ba809f35e74"
+        },
+        {
+          "offset": 17301504,
+          "size": 524288,
+          "sha": "f53c628cbabc0ba382f0efe8a01410f81076eb17"
+        },
+        {
+          "offset": 17825792,
+          "size": 524288,
+          "sha": "29528fd899ccd01b052d69637e35973a744e4774"
+        },
+        {
+          "offset": 18350080,
+          "size": 524288,
+          "sha": "90d1284bf9eca02abfb7520f0b0dd80d3d400221"
+        },
+        {
+          "offset": 18874368,
+          "size": 524288,
+          "sha": "9503ab9bf4ec133ac51b943e1551b2c4f930335b"
+        },
+        {
+          "offset": 19398656,
+          "size": 524288,
+          "sha": "abdca276d51b02b48438522d5aca4e83a52477d0"
+        },
+        {
+          "offset": 19922944,
+          "size": 524288,
+          "sha": "b6dcb2313ea0cbfe4cdedf1aeafcc14cafb44504"
+        },
+        {
+          "offset": 20447232,
+          "size": 524288,
+          "sha": "628b4441f8622e906b4534c71d53325ae837d0d6"
+        },
+        {
+          "offset": 20971520,
+          "size": 524288,
+          "sha": "8ec4eb35042cb28f444195ac698db5e54f1f0f4a"
+        },
+        {
+          "offset": 21495808,
+          "size": 524288,
+          "sha": "06f968e82caa8e6255422f6e6df4bdbf0146d2c6"
+        },
+        {
+          "offset": 22020096,
+          "size": 524288,
+          "sha": "5d5ec214b2357f7e6510bb8a5d8cdaeda9c1ef0b"
+        },
+        {
+          "offset": 22544384,
+          "size": 524288,
+          "sha": "e1d1e20c9612d366d3aac8904a605cf0714add06"
+        },
+        {
+          "offset": 23068672,
+          "size": 524288,
+          "sha": "ca3daef475eb49c487cd8c26975b1b2da5658c4b"
+        },
+        {
+          "offset": 23592960,
+          "size": 524288,
+          "sha": "850248122630dc9f02d9e8349acf376b75347cb9"
+        },
+        {
+          "offset": 24117248,
+          "size": 524288,
+          "sha": "1e8e1967081245c1fe38fc6058d8172d024d1101"
+        },
+        {
+          "offset": 24641536,
+          "size": 260521,
+          "sha": "7e5c1a3216b5fab7135b484b62b14a25f6812174"
+        }
+      ]
+    }
+  ]
+}
