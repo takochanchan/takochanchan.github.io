@@ -120,7 +120,7 @@ test("split volumes share one canonical bibliography record", () => {
   assert.equal(nativeRaces.volumes.length, 5);
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),
-    new Set([blom.slug, herrera.slug, nativeRaces.slug, "robertson-history-america-1777-1796"]),
+    new Set([blom.slug, herrera.slug, nativeRaces.slug, "robertson-history-america-1777-1796", "oviedo-historia-general-natural-indias-1851-1855"]),
   );
 
   const robertson = cataloguePublications.find(
@@ -192,6 +192,10 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
       .filter((publication) => publication.searchShard === "002")
       .map((publication) => publication.slug),
     [
+      "oviedo-historia-general-natural-indias-volume-i-1851",
+      "oviedo-historia-general-natural-indias-volume-ii-1852",
+      "oviedo-historia-general-natural-indias-volume-iii-1853",
+      "oviedo-historia-general-natural-indias-volume-iv-1855",
       "fellechner-mueller-hesse-mosquitoland-1845",
       "garcia-historia-bethlehemitica-1723",
       "vle-panama-1831-article-1",
@@ -1733,7 +1737,7 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 200);
+  assert.equal(majorPublications.length, 204);
   assert.equal(shortPublications.length, 195);
   assert.equal(shortPublicationAuthors.length, 45);
   assert.deepEqual(
