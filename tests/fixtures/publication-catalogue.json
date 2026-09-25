@@ -1,0 +1,2242 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
+  "records": [
+    {
+      "slug": "bury-bishop-amongst-bananas-1911",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "seitz-parkman-squier-letters-1911",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "valle-george-ephraim-squier-1922",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ラファエル・エリオドロ・バリェ"
+    },
+    {
+      "slug": "carranza-un-pueblo-los-altos-1897",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "baily-central-america-1850",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "baz-gallo-historia-ferrocarril-mexicano-1874",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "squier-davis-ancient-monuments-mississippi-valley-1848",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "squier-nicaragua-1852",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "squier-great-calendar-stone-1849",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-british-encroachments-mosquito-question-1850",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-spanish-american-republics-1850",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "無署名"
+    },
+    {
+      "slug": "squier-great-ship-canal-question-1850",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-judgment-by-default-1851",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "otis-isthmus-panama-railroad-1867",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "siguenza-parayso-occidental-1684",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gonzalez-compendio-geografia-centro-america-1881",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gonzalez-ruinas-tehuacan-1892",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ダリオ・ゴンサレス"
+    },
+    {
+      "slug": "barberena-fonseca-monografias-departamentales-1909-1914",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "siguenza-infortunios-alonso-ramirez-1690",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "torquemada-monarquia-indiana-1615",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "guzman-apuntamientos-topografia-salvador-1883",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "fernandez-historia-costa-rica-1889",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "strangeways-mosquito-shore-1822",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "barraza-anastasio-aquino-2001",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "roberts-voyages-central-america-1827",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "villavicencio-luz-metodo-idolatras-1692",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "alva-confessionario-mayor-menor-1634",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "duran-historia-indias-nueva-espana-1581",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "romero-cultivo-cafe-chiapas-1893",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "g59-romances-senores-nueva-espana",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "cantares-mexicanos-ms-1628-bis",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "bancroft-history-central-america-1886-1887",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "remesal-historia-general-1619",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "san-buenaventura-arte-lengua-maya-1684",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "atkins-voyage-guinea-1735",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "wafer-new-voyage-isthmus-america-1699",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "marimon-lacandones-1695",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "セバスティアン・マリモン・イ・トゥドー"
+    },
+    {
+      "slug": "figueroa-color-notebooks",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "figueroa-album",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "us-senate-central-america-correspondence-1853",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アメリカ合衆国国務省（編）"
+    },
+    {
+      "slug": "williams-anglo-american-isthmian-diplomacy-1916",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "molina-costa-rica-new-granada-1853",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "squier-notes-central-america-1855",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "valenzuela-lacandon-chol-1695",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "charnay-cites-et-ruines-americaines-1863",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "dupaix-antiquites-mexicaines-1834",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "cogolludo-yucatan-1688",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "villagutierre-itza-1701",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "maler-usumacinta",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "maler-upper-usumacinta",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "morelet-1857",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "morelet-exploration-guatemala-1850",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ピエール＝マリー＝アルテュール・モルレ／アシル・ヴァランシエンヌ"
+    },
+    {
+      "slug": "morelet-testacea-novissima-pars-i-1849",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ピエール＝マリー＝アルテュール・モルレ"
+    },
+    {
+      "slug": "morelet-testacea-novissima-pars-ii-1851",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ピエール＝マリー＝アルテュール・モルレ"
+    },
+    {
+      "slug": "rockstroh-ukes",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "chambon-mexique",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "arthes-peten-1893",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フェデリコ・ギジェルモ・アルテス"
+    },
+    {
+      "slug": "del-rio-palenque",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "bourbourg-palenque-1866",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "esquinca-usumacinta",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ホセ・マリア・エスキンカ"
+    },
+    {
+      "slug": "galindo-ruins-palenque-literary-gazette-1831",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-noticias-peten-1831",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-palenque-1832",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-usumacinta-1833",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-caribs-central-america-1833",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-antiquities-peten-1834",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-copan-full-report-1834",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-copan-literary-gazette-1835",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-eruption-cosiguina-1835",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-ruins-copan-aas-1836",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "galindo-on-central-america-1836",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フアン・ガリンド"
+    },
+    {
+      "slug": "societe-geographie-central-america-report-1836",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フランス地理学会委員会"
+    },
+    {
+      "slug": "tribes-and-temples-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "tribes-and-temples-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "egan-wyer-1930",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "sapper-eastern-lacandons-1891",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ザッパー"
+    },
+    {
+      "slug": "friedrichsthal-yucatan-1841",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エマヌエル・フォン・フリードリヒスタール"
+    },
+    {
+      "slug": "means-yucatan-itzas-1917",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "dunlop-central-america-1847",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "bandelier-yucatan-central-america-1881",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "rau-palenque-tablet-1879",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "charencey-votan-1871",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ordonez-creation-1907",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "le-plongeon-yucatan-1889",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "fancourt-history-yucatan-1854",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "humboldt-vues-cordilleres-1810-1813",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "tozzer-mayas-lacandones-1907",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "frias-mexico-guatemala-boundary-1883",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "pastrana-mexico-guatemala-boundary-1897",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "urrutia-guatemala-mexico-boundary-1900",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "seler-sachs-auf-alten-wegen-1900",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "byam-chiapas-1897",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "robles-memoria-historica-chiapa-1813",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "brinton-nagualism-1894",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "pineda-chiapas-soconusco-1845",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "paniagua-catecismo-chiapas-1876",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "morris-colony-british-honduras-1883",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "henderson-british-honduras-1811",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gann-maya-indians-1918",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "uring-voyages-travels-1928",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "cook-balise-merida-1769",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "swett-british-honduras-san-pedro-1868",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gann-discoveries-central-america-1928",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "juarros-compendio-guatemala-1857",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "moran-cholti-1695",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "thompson-ethnology-mayas-1930",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "berendt-vermessungsarbeiten-mexiko-1862",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-maasse-gewichte-mexiko-1862",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-handel-veracruz-1862",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-cochenille-produktion-oaxaca-1862",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-mexikanische-geographische-literatur-1862-1",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-baumwollenbau-yucatan-1863",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-analytical-alphabet-1869",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-escritos-garcia-icazbalceta-1870",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-trabajos-linguisticos-juan-pio-perez-1871",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-el-ramie-1871",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-mexico-1872",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-indianer-tehuantepec-1873",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-carib-karif-language-1873",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-darien-language-1874",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-ethnologie-nicaragua-1874",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-ethnologie-nicaragua-1875",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-ancient-central-american-civilization-1876",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-historical-documents-guatemala-1877",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-central-america-explorations-1867",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "garcia-pelaez-memorias-guatemala-1851-1852",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "maudslay-glimpse-guatemala-1899",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "dunn-guatimala-central-america-1828",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gibbs-british-honduras-1883",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "young-black-charaibs-st-vincent-1795",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "sapper-mittelamerikanische-reisen-studien-1902",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "honduras-slaves-correspondence-1823",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "defence-settlers-honduras-1824",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "lundell-vegetation-peten-1937",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "sapper-alta-verapaz-1901",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "santo-thomas-colonisation-1844",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "crowe-gospel-central-america-1850",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "brigham-guatemala-quetzal-1887",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "stoll-ethnographie-guatemala-1884",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "stoll-guatemala-reisen-schilderungen-1886",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "stoll-ixil-language-1887",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "stoll-pokom-languages-1888-1896",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "brinton-chilan-balam-1882",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "codex-perez-pmm9-1877",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "roys-chilam-balam-chumayel-1933",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "elorza-conquista-ytza-1714",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "chonay-totonicapan-title-1886",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ディオニシオ・ホセ・チョナイ"
+    },
+    {
+      "slug": "saville-reports-maya-yucatan-1921",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "brasseur-rabinal-achi-1862",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "santibanez-geografia-regional-chiapas-1907",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "pineda-traslado-poderes-chiapas-1892",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gage-new-survey-west-indias-1655",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "marure-bosquejo-revoluciones-centro-america-1837-1878",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "montgomery-journey-guatemala-1839",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "carrera-memorias-1837-1840-1906",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "valle-anexion-centro-america-mexico-1924-1949",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "montufar-memorias-revolucion-centro-america-1832",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ximenez-ayer-ms-1515-volume-1",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ximenez-ayer-ms-1515-volume-2",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "peniche-relaciones-belice-1869",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "マヌエル・ペニチェ"
+    },
+    {
+      "slug": "southey-chronological-history-west-indies-1827",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "dieseldorff-ausgrabungen-coban-1893",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-gefaess-chama-1895",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-reliefbild-chipolem-1895",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-cuculcan-1895",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-tolteken-1896",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "cortes-y-larraz-descripcion-geografico-moral-1771",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "perigny-ruines-nacun-1906",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-exploration-yucatan-1906",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "lemoine-travers-peten-yucatan-1906",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フレデリック・ルモワーヌ"
+    },
+    {
+      "slug": "perigny-peten-1907",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-maya-ruins-quintana-roo-1907",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "dieseldorff-gegenstaende-guatemala-1893",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エドゥアルト・ゼーラー（E・P・ディースルドルフ／K・ザッパー収集資料）"
+    },
+    {
+      "slug": "dieseldorff-bemaltes-thongefaess-chama-1894",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-vampyrkoepfige-gottheit-1894",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-neue-ausgrabungen-chajcar-1895",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ／パウル・シェルハス"
+    },
+    {
+      "slug": "dieseldorff-two-vases-chama-1904",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "E・P・ディースルドルフ、エドゥアルト・ゼーラー、エルンスト・フェルステマン"
+    },
+    {
+      "slug": "dieseldorff-jadeit-schmuck-1905",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-klassifizierung-funde-1909",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-tzultaca-mam-1926",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-kunst-religion-band-i-1926",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-kunst-religion-band-ii-1931",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-kekchi-will-1583-1932",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-cauac-thunderbolt-signs-1932",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ（書簡）／W・ゲイツ（編集・論評）"
+    },
+    {
+      "slug": "dieseldorff-arqueologia-alta-verapaz-1936",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-calendario-maya-quirigua-1936",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "dieseldorff-causa-calendario-quirigua-1940",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "エルヴィン・P・ディースルドルフ"
+    },
+    {
+      "slug": "schellhas-virchow-deformierter-schaedel-ulpan-1894",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "パウル・シェルハス、ルドルフ・ヴィルヒョウ"
+    },
+    {
+      "slug": "virchow-graeberschaedel-guatemala-1897",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ルドルフ・ヴィルヒョウ"
+    },
+    {
+      "slug": "romero-bosquejo-chiapas-soconusco-1877",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "perigny-yucatan-inconnu-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-maler-discoveries-yucatan-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-yucatan-inconnu-geographie-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-villes-mortes-amerique-centrale-1909",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ruines-rio-bec-1909",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-lettre-costa-rica-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-costa-rica-pays-habitants-ressources-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ruines-nakcun-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-costa-rica-nantes-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-amerique-centrale-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "coronel-arte-maya-1620",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "beltran-arte-idioma-maya-1746",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "gemelli-careri-giro-del-mondo-nuova-spagna-1700",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "fuentes-guzman-recordacion-florida-1882-1883",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ixtlilxochitl-sumaria-todas",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ixtlilxochitl-relacion-sucinta",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ixtlilxochitl-compendio-tetzcoco",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ixtlilxochitl-sumaria-general",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "ixtlilxochitl-historia-chichimeca",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "castillo-historias-mexicanos-conquista-1908",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "munoz-camargo-historia-tlaxcala-ms210",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "tezozomoc-cronica-mexicana-kraus-117",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "pineda-sublevaciones-indigenas-chiapas-1888",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "codice-chimalpahin-volumen-3",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "pomar-relacion-tezcuco-1582",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "chimalpahin-diario-1577-1615",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "boturini-idea-catalogo-1746",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "flint-antiquities-nicaragua-palenque-builders-1882",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-human-foot-prints-nicaragua-1884",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-human-foot-prints-nicaragua-1885",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-pre-adamite-foot-prints-1886",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-human-footprints-eocene-1888",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-paleolithics-nicaragua-1888",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-nicaragua-foot-prints-1889",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-what-dr-flint-says-nicaragua-footprints-1890",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-prehistoric-horse-america-1891",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-rainfall-rivas-nicaragua-1898",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "flint-rainfall-central-western-nicaragua-1899",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "アール・フリント"
+    },
+    {
+      "slug": "historia-tolteca-chichimeca",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "putnam-antiquity-man-america-1884",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "フレデリック・W・パットナム"
+    },
+    {
+      "slug": "mca-pre-adamite-track-1885",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "A・McA"
+    },
+    {
+      "slug": "unsigned-nicaragua-footprints-again-1886",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "無署名（“The Museum”欄）"
+    },
+    {
+      "slug": "brinton-ancient-human-footprint-nicaragua-1887",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "editorial-age-nicaragua-footprints-1889",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "編集部（スティーヴン・D・ピート編集）"
+    },
+    {
+      "slug": "crawford-neolithic-man-nicaragua-1891",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ジョン・クロフォード"
+    },
+    {
+      "slug": "cervantes-salazar-mexico-en-1554-1875",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "baqueiro-ensayo-revoluciones-yucatan-1878-1887",
+      "recordClass": "major-work",
+      "searchShard": "001"
+    },
+    {
+      "slug": "berendt-veracruz-correspondence-1861-1862",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-drei-tage-cuba-1860",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-acasaguastlan-jilotepec-1878",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント、フランツ・ブロモヴィチ、ホセ・イノセンテ・コルドンほか"
+    },
+    {
+      "slug": "berendt-indigenas-america-central-1877",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-palabras-modismos-nicaragua-1874",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "berendt-mangue-subtiaba-dossier-1874",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "カール・ヘルマン・ベレント"
+    },
+    {
+      "slug": "squier-visit-guajiquero-indians-1859",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-volcanoes-central-america-1859",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-hunting-pass-tropical-adventure-1860",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-lake-yojoa-taulebe-1860",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-unexplored-regions-central-america-1868",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-waikna-mosquito-shore-1855",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "perigny-communications-central-america-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-mexico-economic-development-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-mission-central-america-nakcun-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-costa-rica-pays-gens-choses-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-quechis-kekchis-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-francais-mexique-1905",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-henequen-yucatan-1906",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-merida-ville-florissante-1906",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-modern-mexico-1907",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-industrie-chicle-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-emigration-asiatique-mexique-1909",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-lettre-guatemala-cafe",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ecole-cadets-honduras-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-port-amapala-honduras-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ancienne-route-galions-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-honduras-ecole-militaire-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ruines-nakcun-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-villes-mortes-nakcun-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-ruines-nakcun-mission-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-plein-cintre-architecture-maya-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-review-gates-perez-codex-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "societe-americanistes-maler-tozzer-tikal-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "パリ・アメリカニスト協会会報（無署名）"
+    },
+    {
+      "slug": "perigny-morelos-revolution-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-mexique-developpement-revised-typescript-1911",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "reynaud-perigny-honnorat-interets-mexique-1914",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "ポール・レノー／モーリス・ド・ペリニー／アンドレ・オノラ"
+    },
+    {
+      "slug": "perigny-costa-rica-guerre-1917",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-amerique-centrale-guerre-1919",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-hokkaido-ainos-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-iles-riou-kiou-1908",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-principaute-japonaise-riou-kiou-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-pays-ainos-1910",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-riou-kiou-coree-1912",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "perigny-coree-impressions-voyage-1913",
+      "recordClass": "short-work",
+      "searchShard": "001",
+      "author": "モーリス・ド・ペリニー"
+    },
+    {
+      "slug": "squier-observations-zestermann-1851",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "squier-crampton-webster-project-1852",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "無署名"
+    },
+    {
+      "slug": "squier-ancient-peru-1853",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "無署名"
+    },
+    {
+      "slug": "squier-great-south-american-earthquakes-1869",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "無署名"
+    },
+    {
+      "slug": "squier-chalchihuitls-mexico-central-america-1870",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "E・G・スクワイア"
+    },
+    {
+      "slug": "thompson-official-visit-guatemala-1829",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "childs-nicaragua-canal-survey-1852",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "us-navy-nicaragua-ship-canal-survey-1874",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "selfridge-darien-ship-canal-1874",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bonaparte-nicaragua-canal-1846",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "belly-percement-isthme-panama-canal-nicaragua-1858",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "belly-a-travers-amerique-centrale-1867",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "keasbey-nicaragua-canal-monroe-doctrine-1896",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garella-panama-canal-1845",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "reclus-panama-darien-1881",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "rodrigues-panama-canal-1885",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "congres-international-canal-interoceanique-1879",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "siguenza-obras-1928",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "wyse-canal-panama-isthme-americain-1886",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-cronologia-arqueologica-el-salvador-1926",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-indice-provisional-arqueologico-el-salvador-1926",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "lothrop-museum-central-american-expedition-1927",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "サミュエル・カークランド・ロスロップ"
+    },
+    {
+      "slug": "lothrop-pottery-types-el-salvador-1927",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "サミュエル・カークランド・ロスロップ"
+    },
+    {
+      "slug": "conzemius-miskito-sumu-1932",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "arce-memoria-presidency-1830",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "meza-centro-america-campana-nacional-1885-1911",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "doubleday-filibuster-war-nicaragua-1886",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "proceso-contra-william-walker-1860",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "pim-seemann-dottings-roadside-1869",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-arqueologia-cuzcatleca-1924",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-region-arqueologica-chalchuapa-1926",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-volcan-izalco-1923",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-poblacion-el-salvador-1921",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-geologia-general-centro-america-el-salvador-1924",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "peralta-costa-rica-costa-mosquitos-1898",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "rabasa-estado-chiapas-1895",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "montufar-walker-centro-america-1887",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "barberena-historia-el-salvador-1914-1917",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "stone-northern-highland-tribes-lenca-1948",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ドリス・ストーン"
+    },
+    {
+      "slug": "perez-memorias-nicaragua-guerra-nacional-1854-1857",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-terremoto-septiembre-1915-1916",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-origenes-san-salvador-cuzcatlan-1925",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "larde-boqueron-grietas-volcanicas-el-pinar-1917",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-ruinas-cihuatan-1927",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "larde-volcan-izalco-1922-1925",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホルヘ・ラルデ"
+    },
+    {
+      "slug": "young-mosquito-shore-1847",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "wells-walkers-expedition-nicaragua-1856",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "walker-war-nicaragua-1860",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "brinton-essays-americanist-1890",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "henningsen-official-report-granada-1857",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "C・F・ヘニングセン"
+    },
+    {
+      "slug": "brinton-native-calendar-1893",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-xinca-1885",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-matagalpan-1895",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-alaguilac-1887",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-landa-editions-1887",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-cintla-1896",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-codex-troano-maya-chronology-1881",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-chane-abal-1888",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-mangue-1886",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-maya-inscriptions-1894",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-ancient-phonetic-alphabet-yucatan-1870",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-nahuatl-version-sahagun-historia-1890",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-chontales-popolucas-1892",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-words-anahuac-nahuatl-1893",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-written-language-ancient-mexicans-1889",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-chinantec-mazatec-languages-1892",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-otomi-athabascan-affinities-1894-1897",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-guetares-costa-rica-1897",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-musquito-coast-vocabularies-1891",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-central-american-language-manuscripts-1869",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-missing-authorities-mayan-antiquities-1897",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "brinton-pillars-of-ben-1897",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ダニエル・G・ブリントン"
+    },
+    {
+      "slug": "milla-gomez-carrillo-historia-america-central-1879-1905",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "nuix-reflexiones-imparciales-1783-ja",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "herrera-historia-general-decadas-1-2-1601",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "herrera-historia-general-decadas-3-4-1601",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "herrera-historia-general-decadas-5-6-1615",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "herrera-historia-general-decadas-7-8-1615",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bancroft-native-races-volume-i-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bancroft-native-races-volume-ii-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bancroft-native-races-volume-iii-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bancroft-native-races-volume-iv-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "bancroft-native-races-volume-v-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "palacio-carta-rey-espana-1860",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "brinton-gueguence-1883",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "benzoni-historia-mondo-nuovo-1565-ja",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "rodriguez-relacion-espantable-terremoto-1541",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "フアン・ロドリゲス"
+    },
+    {
+      "slug": "foreign-office-mosquito-territory-1848",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "イギリス外務省"
+    },
+    {
+      "slug": "sahagun-historia-general-nueva-espana",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "galvao-tratado-descobrimentos-1563",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "robertson-history-america-volume-i-1777",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "robertson-history-america-volume-ii-1777",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "robertson-history-america-books-ix-x-1796",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "mendieta-historia-eclesiastica-indiana-1870",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "serrano-archivo-indias-panama-1911",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "マヌエル・セラーノ・イ・サンス"
+    },
+    {
+      "slug": "how-james-b-eads-1900",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "lobo-pedro-betancur-1667",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "haefkens-reize-guatemala-1827-1828",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "haefkens-centraal-amerika-1832",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "frus-nicaragua-mosquito-territory-1894",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "アメリカ合衆国国務省（編）"
+    },
+    {
+      "slug": "vazquez-pedro-betancur-1962",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "vle-panama-1831-article-1",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "F.W.C."
+    },
+    {
+      "slug": "vle-panama-1831-article-2",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "F.W.C."
+    },
+    {
+      "slug": "vle-interoceanic-1832-article-3",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "F.W.C."
+    },
+    {
+      "slug": "montalvo-betancur-1683",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-historia-bethlehemitica-1723",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "fellechner-mueller-hesse-mosquitoland-1845",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "oviedo-historia-general-natural-indias-volume-i-1851",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "oviedo-historia-general-natural-indias-volume-ii-1852",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "oviedo-historia-general-natural-indias-volume-iii-1853",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "oviedo-historia-general-natural-indias-volume-iv-1855",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    }
+  ],
+  "groups": [
+    {
+      "slug": "oviedo-historia-general-natural-indias-1851-1855",
+      "memberSlugs": [
+        "oviedo-historia-general-natural-indias-volume-i-1851",
+        "oviedo-historia-general-natural-indias-volume-ii-1852",
+        "oviedo-historia-general-natural-indias-volume-iii-1853",
+        "oviedo-historia-general-natural-indias-volume-iv-1855"
+      ]
+    },
+    {
+      "slug": "robertson-history-america-1777-1796",
+      "memberSlugs": [
+        "robertson-history-america-volume-i-1777",
+        "robertson-history-america-volume-ii-1777",
+        "robertson-history-america-books-ix-x-1796"
+      ]
+    },
+    {
+      "slug": "bancroft-native-races-pacific-states-1883",
+      "memberSlugs": [
+        "bancroft-native-races-volume-i-1883",
+        "bancroft-native-races-volume-ii-1883",
+        "bancroft-native-races-volume-iii-1883",
+        "bancroft-native-races-volume-iv-1883",
+        "bancroft-native-races-volume-v-1883"
+      ]
+    },
+    {
+      "slug": "tribes-and-temples-1926-1927",
+      "memberSlugs": [
+        "tribes-and-temples-vol-1",
+        "tribes-and-temples-vol-2"
+      ]
+    },
+    {
+      "slug": "herrera-historia-general-1601-1615",
+      "memberSlugs": [
+        "herrera-historia-general-decadas-1-2-1601",
+        "herrera-historia-general-decadas-3-4-1601",
+        "herrera-historia-general-decadas-5-6-1615",
+        "herrera-historia-general-decadas-7-8-1615"
+      ]
+    }
+  ],
+  "shortAuthorCount": 45
+}

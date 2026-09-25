@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { matchText, doesNotMatchText } from "./helpers/assert-text.mjs";
 import { createHash } from "node:crypto";
 import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
@@ -19,7 +20,6 @@ import {
   publicationGroupDefinitions,
   shortCataloguePublications,
 } from "../src/catalogue-publications.mjs";
-import { perignyRemainingSlugs } from "../src/perigny-remaining-publications.mjs";
 import {
   readSearchShardConfig,
   validateSearchShardAssignments,
@@ -28,6 +28,24 @@ import {
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const dist = path.join(root, "dist");
+
+// One independent, reviewed snapshot supplies catalogue expectations. Adding a
+// record here updates all counts without accepting the implementation as its oracle.
+const expectedCatalogue = JSON.parse(await readFile(
+  path.join(here, "fixtures/publication-catalogue.json"), "utf8",
+));
+const expectedRecords = expectedCatalogue.records;
+const expectedGroups = expectedCatalogue.groups;
+const expectedBySlug = new Map(expectedRecords.map(item => [item.slug, item]));
+const expectedMajor = expectedRecords.filter(item => item.recordClass === "major-work");
+const expectedShort = expectedRecords.filter(item => item.recordClass === "short-work");
+const expectedCatalogueCount = recordClass =>
+  expectedRecords.filter(item => item.recordClass === recordClass).length -
+  expectedGroups.filter(group => expectedBySlug.get(group.memberSlugs[0])?.recordClass === recordClass)
+    .reduce((removed, group) => removed + group.memberSlugs.length - 1, 0);
+const expectedBooks = expectedCatalogueCount("major-work");
+const expectedPapers = expectedCatalogueCount("short-work");
+
 
 const exists = async (file) => {
   await access(file);
@@ -43,7 +61,15 @@ const escapeHtml = (value = "") =>
     .replaceAll("'", "&#039;");
 
 test("catalogue metadata is complete and unique", () => {
-  assert.equal(publications.length, 399);
+  assert.equal(expectedCatalogue.schemaVersion, 1);
+  assert.equal(expectedBySlug.size, expectedRecords.length, "duplicate expectation slug");
+  assert.equal(publications.length, expectedRecords.length);
+  assert.deepEqual(new Set(publications.map(item => item.slug)), new Set(expectedBySlug.keys()));
+  for (const item of publications) {
+    const expected = expectedBySlug.get(item.slug);
+    assert.equal(item.recordClass, expected.recordClass, `${item.slug}: class`);
+    assert.equal(item.searchShard ?? "001", expected.searchShard, `${item.slug}: shard`);
+  }
   assert.equal(new Set(publications.map((item) => item.slug)).size, publications.length);
   for (const item of publications) {
     for (const key of [
@@ -83,11 +109,14 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("split volumes share one canonical bibliography record", () => {
-  assert.equal(publicationGroupDefinitions.length, 5);
+  assert.deepEqual(
+    publicationGroupDefinitions.map(({slug, memberSlugs}) => ({slug, memberSlugs})).sort((a,b)=>a.slug.localeCompare(b.slug)),
+    [...expectedGroups].sort((a,b)=>a.slug.localeCompare(b.slug)),
+  );
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, 386);
-  assert.equal(majorCataloguePublications.length, 191);
-  assert.equal(shortCataloguePublications.length, 195);
+  assert.equal(cataloguePublications.length, expectedBooks + expectedPapers);
+  assert.equal(majorCataloguePublications.length, expectedBooks);
+  assert.equal(shortCataloguePublications.length, expectedPapers);
 
   const blom = cataloguePublications.find(
     (publication) => publication.slug === "tribes-and-temples-1926-1927",
@@ -120,7 +149,7 @@ test("split volumes share one canonical bibliography record", () => {
   assert.equal(nativeRaces.volumes.length, 5);
   assert.deepEqual(
     new Set(Object.values(bibliographicAliases)),
-    new Set([blom.slug, herrera.slug, nativeRaces.slug, "robertson-history-america-1777-1796", "oviedo-historia-general-natural-indias-1851-1855"]),
+    new Set(expectedGroups.map(group => group.slug)),
   );
 
   const robertson = cataloguePublications.find(
@@ -182,139 +211,14 @@ test("full-text search assignments stay inside stable Pages shards", async () =>
   assert.equal(config.maxWorksPerShard, 300);
   assert.equal(config.maxBytesPerShard, 500 * 1024 * 1024);
   assert.equal(counts.get("001"), 277);
-  assert.equal(counts.get("002"), 122);
+  assert.equal(counts.get("002"), expectedRecords.filter(item => item.searchShard === "002").length);
   assert.equal(
     publications.filter((publication) => publication.searchShard === "001").length,
     277,
   );
   assert.deepEqual(
-    publications
-      .filter((publication) => publication.searchShard === "002")
-      .map((publication) => publication.slug),
-    [
-      "oviedo-historia-general-natural-indias-volume-i-1851",
-      "oviedo-historia-general-natural-indias-volume-ii-1852",
-      "oviedo-historia-general-natural-indias-volume-iii-1853",
-      "oviedo-historia-general-natural-indias-volume-iv-1855",
-      "fellechner-mueller-hesse-mosquitoland-1845",
-      "garcia-historia-bethlehemitica-1723",
-      "vle-panama-1831-article-1",
-      "vle-panama-1831-article-2",
-      "vle-interoceanic-1832-article-3",
-      "vazquez-pedro-betancur-1962",
-      "montalvo-betancur-1683",
-      "frus-nicaragua-mosquito-territory-1894",
-      "haefkens-reize-guatemala-1827-1828",
-      "haefkens-centraal-amerika-1832",
-      "lobo-pedro-betancur-1667",
-      "how-james-b-eads-1900",
-      "serrano-archivo-indias-panama-1911",
-      "mendieta-historia-eclesiastica-indiana-1870",
-      "foreign-office-mosquito-territory-1848",
-      "rodriguez-relacion-espantable-terremoto-1541",
-      "bury-bishop-amongst-bananas-1911",
-      "squier-visit-guajiquero-indians-1859",
-      "squier-volcanoes-central-america-1859",
-      "squier-hunting-pass-tropical-adventure-1860",
-      "squier-lake-yojoa-taulebe-1860",
-      "squier-unexplored-regions-central-america-1868",
-      "larde-cronologia-arqueologica-el-salvador-1926",
-      "larde-indice-provisional-arqueologico-el-salvador-1926",
-      "lothrop-museum-central-american-expedition-1927",
-      "lothrop-pottery-types-el-salvador-1927",
-      "larde-arqueologia-cuzcatleca-1924",
-      "larde-region-arqueologica-chalchuapa-1926",
-      "larde-volcan-izalco-1923",
-      "larde-poblacion-el-salvador-1921",
-      "larde-geologia-general-centro-america-el-salvador-1924",
-      "larde-terremoto-septiembre-1915-1916",
-      "larde-origenes-san-salvador-cuzcatlan-1925",
-      "larde-boqueron-grietas-volcanicas-el-pinar-1917",
-      "larde-ruinas-cihuatan-1927",
-      "larde-volcan-izalco-1922-1925",
-      "squier-observations-zestermann-1851",
-      "squier-crampton-webster-project-1852",
-      "squier-ancient-peru-1853",
-      "squier-great-south-american-earthquakes-1869",
-      "squier-chalchihuitls-mexico-central-america-1870",
-      "seitz-parkman-squier-letters-1911",
-      "valle-george-ephraim-squier-1922",
-      "carranza-un-pueblo-los-altos-1897",
-      "baily-central-america-1850",
-      "childs-nicaragua-canal-survey-1852",
-      "us-navy-nicaragua-ship-canal-survey-1874",
-      "selfridge-darien-ship-canal-1874",
-      "bonaparte-nicaragua-canal-1846",
-      "belly-percement-isthme-panama-canal-nicaragua-1858",
-      "belly-a-travers-amerique-centrale-1867",
-      "keasbey-nicaragua-canal-monroe-doctrine-1896",
-      "conzemius-miskito-sumu-1932",
-      "young-mosquito-shore-1847",
-      "garella-panama-canal-1845",
-      "reclus-panama-darien-1881",
-      "rodrigues-panama-canal-1885",
-      "wyse-canal-panama-isthme-americain-1886",
-      "congres-international-canal-interoceanique-1879",
-      "siguenza-obras-1928",
-      "thompson-official-visit-guatemala-1829",
-      "squier-waikna-mosquito-shore-1855",
-      "arce-memoria-presidency-1830",
-      "meza-centro-america-campana-nacional-1885-1911",
-      "doubleday-filibuster-war-nicaragua-1886",
-      "henningsen-official-report-granada-1857",
-      "proceso-contra-william-walker-1860",
-      "pim-seemann-dottings-roadside-1869",
-      "peralta-costa-rica-costa-mosquitos-1898",
-      "rabasa-estado-chiapas-1895",
-      "montufar-walker-centro-america-1887",
-      "barberena-historia-el-salvador-1914-1917",
-      "stone-northern-highland-tribes-lenca-1948",
-      "perez-memorias-nicaragua-guerra-nacional-1854-1857",
-      "wells-walkers-expedition-nicaragua-1856",
-      "walker-war-nicaragua-1860",
-      "brinton-essays-americanist-1890",
-      "brinton-native-calendar-1893",
-      "brinton-xinca-1885",
-      "brinton-matagalpan-1895",
-      "brinton-alaguilac-1887",
-      "brinton-landa-editions-1887",
-      "brinton-cintla-1896",
-      "brinton-codex-troano-maya-chronology-1881",
-      "brinton-chane-abal-1888",
-      "brinton-mangue-1886",
-      "brinton-maya-inscriptions-1894",
-      "brinton-ancient-phonetic-alphabet-yucatan-1870",
-      "brinton-nahuatl-version-sahagun-historia-1890",
-      "brinton-chontales-popolucas-1892",
-      "brinton-words-anahuac-nahuatl-1893",
-      "brinton-written-language-ancient-mexicans-1889",
-      "brinton-chinantec-mazatec-languages-1892",
-      "brinton-otomi-athabascan-affinities-1894-1897",
-      "brinton-guetares-costa-rica-1897",
-      "brinton-musquito-coast-vocabularies-1891",
-      "brinton-central-american-language-manuscripts-1869",
-      "brinton-missing-authorities-mayan-antiquities-1897",
-      "brinton-pillars-of-ben-1897",
-      "milla-gomez-carrillo-historia-america-central-1879-1905",
-      "galvao-tratado-descobrimentos-1563",
-      "benzoni-historia-mondo-nuovo-1565-ja",
-      "nuix-reflexiones-imparciales-1783-ja",
-      "palacio-carta-rey-espana-1860",
-      "brinton-gueguence-1883",
-      "sahagun-historia-general-nueva-espana",
-      "herrera-historia-general-decadas-1-2-1601",
-      "herrera-historia-general-decadas-3-4-1601",
-      "herrera-historia-general-decadas-5-6-1615",
-      "herrera-historia-general-decadas-7-8-1615",
-      "bancroft-native-races-volume-i-1883",
-      "bancroft-native-races-volume-ii-1883",
-      "bancroft-native-races-volume-iii-1883",
-      "bancroft-native-races-volume-iv-1883",
-      "bancroft-native-races-volume-v-1883",
-      "robertson-history-america-volume-i-1777",
-      "robertson-history-america-volume-ii-1777",
-      "robertson-history-america-books-ix-x-1796",
-    ],
+    new Set(publications.filter(item => item.searchShard === "002").map(item => item.slug)),
+    new Set(expectedRecords.filter(item => item.searchShard === "002").map(item => item.slug)),
   );
   assert.equal(
     config.shards[0].baseUrl,
@@ -404,7 +308,7 @@ test("Spanish American Republics keeps unsigned authorship and the true 337–34
     "utf8",
   );
   assert.ok(html.includes(escapeHtml(item.attributionNote)));
-  assert.match(html, /後世の暫定帰属：Ephraim George Squier/);
+  matchText(html, /後世の暫定帰属：Ephraim George Squier/);
   const match = html.match(
     /<script type="application\/ld\+json">([\s\S]*?)<\/script>/,
   );
@@ -1737,176 +1641,12 @@ test("Walker 1860 keeps the Fancourt edition metadata and institutional rights n
 });
 
 test("short works use explicit author groups instead of page-count rules", () => {
-  assert.equal(majorPublications.length, 204);
-  assert.equal(shortPublications.length, 195);
-  assert.equal(shortPublicationAuthors.length, 45);
+  assert.equal(majorPublications.length, expectedMajor.length);
+  assert.equal(shortPublications.length, expectedShort.length);
+  assert.equal(shortPublicationAuthors.length, expectedCatalogue.shortAuthorCount);
   assert.deepEqual(
-    new Set(shortPublications.map((item) => item.slug)),
-    new Set([
-      "vle-panama-1831-article-1",
-      "vle-panama-1831-article-2",
-      "vle-interoceanic-1832-article-3",
-      "frus-nicaragua-mosquito-territory-1894",
-      "serrano-archivo-indias-panama-1911",
-      "foreign-office-mosquito-territory-1848",
-      "squier-great-calendar-stone-1849",
-      "squier-british-encroachments-mosquito-question-1850",
-      "squier-spanish-american-republics-1850",
-      "squier-great-ship-canal-question-1850",
-      "squier-judgment-by-default-1851",
-      "squier-visit-guajiquero-indians-1859",
-      "squier-volcanoes-central-america-1859",
-      "squier-hunting-pass-tropical-adventure-1860",
-      "squier-lake-yojoa-taulebe-1860",
-      "squier-unexplored-regions-central-america-1868",
-      "squier-observations-zestermann-1851",
-      "squier-crampton-webster-project-1852",
-      "squier-ancient-peru-1853",
-      "squier-great-south-american-earthquakes-1869",
-      "squier-chalchihuitls-mexico-central-america-1870",
-      "larde-cronologia-arqueologica-el-salvador-1926",
-      "larde-indice-provisional-arqueologico-el-salvador-1926",
-      "lothrop-museum-central-american-expedition-1927",
-      "lothrop-pottery-types-el-salvador-1927",
-      "larde-arqueologia-cuzcatleca-1924",
-      "larde-region-arqueologica-chalchuapa-1926",
-      "larde-poblacion-el-salvador-1921",
-      "larde-boqueron-grietas-volcanicas-el-pinar-1917",
-      "larde-ruinas-cihuatan-1927",
-      "larde-volcan-izalco-1922-1925",
-      "valle-george-ephraim-squier-1922",
-      "gonzalez-ruinas-tehuacan-1892",
-      "esquinca-usumacinta",
-      "sapper-eastern-lacandons-1891",
-      "berendt-central-america-explorations-1867",
-      "berendt-baumwollenbau-yucatan-1863",
-      "berendt-analytical-alphabet-1869",
-      "berendt-escritos-garcia-icazbalceta-1870",
-      "berendt-trabajos-linguisticos-juan-pio-perez-1871",
-      "berendt-el-ramie-1871",
-      "berendt-mexico-1872",
-      "berendt-indianer-tehuantepec-1873",
-      "berendt-carib-karif-language-1873",
-      "berendt-darien-language-1874",
-      "berendt-ethnologie-nicaragua-1874",
-      "berendt-ethnologie-nicaragua-1875",
-      "berendt-ancient-central-american-civilization-1876",
-      "berendt-historical-documents-guatemala-1877",
-      "berendt-veracruz-correspondence-1861-1862",
-      "berendt-drei-tage-cuba-1860",
-      "berendt-acasaguastlan-jilotepec-1878",
-      "berendt-indigenas-america-central-1877",
-      "berendt-palabras-modismos-nicaragua-1874",
-      "berendt-mangue-subtiaba-dossier-1874",
-      "berendt-vermessungsarbeiten-mexiko-1862",
-      "berendt-maasse-gewichte-mexiko-1862",
-      "berendt-handel-veracruz-1862",
-      "berendt-cochenille-produktion-oaxaca-1862",
-      "berendt-mexikanische-geographische-literatur-1862-1",
-      "us-senate-central-america-correspondence-1853",
-      "galindo-ruins-palenque-literary-gazette-1831",
-      "galindo-noticias-peten-1831",
-      "galindo-usumacinta-1833",
-      "galindo-caribs-central-america-1833",
-      "galindo-copan-full-report-1834",
-      "galindo-antiquities-peten-1834",
-      "galindo-eruption-cosiguina-1835",
-      "galindo-copan-literary-gazette-1835",
-      "galindo-on-central-america-1836",
-      "galindo-ruins-copan-aas-1836",
-      "friedrichsthal-yucatan-1841",
-      "galindo-palenque-1832",
-      "arthes-peten-1893",
-      "chonay-totonicapan-title-1886",
-      "societe-geographie-central-america-report-1836",
-      "marimon-lacandones-1695",
-      "peniche-relaciones-belice-1869",
-      "dieseldorff-ausgrabungen-coban-1893",
-      "dieseldorff-alte-bemalte-thongefaesse-guatemala-1893",
-      "dieseldorff-gefaess-chama-1895",
-      "dieseldorff-reliefbild-chipolem-1895",
-      "dieseldorff-cuculcan-1895",
-      "dieseldorff-tolteken-1896",
-      "dieseldorff-gegenstaende-guatemala-1893",
-      "dieseldorff-bemaltes-thongefaess-chama-1894",
-      "dieseldorff-vampyrkoepfige-gottheit-1894",
-      "dieseldorff-neue-ausgrabungen-chajcar-1895",
-      "dieseldorff-two-vases-chama-1904",
-      "dieseldorff-jadeit-schmuck-1905",
-      "dieseldorff-klassifizierung-funde-1909",
-      "dieseldorff-tzultaca-mam-1926",
-      "dieseldorff-kunst-religion-band-i-1926",
-      "dieseldorff-kunst-religion-band-ii-1931",
-      "dieseldorff-kekchi-will-1583-1932",
-      "dieseldorff-cauac-thunderbolt-signs-1932",
-      "dieseldorff-arqueologia-alta-verapaz-1936",
-      "dieseldorff-calendario-maya-quirigua-1936",
-      "dieseldorff-plantas-medicinales-alta-verapaz-1939-1940",
-      "dieseldorff-causa-calendario-quirigua-1940",
-      "schellhas-virchow-deformierter-schaedel-ulpan-1894",
-      "virchow-graeberschaedel-guatemala-1897",
-      "perigny-ruines-nacun-1906",
-      "perigny-exploration-yucatan-1906",
-      "lemoine-travers-peten-yucatan-1906",
-      "perigny-peten-1907",
-      "perigny-maya-ruins-quintana-roo-1907",
-      "perigny-yucatan-inconnu-1908",
-      "perigny-maler-discoveries-yucatan-1908",
-      "perigny-yucatan-inconnu-geographie-1908",
-      "perigny-ruines-rio-bec-1909",
-      "perigny-villes-mortes-amerique-centrale-1909",
-      "perigny-lettre-costa-rica-1910",
-      "perigny-costa-rica-pays-habitants-ressources-1910",
-      "perigny-ruines-nakcun-1911",
-      "perigny-costa-rica-nantes-1911",
-      "perigny-amerique-centrale-1911",
-      "morelet-exploration-guatemala-1850",
-      "morelet-testacea-novissima-pars-i-1849",
-      "morelet-testacea-novissima-pars-ii-1851",
-      "flint-antiquities-nicaragua-palenque-builders-1882",
-      "flint-human-foot-prints-nicaragua-1884",
-      "flint-human-foot-prints-nicaragua-1885",
-      "flint-pre-adamite-foot-prints-1886",
-      "flint-human-footprints-eocene-1888",
-      "flint-paleolithics-nicaragua-1888",
-      "flint-nicaragua-foot-prints-1889",
-      "flint-what-dr-flint-says-nicaragua-footprints-1890",
-      "flint-prehistoric-horse-america-1891",
-      "flint-rainfall-rivas-nicaragua-1898",
-      "flint-rainfall-central-western-nicaragua-1899",
-      "putnam-antiquity-man-america-1884",
-      "mca-pre-adamite-track-1885",
-      "unsigned-nicaragua-footprints-again-1886",
-      "brinton-ancient-human-footprint-nicaragua-1887",
-      "brinton-native-calendar-1893",
-      "brinton-xinca-1885",
-      "brinton-matagalpan-1895",
-      "brinton-alaguilac-1887",
-      "brinton-landa-editions-1887",
-      "brinton-cintla-1896",
-      "brinton-codex-troano-maya-chronology-1881",
-      "brinton-chane-abal-1888",
-      "brinton-mangue-1886",
-      "brinton-maya-inscriptions-1894",
-      "brinton-ancient-phonetic-alphabet-yucatan-1870",
-      "brinton-nahuatl-version-sahagun-historia-1890",
-      "brinton-chontales-popolucas-1892",
-      "brinton-words-anahuac-nahuatl-1893",
-      "brinton-written-language-ancient-mexicans-1889",
-      "brinton-chinantec-mazatec-languages-1892",
-      "brinton-otomi-athabascan-affinities-1894-1897",
-      "brinton-guetares-costa-rica-1897",
-      "brinton-musquito-coast-vocabularies-1891",
-      "brinton-central-american-language-manuscripts-1869",
-      "brinton-missing-authorities-mayan-antiquities-1897",
-      "brinton-pillars-of-ben-1897",
-      "editorial-age-nicaragua-footprints-1889",
-      "crawford-neolithic-man-nicaragua-1891",
-      "stone-northern-highland-tribes-lenca-1948",
-      "henningsen-official-report-granada-1857",
-      ...perignyRemainingSlugs,
-      "rodriguez-relacion-espantable-terremoto-1541",
-    ]),
+    new Set(shortPublications.map(item => item.slug)),
+    new Set(expectedShort.map(item => item.slug)),
   );
   const galindo = shortPublicationAuthors.find(
     (author) => author.key === "juan-galindo",
@@ -2854,9 +2594,9 @@ test("home page contains scalable archive controls", async () => {
     "fulltext-dialog-close",
     "fulltext-result-list",
   ]) {
-    assert.match(html, new RegExp(`id="${id}"`));
+    matchText(html, new RegExp(`id="${id}"`));
   }
-  assert.match(html, /window\.ARCHIVE_PUBLICATIONS=/);
+  matchText(html, /window\.ARCHIVE_PUBLICATIONS=/);
   const embeddedStart = html.indexOf("window.ARCHIVE_PUBLICATIONS=") +
     "window.ARCHIVE_PUBLICATIONS=".length;
   const embeddedEnd = html.indexOf(";</script>", embeddedStart);
@@ -2883,33 +2623,33 @@ test("home page contains scalable archive controls", async () => {
     ]),
     [[3, 924, 0], [925, 1688, -922], [1689, 2585, -1686]],
   );
-  assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
-  assert.match(html, /\/archive\.js\?v=20260906-multivolume-files/);
-  assert.match(html, /\/fulltext-search\.css\?v=20260906-multivolume-files/);
-  assert.match(
+  matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
+  matchText(html, /\/archive\.js\?v=20260906-multivolume-files/);
+  matchText(html, /\/fulltext-search\.css\?v=20260906-multivolume-files/);
+  matchText(
     html,
     /\/fulltext-search\.js\?v=20260906-multivolume-files-bibliographic-counts/,
   );
-  assert.match(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
-  assert.match(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
-  assert.match(
+  matchText(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
+  matchText(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
+  matchText(
     html,
-    /bibliographicCounts:\{"books":191,"papers":195\}/,
+    new RegExp(`bibliographicCounts:${JSON.stringify({books: expectedBooks, papers: expectedPapers})}`),
   );
-  assert.match(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
-  assert.match(html, /takochan-search-index-001\/document-map\.json/);
-  assert.doesNotMatch(html, /"\/search\/pagefind\//);
-  assert.match(html, /書名・著者・地名・キーワード/);
-  assert.match(html, /本文全文検索/);
-  assert.match(html, /同じPDF頁の一致は1件にまとめ/);
-  assert.match(html, /大冊は最初の一致頁を先に表示/);
-  assert.doesNotMatch(html, /Googleサイト内検索|google-site-search|www\.google\.com\/search/);
-  assert.match(html, />一覧内検索</);
-  assert.match(html, /class="collection-tabs" role="tablist"/);
-  assert.match(html, /id="collection-match-summary" aria-live="polite"/);
-  assert.match(html, /id="book-match-count">191<\/strong>件/);
-  assert.match(html, /id="paper-match-count">195<\/strong>件/);
-  assert.match(html, /data-short-archive/);
+  matchText(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
+  matchText(html, /takochan-search-index-001\/document-map\.json/);
+  doesNotMatchText(html, /"\/search\/pagefind\//);
+  matchText(html, /書名・著者・地名・キーワード/);
+  matchText(html, /本文全文検索/);
+  matchText(html, /同じPDF頁の一致は1件にまとめ/);
+  matchText(html, /大冊は最初の一致頁を先に表示/);
+  doesNotMatchText(html, /Googleサイト内検索|google-site-search|www\.google\.com\/search/);
+  matchText(html, />一覧内検索</);
+  matchText(html, /class="collection-tabs" role="tablist"/);
+  matchText(html, /id="collection-match-summary" aria-live="polite"/);
+  matchText(html, new RegExp(`id="book-match-count">${expectedBooks}</strong>件`));
+  matchText(html, new RegExp(`id="paper-match-count">${expectedPapers}</strong>件`));
+  matchText(html, /data-short-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
   const matchSummaryPosition = html.indexOf('id="collection-match-summary"');
@@ -2922,27 +2662,27 @@ test("home page contains scalable archive controls", async () => {
       collectionTabsPosition < booksPanelPosition,
     "all search controls and category match counts must precede the tabs",
   );
-  assert.match(
+  matchText(
     html,
     /id="tab-publications"[\s\S]*?aria-selected="true"[\s\S]*?collection-tab__label">書籍<\/span>/,
   );
-  assert.match(
+  matchText(
     html,
     /id="tab-short-works"[\s\S]*?aria-selected="false"[\s\S]*?collection-tab__label">論文<\/span>/,
   );
-  assert.match(html, /id="publications" role="tabpanel"/);
-  assert.match(html, /id="short-works" role="tabpanel"[\s\S]*? hidden>/);
-  assert.doesNotMatch(html, /刊本・大部論文|短篇論文・報告/);
-  assert.match(html, /<option value="12" selected>12件<\/option>/);
-  assert.match(html, /<option value="all">すべて<\/option>/);
-  assert.match(html, /元資料を読もう/);
-  assert.match(html, /中部アメリカとその周辺に関する年代記/);
-  assert.match(html, /公開版総ページ数/);
-  assert.match(html, /海外の記録を、/);
-  assert.match(html, /PDFとリフロー型EPUB/);
-  assert.match(html, /href="\/about\/">翻訳・編集・レビュー・再利用方針を読む/);
-  assert.doesNotMatch(html, /生成AIの余剰リソース/);
-  assert.match(html, /底本位置標識（原刊頁・写本葉丁・画像番号など）と日本語版PDFの物理頁を併記/);
+  matchText(html, /id="publications" role="tabpanel"/);
+  matchText(html, /id="short-works" role="tabpanel"[\s\S]*? hidden>/);
+  doesNotMatchText(html, /刊本・大部論文|短篇論文・報告/);
+  matchText(html, /<option value="12" selected>12件<\/option>/);
+  matchText(html, /<option value="all">すべて<\/option>/);
+  matchText(html, /元資料を読もう/);
+  matchText(html, /中部アメリカとその周辺に関する年代記/);
+  matchText(html, /公開版総ページ数/);
+  matchText(html, /海外の記録を、/);
+  matchText(html, /PDFとリフロー型EPUB/);
+  matchText(html, /href="\/about\/">翻訳・編集・レビュー・再利用方針を読む/);
+  doesNotMatchText(html, /生成AIの余剰リソース/);
+  matchText(html, /底本位置標識（原刊頁・写本葉丁・画像番号など）と日本語版PDFの物理頁を併記/);
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
     majorCataloguePublications.length,
@@ -2959,13 +2699,13 @@ test("home page contains scalable archive controls", async () => {
     (html.match(/<details class="short-author"/g) || []).length,
     shortPublicationAuthors.length,
   );
-  assert.doesNotMatch(html, /<details class="short-author"[^>]*\sopen(?:\s|>)/);
-  assert.match(html, /id="author-juan-galindo"/);
-  assert.match(html, /フアン・ガリンド/);
-  assert.match(html, />11篇</);
-  assert.match(html, /id="author-arthur-morelet"/);
-  assert.match(html, /ピエール＝マリー＝アルテュール・モルレ/);
-  assert.match(html, />2篇</);
+  doesNotMatchText(html, /<details class="short-author"[^>]*\sopen(?:\s|>)/);
+  matchText(html, /id="author-juan-galindo"/);
+  matchText(html, /フアン・ガリンド/);
+  matchText(html, />11篇</);
+  matchText(html, /id="author-arthur-morelet"/);
+  matchText(html, /ピエール＝マリー＝アルテュール・モルレ/);
+  matchText(html, />2篇</);
   const shortPanel = html.slice(
     html.indexOf('id="short-works" role="tabpanel"'),
     html.indexOf('<section class="about" id="about">'),
@@ -2977,21 +2717,21 @@ test("home page contains scalable archive controls", async () => {
 
 test("about page explains the editorial workflow and its limits", async () => {
   const html = await readFile(path.join(dist, "about", "index.html"), "utf8");
-  assert.match(html, /翻訳・編集・/);
-  assert.match(html, /底本と翻訳/);
-  assert.match(html, /独立レビュー/);
-  assert.match(html, /組版と公開前確認/);
-  assert.match(html, /再利用とライセンス/);
-  assert.match(html, /パブリックドメインの原著に基づく通常の翻訳/);
-  assert.match(html, /BY、SA、NCなどの条件は省略せず/);
-  assert.match(html, /利用上の注意/);
-  assert.match(html, /原文から日本語へ翻訳します/);
-  assert.match(html, /専門研究者による外部査読を意味しません/);
-  assert.match(html, /全文を逐語的に人手校閲したことを意味しません/);
-  assert.match(html, /最終PDFの確認と承認を受けるまでは/);
-  assert.doesNotMatch(html, /現在翻訳中|WORK IN PROGRESS/);
-  assert.match(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
+  matchText(html, /翻訳・編集・/);
+  matchText(html, /底本と翻訳/);
+  matchText(html, /独立レビュー/);
+  matchText(html, /組版と公開前確認/);
+  matchText(html, /再利用とライセンス/);
+  matchText(html, /パブリックドメインの原著に基づく通常の翻訳/);
+  matchText(html, /BY、SA、NCなどの条件は省略せず/);
+  matchText(html, /利用上の注意/);
+  matchText(html, /原文から日本語へ翻訳します/);
+  matchText(html, /専門研究者による外部査読を意味しません/);
+  matchText(html, /全文を逐語的に人手校閲したことを意味しません/);
+  matchText(html, /最終PDFの確認と承認を受けるまでは/);
+  doesNotMatchText(html, /現在翻訳中|WORK IN PROGRESS/);
+  matchText(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
+  matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -3086,11 +2826,11 @@ test("publication pages expose Google-readable metadata and schema.org records",
       path.join(dist, "publications", item.slug, "index.html"),
       "utf8",
     );
-    assert.match(
+    matchText(
       html,
       /<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">/,
     );
-    assert.match(
+    matchText(
       html,
       new RegExp(
         `<meta property="og:image" content="https://takochanchan\\.github\\.io/${item.cover.replace(
@@ -3129,8 +2869,8 @@ test("every bibliographic work has one detail page, local cover, and volume link
     const detail = path.join(dist, "publications", item.slug, "index.html");
     assert.ok(await exists(detail));
     const html = await readFile(detail, "utf8");
-    assert.match(html, new RegExp(item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-    assert.match(
+    matchText(html, new RegExp(item.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+    matchText(
       html,
       new RegExp(
         escapeHtml(item.originalTitle).replace(
@@ -3143,16 +2883,16 @@ test("every bibliographic work has one detail page, local cover, and volume link
       assert.ok(html.includes(escapeHtml(volume.pdfUrl)), `${volume.slug}: PDF URL`);
       assert.ok(html.includes(escapeHtml(volume.epubUrl)), `${volume.slug}: EPUB URL`);
     }
-    assert.match(html, /底本・公開情報/);
-    assert.match(html, /\/archive\.css\?v=20260906-multivolume-files/);
-    assert.match(html, /\/archive\.js\?v=20260906-multivolume-files/);
+    matchText(html, /底本・公開情報/);
+    matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
+    matchText(html, /\/archive\.js\?v=20260906-multivolume-files/);
     if (item.recordClass === "short-work") {
-      assert.match(
+      matchText(
         html,
         /href="\/\?v=20260906-multivolume-files#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
-      assert.match(
+      matchText(
         html,
         /href="\/\?v=20260906-multivolume-files#publications">← 書籍へ戻る<\/a>/,
       );
@@ -3165,7 +2905,7 @@ test("every bibliographic work has one detail page, local cover, and volume link
       "更新日",
       "訂正窓口",
     ]) {
-      assert.match(html, new RegExp(`>${label}<`), `${item.slug}: ${label}`);
+      matchText(html, new RegExp(`>${label}<`), `${item.slug}: ${label}`);
     }
     assert.ok(html.includes(escapeHtml(item.sourceEdition)), item.slug);
     assert.ok(html.includes(escapeHtml(item.sourceProvider)), item.slug);
@@ -3179,8 +2919,8 @@ test("every bibliographic work has one detail page, local cover, and volume link
       item.volumes.length,
       `${item.slug}: PDF download controls`,
     );
-    assert.match(html, /EPUBを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
-    assert.doesNotMatch(html, /PDFを開く|別画面で開く/);
+    matchText(html, /EPUBを保存（\d+(?:\.\d+)? (?:KB|MB)）/);
+    doesNotMatchText(html, /PDFを開く|別画面で開く/);
     const iframeTags = html.match(/<iframe\b[^>]*>/g) || [];
     assert.equal(iframeTags.length, 1, `${item.slug}: iframe count`);
     assert.doesNotMatch(iframeTags[0], /\ssrc=/, `${item.slug}: eager PDF`);
@@ -3190,7 +2930,7 @@ test("every bibliographic work has one detail page, local cover, and volume link
       await assert.rejects(access(path.join(dist, volume.pdf)));
       await assert.rejects(access(path.join(dist, volume.epub)));
     }
-    assert.match(
+    matchText(
       html,
       /https:\/\/docs\.google\.com\/viewerng\/viewer\?embedded=true&amp;url=/,
     );
@@ -3204,7 +2944,7 @@ test("legacy volume URLs redirect to their shared bibliography page", async () =
       "utf8",
     );
     const target = `/publications/${canonicalSlug}/`;
-    assert.match(html, /<meta name="robots" content="noindex,follow">/);
+    matchText(html, /<meta name="robots" content="noindex,follow">/);
     assert.ok(html.includes(`<link rel="canonical" href="https://takochanchan.github.io${target}">`));
     assert.ok(html.includes(`href="${target}"`));
   }

@@ -16,6 +16,11 @@ GitHub上のコミットSHAが公開側の台帳に記録された後にのみ�
 4. GitHub上で保存後の40桁コミットSHAを確認する。
 5. 本リポジトリの `master-archive.json` に、そのSHAと正本パスを記録する。
 6. `npm run build` と `npm test` を実行する。
+   件数・分類・検索所属・巻グループの回帰検査は
+   `tests/fixtures/publication-catalogue.json` の独立した期待値を使う。
+   新規公開では当該作品のレコードと必要な巻グループだけを同じ変更へ追加する。
+   各種件数とホーム画面の期待値はそこから算出するため、複数箇所の数値置換は不要。
+   実装から期待値全体を自動再生成して検査を通さない。
 7. PDF・EPUBをReleaseへ反映し、容量・SHA-256を`assets-manifest.json`へ記録する。
 8. `search-shards.json` と各資料の `searchShard` から更新対象の外部索引を確定する。
    `001` は277作品で封印し、`sealedWorks` 検査で暗黙追加を拒否する。2026年8月26日以後の
