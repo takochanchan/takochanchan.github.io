@@ -19,4 +19,4 @@ No further publication steps remain.
 
 ## Cover correction 2026-09-25
 
-Corrected label: BERICHT · 1845. 325 pages; non-cover 324 pages are raster-identical to the approved edition. Canonical master saved at ae7ecd6743d24764640bc5524c59b1b6008118f9; run 36107555273 succeeded. Reusing fellechner-transfer.yml (run 36088877747) with checksum-pinned byte-copy delta input to avoid retransmitting unchanged images. PDF and EPUB reconstruction is checked against locally generated final bytes. Pending: public assets, shard 002, remote gate, Pages, live verification.
+Label: BERICHT · 1845. PDF: 325 pages; 324 non-cover pages are raster-identical to the approved edition. Immediate DOCX reproduction: pdfplumber 0.11.8, 201254 characters, maximum coordinate difference 0 pt. Canonical master: ae7ecd6743d24764640bc5524c59b1b6008118f9; archive run 36107555273 success. PDF/EPUB replacement, EPUB 3 validation and redownload byte verification: run 36107819458 success. Reused transfer flow from run 36088877747, with a checksum-pinned delta to reuse unchanged images. Shard 002 run 36107976973. Pending: main Pages and final live URL checks.
