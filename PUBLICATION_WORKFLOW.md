@@ -86,6 +86,21 @@ GitHub上のコミットSHAが公開側の台帳に記録された後にのみ�
    Actions起動だけでは完了にしない。所定の正本・資産・台帳・検索・Pages・公開後照合が揃ったことを確認する。
    進捗は新たに完了した工程と証拠、阻害要因、次に必要な操作を報告し、同じ予定だけを繰り返さない。
 
+<a id="verified-publication-references"></a>
+### 確認済み実装の参照先（2026-09-25）
+
+以下は既存手順の適用例であり、新しい公開経路ではありません。現在の入力仕様・台帳・索引構成へ適合する一例を選び、案件状態へ参照元を記録した後は再探索しません。
+
+| 用途 | 確認済みの参照元 | 再利用時に保持するもの |
+| --- | --- | --- |
+| 複数巻のPDF・EPUB転送 | [エレーラの公開準備](https://github.com/takochanchan/takochanchan.github.io/commit/00546abc4a26e0d08d4636795bb25bb4a2956c19)、[成功run](https://github.com/takochanchan/takochanchan.github.io/actions/runs/34007198613)。同commitの `.github/workflows/transfer-herrera.yml`、`.herrera-transfer.py`、`.herrera-public-request.json` | サイズ・SHA・全片の組、再取得照合、環境と依存。対象slug・版・資産だけを現案件へ合わせる。 |
+| カタログ検査への資料追加 | 現行の `tests/fixtures/publication-catalogue.json` と `tests/archive.test.mjs` | 現行fixtureの当該レコード・巻グループを更新する。過去例の固定件数や旧コードで現行の一元化を巻き戻さない。 |
+
+正本取り込みの再開は、実際のworkflowの起動条件と対象依頼を対応させます。検証コードだけを変更して取り込み済みと扱わず、対象を実行したrunで結果を確認します。再送前には同一版の正本が既に成立していないか確認し、重複依頼による全体停止を避けます。
+
+この参照登録自体を、実行性能の改善や公開完了とは扱いません。必要条件が揃ったら、上記「確認が済んだら実行へ進む」に従って次の未完了工程を実行します。
+
+
 ## 公開書誌の記述方針
 
 書誌の説明文は資料の内容・主題と主要底本に限定し、形態欄は巻数・PDF頁数などの
