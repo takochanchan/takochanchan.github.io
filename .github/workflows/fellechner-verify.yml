@@ -16,3 +16,44 @@ jobs:
           node-version: 22
       - run: npm ci --no-audit --no-fund
       - run: npm run verify:remote-search
+      - name: Install PDF inspection dependency
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y poppler-utils
+      - name: Verify published page and exact final assets
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, subprocess, tempfile, urllib.request, zipfile, io
+          from xml.etree import ElementTree as ET
+          base='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/'
+          page='https://takochanchan.github.io/publications/fellechner-mueller-hesse-mosquitoland-1845/'
+          def get(url):
+              with urllib.request.urlopen(url,timeout=120) as response:return response.read()
+          html=get(page).decode()
+          assert 'モスキート地方調査報告' in html
+          sums=get(base+'SHA256SUMS.txt').decode()
+          expected={
+          'Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.pdf':(7882482,'783130494b73c58206bd44f75ed7481f78bd9217f671f490f396ac4de920af95'),
+          'Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub':(24902057,'7c9a575b3a7809186cb047ab76ae60d854d14ff0cd86089abea6ca9066b1f9ce')}
+          report={'page':page,'assets':{}}
+          for name,(size,digest) in expected.items():
+              assert name in html
+              data=get(base+name)
+              assert len(data)==size and hashlib.sha256(data).hexdigest()==digest
+              assert any(line.split()[0]==digest and line.split()[-1].lstrip('*').rsplit('/',1)[-1]==name for line in sums.splitlines() if line.strip())
+              report['assets'][name]={'size':len(data),'sha256':digest}
+              if name.endswith('.epub'):
+                  with zipfile.ZipFile(io.BytesIO(data)) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+                      container=ET.fromstring(z.read('META-INF/container.xml'))
+                      opf=container.find('.//{urn:oasis:names:tc:opendocument:xmlns:container}rootfile').attrib['full-path']
+                      assert ET.fromstring(z.read(opf)).attrib['version'].startswith('3')
+              else:
+                  with tempfile.TemporaryDirectory() as t:
+                      p=pathlib.Path(t)/name;p.write_bytes(data)
+                      info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                      assert any(line.startswith('Pages:') and line.split()[-1]=='325' for line in info.splitlines())
+          print(json.dumps(report,ensure_ascii=False,indent=2))
+          
+          PY
