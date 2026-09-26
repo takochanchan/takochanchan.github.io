@@ -1496,6 +1496,24 @@
       "sha256": "ce9a5c4bdeccf933a059d2f292bacf17d09b677645751d4a093cbfc131e03518"
     },
     {
+      "path": "publications/bustamante-acontecimientos-1814-1911/Jose_de_Bustamante_Informe_sobre_los_acontecimientos_de_1814_1911_Japanese_Complete_Translation.epub",
+      "size": 108609,
+      "sha256": "ea6ee22e67bdfcd7cbd9d935afa7ec2a1de5202fb417679c19ee22bc0b4105fa",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_de_Bustamante_Informe_sobre_los_acontecimientos_de_1814_1911_Japanese_Complete_Translation.epub"
+    },
+    {
+      "path": "publications/bustamante-acontecimientos-1814-1911/Jose_de_Bustamante_Informe_sobre_los_acontecimientos_de_1814_1911_Japanese_Complete_Translation.pdf",
+      "size": 510537,
+      "sha256": "a4f3150c3cc22b075ff64f418a555c5a7964d07c41ba6ecb6aa528b74979a45e",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_de_Bustamante_Informe_sobre_los_acontecimientos_de_1814_1911_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "path": "publications/bustamante-acontecimientos-1814-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-acontecimientos-1814-1911/cover.jpg",
+      "size": 92634,
+      "sha256": "1a499a4a072c0fcb8173dc1484c450bc341d1e8b3d93c3ec60fc4ddbd4a4080e"
+    },
+    {
       "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "size": 35544632,
@@ -4070,6 +4088,24 @@
       "sha256": "a4a9632804a8fe4a8d1f7312e0643eab9a47d3706db45ced6b08f34dc02cabdb"
     },
     {
+      "path": "publications/luna-arte-libertad-centro-america-1911/Alberto_Luna_El_Arte_al_servicio_de_la_Libertad_en_Centro_America_1911_Japanese_Complete_Translation.epub",
+      "size": 91729,
+      "sha256": "028e9ed71ac6d0645329f7df33998145c1d94cc4ef4fef4bd10228105500aa9e",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alberto_Luna_El_Arte_al_servicio_de_la_Libertad_en_Centro_America_1911_Japanese_Complete_Translation.epub"
+    },
+    {
+      "path": "publications/luna-arte-libertad-centro-america-1911/Alberto_Luna_El_Arte_al_servicio_de_la_Libertad_en_Centro_America_1911_Japanese_Complete_Translation.pdf",
+      "size": 282343,
+      "sha256": "2d97712fd97cf786218a232ecd8ad2f2da91f6754cf39bd7fa76ab3028a23b82",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alberto_Luna_El_Arte_al_servicio_de_la_Libertad_en_Centro_America_1911_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "path": "publications/luna-arte-libertad-centro-america-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/luna-arte-libertad-centro-america-1911/cover.jpg",
+      "size": 92830,
+      "sha256": "40a829cf6ff9b6c8bbd5810b3361be5f459b7cd2b6c1831daff92644d3960ca6"
+    },
+    {
       "path": "publications/lundell-vegetation-peten-1937/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Cyrus_Longworth_Lundell_The_Vegetation_of_Peten_1937_Japanese_Complete_Translation.epub",
       "size": 29895104,
@@ -4722,6 +4758,24 @@
       "url": "https://takochanchan.github.io/publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
       "size": 40864,
       "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
+    },
+    {
+      "path": "publications/peinado-san-salvador-insurreccion-1814-1911/Jose_Maria_Peinado_Comunicacion_al_Capitan_General_del_Reino_1911_Japanese_Complete_Translation.epub",
+      "size": 3804905,
+      "sha256": "56d5ac7d8a52edb5242b509025a1c9ce6aaf1f35fbb0ae36e3ae7f895d8250d3",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Peinado_Comunicacion_al_Capitan_General_del_Reino_1911_Japanese_Complete_Translation.epub"
+    },
+    {
+      "path": "publications/peinado-san-salvador-insurreccion-1814-1911/Jose_Maria_Peinado_Comunicacion_al_Capitan_General_del_Reino_1911_Japanese_Complete_Translation.pdf",
+      "size": 912082,
+      "sha256": "9e4af9028754e81a6372f1e7afbc78a4fd92bc33835a3b866f9284cc49544415",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Maria_Peinado_Comunicacion_al_Capitan_General_del_Reino_1911_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "path": "publications/peinado-san-salvador-insurreccion-1814-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/peinado-san-salvador-insurreccion-1814-1911/cover.jpg",
+      "size": 108678,
+      "sha256": "8b03c07249cf5e6b2681dc9a4c365808b8fe374e8b42f01677bd8cfd676bdc38"
     },
     {
       "path": "publications/peniche-relaciones-belice-1869/Manuel_Peniche_Historia_relaciones_Belice_1869_Japanese_Complete_Translation.epub",

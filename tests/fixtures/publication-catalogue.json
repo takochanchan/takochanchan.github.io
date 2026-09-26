@@ -2191,6 +2191,24 @@
       "slug": "oviedo-historia-general-natural-indias-volume-iv-1855",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "peinado-san-salvador-insurreccion-1814-1911",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホセ・マリア・ペイナード"
+    },
+    {
+      "slug": "bustamante-acontecimientos-1814-1911",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ホセ・デ・ブスタマンテ"
+    },
+    {
+      "slug": "luna-arte-libertad-centro-america-1911",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "アルベルト・ルナ"
     }
   ],
   "groups": [
@@ -2238,5 +2256,5 @@
       ]
     }
   ],
-  "shortAuthorCount": 45
+  "shortAuthorCount": 48
 }

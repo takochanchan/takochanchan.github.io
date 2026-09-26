@@ -1,3 +1,4 @@
+import { proceresPublicationRecords, proceresPublicationMetadata, proceresShortWorkAuthors } from "./proceres-publications.mjs";
 import { oviedoPublicationRecords, oviedoPublicationMetadata } from "./oviedo-publications.mjs";
 import { fellechnerPublicationRecords, fellechnerPublicationMetadata } from "./fellechner-publication.mjs";
 import { bethlehemiticaPublicationRecords, bethlehemiticaPublicationMetadata } from "./bethlehemitica-publication.mjs";
@@ -246,6 +247,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...proceresPublicationRecords,
   ...oviedoPublicationRecords,
   ...fellechnerPublicationRecords,
   ...bethlehemiticaPublicationRecords,
@@ -9335,6 +9337,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...proceresPublicationMetadata,
   ...oviedoPublicationMetadata,
   ...fellechnerPublicationMetadata,
   ...bethlehemiticaPublicationMetadata,
@@ -11904,6 +11907,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  ...proceresShortWorkAuthors,
   "vle-panama-1831-article-1": "f-w-c",
   "vle-panama-1831-article-2": "f-w-c",
   "vle-interoceanic-1832-article-3": "f-w-c",
