@@ -122,7 +122,7 @@ export const proceresPublicationMetadata = {
     "sourceEdition": "José María Peinado, “1814. Comunicación dirigida por el Intendente Don José María Peinado al Capitán General del Reino, dándole cuenta de la insurrección efectuada en la ciudad de San Salvador el 24 de enero de 1814”, Próceres: documentos y datos históricos, tomo I, núm. 6, Rafael V. Castro 編, San Salvador: Tip. La Unión, 1911, pp. 195–208.",
     "sourceProvider": "Universidad Centroamericana José Simeón Cañas（UCA）、Biblioteca «P. Florentino Idoate, S.J.»所蔵・公開。",
     "sourceUrl": "https://repositorio.uca.edu.sv/entities/publication/94853cb0-da3e-4284-8465-07646966c24b",
-    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。本日本語訳には再利用許諾を付与しません。https://creativecommons.org/publicdomain/mark/1.0/"
+    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。https://creativecommons.org/publicdomain/mark/1.0/"
   },
   "bustamante-acontecimientos-1814-1911": {
     "publishedDate": "2026-09-26",
@@ -130,7 +130,7 @@ export const proceresPublicationMetadata = {
     "sourceEdition": "José de Bustamante, “Informe del Capitán General de Guatemala D. José de Bustamante sobre los acontecimientos de 1814”, Próceres: documentos y datos históricos, tomo I, núm. 6, Rafael V. Castro 編, San Salvador: Tip. La Unión, 1911, pp. 209–231.",
     "sourceProvider": "Universidad Centroamericana José Simeón Cañas（UCA）、Biblioteca «P. Florentino Idoate, S.J.»所蔵・公開。",
     "sourceUrl": "https://repositorio.uca.edu.sv/entities/publication/94853cb0-da3e-4284-8465-07646966c24b",
-    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。本日本語訳には再利用許諾を付与しません。https://creativecommons.org/publicdomain/mark/1.0/"
+    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。https://creativecommons.org/publicdomain/mark/1.0/"
   },
   "luna-arte-libertad-centro-america-1911": {
     "publishedDate": "2026-09-26",
@@ -138,7 +138,7 @@ export const proceresPublicationMetadata = {
     "sourceEdition": "Alberto Luna, “El Arte al servicio de la Libertad en Centro América. La primera representación dramática en San Salvador. Más vale tarde que nunca”, Próceres: documentos y datos históricos, tomo I, núm. 6, Rafael V. Castro 編, San Salvador: Tip. La Unión, 1911, pp. 232–234.",
     "sourceProvider": "Universidad Centroamericana José Simeón Cañas（UCA）、Biblioteca «P. Florentino Idoate, S.J.»所蔵・公開。",
     "sourceUrl": "https://repositorio.uca.edu.sv/entities/publication/94853cb0-da3e-4284-8465-07646966c24b",
-    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。本日本語訳には再利用許諾を付与しません。https://creativecommons.org/publicdomain/mark/1.0/"
+    "rights": "UCAリポジトリは本資料をパブリックドメイン作品（Public Domain Mark 1.0）として公開しています。画像・書誌の提供：UCA「P. Florentino Idoate, S.J.」図書館。https://creativecommons.org/publicdomain/mark/1.0/"
   }
 };
 
