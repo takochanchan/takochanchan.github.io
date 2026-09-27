@@ -7602,6 +7602,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
+      "size": 4791762,
+      "sha256": "3fd2048eab06eaacc413e6351ecc3b2c6b21d0a45412df327b11df4a0bea539d"
+    },
+    {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
+      "size": 2219098,
+      "sha256": "f62911369f2163b7e3a2685489b5665fecb75e21fd52d158ee20808ee1f1b064"
+    },
+    {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
+      "size": 71714,
+      "sha256": "de7a6da071adb388223dcb6709c24464a5c8a88dc446a1e90e796483440caf23"
     }
   ]
 }

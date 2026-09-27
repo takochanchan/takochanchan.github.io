@@ -1,0 +1,30 @@
+name: Transfer approved Espinosa publication files
+on:
+  push:
+    branches: [agent/espinosa-publish-20260927]
+    paths: [.espinosa-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .espinosa-transfer.py
+      - name: Verify EPUB 3 structure
+        run: python3 scripts/validate-epubs.py /tmp/espinosa-final-assets --slug espinosa-peregrino-septentrional-atlante-1737
+      - uses: actions/upload-artifact@v4
+        with:
+          name: espinosa-public-verification
+          path: espinosa-public-verification.json

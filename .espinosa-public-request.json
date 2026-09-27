@@ -1,0 +1,42 @@
+{
+  "bundle": {
+    "size": 6022243,
+    "sha256": "3aea484ebf97d2acf84ac8bc67db9f4361e27822e0318938dfdf5203b9978dab",
+    "chunks": [
+      "14c70ef95b4143fc54db45c37cad7a94becfd407",
+      "4c6e3b4afd3ef2f73892306a5691d4903f1d3843",
+      "b954deba5771a340b18d2ca18295dc2658fa2f79",
+      "a3020f163a874150de0b3d10f298ec90eeacc9d3",
+      "7b5928ea8a0a63610a8aacd506aa3284df82e8b1",
+      "822250e6e5f21a979e3847bd39be08e28e68392a",
+      "1c7a0fb94d72bf7ea3162dee3afaccf4dcb6af85",
+      "2e7ff0ac15dd928c85552585edc3878bbc05fe15",
+      "ea63755a4eceef178f469deb8cb6a08321065491",
+      "1e6c40e24b25c6f14b04cf2d12a3a47c712da30b",
+      "8c7a4558eb37008ede2c1a61fb7b2b826314f174",
+      "d5abb9915816757c6afff42654cc1f8f0b701086",
+      "d0aa19727522a02ebfecb889c9f682310499e23f",
+      "2e94ca476bb486fbd99e13a057a349ac301705b1",
+      "4718f907ab8170318c752515d6d6eed2dea30367",
+      "9c7a28b5e318ed1cbe76d2368768ced3381b8b46",
+      "66b69bce3e6a25659a579cf40aa4fa03a144b49e",
+      "a0553dea6f124abbe604b46fa14e5b0180ebd09d",
+      "168854b0cf49960b9bb2fb0a428768b0c0d55c7f",
+      "850924a4f1107a900c6d201aa7515e06f2af03d4",
+      "c74b7990a881b58b0fe1e4173f379dbcf4399376"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
+      "size": 4791762,
+      "sha256": "3fd2048eab06eaacc413e6351ecc3b2c6b21d0a45412df327b11df4a0bea539d"
+    },
+    {
+      "filename": "Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
+      "size": 2219098,
+      "sha256": "f62911369f2163b7e3a2685489b5665fecb75e21fd52d158ee20808ee1f1b064"
+    }
+  ],
+  "verified_archive_commit": "b4530f056d09e13b62e36b72df005aa265709291"
+}
