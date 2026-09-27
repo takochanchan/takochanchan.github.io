@@ -1,3 +1,4 @@
+import { siriaPublicationRecords, siriaPublicationMetadata } from "./siria-publication.mjs";
 import { proceresPublicationRecords, proceresPublicationMetadata, proceresShortWorkAuthors } from "./proceres-publications.mjs";
 import { oviedoPublicationRecords, oviedoPublicationMetadata } from "./oviedo-publications.mjs";
 import { fellechnerPublicationRecords, fellechnerPublicationMetadata } from "./fellechner-publication.mjs";
@@ -253,6 +254,7 @@ const publicationRecords = [
   ...bethlehemiticaPublicationRecords,
   ...vlePanamaPublicationRecords,
   ...vazquezPublicationRecords,
+  ...siriaPublicationRecords,
   ...montalvoPublicationRecords,
   ...frusPublicationRecords,
   ...haefkensPublicationRecords,
@@ -9346,6 +9348,7 @@ const publicationMetadata = {
   ...loboPublicationMetadata,
   ...howEadsPublicationMetadata,
   ...vazquezPublicationMetadata,
+  ...siriaPublicationMetadata,
   ...montalvoPublicationMetadata,
   ...frusPublicationMetadata,
   ...serranoPublicationMetadata,

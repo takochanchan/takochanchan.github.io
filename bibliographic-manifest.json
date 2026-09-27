@@ -7658,6 +7658,25 @@
         "status": "online",
         "url": "https://repositorio.uca.edu.sv/entities/publication/94853cb0-da3e-4284-8465-07646966c24b"
       }
+    },
+    {
+      "slug": "siria-anna-guerra-1716",
+      "recordClass": "major-work",
+      "title": "アナ・ゲーラの生涯",
+      "originalTitle": "Vida admirable, y prodigiosas virtudes de la V. sierva de Dios D. Anna Guerra de Jesus",
+      "author": "アントニオ・デ・シリア",
+      "originalAuthor": "Antonio de Siria",
+      "year": 1716,
+      "originalPublication": "Guatemala: Antonio de Velasco, 1716.",
+      "sourceEdition": "Antonio de Siria, Vida admirable, y prodigiosas virtudes de la V. sierva de Dios D. Anna Guerra de Jesus. Guatemala: Antonio de Velasco, 1716.",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本。Internet Archive公開。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidaadmirableypr00siri"
+      },
+      "rights": "1716年刊の原著は著作権保護期間を満了しています。Internet Archiveの当該資料にはPublic Domain Mark 1.0が表示されています。https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-09-27",
+      "updatedDate": "2026-09-27"
     }
   ],
   "works": [
