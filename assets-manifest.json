@@ -7620,6 +7620,24 @@
       "url": "https://takochanchan.github.io/publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
       "size": 71714,
       "sha256": "de7a6da071adb388223dcb6709c24464a5c8a88dc446a1e90e796483440caf23"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
+      "size": 36916550,
+      "sha256": "7a1084b725ae570b33373995072f0337bfd5a57609de8dd7803d1b4825e01f9e"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
+      "size": 34332626,
+      "sha256": "79aa1536e64670d851ae09a7ed0dfb111b7f8f7801bd476ef4c48e4aa647ab0e"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
+      "size": 47546,
+      "sha256": "b01875d8187231859cbe736d8c85559f15efecdf4c325a151a209b587940829a"
     }
   ]
 }

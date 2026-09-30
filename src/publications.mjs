@@ -1,3 +1,4 @@
+import { mexicoViejoPublicationRecords, mexicoViejoPublicationMetadata } from "./mexico-viejo-publication.mjs";
 import { espinosaPublicationRecords, espinosaPublicationMetadata } from "./espinosa-publication.mjs";
 import { siriaPublicationRecords, siriaPublicationMetadata } from "./siria-publication.mjs";
 import { proceresPublicationRecords, proceresPublicationMetadata, proceresShortWorkAuthors } from "./proceres-publications.mjs";
@@ -249,6 +250,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...mexicoViejoPublicationRecords,
   ...proceresPublicationRecords,
   ...oviedoPublicationRecords,
   ...fellechnerPublicationRecords,
@@ -9341,6 +9343,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...mexicoViejoPublicationMetadata,
   ...proceresPublicationMetadata,
   ...oviedoPublicationMetadata,
   ...fellechnerPublicationMetadata,

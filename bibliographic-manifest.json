@@ -7696,6 +7696,25 @@
         "status": "online",
         "url": "https://books.google.com/books?id=0a1qAAAAMAAJ"
       }
+    },
+    {
+      "slug": "gonzalez-obregon-mexico-viejo-1900",
+      "title": "古きメキシコ",
+      "originalTitle": "México viejo: noticias históricas, tradiciones, leyendas y costumbres",
+      "author": "ルイス・ゴンサレス・オブレゴン",
+      "originalAuthor": "Luis González Obregón",
+      "year": 1900,
+      "originalPublication": "París y México: Librería de la Vda. de C. Bouret, 1900.",
+      "sourceEdition": "Luis González Obregón, México viejo: noticias históricas, tradiciones, leyendas y costumbres. París y México: Librería de la Vda. de C. Bouret, 1900.",
+      "sourceProvider": "Getty Research Institute, Los Angeles（請求記号9930200500001551）所蔵本。Internet Archive公開画像。",
+      "rights": "1900年刊の原著は著作権保護期間を満了しています。提供画像の利用条件はGettyのReproductions & Permissions（https://www.getty.edu/research-conservation/library/reproductions-permissions/）およびTerms of Use（https://www.getty.edu/legal/terms-of-use/）を参照してください。当該公開本には個別のCCライセンス表示がなく、CC0の指定は確認できません。",
+      "publishedDate": "2026-09-30",
+      "updatedDate": "2026-09-30",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/mexicoviejonotic00gonz"
+      }
     }
   ],
   "works": [
