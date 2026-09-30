@@ -2,7 +2,7 @@ name: Replace verified Espinosa cover correction
 on:
   push:
     branches: [agent/espinosa-cover-publish-20261001]
-    paths: [.espinosa-public-request.json]
+    paths: [.espinosa-public-request.json, master-archive.json]
 permissions:
   contents: write
 concurrency:
