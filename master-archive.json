@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "91854d88d75ff160bb3a4228ec8f134bae0d228b",
+  "archive_commit": "6c11eeee2f5d050eb1c84a7f2a4429a374f8699f",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -351,7 +351,9 @@
     "siria-anna-guerra-1716": "publications/siria-anna-guerra-1716/master.docx",
     "espinosa-peregrino-septentrional-atlante-1737": "publications/espinosa-peregrino-septentrional-atlante-1737/master.docx",
     "gonzalez-obregon-mexico-viejo-1900": "publications/gonzalez-obregon-mexico-viejo-1900/master.docx",
-    "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/master.docx"
+    "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/master.docx",
+    "cehm-manuscritos-betlemitas-xi-5": "publications/cehm-manuscritos-betlemitas-xi-5/master.docx",
+    "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
