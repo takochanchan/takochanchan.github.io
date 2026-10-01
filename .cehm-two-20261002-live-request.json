@@ -1,0 +1,43 @@
+{
+  "verified_archive_commit": "6c11eeee2f5d050eb1c84a7f2a4429a374f8699f",
+  "publications": [
+    {
+      "slug": "cehm-manuscritos-betlemitas-xi-5",
+      "title": "ベツレヘム会手稿",
+      "author": "ベツレヘム会関係文書（複数の作成者）",
+      "code": "XI",
+      "pages": 551,
+      "assets": [
+        {
+          "filename": "CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
+          "size": 5360320,
+          "sha256": "4ae76de3250c13a58c91ec72db2b32f4261b2b88d02e31fe578f25af62efca55"
+        },
+        {
+          "filename": "CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
+          "size": 673976,
+          "sha256": "964c2a6055dae8b51a8db8e5c2ac1f13f483e015c76436a41f1872930c578c86"
+        }
+      ]
+    },
+    {
+      "slug": "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
+      "title": "ペドロ・ホセ・ベタンクールの列福",
+      "author": "ベツレヘム会関係文書（複数の作成者）",
+      "code": "LXIX",
+      "pages": 154,
+      "assets": [
+        {
+          "filename": "CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
+          "size": 1532073,
+          "sha256": "cc49eb22ced4958cedf77f35e877b8ada1a613a6b417c701a22685b3c30e608b"
+        },
+        {
+          "filename": "CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
+          "size": 277250,
+          "sha256": "6d246bb27e5e63c66c59d1b16102174717fea23470010ff974d980b841b9c892"
+        }
+      ]
+    }
+  ]
+}

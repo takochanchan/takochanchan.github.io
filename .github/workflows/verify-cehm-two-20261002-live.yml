@@ -1,0 +1,29 @@
+name: Verify both live CEHM article publications
+on:
+  push:
+    branches: [agent/cehm-two-20261002-live]
+    paths: [.cehm-two-20261002-live-request.json]
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure PDF text tools are available
+        run: |
+          if ! command -v pdftotext; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Verify live bibliography, PDF, EPUB and search page mapping
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .cehm-two-20261002-live-verify.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cehm-two-20261002-live-verification
+          path: cehm-two-20261002-live-verification.json
