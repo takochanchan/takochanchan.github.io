@@ -130,5 +130,6 @@
       "size": 277250,
       "sha256": "6d246bb27e5e63c66c59d1b16102174717fea23470010ff974d980b841b9c892"
     }
-  ]
+  ],
+  "retry": "refresh_fallback_ledger_pin"
 }
