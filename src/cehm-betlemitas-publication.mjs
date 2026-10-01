@@ -1,6 +1,7 @@
 export const cehmBetlemitasPublicationRecords = [
   {
     "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
+    "type": "paper",
     "title": "ベツレヘム会関係事件記録",
     "subtitle": "CEHM CARSO XCVII.1（1792–1810年）・日本語全訳",
     "originalTitle": "Expedientes Betlemitas",

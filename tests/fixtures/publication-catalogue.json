@@ -4,7 +4,7 @@
   "records": [
     {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
-      "recordClass": "major-work",
+      "recordClass": "short-work",
       "searchShard": "002"
     },
     {
@@ -2276,5 +2276,5 @@
       ]
     }
   ],
-  "shortAuthorCount": 48
+  "shortAuthorCount": 49
 }

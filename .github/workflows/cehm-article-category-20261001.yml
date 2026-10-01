@@ -1,0 +1,35 @@
+name: Verify CEHM article classification
+on:
+  push:
+    branches: ["agent/cehm-article-category-20261001"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Verify classification and unchanged assets
+        run: |
+          node --input-type=module - <<'JS'
+          import assert from "node:assert/strict";
+          import { readFileSync } from "node:fs";
+          import { publications, shortPublications, majorPublications } from "./src/publications.mjs";
+          const slug = "cehm-expedientes-betlemitas-xcvii-1-1792-1810";
+          const item = publications.find(p => p.slug === slug);
+          assert.equal(item.recordClass, "short-work");
+          assert.equal(item.type, "paper");
+          assert(shortPublications.some(p => p.slug === slug));
+          assert(!majorPublications.some(p => p.slug === slug));
+          assert.equal(item.pageCount, 237);
+          const assets = JSON.parse(readFileSync("assets-manifest.json")).assets;
+          assert.equal(assets.find(a => a.path === item.pdf).sha256, "95bcfbb935bdcd53227a415d7a7129d21b4104d0df29baf421ffd084da2b2199");
+          assert.equal(assets.find(a => a.path === item.epub).sha256, "6dd7b9d8d2083f047829f4b4ec92427f441a4498e8dbca5d7a1462b1fa75da8f");
+          console.log("CEHM classification: article; approved PDF/EPUB unchanged");
+          JS
