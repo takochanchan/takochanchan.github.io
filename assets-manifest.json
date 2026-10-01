@@ -7656,6 +7656,42 @@
       "url": "https://takochanchan.github.io/publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
       "size": 279775,
       "sha256": "06671c54450831227d934c07eaf2026ffe86291384cc2f8c6d1d9095e8c067ac"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
+      "size": 5360320,
+      "sha256": "4ae76de3250c13a58c91ec72db2b32f4261b2b88d02e31fe578f25af62efca55"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
+      "size": 673976,
+      "sha256": "964c2a6055dae8b51a8db8e5c2ac1f13f483e015c76436a41f1872930c578c86"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
+      "size": 44772,
+      "sha256": "eb7ac0a40ab5de352c36d011391e029b7535e161162a5a9f1f3fff5d18fc489b"
+    },
+    {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
+      "size": 1532073,
+      "sha256": "cc49eb22ced4958cedf77f35e877b8ada1a613a6b417c701a22685b3c30e608b"
+    },
+    {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
+      "size": 277250,
+      "sha256": "6d246bb27e5e63c66c59d1b16102174717fea23470010ff974d980b841b9c892"
+    },
+    {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
+      "size": 42059,
+      "sha256": "e46f7db1efa86631db7ea488643db71df3bf056eb15194d93a90d4437733e790"
     }
   ]
 }

@@ -11919,6 +11919,8 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "cehm-manuscritos-betlemitas-xi-5": "cehm-betlemitas-documents",
+  "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "cehm-betlemitas-documents",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "cehm-betlemitas-documents",
   ...proceresShortWorkAuthors,
   "vle-panama-1831-article-1": "f-w-c",

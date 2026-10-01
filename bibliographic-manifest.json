@@ -7734,6 +7734,44 @@
         "status": "online",
         "url": "https://archive.org/details/mexicoviejonotic00gonz"
       }
+    },
+    {
+      "slug": "cehm-manuscritos-betlemitas-xi-5",
+      "recordClass": "short-work",
+      "title": "ベツレヘム会手稿",
+      "originalTitle": "Manuscritos de Betlemitas / Cedulario de la Nueva Galicia",
+      "author": "ベツレヘム会関係文書（複数の作成者）",
+      "originalAuthor": "Various authors",
+      "year": 1712,
+      "originalPublication": "CEHM CARSO、Fondo XI-5「Manuscritos de Betlemitas」（目録年代1712–1800年）、全61文書。Fondo I「Cedulario de la Nueva Galicia」のベツレヘム会関係6文書を付す。",
+      "sourceEdition": "CEHM CARSO、Fondo XI-5「Manuscritos de Betlemitas」、全61文書・公開原画像902コマ。Fondo I「Cedulario de la Nueva Galicia」のベツレヘム会関係6文書（登録番号3620・3863・3968・4012・5414・6961）、公開原画像43コマ。",
+      "sourceProvider": "Centro de Estudios de Historia de México CARSO（Fundación Carlos Slim）所蔵・デジタル公開。",
+      "rights": "原史料本文はPD（パブリックドメイン）です。現代のデジタル画像・ウェブサイトや、本訳・校訂の新規部分とは区別します。CEHM CARSO／Fundación Carlos Slimの公式サイトには「Todos los Derechos Reservados」と©2026の表示があります。これは公開サイトの一般的な権利留保表示であり、各画像の権利範囲を一律に断定するものではありません。デジタル画像の個別ライセンス（CC等）は確認できないため、本訳では閲覧・判読の参照にとどめ、画像を掲載・転載していません。原史料本文のPDは、デジタル画像の利用許諾を意味しません。権利表示：https://www.cehm.org.mx/Usuario/Registro（2026年10月2日確認）。",
+      "publishedDate": "2026-10-02",
+      "updatedDate": "2026-10-02",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://www.cehm.org.mx/Archivo/Fondo/109/0/archivo-manuscritos-de-betlemitas"
+      }
+    },
+    {
+      "slug": "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
+      "recordClass": "short-work",
+      "title": "ペドロ・ホセ・ベタンクールの列福",
+      "originalTitle": "Beatificación de Pedro Joseph Betancur",
+      "author": "ベツレヘム会関係文書（複数の作成者）",
+      "originalAuthor": "Various authors",
+      "year": 1705,
+      "originalPublication": "1705–1784年の手稿文書群（目録年代）。CEHM CARSO、Fondo LXIX、分類LXIX.1.1.1、登録番号471480。目録記載158葉。",
+      "sourceEdition": "Beatificación de Pedro Joseph Betancur, 1705–1784（目録年代）。CEHM CARSO、Fondo LXIX、分類LXIX.1.1.1、登録番号471480、目録記載158葉。公開デジタル原画像265コマ。",
+      "sourceProvider": "Centro de Estudios de Historia de México CARSO（Fundación Carlos Slim）所蔵・デジタル公開。",
+      "rights": "原史料本文はPD（パブリックドメイン）です。現代のデジタル画像・ウェブサイトや、本訳・校訂の新規部分とは区別します。CEHM CARSO／Fundación Carlos Slimの公式サイトには「Todos los Derechos Reservados」と©2026の表示があります。これは公開サイトの一般的な権利留保表示であり、各画像の権利範囲を一律に断定するものではありません。デジタル画像の個別ライセンス（CC等）は確認できないため、本訳では閲覧・判読の参照にとどめ、画像を掲載・転載していません。原史料本文のPDは、デジタル画像の利用許諾を意味しません。権利表示：https://www.cehm.org.mx/Usuario/Registro（2026年10月2日確認）。",
+      "publishedDate": "2026-10-02",
+      "updatedDate": "2026-10-02",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cehm.org.mx/Buscador/FichaCompleta/471480?tipo=A"
+      }
     }
   ],
   "works": [

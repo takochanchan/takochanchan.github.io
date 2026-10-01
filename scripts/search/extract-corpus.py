@@ -36,7 +36,7 @@ from xml.etree import ElementTree as ET
 # described composite source.
 ORIGINAL_MARKER_RE = re.compile(
     r"(?:"
-    r"〔\s*(?:(?:前付・底本PDF|付録・底本PDF|裏表紙・底本PDF|原刊|原冊|原資料|原書|原写本|写本(?=（|\s+f\.?\s*\d+[rv])|自筆稿(?!の)|原稿|底本|原誌|原報告|"
+    r"〔\s*(?:(?:前付・底本PDF|付録・底本PDF|裏表紙・底本PDF|原刊|原冊|原資料|史料画像|原書|原写本|写本(?=（|\s+f\.?\s*\d+[rv])|自筆稿(?!の)|原稿|底本|原誌|原報告|"
     r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
     r"主底本|補完底本|合成底本)"
     r"[^〕\r\n]{0,240})〕"
@@ -272,7 +272,7 @@ def is_original_page_marker(value: str) -> bool:
             r"|写本(?:（[^）\r\n]+）\s*|\s+)f\.?\s*\d+[rv]"
             r"|自筆稿(?:\s+第\d+巻\s+f\.?\s*\d+[rv]?|\s+f\.?\s*\d+[rv]?)"
             r"|原稿\s+p\."
-            r"|原資料画像\s*\d"
+            r"|(?:原資料|史料)画像\s*\d"
             r"|底本(?:\s+p\.?|画像\s*\d)"
             r"|デジタル画像\s*\d"
             r"|原誌(?:\s*p\.?|\d+頁)"
@@ -1325,5 +1325,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
 

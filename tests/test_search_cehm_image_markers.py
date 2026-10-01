@@ -11,7 +11,8 @@ SPEC.loader.exec_module(extract)
 class CEHMImageLocationsTest(unittest.TestCase):
     def test_existing_labels_keep_their_meaning(self):
         labels = ['原資料画像0018', '原資料画像0021冒頭', '原資料画像0021残部',
-                  '原資料画像0329–0330および0334', '原資料画像0401末尾–0402']
+                  '原資料画像0329–0330および0334', '原資料画像0401末尾–0402',
+                  '史料画像0001', '史料画像0264–0265']
         for label in labels:
             with self.subTest(label=label):
                 self.assertTrue(extract.is_original_page_marker('〔' + label + '〕'))
@@ -20,6 +21,7 @@ class CEHMImageLocationsTest(unittest.TestCase):
 
     def test_prose_does_not_become_a_location(self):
         self.assertFalse(extract.is_original_page_marker('〔原資料画像を参照〕'))
+        self.assertFalse(extract.is_original_page_marker('〔史料画像を参照〕'))
 
     def test_unique_notes_heading_keeps_its_exact_pdf_page(self):
         label = '原資料画像0415–0416'
