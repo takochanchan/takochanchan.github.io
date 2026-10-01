@@ -7638,6 +7638,24 @@
       "url": "https://takochanchan.github.io/publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
       "size": 47546,
       "sha256": "b01875d8187231859cbe736d8c85559f15efecdf4c325a151a209b587940829a"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
+      "size": 2934765,
+      "sha256": "95bcfbb935bdcd53227a415d7a7129d21b4104d0df29baf421ffd084da2b2199"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
+      "size": 417917,
+      "sha256": "6dd7b9d8d2083f047829f4b4ec92427f441a4498e8dbca5d7a1462b1fa75da8f"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
+      "size": 279775,
+      "sha256": "06671c54450831227d934c07eaf2026ffe86291384cc2f8c6d1d9095e8c067ac"
     }
   ]
 }

@@ -3,6 +3,11 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
       "slug": "bury-bishop-amongst-bananas-1911",
       "recordClass": "major-work",
       "searchShard": "002"

@@ -272,6 +272,7 @@ def is_original_page_marker(value: str) -> bool:
             r"|写本(?:（[^）\r\n]+）\s*|\s+)f\.?\s*\d+[rv]"
             r"|自筆稿(?:\s+第\d+巻\s+f\.?\s*\d+[rv]?|\s+f\.?\s*\d+[rv]?)"
             r"|原稿\s+p\."
+            r"|原資料画像\s*\d"
             r"|底本(?:\s+p\.?|画像\s*\d)"
             r"|デジタル画像\s*\d"
             r"|原誌(?:\s*p\.?|\d+頁)"
@@ -1141,7 +1142,14 @@ def align_chunks_to_pdf(
                 matching_pages,
                 key=lambda page_number: abs(page_number - target_page),
             )
-            chunk["alignment"] = "exact" if len(needle) >= 12 else "inherited"
+            # A genuinely unique short heading has an exact physical location.
+            # Do not let an inherited source marker pull appendix headings back
+            # to the final source-image page. Repeated short values stay weak.
+            unique_short_match = (
+                len(matching_pages) == 1
+                and sum(needle in page for page in normalized_pages) == 1
+            )
+            chunk["alignment"] = "exact" if len(needle) >= 12 or unique_short_match else "inherited"
             continue
 
         previous_page = (

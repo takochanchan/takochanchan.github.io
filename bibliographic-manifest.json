@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
+      "recordClass": "major-work",
+      "title": "ベツレヘム会関係事件記録",
+      "originalTitle": "Expedientes Betlemitas",
+      "author": "ベツレヘム会関係文書（複数の作成者）",
+      "originalAuthor": "Various authors",
+      "year": 1792,
+      "originalPublication": "1792–1810年の手稿文書群。CEHM CARSO所蔵、Fondo XCVII、XCVII.1、登録番号536111",
+      "sourceEdition": "Expedientes Betlemitas, 1792–1810（目録年代）。CEHM CARSO、Fondo XCVII、整理番号XCVII.1、登録番号536111。製本を解かれた無丁付の手稿、目録記載279葉。CEHM公開のデジタル画像416コマ。",
+      "sourceProvider": "Centro de Estudios de Historia de México CARSO（Fundación Carlos Slim）所蔵・デジタル公開。",
+      "rights": "原資料本文はPD（パブリックドメイン）です。現代のデジタル画像・ウェブサイトや、本訳・校訂の新規部分とは区別します。CEHM CARSO／Fundación Carlos Slimの公式サイトには「Todos los Derechos Reservados」と©2026の表示があり、確認した公式ページでは公開画像に適用される個別ライセンス（CC等）は確認できませんでした。これは一般的なサイト権利留保表示で、原資料本文や各画像の権利範囲を一律に断定するものではありません。本訳には原資料画像を転載していません。権利表示：https://cehm.org.mx/Usuario/Registro（2026年10月1日確認）。",
+      "publishedDate": "2026-10-01",
+      "updatedDate": "2026-10-01",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cehm.org.mx/Buscador/FichaBasica/536111?Tipo=A"
+      }
+    },
+    {
       "slug": "bury-bishop-amongst-bananas-1911",
       "recordClass": "major-work",
       "title": "バナナの中の主教",
