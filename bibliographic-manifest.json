@@ -7772,6 +7772,25 @@
         "status": "online",
         "url": "https://www.cehm.org.mx/Buscador/FichaCompleta/471480?tipo=A"
       }
+    },
+    {
+      "slug": "academia-guatemalteca-biografias-literatos-nacionales-1889",
+      "recordClass": "major-work",
+      "title": "グアテマラ文人伝　第1巻",
+      "originalTitle": "Biografías de literatos nacionales",
+      "author": "グアテマラ学会",
+      "originalAuthor": "Academia Guatemalteca",
+      "year": 1889,
+      "originalPublication": "グアテマラ、「ラ・ウニオン」印刷所、1889年",
+      "sourceEdition": "Academia Guatemalteca, Biografías de literatos nacionales, tomo I, Guatemala: Establecimiento Tipográfico «La Unión», 1889.",
+      "sourceProvider": "Biblioteca América, Biblioteca de la Universidad de Santiago de Compostela所蔵本。Unidixitalがデジタル化し、Biblioteca Virtual Miguel de Cervantesが2017年に公開した1889年版を底本としました。",
+      "rights": "1889年原著本文はパブリックドメインです。本訳は原著本文の日本語訳であり、公開元のスキャン画像・独自の解説・サイト構成要素は転載していません。Biblioteca Virtual Miguel de Cervantesの「Marco legal」第4.3節は原著のPDとデジタル版・データベース等の権利を区別し、第5節は公開データの閲覧・印刷・複製・保存を非商業的な個人利用に限定し、オンライン再配布等のその他の利用には書面による許可を求めます。本訳は同機関のデジタル版の再配布ではなく、同機関の利用許諾を示すものでもありません。利用条件：https://www.cervantesvirtual.com/marco-legal/（2026年10月4日、日本時間で確認）。",
+      "publishedDate": "2026-10-04",
+      "updatedDate": "2026-10-04",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/obra/biografias-de-literatos--publicacion-de-la-academia-guatemalteca/"
+      }
     }
   ],
   "works": [
