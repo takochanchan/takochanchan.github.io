@@ -1,3 +1,4 @@
+import { academiaGuatemaltecaPublicationRecords, academiaGuatemaltecaPublicationMetadata } from "./academia-guatemalteca-publication.mjs";
 import { cehmBetlemitasPublicationRecords, cehmBetlemitasPublicationMetadata } from "./cehm-betlemitas-publication.mjs";
 import { mexicoViejoPublicationRecords, mexicoViejoPublicationMetadata } from "./mexico-viejo-publication.mjs";
 import { espinosaPublicationRecords, espinosaPublicationMetadata } from "./espinosa-publication.mjs";
@@ -251,6 +252,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...academiaGuatemaltecaPublicationRecords,
   ...cehmBetlemitasPublicationRecords,
   ...mexicoViejoPublicationRecords,
   ...proceresPublicationRecords,
@@ -9345,6 +9347,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...academiaGuatemaltecaPublicationMetadata,
   ...cehmBetlemitasPublicationMetadata,
   ...mexicoViejoPublicationMetadata,
   ...proceresPublicationMetadata,

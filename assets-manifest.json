@@ -7692,6 +7692,24 @@
       "url": "https://takochanchan.github.io/publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
       "size": 42059,
       "sha256": "e46f7db1efa86631db7ea488643db71df3bf056eb15194d93a90d4437733e790"
+    },
+    {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
+      "size": 3262781,
+      "sha256": "d6cef4c8799b3fda33ffb83613e8b3b55fbc9a820911fb53e058f8a9d56c3125"
+    },
+    {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
+      "size": 341777,
+      "sha256": "aef6c1a610ba6523f14ef4e43a160f31e811d0a1a80c057dfbc458e500ba729e"
+    },
+    {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
+      "size": 42486,
+      "sha256": "b94f1f0aa99b48e3de25c195e8af9908a8fe4e65057104f8913eb8e2ae5eae6e"
     }
   ]
 }

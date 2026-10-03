@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "e430a358ff5cf31c8bd810bca5fd491debdad88e",
+  "archive_commit": "dc8c3d898d8f69ebe94944310b87ba32feb064fd",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -353,7 +353,8 @@
     "gonzalez-obregon-mexico-viejo-1900": "publications/gonzalez-obregon-mexico-viejo-1900/master.docx",
     "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/master.docx",
     "cehm-manuscritos-betlemitas-xi-5": "publications/cehm-manuscritos-betlemitas-xi-5/master.docx",
-    "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/master.docx"
+    "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/master.docx",
+    "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
