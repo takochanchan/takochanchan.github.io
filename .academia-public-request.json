@@ -71,5 +71,5 @@
       "sha256": "aef6c1a610ba6523f14ef4e43a160f31e811d0a1a80c057dfbc458e500ba729e"
     }
   ],
-  "revision": "verified-fallback-ledger-pointer-refresh"
+  "revision": "static-cover-path-corrected"
 }
