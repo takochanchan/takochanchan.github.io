@@ -12095,6 +12095,19 @@ const comparePublicationYears = (left, right) => {
   return left.year - right.year;
 };
 
+// Administrative, judicial, diplomatic, and institutional records retain this
+// class even when the source documents were issued as an official compilation.
+const documentCollectionSlugs = new Set([
+  "cehm-manuscritos-betlemitas-xi-5",
+  "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
+  "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
+  "proceso-contra-william-walker-1860",
+  "egan-wyer-1930",
+  "us-senate-central-america-correspondence-1853",
+  "frus-nicaragua-mosquito-territory-1894",
+  "foreign-office-mosquito-territory-1848",
+]);
+
 export const publications = publicationRecords.map((item) => {
   const metadata = publicationMetadata[item.slug];
   if (!metadata) {
@@ -12105,7 +12118,9 @@ export const publications = publicationRecords.map((item) => {
     throw new Error(`Missing canonical bibliography: ${item.slug}`);
   }
   const shortWorkAuthorKey = shortWorkAuthorBySlug[item.slug] ?? null;
-  const recordClass = shortWorkAuthorKey ? "short-work" : "major-work";
+  const recordClass = documentCollectionSlugs.has(item.slug)
+    ? "document-collection"
+    : shortWorkAuthorKey ? "short-work" : "major-work";
   if (bibliography.recordClass !== recordClass) {
     throw new Error(
       `Bibliographic record class differs for ${item.slug}: ` +
@@ -12148,6 +12163,10 @@ export const majorPublications = publications.filter(
 
 export const shortPublications = publications.filter(
   (item) => item.recordClass === "short-work",
+);
+
+export const documentPublications = publications.filter(
+  (item) => item.recordClass === "document-collection",
 );
 
 export const shortPublicationAuthors = [

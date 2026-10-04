@@ -43,11 +43,17 @@ export const countsFor = (results) => {
   const books = results.filter(
     (result) => result.meta?.recordClass === "major-work",
   ).length;
-  return { books, papers: results.length - books };
+  const papers = results.filter(
+    (result) => result.meta?.recordClass === "short-work",
+  ).length;
+  const documentCollections = results.filter(
+    (result) => result.meta?.recordClass === "document-collection",
+  ).length;
+  return { books, papers, documentCollections };
 };
 
-export const resultLabel = ({ books, papers }) =>
-  "書籍 " + books + "冊・論文 " + papers + "篇が該当";
+export const resultLabel = ({ books, papers, documentCollections = 0 }) =>
+  "書籍 " + books + "冊・論文 " + papers + "篇・文書群 " + documentCollections + "件が該当";
 
 const segmentWords = (query) => {
   const normalized = String(query || "").normalize("NFC").trim();
@@ -361,5 +367,7 @@ export const groupDocumentReferences = (
   const books = works.filter(
     (work) => work.recordClass === "major-work",
   ).length;
-  return { results, books, papers: works.length - books };
+  const papers = works.filter((work) => work.recordClass === "short-work").length;
+  const documentCollections = works.filter((work) => work.recordClass === "document-collection").length;
+  return { results, books, papers, documentCollections };
 };

@@ -50,6 +50,7 @@ const seenSlugs = new Set();
 for (const shard of config.shards) {
   const expected = publicationsForSearchShard(publications, shard.id);
   const expectedSlugs = expected.map((publication) => publication.slug).sort();
+  const expectedBySlug = new Map(expected.map((publication) => [publication.slug, publication]));
   const metadataUrl = new URL("search-meta.json", shard.baseUrl).href;
   const documentMapUrl = new URL("document-map.json", shard.baseUrl).href;
   const moduleUrl = new URL("pagefind/pagefind.js", shard.baseUrl).href;
@@ -83,7 +84,8 @@ for (const shard of config.shards) {
     metadata.bibliographicManifestSha256 === bibliographicManifestSha256;
   const mappedSlugs = new Set();
   for (const mapping of Object.values(documentMap.fragments || {})) {
-    if (!Array.isArray(mapping) || !expectedSlugs.includes(mapping[0])) {
+    if (!Array.isArray(mapping) || !expectedSlugs.includes(mapping[0]) ||
+        expectedBySlug.get(mapping[0]).recordClass !== mapping[1]) {
       throw new Error(`Search shard ${shard.id} has an unexpected fragment`);
     }
     mappedSlugs.add(mapping[0]);
@@ -99,6 +101,9 @@ for (const shard of config.shards) {
     ).length ||
     metadata.papers !== expected.filter(
       (publication) => publication.recordClass === "short-work",
+    ).length ||
+    (metadata.documentCollections ?? 0) !== expected.filter(
+      (publication) => publication.recordClass === "document-collection",
     ).length ||
     !Number.isInteger(metadata.chunks) ||
     metadata.chunks < expected.length ||

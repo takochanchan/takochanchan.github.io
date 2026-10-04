@@ -103,9 +103,11 @@
 
   const root = document.querySelector("[data-archive]");
   const shortRoot = document.querySelector("[data-short-archive]");
+  const documentRoot = document.querySelector("[data-document-archive]");
   if (
     !root ||
     !shortRoot ||
+    !documentRoot ||
     !Array.isArray(window.ARCHIVE_PUBLICATIONS)
   ) return;
 
@@ -136,6 +138,8 @@
     bookMatch: document.querySelector("#book-match-count"),
     paperMatch: document.querySelector("#paper-match-count"),
     shortResults: document.querySelector("#short-results"),
+    documentMatch: document.querySelector("#document-match-count"),
+    documentResults: document.querySelector("#document-results"),
   };
 
   const params = new URLSearchParams(location.search);
@@ -427,6 +431,9 @@
     const filteredShort = matching.filter(
       (item) => item.recordClass === "short-work",
     );
+    const filteredDocuments = matching.filter(
+      (item) => item.recordClass === "document-collection",
+    ).sort((a, b) => compareYears(a, b) || a.title.localeCompare(b.title, "ja"));
 
     filtered = [...filtered].sort((a, b) => {
       if (state.sort === "year-desc") return compareYears(a, b, true);
@@ -450,6 +457,9 @@
     shortRoot.innerHTML = filteredShort.length
       ? shortCatalogue(filteredShort)
       : `<div class="archive-empty"><strong>該当する論文はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
+    documentRoot.innerHTML = filteredDocuments.length
+      ? filteredDocuments.map(card).join("")
+      : `<div class="archive-empty"><strong>該当する文書群はありません。</strong><p>検索語または絞り込み条件を変更してください。</p></div>`;
 
     controls.results.textContent = `書籍 ${filtered.length}件中 ${
       filtered.length ? start + 1 : 0
@@ -457,12 +467,18 @@
     controls.shortResults.textContent = `論文 ${filteredShort.length}件`;
     controls.bookMatch.textContent = String(filtered.length);
     controls.paperMatch.textContent = String(filteredShort.length);
+    controls.documentMatch.textContent = String(filteredDocuments.length);
+    controls.documentResults.textContent = `文書群 ${filteredDocuments.length}件`;
+    const collectionCounts = {
+      publications: ["書籍", filtered.length],
+      "short-works": ["論文", filteredShort.length],
+      "document-collections": ["文書群", filteredDocuments.length],
+    };
     collectionTabs.forEach((tab) => {
-      const isBooks = tab.dataset.collectionTab === "publications";
-      const count = isBooks ? filtered.length : filteredShort.length;
+      const [label, count] = collectionCounts[tab.dataset.collectionTab];
       tab.setAttribute(
         "aria-label",
-        `${isBooks ? "書籍" : "論文"}（${count}件）`,
+        `${label}（${count}件）`,
       );
     });
     renderPagination(pages);

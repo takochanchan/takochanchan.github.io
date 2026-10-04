@@ -534,4 +534,7 @@ export const shortCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "short-work",
 );
 
+export const documentCataloguePublications = cataloguePublications.filter(
+  (publication) => publication.recordClass === "document-collection",
+);
 

@@ -131,14 +131,15 @@ test("snippets preserve labels, sort by PDF page, and merge same-page hits", () 
   ]);
 });
 
-test("book and paper counts use archive record classes", () => {
+test("book, paper, and document collection counts use archive record classes", () => {
   const counts = countsFor([
     { meta: { recordClass: "major-work" } },
     { meta: { recordClass: "short-work" } },
     { meta: { recordClass: "short-work" } },
+    { meta: { recordClass: "document-collection" } },
   ]);
-  assert.deepEqual(counts, { books: 1, papers: 2 });
-  assert.equal(resultLabel(counts), "書籍 1冊・論文 2篇が該当");
+  assert.deepEqual(counts, { books: 1, papers: 2, documentCollections: 1 });
+  assert.equal(resultLabel(counts), "書籍 1冊・論文 2篇・文書群 1件が該当");
 });
 
 test("literal Japanese search keeps voiced kana and retries index word boundaries", () => {
@@ -358,6 +359,20 @@ test("split search documents are regrouped into unique works", async () => {
     fullBook.sub_results.map((result) => result.anchor.id),
     ["b00001", "b00008"],
   );
+});
+
+test("split administrative documents retain one document collection result", async () => {
+  const data = async () => ({
+    meta: { slug: "document-a", recordClass: "document-collection", title: "外交文書" },
+    sub_results: [{ plain_excerpt: "グリハルバ", anchor: { id: "b00001" } }],
+  });
+  const references = [{ id: "doc-a", score: 2, data }, { id: "doc-b", score: 1, data }];
+  const grouped = groupDocumentReferences(references, references, {
+    fragments: { "doc-a": ["document-a", "document-collection", 0], "doc-b": ["document-a", "document-collection", 1] },
+  }, "グリハルバ");
+  assert.equal(grouped.results.length, 1);
+  assert.deepEqual({ books: grouped.books, papers: grouped.papers, documentCollections: grouped.documentCollections }, { books: 0, papers: 0, documentCollections: 1 });
+  assert.equal((await grouped.results[0].data()).meta.recordClass, "document-collection");
 });
 
 test("Pagefind groups small documents and result data loads progressively", () => {

@@ -22,7 +22,7 @@
     },
     {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "title": "ベツレヘム会関係事件記録",
       "originalTitle": "Expedientes Betlemitas",
       "author": "ベツレヘム会関係文書（複数の作成者）",
@@ -825,7 +825,7 @@
     },
     {
       "slug": "us-senate-central-america-correspondence-1853",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "title": "第32議会第2会期上院行政文書第27号",
       "originalTitle": "Message from the President of the United States, Communicating, in Compliance with a Resolution of the Senate, Certain Correspondence in Relation to Central America",
       "author": "アメリカ合衆国国務省（編）",
@@ -1490,7 +1490,7 @@
     },
     {
       "slug": "egan-wyer-1930",
-      "recordClass": "major-work",
+      "recordClass": "document-collection",
       "title": "テノシケ・ピエドラス・ネグラス間の地形図と付属文書",
       "originalTitle": "Topographical Map of Land Between Tenosique & Piedras Negras, Showing Trails & Projected Cart Roads",
       "author": "T・イーガン＝ワイアー",
@@ -6046,7 +6046,7 @@
     },
     {
       "slug": "proceso-contra-william-walker-1860",
-      "recordClass": "major-work",
+      "recordClass": "document-collection",
       "title": "フィリバスター、ウィリアム・ウォーカーに対する訴訟",
       "originalTitle": "Proceso contra el filibustero William Walker",
       "author": "無署名",
@@ -7186,7 +7186,7 @@
     },
     {
       "slug": "foreign-office-mosquito-territory-1848",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "title": "モスキート領に関する往復文書",
       "originalTitle": "Correspondence respecting the Mosquito territory",
       "author": "イギリス外務省",
@@ -7425,7 +7425,7 @@
       "sourceEdition": "United States, Department of State. Papers Relating to the Foreign Relations of the United States, Nicaragua (Mosquito Territory), 1894. Washington: Government Printing Office, 1895. pp. 1–207.",
       "sourceProvider": "米国国務省歴史局（Office of the Historian）。同局の公開画像および電子本文。",
       "rights": "底本は米国連邦政府刊行物であり、パブリックドメインです。米国国務省歴史局が公開する電子本文（TEI XML）のライセンスはCC0 1.0 Universalです。https://github.com/HistoryAtState/frus/blob/master/LICENSE.md",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "sourceAccess": {
         "status": "online",
         "url": "https://history.state.gov/historicaldocuments/frus1894Nicaragua"
@@ -7756,7 +7756,7 @@
     },
     {
       "slug": "cehm-manuscritos-betlemitas-xi-5",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "title": "ベツレヘム会手稿",
       "originalTitle": "Manuscritos de Betlemitas / Cedulario de la Nueva Galicia",
       "author": "ベツレヘム会関係文書（複数の作成者）",
@@ -7775,7 +7775,7 @@
     },
     {
       "slug": "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "title": "ペドロ・ホセ・ベタンクールの列福",
       "originalTitle": "Beatificación de Pedro Joseph Betancur",
       "author": "ベツレヘム会関係文書（複数の作成者）",

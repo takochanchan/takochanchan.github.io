@@ -10,6 +10,7 @@ import {
   cataloguePublications as publications,
   majorCataloguePublications as majorPublications,
   shortCataloguePublications as shortPublications,
+  documentCataloguePublications as documentPublications,
 } from "../src/catalogue-publications.mjs";
 import {
   browserSearchShards,
@@ -34,7 +35,7 @@ const site = {
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
-const assetVersion = "20260906-multivolume-files";
+const assetVersion = "20261004-document-collections";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -246,6 +247,11 @@ const staticCatalogue = [...majorPublications]
   .map(publicationCard)
   .join("");
 
+const documentCatalogue = [...documentPublications]
+  .sort((a, b) => compareYears(a, b) || a.title.localeCompare(b.title, "ja"))
+  .map(publicationCard)
+  .join("");
+
 const shortWorkCard = (item) => `
   <article class="short-work-card">
     <div class="short-work-card__meta">
@@ -301,6 +307,7 @@ const header = ({
         : `<nav class="site-nav" aria-label="主要メニュー">
             <a href="#publications">書籍</a>
             <a href="#short-works">論文</a>
+            <a href="#document-collections">文書群</a>
             <a href="/about/">このアーカイブについて</a>
           </nav>`
     }
@@ -428,6 +435,7 @@ ${header()}
       <div class="hero__index" aria-label="収録統計">
         <div><strong>${majorPublications.length}冊</strong><span>書籍</span></div>
         <div><strong>${shortPublications.length}篇</strong><span>論文</span></div>
+        <div><strong>${documentPublications.length}件</strong><span>文書群</span></div>
         <div><strong>${totalPages.toLocaleString("ja-JP")}</strong><span>公開版総ページ数</span></div>
         <div><strong>${totalVisuals}</strong><span>FIGURES &amp; PLATES</span></div>
       </div>
@@ -492,6 +500,7 @@ ${header()}
       <p class="collection-match-summary" id="collection-match-summary" aria-live="polite">
         <span>書籍 <strong id="book-match-count">${majorPublications.length}</strong>件</span>
         <span>論文 <strong id="paper-match-count">${shortPublications.length}</strong>件</span>
+        <span>文書群 <strong id="document-match-count">${documentPublications.length}</strong>件</span>
         <span>が該当</span>
       </p>
     </div>
@@ -510,6 +519,11 @@ ${header()}
           data-collection-tab="short-works">
           <span class="collection-tab__label">論文</span>
         </a>
+        <a class="collection-tab" id="tab-document-collections" href="#document-collections"
+          role="tab" aria-selected="false" aria-controls="document-collections" tabindex="-1"
+          data-collection-tab="document-collections">
+          <span class="collection-tab__label">文書群</span>
+        </a>
       </div>
     </div>
   </nav>
@@ -522,7 +536,7 @@ ${header()}
         <h2>書籍</h2>
         <p>
           単行本、報告書、長編資料を収録しています。下の一覧は書名・著者・地名・タグのほか、
-          資料種別、地域、原刊言語、年代で絞り込めます。論文は別タブに著者別でまとめています。
+          資料種別、地域、原刊言語、年代で絞り込めます。論文と文書群はそれぞれ別タブにまとめています。
         </p>
       </div>
 
@@ -570,6 +584,22 @@ ${header()}
     </div>
   </section>
 
+  <section class="catalog collection-panel" id="document-collections" role="tabpanel"
+    aria-labelledby="tab-document-collections" data-collection-panel="document-collections" hidden>
+    <div class="catalog__inner">
+      <div class="section-heading">
+        <p class="eyebrow">DOCUMENT COLLECTIONS</p>
+        <h2>文書群</h2>
+        <p>
+          行政・司法・外交・教会運営・調査事業に伴う文書群を収録しています。
+          公式刊行された外交文書集も含みます。資料の作成年順に表示しています。
+        </p>
+      </div>
+      <p class="short-results" id="document-results" aria-live="polite">文書群 ${documentPublications.length}件</p>
+      <div class="archive-grid" data-document-archive>${documentCatalogue}</div>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <div class="about__inner">
       <div>
@@ -578,7 +608,7 @@ ${header()}
       </div>
       <div class="about__copy">
         <p>
-          本アーカイブは、中部アメリカの歴史・地理・考古学を伝える刊行物を日本語で読める形に整え、
+          本アーカイブは、中部アメリカの歴史・地理・考古学を伝える刊行物や文書群を日本語で読める形に整え、
           PDFとリフロー型EPUBで公開する個人プロジェクトです。原刊の見出し、段落、注、表、図版を照合し、
           史料としての構成を保ちながら、画面幅や文字サイズに合わせて読める版も用意しています。
         </p>
@@ -602,6 +632,7 @@ window.FULLTEXT_SEARCH_CONFIG={
   bibliographicCounts:${jsonForScript({
     books: majorPublications.length,
     papers: shortPublications.length,
+    documentCollections: documentPublications.length,
   })},
   preferEmbedded:false
 };
@@ -856,7 +887,8 @@ const tagList = (item) =>
 
 const publicationStructuredData = (item, isShortWork) => {
   const canonical = `${site.url}/publications/${item.slug}/`;
-  const workType = isShortWork ? "ScholarlyArticle" : "Book";
+  const isDocumentCollection = item.recordClass === "document-collection";
+  const workType = isDocumentCollection ? "Collection" : isShortWork ? "ScholarlyArticle" : "Book";
   const encodingsFor = (volume) => [
     {
       "@type": "MediaObject",
@@ -920,7 +952,7 @@ const publicationStructuredData = (item, isShortWork) => {
       isAccessibleForFree: true,
       ...(isShortWork
         ? { pagination: `${item.pageCount}頁` }
-        : { numberOfPages: item.pageCount }),
+        : isDocumentCollection ? {} : { numberOfPages: item.pageCount }),
       encoding: item.volumes.flatMap(encodingsFor),
       ...(isMultiVolume(item)
         ? {
@@ -1040,7 +1072,8 @@ const detailPage = (item) => {
   const visualTotal = item.figureCount + item.plateCount;
   const visualLabel = item.visualLabel ?? "図版・挿図";
   const isShortWork = item.recordClass === "short-work";
-  const recordClassLabel = isShortWork ? "論文" : "書籍";
+  const isDocumentCollection = item.recordClass === "document-collection";
+  const recordClassLabel = isDocumentCollection ? "文書群" : isShortWork ? "論文" : "書籍";
   const pdfViewerUrl = !isMultiVolume(item)
     ? `https://docs.google.com/viewerng/viewer?embedded=true&url=${encodeURIComponent(item.pdfUrl)}`
     : null;
@@ -1055,14 +1088,16 @@ const detailPage = (item) => {
     description: item.description,
     canonical: `${site.url}/publications/${item.slug}/`,
     structuredData: publicationStructuredData(item, isShortWork),
-    ogType: isShortWork ? "article" : "book",
+    ogType: isDocumentCollection ? "website" : isShortWork ? "article" : "book",
     image: `${site.url}/${item.cover}`,
     publishedDate: item.publishedDate,
     updatedDate: item.updatedDate,
     body: `
 ${header({
   detail: true,
-  backHref: isShortWork
+  backHref: isDocumentCollection
+    ? `/?v=${assetVersion}#document-collections`
+    : isShortWork
     ? `/?v=${assetVersion}#short-works`
     : `/?v=${assetVersion}#publications`,
   backLabel: `${recordClassLabel}へ戻る`,
@@ -1370,6 +1405,11 @@ const sitemapFiles = [
     name: "sitemap-papers.xml",
     lastmod: latestUpdatedDate(shortPublications),
     entries: shortPublications.map(publicationSitemapEntry),
+  },
+  {
+    name: "sitemap-documents.xml",
+    lastmod: latestUpdatedDate(documentPublications),
+    entries: documentPublications.map(publicationSitemapEntry),
   },
 ];
 

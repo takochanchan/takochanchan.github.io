@@ -9,7 +9,7 @@
     },
     {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "002"
     },
     {
@@ -227,7 +227,7 @@
     },
     {
       "slug": "us-senate-central-america-correspondence-1853",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "001",
       "author": "アメリカ合衆国国務省（編）"
     },
@@ -420,7 +420,7 @@
     },
     {
       "slug": "egan-wyer-1930",
-      "recordClass": "major-work",
+      "recordClass": "document-collection",
       "searchShard": "001"
     },
     {
@@ -1747,7 +1747,7 @@
     },
     {
       "slug": "proceso-contra-william-walker-1860",
-      "recordClass": "major-work",
+      "recordClass": "document-collection",
       "searchShard": "002"
     },
     {
@@ -2078,7 +2078,7 @@
     },
     {
       "slug": "foreign-office-mosquito-territory-1848",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "002",
       "author": "イギリス外務省"
     },
@@ -2140,7 +2140,7 @@
     },
     {
       "slug": "frus-nicaragua-mosquito-territory-1894",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "002",
       "author": "アメリカ合衆国国務省（編）"
     },
@@ -2237,12 +2237,12 @@
     },
     {
       "slug": "cehm-manuscritos-betlemitas-xi-5",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "002"
     },
     {
       "slug": "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
-      "recordClass": "short-work",
+      "recordClass": "document-collection",
       "searchShard": "002"
     },
     {
@@ -2301,5 +2301,5 @@
       ]
     }
   ],
-  "shortAuthorCount": 49
+  "shortAuthorCount": 46
 }

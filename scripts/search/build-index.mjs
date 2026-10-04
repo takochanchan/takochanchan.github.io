@@ -192,7 +192,8 @@ const pagefindDocumentMap = async (pagefindPath, expectedDocuments) => {
     const expected = expectedDocuments.get(key);
     if (
       !expected ||
-      !["major-work", "short-work"].includes(recordClass) ||
+      !["major-work", "short-work", "document-collection"].includes(recordClass) ||
+      recordClass !== expected.recordClass ||
       foundDocuments.has(key)
     ) {
       throw new Error(`Unexpected Pagefind search document: ${filename}`);
@@ -367,6 +368,7 @@ try {
     for (const part of searchPartsFor(work)) {
       const documentUrl = searchDocumentUrl(work.slug, part.index);
       expectedDocuments.set(`${work.slug}:${part.index}`, {
+        recordClass: work.recordClass,
         title: work.title,
         author: work.author,
         url: work.url,
@@ -446,7 +448,8 @@ try {
   const books = corpus.works.filter(
     (work) => work.recordClass === "major-work",
   ).length;
-  const papers = corpus.works.length - books;
+  const papers = corpus.works.filter((work) => work.recordClass === "short-work").length;
+  const documentCollections = corpus.works.filter((work) => work.recordClass === "document-collection").length;
   const metadata = {
     schemaVersion: 1,
     searchShard: corpus.searchShard ?? null,
@@ -458,6 +461,7 @@ try {
     workSlugs: corpus.works.map((work) => work.slug),
     books,
     papers,
+    documentCollections,
     documents: documentMap.documents,
     chunks: corpus.works.reduce((sum, work) => sum + work.chunks.length, 0),
     pagefindBytes: await directorySize(pagefindPath),

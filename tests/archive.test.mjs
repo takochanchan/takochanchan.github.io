@@ -7,6 +7,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 import {
   majorPublications,
+  documentPublications,
   publications,
   shortPublicationAuthors,
   shortPublications,
@@ -16,6 +17,7 @@ import {
   bibliographicAliases,
   cataloguePublications,
   majorCataloguePublications,
+  documentCataloguePublications,
   publicationFileSplitDefinitions,
   publicationGroupDefinitions,
   shortCataloguePublications,
@@ -39,12 +41,44 @@ const expectedGroups = expectedCatalogue.groups;
 const expectedBySlug = new Map(expectedRecords.map(item => [item.slug, item]));
 const expectedMajor = expectedRecords.filter(item => item.recordClass === "major-work");
 const expectedShort = expectedRecords.filter(item => item.recordClass === "short-work");
+const expectedDocuments = expectedRecords.filter(item => item.recordClass === "document-collection");
 const expectedCatalogueCount = recordClass =>
   expectedRecords.filter(item => item.recordClass === recordClass).length -
   expectedGroups.filter(group => expectedBySlug.get(group.memberSlugs[0])?.recordClass === recordClass)
     .reduce((removed, group) => removed + group.memberSlugs.length - 1, 0);
 const expectedBooks = expectedCatalogueCount("major-work");
 const expectedPapers = expectedCatalogueCount("short-work");
+const expectedDocumentCollections = expectedCatalogueCount("document-collection");
+
+test("administrative and diplomatic documents occupy their own collection", async () => {
+  const selected = new Set([
+    "cehm-manuscritos-betlemitas-xi-5",
+    "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
+    "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
+    "proceso-contra-william-walker-1860",
+    "egan-wyer-1930",
+    "us-senate-central-america-correspondence-1853",
+    "frus-nicaragua-mosquito-territory-1894",
+    "foreign-office-mosquito-territory-1848",
+  ]);
+  assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
+  assert.deepEqual(new Set(expectedDocuments.map(item => item.slug)), selected);
+  assert.equal(majorPublications.length + shortPublications.length + documentPublications.length, publications.length);
+  assert.ok(majorPublications.every(item => !selected.has(item.slug)));
+  assert.ok(shortPublicationAuthors.every(author => author.publications.every(item => !selected.has(item.slug))));
+
+  const html = await readFile(path.join(dist, "index.html"), "utf8");
+  const books = html.slice(html.indexOf('id="publications" role="tabpanel"'), html.indexOf('id="short-works" role="tabpanel"'));
+  const papers = html.slice(html.indexOf('id="short-works" role="tabpanel"'), html.indexOf('id="document-collections" role="tabpanel"'));
+  const documents = html.slice(html.indexOf('id="document-collections" role="tabpanel"'), html.indexOf('<section class="about" id="about">'));
+  assert.equal((documents.match(/class="record-card"/g) || []).length, selected.size);
+  for (const slug of selected) {
+    const href = `href="/publications/${slug}/"`;
+    assert.ok(documents.includes(href), `${slug}: document listing`);
+    assert.ok(!books.includes(href), `${slug}: removed from books`);
+    assert.ok(!papers.includes(href), `${slug}: removed from papers`);
+  }
+});
 
 
 const exists = async (file) => {
@@ -114,9 +148,10 @@ test("split volumes share one canonical bibliography record", () => {
     [...expectedGroups].sort((a,b)=>a.slug.localeCompare(b.slug)),
   );
   assert.equal(publicationFileSplitDefinitions.length, 8);
-  assert.equal(cataloguePublications.length, expectedBooks + expectedPapers);
+  assert.equal(cataloguePublications.length, expectedBooks + expectedPapers + expectedDocumentCollections);
   assert.equal(majorCataloguePublications.length, expectedBooks);
   assert.equal(shortCataloguePublications.length, expectedPapers);
+  assert.equal(documentCataloguePublications.length, expectedDocumentCollections);
 
   const blom = cataloguePublications.find(
     (publication) => publication.slug === "tribes-and-temples-1926-1927",
@@ -1705,12 +1740,7 @@ test("short works use explicit author groups instead of page-count rules", () =>
   const stateDepartment = shortPublicationAuthors.find(
     (author) => author.key === "united-states-department-of-state",
   );
-  assert.ok(stateDepartment);
-  assert.equal(stateDepartment.name, "アメリカ合衆国国務省（編）");
-  assert.deepEqual(
-    stateDepartment.publications.map((item) => item.slug),
-    ["us-senate-central-america-correspondence-1853", "frus-nicaragua-mosquito-territory-1894"],
-  );
+  assert.equal(stateDepartment, undefined, "diplomatic documents have their own collection");
   const marimon = shortPublicationAuthors.find(
     (author) => author.key === "sebastian-marimon-y-tudo",
   );
@@ -2623,18 +2653,18 @@ test("home page contains scalable archive controls", async () => {
     ]),
     [[3, 924, 0], [925, 1688, -922], [1689, 2585, -1686]],
   );
-  matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
-  matchText(html, /\/archive\.js\?v=20260906-multivolume-files/);
-  matchText(html, /\/fulltext-search\.css\?v=20260906-multivolume-files/);
+  matchText(html, /\/archive\.css\?v=20261004-document-collections/);
+  matchText(html, /\/archive\.js\?v=20261004-document-collections/);
+  matchText(html, /\/fulltext-search\.css\?v=20261004-document-collections/);
   matchText(
     html,
-    /\/fulltext-search\.js\?v=20260906-multivolume-files-bibliographic-counts/,
+    /\/fulltext-search\.js\?v=20261004-document-collections-bibliographic-counts/,
   );
   matchText(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   matchText(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   matchText(
     html,
-    new RegExp(`bibliographicCounts:${JSON.stringify({books: expectedBooks, papers: expectedPapers})}`),
+    new RegExp(`bibliographicCounts:${JSON.stringify({books: expectedBooks, papers: expectedPapers, documentCollections: expectedDocumentCollections})}`),
   );
   matchText(html, /takochan-search-index-001\/pagefind\/pagefind\.js/);
   matchText(html, /takochan-search-index-001\/document-map\.json/);
@@ -2649,7 +2679,9 @@ test("home page contains scalable archive controls", async () => {
   matchText(html, /id="collection-match-summary" aria-live="polite"/);
   matchText(html, new RegExp(`id="book-match-count">${expectedBooks}</strong>件`));
   matchText(html, new RegExp(`id="paper-match-count">${expectedPapers}</strong>件`));
+  matchText(html, new RegExp(`id="document-match-count">${expectedDocumentCollections}</strong>件`));
   matchText(html, /data-short-archive/);
+  matchText(html, /data-document-archive/);
   const catalogueSearchPosition = html.indexOf('id="archive-search"');
   const fulltextSearchPosition = html.indexOf('id="fulltext-form"');
   const matchSummaryPosition = html.indexOf('id="collection-match-summary"');
@@ -2672,6 +2704,8 @@ test("home page contains scalable archive controls", async () => {
   );
   matchText(html, /id="publications" role="tabpanel"/);
   matchText(html, /id="short-works" role="tabpanel"[\s\S]*? hidden>/);
+  matchText(html, /id="tab-document-collections"[\s\S]*?aria-selected="false"[\s\S]*?collection-tab__label">文書群<\/span>/);
+  matchText(html, /id="document-collections" role="tabpanel"[\s\S]*? hidden>/);
   doesNotMatchText(html, /刊本・大部論文|短篇論文・報告/);
   matchText(html, /<option value="12" selected>12件<\/option>/);
   matchText(html, /<option value="all">すべて<\/option>/);
@@ -2685,7 +2719,7 @@ test("home page contains scalable archive controls", async () => {
   matchText(html, /底本位置標識（原刊頁・写本葉丁・画像番号など）と日本語版PDFの物理頁を併記/);
   assert.equal(
     (html.match(/class="record-card"/g) || []).length,
-    majorCataloguePublications.length,
+    majorCataloguePublications.length + documentCataloguePublications.length,
   );
   assert.equal(
     (html.match(/class="short-work-card"/g) || []).length,
@@ -2708,7 +2742,7 @@ test("home page contains scalable archive controls", async () => {
   matchText(html, />2篇</);
   const shortPanel = html.slice(
     html.indexOf('id="short-works" role="tabpanel"'),
-    html.indexOf('<section class="about" id="about">'),
+    html.indexOf('id="document-collections" role="tabpanel"'),
   );
   assert.doesNotMatch(shortPanel, /short-work-card__series/);
   assert.doesNotMatch(shortPanel, />PDF（|>EPUB（/);
@@ -2731,7 +2765,7 @@ test("about page explains the editorial workflow and its limits", async () => {
   matchText(html, /最終PDFの確認と承認を受けるまでは/);
   doesNotMatchText(html, /現在翻訳中|WORK IN PROGRESS/);
   matchText(html, /<link rel="canonical" href="https:\/\/takochanchan\.github\.io\/about\/">/);
-  matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
+  matchText(html, /\/archive\.css\?v=20261004-document-collections/);
 });
 
 test("catalogue search stays within publication metadata", async () => {
@@ -2742,6 +2776,7 @@ test("catalogue search stays within publication metadata", async () => {
   assert.match(script, /if \(fulltextQuery\) next\.set\("fulltext", fulltextQuery\)/);
   assert.match(script, /item\.recordClass === "major-work"/);
   assert.match(script, /item\.recordClass === "short-work"/);
+  assert.match(script, /item\.recordClass === "document-collection"/);
   assert.match(script, /shortCatalogue\(filteredShort\)/);
   assert.match(script, /<details class="short-author"/);
   assert.match(script, /target\?\.matches\("details\.short-author"\)/);
@@ -2767,9 +2802,11 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
   const index = await readFile(path.join(dist, "sitemap.xml"), "utf8");
   const books = await readFile(path.join(dist, "sitemap-books.xml"), "utf8");
   const papers = await readFile(path.join(dist, "sitemap-papers.xml"), "utf8");
+  const documents = await readFile(path.join(dist, "sitemap-documents.xml"), "utf8");
   assert.match(index, /<sitemapindex/);
   assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-books\.xml/);
   assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-papers\.xml/);
+  assert.match(index, /https:\/\/takochanchan\.github\.io\/sitemap-documents\.xml/);
   assert.match(index, /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/);
   assert.doesNotMatch(index, /sitemap-authors|#author-/);
   assert.match(books, /https:\/\/takochanchan\.github\.io\/about\//);
@@ -2777,6 +2814,7 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
   for (const [item, sitemap] of [
     ...majorCataloguePublications.map((item) => [item, books]),
     ...shortCataloguePublications.map((item) => [item, papers]),
+    ...documentCataloguePublications.map((item) => [item, documents]),
   ]) {
     const loc = `https://takochanchan.github.io/publications/${item.slug}/`;
     const marker = `<loc>${loc}</loc>`;
@@ -2847,7 +2885,7 @@ test("publication pages expose Google-readable metadata and schema.org records",
     const canonical = `https://takochanchan.github.io/publications/${item.slug}/`;
     const work = records.find((record) => record["@id"] === `${canonical}#work`);
     assert.ok(work, `${item.slug}: work record`);
-    assert.equal(work["@type"], item.recordClass === "short-work" ? "ScholarlyArticle" : "Book");
+    assert.equal(work["@type"], item.recordClass === "document-collection" ? "Collection" : item.recordClass === "short-work" ? "ScholarlyArticle" : "Book");
     assert.equal(work.name, item.title);
     assert.equal(work.alternateName, item.originalTitle);
     assert.equal(work.url, canonical);
@@ -2884,17 +2922,19 @@ test("every bibliographic work has one detail page, local cover, and volume link
       assert.ok(html.includes(escapeHtml(volume.epubUrl)), `${volume.slug}: EPUB URL`);
     }
     matchText(html, /底本・公開情報/);
-    matchText(html, /\/archive\.css\?v=20260906-multivolume-files/);
-    matchText(html, /\/archive\.js\?v=20260906-multivolume-files/);
-    if (item.recordClass === "short-work") {
+    matchText(html, /\/archive\.css\?v=20261004-document-collections/);
+    matchText(html, /\/archive\.js\?v=20261004-document-collections/);
+    if (item.recordClass === "document-collection") {
+      matchText(html, /#document-collections">← 文書群へ戻る<\/a>/);
+    } else if (item.recordClass === "short-work") {
       matchText(
         html,
-        /href="\/\?v=20260906-multivolume-files#short-works">← 論文へ戻る<\/a>/,
+        /href="\/\?v=20261004-document-collections#short-works">← 論文へ戻る<\/a>/,
       );
     } else {
       matchText(
         html,
-        /href="\/\?v=20260906-multivolume-files#publications">← 書籍へ戻る<\/a>/,
+        /href="\/\?v=20261004-document-collections#publications">← 書籍へ戻る<\/a>/,
       );
     }
     for (const label of [
@@ -3047,6 +3087,7 @@ test("rendered public site does not expose the previous identifying host", async
     "sitemap.xml",
     "sitemap-books.xml",
     "sitemap-papers.xml",
+    "sitemap-documents.xml",
     ...cataloguePublications.map((item) => `publications/${item.slug}/index.html`),
     ...Object.keys(bibliographicAliases).map(
       (slug) => `publications/${slug}/index.html`,
@@ -3117,4 +3158,3 @@ test("Haefkens books remain separate and disclose unavailable source material", 
   assert.match(centraal.rights, /NOT_IN_COPYRIGHT/);
   assert.equal(cataloguePublications.filter((item) => [reize.slug, centraal.slug].includes(item.slug)).length, 2);
 });
-

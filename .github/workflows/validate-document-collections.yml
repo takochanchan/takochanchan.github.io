@@ -1,0 +1,45 @@
+name: Validate document collections
+
+on:
+  push:
+    branches: ["agent/document-collections-20261004"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build archive
+        run: npm run build
+      - name: Validate archive
+        run: npm test
+      - name: Prepare document collection preview
+        run: |
+          node --input-type=module <<'JS'
+          import { cp, mkdir } from "node:fs/promises";
+          import path from "node:path";
+          import { documentPublications } from "./src/publications.mjs";
+          await mkdir("document-preview", { recursive: true });
+          for (const file of ["index.html", "archive.css", "archive.js", "fulltext-search.css", "fulltext-search.js", "search-shards.json"]) {
+            await cp(path.join("dist", file), path.join("document-preview", file));
+          }
+          for (const item of documentPublications) {
+            for (const file of [item.cover, `publications/${item.slug}/index.html`]) {
+              await mkdir(path.dirname(path.join("document-preview", file)), { recursive: true });
+              await cp(path.join("dist", file), path.join("document-preview", file));
+            }
+          }
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: document-collection-preview
+          path: document-preview
+          retention-days: 1

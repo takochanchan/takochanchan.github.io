@@ -358,8 +358,8 @@
     }
   };
 
-  const resultLabel = ({ books, papers }) =>
-    "書籍 " + books + "冊・論文 " + papers + "篇が該当";
+  const resultLabel = ({ books, papers, documentCollections = 0 }) =>
+    "書籍 " + books + "冊・論文 " + papers + "篇・文書群 " + documentCollections + "件が該当";
 
   const bibliographyUrlFor = (slug) => {
     const canonicalSlug = window.BIBLIOGRAPHIC_ALIASES?.[slug] || slug;
@@ -468,7 +468,8 @@
     const article = node("article", "fulltext-result");
     const heading = node("div", "fulltext-result__heading");
     const recordClass =
-      result.meta?.recordClass === "major-work" ? "書籍" : "論文";
+      result.meta?.recordClass === "document-collection" ? "文書群" :
+        result.meta?.recordClass === "major-work" ? "書籍" : "論文";
     const type = node("p", "fulltext-result__type", recordClass);
     const title = node("h3");
     const link = node("a", "", result.meta?.title || "無題");
@@ -664,25 +665,36 @@
             (sum, metadata) => sum + metadata.papers,
             0,
           );
+          const indexedDocumentCollections = allMetadata.reduce(
+            (sum, metadata) => sum + (metadata.documentCollections || 0),
+            0,
+          );
           const configuredCounts = config.bibliographicCounts;
           const hasBibliographicCounts =
             Number.isInteger(configuredCounts?.books) &&
             configuredCounts.books >= 0 &&
             Number.isInteger(configuredCounts?.papers) &&
             configuredCounts.papers >= 0 &&
-            configuredCounts.books + configuredCounts.papers <= slugs.size;
+            Number.isInteger(configuredCounts.documentCollections ?? 0) &&
+            (configuredCounts.documentCollections ?? 0) >= 0 &&
+            configuredCounts.books + configuredCounts.papers +
+              (configuredCounts.documentCollections ?? 0) <= slugs.size;
           const books = hasBibliographicCounts
             ? configuredCounts.books
             : indexedBooks;
           const papers = hasBibliographicCounts
             ? configuredCounts.papers
             : indexedPapers;
+          const documentCollections = hasBibliographicCounts
+            ? configuredCounts.documentCollections || 0
+            : indexedDocumentCollections;
           return {
             schemaVersion: 1,
-            works: books + papers,
+            works: books + papers + documentCollections,
             searchUnits: slugs.size,
             books,
             papers,
+            documentCollections,
             chunks: allMetadata.reduce(
               (sum, metadata) => sum + metadata.chunks,
               0,
@@ -822,7 +834,9 @@
     const books = works.filter(
       (work) => work.recordClass === "major-work",
     ).length;
-    return { results, books, papers: works.length - books };
+    const papers = works.filter((work) => work.recordClass === "short-work").length;
+    const documentCollections = works.filter((work) => work.recordClass === "document-collection").length;
+    return { results, books, papers, documentCollections };
   };
 
   const literalPagefindSearch = async (api, query, documentMap) => {
@@ -967,6 +981,7 @@
       results: references,
       books: references.filter((item) => item.recordClass === "major-work").length,
       papers: references.filter((item) => item.recordClass === "short-work").length,
+      documentCollections: references.filter((item) => item.recordClass === "document-collection").length,
     };
   };
 
@@ -1036,7 +1051,9 @@
       metadata.books +
       "冊・" +
       metadata.papers +
-      "篇／本文断片 " +
+      "篇・文書群 " +
+      (metadata.documentCollections || 0) +
+      "件／本文断片 " +
       metadata.chunks.toLocaleString("ja-JP") +
       "件／索引 " +
       formattedBytes(metadata.pagefindBytes);
