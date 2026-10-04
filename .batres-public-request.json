@@ -1,0 +1,35 @@
+{
+  "verified_archive_commit": "90aed0bee3a41240d7701cd77fb215c6ee0cc01c",
+  "bundle": {
+    "size": 9133744,
+    "sha256": "dc9433cf44cddcb25a7fa56aa87d7f18262c28e8eeda181a968d47684f67f6c5",
+    "chunks": [
+      "46a7405ca89d625cddd3807e1cdedaa6a9ed6be5",
+      "5a6d6c49a136233173a7c8766a4b92ef39a51c25",
+      "7c51590bc91b853bc655281056a3a8f642338b33",
+      "1b9e55421eb101aa1fcdde5f8d42cefa6c47c419",
+      "511152c9bb6e64918e0b287999613fa26cdeff14",
+      "4413c4fef303dc487852a5d24f6b3873a51d81b6",
+      "303bf01aa013af10e6ab7bf352353eb4eb006cdb",
+      "5b7f0433b5248c0b3bba8b95bcf62237d427c232",
+      "df8f9bdc8c40ad0ca8b7e6f8bebab1d1a1020b67",
+      "71e00c9ce94d297a055f40504ad2b5e6241e6c04",
+      "937456c8e73847b5e5184696d56985a004f04eb3",
+      "c2c4786df8db5645e2709462103e7588437cb471",
+      "6fe9944630d35b47ba29b60b262f18b6468636a6",
+      "220eb3776f9d45658ba43010cecbadc49a598d7d"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
+      "size": 3758580,
+      "sha256": "12dea7b86025f57f1b1008b1901e95d865ffec1673cc63e5a3008c0ec6f0c493"
+    },
+    {
+      "filename": "Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
+      "size": 5991660,
+      "sha256": "62ac52f0c41d4e413b14302b69bd90600bcf0343ff939c61b964b64586c66324"
+    }
+  ]
+}

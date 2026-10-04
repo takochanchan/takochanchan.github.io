@@ -1,3 +1,4 @@
+import { batresPublicationRecords, batresPublicationMetadata } from "./batres-publication.mjs";
 import { salazarPublicationRecords, salazarPublicationMetadata } from "./salazar-publication.mjs";
 import { academiaGuatemaltecaPublicationRecords, academiaGuatemaltecaPublicationMetadata } from "./academia-guatemalteca-publication.mjs";
 import { cehmBetlemitasPublicationRecords, cehmBetlemitasPublicationMetadata } from "./cehm-betlemitas-publication.mjs";
@@ -253,6 +254,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...batresPublicationRecords,
   ...salazarPublicationRecords,
   ...academiaGuatemaltecaPublicationRecords,
   ...cehmBetlemitasPublicationRecords,
@@ -9349,6 +9351,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...batresPublicationMetadata,
   ...salazarPublicationMetadata,
   ...academiaGuatemaltecaPublicationMetadata,
   ...cehmBetlemitasPublicationMetadata,
