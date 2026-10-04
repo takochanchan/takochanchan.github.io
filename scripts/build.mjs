@@ -592,7 +592,7 @@ ${header()}
         <h2>文書群</h2>
         <p>
           行政・司法・外交・教会運営・調査事業に伴う文書群を収録しています。
-          公式刊行された外交文書集も含みます。資料の作成年順に表示しています。
+          公式刊行された外交文書集も含みます。資料を年代順に表示しています。
         </p>
       </div>
       <p class="short-results" id="document-results" aria-live="polite">文書群 ${documentPublications.length}件</p>
