@@ -46,6 +46,7 @@ export const batresPublicationMetadata = {
     "sourceProvider": "テキサス大学図書館所蔵本をGoogleがデジタル化し、Internet Archiveが公開。原刊78-79頁はGoogle Booksの同版別本（書籍ID：vwwZAAAAYAAJ）で補完。",
     "sourceUrl": "https://archive.org/details/memoriasdeantao00jugoog",
     "rights": "1896年刊の原著本文および当時の図版は著作権保護期間を満了しています。Internet Archiveの公開記録はNOT_IN_COPYRIGHTとしています。Googleのデジタル複製に付された利用案内は非商用利用、帰属表示の保持、自動取得の制限等を求めています。",
-    "publishedDate": "2026-10-04"
+    "publishedDate": "2026-10-04",
+    "updatedDate": "2026-10-04"
   }
 };
