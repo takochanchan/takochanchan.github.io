@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "salazar-historia-desenvolvimiento-intelectual-guatemala-1897",
+      "recordClass": "major-work",
+      "title": "グアテマラ知的発展史",
+      "originalTitle": "Historia del desenvolvimiento intelectual de Guatemala",
+      "author": "ラモン・A・サラサール",
+      "originalAuthor": "Ramón A. Salazar",
+      "year": 1897,
+      "originalPublication": "Guatemala: Tipografía Nacional, 1897.",
+      "sourceEdition": "Ramón A. Salazar, Historia del desenvolvimiento intelectual de Guatemala. La Colonia. Guatemala: Tipografía Nacional, 1897.",
+      "sourceProvider": "Universidad Francisco Marroquín、Biblioteca Ludwig von Mises所蔵本。Internet Archiveで公開。",
+      "rights": "1897年刊の原著は著作権保護期間を満了しています。底本画像はInternet Archiveの当該資料で「NOT IN COPYRIGHT」と表示されています。画像の提供元・利用条件は資料公開ページを参照してください。",
+      "publishedDate": "2026-10-03",
+      "updatedDate": "2026-10-03",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadeldes00salaguat"
+      }
+    },
+    {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
       "recordClass": "short-work",
       "title": "ベツレヘム会関係事件記録",

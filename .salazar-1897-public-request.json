@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "slug": "salazar-historia-desenvolvimiento-intelectual-guatemala-1897",
+  "verified_archive_commit": "18d74d72e3915cd20563426ec71c5e8b46718ae5",
+  "bundle": {
+    "size": 2565793,
+    "sha256": "d613dde8fb08940c0539592c8e8155b872c4d16ee1b2362bfd433b60e7ed1e13",
+    "chunks": [
+      "38e59ee81596070ea52d5cba4da3e1e8f66f573d",
+      "f6f252babcf2544b57fe049c6c3fa40a3e8099aa",
+      "138a94f503a65e79d3356590d02de69d6925b22a",
+      "fb2233d6885979356005e5c28779fd8d7650bda3",
+      "9cc832610a507eb88c9ce7facb6b137bf726813c",
+      "390d53213343e0cc056f0cd8b7c499435bfa4907",
+      "a9a1e28fd5c3d9f4d89737fdff794367b1f1e954",
+      "4956bdefdc5825479ab5afc09f3debddc94a7bc0",
+      "d9e6584e761cb7dab360edaf77ffe89157a07a98",
+      "c25390a6a0e1c86b73e8d8d9c6b33c88e76202f5",
+      "3941a8bca6b9f5e06e9e982c415b2254026daa65",
+      "20ec7edd1a293e357ef2ade351df61844da56daf",
+      "e7b93c944a2c80ac0527543bfa42f2b797be9f11",
+      "d7cc92954ab2cc75549321fdd549b1892b4be60f",
+      "9ac2695f9b9cf8d874a76fcf8a98dc10788f08d7"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Historia_Guatemala_1897_ja.pdf",
+      "size": 3644846,
+      "sha256": "1eff18e152a233f111d99cd1447f735dee791fb528deac7e0dc499dea49367b0"
+    },
+    {
+      "filename": "Historia_Guatemala_1897_ja.epub",
+      "size": 383789,
+      "sha256": "f1dff3598c4e3bae09cc2b57984e13f6f8790873b54caf4510253bf8ae6d46c5"
+    }
+  ]
+}

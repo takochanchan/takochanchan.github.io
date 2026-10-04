@@ -1,0 +1,29 @@
+name: Publish approved Salazar 1897 files
+on:
+  push:
+    branches: [agent/salazar-1897-publish-20261004]
+    paths: [.salazar-1897-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .salazar-1897-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: salazar-1897-public-verification
+          path: salazar-1897-public-verification.json
+

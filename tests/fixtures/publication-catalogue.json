@@ -3,6 +3,11 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "salazar-historia-desenvolvimiento-intelectual-guatemala-1897",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
       "recordClass": "short-work",
       "searchShard": "002"

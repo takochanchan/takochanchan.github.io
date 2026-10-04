@@ -7710,6 +7710,24 @@
       "url": "https://takochanchan.github.io/publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
       "size": 42486,
       "sha256": "b94f1f0aa99b48e3de25c195e8af9908a8fe4e65057104f8913eb8e2ae5eae6e"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.pdf",
+      "size": 3644846,
+      "sha256": "1eff18e152a233f111d99cd1447f735dee791fb528deac7e0dc499dea49367b0"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.epub",
+      "size": 383789,
+      "sha256": "f1dff3598c4e3bae09cc2b57984e13f6f8790873b54caf4510253bf8ae6d46c5"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
+      "size": 36121,
+      "sha256": "fee460f2a5d6872a16dd28b27d1bbfb8260b9291e6d22d265d9a5ef644d2d6aa"
     }
   ]
 }
