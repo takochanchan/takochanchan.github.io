@@ -7728,6 +7728,24 @@
       "url": "https://takochanchan.github.io/publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
       "size": 36121,
       "sha256": "fee460f2a5d6872a16dd28b27d1bbfb8260b9291e6d22d265d9a5ef644d2d6aa"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
+      "size": 3758580,
+      "sha256": "12dea7b86025f57f1b1008b1901e95d865ffec1673cc63e5a3008c0ec6f0c493"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
+      "size": 5991660,
+      "sha256": "62ac52f0c41d4e413b14302b69bd90600bcf0343ff939c61b964b64586c66324"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/batres-memorias-de-antano-1896/cover.jpg",
+      "size": 41774,
+      "sha256": "8b5592a35a76aa47a9c77196ce71a2c8fb91eb32f90f4d3d8b1e1c29d729c95e"
     }
   ]
 }
