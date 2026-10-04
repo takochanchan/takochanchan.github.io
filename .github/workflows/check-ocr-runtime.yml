@@ -1,0 +1,85 @@
+name: Check Egan-Wyer OCR runtime
+on:
+  push:
+    branches: ["agent/ocr-runtime-20261004"]
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out verified archive
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install existing dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Ensure existing OCR tools
+        run: |
+          if ! command -v pdftoppm || ! command -v tesseract; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils tesseract-ocr
+          fi
+      - name: Compare OCR thread conditions on approved PDF
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, writeFileSync } from "node:fs";
+          import { publications } from "./src/publications.mjs";
+          const publication = publications.find(p => p.slug === "egan-wyer-1930");
+          const assets = JSON.parse(readFileSync("assets-manifest.json", "utf8")).assets;
+          const asset = assets.find(a => a.path === publication.pdf);
+          if (!publication || !asset) throw new Error("Missing approved OCR source");
+          writeFileSync(".ocr-benchmark.json", JSON.stringify({url:publication.pdfUrl, sha256:asset.sha256}));
+          NODE
+          python3 - <<'PY'
+          import gzip, hashlib, json, os, shutil, subprocess, tempfile, time, urllib.request
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          from pathlib import Path
+          root = Path.cwd()
+          spec = json.loads((root / ".ocr-benchmark.json").read_text())
+          with tempfile.TemporaryDirectory(prefix="ocr-runtime-") as folder:
+              work = Path(folder)
+              pdf = work / "source.pdf"
+              urllib.request.urlretrieve(spec["url"], pdf)
+              digest = hashlib.sha256(pdf.read_bytes()).hexdigest()
+              if digest != spec["sha256"]:
+                  raise RuntimeError("Final PDF checksum mismatch")
+              tessdata = work / "tessdata"
+              tessdata.mkdir()
+              model = root / "node_modules/@tesseract.js-data/jpn/4.0.0_best_int/jpn.traineddata.gz"
+              with gzip.open(model, "rb") as src, (tessdata / "jpn.traineddata").open("wb") as dst:
+                  shutil.copyfileobj(src, dst)
+              pages = [1, 10, 90, 93]
+              for page in pages:
+                  subprocess.run(["pdftoppm", "-f", str(page), "-l", str(page), "-r", "160", "-singlefile", "-jpeg", "-jpegopt", "quality=82", str(pdf), str(work / f"page-{page}")], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+              print(json.dumps({"cpuCount":os.cpu_count(), "existingOmpLimit":os.environ.get("OMP_THREAD_LIMIT"), "pdfSha256":digest}), flush=True)
+              results = {}
+              for mode in ["default", "one-thread"]:
+                  def recognize(page):
+                      env = dict(os.environ)
+                      if mode == "one-thread":
+                          env["OMP_THREAD_LIMIT"] = "1"
+                      start = time.monotonic()
+                      try:
+                          run = subprocess.run(["tesseract", str(work / f"page-{page}.jpg"), "stdout", "--tessdata-dir", str(tessdata), "-l", "jpn", "--psm", "6", "-c", "preserve_interword_spaces=1"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=env, timeout=60)
+                          result = {"mode":mode, "page":page, "seconds":round(time.monotonic()-start,2), "textSha256":hashlib.sha256(run.stdout).hexdigest(), "textBytes":len(run.stdout)}
+                      except subprocess.TimeoutExpired:
+                          result = {"mode":mode, "page":page, "seconds":round(time.monotonic()-start,2), "timeout":True}
+                      return result
+                  start = time.monotonic()
+                  with ThreadPoolExecutor(max_workers=2) as pool:
+                      futures = [pool.submit(recognize, page) for page in pages]
+                      for future in as_completed(futures):
+                          result = future.result()
+                          results[(mode, result["page"])] = result
+                          print("OCR_BENCH " + json.dumps(result), flush=True)
+                  print("OCR_TOTAL " + json.dumps({"mode":mode, "seconds":round(time.monotonic()-start,2)}), flush=True)
+              for page in pages:
+                  normal = results[("default", page)]
+                  single = results[("one-thread", page)]
+                  if "textSha256" in normal and "textSha256" in single and normal["textSha256"] != single["textSha256"]:
+                      raise RuntimeError(f"OCR text differs across thread conditions: {page}")
+          PY
