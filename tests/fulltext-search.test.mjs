@@ -1,5 +1,11 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, mkdtemp, writeFile, rm } from "node:fs/promises";
+import { createHash } from "node:crypto";
+import { execFile } from "node:child_process";
+import { tmpdir } from "node:os";
+import path from "node:path";
+import { promisify } from "node:util";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 import {
   INITIAL_SNIPPET_LIMIT,
@@ -34,6 +40,42 @@ const remoteShardVerifierScript = await readFile(
   new URL("../scripts/search/verify-remote-shards.mjs", import.meta.url),
   "utf8",
 );
+
+test("shard verification accepts three classes and rejects misplaced documents", async () => {
+  const root = fileURLToPath(new URL("../", import.meta.url));
+  const fixture = JSON.parse(await readFile(path.join(root, "tests/fixtures/publication-catalogue.json"), "utf8"));
+  const records = fixture.records.filter(item => item.searchShard === "002");
+  const archive = JSON.parse(await readFile(path.join(root, "master-archive.json"), "utf8"));
+  const digest = async filename => createHash("sha256").update(await readFile(path.join(root, filename))).digest("hex");
+  const metadata = {
+    schemaVersion: 1, searchShard: "002", archiveCommit: archive.archive_commit,
+    assetManifestSha256: await digest("assets-manifest.json"),
+    bibliographicManifestSha256: await digest("bibliographic-manifest.json"),
+    works: records.length, workSlugs: records.map(item => item.slug),
+    books: records.filter(item => item.recordClass === "major-work").length,
+    papers: records.filter(item => item.recordClass === "short-work").length,
+    documentCollections: records.filter(item => item.recordClass === "document-collection").length,
+    chunks: 0,
+  };
+  assert.equal(metadata.documentCollections, 6);
+  const directory = await mkdtemp(path.join(tmpdir(), "document-count-verification-"));
+  try {
+    await writeFile(path.join(directory, "document-map.json"), "{}");
+    const verify = async (data, expectedError) => {
+      await writeFile(path.join(directory, "search-meta.json"), JSON.stringify(data));
+      await assert.rejects(promisify(execFile)(process.execPath,
+        ["scripts/search/verify-index.mjs", "--directory", directory, "--shard", "002"], { cwd: root }),
+        error => error.stderr.includes(expectedError));
+    };
+    // The valid distribution passes the count gate and reaches the deliberately
+    // empty corpus guard; moving documents into papers must fail before it.
+    await verify(metadata, "Search index contains too few text chunks");
+    await verify({ ...metadata, papers: metadata.papers + metadata.documentCollections, documentCollections: 0 },
+      "Search index book/paper/document collection counts are inconsistent");
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});
 
 test("search extractor preserves the shard identifier", () => {
   assert.match(

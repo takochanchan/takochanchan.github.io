@@ -97,8 +97,13 @@ if (metadata.works !== expectedPublications.length) {
 if (JSON.stringify(actualSlugs) !== JSON.stringify(expectedSlugs)) {
   throw new Error("Search index slug set does not match the public catalogue");
 }
-if (metadata.books + metadata.papers !== expectedPublications.length) {
-  throw new Error("Search index book/paper counts are inconsistent");
+if (
+  metadata.books !== expectedPublications.filter((item) => item.recordClass === "major-work").length ||
+  metadata.papers !== expectedPublications.filter((item) => item.recordClass === "short-work").length ||
+  (metadata.documentCollections ?? 0) !== expectedPublications.filter((item) => item.recordClass === "document-collection").length ||
+  metadata.books + metadata.papers + (metadata.documentCollections ?? 0) !== expectedPublications.length
+) {
+  throw new Error("Search index book/paper/document collection counts are inconsistent");
 }
 if (
   !Number.isInteger(metadata.chunks) ||
@@ -300,5 +305,6 @@ for (const publication of expectedPublications) {
 
 process.stdout.write(
   `Search index OK: ${metadata.books} books, ${metadata.papers} papers, ` +
+    `${metadata.documentCollections ?? 0} document collections, ` +
     `${metadata.chunks.toLocaleString("en-US")} chunks.\n`,
 );
