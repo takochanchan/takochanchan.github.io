@@ -7746,6 +7746,24 @@
       "url": "https://takochanchan.github.io/publications/batres-memorias-de-antano-1896/cover.jpg",
       "size": 41774,
       "sha256": "8b5592a35a76aa47a9c77196ce71a2c8fb91eb32f90f4d3d8b1e1c29d729c95e"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
+      "size": 3219781,
+      "sha256": "51261a99dff49faf4064d14aea2feebbe37d53b41f2bf1e968c68f0a00aea034"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
+      "size": 331282,
+      "sha256": "b16f71c070fce086b457b8c42f51355758c89f35d89baa533be5f0a48f5bf30d"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/batres-los-indios-1894/cover.jpg",
+      "size": 77591,
+      "sha256": "bb11801467b0bc06687fc90c086b12a5f97846a845e5e046ddd52bb036d4c5fe"
     }
   ]
 }
