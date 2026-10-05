@@ -1,0 +1,26 @@
+{
+  "verified_archive_commit": "93af8f219756d4fb56ea8ace0bb1b0c9c387588a",
+  "bundle": {
+    "size": 2399154,
+    "sha256": "273a1914a4fcd626794eed0195cdc40b2c94984410373f61cfc28b53b85a277a",
+    "chunks": [
+      "61e62da36bc9a7b3f76d2d169070dca6c9dc528c",
+      "83aedabfcf25a8fe7bda5226b77b4b627e024046",
+      "b3f8f11818371ddf2a5c137db2cab48d61c09dc0",
+      "b6c27e5f6f8eac6fb442e1f7d05889f1f614da70",
+      "b6df1d35bb37210cff55099e543a37854a31fdcd"
+    ]
+  },
+  "assets": [
+    {
+      "size": 3219781,
+      "sha256": "51261a99dff49faf4064d14aea2feebbe37d53b41f2bf1e968c68f0a00aea034",
+      "filename": "Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "size": 331282,
+      "sha256": "b16f71c070fce086b457b8c42f51355758c89f35d89baa533be5f0a48f5bf30d",
+      "filename": "Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub"
+    }
+  ]
+}
