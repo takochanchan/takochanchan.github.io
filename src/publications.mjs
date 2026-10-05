@@ -1,3 +1,4 @@
+import { deGuignesPublicationRecords, deGuignesPublicationMetadata } from "./de-guignes-publication.mjs";
 import { batresPublicationRecords, batresPublicationMetadata } from "./batres-publication.mjs";
 import { salazarPublicationRecords, salazarPublicationMetadata } from "./salazar-publication.mjs";
 import { academiaGuatemaltecaPublicationRecords, academiaGuatemaltecaPublicationMetadata } from "./academia-guatemalteca-publication.mjs";
@@ -254,6 +255,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
   ...salazarPublicationRecords,
   ...academiaGuatemaltecaPublicationRecords,
@@ -9351,6 +9353,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
   ...salazarPublicationMetadata,
   ...academiaGuatemaltecaPublicationMetadata,
@@ -11928,6 +11931,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "de-guignes-navigations-chinois-amerique-1761": "joseph-de-guignes",
   "cehm-manuscritos-betlemitas-xi-5": "cehm-betlemitas-documents",
   "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "cehm-betlemitas-documents",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "cehm-betlemitas-documents",

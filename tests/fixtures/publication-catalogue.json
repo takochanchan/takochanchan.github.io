@@ -3,6 +3,12 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "de-guignes-navigations-chinois-amerique-1761",
+      "recordClass": "short-work",
+      "searchShard": "002",
+      "author": "ジョゼフ・ド・ギーニュ"
+    },
+    {
       "slug": "salazar-historia-desenvolvimiento-intelectual-guatemala-1897",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -2306,5 +2312,5 @@
       ]
     }
   ],
-  "shortAuthorCount": 46
+  "shortAuthorCount": 47
 }
