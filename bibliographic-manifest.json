@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "de-guignes-navigations-chinois-amerique-1761",
+      "title": "中国人のアメリカ方面への航海と、アジア東端に位置するいくつかの民族に関する研究",
+      "originalTitle": "Recherches sur les navigations des Chinois du côté de l’Amérique, et sur quelques peuples situés à l’extrémité orientale de l’Asie",
+      "author": "ジョゼフ・ド・ギーニュ",
+      "originalAuthor": "Joseph de Guignes",
+      "year": 1761,
+      "originalPublication": "Joseph de Guignes, “Recherches sur les navigations des Chinois du côté de l’Amérique, et sur quelques peuples situés à l’extrémité orientale de l’Asie”, Mémoires de littérature, tirés des registres de l’Académie royale des inscriptions et belles-lettres, tome XXVIII, Paris: Imprimerie Royale, 1761, pp. 503-525, planches 1-2.",
+      "sourceEdition": "Joseph de Guignes, “Recherches sur les navigations des Chinois du côté de l’Amérique, et sur quelques peuples situés à l’extrémité orientale de l’Asie”, Mémoires de littérature, tirés des registres de l’Académie royale des inscriptions et belles-lettres, tome XXVIII, Paris: Imprimerie Royale, 1761, pp. 503-525, planches 1-2.",
+      "sourceProvider": "University of Ottawa所蔵本をInternet Archiveがデジタル化・公開した第28巻（識別子 histoiredelac28acad）。刊年は巻の標題紙で1761年と確認した。",
+      "rights": "原著本文と地図はパブリックドメインに属する。図版画像はオタワ大学所蔵本をInternet Archiveがデジタル化・公開した忠実な複製であり、原資料のパブリックドメインに基づいて再掲した。画像の出典：University of Ottawa / Internet Archive。公開元の資料情報には個別のCreative Commonsライセンス表示はない。",
+      "publishedDate": "2026-10-05",
+      "updatedDate": "2026-10-05",
+      "recordClass": "short-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredelac28acad"
+      }
+    },
+    {
       "slug": "salazar-historia-desenvolvimiento-intelectual-guatemala-1897",
       "recordClass": "major-work",
       "title": "グアテマラ知的発展史",

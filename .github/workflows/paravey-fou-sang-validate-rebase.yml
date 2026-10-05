@@ -1,0 +1,25 @@
+name: Validate current catalogue and Paravey final assets
+on:
+  push:
+    branches: [agent/paravey-fou-sang-publish-20261005]
+    paths: [.github/workflows/paravey-fou-sang-validate-rebase.yml]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Verify the already published PDF and EPUB bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/verify-paravey-fou-sang-assets.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paravey-assets-reverified
+          path: paravey-assets-reverified.json

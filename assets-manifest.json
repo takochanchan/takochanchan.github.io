@@ -2018,6 +2018,24 @@
       "sha256": "961f2da51d07049c32ddc8e642cc484dae79e7f05f71cc69557228ab9089a46a"
     },
     {
+      "path": "publications/de-guignes-navigations-chinois-amerique-1761/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/de-guignes-navigations-chinois-amerique-1761/cover.jpg",
+      "size": 123980,
+      "sha256": "6d0826c02eacd057c0d49b0a0e299b75783cdb8d81c40a2ab39d1775c8fc5ed5"
+    },
+    {
+      "path": "publications/de-guignes-navigations-chinois-amerique-1761/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.epub",
+      "size": 27397423,
+      "sha256": "56f792535f5efc2df6d0753925db1f8be2e7da54b1c2f88e78c4abfd8c3957bb"
+    },
+    {
+      "path": "publications/de-guignes-navigations-chinois-amerique-1761/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.pdf",
+      "size": 1705368,
+      "sha256": "06efb8587e636ae1626c9746b4f6b9a97fda965d807c8f2173df2a0ae54748cf"
+    },
+    {
       "path": "publications/defence-settlers-honduras-1824/cover.jpg",
       "url": "https://takochanchan.github.io/publications/defence-settlers-honduras-1824/cover.jpg",
       "size": 55448,
