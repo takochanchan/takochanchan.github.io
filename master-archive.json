@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "93af8f219756d4fb56ea8ace0bb1b0c9c387588a",
+  "archive_commit": "5fb32f63341dfde43e97230536c685d06d52e20b",
   "publications": {
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
@@ -357,7 +357,9 @@
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "salazar-historia-desenvolvimiento-intelectual-guatemala-1897": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/master.docx",
     "batres-memorias-de-antano-1896": "publications/batres-memorias-de-antano-1896/master.docx",
-    "batres-los-indios-1894": "publications/batres-los-indios-1894/master.docx"
+    "batres-los-indios-1894": "publications/batres-los-indios-1894/master.docx",
+    "paravey-fou-sang-1844": "publications/paravey-fou-sang-1844/master.docx",
+    "paravey-fou-sang-supplement-1847": "publications/paravey-fou-sang-supplement-1847/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

@@ -1,0 +1,28 @@
+name: Transfer approved Paravey Fou-Sang 1844 and 1847 publication files
+on:
+  push:
+    branches: [agent/paravey-fou-sang-publish-20261005]
+    paths: [.publication-upload-requests/paravey-fou-sang-1844-1847.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-paravey-fou-sang.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paravey-fou-sang-public-verification
+          path: paravey-fou-sang-public-verification.json

@@ -2259,6 +2259,16 @@
       "slug": "batres-los-indios-1894",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "paravey-fou-sang-1844",
+      "recordClass": "short-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "paravey-fou-sang-supplement-1847",
+      "recordClass": "short-work",
+      "searchShard": "002"
     }
   ],
   "groups": [
@@ -2306,5 +2316,5 @@
       ]
     }
   ],
-  "shortAuthorCount": 46
+  "shortAuthorCount": 47
 }

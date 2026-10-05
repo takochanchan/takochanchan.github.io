@@ -2,6 +2,24 @@
   "version": 1,
   "assets": [
     {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
+      "size": 341777,
+      "sha256": "aef6c1a610ba6523f14ef4e43a160f31e811d0a1a80c057dfbc458e500ba729e"
+    },
+    {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
+      "size": 3262781,
+      "sha256": "d6cef4c8799b3fda33ffb83613e8b3b55fbc9a820911fb53e058f8a9d56c3125"
+    },
+    {
+      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
+      "size": 42486,
+      "sha256": "b94f1f0aa99b48e3de25c195e8af9908a8fe4e65057104f8913eb8e2ae5eae6e"
+    },
+    {
       "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "size": 4113148,
@@ -360,6 +378,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Barraza_Ibarra_La_gesta_de_Anastasio_Aquino_2001_Japanese_Complete_Translation.pdf",
       "size": 9823467,
       "sha256": "9a5fd6b51e069cd8c7fb822bfd3650e90b5c7447d17d04beeb1ed3815121d046"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
+      "size": 331282,
+      "sha256": "b16f71c070fce086b457b8c42f51355758c89f35d89baa533be5f0a48f5bf30d"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
+      "size": 3219781,
+      "sha256": "51261a99dff49faf4064d14aea2feebbe37d53b41f2bf1e968c68f0a00aea034"
+    },
+    {
+      "path": "publications/batres-los-indios-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/batres-los-indios-1894/cover.jpg",
+      "size": 77591,
+      "sha256": "bb11801467b0bc06687fc90c086b12a5f97846a845e5e046ddd52bb036d4c5fe"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
+      "size": 5991660,
+      "sha256": "62ac52f0c41d4e413b14302b69bd90600bcf0343ff939c61b964b64586c66324"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
+      "size": 3758580,
+      "sha256": "12dea7b86025f57f1b1008b1901e95d865ffec1673cc63e5a3008c0ec6f0c493"
+    },
+    {
+      "path": "publications/batres-memorias-de-antano-1896/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/batres-memorias-de-antano-1896/cover.jpg",
+      "size": 41774,
+      "sha256": "8b5592a35a76aa47a9c77196ce71a2c8fb91eb32f90f4d3d8b1e1c29d729c95e"
     },
     {
       "path": "publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
@@ -1604,6 +1658,60 @@
       "sha256": "f5e5e1a6c63dbf38cb7373371b12070b28f50aaa418e32bdde83625b602ca863"
     },
     {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
+      "size": 277250,
+      "sha256": "6d246bb27e5e63c66c59d1b16102174717fea23470010ff974d980b841b9c892"
+    },
+    {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
+      "size": 1532073,
+      "sha256": "cc49eb22ced4958cedf77f35e877b8ada1a613a6b417c701a22685b3c30e608b"
+    },
+    {
+      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
+      "size": 42059,
+      "sha256": "e46f7db1efa86631db7ea488643db71df3bf056eb15194d93a90d4437733e790"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
+      "size": 417917,
+      "sha256": "6dd7b9d8d2083f047829f4b4ec92427f441a4498e8dbca5d7a1462b1fa75da8f"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
+      "size": 2934765,
+      "sha256": "95bcfbb935bdcd53227a415d7a7129d21b4104d0df29baf421ffd084da2b2199"
+    },
+    {
+      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
+      "size": 279775,
+      "sha256": "06671c54450831227d934c07eaf2026ffe86291384cc2f8c6d1d9095e8c067ac"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
+      "size": 673976,
+      "sha256": "964c2a6055dae8b51a8db8e5c2ac1f13f483e015c76436a41f1872930c578c86"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
+      "size": 5360320,
+      "sha256": "4ae76de3250c13a58c91ec72db2b32f4261b2b88d02e31fe578f25af62efca55"
+    },
+    {
+      "path": "publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
+      "size": 44772,
+      "sha256": "eb7ac0a40ab5de352c36d011391e029b7535e161162a5a9f1f3fff5d18fc489b"
+    },
+    {
       "path": "publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
       "url": "https://takochanchan.github.io/publications/cervantes-salazar-mexico-en-1554-1875/cover.jpg",
       "size": 110495,
@@ -2522,6 +2630,24 @@
       "sha256": "4bf3c044c2c10607054f242e9ba0b533460035e4d0ba303e608cf4a3300769ba"
     },
     {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
+      "size": 49001,
+      "sha256": "8f6f9a30a8df73fd16850e57f1c1f08b5552b393ba48d1017bb8921aa8328629"
+    },
+    {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
+      "size": 2296059,
+      "sha256": "4ba46333653b63d4d832b6a5ce2ad7f976433e0d749d5e4a85e6862c6ef47e00"
+    },
+    {
+      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
+      "size": 5397234,
+      "sha256": "fcc7e2a101358f1d8e2083d76bafafe0795f078419d0b64331e18b01e13e108a"
+    },
+    {
       "path": "publications/esquinca-usumacinta/cover.jpg",
       "url": "https://takochanchan.github.io/publications/esquinca-usumacinta/cover.jpg",
       "size": 56453,
@@ -3384,6 +3510,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Dario_Gonzalez_Compendio_de_geografia_de_Centro_America_1881_Japanese_Translation.pdf",
       "size": 15870953,
       "sha256": "26652ccdd04508d61bc83c4cfcc1dded24270fd0ae9112b0c5cbaab4f0c25dce"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
+      "size": 47546,
+      "sha256": "b01875d8187231859cbe736d8c85559f15efecdf4c325a151a209b587940829a"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
+      "size": 34332626,
+      "sha256": "79aa1536e64670d851ae09a7ed0dfb111b7f8f7801bd476ef4c48e4aa647ab0e"
+    },
+    {
+      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
+      "size": 36916550,
+      "sha256": "7a1084b725ae570b33373995072f0337bfd5a57609de8dd7803d1b4825e01f9e"
     },
     {
       "path": "publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
@@ -4742,6 +4886,42 @@
       "sha256": "321d0f639893ba4ee665dc1fc00a311ca12da3d146dadd64c679352f290f8eaa"
     },
     {
+      "path": "publications/paravey-fou-sang-1844/Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.epub",
+      "size": 130784,
+      "sha256": "d75004d4c1cf1d075ad15c195793aae0ecd18f346098ce08423e4c2b6c1a9e14"
+    },
+    {
+      "path": "publications/paravey-fou-sang-1844/Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.pdf",
+      "size": 601767,
+      "sha256": "cfe1ecd28aa878b824eedb70a060b4aabc38bf247ad9ac79585835a9dd86e497"
+    },
+    {
+      "path": "publications/paravey-fou-sang-1844/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/paravey-fou-sang-1844/cover.jpg",
+      "size": 114030,
+      "sha256": "566fa8c68c50e21ae544e23326cad5b425133a979b797992413a13409289e3b1"
+    },
+    {
+      "path": "publications/paravey-fou-sang-supplement-1847/Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.epub",
+      "size": 252537,
+      "sha256": "fe3e8566f1705e50b29517753acd11fd6c7084f0b81175727c2b4dd5661cd7b4"
+    },
+    {
+      "path": "publications/paravey-fou-sang-supplement-1847/Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.pdf",
+      "size": 840417,
+      "sha256": "75995a7725edc70d0331aacc129b7719e8b7404b628b131f5363a50d7f1d90eb"
+    },
+    {
+      "path": "publications/paravey-fou-sang-supplement-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/paravey-fou-sang-supplement-1847/cover.jpg",
+      "size": 148766,
+      "sha256": "da43954b239a4560512d54640ba84e5145e6912f62e01ed2f14685393156c3b3"
+    },
+    {
       "path": "publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
       "url": "https://takochanchan.github.io/publications/pastrana-mexico-guatemala-boundary-1897/cover.jpg",
       "size": 40864,
@@ -6090,6 +6270,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sahagun_Historia_General_Matritenses_I-VI_Japanese.pdf",
       "size": 55040441,
       "sha256": "5b5c147bbf53dcc469f9790410dfda12af243ce465f79cfb42556436cac3aceb"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.epub",
+      "size": 383789,
+      "sha256": "f1dff3598c4e3bae09cc2b57984e13f6f8790873b54caf4510253bf8ae6d46c5"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.pdf",
+      "size": 3644846,
+      "sha256": "1eff18e152a233f111d99cd1447f735dee791fb528deac7e0dc499dea49367b0"
+    },
+    {
+      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
+      "size": 36121,
+      "sha256": "fee460f2a5d6872a16dd28b27d1bbfb8260b9291e6d22d265d9a5ef644d2d6aa"
     },
     {
       "path": "publications/san-buenaventura-arte-lengua-maya-1684/cover.jpg",
@@ -7602,168 +7800,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
-    },
-    {
-      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.pdf",
-      "size": 5397234,
-      "sha256": "fcc7e2a101358f1d8e2083d76bafafe0795f078419d0b64331e18b01e13e108a"
-    },
-    {
-      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
-      "size": 2296059,
-      "sha256": "4ba46333653b63d4d832b6a5ce2ad7f976433e0d749d5e4a85e6862c6ef47e00"
-    },
-    {
-      "path": "publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/espinosa-peregrino-septentrional-atlante-1737/cover.jpg",
-      "size": 49001,
-      "sha256": "8f6f9a30a8df73fd16850e57f1c1f08b5552b393ba48d1017bb8921aa8328629"
-    },
-    {
-      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.pdf",
-      "size": 36916550,
-      "sha256": "7a1084b725ae570b33373995072f0337bfd5a57609de8dd7803d1b4825e01f9e"
-    },
-    {
-      "path": "publications/gonzalez-obregon-mexico-viejo-1900/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Luis_Gonzalez_Obregon_Mexico_viejo_1900_Japanese.epub",
-      "size": 34332626,
-      "sha256": "79aa1536e64670d851ae09a7ed0dfb111b7f8f7801bd476ef4c48e4aa647ab0e"
-    },
-    {
-      "path": "publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/gonzalez-obregon-mexico-viejo-1900/cover.jpg",
-      "size": 47546,
-      "sha256": "b01875d8187231859cbe736d8c85559f15efecdf4c325a151a209b587940829a"
-    },
-    {
-      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.pdf",
-      "size": 2934765,
-      "sha256": "95bcfbb935bdcd53227a415d7a7129d21b4104d0df29baf421ffd084da2b2199"
-    },
-    {
-      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
-      "size": 417917,
-      "sha256": "6dd7b9d8d2083f047829f4b4ec92427f441a4498e8dbca5d7a1462b1fa75da8f"
-    },
-    {
-      "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/cover.jpg",
-      "size": 279775,
-      "sha256": "06671c54450831227d934c07eaf2026ffe86291384cc2f8c6d1d9095e8c067ac"
-    },
-    {
-      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.pdf",
-      "size": 5360320,
-      "sha256": "4ae76de3250c13a58c91ec72db2b32f4261b2b88d02e31fe578f25af62efca55"
-    },
-    {
-      "path": "publications/cehm-manuscritos-betlemitas-xi-5/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Manuscritos_de_Betlemitas_XI5_Japanese_Translation.epub",
-      "size": 673976,
-      "sha256": "964c2a6055dae8b51a8db8e5c2ac1f13f483e015c76436a41f1872930c578c86"
-    },
-    {
-      "path": "publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cehm-manuscritos-betlemitas-xi-5/cover.jpg",
-      "size": 44772,
-      "sha256": "eb7ac0a40ab5de352c36d011391e029b7535e161162a5a9f1f3fff5d18fc489b"
-    },
-    {
-      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.pdf",
-      "size": 1532073,
-      "sha256": "cc49eb22ced4958cedf77f35e877b8ada1a613a6b417c701a22685b3c30e608b"
-    },
-    {
-      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_Beatificacion_de_Pedro_Joseph_Betancur_LXIX_1_1_1_Japanese_Translation.epub",
-      "size": 277250,
-      "sha256": "6d246bb27e5e63c66c59d1b16102174717fea23470010ff974d980b841b9c892"
-    },
-    {
-      "path": "publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1/cover.jpg",
-      "size": 42059,
-      "sha256": "e46f7db1efa86631db7ea488643db71df3bf056eb15194d93a90d4437733e790"
-    },
-    {
-      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.pdf",
-      "size": 3262781,
-      "sha256": "d6cef4c8799b3fda33ffb83613e8b3b55fbc9a820911fb53e058f8a9d56c3125"
-    },
-    {
-      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Academia_Guatemalteca_Biografias_de_Literatos_Nacionales_1889_Japanese_Translation.epub",
-      "size": 341777,
-      "sha256": "aef6c1a610ba6523f14ef4e43a160f31e811d0a1a80c057dfbc458e500ba729e"
-    },
-    {
-      "path": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
-      "url": "https://takochanchan.github.io/publications/academia-guatemalteca-biografias-literatos-nacionales-1889/japanese-cover.jpg",
-      "size": 42486,
-      "sha256": "b94f1f0aa99b48e3de25c195e8af9908a8fe4e65057104f8913eb8e2ae5eae6e"
-    },
-    {
-      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.pdf",
-      "size": 3644846,
-      "sha256": "1eff18e152a233f111d99cd1447f735dee791fb528deac7e0dc499dea49367b0"
-    },
-    {
-      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/Historia_Guatemala_1897_ja.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Historia_Guatemala_1897_ja.epub",
-      "size": 383789,
-      "sha256": "f1dff3598c4e3bae09cc2b57984e13f6f8790873b54caf4510253bf8ae6d46c5"
-    },
-    {
-      "path": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
-      "url": "https://takochanchan.github.io/publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/japanese-cover.jpg",
-      "size": 36121,
-      "sha256": "fee460f2a5d6872a16dd28b27d1bbfb8260b9291e6d22d265d9a5ef644d2d6aa"
-    },
-    {
-      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.pdf",
-      "size": 3758580,
-      "sha256": "12dea7b86025f57f1b1008b1901e95d865ffec1673cc63e5a3008c0ec6f0c493"
-    },
-    {
-      "path": "publications/batres-memorias-de-antano-1896/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Memorias_de_antano_1896_Japanese_Translation.epub",
-      "size": 5991660,
-      "sha256": "62ac52f0c41d4e413b14302b69bd90600bcf0343ff939c61b964b64586c66324"
-    },
-    {
-      "path": "publications/batres-memorias-de-antano-1896/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/batres-memorias-de-antano-1896/cover.jpg",
-      "size": 41774,
-      "sha256": "8b5592a35a76aa47a9c77196ce71a2c8fb91eb32f90f4d3d8b1e1c29d729c95e"
-    },
-    {
-      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.pdf",
-      "size": 3219781,
-      "sha256": "51261a99dff49faf4064d14aea2feebbe37d53b41f2bf1e968c68f0a00aea034"
-    },
-    {
-      "path": "publications/batres-los-indios-1894/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation.epub",
-      "size": 331282,
-      "sha256": "b16f71c070fce086b457b8c42f51355758c89f35d89baa533be5f0a48f5bf30d"
-    },
-    {
-      "path": "publications/batres-los-indios-1894/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/batres-los-indios-1894/cover.jpg",
-      "size": 77591,
-      "sha256": "bb11801467b0bc06687fc90c086b12a5f97846a845e5e046ddd52bb036d4c5fe"
     }
   ]
 }

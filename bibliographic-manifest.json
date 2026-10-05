@@ -7848,6 +7848,44 @@
         "status": "online",
         "url": "https://archive.org/details/losindiossuhisto00batriala"
       }
+    },
+    {
+      "slug": "paravey-fou-sang-1844",
+      "recordClass": "short-work",
+      "title": "扶桑国という名のアメリカ",
+      "originalTitle": "L’Amérique sous le nom de pays de Fou-Sang",
+      "author": "シャルル＝イポリット・ド・パラヴェイ",
+      "originalAuthor": "Charles Hippolyte de Paravey",
+      "year": 1844,
+      "originalPublication": "Paris: Treuttel et Wurtz et Bureau des Annales de philosophie chrétienne, 1844.",
+      "sourceEdition": "Charles Hippolyte de Paravey, L’Amérique sous le nom de pays de Fou-Sang, Paris, Treuttel et Wurtz et Bureau des Annales de philosophie chrétienne, 1844. 原刊27頁。",
+      "sourceProvider": "1844年原刊別刷の画像をInternet Archive／Canadiana.orgが公開（University of Ottawa支援）。Project Gutenberg第35134号の電子化本文を参照。",
+      "rights": "原著本文はパブリックドメインです。IAの照合資料cihm_21966には個別のCCライセンス指定がなく、本訳にはその原刊画像を転載していません。電子化本文の公開元はProject Gutenberg第35134号です。利用条件：https://www.gutenberg.org/policy/license.html 。本日本語訳には再利用許諾を付与しません。",
+      "publishedDate": "2026-10-05",
+      "updatedDate": "2026-10-05",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cihm_21966"
+      }
+    },
+    {
+      "slug": "paravey-fou-sang-supplement-1847",
+      "recordClass": "short-work",
+      "title": "中国の書物に記された扶桑国がアメリカであることの新たな証拠",
+      "originalTitle": "Nouvelles preuves que le pays du Fou-Sang mentionné dans les livres chinois est l’Amérique",
+      "author": "シャルル＝イポリット・ド・パラヴェイ",
+      "originalAuthor": "Charles Hippolyte de Paravey",
+      "year": 1847,
+      "originalPublication": "Annales de philosophie chrétienne, IIIe série, t. XV, no 90, juin 1847, pp. 439-450, planche 50.",
+      "sourceEdition": "Charles Hippolyte de Paravey, “Nouvelles preuves que le pays du Fou-Sang mentionné dans les livres chinois est l’Amérique”, Annales de philosophie chrétienne, IIIe série, t. XV, no 90, juin 1847, pp. 439-450, planche 50. 別刷12頁。",
+      "sourceProvider": "Oxford University所蔵の掲載誌をGoogleが電子化し、Internet Archiveが公開。別刷本文および掲載図版画像の入手元はProject Gutenberg第35134号（https://www.gutenberg.org/ebooks/35134）。",
+      "rights": "原著本文・当時の図版はパブリックドメインです。Internet Archiveの掲載誌annalesdephilos14bonngoogはNOT_IN_COPYRIGHT（著作権保護対象外）と表示し、個別のCCライセンスは指定していません。図版50の画像はProject Gutenberg第35134号から収録しています。同公開元の利用条件：https://www.gutenberg.org/policy/license.html 。原刊の照合資料はOxford University所蔵、Google電子化、Internet Archive公開です。本日本語訳には再利用許諾を付与しません。",
+      "publishedDate": "2026-10-05",
+      "updatedDate": "2026-10-05",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/annalesdephilos14bonngoog"
+      }
     }
   ],
   "works": [

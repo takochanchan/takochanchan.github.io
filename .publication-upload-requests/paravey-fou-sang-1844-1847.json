@@ -1,0 +1,56 @@
+{
+  "assets": [
+    {
+      "filename": "Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.pdf",
+      "size": 601767,
+      "sha256": "cfe1ecd28aa878b824eedb70a060b4aabc38bf247ad9ac79585835a9dd86e497"
+    },
+    {
+      "filename": "Charles_Hippolyte_de_Paravey_Fou_Sang_1844_Japanese_Complete_Translation.epub",
+      "size": 130784,
+      "sha256": "d75004d4c1cf1d075ad15c195793aae0ecd18f346098ce08423e4c2b6c1a9e14"
+    },
+    {
+      "filename": "Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.pdf",
+      "size": 840417,
+      "sha256": "75995a7725edc70d0331aacc129b7719e8b7404b628b131f5363a50d7f1d90eb"
+    },
+    {
+      "filename": "Charles_Hippolyte_de_Paravey_Fou_Sang_Supplement_1847_Japanese_Complete_Translation.epub",
+      "size": 252537,
+      "sha256": "fe3e8566f1705e50b29517753acd11fd6c7084f0b81175727c2b4dd5661cd7b4"
+    }
+  ],
+  "bundle": {
+    "size": 1602822,
+    "sha256": "2de786e3d8314f64413e21b7cfb287f173db9fe1b4704784b8b68948c99db6b3",
+    "chunks": [
+      "5e7f6f96c120a6d84b3f1c2921dda53aaa4cb8b4",
+      "9ed05cb6a1db03d9b26177565c0f331ae458eb0e",
+      "8421ce89e2dc1579fd0584ee8eca4bb72ba2a51c",
+      "71a3b0ca81da717f460805c366ab8127c1ffa9d3",
+      "fdcffff8bdb5dfe222cdd290975615a2902ee56e",
+      "d7669c55d4aeecf282abb17e6edbfdbce4e604e4",
+      "fa5b7787f860da0ca0921397006378a2eeac7afd",
+      "dcf72e27d17f35d0d03a8f42a9bc724999bbd6c9",
+      "c4f908b391f302a3a81565cdd4cc3654fa09d829",
+      "5dad8c46f191ccc428d8e13d1a04e8376583a72c",
+      "ef154c8ba1ce4f5f6e377c47dc15c88082c16074",
+      "e9a5cc2b6e2c88c342faa2f591fe98e79d5dcce6",
+      "a750a20ca717ddc12f549e4568f6fec196af1ed5",
+      "d883576ced90a9ae51d1105419c32f24114adad0",
+      "0892a988b87320ef9a612db8f1a906a8144d6519",
+      "e754da39e0bd30cc49196bc488d34bf66ecdd811",
+      "96c16408d6c201f4dbc693d9fcaa6a698cdfb30b",
+      "9eb654e1dfb8be2024500a7c597f4a39d7ee1856",
+      "351872026330485cacbd71d6e0e1901b2d5ee2e3",
+      "9efea0eb4a5cc03fa68ea4138b412cf81b05ae07",
+      "1bb4c4195a69605c6c64295bff1de09d89c8df25",
+      "6e53a8d24c8c9a674786c373194ebfabff63ecc6",
+      "b8dd281de33f081472d1d53cbd4b2b65b88b0839",
+      "cc9df264ce622b085b326ae5a1d7a0e22fb38287",
+      "13ba416a99bf44e9d776b77a9600fe6c43ce815c"
+    ]
+  },
+  "verified_archive_commit": "5fb32f63341dfde43e97230536c685d06d52e20b"
+}
