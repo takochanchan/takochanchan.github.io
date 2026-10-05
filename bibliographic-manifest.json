@@ -7829,6 +7829,25 @@
         "url": "https://archive.org/details/memoriasdeantao00jugoog"
       },
       "updatedDate": "2026-10-04"
+    },
+    {
+      "slug": "batres-los-indios-1894",
+      "recordClass": "major-work",
+      "title": "インディオ、その歴史と文明",
+      "originalTitle": "Los indios, su historia y su civilización",
+      "author": "アントニオ・バトレス・ハウレギ",
+      "originalAuthor": "Antonio Batres Jáuregui",
+      "year": 1894,
+      "originalPublication": "Guatemala: Tipografía La Unión, 1894.",
+      "sourceEdition": "Antonio Batres Jáuregui, Los indios, su historia y su civilización. Guatemala: Tipografía La Unión, 1894. 標題紙中央には1893年、下部刊記には1894年と記載。",
+      "sourceProvider": "カリフォルニア大学図書館所蔵本の原刊画像をInternet Archiveが公開。Project Gutenberg第45250番の電子転写を補助資料として参照。",
+      "rights": "1894年刊の原著本文は著作権保護期間を満了しています。Internet Archiveの当該項目はNOT_IN_COPYRIGHTと表示しています。原刊画像と現代の電子転写には、各公開元の利用条件が適用されます。",
+      "publishedDate": "2026-10-05",
+      "updatedDate": "2026-10-05",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/losindiossuhisto00batriala"
+      }
     }
   ],
   "works": [
