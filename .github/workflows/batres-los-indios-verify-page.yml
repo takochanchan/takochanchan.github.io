@@ -41,7 +41,7 @@ jobs:
           python3 - <<'PY'
           import time, urllib.request
           url = "https://takochanchan.github.io/publications/batres-los-indios-1894/"
-          stem = "Juan_Batres Los indios_Relacion_del_Espantable_Terremoto_1541_Japanese_Complete_Translation"
+          stem = "Antonio_Batres_Jauregui_Los_indios_1894_Japanese_Complete_Translation"
           for attempt in range(12):
               try:
                   with urllib.request.urlopen(url + "?published=135bb8dd", timeout=30) as response:
