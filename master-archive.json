@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5fb32f63341dfde43e97230536c685d06d52e20b",
+  "archive_commit": "25ee1cf07a77555260464b0fc9b5408b4fe85858",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
@@ -360,7 +360,13 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "paravey-fou-sang-1844": "publications/paravey-fou-sang-1844/master.docx",
-    "paravey-fou-sang-supplement-1847": "publications/paravey-fou-sang-supplement-1847/master.docx"
+    "paravey-fou-sang-supplement-1847": "publications/paravey-fou-sang-supplement-1847/master.docx",
+    "palma-tradiciones-peruanas-v01": "publications/palma-tradiciones-peruanas-v01/master.docx",
+    "palma-tradiciones-peruanas-v02": "publications/palma-tradiciones-peruanas-v02/master.docx",
+    "palma-tradiciones-peruanas-v03": "publications/palma-tradiciones-peruanas-v03/master.docx",
+    "palma-tradiciones-peruanas-v04": "publications/palma-tradiciones-peruanas-v04/master.docx",
+    "palma-tradiciones-peruanas-v05": "publications/palma-tradiciones-peruanas-v05/master.docx",
+    "palma-tradiciones-peruanas-v06": "publications/palma-tradiciones-peruanas-v06/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

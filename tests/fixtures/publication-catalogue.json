@@ -2275,6 +2275,42 @@
       "slug": "paravey-fou-sang-supplement-1847",
       "recordClass": "short-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v01",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v02",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v03",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v04",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v05",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v06",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
     }
   ],
   "groups": [
@@ -2319,6 +2355,17 @@
         "herrera-historia-general-decadas-3-4-1601",
         "herrera-historia-general-decadas-5-6-1615",
         "herrera-historia-general-decadas-7-8-1615"
+      ]
+    },
+    {
+      "slug": "palma-tradiciones-peruanas",
+      "memberSlugs": [
+        "palma-tradiciones-peruanas-v01",
+        "palma-tradiciones-peruanas-v02",
+        "palma-tradiciones-peruanas-v03",
+        "palma-tradiciones-peruanas-v04",
+        "palma-tradiciones-peruanas-v05",
+        "palma-tradiciones-peruanas-v06"
       ]
     }
   ],

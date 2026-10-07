@@ -1,0 +1,752 @@
+[
+  {
+    "volume": 1,
+    "kind": "public",
+    "bundle": {
+      "size": 118751736,
+      "sha256": "2da20bbf2dc974b718b01fcd7d81199e3c7f246d385613b26170519c4e592179",
+      "chunks": [
+        "f8d0e6e4037ba03728f1d3894d96ec0d2c5e12e0",
+        "9e76d214468be6b7f11468c5b5fd8b98445f4d4b",
+        "38dd2debb0447ed8432b25129cfc134b591c835e",
+        "9487909d26695449313a13ea0d5f06b783f1b777",
+        "81dec7c691653cd6a1448adb169378364c876322",
+        "1e2c9ce5def236ea79caa2a5ba7c699d3bb48b0a",
+        "d6ca989f07fe5aea5280e8c7854db4a53107daf3",
+        "f09c1fc3f204f4768e4d65b0d44accd6fbfb828c",
+        "c2d7f3da933c6d0cf0d38427773bd65f3797dfbb",
+        "d6bd4e94848896537b5ac3ad1c804dbdaa9444a8",
+        "3782ebeb36ce42c9ab7d7f2291fc3e83008a6b3e",
+        "5b4cdb7e648242a17d42d2eb4775040268f2acf4",
+        "62415fa24317d1d10da15baba8b960f8c0bef608",
+        "00f01f7fa1e3ee8456173772dcf04e5209e939d1",
+        "4462a5772f5769927d5c18a1441bf04c5fedbb20"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00000",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00000",
+        "size": 8000000,
+        "git_blob_sha": "f8d0e6e4037ba03728f1d3894d96ec0d2c5e12e0"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00001",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00001",
+        "size": 8000000,
+        "git_blob_sha": "9e76d214468be6b7f11468c5b5fd8b98445f4d4b"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00002",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00002",
+        "size": 8000000,
+        "git_blob_sha": "38dd2debb0447ed8432b25129cfc134b591c835e"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00003",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00003",
+        "size": 8000000,
+        "git_blob_sha": "9487909d26695449313a13ea0d5f06b783f1b777"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00004",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00004",
+        "size": 8000000,
+        "git_blob_sha": "81dec7c691653cd6a1448adb169378364c876322"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00005",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00005",
+        "size": 8000000,
+        "git_blob_sha": "1e2c9ce5def236ea79caa2a5ba7c699d3bb48b0a"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00006",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00006",
+        "size": 8000000,
+        "git_blob_sha": "d6ca989f07fe5aea5280e8c7854db4a53107daf3"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00007",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00007",
+        "size": 8000000,
+        "git_blob_sha": "f09c1fc3f204f4768e4d65b0d44accd6fbfb828c"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00008",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00008",
+        "size": 8000000,
+        "git_blob_sha": "c2d7f3da933c6d0cf0d38427773bd65f3797dfbb"
+      },
+      {
+        "index": 9,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00009",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00009",
+        "size": 8000000,
+        "git_blob_sha": "d6bd4e94848896537b5ac3ad1c804dbdaa9444a8"
+      },
+      {
+        "index": 10,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00010",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00010",
+        "size": 8000000,
+        "git_blob_sha": "3782ebeb36ce42c9ab7d7f2291fc3e83008a6b3e"
+      },
+      {
+        "index": 11,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00011",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00011",
+        "size": 8000000,
+        "git_blob_sha": "5b4cdb7e648242a17d42d2eb4775040268f2acf4"
+      },
+      {
+        "index": 12,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00012",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00012",
+        "size": 8000000,
+        "git_blob_sha": "62415fa24317d1d10da15baba8b960f8c0bef608"
+      },
+      {
+        "index": 13,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00013",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00013",
+        "size": 8000000,
+        "git_blob_sha": "00f01f7fa1e3ee8456173772dcf04e5209e939d1"
+      },
+      {
+        "index": 14,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v01/00014",
+        "path": ".palma-upload/public/v01/2da20bbf2dc9/00014",
+        "size": 6751736,
+        "git_blob_sha": "4462a5772f5769927d5c18a1441bf04c5fedbb20"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.pdf",
+        "size": 20589205,
+        "sha256": "669191549c46d65e5fef43063aef72a2fc54f08f238b38d9d99b39396e06879d"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.epub",
+        "size": 99687070,
+        "sha256": "5e8ec8c85719014e639deac687e1aa0880701c718f2c52413be2d5172d84b5f2"
+      }
+    ]
+  },
+  {
+    "volume": 2,
+    "kind": "public",
+    "bundle": {
+      "size": 65361446,
+      "sha256": "b7d5d71d15491cbd60cef4cd2232b3309ca159cfa8d6884dad5e4778ad5a7a88",
+      "chunks": [
+        "0a982f6df9e276c9f9fb08f4fb8ebe1ab7a9083a",
+        "05b395ae35330bf05dad2167cb18474b0f24cdc1",
+        "ed3d3a2429561a572c8f18baa13a3b32c1d2f772",
+        "0ac2cb4b039d77d6ac63af17f84f948222840826",
+        "9905230b7e0da54462eb949444ecf6e8d8fa8360",
+        "c0bfda6faeacb485ad1740a11a3796ec830411dd",
+        "348d08503abf10c75bff03f09e86e6e370a556ab",
+        "6f6dde1bdbfb6c948c742e8d5f81e99b020e4d47",
+        "bc8bdb225dde2b062833869faf2039c600a96d30"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00000",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00000",
+        "size": 8000000,
+        "git_blob_sha": "0a982f6df9e276c9f9fb08f4fb8ebe1ab7a9083a"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00001",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00001",
+        "size": 8000000,
+        "git_blob_sha": "05b395ae35330bf05dad2167cb18474b0f24cdc1"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00002",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00002",
+        "size": 8000000,
+        "git_blob_sha": "ed3d3a2429561a572c8f18baa13a3b32c1d2f772"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00003",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00003",
+        "size": 8000000,
+        "git_blob_sha": "0ac2cb4b039d77d6ac63af17f84f948222840826"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00004",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00004",
+        "size": 8000000,
+        "git_blob_sha": "9905230b7e0da54462eb949444ecf6e8d8fa8360"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00005",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00005",
+        "size": 8000000,
+        "git_blob_sha": "c0bfda6faeacb485ad1740a11a3796ec830411dd"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00006",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00006",
+        "size": 8000000,
+        "git_blob_sha": "348d08503abf10c75bff03f09e86e6e370a556ab"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00007",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00007",
+        "size": 8000000,
+        "git_blob_sha": "6f6dde1bdbfb6c948c742e8d5f81e99b020e4d47"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v02/00008",
+        "path": ".palma-upload/public/v02/b7d5d71d1549/00008",
+        "size": 1361446,
+        "git_blob_sha": "bc8bdb225dde2b062833869faf2039c600a96d30"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.pdf",
+        "size": 10933179,
+        "sha256": "d34c77f4745974474eb8b706678e35a7c70d5f876762a3e83cf2b78a83238d19"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.epub",
+        "size": 55826288,
+        "sha256": "9317742a71f3913ffe62937c4030a599867d1aa6dedbbab01a39175c030033ec"
+      }
+    ]
+  },
+  {
+    "volume": 3,
+    "kind": "public",
+    "bundle": {
+      "size": 75053938,
+      "sha256": "6cc97505c502bf7892afb14312731ff1d0d6d1f9af64cb49759be2c5359db4a1",
+      "chunks": [
+        "718e17c33a6e5360af8b2663bf138139021c263c",
+        "44dcbb0f17bd6ac8fb56419b7282285b726a42c1",
+        "17f470137f0be83dca415bb2a82cd5bdcb564ef9",
+        "8367181c4ac2dba2ac8cbf9ab739ef759e870099",
+        "ea8031c4bc4dfd372957b8cc80a67e772e246a7e",
+        "92558f62a83424f2eaa1f9c2d49dc7425abcd6c1",
+        "ea76429b0417543a2521ac214aad9d3de3de3772",
+        "a8a103ea73a721c6fee3e9dff145fff4f1381434",
+        "4b6d0a41d9fca9f09899868fe16c8cd852abe14f",
+        "53773f045d4b2b4bda437c2e55f0f95c0164e3fc"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00000",
+        "path": ".palma-upload/public/v03/6cc97505c502/00000",
+        "size": 8000000,
+        "git_blob_sha": "718e17c33a6e5360af8b2663bf138139021c263c"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00001",
+        "path": ".palma-upload/public/v03/6cc97505c502/00001",
+        "size": 8000000,
+        "git_blob_sha": "44dcbb0f17bd6ac8fb56419b7282285b726a42c1"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00002",
+        "path": ".palma-upload/public/v03/6cc97505c502/00002",
+        "size": 8000000,
+        "git_blob_sha": "17f470137f0be83dca415bb2a82cd5bdcb564ef9"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00003",
+        "path": ".palma-upload/public/v03/6cc97505c502/00003",
+        "size": 8000000,
+        "git_blob_sha": "8367181c4ac2dba2ac8cbf9ab739ef759e870099"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00004",
+        "path": ".palma-upload/public/v03/6cc97505c502/00004",
+        "size": 8000000,
+        "git_blob_sha": "ea8031c4bc4dfd372957b8cc80a67e772e246a7e"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00005",
+        "path": ".palma-upload/public/v03/6cc97505c502/00005",
+        "size": 8000000,
+        "git_blob_sha": "92558f62a83424f2eaa1f9c2d49dc7425abcd6c1"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00006",
+        "path": ".palma-upload/public/v03/6cc97505c502/00006",
+        "size": 8000000,
+        "git_blob_sha": "ea76429b0417543a2521ac214aad9d3de3de3772"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00007",
+        "path": ".palma-upload/public/v03/6cc97505c502/00007",
+        "size": 8000000,
+        "git_blob_sha": "a8a103ea73a721c6fee3e9dff145fff4f1381434"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00008",
+        "path": ".palma-upload/public/v03/6cc97505c502/00008",
+        "size": 8000000,
+        "git_blob_sha": "4b6d0a41d9fca9f09899868fe16c8cd852abe14f"
+      },
+      {
+        "index": 9,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v03/00009",
+        "path": ".palma-upload/public/v03/6cc97505c502/00009",
+        "size": 3053938,
+        "git_blob_sha": "53773f045d4b2b4bda437c2e55f0f95c0164e3fc"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.pdf",
+        "size": 12799374,
+        "sha256": "2bd651d98ef35dc04917538981bbe33204bdc9366a122958e11b576c7d939b25"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.epub",
+        "size": 63883234,
+        "sha256": "2de57fe8cfdbb68638a7809d51c7da953be489194339a3b8444fcad45fb1d4c1"
+      }
+    ]
+  },
+  {
+    "volume": 4,
+    "kind": "public",
+    "bundle": {
+      "size": 94586451,
+      "sha256": "261793c498a6be010c335e498da6576ecef17890dbe4eafb6900c6762827eba4",
+      "chunks": [
+        "c08e7306161a64ea124831541e63a2ed81d55937",
+        "d79817649fc37fc9954b665532611e3647a1f95b",
+        "fc4dc483fe853652782a0eda479fed2739b61447",
+        "957c8948ccc7bb305f67c85b75f6393cb4eae643",
+        "2ab8d72a0aff561137672c80771c4612c4519100",
+        "43863c2a4652f594d8186207a6de637bf4656d6f",
+        "4ec4b00c87944a63d2c1441c1fc7b4dbe6a6fcec",
+        "0b0f234db01617097b761dfd6f8221f0eeb39c7c",
+        "97476e0863716e68443b8799b55946eac7cc35e4",
+        "6f8a5cab9b9c1f3af8404b4a51aab01119f47c2a",
+        "2d2b3002737276de297f16e586c0dba035b3e34a",
+        "e995f68b60db8a39905681d1e3ab6705224b58e8"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00000",
+        "path": ".palma-upload/public/v04/261793c498a6/00000",
+        "size": 8000000,
+        "git_blob_sha": "c08e7306161a64ea124831541e63a2ed81d55937"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00001",
+        "path": ".palma-upload/public/v04/261793c498a6/00001",
+        "size": 8000000,
+        "git_blob_sha": "d79817649fc37fc9954b665532611e3647a1f95b"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00002",
+        "path": ".palma-upload/public/v04/261793c498a6/00002",
+        "size": 8000000,
+        "git_blob_sha": "fc4dc483fe853652782a0eda479fed2739b61447"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00003",
+        "path": ".palma-upload/public/v04/261793c498a6/00003",
+        "size": 8000000,
+        "git_blob_sha": "957c8948ccc7bb305f67c85b75f6393cb4eae643"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00004",
+        "path": ".palma-upload/public/v04/261793c498a6/00004",
+        "size": 8000000,
+        "git_blob_sha": "2ab8d72a0aff561137672c80771c4612c4519100"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00005",
+        "path": ".palma-upload/public/v04/261793c498a6/00005",
+        "size": 8000000,
+        "git_blob_sha": "43863c2a4652f594d8186207a6de637bf4656d6f"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00006",
+        "path": ".palma-upload/public/v04/261793c498a6/00006",
+        "size": 8000000,
+        "git_blob_sha": "4ec4b00c87944a63d2c1441c1fc7b4dbe6a6fcec"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00007",
+        "path": ".palma-upload/public/v04/261793c498a6/00007",
+        "size": 8000000,
+        "git_blob_sha": "0b0f234db01617097b761dfd6f8221f0eeb39c7c"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00008",
+        "path": ".palma-upload/public/v04/261793c498a6/00008",
+        "size": 8000000,
+        "git_blob_sha": "97476e0863716e68443b8799b55946eac7cc35e4"
+      },
+      {
+        "index": 9,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00009",
+        "path": ".palma-upload/public/v04/261793c498a6/00009",
+        "size": 8000000,
+        "git_blob_sha": "6f8a5cab9b9c1f3af8404b4a51aab01119f47c2a"
+      },
+      {
+        "index": 10,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00010",
+        "path": ".palma-upload/public/v04/261793c498a6/00010",
+        "size": 8000000,
+        "git_blob_sha": "2d2b3002737276de297f16e586c0dba035b3e34a"
+      },
+      {
+        "index": 11,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v04/00011",
+        "path": ".palma-upload/public/v04/261793c498a6/00011",
+        "size": 6586451,
+        "git_blob_sha": "e995f68b60db8a39905681d1e3ab6705224b58e8"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.pdf",
+        "size": 16792011,
+        "sha256": "5943b35be436bdac4e34578a68c2c0eac045f6f789fdd9f899d4acab8cab2364"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.epub",
+        "size": 79278589,
+        "sha256": "8af1602ed339837fe222d30ff7efc02a02838a9338ba3ac0471c6136e1b3f96c"
+      }
+    ]
+  },
+  {
+    "volume": 5,
+    "kind": "public",
+    "bundle": {
+      "size": 99051214,
+      "sha256": "c26b40432b644fc8b061071fd361be8655ebed1991ad680d44876bd25d25750b",
+      "chunks": [
+        "332cf8d7029da2a34fb0805619a2b85913e41dfe",
+        "d6ec16adb2ecad92e0b5187fca61761cd00a7bbe",
+        "3bcdbf520e1483dff9a63ae0565efc210631187c",
+        "2a7c6a8b001c2d4d7f78d450d76cd7d403e468b4",
+        "d6bb1c50cc5957488d4a717fe7a8e7090430d0ba",
+        "46f02245716494bd983badc006374ef0a74db5ce",
+        "041645181a2a960093e27c7805d9ec9e43b9ebe2",
+        "e9aab623e7d36dd25225a9fdda3c7b5a5ca626f7",
+        "9a4ffbdd2c7aded0e2f485ba558fb2149f41b305",
+        "8ecdde2aa1061966e442919a2c7464acf182d38b",
+        "4a196171095d99501b4b655f2107bf92b0f7009f",
+        "b9a1abaa9673baeb0cac119a6294e1a59f1f450a",
+        "71db6db76b1b2c62a1d0182ef6aaf8e25fbbcea7"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00000",
+        "path": ".palma-upload/public/v05/c26b40432b64/00000",
+        "size": 8000000,
+        "git_blob_sha": "332cf8d7029da2a34fb0805619a2b85913e41dfe"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00001",
+        "path": ".palma-upload/public/v05/c26b40432b64/00001",
+        "size": 8000000,
+        "git_blob_sha": "d6ec16adb2ecad92e0b5187fca61761cd00a7bbe"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00002",
+        "path": ".palma-upload/public/v05/c26b40432b64/00002",
+        "size": 8000000,
+        "git_blob_sha": "3bcdbf520e1483dff9a63ae0565efc210631187c"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00003",
+        "path": ".palma-upload/public/v05/c26b40432b64/00003",
+        "size": 8000000,
+        "git_blob_sha": "2a7c6a8b001c2d4d7f78d450d76cd7d403e468b4"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00004",
+        "path": ".palma-upload/public/v05/c26b40432b64/00004",
+        "size": 8000000,
+        "git_blob_sha": "d6bb1c50cc5957488d4a717fe7a8e7090430d0ba"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00005",
+        "path": ".palma-upload/public/v05/c26b40432b64/00005",
+        "size": 8000000,
+        "git_blob_sha": "46f02245716494bd983badc006374ef0a74db5ce"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00006",
+        "path": ".palma-upload/public/v05/c26b40432b64/00006",
+        "size": 8000000,
+        "git_blob_sha": "041645181a2a960093e27c7805d9ec9e43b9ebe2"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00007",
+        "path": ".palma-upload/public/v05/c26b40432b64/00007",
+        "size": 8000000,
+        "git_blob_sha": "e9aab623e7d36dd25225a9fdda3c7b5a5ca626f7"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00008",
+        "path": ".palma-upload/public/v05/c26b40432b64/00008",
+        "size": 8000000,
+        "git_blob_sha": "9a4ffbdd2c7aded0e2f485ba558fb2149f41b305"
+      },
+      {
+        "index": 9,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00009",
+        "path": ".palma-upload/public/v05/c26b40432b64/00009",
+        "size": 8000000,
+        "git_blob_sha": "8ecdde2aa1061966e442919a2c7464acf182d38b"
+      },
+      {
+        "index": 10,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00010",
+        "path": ".palma-upload/public/v05/c26b40432b64/00010",
+        "size": 8000000,
+        "git_blob_sha": "4a196171095d99501b4b655f2107bf92b0f7009f"
+      },
+      {
+        "index": 11,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00011",
+        "path": ".palma-upload/public/v05/c26b40432b64/00011",
+        "size": 8000000,
+        "git_blob_sha": "b9a1abaa9673baeb0cac119a6294e1a59f1f450a"
+      },
+      {
+        "index": 12,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v05/00012",
+        "path": ".palma-upload/public/v05/c26b40432b64/00012",
+        "size": 3051214,
+        "git_blob_sha": "71db6db76b1b2c62a1d0182ef6aaf8e25fbbcea7"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.pdf",
+        "size": 18146988,
+        "sha256": "88eb02dc75483a0c218066eaaefb9bce4ed5cd75440d87e3676ec3996c35b05d"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.epub",
+        "size": 82562533,
+        "sha256": "5b4ecd825f47abcf4ecc68d03c421f43b852901eb2ea580b008ddccb8b0d075e"
+      }
+    ]
+  },
+  {
+    "volume": 6,
+    "kind": "public",
+    "bundle": {
+      "size": 124681485,
+      "sha256": "3875b881fde53798d7a3985bc2dfa630a56df75e782a1f6cc31d27021a583bb6",
+      "chunks": [
+        "67afca16ad7cce570155758a2de8a38277d70cfe",
+        "002a7ea6bea40dbc37b4cd1b0f74d102b7c6d8ab",
+        "bd6f7afd174d4a16445e1cb05ddf6fb14f43ffd8",
+        "da10af6d8be24d80905108de0c90438f2b2842f5",
+        "3dbd60f17cfde5743d483343582de4cae2fb0d2c",
+        "f55aaa24f3c870cf9320ffeb055ed07058034eb2",
+        "dc8ca4db2dc96c3d1e68d12e55f7e2f961a85709",
+        "85e7322d6de9a73ba872da156d946989fb69f1eb",
+        "ea29cc5b6bf869ea74bcb3cf336a9917f8a82c05",
+        "1a1612c8932bdd6b888960fe78ca3b1ae3ee1060",
+        "c4a7468e9a94e579b5fc7a8500ac0ee167dd0a87",
+        "cf57a64e295bd3038be9ce6c50b4cf0f6319ae3e",
+        "cc466717a3486e907d0aa0980f23f3f4e57fbc3e",
+        "e146d607cda705168186f85d4c0c027c77d6020c",
+        "115feee7a8ddb5ab2a9cd4c3547b612e7dc97656",
+        "d4c3c08cb6d54b2e734ce896ce91c4e865dc8331"
+      ]
+    },
+    "chunks": [
+      {
+        "index": 0,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00000",
+        "path": ".palma-upload/public/v06/3875b881fde5/00000",
+        "size": 8000000,
+        "git_blob_sha": "67afca16ad7cce570155758a2de8a38277d70cfe"
+      },
+      {
+        "index": 1,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00001",
+        "path": ".palma-upload/public/v06/3875b881fde5/00001",
+        "size": 8000000,
+        "git_blob_sha": "002a7ea6bea40dbc37b4cd1b0f74d102b7c6d8ab"
+      },
+      {
+        "index": 2,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00002",
+        "path": ".palma-upload/public/v06/3875b881fde5/00002",
+        "size": 8000000,
+        "git_blob_sha": "bd6f7afd174d4a16445e1cb05ddf6fb14f43ffd8"
+      },
+      {
+        "index": 3,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00003",
+        "path": ".palma-upload/public/v06/3875b881fde5/00003",
+        "size": 8000000,
+        "git_blob_sha": "da10af6d8be24d80905108de0c90438f2b2842f5"
+      },
+      {
+        "index": 4,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00004",
+        "path": ".palma-upload/public/v06/3875b881fde5/00004",
+        "size": 8000000,
+        "git_blob_sha": "3dbd60f17cfde5743d483343582de4cae2fb0d2c"
+      },
+      {
+        "index": 5,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00005",
+        "path": ".palma-upload/public/v06/3875b881fde5/00005",
+        "size": 8000000,
+        "git_blob_sha": "f55aaa24f3c870cf9320ffeb055ed07058034eb2"
+      },
+      {
+        "index": 6,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00006",
+        "path": ".palma-upload/public/v06/3875b881fde5/00006",
+        "size": 8000000,
+        "git_blob_sha": "dc8ca4db2dc96c3d1e68d12e55f7e2f961a85709"
+      },
+      {
+        "index": 7,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00007",
+        "path": ".palma-upload/public/v06/3875b881fde5/00007",
+        "size": 8000000,
+        "git_blob_sha": "85e7322d6de9a73ba872da156d946989fb69f1eb"
+      },
+      {
+        "index": 8,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00008",
+        "path": ".palma-upload/public/v06/3875b881fde5/00008",
+        "size": 8000000,
+        "git_blob_sha": "ea29cc5b6bf869ea74bcb3cf336a9917f8a82c05"
+      },
+      {
+        "index": 9,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00009",
+        "path": ".palma-upload/public/v06/3875b881fde5/00009",
+        "size": 8000000,
+        "git_blob_sha": "1a1612c8932bdd6b888960fe78ca3b1ae3ee1060"
+      },
+      {
+        "index": 10,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00010",
+        "path": ".palma-upload/public/v06/3875b881fde5/00010",
+        "size": 8000000,
+        "git_blob_sha": "c4a7468e9a94e579b5fc7a8500ac0ee167dd0a87"
+      },
+      {
+        "index": 11,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00011",
+        "path": ".palma-upload/public/v06/3875b881fde5/00011",
+        "size": 8000000,
+        "git_blob_sha": "cf57a64e295bd3038be9ce6c50b4cf0f6319ae3e"
+      },
+      {
+        "index": 12,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00012",
+        "path": ".palma-upload/public/v06/3875b881fde5/00012",
+        "size": 8000000,
+        "git_blob_sha": "cc466717a3486e907d0aa0980f23f3f4e57fbc3e"
+      },
+      {
+        "index": 13,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00013",
+        "path": ".palma-upload/public/v06/3875b881fde5/00013",
+        "size": 8000000,
+        "git_blob_sha": "e146d607cda705168186f85d4c0c027c77d6020c"
+      },
+      {
+        "index": 14,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00014",
+        "path": ".palma-upload/public/v06/3875b881fde5/00014",
+        "size": 8000000,
+        "git_blob_sha": "115feee7a8ddb5ab2a9cd4c3547b612e7dc97656"
+      },
+      {
+        "index": 15,
+        "local_path": "/workspace/scratch/d0062d3495e5/palma_publish/transfers/public/v06/00015",
+        "path": ".palma-upload/public/v06/3875b881fde5/00015",
+        "size": 4681485,
+        "git_blob_sha": "d4c3c08cb6d54b2e734ce896ce91c4e865dc8331"
+      }
+    ],
+    "staging_branch": "agent/palma-publish-20261006",
+    "assets": [
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.pdf",
+        "size": 17202156,
+        "sha256": "262e033dae3dd74633ce5fd27cb588a56a58001f3ff214350436b2397ea22690"
+      },
+      {
+        "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.epub",
+        "size": 109574584,
+        "sha256": "f0680bc4e7ec9891df8d363d12a9766736a191a1a038e29af139d9c6ba8f77fc"
+      }
+    ]
+  }
+]
