@@ -7905,6 +7905,44 @@
         "status": "online",
         "url": "https://archive.org/details/annalesdephilos14bonngoog"
       }
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
+      "title": "グアテマラ風俗描写集",
+      "originalTitle": "Cuadros de costumbres guatemaltecas",
+      "author": "ホセ・ミリャ（サロメ・ヒル）",
+      "originalAuthor": "José Milla / Salomé Jil",
+      "year": 1882,
+      "originalPublication": "Guatemala: Imprenta de El Progreso, 1882. Segunda edición, tomo I.",
+      "sourceEdition": "Salomé Jil [José Milla], Cuadros de costumbres guatemaltecas, segunda edición, tomo I, Guatemala: Imprenta de El Progreso, 1882.",
+      "sourceProvider": "Universidad Francisco Marroquín・Biblioteca Ludwig von Mises所蔵・提供、Internet Archive公開本。",
+      "rights": "1882年刊の原著は著作権保護期間を満了しています。底本画像はInternet Archiveの当該資料で『NOT IN COPYRIGHT』と表示されています。画像の提供元・利用条件は資料公開ページを参照してください。",
+      "publishedDate": "2026-10-08",
+      "updatedDate": "2026-10-08",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrosdecostumb12salmguat"
+      }
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882",
+      "title": "グアテマラ風俗描写集",
+      "originalTitle": "Cuadros de costumbres guatemaltecas",
+      "author": "ホセ・ミリャ（サロメ・ヒル）",
+      "originalAuthor": "José Milla / Salomé Jil",
+      "year": 1882,
+      "originalPublication": "Guatemala: Imprenta de El Progreso, 1882. Segunda edición, tomo II.",
+      "sourceEdition": "Salomé Jil [José Milla], Cuadros de costumbres guatemaltecas, segunda edición, tomo II, Guatemala: Imprenta de El Progreso, 1882.",
+      "sourceProvider": "Universidad Francisco Marroquín・Biblioteca Ludwig von Mises所蔵・提供、Internet Archive公開本。",
+      "rights": "1882年刊の原著は著作権保護期間を満了しています。底本画像はInternet Archiveの当該資料で『NOT IN COPYRIGHT』と表示されています。画像の提供元・利用条件は資料公開ページを参照してください。",
+      "publishedDate": "2026-10-08",
+      "updatedDate": "2026-10-08",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrosdecostumb02saloguat"
+      }
     }
   ],
   "works": [

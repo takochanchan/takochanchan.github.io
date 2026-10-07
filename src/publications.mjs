@@ -1,3 +1,4 @@
+import { millaCuadrosPublicationRecords, millaCuadrosPublicationMetadata } from "./milla-cuadros-publication.mjs";
 import { paraveyFouSangPublicationRecords, paraveyFouSangPublicationMetadata, paraveyFouSangShortWorkAuthors } from "./paravey-fou-sang-publications.mjs";
 import { deGuignesPublicationRecords, deGuignesPublicationMetadata } from "./de-guignes-publication.mjs";
 import { batresPublicationRecords, batresPublicationMetadata } from "./batres-publication.mjs";
@@ -256,6 +257,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...millaCuadrosPublicationRecords,
   ...paraveyFouSangPublicationRecords,
   ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
@@ -9355,6 +9357,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...millaCuadrosPublicationMetadata,
   ...paraveyFouSangPublicationMetadata,
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,

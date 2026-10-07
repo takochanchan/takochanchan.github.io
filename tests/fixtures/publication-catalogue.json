@@ -2275,6 +2275,16 @@
       "slug": "paravey-fou-sang-supplement-1847",
       "recordClass": "short-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882",
+      "recordClass": "major-work",
+      "searchShard": "002"
     }
   ],
   "groups": [
@@ -2319,6 +2329,13 @@
         "herrera-historia-general-decadas-3-4-1601",
         "herrera-historia-general-decadas-5-6-1615",
         "herrera-historia-general-decadas-7-8-1615"
+      ]
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
+      "memberSlugs": [
+        "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
+        "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
       ]
     }
   ],
