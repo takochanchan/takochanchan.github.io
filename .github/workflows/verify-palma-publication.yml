@@ -1,0 +1,67 @@
+name: Verify published Palma files and bibliography
+on:
+  push:
+    branches: [agent/palma-publish-20261006]
+    paths: ['.github/workflows/verify-palma-publication.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 25ea56b06e7f5dff24d6bd167264fb479d70a137
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Verify deployed catalogue and downloaded approved files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, subprocess, tempfile, time, urllib.request
+          from html.parser import HTMLParser
+          from urllib.parse import urljoin
+          repo = "takochanchan/takochanchan.github.io"
+          commit = "25ea56b06e7f5dff24d6bd167264fb479d70a137"
+          for attempt in range(36):
+              deployment = json.loads(subprocess.check_output(["gh", "api", f"repos/{repo}/actions/runs/37782713208"]))
+              assert deployment["head_sha"] == commit, "Unexpected Pages commit"
+              if deployment["status"] == "completed":
+                  assert deployment["conclusion"] == "success", "Pages deployment failed"
+                  break
+              time.sleep(5)
+          else:
+              raise SystemExit("Pages deployment still pending")
+          target = [a for a in json.loads(pathlib.Path("assets-manifest.json").read_text())["assets"] if a["path"].startswith("publications/palma-")]
+          assert len(target) == 18
+          canonical = "https://takochanchan.github.io/publications/palma-tradiciones-peruanas/"
+          class Links(HTMLParser):
+              def __init__(self): super().__init__(); self.links = []
+              def handle_starttag(self, tag, attrs):
+                  if tag == "a":
+                      self.links += [urljoin(canonical, value) for key, value in attrs if key == "href"]
+          html = urllib.request.urlopen(canonical + "?published=" + commit, timeout=60).read().decode()
+          assert "ペルー伝説集" in html and "リカルド・パルマ" in html and "3,283" in html
+          parser = Links(); parser.feed(html)
+          with tempfile.TemporaryDirectory() as folder:
+              subprocess.run(["gh", "release", "download", "publications-current", "--repo", repo, "--dir", folder, "--pattern", "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_*", "--pattern", "SHA256SUMS.txt"], check=True)
+              checksums = dict((fields[1].lstrip("*"), fields[0]) for line in (pathlib.Path(folder) / "SHA256SUMS.txt").read_text().splitlines() if len(fields := line.split()) == 2)
+              for asset in target:
+                  name = pathlib.PurePosixPath(asset["path"]).name
+                  if name.endswith((".pdf", ".epub")):
+                      assert asset["url"] in parser.links, f"Missing live download link: {name}"
+                      data = (pathlib.Path(folder) / name).read_bytes()
+                      assert checksums[name] == asset["sha256"], f"Checksum list mismatch: {name}"
+                  else:
+                      data = urllib.request.urlopen(asset["url"] + "?published=" + commit, timeout=60).read()
+                  assert len(data) == asset["size"], f"Size mismatch: {asset['path']}"
+                  assert hashlib.sha256(data).hexdigest() == asset["sha256"], f"Hash mismatch: {asset['path']}"
+                  print("Verified", asset["path"], len(data))
+          print("Palma publication OK: 1 bibliography, 6 PDF, 6 EPUB, 6 covers; all downloaded bytes match approved manifests.")
+          PY
+      - name: Verify exact deployed search shards
+        run: npm run verify:remote-search
