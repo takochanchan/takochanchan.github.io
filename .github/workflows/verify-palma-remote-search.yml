@@ -1,0 +1,19 @@
+name: Verify Palma deployed search before publication
+on:
+  push:
+    branches: [agent/palma-publish-20261006]
+    paths: [.palma-remote-search-request.json]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 25ea56b06e7f5dff24d6bd167264fb479d70a137
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run verify:remote-search
