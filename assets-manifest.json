@@ -7854,6 +7854,114 @@
       "url": "https://takochanchan.github.io/publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/cover.jpg",
       "size": 87119,
       "sha256": "24c918c53c4c33a048779f3e7d87d7b34fce96f7a3600d7b4609b261f5456627"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v01/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.pdf",
+      "size": 20589205,
+      "sha256": "669191549c46d65e5fef43063aef72a2fc54f08f238b38d9d99b39396e06879d"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v01/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.epub",
+      "size": 99687070,
+      "sha256": "5e8ec8c85719014e639deac687e1aa0880701c718f2c52413be2d5172d84b5f2"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v01/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v01/japanese-cover.jpg",
+      "size": 23165,
+      "sha256": "0a1d9f427bc9608e59ae845079ead0bd6397884c52ee9fe25a252cd952c50f27"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v02/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.pdf",
+      "size": 10933179,
+      "sha256": "d34c77f4745974474eb8b706678e35a7c70d5f876762a3e83cf2b78a83238d19"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v02/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.epub",
+      "size": 55826288,
+      "sha256": "9317742a71f3913ffe62937c4030a599867d1aa6dedbbab01a39175c030033ec"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v02/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v02/japanese-cover.jpg",
+      "size": 23204,
+      "sha256": "ced57ffd6ea8591ed263028bbe20371b936929a38310d8235d0dd93e5c4cc02a"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v03/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.pdf",
+      "size": 12799374,
+      "sha256": "2bd651d98ef35dc04917538981bbe33204bdc9366a122958e11b576c7d939b25"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v03/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_03.epub",
+      "size": 63883234,
+      "sha256": "2de57fe8cfdbb68638a7809d51c7da953be489194339a3b8444fcad45fb1d4c1"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v03/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v03/japanese-cover.jpg",
+      "size": 23192,
+      "sha256": "0280cfbd8521f147edf8492c76b9ae3ab2222b33bbed98fb26f1d6f3c2034a00"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v04/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.pdf",
+      "size": 16792011,
+      "sha256": "5943b35be436bdac4e34578a68c2c0eac045f6f789fdd9f899d4acab8cab2364"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v04/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_04.epub",
+      "size": 79278589,
+      "sha256": "8af1602ed339837fe222d30ff7efc02a02838a9338ba3ac0471c6136e1b3f96c"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v04/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v04/japanese-cover.jpg",
+      "size": 24084,
+      "sha256": "1cde3e5fd251499f7a869676868f727bd55a779a53feb6632d85c4d88bdb76a7"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v05/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.pdf",
+      "size": 18146988,
+      "sha256": "88eb02dc75483a0c218066eaaefb9bce4ed5cd75440d87e3676ec3996c35b05d"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v05/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.epub",
+      "size": 82562533,
+      "sha256": "5b4ecd825f47abcf4ecc68d03c421f43b852901eb2ea580b008ddccb8b0d075e"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v05/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v05/japanese-cover.jpg",
+      "size": 26045,
+      "sha256": "df3cde54af253cad4b2a57be3edc605a99fa72ba7452473262879e12c1d9a726"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v06/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.pdf",
+      "size": 17202156,
+      "sha256": "262e033dae3dd74633ce5fd27cb588a56a58001f3ff214350436b2397ea22690"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v06/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_06.epub",
+      "size": 109574584,
+      "sha256": "f0680bc4e7ec9891df8d363d12a9766736a191a1a038e29af139d9c6ba8f77fc"
+    },
+    {
+      "path": "publications/palma-tradiciones-peruanas-v06/japanese-cover.jpg",
+      "url": "https://takochanchan.github.io/publications/palma-tradiciones-peruanas-v06/japanese-cover.jpg",
+      "size": 25706,
+      "sha256": "a9ed026df628feb483b0e34535b84d53e69554f5b9fc8f96089a3f2c24815933"
     }
   ]
 }

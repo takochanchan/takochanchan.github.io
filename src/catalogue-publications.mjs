@@ -7,6 +7,41 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "title": "ペルー伝説集",
+  "author": "リカルド・パルマ",
+  "originalAuthor": "Ricardo Palma",
+  "slug": "palma-tradiciones-peruanas",
+  "memberSlugs": [
+    "palma-tradiciones-peruanas-v01",
+    "palma-tradiciones-peruanas-v02",
+    "palma-tradiciones-peruanas-v03",
+    "palma-tradiciones-peruanas-v04",
+    "palma-tradiciones-peruanas-v05",
+    "palma-tradiciones-peruanas-v06"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第3巻",
+    "第4巻",
+    "第5巻",
+    "第6巻"
+  ],
+  "originalTitle": "Tradiciones peruanas",
+  "subtitle": "全10シリーズ・全6巻",
+  "series": "TRADICIONES PERUANAS · 1893–1910",
+  "originalPublication": "Barcelona: Montaner y Simón, 1893–1896; Maucci, 1906–1910.",
+  "year": 1893,
+  "extent": "全6巻・PDF計3,283頁",
+  "description": "リカルド・パルマが、インカ期から植民地時代・共和国期のペルーを舞台とする逸話や伝承を、歴史記録、口承、風刺を交えて綴った作品集です。生前に刊行された全10シリーズを、1893・1894・1896年のMontaner y Simón版4冊と、1906・1910年のMaucci版2冊を底本として収録しています。",
+  "sourceEdition": "Ricardo Palma, Tradiciones peruanas, tomo I, Barcelona: Montaner y Simón, 1893. / Ricardo Palma, Tradiciones peruanas, tomo II, Barcelona: Montaner y Simón, 1894. / Ricardo Palma, Tradiciones peruanas, tomo III, Barcelona: Montaner y Simón, 1894. / Ricardo Palma, Tradiciones peruanas (Ropa vieja), Barcelona: Montaner y Simón, 1896. / Ricardo Palma, Mis últimas tradiciones peruanas y Cachivachería, Barcelona / Buenos Aires: Casa Editorial Maucci, 1906. / Ricardo Palma, Apéndice á Mis últimas tradiciones peruanas, Barcelona: Casa Editorial Maucci, 1910.",
+  "sourceProvider": "カリフォルニア大学、ハーヴァード大学、イリノイ大学アーバナ・シャンペーン校、テキサス大学所蔵。Google Books / Internet Archive / Wikimedia Commons公開本。",
+  "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tradiciones_peruanas_-_Tomo_I_(1893).pdf",
+  "rights": "底本ごとの権利表示・公開元の利用条件は各巻の書誌情報に記載しています。",
+  "publishedDate": "2026-10-06",
+  "updatedDate": "2026-10-06"
+},
+{
   "title": "グアテマラ風俗描写集",
   "originalTitle": "Cuadros de costumbres guatemaltecas",
   "author": "ホセ・ミリャ（サロメ・ヒル）",

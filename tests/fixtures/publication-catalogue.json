@@ -2285,6 +2285,42 @@
       "slug": "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v01",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v02",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v03",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v04",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v05",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "palma-tradiciones-peruanas-v06",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "リカルド・パルマ"
     }
   ],
   "groups": [
@@ -2336,6 +2372,17 @@
       "memberSlugs": [
         "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
         "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
+      ]
+    },
+    {
+      "slug": "palma-tradiciones-peruanas",
+      "memberSlugs": [
+        "palma-tradiciones-peruanas-v01",
+        "palma-tradiciones-peruanas-v02",
+        "palma-tradiciones-peruanas-v03",
+        "palma-tradiciones-peruanas-v04",
+        "palma-tradiciones-peruanas-v05",
+        "palma-tradiciones-peruanas-v06"
       ]
     }
   ],
