@@ -1,0 +1,34 @@
+{
+  "verified_archive_commit": "25ee1cf07a77555260464b0fc9b5408b4fe85858",
+  "bundle": {
+    "size": 99051214,
+    "sha256": "c26b40432b644fc8b061071fd361be8655ebed1991ad680d44876bd25d25750b",
+    "chunks": [
+      "332cf8d7029da2a34fb0805619a2b85913e41dfe",
+      "d6ec16adb2ecad92e0b5187fca61761cd00a7bbe",
+      "3bcdbf520e1483dff9a63ae0565efc210631187c",
+      "2a7c6a8b001c2d4d7f78d450d76cd7d403e468b4",
+      "d6bb1c50cc5957488d4a717fe7a8e7090430d0ba",
+      "46f02245716494bd983badc006374ef0a74db5ce",
+      "041645181a2a960093e27c7805d9ec9e43b9ebe2",
+      "e9aab623e7d36dd25225a9fdda3c7b5a5ca626f7",
+      "9a4ffbdd2c7aded0e2f485ba558fb2149f41b305",
+      "8ecdde2aa1061966e442919a2c7464acf182d38b",
+      "4a196171095d99501b4b655f2107bf92b0f7009f",
+      "b9a1abaa9673baeb0cac119a6294e1a59f1f450a",
+      "71db6db76b1b2c62a1d0182ef6aaf8e25fbbcea7"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.pdf",
+      "size": 18146988,
+      "sha256": "88eb02dc75483a0c218066eaaefb9bce4ed5cd75440d87e3676ec3996c35b05d"
+    },
+    {
+      "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_05.epub",
+      "size": 82562533,
+      "sha256": "5b4ecd825f47abcf4ecc68d03c421f43b852901eb2ea580b008ddccb8b0d075e"
+    }
+  ]
+}

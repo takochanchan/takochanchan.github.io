@@ -1,0 +1,30 @@
+{
+  "verified_archive_commit": "25ee1cf07a77555260464b0fc9b5408b4fe85858",
+  "bundle": {
+    "size": 65361446,
+    "sha256": "b7d5d71d15491cbd60cef4cd2232b3309ca159cfa8d6884dad5e4778ad5a7a88",
+    "chunks": [
+      "0a982f6df9e276c9f9fb08f4fb8ebe1ab7a9083a",
+      "05b395ae35330bf05dad2167cb18474b0f24cdc1",
+      "ed3d3a2429561a572c8f18baa13a3b32c1d2f772",
+      "0ac2cb4b039d77d6ac63af17f84f948222840826",
+      "9905230b7e0da54462eb949444ecf6e8d8fa8360",
+      "c0bfda6faeacb485ad1740a11a3796ec830411dd",
+      "348d08503abf10c75bff03f09e86e6e370a556ab",
+      "6f6dde1bdbfb6c948c742e8d5f81e99b020e4d47",
+      "bc8bdb225dde2b062833869faf2039c600a96d30"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.pdf",
+      "size": 10933179,
+      "sha256": "d34c77f4745974474eb8b706678e35a7c70d5f876762a3e83cf2b78a83238d19"
+    },
+    {
+      "filename": "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_02.epub",
+      "size": 55826288,
+      "sha256": "9317742a71f3913ffe62937c4030a599867d1aa6dedbbab01a39175c030033ec"
+    }
+  ]
+}
