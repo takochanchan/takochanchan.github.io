@@ -7820,6 +7820,42 @@
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
     },
     {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-i-1882/Milla_Cuadros_1882_Vol_1_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Milla_Cuadros_1882_Vol_1_ja.pdf",
+      "size": 1713216,
+      "sha256": "f5cf611275798131daeef3130284f531ab7ed15a9665bdc0e137cfd02e1f4665"
+    },
+    {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-i-1882/Milla_Cuadros_1882_Vol_1_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Milla_Cuadros_1882_Vol_1_ja.epub",
+      "size": 289686,
+      "sha256": "a47124c5b443197292ff2879de4aea1aac8720607ea6bc6a40ed76a5b15cbe6f"
+    },
+    {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-i-1882/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/milla-cuadros-costumbres-guatemaltecas-volume-i-1882/cover.jpg",
+      "size": 93825,
+      "sha256": "bb09b752682e521e2a94c89daa392e0419055c6bab327761a074de49ae65068f"
+    },
+    {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/Milla_Cuadros_1882_Vol_2_ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Milla_Cuadros_1882_Vol_2_ja.pdf",
+      "size": 1392634,
+      "sha256": "0ff2df7c68b8f2c1cdf46fa71282f4a0ad2443e14ab35fe5b18ea3867cddbd10"
+    },
+    {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/Milla_Cuadros_1882_Vol_2_ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Milla_Cuadros_1882_Vol_2_ja.epub",
+      "size": 230837,
+      "sha256": "32686586c3e4e33882d2d5ba4f1caf1a3b245a980dad63688bd797d7c2d4d1b0"
+    },
+    {
+      "path": "publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/cover.jpg",
+      "size": 87119,
+      "sha256": "24c918c53c4c33a048779f3e7d87d7b34fce96f7a3600d7b4609b261f5456627"
+    },
+    {
       "path": "publications/palma-tradiciones-peruanas-v01/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_01.pdf",
       "size": 20589205,

@@ -42,6 +42,33 @@ export const publicationGroupDefinitions = [
   "updatedDate": "2026-10-06"
 },
 {
+  "title": "グアテマラ風俗描写集",
+  "originalTitle": "Cuadros de costumbres guatemaltecas",
+  "author": "ホセ・ミリャ（サロメ・ヒル）",
+  "originalAuthor": "José Milla / Salomé Jil",
+  "series": "CUADROS DE COSTUMBRES GUATEMALTECAS · 1882",
+  "year": 1882,
+  "description": "ホセ・ミリャ（筆名サロメ・ヒル）が、19世紀のグアテマラの人物、家庭生活、社交、祭礼や日常の習俗を、ユーモアと風刺を交えて描いた風俗描写集です。1882年グアテマラ刊第2版、全2巻を底本としています。",
+  "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
+  "memberSlugs": [
+    "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
+    "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻"
+  ],
+  "subtitle": "全2巻・1882年第2版・日本語全訳",
+  "originalPublication": "Guatemala: Imprenta de El Progreso, 1882. Segunda edición, tomos I–II.",
+  "extent": "全2巻・PDF計300頁",
+  "sourceEdition": "Salomé Jil [José Milla], Cuadros de costumbres guatemaltecas, segunda edición, tomos I–II, Guatemala: Imprenta de El Progreso, 1882.",
+  "sourceProvider": "Universidad Francisco Marroquín・Biblioteca Ludwig von Mises所蔵・提供、Internet Archive公開本。",
+  "sourceUrl": "https://archive.org/details/cuadrosdecostumb12salmguat",
+  "rights": "1882年刊の原著は著作権保護期間を満了しています。底本画像はInternet Archiveの当該資料で『NOT IN COPYRIGHT』と表示されています。画像の提供元・利用条件は資料公開ページを参照してください。",
+  "publishedDate": "2026-10-08",
+  "updatedDate": "2026-10-08"
+},
+{
   "author": "ゴンサロ・フェルナンデス・デ・オビエド・イ・バルデス",
   "originalAuthor": "Gonzalo Fernández de Oviedo y Valdés",
   "series": "HISTORIA GENERAL Y NATURAL DE LAS INDIAS · 1851–1855",
@@ -572,5 +599,4 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
-
 

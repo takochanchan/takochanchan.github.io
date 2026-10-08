@@ -1,4 +1,5 @@
 import { palmaPublicationRecords, palmaPublicationMetadata } from "./palma-publications.mjs";
+import { millaCuadrosPublicationRecords, millaCuadrosPublicationMetadata } from "./milla-cuadros-publication.mjs";
 import { paraveyFouSangPublicationRecords, paraveyFouSangPublicationMetadata, paraveyFouSangShortWorkAuthors } from "./paravey-fou-sang-publications.mjs";
 import { deGuignesPublicationRecords, deGuignesPublicationMetadata } from "./de-guignes-publication.mjs";
 import { batresPublicationRecords, batresPublicationMetadata } from "./batres-publication.mjs";
@@ -258,6 +259,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 
 const publicationRecords = [
   ...palmaPublicationRecords,
+  ...millaCuadrosPublicationRecords,
   ...paraveyFouSangPublicationRecords,
   ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
@@ -9358,6 +9360,7 @@ const gallicaPublicDomainRights =
 
 const publicationMetadata = {
   ...palmaPublicationMetadata,
+  ...millaCuadrosPublicationMetadata,
   ...paraveyFouSangPublicationMetadata,
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
@@ -12217,7 +12220,6 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
-
 
 
 

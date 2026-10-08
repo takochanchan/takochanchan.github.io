@@ -1,5 +1,6 @@
 {
   "verified_archive_commit": "25ee1cf07a77555260464b0fc9b5408b4fe85858",
+  "publication_source_commit": "f61fe72edf06651a32791b7e14eaddf340dc2ff1",
   "bundle": {
     "size": 99051214,
     "sha256": "c26b40432b644fc8b061071fd361be8655ebed1991ad680d44876bd25d25750b",
