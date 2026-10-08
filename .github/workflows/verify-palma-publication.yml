@@ -22,7 +22,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
-          import hashlib, json, pathlib, subprocess, tempfile, time, urllib.request
+          import hashlib, json, pathlib, re, subprocess, tempfile, time, urllib.request
           from html.parser import HTMLParser
           from urllib.parse import urljoin
           repo = "takochanchan/takochanchan.github.io"
@@ -45,7 +45,7 @@ jobs:
                   if tag == "a":
                       self.links += [urljoin(canonical, value) for key, value in attrs if key == "href"]
           html = urllib.request.urlopen(canonical + "?published=" + commit, timeout=60).read().decode()
-          assert "ペルー伝説集" in html and "リカルド・パルマ" in html and "3,283" in html
+          assert "ペルー伝説集" in html and "リカルド・パルマ" in html and re.search(r'"numberOfPages"\s*:\s*3283\b', html), "Unexpected live bibliography metadata"
           parser = Links(); parser.feed(html)
           with tempfile.TemporaryDirectory() as folder:
               subprocess.run(["gh", "release", "download", "publications-current", "--repo", repo, "--dir", folder, "--pattern", "Ricardo_Palma_Tradiciones_Peruanas_Japanese_Vol_*", "--pattern", "SHA256SUMS.txt"], check=True)
