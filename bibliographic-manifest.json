@@ -16,9 +16,8 @@
       "updatedDate": "2026-10-09",
       "recordClass": "major-work",
       "sourceAccess": {
-        "status": "online",
-        "url": "https://www.bne.es/es/catalogos/biblioteca-digital-hispanica",
-        "note": "BNEの公開窓口。個別資料への恒久リンクは未確認です。"
+        "status": "unresolved-link",
+        "note": "BNEが公開する1853年刊第1巻のPDFを使用しました。個別資料への恒久リンクは未確認です。"
       }
     },
     {
