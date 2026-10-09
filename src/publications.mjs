@@ -1,3 +1,4 @@
+import { guijoPublicationRecords, guijoPublicationMetadata } from "./guijo-publication.mjs";
 import { palmaPublicationRecords, palmaPublicationMetadata } from "./palma-publications.mjs";
 import { millaCuadrosPublicationRecords, millaCuadrosPublicationMetadata } from "./milla-cuadros-publication.mjs";
 import { paraveyFouSangPublicationRecords, paraveyFouSangPublicationMetadata, paraveyFouSangShortWorkAuthors } from "./paravey-fou-sang-publications.mjs";
@@ -258,6 +259,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...guijoPublicationRecords,
   ...palmaPublicationRecords,
   ...millaCuadrosPublicationRecords,
   ...paraveyFouSangPublicationRecords,
@@ -9365,6 +9367,7 @@ const publicationMetadata = {
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
   ...salazarPublicationMetadata,
+  ...guijoPublicationMetadata,
   ...academiaGuatemaltecaPublicationMetadata,
   ...cehmBetlemitasPublicationMetadata,
   ...mexicoViejoPublicationMetadata,
