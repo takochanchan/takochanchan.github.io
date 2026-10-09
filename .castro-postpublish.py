@@ -41,7 +41,8 @@ for v,n,first,last in [(4,185,5,260),(5,189,5,269),(6,181,5,262)]:
  if v==6:expected-=set(map(str,range(181,191)))
  assert expected<=labels,(v,len(expected-labels),sorted(expected-labels)[:10])
  assert pdfpages and all(isinstance(p,int) and 1<=p<=n for p in pdfpages)
- assert search['canonicalUrl']=='/publications/'+slug+'/'
+ print('SEARCH_CANONICAL '+json.dumps({'volume':v,'actual':search['canonicalUrl'],'expected':'/publications/'+slug+'/'},ensure_ascii=False),flush=True)
+ assert search['canonicalUrl']=='/publications/'+slug+'/',search['canonicalUrl']
  search_results.append(dict(volume=v,pdf_pages=n,source_labels_verified=len(expected),search_pdf_pages=len(pdfpages)))
 subprocess.run(['npm','run','verify:remote-search'],check=True)
 result=dict(status='published_and_verified',url=base+'publications/'+slug+'/',assets=verified,volumes=search_results,archive_commit="d9847a063b08181d3f20c10634745dfcb29ceaad")
