@@ -3,6 +3,11 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "guijo-diario-sucesos-notables-1853-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
       "slug": "de-guignes-navigations-chinois-amerique-1761",
       "recordClass": "short-work",
       "searchShard": "002",

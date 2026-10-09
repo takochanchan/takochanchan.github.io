@@ -1,0 +1,173 @@
+{
+  "slug": "guijo-diario-sucesos-notables-1853-vol-1",
+  "release_tag": "publications-current",
+  "verified_archive_commit": "a7c713dfd252c9a06d5a74d6495973307a8f604c",
+  "assets": [
+    {
+      "filename": "Gregorio_Martin_de_Guijo_Diario_1853_Vol1_Japanese_Complete_Translation.epub",
+      "size": 394101,
+      "sha256": "3888c8ee61364800093e3d1b40bfa1b3f02bbdffa9bb77fab57248fb32b2c83c",
+      "chunks": [
+        {
+          "sha": "5d465b89b0566512c37b40cecabe043c8070b793",
+          "size": 120000
+        },
+        {
+          "sha": "c0776f254dff2514dbf645253aaad0c8e81b1298",
+          "size": 120000
+        },
+        {
+          "sha": "95f0aa9c11020757d618e98016f33ab858aecfe2",
+          "size": 120000
+        },
+        {
+          "sha": "ea6344a731dcfa4bf84ed91fbfb3f8d3d3f6fc67",
+          "size": 34101
+        }
+      ]
+    },
+    {
+      "filename": "Gregorio_Martin_de_Guijo_Diario_1853_Vol1_Japanese_Complete_Translation.pdf",
+      "size": 3964946,
+      "sha256": "38159ca4bd5c7ecfdecc5cc4380445f1039a959fc45dd47d6b2b889553064837",
+      "chunks": [
+        {
+          "sha": "9d027a86dfef83ebaaf87222ff98e00c280ff094",
+          "size": 120000
+        },
+        {
+          "sha": "d374e901ffd902c006c548e2b18fd1675776c916",
+          "size": 120000
+        },
+        {
+          "sha": "d0982f35d2e2ec0de0f37624f2c3758d29ce1b16",
+          "size": 120000
+        },
+        {
+          "sha": "f237608fa7d1da84102807470447b5e3ea23e0fe",
+          "size": 120000
+        },
+        {
+          "sha": "718cadc4a6a0fe9ae717c767cc9f44fd96b04bfd",
+          "size": 120000
+        },
+        {
+          "sha": "bc766d1a03781508140039002358bbaa9239778e",
+          "size": 120000
+        },
+        {
+          "sha": "ac99e524df0b38f7f6b43e8051576fbf1fc731e6",
+          "size": 120000
+        },
+        {
+          "sha": "f0b7b0162ae91337d051415424c8ba067f13555e",
+          "size": 120000
+        },
+        {
+          "sha": "82a046b5fbf7a6161b2751c64f8f8abed48a10b8",
+          "size": 120000
+        },
+        {
+          "sha": "f7b6df2b376e4cc8b4c35efdf4913e765f3d3b9b",
+          "size": 120000
+        },
+        {
+          "sha": "cff2594def8a85c9c1ad45bef477fb2b57b2288f",
+          "size": 120000
+        },
+        {
+          "sha": "40bd0d561d6d4afc93acc5e8d600a1de26e49e53",
+          "size": 120000
+        },
+        {
+          "sha": "bb4f0ad14789304888adccd2f6089c037d10d93a",
+          "size": 120000
+        },
+        {
+          "sha": "12f783decd0e2bf9a2eaa64393d9f5f5fc878459",
+          "size": 120000
+        },
+        {
+          "sha": "118d21081223ae806e781a1b6407cfa5bd10ed8e",
+          "size": 120000
+        },
+        {
+          "sha": "6a01bbe5efc527b0f28aa1fed6ae319c1492889b",
+          "size": 120000
+        },
+        {
+          "sha": "cc09d0638f6d2bf35191c5b1896c0742f1d4ab06",
+          "size": 120000
+        },
+        {
+          "sha": "ef5af38b8c4091ead8cd722692d098fe7b8cc609",
+          "size": 120000
+        },
+        {
+          "sha": "52dc638ecac0a38ab4a7d2ca6ec0ffaca3d30ac8",
+          "size": 120000
+        },
+        {
+          "sha": "b70a7b3846cc5b86926bf9e941df8d7e9a32c925",
+          "size": 120000
+        },
+        {
+          "sha": "1675c04b63c4c494c9c9efd40fade3464d8b508d",
+          "size": 120000
+        },
+        {
+          "sha": "4fc8bb70028fdf4ce633e077c878dd56c1d5e264",
+          "size": 120000
+        },
+        {
+          "sha": "008109c960f7ad61c4dde74a2392c76f20c5c3c2",
+          "size": 120000
+        },
+        {
+          "sha": "5c51fe0a9b788baf688c1e6dfa3d724edb9afcb7",
+          "size": 120000
+        },
+        {
+          "sha": "4bd399a1fd05711ad2e2d67aea94e377ef05e14a",
+          "size": 120000
+        },
+        {
+          "sha": "47d18b02bcf077c81b8660e415c8ae6d283e8da7",
+          "size": 120000
+        },
+        {
+          "sha": "a236654ca2aefc804794bbe3c17cea44803d0fb1",
+          "size": 120000
+        },
+        {
+          "sha": "090755d6672fab678976e88baceda4cf5d16738f",
+          "size": 120000
+        },
+        {
+          "sha": "845035fe75893281d05d77bb236c470d3167ceef",
+          "size": 120000
+        },
+        {
+          "sha": "553b5c30b67e683d9ae8d61a4e92697bbf0b9095",
+          "size": 120000
+        },
+        {
+          "sha": "e4472e0507710aca1656e7d0dfb96eeefd777848",
+          "size": 120000
+        },
+        {
+          "sha": "dfbd1554331653eca2ac15029d4ef127fd2794d4",
+          "size": 120000
+        },
+        {
+          "sha": "d16ccb513153caec1d2c4cf6f3228844fd096aae",
+          "size": 120000
+        },
+        {
+          "sha": "563f98ef10b4306155561dac490c9b8c566513b9",
+          "size": 4946
+        }
+      ]
+    }
+  ]
+}

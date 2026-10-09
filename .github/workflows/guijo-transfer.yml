@@ -1,0 +1,28 @@
+name: Transfer approved Guijo diary volume I
+on:
+  push:
+    branches: [agent/guijo-publish-20261009]
+    paths: [.publication-upload-requests/guijo-diario-sucesos-notables-1853-vol-1.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-guijo.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guijo-public-verification
+          path: release-byte-verification.json
