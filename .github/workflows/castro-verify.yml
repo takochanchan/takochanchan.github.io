@@ -1,0 +1,52 @@
+name: Verify Castro Santa-Anna publication remote search and live delivery
+on:
+  push:
+    branches: [agent/castro-diario-verify-20261009]
+    paths: [.castro-verification-stage]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochanchan.github.io/actions/runs/37893939951"
+          for attempt in range(90):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              if run["head_sha"] != "9d4ec5d44280b1b373996b5e68744a428c73a0d5":
+                  raise SystemExit("Unexpected Pages source commit")
+              if run["status"] == "completed":
+                  if run["conclusion"] != "success":
+                      raise SystemExit("Pages deployment failed: " + str(run["conclusion"]))
+                  print("Pinned Pages deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Pages deployment did not complete within 15 minutes")
+          PY
+      - name: Verify current remote search coverage
+        run: npm run verify:remote-search
+      - name: Ensure PDF inspection tools
+        run: |
+          if ! command -v pdfinfo || ! command -v pdftotext; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Verify live publication bytes and bibliography
+        if: ${{ hashFiles('.castro-postpublish.py') != '' }}
+        run: python3 .castro-postpublish.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: castro-live-verification
+          path: castro-live-verification.json
