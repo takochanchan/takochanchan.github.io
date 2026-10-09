@@ -2326,6 +2326,24 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "リカルド・パルマ"
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v4",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ"
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v5",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ"
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v6",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ"
     }
   ],
   "groups": [
@@ -2388,6 +2406,14 @@
         "palma-tradiciones-peruanas-v04",
         "palma-tradiciones-peruanas-v05",
         "palma-tradiciones-peruanas-v06"
+      ]
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854",
+      "memberSlugs": [
+        "castro-santa-anna-diario-1854-v4",
+        "castro-santa-anna-diario-1854-v5",
+        "castro-santa-anna-diario-1854-v6"
       ]
     }
   ],

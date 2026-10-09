@@ -7980,6 +7980,60 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v4/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.pdf",
+      "size": 1824312,
+      "sha256": "99c7c5ba13bebbc73bcc4a81b2ba0fadd12e1bf8c8327cfc463868d6b5eec975"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v4/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
+      "size": 250328,
+      "sha256": "3ad77335788b13808bfc09bd6b8dd9ec43f98cc5125372a0bc341fdceb2e2c21"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v5/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.pdf",
+      "size": 1931529,
+      "sha256": "cecd30268a4d945d08754a61123b5721e0a1e465261e841d595fd2b9287b5259"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v5/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.epub",
+      "size": 258853,
+      "sha256": "8fbeb1f22527c7302dca3b8e9bd95afda16808761a17d4ffcca824ec27a1434c"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v6/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.pdf",
+      "size": 1896855,
+      "sha256": "803e0d1d34d80d6ba990ce5d9989a555155ed30368a679703a3e901f151d7337"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v6/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub",
+      "size": 250766,
+      "sha256": "4d6cb38c352a01d7966086499c955fea306d2554cc2e3c3a11164d6b84196f04"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v4/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/castro-santa-anna-diario-1854-v4/cover.jpg",
+      "size": 115409,
+      "sha256": "bc527de0a7369ccab010ec48d6c958da3b64c9fd37fff4de6ea336eb36fde128"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v5/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/castro-santa-anna-diario-1854-v5/cover.jpg",
+      "size": 115454,
+      "sha256": "595238638cb423f4109b0f1952eed940dbfba6d090566edbd6376cc2a50e40ec"
+    },
+    {
+      "path": "publications/castro-santa-anna-diario-1854-v6/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/castro-santa-anna-diario-1854-v6/cover.jpg",
+      "size": 117851,
+      "sha256": "4f4b0bd04bc53976ea9e10ed905ce3d93018be4c3ba6150f12f5274c718c9726"
     }
   ]
 }

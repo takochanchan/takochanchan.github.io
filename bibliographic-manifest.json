@@ -8262,6 +8262,63 @@
         "status": "online",
         "url": "https://commons.wikimedia.org/wiki/File:Ap%C3%A9ndice_a_Mis_%C3%BAltimas_tradiciones_peruanas_(1910).pdf"
       }
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v4",
+      "recordClass": "major-work",
+      "title": "注目すべき出来事の日誌（第4巻）",
+      "originalTitle": "Diario de sucesos notables",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ",
+      "originalAuthor": "José Manuel de Castro Santa-Anna",
+      "year": 1854,
+      "originalPublication": "メキシコ、フアン・R・ナバロ印刷所、1854年",
+      "sourceEdition": "José Manuel de Castro Santa-Anna, Diario de sucesos notables, Documentos para la historia de Méjico, tomo 4, Méjico: Imprenta de Juan R. Navarro, 1854.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）所蔵・公開の底本PDF。",
+      "rights": "原著本文はパブリックドメインです。底本PDFはスペイン国立図書館（BNE）から取得しました。BNE所蔵のパブリックドメイン資料の底本画像は商用・非商用を問わず無償で事前許可なく利用でき、出典表示が必要です。本訳に底本の画像は転載していません。画像出典：Imágenes procedentes de los fondos de la Biblioteca Nacional de España。利用条件：https://www.bne.es/es/servicios/reproduccion-documentos/uso-reproducciones",
+      "publishedDate": "2026-10-09",
+      "updatedDate": "2026-10-09",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bdh-rd.bne.es/viewer.vm?id=0000147570&page=1"
+      }
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v5",
+      "recordClass": "major-work",
+      "title": "注目すべき出来事の日誌（第5巻）",
+      "originalTitle": "Diario de sucesos notables",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ",
+      "originalAuthor": "José Manuel de Castro Santa-Anna",
+      "year": 1854,
+      "originalPublication": "メキシコ、フアン・R・ナバロ印刷所、1854年",
+      "sourceEdition": "José Manuel de Castro Santa-Anna, Diario de sucesos notables, Documentos para la historia de Méjico, tomo 5, Méjico: Imprenta de Juan R. Navarro, 1854.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）所蔵・公開の底本PDF。",
+      "rights": "原著本文はパブリックドメインです。底本PDFはスペイン国立図書館（BNE）から取得しました。BNE所蔵のパブリックドメイン資料の底本画像は商用・非商用を問わず無償で事前許可なく利用でき、出典表示が必要です。本訳に底本の画像は転載していません。画像出典：Imágenes procedentes de los fondos de la Biblioteca Nacional de España。利用条件：https://www.bne.es/es/servicios/reproduccion-documentos/uso-reproducciones",
+      "publishedDate": "2026-10-09",
+      "updatedDate": "2026-10-09",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bdh-rd.bne.es/viewer.vm?id=0000147570&page=1"
+      }
+    },
+    {
+      "slug": "castro-santa-anna-diario-1854-v6",
+      "recordClass": "major-work",
+      "title": "注目すべき出来事の日誌（第6巻）",
+      "originalTitle": "Diario de sucesos notables",
+      "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ",
+      "originalAuthor": "José Manuel de Castro Santa-Anna",
+      "year": 1854,
+      "originalPublication": "メキシコ、フアン・R・ナバロ印刷所、1854年",
+      "sourceEdition": "José Manuel de Castro Santa-Anna, Diario de sucesos notables, Documentos para la historia de Méjico, tomo 6, Méjico: Imprenta de Juan R. Navarro, 1854.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）所蔵・公開の底本PDF。",
+      "rights": "原著本文はパブリックドメインです。底本PDFはスペイン国立図書館（BNE）から取得しました。BNE所蔵のパブリックドメイン資料の底本画像は商用・非商用を問わず無償で事前許可なく利用でき、出典表示が必要です。本訳に底本の画像は転載していません。画像出典：Imágenes procedentes de los fondos de la Biblioteca Nacional de España。利用条件：https://www.bne.es/es/servicios/reproduccion-documentos/uso-reproducciones",
+      "publishedDate": "2026-10-09",
+      "updatedDate": "2026-10-09",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bdh-rd.bne.es/viewer.vm?id=0000147570&page=1"
+      }
     }
   ],
   "works": [

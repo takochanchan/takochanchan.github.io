@@ -1,3 +1,4 @@
+import { castroPublicationRecords, castroPublicationMetadata } from "./castro-publications.mjs";
 import { guijoPublicationRecords, guijoPublicationMetadata } from "./guijo-publication.mjs";
 import { palmaPublicationRecords, palmaPublicationMetadata } from "./palma-publications.mjs";
 import { millaCuadrosPublicationRecords, millaCuadrosPublicationMetadata } from "./milla-cuadros-publication.mjs";
@@ -259,6 +260,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...castroPublicationRecords,
   ...guijoPublicationRecords,
   ...palmaPublicationRecords,
   ...millaCuadrosPublicationRecords,
@@ -9361,6 +9363,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...castroPublicationMetadata,
   ...palmaPublicationMetadata,
   ...millaCuadrosPublicationMetadata,
   ...paraveyFouSangPublicationMetadata,

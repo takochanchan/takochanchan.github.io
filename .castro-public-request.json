@@ -1,0 +1,63 @@
+{
+  "bundle": {
+    "size": 4520497,
+    "sha256": "2ee8d7566b7ecc87f201665041d5fe9ce4d0d5ee99ea4aab960c46c2431577a7",
+    "chunks": [
+      "95f8e3baeb7348a34146044b3a58c6cd388df5d2",
+      "4582166b038e103bc0b3d5e48fa0b12068481b86",
+      "165b5707d7aa434b1fadb821d416ffb72ecc6b7c",
+      "36cf83068a91ceb3aa6bc3e43c68498b7c2f6c56",
+      "a7e1db6c48842525a552fc1dadeaca5ab3bf404a",
+      "e7caa206c555d6358ccf825168a61283a62c752c",
+      "8e13b7cc061b0f80aa0b06069ba688bef6c066f4",
+      "aab3bc2fc651b4b4baf5361032677b09feef022f",
+      "b2b5426d390af9457f0eddcfe8cdbc4de58d82d7",
+      "2b68738f9492cff5e99e56c8ae4aae2d91f037a4"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.pdf",
+      "path": "publications/castro-santa-anna-diario-1854-v4/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.pdf",
+      "size": 1824312,
+      "sha256": "99c7c5ba13bebbc73bcc4a81b2ba0fadd12e1bf8c8327cfc463868d6b5eec975",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
+      "path": "publications/castro-santa-anna-diario-1854-v4/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
+      "size": 250328,
+      "sha256": "3ad77335788b13808bfc09bd6b8dd9ec43f98cc5125372a0bc341fdceb2e2c21",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub"
+    },
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.pdf",
+      "path": "publications/castro-santa-anna-diario-1854-v5/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.pdf",
+      "size": 1931529,
+      "sha256": "cecd30268a4d945d08754a61123b5721e0a1e465261e841d595fd2b9287b5259",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.epub",
+      "path": "publications/castro-santa-anna-diario-1854-v5/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.epub",
+      "size": 258853,
+      "sha256": "8fbeb1f22527c7302dca3b8e9bd95afda16808761a17d4ffcca824ec27a1434c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol5_Japanese_Complete_Translation.epub"
+    },
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.pdf",
+      "path": "publications/castro-santa-anna-diario-1854-v6/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.pdf",
+      "size": 1896855,
+      "sha256": "803e0d1d34d80d6ba990ce5d9989a555155ed30368a679703a3e901f151d7337",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub",
+      "path": "publications/castro-santa-anna-diario-1854-v6/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub",
+      "size": 250766,
+      "sha256": "4d6cb38c352a01d7966086499c955fea306d2554cc2e3c3a11164d6b84196f04",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub"
+    }
+  ],
+  "verified_archive_commit": "d9847a063b08181d3f20c10634745dfcb29ceaad"
+}

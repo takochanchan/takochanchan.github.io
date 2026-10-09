@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "a7c713dfd252c9a06d5a74d6495973307a8f604c",
+  "archive_commit": "d9847a063b08181d3f20c10634745dfcb29ceaad",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
@@ -369,7 +369,10 @@
     "palma-tradiciones-peruanas-v04": "publications/palma-tradiciones-peruanas-v04/master.docx",
     "palma-tradiciones-peruanas-v05": "publications/palma-tradiciones-peruanas-v05/master.docx",
     "palma-tradiciones-peruanas-v06": "publications/palma-tradiciones-peruanas-v06/master.docx",
-    "guijo-diario-sucesos-notables-1853-vol-1": "publications/guijo-diario-sucesos-notables-1853-vol-1/master.docx"
+    "guijo-diario-sucesos-notables-1853-vol-1": "publications/guijo-diario-sucesos-notables-1853-vol-1/master.docx",
+    "castro-santa-anna-diario-1854-v4": "publications/castro-santa-anna-diario-1854-v4/master.docx",
+    "castro-santa-anna-diario-1854-v5": "publications/castro-santa-anna-diario-1854-v5/master.docx",
+    "castro-santa-anna-diario-1854-v6": "publications/castro-santa-anna-diario-1854-v6/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

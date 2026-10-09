@@ -7,6 +7,51 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "castro-santa-anna-diario-1854",
+  "title": "注目すべき出来事の日誌",
+  "originalTitle": "Diario de sucesos notables",
+  "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ",
+  "subtitle": "1752–1758年の記録・全3巻",
+  "series": "DIARIO DE SUCESOS NOTABLES · 1854",
+  "year": 1854,
+  "types": [
+    "日記",
+    "歴史"
+  ],
+  "regions": [
+    "メキシコ"
+  ],
+  "languages": [
+    "スペイン語"
+  ],
+  "tags": [
+    "メキシコ市",
+    "ヌエバ・エスパーニャ",
+    "18世紀"
+  ],
+  "visualLabel": "1854年刊・日記",
+  "description": "メキシコ市の政治・宗教行事、人事、都市の工事・事件と各地からの報告を日付順に記した同時代の日記です。1752年6月12日から1758年6月14日までの記録を収める、1854年刊『メキシコ史資料』第IV–VI巻を底本としています。",
+  "extent": "全3巻・PDF計555頁",
+  "originalAuthor": "José Manuel de Castro Santa-Anna",
+  "originalPublication": "メキシコ、フアン・R・ナバロ印刷所、1854年",
+  "sourceEdition": "José Manuel de Castro Santa-Anna, Diario de sucesos notables, Documentos para la historia de Méjico, tomos IV–VI, Méjico: Imprenta de Juan R. Navarro, 1854.",
+  "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España、BNE）所蔵・公開の底本PDF。",
+  "sourceUrl": "https://bdh-rd.bne.es/viewer.vm?id=0000147570&page=1",
+  "rights": "原著本文はパブリックドメインです。底本PDFはスペイン国立図書館（BNE）から取得しました。BNE所蔵のパブリックドメイン資料の底本画像は商用・非商用を問わず無償で事前許可なく利用でき、出典表示が必要です。本訳に底本の画像は転載していません。画像出典：Imágenes procedentes de los fondos de la Biblioteca Nacional de España。利用条件：https://www.bne.es/es/servicios/reproduccion-documentos/uso-reproducciones",
+  "publishedDate": "2026-10-09",
+  "updatedDate": "2026-10-09",
+  "memberSlugs": [
+    "castro-santa-anna-diario-1854-v4",
+    "castro-santa-anna-diario-1854-v5",
+    "castro-santa-anna-diario-1854-v6"
+  ],
+  "volumeLabels": [
+    "第IV巻",
+    "第V巻",
+    "第VI巻"
+  ]
+},
+{
   "title": "ペルー伝説集",
   "author": "リカルド・パルマ",
   "originalAuthor": "Ricardo Palma",
