@@ -19,6 +19,8 @@ jobs:
           node-version: 22
       - name: Install verification dependencies
         run: npm ci --no-audit --no-fund
+      - name: Build and validate final archive pages
+        run: npm run build && npm test
       - name: Wait for the pinned search deployment
         env:
           GH_TOKEN: ${{ github.token }}
