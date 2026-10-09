@@ -1,0 +1,20 @@
+name: Verify Guijo publication remote search and live delivery
+on:
+  push:
+    branches: [agent/guijo-verify-20261009]
+    paths: [.guijo-verification-stage]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify current remote search coverage
+        run: npm run verify:remote-search
+      - name: Verify live publication bytes and bibliography
+        if: ${{ hashFiles('.guijo-postpublish.py') != '' }}
+        run: python3 .guijo-postpublish.py
