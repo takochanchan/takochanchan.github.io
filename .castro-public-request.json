@@ -59,5 +59,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol6_Japanese_Complete_Translation.epub"
     }
   ],
-  "verified_archive_commit": "d9847a063b08181d3f20c10634745dfcb29ceaad"
+  "verified_archive_commit": "d9847a063b08181d3f20c10634745dfcb29ceaad",
+  "validation_revision": "align retained release fallback ledger commits with verified archive head"
 }
