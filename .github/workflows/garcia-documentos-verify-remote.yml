@@ -25,12 +25,12 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, time, urllib.request
-          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/38028945270"
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/38029428291"
           for attempt in range(90):
               request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
               with urllib.request.urlopen(request, timeout=30) as response:
                   run = json.load(response)
-              if run["head_sha"] != "bf448b70cf235abf750a1045e6d0ffe5f08cdf61":
+              if run["head_sha"] != "fdc7647b9b7e1ac6bf260ea7d2a1d9f28482e6ad":
                   raise SystemExit("Unexpected search controller commit")
               if run["status"] == "completed":
                   if run["conclusion"] != "success":
