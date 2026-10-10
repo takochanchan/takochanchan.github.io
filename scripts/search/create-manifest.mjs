@@ -3,7 +3,6 @@ import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../../src/publications.mjs";
-import { cataloguePublicationByMemberSlug } from "../../src/catalogue-publications.mjs";
 import {
   publicationsForSearchShard,
   readSearchShardConfig,
@@ -93,7 +92,7 @@ for (const publication of selectedPublications) {
     attributionStatus: publication.attributionStatus ?? null,
     attributionNote: publication.attributionNote ?? null,
     recordClass: publication.recordClass,
-    url: `/publications/${cataloguePublicationByMemberSlug.get(publication.slug)?.multiAuthorSeries ? cataloguePublicationByMemberSlug.get(publication.slug).slug : publication.slug}/`,
+    url: `/publications/${publication.slug}/`,
     pdfUrl: publication.pdfUrl,
     masterPath,
     source: useMaster
