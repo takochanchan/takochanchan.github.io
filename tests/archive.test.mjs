@@ -60,6 +60,9 @@ test("administrative and diplomatic documents occupy their own collection", asyn
     "us-senate-central-america-correspondence-1853",
     "frus-nicaragua-mosquito-territory-1894",
     "foreign-office-mosquito-territory-1848",
+    "garcia-documentos-ineditos-mexico-v01-1905",
+    "garcia-documentos-ineditos-mexico-v02-1905",
+    "garcia-documentos-ineditos-mexico-v03-1905",
   ]);
   assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
   assert.deepEqual(new Set(expectedDocuments.map(item => item.slug)), selected);
@@ -71,8 +74,10 @@ test("administrative and diplomatic documents occupy their own collection", asyn
   const books = html.slice(html.indexOf('id="publications" role="tabpanel"'), html.indexOf('id="short-works" role="tabpanel"'));
   const papers = html.slice(html.indexOf('id="short-works" role="tabpanel"'), html.indexOf('id="document-collections" role="tabpanel"'));
   const documents = html.slice(html.indexOf('id="document-collections" role="tabpanel"'), html.indexOf('<section class="about" id="about">'));
-  assert.equal((documents.match(/class="record-card"/g) || []).length, selected.size);
-  for (const slug of selected) {
+  const listedSlugs = new Set([...selected].map(slug =>
+    expectedGroups.find(group => group.memberSlugs.includes(slug))?.slug ?? slug));
+  assert.equal((documents.match(/class="record-card"/g) || []).length, listedSlugs.size);
+  for (const slug of listedSlugs) {
     const href = `href="/publications/${slug}/"`;
     assert.ok(documents.includes(href), `${slug}: document listing`);
     assert.ok(!books.includes(href), `${slug}: removed from books`);
