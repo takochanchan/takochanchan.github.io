@@ -1,0 +1,23 @@
+name: Resume Cuevas release verification without re-transferring files
+on:
+  push:
+    branches: [agent/cuevas-historia-publish-20261010]
+    paths: [.cuevas-release-recovery.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resume only the failed release verification
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .cuevas-release-recovery.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cuevas-public-verification
+          path: cuevas-public-verification.json
