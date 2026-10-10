@@ -2,6 +2,7 @@ import { cuevasPublicationRecords, cuevasPublicationMetadata } from "./cuevas-pu
 import { garciaDocumentosPublicationRecords, garciaDocumentosPublicationMetadata } from "./garcia-documentos-publication.mjs";
 import { castroPublicationRecords, castroPublicationMetadata } from "./castro-publications.mjs";
 import { guijoPublicationRecords, guijoPublicationMetadata } from "./guijo-publication.mjs";
+import { roblesDiarioPublicationRecords, roblesDiarioPublicationMetadata } from "./robles-diario-publication.mjs";
 import { palmaPublicationRecords, palmaPublicationMetadata } from "./palma-publications.mjs";
 import { millaCuadrosPublicationRecords, millaCuadrosPublicationMetadata } from "./milla-cuadros-publication.mjs";
 import { paraveyFouSangPublicationRecords, paraveyFouSangPublicationMetadata, paraveyFouSangShortWorkAuthors } from "./paravey-fou-sang-publications.mjs";
@@ -266,6 +267,7 @@ const publicationRecords = [
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
   ...guijoPublicationRecords,
+  ...roblesDiarioPublicationRecords,
   ...palmaPublicationRecords,
   ...millaCuadrosPublicationRecords,
   ...paraveyFouSangPublicationRecords,
@@ -9377,6 +9379,7 @@ const publicationMetadata = {
   ...batresPublicationMetadata,
   ...salazarPublicationMetadata,
   ...guijoPublicationMetadata,
+  ...roblesDiarioPublicationMetadata,
   ...academiaGuatemaltecaPublicationMetadata,
   ...cehmBetlemitasPublicationMetadata,
   ...mexicoViejoPublicationMetadata,
@@ -12236,6 +12239,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

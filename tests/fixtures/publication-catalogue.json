@@ -3,6 +3,18 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "robles-diario-sucesos-notables-1853-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "アントニオ・デ・ロブレス"
+    },
+    {
+      "slug": "robles-diario-sucesos-notables-1853-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "アントニオ・デ・ロブレス"
+    },
+    {
       "slug": "guijo-diario-sucesos-notables-1853-vol-1",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -2393,6 +2405,13 @@
   ],
   "groups": [
     {
+      "slug": "robles-diario-sucesos-notables-1853",
+      "memberSlugs": [
+        "robles-diario-sucesos-notables-1853-vol-1",
+        "robles-diario-sucesos-notables-1853-vol-2"
+      ]
+    },
+    {
       "slug": "oviedo-historia-general-natural-indias-1851-1855",
       "memberSlugs": [
         "oviedo-historia-general-natural-indias-volume-i-1851",
@@ -2482,3 +2501,4 @@
   ],
   "shortAuthorCount": 48
 }
+
