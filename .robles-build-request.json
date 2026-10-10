@@ -1,6 +1,7 @@
 {
   "publication": "robles-diario-sucesos-notables-1853",
   "volumes": 2,
+  "verification_attempt": 2,
   "verified_archive_commit": "be383785c5a89daeb0b8d87e5f69fc7d5cc703ca",
   "purpose": "candidate build and regression tests; no Release or Pages writes"
 }
