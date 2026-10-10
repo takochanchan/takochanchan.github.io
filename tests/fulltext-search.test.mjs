@@ -57,7 +57,7 @@ test("shard verification accepts three classes and rejects misplaced documents",
     documentCollections: records.filter(item => item.recordClass === "document-collection").length,
     chunks: 0,
   };
-  assert.equal(metadata.documentCollections, 6);
+  assert.equal(metadata.documentCollections, 9);
   const directory = await mkdtemp(path.join(tmpdir(), "document-count-verification-"));
   try {
     await writeFile(path.join(directory, "document-map.json"), "{}");
@@ -447,3 +447,4 @@ test("Pagefind groups small documents and result data loads progressively", () =
     /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= 1/,
   );
 });
+
