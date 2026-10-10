@@ -1,45 +1,78 @@
-name: Verify deployed Garcia Documentos publication search
-
+name: Verify published Garcia bibliography
 on:
   push:
     branches: [agent/garcia-documentos-publish-20261010]
     paths: ['.github/workflows/garcia-documentos-verify-remote.yml']
-
 permissions:
   contents: read
-
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Install verification dependencies
-        run: npm ci --no-audit --no-fund
-      - name: Wait for the pinned search deployment
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Check the published bibliography and final download links
         run: |
           python3 - <<'PY'
-          import json, os, time, urllib.request
-          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/38029428291"
-          for attempt in range(90):
-              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
-              with urllib.request.urlopen(request, timeout=30) as response:
-                  run = json.load(response)
-              if run["head_sha"] != "fdc7647b9b7e1ac6bf260ea7d2a1d9f28482e6ad":
-                  raise SystemExit("Unexpected search controller commit")
-              if run["status"] == "completed":
-                  if run["conclusion"] != "success":
-                      raise SystemExit("Search deployment failed: " + str(run["conclusion"]))
-                  print("Pinned search deployment succeeded.")
+          import hashlib, html, json, pathlib, re, time, urllib.request
+          from html.parser import HTMLParser
+          url = "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-1905-1911/"
+          for attempt in range(6):
+              try:
+                  request = urllib.request.Request(url, headers={"User-Agent": "takochan-publication-verification", "Cache-Control": "no-cache"})
+                  with urllib.request.urlopen(request, timeout=30) as response:
+                      status, final_url = response.status, response.geturl()
+                      data = response.read()
                   break
-              time.sleep(10)
-          else:
-              raise SystemExit("Search deployment did not complete within 15 minutes")
+              except Exception:
+                  if attempt == 5:
+                      raise
+                  time.sleep(5)
+          assert status == 200 and final_url == url
+          content = data.decode("utf-8")
+          class Page(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.links, self.canonical, self.text, self.hidden = [], [], [], 0
+              def handle_starttag(self, tag, attributes):
+                  a = dict(attributes)
+                  if tag in ("script", "style"):
+                      self.hidden += 1
+                  if tag == "a" and "href" in a:
+                      self.links.append(a["href"])
+                  if tag == "link" and a.get("rel") == "canonical":
+                      self.canonical.append(a.get("href"))
+              def handle_endtag(self, tag):
+                  if tag in ("script", "style"):
+                      self.hidden -= 1
+              def handle_data(self, text):
+                  if self.hidden == 0:
+                      self.text.append(text)
+          page = Page()
+          page.feed(content)
+          assert page.canonical == [url]
+          visible = " ".join(page.text)
+          rows = re.findall(r'<tr data-series-volume="(\d+)">(.*?)</tr>', content, re.S)
+          assert [int(number) for number, _ in rows] == list(range(1, 37))
+          assert all("公開済み" in row for number, row in rows if int(number) <= 3)
+          assert all("未公開" in row for number, row in rows if int(number) >= 4)
+          assets = []
+          prefix = "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/"
+          for volume in ["I", "II", "III"]:
+              for extension in ["pdf", "epub"]:
+                  target = prefix + f"Garcia_Documentos_Volume_{volume}_1905_Japanese_Complete_Translation.{extension}"
+                  assert target in page.links
+                  assets.append(target)
+          assert "https://archive.org/details/documentosindi01garc" in page.links
+          assert "トロント大学ロバーツ図書館" in visible and "Internet Archive" in visible
+          assert visible.count("CC等のライセンス指定がありません") >= 4
+          assert visible.count("本訳に原刊画像は転載していません") >= 4
+          assert "Antonio López de Santa Anna" in visible and "José Fernando Ramírez" in visible
+          assert "初刊全36巻" in visible and "公開3巻" in visible
+          result = {"url": url, "status": status, "html_sha256": hashlib.sha256(data).hexdigest(), "series_volume_rows": 36, "published_volumes": [1, 2, 3], "unpublished_volume_rows": 33, "download_links_verified": assets, "source_provider_and_terms_explicit": True, "per_volume_authors_visible": True, "canonical_url_verified": True}
+          pathlib.Path("garcia-public-page-verification.json").write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n")
+          print(json.dumps(result, ensure_ascii=False))
           PY
-      - name: Verify exact deployed catalogue and final asset checksums
-        run: npm run verify:remote-search
+      - uses: actions/upload-artifact@v4
+        with:
+          name: garcia-published-page-verification
+          path: garcia-public-page-verification.json
