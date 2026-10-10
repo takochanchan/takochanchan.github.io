@@ -207,5 +207,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub"
     }
   ],
-  "verified_archive_commit": "c8464d4bbdd53a24b8a00e90734843ecfb8658f4"
+  "verified_archive_commit": "c8464d4bbdd53a24b8a00e90734843ecfb8658f4",
+  "validation_revision": "align retained release fallback ledger commits with verified archive head"
 }
