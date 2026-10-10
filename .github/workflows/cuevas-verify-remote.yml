@@ -3,7 +3,7 @@ name: Verify deployed Cuevas publication search
 on:
   push:
     branches: [agent/cuevas-historia-publish-20261010]
-    paths: ['.github/workflows/castro-verify-remote.yml']
+    paths: ['.github/workflows/cuevas-verify-remote.yml']
 
 permissions:
   contents: read
