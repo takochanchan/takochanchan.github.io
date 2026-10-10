@@ -155,13 +155,14 @@
       "observed_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub"
     },
     {
-      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
-      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
       "size": 42784779,
       "sha256": "7e0794715158298e796f77e273ba3f18d20321b809fb0408da0e3cbfd164b67c",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
       "release_asset_id": 627207370,
-      "observed_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf"
+      "observed_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
+      "approved_original_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf"
     },
     {
       "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
@@ -227,12 +228,13 @@
       "observed_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub"
     }
   ],
-  "verified_archive_commit": "c8464d4bbdd53a24b8a00e90734843ecfb8658f4",
+  "verified_archive_commit": "399d5dc3caf9a29d01f3e31a8330c7413067eea8",
   "validation_revision": "align retained release fallback ledger commits with verified archive head",
   "validated_public_build_commit": "ce77eb915c35aeb64a1670b1c21afa669414fa82",
   "validated_public_build_run": 38031028634,
   "already_redownload_verified": [
     627206915,
     627207058
-  ]
+  ],
+  "metadata_changed": true
 }

@@ -43,7 +43,7 @@ export const cuevasPublicationRecords = [
     "series": "HISTORIA DE LA IGLESIA EN MÉXICO · 1922",
     "year": 1922,
     "cover": "publications/cuevas-historia-iglesia-mexico-v02/cover.jpg",
-    "pdf": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
+    "pdf": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
     "epub": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
     "pageCount": 802,
     "figureCount": 104,
