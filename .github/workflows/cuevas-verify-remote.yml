@@ -1,0 +1,61 @@
+name: Verify deployed Cuevas publication search
+
+on:
+  push:
+    branches: [agent/cuevas-historia-publish-20261010]
+    paths: ['.github/workflows/castro-verify-remote.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install verification dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Carry forward successful build and test evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch --depth=1 origin c00b263b71d512e0517d33bc6eeface59a97de71
+          git diff --exit-code c00b263b71d512e0517d33bc6eeface59a97de71 HEAD -- src scripts static tests package.json package-lock.json assets-manifest.json bibliographic-manifest.json master-archive.json search-shards.json
+          python3 - <<'PY'
+          import json,os,urllib.request
+          base="https://api.github.com/repos/takochanchan/takochanchan.github.io/actions/runs/38032134220"
+          def read(url):
+              request=urllib.request.Request(url,headers={"Authorization":"Bearer "+os.environ["GH_TOKEN"],"Accept":"application/vnd.github+json"})
+              with urllib.request.urlopen(request,timeout=30)as response:return json.load(response)
+          run=read(base);assert run['head_sha']=='c00b263b71d512e0517d33bc6eeface59a97de71'and run['conclusion']=='success'
+          jobs=read(base+'/jobs')['jobs'];assert any(s['name']=='Build updated publication references'and s['conclusion']=='success'for j in jobs for s in j['steps'])
+          print('Retained completed build and test result for identical publication inputs.')
+          PY
+      - name: Wait for the pinned search deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/38032387275"
+          for attempt in range(90):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              if run["head_sha"] != "34b7e4c76e5013a22fd17ea1ea9d573fae8b9834":
+                  raise SystemExit("Unexpected search controller commit")
+              if run["status"] == "completed":
+                  if run["conclusion"] != "success":
+                      raise SystemExit("Search deployment failed: " + str(run["conclusion"]))
+                  print("Pinned search deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Search deployment did not complete within 15 minutes")
+          PY
+      - name: Verify exact deployed catalogue and final asset checksums
+        run: npm run verify:remote-search
