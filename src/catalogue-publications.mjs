@@ -7,6 +7,217 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+  "memberSlugs": [
+    "garcia-documentos-ineditos-mexico-v01-1905",
+    "garcia-documentos-ineditos-mexico-v02-1905",
+    "garcia-documentos-ineditos-mexico-v03-1905"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第3巻"
+  ],
+  "multiAuthorSeries": true,
+  "author": "ヘナロ・ガルシア編（第1〜5巻はカルロス・ペレイラとの共編）",
+  "originalAuthor": "Genaro García; Carlos Pereyra (tomos I–V)",
+  "title": "メキシコ史未刊・稀覯史料集",
+  "originalTitle": "Documentos inéditos ó muy raros para la historia de México",
+  "subtitle": "初刊全36巻（1905〜1911年）・日本語訳を順次公開",
+  "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1905–1911",
+  "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905〜1911年",
+  "year": 1905,
+  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜3巻の日本語全訳を巻別PDF・EPUBで公開しています。",
+  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）。",
+  "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+  "sourceUrl": "https://archive.org/details/documentosindi01garc",
+  "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
+  "publishedDate": "2026-10-10",
+  "updatedDate": "2026-10-10",
+  "seriesVolumes": [
+    {
+      "number": 1,
+      "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos — Primera parte",
+      "sourceUrl": "https://archive.org/details/documentosindi01garc"
+    },
+    {
+      "number": 2,
+      "originalTitle": "Mi historia militar y política, 1810–1874",
+      "sourceUrl": "https://archive.org/details/documentosindi01garc"
+    },
+    {
+      "number": 3,
+      "originalTitle": "México durante su guerra con los Estados Unidos",
+      "sourceUrl": "https://archive.org/details/documentosindi01garc"
+    },
+    {
+      "number": 4,
+      "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos — Segunda parte",
+      "sourceUrl": "https://archive.org/details/documentosindi04garc"
+    },
+    {
+      "number": 5,
+      "originalTitle": "La Inquisición en México",
+      "sourceUrl": "https://archive.org/details/documentosindi04garc"
+    },
+    {
+      "number": 6,
+      "originalTitle": "Papeles inéditos y obras selectas del Dr. Mora",
+      "sourceUrl": "https://archive.org/details/documentosindi04garc"
+    },
+    {
+      "number": 7,
+      "originalTitle": "Don Juan de Palafox y Mendoza: su virreinato en la Nueva España, sus contiendas con los PP. Jesuitas, etc.",
+      "sourceUrl": "https://archive.org/details/documentosindi07garc"
+    },
+    {
+      "number": 8,
+      "originalTitle": "Causa instruida contra el general Leonardo Márquez por graves delitos del orden militar",
+      "sourceUrl": "https://archive.org/details/documentosindi07garc"
+    },
+    {
+      "number": 9,
+      "originalTitle": "El clero de México y la guerra de Independencia: documentos del Arzobispado de México",
+      "sourceUrl": "https://archive.org/details/documentosindi07garc"
+    },
+    {
+      "number": 10,
+      "originalTitle": "Tumultos y rebeliones acaecidos en México",
+      "sourceUrl": "https://archive.org/details/documentosindi10garc"
+    },
+    {
+      "number": 11,
+      "originalTitle": "Don Santos Degollado: sus manifiestos, campañas, enjuiciamiento, muerte, etc.",
+      "sourceUrl": "https://archive.org/details/documentosindi10garc"
+    },
+    {
+      "number": 12,
+      "originalTitle": "Autógrafos inéditos de Morelos y causa que se le instruyó; México en 1623, por Arias de Villalobos",
+      "sourceUrl": "https://archive.org/details/documentosindi10garc"
+    },
+    {
+      "number": 13,
+      "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos — Tercera y última parte",
+      "sourceUrl": "https://archive.org/details/documentosindi13garc"
+    },
+    {
+      "number": 14,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Primera parte",
+      "sourceUrl": "https://archive.org/details/documentosindi13garc"
+    },
+    {
+      "number": 15,
+      "originalTitle": "El clero de México durante la dominación española, según el archivo archiepiscopal metropolitano",
+      "sourceUrl": "https://archive.org/details/documentosindi13garc"
+    },
+    {
+      "number": 16,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Segunda parte",
+      "sourceUrl": "https://archive.org/details/documentosindi16garc"
+    },
+    {
+      "number": 17,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Tercera parte",
+      "sourceUrl": "https://archive.org/details/documentosindi16garc"
+    },
+    {
+      "number": 18,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Cuarta parte",
+      "sourceUrl": "https://archive.org/details/documentosindi16garc"
+    },
+    {
+      "number": 19,
+      "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México — Primera parte",
+      "sourceUrl": "https://archive.org/details/documentosindi19garc"
+    },
+    {
+      "number": 20,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Quinta parte",
+      "sourceUrl": "https://archive.org/details/documentosindi19garc"
+    },
+    {
+      "number": 21,
+      "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México — Segunda parte",
+      "sourceUrl": "https://archive.org/details/documentosindi19garc"
+    },
+    {
+      "number": 22,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte",
+      "sourceUrl": "https://archive.org/details/documentosindi22garc"
+    },
+    {
+      "number": 23,
+      "originalTitle": "El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente",
+      "sourceUrl": "https://archive.org/details/documentosindi22garc"
+    },
+    {
+      "number": 24,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte",
+      "sourceUrl": "https://archive.org/details/documentosindi22garc"
+    },
+    {
+      "number": 25,
+      "originalTitle": "Historia de Nuevo León, con noticias sobre Coahuila, Tejas y Nuevo México",
+      "sourceUrl": "https://archive.org/details/documentosindi25garc"
+    },
+    {
+      "number": 26,
+      "originalTitle": "La revolución de Ayutla, según el archivo del general Doblado",
+      "sourceUrl": "https://archive.org/details/documentosindi25garc"
+    },
+    {
+      "number": 27,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Octava parte",
+      "sourceUrl": "https://archive.org/details/documentosindi25garc"
+    },
+    {
+      "number": 28,
+      "originalTitle": "Autos de fe de la Inquisición de México, con extractos de sus causas",
+      "sourceUrl": "https://archive.org/details/documentosindi28garc"
+    },
+    {
+      "number": 29,
+      "originalTitle": "Las guerras de México con Tejas y los Estados Unidos",
+      "sourceUrl": "https://archive.org/details/documentosindi28garc"
+    },
+    {
+      "number": 30,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Novena parte",
+      "sourceUrl": "https://archive.org/details/documentosindi28garc"
+    },
+    {
+      "number": 31,
+      "originalTitle": "Los gobiernos de Álvarez y Comonfort, según el archivo del general Doblado",
+      "sourceUrl": "https://archive.org/details/documentosindi31garc"
+    },
+    {
+      "number": 32,
+      "originalTitle": "El general Paredes y Arrillaga: su gobierno en Jalisco, sus movimientos revolucionarios, sus relaciones con el general Santa Anna, etc.",
+      "sourceUrl": "https://archive.org/details/documentosindi31garc"
+    },
+    {
+      "number": 33,
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Décima parte",
+      "sourceUrl": "https://archive.org/details/documentosindi31garc"
+    },
+    {
+      "number": 34,
+      "originalTitle": "Memorias del coronel Manuel María Giménez, ayudante de campo del general Santa Anna, 1798–1878",
+      "sourceUrl": "https://archive.org/details/documentosindi34garc"
+    },
+    {
+      "number": 35,
+      "originalTitle": "La cooperación de México en la independencia de Centro América — Primera parte",
+      "sourceUrl": "https://archive.org/details/documentosindi34garc"
+    },
+    {
+      "number": 36,
+      "originalTitle": "La cooperación de México en la independencia de Centro América — Segunda parte",
+      "sourceUrl": "https://archive.org/details/documentosindi34garc"
+    }
+  ]
+},
+{
   "slug": "castro-santa-anna-diario-1854",
   "title": "注目すべき出来事の日誌",
   "originalTitle": "Diario de sucesos notables",
@@ -552,8 +763,11 @@ const groupedPublications = publicationGroupDefinitions.map((definition) => {
     };
   });
   const first = members[0];
+  if (definition.multiAuthorSeries && (!definition.author || !definition.originalAuthor)) {
+    throw new Error(`${definition.slug}: multi-author series needs explicit series authors`);
+  }
   for (const member of members.slice(1)) {
-    for (const field of ["recordClass", "author", "originalAuthor"]) {
+    for (const field of definition.multiAuthorSeries ? ["recordClass"] : ["recordClass", "author", "originalAuthor"]) {
       if (member[field] !== first[field]) {
         throw new Error(`${definition.slug}: inconsistent ${field}`);
       }
@@ -563,8 +777,9 @@ const groupedPublications = publicationGroupDefinitions.map((definition) => {
     ...first,
     ...definition,
     recordClass: first.recordClass,
-    author: first.author,
-    originalAuthor: first.originalAuthor,
+    author: definition.multiAuthorSeries ? definition.author : first.author,
+    originalAuthor: definition.multiAuthorSeries ? definition.originalAuthor : first.originalAuthor,
+    ...(definition.seriesVolumes ? { extent: `初刊全${definition.seriesVolumes.length}巻・公開${members.length}巻・PDF計${members.reduce((sum, member) => sum + member.pageCount, 0).toLocaleString("ja-JP")}頁` } : {}),
     cover: first.cover,
     visualLabel: first.visualLabel,
     sourceAccessStatus: "online",
@@ -644,4 +859,5 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+
 

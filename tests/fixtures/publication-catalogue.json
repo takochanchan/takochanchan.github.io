@@ -2344,6 +2344,21 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "ホセ・マヌエル・デ・カストロ・サンタ＝アンナ"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v01-1905",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v02-1905",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v03-1905",
+      "recordClass": "document-collection",
+      "searchShard": "002"
     }
   ],
   "groups": [
@@ -2414,6 +2429,14 @@
         "castro-santa-anna-diario-1854-v4",
         "castro-santa-anna-diario-1854-v5",
         "castro-santa-anna-diario-1854-v6"
+      ]
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "memberSlugs": [
+        "garcia-documentos-ineditos-mexico-v01-1905",
+        "garcia-documentos-ineditos-mexico-v02-1905",
+        "garcia-documentos-ineditos-mexico-v03-1905"
       ]
     }
   ],

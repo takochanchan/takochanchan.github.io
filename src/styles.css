@@ -2112,3 +2112,12 @@ select {
     transition: none;
   }
 }
+
+
+/* Optional series inventory, kept separate from published download controls. */
+.series-volume-inventory summary { cursor: pointer; font-weight: 700; }
+.series-volume-inventory__scroll { overflow-x: auto; margin-top: 1rem; }
+.series-volume-inventory table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.series-volume-inventory th, .series-volume-inventory td { padding: .65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line, #d7dddb); }
+.series-volume-inventory th:first-child, .series-volume-inventory td:nth-child(3), .series-volume-inventory td:nth-child(4) { white-space: nowrap; }
+.series-volume-inventory td:nth-child(2) { min-width: 13rem; overflow-wrap: anywhere; }

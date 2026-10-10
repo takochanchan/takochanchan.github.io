@@ -8034,6 +8034,60 @@
       "url": "https://takochanchan.github.io/publications/castro-santa-anna-diario-1854-v6/cover.jpg",
       "size": 117851,
       "sha256": "4f4b0bd04bc53976ea9e10ed905ce3d93018be4c3ba6150f12f5274c718c9726"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v01-1905/Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.pdf",
+      "size": 2091449,
+      "sha256": "ce7341b90a2b3367d5f93f6d4e62121f672865c7696f23236704420bdce3786c"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v01-1905/Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.epub",
+      "size": 292808,
+      "sha256": "86e37fab3071bfef0423bf19923b4b16488e2142d590a848e48ba07d9ef390e6"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v01-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v01-1905/cover.jpg",
+      "size": 47069,
+      "sha256": "2ee605ab454bd67b4a0dc688a0b384c16b452b4d90f5d3f82a2eb5229950770b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v02-1905/Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.pdf",
+      "size": 2075737,
+      "sha256": "62ccfa53c8366634b72528e2e1f4bb424cbbacdc6893fd694e77101774b2e1a6"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v02-1905/Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.epub",
+      "size": 240681,
+      "sha256": "44c6e36bf87173af9baf1c2b1628ee4f9dda8d821a8c4e961d7e65debd94bf50"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v02-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v02-1905/cover.jpg",
+      "size": 43923,
+      "sha256": "e2f774ff265f51bce7335b8d7069f759c61673e661138fd2e985a901da61afbf"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v03-1905/Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.pdf",
+      "size": 2417499,
+      "sha256": "c2d7167e5c8a7bc962c04c32b3f334511022d0a98c064596539cc544f01b4872"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v03-1905/Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.epub",
+      "size": 293281,
+      "sha256": "3e9c9df04ebf2c174b43f42565620af35b4dd6f29a51199e1cfeccf38a4b028e"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v03-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v03-1905/cover.jpg",
+      "size": 41466,
+      "sha256": "81542f30b8019a8e1a6c0b00aab087882a7bf09df9f8d58ffa586e13bf421c32"
     }
   ]
 }

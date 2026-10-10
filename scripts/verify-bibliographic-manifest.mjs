@@ -179,11 +179,17 @@ for (const record of manifest.records) {
     const structured = JSON.parse(match[1]).find((entry) =>
       entry["@id"]?.endsWith("#work"),
     );
+    const representedOriginal = bibliographicPublication.multiAuthorSeries
+      ? structured?.hasPart?.find((part) => part.identifier === record.slug)?.translationOfWork
+      : structured?.translationOfWork;
     if (
-      !structured ||
-      structured.translationOfWork?.author?.name !== record.originalAuthor
+      !representedOriginal ||
+      representedOriginal.author?.name !== record.originalAuthor
     ) {
       throw new Error(`${record.slug}: JSON-LD original author differs from manifest`);
+    }
+    if (bibliographicPublication.multiAuthorSeries && representedOriginal.name !== record.originalTitle) {
+      throw new Error(`${record.slug}: JSON-LD volume title differs from manifest`);
     }
   } catch (error) {
     if (error.code !== "ENOENT") throw error;
@@ -255,3 +261,4 @@ process.stdout.write(
   `Bibliographic manifest OK: ${manifest.records.length} canonical record(s), ` +
     `${manifest.works.length} strict source-boundary record(s).\n`,
 );
+

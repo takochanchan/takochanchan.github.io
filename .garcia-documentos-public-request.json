@@ -1,0 +1,42 @@
+{
+  "verified_archive_commit": "d09437b4d2a1239e042ae0d6de7446a8ee7ce001",
+  "assets": [
+    {
+      "filename": "Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.pdf",
+      "size": 2091449,
+      "sha256": "ce7341b90a2b3367d5f93f6d4e62121f672865c7696f23236704420bdce3786c"
+    },
+    {
+      "filename": "Garcia_Documentos_Volume_I_1905_Japanese_Complete_Translation.epub",
+      "size": 292808,
+      "sha256": "86e37fab3071bfef0423bf19923b4b16488e2142d590a848e48ba07d9ef390e6"
+    },
+    {
+      "filename": "Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.pdf",
+      "size": 2075737,
+      "sha256": "62ccfa53c8366634b72528e2e1f4bb424cbbacdc6893fd694e77101774b2e1a6"
+    },
+    {
+      "filename": "Garcia_Documentos_Volume_II_1905_Japanese_Complete_Translation.epub",
+      "size": 240681,
+      "sha256": "44c6e36bf87173af9baf1c2b1628ee4f9dda8d821a8c4e961d7e65debd94bf50"
+    },
+    {
+      "filename": "Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.pdf",
+      "size": 2417499,
+      "sha256": "c2d7167e5c8a7bc962c04c32b3f334511022d0a98c064596539cc544f01b4872"
+    },
+    {
+      "filename": "Garcia_Documentos_Volume_III_1905_Japanese_Complete_Translation.epub",
+      "size": 293281,
+      "sha256": "3e9c9df04ebf2c174b43f42565620af35b4dd6f29a51199e1cfeccf38a4b028e"
+    }
+  ],
+  "bundle": {
+    "size": 5189565,
+    "sha256": "c9845cdb26407f32cb29fd2b50d4d0b0d03b83acf1f5951e8db334644a1640a7",
+    "chunks": [
+      "a9f1e599885880d0e337aae64c42f21683936e65"
+    ]
+  }
+}

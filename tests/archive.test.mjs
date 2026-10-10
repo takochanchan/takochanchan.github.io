@@ -3158,3 +3158,22 @@ test("Haefkens books remain separate and disclose unavailable source material", 
   assert.match(centraal.rights, /NOT_IN_COPYRIGHT/);
   assert.equal(cataloguePublications.filter((item) => [reize.slug, centraal.slug].includes(item.slug)).length, 2);
 });
+
+
+test("Garcia's 36-volume series separates published volumes from future volumes", async () => {
+  const series = cataloguePublications.find(item => item.slug === "garcia-documentos-ineditos-mexico-1905-1911");
+  assert.ok(series);
+  assert.equal(series.recordClass, "document-collection");
+  assert.deepEqual(series.seriesVolumes.map(volume => volume.number), Array.from({length: 36}, (_, index) => index + 1));
+  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), [1, 2, 3]);
+  assert.equal(new Set(series.volumes.map(volume => volume.originalAuthor)).size, 3);
+  for (const member of series.memberSlugs) assert.equal(bibliographicAliases[member], series.slug);
+  const html = await readFile(path.join(dist, "publications", series.slug, "index.html"), "utf8");
+  assert.equal((html.match(/data-series-volume="/g) ?? []).length, 36);
+  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, 3);
+  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 33);
+  assert.match(html, /公開3巻/);
+  assert.match(html, /ロバーツ図書館/);
+  assert.match(html, /CC等のライセンス指定がありません/);
+  assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
+});

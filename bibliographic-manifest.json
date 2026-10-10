@@ -8319,6 +8319,63 @@
         "status": "online",
         "url": "https://bdh-rd.bne.es/viewer.vm?id=0000147570&page=1"
       }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v01-1905",
+      "title": "メキシコ干渉派主要人物の秘密書簡集",
+      "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos, 1860–1862",
+      "author": "ヘナロ・ガルシア／カルロス・ペレイラ 編",
+      "originalAuthor": "Genaro García / Carlos Pereyra (eds.)",
+      "year": 1905,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905年",
+      "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Correspondencia secreta de los principales intervencionistas mexicanos, 1860–1862, Documentos inéditos ó muy raros para la historia de México, tomo I, México: Librería de la Vda. de C. Bouret, 1905.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi01garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v02-1905",
+      "title": "私の軍歴と政治歴",
+      "originalTitle": "Mi historia militar y política, 1810–1874. Memorias inéditas",
+      "author": "アントニオ・ロペス・デ・サンタ・アンナ 著／ガルシア・ペレイラ 編",
+      "originalAuthor": "Antonio López de Santa Anna; Genaro García / Carlos Pereyra (eds.)",
+      "year": 1905,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905年",
+      "sourceEdition": "Antonio López de Santa Anna; Genaro García / Carlos Pereyra (eds.), Mi historia militar y política, 1810–1874. Memorias inéditas, Documentos inéditos ó muy raros para la historia de México, tomo II, México: Librería de la Vda. de C. Bouret, 1905.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi01garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v03-1905",
+      "title": "アメリカ合衆国との戦争中のメキシコ",
+      "originalTitle": "México durante su guerra con los Estados Unidos",
+      "author": "ホセ・フェルナンド・ラミレス 著／ガルシア・ペレイラ 編",
+      "originalAuthor": "José Fernando Ramírez; Genaro García / Carlos Pereyra (eds.)",
+      "year": 1905,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905年",
+      "sourceEdition": "José Fernando Ramírez; Genaro García / Carlos Pereyra (eds.), México durante su guerra con los Estados Unidos, Documentos inéditos ó muy raros para la historia de México, tomo III, México: Librería de la Vda. de C. Bouret, 1905.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi01garc"
+      }
     }
   ],
   "works": [

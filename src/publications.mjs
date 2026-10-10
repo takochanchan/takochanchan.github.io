@@ -1,3 +1,4 @@
+import { garciaDocumentosPublicationRecords, garciaDocumentosPublicationMetadata } from "./garcia-documentos-publication.mjs";
 import { castroPublicationRecords, castroPublicationMetadata } from "./castro-publications.mjs";
 import { guijoPublicationRecords, guijoPublicationMetadata } from "./guijo-publication.mjs";
 import { palmaPublicationRecords, palmaPublicationMetadata } from "./palma-publications.mjs";
@@ -260,6 +261,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
   ...guijoPublicationRecords,
   ...palmaPublicationRecords,
@@ -9363,6 +9365,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
   ...palmaPublicationMetadata,
   ...millaCuadrosPublicationMetadata,
@@ -12118,6 +12121,10 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "garcia-documentos-ineditos-mexico-v01-1905",
+  "garcia-documentos-ineditos-mexico-v02-1905",
+  "garcia-documentos-ineditos-mexico-v03-1905",
+
   "cehm-manuscritos-betlemitas-xi-5",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
   "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
@@ -12226,6 +12233,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

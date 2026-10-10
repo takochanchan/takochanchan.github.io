@@ -956,9 +956,19 @@ const publicationStructuredData = (item, isShortWork) => {
       encoding: item.volumes.flatMap(encodingsFor),
       ...(isMultiVolume(item)
         ? {
-            hasPart: item.volumes.map((volume) => ({
+            hasPart: item.volumes.map((volume, index) => ({
               "@type": "Book",
               name: `${item.title}（${volume.volumeLabel}）`,
+              ...(item.multiAuthorSeries ? {
+                "@id": `${canonical}#volume-${index + 1}`,
+                identifier: volume.slug,
+                translationOfWork: {
+                  "@type": "Book",
+                  name: volume.originalTitle,
+                  author: { "@type": "Person", name: volume.originalAuthor },
+                  ...(volume.sourceUrl ? { url: volume.sourceUrl } : {}),
+                },
+              } : {}),
               numberOfPages: volume.pageCount,
               encoding: encodingsFor(volume),
             })),
@@ -992,6 +1002,27 @@ const volumeSourceProviderMarkup = (volume) =>
     ? `<a href="${escapeHtml(volume.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(volume.sourceProvider)} ↗</a>`
     : escapeHtml(volume.sourceProvider);
 
+const seriesVolumeInventoryMarkup = (item) => {
+  if (!item.seriesVolumes?.length) return "";
+  const published = new Map(item.volumes.map((volume, index) => [volume.seriesVolumeNumber, index + 1]));
+  return `<div class="publication-info__wide">
+    <dt>全巻の構成</dt>
+    <dd><details class="series-volume-inventory">
+      <summary>初刊全${item.seriesVolumes.length}巻の巻一覧（${item.volumes.length}巻公開）</summary>
+      <p>未公開巻の表題は略記です。続刊の底本と利用条件は各巻の公開時に記載します。</p>
+      <div class="series-volume-inventory__scroll"><table>
+        <thead><tr><th scope="col">巻</th><th scope="col">原題</th><th scope="col">日本語訳</th><th scope="col">原刊</th></tr></thead>
+        <tbody>${item.seriesVolumes.map((volume) => `<tr data-series-volume="${volume.number}">
+          <th scope="row">第${volume.number}巻</th>
+          <td lang="es">${escapeHtml(volume.originalTitle)}</td>
+          <td>${published.has(volume.number) ? `<a href="#volume-${published.get(volume.number)}">公開済み</a>` : "未公開"}</td>
+          <td><a href="${escapeHtml(volume.sourceUrl)}" target="_blank" rel="noopener">登録を見る ↗</a></td>
+        </tr>`).join("")}</tbody>
+      </table></div>
+    </details></dd>
+  </div>`;
+};
+
 const volumeBibliographyMarkup = (item) =>
   isMultiVolume(item)
     ? `<div class="publication-info__wide">
@@ -1007,6 +1038,7 @@ const volumeBibliographyMarkup = (item) =>
                 <p class="volume-bibliography__original"><cite>${escapeHtml(volume.originalTitle)}</cite></p>
                 <dl>
                   <div><dt>原刊</dt><dd>${escapeHtml(volume.originalPublication)}</dd></div>
+                  ${item.multiAuthorSeries ? `<div><dt>著者・編者</dt><dd>${catalogueAuthorMarkup(volume)}</dd></div>` : ""}
                   <div><dt>構成</dt><dd>${escapeHtml(volume.extent)}</dd></div>
                   <div><dt>底本</dt><dd>${escapeHtml(volume.sourceEdition)}</dd></div>
                   <div><dt>公開元</dt><dd>${volumeSourceProviderMarkup(volume)}</dd></div>
@@ -1180,6 +1212,7 @@ ${header({
             <dt>権利・利用条件</dt>
             <dd>${escapeHtml(item.rights)}</dd>
           </div>
+          ${seriesVolumeInventoryMarkup(item)}
           ${volumeBibliographyMarkup(item)}
           <div>
             <dt>公開日</dt>
@@ -1202,7 +1235,7 @@ ${header({
         <div class="reader-heading">
           <div>
             <p class="eyebrow">DOCUMENT READER</p>
-            <h2>${isMultiVolume(item) ? `日本語翻訳版 PDF・EPUB（全${item.volumes.length}分冊）` : "日本語翻訳版 PDF"}</h2>
+            <h2>${isMultiVolume(item) ? (item.seriesVolumes ? `日本語翻訳版 PDF・EPUB（公開${item.volumes.length}巻）` : `日本語翻訳版 PDF・EPUB（全${item.volumes.length}分冊）`) : "日本語翻訳版 PDF"}</h2>
             ${isMultiVolume(item) ? `<p class="reader-heading__current" data-pdf-current>読み込む分冊を選択してください。</p>` : ""}
           </div>
         </div>
@@ -1444,3 +1477,4 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 2} pages in ${path.relative(projectRoot, dist)}`,
 );
+

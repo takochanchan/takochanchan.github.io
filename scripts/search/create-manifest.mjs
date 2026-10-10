@@ -3,6 +3,7 @@ import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../../src/publications.mjs";
+import { cataloguePublicationByMemberSlug } from "../../src/catalogue-publications.mjs";
 import {
   publicationsForSearchShard,
   readSearchShardConfig,
@@ -92,7 +93,7 @@ for (const publication of selectedPublications) {
     attributionStatus: publication.attributionStatus ?? null,
     attributionNote: publication.attributionNote ?? null,
     recordClass: publication.recordClass,
-    url: `/publications/${publication.slug}/`,
+    url: `/publications/${cataloguePublicationByMemberSlug.get(publication.slug)?.multiAuthorSeries ? cataloguePublicationByMemberSlug.get(publication.slug).slug : publication.slug}/`,
     pdfUrl: publication.pdfUrl,
     masterPath,
     source: useMaster
@@ -127,3 +128,4 @@ process.stdout.write(
     `${works.length} works (${direct} canonical masters, ` +
     `${works.length - direct} approved EPUB mirrors).\n`,
 );
+
