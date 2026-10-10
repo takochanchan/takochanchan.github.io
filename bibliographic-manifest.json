@@ -8376,6 +8376,101 @@
         "status": "online",
         "url": "https://archive.org/details/documentosindi01garc"
       }
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v01",
+      "recordClass": "major-work",
+      "title": "メキシコ教会史　第1巻",
+      "originalTitle": "Historia de la Iglesia en México",
+      "author": "マリアーノ・クエバス",
+      "originalAuthor": "Mariano Cuevas",
+      "year": 1921,
+      "originalPublication": "Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1921.",
+      "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 1, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1921.",
+      "sourceProvider": "ボストン大学神学部図書館所蔵、Internet Archive公開スキャン。",
+      "rights": "原著者マリアーノ・クエバスは1949年没であり、1921年刊の原著本文・原図は日本および米国で著作権保護期間を満了しています。底本はInternet Archive公開スキャンです。参照した資料に個別のライセンス名は記載されていません。底本：https://archive.org/details/historiadelaigle01cuev。公開元の権利案内：https://help.archive.org/help/rights/。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaigle01cuev"
+      }
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v02",
+      "recordClass": "major-work",
+      "title": "メキシコ教会史　第2巻",
+      "originalTitle": "Historia de la Iglesia en México",
+      "author": "マリアーノ・クエバス",
+      "originalAuthor": "Mariano Cuevas",
+      "year": 1922,
+      "originalPublication": "Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1922.",
+      "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 2, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1922.",
+      "sourceProvider": "Internet Archive公開スキャン。",
+      "rights": "原著者マリアーノ・クエバスは1949年没であり、1922年刊の原著本文・原図は日本および米国で著作権保護期間を満了しています。底本はInternet Archive公開スキャンです。参照した資料に個別のライセンス名は記載されていません。底本：https://archive.org/details/historiadelaigle02cuev。公開元の権利案内：https://help.archive.org/help/rights/。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaigle02cuev"
+      }
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v03",
+      "recordClass": "major-work",
+      "title": "メキシコ教会史　第3巻",
+      "originalTitle": "Historia de la Iglesia en México",
+      "author": "マリアーノ・クエバス",
+      "originalAuthor": "Mariano Cuevas",
+      "year": 1924,
+      "originalPublication": "Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1924.",
+      "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 3, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1924.",
+      "sourceProvider": "Internet Archive公開スキャン。",
+      "rights": "原著者マリアーノ・クエバスは1949年没であり、1924年刊の原著本文・原図は日本および米国で著作権保護期間を満了しています。底本はInternet Archive公開スキャンです。参照した資料に個別のライセンス名は記載されていません。底本：https://archive.org/details/historiadelaigle03cuev。公開元の権利案内：https://help.archive.org/help/rights/。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaigle03cuev"
+      }
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v04",
+      "recordClass": "major-work",
+      "title": "メキシコ教会史　第4巻",
+      "originalTitle": "Historia de la Iglesia en México",
+      "author": "マリアーノ・クエバス",
+      "originalAuthor": "Mariano Cuevas",
+      "year": 1928,
+      "originalPublication": "El Paso, Texas: Editorial «Revista Católica», 1928.",
+      "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 4, 3.ª edición, El Paso, Texas: Editorial «Revista Católica», 1928.",
+      "sourceProvider": "Internet Archive公開スキャン。",
+      "rights": "原著者マリアーノ・クエバスは1949年没であり、1928年刊の原著本文・原図は日本および米国で著作権保護期間を満了しています。底本はInternet Archive公開スキャンです。参照した資料に個別のライセンス名は記載されていません。個別資料への恒久リンクは未確認です。公開元の権利案内：https://help.archive.org/help/rights/。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "sourceAccess": {
+        "status": "unresolved-link",
+        "note": "Internet Archive公開の1928年刊第4巻（第3版）を底本としています。個別資料への恒久リンクは未確認です。"
+      }
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v05",
+      "recordClass": "major-work",
+      "title": "メキシコ教会史　第5巻",
+      "originalTitle": "Historia de la Iglesia en México",
+      "author": "マリアーノ・クエバス",
+      "originalAuthor": "Mariano Cuevas",
+      "year": 1928,
+      "originalPublication": "El Paso, Texas: Editorial «Revista Católica», 1928.",
+      "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 5, El Paso, Texas: Editorial «Revista Católica», 1928.",
+      "sourceProvider": "Internet Archive公開スキャン。",
+      "rights": "原著者マリアーノ・クエバスは1949年没であり、1928年刊の原著本文・原図は日本および米国で著作権保護期間を満了しています。底本はInternet Archive公開スキャンです。参照した資料に個別のライセンス名は記載されていません。底本：https://archive.org/details/historiadelaigle0tomo5unse_n5r7。公開元の権利案内：https://help.archive.org/help/rights/。",
+      "publishedDate": "2026-10-10",
+      "updatedDate": "2026-10-10",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaigle0tomo5unse_n5r7"
+      }
     }
   ],
   "works": [

@@ -7,6 +7,56 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "originalTitle": "Historia de la Iglesia en México",
+  "author": "マリアーノ・クエバス",
+  "originalAuthor": "Mariano Cuevas",
+  "year": 1921,
+  "types": [
+    "宗教史",
+    "歴史"
+  ],
+  "regions": [
+    "メキシコ"
+  ],
+  "languages": [
+    "スペイン語"
+  ],
+  "tags": [
+    "カトリック教会",
+    "ヌエバ・エスパーニャ",
+    "宣教",
+    "修道会"
+  ],
+  "sourceUrl": "https://archive.org/details/historiadelaigle01cuev",
+  "publishedDate": "2026-10-10",
+  "updatedDate": "2026-10-10",
+  "slug": "cuevas-historia-iglesia-mexico",
+  "title": "メキシコ教会史",
+  "subtitle": "全5巻・1511–1910年",
+  "series": "HISTORIA DE LA IGLESIA EN MÉXICO · 1921–1928",
+  "visualLabel": "1921–1928年刊・教会史",
+  "description": "福音宣教以前のアナワクから、1511–1910年のメキシコにおけるカトリック教会の歴史をたどる全5巻です。ヌエバ・エスパーニャの教会組織、宣教、修道会と、独立後の教会を扱います。1921・1922・1924・1928年刊本を底本としています。",
+  "extent": "全5巻・PDF計3,938頁",
+  "originalPublication": "Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1921–1924; El Paso, Texas: Editorial «Revista Católica», 1928.",
+  "sourceEdition": "Mariano Cuevas, Historia de la Iglesia en México, tomo 1, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1921. / Mariano Cuevas, Historia de la Iglesia en México, tomo 2, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1922. / Mariano Cuevas, Historia de la Iglesia en México, tomo 3, Tlalpam, D.F. (México): Imprenta del Asilo «Patricio Sanz», 1924. / Mariano Cuevas, Historia de la Iglesia en México, tomo 4, 3.ª edición, El Paso, Texas: Editorial «Revista Católica», 1928. / Mariano Cuevas, Historia de la Iglesia en México, tomo 5, El Paso, Texas: Editorial «Revista Católica», 1928.",
+  "sourceProvider": "Internet Archive公開スキャン。所蔵元・底本の詳細は各巻に記載しています。",
+  "rights": "原著本文・原図は著作権保護期間を満了しています。底本の公開元と権利情報は各巻に記載しています。",
+  "memberSlugs": [
+    "cuevas-historia-iglesia-mexico-v01",
+    "cuevas-historia-iglesia-mexico-v02",
+    "cuevas-historia-iglesia-mexico-v03",
+    "cuevas-historia-iglesia-mexico-v04",
+    "cuevas-historia-iglesia-mexico-v05"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第3巻",
+    "第4巻",
+    "第5巻"
+  ]
+},
+{
   "slug": "garcia-documentos-ineditos-mexico-1905-1911",
   "memberSlugs": [
     "garcia-documentos-ineditos-mexico-v01-1905",
