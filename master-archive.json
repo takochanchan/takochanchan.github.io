@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "d09437b4d2a1239e042ae0d6de7446a8ee7ce001",
+  "archive_commit": "c8464d4bbdd53a24b8a00e90734843ecfb8658f4",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
@@ -375,7 +375,12 @@
     "castro-santa-anna-diario-1854-v6": "publications/castro-santa-anna-diario-1854-v6/master.docx",
     "garcia-documentos-ineditos-mexico-v01-1905": "publications/garcia-documentos-ineditos-mexico-v01-1905/master.docx",
     "garcia-documentos-ineditos-mexico-v02-1905": "publications/garcia-documentos-ineditos-mexico-v02-1905/master.docx",
-    "garcia-documentos-ineditos-mexico-v03-1905": "publications/garcia-documentos-ineditos-mexico-v03-1905/master.docx"
+    "garcia-documentos-ineditos-mexico-v03-1905": "publications/garcia-documentos-ineditos-mexico-v03-1905/master.docx",
+    "cuevas-historia-iglesia-mexico-v01": "publications/cuevas-historia-iglesia-mexico-v01/master.docx",
+    "cuevas-historia-iglesia-mexico-v02": "publications/cuevas-historia-iglesia-mexico-v02/master.docx",
+    "cuevas-historia-iglesia-mexico-v03": "publications/cuevas-historia-iglesia-mexico-v03/master.docx",
+    "cuevas-historia-iglesia-mexico-v04": "publications/cuevas-historia-iglesia-mexico-v04/master.docx",
+    "cuevas-historia-iglesia-mexico-v05": "publications/cuevas-historia-iglesia-mexico-v05/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

@@ -2359,6 +2359,36 @@
       "slug": "garcia-documentos-ineditos-mexico-v03-1905",
       "recordClass": "document-collection",
       "searchShard": "002"
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v01",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "マリアーノ・クエバス"
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v02",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "マリアーノ・クエバス"
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v03",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "マリアーノ・クエバス"
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v04",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "マリアーノ・クエバス"
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico-v05",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "マリアーノ・クエバス"
     }
   ],
   "groups": [
@@ -2437,6 +2467,16 @@
         "garcia-documentos-ineditos-mexico-v01-1905",
         "garcia-documentos-ineditos-mexico-v02-1905",
         "garcia-documentos-ineditos-mexico-v03-1905"
+      ]
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico",
+      "memberSlugs": [
+        "cuevas-historia-iglesia-mexico-v01",
+        "cuevas-historia-iglesia-mexico-v02",
+        "cuevas-historia-iglesia-mexico-v03",
+        "cuevas-historia-iglesia-mexico-v04",
+        "cuevas-historia-iglesia-mexico-v05"
       ]
     }
   ],

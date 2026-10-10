@@ -8088,6 +8088,96 @@
       "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v03-1905/cover.jpg",
       "size": 41466,
       "sha256": "81542f30b8019a8e1a6c0b00aab087882a7bf09df9f8d58ffa586e13bf421c32"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v01/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.pdf",
+      "size": 46530623,
+      "sha256": "7828b4b4efb3de38bccc310f0dfcd82e417d23a95089e9e9ba359265ea8872ed"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v01/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub",
+      "size": 227120035,
+      "sha256": "58f78b3ee22ee02d8016a4ed1e91aba9c553a3ab53ea7ca81eea8e7c7872e054"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf",
+      "size": 42784779,
+      "sha256": "7e0794715158298e796f77e273ba3f18d20321b809fb0408da0e3cbfd164b67c"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
+      "size": 53086849,
+      "sha256": "acd3c5581820472970ddd2b79adad518e9c0c6f48fe81c267730a21f055eba2a"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v03/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.pdf",
+      "size": 48356017,
+      "sha256": "8e0ce11e1e8d0f06d2a9cc4e01eb81baf3193c538936475fa8595b31d0528eca"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v03/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.epub",
+      "size": 203836957,
+      "sha256": "d7a5bc571e666fdf76b2547b3ded48704e7a42b36a331234f134ed0f865f2c55"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v04/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.pdf",
+      "size": 39653393,
+      "sha256": "6f5ea3b79a535776d59f5449487565117bdb469f4b94fa43b23dfe6245a6caa5"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v04/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.epub",
+      "size": 186106118,
+      "sha256": "0be3ba9575679c8dea8ce411d121e54d9cda8e0f966715d935c3b38dbac6d947"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v05/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.pdf",
+      "size": 28033797,
+      "sha256": "a3b88a80856906f0047d2cf7e9e1b6cad87b24b69dd81a511f6129c7ce77e4aa"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v05/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub",
+      "size": 162788753,
+      "sha256": "013924137c53923d5dec82de7fe14b60ae2843a1f9a623c05d1a6c77677ed981"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v01/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico-v01/cover.jpg",
+      "size": 34688,
+      "sha256": "34067d197165897b0ea5d0cbc53f428c0750f9c11adc919904b022c3fecf774a"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico-v02/cover.jpg",
+      "size": 32436,
+      "sha256": "b20d6249e780f7cc486e2073f5daf94dd6b79c8b069fa8313e05c598b0f9e07e"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v03/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico-v03/cover.jpg",
+      "size": 33336,
+      "sha256": "1ba190ef4d9c3579444f0c8d670f2c2c3148f05ad7179edba548b4b0dc863ad8"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v04/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico-v04/cover.jpg",
+      "size": 33314,
+      "sha256": "9df94de280f549faff5636d62b8bc41424673122521177c5c68b6f1ee4395ef1"
+    },
+    {
+      "path": "publications/cuevas-historia-iglesia-mexico-v05/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico-v05/cover.jpg",
+      "size": 34377,
+      "sha256": "b77722dd433e98a577fc0d90b1fbdf3cb17d39913c44f342018d8697bc780f23"
     }
   ]
 }

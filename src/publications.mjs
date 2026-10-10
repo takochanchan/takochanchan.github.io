@@ -1,3 +1,4 @@
+import { cuevasPublicationRecords, cuevasPublicationMetadata } from "./cuevas-publications.mjs";
 import { garciaDocumentosPublicationRecords, garciaDocumentosPublicationMetadata } from "./garcia-documentos-publication.mjs";
 import { castroPublicationRecords, castroPublicationMetadata } from "./castro-publications.mjs";
 import { guijoPublicationRecords, guijoPublicationMetadata } from "./guijo-publication.mjs";
@@ -261,6 +262,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
   ...guijoPublicationRecords,
@@ -9365,6 +9367,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
   ...palmaPublicationMetadata,
