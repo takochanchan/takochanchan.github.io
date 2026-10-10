@@ -1,0 +1,80 @@
+{
+  "main_commit": "585156b66e4bfab0583fb56d18bda92cb2f96a93",
+  "main_deployment_run": 38033457835,
+  "url": "https://takochanchan.github.io/publications/cuevas-historia-iglesia-mexico/",
+  "assets": [
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v01/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.pdf",
+      "size": 46530623,
+      "sha256": "7828b4b4efb3de38bccc310f0dfcd82e417d23a95089e9e9ba359265ea8872ed",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.pdf"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub",
+      "path": "publications/cuevas-historia-iglesia-mexico-v01/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub",
+      "size": 227120035,
+      "sha256": "58f78b3ee22ee02d8016a4ed1e91aba9c553a3ab53ea7ca81eea8e7c7872e054",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol01_1921_Japanese_Translation.epub"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
+      "size": 42784779,
+      "sha256": "7e0794715158298e796f77e273ba3f18d20321b809fb0408da0e3cbfd164b67c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.1.pdf",
+      "approved_original_filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation(1).pdf"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
+      "path": "publications/cuevas-historia-iglesia-mexico-v02/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub",
+      "size": 53086849,
+      "sha256": "acd3c5581820472970ddd2b79adad518e9c0c6f48fe81c267730a21f055eba2a",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol02_1922_Japanese_Translation.epub"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v03/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.pdf",
+      "size": 48356017,
+      "sha256": "8e0ce11e1e8d0f06d2a9cc4e01eb81baf3193c538936475fa8595b31d0528eca",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.pdf"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.epub",
+      "path": "publications/cuevas-historia-iglesia-mexico-v03/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.epub",
+      "size": 203836957,
+      "sha256": "d7a5bc571e666fdf76b2547b3ded48704e7a42b36a331234f134ed0f865f2c55",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol03_1924_Japanese_Translation.epub"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v04/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.pdf",
+      "size": 39653393,
+      "sha256": "6f5ea3b79a535776d59f5449487565117bdb469f4b94fa43b23dfe6245a6caa5",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.pdf"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.epub",
+      "path": "publications/cuevas-historia-iglesia-mexico-v04/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.epub",
+      "size": 186106118,
+      "sha256": "0be3ba9575679c8dea8ce411d121e54d9cda8e0f966715d935c3b38dbac6d947",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol04_1928_Japanese_Translation.epub"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.pdf",
+      "path": "publications/cuevas-historia-iglesia-mexico-v05/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.pdf",
+      "size": 28033797,
+      "sha256": "a3b88a80856906f0047d2cf7e9e1b6cad87b24b69dd81a511f6129c7ce77e4aa",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.pdf"
+    },
+    {
+      "filename": "Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub",
+      "path": "publications/cuevas-historia-iglesia-mexico-v05/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub",
+      "size": 162788753,
+      "sha256": "013924137c53923d5dec82de7fe14b60ae2843a1f9a623c05d1a6c77677ed981",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Mariano_Cuevas_Historia_Iglesia_Mexico_Vol05_1928_Japanese_Translation.epub"
+    }
+  ],
+  "archive_commit": "399d5dc3caf9a29d01f3e31a8330c7413067eea8",
+  "release_byte_verification_run": 38032134220
+}
