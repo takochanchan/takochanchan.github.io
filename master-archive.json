@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "be383785c5a89daeb0b8d87e5f69fc7d5cc703ca",
+  "archive_commit": "893d05e9f476b6dbe1689386885672bd499c73f2",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -382,7 +382,10 @@
     "cuevas-historia-iglesia-mexico-v02": "publications/cuevas-historia-iglesia-mexico-v02/master.docx",
     "cuevas-historia-iglesia-mexico-v03": "publications/cuevas-historia-iglesia-mexico-v03/master.docx",
     "cuevas-historia-iglesia-mexico-v04": "publications/cuevas-historia-iglesia-mexico-v04/master.docx",
-    "cuevas-historia-iglesia-mexico-v05": "publications/cuevas-historia-iglesia-mexico-v05/master.docx"
+    "cuevas-historia-iglesia-mexico-v05": "publications/cuevas-historia-iglesia-mexico-v05/master.docx",
+    "garcia-documentos-ineditos-mexico-v04-1906": "publications/garcia-documentos-ineditos-mexico-v04-1906/master.docx",
+    "garcia-documentos-ineditos-mexico-v05-1906": "publications/garcia-documentos-ineditos-mexico-v05-1906/master.docx",
+    "garcia-documentos-ineditos-mexico-v06-1906": "publications/garcia-documentos-ineditos-mexico-v06-1906/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

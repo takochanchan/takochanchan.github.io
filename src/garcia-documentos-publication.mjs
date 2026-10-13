@@ -113,6 +113,119 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 3
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v04-1906",
+    "title": "メキシコ干渉派主要人物の秘密書簡集 第2部",
+    "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos. Segunda parte.",
+    "subtitle": "史料集第4巻・1906年刊",
+    "author": "ヘナロ・ガルシア／カルロス・ペレイラ 編",
+    "originalAuthor": "Genaro García / Carlos Pereyra (eds.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 209頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "フランス干渉と帝政の成立をめぐる秘密書簡集の第2部です。干渉派の政治交渉、軍事動向、国外との連絡を収録しています。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v04-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v04-1906/Garcia_Documentos_IV_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v04-1906/Garcia_Documentos_IV_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 209,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "19世紀",
+      "ペレイラ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 4
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v05-1906",
+    "title": "メキシコの異端審問",
+    "originalTitle": "La Inquisición de México. Sus orígenes, jurisdicción, competencia, procesos, autos de fe, relaciones con los poderes públicos, ceremonias, etiquetas y otros hechos. Documentos inéditos tomados de su propio archivo.",
+    "subtitle": "史料集第5巻・1906年刊",
+    "author": "ヘナロ・ガルシア／カルロス・ペレイラ 編",
+    "originalAuthor": "Genaro García / Carlos Pereyra (eds.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 225頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "メキシコの異端審問所の起源、管轄、裁判、アウト・デ・フェ、他の権力との関係を扱う第5巻です。異端審問所の文書庫から採録した26文書を収めています。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v05-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v05-1906/Garcia_Documentos_V_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v05-1906/Garcia_Documentos_V_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 225,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "19世紀",
+      "ペレイラ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 5
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v06-1906",
+    "title": "モラ博士の未刊文書と著作選",
+    "originalTitle": "Papeles inéditos y obras selectas del Doctor Mora. Cartas íntimas que durante los años de 1836 hasta 1850 le dirigieron los Sres. Arango y Escandón, Couto, Gómez Farías, Gutiérrez de Estrada, Lacunza, Ocampo, Peña y Peña, Quintana Roo, etc.",
+    "subtitle": "史料集第6巻・1906年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 220頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "モラ博士の未刊文書と著作選を収める第6巻です。1836〜1850年に同博士へ寄せられた書簡、伝記、政治・宗教に関する著作を収録しています。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v06-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v06-1906/Garcia_Documentos_VI_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v06-1906/Garcia_Documentos_VI_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 220,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "19世紀"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 6
   }
 ];
 
@@ -140,5 +253,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
     "publishedDate": "2026-10-10",
     "updatedDate": "2026-10-10"
+  },
+  "garcia-documentos-ineditos-mexico-v04-1906": {
+    "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Correspondencia secreta de los principales intervencionistas mexicanos. Segunda parte. Documentos inéditos ó muy raros para la historia de México, tomo IV, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の助成でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi04garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archiveのこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。",
+    "publishedDate": "2026-10-13",
+    "updatedDate": "2026-10-13"
+  },
+  "garcia-documentos-ineditos-mexico-v05-1906": {
+    "sourceEdition": "Genaro García / Carlos Pereyra (eds.), La Inquisición de México. Sus orígenes, jurisdicción, competencia, procesos, autos de fe, relaciones con los poderes públicos, ceremonias, etiquetas y otros hechos. Documentos inéditos tomados de su propio archivo. Documentos inéditos ó muy raros para la historia de México, tomo V, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の助成でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi04garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archiveのこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。",
+    "publishedDate": "2026-10-13",
+    "updatedDate": "2026-10-13"
+  },
+  "garcia-documentos-ineditos-mexico-v06-1906": {
+    "sourceEdition": "Genaro García (ed.), Papeles inéditos y obras selectas del Doctor Mora. Cartas íntimas que durante los años de 1836 hasta 1850 le dirigieron los Sres. Arango y Escandón, Couto, Gómez Farías, Gutiérrez de Estrada, Lacunza, Ocampo, Peña y Peña, Quintana Roo, etc. Documentos inéditos ó muy raros para la historia de México, tomo VI, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の助成でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi04garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archiveのこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。",
+    "publishedDate": "2026-10-13",
+    "updatedDate": "2026-10-13"
   }
 };

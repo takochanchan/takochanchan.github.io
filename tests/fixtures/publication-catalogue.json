@@ -2401,6 +2401,21 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "マリアーノ・クエバス"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v04-1906",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v05-1906",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v06-1906",
+      "recordClass": "document-collection",
+      "searchShard": "002"
     }
   ],
   "groups": [
@@ -2485,7 +2500,10 @@
       "memberSlugs": [
         "garcia-documentos-ineditos-mexico-v01-1905",
         "garcia-documentos-ineditos-mexico-v02-1905",
-        "garcia-documentos-ineditos-mexico-v03-1905"
+        "garcia-documentos-ineditos-mexico-v03-1905",
+        "garcia-documentos-ineditos-mexico-v04-1906",
+        "garcia-documentos-ineditos-mexico-v05-1906",
+        "garcia-documentos-ineditos-mexico-v06-1906"
       ]
     },
     {
@@ -2501,4 +2519,3 @@
   ],
   "shortAuthorCount": 48
 }
-

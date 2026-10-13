@@ -89,12 +89,18 @@ export const publicationGroupDefinitions = [
   "memberSlugs": [
     "garcia-documentos-ineditos-mexico-v01-1905",
     "garcia-documentos-ineditos-mexico-v02-1905",
-    "garcia-documentos-ineditos-mexico-v03-1905"
+    "garcia-documentos-ineditos-mexico-v03-1905",
+    "garcia-documentos-ineditos-mexico-v04-1906",
+    "garcia-documentos-ineditos-mexico-v05-1906",
+    "garcia-documentos-ineditos-mexico-v06-1906"
   ],
   "volumeLabels": [
     "第1巻",
     "第2巻",
-    "第3巻"
+    "第3巻",
+    "第4巻",
+    "第5巻",
+    "第6巻"
   ],
   "multiAuthorSeries": true,
   "author": "ヘナロ・ガルシア編（第1〜5巻はカルロス・ペレイラとの共編）",
@@ -105,13 +111,13 @@ export const publicationGroupDefinitions = [
   "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1905–1911",
   "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905〜1911年",
   "year": 1905,
-  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜3巻の日本語全訳を巻別PDF・EPUBで公開しています。",
-  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）。",
+  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜6巻の日本語全訳を巻別PDF・EPUBで公開しています。",
+  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）、第IV〜VI巻（1906年）。",
   "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
   "sourceUrl": "https://archive.org/details/documentosindi01garc",
-  "rights": "原著本文と1905年刊本の編集部分は、日本および米国で著作権保護期間を満了しています。トロント大学ロバーツ図書館所蔵、Internet Archive公開本の個別メタデータにはCC等のライセンス指定がありません。本訳に原刊画像は転載していません。Internet Archiveは掲載物の権利状態を保証せず、利用者に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/。利用規約：https://archive.org/about/terms。",
+  "rights": "原著本文および1905・1906年刊本の編集部分はパブリックドメインです。Internet Archive公開の使用底本の個別メタデータには、CC等の再利用ライセンス指定はありません。",
   "publishedDate": "2026-10-10",
-  "updatedDate": "2026-10-10",
+  "updatedDate": "2026-10-13",
   "seriesVolumes": [
     {
       "number": 1,

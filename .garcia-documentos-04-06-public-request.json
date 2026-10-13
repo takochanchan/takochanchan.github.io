@@ -1,0 +1,43 @@
+{
+  "verified_archive_commit": "893d05e9f476b6dbe1689386885672bd499c73f2",
+  "assets": [
+    {
+      "filename": "Garcia_Documentos_IV_1906_Japanese_Complete_Translation.pdf",
+      "size": 1456701,
+      "sha256": "0324cb64bf0533760831df1abd3ce1a4a8a4f359a817ff3aed7b7838457d4c4f"
+    },
+    {
+      "filename": "Garcia_Documentos_IV_1906_Japanese_Complete_Translation.epub",
+      "size": 269346,
+      "sha256": "17c10781033eb3da15376283e8ef3eba661a9d4db30f7f02a7eb692712468a7e"
+    },
+    {
+      "filename": "Garcia_Documentos_V_1906_Japanese_Complete_Translation.pdf",
+      "size": 1742909,
+      "sha256": "4b109e8fbcef759b1876cf21e8a5a131ec89eaa0e16d58a28a27c02537d97225"
+    },
+    {
+      "filename": "Garcia_Documentos_V_1906_Japanese_Complete_Translation.epub",
+      "size": 265803,
+      "sha256": "b2b81e74298f340a7f08639287f83d232665dc5873ba51f9d1f46ef95fb92eee"
+    },
+    {
+      "filename": "Garcia_Documentos_VI_1906_Japanese_Complete_Translation.pdf",
+      "size": 2408535,
+      "sha256": "91b82be4ca3597c63801709db6aea3e8a0c87a66674b13a4344a9e58eaa37c91"
+    },
+    {
+      "filename": "Garcia_Documentos_VI_1906_Japanese_Complete_Translation.epub",
+      "size": 267844,
+      "sha256": "45a63417f448c5ab87a5d164df9053d55bab1ade3fcba483120dfbff8f6b5d0a"
+    }
+  ],
+  "bundle": {
+    "size": 5414026,
+    "sha256": "37eacba2c155a6740d51baaf845ccf71109c35d43ecee9844f434a24b5908174",
+    "chunks": [
+      "8860a5cc6be414831e5f73d3478a5891651a543d"
+    ]
+  },
+  "validation_attempt": 1
+}
