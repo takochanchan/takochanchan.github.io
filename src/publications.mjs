@@ -12130,6 +12130,9 @@ const documentCollectionSlugs = new Set([
   "garcia-documentos-ineditos-mexico-v01-1905",
   "garcia-documentos-ineditos-mexico-v02-1905",
   "garcia-documentos-ineditos-mexico-v03-1905",
+  "garcia-documentos-ineditos-mexico-v04-1906",
+  "garcia-documentos-ineditos-mexico-v05-1906",
+  "garcia-documentos-ineditos-mexico-v06-1906",
 
   "cehm-manuscritos-betlemitas-xi-5",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
