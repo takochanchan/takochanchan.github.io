@@ -8280,6 +8280,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.epub",
       "size": 84809636,
       "sha256": "2bf353037f83ed8742320413ef3c4dff0cf20751068cb80b18f37aeda65999ed"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/medina-imprenta-guatemala-1910/cover.jpg",
+      "size": 26865,
+      "sha256": "9eeda0928d48ca93bd18e3588cb5a3de1466270483fe9bf9cae18ccffc820cb2"
     }
   ]
 }
