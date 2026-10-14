@@ -1,0 +1,35 @@
+{
+  "verified_archive_commit": "d6b5569ad60eb1b4d689677f28a37cf7e68d29d4",
+  "assets": [
+    {
+      "filename": "Medina_1910_Japanese_Review_20261014.pdf",
+      "size": 31889566,
+      "sha256": "c3afdc5c1c405724c844b861894a16e8b840a0e5ab27470120fcd08a1d367351"
+    },
+    {
+      "filename": "Medina_1910_Japanese_Review_20261014.epub",
+      "size": 84809636,
+      "sha256": "2bf353037f83ed8742320413ef3c4dff0cf20751068cb80b18f37aeda65999ed"
+    }
+  ],
+  "bundle": {
+    "size": 106380566,
+    "sha256": "a5ac61b8322dd085af3c20265e5253cd9471cf78264f0a0ff02a4855d52fd079",
+    "chunks": [
+      "38076d0d1eed7ef3de71a923893a08643d87708a",
+      "3c1e47ecc9b7d9301345b303c3cda9c37928b210",
+      "cc332b82826ea65f608a0f37c414e6ad1e97e5a2",
+      "aa5c6b24043a23b4e6b94adb079a6fc69a6872d8",
+      "8b0c68672286672ab3842d02a20ff3cb96947ab7",
+      "5c1abab7b351cb8d0bccbfa6b715737bcfaa8c60",
+      "40627e5dd30b686d295f1a459065c0ba18a56bfd",
+      "f3ba262f1c21af6cfe26de0b1a5e492097c4a11a",
+      "4b16536bc169839eff840e1cfb3bda9d2df01c12",
+      "77dc9e45d233c5520d825cef8e6b324ca109aa24",
+      "c9efa1b4dfbc6d0343b37595dd5f2478aeed2c8f",
+      "095c581c8e83f48625b3045a472246e6d71d7a9a",
+      "b64cf1e893896ae1138e6b16999b731f0721b629",
+      "de309c5c25306008a4a841f1e95feef67e1e9057"
+    ]
+  }
+}
