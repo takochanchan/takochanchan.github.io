@@ -57,7 +57,7 @@ test("shard verification accepts three classes and rejects misplaced documents",
     documentCollections: records.filter(item => item.recordClass === "document-collection").length,
     chunks: 0,
   };
-  assert.equal(metadata.documentCollections, 12);
+  assert.equal(metadata.documentCollections, 13); // Includes the approved MSS/3023 collection.
   const directory = await mkdtemp(path.join(tmpdir(), "document-count-verification-"));
   try {
     await writeFile(path.join(directory, "document-map.json"), "{}");
