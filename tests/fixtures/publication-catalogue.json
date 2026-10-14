@@ -3,6 +3,12 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "diez-noticias-sacras-reales-mss3023-vol-1",
+      "recordClass": "document-collection",
+      "searchShard": "002",
+      "author": "フアン・ディエス・デ・ラ・カジェ"
+    },
+    {
       "slug": "medina-imprenta-guatemala-1910",
       "recordClass": "major-work",
       "searchShard": "002",

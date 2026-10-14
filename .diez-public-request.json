@@ -1,0 +1,38 @@
+{
+  "verified_archive_commit": "16533baa3238b061046ec9253b72e5e455d756c4",
+  "assets": [
+    {
+      "filename": "Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf",
+      "size": 9455123,
+      "sha256": "7ec75c7d0bc08f452999bd09b0a2feea42e212ba60135f7bfe5d3e1b19a3351c"
+    },
+    {
+      "filename": "Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub",
+      "size": 6112653,
+      "sha256": "e379f34bfd3dcba23194ee518b545a247e188cfd8a7adaaadd06d80c0c1ed7cd"
+    }
+  ],
+  "bundle": {
+    "size": 11334604,
+    "sha256": "be780b698c184106ed46bc8b822d6dc3297985f3b206a45ef350be4218e9c29e",
+    "chunks": [
+      "83be31739f1e6c24c3c6285fab37972c2ac875e9",
+      "3ca6c35860204c9488917e50ca0a009bd756c813",
+      "ab08bacd154b63937ba7d241d430861258421bef",
+      "9696406bb89b554250fd34a0a5a70b265165615c",
+      "0d72f9dbaf63033f63071d2f5ef7982bad0ac5a7",
+      "520785c7718fd60015502aaaa97a53e432f74c16",
+      "14307d1de70b5d14c96e470b1bb9017f8783761e",
+      "e46be7fc27b0de4608a0d8daf1944d46b84ce81d",
+      "78b1b05c7955c6a424ff86513ea64bf680ccc9a3",
+      "5a7916010a53e89b996c8676510d5bd1b33f45bf",
+      "2f97e517d8d1b41556b8c70f9750550bd39a1bd7",
+      "c4f0aa679d95b6854f3314b174d8f800b7c3d23f",
+      "ef6e4854d4d8e74d43f52455022b30e03c8db3b0",
+      "ba9b8c73c6c2fa2964ea892d8cc2ee3b4df0af31",
+      "b40483576ce8cc6317319fa4705d77057220f792",
+      "d9a4aa7349890eedb79d6aa0a27b120d14b0cda4",
+      "ea78aecfb1e22a8b39904a7d6fe55bdca57e4209"
+    ]
+  }
+}

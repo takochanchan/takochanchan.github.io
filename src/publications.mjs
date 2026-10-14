@@ -1,3 +1,4 @@
+import { diezPublicationRecords, diezPublicationMetadata } from "./diez-publication.mjs";
 import { medinaPublicationRecords, medinaPublicationMetadata } from "./medina-publication.mjs";
 import { normalizePublicationAttributes } from "./attribute-spelling.mjs";
 import { cuevasPublicationRecords, cuevasPublicationMetadata } from "./cuevas-publications.mjs";
@@ -275,6 +276,7 @@ const publicationRecords = [
   ...paraveyFouSangPublicationRecords,
   ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
+  ...diezPublicationRecords,
   ...medinaPublicationRecords,
   ...salazarPublicationRecords,
   ...academiaGuatemaltecaPublicationRecords,
@@ -9380,6 +9382,7 @@ const publicationMetadata = {
   ...paraveyFouSangPublicationMetadata,
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
+  ...diezPublicationMetadata,
   ...medinaPublicationMetadata,
   ...salazarPublicationMetadata,
   ...guijoPublicationMetadata,
@@ -12131,6 +12134,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "diez-noticias-sacras-reales-mss3023-vol-1",
   "garcia-documentos-ineditos-mexico-v01-1905",
   "garcia-documentos-ineditos-mexico-v02-1905",
   "garcia-documentos-ineditos-mexico-v03-1905",
@@ -12246,6 +12250,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

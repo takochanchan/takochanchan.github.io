@@ -1,0 +1,41 @@
+name: Transfer approved Díez MSS/3023 publication files
+on:
+  push:
+    branches: [agent/diez-noticias-publish-20261014]
+    paths: [.diez-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify approved bytes and prepare catalogue cover
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .diez-prepare.py
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Save verified catalogue cover
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add static/publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg assets-manifest.json
+          git commit -m 'Add verified Díez MSS/3023 catalogue cover'
+          git push origin HEAD:agent/diez-noticias-publish-20261014
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .diez-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: diez-public-verification
+          path: diez-public-verification.json
+

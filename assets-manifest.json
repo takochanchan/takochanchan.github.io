@@ -8286,6 +8286,24 @@
       "url": "https://takochanchan.github.io/publications/medina-imprenta-guatemala-1910/cover.jpg",
       "size": 26865,
       "sha256": "9eeda0928d48ca93bd18e3588cb5a3de1466270483fe9bf9cae18ccffc820cb2"
+    },
+    {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf",
+      "size": 9455123,
+      "sha256": "7ec75c7d0bc08f452999bd09b0a2feea42e212ba60135f7bfe5d3e1b19a3351c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf"
+    },
+    {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub",
+      "size": 6112653,
+      "sha256": "e379f34bfd3dcba23194ee518b545a247e188cfd8a7adaaadd06d80c0c1ed7cd",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub"
+    },
+    {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
+      "size": 29034,
+      "sha256": "4fa9d46da78fa68251d25e968fc741fe0934fccece9588551b8807602f43eb88"
     }
   ]
 }
