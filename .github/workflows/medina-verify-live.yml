@@ -2,7 +2,7 @@ name: Verify live Medina publication
 on:
   push:
     branches: [main]
-    paths: [src/medina-publication.mjs]
+    paths: [src/medina-publication.mjs, .github/workflows/medina-verify-live.yml]
 permissions:
   contents: read
   actions: read
@@ -28,6 +28,8 @@ jobs:
               time.sleep(10)
           else: raise SystemExit('Pages deployment timed out')
           PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Verify live bibliography and exact final assets
         run: |
           python3 - <<'PY'
