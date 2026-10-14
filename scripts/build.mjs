@@ -1,6 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { catalogueFiles, reportCsv } from "./analytics-report.mjs";
 import {
   publications as publicationUnits,
   shortPublicationAuthors,
@@ -36,6 +37,8 @@ const site = {
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
 const assetVersion = "20261004-document-collections";
+const analyticsVersion = "20261014-ga4-v1";
+catalogueFiles(publications); // Validate stable analytics IDs before publishing.
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -309,6 +312,7 @@ const header = ({
             <a href="#short-works">論文</a>
             <a href="#document-collections">文書群</a>
             <a href="/about/">このアーカイブについて</a>
+            <a href="/stats/">利用統計</a>
           </nav>`
     }
   </header>`;
@@ -317,6 +321,8 @@ const footer = () => `
   <footer class="site-footer">
     <span>${site.englishName}</span>
     <span>日本語翻訳資料を順次追加しています</span>
+    <a href="/stats/">利用統計</a>
+    <a href="/about/#analytics">アクセス解析について</a>
   </footer>`;
 
 const documentShell = ({
@@ -356,6 +362,7 @@ const documentShell = ({
   ${structuredData ? `<script type="application/ld+json">${jsonForScript(structuredData)}</script>` : ""}
   <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
   <title>${escapeHtml(title)}</title>
+  <script type="module" src="/analytics.mjs?v=${analyticsVersion}"></script>
 </head>
 <body>
 ${body}
@@ -837,6 +844,29 @@ ${header({ detail: true })}
     </div>
   </section>
 
+  <section class="policy-section" id="analytics" aria-labelledby="analytics-heading">
+    <div class="policy-section__inner">
+      <div class="policy-section__heading">
+        <p class="eyebrow">ACCESS ANALYTICS</p>
+        <h2 id="analytics-heading">アクセス解析について</h2>
+      </div>
+      <div class="policy-copy">
+        <p>資料の利用状況の把握とサイトの改善のため、Google Analytics（GA4）を使用します。
+          Cookieなどを利用して、閲覧ページやPDF・EPUBの保存操作、利用環境などの情報をGoogleへ送信します。
+          本サイトから氏名やメールアドレスを計測情報として送信することはありません。</p>
+        <p>既知のボットと検出できる自動操作を集計から除外しますが、すべての自動アクセスを識別できるものではありません。
+          ダウンロード件数はサイト上の保存操作を表し、保存完了や実人数を示すものではありません。
+          公開する<a href="/stats/">利用統計</a>は、資料別・日別などの集計値に限ります。</p>
+        <p><a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleによるデータの使用について</a>をご確認ください。
+          このブラウザでのアクセス解析は下のボタンから停止できます。ブラウザのDNT・GPC設定も尊重します。
+          解析を停止しても資料を閲覧・保存できます。</p>
+        <p data-analytics-status aria-live="polite"></p>
+        <button class="button button--quiet" type="button" data-analytics-preference hidden>アクセス解析を停止する</button>
+        <noscript><p>JavaScriptが無効なため、アクセス解析は実行されません。</p></noscript>
+      </div>
+    </div>
+  </section>
+
   <section class="policy-section policy-section--notice" id="notice" aria-labelledby="notice-heading">
     <div class="policy-section__inner">
       <div class="policy-section__heading">
@@ -1298,6 +1328,34 @@ ${footer()}`,
   });
 };
 
+const statisticsPage = documentShell({
+  title: `利用統計｜${site.shortName}`,
+  description: "日本語翻訳資料のPDF・EPUB保存操作を資料別・日別・月別に集計した利用統計。",
+  canonical: `${site.url}/stats/`,
+  body: `${header({ detail: true })}
+<main id="main" class="download-statistics">
+  <p class="eyebrow">ARCHIVE USAGE</p>
+  <h1>利用統計</h1>
+  <p>本サイトの「PDFを保存」「EPUBを保存」などのボタンから行われた保存操作を集計します。
+    既知のボットと検出できる自動操作を除外していますが、人間だけの利用を保証する数値ではありません。</p>
+  <p>集計対象は2026年10月14日以降です。ファイルの保存完了・利用者の実人数・GitHubへの直接アクセスは表しません。
+    PDFの画面内閲覧は保存件数に含めません。計測を停止したブラウザなどの利用は含まれないため、全利用件数とは異なります。</p>
+  <p data-stats-status role="status">集計データを確認しています。</p>
+  <noscript><p>集計表の表示にはJavaScriptが必要です。</p></noscript>
+  <div data-stats-content hidden>
+    <p><a href="/stats/downloads.csv" download>日別・資料別の集計CSV</a> · <a href="/stats/downloads.json">集計JSON</a></p>
+    <h2>資料別の保存件数</h2>
+    <div class="stats-table-wrap"><table><thead><tr><th scope="col">資料・分冊</th><th scope="col">形式</th><th scope="col">件数</th></tr></thead><tbody data-stats-files></tbody></table></div>
+    <h2>月別の保存件数</h2>
+    <table><thead><tr><th scope="col">年月</th><th scope="col">件数</th></tr></thead><tbody data-stats-months></tbody></table>
+    <h2>日別の保存件数</h2>
+    <table><thead><tr><th scope="col">日付（日本時間）</th><th scope="col">件数</th></tr></thead><tbody data-stats-days></tbody></table>
+  </div>
+  <p><a href="/about/#analytics">アクセス解析と計測の停止について</a></p>
+</main>${footer()}`,
+  scripts: `<link rel="stylesheet" href="/download-stats.css?v=${analyticsVersion}"><script type="module" src="/download-stats.mjs?v=${analyticsVersion}"></script>`,
+});
+
 const notFound = documentShell({
   title: `ページが見つかりません｜${site.shortName}`,
   body: `
@@ -1335,9 +1393,17 @@ const redirectPage = (item, canonicalSlug) => {
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await mkdir(path.join(dist, "about"), { recursive: true });
+await mkdir(path.join(dist, "stats"), { recursive: true });
+const analyticsReport = JSON.parse(await readFile(path.join(projectRoot, "analytics-data", "downloads.json"), "utf8"));
 await Promise.all([
   writeFile(path.join(dist, "index.html"), home),
   writeFile(path.join(dist, "about", "index.html"), aboutPage),
+  writeFile(path.join(dist, "stats", "index.html"), statisticsPage),
+  writeFile(path.join(dist, "stats", "downloads.json"), JSON.stringify(analyticsReport) + "\n"),
+  writeFile(path.join(dist, "stats", "downloads.csv"), reportCsv(analyticsReport)),
+  cp(path.join(projectRoot, "src", "analytics.mjs"), path.join(dist, "analytics.mjs")),
+  cp(path.join(projectRoot, "src", "download-stats.mjs"), path.join(dist, "download-stats.mjs")),
+  cp(path.join(projectRoot, "src", "download-stats.css"), path.join(dist, "download-stats.css")),
   cp(path.join(projectRoot, "src", "styles.css"), path.join(dist, "archive.css")),
   cp(path.join(projectRoot, "src", "archive.js"), path.join(dist, "archive.js")),
   cp(
@@ -1431,6 +1497,7 @@ const sitemapFiles = [
     entries: [
       { loc: `${site.url}/`, lastmod: currentCatalogueDate },
       { loc: `${site.url}/about/` },
+      { loc: `${site.url}/stats/` },
       ...majorPublications.map(publicationSitemapEntry),
     ],
   },
@@ -1475,6 +1542,7 @@ if (localAssets) {
 }
 
 console.log(
-  `Built ${publications.length + Object.keys(bibliographicAliases).length + 2} pages in ${path.relative(projectRoot, dist)}`,
+  `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 

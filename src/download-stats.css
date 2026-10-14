@@ -1,0 +1,9 @@
+.download-statistics { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px; }
+.download-statistics h1 { font-size: clamp(1.8rem, 4vw, 3rem); }
+.download-statistics h2 { margin-top: 2.5rem; }
+.download-statistics p { line-height: 1.85; }
+.download-statistics table { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+.download-statistics th, .download-statistics td { padding: 12px; border-bottom: 1px solid #c7ccca; text-align: left; vertical-align: top; }
+.download-statistics th:last-child, .download-statistics td:last-child { text-align: right; white-space: nowrap; }
+.download-statistics a { text-underline-offset: .2em; }
+.download-statistics .stats-table-wrap { overflow-x: auto; }

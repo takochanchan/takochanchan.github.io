@@ -1,0 +1,64 @@
+name: Update public download statistics
+
+on:
+  schedule:
+    - cron: '17 20 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: analytics-statistics
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: vars.GA4_STATS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Export aggregate data only
+        env:
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
+          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+        run: node scripts/export-analytics.mjs
+      - name: Publish aggregate snapshot and rebuild Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const content = await readFile('analytics-data/downloads.json', 'utf8');
+          if (JSON.parse(content).status !== 'ready') process.exit(0);
+          const base = `https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}`;
+          const headers = { Authorization: `Bearer ${process.env.GH_TOKEN}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', 'X-GitHub-Api-Version': '2022-11-28' };
+          const endpoint = `${base}/contents/analytics-data/downloads.json`;
+          let committed = false;
+          for (let attempt = 0; attempt < 3; attempt++) {
+            const response = await fetch(`${endpoint}?ref=main`, { headers });
+            if (!response.ok) throw new Error(`Cannot read current statistics (${response.status})`);
+            const current = await response.json();
+            const currentText = Buffer.from(current.content, 'base64').toString('utf8');
+            const currentReport = JSON.parse(currentText);
+            if (currentReport.updatedAt && currentReport.updatedAt > JSON.parse(content).updatedAt) process.exit(0);
+            if (currentText === content) { committed = true; break; }
+            const write = await fetch(endpoint, {
+              method: 'PUT', headers,
+              body: JSON.stringify({ branch: 'main', sha: current.sha, message: 'Update public download aggregates', content: Buffer.from(content).toString('base64') }),
+            });
+            if (write.status === 409) continue;
+            if (!write.ok) throw new Error(`Cannot publish statistics (${write.status})`);
+            committed = true; break;
+          }
+          if (!committed) throw new Error('Concurrent statistics update; keep the existing file');
+          // A GITHUB_TOKEN commit does not trigger a push workflow.
+          const deployed = await fetch(`${base}/actions/workflows/pages.yml/dispatches`, {
+            method: 'POST', headers, body: JSON.stringify({ ref: 'main' }),
+          });
+          if (!deployed.ok) throw new Error(`Cannot start Pages deployment (${deployed.status})`);
+          NODE
