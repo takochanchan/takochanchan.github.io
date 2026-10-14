@@ -35,17 +35,34 @@ Until the following setup is complete, `/stats/` shows an unpublished-data state
 it does not represent unavailable data as zero downloads.
 
 1. In Google Cloud, enable Google Analytics Data API and create a dedicated
-   service account. Give that account only Viewer access to the takochan GA4
-   property. Do not grant GA access to the public or unrelated users.
-2. Set repository Actions variable `GA4_PROPERTY_ID` to the numeric property ID
-   (not the `G-` measurement ID). The GA property timezone must be Asia/Tokyo.
-3. Save the service account JSON key in repository Actions secret
-   `GA4_SERVICE_ACCOUNT_JSON`. Never commit, paste into website code, or log it.
-   A future keyless Workload Identity configuration can replace this credential.
-4. Set repository Actions variable `GA4_STATS_ENABLED` to `true`, then run
-   `Update public download statistics`. It subsequently runs daily at 05:17 JST.
-5. Confirm `archive_download` in GA Realtime using an ordinary browser (not
-   WebDriver). Allow normal GA processing before expecting the public report.
+   `takochan-stats` service account. Give it only Viewer access to the takochan
+   GA4 property. The GA property timezone must be Asia/Tokyo.
+2. Use Workload Identity Federation through that service account. Do not weaken
+   an organization policy to create a JSON key. The workflow now uses short-lived
+   OAuth access tokens, with only the `analytics.readonly` scope.
+3. In Google Cloud Shell, run the reviewed `scripts/setup-analytics-wif.py` with
+   `--project YOUR_PROJECT_ID --property-id YOUR_NUMERIC_GA4_ID`. The operator
+   must be allowed to enable APIs, configure federation, and change this service
+   account's IAM policy. The script does not create keys, change organization
+   policies, or grant project-wide roles.
+4. Register the four repository Actions Variables printed by that script:
+   `GA4_PROPERTY_ID`, `GA4_SERVICE_ACCOUNT_EMAIL`, `GA4_WIF_PROVIDER`, and
+   finally `GA4_STATS_ENABLED=true`. No service account JSON secret is needed.
+5. Allow up to five minutes for Google IAM changes to propagate, then run
+   `Update public download statistics` on `main`. It subsequently runs daily
+   at 05:17 JST. Even on the first day, it checks actual report access and the
+   property timezone, while retaining the pending public report until a completed
+   reporting day exists.
+6. Confirm `archive_download` in GA Realtime using an ordinary browser.
+   Allow normal GA processing before expecting the public report.
+
+The dedicated provider restricts federation to GitHub repository ID
+`1310601565`, owner ID `308618393`, branch `refs/heads/main`, the exact
+`analytics-stats.yml` workflow, and only `schedule` or `workflow_dispatch`
+events. Forks, pull requests, other workflows, and other branches are excluded.
+The service-account binding uses only `roles/iam.workloadIdentityUser`, on
+that service account only. Existing provider settings that differ are rejected
+rather than silently broadened. The setup script can resume compatible setup.
 
 The exporter queries daily file counts from 2026-10-14 through yesterday,
 paginated and filtered to the dedicated event and site hostname. It rejects

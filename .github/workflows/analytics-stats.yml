@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   actions: write
+  id-token: write
 
 concurrency:
   group: analytics-statistics
@@ -15,17 +16,29 @@ concurrency:
 
 jobs:
   update:
-    if: vars.GA4_STATS_ENABLED == 'true'
+    if: vars.GA4_STATS_ENABLED == 'true' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Authenticate without a service account key
+        id: google-auth
+        uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3
+        with:
+          workload_identity_provider: ${{ vars.GA4_WIF_PROVIDER }}
+          service_account: ${{ vars.GA4_SERVICE_ACCOUNT_EMAIL }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/analytics.readonly
+          access_token_lifetime: 900s
+          create_credentials_file: false
+          export_environment_variables: false
       - name: Export aggregate data only
         env:
           GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}
-          GA4_SERVICE_ACCOUNT_JSON: ${{ secrets.GA4_SERVICE_ACCOUNT_JSON }}
+          GA4_ACCESS_TOKEN: ${{ steps.google-auth.outputs.access_token }}
         run: node scripts/export-analytics.mjs
       - name: Publish aggregate snapshot and rebuild Pages
         env:
