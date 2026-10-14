@@ -1,7 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { catalogueFiles, reportCsv } from "./analytics-report.mjs";
+import { catalogueFiles } from "./analytics-report.mjs";
 import {
   publications as publicationUnits,
   shortPublicationAuthors,
@@ -1343,7 +1343,7 @@ const statisticsPage = documentShell({
   <p data-stats-status role="status">集計データを確認しています。</p>
   <noscript><p>集計表の表示にはJavaScriptが必要です。</p></noscript>
   <div data-stats-content hidden>
-    <p><a href="/stats/downloads.csv" download>日別・資料別の集計CSV</a> · <a href="/stats/downloads.json">集計JSON</a></p>
+    <p><a href="/stats/downloads.json">集計JSON</a></p>
     <h2>資料別の保存件数</h2>
     <div class="stats-table-wrap"><table><thead><tr><th scope="col">資料・分冊</th><th scope="col">形式</th><th scope="col">件数</th></tr></thead><tbody data-stats-files></tbody></table></div>
     <h2>月別の保存件数</h2>
@@ -1400,7 +1400,6 @@ await Promise.all([
   writeFile(path.join(dist, "about", "index.html"), aboutPage),
   writeFile(path.join(dist, "stats", "index.html"), statisticsPage),
   writeFile(path.join(dist, "stats", "downloads.json"), JSON.stringify(analyticsReport) + "\n"),
-  writeFile(path.join(dist, "stats", "downloads.csv"), reportCsv(analyticsReport)),
   cp(path.join(projectRoot, "src", "analytics.mjs"), path.join(dist, "analytics.mjs")),
   cp(path.join(projectRoot, "src", "download-stats.mjs"), path.join(dist, "download-stats.mjs")),
   cp(path.join(projectRoot, "src", "download-stats.css"), path.join(dist, "download-stats.css")),

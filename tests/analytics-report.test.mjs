@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { catalogueFiles, reportRecords, reportCsv } from "../scripts/analytics-report.mjs";
+import { catalogueFiles, reportRecords } from "../scripts/analytics-report.mjs";
 
 const base = "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/";
 const catalogue = [{ slug: "book", title: "資料", volumes: [
@@ -25,12 +25,4 @@ test("uses daily aggregate counts and rejects missing mappings or lossy reports"
     { metadata: { subjectToThresholding: true } },
     { metadata: { dataLossFromOtherRow: true } },
   ]) assert.throws(() => reportRecords([page], files));
-});
-test("CSV includes public aggregates, quotes titles, and prevents spreadsheet formulas", () => {
-  const csv = reportCsv({ files: [{ ...files[0], title: '=HYPERLINK("bad")' }], records: [
-    { date: "2026-10-14", key: files[0].key, count: 2 },
-  ] });
-  assert.ok(csv.includes("'=HYPERLINK"));
-  assert.ok(csv.includes('"2026-10-14"'));
-  assert.ok(!csv.includes("client_id"));
 });

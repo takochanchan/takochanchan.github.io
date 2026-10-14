@@ -72,7 +72,8 @@ on errors. Dates and counts can be revised by GA processing.
 Only daily aggregate file counts and public catalogue metadata are exported to
 `analytics-data/downloads.json`. No IP, client ID, session ID, exact event time,
 Google account, property ID or credentials are exported. The normal Pages build
-publishes JSON and CSV; existing build, test and search gates remain in force.
+publishes JSON for the statistics display; CSV export is not provided.
+Existing build, test and search gates remain in force.
 The schedule performs a SHA-checked update of that one file and explicitly starts
 the existing Pages workflow. It never force-pushes or edits publication assets.
 

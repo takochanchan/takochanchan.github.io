@@ -45,16 +45,3 @@ export function reportRecords(pages, files) {
   }
   return [...records.values()].sort((a, b) => a.date.localeCompare(b.date) || a.key.localeCompare(b.key));
 }
-
-export function reportCsv(report) {
-  const files = new Map(report.files.map(file => [file.key, file]));
-  // Quote every cell and neutralize spreadsheet formula prefixes in text.
-  const quote = value => '"' + String(value).replace(/^[=+@-]/, "'$&").replaceAll('"', '""') + '"';
-  const rows = [["date", "publication", "volume", "format", "download_requests"]];
-  for (const record of report.records) {
-    const file = files.get(record.key);
-    if (!file) throw new Error("CSV file identifier is missing");
-    rows.push([record.date, file.title, file.volumeLabel, file.format, record.count]);
-  }
-  return "\uFEFF" + rows.map(row => row.map(quote).join(",")).join("\r\n") + "\r\n";
-}
