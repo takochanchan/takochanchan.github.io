@@ -3,6 +3,12 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "medina-imprenta-guatemala-1910",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ホセ・トリビオ・メディナ"
+    },
+    {
       "slug": "robles-diario-sucesos-notables-1853-vol-1",
       "recordClass": "major-work",
       "searchShard": "002",

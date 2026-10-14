@@ -875,6 +875,7 @@ const groupedPublications = publicationGroupDefinitions.map((definition) => {
     regions: unique(members.flatMap((member) => member.regions)),
     languages: unique(members.flatMap((member) => member.languages)),
     tags: unique(members.flatMap((member) => member.tags)),
+    searchAliases: unique(members.flatMap((member) => member.searchAliases ?? [])),
     memberSlugs: [...definition.memberSlugs],
     volumes: members,
   };
@@ -943,6 +944,7 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+
 
 
 

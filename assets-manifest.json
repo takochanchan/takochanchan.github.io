@@ -8268,6 +8268,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.pdf",
+      "size": 31889566,
+      "sha256": "c3afdc5c1c405724c844b861894a16e8b840a0e5ab27470120fcd08a1d367351"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.epub",
+      "size": 84809636,
+      "sha256": "2bf353037f83ed8742320413ef3c4dff0cf20751068cb80b18f37aeda65999ed"
     }
   ]
 }

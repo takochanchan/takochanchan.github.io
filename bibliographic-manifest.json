@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "medina-imprenta-guatemala-1910",
+      "title": "グアテマラの印刷史",
+      "originalTitle": "La imprenta en Guatemala, 1660–1821",
+      "author": "ホセ・トリビオ・メディナ",
+      "originalAuthor": "José Toribio Medina",
+      "originalPublication": "Santiago de Chile: Impreso en casa del autor, 1910.",
+      "year": 1910,
+      "sourceEdition": "José Toribio Medina, La imprenta en Guatemala, 1660–1821. Santiago de Chile: Impreso en casa del autor, 1910. lxxxv, 696 p. 主底本：MC0072099。照合・別本巻末広告：Wellcome Library所蔵、Internet Archive公開の同年版（b24853331）。",
+      "sourceProvider": "チリ国立図書館（Biblioteca Nacional de Chile）所蔵・Memoria Chilena公開。資料番号MC0072099。",
+      "rights": "原著および1910年刊本は著作権の保護期間を満了しています。底本・図版：チリ国立図書館（Biblioteca Nacional de Chile）所蔵、Memoria Chilena公開、MC0072099。作品ページの権利表示はPatrimonio cultural común（パブリックドメイン）で、著者名の明記と作品の同一性を尊重して利用します。利用案内：https://www.memoriachilena.gob.cl/602/w3-article-123838.html 。同サイトの解説記事に付されたCC BY-SA 3.0はデジタル資料を適用対象から除いています。照合・別本巻末広告に参照したWellcome Library所蔵、Internet Archive公開本（b24853331）の取得メタデータはRightsStatements.orgのIn Copyright（InC 1.0）を参照しています。この権利表示は利用許諾ライセンスではありません。補助本：https://archive.org/details/b24853331 ／ 権利表示：https://rightsstatements.org/page/InC/1.0/?language=en",
+      "publishedDate": "2026-10-14",
+      "updatedDate": "2026-10-14",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.memoriachilena.gob.cl/602/w3-article-348803.html"
+      }
+    },
+    {
       "slug": "robles-diario-sucesos-notables-1853-vol-1",
       "title": "注目すべき出来事の日記 第1巻",
       "originalTitle": "Diario de sucesos notables",
