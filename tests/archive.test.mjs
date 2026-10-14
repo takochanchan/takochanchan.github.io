@@ -52,6 +52,7 @@ const expectedDocumentCollections = expectedCatalogueCount("document-collection"
 
 test("administrative and diplomatic documents occupy their own collection", async () => {
   const selected = new Set([
+    "diez-noticias-sacras-reales-mss3023-vol-1",
     "cehm-manuscritos-betlemitas-xi-5",
     "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
     "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
