@@ -144,11 +144,16 @@
 
   const params = new URLSearchParams(location.search);
   const requestedPageSize = params.get("perPage") || storedPageSize;
+  const attributeAliases = window.ARCHIVE_ATTRIBUTE_ALIASES ?? {};
+  const canonicalFilter = (field, value) => {
+    const aliases = attributeAliases[field] ?? {};
+    return Object.hasOwn(aliases, value) ? aliases[value] : value;
+  };
   const state = {
     q: params.get("q") || "",
-    type: params.get("type") || "",
-    region: params.get("region") || "",
-    language: params.get("language") || "",
+    type: canonicalFilter("types", params.get("type") || ""),
+    region: canonicalFilter("regions", params.get("region") || ""),
+    language: canonicalFilter("languages", params.get("language") || ""),
     era: params.get("era") || "",
     sort: params.get("sort") || "year-asc",
     perPage: pageSizeOptions.has(requestedPageSize)
@@ -206,6 +211,7 @@
       ...item.regions,
       ...item.languages,
       ...item.tags,
+      ...(item.searchAliases || []),
       ...(item.volumes || []).flatMap((volume) => [
         volume.title,
         volume.originalTitle,
@@ -546,3 +552,4 @@
     });
   }
 })();
+

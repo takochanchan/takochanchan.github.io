@@ -2,6 +2,7 @@ import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { catalogueFiles } from "./analytics-report.mjs";
+import { attributeSpellingAliases } from "../src/attribute-spelling.mjs";
 import {
   publications as publicationUnits,
   shortPublicationAuthors,
@@ -37,6 +38,7 @@ const site = {
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
 const assetVersion = "20261004-document-collections";
+const catalogueScriptVersion = `${assetVersion}-spelling-20261014`;
 const analyticsVersion = "20261014-ga4-v1";
 catalogueFiles(publications); // Validate stable analytics IDs before publishing.
 
@@ -176,6 +178,7 @@ const archivePublications = publications.map((item) => ({
   regions: item.regions,
   languages: item.languages,
   tags: item.tags,
+  searchAliases: item.searchAliases,
   year: item.year,
   series: item.series,
   extent: item.extent,
@@ -632,6 +635,7 @@ ${fulltextDialog()}
 ${footer()}`,
   scripts: `
 <script>window.ARCHIVE_PUBLICATIONS=${jsonForScript(archivePublications)};</script>
+<script>window.ARCHIVE_ATTRIBUTE_ALIASES=${jsonForScript(attributeSpellingAliases)};</script>
 <script>window.BIBLIOGRAPHIC_ALIASES=${jsonForScript(bibliographicAliases)};</script>
 <script>
 window.FULLTEXT_SEARCH_CONFIG={
@@ -644,7 +648,7 @@ window.FULLTEXT_SEARCH_CONFIG={
   preferEmbedded:false
 };
 </script>
-<script src="/archive.js?v=${assetVersion}" defer></script>
+<script src="/archive.js?v=${catalogueScriptVersion}" defer></script>
 <script src="/fulltext-search.js?v=${assetVersion}-bibliographic-counts" defer></script>`,
 });
 
@@ -1543,5 +1547,6 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 
 

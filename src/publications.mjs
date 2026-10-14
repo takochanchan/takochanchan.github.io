@@ -1,3 +1,4 @@
+import { normalizePublicationAttributes } from "./attribute-spelling.mjs";
 import { cuevasPublicationRecords, cuevasPublicationMetadata } from "./cuevas-publications.mjs";
 import { garciaDocumentosPublicationRecords, garciaDocumentosPublicationMetadata } from "./garcia-documentos-publication.mjs";
 import { castroPublicationRecords, castroPublicationMetadata } from "./castro-publications.mjs";
@@ -12184,7 +12185,7 @@ export const publications = publicationRecords.map((item) => {
     pdfUrl: releaseAssetUrl(item.pdf),
     epubUrl: releaseAssetUrl(item.epub),
   };
-});
+}).map(normalizePublicationAttributes);
 
 if (canonicalBibliography.size !== publications.length) {
   throw new Error(
@@ -12242,6 +12243,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 
