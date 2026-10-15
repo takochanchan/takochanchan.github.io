@@ -8358,6 +8358,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
       "size": 2688698,
       "sha256": "82ac18cfae467496665f30aa33832a77b19a102239d2f7cc83eafda5f126cfce"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
+      "size": 1533335,
+      "sha256": "f1886d09f19fbd3aedc63b83c0b669147029e2e3a9f21a0ce952f85f9170a359"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
+      "size": 15197588,
+      "sha256": "706196af818ac7f19168316866df1cd9110d17b7fd33dbf1e00de094ee47e62b"
     }
   ]
 }

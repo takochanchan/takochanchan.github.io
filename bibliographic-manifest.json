@@ -8661,6 +8661,25 @@
         "status": "online",
         "url": "https://archive.org/details/documentosindi07garc"
       }
+    },
+    {
+      "slug": "mencos-cronicas-antigua-guatemala-1894",
+      "title": "アンティグア・グアテマラ年代記",
+      "originalTitle": "Crónicas de la Antigua Guatemala",
+      "author": "アグスティン・メンコス・フランコ",
+      "originalAuthor": "Agustín Mencos Franco",
+      "year": 1894,
+      "originalPublication": "Guatemala: Tipografía El Comercio, 1894.",
+      "sourceEdition": "Agustín Mencos Franco, Crónicas de la Antigua Guatemala, Guatemala: Tipografía El Comercio, 1894.",
+      "sourceProvider": "スペイン高等学術研究院（CSIC）・Biblioteca Americanista de Sevilla所蔵、電子図書館Simurg公開本。",
+      "rights": "1894年刊の原著本文は著作権保護期間を満了しています。デジタル資料の提供元はCSIC／Biblioteca Americanista de Sevillaです。Simurgの書誌・IIIFメタデータには利用条件としてCC BY-NC-SA 4.0が示されています。利用条件：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "publishedDate": "2026-10-15",
+      "updatedDate": "2026-10-15",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/CSIC000234520/cronicas-de-la-antigua-guatemala"
+      }
     }
   ],
   "works": [

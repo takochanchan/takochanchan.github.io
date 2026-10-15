@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "aa373e26d86e239cc55fbe39f72da4f81cd94495",
+  "archive_commit": "b2a9bb86e5f385871fd3eae92e598151c08913a0",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -390,7 +390,8 @@
     "diez-noticias-sacras-reales-mss3023-vol-1": "publications/diez-noticias-sacras-reales-mss3023-vol-1/master.docx",
     "garcia-documentos-ineditos-mexico-v07-1906": "publications/garcia-documentos-ineditos-mexico-v07-1906/master.docx",
     "garcia-documentos-ineditos-mexico-v08-1906": "publications/garcia-documentos-ineditos-mexico-v08-1906/master.docx",
-    "garcia-documentos-ineditos-mexico-v09-1906": "publications/garcia-documentos-ineditos-mexico-v09-1906/master.docx"
+    "garcia-documentos-ineditos-mexico-v09-1906": "publications/garcia-documentos-ineditos-mexico-v09-1906/master.docx",
+    "mencos-cronicas-antigua-guatemala-1894": "publications/mencos-cronicas-antigua-guatemala-1894/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
