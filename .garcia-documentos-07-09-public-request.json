@@ -44,5 +44,6 @@
       "cbc4aaf42f7ff0b788f112f4611f67be05361fc4"
     ]
   },
-  "verified_archive_commit": "aa373e26d86e239cc55fbe39f72da4f81cd94495"
+  "verified_archive_commit": "aa373e26d86e239cc55fbe39f72da4f81cd94495",
+  "revision": "fix-document-collection-registration"
 }
