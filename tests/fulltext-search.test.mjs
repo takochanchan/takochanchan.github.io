@@ -21,6 +21,8 @@ import {
   snippetsFor,
 } from "../src/fulltext-search-core.mjs";
 
+import { expectedRecords, publicationCounts } from "./helpers/publication-catalogue.mjs";
+
 const browserScript = await readFile(
   new URL("../src/fulltext-search.js", import.meta.url),
   "utf8",
@@ -43,8 +45,7 @@ const remoteShardVerifierScript = await readFile(
 
 test("shard verification accepts three classes and rejects misplaced documents", async () => {
   const root = fileURLToPath(new URL("../", import.meta.url));
-  const fixture = JSON.parse(await readFile(path.join(root, "tests/fixtures/publication-catalogue.json"), "utf8"));
-  const records = fixture.records.filter(item => item.searchShard === "002");
+  const records = expectedRecords.filter(item => item.searchShard === "002");
   const archive = JSON.parse(await readFile(path.join(root, "master-archive.json"), "utf8"));
   const digest = async filename => createHash("sha256").update(await readFile(path.join(root, filename))).digest("hex");
   const metadata = {
@@ -52,12 +53,10 @@ test("shard verification accepts three classes and rejects misplaced documents",
     assetManifestSha256: await digest("assets-manifest.json"),
     bibliographicManifestSha256: await digest("bibliographic-manifest.json"),
     works: records.length, workSlugs: records.map(item => item.slug),
-    books: records.filter(item => item.recordClass === "major-work").length,
-    papers: records.filter(item => item.recordClass === "short-work").length,
-    documentCollections: records.filter(item => item.recordClass === "document-collection").length,
+    ...publicationCounts(records),
     chunks: 0,
   };
-  assert.equal(metadata.documentCollections, 16); // Includes MSS/3023 and Garcia volumes VII–IX.
+  assert.ok(metadata.documentCollections > 0, "document misclassification cases must exercise a document collection");
   const directory = await mkdtemp(path.join(tmpdir(), "document-count-verification-"));
   try {
     await writeFile(path.join(directory, "document-map.json"), "{}");
@@ -72,6 +71,19 @@ test("shard verification accepts three classes and rejects misplaced documents",
     await verify(metadata, "Search index contains too few text chunks");
     await verify({ ...metadata, papers: metadata.papers + metadata.documentCollections, documentCollections: 0 },
       "Search index book/paper/document collection counts are inconsistent");
+    for (const destination of ["books", "papers"]) {
+      await verify({ ...metadata, [destination]: metadata[destination] + 1,
+        documentCollections: metadata.documentCollections - 1 },
+      "Search index book/paper/document collection counts are inconsistent");
+    }
+    await verify({ ...metadata, works: metadata.works - 1, workSlugs: metadata.workSlugs.slice(1) },
+      `Search index has ${metadata.works - 1}/${metadata.works} works`);
+    await verify({ ...metadata, works: metadata.works + 1, workSlugs: [...metadata.workSlugs, "unregistered-volume"] },
+      `Search index has ${metadata.works + 1}/${metadata.works} works`);
+    await verify({ ...metadata, workSlugs: ["unregistered-volume", ...metadata.workSlugs.slice(1)] },
+      "Search index slug set does not match the public catalogue");
+    await verify({ ...metadata, workSlugs: [metadata.workSlugs[1], ...metadata.workSlugs.slice(1)] },
+      "Search index slug set does not match the public catalogue");
   } finally {
     await rm(directory, { recursive: true, force: true });
   }
@@ -447,4 +459,3 @@ test("Pagefind groups small documents and result data loads progressively", () =
     /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= 1/,
   );
 });
-
