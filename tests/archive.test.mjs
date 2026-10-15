@@ -67,6 +67,9 @@ test("administrative and diplomatic documents occupy their own collection", asyn
     "garcia-documentos-ineditos-mexico-v04-1906",
     "garcia-documentos-ineditos-mexico-v05-1906",
     "garcia-documentos-ineditos-mexico-v06-1906",
+    "garcia-documentos-ineditos-mexico-v07-1906",
+    "garcia-documentos-ineditos-mexico-v08-1906",
+    "garcia-documentos-ineditos-mexico-v09-1906",
   ]);
   assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
   assert.deepEqual(new Set(expectedDocuments.map(item => item.slug)), selected);
@@ -3174,14 +3177,14 @@ test("Garcia's 36-volume series separates published volumes from future volumes"
   assert.ok(series);
   assert.equal(series.recordClass, "document-collection");
   assert.deepEqual(series.seriesVolumes.map(volume => volume.number), Array.from({length: 36}, (_, index) => index + 1));
-  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
   assert.equal(new Set(series.volumes.map(volume => volume.originalAuthor)).size, 4);
   for (const member of series.memberSlugs) assert.equal(bibliographicAliases[member], series.slug);
   const html = await readFile(path.join(dist, "publications", series.slug, "index.html"), "utf8");
   assert.equal((html.match(/data-series-volume="/g) ?? []).length, 36);
-  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, 6);
-  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 30);
-  assert.match(html, /公開6巻/);
+  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, 9);
+  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 27);
+  assert.match(html, /公開9巻/);
   assert.match(html, /ロバーツ図書館/);
   assert.match(html, /CC等のライセンス指定がありません/);
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);

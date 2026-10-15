@@ -45,5 +45,5 @@
     ]
   },
   "verified_archive_commit": "aa373e26d86e239cc55fbe39f72da4f81cd94495",
-  "revision": "fix-document-collection-registration"
+  "revision": "register-volumes-and-update-series-expectations"
 }
