@@ -226,6 +226,117 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 6
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v07-1906",
+    "title": "ドン・フアン・デ・パラフォックス・イ・メンドサ",
+    "originalTitle": "Don Juan de Palafox y Mendoza. Su virreinato en la Nueva España, sus contiendas con los PP. Jesuítas, sus partidarios en Puebla, sus apariciones, sus escritos escogidos, etc., etc.",
+    "subtitle": "史料集第7巻・1906年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 234頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "プエブラ司教・ヌエバ・エスパーニャ副王フアン・デ・パラフォックス・イ・メンドサに関する第7巻です。副王としての統治、イエズス会との対立、プエブラの支持者、出現譚と、その書簡・報告・詩文を収めます。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 234,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "パラフォックス"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 7
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v08-1906",
+    "title": "レオナルド・マルケス将軍の軍事裁判記録",
+    "originalTitle": "Causa instruida contra el general Leonardo Márquez por graves delitos del orden militar. Publícase por primera vez.",
+    "subtitle": "史料集第8巻・1906年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 221頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "レオナルド・マルケス将軍に対する軍事裁判の記録を収める第8巻です。軍紀違反をめぐる命令・供述・審理と、関係する軍歴や附属文書を扱います。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 221,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "レオナルド・マルケス"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 8
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v09-1906",
+    "title": "メキシコの聖職者と独立戦争",
+    "originalTitle": "El clero de México y la guerra de Independencia. Documentos del Arzobispado de México.",
+    "subtitle": "史料集第9巻・1906年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1906",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1906年",
+    "year": 1906,
+    "extent": "日本語版PDF 234頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "メキシコ独立戦争期の聖職者と教会に関する第9巻です。メキシコ大司教区の文書により、反乱への対応、聖職者の関与と、教会当局・世俗当局の交渉をたどります。1906年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+    "pageCount": 234,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "独立戦争"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 9
   }
 ];
 
@@ -277,5 +388,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archiveのこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。",
     "publishedDate": "2026-10-13",
     "updatedDate": "2026-10-13"
+  },
+  "garcia-documentos-ineditos-mexico-v07-1906": {
+    "sourceEdition": "Genaro García (ed.), Don Juan de Palafox y Mendoza. Su virreinato en la Nueva España, sus contiendas con los PP. Jesuítas, sus partidarios en Puebla, sus apariciones, sus escritos escogidos, etc., etc. Documentos inéditos ó muy raros para la historia de México, tomo VII, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi07garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archive公開のこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。Internet Archiveは掲載物の権利状態を保証せず、利用者自身に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14"
+  },
+  "garcia-documentos-ineditos-mexico-v08-1906": {
+    "sourceEdition": "Genaro García (ed.), Causa instruida contra el general Leonardo Márquez por graves delitos del orden militar. Publícase por primera vez. Documentos inéditos ó muy raros para la historia de México, tomo VIII, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi07garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archive公開のこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。Internet Archiveは掲載物の権利状態を保証せず、利用者自身に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14"
+  },
+  "garcia-documentos-ineditos-mexico-v09-1906": {
+    "sourceEdition": "Genaro García (ed.), El clero de México y la guerra de Independencia. Documentos del Arzobispado de México. Documentos inéditos ó muy raros para la historia de México, tomo IX, México: Librería de la Vda. de Ch. Bouret, 1906.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi07garc",
+    "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archive公開のこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。Internet Archiveは掲載物の権利状態を保証せず、利用者自身に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-14",
+    "updatedDate": "2026-10-14"
   }
 };

@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "size": 15208961,
+      "sha256": "0e6f9b334ccbaded380931e92ae89dba619d7105b1532a6953d641851bd4a311"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2289302,
+      "sha256": "bb9fe2abe146a0f985779f07b149ffa38584aefd4e2624cc5cad237dab32747d"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "size": 15186527,
+      "sha256": "16177943fcb0611b3aa42e4215f30e6ba615794aaa13f0de985fcd9e16726827"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2543339,
+      "sha256": "ec4a04e91df424582deff91cb7d4c7016bed5f02d786ad792c1e69246da28f69"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "size": 15204630,
+      "sha256": "0c42d61eb8f3c1fa7dfe0b9fe86f412414315ff9230c33d10cb07049169a5094"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "size": 2688698,
+      "sha256": "82ac18cfae467496665f30aa33832a77b19a102239d2f7cc83eafda5f126cfce"
+    }
+  ],
+  "bundle": {
+    "size": 50320225,
+    "sha256": "9c1cc5cb621ce80ce612d32099f1259727c2d23d4f7986444809a2e538ef2963",
+    "chunks": [
+      "56f16900e0ecd404ddc580cb50478f99285fc3a8",
+      "5b7986bd3931a5a5c9f318ad7394e997a5d3655e",
+      "bdc2d9649b56bb750a0058ea5320ff0c512cb1f3",
+      "151a149302ecf92a6039d3b112ad1439561155bd",
+      "265c0d71e5b3a6593fd3ddff50f1955a6e650bb3",
+      "7da81bdef4ba73619358293b2a6bb35e086c132d",
+      "cbc4aaf42f7ff0b788f112f4611f67be05361fc4"
+    ]
+  },
+  "verified_archive_commit": "aa373e26d86e239cc55fbe39f72da4f81cd94495"
+}

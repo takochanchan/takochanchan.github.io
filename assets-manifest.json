@@ -8304,6 +8304,60 @@
       "url": "https://takochanchan.github.io/publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
       "size": 29034,
       "sha256": "4fa9d46da78fa68251d25e968fc741fe0934fccece9588551b8807602f43eb88"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
+      "size": 57660,
+      "sha256": "b22fbd7582c433b853ef7b25e6918db4021906be9065dfc48e3d589f989af02b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "size": 15208961,
+      "sha256": "0e6f9b334ccbaded380931e92ae89dba619d7105b1532a6953d641851bd4a311"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2289302,
+      "sha256": "bb9fe2abe146a0f985779f07b149ffa38584aefd4e2624cc5cad237dab32747d"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
+      "size": 59594,
+      "sha256": "5b91504f9f7a7795fee912a84723d510ffcba118891a4fd693f9116f2e489e1b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "size": 15186527,
+      "sha256": "16177943fcb0611b3aa42e4215f30e6ba615794aaa13f0de985fcd9e16726827"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2543339,
+      "sha256": "ec4a04e91df424582deff91cb7d4c7016bed5f02d786ad792c1e69246da28f69"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
+      "size": 57879,
+      "sha256": "09398985bf4df07ed8c70c9d5f0d740bf41efd834b9424ae3207fb01359dcc36"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "size": 15204630,
+      "sha256": "0c42d61eb8f3c1fa7dfe0b9fe86f412414315ff9230c33d10cb07049169a5094"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "size": 2688698,
+      "sha256": "82ac18cfae467496665f30aa33832a77b19a102239d2f7cc83eafda5f126cfce"
     }
   ]
 }
