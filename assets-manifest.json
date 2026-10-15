@@ -8370,6 +8370,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
       "size": 15197588,
       "sha256": "706196af818ac7f19168316866df1cd9110d17b7fd33dbf1e00de094ee47e62b"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
+      "size": 86459,
+      "sha256": "e44d2c4cfb4fbb72f09a1206c883212657c9a3527ec377c0a653e2abab3c5610"
     }
   ]
 }
