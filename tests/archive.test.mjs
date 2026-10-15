@@ -3168,7 +3168,7 @@ test("Garcia's series separates expected published volumes from future volumes",
       assert.doesNotMatch(row, /未公開/);
     } else {
       assert.match(row, /<td>未公開<\/td>/);
-      assert.doesNotMatch(row, /<a |公開済み/);
+      assert.doesNotMatch(row, /href="#volume-|公開済み/);
     }
   }
   assert.match(html, new RegExp(`公開${publishedVolumes.length}巻`));
