@@ -22,7 +22,9 @@
 - 調査用workflow: .github/workflows/read-detailed-overview-sources.yml
 - 原資料抜粋artifact: run 38866525203, artifact 12031198357, detailed-overview-source-material。各ファイルにEPUBのURLとSHA-256を記録。
 - drafts.json に本文・目次を参照した22件の原稿を保存。855〜916字。未公開。
-- 残る446件の執筆、全原稿の確認、従来概要を保持するUIの検証、公開が未完了。
+- ユーザーの明示許可により6担当で残る446件を分担。各担当の原稿をagent-1.json〜agent-6.jsonに逐次保存。字数・文体調整と本文照合の途中で、未公開。
+- 抽出が2000字未満だった28件は、長い段落やp以外の本文を落とさないようEPUBのbody全文を補足取得する。
+- 全原稿の確認、従来概要を保持するUIの検証、公開が未完了。
 - 前回の短い publication-overviews.json は採用しない。
 
 ## 実装方針
