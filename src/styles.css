@@ -1340,68 +1340,11 @@ select {
   letter-spacing: 0.08em;
 }
 
-.publication-overview {
-  min-width: 0;
+.publication-hero__description {
   max-width: 740px;
   margin: 0 0 23px;
-}
-
-.publication-overview > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 44px;
-  width: fit-content;
-  max-width: 100%;
-  cursor: pointer;
-  list-style: none;
-  font-size: 13px;
-}
-
-.publication-overview > summary::-webkit-details-marker {
-  display: none;
-}
-
-.publication-overview > summary:focus-visible {
-  outline: 2px solid var(--teal);
-  outline-offset: 4px;
-}
-
-.publication-overview__hide,
-.publication-overview[open] .publication-overview__show {
-  display: none;
-}
-
-.publication-overview[open] .publication-overview__hide {
-  display: inline;
-}
-
-.publication-overview__icon::before {
-  content: "+";
-}
-
-.publication-overview[open] .publication-overview__icon::before {
-  content: "−";
-}
-
-.publication-overview__body {
-  padding: 16px 0 0;
   color: #405053;
-  font-size: 15px;
   line-height: 1.95;
-  overflow-wrap: anywhere;
-}
-
-.publication-overview__body p {
-  margin: 0;
-}
-
-.volume-file > .publication-overview {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  max-width: none;
-  margin: 0;
 }
 
 .publication-hero .tag-list {
@@ -2178,4 +2121,3 @@ select {
 .series-volume-inventory th, .series-volume-inventory td { padding: .65rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line, #d7dddb); }
 .series-volume-inventory th:first-child, .series-volume-inventory td:nth-child(3), .series-volume-inventory td:nth-child(4) { white-space: nowrap; }
 .series-volume-inventory td:nth-child(2) { min-width: 13rem; overflow-wrap: anywhere; }
-
