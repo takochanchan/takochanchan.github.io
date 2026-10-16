@@ -56,6 +56,24 @@
       "sha256": "edb13a097d37f78d42406fe68d498cc1eb002bb24dcef1f26a3cc936df6875fe"
     },
     {
+      "path": "publications/arevalo-documentos-antiguos-guatemala-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arevalo-documentos-antiguos-guatemala-1857/cover.jpg",
+      "size": 52620,
+      "sha256": "d4113fbf29e26b6658c91708d661991f83cb9d5d60e4cffb6bae4073c30ce3b4"
+    },
+    {
+      "path": "publications/arevalo-documentos-antiguos-guatemala-1857/Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.epub",
+      "size": 334591,
+      "sha256": "2a9186b78fa1e34cdf45890a02a4e10008e8294863e270a85d20ca97aa15f4c2"
+    },
+    {
+      "path": "publications/arevalo-documentos-antiguos-guatemala-1857/Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.pdf",
+      "size": 2121927,
+      "sha256": "ce2ab2793a6a53ed7eac82231db2191f11a3050e33994be1ccb43dcf35fc828a"
+    },
+    {
       "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/arthes_peten_1893_ja.epub",
       "size": 96542,
@@ -2612,6 +2630,24 @@
       "sha256": "834fd90c8c41bca2e881ea16b3ffa8416abc034cee0fc4a1b5524e5c1c4a6e09"
     },
     {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
+      "size": 29034,
+      "sha256": "4fa9d46da78fa68251d25e968fc741fe0934fccece9588551b8807602f43eb88"
+    },
+    {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub",
+      "size": 6112653,
+      "sha256": "e379f34bfd3dcba23194ee518b545a247e188cfd8a7adaaadd06d80c0c1ed7cd",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub"
+    },
+    {
+      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf",
+      "size": 9455123,
+      "sha256": "7ec75c7d0bc08f452999bd09b0a2feea42e212ba60135f7bfe5d3e1b19a3351c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf"
+    },
+    {
       "path": "publications/doubleday-filibuster-war-nicaragua-1886/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
       "size": 1523845,
@@ -3602,6 +3638,60 @@
       "sha256": "91b82be4ca3597c63801709db6aea3e8a0c87a66674b13a4344a9e58eaa37c91"
     },
     {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
+      "size": 57660,
+      "sha256": "b22fbd7582c433b853ef7b25e6918db4021906be9065dfc48e3d589f989af02b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "size": 15208961,
+      "sha256": "0e6f9b334ccbaded380931e92ae89dba619d7105b1532a6953d641851bd4a311"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2289302,
+      "sha256": "bb9fe2abe146a0f985779f07b149ffa38584aefd4e2624cc5cad237dab32747d"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
+      "size": 59594,
+      "sha256": "5b91504f9f7a7795fee912a84723d510ffcba118891a4fd693f9116f2e489e1b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "size": 15186527,
+      "sha256": "16177943fcb0611b3aa42e4215f30e6ba615794aaa13f0de985fcd9e16726827"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "size": 2543339,
+      "sha256": "ec4a04e91df424582deff91cb7d4c7016bed5f02d786ad792c1e69246da28f69"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
+      "size": 57879,
+      "sha256": "09398985bf4df07ed8c70c9d5f0d740bf41efd834b9424ae3207fb01359dcc36"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "size": 15204630,
+      "sha256": "0c42d61eb8f3c1fa7dfe0b9fe86f412414315ff9230c33d10cb07049169a5094"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "size": 2688698,
+      "sha256": "82ac18cfae467496665f30aa33832a77b19a102239d2f7cc83eafda5f126cfce"
+    },
+    {
       "path": "publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "url": "https://takochanchan.github.io/publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "size": 103115,
@@ -4068,6 +4158,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Humboldt_Vues_des_Cordilleres_1810_1813_ja.pdf",
       "size": 38627388,
       "sha256": "7819c76019baf258b45ef222cfc21404e70102c5895e7456000f4b40171923ff"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/isagoge-historico-apologetico-1892/cover.jpg",
+      "size": 45361,
+      "sha256": "00f35ca67fb64f610bf4de89434de7a02eba7414aaf1f3c20ea6085880fe9160"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.epub",
+      "size": 413512,
+      "sha256": "6daab97ea4e3f7cbd8945d3e5d402642877d20cdde33fccd7f7c2ef6cd2c2416"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "size": 3094590,
+      "sha256": "446ecb919a2958c9321ea151ec3e33848df6185e8794a5e8634f3c7bf878ee69"
     },
     {
       "path": "publications/ixtlilxochitl-compendio-tetzcoco/cover.jpg",
@@ -4680,6 +4788,42 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Philip_Ainsworth_Means_History_of_the_Spanish_Conquest_of_Yucatan_and_of_the_Itzas_1917_Japanese_Complete_Translation.pdf",
       "size": 5897756,
       "sha256": "ece6c1d047c9cb0ee7c1ff2137e8cc44b52a62bbc2695fc2faabd2d424cc99a6"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/medina-imprenta-guatemala-1910/cover.jpg",
+      "size": 26865,
+      "sha256": "9eeda0928d48ca93bd18e3588cb5a3de1466270483fe9bf9cae18ccffc820cb2"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.epub",
+      "size": 84809636,
+      "sha256": "2bf353037f83ed8742320413ef3c4dff0cf20751068cb80b18f37aeda65999ed"
+    },
+    {
+      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.pdf",
+      "size": 31889566,
+      "sha256": "c3afdc5c1c405724c844b861894a16e8b840a0e5ab27470120fcd08a1d367351"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
+      "size": 15197588,
+      "sha256": "706196af818ac7f19168316866df1cd9110d17b7fd33dbf1e00de094ee47e62b"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
+      "size": 1533335,
+      "sha256": "f1886d09f19fbd3aedc63b83c0b669147029e2e3a9f21a0ce952f85f9170a359"
+    },
+    {
+      "path": "publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
+      "size": 86459,
+      "sha256": "e44d2c4cfb4fbb72f09a1206c883212657c9a3527ec377c0a653e2abab3c5610"
     },
     {
       "path": "publications/mendieta-historia-eclesiastica-indiana-1870/cover.jpg",
@@ -5496,6 +5640,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_L_Ancienne_route_des_galions_1910_Japanese_Complete_Translation.pdf",
       "size": 201529,
       "sha256": "e277f67099e38e3659ed8327b1c74409cb6bfdb63238763062b2097351f4fb51"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
+      "size": 51409,
+      "sha256": "7d4c82ce5dbb3a6b33ff241586f0f67253692cac2edc6a253432993790bbece1"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "size": 8656968,
+      "sha256": "d22d85840931edda81d9601caad409b9c99cf2647e5465948e01e1f881054d25"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "size": 8299494,
+      "sha256": "c77569f9470d179a755dc750d3c393dfc0b37968a34b5753ab89d17ee665f0e5"
     },
     {
       "path": "publications/perigny-communications-central-america-1911/cover.jpg",
@@ -8268,150 +8430,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
-    },
-    {
-      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.pdf",
-      "size": 31889566,
-      "sha256": "c3afdc5c1c405724c844b861894a16e8b840a0e5ab27470120fcd08a1d367351"
-    },
-    {
-      "path": "publications/medina-imprenta-guatemala-1910/Medina_1910_Japanese_Review_20261014.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Medina_1910_Japanese_Review_20261014.epub",
-      "size": 84809636,
-      "sha256": "2bf353037f83ed8742320413ef3c4dff0cf20751068cb80b18f37aeda65999ed"
-    },
-    {
-      "path": "publications/medina-imprenta-guatemala-1910/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/medina-imprenta-guatemala-1910/cover.jpg",
-      "size": 26865,
-      "sha256": "9eeda0928d48ca93bd18e3588cb5a3de1466270483fe9bf9cae18ccffc820cb2"
-    },
-    {
-      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf",
-      "size": 9455123,
-      "sha256": "7ec75c7d0bc08f452999bd09b0a2feea42e212ba60135f7bfe5d3e1b19a3351c",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.pdf"
-    },
-    {
-      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub",
-      "size": 6112653,
-      "sha256": "e379f34bfd3dcba23194ee518b545a247e188cfd8a7adaaadd06d80c0c1ed7cd",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Diez_Noticias_MSS3023_Vol1_JA_Reviewed.epub"
-    },
-    {
-      "path": "publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/diez-noticias-sacras-reales-mss3023-vol-1/cover.jpg",
-      "size": 29034,
-      "sha256": "4fa9d46da78fa68251d25e968fc741fe0934fccece9588551b8807602f43eb88"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v07-1906/cover.jpg",
-      "size": 57660,
-      "sha256": "b22fbd7582c433b853ef7b25e6918db4021906be9065dfc48e3d589f989af02b"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
-      "size": 15208961,
-      "sha256": "0e6f9b334ccbaded380931e92ae89dba619d7105b1532a6953d641851bd4a311"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v07-1906/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
-      "size": 2289302,
-      "sha256": "bb9fe2abe146a0f985779f07b149ffa38584aefd4e2624cc5cad237dab32747d"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v08-1906/cover.jpg",
-      "size": 59594,
-      "sha256": "5b91504f9f7a7795fee912a84723d510ffcba118891a4fd693f9116f2e489e1b"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
-      "size": 15186527,
-      "sha256": "16177943fcb0611b3aa42e4215f30e6ba615794aaa13f0de985fcd9e16726827"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v08-1906/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
-      "size": 2543339,
-      "sha256": "ec4a04e91df424582deff91cb7d4c7016bed5f02d786ad792c1e69246da28f69"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v09-1906/cover.jpg",
-      "size": 57879,
-      "sha256": "09398985bf4df07ed8c70c9d5f0d740bf41efd834b9424ae3207fb01359dcc36"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
-      "size": 15204630,
-      "sha256": "0c42d61eb8f3c1fa7dfe0b9fe86f412414315ff9230c33d10cb07049169a5094"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v09-1906/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
-      "size": 2688698,
-      "sha256": "82ac18cfae467496665f30aa33832a77b19a102239d2f7cc83eafda5f126cfce"
-    },
-    {
-      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
-      "size": 1533335,
-      "sha256": "f1886d09f19fbd3aedc63b83c0b669147029e2e3a9f21a0ce952f85f9170a359"
-    },
-    {
-      "path": "publications/mencos-cronicas-antigua-guatemala-1894/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
-      "size": 15197588,
-      "sha256": "706196af818ac7f19168316866df1cd9110d17b7fd33dbf1e00de094ee47e62b"
-    },
-    {
-      "path": "publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
-      "size": 86459,
-      "sha256": "e44d2c4cfb4fbb72f09a1206c883212657c9a3527ec377c0a653e2abab3c5610"
-    },
-    {
-      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
-      "size": 8299494,
-      "sha256": "c77569f9470d179a755dc750d3c393dfc0b37968a34b5753ab89d17ee665f0e5"
-    },
-    {
-      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
-      "size": 8656968,
-      "sha256": "d22d85840931edda81d9601caad409b9c99cf2647e5465948e01e1f881054d25"
-    },
-    {
-      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
-      "size": 51409,
-      "sha256": "7d4c82ce5dbb3a6b33ff241586f0f67253692cac2edc6a253432993790bbece1"
-    },
-    {
-      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.pdf",
-      "size": 3094590,
-      "sha256": "446ecb919a2958c9321ea151ec3e33848df6185e8794a5e8634f3c7bf878ee69"
-    },
-    {
-      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.epub",
-      "size": 413512,
-      "sha256": "6daab97ea4e3f7cbd8945d3e5d402642877d20cdde33fccd7f7c2ef6cd2c2416"
-    },
-    {
-      "path": "publications/isagoge-historico-apologetico-1892/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/isagoge-historico-apologetico-1892/cover.jpg",
-      "size": 45361,
-      "sha256": "00f35ca67fb64f610bf4de89434de7a02eba7414aaf1f3c20ea6085880fe9160"
     }
   ]
 }

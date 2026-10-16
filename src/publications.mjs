@@ -1,3 +1,4 @@
+import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
 import { isagogePublicationRecords, isagogePublicationMetadata } from "./isagoge-publication.mjs";
 import { perignyCinqPublicationRecords, perignyCinqPublicationMetadata } from "./perigny-cinq-publication.mjs";
 import { mencosPublicationRecords, mencosPublicationMetadata } from "./mencos-publication.mjs";
@@ -269,6 +270,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...arevaloPublicationRecords,
   ...isagogePublicationRecords,
   ...perignyCinqPublicationRecords,
   ...mencosPublicationRecords,
@@ -9380,6 +9382,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...arevaloPublicationMetadata,
   ...isagogePublicationMetadata,
   ...perignyCinqPublicationMetadata,
   ...mencosPublicationMetadata,
@@ -12143,6 +12146,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "arevalo-documentos-antiguos-guatemala-1857",
   "diez-noticias-sacras-reales-mss3023-vol-1",
   "garcia-documentos-ineditos-mexico-v01-1905",
   "garcia-documentos-ineditos-mexico-v02-1905",

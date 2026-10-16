@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "arevalo-documentos-antiguos-guatemala-1857",
+      "title": "グアテマラ市参事会文書館古文書集",
+      "originalTitle": "Colección de documentos antiguos del Archivo del Ayuntamiento de la ciudad de Guatemala",
+      "author": "ラファエル・アレバロ 編",
+      "originalAuthor": "Rafael Arévalo (ed.)",
+      "originalPublication": "Guatemala: Imprenta de Luna, 1857.",
+      "year": 1857,
+      "sourceEdition": "Rafael Arévalo (ed.), Colección de documentos antiguos del Archivo del Ayuntamiento de la ciudad de Guatemala. Guatemala: Imprenta de Luna, 1857.",
+      "sourceProvider": "Biblioteca de CIRMA提供、Internet Archive公開。資料識別子 ColeccionDocumentosAntiguosRafaelArevalo1857。",
+      "rights": "1857年刊の原著本文は著作権保護期間を満了しています。底本スキャンにはCC BY-NC-ND 3.0の表示があり、原著作の権利とは区別します。本訳には底本の紋章図その他のスキャン画像を転載していません。ライセンス：https://creativecommons.org/licenses/by-nc-nd/3.0/",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/ColeccionDocumentosAntiguosRafaelArevalo1857"
+      }
+    },
+    {
       "slug": "diez-noticias-sacras-reales-mss3023-vol-1",
       "title": "聖務・王務に関する記録",
       "originalTitle": "Noticias sacras y reales",
