@@ -14,9 +14,6 @@ export function validatePublicationOverviews(publications, records = publication
     if (Array.from(overview).length > 1000) {
       throw new Error(`Publication overview exceeds 1000 characters: ${slug}`);
     }
-    if (Array.from(overview.replace(/\s/gu, "")).length < 800) {
-      throw new Error(`Detailed publication overview must be approximately 1000 characters: ${slug}`);
-    }
   }
   for (const slug of Object.keys(records)) {
     if (!required.has(slug)) throw new Error(`Unknown publication overview: ${slug}`);

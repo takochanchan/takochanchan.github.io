@@ -56,7 +56,7 @@ jobs:
                 assert.equal(await disclosure.getAttribute('open'), null);
                 assert.equal(await disclosure.locator('.publication-overview__body').isVisible(), false);
               }
-              await original.evaluate(element => element.scrollIntoView({ block: 'start' }));
+              await original.evaluate(element => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
               await page.screenshot({ path: `overview-screenshots/${slug}-${width}-${javaScriptEnabled}-closed.png`, fullPage: false });
               const first = disclosures.first();
               const summary = first.locator('summary');
@@ -67,7 +67,7 @@ jobs:
               assert.equal(await first.locator('.publication-overview__body').isVisible(), false);
               await summary.press('Space');
               assert.equal(await first.locator('.publication-overview__body').isVisible(), true);
-              await original.evaluate(element => element.scrollIntoView({ block: 'start' }));
+              await original.evaluate(element => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
               await page.screenshot({ path: `overview-screenshots/${slug}-${width}-${javaScriptEnabled}-open.png`, fullPage: false });
               if (slug.startsWith('cuevas')) {
                 await disclosures.nth(1).locator('summary').click();

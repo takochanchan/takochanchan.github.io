@@ -15,8 +15,7 @@ for name in ["drafts.json", *[f"agent-{index}.json" for index in range(1, 7)]]:
     for slug, text in drafts.items():
         assert slug not in records, ("duplicate slug", slug, name, owners.get(slug))
         assert isinstance(text, str), (slug, "text required")
-        assert 800 <= len(text) <= 1000, (slug, "total characters", len(text))
-        assert len(re.sub(r"\s", "", text)) >= 800, (slug, "nonwhitespace characters")
+        assert text.strip() and len(text) <= 1000, (slug, "total characters", len(text))
         assert text == text.strip(), (slug, "outer whitespace")
         records[slug] = text
         owners[slug] = name

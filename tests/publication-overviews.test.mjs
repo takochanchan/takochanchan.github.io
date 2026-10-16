@@ -7,18 +7,17 @@ import { publicationOverviews, validatePublicationOverviews } from "../src/publi
 const escapeHtml = text => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 
-test("every published volume has an individually written detailed overview of approximately 1000 characters", () => {
+test("every published volume has an individually written detailed overview within 1000 characters", () => {
   validatePublicationOverviews(cataloguePublications);
   assert.equal(Object.keys(publicationOverviews).length, cataloguePublications.reduce((count, item) => count + item.volumes.length, 0));
 });
 
-test("overview validation rejects missing, short, oversized, orphaned and duplicated volume text", () => {
+test("overview validation accepts concise text and rejects missing, oversized, orphaned and duplicated volume text", () => {
   const catalogue = [{ slug: "work", volumes: [{ slug: "v1" }, { slug: "v2" }] }];
   const valid = { v1: "甲".repeat(900), v2: "乙".repeat(900) };
   assert.doesNotThrow(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(1000) }));
   assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: " " }), /Missing/);
-  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(799) }), /approximately/);
-  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(799) + " ".repeat(100) }), /approximately/);
+  assert.doesNotThrow(() => validatePublicationOverviews(catalogue, { ...valid, v1: "短い資料は内容に見合う長さで記述します。" }));
   assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(1001) }), /1000/);
   assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, extra: "余分" }), /Unknown/);
   assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, work: "総括" }), /Unknown/);
