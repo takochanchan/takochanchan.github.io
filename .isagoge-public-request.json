@@ -1,0 +1,27 @@
+{
+  "bundle": {
+    "size": 2597237,
+    "sha256": "87a7d3d187f8f9b89e6fbb41a58c79e1749ca227a2e7f90ab236290b0e20a3c9",
+    "chunks": [
+      "e2a3aa3c53261d6aa0e42d5ec6e38ad219928053",
+      "50a2bc079d1797554ad3739dd720c6b58e338238",
+      "df9199d024a6585dff7f6736a79389dc2779abbc",
+      "a3181ad9e084aa1f3e761a897f13f2a23aaa8bc0",
+      "5dfcbd9453e09eb338606cedf623750f271d1601",
+      "01477875abd44b9de724336ba202e5e0d7e91257"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "size": 3094590,
+      "sha256": "446ecb919a2958c9321ea151ec3e33848df6185e8794a5e8634f3c7bf878ee69"
+    },
+    {
+      "filename": "Isagoge_1892_Japanese_Complete_Translation.epub",
+      "size": 413421,
+      "sha256": "a1d95902316e56bdda2a3c7a301f46e8b4271d613d285e9ab878e9aab9c81e31"
+    }
+  ],
+  "verified_archive_commit": "184aac9beaabf4d572a652799e6095e3a57d0ad5"
+}

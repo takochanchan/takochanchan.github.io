@@ -1,0 +1,31 @@
+name: Transfer approved Isagoge 1892
+on:
+  push:
+    branches: [agent/isagoge-publish-20261016]
+    paths: [.isagoge-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .isagoge-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: isagoge-public-verification
+          path: isagoge-public-verification.json
+
+
+

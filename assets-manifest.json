@@ -8394,6 +8394,24 @@
       "url": "https://takochanchan.github.io/publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
       "size": 51409,
       "sha256": "7d4c82ce5dbb3a6b33ff241586f0f67253692cac2edc6a253432993790bbece1"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "size": 3094590,
+      "sha256": "446ecb919a2958c9321ea151ec3e33848df6185e8794a5e8634f3c7bf878ee69"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/Isagoge_1892_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Isagoge_1892_Japanese_Complete_Translation.epub",
+      "size": 413421,
+      "sha256": "a1d95902316e56bdda2a3c7a301f46e8b4271d613d285e9ab878e9aab9c81e31"
+    },
+    {
+      "path": "publications/isagoge-historico-apologetico-1892/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/isagoge-historico-apologetico-1892/cover.jpg",
+      "size": 45361,
+      "sha256": "00f35ca67fb64f610bf4de89434de7a02eba7414aaf1f3c20ea6085880fe9160"
     }
   ]
 }

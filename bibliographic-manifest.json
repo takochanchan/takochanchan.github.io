@@ -8699,6 +8699,25 @@
         "status": "online",
         "url": "https://gallica.bnf.fr/ark:/12148/btv1b10891249f"
       }
+    },
+    {
+      "slug": "isagoge-historico-apologetico-1892",
+      "title": "全インディアス、特に説教者会のチアパ・グアテマラ聖ビセンテ・フェレール管区に関する歴史弁証序説",
+      "originalTitle": "Isagoge histórico apologético general de todas las Indias y especial de la provincia de Sn. Vicente Ferrer de Chiapa y Goathemala de el Orden de Predicadores",
+      "author": "著者不明",
+      "originalAuthor": "Anónimo",
+      "originalPublication": "Madrid: Tipografía de Tomás Minuesa de los Ríos, 1892.",
+      "year": 1892,
+      "sourceEdition": "Isagoge histórico apologético general de todas las Indias y especial de la provincia de Sn. Vicente Ferrer de Chiapa y Goathemala de el Orden de Predicadores. 著者不明。Madrid: Tipografía de Tomás Minuesa de los Ríos, 1892.",
+      "sourceProvider": "ハーバード大学所蔵本。Googleによるデジタル化、Internet Archive公開。資料識別子 isagogehistrico00unkngoog。",
+      "rights": "1892年刊の原著本文は著作権保護期間を満了しています。底本：ハーバード大学所蔵、Googleデジタル化、Internet Archive公開の刊本（isagogehistrico00unkngoog）。取得した公開メタデータの権利表示はNOT_IN_COPYRIGHTです。デジタル画像の利用については底本PDF冒頭のGoogle利用案内を参照してください。",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/isagogehistrico00unkngoog"
+      }
     }
   ],
   "works": [
