@@ -1,0 +1,57 @@
+name: Verify live bibliography overviews
+on:
+  push:
+    branches: [work/seo-overviews-20261016]
+    paths: ['.github/workflows/verify-live-overviews.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify all published overview bodies and stylesheet
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { readFile } from 'node:fs/promises';
+          import { cataloguePublications } from './src/catalogue-publications.mjs';
+          import { publicationOverviews } from './src/publication-overviews.mjs';
+          const origin = 'https://takochanchan.github.io';
+          const escapeHtml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+          async function get(path) {
+            const response = await fetch(origin + path + '?overviews=c9f99ef6f5ae6e102a6ef0fc2d75e2fdf8ab0a09', { signal: AbortSignal.timeout(60000) });
+            assert.equal(response.status, 200, path);
+            return response.text();
+          }
+          const queue = [...cataloguePublications];
+          let pages = 0, summaries = 0;
+          await Promise.all(Array.from({ length: 8 }, async () => {
+            while (queue.length) {
+              const item = queue.shift();
+              const html = await get('/publications/' + item.slug + '/');
+              const expected = [item, ...(item.volumes.length > 1 ? item.volumes : [])];
+              const disclosures = [...html.matchAll(/<details\b([^>]*)class="publication-overview"([^>]*)>([\s\S]*?)<\/details>/gu)];
+              assert.equal(disclosures.length, expected.length, item.slug);
+              for (let index = 0; index < expected.length; index++) {
+                const [, before, after, body] = disclosures[index];
+                const slug = expected[index].slug;
+                assert.doesNotMatch(before + after, /\bopen(?:\s|=|$)/u, slug);
+                assert.ok(after.includes('id="overview-' + slug + '"'), slug);
+                assert.ok(body.includes('<p>' + escapeHtml(publicationOverviews[slug]) + '</p>'), slug);
+                assert.match(body, /<summary\b[\s\S]*?<\/summary>/u, slug);
+                summaries++;
+              }
+              const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gu)].flatMap(match => JSON.parse(match[1]));
+              const work = data.find(value => value.identifier === item.slug);
+              assert.equal(work.abstract, publicationOverviews[item.slug], item.slug);
+              if (item.volumes.length > 1) assert.deepEqual(work.hasPart.map(part => part.abstract), item.volumes.map(volume => publicationOverviews[volume.slug]));
+              pages++;
+            }
+          }));
+          assert.equal(await get('/archive.css'), await readFile('src/styles.css', 'utf8'));
+          console.log(JSON.stringify({ status: 'PASS', publishedBibliographyPages: pages, publishedOverviews: summaries, initiallyClosed: true, staticHtml: true, structuredData: true, stylesheetMatches: true }));
+          JS
