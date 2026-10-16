@@ -1,0 +1,64 @@
+name: Verify live Perigny five republics publication
+on:
+  push:
+    branches: [main]
+    paths: [src/perigny-cinq-publication.mjs, .github/workflows/perigny-cinq-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify live bibliography and exact final assets
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess
+          slug='perigny-cinq-republiques-amerique-centrale-1911'
+          slugs=[slug]
+          url='https://takochanchan.github.io/publications/'+slug+'/'
+          html=urllib.request.urlopen(url,timeout=60).read().decode()
+          for text in ['中央アメリカの五共和国','フランス国立図書館','Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf','Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub']:
+              assert text in html, text
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if any(a['path'].startswith('publications/'+member+'/') for member in slugs)]
+          root=pathlib.Path(tempfile.mkdtemp())
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              with urllib.request.urlopen(a['url'],timeout=120) as response,p.open('wb') as f:
+                  while chunk:=response.read(1024*1024): f.write(chunk)
+              assert p.stat().st_size==a['size']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  pages=212
+                  assert any(line.split()==['Pages:',str(pages)] for line in info.splitlines())
+              print('VERIFIED',p.name,a['size'],a['sha256'])
+          assert len(assets)==3
+          print('Live Perigny bibliography, 212-page PDF, EPUB, and cover verified.')
+          PY
+
+

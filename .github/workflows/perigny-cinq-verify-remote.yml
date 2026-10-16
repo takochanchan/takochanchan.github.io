@@ -1,0 +1,34 @@
+name: Verify deployed search before Perigny publication
+on:
+  push:
+    branches: [agent/perigny-cinq-publish-20261016]
+    paths: [.github/workflows/perigny-cinq-verify-remote.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Wait for verified shard deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, time
+          for attempt in range(90):
+              r=json.loads(subprocess.check_output(['gh','api','repos/takochanchan/takochan-search-index-002/actions/runs/38849147292']))
+              if r['status']=='completed':
+                  assert r['conclusion']=='success',r['conclusion']
+                  print('Shard deployment succeeded',r['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Shard deployment timed out')
+          PY
+      - run: npm run verify:remote-search
