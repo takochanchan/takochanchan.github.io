@@ -1,41 +1,41 @@
 # 詳細概要の修正作業
 
-## ユーザーの確定指示
+## 確定指示
 
 - 従来の概要文を一字も変更せず、従来どおり常時表示する。
-- 従来の概要文の下に「詳細概要」ボタンを追加する。
-- 詳細概要は約1000字（今回の原稿は800〜1000字）で、ボタンを押すまで表示しない。
-- 分冊は各巻の内容に即した別の詳細概要を作成する。
-- 先に従来の状態へ復元して公開し、その後で詳細概要を追加する。
+- その直下に「詳細概要」の開閉ボタンを追加し、詳細本文は初期状態で閉じる。
+- 詳細概要は約1000字、上限1000字。全468資料・分冊の内容に即して個別に執筆する。
+- 先に従来の公開状態へ戻し、その後で全件の詳細概要を追加する。
 
 ## 完了した復元
 
-- 復元コミット: 62276910718a0c135483ba625b1204a53d83cbd1
-- 復元ツリーは変更前の dc662402247b82c5d6e35737187e7b2c6400c9fa と完全一致。
-- Pages公開: run 38866294978 success。
-- 全413ページの従来の概要文を公開HTMLで照合: run 38866525203, job 116860531985, ORIGINAL_DESCRIPTIONS_RESTORED 413。
+- 復元コミット: `62276910718a0c135483ba625b1204a53d83cbd1`
+- 復元ツリー: `dc662402247b82c5d6e35737187e7b2c6400c9fa`（変更前と完全一致）
+- Pages公開: run `38866294978` success。
+- 全413書誌ページの従来概要を公開HTMLで照合: run `38866525203`, job `116860531985`, `ORIGINAL_DESCRIPTIONS_RESTORED 413`。
 
-## 詳細概要
+## 原資料と原稿
 
-- 対象は全468資料・分冊。多巻作品に別途全巻概要は足さず、既存の概要の下に各巻の詳細概要ボタンを設置する。
-- 全468 EPUBの本文・見出しを取得済み。失敗0件。
-- 調査用workflow: .github/workflows/read-detailed-overview-sources.yml
-- 原資料抜粋artifact: run 38866525203, artifact 12031198357, detailed-overview-source-material。各ファイルにEPUBのURLとSHA-256を記録。
-- drafts.json に本文・目次を参照した22件の原稿を保存。855〜916字。未公開。
-- ユーザーの明示許可により6担当で残る446件を分担。各担当の原稿をagent-1.json〜agent-6.jsonに逐次保存。字数・文体調整と本文照合の途中で、未公開。
-- 抽出が2000字未満だった28件は、長い段落やp以外の本文を落とさないようEPUBのbody全文を補足取得する。
-- 全原稿の確認、従来概要を保持するUIの検証、公開が未完了。
-- 前回の短い publication-overviews.json は採用しない。
+- 全468 EPUBのSHA-256、見出し、本文抜粋を取得済み。失敗0件。
+- 原資料取得: `.github/workflows/read-detailed-overview-sources.yml`、run `38866525203`、artifact `12031198357`。
+- 本文抽出の短かった28資料は同一SHA-256のEPUBを再取得し、全spine文書から本文を追加抽出した。
+- 補足取得: `.github/workflows/read-overview-supplement.yml`、run `38870003500` success、artifact `12033455288`。
+- 補足初回run `38869876819` は既存EPUB内のXML不整合で失敗。本文読取をHTMLParserへ修正して上記runで解決済み。公開EPUBは変更していない。
+- 原稿は `drafts.json` の22件と `agent-1.json`〜`agent-6.json` に保存する。割当は各 `assignment-N.json`。
+- チェックポイント `d6c03cf5c88605199d74ee1b9f767985fc331c7d` に299件保存済み。その後の本チェックポイントで369件を保存。残る原稿と初期原稿の敬体整備・事実照合を継続中。
+- 前回の短い `src/publication-overviews.json` は採用しない。全468件の最終原稿で置き換えるまで公開しない。
 
-## 実装方針
+## 実装・検証
 
-元の publication-hero__description をそのまま残し、その直下に各巻の native details/summary を追加する。summaryは「詳細概要」または「第X巻の詳細概要」。初期open属性なし。本文は静的HTMLに含め、段落を維持する。単巻はBookのabstract、多巻はhasPartのabstractへ同じ文章を出力する。既存説明とdescriptionメタデータは保持する。変更後は全ページについて従来概要の完全一致、配置順、初期非表示、字数、巻別網羅、構造化データとの一致を検証し、PC・スマートフォンのクリックとキーボード操作を確認する。
+`publication-hero__description` をそのまま残し、直下へ巻ごとに native `details/summary` を追加する。初期open属性なし。全文は静的HTMLに含め、単巻の `abstract`、分冊の各 `hasPart.abstract` に同じ本文を出力する。旧メタ説明も保持する。
 
-本番へ未完成の詳細概要や作業用文章を出さない。全件の作成・検証が完了してから公開する。
+UI差分は `interface-draft.patch` に保存済み。全件完成後、本番用8ファイルだけを統合する。ビルドで欠落、空白を除いて800字未満、改行込み1000字超過、余分なslug、同一作品内の巻別重複を拒否する。
 
-## 追加照合と保存済み実装
+- QAは既存成功経路 `.github/workflows/check-overviews.yml`（旧run `38864885183`）を今回の要件に合わせて更新する。全ビルド、正本・書誌・検索ゲートと全413ページ検査、1440/375px・JavaScript有効/無効でクリック/Enter/Space・巻別独立開閉・横はみ出しを検査する。
+- 全件原稿、QA、画像確認後に最新mainへ対象8ファイルのみを適用し、既存Pages workflowを再利用する。
+- 公開後は `.github/workflows/verify-live-detailed-overviews.yml` で全413ページ・468本文とCSSを実URLから照合する。
+- 作業用原稿・ワンショットworkflowはmainへ入れない。
 
-- 本文抽出が短かった28資料について、EPUBのbody全文と画像代替テキストを補足取得。初回は既存XHTMLの不整合でXML解析が失敗したため、取得したHTMLの本文読取りをHTMLParserへ変更。
-- 補足取得run 38870003500 success、artifact 12033455288（detailed-overview-supplement）。全28件のEPUB SHA-256は先行取得時と一致。
-- interface-draft.patch に復元版からのUI・検証差分を保存。src/publication-overviews.json の完成データはまだ含まない。検証用workflowを本番mainへ入れない。
-- 字数検証の単体テストが成功。全件データの作成後に、完全なcheckoutでbuild、既存テスト、remote-search、PC・スマホでの開閉を一度通す。
+## 次の操作
+
+残り原稿と編集確認を完了し、468件を統合する。その後QA、Pages公開、公開後の全ページ照合を順に実施する。詳細概要の追加公開は未完了。
