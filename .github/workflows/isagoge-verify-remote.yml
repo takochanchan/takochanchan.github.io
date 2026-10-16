@@ -1,0 +1,36 @@
+name: Verify deployed search before Isagoge publication
+on:
+  push:
+    branches: [agent/isagoge-publish-20261016]
+    paths: [.github/workflows/isagoge-verify-remote.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Wait for verified search deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,time
+          for attempt in range(120):
+              r=json.loads(subprocess.check_output(['gh','api','repos/takochanchan/takochan-search-index-002/actions/runs/38884178157']))
+              if r['status']=='completed':
+                  assert r['conclusion']=='success',r['conclusion']
+                  print('Search deployment succeeded',r['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Search deployment timed out')
+          PY
+      - run: npm run verify:remote-search
+
