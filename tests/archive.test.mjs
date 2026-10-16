@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
+import { overviewUpdatedDate } from "../src/publication-overviews.mjs";
 import { fileURLToPath } from "node:url";
 import {
   majorPublications,
@@ -2837,7 +2838,7 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
     const entry = sitemap.slice(entryAt, entryEnd);
     assert.match(
       entry,
-      new RegExp(`<lastmod>${item.updatedDate}<\\/lastmod>`),
+      new RegExp(`<lastmod>${item.updatedDate > overviewUpdatedDate ? item.updatedDate : overviewUpdatedDate}<\\/lastmod>`),
       `${item.slug}: lastmod`,
     );
     assert.match(
