@@ -1,0 +1,478 @@
+--- a/scripts/build.mjs
++++ b/scripts/build.mjs
+@@ -3,6 +3,7 @@
+ import { fileURLToPath } from "node:url";
+ import { catalogueFiles } from "./analytics-report.mjs";
+ import { attributeSpellingAliases } from "../src/attribute-spelling.mjs";
++import { overviewUpdatedDate, publicationOverviews, validatePublicationOverviews } from "../src/publication-overviews.mjs";
+ import {
+   publications as publicationUnits,
+   shortPublicationAuthors,
+@@ -41,6 +42,7 @@
+ const catalogueScriptVersion = `${assetVersion}-spelling-20261014`;
+ const analyticsVersion = "20261014-ga4-v1";
+ catalogueFiles(publications); // Validate stable analytics IDs before publishing.
++validatePublicationOverviews(publications);
+ 
+ const escapeHtml = (value = "") =>
+   String(value)
+@@ -360,7 +362,7 @@
+   ${image ? `<meta name="twitter:image" content="${escapeHtml(image)}">` : ""}
+   <link rel="canonical" href="${escapeHtml(canonical)}">
+   <link rel="sitemap" type="application/xml" href="${site.url}/sitemap.xml">
+-  <link rel="stylesheet" href="/archive.css?v=${assetVersion}">
++  <link rel="stylesheet" href="/archive.css?v=${assetVersion}-detailed-overviews-20261016">
+   <link rel="stylesheet" href="/fulltext-search.css?v=${assetVersion}">
+   ${structuredData ? `<script type="application/ld+json">${jsonForScript(structuredData)}</script>` : ""}
+   <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
+@@ -972,6 +974,7 @@
+       alternateName: item.originalTitle,
+       ...(isShortWork ? { headline: item.title } : {}),
+       description: item.description,
++      ...(publicationOverviews[item.slug] ? { abstract: publicationOverviews[item.slug] } : {}),
+       author:
+         item.originalAuthor === "Anonymous"
+           ? { "@type": "Person", name: "Anonymous", alternateName: item.author }
+@@ -993,6 +996,7 @@
+             hasPart: item.volumes.map((volume, index) => ({
+               "@type": "Book",
+               name: `${item.title}（${volume.volumeLabel}）`,
++              abstract: publicationOverviews[volume.slug],
+               ...(item.multiAuthorSeries ? {
+                 "@id": `${canonical}#volume-${index + 1}`,
+                 identifier: volume.slug,
+@@ -1101,6 +1105,16 @@
+         <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
+           type="application/epub+zip" download>リフロー型EPUBを保存（${escapeHtml(item.epubSize)}）</a>
+       </div>`;
++
++const overviewDisclosure = (item, label = "") => `
++  <details class="publication-overview" id="overview-${escapeHtml(item.slug)}">
++    <summary class="button button--quiet">
++      <span class="publication-overview__show">${escapeHtml(label)}詳細概要</span>
++      <span class="publication-overview__hide">${escapeHtml(label)}詳細概要を閉じる</span>
++      <span class="publication-overview__icon" aria-hidden="true"></span>
++    </summary>
++    <div class="publication-overview__body">${publicationOverviews[item.slug].split(/\n\s*\n/u).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
++  </details>`;
+ 
+ const volumeFileControls = (item) =>
+   isMultiVolume(item)
+@@ -1186,6 +1200,9 @@
+           <p class="publication-hero__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
+           ${catalogueAttributionMarkup(item, "publication-hero__attribution")}
+           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
++          <div class="publication-overview-list">
++            ${item.volumes.map(volume => overviewDisclosure(volume, isMultiVolume(item) ? `${volume.volumeLabel}の` : "")).join("")}
++          </div>
+           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
+           ${heroFileActions(item)}
+           <p class="epub-note">
+@@ -1466,12 +1483,12 @@
+   items.reduce(
+     (latest, item) =>
+       item.updatedDate && item.updatedDate > latest ? item.updatedDate : latest,
+-    "",
++    overviewUpdatedDate,
+   );
+ 
+ const publicationSitemapEntry = (item) => ({
+   loc: `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
+-  lastmod: item.updatedDate,
++  lastmod: item.updatedDate > overviewUpdatedDate ? item.updatedDate : overviewUpdatedDate,
+   image: `${site.url}/${item.cover}`,
+ });
+ 
+--- a/src/styles.css
++++ b/src/styles.css
+@@ -1345,6 +1345,73 @@
+   margin: 0 0 23px;
+   color: #405053;
+   line-height: 1.95;
++}
++
++.publication-overview-list {
++  display: grid;
++  gap: 10px;
++  margin: 0 0 23px;
++}
++
++.publication-overview {
++  min-width: 0;
++  max-width: 740px;
++  margin: 0;
++}
++
++.publication-overview > summary {
++  display: flex;
++  align-items: center;
++  justify-content: space-between;
++  gap: 16px;
++  min-height: 44px;
++  width: fit-content;
++  max-width: 100%;
++  cursor: pointer;
++  list-style: none;
++  font-size: 13px;
++}
++
++.publication-overview > summary::-webkit-details-marker {
++  display: none;
++}
++
++.publication-overview > summary:focus-visible {
++  outline: 2px solid var(--teal);
++  outline-offset: 4px;
++}
++
++.publication-overview__hide,
++.publication-overview[open] .publication-overview__show {
++  display: none;
++}
++
++.publication-overview[open] .publication-overview__hide {
++  display: inline;
++}
++
++.publication-overview__icon::before {
++  content: "+";
++}
++
++.publication-overview[open] .publication-overview__icon::before {
++  content: "−";
++}
++
++.publication-overview__body {
++  padding: 16px 0 0;
++  color: #405053;
++  font-size: 15px;
++  line-height: 1.95;
++  overflow-wrap: anywhere;
++}
++
++.publication-overview__body p {
++  margin: 0;
++}
++
++.publication-overview__body p + p {
++  margin-top: 1em;
+ }
+ 
+ .publication-hero .tag-list {
+--- a/tests/archive.test.mjs
++++ b/tests/archive.test.mjs
+@@ -4,6 +4,7 @@
+ import { access, readFile, readdir, stat } from "node:fs/promises";
+ import path from "node:path";
+ import test from "node:test";
++import { overviewUpdatedDate } from "../src/publication-overviews.mjs";
+ import { fileURLToPath } from "node:url";
+ import {
+   majorPublications,
+@@ -2837,7 +2838,7 @@
+     const entry = sitemap.slice(entryAt, entryEnd);
+     assert.match(
+       entry,
+-      new RegExp(`<lastmod>${item.updatedDate}<\\/lastmod>`),
++      new RegExp(`<lastmod>${item.updatedDate > overviewUpdatedDate ? item.updatedDate : overviewUpdatedDate}<\\/lastmod>`),
+       `${item.slug}: lastmod`,
+     );
+     assert.match(
+--- a/README.md
++++ b/README.md
+@@ -10,6 +10,7 @@
+ 
+ - `bibliographic-manifest.json` — 全資料の正本書誌（題名、著者、原刊、底本、公開元、権利、公開日）
+ - `src/publications.mjs` — 解説、分類、タグ、配布ファイル情報
++- `src/publication-overviews.json` — 従来の概要文に追加する資料・分冊ごとの詳細概要（各約1000字、上限1000字）
+ - `src/archive.js` — 検索、絞り込み、並べ替え、ページ送り
+ - `src/styles.css` — 共通デザイン
+ - `scripts/build.mjs` — 一覧・個別ページの生成
+@@ -31,6 +32,15 @@
+ 両者のslug集合と書誌内容が一致しない場合は `npm run verify:bibliography` が失敗します。
+ 検証を通過した資料は、一覧カード、検索対象、分類、個別ページ、サイトマップへ
+ 自動的に反映されます。
++
++従来の概要文（`description`）は文面を変えずに常時表示します。その直下に
++「詳細概要」の開閉ボタンを追加し、詳細本文は初期状態で閉じます。
++詳細概要は `src/publication-overviews.json` の `records` に各資料・各巻のslugを
++キーとして記載します。分冊は巻ごとの本文に即して個別に執筆し、巻ごとに開閉できます。
++単巻の詳細概要は作品の `abstract`、分冊の詳細概要は各 `hasPart` の `abstract` に
++含め、同じ全文を初期HTMLにも記載します。従来のメタ説明文も維持します。
++空欄、空白を除いて800字未満、改行を含めて1000字超過、欠落・余分なslug、
++同一作品内の巻別詳細概要の重複はビルド時にエラーになります。
+ 
+ トップページの一覧内検索と資料種別・地域・原刊言語・年代の絞り込みは、
+ 書籍と論文の両方を対象にします。検索条件に該当する件数を分類別に示し、
+--- a/package.json
++++ b/package.json
+@@ -13,7 +13,7 @@
+     "build:search": "npm run prepare:search-manifest && node scripts/search/build-index.mjs --manifest .cache/fulltext-search-manifest.json --output dist/search",
+     "fetch:assets": "node scripts/fetch-assets.mjs",
+     "manifest": "node scripts/make-manifest.mjs",
+-    "test": "npm run verify:masters && npm run verify:bibliography && node --test tests/assert-text.test.mjs tests/archive.test.mjs tests/analytics.test.mjs tests/analytics-report.test.mjs && npm run test:search",
++    "test": "npm run verify:masters && npm run verify:bibliography && node --test tests/assert-text.test.mjs tests/archive.test.mjs tests/analytics.test.mjs tests/analytics-report.test.mjs tests/publication-overviews.test.mjs && npm run test:search",
+     "test:search": "python3 -m unittest discover -s tests -p 'test_search_*.py' && node --test tests/fulltext-search.test.mjs",
+     "test:epub": "python3 scripts/validate-epubs.py dist",
+     "verify:search": "node scripts/search/verify-index.mjs --directory dist/search && node scripts/search/verify-queries.mjs --directory dist/search",
+--- /dev/null
++++ b/src/publication-overviews.mjs
+@@ -0,0 +1,30 @@
++import { readFileSync } from "node:fs";
++
++const data = JSON.parse(readFileSync(new URL("./publication-overviews.json", import.meta.url), "utf8"));
++export const publicationOverviews = Object.freeze(data.records);
++export const overviewUpdatedDate = data.updatedDate;
++
++export function validatePublicationOverviews(publications, records = publicationOverviews) {
++  const required = new Set(publications.flatMap(item => item.volumes.map(volume => volume.slug)));
++  for (const slug of required) {
++    const overview = records[slug];
++    if (typeof overview !== "string" || !overview.trim()) {
++      throw new Error(`Missing publication overview: ${slug}`);
++    }
++    if (Array.from(overview).length > 1000) {
++      throw new Error(`Publication overview exceeds 1000 characters: ${slug}`);
++    }
++    if (Array.from(overview.replace(/\s/gu, "")).length < 800) {
++      throw new Error(`Detailed publication overview must be approximately 1000 characters: ${slug}`);
++    }
++  }
++  for (const slug of Object.keys(records)) {
++    if (!required.has(slug)) throw new Error(`Unknown publication overview: ${slug}`);
++  }
++  for (const item of publications.filter(item => item.volumes.length > 1)) {
++    const summaries = item.volumes.map(volume => records[volume.slug]);
++    if (new Set(summaries).size !== summaries.length) {
++      throw new Error(`Volume overviews must be individually written: ${item.slug}`);
++    }
++  }
++}
+--- /dev/null
++++ b/tests/publication-overviews.test.mjs
+@@ -0,0 +1,62 @@
++import assert from "node:assert/strict";
++import { readFile } from "node:fs/promises";
++import test from "node:test";
++import { cataloguePublications } from "../src/catalogue-publications.mjs";
++import { publicationOverviews, validatePublicationOverviews } from "../src/publication-overviews.mjs";
++
++const escapeHtml = text => text.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
++  .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
++
++test("every published volume has an individually written detailed overview of approximately 1000 characters", () => {
++  validatePublicationOverviews(cataloguePublications);
++  assert.equal(Object.keys(publicationOverviews).length, cataloguePublications.reduce((count, item) => count + item.volumes.length, 0));
++});
++
++test("overview validation rejects missing, short, oversized, orphaned and duplicated volume text", () => {
++  const catalogue = [{ slug: "work", volumes: [{ slug: "v1" }, { slug: "v2" }] }];
++  const valid = { v1: "甲".repeat(900), v2: "乙".repeat(900) };
++  assert.doesNotThrow(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(1000) }));
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: " " }), /Missing/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(799) }), /approximately/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(799) + " ".repeat(100) }), /approximately/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v1: "字".repeat(1001) }), /1000/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, extra: "余分" }), /Unknown/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, work: "総括" }), /Unknown/);
++  assert.throws(() => validatePublicationOverviews(catalogue, { ...valid, v2: valid.v1 }), /individually/);
++});
++
++test("original descriptions remain visible and unchanged, with volume disclosures immediately below them", async () => {
++  for (const item of cataloguePublications) {
++    const html = await readFile(new URL(`../dist/publications/${item.slug}/index.html`, import.meta.url), "utf8");
++    const original = `<p class="publication-hero__description">${escapeHtml(item.description)}</p>`;
++    const descriptionAt = html.indexOf(original);
++    assert.ok(descriptionAt >= 0, `${item.slug}: original description preserved exactly`);
++    const afterDescription = html.slice(descriptionAt + original.length);
++    assert.match(afterDescription, /^\s*<div class="publication-overview-list">\s*<details\b/u, `${item.slug}: details immediately below original`);
++    assert.ok(html.includes(`<meta name="description" content="${escapeHtml(item.description)}">`), `${item.slug}: original meta description`);
++    assert.equal((html.match(/class="publication-hero__description"/gu) ?? []).length, 1, `${item.slug}: one visible original description`);
++    const entries = item.volumes;
++    const disclosures = [...html.matchAll(/<details\b([^>]*)class="publication-overview"([^>]*)>([\s\S]*?)<\/details>/gu)];
++    assert.equal(disclosures.length, entries.length, `${item.slug}: disclosure count`);
++    for (let i = 0; i < entries.length; i++) {
++      const [, before, after, body] = disclosures[i];
++      const slug = entries[i].slug;
++      assert.doesNotMatch(before + after, /\bopen(?:\s|=|$)/u, `${slug}: closed initially`);
++      assert.ok(after.includes(`id="overview-${slug}"`), `${slug}: independent control`);
++      assert.match(body, /^\s*<summary\b[\s\S]*?<\/summary>/u, `${slug}: native keyboard control`);
++      const paragraphs = publicationOverviews[slug].split(/\n\s*\n/u).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("");
++      assert.ok(body.includes(`<div class="publication-overview__body">${paragraphs}</div>`), `${slug}: full text in initial HTML`);
++      const label = `${entries.length > 1 ? entries[i].volumeLabel + "の" : ""}詳細概要`;
++      assert.ok(body.includes(`<span class="publication-overview__show">${escapeHtml(label)}</span>`), `${slug}: volume-specific button`);
++    }
++    const structured = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gu)]
++      .flatMap(match => JSON.parse(match[1]));
++    const work = structured.find(value => value.identifier === item.slug);
++    assert.ok(work, `${item.slug}: structured work`);
++    assert.equal(work.description, item.description, `${item.slug}: original structured description`);
++    assert.equal(work.abstract, publicationOverviews[item.slug]);
++    if (item.volumes.length > 1) {
++      assert.deepEqual(work.hasPart.map(part => part.abstract), item.volumes.map(volume => publicationOverviews[volume.slug]));
++    }
++  }
++});
+--- /dev/null
++++ b/.github/workflows/check-overviews.yml
+@@ -0,0 +1,93 @@
++name: Check additional detailed overviews
++on:
++  push:
++    branches: [work/detailed-overviews-20261016]
++    paths:
++      - '.github/workflows/check-overviews.yml'
++      - 'src/publication-overviews*'
++      - 'src/styles.css'
++      - 'scripts/build.mjs'
++      - 'tests/*'
++      - 'package.json'
++permissions:
++  contents: read
++jobs:
++  verify:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-node@v4
++        with:
++          node-version: 22
++      - run: npm ci --no-audit --no-fund
++      - run: npm run build
++      - run: node scripts/inject-model-comparison.mjs
++      - run: npm test
++      - run: npm run verify:remote-search
++      - name: Install browser for disclosure checks
++        run: |
++          npm install --no-save --package-lock=false playwright
++          npx playwright install --with-deps chromium
++      - name: Test mouse, keyboard, mobile, and JavaScript-disabled disclosures
++        run: |
++          python3 -m http.server 4173 --directory dist > /tmp/overview-server.log 2>&1 &
++          node --input-type=module <<'JS'
++          import { chromium } from 'playwright';
++          import assert from 'node:assert/strict';
++          import { mkdir } from 'node:fs/promises';
++          import { cataloguePublications } from './src/catalogue-publications.mjs';
++          const browser = await chromium.launch();
++          await mkdir('overview-screenshots', { recursive: true });
++          for (const width of [1440, 375]) {
++            for (const javaScriptEnabled of [false, true]) {
++            const context = await browser.newContext({ javaScriptEnabled, viewport: { width, height: 1000 } });
++            await context.route('**/*', route => route.request().url().startsWith('http://127.0.0.1:4173/') ? route.continue() : route.abort());
++            const page = await context.newPage();
++            for (const slug of ['perigny-cinq-republiques-amerique-centrale-1911', 'cuevas-historia-iglesia-mexico']) {
++              await page.goto(`http://127.0.0.1:4173/publications/${slug}/`);
++              const item = cataloguePublications.find(item => item.slug === slug);
++              const original = page.locator('.publication-hero__description');
++              assert.equal(await original.innerText(), item.description);
++              assert.equal(await original.isVisible(), true);
++              assert.equal(await original.evaluate(element => element.nextElementSibling.className), 'publication-overview-list');
++              const disclosures = page.locator('details.publication-overview');
++              assert.equal(await disclosures.count(), item.volumes.length);
++              for (const disclosure of await disclosures.all()) {
++                assert.equal(await disclosure.getAttribute('open'), null);
++                assert.equal(await disclosure.locator('.publication-overview__body').isVisible(), false);
++              }
++              await page.screenshot({ path: `overview-screenshots/${slug}-${width}-${javaScriptEnabled}-closed.png`, fullPage: false });
++              const first = disclosures.first();
++              const summary = first.locator('summary');
++              await summary.click();
++              assert.equal(await first.locator('.publication-overview__body').isVisible(), true);
++              assert.match(await summary.innerText(), /閉じる/);
++              await summary.press('Enter');
++              assert.equal(await first.locator('.publication-overview__body').isVisible(), false);
++              await summary.press('Space');
++              assert.equal(await first.locator('.publication-overview__body').isVisible(), true);
++              await page.screenshot({ path: `overview-screenshots/${slug}-${width}-${javaScriptEnabled}-open.png`, fullPage: false });
++              if (slug.startsWith('cuevas')) {
++                await disclosures.nth(1).locator('summary').click();
++                assert.equal(await disclosures.nth(1).locator('.publication-overview__body').isVisible(), true);
++                assert.equal(await disclosures.nth(2).locator('.publication-overview__body').isVisible(), false);
++                await page.screenshot({ path: `overview-screenshots/volume-${width}-${javaScriptEnabled}.png`, fullPage: false });
++              }
++              for (const disclosure of await disclosures.all()) {
++                const rect = await disclosure.boundingBox();
++                assert.ok(rect.x >= 0 && rect.x + rect.width <= width + 1, `${slug}: overview fits ${width}px`);
++              }
++              assert.equal(await original.isVisible(), true);
++              assert.equal(await original.innerText(), item.description);
++              assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
++              console.log(`PASS ${slug} ${width}px JavaScript=${javaScriptEnabled}: original visible, initially hidden, click/Enter/Space, independent volumes`);
++            }
++            await context.close();
++            }
++          }
++          await browser.close();
++          JS
++      - uses: actions/upload-artifact@v4
++        with:
++          name: overview-screenshots
++          path: overview-screenshots
+--- /dev/null
++++ b/.github/workflows/verify-live-detailed-overviews.yml
+@@ -0,0 +1,64 @@
++name: Verify live additional detailed overviews
++on:
++  push:
++    branches: [work/detailed-overviews-20261016]
++    paths: ['.github/workflows/verify-live-detailed-overviews.yml']
++permissions:
++  contents: read
++jobs:
++  verify:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-node@v4
++        with:
++          node-version: 22
++      - name: Verify all published overview bodies and stylesheet
++        run: |
++          node --input-type=module <<'JS'
++          import assert from 'node:assert/strict';
++          import { readFile } from 'node:fs/promises';
++          import { cataloguePublications } from './src/catalogue-publications.mjs';
++          import { publicationOverviews } from './src/publication-overviews.mjs';
++          const origin = 'https://takochanchan.github.io';
++          const escapeHtml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
++          async function get(path) {
++            const response = await fetch(origin + path + '?overviews=FINAL_COMMIT', { signal: AbortSignal.timeout(60000) });
++            assert.equal(response.status, 200, path);
++            return response.text();
++          }
++          const queue = [...cataloguePublications];
++          let pages = 0, summaries = 0;
++          await Promise.all(Array.from({ length: 8 }, async () => {
++            while (queue.length) {
++              const item = queue.shift();
++              const html = await get('/publications/' + item.slug + '/');
++              const expected = item.volumes;
++              const original = '<p class="publication-hero__description">' + escapeHtml(item.description) + '</p>';
++              const at = html.indexOf(original);
++              assert.ok(at >= 0, item.slug + ': original description');
++              assert.match(html.slice(at + original.length), /^\s*<div class="publication-overview-list">\s*<details\b/u, item.slug + ': details below original');
++              assert.ok(html.includes('<meta name="description" content="' + escapeHtml(item.description) + '">'), item.slug + ': meta description');
++              const disclosures = [...html.matchAll(/<details\b([^>]*)class="publication-overview"([^>]*)>([\s\S]*?)<\/details>/gu)];
++              assert.equal(disclosures.length, expected.length, item.slug);
++              for (let index = 0; index < expected.length; index++) {
++                const [, before, after, body] = disclosures[index];
++                const slug = expected[index].slug;
++                assert.doesNotMatch(before + after, /\bopen(?:\s|=|$)/u, slug);
++                assert.ok(after.includes('id="overview-' + slug + '"'), slug);
++                const paragraphs = publicationOverviews[slug].split(/\n\s*\n/u).map(paragraph => '<p>' + escapeHtml(paragraph) + '</p>').join('');
++                assert.ok(body.includes('<div class="publication-overview__body">' + paragraphs + '</div>'), slug);
++                assert.match(body, /<summary\b[\s\S]*?<\/summary>/u, slug);
++                summaries++;
++              }
++              const data = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gu)].flatMap(match => JSON.parse(match[1]));
++              const work = data.find(value => value.identifier === item.slug);
++              assert.equal(work.description, item.description, item.slug + ': structured description');
++              assert.equal(work.abstract, publicationOverviews[item.slug], item.slug);
++              if (item.volumes.length > 1) assert.deepEqual(work.hasPart.map(part => part.abstract), item.volumes.map(volume => publicationOverviews[volume.slug]));
++              pages++;
++            }
++          }));
++          assert.equal(await get('/archive.css'), await readFile('src/styles.css', 'utf8'));
++          console.log(JSON.stringify({ status: 'PASS', publishedBibliographyPages: pages, publishedOverviews: summaries, originalDescriptionsUnchanged: true, detailsBelowOriginal: true, initiallyClosed: true, staticHtml: true, structuredData: true, stylesheetMatches: true }));
++          JS

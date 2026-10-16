@@ -32,3 +32,10 @@
 元の publication-hero__description をそのまま残し、その直下に各巻の native details/summary を追加する。summaryは「詳細概要」または「第X巻の詳細概要」。初期open属性なし。本文は静的HTMLに含め、段落を維持する。単巻はBookのabstract、多巻はhasPartのabstractへ同じ文章を出力する。既存説明とdescriptionメタデータは保持する。変更後は全ページについて従来概要の完全一致、配置順、初期非表示、字数、巻別網羅、構造化データとの一致を検証し、PC・スマートフォンのクリックとキーボード操作を確認する。
 
 本番へ未完成の詳細概要や作業用文章を出さない。全件の作成・検証が完了してから公開する。
+
+## 追加照合と保存済み実装
+
+- 本文抽出が短かった28資料について、EPUBのbody全文と画像代替テキストを補足取得。初回は既存XHTMLの不整合でXML解析が失敗したため、取得したHTMLの本文読取りをHTMLParserへ変更。
+- 補足取得run 38870003500 success、artifact 12033455288（detailed-overview-supplement）。全28件のEPUB SHA-256は先行取得時と一致。
+- interface-draft.patch に復元版からのUI・検証差分を保存。src/publication-overviews.json の完成データはまだ含まない。検証用workflowを本番mainへ入れない。
+- 字数検証の単体テストが成功。全件データの作成後に、完全なcheckoutでbuild、既存テスト、remote-search、PC・スマホでの開閉を一度通す。
