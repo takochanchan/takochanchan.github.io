@@ -14,9 +14,7 @@ jobs:
         run: |
           node --input-type=module > /tmp/overview-input.json <<'JS'
           import { cataloguePublications } from './src/catalogue-publications.mjs';
-          const selected = cataloguePublications.filter(p =>
-            /による「/.test(p.description) ||
-            /^(cuevas-|oviedo-|torquemada-|tribes-and-temples|garcia-pelaez-|milla-cuadros-|cogolludo-|figueroa-)/.test(p.slug));
+          const selected = cataloguePublications.filter(p => /^(palma-|herrera-)/.test(p.slug));
           console.log(JSON.stringify(selected.flatMap(p => p.volumes)));
           JS
           python3 - <<'PY'
@@ -37,7 +35,7 @@ jobs:
                           if tag=='p' and 100<len(t)<1400 and not any(w in t for w in ['ライセンス','日本語訳','底本','著作権','全訳','原刊p.']):paras.append(t)
                   heads=list(dict.fromkeys(heads))
                   samples=paras[:2]+[paras[len(paras)//2]] if paras else []
-                  return {'slug':v['slug'],'headings':' / '.join(heads)[:4200],'samples':samples}
+                  return {'slug':v['slug'],'headings':' / '.join(heads)[:6500], 'lastHeadings':' / '.join(heads)[-3500:],'samples':samples}
               except Exception as e:return {'slug':v['slug'],'error':str(e)}
           with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
               for result in pool.map(extract,json.load(open('/tmp/overview-input.json'))):
