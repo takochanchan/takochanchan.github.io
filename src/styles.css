@@ -1347,6 +1347,73 @@ select {
   line-height: 1.95;
 }
 
+.publication-overview-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 23px;
+}
+
+.publication-overview {
+  min-width: 0;
+  max-width: 740px;
+  margin: 0;
+}
+
+.publication-overview > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 44px;
+  width: fit-content;
+  max-width: 100%;
+  cursor: pointer;
+  list-style: none;
+  font-size: 13px;
+}
+
+.publication-overview > summary::-webkit-details-marker {
+  display: none;
+}
+
+.publication-overview > summary:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+}
+
+.publication-overview__hide,
+.publication-overview[open] .publication-overview__show {
+  display: none;
+}
+
+.publication-overview[open] .publication-overview__hide {
+  display: inline;
+}
+
+.publication-overview__icon::before {
+  content: "+";
+}
+
+.publication-overview[open] .publication-overview__icon::before {
+  content: "−";
+}
+
+.publication-overview__body {
+  padding: 16px 0 0;
+  color: #405053;
+  font-size: 15px;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.publication-overview__body p {
+  margin: 0;
+}
+
+.publication-overview__body p + p {
+  margin-top: 1em;
+}
+
 .publication-hero .tag-list {
   margin-bottom: 26px;
 }
