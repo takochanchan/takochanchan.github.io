@@ -1,0 +1,81 @@
+name: Check bibliography overviews
+on:
+  push:
+    branches: [work/seo-overviews-20261016]
+    paths:
+      - '.github/workflows/check-overviews.yml'
+      - 'src/publication-overviews*'
+      - 'src/styles.css'
+      - 'scripts/build.mjs'
+      - 'tests/*'
+      - 'package.json'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: node scripts/inject-model-comparison.mjs
+      - run: npm test
+      - run: npm run verify:remote-search
+      - name: Install browser for disclosure checks
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Test mouse, keyboard, mobile, and JavaScript-disabled disclosures
+        run: |
+          python3 -m http.server 4173 --directory dist > /tmp/overview-server.log 2>&1 &
+          node --input-type=module <<'JS'
+          import { chromium } from 'playwright';
+          import assert from 'node:assert/strict';
+          import { mkdir } from 'node:fs/promises';
+          const browser = await chromium.launch();
+          await mkdir('overview-screenshots', { recursive: true });
+          for (const width of [1440, 375]) {
+            const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 1000 } });
+            await context.route('**/*', route => route.request().url().startsWith('http://127.0.0.1:4173/') ? route.continue() : route.abort());
+            const page = await context.newPage();
+            for (const slug of ['perigny-cinq-republiques-amerique-centrale-1911', 'cuevas-historia-iglesia-mexico']) {
+              await page.goto(`http://127.0.0.1:4173/publications/${slug}/`);
+              const disclosures = page.locator('details.publication-overview');
+              assert.equal(await disclosures.count(), slug.startsWith('cuevas') ? 6 : 1);
+              for (const disclosure of await disclosures.all()) {
+                assert.equal(await disclosure.getAttribute('open'), null);
+                assert.equal(await disclosure.locator('.publication-overview__body').isVisible(), false);
+              }
+              const first = disclosures.first();
+              const summary = first.locator('summary');
+              await summary.click();
+              assert.equal(await first.locator('.publication-overview__body').isVisible(), true);
+              assert.match(await summary.innerText(), /閉じる/);
+              await summary.press('Enter');
+              assert.equal(await first.locator('.publication-overview__body').isVisible(), false);
+              await summary.press('Space');
+              assert.equal(await first.locator('.publication-overview__body').isVisible(), true);
+              await page.screenshot({ path: `overview-screenshots/${slug}-${width}.png`, fullPage: false });
+              if (slug.startsWith('cuevas')) {
+                await disclosures.nth(1).locator('summary').click();
+                assert.equal(await disclosures.nth(1).locator('.publication-overview__body').isVisible(), true);
+                assert.equal(await disclosures.nth(2).locator('.publication-overview__body').isVisible(), false);
+                await page.screenshot({ path: `overview-screenshots/volume-${width}.png`, fullPage: false });
+              }
+              for (const disclosure of await disclosures.all()) {
+                const rect = await disclosure.boundingBox();
+                assert.ok(rect.x >= 0 && rect.x + rect.width <= width + 1, `${slug}: overview fits ${width}px`);
+              }
+              console.log(`PASS ${slug} ${width}px: initially hidden, click/Enter/Space, independent volumes, no JavaScript`);
+            }
+            await context.close();
+          }
+          await browser.close();
+          JS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: overview-screenshots
+          path: overview-screenshots

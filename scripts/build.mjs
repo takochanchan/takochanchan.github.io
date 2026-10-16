@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { catalogueFiles } from "./analytics-report.mjs";
 import { attributeSpellingAliases } from "../src/attribute-spelling.mjs";
+import { overviewUpdatedDate, publicationOverviews, validatePublicationOverviews } from "../src/publication-overviews.mjs";
 import {
   publications as publicationUnits,
   shortPublicationAuthors,
@@ -41,6 +42,7 @@ const assetVersion = "20261004-document-collections";
 const catalogueScriptVersion = `${assetVersion}-spelling-20261014`;
 const analyticsVersion = "20261014-ga4-v1";
 catalogueFiles(publications); // Validate stable analytics IDs before publishing.
+validatePublicationOverviews(publications);
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -360,7 +362,7 @@ const documentShell = ({
   ${image ? `<meta name="twitter:image" content="${escapeHtml(image)}">` : ""}
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <link rel="sitemap" type="application/xml" href="${site.url}/sitemap.xml">
-  <link rel="stylesheet" href="/archive.css?v=${assetVersion}">
+  <link rel="stylesheet" href="/archive.css?v=${assetVersion}-overviews-20261016">
   <link rel="stylesheet" href="/fulltext-search.css?v=${assetVersion}">
   ${structuredData ? `<script type="application/ld+json">${jsonForScript(structuredData)}</script>` : ""}
   <noscript><style>.collection-panel[hidden]{display:block}</style></noscript>
@@ -972,6 +974,7 @@ const publicationStructuredData = (item, isShortWork) => {
       alternateName: item.originalTitle,
       ...(isShortWork ? { headline: item.title } : {}),
       description: item.description,
+      abstract: publicationOverviews[item.slug],
       author:
         item.originalAuthor === "Anonymous"
           ? { "@type": "Person", name: "Anonymous", alternateName: item.author }
@@ -993,6 +996,7 @@ const publicationStructuredData = (item, isShortWork) => {
             hasPart: item.volumes.map((volume, index) => ({
               "@type": "Book",
               name: `${item.title}（${volume.volumeLabel}）`,
+              abstract: publicationOverviews[volume.slug],
               ...(item.multiAuthorSeries ? {
                 "@id": `${canonical}#volume-${index + 1}`,
                 identifier: volume.slug,
@@ -1102,6 +1106,16 @@ const heroFileActions = (item) =>
           type="application/epub+zip" download>リフロー型EPUBを保存（${escapeHtml(item.epubSize)}）</a>
       </div>`;
 
+const overviewDisclosure = (item, label = "資料") => `
+  <details class="publication-overview" id="overview-${escapeHtml(item.slug)}">
+    <summary class="button button--quiet">
+      <span class="publication-overview__show">${escapeHtml(label)}の概要を読む</span>
+      <span class="publication-overview__hide">${escapeHtml(label)}の概要を閉じる</span>
+      <span class="publication-overview__icon" aria-hidden="true"></span>
+    </summary>
+    <div class="publication-overview__body"><p>${escapeHtml(publicationOverviews[item.slug])}</p></div>
+  </details>`;
+
 const volumeFileControls = (item) =>
   isMultiVolume(item)
     ? `<div class="volume-file-list" aria-label="分冊別ファイル">
@@ -1116,6 +1130,7 @@ const volumeFileControls = (item) =>
               <h3>${escapeHtml(volume.title)}</h3>
               <span>${volume.pageCount.toLocaleString("ja-JP")}頁</span>
             </div>
+            ${overviewDisclosure(volume, volume.volumeLabel)}
             <div class="volume-file__actions">
               <button class="button button--primary" type="button" data-pdf-load
                 data-pdf-src="${escapeHtml(pdfViewerUrl)}"
@@ -1185,7 +1200,7 @@ ${header({
           <p class="publication-hero__subtitle">${escapeHtml(item.subtitle)}</p>
           <p class="publication-hero__author${item.originalAuthor ? " catalogue-author" : ""}">${catalogueAuthorMarkup(item)}</p>
           ${catalogueAttributionMarkup(item, "publication-hero__attribution")}
-          <p class="publication-hero__description">${escapeHtml(item.description)}</p>
+          ${overviewDisclosure(item, isMultiVolume(item) ? "全巻" : "資料")}
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
           ${heroFileActions(item)}
           <p class="epub-note">
@@ -1466,12 +1481,12 @@ const latestUpdatedDate = (items) =>
   items.reduce(
     (latest, item) =>
       item.updatedDate && item.updatedDate > latest ? item.updatedDate : latest,
-    "",
+    overviewUpdatedDate,
   );
 
 const publicationSitemapEntry = (item) => ({
   loc: `${site.url}/publications/${encodeURIComponent(item.slug)}/`,
-  lastmod: item.updatedDate,
+  lastmod: item.updatedDate > overviewUpdatedDate ? item.updatedDate : overviewUpdatedDate,
   image: `${site.url}/${item.cover}`,
 });
 
@@ -1547,6 +1562,7 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 
 
 
