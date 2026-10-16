@@ -1,0 +1,45 @@
+name: Inspect publication contents for summaries
+on:
+  push:
+    branches: ["work/seo-overviews-20261016"]
+    paths: [".github/workflows/inspect-overview-sources.yml"]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read published EPUB contents
+        run: |
+          node --input-type=module > /tmp/overview-input.json <<'JS'
+          import { cataloguePublications } from './src/catalogue-publications.mjs';
+          const selected = cataloguePublications.filter(p =>
+            /による「/.test(p.description) ||
+            /^(cuevas-|oviedo-|torquemada-|tribes-and-temples|garcia-pelaez-|milla-cuadros-|cogolludo-|figueroa-)/.test(p.slug));
+          console.log(JSON.stringify(selected.flatMap(p => p.volumes)));
+          JS
+          python3 - <<'PY'
+          import json,urllib.request,zipfile,io,xml.etree.ElementTree as ET,concurrent.futures
+          def extract(v):
+              try:
+                  data=urllib.request.urlopen(v['epubUrl'],timeout=90).read()
+                  z=zipfile.ZipFile(io.BytesIO(data))
+                  heads=[];paras=[]
+                  for name in z.namelist():
+                      if not name.endswith(('.xhtml','.html','.htm')):continue
+                      try:root=ET.fromstring(z.read(name))
+                      except ET.ParseError:continue
+                      for e in root.iter():
+                          tag=e.tag.rsplit('}',1)[-1]
+                          t=' '.join(''.join(e.itertext()).split())
+                          if tag in ('h1','h2','h3','h4') and 6<len(t)<200:heads.append(t)
+                          if tag=='p' and 100<len(t)<1400 and not any(w in t for w in ['ライセンス','日本語訳','底本','著作権','全訳','原刊p.']):paras.append(t)
+                  heads=list(dict.fromkeys(heads))
+                  samples=paras[:2]+[paras[len(paras)//2]] if paras else []
+                  return {'slug':v['slug'],'headings':' / '.join(heads)[:4200],'samples':samples}
+              except Exception as e:return {'slug':v['slug'],'error':str(e)}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+              for result in pool.map(extract,json.load(open('/tmp/overview-input.json'))):
+                  print('OVERVIEW_SOURCE '+json.dumps(result,ensure_ascii=False))
+          PY
