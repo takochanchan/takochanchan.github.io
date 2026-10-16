@@ -1,0 +1,85 @@
+name: Read contents for detailed bibliography summaries
+on:
+  push:
+    branches: [work/detailed-overviews-20261016]
+    paths: ['.github/workflows/read-detailed-overview-sources.yml']
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read each published volume
+        run: |
+          mkdir overview-material
+          node --input-type=module > /tmp/overview-input.json <<'JS'
+          import { cataloguePublications } from './src/catalogue-publications.mjs';
+          console.log(JSON.stringify(cataloguePublications.flatMap(p => p.volumes.map(v => ({ ...v, canonicalSlug: p.slug })))));
+          JS
+          python3 - <<'PY'
+          import json,urllib.request,zipfile,io,xml.etree.ElementTree as ET,concurrent.futures,re,pathlib,hashlib
+          def extract(v):
+              for attempt in range(3):
+                  try:
+                      data=urllib.request.urlopen(v['epubUrl'],timeout=180).read()
+                      checksum=hashlib.sha256(data).hexdigest()
+                      z=zipfile.ZipFile(io.BytesIO(data))
+                      heads=[];paras=[]
+                      for name in z.namelist():
+                          if not name.endswith(('.xhtml','.html','.htm')):continue
+                          try:root=ET.fromstring(z.read(name))
+                          except ET.ParseError:continue
+                          for e in root.iter():
+                              tag=e.tag.rsplit('}',1)[-1]
+                              t=' '.join(''.join(e.itertext()).split())
+                              if tag in ('h1','h2','h3','h4') and 5<len(t)<250:heads.append(t)
+                              if tag=='p' and 60<len(t)<2200 and not any(w in t for w in ['ライセンス','日本語訳','底本','著作権','全訳','Creative Commons']):
+                                  t=re.sub(r'原刊\s*p\.\s*\d+','',t)
+                                  paras.append(t)
+                      heads=list(dict.fromkeys(heads));paras=list(dict.fromkeys(paras))
+                      textSize=sum(map(len,paras))
+                      if textSize<18000:samples=paras
+                      else:
+                          positions={0,1,2,len(paras)-1}
+                          positions.update(round((len(paras)-1)*i/20) for i in range(21))
+                          samples=[paras[i] for i in sorted(positions) if i>=0]
+                      result={'slug':v['slug'],'canonicalSlug':v['canonicalSlug'],'title':v['title'],'description':v['description'],'epubUrl':v['epubUrl'],'sha256':checksum,'headings':heads[:500],'samples':samples,'textCharacters':textSize}
+                      pathlib.Path('overview-material',v['slug']+'.json').write_text(json.dumps(result,ensure_ascii=False))
+                      return {'slug':v['slug'],'paragraphs':len(paras),'headings':len(heads)}
+                  except Exception as e:
+                      if attempt==2:return {'slug':v['slug'],'error':str(e)}
+          records=json.load(open('/tmp/overview-input.json'))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
+              results=list(pool.map(extract,records))
+          pathlib.Path('overview-material/manifest.json').write_text(json.dumps(results,ensure_ascii=False))
+          print(json.dumps({'records':len(results),'failed':[r for r in results if 'error' in r]}))
+          if any('error' in r for r in results):raise SystemExit(1)
+          PY
+      - name: Verify the original descriptions are restored
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { cataloguePublications } from './src/catalogue-publications.mjs';
+          const escapeHtml = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+          const queue=[...cataloguePublications];
+          let checked=0;
+          await Promise.all(Array.from({length:8},async()=>{
+            while(queue.length){
+              const item=queue.shift();
+              const response=await fetch('https://takochanchan.github.io/publications/'+item.slug+'/?restore=20261016');
+              assert.equal(response.status,200,item.slug);
+              const html=await response.text();
+              assert.ok(html.includes('<p class="publication-hero__description">'+escapeHtml(item.description)+'</p>'),item.slug);
+              assert.ok(!html.includes('class="publication-overview"'),item.slug);
+              checked++;
+            }
+          }));
+          console.log('ORIGINAL_DESCRIPTIONS_RESTORED '+checked);
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: detailed-overview-source-material
+          path: overview-material
