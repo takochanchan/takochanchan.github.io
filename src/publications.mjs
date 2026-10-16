@@ -1,3 +1,4 @@
+import { perignyCinqPublicationRecords, perignyCinqPublicationMetadata } from "./perigny-cinq-publication.mjs";
 import { mencosPublicationRecords, mencosPublicationMetadata } from "./mencos-publication.mjs";
 import { diezPublicationRecords, diezPublicationMetadata } from "./diez-publication.mjs";
 import { medinaPublicationRecords, medinaPublicationMetadata } from "./medina-publication.mjs";
@@ -267,6 +268,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...perignyCinqPublicationRecords,
   ...mencosPublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
@@ -9376,6 +9378,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...perignyCinqPublicationMetadata,
   ...mencosPublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
@@ -12256,6 +12259,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

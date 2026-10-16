@@ -8680,6 +8680,25 @@
         "status": "online",
         "url": "https://simurg.csic.es/view/CSIC000234520/cronicas-de-la-antigua-guatemala"
       }
+    },
+    {
+      "slug": "perigny-cinq-republiques-amerique-centrale-1911",
+      "title": "中央アメリカの五共和国",
+      "originalTitle": "Les cinq républiques de l’Amérique centrale",
+      "author": "モーリス・ド・ペリニー伯爵",
+      "originalAuthor": "Comte Maurice de Périgny",
+      "year": 1911,
+      "originalPublication": "Paris: Pierre Roger et Cie, [1911].",
+      "sourceEdition": "Comte Maurice de Périgny, Les cinq républiques de l’Amérique centrale, Paris: Pierre Roger et Cie, [1911].",
+      "sourceProvider": "フランス国立図書館（BnF）所蔵、Gallica公開。ペリニー資料Carton 8（SG MS-4-48 (1171)）に収められた刊本。画像はWikimedia Commonsの公開版を参照。",
+      "rights": "原著者モーリス・ド・ペリニーは1935年没。本文・図版はWikimedia Commonsでパブリックドメインとして公開されています。画像出典：Bibliothèque nationale de France／Gallica。写真中のUnderwood & Underwoodの原著作権表示は史料の一部です。公開画像：https://commons.wikimedia.org/w/index.php?curid=186790150",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://gallica.bnf.fr/ark:/12148/btv1b10891249f"
+      }
     }
   ],
   "works": [

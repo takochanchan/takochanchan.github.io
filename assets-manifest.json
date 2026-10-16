@@ -8376,6 +8376,24 @@
       "url": "https://takochanchan.github.io/publications/mencos-cronicas-antigua-guatemala-1894/cover.jpg",
       "size": 86459,
       "sha256": "e44d2c4cfb4fbb72f09a1206c883212657c9a3527ec377c0a653e2abab3c5610"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "size": 8299494,
+      "sha256": "c77569f9470d179a755dc750d3c393dfc0b37968a34b5753ab89d17ee665f0e5"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "size": 8656968,
+      "sha256": "d22d85840931edda81d9601caad409b9c99cf2647e5465948e01e1f881054d25"
+    },
+    {
+      "path": "publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/perigny-cinq-republiques-amerique-centrale-1911/cover.jpg",
+      "size": 51409,
+      "sha256": "7d4c82ce5dbb3a6b33ff241586f0f67253692cac2edc6a253432993790bbece1"
     }
   ]
 }
