@@ -52,28 +52,7 @@ const expectedPapers = expectedCatalogueCount("short-work");
 const expectedDocumentCollections = expectedCatalogueCount("document-collection");
 
 test("administrative and diplomatic documents occupy their own collection", async () => {
-  const selected = new Set([
-    "arevalo-documentos-antiguos-guatemala-1857",
-    "diez-noticias-sacras-reales-mss3023-vol-1",
-    "cehm-manuscritos-betlemitas-xi-5",
-    "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
-    "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
-    "proceso-contra-william-walker-1860",
-    "egan-wyer-1930",
-    "us-senate-central-america-correspondence-1853",
-    "frus-nicaragua-mosquito-territory-1894",
-    "foreign-office-mosquito-territory-1848",
-    "garcia-documentos-ineditos-mexico-v01-1905",
-    "garcia-documentos-ineditos-mexico-v02-1905",
-    "garcia-documentos-ineditos-mexico-v03-1905",
-    "garcia-documentos-ineditos-mexico-v04-1906",
-    "garcia-documentos-ineditos-mexico-v05-1906",
-    "garcia-documentos-ineditos-mexico-v06-1906",
-    "garcia-documentos-ineditos-mexico-v07-1906",
-    "garcia-documentos-ineditos-mexico-v08-1906",
-    "garcia-documentos-ineditos-mexico-v09-1906",
-  ]);
-  assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
+  const selected = new Set(expectedDocuments.map(item => item.slug));  assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
   assert.deepEqual(new Set(expectedDocuments.map(item => item.slug)), selected);
   assert.equal(majorPublications.length + shortPublications.length + documentPublications.length, publications.length);
   assert.ok(majorPublications.every(item => !selected.has(item.slug)));
@@ -3179,15 +3158,19 @@ test("Garcia's 36-volume series separates published volumes from future volumes"
   assert.ok(series);
   assert.equal(series.recordClass, "document-collection");
   assert.deepEqual(series.seriesVolumes.map(volume => volume.number), Array.from({length: 36}, (_, index) => index + 1));
-  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const expectedGroup = expectedGroups.find(group => group.slug === series.slug);
+  assert.ok(expectedGroup);
+  const publishedNumbers = expectedGroup.memberSlugs.map(slug => Number(slug.match(/-v(\d+)-/)[1]));
+  assert.deepEqual(series.memberSlugs, expectedGroup.memberSlugs);
+  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), publishedNumbers);
   assert.equal(new Set(series.volumes.map(volume => volume.originalAuthor)).size, 4);
   for (const member of series.memberSlugs) assert.equal(bibliographicAliases[member], series.slug);
   const html = await readFile(path.join(dist, "publications", series.slug, "index.html"), "utf8");
   assert.equal((html.match(/data-series-volume="/g) ?? []).length, 36);
-  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, 9);
-  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 27);
-  assert.match(html, /公開9巻/);
+  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, publishedNumbers.length);
+  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 36 - publishedNumbers.length);
+  assert.match(html, new RegExp(`公開${publishedNumbers.length}巻`));
   assert.match(html, /ロバーツ図書館/);
-  assert.match(html, /CC等のライセンス指定がありません/);
+  assert.match(html, /利用・再利用の制限なし/);
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
 });
