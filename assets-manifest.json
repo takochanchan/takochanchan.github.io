@@ -8430,6 +8430,60 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v10-1907/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf",
+      "size": 2094079,
+      "sha256": "bfb497a23b556320fb48bd70ff9a1311fb8f965063348b7d90c119652c5d4831"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v10-1907/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.epub",
+      "size": 15197650,
+      "sha256": "8a5725aaf102eebadd112e64fef74c6d06dd825bc86f3325bce75e1ae30ff569"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v10-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v10-1907/cover.jpg",
+      "size": 55777,
+      "sha256": "8e794cefa65d9469e583475f0ce543cf6343cb24fa7b5613ec52a91d1c233bd9"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v11-1907/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.pdf",
+      "size": 2594454,
+      "sha256": "dffc70b6d51039245c335b9767ea2d92961ce74b940314fba71db5ade99ff164"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v11-1907/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub",
+      "size": 15186538,
+      "sha256": "3d29a2573a91926f9a9de5a9fa773563493153e95373ada523da6534bc7817f2"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v11-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v11-1907/cover.jpg",
+      "size": 54406,
+      "sha256": "e32e9006799e4f608ee58cc10d3de1dc7987edbf16044a0aaab9c59c49de6f85"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v12-1907/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf",
+      "size": 3414015,
+      "sha256": "919c3e7bbf958f44986f0635ee64ce2b6c6cd72ae0e03d25a906ef38c3da8db2"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v12-1907/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.epub",
+      "size": 16849142,
+      "sha256": "289c52306b5b9c0a78b2e28a03272faf250038c2330b87d37f0e125e6f3a3630"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v12-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v12-1907/cover.jpg",
+      "size": 64456,
+      "sha256": "32e343aac46b9fcbd37d4c280ab1806f5a1f3aa918668c7f03e91d70e137dca8"
     }
   ]
 }

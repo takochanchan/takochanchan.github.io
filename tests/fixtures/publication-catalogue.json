@@ -2466,6 +2466,21 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "著者不明"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v10-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v11-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v12-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002"
     }
   ],
   "groups": [
@@ -2556,7 +2571,10 @@
         "garcia-documentos-ineditos-mexico-v06-1906",
         "garcia-documentos-ineditos-mexico-v07-1906",
         "garcia-documentos-ineditos-mexico-v08-1906",
-        "garcia-documentos-ineditos-mexico-v09-1906"
+        "garcia-documentos-ineditos-mexico-v09-1906",
+        "garcia-documentos-ineditos-mexico-v10-1907",
+        "garcia-documentos-ineditos-mexico-v11-1907",
+        "garcia-documentos-ineditos-mexico-v12-1907"
       ]
     },
     {
