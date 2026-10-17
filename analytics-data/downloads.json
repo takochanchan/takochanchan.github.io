@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-16",
-  "updatedAt": "2026-10-16T22:53:03.003Z",
+  "endDate": "2026-10-17",
+  "updatedAt": "2026-10-17T22:22:21.627Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7527,6 +7527,54 @@
       "slug": "perigny-cinq-republiques-amerique-centrale-1911",
       "title": "中央アメリカの五共和国",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_6b22e2a85b79d1f3",
+      "name": "Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第10巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_f6fe53b349fd6661",
+      "name": "Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第10巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_50778ae48e650af8",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第11巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_994f570af724515c",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第11巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a10ee496628b9a05",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第12巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_58a528e276a7aed7",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第12巻",
       "format": "epub"
     }
   ],
