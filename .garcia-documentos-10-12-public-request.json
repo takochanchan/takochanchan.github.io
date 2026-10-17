@@ -51,5 +51,5 @@
       "8bf84f0c5128cf92757e589bfeb323103f13cee9"
     ]
   },
-  "validationRepair": "Register document classes and derive remaining document and Garcia volume regressions from the independent catalogue fixture."
+  "validationRepair": "Complete fixture-based regression migration, including the search document-class negative test."
 }
