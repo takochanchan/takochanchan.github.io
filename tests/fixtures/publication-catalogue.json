@@ -2378,17 +2378,23 @@
     {
       "slug": "garcia-documentos-ineditos-mexico-v01-1905",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Genaro García / Carlos Pereyra (eds.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v02-1905",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Antonio López de Santa Anna; Genaro García / Carlos Pereyra (eds.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v03-1905",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "José Fernando Ramírez; Genaro García / Carlos Pereyra (eds.)"
     },
     {
       "slug": "cuevas-historia-iglesia-mexico-v01",
@@ -2423,32 +2429,44 @@
     {
       "slug": "garcia-documentos-ineditos-mexico-v04-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 4,
+      "originalAuthor": "Genaro García / Carlos Pereyra (eds.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v05-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 5,
+      "originalAuthor": "Genaro García / Carlos Pereyra (eds.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v06-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 6,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v07-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 7,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v08-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 8,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v09-1906",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 9,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "mencos-cronicas-antigua-guatemala-1894",
@@ -2470,17 +2488,23 @@
     {
       "slug": "garcia-documentos-ineditos-mexico-v10-1907",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 10,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v11-1907",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 11,
+      "originalAuthor": "Genaro García (ed.)"
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v12-1907",
       "recordClass": "document-collection",
-      "searchShard": "002"
+      "searchShard": "002",
+      "seriesVolumeNumber": 12,
+      "originalAuthor": "Genaro García (ed.)"
     }
   ],
   "groups": [
@@ -2575,7 +2599,8 @@
         "garcia-documentos-ineditos-mexico-v10-1907",
         "garcia-documentos-ineditos-mexico-v11-1907",
         "garcia-documentos-ineditos-mexico-v12-1907"
-      ]
+      ],
+      "seriesVolumeCount": 36
     },
     {
       "slug": "cuevas-historia-iglesia-mexico",

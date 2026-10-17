@@ -28,32 +28,19 @@ import {
   validateSearchShardAssignments,
 } from "../scripts/search/shard-config.mjs";
 
+import {
+  expectedCatalogue, expectedRecords, expectedGroups, expectedBySlug,
+  expectedMajor, expectedShort, expectedDocuments,
+  expectedBooks, expectedPapers, expectedDocumentCollections, expectedSeriesBySlug,
+} from "./helpers/publication-catalogue.mjs";
+
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
 const dist = path.join(root, "dist");
 
-// One independent, reviewed snapshot supplies catalogue expectations. Adding a
-// record here updates all counts without accepting the implementation as its oracle.
-const expectedCatalogue = JSON.parse(await readFile(
-  path.join(here, "fixtures/publication-catalogue.json"), "utf8",
-));
-const expectedRecords = expectedCatalogue.records;
-const expectedGroups = expectedCatalogue.groups;
-const expectedBySlug = new Map(expectedRecords.map(item => [item.slug, item]));
-const expectedMajor = expectedRecords.filter(item => item.recordClass === "major-work");
-const expectedShort = expectedRecords.filter(item => item.recordClass === "short-work");
-const expectedDocuments = expectedRecords.filter(item => item.recordClass === "document-collection");
-const expectedCatalogueCount = recordClass =>
-  expectedRecords.filter(item => item.recordClass === recordClass).length -
-  expectedGroups.filter(group => expectedBySlug.get(group.memberSlugs[0])?.recordClass === recordClass)
-    .reduce((removed, group) => removed + group.memberSlugs.length - 1, 0);
-const expectedBooks = expectedCatalogueCount("major-work");
-const expectedPapers = expectedCatalogueCount("short-work");
-const expectedDocumentCollections = expectedCatalogueCount("document-collection");
-
 test("administrative and diplomatic documents occupy their own collection", async () => {
-  const selected = new Set(expectedDocuments.map(item => item.slug));  assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
-  assert.deepEqual(new Set(expectedDocuments.map(item => item.slug)), selected);
+  const selected = new Set(expectedDocuments.map(item => item.slug));
+  assert.deepEqual(new Set(documentPublications.map(item => item.slug)), selected);
   assert.equal(majorPublications.length + shortPublications.length + documentPublications.length, publications.length);
   assert.ok(majorPublications.every(item => !selected.has(item.slug)));
   assert.ok(shortPublicationAuthors.every(author => author.publications.every(item => !selected.has(item.slug))));
@@ -136,11 +123,21 @@ test("catalogue metadata is complete and unique", () => {
 });
 
 test("split volumes share one canonical bibliography record", () => {
+  const expectedSplitVolumeCounts = {
+    "bancroft-history-central-america-1886-1887": 3,
+    "torquemada-monarquia-indiana-1615": 3,
+    "valle-anexion-centro-america-mexico-1924-1949": 6,
+    "southey-chronological-history-west-indies-1827": 3,
+    "milla-gomez-carrillo-historia-america-central-1879-1905": 5,
+    "baqueiro-ensayo-revoluciones-yucatan-1878-1887": 3,
+    "dupaix-antiquites-mexicaines-1834": 3,
+    "garcia-pelaez-memorias-guatemala-1851-1852": 3,
+  };
   assert.deepEqual(
     publicationGroupDefinitions.map(({slug, memberSlugs}) => ({slug, memberSlugs})).sort((a,b)=>a.slug.localeCompare(b.slug)),
-    [...expectedGroups].sort((a,b)=>a.slug.localeCompare(b.slug)),
+    expectedGroups.map(({slug, memberSlugs}) => ({slug, memberSlugs})).sort((a,b)=>a.slug.localeCompare(b.slug)),
   );
-  assert.equal(publicationFileSplitDefinitions.length, 8);
+  assert.equal(publicationFileSplitDefinitions.length, Object.keys(expectedSplitVolumeCounts).length);
   assert.equal(cataloguePublications.length, expectedBooks + expectedPapers + expectedDocumentCollections);
   assert.equal(majorCataloguePublications.length, expectedBooks);
   assert.equal(shortCataloguePublications.length, expectedPapers);
@@ -210,16 +207,7 @@ test("split volumes share one canonical bibliography record", () => {
       definition.volumes.length,
     ]),
   );
-  assert.deepEqual(splitVolumeCounts, {
-    "bancroft-history-central-america-1886-1887": 3,
-    "torquemada-monarquia-indiana-1615": 3,
-    "valle-anexion-centro-america-mexico-1924-1949": 6,
-    "southey-chronological-history-west-indies-1827": 3,
-    "milla-gomez-carrillo-historia-america-central-1879-1905": 5,
-    "baqueiro-ensayo-revoluciones-yucatan-1878-1887": 3,
-    "dupaix-antiquites-mexicaines-1834": 3,
-    "garcia-pelaez-memorias-guatemala-1851-1852": 3,
-  });
+  assert.deepEqual(splitVolumeCounts, expectedSplitVolumeCounts);
   const dupaix = cataloguePublications.find(
     (publication) => publication.slug === "dupaix-antiquites-mexicaines-1834",
   );
@@ -3153,23 +3141,38 @@ test("Haefkens books remain separate and disclose unavailable source material", 
 });
 
 
-test("Garcia's 36-volume series separates published volumes from future volumes", async () => {
-  const series = cataloguePublications.find(item => item.slug === "garcia-documentos-ineditos-mexico-1905-1911");
+test("Garcia's series separates expected published volumes from future volumes", async () => {
+  const slug = "garcia-documentos-ineditos-mexico-1905-1911";
+  const expected = expectedSeriesBySlug.get(slug);
+  assert.ok(expected, `${slug}: missing independent series expectations`);
+  const { allNumbers, publishedVolumes, unpublishedNumbers } = expected;
+  const series = cataloguePublications.find(item => item.slug === slug);
   assert.ok(series);
   assert.equal(series.recordClass, "document-collection");
-  assert.deepEqual(series.seriesVolumes.map(volume => volume.number), Array.from({length: 36}, (_, index) => index + 1));
-  const expectedGroup = expectedGroups.find(group => group.slug === series.slug);
-  assert.ok(expectedGroup);
-  const publishedNumbers = expectedGroup.memberSlugs.map(slug => Number(slug.match(/-v(\d+)-/)[1]));
-  assert.deepEqual(series.memberSlugs, expectedGroup.memberSlugs);
-  assert.deepEqual(series.volumes.map(volume => volume.seriesVolumeNumber), publishedNumbers);
-  assert.equal(new Set(series.volumes.map(volume => volume.originalAuthor)).size, 4);
-  for (const member of series.memberSlugs) assert.equal(bibliographicAliases[member], series.slug);
+  assert.deepEqual(series.seriesVolumes.map(volume => volume.number), allNumbers);
+  assert.deepEqual(series.memberSlugs, publishedVolumes.map(volume => volume.slug));
+  assert.deepEqual(
+    series.volumes.map(({ slug, seriesVolumeNumber, originalAuthor }) => ({ slug, seriesVolumeNumber, originalAuthor })),
+    publishedVolumes.map(({ slug, seriesVolumeNumber, originalAuthor }) => ({ slug, seriesVolumeNumber, originalAuthor })),
+  );
+  for (const member of publishedVolumes) assert.equal(bibliographicAliases[member.slug], series.slug);
   const html = await readFile(path.join(dist, "publications", series.slug, "index.html"), "utf8");
-  assert.equal((html.match(/data-series-volume="/g) ?? []).length, 36);
-  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, publishedNumbers.length);
-  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, 36 - publishedNumbers.length);
-  assert.match(html, new RegExp(`公開${publishedNumbers.length}巻`));
+  const rows = [...html.matchAll(/<tr data-series-volume="(\d+)">([\s\S]*?)<\/tr>/g)];
+  assert.deepEqual(rows.map(([, number]) => Number(number)), allNumbers);
+  assert.equal((html.match(/>公開済み<\/a>/g) ?? []).length, publishedVolumes.length);
+  assert.equal((html.match(/<td>未公開<\/td>/g) ?? []).length, unpublishedNumbers.length);
+  // Check each volume's status and target: equal totals must not hide a swap.
+  for (const [, number, row] of rows) {
+    const index = publishedVolumes.findIndex(volume => volume.seriesVolumeNumber === Number(number));
+    if (index >= 0) {
+      assert.ok(row.includes(`<a href="#volume-${index + 1}">公開済み</a>`), `volume ${number}: published link`);
+      assert.doesNotMatch(row, /未公開/);
+    } else {
+      assert.match(row, /<td>未公開<\/td>/);
+      assert.doesNotMatch(row, /href="#volume-|公開済み/);
+    }
+  }
+  assert.match(html, new RegExp(`公開${publishedVolumes.length}巻`));
   assert.match(html, /ロバーツ図書館/);
   assert.match(html, /利用・再利用の制限なし/);
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
