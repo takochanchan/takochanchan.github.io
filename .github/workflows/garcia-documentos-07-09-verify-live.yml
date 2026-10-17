@@ -38,7 +38,7 @@ jobs:
           slugs=['garcia-documentos-ineditos-mexico-v'+str(n).zfill(2)+'-1906' for n in [7,8,9]]
           url='https://takochanchan.github.io/publications/'+slug+'/'
           html=urllib.request.urlopen(url,timeout=60).read().decode()
-          for text in ['公開9巻','ロバーツ図書館','Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf','Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub','Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf']:
+          for text in ['第9巻','ロバーツ図書館','Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf','Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub','Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf']:
               assert text in html, text
           assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if any(a['path'].startswith('publications/'+member+'/') for member in slugs)]
           root=pathlib.Path(tempfile.mkdtemp())

@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-14",
-  "updatedAt": "2026-10-14T23:16:23.303Z",
+  "endDate": "2026-10-16",
+  "updatedAt": "2026-10-16T22:53:03.003Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7415,6 +7415,118 @@
       "slug": "robertson-history-america-1777-1796",
       "title": "アメリカ史",
       "volumeLabel": "第9書および第10書",
+      "format": "epub"
+    },
+    {
+      "key": "dl_4335969c2677381e",
+      "name": "Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.pdf",
+      "slug": "mencos-cronicas-antigua-guatemala-1894",
+      "title": "アンティグア・グアテマラ年代記",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_0895fa037002017e",
+      "name": "Agustin_Mencos_Franco_Cronicas_de_la_Antigua_Guatemala_1894_Japanese_Complete_Translation.epub",
+      "slug": "mencos-cronicas-antigua-guatemala-1894",
+      "title": "アンティグア・グアテマラ年代記",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ba166dc839301fd4",
+      "name": "Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第7巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_82732297f07de5b0",
+      "name": "Garcia_Documentos_Ineditos_Mexico_VII_1906_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第7巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_09ab4bef5e74f917",
+      "name": "Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第8巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_08bef20bc123557d",
+      "name": "Garcia_Documentos_Ineditos_Mexico_VIII_1906_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第8巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_15df20d07563356d",
+      "name": "Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第9巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_af2e6685b4aa004f",
+      "name": "Garcia_Documentos_Ineditos_Mexico_IX_1906_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第9巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_563a7c949031f064",
+      "name": "Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.pdf",
+      "slug": "arevalo-documentos-antiguos-guatemala-1857",
+      "title": "グアテマラ市参事会文書館古文書集",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_168cb8dc68192fc0",
+      "name": "Rafael_Arevalo_Coleccion_de_Documentos_Antiguos_1857_Japanese_Complete_Translation.epub",
+      "slug": "arevalo-documentos-antiguos-guatemala-1857",
+      "title": "グアテマラ市参事会文書館古文書集",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ba731ae7168f3385",
+      "name": "Isagoge_1892_Japanese_Complete_Translation.pdf",
+      "slug": "isagoge-historico-apologetico-1892",
+      "title": "全インディアス、特に説教者会のチアパ・グアテマラ聖ビセンテ・フェレール管区に関する歴史弁証序説",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_8186f40458c58357",
+      "name": "Isagoge_1892_Japanese_Complete_Translation.epub",
+      "slug": "isagoge-historico-apologetico-1892",
+      "title": "全インディアス、特に説教者会のチアパ・グアテマラ聖ビセンテ・フェレール管区に関する歴史弁証序説",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_3d035ce129d19c00",
+      "name": "Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "slug": "perigny-cinq-republiques-amerique-centrale-1911",
+      "title": "中央アメリカの五共和国",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b7674f4c96b34b34",
+      "name": "Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "slug": "perigny-cinq-republiques-amerique-centrale-1911",
+      "title": "中央アメリカの五共和国",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],

@@ -1,0 +1,23 @@
+{
+  "verified_archive_commit": "8b75d8e0b1f9aa99553a5ff2fd3c51fc32c17502",
+  "bundle": {
+    "size": 15499955,
+    "sha256": "4b5a3ed502e76a4dd18e4517e5bcc267a3d67e1b8fb9cc17604ca643d3e146ab",
+    "chunks": [
+      "c9966da3efe78e57dc92f70d4cb38547c8ab03ba",
+      "006224d627df72808c0312a358d6378f59df7e47"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.pdf",
+      "size": 8299494,
+      "sha256": "c77569f9470d179a755dc750d3c393dfc0b37968a34b5753ab89d17ee665f0e5"
+    },
+    {
+      "filename": "Maurice_de_Perigny_Les_cinq_republiques_1911_Japanese_Translation.epub",
+      "size": 8656968,
+      "sha256": "d22d85840931edda81d9601caad409b9c99cf2647e5465948e01e1f881054d25"
+    }
+  ]
+}

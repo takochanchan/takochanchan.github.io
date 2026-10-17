@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "arevalo-documentos-antiguos-guatemala-1857",
+      "title": "グアテマラ市参事会文書館古文書集",
+      "originalTitle": "Colección de documentos antiguos del Archivo del Ayuntamiento de la ciudad de Guatemala",
+      "author": "ラファエル・アレバロ 編",
+      "originalAuthor": "Rafael Arévalo (ed.)",
+      "originalPublication": "Guatemala: Imprenta de Luna, 1857.",
+      "year": 1857,
+      "sourceEdition": "Rafael Arévalo (ed.), Colección de documentos antiguos del Archivo del Ayuntamiento de la ciudad de Guatemala. Guatemala: Imprenta de Luna, 1857.",
+      "sourceProvider": "Biblioteca de CIRMA提供、Internet Archive公開。資料識別子 ColeccionDocumentosAntiguosRafaelArevalo1857。",
+      "rights": "1857年刊の原著本文は著作権保護期間を満了しています。底本スキャンにはCC BY-NC-ND 3.0の表示があり、原著作の権利とは区別します。本訳には底本の紋章図その他のスキャン画像を転載していません。ライセンス：https://creativecommons.org/licenses/by-nc-nd/3.0/",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/ColeccionDocumentosAntiguosRafaelArevalo1857"
+      }
+    },
+    {
       "slug": "diez-noticias-sacras-reales-mss3023-vol-1",
       "title": "聖務・王務に関する記録",
       "originalTitle": "Noticias sacras y reales",
@@ -8660,6 +8679,120 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://archive.org/details/documentosindi07garc"
+      }
+    },
+    {
+      "slug": "mencos-cronicas-antigua-guatemala-1894",
+      "title": "アンティグア・グアテマラ年代記",
+      "originalTitle": "Crónicas de la Antigua Guatemala",
+      "author": "アグスティン・メンコス・フランコ",
+      "originalAuthor": "Agustín Mencos Franco",
+      "year": 1894,
+      "originalPublication": "Guatemala: Tipografía El Comercio, 1894.",
+      "sourceEdition": "Agustín Mencos Franco, Crónicas de la Antigua Guatemala, Guatemala: Tipografía El Comercio, 1894.",
+      "sourceProvider": "スペイン高等学術研究院（CSIC）・Biblioteca Americanista de Sevilla所蔵、電子図書館Simurg公開本。",
+      "rights": "1894年刊の原著本文は著作権保護期間を満了しています。デジタル資料の提供元はCSIC／Biblioteca Americanista de Sevillaです。Simurgの書誌・IIIFメタデータには利用条件としてCC BY-NC-SA 4.0が示されています。利用条件：https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "publishedDate": "2026-10-15",
+      "updatedDate": "2026-10-15",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/CSIC000234520/cronicas-de-la-antigua-guatemala"
+      }
+    },
+    {
+      "slug": "perigny-cinq-republiques-amerique-centrale-1911",
+      "title": "中央アメリカの五共和国",
+      "originalTitle": "Les cinq républiques de l’Amérique centrale",
+      "author": "モーリス・ド・ペリニー伯爵",
+      "originalAuthor": "Comte Maurice de Périgny",
+      "year": 1911,
+      "originalPublication": "Paris: Pierre Roger et Cie, [1911].",
+      "sourceEdition": "Comte Maurice de Périgny, Les cinq républiques de l’Amérique centrale, Paris: Pierre Roger et Cie, [1911].",
+      "sourceProvider": "フランス国立図書館（BnF）所蔵、Gallica公開。ペリニー資料Carton 8（SG MS-4-48 (1171)）に収められた刊本。画像はWikimedia Commonsの公開版を参照。",
+      "rights": "原著者モーリス・ド・ペリニーは1935年没。本文・図版はWikimedia Commonsでパブリックドメインとして公開されています。画像出典：Bibliothèque nationale de France／Gallica。写真中のUnderwood & Underwoodの原著作権表示は史料の一部です。公開画像：https://commons.wikimedia.org/w/index.php?curid=186790150",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://gallica.bnf.fr/ark:/12148/btv1b10891249f"
+      }
+    },
+    {
+      "slug": "isagoge-historico-apologetico-1892",
+      "title": "全インディアス、特に説教者会のチアパ・グアテマラ聖ビセンテ・フェレール管区に関する歴史弁証序説",
+      "originalTitle": "Isagoge histórico apologético general de todas las Indias y especial de la provincia de Sn. Vicente Ferrer de Chiapa y Goathemala de el Orden de Predicadores",
+      "author": "著者不明",
+      "originalAuthor": "Anónimo",
+      "originalPublication": "Madrid: Tipografía de Tomás Minuesa de los Ríos, 1892.",
+      "year": 1892,
+      "sourceEdition": "Isagoge histórico apologético general de todas las Indias y especial de la provincia de Sn. Vicente Ferrer de Chiapa y Goathemala de el Orden de Predicadores. 著者不明。Madrid: Tipografía de Tomás Minuesa de los Ríos, 1892.",
+      "sourceProvider": "ハーバード大学所蔵本。Googleによるデジタル化、Internet Archive公開。資料識別子 isagogehistrico00unkngoog。",
+      "rights": "1892年刊の原著本文は著作権保護期間を満了しています。底本：ハーバード大学所蔵、Googleデジタル化、Internet Archive公開の刊本（isagogehistrico00unkngoog）。取得した公開メタデータの権利表示はNOT_IN_COPYRIGHTです。デジタル画像の利用については底本PDF冒頭のGoogle利用案内を参照してください。",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/isagogehistrico00unkngoog"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v10-1907",
+      "title": "メキシコで起きた騒乱と反乱",
+      "originalTitle": "Tumultos y rebeliones acaecidos en México.",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "year": 1907,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+      "sourceEdition": "Genaro García (ed.), Tumultos y rebeliones acaecidos en México. Documentos inéditos ó muy raros para la historia de México, tomo X, México: Librería de la Vda. de Ch. Bouret, 1907.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi10garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v11-1907",
+      "title": "ドン・サントス・デゴリャド",
+      "originalTitle": "Don Santos Degollado: sus manifiestos, campañas, destitución militar, enjuiciamiento, rehabilitación, muerte, funerales y honores póstumos.",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "year": 1907,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+      "sourceEdition": "Genaro García (ed.), Don Santos Degollado: sus manifiestos, campañas, destitución militar, enjuiciamiento, rehabilitación, muerte, funerales y honores póstumos. Documentos inéditos ó muy raros para la historia de México, tomo XI, México: Librería de la Vda. de Ch. Bouret, 1907.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi10garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v12-1907",
+      "title": "モレロスの自筆文書・裁判記録と1623年のメキシコ",
+      "originalTitle": "Autógrafos inéditos de Morelos y causa que se le instruyó. México en 1623 por el bachiller Arias de Villalobos.",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "year": 1907,
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+      "sourceEdition": "Genaro García (ed.), Autógrafos inéditos de Morelos y causa que se le instruyó. México en 1623 por el bachiller Arias de Villalobos. Documentos inéditos ó muy raros para la historia de México, tomo XII, México: Librería de la Vda. de Ch. Bouret, 1907.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+      "publishedDate": "2026-10-16",
+      "updatedDate": "2026-10-16",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi10garc"
       }
     }
   ],

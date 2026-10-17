@@ -1,0 +1,30 @@
+name: Transfer approved Perigny five republics
+on:
+  push:
+    branches: [agent/perigny-cinq-publish-20261016]
+    paths: [.perigny-cinq-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .perigny-cinq-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: perigny-cinq-public-verification
+          path: perigny-cinq-public-verification.json
+
+

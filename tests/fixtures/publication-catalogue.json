@@ -3,6 +3,12 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "arevalo-documentos-antiguos-guatemala-1857",
+      "recordClass": "document-collection",
+      "searchShard": "002",
+      "author": "ラファエル・アレバロ 編"
+    },
+    {
       "slug": "diez-noticias-sacras-reales-mss3023-vol-1",
       "recordClass": "document-collection",
       "searchShard": "002",
@@ -2461,6 +2467,44 @@
       "searchShard": "002",
       "seriesVolumeNumber": 9,
       "originalAuthor": "Genaro García (ed.)"
+    },
+    {
+      "slug": "mencos-cronicas-antigua-guatemala-1894",
+      "recordClass": "major-work",
+      "searchShard": "002"
+    },
+    {
+      "slug": "perigny-cinq-republiques-amerique-centrale-1911",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "モーリス・ド・ペリニー伯爵"
+    },
+    {
+      "slug": "isagoge-historico-apologetico-1892",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "著者不明"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v10-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002",
+      "seriesVolumeNumber": 10,
+      "originalAuthor": "Genaro García (ed.)"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v11-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002",
+      "seriesVolumeNumber": 11,
+      "originalAuthor": "Genaro García (ed.)"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v12-1907",
+      "recordClass": "document-collection",
+      "searchShard": "002",
+      "seriesVolumeNumber": 12,
+      "originalAuthor": "Genaro García (ed.)"
     }
   ],
   "groups": [
@@ -2551,7 +2595,10 @@
         "garcia-documentos-ineditos-mexico-v06-1906",
         "garcia-documentos-ineditos-mexico-v07-1906",
         "garcia-documentos-ineditos-mexico-v08-1906",
-        "garcia-documentos-ineditos-mexico-v09-1906"
+        "garcia-documentos-ineditos-mexico-v09-1906",
+        "garcia-documentos-ineditos-mexico-v10-1907",
+        "garcia-documentos-ineditos-mexico-v11-1907",
+        "garcia-documentos-ineditos-mexico-v12-1907"
       ],
       "seriesVolumeCount": 36
     },

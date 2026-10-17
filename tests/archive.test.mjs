@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { access, readFile, readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
+import { overviewUpdatedDate } from "../src/publication-overviews.mjs";
 import { fileURLToPath } from "node:url";
 import {
   majorPublications,
@@ -2805,7 +2806,7 @@ test("sitemaps expose canonical URLs, update dates, and cover images", async () 
     const entry = sitemap.slice(entryAt, entryEnd);
     assert.match(
       entry,
-      new RegExp(`<lastmod>${item.updatedDate}<\\/lastmod>`),
+      new RegExp(`<lastmod>${item.updatedDate > overviewUpdatedDate ? item.updatedDate : overviewUpdatedDate}<\\/lastmod>`),
       `${item.slug}: lastmod`,
     );
     assert.match(
@@ -3173,6 +3174,6 @@ test("Garcia's series separates expected published volumes from future volumes",
   }
   assert.match(html, new RegExp(`公開${publishedVolumes.length}巻`));
   assert.match(html, /ロバーツ図書館/);
-  assert.match(html, /CC等のライセンス指定がありません/);
+  assert.match(html, /利用・再利用の制限なし/);
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
 });

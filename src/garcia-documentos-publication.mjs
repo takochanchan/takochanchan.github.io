@@ -337,6 +337,122 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 9
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v10-1907",
+    "title": "メキシコで起きた騒乱と反乱",
+    "originalTitle": "Tumultos y rebeliones acaecidos en México.",
+    "subtitle": "史料集第10巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 198頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "1624年から1801年までにヌエバ・エスパーニャで起きた騒乱・反乱を扱う六篇の史料を収める第10巻です。1624年のメキシコ市の蜂起、オアハカ・テワンテペク地方の反乱、1692年のメキシコ市騒乱、テピクの蜂起を伝えます。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v10-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v10-1907/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v10-1907/Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 198,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "植民地時代",
+      "騒乱",
+      "反乱"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 10
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v11-1907",
+    "title": "ドン・サントス・デゴリャド",
+    "originalTitle": "Don Santos Degollado: sus manifiestos, campañas, destitución militar, enjuiciamiento, rehabilitación, muerte, funerales y honores póstumos.",
+    "subtitle": "史料集第11巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 218頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "改革戦争期の将軍サントス・デゴリャドの宣言、戦役、軍職からの解任、裁判、名誉回復、死と顕彰をたどる第11巻です。全68文書と付録、本人の覚え書き帳、伝記覚え書きを収めます。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v11-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v11-1907/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v11-1907/Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 218,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "改革戦争",
+      "デゴリャド"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 11
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v12-1907",
+    "title": "モレロスの自筆文書・裁判記録と1623年のメキシコ",
+    "originalTitle": "Autógrafos inéditos de Morelos y causa que se le instruyó. México en 1623 por el bachiller Arias de Villalobos.",
+    "subtitle": "史料集第12巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 299頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "モレロスの未刊自筆文書と1815年の異端審問裁判記録、およびアリアス・デ・ビリャロボス『1623年のメキシコ』を収める第12巻です。独立運動の文書と、王への忠誠儀礼・都市生活を描く散文と詩文を収録しています。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v12-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v12-1907/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v12-1907/Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 299,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "独立戦争",
+      "モレロス",
+      "都市史"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 12
   }
 ];
 
@@ -412,5 +528,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "原著本文および1906年刊本の編集部分はパブリックドメインです。Internet Archive公開のこの底本の個別メタデータには、CC等の再利用ライセンス指定はありません。Internet Archiveは掲載物の権利状態を保証せず、利用者自身に適法な利用の確認を求めています。権利方針：https://help.archive.org/help/rights/ 。利用規約：https://archive.org/about/terms 。",
     "publishedDate": "2026-10-14",
     "updatedDate": "2026-10-14"
+  },
+  "garcia-documentos-ineditos-mexico-v10-1907": {
+    "sourceEdition": "Genaro García (ed.), Tumultos y rebeliones acaecidos en México. Documentos inéditos ó muy raros para la historia de México, tomo X, México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi10garc",
+    "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-16",
+    "updatedDate": "2026-10-16"
+  },
+  "garcia-documentos-ineditos-mexico-v11-1907": {
+    "sourceEdition": "Genaro García (ed.), Don Santos Degollado: sus manifiestos, campañas, destitución militar, enjuiciamiento, rehabilitación, muerte, funerales y honores póstumos. Documentos inéditos ó muy raros para la historia de México, tomo XI, México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi10garc",
+    "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-16",
+    "updatedDate": "2026-10-16"
+  },
+  "garcia-documentos-ineditos-mexico-v12-1907": {
+    "sourceEdition": "Genaro García (ed.), Autógrafos inéditos de Morelos y causa que se le instruyó. México en 1623 por el bachiller Arias de Villalobos. Documentos inéditos ó muy raros para la historia de México, tomo XII, México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi10garc",
+    "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
+    "publishedDate": "2026-10-16",
+    "updatedDate": "2026-10-16"
   }
 };

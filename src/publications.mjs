@@ -1,3 +1,7 @@
+import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
+import { isagogePublicationRecords, isagogePublicationMetadata } from "./isagoge-publication.mjs";
+import { perignyCinqPublicationRecords, perignyCinqPublicationMetadata } from "./perigny-cinq-publication.mjs";
+import { mencosPublicationRecords, mencosPublicationMetadata } from "./mencos-publication.mjs";
 import { diezPublicationRecords, diezPublicationMetadata } from "./diez-publication.mjs";
 import { medinaPublicationRecords, medinaPublicationMetadata } from "./medina-publication.mjs";
 import { normalizePublicationAttributes } from "./attribute-spelling.mjs";
@@ -266,6 +270,10 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...arevaloPublicationRecords,
+  ...isagogePublicationRecords,
+  ...perignyCinqPublicationRecords,
+  ...mencosPublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9374,6 +9382,10 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...arevaloPublicationMetadata,
+  ...isagogePublicationMetadata,
+  ...perignyCinqPublicationMetadata,
+  ...mencosPublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
@@ -12134,6 +12146,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "arevalo-documentos-antiguos-guatemala-1857",
   "diez-noticias-sacras-reales-mss3023-vol-1",
   "garcia-documentos-ineditos-mexico-v01-1905",
   "garcia-documentos-ineditos-mexico-v02-1905",
@@ -12144,6 +12157,9 @@ const documentCollectionSlugs = new Set([
   "garcia-documentos-ineditos-mexico-v07-1906",
   "garcia-documentos-ineditos-mexico-v08-1906",
   "garcia-documentos-ineditos-mexico-v09-1906",
+  "garcia-documentos-ineditos-mexico-v10-1907",
+  "garcia-documentos-ineditos-mexico-v11-1907",
+  "garcia-documentos-ineditos-mexico-v12-1907",
 
   "cehm-manuscritos-betlemitas-xi-5",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
@@ -12253,6 +12269,9 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
+
+
 
 
 
