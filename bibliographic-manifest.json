@@ -2,6 +2,25 @@
   "schemaVersion": 2,
   "records": [
     {
+      "slug": "cermoise-deux-ans-panama-1886",
+      "title": "パナマでの二年間",
+      "originalTitle": "Deux ans à Panama : notes et récits d'un ingénieur au canal",
+      "author": "H・セルモワーズ",
+      "originalAuthor": "H. Cermoise",
+      "originalPublication": "Paris: C. Marpon et E. Flammarion, 1886. Quatrième édition.",
+      "year": 1886,
+      "sourceEdition": "H. Cermoise, Deux ans à Panama : notes et récits d'un ingénieur au canal. Quatrième édition. Paris: C. Marpon et E. Flammarion, 1886.",
+      "sourceProvider": "ハーバード大学所蔵本、Google電子化、Internet Archive公開。資料識別子 deuxanspanama01cermgoog。",
+      "rights": "Internet Archiveのメタデータは米国を対象にNOT_IN_COPYRIGHTと記しています。フランス国立図書館の著者典拠では正確な没年を確認できず、刊行国フランスでの保護期間満了は本調査では確定していません。Google電子化ファイルの利用案内と原著の権利状態は区別します。",
+      "publishedDate": "2026-10-18",
+      "updatedDate": "2026-10-18",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/deuxanspanama01cermgoog"
+      }
+    },
+    {
       "slug": "arevalo-documentos-antiguos-guatemala-1857",
       "title": "グアテマラ市参事会文書館古文書集",
       "originalTitle": "Colección de documentos antiguos del Archivo del Ayuntamiento de la ciudad de Guatemala",

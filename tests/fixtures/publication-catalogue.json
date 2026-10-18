@@ -3,6 +3,12 @@
   "baselineCommit": "de1d06743ba9fbe3e822e9fbf3cbd3b68ab55418",
   "records": [
     {
+      "slug": "cermoise-deux-ans-panama-1886",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "H・セルモワーズ"
+    },
+    {
       "slug": "arevalo-documentos-antiguos-guatemala-1857",
       "recordClass": "document-collection",
       "searchShard": "002",
