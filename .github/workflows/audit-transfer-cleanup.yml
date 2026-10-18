@@ -1,0 +1,164 @@
+name: Audit completed transfer binaries
+on:
+  push:
+    branches: [agent/verified-transfer-cleanup-20261018]
+    paths: [.github/workflows/audit-transfer-cleanup.yml]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 0fe743d327b549b5840908bf3f0eb16197e04546
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify release bytes, checksums, manifests and references; remove audited local copies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import gzip, hashlib, io, json, os, re, subprocess, tarfile, tempfile, zipfile
+          from pathlib import Path, PurePosixPath
+          REPO = "takochanchan/takochanchan.github.io"
+          BASE = "0fe743d327b549b5840908bf3f0eb16197e04546"
+          assert os.environ.get("GITHUB_ACTIONS") == "true"
+          assert os.environ["GITHUB_REPOSITORY"] == REPO
+          def command(*args):
+              return subprocess.check_output(args, text=True)
+          def api(path):
+              return json.loads(command("gh", "api", path))
+          def sha(data):
+              return hashlib.sha256(data).hexdigest()
+          assert command("git", "rev-parse", "HEAD").strip() == BASE
+          groups = [
+              (".garcia-documentos-04-06-public-request.json", [".publication-transfer/garcia-documentos-04-06-r14.tar.gz"]),
+              (".garcia-documentos-07-09-public-request.json", [f".publication-transfer/garcia-documentos-07-09-20261014/chunk-{n:03d}" for n in range(7)]),
+              (".perigny-cinq-public-request.json", [f".publication-transfer/perigny-cinq-20261016/chunk-{n:03d}" for n in range(2)]),
+          ]
+          manifest = json.loads(Path("assets-manifest.json").read_text())["assets"]
+          masters = json.loads(Path("master-archive.json").read_text())
+          expected, bundle_assets, targets, blob_ids = {}, {}, [], []
+          report = {"base_commit": BASE, "groups": [], "assets": [], "references": []}
+          for request_path, paths in groups:
+              req = json.loads(Path(request_path).read_text())
+              assert len(paths) == len(req["bundle"]["chunks"])
+              chunks = []
+              for path, oid in zip(paths, req["bundle"]["chunks"]):
+                  data = Path(path).read_bytes()
+                  actual_oid = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+                  assert actual_oid == oid, path
+                  assert command("git", "rev-parse", "HEAD:" + path).strip() == oid
+                  chunks.append(data)
+                  targets.append(path)
+                  blob_ids.append(oid)
+              bundle = b"".join(chunks)
+              assert len(bundle) == req["bundle"]["size"]
+              assert sha(bundle) == req["bundle"]["sha256"]
+              raw = gzip.decompress(bundle)
+              group_names = {a["filename"] for a in req["assets"]}
+              with tarfile.open(fileobj=io.BytesIO(raw), mode="r:") as archive:
+                  members = archive.getmembers()
+                  assert len(members) == len(group_names)
+                  assert {m.name for m in members} == group_names
+                  assert all(m.isfile() and PurePosixPath(m.name).name == m.name for m in members)
+                  for member in members:
+                      bundle_assets[member.name] = archive.extractfile(member).read()
+              for asset in req["assets"]:
+                  name = asset["filename"]
+                  assert name not in expected
+                  data = bundle_assets[name]
+                  assert len(data) == asset["size"] and sha(data) == asset["sha256"], name
+                  records = [a for a in manifest if PurePosixPath(a["path"]).name == name]
+                  assert len(records) == 1, name
+                  record = records[0]
+                  assert record["size"] == asset["size"] and record["sha256"] == asset["sha256"], name
+                  assert record["url"] == f"https://github.com/{REPO}/releases/download/publications-current/{name}"
+                  slug = PurePosixPath(record["path"]).parts[1]
+                  assert slug in masters["publications"], slug
+                  expected[name] = {**asset, "manifest_path": record["path"], "master_path": masters["publications"][slug]}
+              report["groups"].append({"request": request_path, "paths": paths, "bytes": len(bundle), "sha256": sha(bundle), "chunk_git_blobs": req["bundle"]["chunks"], "archive_members": sorted(group_names)})
+              print("VERIFIED_BUNDLE", request_path, len(bundle), sha(bundle), flush=True)
+          assert len(targets) == 10 and len(expected) == 14
+          assert sum(Path(p).stat().st_size for p in targets) == 71234206
+          # Inspect all tracked text, including hidden scripts and workflow files.
+          needles = targets + blob_ids + ["garcia-documentos-04-06-r14", "garcia-documentos-07-09-20261014", "perigny-cinq-20261016", ".publication-transfer", ".garcia-documentos-04-06-transfer.py", ".garcia-documentos-07-09-transfer.py", ".perigny-cinq-transfer.py", ".garcia-documentos-04-06-public-request.json", ".garcia-documentos-07-09-public-request.json", ".perigny-cinq-public-request.json"]
+          for path in command("git", "ls-files").splitlines():
+              if path in targets:
+                  continue
+              try:
+                  content = Path(path).read_text()
+              except (UnicodeDecodeError, OSError):
+                  continue
+              for n, line in enumerate(content.splitlines(), 1):
+                  if any(needle in line for needle in needles):
+                      row = {"path": path, "line": n, "text": line}
+                      report["references"].append(row)
+                      print("REFERENCE", json.dumps(row, ensure_ascii=False), flush=True)
+          release = api(f"repos/{REPO}/releases/tags/publications-current")
+          pages = json.loads(command("gh", "api", "--paginate", "--slurp", f"repos/{REPO}/releases/{release['id']}/assets?per_page=100"))
+          assets = [a for page in pages for a in page]
+          report["release_id"] = release["id"]
+          root = Path(tempfile.mkdtemp())
+          args = ["gh", "release", "download", "publications-current", "--repo", REPO, "--dir", str(root), "--pattern", "SHA256SUMS.txt"]
+          for name in expected:
+              args.extend(["--pattern", name])
+          subprocess.run(args, check=True)
+          checksums = {}
+          for line in (root / "SHA256SUMS.txt").read_text().splitlines():
+              match = re.fullmatch(r"([0-9a-fA-F]{64})\s+\*?(.+)", line)
+              if match:
+                  checksums.setdefault(match[2], []).append(match[1].lower())
+          for name, asset in expected.items():
+              matches = [a for a in assets if a["name"] == name]
+              assert len(matches) == 1, name
+              remote = matches[0]
+              assert remote["state"] == "uploaded" and remote["size"] == asset["size"], name
+              if remote.get("digest"):
+                  assert remote["digest"] == "sha256:" + asset["sha256"], name
+              data = (root / name).read_bytes()
+              assert len(data) == asset["size"] and sha(data) == asset["sha256"], name
+              assert data == bundle_assets[name], name
+              assert checksums.get(name) == [asset["sha256"]], name
+              if name.endswith(".epub"):
+                  with zipfile.ZipFile(io.BytesIO(data)) as archive:
+                      assert archive.testzip() is None
+                      assert archive.read("mimetype") == b"application/epub+zip"
+              else:
+                  assert data.startswith(b"%PDF-")
+                  info = command("pdfinfo", str(root / name))
+                  assert re.search(r"Pages:\s+[1-9]\d*", info)
+              row = {**asset, "release_asset_id": remote["id"], "release_updated_at": remote["updated_at"], "release_digest": remote.get("digest"), "checksums_match": True, "bundle_byte_identical": True}
+              report["assets"].append(row)
+              print("VERIFIED_ASSET", json.dumps(row), flush=True)
+          # No release mutation is performed. Only the explicitly audited checkout files are removed.
+          for path in targets:
+              Path(path).unlink()
+          subprocess.run(["git", "add", "--", *targets], check=True)
+          changes = command("git", "diff", "--cached", "--name-status").splitlines()
+          assert sorted(changes) == sorted("D\t" + p for p in targets), changes
+          assert not command("git", "diff", "--name-only").strip()
+          report["candidate_tree"] = command("git", "write-tree").strip()
+          report["removed_bytes"] = 71234206
+          out = Path(os.environ["RUNNER_TEMP"]) / "transfer-cleanup-verification.json"
+          out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+          print("CANDIDATE_TREE", report["candidate_tree"], flush=True)
+          print("VERIFIED_TOTAL assets=14 binaries=10 bytes=71234206", flush=True)
+          
+          PY
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - run: npm run verify:remote-search
+      - name: Confirm only audited binary deletions remain
+        run: |
+          git diff --exit-code
+          git diff --cached --stat
+          test "$(git write-tree)" = "$(python3 -c 'import json,os; print(json.load(open(os.environ["RUNNER_TEMP"] + "/transfer-cleanup-verification.json"))["candidate_tree"])')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transfer-cleanup-verification-20261018
+          path: ${{ runner.temp }}/transfer-cleanup-verification.json
