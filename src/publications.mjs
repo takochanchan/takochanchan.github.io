@@ -1,3 +1,4 @@
+import { cermoisePublicationRecords, cermoisePublicationMetadata } from "./cermoise-publication.mjs";
 import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
 import { isagogePublicationRecords, isagogePublicationMetadata } from "./isagoge-publication.mjs";
 import { perignyCinqPublicationRecords, perignyCinqPublicationMetadata } from "./perigny-cinq-publication.mjs";
@@ -270,6 +271,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...cermoisePublicationRecords,
   ...arevaloPublicationRecords,
   ...isagogePublicationRecords,
   ...perignyCinqPublicationRecords,
@@ -9382,6 +9384,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...cermoisePublicationMetadata,
   ...arevaloPublicationMetadata,
   ...isagogePublicationMetadata,
   ...perignyCinqPublicationMetadata,

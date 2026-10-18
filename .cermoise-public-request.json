@@ -1,0 +1,38 @@
+{
+  "verified_archive_commit": "04bdc9ac74799d932de4a37cb13e42e7dae84bf6",
+  "bundle": {
+    "size": 8281052,
+    "sha256": "38d7e49d87843434908c67ecf092420e3bc18cbbda4edc8d53adf9face55c311",
+    "chunks": [
+      "483d85515301cbd3c2234491f5358ae931997ed9",
+      "74da4a97aa79e873c1b7077902702c8fd07fb48c",
+      "9c9bbcf88dd102b4ddbd6f87c1a2abb08ac8d84b",
+      "a435e79ac4079740f83e19f773b3ea30b3ca5bcb",
+      "e475f459a62be66fdfba157f9f9b93963dea8187",
+      "ef61b6c89b504b4e003f8817c9742843baacad55",
+      "ee138ece936bf1ffa7921c6048696e7581e49265",
+      "af4e1bb167ea5fe995974128b44efb0985c6727e",
+      "d82e1a29595a7d35e79868c1ed2632c0e48a2547",
+      "b013b86f2802d9abf393b46388306ef6624f6c9f",
+      "f517a37e2ce848455bbbef77a42fa8c2dc6d0869",
+      "7cb0de6738e29fae173a297646acaa38d5183781",
+      "f52f67a1b4349c23611d76cf1f371e40a74dafa9",
+      "495475b3afeefdaa0ff3613ccb020a56a293a23f",
+      "70686d258e608732db2b6f76f4b423ef2b7452f1",
+      "731b71ad8db472e40856975b54e29a7c4ad30f52",
+      "c526571593e001ba116db0b0204e15dfc24dc43b"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Cermoise_1886_Japanese_Complete_Translation.pdf",
+      "size": 2209235,
+      "sha256": "5ec21f58de5ca2e1903bc056082b6291ae4e965c66a78594b53adb5a287474c5"
+    },
+    {
+      "filename": "Cermoise_1886_Japanese_Complete_Translation.epub",
+      "size": 6852317,
+      "sha256": "82019fb7b8bb46d4ce6e088c1d99b5d8121729638d37b97bdc4328ef88b24581"
+    }
+  ]
+}
