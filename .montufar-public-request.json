@@ -46,6 +46,6 @@
     }
   ],
   "verified_archive_commit": "aff865f2acb47705a406a69eece1dd9f4483ecdb",
-  "attempt": 2,
-  "repair": "Refresh fallback ledger references after confirming identical ledger blob at old and new archive commits"
+  "attempt": 3,
+  "repair": "Restore checksum-verified full overview JSON after transport truncation"
 }
