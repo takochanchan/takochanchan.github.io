@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-17",
-  "updatedAt": "2026-10-17T22:22:21.627Z",
+  "endDate": "2026-10-18",
+  "updatedAt": "2026-10-18T22:27:32.309Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7575,6 +7575,38 @@
       "slug": "garcia-documentos-ineditos-mexico-1905-1911",
       "title": "メキシコ史未刊・稀覯史料集",
       "volumeLabel": "第12巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_81d067a9df8a152a",
+      "name": "Cermoise_1886_Japanese_Complete_Translation.pdf",
+      "slug": "cermoise-deux-ans-panama-1886",
+      "title": "パナマでの二年間",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2c25970aaa8d4e12",
+      "name": "Cermoise_1886_Japanese_Complete_Translation.epub",
+      "slug": "cermoise-deux-ans-panama-1886",
+      "title": "パナマでの二年間",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1e0d12ee9cf70faa",
+      "name": "Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "slug": "montufar-memorias-prision-1917",
+      "title": "ある監獄の回想",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_14371cd88abaf592",
+      "name": "Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "slug": "montufar-memorias-prision-1917",
+      "title": "ある監獄の回想",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
