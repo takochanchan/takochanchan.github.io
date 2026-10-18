@@ -8502,6 +8502,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "size": 4236702,
+      "sha256": "c3f2a2f662e139561174330da60e053a44c83a446f8b534a98ef969c80d49b38"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "size": 9737219,
+      "sha256": "cebfbb532ece2c0e9132560727b8c04ce1253c022c5a6b372c93997b77370a4b"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-memorias-prision-1917/cover.jpg",
+      "size": 60020,
+      "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
     }
   ]
 }
