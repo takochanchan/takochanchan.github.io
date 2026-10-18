@@ -34,5 +34,6 @@
       "size": 6852317,
       "sha256": "82019fb7b8bb46d4ce6e088c1d99b5d8121729638d37b97bdc4328ef88b24581"
     }
-  ]
+  ],
+  "validation_revision": "cover_static_path"
 }
