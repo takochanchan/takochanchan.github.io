@@ -2511,6 +2511,12 @@
       "searchShard": "002",
       "seriesVolumeNumber": 12,
       "originalAuthor": "Genaro García (ed.)"
+    },
+    {
+      "slug": "montufar-memorias-prision-1917",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ラファエル・モントゥファル"
     }
   ],
   "groups": [

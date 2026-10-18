@@ -1,3 +1,4 @@
+import { montufarPrisionPublicationRecords, montufarPrisionPublicationMetadata } from "./montufar-prision-publication.mjs";
 import { cermoisePublicationRecords, cermoisePublicationMetadata } from "./cermoise-publication.mjs";
 import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
 import { isagogePublicationRecords, isagogePublicationMetadata } from "./isagoge-publication.mjs";
@@ -286,6 +287,7 @@ const publicationRecords = [
   ...paraveyFouSangPublicationRecords,
   ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
+  ...montufarPrisionPublicationRecords,
   ...diezPublicationRecords,
   ...medinaPublicationRecords,
   ...salazarPublicationRecords,
@@ -9397,6 +9399,7 @@ const publicationMetadata = {
   ...paraveyFouSangPublicationMetadata,
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
+  ...montufarPrisionPublicationMetadata,
   ...diezPublicationMetadata,
   ...medinaPublicationMetadata,
   ...salazarPublicationMetadata,
