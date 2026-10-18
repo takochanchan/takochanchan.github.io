@@ -16,6 +16,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Install existing PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - name: Verify release bytes, checksums, manifests and references; remove audited local copies
         env:
           GH_TOKEN: ${{ github.token }}
