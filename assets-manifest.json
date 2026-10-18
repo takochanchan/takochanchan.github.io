@@ -8484,6 +8484,25 @@
       "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v12-1907/cover.jpg",
       "size": 64456,
       "sha256": "32e343aac46b9fcbd37d4c280ab1806f5a1f3aa918668c7f03e91d70e137dca8"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "size": 4236702,
+      "sha256": "c3f2a2f662e139561174330da60e053a44c83a446f8b534a98ef969c80d49b38"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "size": 9737219,
+      "sha256": "cebfbb532ece2c0e9132560727b8c04ce1253c022c5a6b372c93997b77370a4b"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-memorias-prision-1917/cover.jpg",
+      "size": 60020,
+      "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
     }
   ]
 }
+

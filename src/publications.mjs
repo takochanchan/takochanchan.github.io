@@ -1,3 +1,4 @@
+import { montufarPrisionPublicationRecords, montufarPrisionPublicationMetadata } from "./montufar-prision-publication.mjs";
 import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
 import { isagogePublicationRecords, isagogePublicationMetadata } from "./isagoge-publication.mjs";
 import { perignyCinqPublicationRecords, perignyCinqPublicationMetadata } from "./perigny-cinq-publication.mjs";
@@ -284,6 +285,7 @@ const publicationRecords = [
   ...paraveyFouSangPublicationRecords,
   ...deGuignesPublicationRecords,
   ...batresPublicationRecords,
+  ...montufarPrisionPublicationRecords,
   ...diezPublicationRecords,
   ...medinaPublicationRecords,
   ...salazarPublicationRecords,
@@ -9394,6 +9396,7 @@ const publicationMetadata = {
   ...paraveyFouSangPublicationMetadata,
   ...deGuignesPublicationMetadata,
   ...batresPublicationMetadata,
+  ...montufarPrisionPublicationMetadata,
   ...diezPublicationMetadata,
   ...medinaPublicationMetadata,
   ...salazarPublicationMetadata,
@@ -12269,6 +12272,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

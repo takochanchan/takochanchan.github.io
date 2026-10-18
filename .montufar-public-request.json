@@ -1,0 +1,50 @@
+{
+  "bundle": {
+    "size": 12768011,
+    "sha256": "f835c366b662f046b1c2c47de36db9852633a8e10041a3529d7cbe2e2eca7598",
+    "chunks": [
+      "9b49ecf712b166bfa44726f234aa141e911aaf6a",
+      "1fccc301bc92ee52d77d520aa02feb42b3718713",
+      "1b9ec4db5d6b80f720aad880f50753f39acaf755",
+      "81939afea124165898ff0aa783230be027f585bb",
+      "dbb6455146b2a025ff72bd89b55429f6d70d65d1",
+      "e04bcc250d7f534be17af882af87cc1c572fa602",
+      "781f048e7d087619822051d85f5a12d10dde76fa",
+      "b93d1dd6d8f7425826b38c83ec2f9fa070c0755a",
+      "d32dfa303c09016d0709feec4d87924623e716e8",
+      "d5f5a92ef5ddbee6d584f385ff30cf31cde0c6ca",
+      "8c9b9b38789fd0a9cc0e5b4c1f8abb260cdb4644",
+      "60bd591c8a01eaa6a7e887c035b753e18ca893a4",
+      "d0c49f64edb2cb14afc471e0091883934b2ff6be",
+      "4be435f049be7f8401297d0509554e831b77fb42",
+      "30dec2e860967f337d4f571ae327a026df64c476",
+      "eb7a18a81028deaf196de7e8730bd3b9bcd3925e",
+      "3395fbd02db051875400975b5b3a30c91168e4d5",
+      "8f6c79c630989fccc1c1c5d3d8412456522d407a",
+      "6a2732583b7e286720d06c27e8882c4d9aaec363",
+      "c237491dc4d49b36c919de05952fadaa7f9ed915",
+      "df854f3bd95f8beb7438e285e8102e0bea59599d",
+      "1b8a671eb3dd73dbac7691ee652c6f9b8bfb71d3",
+      "4426d7d1359b66ec9110e83c945faa8c552a959d",
+      "56f468e208d62540af404ece343cdaa254fa49c7",
+      "d8490acaa7539c9710a447a9d37335423fa78882",
+      "8b824047635b1a218ac053d978750f7042c2b5b3"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "size": 4236702,
+      "sha256": "c3f2a2f662e139561174330da60e053a44c83a446f8b534a98ef969c80d49b38",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf"
+    },
+    {
+      "filename": "Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "size": 9737219,
+      "sha256": "cebfbb532ece2c0e9132560727b8c04ce1253c022c5a6b372c93997b77370a4b",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub"
+    }
+  ],
+  "verified_archive_commit": "aff865f2acb47705a406a69eece1dd9f4483ecdb"
+}
+

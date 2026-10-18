@@ -1,8 +1,9 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "fd3893193b945d1a1d10879f93c7ca02c5dd6c24",
+  "archive_commit": "aff865f2acb47705a406a69eece1dd9f4483ecdb",
   "publications": {
+    "montufar-memorias-prision-1917": "publications/montufar-memorias-prision-1917/master.docx",
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
@@ -972,3 +973,4 @@
     }
   }
 }
+

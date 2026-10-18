@@ -8794,6 +8794,25 @@
         "status": "online",
         "url": "https://archive.org/details/documentosindi10garc"
       }
+    },
+    {
+      "slug": "montufar-memorias-prision-1917",
+      "title": "ある監獄の回想",
+      "originalTitle": "Memorias de una prisión: Páginas de la historia de Centro-América",
+      "author": "ラファエル・モントゥファル",
+      "originalAuthor": "Rafael Montúfar",
+      "originalPublication": "1917年版。標題紙は「グアテマラ、1908年」、著作権頁は1917年。公開書誌上の出版者はHarper & Brothers。",
+      "year": 1917,
+      "sourceEdition": "Rafael Montúfar, Memorias de una prisión: Páginas de la historia de Centro-América, 1917年版。標題紙の刊記はGuatemala: 1908、著作権頁は1917年。Internet Archive書誌の出版者はHarper & Brothers。",
+      "sourceProvider": "ハーバード大学所蔵、Googleデジタル化、Internet Archive公開。",
+      "rights": "底本・図版の所蔵機関はハーバード大学、デジタル化機関はGoogle、公開機関はInternet Archiveです。公開元の権利表示はNOT_IN_COPYRIGHT、対象地域は米国。原刊の著作権表示は歴史的な刊記として収録しています。",
+      "publishedDate": "2026-10-18",
+      "updatedDate": "2026-10-18",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/memoriasdeunapr00montgoog"
+      }
     }
   ],
   "works": [
@@ -8841,3 +8860,4 @@
     }
   ]
 }
+
