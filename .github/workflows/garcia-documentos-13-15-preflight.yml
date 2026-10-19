@@ -17,3 +17,5 @@ jobs:
       - run: npm run build && npm test
 
 # Revalidate synchronized unchanged release ledger references.
+
+# Validate merged Cambre catalogue; transfer run 39245514107 succeeded.

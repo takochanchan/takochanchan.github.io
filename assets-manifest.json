@@ -8522,6 +8522,24 @@
       "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
     },
     {
+      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "size": 6679523,
+      "sha256": "c492133e6a35d7c3940e73bd14ace050b2da9e968ba97f927869d0a9c93d1d4d"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
+      "size": 1037380,
+      "sha256": "2752ff704dce4e55cc5a4f9be96428670329b5d6530d0024464e15e114f6dcef"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "size": 25625,
+      "sha256": "971fad10c6e1385de914d6a80fe961dafc5fcc8179b2206bc9b2dd4160407aa6"
+    },
+    {
       "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
       "size": 2977905,

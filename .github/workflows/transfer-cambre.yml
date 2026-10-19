@@ -1,0 +1,41 @@
+name: Transfer approved Cambre publication files
+on:
+  push:
+    branches: [agent/cambre-publish-20261019]
+    paths: [.cambre-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify approved bytes and prepare catalogue cover
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .cambre-prepare.py
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Save verified catalogue cover
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add static/publications/cambre-guerra-tres-anos-1904/cover.jpg assets-manifest.json
+          git commit -m 'Add verified Cambre catalogue cover'
+          git push origin HEAD:agent/cambre-publish-20261019
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .cambre-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cambre-public-verification
+          path: cambre-public-verification.json
+

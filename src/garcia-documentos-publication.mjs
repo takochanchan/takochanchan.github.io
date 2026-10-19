@@ -694,3 +694,4 @@ export const garciaDocumentosPublicationMetadata = {
     "updatedDate": "2026-10-18"
   }
 };
+

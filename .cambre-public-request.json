@@ -1,0 +1,30 @@
+{
+  "verified_archive_commit": "269843b030cd677b8ed5a7214a29c0db323c4f38",
+  "assets": [
+    {
+      "filename": "Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "size": 6679523,
+      "sha256": "c492133e6a35d7c3940e73bd14ace050b2da9e968ba97f927869d0a9c93d1d4d"
+    },
+    {
+      "filename": "Manuel_Cambre_1904_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
+      "size": 1037380,
+      "sha256": "2752ff704dce4e55cc5a4f9be96428670329b5d6530d0024464e15e114f6dcef"
+    }
+  ],
+  "bundle": {
+    "size": 5127918,
+    "sha256": "4f533795e48626ee2ddac06f4cdd54df07065ea30a5b8b4f0705a8a1d53fdbb9",
+    "chunks": [
+      "c86ee4579844bc80949e162eab8f6be846e3e696",
+      "15acc46089baa71d4e33d7eb59b592afd6615beb",
+      "82638e29a2a7580146a27235a6de2b7e5fee6791",
+      "4ae4c7203f20323d4069f69378ad3dade567e1c1",
+      "96ee7c3f53eb8c0a86d685c3f1e2b3bed8ed6afc",
+      "388092406a4d0288248c825e5843d4aea69d6dc9"
+    ]
+  },
+  "revalidation": "Align existing fallback ledger references with verified unchanged ledger at archive commit"
+}
