@@ -39,8 +39,10 @@ jobs:
           slugs=['garcia-documentos-ineditos-mexico-v'+str(n).zfill(2)+'-1907' for n in [10,11,12]]
           url='https://takochanchan.github.io/publications/'+slug+'/'
           html=urllib.request.urlopen(url,timeout=60).read().decode()
-          for text in ['公開12巻','ロバーツ図書館','Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf','Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub','Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf']:
+          for text in ['ロバーツ図書館','Garcia_Documentos_Ineditos_Mexico_X_1907_Japanese_Complete_Translation.pdf','Garcia_Documentos_Ineditos_Mexico_XI_1907_Japanese_Complete_Translation.epub','Garcia_Documentos_Ineditos_Mexico_XII_1907_Japanese_Complete_Translation.pdf']:
               assert text in html, text
+          count=sum(r['slug'].startswith('garcia-documentos-ineditos-mexico-v') for r in json.load(open('tests/fixtures/publication-catalogue.json'))['records'])
+          assert '公開'+str(count)+'巻' in html
           overview=json.load(open('src/publication-overviews.json'))['records']
           plain=re.sub(r'\s+', '', unescape(re.sub(r'<[^>]*>', '', html)))
           for member in slugs:
