@@ -25,5 +25,6 @@
       "96ee7c3f53eb8c0a86d685c3f1e2b3bed8ed6afc",
       "388092406a4d0288248c825e5843d4aea69d6dc9"
     ]
-  }
+  },
+  "revalidation": "Align existing fallback ledger references with verified unchanged ledger at archive commit"
 }
