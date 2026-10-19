@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-18",
-  "updatedAt": "2026-10-18T22:27:32.309Z",
+  "endDate": "2026-10-19",
+  "updatedAt": "2026-10-19T23:44:31.803Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7607,6 +7607,70 @@
       "slug": "montufar-memorias-prision-1917",
       "title": "ある監獄の回想",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_209f02f80f865e1d",
+      "name": "Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "slug": "cambre-guerra-tres-anos-1904",
+      "title": "三年戦争",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2b55c0dc027b833f",
+      "name": "Manuel_Cambre_1904_Japanese_Translation.epub",
+      "slug": "cambre-guerra-tres-anos-1904",
+      "title": "三年戦争",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d5db0dc00e9b087e",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第13巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_5b900c06e4dd815e",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第13巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_530bf1f223528dd2",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第14巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_268938de2a329f6a",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第14巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0e38388accc8e9af",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第15巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_424757343ada1005",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第15巻",
       "format": "epub"
     }
   ],
