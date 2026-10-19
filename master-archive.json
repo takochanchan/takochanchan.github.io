@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "04bdc9ac74799d932de4a37cb13e42e7dae84bf6",
+  "archive_commit": "269843b030cd677b8ed5a7214a29c0db323c4f38",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -399,7 +399,8 @@
     "garcia-documentos-ineditos-mexico-v11-1907": "publications/garcia-documentos-ineditos-mexico-v11-1907/master.docx",
     "garcia-documentos-ineditos-mexico-v12-1907": "publications/garcia-documentos-ineditos-mexico-v12-1907/master.docx",
     "cermoise-deux-ans-panama-1886": "publications/cermoise-deux-ans-panama-1886/master.docx",
-    "montufar-memorias-prision-1917": "publications/montufar-memorias-prision-1917/master.docx"
+    "montufar-memorias-prision-1917": "publications/montufar-memorias-prision-1917/master.docx",
+    "cambre-guerra-tres-anos-1904": "publications/cambre-guerra-tres-anos-1904/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

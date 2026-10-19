@@ -1,3 +1,4 @@
+import { cambrePublicationRecords, cambrePublicationMetadata } from "./cambre-publication.mjs";
 import { montufarPrisionPublicationRecords, montufarPrisionPublicationMetadata } from "./montufar-prision-publication.mjs";
 import { cermoisePublicationRecords, cermoisePublicationMetadata } from "./cermoise-publication.mjs";
 import { arevaloPublicationRecords, arevaloPublicationMetadata } from "./arevalo-publication.mjs";
@@ -272,6 +273,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...cambrePublicationRecords,
   ...cermoisePublicationRecords,
   ...arevaloPublicationRecords,
   ...isagogePublicationRecords,
@@ -9386,6 +9388,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...cambrePublicationMetadata,
   ...cermoisePublicationMetadata,
   ...arevaloPublicationMetadata,
   ...isagogePublicationMetadata,

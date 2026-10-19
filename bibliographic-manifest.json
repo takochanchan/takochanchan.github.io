@@ -8832,6 +8832,25 @@
         "status": "online",
         "url": "https://archive.org/details/memoriasdeunapr00montgoog"
       }
+    },
+    {
+      "slug": "cambre-guerra-tres-anos-1904",
+      "title": "三年戦争",
+      "originalTitle": "La guerra de tres años: apuntes para la historia de la Reforma",
+      "author": "マヌエル・カンブレ",
+      "originalAuthor": "Manuel Cambre",
+      "originalPublication": "Guadalajara: Imprenta y Encuadernación de José Cabrera, 1904.",
+      "year": 1904,
+      "sourceEdition": "Manuel Cambre, La guerra de tres años: apuntes para la historia de la Reforma. Guadalajara: Imprenta y Encuadernación de José Cabrera, 1904. xiv, 616 p. 1892年版の改訂増補版。",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵・資料提供、Internet Archive公開。",
+      "rights": "底本の権利：原著本文と序文は、著者の没年と公刊年に照らし、日本およびメキシコにおける財産権としての著作権の保護期間が満了していると判断した。 公開機関の利用条件：Internet Archiveは、公開資料の著作権状態を保証せず、利用者の責任で、権利を侵害することなく適用法令に従って利用することを求めている（Terms of Use／公式案内「Rights」、https://help.archive.org/help/rights/）。本書の個別配信ページとメタデータには、スキャン画像の個別の利用許諾表示は確認できない。所蔵・資料提供はトロント大学ロバーツ図書館、電子版の公開はInternet Archiveによる。",
+      "publishedDate": "2026-10-19",
+      "updatedDate": "2026-10-19",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/laguerradetres00camb"
+      }
     }
   ],
   "works": [
