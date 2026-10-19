@@ -453,6 +453,122 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 12
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v13-1907",
+    "title": "メキシコ干渉派主要人物の秘密書簡集 第3部",
+    "originalTitle": "Correspondencia secreta de los principales intervencionistas mexicanos. Tercera y última parte. Historia del proyecto del Concordato Mexicano y documentos sobre la Reforma é Invasión francesa",
+    "subtitle": "史料集第13巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 271頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "外国干渉支持者の秘密書簡集の完結篇です。ミランダ、アルモンテらの書簡に加え、改革諸法、マクシミリアン政府の政教協約交渉、フランス軍撤退に関する文書を収めます。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 271,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "レフォルマ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 13
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v14-1907",
+    "title": "バゼーヌ元帥文書によるメキシコのフランス干渉",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine (textos español y francés)",
+    "subtitle": "史料集第14巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 287頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "バゼーヌ元帥の文書群から、ナポレオン3世の訓令、軍の報告、一般命令、プエブラ包囲の日誌などを収める史料集です。原刊のスペイン語・フランス語両本文をそれぞれ訳しています。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 287,
+    "figureCount": 9,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "レフォルマ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 14
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v15-1907",
+    "title": "スペイン支配下のメキシコの聖職者",
+    "originalTitle": "El clero de México durante la dominación española, según el archivo inédito archiepiscopal metropolitano",
+    "subtitle": "史料集第15巻・1907年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1907",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1907年",
+    "year": 1907,
+    "extent": "日本語版PDF 244頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "首都大司教区の未刊文書に基づき、16世紀メキシコの聖職者、教会組織、先住民と伝道をめぐる勅令など113点を収めます。フリアン・ガルセスの書簡と教皇勅書を付録としています。1907年メキシコ刊本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+    "pageCount": 244,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "教会史",
+      "伝道",
+      "先住民"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 15
   }
 ];
 
@@ -552,5 +668,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "原著本文と1907年刊本の編集部分は、刊行国メキシコで著作権保護期間を満了したパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を、利用・再利用の制限なしに公開する方針を示しています。公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/ 。利用規約：https://archive.org/about/terms 。",
     "publishedDate": "2026-10-16",
     "updatedDate": "2026-10-16"
+  },
+  "garcia-documentos-ineditos-mexico-v13-1907": {
+    "sourceEdition": "Genaro García, ed., Documentos inéditos ó muy raros para la historia de México, tomo XIII: Correspondencia secreta de los principales intervencionistas mexicanos. Tercera y última parte. Historia del proyecto del Concordato Mexicano y documentos sobre la Reforma é Invasión francesa. México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、Internet Archiveデジタル化・公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi13garc",
+    "rights": "底本は刊行国メキシコでパブリックドメインです。画像公開元Internet Archiveは、パブリックドメイン図書のデジタル画像を利用・再利用の制限なく公開しています。 公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/",
+    "publishedDate": "2026-10-18",
+    "updatedDate": "2026-10-18"
+  },
+  "garcia-documentos-ineditos-mexico-v14-1907": {
+    "sourceEdition": "Genaro García, ed., Documentos inéditos ó muy raros para la historia de México, tomo XIV: La intervención francesa en México según el archivo del mariscal Bazaine (textos español y francés). México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、Internet Archiveデジタル化・公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi13garc",
+    "rights": "底本は刊行国メキシコでパブリックドメインです。画像公開元Internet Archiveは、パブリックドメイン図書のデジタル画像を利用・再利用の制限なく公開しています。 公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/",
+    "publishedDate": "2026-10-18",
+    "updatedDate": "2026-10-18"
+  },
+  "garcia-documentos-ineditos-mexico-v15-1907": {
+    "sourceEdition": "Genaro García, ed., Documentos inéditos ó muy raros para la historia de México, tomo XV: El clero de México durante la dominación española, según el archivo inédito archiepiscopal metropolitano. México: Librería de la Vda. de Ch. Bouret, 1907.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、Internet Archiveデジタル化・公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi13garc",
+    "rights": "底本は刊行国メキシコでパブリックドメインです。画像公開元Internet Archiveは、パブリックドメイン図書のデジタル画像を利用・再利用の制限なく公開しています。 公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/",
+    "publishedDate": "2026-10-18",
+    "updatedDate": "2026-10-18"
   }
 };

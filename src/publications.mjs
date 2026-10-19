@@ -12152,6 +12152,9 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "garcia-documentos-ineditos-mexico-v13-1907",
+  "garcia-documentos-ineditos-mexico-v14-1907",
+  "garcia-documentos-ineditos-mexico-v15-1907",
   "arevalo-documentos-antiguos-guatemala-1857",
   "diez-noticias-sacras-reales-mss3023-vol-1",
   "garcia-documentos-ineditos-mexico-v01-1905",
@@ -12275,6 +12278,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

@@ -8520,6 +8520,60 @@
       "url": "https://takochanchan.github.io/publications/montufar-memorias-prision-1917/cover.jpg",
       "size": 60020,
       "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+      "size": 2977905,
+      "sha256": "2293eddf8cf101e8953f70cb319490b98612895d6738663fabbca3b525a40402"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+      "size": 360649,
+      "sha256": "164715e941e5f516bd9b1352df148168ecb9ae1619325d9e6d502483ee1bb02f"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
+      "size": 84335,
+      "sha256": "014537014f501d1fe1908b9dc0bc0b623422b793a9ab5211b947ae9e66754403"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+      "size": 8298975,
+      "sha256": "b9c157fa9824dfaa0c02ac47c3ade7d8fa5b2b3a62fb0eb9bd4039ea92a14879"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+      "size": 31319215,
+      "sha256": "84622a20bd9a825bc91d7cc558d660ccfb1fa9516d0cfdc4d809003969d4faf9"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
+      "size": 67829,
+      "sha256": "609fe2857ac3d70d2dcf156402c728f825af16291fad1ed632a04f4001c68789"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+      "size": 2686132,
+      "sha256": "ead52551dd0f085865333b7b13ac6cfd9a9bcd8f5f4d7c0bd5d7e18f3361615f"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+      "size": 1563927,
+      "sha256": "07f52081e967b01ccc723bdc443407f5952634e6aaeaa2db9cd8cd9fa4964242"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
+      "size": 68219,
+      "sha256": "9bba492294c94a2d5e6b7b4e9ce5117bbe625b1016c8a9f2e690e6641e2041d0"
     }
   ]
 }

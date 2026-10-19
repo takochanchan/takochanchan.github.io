@@ -98,7 +98,10 @@ export const publicationGroupDefinitions = [
     "garcia-documentos-ineditos-mexico-v09-1906",
     "garcia-documentos-ineditos-mexico-v10-1907",
     "garcia-documentos-ineditos-mexico-v11-1907",
-    "garcia-documentos-ineditos-mexico-v12-1907"
+    "garcia-documentos-ineditos-mexico-v12-1907",
+    "garcia-documentos-ineditos-mexico-v13-1907",
+    "garcia-documentos-ineditos-mexico-v14-1907",
+    "garcia-documentos-ineditos-mexico-v15-1907"
   ],
   "volumeLabels": [
     "第1巻",
@@ -112,7 +115,10 @@ export const publicationGroupDefinitions = [
     "第9巻",
     "第10巻",
     "第11巻",
-    "第12巻"
+    "第12巻",
+    "第13巻",
+    "第14巻",
+    "第15巻"
   ],
   "multiAuthorSeries": true,
   "author": "ヘナロ・ガルシア編（第1〜5巻はカルロス・ペレイラとの共編）",
@@ -123,13 +129,13 @@ export const publicationGroupDefinitions = [
   "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1905–1911",
   "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905〜1911年",
   "year": 1905,
-  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜12巻の日本語全訳を巻別PDF・EPUBで公開しています。",
-  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）、第IV〜IX巻（1906年）、第X〜XII巻（1907年）。",
+  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜15巻の日本語全訳を巻別PDF・EPUBで公開しています。",
+  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）、第IV〜IX巻（1906年）、第X〜XV巻（1907年）。",
   "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
   "sourceUrl": "https://archive.org/details/documentosindi01garc",
   "rights": "原著本文と使用刊本の編集部分はパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を利用・再利用の制限なしに公開する方針を示しています。各巻の底本と利用条件は巻別書誌をご覧ください。",
   "publishedDate": "2026-10-10",
-  "updatedDate": "2026-10-17",
+  "updatedDate": "2026-10-19",
   "seriesVolumes": [
     {
       "number": 1,
@@ -956,6 +962,7 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+
 
 
 

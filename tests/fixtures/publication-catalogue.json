@@ -2517,6 +2517,30 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "ラファエル・モントゥファル"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v13-1907",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 13,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v14-1907",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 14,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v15-1907",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 15,
+      "recordClass": "document-collection"
     }
   ],
   "groups": [
@@ -2610,7 +2634,10 @@
         "garcia-documentos-ineditos-mexico-v09-1906",
         "garcia-documentos-ineditos-mexico-v10-1907",
         "garcia-documentos-ineditos-mexico-v11-1907",
-        "garcia-documentos-ineditos-mexico-v12-1907"
+        "garcia-documentos-ineditos-mexico-v12-1907",
+        "garcia-documentos-ineditos-mexico-v13-1907",
+        "garcia-documentos-ineditos-mexico-v14-1907",
+        "garcia-documentos-ineditos-mexico-v15-1907"
       ],
       "seriesVolumeCount": 36
     },
