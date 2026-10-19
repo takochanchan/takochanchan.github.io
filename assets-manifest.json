@@ -8532,6 +8532,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
       "size": 1037380,
       "sha256": "2752ff704dce4e55cc5a4f9be96428670329b5d6530d0024464e15e114f6dcef"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "size": 25625,
+      "sha256": "971fad10c6e1385de914d6a80fe961dafc5fcc8179b2206bc9b2dd4160407aa6"
     }
   ]
 }
