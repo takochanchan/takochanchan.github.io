@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-19",
-  "updatedAt": "2026-10-19T23:44:31.803Z",
+  "endDate": "2026-10-20",
+  "updatedAt": "2026-10-20T23:12:31.595Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7671,6 +7671,86 @@
       "slug": "garcia-documentos-ineditos-mexico-1905-1911",
       "title": "メキシコ史未刊・稀覯史料集",
       "volumeLabel": "第15巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_2950202a6908dda2",
+      "name": "Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "slug": "portilla-mejico-1856-1857-1858",
+      "title": "1856年および1857年のメキシコ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_5e90f174ea58993a",
+      "name": "Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "slug": "portilla-mejico-1856-1857-1858",
+      "title": "1856年および1857年のメキシコ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8de21d4abb3a3119",
+      "name": "Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "title": "フランシスコ・モラサン伝記素描",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c3c4fe9137d59223",
+      "name": "Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "title": "フランシスコ・モラサン伝記素描",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_b58309e61908c832",
+      "name": "Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "slug": "beteta-morazan-federacion-1887",
+      "title": "モラサンと連邦",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_30868c68b1b9b34a",
+      "name": "Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "slug": "beteta-morazan-federacion-1887",
+      "title": "モラサンと連邦",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_192023d1296a5799",
+      "name": "Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "slug": "bulnes-juarez-ayutla-reforma-1905",
+      "title": "フアレスとアユトラ革命・レフォルマ革命",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_8e5094fe73a6fda3",
+      "name": "Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "slug": "bulnes-juarez-ayutla-reforma-1905",
+      "title": "フアレスとアユトラ革命・レフォルマ革命",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_91ed7f428178dd28",
+      "name": "Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.pdf",
+      "slug": "bunau-varilla-panama-1913",
+      "title": "パナマ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7d1961a885bdc40c",
+      "name": "Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.epub",
+      "slug": "bunau-varilla-panama-1913",
+      "title": "パナマ",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
