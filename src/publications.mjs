@@ -1,3 +1,4 @@
+import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
 import { bulnesPublicationRecords, bulnesPublicationMetadata } from "./bulnes-publication.mjs";
 import { cambrePublicationRecords, cambrePublicationMetadata } from "./cambre-publication.mjs";
 import { montufarPrisionPublicationRecords, montufarPrisionPublicationMetadata } from "./montufar-prision-publication.mjs";
@@ -274,6 +275,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...morazanPairPublicationRecords,
   ...bulnesPublicationRecords,
   ...cambrePublicationRecords,
   ...cermoisePublicationRecords,
@@ -9390,6 +9392,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...morazanPairPublicationMetadata,
   ...bulnesPublicationMetadata,
   ...cambrePublicationMetadata,
   ...cermoisePublicationMetadata,

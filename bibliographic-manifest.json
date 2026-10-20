@@ -8927,6 +8927,44 @@
         "status": "online",
         "url": "https://archive.org/details/jurezylasrevolu00bulngoog"
       }
+    },
+    {
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "title": "フランシスコ・モラサン伝記素描",
+      "originalTitle": "Rasgos biográficos de Francisco Morazán: apuntes para la historia de Centro-América",
+      "author": "アグスティン・メンコス・フランコ",
+      "originalAuthor": "Agustín Mencos Franco",
+      "originalPublication": "Guatemala: Tipografía El Comercio, 1893.",
+      "year": 1893,
+      "sourceEdition": "Agustín Mencos Franco, Rasgos biográficos de Francisco Morazán: apuntes para la historia de Centro-América. Guatemala: Tipografía El Comercio, 1893.",
+      "sourceProvider": "ハーバード大学所蔵、Googleデジタル化、Internet Archive公開。",
+      "rights": "底本の権利：1893年刊。著者アグスティン・メンコス・フランコは1902年没で、原著本文は著作権保護期間を満了しています。公開機関の利用条件：ハーバード大学所蔵本をGoogleがデジタル化し、Internet Archiveが公開しています。デジタル資料の利用については、資料内のGoogleの利用案内およびInternet Archiveの利用規約（https://archive.org/about/terms.php）を参照してください。",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/rasgosbiogrfico00fgoog"
+      }
+    },
+    {
+      "slug": "beteta-morazan-federacion-1887",
+      "title": "モラサンと連邦",
+      "originalTitle": "Morazán y la Federación",
+      "author": "ホセ・アントニオ・ベテタ",
+      "originalAuthor": "José Antonio Beteta",
+      "originalPublication": "Guatemala: Imprenta Silva, 1887.",
+      "year": 1887,
+      "sourceEdition": "José Antonio Beteta, Morazán y la Federación. Guatemala: Imprenta Silva, 1887.",
+      "sourceProvider": "フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵・資料提供、Internet Archive公開。",
+      "rights": "底本の権利：1887年刊。著者ホセ・アントニオ・ベテタは1930年没で、原著本文は著作権保護期間を満了しています。公開機関の利用条件：フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵本をInternet Archiveが公開しています。デジタル資料の利用については、個別資料の表示およびInternet Archiveの利用規約（https://archive.org/about/terms.php）を参照してください。",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/morazanylafedera00joseguat"
+      }
     }
   ],
   "works": [
