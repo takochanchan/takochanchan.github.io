@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "verified_archive_commit": "1b865cc49c87501094a575e757fbdf4805505907",
+  "assets": [
+    {
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "filename": "Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "size": 1986607,
+      "sha256": "01e5d1be9a3777cffda8287768d0a73e03b0c222014939332869fc24bbefadb5"
+    },
+    {
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "filename": "Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "size": 177043,
+      "sha256": "45c4d4c6a269a12501d962bc9947cb053dbdd68d345f78d7d57ec1a7e1937fb2"
+    },
+    {
+      "slug": "beteta-morazan-federacion-1887",
+      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "filename": "Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "size": 1730382,
+      "sha256": "1ff8ce942c294290ca093d7383320a9a2620138c46f8de17f9619b4deb686650"
+    },
+    {
+      "slug": "beteta-morazan-federacion-1887",
+      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "filename": "Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "size": 137956,
+      "sha256": "b851da14d120f1093aeb4f11c1fd71dff7b0a272b507faff3f2f97276e9cfe9d"
+    }
+  ],
+  "bundle": {
+    "size": 2725882,
+    "sha256": "00655111f62329a4f3de05ca890579643710164d09c28f7e950ea62b9a7599f2",
+    "chunks": [
+      "95d0651491f1ef041fb60cbe54898b18d66c7864",
+      "1560180d1d67e30be65f66c5dba7a33577e5c288",
+      "4e3bd34287baa61019e64680f20aec83ac34e687",
+      "58e6075c4ee16bc6087e552333bddafc738cf364",
+      "50c7a743dc900278d057e8668baaaa6bbbc5c687",
+      "1bbeaf2347940e27b29f4f5cf43740275c8a1795",
+      "eac8e0fd06f9fda07178e931287c026d26f9ce77",
+      "df75f7f16a10c2cd6cb9d921bb39f786d5920734",
+      "b1649a5cb6ae506bb539f469e189229aea9574a8",
+      "daf238cd382aef8f2171fa04c426a112f0701841",
+      "15d2c574a4191d606451d9edb390b7b02f63ef40",
+      "01381e61dfc132516a5e83f9abc8f3bb22feb5e6",
+      "abd13febdca3c77e473c4538e416f6894f0b15ef",
+      "9fa59ce4f7a8928ad202b54a115ad67b52d9c61e",
+      "742a4523a7f9d6c0c0b2e794fe5c58e73082bc5f",
+      "64013658b574f748db413be2ca2c85217de1756a",
+      "49425ac00dd2b9d61873de2bee07c416b17de99a",
+      "4a703859b821521aee294cef15fc4d433c2179e9",
+      "6254c01b7f7f189d2d3ad40ff7c7cbefe698b1a1",
+      "0f3cf9419294d8d48db8022a7fc789fa8f1cf7c9",
+      "b2d1022b20a03543058c60b3942008331513d843",
+      "0f77633c92c3c15132ea811862cd3104751ac5af"
+    ]
+  }
+}

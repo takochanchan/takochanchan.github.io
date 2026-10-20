@@ -1,0 +1,59 @@
+name: Transfer approved Morazan pair publication files
+on:
+  push:
+    branches: [agent/morazan-publish-20261020]
+    paths: [.morazan-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Preserve latest catalogue changes
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin main
+          git merge --no-edit origin/main
+      - name: Install PDF inspection tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Register verified master and public metadata
+        run: python3 .morazan-catalogue.py
+      - name: Reconstruct and verify approved publication files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .morazan-prepare.py
+      - name: Validate EPUBs and catalogue
+        run: |
+          npm ci --no-audit --no-fund
+          python3 scripts/validate-epubs.py .morazan-epub-validation --slug mencos-rasgos-biograficos-morazan-1893 --slug beteta-morazan-federacion-1887
+          npm run build
+          npm test
+      - name: Commit validated catalogue
+        run: |
+          git add src/morazan-pair-publications.mjs src/publications.mjs src/publication-overviews.json bibliographic-manifest.json master-archive.json tests/fixtures/publication-catalogue.json assets-manifest.json static/publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg static/publications/beteta-morazan-federacion-1887/cover.jpg
+          git commit -m 'Publish verified Japanese translations of Mencos and Beteta on Morazan'
+          git push origin HEAD:agent/morazan-publish-20261020
+      - name: Upload final assets and verify downloaded bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .morazan-transfer.py
+      - name: Remove transferred staging binaries
+        run: |
+          git rm -r .morazan-upload
+          git commit -m 'Remove verified Morazan transfer staging binaries'
+          git push origin HEAD:agent/morazan-publish-20261020
+      - uses: actions/upload-artifact@v4
+        with:
+          name: morazan-public-verification
+          path: morazan-public-verification.json

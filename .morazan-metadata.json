@@ -1,0 +1,124 @@
+[
+  {
+    "publication": {
+      "slug": "mencos-rasgos-biograficos-morazan-1893",
+      "title": "フランシスコ・モラサン伝記素描",
+      "subtitle": "中央アメリカ史のための覚書",
+      "originalTitle": "Rasgos biográficos de Francisco Morazán: apuntes para la historia de Centro-América",
+      "author": "アグスティン・メンコス・フランコ",
+      "originalAuthor": "Agustín Mencos Franco",
+      "series": "RASGOS BIOGRÁFICOS · 1893",
+      "originalPublication": "Guatemala: Tipografía El Comercio, 1893.",
+      "year": 1893,
+      "description": "フランシスコ・モラサンの生誕百年祭をめぐる論争を背景に、軍事行動、連邦政治、グアテマラとの関係を批判的に論じた歴史書です。モラサンを顕彰する論者への反論と、書簡・公文書などの引用を通じて、中央アメリカ連邦の歴史を再検討します。ハーバード大学所蔵、Internet Archive公開の1893年刊本を底本としました。",
+      "pageCount": 198,
+      "types": [
+        "歴史",
+        "伝記"
+      ],
+      "tags": [
+        "フランシスコ・モラサン",
+        "中央アメリカ連邦",
+        "グアテマラ",
+        "生誕百年祭",
+        "歴史論争"
+      ],
+      "sourceProvider": "ハーバード大学所蔵、Googleデジタル化、Internet Archive公開。",
+      "sourceUrl": "https://archive.org/details/rasgosbiogrfico00fgoog",
+      "rights": "底本の権利：1893年刊。著者アグスティン・メンコス・フランコは1902年没で、原著本文は著作権保護期間を満了しています。公開機関の利用条件：ハーバード大学所蔵本をGoogleがデジタル化し、Internet Archiveが公開しています。デジタル資料の利用については、資料内のGoogleの利用案内およびInternet Archiveの利用規約（https://archive.org/about/terms.php）を参照してください。",
+      "extent": "全1巻・PDF 198頁",
+      "figureCount": 0,
+      "plateCount": 0,
+      "regions": [
+        "中央アメリカ",
+        "グアテマラ"
+      ],
+      "languages": [
+        "スペイン語"
+      ],
+      "searchShard": "002",
+      "visualLabel": "日本語訳表紙",
+      "sourceEdition": "Agustín Mencos Franco, Rasgos biográficos de Francisco Morazán: apuntes para la historia de Centro-América. Guatemala: Tipografía El Comercio, 1893.",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "cover": "publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg",
+      "pdf": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "epub": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub"
+    },
+    "overview": "アグスティン・メンコス・フランコが、1892年のモラサン生誕百年祭をめぐって新聞に発表した論説を整理し、1893年にグアテマラで刊行した著作です。連邦の英雄としてモラサンを顕彰する立場に対し、グアテマラの経験と利害を前面に出して異議を唱えます。人物の生涯を順に紹介するだけでなく、同時代の顕彰運動と歴史叙述を相手にした論争書としての性格が強い一冊です。\n\n著者はモラサンを軍人、政治家、私人の三つの面から評価し、戦争の遂行、協定の履行、財産の接収、宗教勢力への措置、連邦諸州の政治的関係などを検討します。軍事的な勝利や自由主義の名声だけで功績を判断することを退け、グアテマラが被った損害や当事者間の約束を論拠として、英雄像を崩そうとします。ガビディアやロレンソ・モントゥファルらの主張にも直接応答しています。\n\n叙述には書簡、協定、声明などの引用が組み込まれ、末尾の証拠文書も議論を支えています。ただし、資料の選択と解釈には著者の明確な反モラサン的立場が貫かれています。引用された文書と、それに付された批判的評価を区別しながら読むことで、連邦崩壊後も続いた歴史認識の対立、国民的英雄をめぐる政治、19世紀末のグアテマラの自己像を考えることができます。モラサンを擁護するベテタの『モラサンと連邦』と併読すると、同じ人物と時代が異なる政治的立場から描かれる様子がよく分かります。",
+    "master": {
+      "file": "master.docx",
+      "filename": "master.docx",
+      "format": "word",
+      "status": "original_authoring_master",
+      "publicationStatus": "approved_for_publication",
+      "public_bibliography_policy": "content_source_only_v1",
+      "source_location_policy": "v1",
+      "master_size": 1266156,
+      "master_sha256": "c75fba86e3b6b824dd1ff43ca30e541a9b1eb8839c6808044f8e585cb9cb881f",
+      "noncover_embedded_images": 0,
+      "declared_figures_and_plates": 0
+    }
+  },
+  {
+    "publication": {
+      "slug": "beteta-morazan-federacion-1887",
+      "title": "モラサンと連邦",
+      "subtitle": "1887年刊・日本語全訳",
+      "originalTitle": "Morazán y la Federación",
+      "author": "ホセ・アントニオ・ベテタ",
+      "originalAuthor": "José Antonio Beteta",
+      "series": "MORAZÁN Y LA FEDERACIÓN · 1887",
+      "originalPublication": "Guatemala: Imprenta Silva, 1887.",
+      "year": 1887,
+      "description": "フランシスコ・モラサンを中央アメリカの自由と統合を担った人物として描き、連邦の成立と崩壊、その軍事・政治活動を擁護的に論じた歴史書です。英雄像の形成と19世紀の自由主義的な歴史認識を考える資料となります。フランシスコ・マロキン大学所蔵、Internet Archive公開の1887年刊本を底本としました。",
+      "pageCount": 145,
+      "types": [
+        "歴史",
+        "伝記"
+      ],
+      "tags": [
+        "フランシスコ・モラサン",
+        "中央アメリカ連邦",
+        "自由主義",
+        "連邦主義",
+        "歴史論争"
+      ],
+      "sourceProvider": "フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵・資料提供、Internet Archive公開。",
+      "sourceUrl": "https://archive.org/details/morazanylafedera00joseguat",
+      "rights": "底本の権利：1887年刊。著者ホセ・アントニオ・ベテタは1930年没で、原著本文は著作権保護期間を満了しています。公開機関の利用条件：フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵本をInternet Archiveが公開しています。デジタル資料の利用については、個別資料の表示およびInternet Archiveの利用規約（https://archive.org/about/terms.php）を参照してください。",
+      "extent": "全1巻・PDF 145頁",
+      "figureCount": 0,
+      "plateCount": 0,
+      "regions": [
+        "中央アメリカ",
+        "グアテマラ"
+      ],
+      "languages": [
+        "スペイン語"
+      ],
+      "searchShard": "002",
+      "visualLabel": "日本語訳表紙",
+      "sourceEdition": "José Antonio Beteta, Morazán y la Federación. Guatemala: Imprenta Silva, 1887.",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "cover": "publications/beteta-morazan-federacion-1887/cover.jpg",
+      "pdf": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "epub": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub"
+    },
+    "overview": "ホセ・アントニオ・ベテタが1887年に刊行した、フランシスコ・モラサンと中央アメリカ連邦についての歴史的論考です。序文では、偉人が同時代の人々から憎悪や誹謗を受け、後世の歴史によって評価されるという主題を掲げ、モラサンを自由と統合の理想に身を捧げた英雄として位置づけます。全体を通じて、自由主義と連邦主義への共感が叙述の基調となっています。\n\n本文は、独立後の中央アメリカの政治的対立を背景に、モラサンの登場、軍事行動、連邦政治への関与、その挫折と最期をたどります。個々の戦闘や政争を紹介するだけでなく、自由主義的な改革とその反対勢力、諸州間の対立、統一を妨げた政治的条件を関連づけて説明します。モラサンに向けられた非難に応答し、彼の行動と目標の正当性を主張することが、人物の生涯を描く作業と結びついています。\n\n本文の原注や末尾の文書は、著者が参照する歴史叙述や当事者の言葉を示しています。英雄的な比喩や強い価値判断が随所に見られるため、著者による人物評価を、そのまま中立的な事実の記述とみなすことはできません。一方で、モラサンが19世紀末の自由主義者にとってどのような理念の象徴となっていたかを知るうえでは、その熱のこもった語り自体が重要です。メンコス・フランコの『フランシスコ・モラサン伝記素描』と並べて読むことで、連邦の歴史をめぐる記憶と評価の隔たりを検討できます。底本には、フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵、Internet Archive公開の1887年刊本を使用しています。",
+    "master": {
+      "file": "master.docx",
+      "filename": "master.docx",
+      "format": "word",
+      "status": "original_authoring_master",
+      "publicationStatus": "approved_for_publication",
+      "public_bibliography_policy": "content_source_only_v1",
+      "source_location_policy": "v1",
+      "master_size": 1236773,
+      "master_sha256": "24fb10fe0698afb6865c254fc7fb5956b06830b92ac9a1dff65cf8f202acdedc",
+      "noncover_embedded_images": 0,
+      "declared_figures_and_plates": 0
+    }
+  }
+]
