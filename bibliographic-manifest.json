@@ -8984,6 +8984,25 @@
         "status": "online",
         "url": "https://archive.org/details/mejicoen1856y18500port"
       }
+    },
+    {
+      "slug": "bunau-varilla-panama-1913",
+      "title": "パナマ",
+      "originalTitle": "Panama : la création, la destruction, la résurrection",
+      "author": "フィリップ・ビュノー＝ヴァリーヤ",
+      "originalAuthor": "Philippe Bunau-Varilla",
+      "originalPublication": "Paris: Librairie Plon, Plon-Nourrit et Cie, 1913. 2e édition.",
+      "year": 1913,
+      "sourceEdition": "Philippe Bunau-Varilla, Panama : la création, la destruction, la résurrection, 2e édition, Paris: Librairie Plon, Plon-Nourrit et Cie, 1913.",
+      "sourceProvider": "主底本：パナマ国立図書館 Biblioteca Nacional Ernesto J. Castillero R.（BINAL）。欠損部分の補完：CSIC・Biblioteca Americanista de Sevilla（Simurg 990002554440204201）、ボルドー・モンテーニュ大学図書館（BabordNum 7244、IL 48461）。いずれも1913年第2版。",
+      "rights": "日本語訳・校訂版：takochan、2026年。CC BY-NC-SA 4.0（表示・非営利・継承4.0国際、https://creativecommons.org/licenses/by-nc-sa/4.0/）。翻訳・校訂、図版の切出し・配置を行っています。画像出典：Biblioteca Nacional Ernesto J. Castillero R.、CSIC・Biblioteca Americanista de Sevilla／Simurg、Université Bordeaux Montaigne／BabordNum。CSICのデジタル画像の表示条件はCC BY-NC-SA 4.0、BabordNumの資料表示はDomaine publicです。原著などパブリック・ドメインの部分の利用を制限するものではありません。補完資料：https://simurg.csic.es/view/990002554440204201/panama-la-creation-la-destruction-la-resurrection ／ https://www.babordnum.fr/items/show/7244",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://bdigital.binal.ac.pa/bdp/Panama1.pdf"
+      }
     }
   ],
   "works": [
