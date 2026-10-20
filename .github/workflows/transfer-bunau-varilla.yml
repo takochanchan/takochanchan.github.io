@@ -1,0 +1,30 @@
+name: Transfer approved Bunau-Varilla Panama
+on:
+  push:
+    branches: [agent/bunau-varilla-publish-20261021]
+    paths: [.bunau-varilla-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .bunau-varilla-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bunau-varilla-public-verification
+          path: bunau-varilla-public-verification.json
+
+

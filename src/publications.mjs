@@ -1,3 +1,4 @@
+import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
 import { portillaPublicationRecords, portillaPublicationMetadata } from "./portilla-publication.mjs";
 import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
 import { bulnesPublicationRecords, bulnesPublicationMetadata } from "./bulnes-publication.mjs";
@@ -283,6 +284,7 @@ const publicationRecords = [
   ...cermoisePublicationRecords,
   ...arevaloPublicationRecords,
   ...isagogePublicationRecords,
+  ...bunauVarillaPublicationRecords,
   ...perignyCinqPublicationRecords,
   ...mencosPublicationRecords,
   ...cuevasPublicationRecords,
@@ -9401,6 +9403,7 @@ const publicationMetadata = {
   ...cermoisePublicationMetadata,
   ...arevaloPublicationMetadata,
   ...isagogePublicationMetadata,
+  ...bunauVarillaPublicationMetadata,
   ...perignyCinqPublicationMetadata,
   ...mencosPublicationMetadata,
   ...cuevasPublicationMetadata,
