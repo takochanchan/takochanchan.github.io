@@ -1,0 +1,70 @@
+name: Verify live Bulnes publication
+on:
+  push:
+    branches: [main]
+    paths: [src/bulnes-publication.mjs, .github/workflows/bulnes-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify live bibliography and exact final assets
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess,re
+          slug='bulnes-juarez-ayutla-reforma-1905'
+          url='https://takochanchan.github.io/publications/'+slug+'/'
+          html=urllib.request.urlopen(url,timeout=60).read().decode()
+          for text in ['フアレスとアユトラ革命・レフォルマ革命','Juárez y las revoluciones de Ayutla y de Reforma','Internet Archive','公開機関の利用条件','Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf','Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub']:
+              assert text in html, text
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          root=pathlib.Path(tempfile.mkdtemp())
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              with urllib.request.urlopen(a['url'],timeout=120) as response,p.open('wb') as f:
+                  while chunk:=response.read(1024*1024): f.write(chunk)
+              assert p.stat().st_size==a['size']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+                      assert {n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))} == {'EPUB/images/japanese-cover.jpg'}
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  assert any(line.split()==['Pages:','611'] for line in info.splitlines())
+                  images=subprocess.check_output(['pdfimages','-list',str(p)],text=True)
+                  assert not any(re.match(r'^\s*\d+\s+\d+\s+',line) for line in images.splitlines())
+                  rights=subprocess.check_output(['pdftotext','-f','2','-l','2',str(p),'-'],text=True)
+                  assert all(text in re.sub(r'\s+','',rights) for text in ['メキシコ連邦著作権法','死後100年','CCBY-NC-ND2.5MX'])
+              print('VERIFIED',p.name,a['size'],a['sha256'])
+          sums=urllib.request.urlopen('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt',timeout=120).read().decode()
+          for a in assets:
+              if a['path'].endswith(('.pdf','.epub')):
+                  name=pathlib.PurePosixPath(a['path']).name
+                  assert any(line.split() == [a['sha256'],name] for line in sums.splitlines())
+          assert len(assets)==3
+          print('Live Bulnes bibliography, PDF 611 pages, EPUB, and cover verified.')
+          PY
