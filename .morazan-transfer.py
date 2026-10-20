@@ -29,7 +29,9 @@ verify = root / 'verify'
 verify.mkdir()
 for name, asset in expected.items():
     if name not in existing_names:
-        run('gh', 'release', 'upload', 'publications-current', '--repo', REPO, str(root / name))
+        # An upload can be accepted before its response fails or is retried.
+        # Continue only when the following fresh download matches exact bytes.
+        subprocess.run(['gh', 'release', 'upload', 'publications-current', '--repo', REPO, str(root / name)], check=False)
     run('gh', 'release', 'download', 'publications-current', '--repo', REPO, '--pattern', name, '--dir', str(verify))
     assert (verify / name).stat().st_size == asset['size'] and sha(verify / name) == asset['sha256']
 # Preserve all checksum entries belonging to other publications.

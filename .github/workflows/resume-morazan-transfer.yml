@@ -1,0 +1,36 @@
+name: Complete verified Morazan release transfer
+on:
+  push:
+    branches: [agent/morazan-publish-20261020]
+    paths: [.github/workflows/resume-morazan-transfer.yml]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Reconstruct approved bytes already validated in run39438558792
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .morazan-prepare.py
+      - name: Finish release verification and checksum update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .morazan-transfer.py
+      - name: Remove verified transfer chunks
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm -r .morazan-upload
+          git commit -m 'Remove verified Morazan transfer staging binaries'
+          git push origin HEAD:agent/morazan-publish-20261020
+      - uses: actions/upload-artifact@v4
+        with:
+          name: morazan-public-verification
+          path: morazan-public-verification.json
