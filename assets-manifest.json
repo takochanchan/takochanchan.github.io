@@ -8658,6 +8658,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
       "size": 253894,
       "sha256": "3b2d7bf24db25cd29e00d97e41404d9e75940a54e18f4e51a771102ea9a73c5b"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/portilla-mejico-1856-1857-1858/cover.jpg",
+      "size": 30225,
+      "sha256": "14a114dad6c0a109efc55a29f8f1c2795841e1ffeb3ce23a4242f87453d7b6d2"
     }
   ]
 }
