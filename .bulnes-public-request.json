@@ -36,5 +36,5 @@
     ]
   },
   "validation": "611 pages, all text/notes/tables validated. Formal EPUB 3 validation passed.",
-  "revalidation_note": "57 existing fallback entries verified in the new archive ledger; only their ledger_commit references were advanced."
+  "revalidation_note": "57 existing fallback entries verified in the new archive ledger; only their ledger_commit references were advanced. Added the new title's required detailed catalogue overview."
 }
