@@ -8604,6 +8604,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
       "size": 7465428,
       "sha256": "c2d1e9ecb6ad0d87dd32ffd0ad854bf8696bf757106786d8dba512c51b241019"
+    },
+    {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
+      "size": 30217,
+      "sha256": "777218c96623d15b10ff6ebfbd24759b59b7da1732ee4357f8f49b1cc27d6a81"
     }
   ]
 }
