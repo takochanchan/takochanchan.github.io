@@ -35,5 +35,6 @@
       "6b3fe7de285666f6ca7516a77a9766dfc7d8854d"
     ]
   },
-  "validation": "611 pages, 1956 original paragraphs, 510 notes, 842 table cells and all source markers verified. Zero source images. Formal EPUB 3 validation passed."
+  "validation": "611 pages, all text/notes/tables validated. Formal EPUB 3 validation passed.",
+  "revalidation_note": "57 existing fallback entries verified in the new archive ledger; only their ledger_commit references were advanced."
 }
