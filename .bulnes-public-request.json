@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "verified_archive_commit": "dc395eb67589a05ff70b0291fad66d68c4a8be70",
+  "approval": "メキシコPDを確認し、原刊画像を使用しない修正版を公開してください（2026-10-20）。",
+  "assets": [
+    {
+      "filename": "Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "size": 6078705,
+      "sha256": "84b56774d8abc4b14f0bd0d41ac4c0374fec2a275e48d43e92bdb3fd61994257"
+    },
+    {
+      "filename": "Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "size": 7465428,
+      "sha256": "c2d1e9ecb6ad0d87dd32ffd0ad854bf8696bf757106786d8dba512c51b241019"
+    }
+  ],
+  "bundle": {
+    "size": 11066959,
+    "sha256": "439ab7942424aad422696eecad9fa46d5d705016de850d94af4ff8c1653f51dd",
+    "chunks": [
+      "f9e702a43f39f92b9b15302cb195cd1fd1c5b163",
+      "0fd570934ba7ee8031a159663064e6ef55fca019",
+      "8b85975f6303d9865194fdb73731d589b78085aa",
+      "bf27a11da908e01a24b19ab104b71a13731b5164",
+      "99b2c7b275192e416b39d8b1c45cc6d59b470cb8",
+      "5233a3c70915c8996f46cbb3c3c04ced1aa8974a",
+      "b2b61285298bddad5655e6ccb25e43158b48096d",
+      "0d4b4173b90257b3739a3c6ca87b52a94887e7fa",
+      "2f06173a125b8ee9f66e9c8d188d0d4f0ef306f3",
+      "409f6f75c0cf1b7c8950b0fc047c4198c3c38d22",
+      "b06b17ef2f0aee271368965a8bb6e6f96354c722",
+      "df3967816a50a46804eb00e2375909e683ec41c8",
+      "8e62182ffc9e5a0041f7b9f867abaffb11e1e10c",
+      "d643d12ebf0b2a27d6569ec253f223f7e0b44a14",
+      "6b3fe7de285666f6ca7516a77a9766dfc7d8854d"
+    ]
+  },
+  "validation": "611 pages, 1956 original paragraphs, 510 notes, 842 table cells and all source markers verified. Zero source images. Formal EPUB 3 validation passed."
+}

@@ -1,3 +1,4 @@
+import { bulnesPublicationRecords, bulnesPublicationMetadata } from "./bulnes-publication.mjs";
 import { cambrePublicationRecords, cambrePublicationMetadata } from "./cambre-publication.mjs";
 import { montufarPrisionPublicationRecords, montufarPrisionPublicationMetadata } from "./montufar-prision-publication.mjs";
 import { cermoisePublicationRecords, cermoisePublicationMetadata } from "./cermoise-publication.mjs";
@@ -273,6 +274,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...bulnesPublicationRecords,
   ...cambrePublicationRecords,
   ...cermoisePublicationRecords,
   ...arevaloPublicationRecords,
@@ -9388,6 +9390,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...bulnesPublicationMetadata,
   ...cambrePublicationMetadata,
   ...cermoisePublicationMetadata,
   ...arevaloPublicationMetadata,
@@ -12281,6 +12284,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

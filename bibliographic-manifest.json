@@ -8908,6 +8908,25 @@
         "status": "online",
         "url": "https://archive.org/details/documentosindi13garc"
       }
+    },
+    {
+      "slug": "bulnes-juarez-ayutla-reforma-1905",
+      "title": "フアレスとアユトラ革命・レフォルマ革命",
+      "originalTitle": "Juárez y las revoluciones de Ayutla y de Reforma",
+      "author": "フランシスコ・ブルネス",
+      "originalAuthor": "Francisco Bulnes",
+      "originalPublication": "México: Antigua Imprenta de Murguía, 1905.",
+      "year": 1905,
+      "sourceEdition": "Francisco Bulnes, Juárez y las revoluciones de Ayutla y de Reforma. Primera edición. México: Antigua Imprenta de Murguía, 1905. 651 p.",
+      "sourceProvider": "ミシガン大学所蔵、Googleデジタル化、Internet Archive公開。補完・照合：ヌエボ・レオン自治大学 Colección Digital（https://cd.dgb.uanl.mx/handle/201504211/13179）。",
+      "rights": "底本の権利：原著は1905年刊、著者フランシスコ・ブルネスは1924年没。メキシコ連邦著作権法第9条・第29条による死後100年の保護期間も経過しており、原著本文はメキシコでパブリックドメインに属する（同法第152条、https://www.diputados.gob.mx/LeyesBiblio/pdf/LFDA.pdf）。Internet ArchiveのNOT_IN_COPYRIGHTは米国での権利表示である。公開機関の利用条件：ヌエボ・レオン自治大学の公開データはCC BY-NC-ND 2.5 MXを表示する。Googleのデジタル化資料にも非商用利用・帰属表示保持等の画像利用ガイドラインがある。これらの条件を原著本文の権利状態と区別し、本訳には原刊のスキャン、肖像、署名の画像を収録しない。書影は日本語組版による文字のみの表紙である。",
+      "publishedDate": "2026-10-20",
+      "updatedDate": "2026-10-20",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/jurezylasrevolu00bulngoog"
+      }
     }
   ],
   "works": [

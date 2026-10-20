@@ -8592,6 +8592,18 @@
       "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
       "size": 68219,
       "sha256": "9bba492294c94a2d5e6b7b4e9ce5117bbe625b1016c8a9f2e690e6641e2041d0"
+    },
+    {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "size": 6078705,
+      "sha256": "84b56774d8abc4b14f0bd0d41ac4c0374fec2a275e48d43e92bdb3fd61994257"
+    },
+    {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "size": 7465428,
+      "sha256": "c2d1e9ecb6ad0d87dd32ffd0ad854bf8696bf757106786d8dba512c51b241019"
     }
   ]
 }

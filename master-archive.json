@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "6d4fb77b1693cadf2141ce58b3fc2370112c1ff4",
+  "archive_commit": "dc395eb67589a05ff70b0291fad66d68c4a8be70",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -403,7 +403,8 @@
     "cambre-guerra-tres-anos-1904": "publications/cambre-guerra-tres-anos-1904/master.docx",
     "garcia-documentos-ineditos-mexico-v13-1907": "publications/garcia-documentos-ineditos-mexico-v13-1907/master.docx",
     "garcia-documentos-ineditos-mexico-v14-1907": "publications/garcia-documentos-ineditos-mexico-v14-1907/master.docx",
-    "garcia-documentos-ineditos-mexico-v15-1907": "publications/garcia-documentos-ineditos-mexico-v15-1907/master.docx"
+    "garcia-documentos-ineditos-mexico-v15-1907": "publications/garcia-documentos-ineditos-mexico-v15-1907/master.docx",
+    "bulnes-juarez-ayutla-reforma-1905": "publications/bulnes-juarez-ayutla-reforma-1905/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

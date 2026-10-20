@@ -2547,6 +2547,12 @@
       "originalAuthor": "Genaro García (ed.)",
       "seriesVolumeNumber": 15,
       "recordClass": "document-collection"
+    },
+    {
+      "slug": "bulnes-juarez-ayutla-reforma-1905",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "フランシスコ・ブルネス"
     }
   ],
   "groups": [
