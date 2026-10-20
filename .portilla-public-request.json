@@ -1,0 +1,29 @@
+{
+  "verified_archive_commit": "c764c1e4a3669cbde3124c3d39abc24cd78a0d5e",
+  "assets": [
+    {
+      "filename": "Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "size": 2293575,
+      "sha256": "f2defa50ca94b885ba465d9576423b7f34d083c1cc89c722c73fb6e0fc816aa2"
+    },
+    {
+      "filename": "Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "size": 253894,
+      "sha256": "3b2d7bf24db25cd29e00d97e41404d9e75940a54e18f4e51a771102ea9a73c5b"
+    }
+  ],
+  "bundle": {
+    "size": 1865051,
+    "sha256": "12bcfb543a7b3b2b49c93ec014924899ab7218d5856071533160f2addcc23c77",
+    "chunks": [
+      "a550f1b230db5cc3e9aae521374c0813463c766c",
+      "29054c9e86ba5ab885920476ca007ae24f469d86",
+      "e528797ff2d0ae812ce8bfb1aed5ac4afe197801",
+      "47620af7b6919f7cb3fdacb0e98212f4451b8693",
+      "5e17f30c4c675b3abbbeeff73a372ccbfdb56dc0"
+    ]
+  },
+  "staging_branch": "agent/portilla-assets-20261021"
+}

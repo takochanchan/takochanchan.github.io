@@ -1,3 +1,4 @@
+import { portillaPublicationRecords, portillaPublicationMetadata } from "./portilla-publication.mjs";
 import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
 import { bulnesPublicationRecords, bulnesPublicationMetadata } from "./bulnes-publication.mjs";
 import { cambrePublicationRecords, cambrePublicationMetadata } from "./cambre-publication.mjs";
@@ -275,6 +276,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...portillaPublicationRecords,
   ...morazanPairPublicationRecords,
   ...bulnesPublicationRecords,
   ...cambrePublicationRecords,
@@ -9392,6 +9394,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...portillaPublicationMetadata,
   ...morazanPairPublicationMetadata,
   ...bulnesPublicationMetadata,
   ...cambrePublicationMetadata,
@@ -12287,6 +12290,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

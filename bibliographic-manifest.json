@@ -8965,6 +8965,25 @@
         "status": "online",
         "url": "https://archive.org/details/morazanylafedera00joseguat"
       }
+    },
+    {
+      "slug": "portilla-mejico-1856-1857-1858",
+      "title": "1856年および1857年のメキシコ",
+      "originalTitle": "Méjico en 1856 y 1857. Gobierno del general Comonfort",
+      "author": "アンセルモ・デ・ラ・ポルティーリャ",
+      "originalAuthor": "Anselmo de la Portilla",
+      "originalPublication": "Nueva-York: Imprenta de S. Hallet, 1858.",
+      "year": 1858,
+      "sourceEdition": "Anselmo de la Portilla, Méjico en 1856 y 1857. Gobierno del general Comonfort. Nueva-York: Imprenta de S. Hallet, 1858. viii, 396 p., 正誤表。",
+      "sourceProvider": "米国議会図書館所蔵・デジタル画像提供、Internet Archive公開。",
+      "rights": "底本の権利：原著は1858年刊、著者は1879年没であり、著作権保護期間を満了している。公開機関の権利表示：デジタル画像の提供元である米国議会図書館は、本資料について把握している著作権上の制約はないと表示している。この表示は原著の保護期間に関する説明と区別する。所蔵・権利表示：https://www.loc.gov/item/02005108/",
+      "publishedDate": "2026-10-21",
+      "updatedDate": "2026-10-21",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/mejicoen1856y18500port"
+      }
     }
   ],
   "works": [

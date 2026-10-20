@@ -8646,6 +8646,18 @@
       "url": "https://takochanchan.github.io/publications/beteta-morazan-federacion-1887/cover.jpg",
       "size": 25148,
       "sha256": "c4a71629bad157801933b147ad8899834d1fc2f1e0e7cf445a7ea30ed8a0ff9b"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "size": 2293575,
+      "sha256": "f2defa50ca94b885ba465d9576423b7f34d083c1cc89c722c73fb6e0fc816aa2"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "size": 253894,
+      "sha256": "3b2d7bf24db25cd29e00d97e41404d9e75940a54e18f4e51a771102ea9a73c5b"
     }
   ]
 }
