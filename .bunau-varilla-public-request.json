@@ -1,0 +1,28 @@
+{
+  "verified_archive_commit": "c764c1e4a3669cbde3124c3d39abc24cd78a0d5e",
+  "assets": [
+    {
+      "filename": "Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.pdf",
+      "size": 33964002,
+      "sha256": "ee6588eafa9b66dfeb3d20db569865fed11622a836f7a1366bda53b78165762b"
+    },
+    {
+      "filename": "Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.epub",
+      "size": 25500777,
+      "sha256": "45e412e13c9d2b8bffcf6b734b4d72e51b3daaabb93aacfc32e0f158b04eb05c"
+    }
+  ],
+  "bundle": {
+    "size": 55634948,
+    "sha256": "55966fa2aaff702139c9af0f9a57c06076fc4918fb94e7164bd304ac0205f948",
+    "chunks": [
+      "60c9b13d07d6c6b3a7ab265a725c516f1c1a5516",
+      "4026e72324402f7807108f16a8d21a200d05ba70",
+      "6e0d8705fbf61bf3f6766abce8687d78a6437fd3",
+      "397d3fae72fd018833e1ce0919f46bc6aa3f6c94",
+      "98832f8fa499798358e6e4ed9ef8e1b9052b6d13",
+      "ce23eca8129f77f72c12b0a843a4725aab725d9c",
+      "01f6cebbce2ea5a2a2c00c849968c3eda78ad4f0"
+    ]
+  }
+}
