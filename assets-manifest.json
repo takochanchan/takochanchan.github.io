@@ -974,6 +974,24 @@
       "sha256": "cca5c41550563b275868ff7f97c88559de419ea8418627f90f9f10103f18a42e"
     },
     {
+      "path": "publications/beteta-morazan-federacion-1887/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/beteta-morazan-federacion-1887/cover.jpg",
+      "size": 25148,
+      "sha256": "c4a71629bad157801933b147ad8899834d1fc2f1e0e7cf445a7ea30ed8a0ff9b"
+    },
+    {
+      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
+      "size": 137956,
+      "sha256": "b851da14d120f1093aeb4f11c1fd71dff7b0a272b507faff3f2f97276e9cfe9d"
+    },
+    {
+      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
+      "size": 1730382,
+      "sha256": "1ff8ce942c294290ca093d7383320a9a2620138c46f8de17f9619b4deb686650"
+    },
+    {
       "path": "publications/bonaparte-nicaragua-canal-1846/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bonaparte-nicaragua-canal-1846/cover.jpg",
       "size": 35657,
@@ -1550,6 +1568,42 @@
       "sha256": "a06d5c046201ade7513a8da42dd6007bc5b09319d60c7eda5fa96ad487de334a"
     },
     {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
+      "size": 30217,
+      "sha256": "777218c96623d15b10ff6ebfbd24759b59b7da1732ee4357f8f49b1cc27d6a81"
+    },
+    {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
+      "size": 7465428,
+      "sha256": "c2d1e9ecb6ad0d87dd32ffd0ad854bf8696bf757106786d8dba512c51b241019"
+    },
+    {
+      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
+      "size": 6078705,
+      "sha256": "84b56774d8abc4b14f0bd0d41ac4c0374fec2a275e48d43e92bdb3fd61994257"
+    },
+    {
+      "path": "publications/bunau-varilla-panama-1913/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bunau-varilla-panama-1913/cover.jpg",
+      "size": 35253,
+      "sha256": "c1872595edbefcdbe8e9ce5af7f3b5034238a2538cfd48dbed084070e7a088c4"
+    },
+    {
+      "path": "publications/bunau-varilla-panama-1913/Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.epub",
+      "size": 25500777,
+      "sha256": "45e412e13c9d2b8bffcf6b734b4d72e51b3daaabb93aacfc32e0f158b04eb05c"
+    },
+    {
+      "path": "publications/bunau-varilla-panama-1913/Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.pdf",
+      "size": 33964002,
+      "sha256": "ee6588eafa9b66dfeb3d20db569865fed11622a836f7a1366bda53b78165762b"
+    },
+    {
       "path": "publications/bury-bishop-amongst-bananas-1911/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bury-bishop-amongst-bananas-1911/cover.jpg",
       "size": 39113,
@@ -1602,6 +1656,24 @@
       "url": "https://takochanchan.github.io/publications/byam-chiapas-1897/cover.jpg",
       "size": 25919,
       "sha256": "f185aade4635409a2162efbc701d2d1a68a002353469b7e61acc0cab35fcacc0"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cambre-guerra-tres-anos-1904/cover.jpg",
+      "size": 25625,
+      "sha256": "971fad10c6e1385de914d6a80fe961dafc5fcc8179b2206bc9b2dd4160407aa6"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
+      "size": 1037380,
+      "sha256": "2752ff704dce4e55cc5a4f9be96428670329b5d6530d0024464e15e114f6dcef"
+    },
+    {
+      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.pdf",
+      "size": 6679523,
+      "sha256": "c492133e6a35d7c3940e73bd14ace050b2da9e968ba97f927869d0a9c93d1d4d"
     },
     {
       "path": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.epub",
@@ -3764,6 +3836,60 @@
       "sha256": "919c3e7bbf958f44986f0635ee64ce2b6c6cd72ae0e03d25a906ef38c3da8db2"
     },
     {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
+      "size": 84335,
+      "sha256": "014537014f501d1fe1908b9dc0bc0b623422b793a9ab5211b947ae9e66754403"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
+      "size": 360649,
+      "sha256": "164715e941e5f516bd9b1352df148168ecb9ae1619325d9e6d502483ee1bb02f"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
+      "size": 2977905,
+      "sha256": "2293eddf8cf101e8953f70cb319490b98612895d6738663fabbca3b525a40402"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
+      "size": 67829,
+      "sha256": "609fe2857ac3d70d2dcf156402c728f825af16291fad1ed632a04f4001c68789"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
+      "size": 31319215,
+      "sha256": "84622a20bd9a825bc91d7cc558d660ccfb1fa9516d0cfdc4d809003969d4faf9"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
+      "size": 8298975,
+      "sha256": "b9c157fa9824dfaa0c02ac47c3ade7d8fa5b2b3a62fb0eb9bd4039ea92a14879"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
+      "size": 68219,
+      "sha256": "9bba492294c94a2d5e6b7b4e9ce5117bbe625b1016c8a9f2e690e6641e2041d0"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
+      "size": 1563927,
+      "sha256": "07f52081e967b01ccc723bdc443407f5952634e6aaeaa2db9cd8cd9fa4964242"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
+      "size": 2686132,
+      "sha256": "ead52551dd0f085865333b7b13ac6cfd9a9bcd8f5f4d7c0bd5d7e18f3361615f"
+    },
+    {
       "path": "publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "url": "https://takochanchan.github.io/publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "size": 103115,
@@ -4898,6 +5024,24 @@
       "sha256": "e44d2c4cfb4fbb72f09a1206c883212657c9a3527ec377c0a653e2abab3c5610"
     },
     {
+      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
+      "size": 177043,
+      "sha256": "45c4d4c6a269a12501d962bc9947cb053dbdd68d345f78d7d57ec1a7e1937fb2"
+    },
+    {
+      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
+      "size": 1986607,
+      "sha256": "01e5d1be9a3777cffda8287768d0a73e03b0c222014939332869fc24bbefadb5"
+    },
+    {
+      "path": "publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg",
+      "size": 31703,
+      "sha256": "b93550b42333b64d7a6849052d7715f7921e16d899a71000e2ffeb8701744235"
+    },
+    {
       "path": "publications/mendieta-historia-eclesiastica-indiana-1870/cover.jpg",
       "url": "https://takochanchan.github.io/publications/mendieta-historia-eclesiastica-indiana-1870/cover.jpg",
       "size": 71098,
@@ -5100,6 +5244,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/George_Washington_Montgomery_Narrative_of_a_Journey_to_Guatemala_1839_Japanese_Complete_Translation.pdf",
       "size": 2249288,
       "sha256": "db8946eb04afdbed01c4e1e33c53761c024d66fa037149f01ca16da85181c914"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/montufar-memorias-prision-1917/cover.jpg",
+      "size": 60020,
+      "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
+      "size": 9737219,
+      "sha256": "cebfbb532ece2c0e9132560727b8c04ce1253c022c5a6b372c93997b77370a4b"
+    },
+    {
+      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
+      "size": 4236702,
+      "sha256": "c3f2a2f662e139561174330da60e053a44c83a446f8b534a98ef969c80d49b38"
     },
     {
       "path": "publications/montufar-memorias-revolucion-centro-america-1832/cover.jpg",
@@ -6576,6 +6738,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pomar_Relacion_de_Tezcuco_1582_Japanese_Complete_Translation.pdf",
       "size": 1147145,
       "sha256": "0484daf191978be614ca55f6c1e65435b43ce4b545a9dd6fffa29e28f88ae3c0"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
+      "size": 253894,
+      "sha256": "3b2d7bf24db25cd29e00d97e41404d9e75940a54e18f4e51a771102ea9a73c5b"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
+      "size": 2293575,
+      "sha256": "f2defa50ca94b885ba465d9576423b7f34d083c1cc89c722c73fb6e0fc816aa2"
+    },
+    {
+      "path": "publications/portilla-mejico-1856-1857-1858/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/portilla-mejico-1856-1857-1858/cover.jpg",
+      "size": 30225,
+      "sha256": "14a114dad6c0a109efc55a29f8f1c2795841e1ffeb3ce23a4242f87453d7b6d2"
     },
     {
       "path": "publications/prieto-piatkowski-ferrocarril-interoceanico-guatemala-1880/Alejandro_Prieto_R_Piatkowski_Ideas_generales_sobre_el_Ferrocarril_Interoceanico_de_Guatemala_1880_Japanese_Complete_Translation.epub",
@@ -8502,168 +8682,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
-    },
-    {
-      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.pdf",
-      "size": 4236702,
-      "sha256": "c3f2a2f662e139561174330da60e053a44c83a446f8b534a98ef969c80d49b38"
-    },
-    {
-      "path": "publications/montufar-memorias-prision-1917/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Montufar_Memorias_de_una_prision_1917_Japanese.epub",
-      "size": 9737219,
-      "sha256": "cebfbb532ece2c0e9132560727b8c04ce1253c022c5a6b372c93997b77370a4b"
-    },
-    {
-      "path": "publications/montufar-memorias-prision-1917/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/montufar-memorias-prision-1917/cover.jpg",
-      "size": 60020,
-      "sha256": "542fc3c8dbe0c7ea0313a8b4c3ffeaafa2ea4a1d8d4e65b05ab40c050b59f578"
-    },
-    {
-      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.pdf",
-      "size": 6679523,
-      "sha256": "c492133e6a35d7c3940e73bd14ace050b2da9e968ba97f927869d0a9c93d1d4d"
-    },
-    {
-      "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
-      "size": 1037380,
-      "sha256": "2752ff704dce4e55cc5a4f9be96428670329b5d6530d0024464e15e114f6dcef"
-    },
-    {
-      "path": "publications/cambre-guerra-tres-anos-1904/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cambre-guerra-tres-anos-1904/cover.jpg",
-      "size": 25625,
-      "sha256": "971fad10c6e1385de914d6a80fe961dafc5fcc8179b2206bc9b2dd4160407aa6"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.pdf",
-      "size": 2977905,
-      "sha256": "2293eddf8cf101e8953f70cb319490b98612895d6738663fabbca3b525a40402"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIII_1907_Japanese_Complete_Translation.epub",
-      "size": 360649,
-      "sha256": "164715e941e5f516bd9b1352df148168ecb9ae1619325d9e6d502483ee1bb02f"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v13-1907/cover.jpg",
-      "size": 84335,
-      "sha256": "014537014f501d1fe1908b9dc0bc0b623422b793a9ab5211b947ae9e66754403"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.pdf",
-      "size": 8298975,
-      "sha256": "b9c157fa9824dfaa0c02ac47c3ade7d8fa5b2b3a62fb0eb9bd4039ea92a14879"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XIV_1907_Japanese_Complete_Translation.epub",
-      "size": 31319215,
-      "sha256": "84622a20bd9a825bc91d7cc558d660ccfb1fa9516d0cfdc4d809003969d4faf9"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v14-1907/cover.jpg",
-      "size": 67829,
-      "sha256": "609fe2857ac3d70d2dcf156402c728f825af16291fad1ed632a04f4001c68789"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.pdf",
-      "size": 2686132,
-      "sha256": "ead52551dd0f085865333b7b13ac6cfd9a9bcd8f5f4d7c0bd5d7e18f3361615f"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Garcia_Documentos_Ineditos_Mexico_XV_1907_Japanese_Complete_Translation.epub",
-      "size": 1563927,
-      "sha256": "07f52081e967b01ccc723bdc443407f5952634e6aaeaa2db9cd8cd9fa4964242"
-    },
-    {
-      "path": "publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v15-1907/cover.jpg",
-      "size": 68219,
-      "sha256": "9bba492294c94a2d5e6b7b4e9ce5117bbe625b1016c8a9f2e690e6641e2041d0"
-    },
-    {
-      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.pdf",
-      "size": 6078705,
-      "sha256": "84b56774d8abc4b14f0bd0d41ac4c0374fec2a275e48d43e92bdb3fd61994257"
-    },
-    {
-      "path": "publications/bulnes-juarez-ayutla-reforma-1905/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Bulnes_Juarez_1905_Japanese_Complete_Translation.epub",
-      "size": 7465428,
-      "sha256": "c2d1e9ecb6ad0d87dd32ffd0ad854bf8696bf757106786d8dba512c51b241019"
-    },
-    {
-      "path": "publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bulnes-juarez-ayutla-reforma-1905/cover.jpg",
-      "size": 30217,
-      "sha256": "777218c96623d15b10ff6ebfbd24759b59b7da1732ee4357f8f49b1cc27d6a81"
-    },
-    {
-      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.pdf",
-      "size": 1986607,
-      "sha256": "01e5d1be9a3777cffda8287768d0a73e03b0c222014939332869fc24bbefadb5"
-    },
-    {
-      "path": "publications/mencos-rasgos-biograficos-morazan-1893/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Agustin_Mencos_Franco_Rasgos_Biograficos_de_Francisco_Morazan_1893_Japanese_Translation.epub",
-      "size": 177043,
-      "sha256": "45c4d4c6a269a12501d962bc9947cb053dbdd68d345f78d7d57ec1a7e1937fb2"
-    },
-    {
-      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.pdf",
-      "size": 1730382,
-      "sha256": "1ff8ce942c294290ca093d7383320a9a2620138c46f8de17f9619b4deb686650"
-    },
-    {
-      "path": "publications/beteta-morazan-federacion-1887/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Antonio_Beteta_Morazan_y_la_Federacion_1887_Japanese_Translation.epub",
-      "size": 137956,
-      "sha256": "b851da14d120f1093aeb4f11c1fd71dff7b0a272b507faff3f2f97276e9cfe9d"
-    },
-    {
-      "path": "publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/mencos-rasgos-biograficos-morazan-1893/cover.jpg",
-      "size": 31703,
-      "sha256": "b93550b42333b64d7a6849052d7715f7921e16d899a71000e2ffeb8701744235"
-    },
-    {
-      "path": "publications/beteta-morazan-federacion-1887/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/beteta-morazan-federacion-1887/cover.jpg",
-      "size": 25148,
-      "sha256": "c4a71629bad157801933b147ad8899834d1fc2f1e0e7cf445a7ea30ed8a0ff9b"
-    },
-    {
-      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.pdf",
-      "size": 2293575,
-      "sha256": "f2defa50ca94b885ba465d9576423b7f34d083c1cc89c722c73fb6e0fc816aa2"
-    },
-    {
-      "path": "publications/portilla-mejico-1856-1857-1858/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Anselmo_de_la_Portilla_Mejico_1856_1857_1858_Japanese_Translation.epub",
-      "size": 253894,
-      "sha256": "3b2d7bf24db25cd29e00d97e41404d9e75940a54e18f4e51a771102ea9a73c5b"
-    },
-    {
-      "path": "publications/portilla-mejico-1856-1857-1858/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/portilla-mejico-1856-1857-1858/cover.jpg",
-      "size": 30225,
-      "sha256": "14a114dad6c0a109efc55a29f8f1c2795841e1ffeb3ce23a4242f87453d7b6d2"
     }
   ]
 }
