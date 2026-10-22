@@ -213,26 +213,13 @@ export const literalPagefindSearch = async (api, query, documentMap) => {
   const matchedSearches = exactSearches.filter(
     ({ result }) => result.results.length,
   );
-  if (matchedSearches.length) {
-    const broadSearches = await Promise.all(
-      matchedSearches.map(async ({ candidate }) =>
-        api.search(candidate),
-      ),
-    );
-    return groupDocumentReferences(
-      mergePagefindReferences(
-        matchedSearches.flatMap(({ result }) => result.results),
-        query,
-      ),
-      mergePagefindReferences(
-        broadSearches.flatMap((result) => result.results),
-        query,
-      ),
-      documentMap,
-      query,
-    );
-  }
-
+  // Exact token matches are only part of a literal search: an occurrence
+  // inside a longer token (アルバ公爵家 for アルバ公) may be broad-only.
+  const exactReferences = mergePagefindReferences(
+    matchedSearches.flatMap(({ result }) => result.results),
+    query,
+  );
+  const exactIds = new Set(exactReferences.map((reference) => reference.id));
   const broadSearches = await Promise.all(
     candidates.map((candidate) => api.search(candidate)),
   );
@@ -240,10 +227,11 @@ export const literalPagefindSearch = async (api, query, documentMap) => {
     broadSearches.flatMap((result) => result.results),
     query,
   );
-  const literalReferences = [];
+  const literalReferences = [...exactReferences];
   for (let index = 0; index < broadReferences.length; index += 4) {
     const filtered = await Promise.all(
       broadReferences.slice(index, index + 4).map(async (reference) => {
+        if (exactIds.has(reference.id)) return null;
         const data = await reference.data();
         return data.sub_results.length ? reference : null;
       }),
@@ -371,3 +359,4 @@ export const groupDocumentReferences = (
   const documentCollections = works.filter((work) => work.recordClass === "document-collection").length;
   return { results, books, papers, documentCollections };
 };
+

@@ -651,7 +651,7 @@ window.FULLTEXT_SEARCH_CONFIG={
 };
 </script>
 <script src="/archive.js?v=${catalogueScriptVersion}" defer></script>
-<script src="/fulltext-search.js?v=${assetVersion}-bibliographic-counts" defer></script>`,
+<script src="/fulltext-search.js?v=${assetVersion}-literal-candidates-20261022" defer></script>`,
 });
 
 const aboutPage = documentShell({
@@ -1564,3 +1564,4 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+

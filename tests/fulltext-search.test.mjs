@@ -5,6 +5,7 @@ import { execFile } from "node:child_process";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
+import { runInNewContext } from "node:vm";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import {
@@ -459,3 +460,108 @@ test("Pagefind groups small documents and result data loads progressively", () =
     /resultList\.append\(resultCard\(result, pageMap\)\)[\s\S]*renderedWorks \+= 1/,
   );
 });
+
+// Exercise the shipped browser functions as well as the Node search core.
+// Keeping two implementations must not leave the production client unfixed.
+const browserLiteralSearch = runInNewContext(
+  [
+    "const LITERAL_FILTER_CONCURRENCY = 4;",
+    "const DOCUMENT_LOAD_CONCURRENCY = 6;",
+    browserScript.slice(
+      browserScript.indexOf("  const escapeHtml ="),
+      browserScript.indexOf("  const safeExcerpt ="),
+    ),
+    browserScript.slice(
+      browserScript.indexOf("  const segmentWords ="),
+      browserScript.indexOf("  const loadPageMap ="),
+    ),
+    browserScript.slice(
+      browserScript.indexOf("  const groupDocumentResults ="),
+      browserScript.indexOf("  const markedExcerpt ="),
+    ),
+    "literalPagefindSearch;",
+  ].join("\n"),
+  { Intl, blockIdFor },
+);
+
+for (const [implementation, search] of [
+  ["core", literalPagefindSearch],
+  ["browser", browserLiteralSearch],
+]) {
+  test(`${implementation}: exact matches do not hide literal compound-name matches`, async () => {
+    const slug = "garcia-historia-bethlehemitica-1723";
+    let exactLoads = 0;
+    const reference = (id, text, block) => ({
+      id,
+      score: 1,
+      data: async () => {
+        if (id === "exact") exactLoads += 1;
+        return {
+          meta: { title: id },
+          sub_results: [{
+            anchor: { id: block },
+            plain_excerpt: text,
+          }],
+        };
+      },
+    });
+    const exact = reference("exact", "アルバ公の命令", "b00001");
+    const compound = reference("compound", "両親はきわめて高貴なアルバ公爵家とベナベンテ伯爵公爵家に出自を持つ。", "b02086");
+    const laterPart = reference("later", "アルバ公爵家について", "b02200");
+    const fuzzy = reference("fuzzy", "アルバレスと公爵家", "b00002");
+    const api = {
+      search: async (query) => {
+        if (query === '"アルバ 公"') return { results: [exact] };
+        if (query === "アルバ 公") return { results: [exact, compound, fuzzy] };
+        // This alternative has no quoted hits. It must still be searched.
+        if (query === "アル バ 公") return { results: [compound, laterPart, fuzzy] };
+        return { results: [] };
+      },
+    };
+    const grouped = await search(api, "アルバ公", {
+      fragments: {
+        exact: ["other-book", "major-work", 0],
+        compound: [slug, "major-work", 2],
+        later: [slug, "major-work", 3],
+        fuzzy: ["unrelated-book", "major-work", 0],
+      },
+    });
+    assert.equal(exactLoads, 0, "proven exact results remain lazy");
+    assert.equal(grouped.books, 2);
+    assert.equal(grouped.results.length, 2, "duplicate candidates must not duplicate works");
+    const target = grouped.results.find((result) => result.id === slug);
+    assert.ok(target, "ベレン会史 must survive an exact match in another work");
+    const preview = await target.data();
+    const data = preview.__partialSearch ? await preview.__loadFull() : preview;
+    const snippets = snippetsFor(data, {
+      blocks: {
+        b02086: ["原刊 p. 3", 286, 2085],
+        b02200: ["原刊 p. 15", 300, 2199],
+      },
+    });
+    assert.equal(JSON.stringify(snippets.map((snippet) => snippet.pdfPage)), "[286,300]");
+    assert.match(snippets[0].excerpt, /<mark>アルバ公<\/mark>爵家/);
+    assert.ok(!grouped.results.some((result) => result.id === "unrelated-book"));
+    const other = await grouped.results.find((result) => result.id === "other-book").data();
+    assert.equal(other.sub_results.length, 1, "existing exact results are retained");
+  });
+
+  test(`${implementation}: broad-only search still rejects nonliteral candidates`, async () => {
+    const api = {
+      search: async (query) => ({
+        results: query.startsWith('"') ? [] : [{
+          id: "fuzzy",
+          data: async () => ({
+            sub_results: [{ plain_excerpt: "アルバレスと公爵家", anchor: { id: "b00001" } }],
+          }),
+        }],
+      }),
+    };
+    const grouped = await search(api, "アルバ公", {
+      fragments: { fuzzy: ["unrelated-book", "major-work", 0] },
+    });
+    assert.equal(grouped.results.length, 0);
+    assert.equal(grouped.books, 0);
+  });
+}
+
