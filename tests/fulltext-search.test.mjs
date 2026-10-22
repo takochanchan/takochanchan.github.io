@@ -8,6 +8,8 @@ import { promisify } from "node:util";
 import { runInNewContext } from "node:vm";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import { createPrefixSearch, decodeSearchCbor } from "../src/fulltext-prefix-search.mjs";
+import { gzipSync } from "node:zlib";
 import {
   INITIAL_SNIPPET_LIMIT,
   blockIdFor,
@@ -484,6 +486,53 @@ const browserLiteralSearch = runInNewContext(
   { Intl, blockIdFor },
 );
 
+test("prefix completions cross index chunk boundaries and require adjacent tokens", async () => {
+  const encode = (value) => {
+    const header = (major, size) => size < 24
+      ? [major * 32 + size]
+      : size < 256 ? [major * 32 + 24, size] : [major * 32 + 25, size >> 8, size & 255];
+    if (Number.isInteger(value)) return Uint8Array.from(value < 0 ? header(1, -1 - value) : header(0, value));
+    if (typeof value === "string") {
+      const bytes = new TextEncoder().encode(value);
+      return Uint8Array.from([...header(3, bytes.length), ...bytes]);
+    }
+    return Uint8Array.from([...header(4, value.length), ...value.flatMap((item) => [...encode(item)])]);
+  };
+  const packed = (value) => gzipSync(Buffer.concat([Buffer.from("pagefind_dcd"), encode(value)]));
+  const metadata = ["1.5.2", [["target", 100], ["unrelated", 100]], [
+    ["アルハ", "アルハレス", "kana"],
+    ["公", "公務", "early"],
+    ["公爵", "公爵家", "late"],
+  ], [], []];
+  const payloads = new Map([
+    ["pagefind.ja_test.pf_meta", packed(metadata)],
+    ["index/kana.pf_index", packed([[
+      ["アルハ", [], [["アルバ", [[0, [-25, 10, 10], []], [1, [-25, 4], []]]]]],
+    ]])],
+    ["index/early.pf_index", packed([[["公", [[0, [-25, 11], []]], []]]])],
+    ["index/late.pf_index", packed([[
+      ["公爵", [[0, [-25, 21], []]], []],
+      ["公爵家", [[1, [-25, 8], []]], []],
+    ]])],
+  ]);
+  const requested = [];
+  const fetcher = async (url) => {
+    const pathname = new URL(url).pathname.slice(1);
+    requested.push(pathname);
+    if (pathname === "pagefind-entry.json") return Response.json({ version: "1.5.2", languages: { ja: { hash: "ja_test" } } });
+    assert.ok(payloads.has(pathname), `unexpected download: ${pathname}`);
+    return new Response(payloads.get(pathname));
+  };
+  const expand = createPrefixSearch(["https://search.example/"], fetcher);
+  assert.deepEqual(await expand(["アルバ 公"]), ["アルバ 公爵"]);
+  assert.ok(requested.includes("index/late.pf_index"), "do not stop at the strict 公 chunk");
+  assert.ok(!requested.some((url) => url.includes("fragment")), "candidate discovery must not download book text");
+  const downloads = requested.length;
+  assert.deepEqual(await expand(["アルバ 公"]), ["アルバ 公爵"]);
+  assert.equal(requested.length, downloads, "reuse word chunks on subsequent queries");
+  assert.throws(() => decodeSearchCbor(Uint8Array.from([0x82, 0x01])), /Truncated/);
+});
+
 for (const [implementation, search] of [
   ["core", literalPagefindSearch],
   ["browser", browserLiteralSearch],
@@ -510,10 +559,12 @@ for (const [implementation, search] of [
     const laterPart = reference("later", "アルバ公爵家について", "b02200");
     const fuzzy = reference("fuzzy", "アルバレスと公爵家", "b00002");
     const api = {
+      expandLiteralQueries: async () => ["アルバ 公爵", "アルバ 公爵家"],
       search: async (query) => {
+        if (query === '"アルバ 公爵"') return { results: [compound] };
+        if (query === '"アルバ 公爵家"') return { results: [laterPart] };
         if (query === '"アルバ 公"') return { results: [exact] };
         if (query === "アルバ 公") return { results: [exact, compound, fuzzy] };
-        // This alternative has no quoted hits. It must still be searched.
         if (query === "アル バ 公") return { results: [compound, laterPart, fuzzy] };
         return { results: [] };
       },

@@ -8,6 +8,7 @@ import {
   snippetsFor,
 } from "../../src/fulltext-search-core.mjs";
 import { publications } from "../../src/publications.mjs";
+import { createPrefixSearch } from "../../src/fulltext-prefix-search.mjs";
 
 const argument = (name, fallback = null) => {
   const index = process.argv.indexOf(name);
@@ -83,6 +84,9 @@ const api = pagefindModule.createInstance({
 
 const searchLiteral = (query) =>
   literalPagefindSearch(api, query, documentMap);
+api.expandLiteralQueries = createPrefixSearch([
+  `http://127.0.0.1:${address.port}/pagefind/`,
+]);
 
 const verifyQuery = async (query, expected) => {
   const grouped = await searchLiteral(query);
@@ -321,3 +325,4 @@ try {
   await api.destroy();
   await new Promise((resolve) => server.close(resolve));
 }
+

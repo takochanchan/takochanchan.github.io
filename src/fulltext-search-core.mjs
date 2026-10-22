@@ -204,6 +204,11 @@ export const mergePagefindReferences = (references, query) => {
 
 export const literalPagefindSearch = async (api, query, documentMap) => {
   const candidates = literalCandidateQueries(query);
+  // Complete the final index token before quoted matching. Otherwise an
+  // exact hit in another book hides アルバ公 inside アルバ公爵家.
+  if (typeof api.expandLiteralQueries === "function") {
+    candidates.push(...await api.expandLiteralQueries(candidates));
+  }
   const exactSearches = await Promise.all(
     candidates.map(async (candidate) => ({
       candidate,
@@ -213,13 +218,26 @@ export const literalPagefindSearch = async (api, query, documentMap) => {
   const matchedSearches = exactSearches.filter(
     ({ result }) => result.results.length,
   );
-  // Exact token matches are only part of a literal search: an occurrence
-  // inside a longer token (アルバ公爵家 for アルバ公) may be broad-only.
-  const exactReferences = mergePagefindReferences(
-    matchedSearches.flatMap(({ result }) => result.results),
-    query,
-  );
-  const exactIds = new Set(exactReferences.map((reference) => reference.id));
+  if (matchedSearches.length) {
+    const broadSearches = await Promise.all(
+      matchedSearches.map(async ({ candidate }) =>
+        api.search(candidate),
+      ),
+    );
+    return groupDocumentReferences(
+      mergePagefindReferences(
+        matchedSearches.flatMap(({ result }) => result.results),
+        query,
+      ),
+      mergePagefindReferences(
+        broadSearches.flatMap((result) => result.results),
+        query,
+      ),
+      documentMap,
+      query,
+    );
+  }
+
   const broadSearches = await Promise.all(
     candidates.map((candidate) => api.search(candidate)),
   );
@@ -227,11 +245,10 @@ export const literalPagefindSearch = async (api, query, documentMap) => {
     broadSearches.flatMap((result) => result.results),
     query,
   );
-  const literalReferences = [...exactReferences];
+  const literalReferences = [];
   for (let index = 0; index < broadReferences.length; index += 4) {
     const filtered = await Promise.all(
       broadReferences.slice(index, index + 4).map(async (reference) => {
-        if (exactIds.has(reference.id)) return null;
         const data = await reference.data();
         return data.sub_results.length ? reference : null;
       }),

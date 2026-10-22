@@ -612,6 +612,8 @@
             if (documentLanguage === null) root.removeAttribute("lang");
             else root.setAttribute("lang", documentLanguage);
           }
+          const { createPrefixSearch } = await import(config.prefixSearchModule || "./fulltext-prefix-search.mjs");
+          instance.expandLiteralQueries = createPrefixSearch(searchShards.map((shard) => shard.pagefindBase));
           await instance.init();
           for (const shard of searchShards.slice(1)) {
             await instance.mergeIndex(shard.pagefindBase, {
@@ -841,6 +843,11 @@
 
   const literalPagefindSearch = async (api, query, documentMap) => {
     const candidates = literalCandidateQueries(query);
+    // Complete the final index token before quoted matching. Otherwise an
+    // exact hit in another book hides アルバ公 inside アルバ公爵家.
+    if (typeof api.expandLiteralQueries === "function") {
+      candidates.push(...await api.expandLiteralQueries(candidates));
+    }
     const exactSearches = await Promise.all(
       candidates.map(async (candidate) => ({
         candidate,
@@ -850,13 +857,27 @@
     const matchedSearches = exactSearches.filter(
       ({ result }) => result.results.length,
     );
-    // Exact token matches are only part of a literal search: an occurrence
-    // inside a longer token (アルバ公爵家 for アルバ公) may be broad-only.
-    const exactReferences = mergePagefindReferences(
-      matchedSearches.flatMap(({ result }) => result.results),
-      query,
-    );
-    const exactIds = new Set(exactReferences.map((reference) => reference.id));
+    if (matchedSearches.length) {
+      const broadSearches = await Promise.all(
+        matchedSearches.map(({ candidate }) => api.search(candidate)),
+      );
+      return groupDocumentResults(
+        mergePagefindReferences(
+          matchedSearches.flatMap(({ result }) => result.results),
+          query,
+        ),
+        mergePagefindReferences(
+          broadSearches.flatMap((result) => result.results),
+          query,
+        ),
+        documentMap,
+        query,
+      );
+    }
+
+    // Compound names can have no stable quoted-token form in Pagefind's
+    // Japanese index. Merge every punctuation- and word-boundary candidate,
+    // then hydrate and retain only fragments containing the literal query.
     const broadSearches = await Promise.all(
       candidates.map((candidate) => api.search(candidate)),
     );
@@ -864,7 +885,7 @@
       broadSearches.flatMap((result) => result.results),
       query,
     );
-    const literalReferences = [...exactReferences];
+    const literalReferences = [];
     for (
       let index = 0;
       index < broadReferences.length;
@@ -874,7 +895,6 @@
         broadReferences
           .slice(index, index + LITERAL_FILTER_CONCURRENCY)
           .map(async (reference) => {
-            if (exactIds.has(reference.id)) return null;
             const data = await reference.data();
             return data.sub_results.length ? reference : null;
           }),

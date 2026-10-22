@@ -2637,10 +2637,14 @@ test("home page contains scalable archive controls", async () => {
   matchText(html, /\/archive\.css\?v=20261004-document-collections/);
   matchText(html, /\/archive\.js\?v=20261004-document-collections/);
   matchText(html, /\/fulltext-search\.css\?v=20261004-document-collections/);
-  matchText(
-    html,
-    /\/fulltext-search\.js\?v=20261004-document-collections-bibliographic-counts/,
-  );
+  const searchScript = await readFile(path.join(dist, "fulltext-search.js"));
+  const searchScriptHash = createHash("sha256").update(searchScript).digest("hex").slice(0, 12);
+  assert.ok(html.includes(`/fulltext-search.js?v=${searchScriptHash}`),
+    "search script URL must change when its contents change");
+  const prefixScript = await readFile(path.join(dist, "fulltext-prefix-search.mjs"));
+  const prefixScriptHash = createHash("sha256").update(prefixScript).digest("hex").slice(0, 12);
+  assert.ok(html.includes(`/fulltext-prefix-search.mjs?v=${prefixScriptHash}`),
+    "prefix search module URL must change when its contents change");
   matchText(html, /window\.BIBLIOGRAPHIC_ALIASES=/);
   matchText(html, /window\.FULLTEXT_SEARCH_CONFIG=\{/);
   matchText(

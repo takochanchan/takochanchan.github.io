@@ -1,5 +1,6 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { catalogueFiles } from "./analytics-report.mjs";
 import { attributeSpellingAliases } from "../src/attribute-spelling.mjs";
@@ -39,6 +40,14 @@ const site = {
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
 const assetVersion = "20261004-document-collections";
+const fulltextScriptVersion = createHash("sha256")
+  .update(await readFile(path.join(projectRoot, "src/fulltext-search.js")))
+  .digest("hex")
+  .slice(0, 12);
+const prefixScriptVersion = createHash("sha256")
+  .update(await readFile(path.join(projectRoot, "src/fulltext-prefix-search.mjs")))
+  .digest("hex")
+  .slice(0, 12);
 const catalogueScriptVersion = `${assetVersion}-spelling-20261014`;
 const analyticsVersion = "20261014-ga4-v1";
 catalogueFiles(publications); // Validate stable analytics IDs before publishing.
@@ -641,6 +650,7 @@ ${footer()}`,
 <script>window.BIBLIOGRAPHIC_ALIASES=${jsonForScript(bibliographicAliases)};</script>
 <script>
 window.FULLTEXT_SEARCH_CONFIG={
+  prefixSearchModule:"/fulltext-prefix-search.mjs?v=${prefixScriptVersion}",
   shards:${jsonForScript(searchClientShards)},
   bibliographicCounts:${jsonForScript({
     books: majorPublications.length,
@@ -651,7 +661,7 @@ window.FULLTEXT_SEARCH_CONFIG={
 };
 </script>
 <script src="/archive.js?v=${catalogueScriptVersion}" defer></script>
-<script src="/fulltext-search.js?v=${assetVersion}-literal-candidates-20261022" defer></script>`,
+<script src="/fulltext-search.js?v=${fulltextScriptVersion}" defer></script>`,
 });
 
 const aboutPage = documentShell({
@@ -1433,6 +1443,10 @@ await Promise.all([
   cp(
     path.join(projectRoot, "src", "fulltext-search.js"),
     path.join(dist, "fulltext-search.js"),
+  ),
+  cp(
+    path.join(projectRoot, "src", "fulltext-prefix-search.mjs"),
+    path.join(dist, "fulltext-prefix-search.mjs"),
   ),
   cp(
     path.join(projectRoot, "search-shards.json"),
