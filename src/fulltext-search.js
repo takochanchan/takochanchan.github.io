@@ -612,6 +612,8 @@
             if (documentLanguage === null) root.removeAttribute("lang");
             else root.setAttribute("lang", documentLanguage);
           }
+          const { createPrefixSearch } = await import(config.prefixSearchModule || "./fulltext-prefix-search.mjs");
+          instance.expandLiteralQueries = createPrefixSearch(searchShards.map((shard) => shard.pagefindBase));
           await instance.init();
           for (const shard of searchShards.slice(1)) {
             await instance.mergeIndex(shard.pagefindBase, {
@@ -841,6 +843,11 @@
 
   const literalPagefindSearch = async (api, query, documentMap) => {
     const candidates = literalCandidateQueries(query);
+    // Complete the final index token before quoted matching. Otherwise an
+    // exact hit in another book hides アルバ公 inside アルバ公爵家.
+    if (typeof api.expandLiteralQueries === "function") {
+      candidates.push(...await api.expandLiteralQueries(candidates));
+    }
     const exactSearches = await Promise.all(
       candidates.map(async (candidate) => ({
         candidate,
@@ -1098,3 +1105,4 @@
   input.value = initialQuery;
   if (initialQuery) search();
 })();
+

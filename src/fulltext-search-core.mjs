@@ -204,6 +204,11 @@ export const mergePagefindReferences = (references, query) => {
 
 export const literalPagefindSearch = async (api, query, documentMap) => {
   const candidates = literalCandidateQueries(query);
+  // Complete the final index token before quoted matching. Otherwise an
+  // exact hit in another book hides アルバ公 inside アルバ公爵家.
+  if (typeof api.expandLiteralQueries === "function") {
+    candidates.push(...await api.expandLiteralQueries(candidates));
+  }
   const exactSearches = await Promise.all(
     candidates.map(async (candidate) => ({
       candidate,
@@ -371,3 +376,4 @@ export const groupDocumentReferences = (
   const documentCollections = works.filter((work) => work.recordClass === "document-collection").length;
   return { results, books, papers, documentCollections };
 };
+
