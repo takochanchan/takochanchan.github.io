@@ -8724,6 +8724,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
       "size": 92594,
       "sha256": "285e26bca9ee36ac419ada133ec5e71cda891ee4524c88fed7b359776a152589"
+    },
+    {
+      "path": "publications/milla-los-nazarenos-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/milla-los-nazarenos-1897/cover.jpg",
+      "size": 23886,
+      "sha256": "da5620a50f9ea6e01eda593bcfd2b645ac6af0475aa5b1ebaa827875b1b8488b"
+    },
+    {
+      "path": "publications/gagini-marques-talamanca-obras-dramaticas-1905/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gagini-marques-talamanca-obras-dramaticas-1905/cover.jpg",
+      "size": 26133,
+      "sha256": "ea46b89d19444a53789cc9fdac97e42f5feae6430288592f8313bfa80122ad2c"
     }
   ]
 }
