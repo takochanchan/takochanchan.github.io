@@ -9117,6 +9117,63 @@
         "status": "online",
         "url": "https://inehrm.gob.mx/recursos/Libros/La_gran_decada_nacional_t3.pdf"
       }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+      "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第2部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Segunda parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Segunda parte. Documentos inéditos ó muy raros para la historia de México, tomo XVI. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi16garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+      "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第3部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Tercera parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Tercera parte. Documentos inéditos ó muy raros para la historia de México, tomo XVII. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi16garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+      "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第4部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Cuarta parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Cuarta parte. Documentos inéditos ó muy raros para la historia de México, tomo XVIII. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi16garc"
+      }
     }
   ],
   "works": [

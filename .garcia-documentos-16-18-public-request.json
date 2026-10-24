@@ -131,5 +131,6 @@
       "b33dc7213e23361521dacf09509552a8609d8e8a",
       "426b89caffaaace02552de0d345ad45f25ccb8cf"
     ]
-  }
+  },
+  "retry_reason": "Add missing canonical bibliography and document-collection registration"
 }
