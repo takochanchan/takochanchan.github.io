@@ -1,0 +1,21 @@
+name: Verify Nazarenos and Gagini public pages and search
+on:
+  push:
+    branches: [agent/nazarenos-gagini-livecheck-20261024]
+    paths: [.nazarenos-gagini-live-request.json, .nazarenos-gagini-live-check.mjs]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify live pages, literal search and downloadable bytes
+        run: node .nazarenos-gagini-live-check.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nazarenos-gagini-live-verification
+          path: nazarenos-gagini-live-verification.json
