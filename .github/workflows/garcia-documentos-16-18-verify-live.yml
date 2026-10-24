@@ -1,0 +1,76 @@
+name: Verify live Garcia Documentos XVI–XVIII publication
+on:
+  push:
+    branches: [main]
+    paths: [src/garcia-documentos-publication.mjs, .github/workflows/garcia-documentos-16-18-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify live bibliography and exact final assets
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess,re
+          from html import unescape
+          slug='garcia-documentos-ineditos-mexico-1905-1911'
+          slugs=['garcia-documentos-ineditos-mexico-v'+str(n).zfill(2)+'-1908' for n in [16,17,18]]
+          url='https://takochanchan.github.io/publications/'+slug+'/'
+          html=urllib.request.urlopen(url,timeout=60).read().decode()
+          for text in ['ロバーツ図書館','Garcia_Documentos_Ineditos_Mexico_XVI_1908_Japanese_Complete_Translation.pdf','Garcia_Documentos_Ineditos_Mexico_XVII_1908_Japanese_Complete_Translation.epub','Garcia_Documentos_Ineditos_Mexico_XVIII_1908_Japanese_Complete_Translation.pdf']:
+              assert text in html, text
+          count=sum(r['slug'].startswith('garcia-documentos-ineditos-mexico-v') for r in json.load(open('tests/fixtures/publication-catalogue.json'))['records'])
+          assert '公開'+str(count)+'巻' in html
+          overview=json.load(open('src/publication-overviews.json'))['records']
+          plain=re.sub(r'\s+', '', unescape(re.sub(r'<[^>]*>', '', html)))
+          for member in slugs:
+              for paragraph in overview[member].splitlines():
+                  assert re.sub(r'\s+', '', paragraph) in plain, member+' detailed overview'
+          assert '<details' in html
+          sums_url='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt'
+          sums=urllib.request.urlopen(sums_url,timeout=120).read().decode()
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if any(a['path'].startswith('publications/'+member+'/') for member in slugs)]
+          root=pathlib.Path(tempfile.mkdtemp())
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              with urllib.request.urlopen(a['url'],timeout=120) as response,p.open('wb') as f:
+                  while chunk:=response.read(1024*1024): f.write(chunk)
+              assert p.stat().st_size==a['size']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+              if p.suffix in ['.pdf','.epub']:
+                  assert a['sha256']+'  '+p.name in sums, p.name+' release checksum'
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  pages=263 if '_XVIII_' in p.name else 279
+                  assert any(line.split()==['Pages:',str(pages)] for line in info.splitlines())
+              print('VERIFIED',p.name,a['size'],a['sha256'])
+          assert len(assets)==9
+          print('Live Garcia Documentos XVI–XVIII bibliography, PDF pages, EPUB, and cover verified.')
+          PY
+
