@@ -1,3 +1,4 @@
+import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
 import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
 import { portillaPublicationRecords, portillaPublicationMetadata } from "./portilla-publication.mjs";
 import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
@@ -277,6 +278,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...galindoPublicationRecords,
   ...portillaPublicationRecords,
   ...morazanPairPublicationRecords,
   ...bulnesPublicationRecords,
@@ -9396,6 +9398,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...galindoPublicationMetadata,
   ...portillaPublicationMetadata,
   ...morazanPairPublicationMetadata,
   ...bulnesPublicationMetadata,

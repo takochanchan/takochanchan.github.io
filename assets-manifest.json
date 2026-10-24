@@ -8682,6 +8682,60 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "size": 5386235,
+      "sha256": "9cdc83cff459699516a7a038a8b01f466fade904b9105bc313277187f547011d"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "size": 609286,
+      "sha256": "163ca4223d917dc2f736e8c402b04c5426a257d01137227c056ba6c2020b376d"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1904-vol-1/cover.jpg",
+      "size": 81473,
+      "sha256": "905cfb425c5d6ee01b101399f67f3479b468f3f37dabdb305e4265bddcd9d21e"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "size": 6957566,
+      "sha256": "be675581d2398611416112db05d79f277383d7d2273d7b990961f52905b9ee07"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "size": 781924,
+      "sha256": "9be9493ac0ced9154a6ec9dd5d91e506f911e3ac76caa24c9e2bf37490eefe1d"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1905-vol-2/cover.jpg",
+      "size": 81524,
+      "sha256": "8e06c1554b08258d568b974b34fd7b657eb9b4fbbb24d161a233b7220cd45b3a"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "size": 7337923,
+      "sha256": "fd01fe47e17c65333cbad5540e4e713fdbbd14816772ee3eac1f8438219b70b2"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "size": 778040,
+      "sha256": "eb697c238a540b5b3362b2aa02c0c2cf20cd2fd6aac1c2d5be411b8e4374adca"
+    },
+    {
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg",
+      "size": 81527,
+      "sha256": "2cefdfd97fe71047c60959173847e0aeee9a756192343dcc56b4861e5d52c80c"
     }
   ]
 }
