@@ -37,13 +37,18 @@ jobs:
       - name: Verify live bibliography, assets and source-page search mapping
         run: |
           python3 - <<'PY'
-          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess,re,os
           slug='juarros-compendio-guatemala-1857'
           url='https://takochanchan.github.io/publications/'+slug+'/'
           def get(url):
               return urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=120).read()
-          html=get(url).decode()
-          for text in ['グアテマラ市史要覧','PDF 808頁','Biblioteca Ludwig von Mises','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub']:
+          html=get(url+'?revision='+os.environ['GITHUB_SHA']).decode()
+          pathlib.Path('juarros-live-page.html').write_text(html)
+          structured=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',html,re.S).group(1))
+          work=next(x for x in structured if x.get('@id','').endswith('#work'))
+          assert work['numberOfPages']==808
+          assert re.search(r'<dt>翻訳版</dt>\s*<dd>808頁</dd>',html)
+          for text in ['グアテマラ市史要覧','Biblioteca Ludwig von Mises','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub']:
               assert text in html,text
           assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
           root=pathlib.Path(tempfile.mkdtemp());records=[]
@@ -67,11 +72,14 @@ jobs:
           assert mapping['canonicalUrl'].rstrip('/')==url.rstrip('/')
           assert len(mapping['blocks'])>1000
           assert any('原刊' in str(x[0]) and isinstance(x[1],int) and 1<=x[1]<=808 for x in mapping['blocks'].values())
-          report={'status':'published_and_verified','bibliography_url':url,'assets':records,'search_pdf_sha256':mapping['pdfSha256'],'search_blocks':len(mapping['blocks'])}
+          report={'status':'published_and_verified','publication_commit':os.environ['GITHUB_SHA'],'bibliography_url':url,'assets':records,'search_pdf_sha256':mapping['pdfSha256'],'search_blocks':len(mapping['blocks'])}
           pathlib.Path('juarros-live-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
           print(json.dumps(report,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: juarros-live-verification
-          path: juarros-live-verification.json
+          path: |
+            juarros-live-verification.json
+            juarros-live-page.html
