@@ -1,0 +1,57 @@
+{
+  "verified_archive_commit": "bc2d4e69f45f4124105b58bbfdaa7b004cf97f14",
+  "assets": [
+    {
+      "filename": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
+      "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
+      "size": 3134558,
+      "sha256": "3489f2cdb00468f4b67c9abe4110f6acf0d912be3e26a1afdd016e92e877d469"
+    },
+    {
+      "filename": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
+      "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
+      "size": 1592545,
+      "sha256": "f9020cc6c62895b95162ab6fe321c7591f3ec45754916417fc37c358b2355564"
+    },
+    {
+      "filename": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
+      "path": "publications/gagini-marques-talamanca-obras-dramaticas-1905/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
+      "size": 1538206,
+      "sha256": "a324071cb14ca5b90257ae4ec8ba540ecf4421d3716f8345bee5113459e94d4d"
+    },
+    {
+      "filename": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
+      "path": "publications/gagini-marques-talamanca-obras-dramaticas-1905/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
+      "size": 92594,
+      "sha256": "285e26bca9ee36ac419ada133ec5e71cda891ee4524c88fed7b359776a152589"
+    }
+  ],
+  "bundle": {
+    "size": 4711947,
+    "sha256": "870cb726f722092c20656a279cd99b8cbf9ad7305f16288051b866afe8fb3fd4",
+    "chunks": [
+      "97f407a34beb3dcea2b7a2b2c7734679bd827e0d",
+      "ade82431f4e0096fc0e1b3c0e5188b1c883d46f0",
+      "6bd3c3da259efb81a9cc72ca745ba5143764ae84",
+      "576931aff2133aa2b4ee0b11306109b725a766f8",
+      "9b5c4768fe496ef171cb3dd1999ec34d51608d97",
+      "ac198c019108e20055af8bb8fc510669cc305b72",
+      "e170c34d86a87f6f8614a222911d87a505ef561e",
+      "65741d0fbbf6ed579695258490a39d2f40deddcd",
+      "00d68639b3f8a25751a5cac7cc639f0a3c91cadb",
+      "af63322c9a2b6c14bad844f6acd3d4ab12ef8db4",
+      "24a20c31f00133158e984d1c2eb37532afb3e6d8",
+      "b7955678789ccf03cd7842d646260e9f20dc80eb"
+    ]
+  },
+  "publications": [
+    {
+      "slug": "milla-los-nazarenos-1897",
+      "pdf_filename": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "pdf_filename": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf"
+    }
+  ]
+}

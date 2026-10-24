@@ -2579,22 +2579,22 @@
       "author": "フィリップ・ビュノー＝ヴァリーヤ"
     },
     {
-      "slug": "galindo-gran-decada-nacional-1904-vol-1",
-      "recordClass": "major-work",
+      "slug": "rodrigo-cruz-representacion-juridica-1693",
+      "recordClass": "document-collection",
       "searchShard": "002",
-      "author": "ミゲル・ガリンド・イ・ガリンド"
+      "author": "ロドリゴ・デ・ラ・クルス（申立人）"
     },
     {
-      "slug": "galindo-gran-decada-nacional-1905-vol-2",
+      "slug": "milla-los-nazarenos-1897",
       "recordClass": "major-work",
       "searchShard": "002",
-      "author": "ミゲル・ガリンド・イ・ガリンド"
+      "author": "ホセ・ミリャ（サロメ・ヒル）"
     },
     {
-      "slug": "galindo-gran-decada-nacional-1906-vol-3",
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
       "recordClass": "major-work",
       "searchShard": "002",
-      "author": "ミゲル・ガリンド・イ・ガリンド"
+      "author": "カルロス・ガヒニ"
     }
   ],
   "groups": [
@@ -2703,14 +2703,6 @@
         "cuevas-historia-iglesia-mexico-v03",
         "cuevas-historia-iglesia-mexico-v04",
         "cuevas-historia-iglesia-mexico-v05"
-      ]
-    },
-    {
-      "slug": "galindo-gran-decada-nacional-1904-1906",
-      "memberSlugs": [
-        "galindo-gran-decada-nacional-1904-vol-1",
-        "galindo-gran-decada-nacional-1905-vol-2",
-        "galindo-gran-decada-nacional-1906-vol-3"
       ]
     }
   ],

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "verified_archive_commit": "f5fea7266ace831ec25be7fcf8c25d49fbc0051e",
+  "assets": [
+    {
+      "filename": "Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.pdf",
+      "size": 2448290,
+      "sha256": "381eaa4ed5df45738bc73c35bff33b5a56ed6418fb56325ff1fdfcc9de1e1cc1"
+    },
+    {
+      "filename": "Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
+      "size": 15533881,
+      "sha256": "dfd626f18ce1255d99fd38fbcfd489a6c0d75bc12e479ffee78891228aa1c7c1"
+    }
+  ],
+  "bundle": {
+    "size": 17145773,
+    "sha256": "c7ad6d92c0ec884188b08380dfaa171636f5b2525cdb4e0dcac488b39c968005",
+    "chunks": [
+      "8eddf23ef025186f977e9169397e0dd49769eb83",
+      "55940c02a3e347b05d5c0f2a221498cccdc8af2b",
+      "c5e8523ceaac2e7b34efddfa9b1fa9b6eabe6116",
+      "8987f8209560048a794435ad9b9bd2e4d0d3f3ba",
+      "bb817b7f8425fc3bdb5124bf059fe56ff9da393d",
+      "dac1c51dd0bbc2dbde28bbe5b221d43cbbf3c968",
+      "6284577ad4839b6d6ec2f7d12cabee8bb789d4e0",
+      "1f42f2fea22d554340818eede36a45fd122d63cc",
+      "d9c6151aa43d0baba98def056f2ebd07c94310b5",
+      "58ef29ac659af0aa7073b9cd022d713fb38309c0",
+      "6624202fc8a60c7db1b715d1b682a85cd446a2cd",
+      "95da000fdeaaa73ca6b8c81538ae9791b85e248c",
+      "fe5907a099e562474b67d34e67299330ce1c7473",
+      "8728ca42ec7930f931521d0e80f57b54318099a8",
+      "5f0323e95d04179802b91d8d9d6bfcb2f621d0c6",
+      "712aa5f80c79ef5f49dd247b1f8d3280d1ed09a7",
+      "671dcefdc8a774121ab969eff5725c1fa0043acc",
+      "22aaa5e6b55b17e495133e791838a682e39fc145",
+      "c81c51ef417286f8fe31a3c8b3d2842bd42d7ee0",
+      "18d57748d200cdd0427e181e4b4b9341cabd085d",
+      "aaca4d3845b98ab98a14a5bb56f703daafc5e522",
+      "2c8402e26361ed112dbd527c2abaa84042080fec",
+      "377701acc8c9f666b205394bc94607aae336ed8e",
+      "7f65e057d45ed8d535d6bda21428976c127bb568",
+      "4096f70aa56e4856272b5b75e304d9253d7b605d",
+      "68ba64d00c77329f45632996c75549b1bade2e92",
+      "752493eb16599ec6c2418ce31b2cdfd6da0c87fc",
+      "8de53c06b480c69484187b61f601ad76bbb87196",
+      "118307fd225f40bb32ed35781e85939a267c5e95",
+      "ad9522bf3063f6e70859f668ba882a8ed021a252",
+      "d0251b3c482f55aa9d214f79d20bcd126652b390",
+      "4a8ea2b20c85a7ff16433eb9096ea008a3544fb9",
+      "de930000fcd44b00269d0d76e6b137b0594ac9e1",
+      "1f2eaa58ca170d934961eb0dd152dbcba125858c",
+      "23780c6da2d2c0ece4b373f8419bea9af77f5772",
+      "7d449562bf6ce9ca40a27275251b04a786733ec1"
+    ]
+  },
+  "catalogue_revision": "overview-complete"
+}

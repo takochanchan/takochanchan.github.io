@@ -1,4 +1,5 @@
-import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
+import { nazarenosGaginiPublicationRecords, nazarenosGaginiPublicationMetadata } from "./nazarenos-gagini-publications.mjs";
+import { rodrigoPublicationRecords, rodrigoPublicationMetadata } from "./rodrigo-publication.mjs";
 import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
 import { portillaPublicationRecords, portillaPublicationMetadata } from "./portilla-publication.mjs";
 import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
@@ -278,10 +279,11 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
-  ...galindoPublicationRecords,
+ ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
   ...morazanPairPublicationRecords,
   ...bulnesPublicationRecords,
+  ...nazarenosGaginiPublicationRecords,
   ...cambrePublicationRecords,
   ...cermoisePublicationRecords,
   ...arevaloPublicationRecords,
@@ -9398,10 +9400,11 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
-  ...galindoPublicationMetadata,
+ ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,
   ...morazanPairPublicationMetadata,
   ...bulnesPublicationMetadata,
+  ...nazarenosGaginiPublicationMetadata,
   ...cambrePublicationMetadata,
   ...cermoisePublicationMetadata,
   ...arevaloPublicationMetadata,
@@ -12170,6 +12173,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+ "rodrigo-cruz-representacion-juridica-1693",
   "garcia-documentos-ineditos-mexico-v13-1907",
   "garcia-documentos-ineditos-mexico-v14-1907",
   "garcia-documentos-ineditos-mexico-v15-1907",
@@ -12296,6 +12300,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

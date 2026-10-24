@@ -9005,60 +9005,60 @@
       }
     },
     {
-      "slug": "galindo-gran-decada-nacional-1904-vol-1",
-      "title": "国家の偉大な十年 第1巻",
-      "originalTitle": "La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867",
-      "author": "ミゲル・ガリンド・イ・ガリンド",
-      "originalAuthor": "Miguel Galindo y Galindo",
-      "originalPublication": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 1: Guerra de Reforma, 1857-1860. México: Oficina tipográfica de la Secretaría de Fomento, 1904.",
-      "year": 1904,
-      "sourceEdition": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 1: Guerra de Reforma, 1857-1860. México: Oficina tipográfica de la Secretaría de Fomento, 1904.",
-      "sourceProvider": "Instituto Nacional de Estudios Históricos de las Revoluciones de México（INEHRM）、2020年電子復刻版。",
-      "rights": "原著本文は著作権保護期間が満了したパブリックドメインです。底本の電子復刻版はメキシコ国立革命史研究所（INEHRM）が公開しています。同版の奥付には「D. R. © INEHRM」「Todos los derechos reservados」（全権利留保）とあり、グラフィック・組版上の特徴は同研究所に帰属し、複製には事前の書面による許諾が必要とされています。本訳は原刊の文章のみを収録し、公開機関の画像、現代復刻版の表紙・編集文・デザインは使用していません。",
+      "slug": "rodrigo-cruz-representacion-juridica-1693",
+      "title": "法的陳述書",
+      "originalTitle": "Representacion iuridica por el Hermano Rodrigo de la Cruz",
+      "author": "ロドリゴ・デ・ラ・クルス（申立人）",
+      "originalAuthor": "Rodrigo de la Cruz (petitioner); José de Gurpegui; José de Castro y Araujo",
+      "originalPublication": "Madrid: Diego Martínez Abad, 1693.",
+      "year": 1693,
+      "sourceEdition": "Representacion iuridica por el Hermano Rodrigo de la Cruz. Madrid: Diego Martínez Abad, 1693. 署名：José de Gurpegui、José de Castro y Araujo。所蔵番号 BH FLL 16190(2)。",
+      "sourceProvider": "マドリード・コンプルテンセ大学歴史図書館（Universidad Complutense de Madrid, Biblioteca Histórica Marqués de Valdecilla）。Googleによるデジタル化。所蔵番号 BH FLL 16190(2)。",
+      "rights": "1693年刊の原著はパブリックドメインです。公開元の権利表示：Universidad Complutense de Madrid (Digitalizado por Google)。デジタル資料の表示ライセンスはCC BY 4.0です。底本に収録された聖フランシスコ・ザビエルの肖像を掲載しています。出典：https://patrimoniodigital.ucm.es/s/patrimonio/item/684618 ／ ライセンス：https://creativecommons.org/licenses/by/4.0/",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://patrimoniodigital.ucm.es/s/patrimonio/item/684618"
+      }
+    },
+    {
+      "slug": "milla-los-nazarenos-1897",
+      "title": "ナサレノス",
+      "originalTitle": "Los Nazarenos: novela histórica",
+      "author": "ホセ・ミリャ（サロメ・ヒル）",
+      "originalAuthor": "José Milla (Salomé Jil)",
+      "originalPublication": "Guatemala: E. Goubaud y Cía., 1897. Tercera edición; Obras completas de don José Milla, tomo II.",
+      "year": 1897,
+      "sourceEdition": "José Milla (Salomé Jil), Los Nazarenos: novela histórica. Tercera edición. Guatemala: E. Goubaud y Cía., 1897. Obras completas de don José Milla, tomo II. 前付、本文1–364頁、目次365–366頁。",
+      "sourceProvider": "フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館、ルイス・ルハン・ムニョス・コレクション所蔵本。Internet Archive公開。",
+      "rights": "公開元は原著の権利状態をパブリックドメイン（NOT IN COPYRIGHT）と表示しています。底本および肖像画像の出典は、フランシスコ・マロキン大学所蔵、Internet Archive公開の1897年版です。",
       "publishedDate": "2026-10-24",
       "updatedDate": "2026-10-24",
       "recordClass": "major-work",
       "sourceAccess": {
         "status": "online",
-        "url": "https://inehrm.gob.mx/recursos/Libros/LaGranDecadaNAcT_1.pdf"
+        "url": "https://archive.org/details/losnazarenosnove03saloguat"
       }
     },
     {
-      "slug": "galindo-gran-decada-nacional-1905-vol-2",
-      "title": "国家の偉大な十年 第2巻",
-      "originalTitle": "La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867",
-      "author": "ミゲル・ガリンド・イ・ガリンド",
-      "originalAuthor": "Miguel Galindo y Galindo",
-      "originalPublication": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 2: La intervención extranjera, 1861-1864. México: Imprenta y fototipia de la Secretaría de Fomento, 1905.",
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "title": "タラマンカ侯爵",
+      "originalTitle": "El Marqués de Talamanca; Los pretendientes; Don Concepción",
+      "author": "カルロス・ガヒニ",
+      "originalAuthor": "Carlos Gagini",
+      "originalPublication": "Santa Ana: Tipografía de Ángel E. Delgado, 1905.",
       "year": 1905,
-      "sourceEdition": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 2: La intervención extranjera, 1861-1864. México: Imprenta y fototipia de la Secretaría de Fomento, 1905.",
-      "sourceProvider": "Instituto Nacional de Estudios Históricos de las Revoluciones de México（INEHRM）、2020年電子復刻版。",
-      "rights": "原著本文は著作権保護期間が満了したパブリックドメインです。底本の電子復刻版はメキシコ国立革命史研究所（INEHRM）が公開しています。同版の奥付には「D. R. © INEHRM」「Todos los derechos reservados」（全権利留保）とあり、グラフィック・組版上の特徴は同研究所に帰属し、複製には事前の書面による許諾が必要とされています。本訳は原刊の文章のみを収録し、公開機関の画像、現代復刻版の表紙・編集文・デザインは使用していません。",
+      "sourceEdition": "Carlos Gagini, El Marqués de Talamanca; Los pretendientes; Don Concepción (Obras dramáticas). Santa Ana: Tipografía de Ángel E. Delgado, 1905. 合冊前付および原刊1–148頁。",
+      "sourceProvider": "ハーヴァード大学所蔵本、Google電子化、Internet Archive公開。資料識別子elmarquesdetala00gagigoog。",
+      "rights": "公開元は原著本文の権利状態をNOT_IN_COPYRIGHTと表示しています。Googleによるデジタル画像の提供条件は、電子化ファイル付属の利用告知に示されています。本書はハーヴァード大学所蔵本に基づくもので、本文の権利状態と画像の提供条件を区別します。",
       "publishedDate": "2026-10-24",
       "updatedDate": "2026-10-24",
       "recordClass": "major-work",
       "sourceAccess": {
         "status": "online",
-        "url": "https://inehrm.gob.mx/recursos/Libros/LaGranDecadaNacT_2.pdf"
-      }
-    },
-    {
-      "slug": "galindo-gran-decada-nacional-1906-vol-3",
-      "title": "国家の偉大な十年 第3巻",
-      "originalTitle": "La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867",
-      "author": "ミゲル・ガリンド・イ・ガリンド",
-      "originalAuthor": "Miguel Galindo y Galindo",
-      "originalPublication": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 3: Imperio del Archiduque Maximiliano, 1864-1867. México: Imprenta y fototipia de la Secretaría de Fomento, 1906.",
-      "year": 1906,
-      "sourceEdition": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 3: Imperio del Archiduque Maximiliano, 1864-1867. México: Imprenta y fototipia de la Secretaría de Fomento, 1906.",
-      "sourceProvider": "Instituto Nacional de Estudios Históricos de las Revoluciones de México（INEHRM）、2022年電子復刻版。",
-      "rights": "原著本文は著作権保護期間が満了したパブリックドメインです。底本の電子復刻版はメキシコ国立革命史研究所（INEHRM）が公開しています。同版の奥付には「D. R. © INEHRM」「Todos los derechos reservados」（全権利留保）とあり、グラフィック・組版上の特徴は同研究所に帰属し、複製には事前の書面による許諾が必要とされています。本訳は原刊の文章のみを収録し、公開機関の画像、現代復刻版の表紙・編集文・デザインは使用していません。",
-      "publishedDate": "2026-10-24",
-      "updatedDate": "2026-10-24",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://inehrm.gob.mx/recursos/Libros/La_gran_decada_nacional_t3.pdf"
+        "url": "https://archive.org/details/elmarquesdetala00gagigoog"
       }
     }
   ],
