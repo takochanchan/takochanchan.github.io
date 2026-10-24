@@ -2595,6 +2595,24 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "カルロス・ガヒニ"
+    },
+    {
+      "slug": "galindo-gran-decada-nacional-1904-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ミゲル・ガリンド・イ・ガリンド"
+    },
+    {
+      "slug": "galindo-gran-decada-nacional-1905-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ミゲル・ガリンド・イ・ガリンド"
+    },
+    {
+      "slug": "galindo-gran-decada-nacional-1906-vol-3",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ミゲル・ガリンド・イ・ガリンド"
     }
   ],
   "groups": [
@@ -2703,6 +2721,14 @@
         "cuevas-historia-iglesia-mexico-v03",
         "cuevas-historia-iglesia-mexico-v04",
         "cuevas-historia-iglesia-mexico-v05"
+      ]
+    },
+    {
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "memberSlugs": [
+        "galindo-gran-decada-nacional-1904-vol-1",
+        "galindo-gran-decada-nacional-1905-vol-2",
+        "galindo-gran-decada-nacional-1906-vol-3"
       ]
     }
   ],

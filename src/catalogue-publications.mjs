@@ -7,6 +7,36 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "galindo-gran-decada-nacional-1904-1906",
+  "memberSlugs": [
+    "galindo-gran-decada-nacional-1904-vol-1",
+    "galindo-gran-decada-nacional-1905-vol-2",
+    "galindo-gran-decada-nacional-1906-vol-3"
+  ],
+  "volumeLabels": [
+    "国家の偉大な十年 第1巻　レフォルマ戦争 1857–1860年",
+    "国家の偉大な十年 第2巻　外国干渉 1861–1864年",
+    "国家の偉大な十年 第3巻　マクシミリアン大公の帝国 1864–1867年"
+  ],
+  "title": "国家の偉大な十年",
+  "originalTitle": "La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867",
+  "author": "ミゲル・ガリンド・イ・ガリンド",
+  "originalAuthor": "Miguel Galindo y Galindo",
+  "subtitle": "レフォルマ戦争・外国干渉・マクシミリアン大公政権",
+  "series": "LA GRAN DÉCADA NACIONAL · 1904–1906",
+  "year": 1904,
+  "originalPublication": "México: Secretaría de Fomento, 1904–1906. 全3巻。",
+  "extent": "全3巻・PDF計2077頁",
+  "description": "1857年から1867年までのメキシコを、レフォルマ戦争、外国干渉、マクシミリアンの帝政の三部で叙述した歴史書です。政治と軍事の推移を、書簡、布令、軍の報告などとともに扱います。INEHRM公開の1904・1905・1906年刊本を底本としています。",
+  "sourceEdition": "Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 1: Guerra de Reforma, 1857-1860. México: Oficina tipográfica de la Secretaría de Fomento, 1904. / Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 2: La intervención extranjera, 1861-1864. México: Imprenta y fototipia de la Secretaría de Fomento, 1905. / Miguel Galindo y Galindo, La gran década nacional, ó Relación histórica de la Guerra de Reforma, intervención extranjera y gobierno del archiduque Maximiliano. 1857-1867, tomo 3: Imperio del Archiduque Maximiliano, 1864-1867. México: Imprenta y fototipia de la Secretaría de Fomento, 1906.",
+  "sourceProvider": "Instituto Nacional de Estudios Históricos de las Revoluciones de México（INEHRM）。第1・第2巻は2020年、第3巻は2022年電子復刻版。",
+  "sourceUrl": "https://inehrm.gob.mx/recursos/Libros/LaGranDecadaNAcT_1.pdf",
+  "rights": "原著本文は著作権保護期間が満了したパブリックドメインです。底本の電子復刻版はメキシコ国立革命史研究所（INEHRM）が公開しています。同版の奥付には「D. R. © INEHRM」「Todos los derechos reservados」（全権利留保）とあり、グラフィック・組版上の特徴は同研究所に帰属し、複製には事前の書面による許諾が必要とされています。本訳は原刊の文章のみを収録し、公開機関の画像、現代復刻版の表紙・編集文・デザインは使用していません。",
+  "visualLabel": "全3巻・メキシコ近代史",
+  "publishedDate": "2026-10-24",
+  "updatedDate": "2026-10-24"
+},
+{
   "slug": "robles-diario-sucesos-notables-1853",
   "memberSlugs": [
     "robles-diario-sucesos-notables-1853-vol-1",
