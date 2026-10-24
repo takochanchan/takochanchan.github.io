@@ -8696,12 +8696,6 @@
       "sha256": "b096b028347839d47740b03c8aba03657b05d5ddc22dfec9bede0bc6ac861594"
     },
     {
-      "path": "publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
-      "size": 27331,
-      "sha256": "9105e81358182db407234befeb90b356cc17d4a5c2171b06612e660dbe58d2d0"
-    },
-    {
       "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
       "size": 3134558,
@@ -8790,6 +8784,12 @@
       "url": "/publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg",
       "size": 81527,
       "sha256": "2cefdfd97fe71047c60959173847e0aeee9a756192343dcc56b4861e5d52c80c"
+    },
+    {
+      "path": "publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
+      "size": 28054,
+      "sha256": "2bd513a76fc6820990a8a4026fbab07ab0622bbf493c1ac0f1ac02761a6f971f"
     }
   ]
 }
