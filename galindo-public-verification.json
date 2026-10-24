@@ -1,0 +1,190 @@
+{
+  "verified_archive_commit": "8b5db77fa7d5d56a1360484e50e0110ab75195f3",
+  "archive_success_run": 40047644133,
+  "assets": [
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "size": 5386235,
+      "sha256": "9cdc83cff459699516a7a038a8b01f466fade904b9105bc313277187f547011d"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "size": 609286,
+      "sha256": "163ca4223d917dc2f736e8c402b04c5426a257d01137227c056ba6c2020b376d"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_01_Cover.jpg",
+      "kind": "cover",
+      "path": "publications/galindo-gran-decada-nacional-1904-vol-1/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1904-vol-1/cover.jpg",
+      "size": 81473,
+      "sha256": "905cfb425c5d6ee01b101399f67f3479b468f3f37dabdb305e4265bddcd9d21e"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "size": 6957566,
+      "sha256": "be675581d2398611416112db05d79f277383d7d2273d7b990961f52905b9ee07"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "size": 781924,
+      "sha256": "9be9493ac0ced9154a6ec9dd5d91e506f911e3ac76caa24c9e2bf37490eefe1d"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_02_Cover.jpg",
+      "kind": "cover",
+      "path": "publications/galindo-gran-decada-nacional-1905-vol-2/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1905-vol-2/cover.jpg",
+      "size": 81524,
+      "sha256": "8e06c1554b08258d568b974b34fd7b657eb9b4fbbb24d161a233b7220cd45b3a"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "size": 7337923,
+      "sha256": "fd01fe47e17c65333cbad5540e4e713fdbbd14816772ee3eac1f8438219b70b2"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "kind": "release",
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "size": 778040,
+      "sha256": "eb697c238a540b5b3362b2aa02c0c2cf20cd2fd6aac1c2d5be411b8e4374adca"
+    },
+    {
+      "filename": "Galindo_La_Gran_Decada_Nacional_Tomo_03_Cover.jpg",
+      "kind": "cover",
+      "path": "publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg",
+      "url": "/publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg",
+      "size": 81527,
+      "sha256": "2cefdfd97fe71047c60959173847e0aeee9a756192343dcc56b4861e5d52c80c"
+    }
+  ],
+  "bundle": {
+    "size": 15077235,
+    "sha256": "4fd5e3cf756242bbad184810b7df482a92d15e6683b42b35c32070f5aa4049f6",
+    "chunks": [
+      "0d2286392cf5f07f553b5d695f6839420db2f181",
+      "8fcbc2d4a5440b2ee1fdbca6776061ba4a91ef02",
+      "e4a31883c9e632be235c53e7d8e220ba0eeee04f",
+      "e38caad98ffae721414c612baa3f55ef7fa2126f",
+      "07e7c17c5e81b19bebed86afb79de58cd4256af8",
+      "8003773111f015f8facd93471cccfa697b393d5e",
+      "7a98038d6bd8d00fc252ba95bfc10d4a073a52b9",
+      "c3b21a56cac9427678f5baaddddc758ee8e8afb4",
+      "173019a057a0208d8aa5dcf3fcbd4227dbcdb381",
+      "1120a9cba4a12cf8aba17043b45bc66244f505bb",
+      "415c59ddf9f60e94d0a72bef6dcbf2fad586e893",
+      "3a8ef229581924829f02c80340ab4fb48f46924c",
+      "77c7ee7cce1e84929962a12be0b2ec4ff4cb9427",
+      "3569240065a9251e027262a4927a61aee3edf01b",
+      "cd14b4a83275dd6d63c116f3235428cc6c38b99b",
+      "b825558121bfdf214a783b7bfe4d6905127ae73d",
+      "b8d204d6224a069b23dcecb173eb4e1b89dc44ff",
+      "89791533aec02b75544a1f224f73a9ec026a474c",
+      "91687760088b50d14f8c7231fc1daf42882727fa",
+      "ad7f30d38caf33353089f0558198a1caad2f309c",
+      "80ffcb1628237dd55cf33f095ce0eda31ee00eac",
+      "4b144ebd3050ba32b54caaef66fc1b6fa237e7f3",
+      "bb4e07bc642291fd1b6c75cb42a3146123b0e696",
+      "c7226a5e1bec91671e5c4dc860b1285e56fd5718",
+      "f5a81eca4cbead5fb10c458c43494186cd4363fb",
+      "75fa0be65e81e2432d3fb9cac2a6039088b0e02f",
+      "73ecd0f8e88e4e79e79aa0de0d577f08ffdc0f13",
+      "b87bec8c4d7eaaa3c64c3696cd3e7f702d20280d",
+      "29f9906a144e1e45d32d170462f0e5dc348d8a2c",
+      "d67ae82040c858bdf4b8b714a2651a08b831e011",
+      "17bd5041eddbcbb6ca308f5709b3efa666f9d635",
+      "6e9edc83bffa0ca792f56cc43d2d65948ca09e0b",
+      "3dbbf8f28d68f2c3d36c665eb9f26ceaf83f801e",
+      "3f7278e2a5f013782cb203deba3f64912f82fb0e",
+      "c38a0a7070f75430dfdbef5d83f8f6f2ac3f8af6",
+      "c73afc1b746c8eb07cc6badf0bca73fed588a67c",
+      "aebe7913e0a6101bb25b4f23b5da632a0e69a582",
+      "5bb083198675855341b9d81ceba1b89257ed90c9"
+    ]
+  },
+  "all_downloaded_bytes_verified": true,
+  "source_paragraphs_and_notes": {
+    "paragraphs": 9533,
+    "original_notes": 498,
+    "images": 0,
+    "whole_unit_pdf_audits": "passed all three volumes"
+  },
+  "visual_qa": {
+    "1": {
+      "pages_viewed": 544,
+      "pdf_sha256": "9cdc83cff459699516a7a038a8b01f466fade904b9105bc313277187f547011d",
+      "method": "All pages were visually reviewed on 4-page reduced contact sheets (2x2, each complete page visible); pages 1, 2, and 544 were additionally opened individually at high resolution. Suspected anomalies would be opened individually; none observed.",
+      "unreviewed_pages": 0,
+      "findings": [],
+      "followup": null
+    },
+    "2": {
+      "pages_viewed": 766,
+      "pdf_sha256": "be675581d2398611416112db05d79f277383d7d2273d7b990961f52905b9ee07",
+      "method": {
+        "overview": "All 766 physical pages were visually reviewed in sequential four-page contact sheets, rendered at reduced scale (page thumbnail approx. 500 x 700 px).",
+        "original_size_150dpi_pages": [
+          1,
+          2,
+          151,
+          152,
+          153,
+          590,
+          591,
+          592,
+          593,
+          766
+        ]
+      },
+      "unreviewed_pages": 0,
+      "findings": [],
+      "followup": null
+    },
+    "3": {
+      "pages_viewed": 767,
+      "pdf_sha256": "fd01fe47e17c65333cbad5540e4e713fdbbd14816772ee3eac1f8438219b70b2",
+      "method": "PyMuPDF rendered all pages once at 110 dpi. Every page was visually inspected via 4-page reduced contact sheets. Pages 1-2, 470-473, 673 (suspected), and 767 were additionally viewed individually at the same 110 dpi. No high-resolution zoom was performed or claimed.",
+      "unreviewed_pages": 0,
+      "findings": [],
+      "followup": {
+        "reviewed_pages": [
+          673,
+          674,
+          675,
+          676
+        ],
+        "method": "Each page rendered separately from the candidate PDF at 200 dpi and visually inspected.",
+        "source_paragraph_check": {
+          "source": "/workspace/scratch/faed56e73a8a/galindo_text_work/text_only/Galindo_La_gran_decada_Tomo_03_Japanese_Text_Only.docx",
+          "paragraph_index": 3673,
+          "paragraph": "これらすべてを、さらに確かなものにしたのは、オーストリア、フランス、イギリスの君主たちが、合衆国大統領に対して行っていることを、彼が知っていた、働きかけであった。彼らが、決定的であると考える、大統領の影響力を行使し、メキシコ政府から、大公の生命と自由を、得るためのものであった。",
+          "result": "PDF page 673 ends mid-paragraph after 「彼らが、」; page 674 begins with the remainder and completes the sentence. No text is missing."
+        },
+        "footnote_flow": "Footnote 172 starts below the completed body paragraph on page 674, continues across page 675, and ends on page 676. The page 673 whitespace is explained by ordinary paragraph pagination; the footnote continuation across 674-676 is normal. No overlap or clipping seen.",
+        "disposition": "Resolved as normal pagination; do not count as an unresolved layout defect."
+      }
+    }
+  },
+  "provenance": {
+    "path": ".github/workflows/transfer-garcia-documentos-10-12.yml",
+    "commit": "640d30fad8e2c207d9654e8f95a1ccb1d9ded333",
+    "success_run": 38998510692
+  }
+}

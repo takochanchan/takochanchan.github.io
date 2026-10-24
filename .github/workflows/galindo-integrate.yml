@@ -1,0 +1,30 @@
+name: Integrate verified Galindo text edition
+on:
+  push:
+    branches: [agent/galindo-text-only-20261024]
+    paths: [.galindo-integration-request.json]
+permissions:
+  contents: write
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: |
+          cp .galindo-integration-request.json .galindo-public-request.json
+          python3 .galindo-prepare.py
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+      - name: Commit integrated catalogue
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          rm .galindo-public-request.json
+          git rm .galindo-integration-request.json .galindo-prepare.py
+          git add src/galindo-publications.mjs src/publications.mjs src/catalogue-publications.mjs src/publication-overviews.json tests/fixtures/publication-catalogue.json bibliographic-manifest.json assets-manifest.json master-archive.json
+          git commit -m "Integrate Galindo text edition with current catalogue"
+          git push origin HEAD:agent/galindo-text-only-20261024
