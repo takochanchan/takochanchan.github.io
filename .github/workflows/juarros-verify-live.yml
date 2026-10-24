@@ -1,0 +1,77 @@
+name: Verify live Juarros revised publication
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/juarros-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Ensure PDF inspection tool is available
+        run: |
+          if ! command -v pdfinfo; then
+            sudo apt-get update
+            sudo apt-get install -y poppler-utils
+          fi
+      - name: Verify live bibliography, assets and source-page search mapping
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess
+          slug='juarros-compendio-guatemala-1857'
+          url='https://takochanchan.github.io/publications/'+slug+'/'
+          def get(url):
+              return urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=120).read()
+          html=get(url).decode()
+          for text in ['グアテマラ市史要覧','PDF 808頁','Biblioteca Ludwig von Mises','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf','Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub']:
+              assert text in html,text
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          root=pathlib.Path(tempfile.mkdtemp());records=[]
+          sums=get('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt').decode()
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              data=get(a['url']);p.write_bytes(data)
+              assert len(data)==a['size'] and hashlib.sha256(data).hexdigest()==a['sha256']
+              if p.suffix in {'.pdf','.epub'}: assert f"{a['sha256']}  {p.name}" in sums
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                      assert b'properties="cover-image"' in z.read('OEBPS/package.opf')
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  assert any(line.split()==['Pages:','808'] for line in info.splitlines())
+              records.append({'filename':p.name,'size':len(data),'sha256':a['sha256']})
+          assert len(assets)==3
+          mapping=json.loads(get('https://takochanchan.github.io/takochan-search-index-001/maps/'+slug+'.json'))
+          assert mapping['pdfSha256']=='e3fce0c3e45224163e988deaafe0e88d9865f48d0fe1beaf7d8455bb90447829'
+          assert mapping['canonicalUrl'].rstrip('/')==url.rstrip('/')
+          assert len(mapping['blocks'])>1000
+          assert any('原刊' in str(x[0]) and isinstance(x[1],int) and 1<=x[1]<=808 for x in mapping['blocks'].values())
+          report={'status':'published_and_verified','bibliography_url':url,'assets':records,'search_pdf_sha256':mapping['pdfSha256'],'search_blocks':len(mapping['blocks'])}
+          pathlib.Path('juarros-live-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(report,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: juarros-live-verification
+          path: juarros-live-verification.json
