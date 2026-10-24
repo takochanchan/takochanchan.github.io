@@ -16,6 +16,8 @@ assert os.environ['GITHUB_REPOSITORY'] == REPO
 request = json.loads(Path('.garcia-documentos-16-18-public-request.json').read_text())
 assert re.fullmatch(r'[0-9a-f]{40}', request['verified_archive_commit'])
 assert json.loads(Path('master-archive.json').read_text())['archive_commit'] == request['verified_archive_commit']
+TAG = request['release_tag']
+assert TAG == 'publications-garcia-documentos-16-18-20261025'
 expected = {a['filename']: a for a in request['assets']}
 assert len(expected) == len(request['assets']) == 6
 assert all(re.fullmatch(r'Garcia_Documentos_Ineditos_Mexico_(XVI|XVII|XVIII)_1908_Japanese_Complete_Translation\.(pdf|epub)', name) for name in expected)
@@ -46,15 +48,19 @@ with tarfile.open(bundle) as archive:
 for name, asset in expected.items():
     local = root / name
     assert local.stat().st_size == asset['size'] and sha(local) == asset['sha256']
-release = json.loads(subprocess.check_output(['gh', 'api', f'repos/{REPO}/releases/tags/publications-current']))
+probe = subprocess.run(['gh', 'api', f'repos/{REPO}/releases/tags/{TAG}'], capture_output=True, text=True)
+if probe.returncode:
+    assert '404' in probe.stderr, probe.stderr
+    run('gh', 'release', 'create', TAG, '--repo', REPO, '--target', os.environ['GITHUB_SHA'], '--latest=false', '--title', 'Garcia Documentos XVI–XVIII (1908): Japanese translations', '--notes', 'Approved final PDF and EPUB files with SHA-256 checksums.')
+release = json.loads(subprocess.check_output(['gh', 'api', f'repos/{REPO}/releases/tags/{TAG}']))
 pages = json.loads(subprocess.check_output(['gh', 'api', '--paginate', '--slurp', f'repos/{REPO}/releases/{release["id"]}/assets?per_page=100']))
 existing_names = {asset['name'] for page in pages for asset in page}
 verify = root / 'verify'
 verify.mkdir()
 for name, asset in expected.items():
     if name not in existing_names:
-        run('gh', 'release', 'upload', 'publications-current', '--repo', REPO, str(root / name))
-    run('gh', 'release', 'download', 'publications-current', '--repo', REPO, '--pattern', name, '--dir', str(verify))
+        run('gh', 'release', 'upload', TAG, '--repo', REPO, str(root / name))
+    run('gh', 'release', 'download', TAG, '--repo', REPO, '--pattern', name, '--dir', str(verify))
     assert (verify / name).stat().st_size == asset['size'] and sha(verify / name) == asset['sha256']
 # Preserve all checksum entries belonging to other publications.
 run('gh', 'release', 'download', 'publications-current', '--repo', REPO, '--pattern', 'SHA256SUMS.txt', '--dir', str(root))
@@ -69,3 +75,10 @@ Path('garcia-documentos-16-18-public-verification.json').write_text(json.dumps({
 
 
 
+
+release_sums = root / 'dedicated' / 'SHA256SUMS.txt'
+release_sums.parent.mkdir()
+release_sums.write_text(''.join(f'{a["sha256"]}  {n}\n' for n,a in expected.items()))
+run('gh', 'release', 'upload', TAG, '--repo', REPO, '--clobber', str(release_sums))
+run('gh', 'release', 'download', TAG, '--repo', REPO, '--pattern', 'SHA256SUMS.txt', '--dir', str(root / 'dedicated-verify'))
+assert (root / 'dedicated-verify' / 'SHA256SUMS.txt').read_bytes() == release_sums.read_bytes()

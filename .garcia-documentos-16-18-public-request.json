@@ -132,5 +132,6 @@
       "426b89caffaaace02552de0d345ad45f25ccb8cf"
     ]
   },
-  "retry_reason": "Restore complete overview JSON and validate exact uploaded blob SHA before retry"
+  "retry_reason": "Dedicated release for approved six assets after publications-current reached 1000-asset limit",
+  "release_tag": "publications-garcia-documentos-16-18-20261025"
 }

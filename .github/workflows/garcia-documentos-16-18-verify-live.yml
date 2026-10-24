@@ -49,7 +49,7 @@ jobs:
               for paragraph in overview[member].splitlines():
                   assert re.sub(r'\s+', '', paragraph) in plain, member+' detailed overview'
           assert '<details' in html
-          sums_url='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/SHA256SUMS.txt'
+          sums_url='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-16-18-20261025/SHA256SUMS.txt'
           sums=urllib.request.urlopen(sums_url,timeout=120).read().decode()
           assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if any(a['path'].startswith('publications/'+member+'/') for member in slugs)]
           root=pathlib.Path(tempfile.mkdtemp())
