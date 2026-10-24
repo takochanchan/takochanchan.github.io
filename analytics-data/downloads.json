@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-23",
-  "updatedAt": "2026-10-23T23:10:50.773Z",
+  "endDate": "2026-10-24",
+  "updatedAt": "2026-10-24T22:30:52.228Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7750,6 +7750,102 @@
       "name": "Philippe_Bunau_Varilla_Panama_1913_Japanese_Translation.epub",
       "slug": "bunau-varilla-panama-1913",
       "title": "パナマ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e3e7b3cbf2310b2c",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.pdf",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第1巻　レフォルマ戦争 1857–1860年",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d002d3f7ea0c80f8",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_01_Japanese_Text_Only.epub",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第1巻　レフォルマ戦争 1857–1860年",
+      "format": "epub"
+    },
+    {
+      "key": "dl_55bd766ed04fac5f",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.pdf",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第2巻　外国干渉 1861–1864年",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b9c2d09e820870f5",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_02_Japanese_Text_Only.epub",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第2巻　外国干渉 1861–1864年",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f174a36827f22e82",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.pdf",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第3巻　マクシミリアン大公の帝国 1864–1867年",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_5ded136050cd729a",
+      "name": "Galindo_La_Gran_Decada_Nacional_Tomo_03_Japanese_Text_Only.epub",
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "title": "国家の偉大な十年",
+      "volumeLabel": "国家の偉大な十年 第3巻　マクシミリアン大公の帝国 1864–1867年",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7c4d95429cf3e4dc",
+      "name": "Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.pdf",
+      "slug": "rodrigo-cruz-representacion-juridica-1693",
+      "title": "法的陳述書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_766f7f90b1f49ce8",
+      "name": "Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
+      "slug": "rodrigo-cruz-representacion-juridica-1693",
+      "title": "法的陳述書",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5101df3ddc3a1aab",
+      "name": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
+      "slug": "milla-los-nazarenos-1897",
+      "title": "ナサレノス",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_bdbcddb8c67431e9",
+      "name": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
+      "slug": "milla-los-nazarenos-1897",
+      "title": "ナサレノス",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_6b574c3a320b82af",
+      "name": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "title": "タラマンカ侯爵",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c0aeca3d4b040b05",
+      "name": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "title": "タラマンカ侯爵",
       "volumeLabel": "",
       "format": "epub"
     }
