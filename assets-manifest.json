@@ -8694,6 +8694,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
       "size": 15533881,
       "sha256": "dfd626f18ce1255d99fd38fbcfd489a6c0d75bc12e479ffee78891228aa1c7c1"
+    },
+    {
+      "path": "publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
+      "size": 27331,
+      "sha256": "9105e81358182db407234befeb90b356cc17d4a5c2171b06612e660dbe58d2d0"
     }
   ]
 }
