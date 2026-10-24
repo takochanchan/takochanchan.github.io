@@ -1,0 +1,54 @@
+name: Publish approved Galindo text-only edition
+on:
+  push:
+    branches: [agent/galindo-text-only-20261024]
+    paths: [.galindo-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Verify and register approved inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .galindo-transfer.py prepare
+          npm run build
+          npm test
+          python3 scripts/validate-epubs.py .cache/galindo-approved-assets/public \
+            --slug galindo-gran-decada-nacional-1904-vol-1 \
+            --slug galindo-gran-decada-nacional-1905-vol-2 \
+            --slug galindo-gran-decada-nacional-1906-vol-3
+      - name: Upload and re-download final public files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .galindo-transfer.py upload
+      - name: Commit verified catalogue without temporary transfer files
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git rm -rf .publication-transfer/galindo-text-only-20261024
+          git rm .galindo-public-request.json .galindo-prepare.py .galindo-transfer.py
+          git add src/galindo-publications.mjs src/publications.mjs src/catalogue-publications.mjs \
+            src/publication-overviews.json tests/fixtures/publication-catalogue.json \
+            bibliographic-manifest.json assets-manifest.json master-archive.json \
+            static/publications/galindo-gran-decada-nacional-1904-vol-1/cover.jpg \
+            static/publications/galindo-gran-decada-nacional-1905-vol-2/cover.jpg \
+            static/publications/galindo-gran-decada-nacional-1906-vol-3/cover.jpg \
+            galindo-public-verification.json
+          git commit -m "Publish Galindo La gran década nacional text-only volumes 1–3"
+          git push origin HEAD:agent/galindo-text-only-20261024
+          git rev-parse HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: galindo-public-verification
+          path: galindo-public-verification.json
