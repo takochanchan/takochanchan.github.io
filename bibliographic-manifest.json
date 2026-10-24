@@ -9022,6 +9022,44 @@
         "status": "online",
         "url": "https://patrimoniodigital.ucm.es/s/patrimonio/item/684618"
       }
+    },
+    {
+      "slug": "milla-los-nazarenos-1897",
+      "title": "ナサレノス",
+      "originalTitle": "Los Nazarenos: novela histórica",
+      "author": "ホセ・ミリャ（サロメ・ヒル）",
+      "originalAuthor": "José Milla (Salomé Jil)",
+      "originalPublication": "Guatemala: E. Goubaud y Cía., 1897. Tercera edición; Obras completas de don José Milla, tomo II.",
+      "year": 1897,
+      "sourceEdition": "José Milla (Salomé Jil), Los Nazarenos: novela histórica. Tercera edición. Guatemala: E. Goubaud y Cía., 1897. Obras completas de don José Milla, tomo II. 前付、本文1–364頁、目次365–366頁。",
+      "sourceProvider": "フランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館、ルイス・ルハン・ムニョス・コレクション所蔵本。Internet Archive公開。",
+      "rights": "公開元は原著の権利状態をパブリックドメイン（NOT IN COPYRIGHT）と表示しています。底本および肖像画像の出典は、フランシスコ・マロキン大学所蔵、Internet Archive公開の1897年版です。",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/losnazarenosnove03saloguat"
+      }
+    },
+    {
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "title": "タラマンカ侯爵",
+      "originalTitle": "El Marqués de Talamanca; Los pretendientes; Don Concepción",
+      "author": "カルロス・ガヒニ",
+      "originalAuthor": "Carlos Gagini",
+      "originalPublication": "Santa Ana: Tipografía de Ángel E. Delgado, 1905.",
+      "year": 1905,
+      "sourceEdition": "Carlos Gagini, El Marqués de Talamanca; Los pretendientes; Don Concepción (Obras dramáticas). Santa Ana: Tipografía de Ángel E. Delgado, 1905. 合冊前付および原刊1–148頁。",
+      "sourceProvider": "ハーヴァード大学所蔵本、Google電子化、Internet Archive公開。資料識別子elmarquesdetala00gagigoog。",
+      "rights": "公開元は原著本文の権利状態をNOT_IN_COPYRIGHTと表示しています。Googleによるデジタル画像の提供条件は、電子化ファイル付属の利用告知に示されています。本書はハーヴァード大学所蔵本に基づくもので、本文の権利状態と画像の提供条件を区別します。",
+      "publishedDate": "2026-10-24",
+      "updatedDate": "2026-10-24",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/elmarquesdetala00gagigoog"
+      }
     }
   ],
   "works": [

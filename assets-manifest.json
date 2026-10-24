@@ -8700,6 +8700,30 @@
       "url": "https://takochanchan.github.io/publications/rodrigo-cruz-representacion-juridica-1693/cover.jpg",
       "size": 27331,
       "sha256": "9105e81358182db407234befeb90b356cc17d4a5c2171b06612e660dbe58d2d0"
+    },
+    {
+      "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
+      "size": 3134676,
+      "sha256": "248ff3c69156df4a4e0329608f63b95c922a0a4ada24082e1d57a13f38bfc3fa"
+    },
+    {
+      "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
+      "size": 1592549,
+      "sha256": "43e3db80aa50fc3bab12a887ddefe9266b4ea2375a20fa6248bd7691d7b97686"
+    },
+    {
+      "path": "publications/gagini-marques-talamanca-obras-dramaticas-1905/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
+      "size": 1538206,
+      "sha256": "a324071cb14ca5b90257ae4ec8ba540ecf4421d3716f8345bee5113459e94d4d"
+    },
+    {
+      "path": "publications/gagini-marques-talamanca-obras-dramaticas-1905/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.epub",
+      "size": 92594,
+      "sha256": "285e26bca9ee36ac419ada133ec5e71cda891ee4524c88fed7b359776a152589"
     }
   ]
 }

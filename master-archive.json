@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f5fea7266ace831ec25be7fcf8c25d49fbc0051e",
+  "archive_commit": "cb915c6d70e94b68d9182ef75745e7b55c26dde2",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -409,7 +409,9 @@
     "beteta-morazan-federacion-1887": "publications/beteta-morazan-federacion-1887/master.docx",
     "portilla-mejico-1856-1857-1858": "publications/portilla-mejico-1856-1857-1858/master.docx",
     "bunau-varilla-panama-1913": "publications/bunau-varilla-panama-1913/master.docx",
-    "rodrigo-cruz-representacion-juridica-1693": "publications/rodrigo-cruz-representacion-juridica-1693/master.docx"
+    "rodrigo-cruz-representacion-juridica-1693": "publications/rodrigo-cruz-representacion-juridica-1693/master.docx",
+    "milla-los-nazarenos-1897": "publications/milla-los-nazarenos-1897/master.docx",
+    "gagini-marques-talamanca-obras-dramaticas-1905": "publications/gagini-marques-talamanca-obras-dramaticas-1905/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

@@ -2583,6 +2583,18 @@
       "recordClass": "document-collection",
       "searchShard": "002",
       "author": "ロドリゴ・デ・ラ・クルス（申立人）"
+    },
+    {
+      "slug": "milla-los-nazarenos-1897",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "ホセ・ミリャ（サロメ・ヒル）"
+    },
+    {
+      "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "カルロス・ガヒニ"
     }
   ],
   "groups": [
