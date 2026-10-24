@@ -52,6 +52,8 @@ jobs:
                       assert z.testzip() is None
                       assert z.read('mimetype')==b'application/epub+zip'
               if p.suffix=='.pdf':
+                  covertext=subprocess.check_output(['pdftotext','-f','1','-l','1',str(p),'-'],text=True)
+                  assert 'REPRESENTACION IURIDICA' in covertext
                   info=subprocess.check_output(['pdfinfo',str(p)],text=True)
                   assert any(line.split()==['Pages:','165'] for line in info.splitlines())
               print('VERIFIED',p.name,a['size'],a['sha256'])

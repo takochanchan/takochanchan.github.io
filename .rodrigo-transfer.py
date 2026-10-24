@@ -28,8 +28,7 @@ existing_names = {asset['name'] for page in pages for asset in page}
 verify = root / 'verify'
 verify.mkdir()
 for name, asset in expected.items():
-    if name not in existing_names:
-        run('gh', 'release', 'upload', 'publications-current', '--repo', REPO, str(root / name))
+    run('gh', 'release', 'upload', 'publications-current', '--repo', REPO, '--clobber', str(root / name))
     run('gh', 'release', 'download', 'publications-current', '--repo', REPO, '--pattern', name, '--dir', str(verify))
     assert (verify / name).stat().st_size == asset['size'] and sha(verify / name) == asset['sha256']
 # Preserve all checksum entries belonging to other publications.
