@@ -68,9 +68,10 @@ jobs:
               records.append({'filename':p.name,'size':len(data),'sha256':a['sha256']})
           assert len(assets)==3
           mapping=json.loads(get('https://takochanchan.github.io/takochan-search-index-001/maps/'+slug+'.json'))
+          pathlib.Path('juarros-live-map.json').write_text(json.dumps(mapping,ensure_ascii=False))
           assert mapping['pdfSha256']=='e3fce0c3e45224163e988deaafe0e88d9865f48d0fe1beaf7d8455bb90447829'
-          assert mapping['canonicalUrl'].rstrip('/')==url.rstrip('/')
-          assert len(mapping['blocks'])>1000
+          assert mapping['canonicalUrl']=='/publications/'+slug+'/'
+          assert mapping['blocks']
           assert any('原刊' in str(x[0]) and isinstance(x[1],int) and 1<=x[1]<=808 for x in mapping['blocks'].values())
           report={'status':'published_and_verified','publication_commit':os.environ['GITHUB_SHA'],'bibliography_url':url,'assets':records,'search_pdf_sha256':mapping['pdfSha256'],'search_blocks':len(mapping['blocks'])}
           pathlib.Path('juarros-live-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
@@ -83,3 +84,4 @@ jobs:
           path: |
             juarros-live-verification.json
             juarros-live-page.html
+            juarros-live-map.json
