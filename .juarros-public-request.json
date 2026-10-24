@@ -1,0 +1,366 @@
+{
+  "assets": [
+    {
+      "filename": "Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
+      "size": 11810728,
+      "sha256": "e3fce0c3e45224163e988deaafe0e88d9865f48d0fe1beaf7d8455bb90447829"
+    },
+    {
+      "filename": "Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
+      "size": 18808782,
+      "sha256": "cf9214849ccd0658e52506eb94deaafe0e46322361bf26b967d1e7933f4c3852"
+    }
+  ],
+  "bundle": {
+    "size": 24348519,
+    "sha256": "1a52c24ee59be3b99cecaafc63ddaf9bd6e779059a05fa51d6f4e4a404f4f7a9",
+    "chunks": [
+      "cd2a509be98dd334c6d38cf1270aa94ef85f18bd",
+      "dc5014e38b6a1bf4177146b8526fb8a8300aaaa2",
+      "8cd2737afef093e1af8a990c18c70e9de757f89c",
+      "e0118518adb1d5f5862427041c9f480b8b6ab10d",
+      "9d454f4f311f29bf8eccd8d9ab5f83ad27006bd5",
+      "14ee855632d277ef98faa47436cfe17131d695b2",
+      "c6036a045cb61759df9150dd02516f97d1da8cd4",
+      "4d5f1337fda14d86bd478d300fb7978b5c8954be",
+      "6979c2d812c91c0d362b5c85b89a7d352a8a1ce2",
+      "adb2f3c45ca1bd9f7ee1b665e635a8e363edb97b",
+      "3dc8f331dcdd8cf3294555804279338450e77ce3",
+      "206302dc228674e3e23753896f3fb77090d997f5",
+      "6ca65e7d6f3831e15915acfd1c67b1b37af79dad",
+      "80f684e54fa9db1498dab4f2a13e9e71ec02197b",
+      "d6da7d8dc31499b71ca953526787ace42c089716",
+      "3b95cab998cb71581d5ff476042454b3016248be",
+      "e975b9397aae6edf7343b4e6c1e245562a276940",
+      "921d542d46a05cc6339edcdb2b512c467fe28a50",
+      "7473e3fb6025a433663674b469142580acdfd99c",
+      "f18a8aefbfd057b21954fdf4c1a4730aa8ffecb7",
+      "4826ce65d89522f07d3f9f03918b490034239fa7",
+      "562421606e9aaedc6d9cb78bbd44bc112387022f",
+      "0e2c5df9bd8258c94e3c22d14a00d029e7729c5e",
+      "da03033ddef96ab92f511ffcc34f1a620c152352",
+      "52241563f587149c7086740b9cee355cc9b76408",
+      "8ce3c093ad12b6c02d0b3da6142c056998e02289",
+      "ffb88467190a12f21ab79067df14d48cb3d7064b",
+      "831046835bb0977ddb422a9347cb9bbefb71dfb2",
+      "3a226cf380d923732c88cabb793039ffff9f779e",
+      "d6feed06c4716934342809650b83db10b08086b3",
+      "35cf48953d7baa18a41bc15027f56f3f559fbd14",
+      "6ea96a7de11554817dc42ab22f01b717d0dd9f49",
+      "a3d7f7c336ad638e8c5f14749bae34ce23d85842",
+      "a0f786255bf848dfeeaa704be570093c5241da88",
+      "37ba39eeb3ef355d5a7ae0d1903a1a91d1ee0c4f",
+      "f21c507bf2345919c44e0a9a90684d84aa546abb",
+      "524db801d94aed2209239e53054d9598dbc1d1b3",
+      "12db10b7280581196adcd00d26fd614161e76686",
+      "9fc0723f54d8a61e24f595f4a93680c0d3a4c847",
+      "f0e0efec08809ef2c8c8e159c0410c136899db8f",
+      "13cdda010d6c3900ca93a88f40a09b78a3de5fd4",
+      "8563f96d0a978a97294f105c0c1a233400cfce08",
+      "7d0e0b00caea3178ad33993ecde56bf0b06fbbf9",
+      "28b45fd989fef398ded95493be801f3a28b25632",
+      "36f147b2f5bbd8cd71e5b773357bd9105545b706",
+      "6ccf7af1cf44794d341b6384c190ab03e111600f",
+      "9786f709498ef23dc438e3a4e0412310a7c37ddf",
+      "a9c6f8c4eb6c3e3d846dfabfb00bc544c1e23783",
+      "81bc9f82d33282b22e9731f9e7faf401389caf75"
+    ]
+  },
+  "parts": [
+    {
+      "index": 0,
+      "size": 500000,
+      "sha": "cd2a509be98dd334c6d38cf1270aa94ef85f18bd",
+      "path": ".publication-transfer/juarros-v7-20261024/00000"
+    },
+    {
+      "index": 1,
+      "size": 500000,
+      "sha": "dc5014e38b6a1bf4177146b8526fb8a8300aaaa2",
+      "path": ".publication-transfer/juarros-v7-20261024/00001"
+    },
+    {
+      "index": 2,
+      "size": 500000,
+      "sha": "8cd2737afef093e1af8a990c18c70e9de757f89c",
+      "path": ".publication-transfer/juarros-v7-20261024/00002"
+    },
+    {
+      "index": 3,
+      "size": 500000,
+      "sha": "e0118518adb1d5f5862427041c9f480b8b6ab10d",
+      "path": ".publication-transfer/juarros-v7-20261024/00003"
+    },
+    {
+      "index": 4,
+      "size": 500000,
+      "sha": "9d454f4f311f29bf8eccd8d9ab5f83ad27006bd5",
+      "path": ".publication-transfer/juarros-v7-20261024/00004"
+    },
+    {
+      "index": 5,
+      "size": 500000,
+      "sha": "14ee855632d277ef98faa47436cfe17131d695b2",
+      "path": ".publication-transfer/juarros-v7-20261024/00005"
+    },
+    {
+      "index": 6,
+      "size": 500000,
+      "sha": "c6036a045cb61759df9150dd02516f97d1da8cd4",
+      "path": ".publication-transfer/juarros-v7-20261024/00006"
+    },
+    {
+      "index": 7,
+      "size": 500000,
+      "sha": "4d5f1337fda14d86bd478d300fb7978b5c8954be",
+      "path": ".publication-transfer/juarros-v7-20261024/00007"
+    },
+    {
+      "index": 8,
+      "size": 500000,
+      "sha": "6979c2d812c91c0d362b5c85b89a7d352a8a1ce2",
+      "path": ".publication-transfer/juarros-v7-20261024/00008"
+    },
+    {
+      "index": 9,
+      "size": 500000,
+      "sha": "adb2f3c45ca1bd9f7ee1b665e635a8e363edb97b",
+      "path": ".publication-transfer/juarros-v7-20261024/00009"
+    },
+    {
+      "index": 10,
+      "size": 500000,
+      "sha": "3dc8f331dcdd8cf3294555804279338450e77ce3",
+      "path": ".publication-transfer/juarros-v7-20261024/00010"
+    },
+    {
+      "index": 11,
+      "size": 500000,
+      "sha": "206302dc228674e3e23753896f3fb77090d997f5",
+      "path": ".publication-transfer/juarros-v7-20261024/00011"
+    },
+    {
+      "index": 12,
+      "size": 500000,
+      "sha": "6ca65e7d6f3831e15915acfd1c67b1b37af79dad",
+      "path": ".publication-transfer/juarros-v7-20261024/00012"
+    },
+    {
+      "index": 13,
+      "size": 500000,
+      "sha": "80f684e54fa9db1498dab4f2a13e9e71ec02197b",
+      "path": ".publication-transfer/juarros-v7-20261024/00013"
+    },
+    {
+      "index": 14,
+      "size": 500000,
+      "sha": "d6da7d8dc31499b71ca953526787ace42c089716",
+      "path": ".publication-transfer/juarros-v7-20261024/00014"
+    },
+    {
+      "index": 15,
+      "size": 500000,
+      "sha": "3b95cab998cb71581d5ff476042454b3016248be",
+      "path": ".publication-transfer/juarros-v7-20261024/00015"
+    },
+    {
+      "index": 16,
+      "size": 500000,
+      "sha": "e975b9397aae6edf7343b4e6c1e245562a276940",
+      "path": ".publication-transfer/juarros-v7-20261024/00016"
+    },
+    {
+      "index": 17,
+      "size": 500000,
+      "sha": "921d542d46a05cc6339edcdb2b512c467fe28a50",
+      "path": ".publication-transfer/juarros-v7-20261024/00017"
+    },
+    {
+      "index": 18,
+      "size": 500000,
+      "sha": "7473e3fb6025a433663674b469142580acdfd99c",
+      "path": ".publication-transfer/juarros-v7-20261024/00018"
+    },
+    {
+      "index": 19,
+      "size": 500000,
+      "sha": "f18a8aefbfd057b21954fdf4c1a4730aa8ffecb7",
+      "path": ".publication-transfer/juarros-v7-20261024/00019"
+    },
+    {
+      "index": 20,
+      "size": 500000,
+      "sha": "4826ce65d89522f07d3f9f03918b490034239fa7",
+      "path": ".publication-transfer/juarros-v7-20261024/00020"
+    },
+    {
+      "index": 21,
+      "size": 500000,
+      "sha": "562421606e9aaedc6d9cb78bbd44bc112387022f",
+      "path": ".publication-transfer/juarros-v7-20261024/00021"
+    },
+    {
+      "index": 22,
+      "size": 500000,
+      "sha": "0e2c5df9bd8258c94e3c22d14a00d029e7729c5e",
+      "path": ".publication-transfer/juarros-v7-20261024/00022"
+    },
+    {
+      "index": 23,
+      "size": 500000,
+      "sha": "da03033ddef96ab92f511ffcc34f1a620c152352",
+      "path": ".publication-transfer/juarros-v7-20261024/00023"
+    },
+    {
+      "index": 24,
+      "size": 500000,
+      "sha": "52241563f587149c7086740b9cee355cc9b76408",
+      "path": ".publication-transfer/juarros-v7-20261024/00024"
+    },
+    {
+      "index": 25,
+      "size": 500000,
+      "sha": "8ce3c093ad12b6c02d0b3da6142c056998e02289",
+      "path": ".publication-transfer/juarros-v7-20261024/00025"
+    },
+    {
+      "index": 26,
+      "size": 500000,
+      "sha": "ffb88467190a12f21ab79067df14d48cb3d7064b",
+      "path": ".publication-transfer/juarros-v7-20261024/00026"
+    },
+    {
+      "index": 27,
+      "size": 500000,
+      "sha": "831046835bb0977ddb422a9347cb9bbefb71dfb2",
+      "path": ".publication-transfer/juarros-v7-20261024/00027"
+    },
+    {
+      "index": 28,
+      "size": 500000,
+      "sha": "3a226cf380d923732c88cabb793039ffff9f779e",
+      "path": ".publication-transfer/juarros-v7-20261024/00028"
+    },
+    {
+      "index": 29,
+      "size": 500000,
+      "sha": "d6feed06c4716934342809650b83db10b08086b3",
+      "path": ".publication-transfer/juarros-v7-20261024/00029"
+    },
+    {
+      "index": 30,
+      "size": 500000,
+      "sha": "35cf48953d7baa18a41bc15027f56f3f559fbd14",
+      "path": ".publication-transfer/juarros-v7-20261024/00030"
+    },
+    {
+      "index": 31,
+      "size": 500000,
+      "sha": "6ea96a7de11554817dc42ab22f01b717d0dd9f49",
+      "path": ".publication-transfer/juarros-v7-20261024/00031"
+    },
+    {
+      "index": 32,
+      "size": 500000,
+      "sha": "a3d7f7c336ad638e8c5f14749bae34ce23d85842",
+      "path": ".publication-transfer/juarros-v7-20261024/00032"
+    },
+    {
+      "index": 33,
+      "size": 500000,
+      "sha": "a0f786255bf848dfeeaa704be570093c5241da88",
+      "path": ".publication-transfer/juarros-v7-20261024/00033"
+    },
+    {
+      "index": 34,
+      "size": 500000,
+      "sha": "37ba39eeb3ef355d5a7ae0d1903a1a91d1ee0c4f",
+      "path": ".publication-transfer/juarros-v7-20261024/00034"
+    },
+    {
+      "index": 35,
+      "size": 500000,
+      "sha": "f21c507bf2345919c44e0a9a90684d84aa546abb",
+      "path": ".publication-transfer/juarros-v7-20261024/00035"
+    },
+    {
+      "index": 36,
+      "size": 500000,
+      "sha": "524db801d94aed2209239e53054d9598dbc1d1b3",
+      "path": ".publication-transfer/juarros-v7-20261024/00036"
+    },
+    {
+      "index": 37,
+      "size": 500000,
+      "sha": "12db10b7280581196adcd00d26fd614161e76686",
+      "path": ".publication-transfer/juarros-v7-20261024/00037"
+    },
+    {
+      "index": 38,
+      "size": 500000,
+      "sha": "9fc0723f54d8a61e24f595f4a93680c0d3a4c847",
+      "path": ".publication-transfer/juarros-v7-20261024/00038"
+    },
+    {
+      "index": 39,
+      "size": 500000,
+      "sha": "f0e0efec08809ef2c8c8e159c0410c136899db8f",
+      "path": ".publication-transfer/juarros-v7-20261024/00039"
+    },
+    {
+      "index": 40,
+      "size": 500000,
+      "sha": "13cdda010d6c3900ca93a88f40a09b78a3de5fd4",
+      "path": ".publication-transfer/juarros-v7-20261024/00040"
+    },
+    {
+      "index": 41,
+      "size": 500000,
+      "sha": "8563f96d0a978a97294f105c0c1a233400cfce08",
+      "path": ".publication-transfer/juarros-v7-20261024/00041"
+    },
+    {
+      "index": 42,
+      "size": 500000,
+      "sha": "7d0e0b00caea3178ad33993ecde56bf0b06fbbf9",
+      "path": ".publication-transfer/juarros-v7-20261024/00042"
+    },
+    {
+      "index": 43,
+      "size": 500000,
+      "sha": "28b45fd989fef398ded95493be801f3a28b25632",
+      "path": ".publication-transfer/juarros-v7-20261024/00043"
+    },
+    {
+      "index": 44,
+      "size": 500000,
+      "sha": "36f147b2f5bbd8cd71e5b773357bd9105545b706",
+      "path": ".publication-transfer/juarros-v7-20261024/00044"
+    },
+    {
+      "index": 45,
+      "size": 500000,
+      "sha": "6ccf7af1cf44794d341b6384c190ab03e111600f",
+      "path": ".publication-transfer/juarros-v7-20261024/00045"
+    },
+    {
+      "index": 46,
+      "size": 500000,
+      "sha": "9786f709498ef23dc438e3a4e0412310a7c37ddf",
+      "path": ".publication-transfer/juarros-v7-20261024/00046"
+    },
+    {
+      "index": 47,
+      "size": 500000,
+      "sha": "a9c6f8c4eb6c3e3d846dfabfb00bc544c1e23783",
+      "path": ".publication-transfer/juarros-v7-20261024/00047"
+    },
+    {
+      "index": 48,
+      "size": 348519,
+      "sha": "81bc9f82d33282b22e9731f9e7faf401389caf75",
+      "path": ".publication-transfer/juarros-v7-20261024/00048"
+    }
+  ],
+  "verified_archive_commit": "ae531fb6fff2418e8ed6aa18b961eb498bb46f58"
+}

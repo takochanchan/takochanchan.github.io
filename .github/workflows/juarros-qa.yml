@@ -1,0 +1,28 @@
+name: Verify Juarros EPUB display before publication
+on:
+  push:
+    branches: [agent/juarros-publish-v7-20261024]
+    paths: [.juarros-qa.cjs]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: python3 .juarros-unpack.py
+      - run: npm install --prefix /tmp/juarros-qa playwright@1.62.1 --no-audit --no-fund
+      - name: Render actual EPUB at desktop and mobile widths
+        run: |
+          export CHROME_BIN="$(command -v google-chrome || command -v chromium)"
+          test -n "$CHROME_BIN"
+          python3 -m http.server 8765 --directory juarros-stage/epub >/tmp/juarros-http.log 2>&1 &
+          node .juarros-qa.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: juarros-epub-display
+          path: juarros-qa
