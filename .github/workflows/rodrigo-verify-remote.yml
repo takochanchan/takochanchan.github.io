@@ -2,7 +2,7 @@ name: Verify deployed Rodrigo publication search
 
 on:
   push:
-    branches: [agent/rodrigo-publish-20261024]
+    branches: [agent/rodrigo-cover-20261024]
     paths: ['.github/workflows/rodrigo-verify-remote.yml']
 
 permissions:
@@ -25,12 +25,12 @@ jobs:
         run: |
           python3 - <<'PY'
           import json, os, time, urllib.request
-          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/40050897119"
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-002/actions/runs/40074854836"
           for attempt in range(90):
               request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
               with urllib.request.urlopen(request, timeout=30) as response:
                   run = json.load(response)
-              if run["head_sha"] != "abfbfc7cdb4f2a27db0f9036fd3aa67f5b0f3e51":
+              if run["head_sha"] != "7d297df894127a3eafc0aa37d18a4b4f5f8d2209":
                   raise SystemExit("Unexpected search controller commit")
               if run["status"] == "completed":
                   if run["conclusion"] != "success":
