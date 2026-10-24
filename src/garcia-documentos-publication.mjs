@@ -569,6 +569,123 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 15
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+    "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第2部",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Segunda parte (textos español y francés)",
+    "subtitle": "史料集第16巻・1908年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "year": 1908,
+    "extent": "日本語版PDF 279頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "バゼーヌ元帥の文書群に基づくフランス干渉史料集の第2部です。内陸への軍事行動、摂政政府との交渉、聖職者の財産、軍の再編をめぐる書簡・公文書を収めます。1908年メキシコ刊、スペイン語・フランス語併載本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v16-1908/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v16-1908/Garcia_Documentos_Ineditos_Mexico_XVI_1908_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v16-1908/Garcia_Documentos_Ineditos_Mexico_XVI_1908_Japanese_Complete_Translation.epub",
+    "pageCount": 279,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 16
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+    "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第3部",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Tercera parte (textos español y francés)",
+    "subtitle": "史料集第17巻・1908年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "year": 1908,
+    "extent": "日本語版PDF 279頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "バゼーヌ元帥の文書群に基づくフランス干渉史料集の第3部です。西部地方への作戦、共和派との交渉、サンタ・アナの帰還、米国との関係、鉄道や鉱山をめぐる報告を収めます。1908年メキシコ刊、スペイン語・フランス語併載本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v17-1908/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v17-1908/Garcia_Documentos_Ineditos_Mexico_XVII_1908_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v17-1908/Garcia_Documentos_Ineditos_Mexico_XVII_1908_Japanese_Complete_Translation.epub",
+    "pageCount": 279,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 17
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+    "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第4部",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Cuarta parte (textos español y francés)",
+    "subtitle": "史料集第18巻・1908年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "year": 1908,
+    "extent": "日本語版PDF 263頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "バゼーヌ元帥の文書群に基づくフランス干渉史料集の第4部です。地方統治と軍事行動、報道の監督、捕虜と軍紀、米国での兵員募集、ソノラ州の地理と資源に関する文書を収めます。1908年メキシコ刊、スペイン語・フランス語併載本を底本としています。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v18-1908/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v18-1908/Garcia_Documentos_Ineditos_Mexico_XVIII_1908_Japanese_Complete_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v18-1908/Garcia_Documentos_Ineditos_Mexico_XVIII_1908_Japanese_Complete_Translation.epub",
+    "pageCount": 263,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ"
+    ],
+    "searchShard": "002",
+    "seriesVolumeNumber": 18
   }
 ];
 
@@ -692,6 +809,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "底本は刊行国メキシコでパブリックドメインです。画像公開元Internet Archiveは、パブリックドメイン図書のデジタル画像を利用・再利用の制限なく公開しています。 公開元の方針：https://blog.archive.org/2019/08/20/helping-libraries-transform-their-physical-collections/",
     "publishedDate": "2026-10-18",
     "updatedDate": "2026-10-18"
+  },
+  "garcia-documentos-ineditos-mexico-v16-1908": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Segunda parte. Documentos inéditos ó muy raros para la historia de México, tomo XVI. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi16garc",
+    "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+    "publishedDate": "2026-10-24",
+    "updatedDate": "2026-10-24"
+  },
+  "garcia-documentos-ineditos-mexico-v17-1908": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Tercera parte. Documentos inéditos ó muy raros para la historia de México, tomo XVII. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi16garc",
+    "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+    "publishedDate": "2026-10-24",
+    "updatedDate": "2026-10-24"
+  },
+  "garcia-documentos-ineditos-mexico-v18-1908": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Cuarta parte. Documentos inéditos ó muy raros para la historia de México, tomo XVIII. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi16garc",
+    "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
+    "publishedDate": "2026-10-24",
+    "updatedDate": "2026-10-24"
   }
 };
-

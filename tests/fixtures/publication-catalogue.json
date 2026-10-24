@@ -2613,6 +2613,30 @@
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "ミゲル・ガリンド・イ・ガリンド"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 16,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 17,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+      "searchShard": "002",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 18,
+      "recordClass": "document-collection"
     }
   ],
   "groups": [
@@ -2709,7 +2733,10 @@
         "garcia-documentos-ineditos-mexico-v12-1907",
         "garcia-documentos-ineditos-mexico-v13-1907",
         "garcia-documentos-ineditos-mexico-v14-1907",
-        "garcia-documentos-ineditos-mexico-v15-1907"
+        "garcia-documentos-ineditos-mexico-v15-1907",
+        "garcia-documentos-ineditos-mexico-v16-1908",
+        "garcia-documentos-ineditos-mexico-v17-1908",
+        "garcia-documentos-ineditos-mexico-v18-1908"
       ],
       "seriesVolumeCount": 36
     },
