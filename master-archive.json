@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ec8f332159971ec03b6dd0bbb05b767a68444484",
+  "archive_commit": "45bd4fc4870a207536746c233d3b1733b3cee161",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -408,7 +408,8 @@
     "mencos-rasgos-biograficos-morazan-1893": "publications/mencos-rasgos-biograficos-morazan-1893/master.docx",
     "beteta-morazan-federacion-1887": "publications/beteta-morazan-federacion-1887/master.docx",
     "portilla-mejico-1856-1857-1858": "publications/portilla-mejico-1856-1857-1858/master.docx",
-    "bunau-varilla-panama-1913": "publications/bunau-varilla-panama-1913/master.docx"
+    "bunau-varilla-panama-1913": "publications/bunau-varilla-panama-1913/master.docx",
+    "rodrigo-cruz-representacion-juridica-1693": "publications/rodrigo-cruz-representacion-juridica-1693/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

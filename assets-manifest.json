@@ -8682,6 +8682,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Thomas_Young_Mosquito_Shore_1847_Japanese_Complete_Translation.pdf",
       "size": 2224031,
       "sha256": "04f0b5f4715b605adb2a8c3b802b9616ee8a4d01ac5c4492f1fbb7185240deb4"
+    },
+    {
+      "path": "publications/rodrigo-cruz-representacion-juridica-1693/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.pdf",
+      "size": 2448290,
+      "sha256": "381eaa4ed5df45738bc73c35bff33b5a56ed6418fb56325ff1fdfcc9de1e1cc1"
+    },
+    {
+      "path": "publications/rodrigo-cruz-representacion-juridica-1693/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rodrigo_de_la_Cruz_Representacion_Iuridica_1693_Japanese_Translation.epub",
+      "size": 15533881,
+      "sha256": "dfd626f18ce1255d99fd38fbcfd489a6c0d75bc12e479ffee78891228aa1c7c1"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { rodrigoPublicationRecords, rodrigoPublicationMetadata } from "./rodrigo-publication.mjs";
 import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
 import { portillaPublicationRecords, portillaPublicationMetadata } from "./portilla-publication.mjs";
 import { morazanPairPublicationRecords, morazanPairPublicationMetadata } from "./morazan-pair-publications.mjs";
@@ -277,6 +278,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+ ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
   ...morazanPairPublicationRecords,
   ...bulnesPublicationRecords,
@@ -9396,6 +9398,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+ ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,
   ...morazanPairPublicationMetadata,
   ...bulnesPublicationMetadata,
@@ -12167,6 +12170,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+ "rodrigo-cruz-representacion-juridica-1693",
   "garcia-documentos-ineditos-mexico-v13-1907",
   "garcia-documentos-ineditos-mexico-v14-1907",
   "garcia-documentos-ineditos-mexico-v15-1907",
