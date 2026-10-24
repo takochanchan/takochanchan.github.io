@@ -3903,16 +3903,16 @@ const publicationRecords = [
     originalPublication: "グアテマラ、1857年",
     year: 1857,
     extent:
-      "PDF 697頁・原刊第1巻5–376頁、第2巻5–384頁・原刊画像4点・表53点・原注100件",
+      "全2巻・PDF 808頁",
     description:
-      "ドミンゴ・フアロスによるグアテマラ王国・首都の地理、教会制度、植民地史、征服史、地方史を集成した1857年版全2巻の日本語全訳。原刊の前付、全7論、付録、原注、表、索引、巻末目次、購読者名簿を収録しています。",
+      "ドミンゴ・フアロスがグアテマラ王国の地理、行政区画、人口、教会制度、征服史と首都の沿革を集成した歴史書。各地方の町や教区、歴代統治者と聖職者、教育・宗教施設を詳述する。グアテマラのルナ印刷所による1857年版全2巻を底本とする。",
     cover:
       "publications/juarros-compendio-guatemala-1857/cover.jpg",
     pdf:
       "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.pdf",
     epub:
       "publications/juarros-compendio-guatemala-1857/Juarros_Compendio_Historia_Ciudad_Guatemala_1857_Japanese_Complete_Translation.epub",
-    pageCount: 697,
+    pageCount: 808,
     figureCount: 0,
     plateCount: 4,
     types: ["歴史書", "地誌", "植民地史", "教会史"],

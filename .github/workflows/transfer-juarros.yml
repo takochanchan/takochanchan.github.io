@@ -1,0 +1,29 @@
+name: Publish approved Juarros revised files
+on:
+  push:
+    branches: [agent/juarros-publish-v7-20261024]
+    paths: [.juarros-transfer.py]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - run: python3 .juarros-unpack.py
+      - name: Upload and re-download the approved PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .juarros-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: juarros-public-verification
+          path: juarros-public-verification.json
