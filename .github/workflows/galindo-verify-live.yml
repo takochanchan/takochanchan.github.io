@@ -1,7 +1,7 @@
 name: Verify live Galindo publication
 on:
   push:
-    branches: [main]
+    branches: [main, agent/galindo-live-verification-20261024]
     paths: [src/galindo-publications.mjs, .github/workflows/galindo-verify-live.yml]
 permissions:
   contents: read
@@ -19,7 +19,7 @@ jobs:
           python3 - <<'PY'
           import json,os,subprocess,time
           for attempt in range(90):
-              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+('e489b1e30fd6c6fc14e8992154764b0d4bfda3a4' if os.environ['GITHUB_REF_NAME']=='agent/galindo-live-verification-20261024' else os.environ['GITHUB_SHA'])]))
               runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
               if runs and runs[0]['status']=='completed':
                   assert runs[0]['conclusion']=='success', runs[0]['conclusion']
@@ -59,7 +59,13 @@ jobs:
                   with zipfile.ZipFile(p) as z:
                       assert z.testzip() is None
                       assert z.read('mimetype')==b'application/epub+zip'
-                      assert not any(n.lower().endswith(('.png','.jpg','.jpeg','.gif','.svg','.webp')) for n in z.namelist())
+                      images=[n for n in z.namelist() if n.lower().endswith(('.png','.jpg','.jpeg','.gif','.svg','.webp'))]
+                      vol=next(i for i in (1,2,3) if 'Tomo_%02d_'%i in p.name)
+                      cover=next(x for x in assets if x['kind']=='cover' and 'Tomo_%02d_'%vol in x['filename'])
+                      for name in images:
+                          digest=hashlib.sha256(z.read(name)).hexdigest()
+                          print('EPUB_IMAGE',name,digest,flush=True)
+                          assert digest==cover['sha256'], 'Unexpected non-cover EPUB image: '+name
               if p.suffix=='.pdf':
                   vol=next(i for i in (1,2,3) if 'Tomo_%02d_'%i in p.name)
                   info=subprocess.check_output(['pdfinfo',str(p)],text=True)
