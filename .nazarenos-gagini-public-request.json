@@ -1,17 +1,17 @@
 {
-  "verified_archive_commit": "cb915c6d70e94b68d9182ef75745e7b55c26dde2",
+  "verified_archive_commit": "bc2d4e69f45f4124105b58bbfdaa7b004cf97f14",
   "assets": [
     {
       "filename": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
       "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.pdf",
-      "size": 3134676,
-      "sha256": "248ff3c69156df4a4e0329608f63b95c922a0a4ada24082e1d57a13f38bfc3fa"
+      "size": 3134558,
+      "sha256": "3489f2cdb00468f4b67c9abe4110f6acf0d912be3e26a1afdd016e92e877d469"
     },
     {
       "filename": "Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
       "path": "publications/milla-los-nazarenos-1897/Jose_Milla_Los_Nazarenos_1897_Japanese_Complete_Translation.epub",
-      "size": 1592549,
-      "sha256": "43e3db80aa50fc3bab12a887ddefe9266b4ea2375a20fa6248bd7691d7b97686"
+      "size": 1592545,
+      "sha256": "f9020cc6c62895b95162ab6fe321c7591f3ec45754916417fc37c358b2355564"
     },
     {
       "filename": "Carlos_Gagini_El_Marques_de_Talamanca_Obras_Dramaticas_1905_Japanese_Complete_Translation.pdf",
@@ -27,21 +27,21 @@
     }
   ],
   "bundle": {
-    "size": 4712015,
-    "sha256": "4921dc6896945ab1234d51450ffe9ba7fb014424bd05de82836903945cd54397",
+    "size": 4711947,
+    "sha256": "870cb726f722092c20656a279cd99b8cbf9ad7305f16288051b866afe8fb3fd4",
     "chunks": [
-      "0ed29de8b3584e56d2174202f4578a8f162918fd",
-      "f434819c390be933e493c73333d8cbfefa985cc7",
-      "25f5a39b215a6ecea318a9fb75f140b4a24dbca5",
-      "19b6e32e024640c8fa04cd6805f4bd2d1099cec0",
-      "e4300b830ba89c74ab6266e9851cd45e1c447a2d",
-      "416ea0b59be301ada71f616cc084efc29c2be599",
-      "ead0127b40439022c1d34c94caa7117c551e1646",
-      "04a3bebe7ef0ec545b5cd1eae312a048423e0029",
-      "7b6db3bd4c691bee7ea6d2b80212257fd7222efd",
-      "342cc98e356d5ed3270450c42c40d8339595b61c",
-      "436b2675f02f355dd80cfa76527b995940f862b1",
-      "92448079bd8725c4394bc9aa66ddf467e550ab9e"
+      "97f407a34beb3dcea2b7a2b2c7734679bd827e0d",
+      "ade82431f4e0096fc0e1b3c0e5188b1c883d46f0",
+      "6bd3c3da259efb81a9cc72ca745ba5143764ae84",
+      "576931aff2133aa2b4ee0b11306109b725a766f8",
+      "9b5c4768fe496ef171cb3dd1999ec34d51608d97",
+      "ac198c019108e20055af8bb8fc510669cc305b72",
+      "e170c34d86a87f6f8614a222911d87a505ef561e",
+      "65741d0fbbf6ed579695258490a39d2f40deddcd",
+      "00d68639b3f8a25751a5cac7cc639f0a3c91cadb",
+      "af63322c9a2b6c14bad844f6acd3d4ab12ef8db4",
+      "24a20c31f00133158e984d1c2eb37532afb3e6d8",
+      "b7955678789ccf03cd7842d646260e9f20dc80eb"
     ]
   },
   "publications": [
