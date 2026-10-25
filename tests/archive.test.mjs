@@ -3042,6 +3042,8 @@ test("local covers and release assets match the recorded manifest", async () => 
     assert.equal(asset.url, publicationByPath.get(asset.path), asset.path);
     const expectedRelease = /^publications\/garcia-documentos-ineditos-mexico-v(?:16|17|18)-1908\//.test(asset.path)
       ? "publications-garcia-documentos-16-18-20261025"
+      : /^publications\/zarco-historia-congreso-1856-1857-volume-(?:i|ii)-1857\//.test(asset.path)
+      ? "zarco-publication-20261025"
       : "publications-current";
     const expectedUrl = "https://github.com/takochanchan/takochanchan.github.io/releases/download/" +
       expectedRelease + "/" + encodeURIComponent(path.basename(asset.path));
