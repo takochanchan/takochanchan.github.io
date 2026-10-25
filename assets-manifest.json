@@ -8844,6 +8844,42 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.pdf",
+      "size": 9654629,
+      "sha256": "ee7a9820256634bc527532dd90ab4f27df149509ee3a8afeea20ca4ba6402c11"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.epub",
+      "size": 894760,
+      "sha256": "f9e581be1ce1c6123227a620c40ab8d942a60929279b434a1f5f64fa67096773"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
+      "size": 11245634,
+      "sha256": "4b794adc38efec251040343e5f16ea4be05ff9574d3a180b5fdef9ed36cd8ce9"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.epub",
+      "size": 1063054,
+      "sha256": "147c36e8ed88ab29f275531b27ece14daff4e0ecb19939e2596c545838cd1f77"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-i-1857/cover.jpg",
+      "size": 43468,
+      "sha256": "7f3a85d2bebcfc2c55337284d0f0577127f0938940a2f60965d6229a8127ae48"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
+      "size": 44696,
+      "sha256": "3286310436d86f971c57929bbe34a8bb7b104e5fba6218c95eb63832d68f7448"
     }
   ]
 }
