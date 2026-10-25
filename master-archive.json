@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ffe074b0e3938b24c1af519b7574fbb716dcd9e3",
+  "archive_commit": "fe8604c0aa197cdaba3ea6d869006d910fb88066",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -421,7 +421,8 @@
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
     "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
     "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx",
-    "larrainzar-revolucion-guatemala-1873": "publications/larrainzar-revolucion-guatemala-1873/master.docx"
+    "larrainzar-revolucion-guatemala-1873": "publications/larrainzar-revolucion-guatemala-1873/master.docx",
+    "consulado-guatemala-apuntamientos-1811": "publications/consulado-guatemala-apuntamientos-1811/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

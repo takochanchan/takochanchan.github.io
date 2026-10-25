@@ -9250,6 +9250,25 @@
         "status": "online",
         "url": "https://archive.org/details/larevoluciondeg00herngoog"
       }
+    },
+    {
+      "slug": "consulado-guatemala-apuntamientos-1811",
+      "title": "グアテマラ王国の農業と商業に関する覚書",
+      "originalTitle": "Apuntamientos sobre la agricultura y comercio del Reyno de Guatemala",
+      "author": "グアテマラ王立商務院",
+      "originalAuthor": "Real Consulado de Comercio de Guatemala",
+      "originalPublication": "Nueva Guatemala: Oficina de D. Manuel de Arévalo, 1811.",
+      "year": 1811,
+      "sourceEdition": "Real Consulado de Comercio de Guatemala, Apuntamientos sobre la agricultura y comercio del Reyno de Guatemala. Nueva Guatemala: Oficina de D. Manuel de Arévalo, 1811.",
+      "sourceProvider": "Universidad Francisco Marroquín, Biblioteca Ludwig von Mises, Luis Luján Muñoz collection。Internet Archive公開。",
+      "rights": "1811年刊の原著は著作権保護期間満了。原刊画像はフランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館所蔵本をInternet Archiveが公開し、公開記録の権利表示はNOT IN COPYRIGHT。",
+      "publishedDate": "2026-10-25",
+      "updatedDate": "2026-10-25",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/apuntamientossobrela00guat"
+      }
     }
   ],
   "works": [
