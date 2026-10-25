@@ -3040,9 +3040,10 @@ test("local covers and release assets match the recorded manifest", async () => 
     !/cover(?:-[a-z0-9]+)*\.(?:jpg|png|svg)$/.test(item.path)
   )) {
     assert.equal(asset.url, publicationByPath.get(asset.path), asset.path);
-    const expectedRelease = /^publications\/garcia-documentos-ineditos-mexico-v(?:16|17|18)-1908\//.test(asset.path)
-      ? "publications-garcia-documentos-16-18-20261025"
-      : "publications-current";
+    const assetSlug = /^publications\/([^/]+)\//.exec(asset.path)?.[1];
+    const expectedRecord = assetSlug && expectedBySlug.get(assetSlug);
+    assert.ok(expectedRecord, `${asset.path}: missing independent fixture record`);
+    const expectedRelease = expectedRecord.releaseTag ?? "publications-current";
     const expectedUrl = "https://github.com/takochanchan/takochanchan.github.io/releases/download/" +
       expectedRelease + "/" + encodeURIComponent(path.basename(asset.path));
     assert.equal(asset.url, expectedUrl, asset.path);
@@ -3183,3 +3184,4 @@ test("Garcia's series separates expected published volumes from future volumes",
   assert.match(html, /利用・再利用の制限なし/);
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
 });
+

@@ -1,5 +1,5 @@
-import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
-import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
+import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";\nimport { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
+import { zarcoPublicationRecords, zarcoPublicationMetadata } from "./zarco-publications.mjs";
 import { nazarenosGaginiPublicationRecords, nazarenosGaginiPublicationMetadata } from "./nazarenos-gagini-publications.mjs";
 import { rodrigoPublicationRecords, rodrigoPublicationMetadata } from "./rodrigo-publication.mjs";
 import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
@@ -280,8 +280,8 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
   throw new Error("Duplicate canonical bibliographic record slug");
 }
 
-const publicationRecords = [
-  ...dancerPublicationRecords,
+const publicationRecords = [\n  ...dancerPublicationRecords,
+  ...zarcoPublicationRecords,
   ...galindoPublicationRecords,
  ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
@@ -9403,8 +9403,8 @@ const gallicaPublicDomainRights =
   "モーリス・ド・ペリニーの原刊本文および著者作成の図・写真は著作権保護期間を満了しています。第三者名義の図版は個別の権利表示が優先します。Gallica/BnF由来のデジタル画像は、非商用利用または学術・科学出版では「Source gallica.bnf.fr / Bibliothèque nationale de France」の表示を条件に無償で再利用でき、商用利用はBnFの許諾および利用料の対象となります。" +
   JapaneseEditionNoReuseRights;
 
-const publicationMetadata = {
-  ...dancerPublicationMetadata,
+const publicationMetadata = {\n  ...dancerPublicationMetadata,
+  ...zarcoPublicationMetadata,
   ...galindoPublicationMetadata,
  ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,
@@ -12310,6 +12310,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

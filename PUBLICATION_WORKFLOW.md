@@ -111,6 +111,12 @@ GitHub上のコミットSHAが公開側の台帳に記録された後にのみ�
 この参照登録自体を、実行性能の改善や公開完了とは扱いません。必要条件が揃ったら、上記「確認が済んだら実行へ進む」に従って次の未完了工程を実行します。
 
 
+## 公開Release資産の配置
+
+新規公開資産は作品専用Releaseを増やさず、共通Release `publications-002` を使用します。満杯になった場合は次の共通Release（`publications-003` 以降）へ移ります。既存資産の `publications-current` URLは保持し、既定値 `publicationReleaseTag = "publications-current"` を変更して一括移行しません。
+
+新規公開では各巻recordに `releaseTag` を明示し、`assets-manifest.json` と私設正本の `BIBLIOGRAPHY.json` に記録するPDF・EPUBのURLを実際の配信Releaseと一致させます。アップロード前に対象Releaseの現存asset数と今回の追加数を確認し、PDF・EPUB・チェックサム一覧を含む全assetの合計を1,000以内に収めます。追加によって上限を超える場合は次の共通Releaseを使用し、枠を空ける目的で既存資産を削除・上書きしません。既存資料の改訂は従来の正本先行・同名差替え手順に従います。
+
 ## 公開書誌の記述方針
 
 書誌の説明文は資料の内容・主題と主要底本に限定し、形態欄は巻数・PDF頁数などの
@@ -227,3 +233,4 @@ LFS代替保存中の資料は`release_fallbacks`に正規パス、版別Release
 
 改訂作業は、正本更新、公開資産差替え、外部検索索引更新、サイト更新、公開後照合のすべてが
 完了した時点で完了とします。
+

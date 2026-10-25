@@ -2,7 +2,7 @@ name: Transfer approved Dancer 1781 PDF and EPUB
 on:
   push:
     branches: [agent/dancer-publication-20261025]
-    paths: [.dancer-public-request.json]
+    paths: [.dancer-public-request-final.json]
 permissions:
   contents: write
 concurrency:

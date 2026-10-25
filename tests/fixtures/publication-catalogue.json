@@ -2616,6 +2616,7 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
@@ -2624,6 +2625,7 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
@@ -2632,11 +2634,30 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
       "seriesVolumeNumber": 18,
       "recordClass": "document-collection"
+    },
+    {
+      "slug": "zarco-historia-congreso-1856-1857-volume-i-1857",
+      "releaseTag": "publications-002",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "フランシスコ・サルコ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Francisco Zarco"
+    },
+    {
+      "slug": "zarco-historia-congreso-1856-1857-volume-ii-1857",
+      "releaseTag": "publications-002",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "フランシスコ・サルコ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Francisco Zarco"
     },
     {
       "slug": "dancer-fort-san-juan-1781",
@@ -2763,6 +2784,14 @@
         "galindo-gran-decada-nacional-1905-vol-2",
         "galindo-gran-decada-nacional-1906-vol-3"
       ]
+    },
+    {
+      "slug": "zarco-historia-congreso-1856-1857",
+      "memberSlugs": [
+        "zarco-historia-congreso-1856-1857-volume-i-1857",
+        "zarco-historia-congreso-1856-1857-volume-ii-1857"
+      ],
+      "seriesVolumeCount": 2
     }
   ],
   "shortAuthorCount": 48

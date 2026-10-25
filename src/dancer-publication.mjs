@@ -42,7 +42,7 @@ export const dancerPublicationRecords = [
     ],
     "visualLabel": "1781年刊・軍医の遠征記と熱帯医学",
     "searchShard": "002",
-    "releaseTag": "dancer-san-juan-1781-20261025"
+    "releaseTag": "publications-002"
   }
 ];
 
