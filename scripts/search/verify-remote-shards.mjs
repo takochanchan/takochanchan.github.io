@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { publications } from "../../src/publications.mjs";
 import {
+  activeSearchShards,
   publicationsForSearchShard,
   readSearchShardConfig,
   validateSearchShardAssignments,
@@ -47,7 +48,8 @@ let totalWorks = 0;
 let totalDocuments = 0;
 let totalBytes = 0;
 const seenSlugs = new Set();
-for (const shard of config.shards) {
+const activeShards = activeSearchShards(config, publications);
+for (const shard of activeShards) {
   const expected = publicationsForSearchShard(publications, shard.id);
   const expectedSlugs = expected.map((publication) => publication.slug).sort();
   const expectedBySlug = new Map(expected.map((publication) => [publication.slug, publication]));
@@ -168,6 +170,7 @@ if (totalWorks !== publications.length || seenSlugs.size !== publications.length
   );
 }
 process.stdout.write(
-  `Remote search shards OK: ${config.shards.length} shard(s), ` +
+  `Remote search shards OK: ${activeShards.length} active / ${config.shards.length} configured shard(s), ` +
     `${totalWorks} works, ${totalDocuments} documents, ${totalBytes} bytes.\n`,
 );
+

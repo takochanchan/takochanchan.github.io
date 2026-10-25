@@ -102,7 +102,7 @@ const assetSizes = new Map(
 );
 const searchShardConfig = await readSearchShardConfig(projectRoot);
 validateSearchShardAssignments(publicationUnits, searchShardConfig);
-const searchClientShards = browserSearchShards(searchShardConfig);
+const searchClientShards = browserSearchShards(searchShardConfig, publicationUnits);
 for (const item of publicationUnits) {
   const pdfBytes = assetSizes.get(item.pdf);
   const epubBytes = assetSizes.get(item.epub);
@@ -1578,4 +1578,5 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 

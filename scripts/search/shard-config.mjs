@@ -110,8 +110,15 @@ export const validateSearchShardAssignments = (publications, config) => {
   return counts;
 };
 
-export const browserSearchShards = (config) =>
-  config.shards.map((shard) => ({
+// Empty configured shards are reserved, not deployed indexes. A first assigned
+// work activates the shard immediately, including the mandatory remote gate.
+export const activeSearchShards = (config, publications) => {
+  const counts = validateSearchShardAssignments(publications, config);
+  return config.shards.filter((shard) => counts.get(shard.id) > 0);
+};
+
+export const browserSearchShards = (config, publications) =>
+  activeSearchShards(config, publications).map((shard) => ({
     id: shard.id,
     pagefindModule: new URL("pagefind/pagefind.js", shard.baseUrl).href,
     pagefindBase: new URL("pagefind/", shard.baseUrl).href,
@@ -119,3 +126,4 @@ export const browserSearchShards = (config) =>
     mapsPath: new URL("maps/", shard.baseUrl).href,
     metadataPath: new URL("search-meta.json", shard.baseUrl).href,
   }));
+

@@ -66,8 +66,13 @@ Search shards are append-stable. `001` is sealed at 277 works. Determine shard
 configuration from the current `search-shards.json` and each publication's
 `searchShard`, and verify deployment through the existing remote checks; do not
 infer dormant or active status from historical prose. Assign new publications
-explicitly to `searchShard: "002"` under the current allocation rule and update
-its existing configured repository rather than attempting first-time activation.
+explicitly to `searchShard: "003"` under the current allocation rule. `002` is
+sealed at 199 works; existing assignments and repositories stay unchanged.
+The configured `003` repository is ready for new works. Empty configured shards
+are excluded from the browser and remote checks only while they have zero assigned
+works. The first assignment activates all normal verification gates: pin its
+`source.json` to the publication commit, deploy and verify `003`, then publish the
+main site. Never move an existing slug to activate a new shard.
 The per-shard `sealedWorks` guard must reject silent fallback additions to `001`.
 Later active shards accept at most 300 works; never rebalance old slugs merely
 because catalogue order changes.
@@ -91,3 +96,4 @@ record.
   in this public repository.
 - Re-read remote `main` immediately before any write and never force-update it.
 - Preserve concurrent publication work and unrelated user changes.
+
