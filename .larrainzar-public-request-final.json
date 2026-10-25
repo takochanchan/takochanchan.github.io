@@ -50,5 +50,6 @@
     }
   ],
   "source_site_commit": "49a86cb4add3c8afa198e4b84c3fd06b4435352b",
-  "repairNote": "tree-repaired-20261025"
+  "repairNote": "tree-repaired-20261025",
+  "retryAfterArchiveLedgerSync": true
 }
