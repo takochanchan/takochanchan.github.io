@@ -1,0 +1,23 @@
+{
+  "verified_archive_commit": "50e2e92c25eb0596b3ddac079a627e426bdb746c",
+  "release_tag": "dancer-san-juan-1781-20261025",
+  "bundle": {
+    "size": 859086,
+    "sha256": "2416fad78f11be21e87be77fb5200e83a75f84523136619891dc3795d28ab4c8",
+    "chunks": [
+      "e89db4c04bd231f69b38543bcb04728b1687d79c"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.pdf",
+      "size": 961373,
+      "sha256": "e7a2b81117661f7f108c3132c47886cce181b91f97ced37ba862bd4696b128fe"
+    },
+    {
+      "filename": "Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
+      "size": 110115,
+      "sha256": "290c75718a3b29f300a40b6bfb96dd76b56ec5dd861a1c14d3bdd1ad6789600e"
+    }
+  ]
+}
