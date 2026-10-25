@@ -1,6 +1,6 @@
 {
-  "verified_archive_commit": "5204a5d6183ea7a33a472a83a2c01a73a4eb9e9e",
-  "release_tag": "zarco-publication-20261025",
+  "verified_archive_commit": "3e2461eafe2c8d64dead68e760e46c323bf00be9",
+  "release_tag": "publications-002",
   "bundle": {
     "size": 13593203,
     "sha256": "6ab459c5b5e2d6f3065b7b4f39c7a972e629a7a53b1637b7c0c7d74e316cc7a8",
@@ -56,5 +56,7 @@
       "size": 1063054,
       "sha256": "147c36e8ed88ab29f275531b27ece14daff4e0ecb19939e2596c545838cd1f77"
     }
-  ]
+  ],
+  "previous_release_tag": "zarco-publication-20261025",
+  "existing_release_id": 423230864
 }

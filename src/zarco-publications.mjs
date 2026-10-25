@@ -36,7 +36,7 @@ export const zarcoPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 1,
-    "releaseTag": "zarco-publication-20261025"
+    "releaseTag": "publications-002"
   },
   {
     "slug": "zarco-historia-congreso-1856-1857-volume-ii-1857",
@@ -75,7 +75,7 @@ export const zarcoPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 2,
-    "releaseTag": "zarco-publication-20261025"
+    "releaseTag": "publications-002"
   }
 ];
 

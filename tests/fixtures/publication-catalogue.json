@@ -2616,6 +2616,7 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
@@ -2624,6 +2625,7 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
@@ -2632,6 +2634,7 @@
     },
     {
       "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+      "releaseTag": "publications-garcia-documentos-16-18-20261025",
       "searchShard": "002",
       "author": "ヘナロ・ガルシア 編",
       "originalAuthor": "Genaro García (ed.)",
@@ -2640,6 +2643,7 @@
     },
     {
       "slug": "zarco-historia-congreso-1856-1857-volume-i-1857",
+      "releaseTag": "publications-002",
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "フランシスコ・サルコ",
@@ -2648,6 +2652,7 @@
     },
     {
       "slug": "zarco-historia-congreso-1856-1857-volume-ii-1857",
+      "releaseTag": "publications-002",
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "フランシスコ・サルコ",
@@ -2785,4 +2790,5 @@
   ],
   "shortAuthorCount": 48
 }
+
 
