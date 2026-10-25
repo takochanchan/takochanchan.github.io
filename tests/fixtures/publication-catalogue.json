@@ -2658,6 +2658,13 @@
       "author": "フランシスコ・サルコ",
       "seriesVolumeNumber": 2,
       "originalAuthor": "Francisco Zarco"
+    },
+    {
+      "slug": "dancer-fort-san-juan-1781",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "トマス・ダンサー",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -2790,5 +2797,3 @@
   ],
   "shortAuthorCount": 48
 }
-
-
