@@ -8844,6 +8844,24 @@
       "url": "https://takochanchan.github.io/publications/young-mosquito-shore-1847/cover.jpg",
       "size": 93074,
       "sha256": "9b48dce06da7db186f1605143ba11816f30c03faeb182693eea595a3e7c05833"
+    },
+    {
+      "path": "publications/dancer-fort-san-juan-1781/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/dancer-san-juan-1781-20261025/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
+      "size": 110115,
+      "sha256": "290c75718a3b29f300a40b6bfb96dd76b56ec5dd861a1c14d3bdd1ad6789600e"
+    },
+    {
+      "path": "publications/dancer-fort-san-juan-1781/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/dancer-san-juan-1781-20261025/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.pdf",
+      "size": 961373,
+      "sha256": "e7a2b81117661f7f108c3132c47886cce181b91f97ced37ba862bd4696b128fe"
+    },
+    {
+      "path": "publications/dancer-fort-san-juan-1781/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dancer-fort-san-juan-1781/cover.jpg",
+      "size": 13774,
+      "sha256": "ed87e8e4614d1483cc9a3eff825f9a4d7a27a14721d8a108d2f42c41913a7668"
     }
   ]
 }
