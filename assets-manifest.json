@@ -8868,6 +8868,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.epub",
       "size": 1063054,
       "sha256": "147c36e8ed88ab29f275531b27ece14daff4e0ecb19939e2596c545838cd1f77"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-i-1857/cover.jpg",
+      "size": 43468,
+      "sha256": "7f3a85d2bebcfc2c55337284d0f0577127f0938940a2f60965d6229a8127ae48"
+    },
+    {
+      "path": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
+      "size": 44696,
+      "sha256": "3286310436d86f971c57929bbe34a8bb7b104e5fba6218c95eb63832d68f7448"
     }
   ]
 }
