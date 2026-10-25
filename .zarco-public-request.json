@@ -1,5 +1,6 @@
 {
-  "verified_archive_commit": "0c24e9eae716c49fcd64bf4e3621d94e5cf8f845",
+  "verified_archive_commit": "5204a5d6183ea7a33a472a83a2c01a73a4eb9e9e",
+  "release_tag": "zarco-publication-20261025",
   "bundle": {
     "size": 13593203,
     "sha256": "6ab459c5b5e2d6f3065b7b4f39c7a972e629a7a53b1637b7c0c7d74e316cc7a8",
