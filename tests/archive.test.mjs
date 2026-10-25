@@ -3040,10 +3040,12 @@ test("local covers and release assets match the recorded manifest", async () => 
     !/cover(?:-[a-z0-9]+)*\.(?:jpg|png|svg)$/.test(item.path)
   )) {
     assert.equal(asset.url, publicationByPath.get(asset.path), asset.path);
-    assert.match(
-      asset.url,
-      /^https:\/\/github\.com\/takochanchan\/takochanchan\.github\.io\/releases\/download\/publications-current\//,
-    );
+    const expectedRelease = /^publications\/garcia-documentos-ineditos-mexico-v(?:16|17|18)-1908\//.test(asset.path)
+      ? "publications-garcia-documentos-16-18-20261025"
+      : "publications-current";
+    const expectedUrl = "https://github.com/takochanchan/takochanchan.github.io/releases/download/" +
+      expectedRelease + "/" + encodeURIComponent(path.basename(asset.path));
+    assert.equal(asset.url, expectedUrl, asset.path);
     await assert.rejects(access(path.join(dist, asset.path)));
   }
 });

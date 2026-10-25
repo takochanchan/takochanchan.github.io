@@ -12160,9 +12160,9 @@ export const publicationReleaseTag = "publications-current";
 export const publicationReleaseUrl =
   `https://github.com/takochanchan/takochanchan.github.io/releases/download/${publicationReleaseTag}`;
 
-const releaseAssetUrl = (relativePath) => {
+const releaseAssetUrl = (relativePath, releaseTag = publicationReleaseTag) => {
   const fileName = relativePath.slice(relativePath.lastIndexOf("/") + 1);
-  return `${publicationReleaseUrl}/${encodeURIComponent(fileName)}`;
+  return `https://github.com/takochanchan/takochanchan.github.io/releases/download/${encodeURIComponent(releaseTag)}/${encodeURIComponent(fileName)}`;
 };
 
 const comparePublicationYears = (left, right) => {
@@ -12246,8 +12246,8 @@ export const publications = publicationRecords.map((item) => {
         }
       : {}),
     searchShard: item.searchShard ?? "001",
-    pdfUrl: releaseAssetUrl(item.pdf),
-    epubUrl: releaseAssetUrl(item.epub),
+    pdfUrl: releaseAssetUrl(item.pdf, item.releaseTag),
+    epubUrl: releaseAssetUrl(item.epub, item.releaseTag),
   };
 }).map(normalizePublicationAttributes);
 

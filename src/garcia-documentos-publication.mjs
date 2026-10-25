@@ -572,6 +572,7 @@ export const garciaDocumentosPublicationRecords = [
   },
   {
     "slug": "garcia-documentos-ineditos-mexico-v16-1908",
+    "releaseTag": "publications-garcia-documentos-16-18-20261025",
     "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第2部",
     "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Segunda parte (textos español y francés)",
     "subtitle": "史料集第16巻・1908年刊",
@@ -611,6 +612,7 @@ export const garciaDocumentosPublicationRecords = [
   },
   {
     "slug": "garcia-documentos-ineditos-mexico-v17-1908",
+    "releaseTag": "publications-garcia-documentos-16-18-20261025",
     "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第3部",
     "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Tercera parte (textos español y francés)",
     "subtitle": "史料集第17巻・1908年刊",
@@ -650,6 +652,7 @@ export const garciaDocumentosPublicationRecords = [
   },
   {
     "slug": "garcia-documentos-ineditos-mexico-v18-1908",
+    "releaseTag": "publications-garcia-documentos-16-18-20261025",
     "title": "バゼーヌ元帥文書によるフランスのメキシコ干渉 第4部",
     "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Cuarta parte (textos español y francés)",
     "subtitle": "史料集第18巻・1908年刊",
