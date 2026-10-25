@@ -7,6 +7,7 @@ REPO = "takochanchan/takochanchan.github.io"
 assert os.environ["GITHUB_REPOSITORY"] == REPO
 request = json.loads(Path(".dancer-public-request-final.json").read_text())
 assert re.fullmatch(r"[0-9a-f]{40}", request["verified_archive_commit"])
+assert re.fullmatch(r"[0-9a-f]{40}", request["source_site_commit"])
 assert json.loads(Path("master-archive.json").read_text())["archive_commit"] == request["verified_archive_commit"]
 TAG = request["release_tag"]
 assert TAG == "publications-002"
