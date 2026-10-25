@@ -1,3 +1,4 @@
+import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
 import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
 import { nazarenosGaginiPublicationRecords, nazarenosGaginiPublicationMetadata } from "./nazarenos-gagini-publications.mjs";
 import { rodrigoPublicationRecords, rodrigoPublicationMetadata } from "./rodrigo-publication.mjs";
@@ -280,6 +281,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...dancerPublicationRecords,
   ...galindoPublicationRecords,
  ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
@@ -9402,6 +9404,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...dancerPublicationMetadata,
   ...galindoPublicationMetadata,
  ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,
