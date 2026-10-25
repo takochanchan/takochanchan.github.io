@@ -2,7 +2,7 @@ name: Transfer approved Consulado publication files
 on:
   push:
     branches: [agent/consulado-release-transfer-20261025]
-    paths: [.consulado-public-request.json]
+    paths: [.consulado-public-request.json, .consulado-release-transfer.py]
 permissions:
   contents: write
 concurrency:

@@ -69,7 +69,7 @@ bundle_bytes = bytearray()
 for oid in bundle["chunks"]:
     blob = api_json(f"/repos/{REPO}/git/blobs/{oid}")
     require(blob.get("encoding") == "base64", f"chunk {oid} is not base64")
-    bundle_bytes.extend(base64.b64decode(blob["content"], validate=True))
+    bundle_bytes.extend(base64.b64decode("".join(blob["content"].split()), validate=True))
 bundle_bytes = bytes(bundle_bytes)
 require(len(bundle_bytes) == bundle["size"], "bundle size mismatch")
 require(sha256(bundle_bytes) == bundle["sha256"], "bundle SHA-256 mismatch")
