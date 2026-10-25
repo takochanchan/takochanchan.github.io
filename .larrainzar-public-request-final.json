@@ -49,5 +49,6 @@
       "sha256": "0fe5ea96b5695083a33792ba77cf948fa9abf26b2ec744a3e705ca1ebc63ce32"
     }
   ],
-  "source_site_commit": "49a86cb4add3c8afa198e4b84c3fd06b4435352b"
+  "source_site_commit": "49a86cb4add3c8afa198e4b84c3fd06b4435352b",
+  "repairNote": "tree-repaired-20261025"
 }

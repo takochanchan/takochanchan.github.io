@@ -8898,6 +8898,24 @@
       "url": "https://takochanchan.github.io/publications/dancer-fort-san-juan-1781/cover.jpg",
       "size": 13774,
       "sha256": "ed87e8e4614d1483cc9a3eff825f9a4d7a27a14721d8a108d2f42c41913a7668"
+    },
+    {
+      "path": "publications/larrainzar-revolucion-guatemala-1873/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.pdf",
+      "size": 1096624,
+      "sha256": "7d22d6328923bcb65257e41cc686ddb70089c23671abaa477cc1e490f900114f"
+    },
+    {
+      "path": "publications/larrainzar-revolucion-guatemala-1873/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
+      "size": 137750,
+      "sha256": "0fe5ea96b5695083a33792ba77cf948fa9abf26b2ec744a3e705ca1ebc63ce32"
+    },
+    {
+      "path": "publications/larrainzar-revolucion-guatemala-1873/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larrainzar-revolucion-guatemala-1873/cover.jpg",
+      "size": 94001,
+      "sha256": "cd834d9b382f4cf35200d01d87ca5173084fb15350f222ea4cf98ef19f602427"
     }
   ]
 }
