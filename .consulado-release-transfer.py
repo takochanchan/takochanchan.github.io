@@ -144,8 +144,19 @@ uploaded = {}
 for name, descriptor in expected.items():
     asset = asset_map.get(name)
     if asset is not None:
-        verify_asset(asset, descriptor["size"], descriptor["sha256"])
-    else:
+        current_bytes = get_release_asset_bytes(asset["id"])
+        current_sha = sha256(current_bytes)
+        if (len(current_bytes) == descriptor["size"] and
+                current_sha == descriptor["sha256"]):
+            pass
+        else:
+            prior = request.get("replace_assets", {}).get(name)
+            require(prior is not None, f"unexpected existing asset requires explicit replacement: {name}")
+            require(len(current_bytes) == prior["size"] and current_sha == prior["sha256"],
+                    f"existing asset differs from approved prior bytes: {name}")
+            api_json(f"/repos/{REPO}/releases/assets/{asset['id']}", method="DELETE")
+            asset = None
+    if asset is None:
         asset = upload_asset(name, members[name])
         verify_asset(asset, descriptor["size"], descriptor["sha256"])
     uploaded[name] = asset
