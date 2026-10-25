@@ -8920,20 +8920,20 @@
     {
       "path": "publications/consulado-guatemala-apuntamientos-1811/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.pdf",
-      "size": 1612301,
-      "sha256": "e35e6705c61d5aee84da78b004225b189add3e85e25443145d56ac8c9b3f6dad"
+      "size": 1609988,
+      "sha256": "51234eea6b0bc58c0abf29a336677a0012a21c3b755a369174fb42dc6046faad"
     },
     {
       "path": "publications/consulado-guatemala-apuntamientos-1811/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.epub",
-      "size": 194647,
-      "sha256": "3ab4a284c509c42e59613bddc1e32f33e3a6dd12b45a6ad3bc8ba140c29984dc"
+      "size": 183863,
+      "sha256": "bb0552aa17469c9b935a0e2d6349bb343363304484fe2b23c09dd92c71a7d6bd"
     },
     {
       "path": "publications/consulado-guatemala-apuntamientos-1811/cover.jpg",
       "url": "https://takochanchan.github.io/publications/consulado-guatemala-apuntamientos-1811/cover.jpg",
-      "size": 4068,
-      "sha256": "9fb75b63af9a3949adbd9fdb2f20f5316547247b2f89ea50cf3240d3cebbbfe2"
+      "size": 8570,
+      "sha256": "739707d860210df2c18fdd546258ca5f281a4c0c0c3bec54a9868d57880256b1"
     }
   ]
 }
