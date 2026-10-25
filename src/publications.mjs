@@ -1,4 +1,5 @@
 import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
+import { zarcoPublicationRecords, zarcoPublicationMetadata } from "./zarco-publications.mjs";
 import { nazarenosGaginiPublicationRecords, nazarenosGaginiPublicationMetadata } from "./nazarenos-gagini-publications.mjs";
 import { rodrigoPublicationRecords, rodrigoPublicationMetadata } from "./rodrigo-publication.mjs";
 import { bunauVarillaPublicationRecords, bunauVarillaPublicationMetadata } from "./bunau-varilla-publication.mjs";
@@ -280,6 +281,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...zarcoPublicationRecords,
   ...galindoPublicationRecords,
  ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
@@ -9402,6 +9404,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...zarcoPublicationMetadata,
   ...galindoPublicationMetadata,
  ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,
@@ -12307,6 +12310,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

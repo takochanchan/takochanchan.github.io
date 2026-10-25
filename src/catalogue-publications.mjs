@@ -7,6 +7,34 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "zarco-historia-congreso-1856-1857",
+  "memberSlugs": [
+    "zarco-historia-congreso-1856-1857-volume-i-1857",
+    "zarco-historia-congreso-1856-1857-volume-ii-1857"
+  ],
+  "volumeLabels": [
+    "1856–1857年制憲議会史 第I巻",
+    "1856–1857年制憲議会史 第II巻"
+  ],
+  "title": "1856–1857年制憲議会史",
+  "originalTitle": "Historia del Congreso Estraordinario Constituyente de 1856 y 1857",
+  "author": "フランシスコ・サルコ",
+  "originalAuthor": "Francisco Zarco",
+  "subtitle": "全2巻",
+  "series": "HISTORIA DEL CONGRESO ESTRAORDINARIO CONSTITUYENTE · 1856–1857",
+  "year": 1857,
+  "originalPublication": "メキシコ、イグナシオ・クンプリド印刷所、1857年。全2巻。",
+  "extent": "全2巻・PDF計2,551頁",
+  "description": "1857年メキシコ憲法の成立過程を、議員でもあったサルコが日々の会議、演説、委員会報告、関連法令から記録した全2巻。自由と権利、教会と国家、連邦制、統治機構をめぐる論争を伝える。底本はイグナシオ・クンプリド印刷所刊の1857年版。",
+  "sourceEdition": "Francisco Zarco, Historia del Congreso Estraordinario Constituyente de 1856 y 1857: estracto de todas sus sesiones y documentos parlamentarios de la época, tomo I. México: Imprenta de Ignacio Cumplido, 1857. / Francisco Zarco, Historia del Congreso Estraordinario Constituyente de 1856 y 1857: estracto de todas sus sesiones y documentos parlamentarios de la época, tomo II. México: Imprenta de Ignacio Cumplido, 1857.",
+  "sourceProvider": "Universidad Autónoma de Nuevo León（UANL）, Colección Digital UANL.",
+  "sourceUrl": "https://cd.dgb.uanl.mx/handle/201504211/13715",
+  "rights": "原著および1857年刊本はパブリックドメインです。底本画像はUniversidad Autónoma de Nuevo León（UANL）がCC BY-NC-ND 2.5 Méxicoで公開しています。翻訳版には底本画像を転載していません。",
+  "publishedDate": "2026-10-25",
+  "updatedDate": "2026-10-25",
+  "seriesVolumeCount": 2
+},
+{
   "slug": "galindo-gran-decada-nacional-1904-1906",
   "memberSlugs": [
     "galindo-gran-decada-nacional-1904-vol-1",
@@ -998,6 +1026,7 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+
 
 
 
