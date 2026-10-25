@@ -35,7 +35,8 @@ export const zarcoPublicationRecords = [
       "1857年憲法"
     ],
     "searchShard": "002",
-    "seriesVolumeNumber": 1
+    "seriesVolumeNumber": 1,
+    "releaseTag": "zarco-publication-20261025"
   },
   {
     "slug": "zarco-historia-congreso-1856-1857-volume-ii-1857",
@@ -73,7 +74,8 @@ export const zarcoPublicationRecords = [
       "1857年憲法"
     ],
     "searchShard": "002",
-    "seriesVolumeNumber": 2
+    "seriesVolumeNumber": 2,
+    "releaseTag": "zarco-publication-20261025"
   }
 ];
 
