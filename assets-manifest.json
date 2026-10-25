@@ -8916,6 +8916,24 @@
       "url": "https://takochanchan.github.io/publications/larrainzar-revolucion-guatemala-1873/cover.jpg",
       "size": 94001,
       "sha256": "cd834d9b382f4cf35200d01d87ca5173084fb15350f222ea4cf98ef19f602427"
+    },
+    {
+      "path": "publications/consulado-guatemala-apuntamientos-1811/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.pdf",
+      "size": 1612301,
+      "sha256": "e35e6705c61d5aee84da78b004225b189add3e85e25443145d56ac8c9b3f6dad"
+    },
+    {
+      "path": "publications/consulado-guatemala-apuntamientos-1811/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.epub",
+      "size": 194647,
+      "sha256": "3ab4a284c509c42e59613bddc1e32f33e3a6dd12b45a6ad3bc8ba140c29984dc"
+    },
+    {
+      "path": "publications/consulado-guatemala-apuntamientos-1811/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/consulado-guatemala-apuntamientos-1811/cover.jpg",
+      "size": 4068,
+      "sha256": "9fb75b63af9a3949adbd9fdb2f20f5316547247b2f89ea50cf3240d3cebbbfe2"
     }
   ]
 }
