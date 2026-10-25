@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5bc2fc2bc1f2083bcfc80fbbe73e75735fc647ad",
+  "archive_commit": "50e2e92c25eb0596b3ddac079a627e426bdb746c",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -417,7 +417,8 @@
     "galindo-gran-decada-nacional-1906-vol-3": "publications/galindo-gran-decada-nacional-1906-vol-3/master.docx",
     "garcia-documentos-ineditos-mexico-v16-1908": "publications/garcia-documentos-ineditos-mexico-v16-1908/master.docx",
     "garcia-documentos-ineditos-mexico-v17-1908": "publications/garcia-documentos-ineditos-mexico-v17-1908/master.docx",
-    "garcia-documentos-ineditos-mexico-v18-1908": "publications/garcia-documentos-ineditos-mexico-v18-1908/master.docx"
+    "garcia-documentos-ineditos-mexico-v18-1908": "publications/garcia-documentos-ineditos-mexico-v18-1908/master.docx",
+    "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
