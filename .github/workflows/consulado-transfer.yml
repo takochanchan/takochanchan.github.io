@@ -1,0 +1,28 @@
+name: Transfer approved Consulado publication files
+on:
+  push:
+    branches: [agent/consulado-release-transfer-20261025]
+    paths: [.consulado-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and re-download approved PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .consulado-release-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: consulado-public-verification
+          path: consulado-public-verification.json
