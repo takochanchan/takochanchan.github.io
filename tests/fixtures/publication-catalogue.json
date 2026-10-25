@@ -2665,6 +2665,14 @@
       "searchShard": "002",
       "author": "トマス・ダンサー",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "larrainzar-revolucion-guatemala-1873",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "フェデリコ・ララインサル",
+      "originalAuthor": "Federico Larraínzar",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
