@@ -63,6 +63,36 @@ def get_public_bytes(url):
         return response.read()
 
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def get_release_asset_bytes(asset_id):
+    url = f"{API}/repos/{REPO}/releases/assets/{asset_id}"
+    req = urllib.request.Request(url, headers={
+        "Accept": "application/octet-stream",
+        "Authorization": f"Bearer {token}",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "consulado-publication-transfer",
+    })
+    opener = urllib.request.build_opener(NoRedirect)
+    try:
+        with opener.open(req, timeout=120) as response:
+            data = response.read()
+            require(not response.headers.get("Content-Type", "").startswith("application/json"),
+                    "release asset endpoint returned JSON instead of bytes")
+            return data
+    except urllib.error.HTTPError as response:
+        if response.code not in (301, 302, 303, 307, 308):
+            raise
+        location = response.headers.get("Location")
+        require(location, "release asset redirect is missing Location")
+        req = urllib.request.Request(location, headers={"User-Agent": "consulado-publication-transfer"})
+        with urllib.request.urlopen(req, timeout=120) as download:
+            return download.read()
+
+
 # Reconstruct the exact staged bundle from Git blobs and validate it before release writes.
 bundle = request["bundle"]
 bundle_bytes = bytearray()
@@ -93,8 +123,8 @@ with tarfile.open(fileobj=io.BytesIO(bundle_bytes), mode="r:gz") as archive:
 
 release = api_json(f"/repos/{REPO}/releases/tags/{urllib.parse.quote(TAG, safe='')}")
 asset_map = {item["name"]: item for item in release["assets"]}
-require(not (set(expected) & set(asset_map)), "release already contains a target asset; refusing duplicate upload")
-require(len(release["assets"]) + 2 <= 1000, "release asset limit would be exceeded")
+missing_assets = set(expected) - set(asset_map)
+require(len(release["assets"]) + len(missing_assets) <= 1000, "release asset limit would be exceeded")
 
 
 def upload_asset(name, data):
@@ -104,7 +134,7 @@ def upload_asset(name, data):
 
 
 def verify_asset(asset, expected_size, expected_sha):
-    data = get_public_bytes(asset["browser_download_url"])
+    data = get_release_asset_bytes(asset["id"])
     require(len(data) == expected_size, f"downloaded size mismatch: {asset['name']}")
     require(sha256(data) == expected_sha, f"downloaded SHA-256 mismatch: {asset['name']}")
     return data
@@ -112,14 +142,18 @@ def verify_asset(asset, expected_size, expected_sha):
 
 uploaded = {}
 for name, descriptor in expected.items():
-    asset = upload_asset(name, members[name])
-    verify_asset(asset, descriptor["size"], descriptor["sha256"])
+    asset = asset_map.get(name)
+    if asset is not None:
+        verify_asset(asset, descriptor["size"], descriptor["sha256"])
+    else:
+        asset = upload_asset(name, members[name])
+        verify_asset(asset, descriptor["size"], descriptor["sha256"])
     uploaded[name] = asset
 
 # Update only the two newly published checksum rows and preserve every other line.
 sum_asset = asset_map.get("SHA256SUMS.txt")
 require(sum_asset is not None, "release is missing SHA256SUMS.txt")
-old_sums = get_public_bytes(sum_asset["browser_download_url"]).decode("utf-8")
+old_sums = get_release_asset_bytes(sum_asset["id"]).decode("utf-8")
 lines = []
 for line in old_sums.splitlines():
     fields = line.split()
@@ -129,9 +163,12 @@ for line in old_sums.splitlines():
         lines.append(line)
 lines.extend(f"{descriptor['sha256']}  {name}" for name, descriptor in expected.items())
 new_sums = ("\n".join(lines) + "\n").encode("utf-8")
-api_json(f"/repos/{REPO}/releases/assets/{sum_asset['id']}", method="DELETE")
-replacement_sum = upload_asset("SHA256SUMS.txt", new_sums)
-downloaded_sums = get_public_bytes(replacement_sum["browser_download_url"])
+if new_sums == old_sums.encode("utf-8"):
+    replacement_sum = sum_asset
+else:
+    api_json(f"/repos/{REPO}/releases/assets/{sum_asset['id']}", method="DELETE")
+    replacement_sum = upload_asset("SHA256SUMS.txt", new_sums)
+downloaded_sums = get_release_asset_bytes(replacement_sum["id"])
 require(downloaded_sums == new_sums, "replacement SHA256SUMS.txt download differs")
 
 RESULT.write_text(json.dumps({
@@ -147,6 +184,6 @@ RESULT.write_text(json.dumps({
     "checksum_asset": {"name": "SHA256SUMS.txt", "id": replacement_sum["id"],
                         "size": len(new_sums), "sha256": sha256(new_sums),
                         "preserved_existing_rows": True, "download_verified": True},
-    "release_asset_count_after": len(release["assets"]) + 2,
+    "release_asset_count_after": len(release["assets"]) + len(missing_assets),
     "all_downloaded_bytes_verified": True,
 }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
