@@ -2637,6 +2637,12 @@
       "originalAuthor": "Genaro García (ed.)",
       "seriesVolumeNumber": 18,
       "recordClass": "document-collection"
+    },
+    {
+      "slug": "dancer-fort-san-juan-1781",
+      "recordClass": "major-work",
+      "searchShard": "002",
+      "author": "トマス・ダンサー"
     }
   ],
   "groups": [
