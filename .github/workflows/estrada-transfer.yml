@@ -1,0 +1,30 @@
+name: Transfer checksum-pinned Estrada publication assets
+on:
+  push:
+    branches: [agent/estrada-publication-20261025]
+    paths: ['.publication-upload-requests/estrada-descripcion-zapotitlan-suchitepeques-1579.json']
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-estrada.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: estrada-release-byte-verification
+          path: estrada-release-verification.json

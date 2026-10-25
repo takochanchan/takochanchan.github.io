@@ -1,3 +1,4 @@
+import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
 import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
 import { larrainzarPublicationRecords, larrainzarPublicationMetadata } from "./larrainzar-publication.mjs";
 import { consuladoPublicationRecords, consuladoPublicationMetadata } from "./consulado-guatemala-publication.mjs";
@@ -284,6 +285,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...estradaPublicationRecords,
   ...dancerPublicationRecords,
   ...larrainzarPublicationRecords,
   ...consuladoPublicationRecords,
@@ -9410,6 +9412,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...estradaPublicationMetadata,
   ...dancerPublicationMetadata,
   ...larrainzarPublicationMetadata,
   ...consuladoPublicationMetadata,

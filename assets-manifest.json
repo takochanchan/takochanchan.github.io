@@ -8934,6 +8934,24 @@
       "url": "https://takochanchan.github.io/publications/consulado-guatemala-apuntamientos-1811/cover.jpg",
       "size": 8570,
       "sha256": "739707d860210df2c18fdd546258ca5f281a4c0c0c3bec54a9868d57880256b1"
+    },
+    {
+      "path": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.pdf",
+      "size": 29150242,
+      "sha256": "4678622d3e9c49a66d86b89bd39b39bd76ab3dd395abbcea879e279f314198a4"
+    },
+    {
+      "path": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.epub",
+      "size": 1790499,
+      "sha256": "ba67e64a116911016066d95c57819b9a3a632236c7c06e8399d7e105bc9f31d1"
+    },
+    {
+      "path": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/estrada-descripcion-zapotitlan-suchitepeques-1579/cover.jpg",
+      "size": 29888,
+      "sha256": "5954c81465868daf83d4fe645715b1f893d1ee5cd8ceb5940e95477dec5a0fbc"
     }
   ]
 }

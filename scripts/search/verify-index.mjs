@@ -69,7 +69,7 @@ const expectedSlugs = expectedPublications
   .sort();
 const actualSlugs = [...(metadata.workSlugs || [])].sort();
 const sourceLocationLabelPattern = new RegExp(
-  "^(?:底本位置なし（前付）|" +
+  "^(?:底本位置なし（(?:前付|訳注)）|" +
     "前付・底本PDF|付録・底本PDF|裏表紙・底本PDF|" +
     "原冊|原刊|原資料|史料画像|原書|原写本|写本|自筆稿|原稿|底本|原誌|原報告|" +
     "クラウス\\s*117\\s*写本|PMM\\s*\\d+\\s*,|出所|" +

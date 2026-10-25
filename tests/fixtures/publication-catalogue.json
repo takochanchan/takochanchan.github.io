@@ -2680,6 +2680,14 @@
       "searchShard": "003",
       "author": "グアテマラ王立商務院",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "estrada-descripcion-zapotitlan-suchitepeques-1579",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・エストラーダ",
+      "originalAuthor": "Juan de Estrada",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [

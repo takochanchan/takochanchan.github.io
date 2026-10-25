@@ -34,12 +34,36 @@ from xml.etree import ElementTree as ET
 # field ``originalPage``.  In practice this is a source-location marker: it may
 # point to a printed page, a manuscript folio, a digital image, or an explicitly
 # described composite source.
+MAP_LOCATION_LABELS = frozenset(
+    {
+        "地図",
+        "地図下縁",
+        "地図・西側の十字印間",
+        "地図・中央西寄り",
+        "地図・中央",
+        "地図・中央東寄り",
+        "地図・東側",
+        "地図・南東",
+        "地図・南西",
+        "地図・東端の山麓",
+        "地図・河口",
+        "地図・東側の川沿い",
+        "地図・中央北寄り",
+        "地図・東寄り",
+        "地図・東端",
+        "地図・南東寄り",
+    }
+)
+MAP_LOCATION_MARKER_PATTERN = "|".join(
+    re.escape(label) for label in sorted(MAP_LOCATION_LABELS, key=len, reverse=True)
+)
 ORIGINAL_MARKER_RE = re.compile(
     r"(?:"
     r"〔\s*(?:(?:前付・底本PDF|付録・底本PDF|裏表紙・底本PDF|原刊|原冊|原資料|史料画像|原書|原写本|写本(?=（|\s+f\.?\s*\d+[rv])|自筆稿(?!の)|原稿|底本|原誌|原報告|"
     r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
     r"主底本|補完底本|合成底本)"
     r"[^〕\r\n]{0,240})〕"
+    r"|〔\s*(?:" + MAP_LOCATION_MARKER_PATTERN + r")\s*〕"
     r"|\{\{\s*SOURCE\s*:\s*[^{}\r\n]{1,240}\s*\}\}"
     r")",
     re.IGNORECASE,
@@ -191,6 +215,8 @@ def original_marker_label(value: str) -> str:
         )
         return "出所 " + re.sub(r"\s+", " ", label).strip()
     label = re.sub(r"\s+", " ", marker[1:-1]).strip()
+    if label in MAP_LOCATION_LABELS:
+        return "原資料：" + label
     # Some legacy PMM 9 masters put a location and a full editorial note in one
     # Source Page paragraph.  Keep the searchable location concise; the note is
     # recovered separately by embedded_source_note(). Revised masters split the
@@ -700,10 +726,37 @@ def epub_paragraphs(path: Path) -> list[str]:
     return trim_paragraphs_to_translation(paragraphs, allow_marker_fallback=False)
 
 
-def paragraphs_with_original_pages(paragraphs: list[str]) -> list[tuple[str, str]]:
+def paragraphs_with_original_pages(
+    paragraphs: list[str], *, publication_slug: str | None = None
+) -> list[tuple[str, str]]:
     current_marker = DEFAULT_SOURCE_LOCATION
     output: list[tuple[str, str]] = []
+    estrada_map_policy = (
+        publication_slug == "estrada-descripcion-zapotitlan-suchitepeques-1579"
+    )
+    in_estrada_map = False
+    local_map_marker_pending = False
+    map_source_location = "原資料：付属地図"
     for paragraph in paragraphs:
+        heading = clean_markdown_inline(paragraph)
+        if estrada_map_policy and heading == "付属地図":
+            in_estrada_map = True
+            current_marker = map_source_location
+            local_map_marker_pending = False
+            output.append((current_marker, heading))
+            continue
+        if estrada_map_policy and heading == "地図の地名・数値一覧":
+            in_estrada_map = True
+            current_marker = map_source_location
+            local_map_marker_pending = False
+            output.append((current_marker, heading))
+            continue
+        if estrada_map_policy and heading == "訳注・校訂上の留意点":
+            in_estrada_map = False
+            current_marker = "底本位置なし（訳注）"
+            local_map_marker_pending = False
+            output.append((current_marker, heading))
+            continue
         standalone_marker = STANDALONE_SOURCE_PAGE_RE.fullmatch(paragraph.strip())
         if standalone_marker:
             current_marker = re.sub(r"\s+", " ", paragraph.strip())
@@ -726,6 +779,11 @@ def paragraphs_with_original_pages(paragraphs: list[str]) -> list[tuple[str, str
             if before:
                 output.append((current_marker, before))
             current_marker = original_marker_label(marker.group(0))
+            if estrada_map_policy and in_estrada_map:
+                local_map_marker_pending = (
+                    original_marker_label(marker.group(0))
+                    in {"原資料：" + label for label in MAP_LOCATION_LABELS}
+                )
             embedded_note = embedded_source_note(marker.group(0))
             if embedded_note:
                 output.append((current_marker, f"訳注　{embedded_note}"))
@@ -733,6 +791,9 @@ def paragraphs_with_original_pages(paragraphs: list[str]) -> list[tuple[str, str
         after = clean_markdown_inline(paragraph[cursor:])
         if after:
             output.append((current_marker, after))
+            if local_map_marker_pending:
+                current_marker = map_source_location
+                local_map_marker_pending = False
     return output
 
 
@@ -1213,7 +1274,9 @@ def build_work(manifest_path: Path, spec: dict) -> dict:
     if spec.get("pdfSha256") and pdf_sha256 != spec["pdfSha256"]:
         raise ValueError(f"{slug}: PDF SHA-256 mismatch")
 
-    annotated = paragraphs_with_original_pages(paragraphs)
+    annotated = paragraphs_with_original_pages(
+        paragraphs, publication_slug=slug
+    )
     chunks = searchable_chunks(annotated)
     if not chunks:
         raise ValueError(f"{slug}: no searchable chunks")
@@ -1235,6 +1298,18 @@ def build_work(manifest_path: Path, spec: dict) -> dict:
     alignment = alignment_summary(chunks)
     for chunk in chunks:
         labels = pdf_original_labels[chunk["pdfPage"] - 1]
+        if (
+            slug == "estrada-descripcion-zapotitlan-suchitepeques-1579"
+            and chunk["originalPage"]
+            in {
+                "原資料：付属地図",
+                *{"原資料：" + label for label in MAP_LOCATION_LABELS},
+            }
+        ):
+            # Preserve explicit map scope and local map-position markers. A
+            # preceding manuscript image marker on the same PDF page must not
+            # replace them, and the table must not inherit its final map note.
+            continue
         if labels:
             chunk["originalPage"] = "／".join(labels)
     substantive = sum(

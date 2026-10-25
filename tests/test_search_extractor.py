@@ -83,6 +83,72 @@ class SearchExtractorTest(unittest.TestCase):
             ],
         )
 
+    def test_exact_map_location_markers_replace_the_previous_source_image_page(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔原資料画像 032〕地図図版。",
+                "〔地図下縁〕この地図の縮尺について。",
+                "〔地図・中央西寄り〕白い家と呼ばれる。",
+                "この地図の説明は本文中にも出てくる。",
+                "〔地図についての注記〕これは位置ラベルではない。",
+            ]
+        )
+
+        self.assertEqual(
+            annotated,
+            [
+                ("原資料画像 032", "地図図版。"),
+                ("原資料：地図下縁", "この地図の縮尺について。"),
+                ("原資料：地図・中央西寄り", "白い家と呼ばれる。"),
+                ("原資料：地図・中央西寄り", "この地図の説明は本文中にも出てくる。"),
+                ("原資料：地図・中央西寄り", "〔地図についての注記〕これは位置ラベルではない。"),
+            ],
+        )
+        self.assertFalse(
+            extract_corpus.is_original_page_marker("〔地図についての注記〕")
+        )
+
+    def test_estrada_map_scope_resets_before_table_and_endnotes(self):
+        annotated = extract_corpus.paragraphs_with_original_pages(
+            [
+                "〔原資料画像 032〕背面書付。",
+                "前の原資料画像に続く本文。",
+                "付属地図",
+                "サポティトランとスチテペケスの海岸地方。",
+                "地図の説明書付",
+                "〔地図下縁〕",
+                "下縁の説明本文。",
+                "図版に続く説明。",
+                "〔地図・南東寄り〕",
+                "局所ラベル付きの説明。",
+                "地図の地名・数値一覧",
+                "表の一行目。",
+                "表の最後の一行。",
+                "訳注・校訂上の留意点",
+                "巻末訳注。",
+            ],
+            publication_slug="estrada-descripcion-zapotitlan-suchitepeques-1579",
+        )
+
+        self.assertEqual(
+            annotated,
+            [
+                ("原資料画像 032", "背面書付。"),
+                ("原資料画像 032", "前の原資料画像に続く本文。"),
+                ("原資料：付属地図", "付属地図"),
+                ("原資料：付属地図", "サポティトランとスチテペケスの海岸地方。"),
+                ("原資料：付属地図", "地図の説明書付"),
+                ("原資料：地図下縁", "下縁の説明本文。"),
+                ("原資料：付属地図", "図版に続く説明。"),
+                ("原資料：地図・南東寄り", "局所ラベル付きの説明。"),
+                ("原資料：付属地図", "地図の地名・数値一覧"),
+                ("原資料：付属地図", "表の一行目。"),
+                ("原資料：付属地図", "表の最後の一行。"),
+                ("底本位置なし（訳注）", "訳注・校訂上の留意点"),
+                ("底本位置なし（訳注）", "巻末訳注。"),
+            ],
+        )
+
     def test_approved_legacy_pdf_location_labels_are_preserved(self):
         annotated = extract_corpus.paragraphs_with_original_pages(
             [

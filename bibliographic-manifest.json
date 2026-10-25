@@ -9269,6 +9269,25 @@
         "status": "online",
         "url": "https://archive.org/details/apuntamientossobrela00guat"
       }
+    },
+    {
+      "slug": "estrada-descripcion-zapotitlan-suchitepeques-1579",
+      "title": "サポティトランとスチテペケスの記述",
+      "originalTitle": "Descripción de Zapotitlán y Suchitepeques",
+      "author": "フアン・デ・エストラーダ",
+      "originalAuthor": "Juan de Estrada",
+      "originalPublication": "San Antonio Suchitepéquez, Guatemala, 1579.",
+      "year": 1579,
+      "sourceEdition": "Juan de Estrada, “Descripción de Zapotitlán y Suchitepeques,” 1579. Manuscript JGI XX-09, San Antonio Suchitepéquez, Guatemala. The 1577 printed questionnaire is included in the manuscript report.",
+      "sourceProvider": "Benson Latin American Collection, The University of Texas at Austin. Digital manuscript JGI XX-09 and associated map.",
+      "rights": "原資料本文および付属地図は、テキサス大学オースティン校の公開表示に基づきパブリックドメインです。",
+      "publishedDate": "2026-10-25",
+      "updatedDate": "2026-10-25",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://fromthepage.lib.utexas.edu/llilasbenson/relaciones-geograficas-of-mexico-and-guatemala/san-antonio-suchitepeque-zapotitlan-guatemala-1579"
+      }
     }
   ],
   "works": [
