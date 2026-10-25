@@ -1,5 +1,4 @@
 import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
-import { larrainzarPublicationRecords, larrainzarPublicationMetadata } from "./larrainzar-publication.mjs";
 import { galindoPublicationRecords, galindoPublicationMetadata } from "./galindo-publications.mjs";
 import { zarcoPublicationRecords, zarcoPublicationMetadata } from "./zarco-publications.mjs";
 import { nazarenosGaginiPublicationRecords, nazarenosGaginiPublicationMetadata } from "./nazarenos-gagini-publications.mjs";
@@ -284,7 +283,6 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 
 const publicationRecords = [
   ...dancerPublicationRecords,
-  ...larrainzarPublicationRecords,
   ...zarcoPublicationRecords,
   ...galindoPublicationRecords,
  ...rodrigoPublicationRecords,
@@ -9409,7 +9407,6 @@ const gallicaPublicDomainRights =
 
 const publicationMetadata = {
   ...dancerPublicationMetadata,
-  ...larrainzarPublicationMetadata,
   ...zarcoPublicationMetadata,
   ...galindoPublicationMetadata,
  ...rodrigoPublicationMetadata,

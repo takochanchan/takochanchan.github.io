@@ -1,0 +1,53 @@
+{
+  "verified_archive_commit": "ffe074b0e3938b24c1af519b7574fbb716dcd9e3",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 965761,
+    "sha256": "a52cdccc7a5aef953f7a984fc20971a7a8e121bd64a90cd19cda876d59c25a8c",
+    "chunks": [
+      "11b5cfd7e7d8349835896a9fada6b52c992f5155",
+      "206f67ed07748b58b7f301bb915b4b70c9d50a80",
+      "cabc9b6e10e62c4c1db34921fd664f590a148c5e",
+      "2bccd5b464effa5680a7c107d91a2a74332dace9",
+      "5eef632b032a1a2654d4d312541a8b00629cb540",
+      "411020a7e9a14dc1531b20c3429d685245832b37",
+      "e13e125427e0653bc884d054448b5985c96b669e",
+      "8b798606f525fc203e96c28b6ef0d71b14f7f261",
+      "eaca254463fd4e4d59a12c0710d27542f345fd55",
+      "813283ea9757a2d19cbbd48369720d547836bbe0",
+      "669fbcee1260f7eecbd8e6137524fa4ff73b9812",
+      "4ab90eb7a3317d76a9143c91c30ee3544bb7d6fb",
+      "133a6f92051d7fa20db2fbc132a7ac171e754a7f",
+      "6d07ad8b0b08ab4ccd6361febbd9590b5136b6ba",
+      "6718b2cd96b753aa5ac7e0ee1836369177ccaf19",
+      "472e0982a87f3879188d6d3b13ddce470b862682",
+      "001ef66c6fd84d171dc0cd179c340da6ec1475e9",
+      "f62b5e59461b18b0c088a2d618a3741473837318",
+      "f7a764a59e9cb98b2a968e65068a45a120b3e018",
+      "967c7767abe38a3ccdc48387f045abaf4879a538",
+      "b3faff0fbf650ae84e7d7ab5a1440d8870ada3c3",
+      "2b38ce4dc9cb6c5532af341dcad5081d8f2517e4",
+      "9f1f6a66e3e2054cf2667cf865fc1ec5db99fc04",
+      "125e0f364a755426bd5c245ed81d086033584213",
+      "b334a887f5605f309d455fdf41fcb67ac0d79b95",
+      "920bd912d5bcaa72c01d10a27712ae50605a5fa5",
+      "2a4cef1a273dae472824e3d88a7d727944b1f3f5",
+      "585bb0a9c3fa4a7fb2b341ec02f7b9cfd2965c17",
+      "70a599dc65b208f686ea0288fb34f3e161710e43",
+      "5dc63132319d4e67c35cd203994b3c7a5ba0cdec"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.pdf",
+      "size": 1096624,
+      "sha256": "7d22d6328923bcb65257e41cc686ddb70089c23671abaa477cc1e490f900114f"
+    },
+    {
+      "filename": "Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
+      "size": 137750,
+      "sha256": "0fe5ea96b5695083a33792ba77cf948fa9abf26b2ec744a3e705ca1ebc63ce32"
+    }
+  ],
+  "source_site_commit": "49a86cb4add3c8afa198e4b84c3fd06b4435352b"
+}
