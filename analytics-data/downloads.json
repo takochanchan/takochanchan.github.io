@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-24",
-  "updatedAt": "2026-10-24T22:30:52.228Z",
+  "endDate": "2026-10-25",
+  "updatedAt": "2026-10-25T22:36:04.183Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7847,6 +7847,150 @@
       "slug": "gagini-marques-talamanca-obras-dramaticas-1905",
       "title": "タラマンカ侯爵",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_109ba50a657556fb",
+      "name": "Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.pdf",
+      "slug": "estrada-descripcion-zapotitlan-suchitepeques-1579",
+      "title": "サポティトランとスチテペケスの記述",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2333a73f7ce9b539",
+      "name": "Juan_de_Estrada_Descripcion_de_Zapotitlan_y_Suchitepeques_1579_Japanese_Translation.epub",
+      "slug": "estrada-descripcion-zapotitlan-suchitepeques-1579",
+      "title": "サポティトランとスチテペケスの記述",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fb8210ca78509e17",
+      "name": "Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.pdf",
+      "slug": "dancer-fort-san-juan-1781",
+      "title": "サン・フアン砦遠征略史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d4547258b15cb47d",
+      "name": "Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
+      "slug": "dancer-fort-san-juan-1781",
+      "title": "サン・フアン砦遠征略史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d792224cd484580c",
+      "name": "Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.pdf",
+      "slug": "larrainzar-revolucion-guatemala-1873",
+      "title": "グアテマラ革命",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2de9b8f87d988e58",
+      "name": "Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
+      "slug": "larrainzar-revolucion-guatemala-1873",
+      "title": "グアテマラ革命",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d434dbb40c83eb7b",
+      "name": "Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.pdf",
+      "slug": "consulado-guatemala-apuntamientos-1811",
+      "title": "グアテマラ王国の農業と商業に関する覚書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_8f2009865ab00ab9",
+      "name": "Real_Consulado_Guatemala_Apuntamientos_1811_Japanese_Translation.epub",
+      "slug": "consulado-guatemala-apuntamientos-1811",
+      "title": "グアテマラ王国の農業と商業に関する覚書",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_c210b468c2be4828",
+      "name": "Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.pdf",
+      "slug": "zarco-historia-congreso-1856-1857",
+      "title": "1856–1857年制憲議会史",
+      "volumeLabel": "1856–1857年制憲議会史 第I巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_8e57b1a96eb2950c",
+      "name": "Francisco_Zarco_Historia_Congreso_1856_1857_Vol1_Japanese.epub",
+      "slug": "zarco-historia-congreso-1856-1857",
+      "title": "1856–1857年制憲議会史",
+      "volumeLabel": "1856–1857年制憲議会史 第I巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d4ddff3079e4071b",
+      "name": "Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
+      "slug": "zarco-historia-congreso-1856-1857",
+      "title": "1856–1857年制憲議会史",
+      "volumeLabel": "1856–1857年制憲議会史 第II巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_61c1b5ef4a1cbad9",
+      "name": "Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.epub",
+      "slug": "zarco-historia-congreso-1856-1857",
+      "title": "1856–1857年制憲議会史",
+      "volumeLabel": "1856–1857年制憲議会史 第II巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5b246598f5d1e5fd",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVI_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第16巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_eaea784357b6fa9f",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVI_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第16巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d3d715e733ff8948",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVII_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第17巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_03b03b83e093d1ac",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVII_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第17巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a21a5b4336f86ea7",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVIII_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第18巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_4e7f6e94f3df0ccd",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XVIII_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第18巻",
       "format": "epub"
     }
   ],
