@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "40bebf8598ff3a87ad783b57d823860747675f4c",
+  "archive_commit": "83e7f4b6c1449e75e493c1392f7b214e6d7f9eb6",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -423,7 +423,9 @@
     "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx",
     "larrainzar-revolucion-guatemala-1873": "publications/larrainzar-revolucion-guatemala-1873/master.docx",
     "consulado-guatemala-apuntamientos-1811": "publications/consulado-guatemala-apuntamientos-1811/master.docx",
-    "estrada-descripcion-zapotitlan-suchitepeques-1579": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/master.docx"
+    "estrada-descripcion-zapotitlan-suchitepeques-1579": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/master.docx",
+    "gonzalez-davila-teatro-eclesiastico-volume-i-1649": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/master.docx",
+    "gonzalez-davila-teatro-eclesiastico-volume-ii-1655": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
