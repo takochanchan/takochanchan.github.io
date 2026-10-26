@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-25",
-  "updatedAt": "2026-10-25T22:36:04.183Z",
+  "endDate": "2026-10-26",
+  "updatedAt": "2026-10-26T23:55:39.680Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -7992,7 +7992,109 @@
       "title": "メキシコ史未刊・稀覯史料集",
       "volumeLabel": "第18巻",
       "format": "epub"
+    },
+    {
+      "key": "dl_c1cdc862cda76fc1",
+      "name": "Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.pdf",
+      "slug": "payno-mexico-financial-questions-1862",
+      "title": "メキシコとイギリス・スペイン・フランスとの財政問題",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7e8f0183ead1327b",
+      "name": "Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.epub",
+      "slug": "payno-mexico-financial-questions-1862",
+      "title": "メキシコとイギリス・スペイン・フランスとの財政問題",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1602a531405572b7",
+      "name": "Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.pdf",
+      "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+      "title": "西インド初期教会誌",
+      "volumeLabel": "西インド初期教会誌 第1巻 ヌエバ・エスパーニャ",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_de3ffcfe8eb01d9d",
+      "name": "Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.epub",
+      "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+      "title": "西インド初期教会誌",
+      "volumeLabel": "西インド初期教会誌 第1巻 ヌエバ・エスパーニャ",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0462abf0c07f0d31",
+      "name": "Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.pdf",
+      "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+      "title": "西インド初期教会誌",
+      "volumeLabel": "西インド初期教会誌 第2巻 ペルー王国",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_3c67faaaf349e56b",
+      "name": "Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.epub",
+      "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+      "title": "西インド初期教会誌",
+      "volumeLabel": "西インド初期教会誌 第2巻 ペルー王国",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1464756971de3c3d",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第19巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6530178b05c831df",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第19巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a528576b00f830c8",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第20巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_a96a0e792b18702c",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第20巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_47d42e38817d0d27",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第21巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6ddf65629338604d",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第21巻",
+      "format": "epub"
     }
   ],
-  "records": []
+  "records": [
+    {
+      "date": "2026-10-26",
+      "key": "dl_90135e31bc32d0dc",
+      "count": 1
+    }
+  ]
 }
