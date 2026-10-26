@@ -2695,7 +2695,8 @@
       "searchShard": "003",
       "author": "ヒル・ゴンサレス・ダビラ",
       "seriesVolumeNumber": 1,
-      "originalAuthor": "Gil González Dávila"
+      "originalAuthor": "Gil González Dávila",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "gonzalez-davila-teatro-eclesiastico-volume-ii-1655",
@@ -2703,7 +2704,8 @@
       "searchShard": "003",
       "author": "ヒル・ゴンサレス・ダビラ",
       "seriesVolumeNumber": 2,
-      "originalAuthor": "Gil González Dávila"
+      "originalAuthor": "Gil González Dávila",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
