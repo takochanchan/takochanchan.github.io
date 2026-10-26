@@ -8988,6 +8988,24 @@
       "url": "https://takochanchan.github.io/publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/cover.jpg",
       "size": 24102,
       "sha256": "9a37f2e333de1cc942b9386ca31b8259ebedb8a51593e877fb1e21033a9f23a1"
+    },
+    {
+      "path": "publications/payno-mexico-financial-questions-1862/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.pdf",
+      "size": 9588422,
+      "sha256": "af8bfbd54dc6e5d532d3da4f109628d886d074309289f043fa4b5736f1c9cdf7"
+    },
+    {
+      "path": "publications/payno-mexico-financial-questions-1862/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.epub",
+      "size": 466290,
+      "sha256": "32de1eb90e06334d240c74c4ecc123af0b3db16e4f405a08a472a11565f0921f"
+    },
+    {
+      "path": "publications/payno-mexico-financial-questions-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/payno-mexico-financial-questions-1862/cover.jpg",
+      "size": 153768,
+      "sha256": "c8dded29fc760c9a02c47fb03cc0430e0b3a69f80c6448d4ba972409f8dfc569"
     }
   ]
 }
