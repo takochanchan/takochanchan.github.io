@@ -1,7 +1,7 @@
 name: Transfer approved Garcia Documentos volumes19–21
 on:
   push:
-    branches: [agent/garcia-documentos-19-21-publish-20261027]
+    branches: [agent/garcia-documentos-19-21-*]
     paths: [.garcia-documentos-19-21-public-request.json]
 permissions:
   contents: write
