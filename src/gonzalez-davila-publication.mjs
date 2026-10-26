@@ -7,7 +7,7 @@ export const gonzalezDavilaPublicationRecords = [
     "author": "ヒル・ゴンサレス・ダビラ",
     "originalAuthor": "Gil González Dávila",
     "series": "TEATRO ECLESIÁSTICO DE LA PRIMITIVA IGLESIA DE LAS INDIAS OCCIDENTALES · 1649–1655",
-    "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ印刷所、1649年",
+    "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレーラ印刷所、1649年",
     "year": 1649,
     "extent": "日本語版PDF 345頁",
     "visualLabel": "日本語訳表紙",
@@ -32,7 +32,7 @@ export const gonzalezDavilaPublicationRecords = [
       "スペイン語"
     ],
     "tags": [
-      "西インド諸島",
+      "スペイン領アメリカ",
       "カトリック教会",
       "司教",
       "植民地史",
@@ -50,7 +50,7 @@ export const gonzalezDavilaPublicationRecords = [
     "author": "ヒル・ゴンサレス・ダビラ",
     "originalAuthor": "Gil González Dávila",
     "series": "TEATRO ECLESIÁSTICO DE LA PRIMITIVA IGLESIA DE LAS INDIAS OCCIDENTALES · 1649–1655",
-    "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ印刷所、1655年",
+    "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレーラ印刷所、1655年",
     "year": 1655,
     "extent": "日本語版PDF 217頁",
     "visualLabel": "日本語訳表紙",
@@ -75,7 +75,7 @@ export const gonzalezDavilaPublicationRecords = [
       "スペイン語"
     ],
     "tags": [
-      "西インド諸島",
+      "スペイン領アメリカ",
       "カトリック教会",
       "司教",
       "植民地史",

@@ -23,7 +23,7 @@ export const publicationGroupDefinitions = [
   "subtitle": "全2巻",
   "series": "TEATRO ECLESIÁSTICO DE LA PRIMITIVA IGLESIA DE LAS INDIAS OCCIDENTALES · 1649–1655",
   "year": 1649,
-  "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ印刷所、1649–1655年。全2巻。",
+  "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレーラ印刷所、1649–1655年。全2巻。",
   "extent": "全2巻・PDF計562頁",
   "description": "第1巻は、メキシコ、グアテマラ、ユカタン、カリブ海域などの教会と歴代司教を記した1649年刊の教会史。都市の成立、修道会、学校、病院、先住民布教も扱う。セビリア大学図書館所蔵本による。 第2巻は、リマをはじめ、ヌエバ・グラナダ、チャルカス、キト、チレ、パラグアイなどの教会と歴代司教を記した1655年刊の教会史。南米とパナマの宗教制度、都市、宣教を扱う。セビリア大学図書館所蔵本による。",
   "sourceEdition": "Gil González Dávila, Teatro eclesiástico de la primitiva iglesia de las Indias Occidentales: vidas de sus arzobispos, obispos y cosas memorables de sus sedes, tomo I. Madrid: Diego Díaz de la Carrera, 1649. / Gil González Dávila, Teatro eclesiástico de la primitiva iglesia de las Indias Occidentales: vidas de sus arzobispos, obispos y cosas memorables de sus sedes, tomo II. Madrid: Diego Díaz de la Carrera, 1655.",
