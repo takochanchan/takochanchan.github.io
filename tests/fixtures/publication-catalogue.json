@@ -2688,6 +2688,22 @@
       "author": "フアン・デ・エストラーダ",
       "originalAuthor": "Juan de Estrada",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "gonzalez-davila-teatro-eclesiastico-volume-i-1649",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ヒル・ゴンサレス・ダビラ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Gil González Dávila"
+    },
+    {
+      "slug": "gonzalez-davila-teatro-eclesiastico-volume-ii-1655",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ヒル・ゴンサレス・ダビラ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Gil González Dávila"
     }
   ],
   "groups": [
@@ -2814,6 +2830,14 @@
       "memberSlugs": [
         "zarco-historia-congreso-1856-1857-volume-i-1857",
         "zarco-historia-congreso-1856-1857-volume-ii-1857"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+      "memberSlugs": [
+        "gonzalez-davila-teatro-eclesiastico-volume-i-1649",
+        "gonzalez-davila-teatro-eclesiastico-volume-ii-1655"
       ],
       "seriesVolumeCount": 2
     }

@@ -7,6 +7,34 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
+  "memberSlugs": [
+    "gonzalez-davila-teatro-eclesiastico-volume-i-1649",
+    "gonzalez-davila-teatro-eclesiastico-volume-ii-1655"
+  ],
+  "volumeLabels": [
+    "西インド初期教会誌 第1巻 ヌエバ・エスパーニャ",
+    "西インド初期教会誌 第2巻 ペルー王国"
+  ],
+  "title": "西インド初期教会誌",
+  "originalTitle": "Teatro eclesiástico de la primitiva iglesia de las Indias Occidentales",
+  "author": "ヒル・ゴンサレス・ダビラ",
+  "originalAuthor": "Gil González Dávila",
+  "subtitle": "全2巻",
+  "series": "TEATRO ECLESIÁSTICO DE LA PRIMITIVA IGLESIA DE LAS INDIAS OCCIDENTALES · 1649–1655",
+  "year": 1649,
+  "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ印刷所、1649–1655年。全2巻。",
+  "extent": "全2巻・PDF計562頁",
+  "description": "第1巻は、メキシコ、グアテマラ、ユカタン、カリブ海域などの教会と歴代司教を記した1649年刊の教会史。都市の成立、修道会、学校、病院、先住民布教も扱う。セビリア大学図書館所蔵本による。 第2巻は、リマをはじめ、ヌエバ・グラナダ、チャルカス、キト、チレ、パラグアイなどの教会と歴代司教を記した1655年刊の教会史。南米とパナマの宗教制度、都市、宣教を扱う。セビリア大学図書館所蔵本による。",
+  "sourceEdition": "Gil González Dávila, Teatro eclesiástico de la primitiva iglesia de las Indias Occidentales: vidas de sus arzobispos, obispos y cosas memorables de sus sedes, tomo I. Madrid: Diego Díaz de la Carrera, 1649. / Gil González Dávila, Teatro eclesiástico de la primitiva iglesia de las Indias Occidentales: vidas de sus arzobispos, obispos y cosas memorables de sus sedes, tomo II. Madrid: Diego Díaz de la Carrera, 1655.",
+  "sourceProvider": "セビリア大学図書館（Biblioteca Universitaria de Sevilla）、Fondo Antiguo。Internet Archive公開。",
+  "sourceUrl": "https://archive.org/details/A160153",
+  "rights": "原著および1649年・1655年刊本はパブリックドメインです。底本画像はセビリア大学図書館所蔵本をInternet Archiveが公開し、各巻の公開記録にPublic Domain Mark 1.0が表示されています。翻訳版には底本画像を転載していません。",
+  "publishedDate": "2026-10-26",
+  "updatedDate": "2026-10-26",
+  "seriesVolumeCount": 2
+},
+{
   "slug": "zarco-historia-congreso-1856-1857",
   "memberSlugs": [
     "zarco-historia-congreso-1856-1857-volume-i-1857",
