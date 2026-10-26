@@ -1,0 +1,88 @@
+{
+  "verified_archive_commit": "83e7f4b6c1449e75e493c1392f7b214e6d7f9eb6",
+  "release_tag": "publications-garcia-documentos-19-21-20261027",
+  "assets": [
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+      "size": 3135225,
+      "sha256": "41f95e6e3355ebb0add032c4ef14be640187afe511844e13f0b3948193098e41"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+      "size": 1075454,
+      "sha256": "1b26823faf7b15d8535615c30b0a5ac5e69686be44a8b4a6e41dc1704bbf9d12"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+      "size": 2743816,
+      "sha256": "aba55d66681e0fe90298741f36b430cd9eea31e2277120a5e3e4e32a1d11c24b"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+      "size": 302595,
+      "sha256": "9044df407fdf685ffd07e01a334024a26cf2aa7faa6acae75e760394d6b5c1af"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+      "size": 3056532,
+      "sha256": "66ca967afac4b62431c4ed2a659d4632e5211a4d8ef768ad4b0525ef9292bb3e"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+      "size": 255846,
+      "sha256": "8f8980195c6f46c9fe63ebeae56d62a4f00feb4eb2413b8f6f7f2a19a55a5214"
+    }
+  ],
+  "bundle": {
+    "size": 7061165,
+    "sha256": "82bfc8f4250b581c3e4f429da098b952909d3f154c6c80d069be1939c4338d64",
+    "chunks": [
+      "49d904bf8708ace0d567cbeb6e7da88e13c1fd51",
+      "1fdbd0c089c3017b69539d96ddfc341faeb2e890",
+      "713d7237e613cfbb94e34f6e42bfb693ae32df64",
+      "f873bb7886b4587681a51ab99dd12eeb6641db90",
+      "4e493d11839bca82e0da4132b01c931c545ce0ac",
+      "0ee6865fd867ec5a7603d66149c77b2576a4ab96",
+      "95b5f2373e4a4091e2f06df4d39b7bc522b61fc6",
+      "39bbb4efbd451167b9311bfeeabb21ad3c5115df",
+      "487569a9741d85e6e45ce8cac6f24ba668e8bf4b",
+      "93b40c27ee27aa18c83ebb7debcf68ef4225eba7",
+      "8072efccfecc9a9dac164b4df7348b5650cc8e55",
+      "5a51f611c874ca54b054e1496bcd9f0ff1143e41",
+      "05dfb1ac385b1b2ba592464557c8bead4d62fe33",
+      "21961d7b8c5537f46c014dbb116020c787ce4032",
+      "5d7088b1d47efa4cacfa2a6c35e8c00766632eef",
+      "f72da59c46d47601de0ef99b73f23d5d44d7bcc9",
+      "515763b6339c8266e97f92e2a87f196815ff3629",
+      "4dbb84be12c7b6ea2a5fbc48cbe0ac6a78be29c7",
+      "2f497f83f7ef878eee5fadb0f4007b3e37791eb5",
+      "9acecffc199c9d644236374ff88df476e6090233",
+      "4609be69423c330a7dad565afa263c84899525c5",
+      "e18ba9cc2a1d3e30c147f27297b6968358a1c293",
+      "b8e1b980c62d9f503904cff30a19c61a5c7fbdcc",
+      "40992012fdee5de1267fe94212cb1d3a0d890308",
+      "58fd42df570b0e098693a6e8ba6ca6bea5b916be",
+      "7793bd3c06c0671b4216a146b8293aa947d0889c",
+      "cae16cdbdc1cd5400618bc39a78a8ccb0101d0cb",
+      "7a9701fb36ad137648f74f2e20d5f48ead188854",
+      "794deb343f99a495dfa45e03c4467569d37d62c6",
+      "8cdedc248b3a2dfbbee553a961c0522ec0d21d4c",
+      "b17762f4adb22b582c222c314cc9c7d54b3835f2",
+      "4115c88b53b61c48631df2486a22a33f7d20ff58",
+      "65db48c0a2f5058741d587ae5a4270b3ece1af6f",
+      "09710cf274b4493aaa0dd3cab6f15a76e3636515",
+      "c941a7745ca869a4fdda618e490baa9d1fc869e0",
+      "a22eefacfdea354453b488ccef1fd9c5035a3a8f",
+      "7684b7fb8eea287e3314f084772c400a8a05fb72",
+      "5d70cff61a136e6597e0972e97c45a12d3d4c47b",
+      "83d110b93b4a0ae19f455baf47e9838981e8cfda",
+      "3df009f8404f6e5f0c6bade4867a8dfefaaa2578"
+    ]
+  }
+}
