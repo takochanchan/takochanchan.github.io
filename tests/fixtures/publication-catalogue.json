@@ -2642,6 +2642,33 @@
       "recordClass": "document-collection"
     },
     {
+      "slug": "garcia-documentos-ineditos-mexico-v19-1908",
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+      "originalAuthor": "Félix Osores; Genaro García (ed.)",
+      "seriesVolumeNumber": 19,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v20-1908",
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 20,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v21-1908",
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+      "originalAuthor": "Félix Osores; Genaro García (ed.)",
+      "seriesVolumeNumber": 21,
+      "recordClass": "document-collection"
+    },
+    {
       "slug": "zarco-historia-congreso-1856-1857-volume-i-1857",
       "releaseTag": "publications-002",
       "recordClass": "major-work",
@@ -2813,7 +2840,10 @@
         "garcia-documentos-ineditos-mexico-v15-1907",
         "garcia-documentos-ineditos-mexico-v16-1908",
         "garcia-documentos-ineditos-mexico-v17-1908",
-        "garcia-documentos-ineditos-mexico-v18-1908"
+        "garcia-documentos-ineditos-mexico-v18-1908",
+        "garcia-documentos-ineditos-mexico-v19-1908",
+        "garcia-documentos-ineditos-mexico-v20-1908",
+        "garcia-documentos-ineditos-mexico-v21-1908"
       ],
       "seriesVolumeCount": 36
     },

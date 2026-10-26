@@ -9345,6 +9345,72 @@
         "status": "online",
         "url": "http://cdigital.dgb.uanl.mx/la/1080013505/1080013505.html"
       }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v19-1908",
+      "title": "メキシコ史未刊・稀覯史料集 第19巻 サン・イルデフォンソ学院の出身者 伝記・書誌的記録 第1部",
+      "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Primera parte",
+      "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+      "originalAuthor": "Félix Osores; Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Félix Osores, Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Primera parte. Genaro García, ed. Documentos inéditos ó muy raros para la historia de México, tomo XIX. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "ハーバード大学所蔵のGoogleデジタル化図書、Internet Archive公開。トロント大学ロバーツ図書館所蔵の同版も照合。",
+      "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl02sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。内容を描く原刊の図版1点を収録した。",
+      "publishedDate": "2026-10-27",
+      "updatedDate": "2026-10-27",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiasbiobibl02sotogoog"
+      },
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "seriesVolumeNumber": 19
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v20-1908",
+      "title": "メキシコ史未刊・稀覯史料集 第20巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第5部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Quinta parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Quinta parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XX. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+      "rights": "使用原刊は、トロント大学所蔵の1908年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi19garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+      "publishedDate": "2026-10-27",
+      "updatedDate": "2026-10-27",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi19garc"
+      },
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "seriesVolumeNumber": 20
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v21-1908",
+      "title": "メキシコ史未刊・稀覯史料集 第21巻 サン・イルデフォンソ学院の出身者 伝記・書誌的記録 第2・最終部",
+      "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Segunda parte",
+      "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+      "originalAuthor": "Félix Osores; Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+      "year": 1908,
+      "sourceEdition": "Félix Osores, Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Segunda parte. Genaro García, ed. Documentos inéditos ó muy raros para la historia de México, tomo XXI. México: Librería de la Vda. de Ch. Bouret, 1908.",
+      "sourceProvider": "ハーバード大学所蔵のGoogleデジタル化図書、Internet Archive公開。トロント大学ロバーツ図書館所蔵の同版も照合。",
+      "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl03sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+      "publishedDate": "2026-10-27",
+      "updatedDate": "2026-10-27",
+      "recordClass": "document-collection",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiasbiobibl03sotogoog"
+      },
+      "releaseTag": "publications-garcia-documentos-19-21-20261027",
+      "searchShard": "003",
+      "seriesVolumeNumber": 21
     }
   ],
   "works": [

@@ -689,6 +689,127 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "002",
     "seriesVolumeNumber": 18
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v19-1908",
+    "title": "メキシコ史未刊・稀覯史料集 第19巻 サン・イルデフォンソ学院の出身者 伝記・書誌的記録 第1部",
+    "subtitle": "史料集第19巻・1908年刊",
+    "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+    "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Primera parte",
+    "description": "フェリックス・オソレスによるサン・イルデフォンソ学院出身者の伝記・書誌集の第1部。AからJまでの人物項目を通じ、植民地期から独立後のメキシコの学問、教会、政治をたどる。",
+    "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl02sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。内容を描く原刊の図版1点を収録した。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v19-1908/cover.jpg",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v19-1908/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v19-1908/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+    "recordClass": "document-collection",
+    "releaseTag": "publications-garcia-documentos-19-21-20261027",
+    "originalAuthor": "Félix Osores; Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "extent": "日本語版PDF 281頁",
+    "visualLabel": "日本語訳表紙",
+    "pageCount": 281,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "サン・イルデフォンソ学院",
+      "伝記・書誌"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 19
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v20-1908",
+    "title": "メキシコ史未刊・稀覯史料集 第20巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第5部",
+    "subtitle": "史料集第20巻・1908年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine. Quinta parte (textos español y francés)",
+    "description": "バゼーヌ元帥文書に基づくフランス干渉史料の第5部。1864年春夏の軍事行動、共和国派指揮官の動向、マクシミリアン夫妻の到着と帝政初期の統治を収録する。",
+    "rights": "使用原刊は、トロント大学所蔵の1908年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi19garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v20-1908/cover.jpg",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v20-1908/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v20-1908/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+    "recordClass": "document-collection",
+    "releaseTag": "publications-garcia-documentos-19-21-20261027",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "extent": "日本語版PDF 249頁",
+    "visualLabel": "日本語訳表紙",
+    "pageCount": 249,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 20
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v21-1908",
+    "title": "メキシコ史未刊・稀覯史料集 第21巻 サン・イルデフォンソ学院の出身者 伝記・書誌的記録 第2・最終部",
+    "subtitle": "史料集第21巻・1908年刊",
+    "author": "フェリックス・オソレス著／ヘナロ・ガルシア編",
+    "originalTitle": "Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Segunda parte",
+    "description": "オソレスによるサン・イルデフォンソ学院出身者の伝記・書誌集の第2・最終部。LからZまでを収め、学位・官職・著述活動と、学問や教会を支えた人的つながりを記録する。",
+    "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl03sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v21-1908/cover.jpg",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v21-1908/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v21-1908/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+    "recordClass": "document-collection",
+    "releaseTag": "publications-garcia-documentos-19-21-20261027",
+    "originalAuthor": "Félix Osores; Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1908",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1908年",
+    "extent": "日本語版PDF 259頁",
+    "visualLabel": "日本語訳表紙",
+    "pageCount": 259,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "サン・イルデフォンソ学院",
+      "伝記・書誌"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 21
   }
 ];
 
@@ -836,5 +957,29 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "原著：パブリックドメイン（PD、著作権保護期間満了）。所蔵：トロント大学ロバーツ図書館。デジタル化支援：トロント大学。公開：Internet Archive。",
     "publishedDate": "2026-10-24",
     "updatedDate": "2026-10-24"
+  },
+"garcia-documentos-ineditos-mexico-v19-1908": {
+    "sourceEdition": "Félix Osores, Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Primera parte. Genaro García, ed. Documentos inéditos ó muy raros para la historia de México, tomo XIX. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "ハーバード大学所蔵のGoogleデジタル化図書、Internet Archive公開。トロント大学ロバーツ図書館所蔵の同版も照合。",
+    "sourceUrl": "https://archive.org/details/noticiasbiobibl02sotogoog",
+    "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl02sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。内容を描く原刊の図版1点を収録した。",
+    "publishedDate": "2026-10-27",
+    "updatedDate": "2026-10-27"
+  },
+  "garcia-documentos-ineditos-mexico-v20-1908": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine. Quinta parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XX. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
+    "sourceUrl": "https://archive.org/details/documentosindi19garc",
+    "rights": "使用原刊は、トロント大学所蔵の1908年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi19garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-10-27",
+    "updatedDate": "2026-10-27"
+  },
+  "garcia-documentos-ineditos-mexico-v21-1908": {
+    "sourceEdition": "Félix Osores, Noticias bio-bibliográficas de alumnos distinguidos del Colegio de San Pedro, San Pablo y San Ildefonso de México. Segunda parte. Genaro García, ed. Documentos inéditos ó muy raros para la historia de México, tomo XXI. México: Librería de la Vda. de Ch. Bouret, 1908.",
+    "sourceProvider": "ハーバード大学所蔵のGoogleデジタル化図書、Internet Archive公開。トロント大学ロバーツ図書館所蔵の同版も照合。",
+    "sourceUrl": "https://archive.org/details/noticiasbiobibl03sotogoog",
+    "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl03sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-10-27",
+    "updatedDate": "2026-10-27"
   }
 };

@@ -190,7 +190,10 @@ export const publicationGroupDefinitions = [
     "garcia-documentos-ineditos-mexico-v15-1907",
     "garcia-documentos-ineditos-mexico-v16-1908",
     "garcia-documentos-ineditos-mexico-v17-1908",
-    "garcia-documentos-ineditos-mexico-v18-1908"
+    "garcia-documentos-ineditos-mexico-v18-1908",
+    "garcia-documentos-ineditos-mexico-v19-1908",
+    "garcia-documentos-ineditos-mexico-v20-1908",
+    "garcia-documentos-ineditos-mexico-v21-1908"
   ],
   "volumeLabels": [
     "第1巻",
@@ -210,7 +213,10 @@ export const publicationGroupDefinitions = [
     "第15巻",
     "第16巻",
     "第17巻",
-    "第18巻"
+    "第18巻",
+    "第19巻",
+    "第20巻",
+    "第21巻"
   ],
   "multiAuthorSeries": true,
   "author": "ヘナロ・ガルシア編（第1〜5巻はカルロス・ペレイラとの共編）",
@@ -221,8 +227,8 @@ export const publicationGroupDefinitions = [
   "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1905–1911",
   "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1905〜1911年",
   "year": 1905,
-  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜18巻の日本語全訳を巻別PDF・EPUBで公開しています。",
-  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）、第IV〜IX巻（1906年）、第X〜XV巻（1907年）、第XVI〜XVIII巻（1908年）。",
+  "description": "ヘナロ・ガルシアらが1905〜1911年に刊行した、初刊全36巻のメキシコ史料集です。独立戦争、共和国の政治、対外戦争、フランス干渉、教会と異端審問などに関する書簡、回想録、日記、裁判記録を収めます。第1〜21巻の日本語全訳を巻別PDF・EPUBで公開しています。",
+  "sourceEdition": "Genaro García / Carlos Pereyra (eds.), Documentos inéditos ó muy raros para la historia de México, primera serie, tomos I–XXXVI, México: Librería de la Vda. de C. Bouret, 1905–1911. 日本語公開分の底本：第I〜III巻（1905年）、第IV〜IX巻（1906年）、第X〜XV巻（1907年）、第XVI〜XXI巻（1908年）。",
   "sourceProvider": "トロント大学ロバーツ図書館所蔵、トロント大学の支援でデジタル化、Internet Archive公開。",
   "sourceUrl": "https://archive.org/details/documentosindi01garc",
   "rights": "原著本文と使用刊本の編集部分はパブリックドメインです。Internet Archiveは、パブリックドメインのデジタル化図書を利用・再利用の制限なしに公開する方針を示しています。各巻の底本と利用条件は巻別書誌をご覧ください。",

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "db9f963282a5cccf662924e4fd02f90c70582892",
+  "archive_commit": "367af69e8e95c4fb8eb38aa5433be64f2c1ccf8f",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -418,6 +418,9 @@
     "garcia-documentos-ineditos-mexico-v16-1908": "publications/garcia-documentos-ineditos-mexico-v16-1908/master.docx",
     "garcia-documentos-ineditos-mexico-v17-1908": "publications/garcia-documentos-ineditos-mexico-v17-1908/master.docx",
     "garcia-documentos-ineditos-mexico-v18-1908": "publications/garcia-documentos-ineditos-mexico-v18-1908/master.docx",
+    "garcia-documentos-ineditos-mexico-v19-1908": "publications/garcia-documentos-ineditos-mexico-v19-1908/master.docx",
+    "garcia-documentos-ineditos-mexico-v20-1908": "publications/garcia-documentos-ineditos-mexico-v20-1908/master.docx",
+    "garcia-documentos-ineditos-mexico-v21-1908": "publications/garcia-documentos-ineditos-mexico-v21-1908/master.docx",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
     "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
     "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx",

@@ -9006,6 +9006,60 @@
       "url": "https://takochanchan.github.io/publications/payno-mexico-financial-questions-1862/cover.jpg",
       "size": 153768,
       "sha256": "c8dded29fc760c9a02c47fb03cc0430e0b3a69f80c6448d4ba972409f8dfc569"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v19-1908/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.pdf",
+      "size": 3135225,
+      "sha256": "41f95e6e3355ebb0add032c4ef14be640187afe511844e13f0b3948193098e41"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v19-1908/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XIX_1908_Japanese_Complete_Translation.epub",
+      "size": 1075454,
+      "sha256": "1b26823faf7b15d8535615c30b0a5ac5e69686be44a8b4a6e41dc1704bbf9d12"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v20-1908/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.pdf",
+      "size": 2743816,
+      "sha256": "aba55d66681e0fe90298741f36b430cd9eea31e2277120a5e3e4e32a1d11c24b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v20-1908/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XX_1908_Japanese_Complete_Translation.epub",
+      "size": 302595,
+      "sha256": "9044df407fdf685ffd07e01a334024a26cf2aa7faa6acae75e760394d6b5c1af"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v21-1908/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.pdf",
+      "size": 3056532,
+      "sha256": "66ca967afac4b62431c4ed2a659d4632e5211a4d8ef768ad4b0525ef9292bb3e"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v21-1908/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-garcia-documentos-19-21-20261027/Garcia_Documentos_Ineditos_Mexico_XXI_1908_Japanese_Complete_Translation.epub",
+      "size": 255846,
+      "sha256": "8f8980195c6f46c9fe63ebeae56d62a4f00feb4eb2413b8f6f7f2a19a55a5214"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v19-1908/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v19-1908/cover.jpg",
+      "size": 46011,
+      "sha256": "a2f2101a7ee66690215a5eaf7656143191fe5c6e98f01d7b466dbe1348143cd4"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v20-1908/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v20-1908/cover.jpg",
+      "size": 41678,
+      "sha256": "572112fa75c6f39b98fafd6efa19bfa28eb2ebf4d58dc5ac0ab6cbe51801ee3c"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v21-1908/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v21-1908/cover.jpg",
+      "size": 46540,
+      "sha256": "12f71eba20e6ba8e604964c0ec4e9866e9386591d36dee460325daa616742bc2"
     }
   ]
 }
