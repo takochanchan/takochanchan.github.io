@@ -59,6 +59,7 @@ import { gueguencePublicationRecords, gueguencePublicationMetadata } from "./gue
 import { palacioPublicationRecords, palacioPublicationMetadata } from "./palacio-publication.mjs";
 import { bancroftNativeRacesPublicationMetadata, bancroftNativeRacesPublicationRecords } from "./bancroft-native-races-publication.mjs";
 import { herreraPublicationRecords, herreraPublicationMetadata } from "./herrera-publication.mjs";
+import { gonzalezDavilaPublicationRecords, gonzalezDavilaPublicationMetadata } from "./gonzalez-davila-publication.mjs";
 import { createRequire } from "node:module";
 import {
   nuixPublicationMetadata,
@@ -290,6 +291,7 @@ const publicationRecords = [
   ...larrainzarPublicationRecords,
   ...consuladoPublicationRecords,
   ...zarcoPublicationRecords,
+  ...gonzalezDavilaPublicationRecords,
   ...galindoPublicationRecords,
  ...rodrigoPublicationRecords,
   ...portillaPublicationRecords,
@@ -9417,6 +9419,7 @@ const publicationMetadata = {
   ...larrainzarPublicationMetadata,
   ...consuladoPublicationMetadata,
   ...zarcoPublicationMetadata,
+  ...gonzalezDavilaPublicationMetadata,
   ...galindoPublicationMetadata,
  ...rodrigoPublicationMetadata,
   ...portillaPublicationMetadata,

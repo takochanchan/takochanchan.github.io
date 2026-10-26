@@ -8952,6 +8952,42 @@
       "url": "https://takochanchan.github.io/publications/estrada-descripcion-zapotitlan-suchitepeques-1579/cover.jpg",
       "size": 29888,
       "sha256": "5954c81465868daf83d4fe645715b1f893d1ee5cd8ceb5940e95477dec5a0fbc"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.pdf",
+      "size": 3404632,
+      "sha256": "bb1b95e46e564a4152d68117ee67c204b25e87b290bb9ade93542bc28a3f3e12"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol01_1649_Japanese_Translation.epub",
+      "size": 287378,
+      "sha256": "eb3e8f3d7a2184916ba40a7d04c71d977d3982e27ae7ad80710696dddddce399"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.pdf",
+      "size": 2382389,
+      "sha256": "e2dc43318929ec39443fb346473bf0bd3d62515921931f5ffe38147c934fee74"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gil_Gonzalez_Davila_Teatro_Eclesiastico_Vol02_1655_Japanese_Translation.epub",
+      "size": 206440,
+      "sha256": "b5703336d26f1753315cc674ef216907f64ba8dedac59754710ca9565f2e9d2e"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/cover.jpg",
+      "size": 25660,
+      "sha256": "addae5158438b2a115734e1c2cd09f9761d18792ed7ad77890e7f3cab82b68a3"
+    },
+    {
+      "path": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/cover.jpg",
+      "size": 24102,
+      "sha256": "9a37f2e333de1cc942b9386ca31b8259ebedb8a51593e877fb1e21033a9f23a1"
     }
   ]
 }
