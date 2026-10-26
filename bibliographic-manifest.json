@@ -9326,6 +9326,25 @@
         "status": "online",
         "url": "https://archive.org/details/A160154"
       }
+    },
+    {
+      "slug": "payno-mexico-financial-questions-1862",
+      "title": "メキシコとイギリス・スペイン・フランスとの財政問題",
+      "originalTitle": "México y sus cuestiones financieras con la Inglaterra, la España y la Francia",
+      "author": "マヌエル・パイノ",
+      "originalAuthor": "Manuel Payno",
+      "originalPublication": "メキシコ、イグナシオ・クンプリード印刷所、1862年。",
+      "year": 1862,
+      "sourceEdition": "Manuel Payno, México y sus cuestiones financieras con la Inglaterra, la España y la Francia. México: Imprenta de Ignacio Cumplido, 1862.",
+      "sourceProvider": "Universidad Autónoma de Nuevo León（UANL）, Colección Digital UANL。本文84–85頁の補完底本はHarvard University所蔵本（Google digitalization、Internet Archive公開）。",
+      "rights": "原著および1862年刊本はパブリックドメインです。主底本はUniversidad Autónoma de Nuevo León（UANL）所蔵のデジタル公開本です。本文84–85頁はHarvard University所蔵の同版をInternet Archiveが公開するデジタル本で補完しました。翻訳版には底本画像を転載していません。",
+      "publishedDate": "2026-10-27",
+      "updatedDate": "2026-10-27",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://cdigital.dgb.uanl.mx/la/1080013505/1080013505.html"
+      }
     }
   ],
   "works": [
