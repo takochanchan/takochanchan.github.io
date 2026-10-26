@@ -1,3 +1,4 @@
+import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
 import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
 import { larrainzarPublicationRecords, larrainzarPublicationMetadata } from "./larrainzar-publication.mjs";
@@ -286,6 +287,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...paynoPublicationRecords,
   ...estradaPublicationRecords,
   ...dancerPublicationRecords,
   ...larrainzarPublicationRecords,
@@ -9414,6 +9416,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...paynoPublicationMetadata,
   ...estradaPublicationMetadata,
   ...dancerPublicationMetadata,
   ...larrainzarPublicationMetadata,

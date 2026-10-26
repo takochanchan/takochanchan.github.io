@@ -2706,6 +2706,14 @@
       "seriesVolumeNumber": 2,
       "originalAuthor": "Gil González Dávila",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "payno-mexico-financial-questions-1862",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マヌエル・パイノ",
+      "originalAuthor": "Manuel Payno",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
