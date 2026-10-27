@@ -36,6 +36,8 @@ const site = {
   name: "中部アメリカ歴史資料 日本語翻訳アーカイブ",
   shortName: "日本語翻訳アーカイブ",
   englishName: "MIDDLE AMERICA HISTORICAL SOURCES",
+  shareImage: "/social/top-20261027.jpg",
+  shareImageAlt: "中部アメリカ歴史資料 日本語翻訳アーカイブのTOP画面。「元資料を読もう」の見出しと収録統計。",
   description:
     "中部アメリカの探検記・旅行記・考古学調査報告・一次史料を、原図版とともに日本語で公開するデジタルアーカイブ。",
 };
@@ -347,7 +349,8 @@ const documentShell = ({
   scripts = "",
   structuredData = null,
   ogType = "website",
-  image = "",
+  image = `${site.url}${site.shareImage}`,
+  imageAlt = image === `${site.url}${site.shareImage}` ? site.shareImageAlt : title,
   publishedDate = "",
   updatedDate = "",
 }) => `<!doctype html>
@@ -359,16 +362,23 @@ const documentShell = ({
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta name="theme-color" content="#101c1d">
   <meta property="og:type" content="${escapeHtml(ogType)}">
+  <meta property="og:site_name" content="${escapeHtml(site.name)}">
+  <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="${escapeHtml(title)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${escapeHtml(canonical)}">
   ${image ? `<meta property="og:image" content="${escapeHtml(image)}">` : ""}
+  ${image ? `<meta property="og:image:alt" content="${escapeHtml(imageAlt)}">` : ""}
+  ${image === `${site.url}${site.shareImage}` ? `<meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">` : ""}
   ${publishedDate ? `<meta property="article:published_time" content="${escapeHtml(publishedDate)}">` : ""}
   ${updatedDate ? `<meta property="article:modified_time" content="${escapeHtml(updatedDate)}">` : ""}
   <meta name="twitter:card" content="${image ? "summary_large_image" : "summary"}">
   <meta name="twitter:title" content="${escapeHtml(title)}">
   <meta name="twitter:description" content="${escapeHtml(description)}">
   ${image ? `<meta name="twitter:image" content="${escapeHtml(image)}">` : ""}
+  ${image ? `<meta name="twitter:image:alt" content="${escapeHtml(imageAlt)}">` : ""}
   <link rel="canonical" href="${escapeHtml(canonical)}">
   <link rel="sitemap" type="application/xml" href="${site.url}/sitemap.xml">
   <link rel="stylesheet" href="/archive.css?v=${assetVersion}-detailed-overviews-20261016">
@@ -1428,6 +1438,7 @@ await mkdir(path.join(dist, "stats"), { recursive: true });
 const analyticsReport = JSON.parse(await readFile(path.join(projectRoot, "analytics-data", "downloads.json"), "utf8"));
 await Promise.all([
   writeFile(path.join(dist, "index.html"), home),
+  cp(path.join(projectRoot, "static", "social"), path.join(dist, "social"), { recursive: true }),
   writeFile(path.join(dist, "about", "index.html"), aboutPage),
   writeFile(path.join(dist, "stats", "index.html"), statisticsPage),
   writeFile(path.join(dist, "stats", "downloads.json"), JSON.stringify(analyticsReport) + "\n"),
@@ -1578,5 +1589,6 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 
 
