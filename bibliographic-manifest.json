@@ -9411,6 +9411,25 @@
       "releaseTag": "publications-garcia-documentos-19-21-20261027",
       "searchShard": "003",
       "seriesVolumeNumber": 21
+    },
+    {
+      "slug": "nunez-ortega-mexico-japon-1923",
+      "title": "17世紀におけるメキシコと日本の政治・通商関係史",
+      "originalTitle": "Noticia histórica de las relaciones políticas y comerciales entre México y el Japón, durante el siglo XVII",
+      "author": "アンヘル・ヌニェス・オルテガ",
+      "originalAuthor": "Ángel Núñez Ortega",
+      "originalPublication": "México: Publicaciones de la Secretaría de Relaciones Exteriores, 1923.",
+      "year": 1923,
+      "sourceEdition": "Ángel Núñez Ortega, Noticia histórica de las relaciones políticas y comerciales entre México y el Japón, durante el siglo XVII. México: Publicaciones de la Secretaría de Relaciones Exteriores, Archivo Histórico Diplomático Mexicano, núm. 2, 1923.",
+      "sourceProvider": "Secretaría de Relaciones Exteriores de México, Acervo Histórico Diplomático.",
+      "rights": "原著者ヌニェス・オルテガ（1890年没）と序言・編者ペーニャ・イ・レイエス（1928年没）の著作は、日本の著作権保護期間を満了している。付録には19世紀の報告と17世紀の史料を含む。",
+      "publishedDate": "2026-10-28",
+      "updatedDate": "2026-10-28",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://portales.sre.gob.mx/acervo/images/libros/ahdm_2.pdf"
+      }
     }
   ],
   "works": [
