@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "367af69e8e95c4fb8eb38aa5433be64f2c1ccf8f",
+  "archive_commit": "beac1856f4ebad826f218cebaab65bbcec187dea",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -429,7 +429,8 @@
     "estrada-descripcion-zapotitlan-suchitepeques-1579": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/master.docx",
     "gonzalez-davila-teatro-eclesiastico-volume-i-1649": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/master.docx",
     "gonzalez-davila-teatro-eclesiastico-volume-ii-1655": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/master.docx",
-    "payno-mexico-financial-questions-1862": "publications/payno-mexico-financial-questions-1862/master.docx"
+    "payno-mexico-financial-questions-1862": "publications/payno-mexico-financial-questions-1862/master.docx",
+    "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

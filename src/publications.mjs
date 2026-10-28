@@ -1,3 +1,4 @@
+import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
 import { dancerPublicationRecords, dancerPublicationMetadata } from "./dancer-publication.mjs";
@@ -9379,6 +9380,7 @@ const publicationRecords = [
   ...herreraPublicationRecords,
   ...bancroftNativeRacesPublicationRecords,
   ...robertsonPublicationRecords,
+  ...nunezOrtegaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -12018,6 +12020,7 @@ const publicationMetadata = {
   ...herreraPublicationMetadata,
   ...bancroftNativeRacesPublicationMetadata,
   ...robertsonPublicationMetadata,
+  ...nunezOrtegaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
