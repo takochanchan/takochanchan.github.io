@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-27",
-  "updatedAt": "2026-10-27T23:47:22.428Z",
+  "endDate": "2026-10-28",
+  "updatedAt": "2026-10-29T00:01:35.379Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8087,6 +8087,22 @@
       "slug": "garcia-documentos-ineditos-mexico-1905-1911",
       "title": "メキシコ史未刊・稀覯史料集",
       "volumeLabel": "第21巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_eea84dfde52bb845",
+      "name": "Nunez_Ortega_Mexico_Japon_1923_Japanese_Translation.pdf",
+      "slug": "nunez-ortega-mexico-japon-1923",
+      "title": "17世紀におけるメキシコと日本の政治・通商関係史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_815203ca579c1017",
+      "name": "Nunez_Ortega_Mexico_Japon_1923_Japanese_Translation.epub",
+      "slug": "nunez-ortega-mexico-japon-1923",
+      "title": "17世紀におけるメキシコと日本の政治・通商関係史",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
