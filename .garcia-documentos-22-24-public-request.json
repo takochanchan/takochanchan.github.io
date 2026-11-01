@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "verified_archive_commit": "fd538e95cbf37386e55ec05f5f7a350e11820af4",
-  "source_site_commit": "5af8a4efdc7889e092d713aad3259300dc9ae5ef",
+  "source_site_commit": "eae7cc5f7c868cd42475b3759641f9bbb652bc2f",
   "release_tag": "publications-002",
   "bundle": {
     "size": 10493109,
@@ -56,6 +56,6 @@
       "sha256": "6e88962b2e66695f49c763ea34afcb6a5841529bddfc7ec3c1675c8615f56768"
     }
   ],
-  "retry_attempt": 4,
-  "retry_reason": "Validate the three frozen EPUBs in static because the site build intentionally does not copy release-backed EPUB files into dist."
+  "retry_attempt": 5,
+  "retry_reason": "Keep EPUBs release-only; validate the exact frozen bundle EPUB bytes before upload, then run full site tests with only cover files in source."
 }
