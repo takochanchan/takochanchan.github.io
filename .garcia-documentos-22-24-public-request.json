@@ -55,5 +55,7 @@
       "size": 3187575,
       "sha256": "6e88962b2e66695f49c763ea34afcb6a5841529bddfc7ec3c1675c8615f56768"
     }
-  ]
+  ],
+  "retry_attempt": 3,
+  "retry_reason": "Scope EPUB validation to the three requested Garcia Documentos volumes; full build and test remain enabled."
 }
