@@ -38,6 +38,24 @@
       "sha256": "65228c4c6080339315fbf8c465042146d05110e527a938826d538223bb17cdba"
     },
     {
+      "path": "publications/arce-libro-vida-proximo-evangelico-1762/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arce-libro-vida-proximo-evangelico-1762/cover.jpg",
+      "size": 87995,
+      "sha256": "9a59250ab56d4564849b52aaeba8be011f5a7ceb31528c274a68e4251317fb46"
+    },
+    {
+      "path": "publications/arce-libro-vida-proximo-evangelico-1762/Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.epub",
+      "size": 47056585,
+      "sha256": "7282ce71d117ce2103d7c64e8575be63f33d746a83c3b16581b02ae4bac5f190"
+    },
+    {
+      "path": "publications/arce-libro-vida-proximo-evangelico-1762/Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.pdf",
+      "size": 6524937,
+      "sha256": "f6c07528522222bb45f602ab7f58e9a2271b81c3aedf531952fc86803bcf6598"
+    },
+    {
       "path": "publications/arce-memoria-presidency-1830/cover.jpg",
       "url": "https://takochanchan.github.io/publications/arce-memoria-presidency-1830/cover.jpg",
       "size": 132072,
