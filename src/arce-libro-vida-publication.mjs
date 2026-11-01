@@ -31,7 +31,7 @@ export const arceLibroVidaPublicationMetadata = {
     sourceEdition: "Libro de la vida del proximo evangelico, el vener. padre Bernardino Alvarez, patriarcha y fundador de la sagrada religion de la charidad, y S. Hypolito Martyr en esta Nueva-España, confirmada, y aprobada por Nró. Smo. Padre el Señor Innocencio Duodecimo. Mexico: Imprenta Nueva Antuerpiana, 1762.",
     sourceProvider: "ジョン・カーター・ブラウン図書館所蔵本（請求記号 BA762 .D542L）。同館提供のInternet Archive公開資料 librodelavidadel00dazd。",
     sourceUrl: "https://archive.org/details/librodelavidadel00dazd",
-    rights: "原著（1762年刊）の本文はパブリックドメインです。図版画像は John Carter Brown Library による CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）で提供されています。Courtesy of the John Carter Brown Library. 本訳では図版周辺の撮影台を表示範囲から除いています。画像利用方針：https://jcblibrary.org/permissions/ 。日本語訳・編集・組版に独自の再利用ライセンスは設定していません。",
+    rights: "原著（1762年刊）の本文はパブリックドメインです。図版画像は John Carter Brown Library による CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）で提供されています。Courtesy of the John Carter Brown Library. 本訳では図版周辺の撮影台を表示範囲から除いています。画像利用方針：https://jcblibrary.org/permissions/。",
     publishedDate: "2026-11-01",
     updatedDate: "2026-11-01",
   },
