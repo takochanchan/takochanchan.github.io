@@ -4124,6 +4124,60 @@
       "sha256": "66ca967afac4b62431c4ed2a659d4632e5211a4d8ef768ad4b0525ef9292bb3e"
     },
     {
+      "path": "publications/garcia-documentos-ineditos-mexico-v22-1909/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v22-1909/cover.jpg",
+      "size": 72824,
+      "sha256": "32708a8aff7b84528026979c5ec81025853f0effcb981097d56adce1d1d1ac47"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v22-1909/Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+      "size": 239361,
+      "sha256": "40a9c6ec9afa221917a9243352523066ad419568a4547bbaa635e2169173f5ae"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v22-1909/Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.pdf",
+      "size": 2574899,
+      "sha256": "58e6ea16b96beae403593e37fe57ad3cd7e1b1c3184c40f301cd9b0d416f8a7b"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v23-1909/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v23-1909/cover.jpg",
+      "size": 69945,
+      "sha256": "bd8bac6d1f95740525d70bd39f50dc090b476d5ce4e5ee276be1c8e8e89a0efd"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v23-1909/Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+      "size": 1564084,
+      "sha256": "708eff372d59310d4acf40934df3ed131b1d36d051a9021b285432073280bcf0"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v23-1909/Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.pdf",
+      "size": 2609767,
+      "sha256": "bfc8c5ab6aed41ed91ef842d3c8220c1812311939e8ab5037ca2cb299749779f"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v24-1909/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-documentos-ineditos-mexico-v24-1909/cover.jpg",
+      "size": 73150,
+      "sha256": "ca549976a0b7a5a5553fd32d568a4a0b141e225451ce2883ca302b111b2a5b6a"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v24-1909/Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+      "size": 3488383,
+      "sha256": "1cfa6fecd939c8199e76e0f14bbe52e35fb29f78ff3159db9309a84a1b2a170d"
+    },
+    {
+      "path": "publications/garcia-documentos-ineditos-mexico-v24-1909/Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.pdf",
+      "size": 3187575,
+      "sha256": "6e88962b2e66695f49c763ea34afcb6a5841529bddfc7ec3c1675c8615f56768"
+    },
+    {
       "path": "publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "url": "https://takochanchan.github.io/publications/garcia-historia-bethlehemitica-1723/cover.jpg",
       "size": 103115,

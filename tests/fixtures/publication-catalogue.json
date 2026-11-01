@@ -2749,6 +2749,33 @@
       "author": "アンヘル・ヌニェス・オルテガ",
       "originalAuthor": "Ángel Núñez Ortega",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v22-1909",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 22,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v23-1909",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 23,
+      "recordClass": "document-collection"
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v24-1909",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "seriesVolumeNumber": 24,
+      "recordClass": "document-collection"
     }
   ],
   "groups": [
@@ -2851,7 +2878,10 @@
         "garcia-documentos-ineditos-mexico-v18-1908",
         "garcia-documentos-ineditos-mexico-v19-1908",
         "garcia-documentos-ineditos-mexico-v20-1908",
-        "garcia-documentos-ineditos-mexico-v21-1908"
+        "garcia-documentos-ineditos-mexico-v21-1908",
+        "garcia-documentos-ineditos-mexico-v22-1909",
+        "garcia-documentos-ineditos-mexico-v23-1909",
+        "garcia-documentos-ineditos-mexico-v24-1909"
       ],
       "seriesVolumeCount": 36
     },

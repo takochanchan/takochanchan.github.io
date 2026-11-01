@@ -9430,6 +9430,72 @@
         "status": "online",
         "url": "https://portales.sre.gob.mx/acervo/images/libros/ahdm_2.pdf"
       }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v22-1909",
+      "title": "メキシコ史未刊・稀覯史料集 第22巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第6部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+      "year": 1909,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+      "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+      "publishedDate": "2026-11-01",
+      "updatedDate": "2026-11-01",
+      "recordClass": "document-collection",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "seriesVolumeNumber": 22,
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi22garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v23-1909",
+      "title": "メキシコ史未刊・稀覯史料集 第23巻 1863年のプエブラ包囲",
+      "originalTitle": "El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+      "year": 1909,
+      "sourceEdition": "Genaro García, ed., El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente. Documentos inéditos ó muy raros para la historia de México, tomo XXIII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+      "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+      "publishedDate": "2026-11-01",
+      "updatedDate": "2026-11-01",
+      "recordClass": "document-collection",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "seriesVolumeNumber": 23,
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi22garc"
+      }
+    },
+    {
+      "slug": "garcia-documentos-ineditos-mexico-v24-1909",
+      "title": "メキシコ史未刊・稀覯史料集 第24巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第7部",
+      "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte (textos español y francés)",
+      "author": "ヘナロ・ガルシア 編",
+      "originalAuthor": "Genaro García (ed.)",
+      "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+      "year": 1909,
+      "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXIV. México: Librería de la Vda. de Ch. Bouret, 1909.",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+      "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+      "publishedDate": "2026-11-01",
+      "updatedDate": "2026-11-01",
+      "recordClass": "document-collection",
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "seriesVolumeNumber": 24,
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/documentosindi22garc"
+      }
     }
   ],
   "works": [

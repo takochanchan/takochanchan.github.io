@@ -12206,6 +12206,9 @@ const documentCollectionSlugs = new Set([
   "garcia-documentos-ineditos-mexico-v19-1908",
   "garcia-documentos-ineditos-mexico-v20-1908",
   "garcia-documentos-ineditos-mexico-v21-1908",
+  "garcia-documentos-ineditos-mexico-v22-1909",
+  "garcia-documentos-ineditos-mexico-v23-1909",
+  "garcia-documentos-ineditos-mexico-v24-1909",
 
  "rodrigo-cruz-representacion-juridica-1693",
   "garcia-documentos-ineditos-mexico-v13-1907",
