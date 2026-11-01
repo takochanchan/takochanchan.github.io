@@ -1,0 +1,32 @@
+name: Transfer approved Teatro Mexicano PDF and EPUB
+on:
+  push:
+    branches: [publication/teatro-mexicano-vetancurt-2026-11]
+    paths: [.teatro-public-request.json, scripts/.teatro-prepare.py, .github/workflows/transfer-teatro.yml]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify approved bytes and prepare release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/.teatro-prepare.py
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/.teatro-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: teatro-public-verification
+          path: teatro-public-verification.json

@@ -9150,6 +9150,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
       "size": 11245634,
       "sha256": "4b794adc38efec251040343e5f16ea4be05ff9574d3a180b5fdef9ed36cd8ce9"
+    },
+    {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "size": 1191403,
+      "sha256": "5f16f2aa4894c14403616e03ca8c9e385e431751343c929454f5a09475937582"
+    },
+    {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "size": 13358215,
+      "sha256": "d2f0b3bfd86551746f72edc02367e7398bc24c2db1dfeeefb929aa19c6986701"
+    },
+    {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
+      "size": 50358,
+      "sha256": "88c96388dbd4c0e04d80b17d759bbd2a5553e9f8f16e4ffba4e8ed14d93e29e9"
     }
   ]
 }
