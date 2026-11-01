@@ -57,7 +57,7 @@ with bundle.open("wb") as out:
     for oid in bundle_spec["chunks"]:
         blob = json.loads(subprocess.check_output(["gh", "api", f"repos/{REPO}/git/blobs/{oid}"]))
         assert blob["sha"] == oid and blob["encoding"] == "base64"
-        data = base64.b64decode(blob["content"], validate=True)
+        data = base64.b64decode(re.sub(r"\\s+", "", blob["content"]), validate=True)
         assert hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest() == oid
         assert blob["size"] == len(data)
         out.write(data)

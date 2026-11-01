@@ -2,7 +2,7 @@ name: Transfer approved Teatro Mexicano PDF and EPUB
 on:
   push:
     branches: [publication/teatro-mexicano-vetancurt-2026-11]
-    paths: [.teatro-public-request.json]
+    paths: [.teatro-public-request.json, scripts/.teatro-prepare.py, .github/workflows/transfer-teatro.yml]
 permissions:
   contents: write
 concurrency:
