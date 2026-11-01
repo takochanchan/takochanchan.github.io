@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-10-31",
-  "updatedAt": "2026-10-31T23:25:14.228Z",
+  "endDate": "2026-11-01",
+  "updatedAt": "2026-11-01T23:38:32.861Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8102,6 +8102,86 @@
       "name": "Nunez_Ortega_Mexico_Japon_1923_Japanese_Translation.epub",
       "slug": "nunez-ortega-mexico-japon-1923",
       "title": "17世紀におけるメキシコと日本の政治・通商関係史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ab320744d0b37832",
+      "name": "Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第22巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_eea28b8565fcae8b",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第22巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_71b67eb0e943ae99",
+      "name": "Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第23巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_af67d329cb436376",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第23巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_4c7ee94aa78d1528",
+      "name": "Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.pdf",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第24巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2d568167bbcfc912",
+      "name": "Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+      "slug": "garcia-documentos-ineditos-mexico-1905-1911",
+      "title": "メキシコ史未刊・稀覯史料集",
+      "volumeLabel": "第24巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_cd366522cceef174",
+      "name": "Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.pdf",
+      "slug": "arce-libro-vida-proximo-evangelico-1762",
+      "title": "福音の隣人ベルナルディーノ・アルバレスの生涯",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6a11d185e5bc09d0",
+      "name": "Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.epub",
+      "slug": "arce-libro-vida-proximo-evangelico-1762",
+      "title": "福音の隣人ベルナルディーノ・アルバレスの生涯",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_05865644d4996341",
+      "name": "Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "slug": "teatro-mexicano-vetancurt-1697-1698-ja",
+      "title": "メキシコ劇場",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_831b9895b7f1f4fb",
+      "name": "Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "slug": "teatro-mexicano-vetancurt-1697-1698-ja",
+      "title": "メキシコ劇場",
       "volumeLabel": "",
       "format": "epub"
     }
