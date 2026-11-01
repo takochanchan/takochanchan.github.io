@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "verified_archive_commit": "fd538e95cbf37386e55ec05f5f7a350e11820af4",
-  "source_site_commit": "97ec64d8b14b63e27f07098229ca3950e135c607",
+  "source_site_commit": "b98e7f21ac954d2e7ba5e34cafa949218661a4d9",
   "release_tag": "publications-002",
   "bundle": {
     "size": 10493109,
