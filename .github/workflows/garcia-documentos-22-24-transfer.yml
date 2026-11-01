@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci --no-audit --no-fund
-      - run: npm run build && python3 scripts/validate-epubs.py static --slug garcia-documentos-ineditos-mexico-v22-1909 --slug garcia-documentos-ineditos-mexico-v23-1909 --slug garcia-documentos-ineditos-mexico-v24-1909 && npm test
+      - run: npm run build && npm test
       - name: Upload and verify final PDF and EPUB files
         env:
           GH_TOKEN: ${{ github.token }}

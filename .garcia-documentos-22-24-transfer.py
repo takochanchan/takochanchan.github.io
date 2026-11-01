@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import pathlib
+import shutil
 import subprocess
 import tarfile
 import tempfile
@@ -48,6 +49,25 @@ with tarfile.open(bundle, "r:gz") as archive:
         assert member.isfile() and pathlib.PurePosixPath(member.name).name == member.name
     archive.extractall(root, filter="data")
 
+epub_slugs = {
+    "garcia-documentos-ineditos-mexico-v22-1909":
+        "Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+    "garcia-documentos-ineditos-mexico-v23-1909":
+        "Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+    "garcia-documentos-ineditos-mexico-v24-1909":
+        "Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+}
+validation_root = root / "epub-validation"
+for slug, filename in epub_slugs.items():
+    assert filename in expected
+    destination = validation_root / "publications" / slug
+    destination.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(root / filename, destination / filename)
+validation_args = ["python3", "scripts/validate-epubs.py", str(validation_root)]
+for slug in epub_slugs:
+    validation_args.extend(["--slug", slug])
+run(*validation_args)
+
 for name, item in expected.items():
     asset = root / name
     assert asset.stat().st_size == item["size"] and digest(asset) == item["sha256"]
@@ -89,6 +109,8 @@ result = {
     "bundle_size": q["bundle"]["size"],
     "bundle_sha256": q["bundle"]["sha256"],
     "assets": q["assets"],
+    "epub_validation_slugs": list(epub_slugs),
+    "epub_validation_passed": True,
     "all_uploaded_and_downloaded_bytes_verified": True,
     "checksums_file_downloaded_and_verified": True,
 }
