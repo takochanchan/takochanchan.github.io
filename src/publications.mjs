@@ -116,6 +116,10 @@ import {
   arceLibroVidaPublicationRecords,
 } from "./arce-libro-vida-publication.mjs";
 import {
+  teatroMexicanoPublicationMetadata,
+  teatroMexicanoPublicationRecords,
+} from "./teatro-mexicano-publication.mjs";
+import {
   mezaPublicationMetadata,
   mezaPublicationRecords,
 } from "./meza-publication.mjs";
@@ -9356,6 +9360,7 @@ const publicationRecords = [
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
   ...arceLibroVidaPublicationRecords,
+  ...teatroMexicanoPublicationRecords,
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
   ...henningsenOfficialReportPublicationRecords,
@@ -11997,6 +12002,7 @@ const publicationMetadata = {
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
   ...arceLibroVidaPublicationMetadata,
+  ...teatroMexicanoPublicationMetadata,
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,
   ...henningsenOfficialReportPublicationMetadata,
