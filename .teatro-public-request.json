@@ -1,0 +1,64 @@
+{
+  "slug": "teatro-mexicano-vetancurt-1697-1698-ja",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "3e9805a1b986f11804accf3eafcfc90db5a8afac",
+  "source_site_commit": "4cc15a1969f6d40d05bb09672828aee311d431e0",
+  "assets": [
+    {
+      "filename": "Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "size": 1191403,
+      "sha256": "5f16f2aa4894c14403616e03ca8c9e385e431751343c929454f5a09475937582"
+    },
+    {
+      "filename": "Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "size": 13358215,
+      "sha256": "d2f0b3bfd86551746f72edc02367e7398bc24c2db1dfeeefb929aa19c6986701"
+    }
+  ],
+  "cover": {
+    "path": "static/publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
+    "size": 50358,
+    "sha256": "88c96388dbd4c0e04d80b17d759bbd2a5553e9f8f16e4ffba4e8ed14d93e29e9"
+  },
+  "bundle": {
+    "size": 8600643,
+    "sha256": "068e3b5a0becda96e2286b741ccc7e9e64b211c56cb83c54db6cbb59e392e331",
+    "chunks": [
+      "18ac0826a849c20c498ebe4ecaa042ad133c52ac",
+      "67779ad3fe9bbc33ee8c193becd4362b1cdc7a73",
+      "775378fe2fb219de6afe84b3519136198f276209",
+      "87c05e6cdb6c27acec188d69fcbd23dceb22db8e",
+      "f45e5ab56e1e91367807b1f3cfc23d51b806b436",
+      "61be56e397a57025bc127b459aceee24585a4de7",
+      "bc943beca5ffa25487fe2827eb149fc751d9cfd2",
+      "700c59ebf17023536abf9a9672de1abe8590ba6b",
+      "46704aecf70eb4eb8bd68df3013ffda867b1cf81",
+      "2b38cb3eb779ce751a4632a56e3ff96dbecfd196",
+      "572ee16dcd625766bd1b02333d86849e456017a7",
+      "23eed71d6a8c8843bcd84c1bf7c1e09c6693df7e",
+      "d09fcbc005b770f2c6de1712b6f497b133a64ffe",
+      "0d772f36b8e13774e2199a28a19e89d09be278e8",
+      "ac583090058610e27aa84ee829344a4081fcab40",
+      "bb967d64c9f8ec3cabca8fd242a3598201ec64d0",
+      "c4c8729a414957cb6817cfd4f205e4025a9645dc",
+      "12c67a66fde77eed95ad69ddc1b722f1947fbc49",
+      "bc845c2450614f8f9087c87c5d5dad71c54e1c71",
+      "7b1e464dbae0515295f3119c3df1c364bb705e26",
+      "d3e476d4b820784ceb47d133472e83213856f5c7",
+      "d9db510cddbda6751fb591da93246191129fd016",
+      "7ab46f27be8811f0db3814bbad523a6273c74c25",
+      "720b22cc9bd4abf775d416d535f486c5c85b1985",
+      "bc166d2488b01915ca94f152b4cb649514fa70a7",
+      "68c06a35aa439ba190e8bf312cf82447723592fd",
+      "695242f265745ed57ae711360a756647426a26eb",
+      "841adbc6781bac744af3f14804f6a429c8a56f82",
+      "a36fdc19db762fbb7cc5fcda0a566cd1d090d8f0",
+      "82c556d4d13941d11b4ad3f7fab1a53a2d8c98c7",
+      "04c16ad92976b45fe1a8c95d19d3942cc4143aa6",
+      "fb9e78453cf2c17e7dd7167d59c3122b7dc73418",
+      "479da3ea7fc971445f7680c2447d1f6a8b87e1c7",
+      "d72c6779b34b0e1bd793e0c9a17ff3348f153d39",
+      "acbcdd27fa4515904eba508c2fbd9adc25ba5c17"
+    ]
+  }
+}
