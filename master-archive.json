@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "fd538e95cbf37386e55ec05f5f7a350e11820af4",
+  "archive_commit": "c555db16009a44a21e11ac7b41673917517fff0c",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -433,7 +433,8 @@
     "gonzalez-davila-teatro-eclesiastico-volume-i-1649": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/master.docx",
     "gonzalez-davila-teatro-eclesiastico-volume-ii-1655": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/master.docx",
     "payno-mexico-financial-questions-1862": "publications/payno-mexico-financial-questions-1862/master.docx",
-    "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx"
+    "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx",
+    "arce-libro-vida-proximo-evangelico-1762": "publications/arce-libro-vida-proximo-evangelico-1762/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
