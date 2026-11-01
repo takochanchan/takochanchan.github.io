@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "verified_archive_commit": "fd538e95cbf37386e55ec05f5f7a350e11820af4",
+  "source_site_commit": "97ec64d8b14b63e27f07098229ca3950e135c607",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 10493109,
+    "sha256": "e672a5c6aa94d32393c695e8fd686c4d75733f8394f62ad0813488e0cffddb86",
+    "chunks": [
+      "721fc7173bd575cfec22a7925667661e0a9afb3f",
+      "9f386219c810331a6f0892b893a4e1c24e5489a9",
+      "adac20bc5c29003768fb28de08a1ac2cf0e62953",
+      "a451576274f9598df91adc49831b86c725dfeed3",
+      "7abb5c4844e18fa06511ee302e49091ec6c9aa49",
+      "67908505e5b9f112e3d181ff73402a8f194ae8bf",
+      "9ef72f2f147685648304621d6cb7f47f90c36f01",
+      "270075384d65d07a3d6f741a4d229a8134d6a73d",
+      "aef7143ef0ba26e329a1c7dbcb9ab0f3b69066c8",
+      "2b9484f6593a0d7892095b150e3dd547ad57c2bc",
+      "ead1939295cafa6386181338043da71715680b01",
+      "82b83a397b4807be511472f442cd5e040b269308",
+      "a54ea8c9016b027b2710bd6484a9cc0b4b08d88f",
+      "ae1122723f833a0a88578fd220c0889e694f3bcd",
+      "fddae34f10c80850cb6f5437c5a1977522cc7d91"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+      "size": 1564084,
+      "sha256": "708eff372d59310d4acf40934df3ed131b1d36d051a9021b285432073280bcf0"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+      "size": 239361,
+      "sha256": "40a9c6ec9afa221917a9243352523066ad419568a4547bbaa635e2169173f5ae"
+    },
+    {
+      "filename": "Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+      "size": 3488383,
+      "sha256": "1cfa6fecd939c8199e76e0f14bbe52e35fb29f78ff3159db9309a84a1b2a170d"
+    },
+    {
+      "filename": "Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.pdf",
+      "size": 2574899,
+      "sha256": "58e6ea16b96beae403593e37fe57ad3cd7e1b1c3184c40f301cd9b0d416f8a7b"
+    },
+    {
+      "filename": "Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.pdf",
+      "size": 2609767,
+      "sha256": "bfc8c5ab6aed41ed91ef842d3c8220c1812311939e8ab5037ca2cb299749779f"
+    },
+    {
+      "filename": "Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.pdf",
+      "size": 3187575,
+      "sha256": "6e88962b2e66695f49c763ea34afcb6a5841529bddfc7ec3c1675c8615f56768"
+    }
+  ]
+}
