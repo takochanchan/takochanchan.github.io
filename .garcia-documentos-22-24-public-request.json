@@ -56,6 +56,6 @@
       "sha256": "6e88962b2e66695f49c763ea34afcb6a5841529bddfc7ec3c1675c8615f56768"
     }
   ],
-  "retry_attempt": 3,
-  "retry_reason": "Scope EPUB validation to the three requested Garcia Documentos volumes; full build and test remain enabled."
+  "retry_attempt": 4,
+  "retry_reason": "Validate the three frozen EPUBs in static because the site build intentionally does not copy release-backed EPUB files into dist."
 }
