@@ -1,0 +1,28 @@
+name: Transfer verified Garcia Documentos volumes 22-24
+on:
+  push:
+    branches: [agent/garcia-documentos-22-24-transfer-20261101]
+    paths: [.garcia-documentos-22-24-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm run test:epub && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .garcia-documentos-22-24-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: garcia-documentos-22-24-public-verification
+          path: garcia-documentos-22-24-public-verification.json

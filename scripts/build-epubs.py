@@ -396,6 +396,9 @@ DOCX_SOURCES = {
     "larde-geologia-general-centro-america-el-salvador-1924": SOURCES
     / "翻訳サイト"
     / "Jorge_Larde_Geologia_general_de_Centro_America_y_especial_de_El_Salvador_1924_Japanese_Complete_Translation.docx",
+    "garcia-documentos-ineditos-mexico-v22-1909": SOURCES / "翻訳サイト" / "Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.docx",
+    "garcia-documentos-ineditos-mexico-v23-1909": SOURCES / "翻訳サイト" / "Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.docx",
+    "garcia-documentos-ineditos-mexico-v24-1909": SOURCES / "翻訳サイト" / "Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.docx",
 }
 
 MARKDOWN_SOURCES = {

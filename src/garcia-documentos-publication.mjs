@@ -810,6 +810,147 @@ export const garciaDocumentosPublicationRecords = [
     ],
     "searchShard": "003",
     "seriesVolumeNumber": 21
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v22-1909",
+    "releaseTag": "publications-002",
+    "title": "メキシコ史未刊・稀覯史料集 第22巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第6部",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte (textos español y francés)",
+    "subtitle": "史料集第22巻・1909年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1909",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+    "year": 1909,
+    "extent": "日本語版PDF 238頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "バゼーヌ元帥の文書から、1864年のフランス軍の作戦、メキシコ帝国の政治・財政、ソノラとバハ・カリフォルニアの地理・鉱業・植民構想を収める史料集。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v22-1909/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v22-1909/Genaro_Garcia_Documentos_Vol_22_1909_Japanese_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v22-1909/Garcia_Documentos_Ineditos_Mexico_XXII_1909_Japanese_Complete_Translation.epub",
+    "pageCount": 238,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 22,
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01",
+    "recordClass": "document-collection"
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v23-1909",
+    "releaseTag": "publications-002",
+    "title": "メキシコ史未刊・稀覯史料集 第23巻 1863年のプエブラ包囲",
+    "originalTitle": "El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente",
+    "subtitle": "史料集第23巻・1909年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1909",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+    "year": 1909,
+    "extent": "日本語版PDF 228頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "コモンフォルトとデ・ラ・フエンテの文書を中心に、1862年末から1863年4月までのプエブラ防衛準備、救援軍の活動、兵站不足と共和国指導部の交渉を伝える史料集。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v23-1909/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v23-1909/Genaro_Garcia_Documentos_Vol_23_1909_Japanese_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v23-1909/Garcia_Documentos_Ineditos_Mexico_XXIII_1909_Japanese_Complete_Translation.epub",
+    "pageCount": 228,
+    "figureCount": 1,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "プエブラ包囲",
+      "コモンフォルト"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 23,
+    "sourceEdition": "Genaro García, ed., El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente. Documentos inéditos ó muy raros para la historia de México, tomo XXIII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01",
+    "recordClass": "document-collection"
+  },
+  {
+    "slug": "garcia-documentos-ineditos-mexico-v24-1909",
+    "releaseTag": "publications-002",
+    "title": "メキシコ史未刊・稀覯史料集 第24巻 バゼーヌ元帥文書によるメキシコへのフランス干渉 第7部",
+    "originalTitle": "La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte (textos español y francés)",
+    "subtitle": "史料集第24巻・1909年刊",
+    "author": "ヘナロ・ガルシア 編",
+    "originalAuthor": "Genaro García (ed.)",
+    "series": "DOCUMENTOS INÉDITOS Ó MUY RAROS PARA LA HISTORIA DE MÉXICO · 1909",
+    "originalPublication": "メキシコ、シャルル・ブーレ未亡人書店、1909年",
+    "year": 1909,
+    "extent": "日本語版PDF 234頁",
+    "visualLabel": "日本語訳表紙",
+    "description": "1864年末から1865年3月のバゼーヌ元帥文書を中心に、オアハカ攻略と占領統治、帝国財政、地方の帰順交渉、フランス軍と帝国政府の関係を収める史料集。",
+    "cover": "publications/garcia-documentos-ineditos-mexico-v24-1909/cover.jpg",
+    "pdf": "publications/garcia-documentos-ineditos-mexico-v24-1909/Genaro_Garcia_Documentos_Vol_24_1909_Japanese_Translation.pdf",
+    "epub": "publications/garcia-documentos-ineditos-mexico-v24-1909/Garcia_Documentos_Ineditos_Mexico_XXIV_1909_Japanese_Complete_Translation.epub",
+    "pageCount": 234,
+    "figureCount": 2,
+    "plateCount": 0,
+    "types": [
+      "一次史料",
+      "メキシコ史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "フランス語"
+    ],
+    "tags": [
+      "ガルシア",
+      "メキシコ史料集",
+      "フランス干渉",
+      "バゼーヌ",
+      "オアハカ"
+    ],
+    "searchShard": "003",
+    "seriesVolumeNumber": 24,
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXIV. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01",
+    "recordClass": "document-collection"
   }
 ];
 
@@ -981,5 +1122,30 @@ export const garciaDocumentosPublicationMetadata = {
     "rights": "使用原刊は、ハーバード大学所蔵の1908年版をGoogleがデジタル化し、Internet Archiveが公開した画像（識別子 noticiasbiobibl03sotogoog）である。トロント大学所蔵の同版（識別子 documentosindi19garc）も照合に用いた。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
     "publishedDate": "2026-10-27",
     "updatedDate": "2026-10-27"
+  },
+  "garcia-documentos-ineditos-mexico-v22-1909": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Sexta parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01"
+  },
+  "garcia-documentos-ineditos-mexico-v23-1909": {
+    "sourceEdition": "Genaro García, ed., El sitio de Puebla en 1863, según los archivos de Ignacio Comonfort y Juan Antonio de la Fuente. Documentos inéditos ó muy raros para la historia de México, tomo XXIII. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01"
+  },
+  "garcia-documentos-ineditos-mexico-v24-1909": {
+    "sourceEdition": "Genaro García, ed., La intervención francesa en México según el archivo del mariscal Bazaine — Séptima parte (textos español y francés). Documentos inéditos ó muy raros para la historia de México, tomo XXIV. México: Librería de la Vda. de Ch. Bouret, 1909.",
+    "sourceProvider": "トロント大学ロバーツ図書館所蔵の原刊を同大学がデジタル化し、Internet Archiveで公開。識別子 documentosindi22garc。",
+    "sourceUrl": "https://archive.org/details/documentosindi22garc",
+    "rights": "使用原刊は、トロント大学ロバーツ図書館所蔵の1909年版を同大学がデジタル化し、Internet Archiveで公開した画像（識別子 documentosindi22garc）である。原著本文と原刊の編集部分は著作権保護期間を満了している。画像提供機関の利用条件は、原著本文の権利状態とは区別される。",
+    "publishedDate": "2026-11-01",
+    "updatedDate": "2026-11-01"
   }
 };
+
