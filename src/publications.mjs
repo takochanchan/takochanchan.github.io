@@ -112,6 +112,10 @@ import {
   arceMemoriaPublicationRecords,
 } from "./arce-memoria-publication.mjs";
 import {
+  arceLibroVidaPublicationMetadata,
+  arceLibroVidaPublicationRecords,
+} from "./arce-libro-vida-publication.mjs";
+import {
   mezaPublicationMetadata,
   mezaPublicationRecords,
 } from "./meza-publication.mjs";
@@ -9351,6 +9355,7 @@ const publicationRecords = [
   ...waiknaPublicationRecords,
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
+  ...arceLibroVidaPublicationRecords,
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
   ...henningsenOfficialReportPublicationRecords,
@@ -11991,6 +11996,7 @@ const publicationMetadata = {
   ...waiknaPublicationMetadata,
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
+  ...arceLibroVidaPublicationMetadata,
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,
   ...henningsenOfficialReportPublicationMetadata,
