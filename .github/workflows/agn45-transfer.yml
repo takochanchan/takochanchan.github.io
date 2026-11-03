@@ -1,0 +1,30 @@
+name: Transfer checksum-pinned AGN Hospitales volume 45 assets
+on:
+  push:
+    branches: [agent/agn45-assets-transfer-20261103]
+    paths: ['.publication-upload-requests/agn-hospitales-volume-45-1589-1645.json']
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-agn45.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agn45-release-byte-verification
+          path: agn45-release-verification.json
