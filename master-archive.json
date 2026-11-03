@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "3e9805a1b986f11804accf3eafcfc90db5a8afac",
+  "archive_commit": "04fda9ea110c1a71331837d8fee01ad6880cd529",
   "publications": {
     "robles-diario-sucesos-notables-1853-vol-1": "publications/robles-diario-sucesos-notables-1853-vol-1/master.docx",
     "robles-diario-sucesos-notables-1853-vol-2": "publications/robles-diario-sucesos-notables-1853-vol-2/master.docx",
@@ -435,7 +435,8 @@
     "payno-mexico-financial-questions-1862": "publications/payno-mexico-financial-questions-1862/master.docx",
     "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx",
     "arce-libro-vida-proximo-evangelico-1762": "publications/arce-libro-vida-proximo-evangelico-1762/master.docx",
-    "teatro-mexicano-vetancurt-1697-1698-ja": "publications/teatro-mexicano-vetancurt-1697-1698-ja/master.docx"
+    "teatro-mexicano-vetancurt-1697-1698-ja": "publications/teatro-mexicano-vetancurt-1697-1698-ja/master.docx",
+    "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
