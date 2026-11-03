@@ -28,5 +28,5 @@
       "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
     }
   ],
-  "revalidation": "verify all requested publication bytes and update SHA256SUMS.txt preserving all existing checksums"
+  "revalidation": "Retry after correcting the archive ledger-commit pin that blocked preflight; no assets were uploaded in the failed attempt."
 }
