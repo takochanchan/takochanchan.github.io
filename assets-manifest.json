@@ -9168,6 +9168,24 @@
       "url": "https://takochanchan.github.io/publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
       "size": 50358,
       "sha256": "88c96388dbd4c0e04d80b17d759bbd2a5553e9f8f16e4ffba4e8ed14d93e29e9"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_corrected.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_corrected.pdf",
+      "size": 6241695,
+      "sha256": "0f83d1c7d041772d7d6e223c78651c92f1ca59dbe0788d06261ab0c5ea8b07ac"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_Translation.epub",
+      "size": 455754,
+      "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
+      "size": 45298,
+      "sha256": "4676156a01ac0f2eff35aba271421a4ac5129943944794cee8cdddebb222a55d"
     }
   ]
 }

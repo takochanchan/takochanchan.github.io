@@ -1,3 +1,4 @@
+import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
@@ -316,6 +317,7 @@ const publicationRecords = [
   ...bunauVarillaPublicationRecords,
   ...perignyCinqPublicationRecords,
   ...mencosPublicationRecords,
+  ...agnHospitales45PublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9448,6 +9450,7 @@ const publicationMetadata = {
   ...bunauVarillaPublicationMetadata,
   ...perignyCinqPublicationMetadata,
   ...mencosPublicationMetadata,
+  ...agnHospitales45PublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
@@ -12249,6 +12252,7 @@ const documentCollectionSlugs = new Set([
   "us-senate-central-america-correspondence-1853",
   "frus-nicaragua-mosquito-territory-1894",
   "foreign-office-mosquito-territory-1848",
+  "agn-hospitales-volume-45-1589-1645",
 ]);
 
 export const publications = publicationRecords.map((item) => {

@@ -21,6 +21,37 @@
       }
     },
     {
+      "slug": "agn-hospitales-volume-45-1589-1645",
+      "recordClass": "document-collection",
+      "title": "病院文書集 第45巻",
+      "originalTitle": "Hospitales, vol. 45",
+      "author": "複数の作成者（Archivo General de la Nación所蔵文書）",
+      "originalAuthor": "Various authors",
+      "year": 1589,
+      "originalPublication": "1589–1645年の手稿文書群（巻表紙記載の年代範囲）。Archivo General de la Nación (México) 所蔵、Hospitales, vol. 45, expedientes 1–9, ff. 1–586。",
+      "sourceEdition": "Archivo General de la Nación (México), Hospitales, vol. 45, expedientes 1–9, ff. 1–586. 巻表紙の年代表示：1589–1645年。",
+      "sourceProvider": "メキシコ国立公文書館（Archivo General de la Nación, México）、Repositorio Documental Digital。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.agn.gob.mx/arbol-jerarquico?id=2e54112f-4628-4f0f-a2d3-5e8390899f71"
+      },
+      "rights": "本訳PDF・EPUBに原画像は転載していません。原史料本文とデジタル画像の権利・利用条件は別個に扱っています。AGNは閲覧・ダウンロードを認める一方、文書遺産の内容の出版・公開・配布等には所定の指針を適用します。CCライセンスの適用は確認できていません。利用条件：https://repositorio.agn.gob.mx/condiciones-de-uso",
+      "publishedDate": "2026-11-03",
+      "updatedDate": "2026-11-03",
+      "assets": {
+        "pdf": {
+          "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_corrected.pdf",
+          "size": 6241695,
+          "sha256": "0f83d1c7d041772d7d6e223c78651c92f1ca59dbe0788d06261ab0c5ea8b07ac"
+        },
+        "epub": {
+          "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_Translation.epub",
+          "size": 455754,
+          "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
+        }
+      }
+    },
+    {
       "slug": "alva-confessionario-mayor-menor-1634",
       "recordClass": "major-work",
       "title": "ナワトル語大・小告解問答",
