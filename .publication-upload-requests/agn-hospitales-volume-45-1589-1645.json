@@ -1,0 +1,32 @@
+{
+  "slug": "agn-hospitales-volume-45-1589-1645",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "21e9c09e7aca596d9f0bceebddb36cedcb5ca5dd",
+  "bundle": {
+    "chunks": [
+      "02806a4ac98d919bc9b775074d881ebbedeb6bf4",
+      "28d49592655c5346d635cf156bfeaba6385816c2",
+      "896fb979111129a70c63c42eae55e31e0da38dc7",
+      "1ee6c5cec4411d24f66179d8a7228b09eb30973a",
+      "5395461f5842411aaacbe577da36750bff9c8b5d",
+      "3dacb87502ce14c285d2c0f6ed043c98d6d862e2"
+    ],
+    "sha256": "0b162255eaa912975f5ce20ba77b585c81036cb29e2ae4e64178a82c788f6e3c",
+    "size": 4066654
+  },
+  "assets": [
+    {
+      "filename": "AGN_Hospitales_45_Japanese_corrected.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_corrected.pdf",
+      "size": 6241695,
+      "sha256": "0f83d1c7d041772d7d6e223c78651c92f1ca59dbe0788d06261ab0c5ea8b07ac"
+    },
+    {
+      "filename": "AGN_Hospitales_45_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_Translation.epub",
+      "size": 455754,
+      "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
+    }
+  ],
+  "revalidation": "verify all requested publication bytes and update SHA256SUMS.txt preserving all existing checksums"
+}
