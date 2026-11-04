@@ -3185,3 +3185,22 @@ test("Garcia's series separates expected published volumes from future volumes",
   assert.doesNotMatch(html, /独立レビュー|段落ID|母版/);
 });
 
+
+
+test("AGN Hospitales vol. 45 catalogue card shows its confirmed extent", async () => {
+  const slug = "agn-hospitales-volume-45-1589-1645";
+  const item = publications.find(publication => publication.slug === slug);
+  assert.ok(item, `${slug}: missing publication record`);
+  assert.equal(item.extent, "日本語版PDF 825頁・原資料586葉");
+
+  const html = await readFile(path.join(dist, "index.html"), "utf8");
+  const href = `href="/publications/${slug}/"`;
+  const linkIndex = html.indexOf(href);
+  assert.notEqual(linkIndex, -1, `${slug}: missing catalogue card`);
+  const cardStart = html.lastIndexOf('<article class="record-card"', linkIndex);
+  const cardEnd = html.indexOf("</article>", linkIndex);
+  assert.ok(cardStart >= 0 && cardEnd > linkIndex, `${slug}: malformed catalogue card`);
+  const card = html.slice(cardStart, cardEnd);
+  assert.ok(card.includes("<dt>構成</dt><dd>日本語版PDF 825頁・原資料586葉</dd>"));
+  assert.doesNotMatch(card, /<dt>構成<\\/dt><dd>undefined<\\/dd>/);
+});
