@@ -3202,5 +3202,5 @@ test("AGN Hospitales vol. 45 catalogue card shows its confirmed extent", async (
   assert.ok(cardStart >= 0 && cardEnd > linkIndex, `${slug}: malformed catalogue card`);
   const card = html.slice(cardStart, cardEnd);
   assert.ok(card.includes("<dt>構成</dt><dd>日本語版PDF 825頁・原資料586葉</dd>"));
-  assert.doesNotMatch(card, /<dt>構成<\\/dt><dd>undefined<\\/dd>/);
+  assert.ok(!card.includes("<dt>構成</dt><dd>undefined</dd>"));
 });
