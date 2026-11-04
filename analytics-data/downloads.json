@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-02",
-  "updatedAt": "2026-11-03T02:22:19.205Z",
+  "endDate": "2026-11-03",
+  "updatedAt": "2026-11-04T00:38:17.667Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8182,6 +8182,22 @@
       "name": "Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
       "slug": "teatro-mexicano-vetancurt-1697-1698-ja",
       "title": "メキシコ劇場",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_206eed827a831368",
+      "name": "AGN_Hospitales_45_Japanese_corrected.pdf",
+      "slug": "agn-hospitales-volume-45-1589-1645",
+      "title": "病院文書集 第45巻",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_59107a55b1cd2840",
+      "name": "AGN_Hospitales_45_Japanese_Translation.epub",
+      "slug": "agn-hospitales-volume-45-1589-1645",
+      "title": "病院文書集 第45巻",
       "volumeLabel": "",
       "format": "epub"
     }
