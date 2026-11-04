@@ -12,6 +12,21 @@ test("every published volume has an individually written detailed overview withi
   assert.equal(Object.keys(publicationOverviews).length, cataloguePublications.reduce((count, item) => count + item.volumes.length, 0));
 });
 
+test("AGN45 has a concise synopsis and a distinct expanded detailed overview", () => {
+  const slug = "agn-hospitales-volume-45-1589-1645";
+  const publication = cataloguePublications.find(item => item.slug === slug);
+  assert.ok(publication, "AGN45 publication record exists");
+  assert.equal(
+    publication.description,
+    "メキシコ国立公文書館「Hospitales（病院）」文書群第45巻の全訳です。1589年から1645年にかけての、聖イポリト会と病院の運営、財産、保護権をめぐる命令・請願・訴訟記録などを収録します。原冊586葉を日本語訳し、判読できない箇所を注記しました。",
+  );
+  const overview = publicationOverviews[slug];
+  assert.equal(overview.split(/\n\s*\n/u).length, 5);
+  assert.ok(Array.from(overview).length <= 1000);
+  assert.notEqual(overview, publication.description);
+  assert.ok(!overview.includes(publication.description), "detailed overview does not repeat the synopsis");
+});
+
 test("overview validation accepts concise text and rejects missing, oversized, orphaned and duplicated volume text", () => {
   const catalogue = [{ slug: "work", volumes: [{ slug: "v1" }, { slug: "v2" }] }];
   const valid = { v1: "甲".repeat(900), v2: "乙".repeat(900) };
