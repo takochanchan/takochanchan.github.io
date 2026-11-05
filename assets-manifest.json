@@ -9240,6 +9240,24 @@
       "url": "https://takochanchan.github.io/publications/hipolito-regla-constituciones-1718/cover.jpg",
       "size": 29105,
       "sha256": "d4fb6ec55a43521f9045722eb22fb7faa4b609a47ad62b67a0616ff267c88069"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
+      "size": 2514104,
+      "sha256": "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
+      "size": 301970,
+      "sha256": "6a7048fb6371dff9bb81701da9545373238ac0d3e12b149cfeeb7f48f43eb574"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1749/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/hipolito-regla-constituciones-1749/cover.jpg",
+      "size": 47645,
+      "sha256": "d61d8e66ea594b440e7ed4e0359dad54cacb6f39a4cc3b8bf0ab6b2ffc6adb40"
     }
   ]
 }

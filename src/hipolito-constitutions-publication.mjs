@@ -52,7 +52,7 @@ export const hipolitoConstitutionsPublicationRecords = [
   "originalPublication": "México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
   "year": 1749,
   "extent": "日本語版PDF 253頁",
-  "description": "1749年にメキシコで刊行された、サン・イポリト慈善修道会の会憲です。聖アウグスティヌスの会則、修道共同体の運営、病院の管理と各職の任務を定めています。",
+  "description": "1749年にメキシコで刊行された、聖イポリト慈善修道会の会憲。聖アウグスティヌスの会則に続き、会員の誓願と祈り、病人・貧者の看護、客人や旅人への対応を定める。さらに修練者の受入れ、誓願、衣食住、病院財産と文書の管理、薬剤師など各職の任務を規定。総会議と選挙、総長・院長による統治や巡察、違反への刑罰と追放も扱う。18世紀の病院運営と修道共同体の制度を知るための史料である。",
   "cover": "publications/hipolito-regla-constituciones-1749/cover.jpg",
   "pdf": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
   "epub": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
@@ -91,7 +91,7 @@ export const hipolitoConstitutionsPublicationMetadata = {
     "rights": "1718年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
     "publishedDate": "2026-11-05",
     "updatedDate": "2026-11-05"
-  }
+  },
   "hipolito-regla-constituciones-1749": {
     "sourceEdition": "Hermanos de San Hipólito, Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII. México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
     "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",

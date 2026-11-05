@@ -2816,6 +2816,12 @@
       "recordClass": "major-work",
       "searchShard": "003",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1749",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -2962,9 +2968,11 @@
     {
       "slug": "hipolito-regla-constituciones",
       "memberSlugs": [
-        "hipolito-regla-constituciones-1718"
+        "hipolito-regla-constituciones-1718",
+        "hipolito-regla-constituciones-1749"
       ]
     }
   ],
   "shortAuthorCount": 48
 }
+
