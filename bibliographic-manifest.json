@@ -9648,6 +9648,37 @@
           "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
         }
       }
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1749",
+      "recordClass": "major-work",
+      "title": "イポリト会憲 1749年刊本",
+      "originalTitle": "Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII.",
+      "author": "サン・イポリト慈善修道会",
+      "originalAuthor": "Hermanos de San Hipólito",
+      "originalPublication": "México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
+      "year": 1749,
+      "sourceEdition": "Hermanos de San Hipólito, Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII. México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
+      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.unam.mx/contenidos/ficha/constituciones-de-la-sagrada-religion-de-la-charidad-de-s-hypolyto-martyr-fundada-en-las-indias-occidentales-por-el-ven-413?as=0&c=NPoYA6&d=false&i=28&q=derecho&t=search_0&v=1"
+      },
+      "rights": "1749年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "assets": {
+        "pdf": {
+          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
+          "size": 2514104,
+          "sha256": "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"
+        },
+        "epub": {
+          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
+          "size": 301970,
+          "sha256": "6a7048fb6371dff9bb81701da9545373238ac0d3e12b149cfeeb7f48f43eb574"
+        }
+      }
     }
   ],
   "works": [
