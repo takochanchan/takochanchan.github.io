@@ -124,5 +124,5 @@
       "sha256": "ab0f7904b113f0d9e64e15ab00c7712d7d64b429b34cfff52849f122bd445943"
     }
   ],
-  "revalidation": "Public site catalogue and archive commit must pass build/test before transfer; release downloads and checksum manifest are verified afterward."
+  "revalidation": "Added the volume 73 slug to documentCollectionSlugs so the site classifier matches the canonical bibliographic record; rerun build/test before the release byte transfer."
 }

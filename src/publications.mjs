@@ -12256,6 +12256,7 @@ const documentCollectionSlugs = new Set([
   "frus-nicaragua-mosquito-territory-1894",
   "foreign-office-mosquito-territory-1848",
   "agn-hospitales-volume-45-1589-1645",
+  "agn-hospitales-volume-73-1649-1773",
 ]);
 
 export const publications = publicationRecords.map((item) => {
