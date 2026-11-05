@@ -1,0 +1,30 @@
+name: Transfer checksum-pinned Hipólito 1718 assets
+on:
+  push:
+    branches: [agent/hipolito-1718-release-transfer-20261105-1439]
+    paths: ['.publication-upload-requests/hipolito-regla-constituciones-1718.json']
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-hipolito-1718.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hipolito-1718-release-byte-verification
+          path: hipolito1718-release-verification.json
