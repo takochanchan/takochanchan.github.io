@@ -15,6 +15,13 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "agn-hospitales-volume-73-1649-1773",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "複数の作成者（Archivo General de la Nación所蔵文書）",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "alva-confessionario-mayor-menor-1634",
       "recordClass": "major-work",
       "searchShard": "001"

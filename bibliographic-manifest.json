@@ -52,6 +52,37 @@
       }
     },
     {
+      "slug": "agn-hospitales-volume-73-1649-1773",
+      "recordClass": "document-collection",
+      "title": "病院文書集 第73巻",
+      "originalTitle": "Hospitales, vol. 73",
+      "author": "複数の作成者（Archivo General de la Nación所蔵文書）",
+      "originalAuthor": "Various authors",
+      "year": 1649,
+      "originalPublication": "手稿文書群（巻表紙記載の年代範囲：1649–1773年。収録文書にはそれ以前の記録の写しも含む）。Archivo General de la Nación (México) 所蔵、Hospitales, vol. 73, digital images 0001–1134.",
+      "sourceEdition": "Archivo General de la Nación (México), Hospitales, vol. 73, digital images 0001–1134. Date range printed on the volume cover: 1649–1773; some included copies reproduce earlier records.",
+      "sourceProvider": "メキシコ国立公文書館（Archivo General de la Nación, México）、Repositorio Documental Digital。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.agn.gob.mx/arbol-jerarquico?id=13c1ff17-98c5-4771-92ad-98b138e27d4e"
+      },
+      "rights": "本訳PDF・EPUBに原画像は転載していません。原史料本文とデジタル画像の権利・利用条件は別個に扱っています。AGNのデジタル文書リポジトリでは閲覧・ダウンロードが無料です。画像の出典表示、出版・複製・配布等については同館の利用条件および関連規程第VI章を参照してください。CCライセンスの適用は確認できていません。利用条件：https://repositorio.agn.gob.mx/condiciones-de-uso 規程本文：https://sidof.segob.gob.mx/notas/docFuente/5795045",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "assets": {
+        "pdf": {
+          "path": "publications/agn-hospitales-volume-73-1649-1773/AGN_Hospitales_73_Japanese.pdf",
+          "size": 9730880,
+          "sha256": "105f5113d956ea421b177c0632e7c097dcd91c6e9f7e878ead9b6f5bba7ac44d"
+        },
+        "epub": {
+          "path": "publications/agn-hospitales-volume-73-1649-1773/AGN_Hospitales_73_Japanese_Translation.epub",
+          "size": 1944072,
+          "sha256": "ab0f7904b113f0d9e64e15ab00c7712d7d64b429b34cfff52849f122bd445943"
+        }
+      }
+    },
+    {
       "slug": "alva-confessionario-mayor-menor-1634",
       "recordClass": "major-work",
       "title": "ナワトル語大・小告解問答",
