@@ -1,0 +1,60 @@
+{
+  "slug": "hipolito-regla-constituciones-1718",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "e3b1eaecc2659dce6c52a327c5c0ca2e07269059",
+  "bundle": {
+    "chunks": [
+      "79f9e700405f25595861de30d488037940c6c2d6",
+      "050361b13acf5a4f9035d790dc085557976c48d2",
+      "1f967d95d3e09562d4a55aff7e09917e309cc6df",
+      "bec62932f56f25dd3a534eda620fbc8e16eab948",
+      "7621a42c4736eaee78863b45c6651517deabc046",
+      "1c657053988d2e8753395b20d81a148029cd0b7f",
+      "be053eb9ccc66538721b6fa638f176051c09ebc0",
+      "a74dc666c71ea9f0d1708b56f7bed1928b7a4f69",
+      "1b5dbd1be04f2f788b224ff80ee4bd1f462fa6bd",
+      "1203179e3041f237879723ef85462ffd7363a3da",
+      "6e957f584a98af00829c46eed860443c1e9f48c4",
+      "f4793c2be8f6e66e9276bc2235880163d400bc4c",
+      "b43a325c5a77462359e6c181e543e0ba09458f8b",
+      "6a302a917ffa7984c6879c83d1e27c39e58fe6c5",
+      "9a1bfeedfef6ba9a53f47a8919b59d685c30040c",
+      "8e5f826efa58b12cce8bf571a4fa3f842d17858a",
+      "a6d2ca1f2166ceffce100162d7f5157b64738ee3",
+      "48bad1a3b36a84d0c25df7d6c2ae2e69fc4b00de",
+      "c3782bfb989dcc7ef7e7ac24664628a433dc7059",
+      "0a736914f3951fb630c3cd2b6d0c1ae8770cf827",
+      "f0809bfee97894ece4f4e8ec779cafb20023d433",
+      "f0409563e92a3ff43f52776e80e15d08863f385c",
+      "8680f844f2e10d32e1058cb21c1f7e75d24f4974",
+      "bd44ecaddc2e6ddf6ed8995764229f03a10687b6",
+      "840893a89883454d658dd689828b9d463ee9d6b9",
+      "fddfe0849d8b912a67dafc3e2df361ccc2da2162",
+      "165709675b5322651c74f763439848867fbccf6a",
+      "a579fb41c918703da9e5740dc26ca98370469053",
+      "6b40763df80e854c24b261047515951df03adfe8",
+      "cc96ea39c560e81e0a3eb005155abefa9ed75448",
+      "f5425f7ffced11e54969dc07fc6dc5ddf4c859c7",
+      "394a762f3ccb850b8e846b094b766a4348b971fc"
+    ],
+    "sha256": "41bd8be138010adcc8e03d311b5914554ba8bfe32cdd485f9bf7210b9b3d4401",
+    "size": 749644
+  },
+  "assets": [
+    {
+      "filename": "Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "size": 819752,
+      "sha256": "690a03a7736ecc44125e42de8b4b4e0530bca3098688466107550c07b381bd4e"
+    },
+    {
+      "filename": "Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "size": 105514,
+      "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
+    }
+  ],
+  "revalidation": "The bundle contains only the approved 1718 Japanese PDF and EPUB. No source images, DOCX, or 1749 materials are included."
+}
