@@ -28,5 +28,5 @@
       "sha256": "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"
     }
   ],
-  "revalidation": "Canonical bibliography added after failed build; approved PDF and EPUB bytes unchanged."
+  "revalidation": "Canonical bibliography and individual overview added after build diagnostics; approved PDF and EPUB bytes unchanged."
 }
