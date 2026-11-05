@@ -9234,6 +9234,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
       "size": 105514,
       "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1718/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/hipolito-regla-constituciones-1718/cover.jpg",
+      "size": 29105,
+      "sha256": "d4fb6ec55a43521f9045722eb22fb7faa4b609a47ad62b67a0616ff267c88069"
     }
   ]
 }
