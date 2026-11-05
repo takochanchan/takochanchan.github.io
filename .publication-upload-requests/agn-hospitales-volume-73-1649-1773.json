@@ -124,5 +124,5 @@
       "sha256": "ab0f7904b113f0d9e64e15ab00c7712d7d64b429b34cfff52849f122bd445943"
     }
   ],
-  "revalidation": "Added the volume 73 slug to documentCollectionSlugs so the site classifier matches the canonical bibliographic record; rerun build/test before the release byte transfer."
+  "revalidation": "Corrected document-collection classification; updated archive_commit to the verified master commit and advanced only the 57 release_fallbacks.ledger_commit references to match it. Verified all 57 fallback records against MASTER_RELEASE_LEDGER.json at that commit: status, canonical path, release tag/URL, master filename, size, and SHA-256 all match. Build/test must pass before Release transfer."
 }
