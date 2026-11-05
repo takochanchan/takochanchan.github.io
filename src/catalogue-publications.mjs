@@ -686,14 +686,15 @@ export const publicationGroupDefinitions = [
   },
   {
     "slug": "hipolito-regla-constituciones",
+    "groupType": "edition",
+    "extent": "全2版・PDF各版合計315頁",
     "memberSlugs": [
-      "hipolito-regla-constituciones-1718"
+      "hipolito-regla-constituciones-1718",
+      "hipolito-regla-constituciones-1749"
     ],
     "volumeLabels": [
-      "イポリト会則・会憲 1718年刊本"
-    ],
-    "plannedMemberSlugs": [
-      "hipolito-regla-constituciones-1749"
+      "イポリト会則・会憲 1718年刊本",
+      "イポリト会憲 1749年刊本"
     ],
     "title": "イポリト会則・会憲",
     "originalTitle": "Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España",
