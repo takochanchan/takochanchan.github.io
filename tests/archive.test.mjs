@@ -230,7 +230,7 @@ test("Hipólito editions share one stable bibliography without exposing the 1749
   assert.deepEqual(definition.memberSlugs, [activeSlug]);
   assert.deepEqual(definition.plannedMemberSlugs, [plannedSlug]);
   assert.deepEqual(publication.memberSlugs, [activeSlug]);
-  assert.deepEqual(publication.volumes.map(({ slug, volumeLabel }) => [slug, volumeLabel]), [[activeSlug, "1718年刊本"]]);
+  assert.deepEqual(publication.volumes.map(({ slug, volumeLabel }) => [slug, volumeLabel]), [[activeSlug, "イポリト会則・会憲 1718年刊本"]]);
   assert.equal(publication.plannedMemberSlugs, undefined);
   assert.equal(bibliographicAliases[activeSlug], "hipolito-regla-constituciones");
   assert.equal(bibliographicAliases[plannedSlug], undefined);

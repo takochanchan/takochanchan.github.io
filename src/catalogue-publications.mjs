@@ -690,7 +690,7 @@ export const publicationGroupDefinitions = [
       "hipolito-regla-constituciones-1718"
     ],
     "volumeLabels": [
-      "1718年刊本"
+      "イポリト会則・会憲 1718年刊本"
     ],
     "plannedMemberSlugs": [
       "hipolito-regla-constituciones-1749"
