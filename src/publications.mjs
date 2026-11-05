@@ -282,6 +282,8 @@ import {
   waiknaPublicationRecords,
 } from "./waikna-publication.mjs";
 
+import { heinePublicationMetadata, heinePublicationRecords } from "./heine-wanderbilder-publication.mjs";
+
 const require = createRequire(import.meta.url);
 const bibliographicManifest = require("../bibliographic-manifest.json");
 if (
@@ -9395,6 +9397,7 @@ const publicationRecords = [
   ...bancroftNativeRacesPublicationRecords,
   ...robertsonPublicationRecords,
   ...nunezOrtegaPublicationRecords,
+  ...heinePublicationRecords,
 ];
 
 const publicDomainRights =
@@ -12039,6 +12042,7 @@ const publicationMetadata = {
   ...bancroftNativeRacesPublicationMetadata,
   ...robertsonPublicationMetadata,
   ...nunezOrtegaPublicationMetadata,
+  ...heinePublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
