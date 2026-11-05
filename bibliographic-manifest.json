@@ -9598,6 +9598,25 @@
         "status": "online",
         "url": "https://cd.dgb.uanl.mx/handle/201504211/13715"
       }
+    },
+    {
+      "slug": "heine-wanderbilder-central-amerika-1853",
+      "title": "中央アメリカ紀行",
+      "originalTitle": "Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers",
+      "author": "ヴィルヘルム・ハイネ",
+      "originalAuthor": "Wilhelm Heine",
+      "originalPublication": "ライプツィヒ、ヘルマン・コステノーブル、1853年。",
+      "year": 1853,
+      "sourceEdition": "Wilhelm Heine, Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers. Leipzig: Hermann Costenoble, 1853.",
+      "sourceProvider": "デューク大学図書館、Harold Jantz Collection所蔵本。Internet Archive公開。",
+      "rights": "原著および1853年刊本は著作権保護期間を満了しています。底本はデューク大学図書館所蔵本をInternet Archiveが公開するデジタル記録です。同記録のメタデータには個別のライセンスURLがありません。同じ所蔵本のWikimedia Commons掲載ファイルには米国でのパブリックドメイン表示があります。日本語版には底本画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/wanderbilderausc01hein"
+      }
     }
   ],
   "works": [
