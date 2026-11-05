@@ -1,0 +1,20 @@
+name: Verify Hipolito 1749 remote search
+on:
+  push:
+    branches: [agent/hipolito-1749-publication-20261105]
+    paths: ['.github/workflows/hipolito-1749-verify-remote.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify deployed full-text search shards
+        run: npm run verify:remote-search
