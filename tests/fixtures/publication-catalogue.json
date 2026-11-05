@@ -2810,6 +2810,11 @@
       "releaseTag": "publications-002",
       "recordClass": "major-work",
       "searchShard": "003"
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1718",
+      "recordClass": "major-work",
+      "searchShard": "003"
     }
   ],
   "groups": [
@@ -2952,6 +2957,12 @@
         "gonzalez-davila-teatro-eclesiastico-volume-ii-1655"
       ],
       "seriesVolumeCount": 2
+    },
+    {
+      "slug": "hipolito-regla-constituciones",
+      "memberSlugs": [
+        "hipolito-regla-constituciones-1718"
+      ]
     }
   ],
   "shortAuthorCount": 48

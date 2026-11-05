@@ -220,6 +220,25 @@ test("split volumes share one canonical bibliography record", () => {
   assert.equal(dupaix.volumes[2].searchPdfPageSegments.length, 5);
 });
 
+test("Hipólito editions share one stable bibliography without exposing the 1749 edition", () => {
+  const activeSlug = "hipolito-regla-constituciones-1718";
+  const plannedSlug = "hipolito-regla-constituciones-1749";
+  const definition = publicationGroupDefinitions.find((group) => group.slug === "hipolito-regla-constituciones");
+  const publication = cataloguePublications.find((item) => item.slug === "hipolito-regla-constituciones");
+  assert.ok(definition);
+  assert.ok(publication);
+  assert.deepEqual(definition.memberSlugs, [activeSlug]);
+  assert.deepEqual(definition.plannedMemberSlugs, [plannedSlug]);
+  assert.deepEqual(publication.memberSlugs, [activeSlug]);
+  assert.deepEqual(publication.volumes.map(({ slug, volumeLabel }) => [slug, volumeLabel]), [[activeSlug, "1718年刊本"]]);
+  assert.equal(publication.plannedMemberSlugs, undefined);
+  assert.equal(bibliographicAliases[activeSlug], "hipolito-regla-constituciones");
+  assert.equal(bibliographicAliases[plannedSlug], undefined);
+  assert.equal(publications.some((item) => item.slug === plannedSlug), false);
+  assert.equal(cataloguePublications.some((item) => item.slug === plannedSlug || item.volumes.some((volume) => volume.slug === plannedSlug)), false);
+  assert.equal(expectedBySlug.has(plannedSlug), false);
+});
+
 test("full-text search assignments stay inside stable Pages shards", async () => {
   const config = await readSearchShardConfig(root);
   const counts = validateSearchShardAssignments(publications, config);

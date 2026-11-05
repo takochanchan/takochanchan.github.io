@@ -684,6 +684,25 @@ export const publicationGroupDefinitions = [
     publishedDate: "2026-09-06",
     updatedDate: "2026-09-06",
   },
+  {
+    "slug": "hipolito-regla-constituciones",
+    "memberSlugs": [
+      "hipolito-regla-constituciones-1718"
+    ],
+    "volumeLabels": [
+      "1718年刊本"
+    ],
+    "plannedMemberSlugs": [
+      "hipolito-regla-constituciones-1749"
+    ],
+    "title": "イポリト会則・会憲",
+    "originalTitle": "Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España",
+    "author": "サン・イポリト慈善修道会",
+    "originalAuthor": "Hermanos de San Hipólito",
+    "subtitle": "サン・イポリト慈善修道会ヌエバ・エスパーニャ管区",
+    "year": 1718,
+    "originalPublication": "México: Francisco de Rivera Calderón, en la calle de San Agustín, 1718."
+  },
 ];
 
 const releaseAsset = (filename) =>
@@ -946,11 +965,18 @@ for (const definition of publicationFileSplitDefinitions) {
 }
 
 const groupedPublications = publicationGroupDefinitions.map((definition) => {
+  const { plannedMemberSlugs = [], ...publicDefinition } = definition;
+  if (!Array.isArray(plannedMemberSlugs) ||
+      new Set(plannedMemberSlugs).size !== plannedMemberSlugs.length ||
+      plannedMemberSlugs.some((slug) => typeof slug !== "string" || !slug || unitsBySlug.has(slug) || definition.memberSlugs.includes(slug))) {
+    throw new Error(`Invalid planned publication group members: ${definition.slug}`);
+  }
   if (unitsBySlug.has(definition.slug)) {
     throw new Error(`Publication group slug collides with a unit: ${definition.slug}`);
   }
-  if (definition.memberSlugs.length < 2) {
-    throw new Error(`Publication group must contain at least two units: ${definition.slug}`);
+  if (definition.memberSlugs.length < 1 ||
+      (definition.memberSlugs.length === 1 && plannedMemberSlugs.length === 0)) {
+    throw new Error(`Publication group needs at least two active or one active plus one planned unit: ${definition.slug}`);
   }
   if (definition.memberSlugs.length !== definition.volumeLabels.length) {
     throw new Error(`Publication group labels differ: ${definition.slug}`);
@@ -981,7 +1007,7 @@ const groupedPublications = publicationGroupDefinitions.map((definition) => {
   }
   return {
     ...first,
-    ...definition,
+    ...publicDefinition,
     recordClass: first.recordClass,
     author: definition.multiAuthorSeries ? definition.author : first.author,
     originalAuthor: definition.multiAuthorSeries ? definition.originalAuthor : first.originalAuthor,

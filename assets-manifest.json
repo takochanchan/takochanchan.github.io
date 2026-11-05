@@ -9222,6 +9222,18 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wilhelm_Heine_Wanderbilder_1853_Japanese.pdf",
       "size": 1767625,
       "sha256": "42c3c9d0e8a4fd3a99a05ccdad159dc87d56badf4b28c570d0757b30843c6e03"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "size": 819752,
+      "sha256": "690a03a7736ecc44125e42de8b4b4e0530bca3098688466107550c07b381bd4e"
+    },
+    {
+      "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "size": 105514,
+      "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
     }
   ]
 }

@@ -283,6 +283,7 @@ import {
 } from "./waikna-publication.mjs";
 
 import { heinePublicationMetadata, heinePublicationRecords } from "./heine-wanderbilder-publication.mjs";
+import { hipolitoConstitutionsPublicationMetadata, hipolitoConstitutionsPublicationRecords } from "./hipolito-constitutions-publication.mjs";
 
 const require = createRequire(import.meta.url);
 const bibliographicManifest = require("../bibliographic-manifest.json");
@@ -9398,6 +9399,7 @@ const publicationRecords = [
   ...robertsonPublicationRecords,
   ...nunezOrtegaPublicationRecords,
   ...heinePublicationRecords,
+  ...hipolitoConstitutionsPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -12043,6 +12045,7 @@ const publicationMetadata = {
   ...robertsonPublicationMetadata,
   ...nunezOrtegaPublicationMetadata,
   ...heinePublicationMetadata,
+  ...hipolitoConstitutionsPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
