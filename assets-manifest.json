@@ -9204,6 +9204,24 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
       "size": 11245634,
       "sha256": "4b794adc38efec251040343e5f16ea4be05ff9574d3a180b5fdef9ed36cd8ce9"
+    },
+    {
+      "path": "publications/heine-wanderbilder-central-amerika-1853/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/heine-wanderbilder-central-amerika-1853/cover.jpg",
+      "size": 22473,
+      "sha256": "41acc6e9a010d2d515f92c0cb494276777cb16acc91bb11fef557eae832788e0"
+    },
+    {
+      "path": "publications/heine-wanderbilder-central-amerika-1853/Wilhelm_Heine_Wanderbilder_1853_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wilhelm_Heine_Wanderbilder_1853_Japanese.epub",
+      "size": 158889,
+      "sha256": "aec5d798df0b0181123461e93c13bfe151caad8dd5b01d67838bc64870637050"
+    },
+    {
+      "path": "publications/heine-wanderbilder-central-amerika-1853/Wilhelm_Heine_Wanderbilder_1853_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wilhelm_Heine_Wanderbilder_1853_Japanese.pdf",
+      "size": 1767625,
+      "sha256": "42c3c9d0e8a4fd3a99a05ccdad159dc87d56badf4b28c570d0757b30843c6e03"
     }
   ]
 }
