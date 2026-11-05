@@ -20,6 +20,42 @@
       "sha256": "b94f1f0aa99b48e3de25c195e8af9908a8fe4e65057104f8913eb8e2ae5eae6e"
     },
     {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_corrected.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_corrected.pdf",
+      "size": 6241695,
+      "sha256": "0f83d1c7d041772d7d6e223c78651c92f1ca59dbe0788d06261ab0c5ea8b07ac"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_Translation.epub",
+      "size": 455754,
+      "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
+      "size": 45298,
+      "sha256": "4676156a01ac0f2eff35aba271421a4ac5129943944794cee8cdddebb222a55d"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-73-1649-1773/AGN_Hospitales_73_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_73_Japanese_Translation.epub",
+      "size": 1944072,
+      "sha256": "ab0f7904b113f0d9e64e15ab00c7712d7d64b429b34cfff52849f122bd445943"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-73-1649-1773/AGN_Hospitales_73_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_73_Japanese.pdf",
+      "size": 9730880,
+      "sha256": "105f5113d956ea421b177c0632e7c097dcd91c6e9f7e878ead9b6f5bba7ac44d"
+    },
+    {
+      "path": "publications/agn-hospitales-volume-73-1649-1773/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/agn-hospitales-volume-73-1649-1773/cover.jpg",
+      "size": 56301,
+      "sha256": "1840516597aa845f6c2fef54c47a39f1d94200b5e670e1862082bb25fbaa7efc"
+    },
+    {
       "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "size": 4113148,
@@ -8450,6 +8486,24 @@
       "sha256": "282334d29f1fd0724f1feb656213154a785233365673312b1996a7bda9ee0c1a"
     },
     {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
+      "size": 1191403,
+      "sha256": "5f16f2aa4894c14403616e03ca8c9e385e431751343c929454f5a09475937582"
+    },
+    {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
+      "size": 13358215,
+      "sha256": "d2f0b3bfd86551746f72edc02367e7398bc24c2db1dfeeefb929aa19c6986701"
+    },
+    {
+      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
+      "size": 50358,
+      "sha256": "88c96388dbd4c0e04d80b17d759bbd2a5553e9f8f16e4ffba4e8ed14d93e29e9"
+    },
+    {
       "path": "publications/tezozomoc-cronica-mexicana-kraus-117/cover.jpg",
       "url": "https://takochanchan.github.io/publications/tezozomoc-cronica-mexicana-kraus-117/cover.jpg",
       "size": 28941,
@@ -9150,42 +9204,6 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Zarco_Historia_Congreso_1856_1857_Vol2_Japanese.pdf",
       "size": 11245634,
       "sha256": "4b794adc38efec251040343e5f16ea4be05ff9574d3a180b5fdef9ed36cd8ce9"
-    },
-    {
-      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.epub",
-      "size": 1191403,
-      "sha256": "5f16f2aa4894c14403616e03ca8c9e385e431751343c929454f5a09475937582"
-    },
-    {
-      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_de_Vetancurt_Teatro_Mexicano_1697_1698_Japanese_Translation.pdf",
-      "size": 13358215,
-      "sha256": "d2f0b3bfd86551746f72edc02367e7398bc24c2db1dfeeefb929aa19c6986701"
-    },
-    {
-      "path": "publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/teatro-mexicano-vetancurt-1697-1698-ja/cover.jpg",
-      "size": 50358,
-      "sha256": "88c96388dbd4c0e04d80b17d759bbd2a5553e9f8f16e4ffba4e8ed14d93e29e9"
-    },
-    {
-      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_corrected.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_corrected.pdf",
-      "size": 6241695,
-      "sha256": "0f83d1c7d041772d7d6e223c78651c92f1ca59dbe0788d06261ab0c5ea8b07ac"
-    },
-    {
-      "path": "publications/agn-hospitales-volume-45-1589-1645/AGN_Hospitales_45_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/AGN_Hospitales_45_Japanese_Translation.epub",
-      "size": 455754,
-      "sha256": "ce30be23c2e62ef0bb7e5b935041d635727be63b08489aebb3868f54bcf679ee"
-    },
-    {
-      "path": "publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/agn-hospitales-volume-45-1589-1645/cover.jpg",
-      "size": 45298,
-      "sha256": "4676156a01ac0f2eff35aba271421a4ac5129943944794cee8cdddebb222a55d"
     }
   ]
 }
