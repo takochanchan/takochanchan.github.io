@@ -9617,6 +9617,37 @@
         "status": "online",
         "url": "https://archive.org/details/wanderbilderausc01hein"
       }
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1718",
+      "recordClass": "major-work",
+      "title": "イポリト会則・会憲 1718年刊本",
+      "originalTitle": "Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España",
+      "author": "サン・イポリト慈善修道会",
+      "originalAuthor": "Hermanos de San Hipólito",
+      "originalPublication": "México: Francisco de Rivera Calderón, en la calle de San Agustín, 1718.",
+      "year": 1718,
+      "sourceEdition": "Hermanos de San Hipólito, Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España. Fundada en Mexico por el Venerable P. Bernardino Alvares, y confirmada por N. SS.mo P. Innocencio XII. Quien para su regimen, y govierno, diò dichas Constituciones. México: Francisco de Rivera Calderón, en la calle de San Augustin, 1718.",
+      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.unam.mx/contenidos/ficha/regla-y-constituciones-que-observa-la-sagrada-religion-de-la-charidad-titulo-del-gloriosos-martyr-san-hipolito-provin-4311?as=0&c=EaBa5y&d=false&i=2900&q=humanidades&t=search_0&v=1"
+      },
+      "rights": "1718年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "assets": {
+        "pdf": {
+          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+          "size": 819752,
+          "sha256": "690a03a7736ecc44125e42de8b4b4e0530bca3098688466107550c07b381bd4e"
+        },
+        "epub": {
+          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+          "size": 105514,
+          "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
+        }
+      }
     }
   ],
   "works": [
