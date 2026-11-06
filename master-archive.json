@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "aa9283bbb8cfe2622937f560343c065bf67575e5",
+  "archive_commit": "ba9a5a83d01ad610ebb54ef76dd997233b15a7b3",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -439,7 +439,8 @@
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
     "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
     "heine-wanderbilder-central-amerika-1853": "publications/heine-wanderbilder-central-amerika-1853/master.docx",
-    "hipolito-regla-constituciones-1718": "publications/hipolito-regla-constituciones-1718/master.docx"
+    "hipolito-regla-constituciones-1718": "publications/hipolito-regla-constituciones-1718/master.docx",
+    "galicia-manual-1766": "publications/galicia-manual-1766/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
