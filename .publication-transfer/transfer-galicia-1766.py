@@ -25,7 +25,9 @@ expected_names = {
     "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
 }
 expected = {asset["filename"]: asset for asset in request["assets"]}
+previous = {asset["filename"]: asset for asset in request["previous_assets"]}
 assert set(expected) == expected_names and len(expected) == 2
+assert set(previous) == expected_names and len(previous) == 2
 
 manifest = json.loads(pathlib.Path("assets-manifest.json").read_text())
 manifest_by_path = {asset["path"]: asset for asset in manifest["assets"]}
@@ -74,23 +76,34 @@ with tempfile.TemporaryDirectory() as tmp:
     existing = {item["name"] for page in asset_pages for item in page}
     projected = len(existing) + sum(name not in existing for name in expected) + ("SHA256SUMS.txt" not in existing)
     assert projected <= 1000, f"Projected release asset count exceeds limit: {projected}"
-    for name in expected:
-        if name not in existing:
-            subprocess.run(["gh", "release", "upload", request["release_tag"], "--repo", REPO, str(root / name)], check=True)
 
     verify = root / "verify"
     verify.mkdir()
+    existing_downloads = root / "existing"
+    existing_downloads.mkdir()
     for name, asset in expected.items():
+        replace = False
+        if name in existing:
+            subprocess.run(["gh", "release", "download", request["release_tag"], "--repo", REPO, "--pattern", name, "--dir", str(existing_downloads)], check=True)
+            previous_bytes = (existing_downloads / name).read_bytes()
+            if sha(previous_bytes) != asset["sha256"]:
+                before = previous[name]
+                assert len(previous_bytes) == before["size"] and sha(previous_bytes) == before["sha256"], "Concurrent asset revision: " + name
+                replace = True
+        if name not in existing or replace:
+            subprocess.run(["gh", "release", "upload", request["release_tag"], "--repo", REPO, "--clobber", str(root / name)], check=True)
         subprocess.run(["gh", "release", "download", request["release_tag"], "--repo", REPO, "--pattern", name, "--dir", str(verify)], check=True)
         downloaded = (verify / name).read_bytes()
         assert len(downloaded) == asset["size"] and sha(downloaded) == asset["sha256"]
 
     subprocess.run(["gh", "release", "download", request["release_tag"], "--repo", REPO, "--pattern", "SHA256SUMS.txt", "--dir", str(root)], check=True)
     sums = root / "SHA256SUMS.txt"
-    lines = [
-        line for line in sums.read_text().splitlines()
-        if line.split() and pathlib.PurePosixPath(line.split()[-1].lstrip("*")).name not in expected
-    ]
+    lines = []
+    for line in sums.read_text().splitlines():
+        fields = line.split(maxsplit=1)
+        recorded_name = fields[1].lstrip("*").rsplit("/", 1)[-1] if len(fields) == 2 else ""
+        if recorded_name not in expected:
+            lines.append(line)
     lines.extend(f'{asset["sha256"]}  {name}' for name, asset in expected.items())
     sums.write_text("\n".join(lines) + "\n")
     subprocess.run(["gh", "release", "upload", request["release_tag"], "--repo", REPO, "--clobber", str(sums)], check=True)

@@ -1,34 +1,61 @@
 {
   "slug": "galicia-manual-1766",
   "release_tag": "publications-002",
-  "verified_archive_commit": "ba9a5a83d01ad610ebb54ef76dd997233b15a7b3",
+  "verified_archive_commit": "a83e8386bc839816bfbb541b365ebfee738c467c",
   "bundle": {
     "chunks": [
-      "0d9f09b2074b5e57eb6df04967d04ee929e0ca15",
-      "fc9888364b42b2b6b3517bd516dc79525cc81212",
-      "ab59ac2e17337ddbdaf3c3e37301041cde57c978",
-      "27bc0de74f09778d8e885c9185410667b464ced1",
-      "6b71be6bc19a9038e7d19867060b3efbb9db52a8",
-      "eeefa9a10b35466e4b54723d626f7f96fe495027",
-      "f489e446a177c32d6598c2fe413f44fddfe93485",
-      "c9a7b94c80e164b4bb7892e9c6e610c034126701",
-      "9c1769ee355ae238bae4f2ffbc1adb6a166128b1"
+      "0a9c1e0ab8f815b3083fcc88b1545bb3700175dd",
+      "17715f3f273e63993103af554ff409daf9b27827",
+      "3df6c965b7d7aab7d24a6a470ed0de377e2c97b7",
+      "71a06eb42c35d597bee9e638da55f061f50dc0c4",
+      "e63978baf6159c48d0ecc05ac71825cb79775aa5",
+      "539ed67f078ea061adc314c6637c93d61e94ceca",
+      "cda708b8e7ba2365dcdb9122ff36a82ffb96fdf6",
+      "3334dc040d1b616d5bae2758c324efe17ccddcd2",
+      "d9ca93ab7108613b8d2add3e2820eb0946269cca",
+      "3d6edecd9e367d1f1f53cdda1111a3e4268ce30f",
+      "34f5d041ab01761fbd8e7d7ca78e5fff1ceae4ad",
+      "3b6fc8f817f87b887d5bee1b2215b6f3d2ca0ec8",
+      "8fa82b534a023475b00d35071b17e35af986bbce",
+      "1d84265b9f7d24cf9eb50a9265d2527d75ba51e4",
+      "a1fbd9598af5736a9a1e1db975c621bc2f896630",
+      "922041c9aace8f3480df634d05d29f40b29fe4d9",
+      "86341a49e3068c00c33668a20a38d737863a70bd",
+      "f600eacc4a7821c82e5761cbb081bd128eb2b7aa",
+      "42f9b187163108d9dce943f6cf7fbc4d7f77389e",
+      "9f3f027dc361a07ba87a876ded4d16c6bbb1e775",
+      "4f66b2989d0eb745c79497b06946401270c2d3eb",
+      "1ba9503949b627b2492919f07d63dacca9fc710d",
+      "e5e968e29ca6d30f3d556af0c0b293bd659864b8",
+      "c73349c68c28594259fc8d804c3b1d2b292a1927"
     ],
-    "sha256": "414898f82afc1781d403ab8693943a0a93db5284597392007f9125725ce2e77a",
-    "size": 5804138
+    "sha256": "504aa2089871c8a2418baf281717f9e8a3642d6d1122764e9d40033de46c3c4f",
+    "size": 5803934
   },
   "assets": [
+    {
+      "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "size": 4041425,
+      "sha256": "6dda9a34c96e9ee7f5d21339e3f0bf19e00a46cdb3aaabd80952bbd02451cbd5"
+    },
     {
       "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
       "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+      "size": 2565704,
+      "sha256": "10d8b8874bfccc5aaf6ad835407a648419fe62e7ea0d0fd2f7b6a49d91aeb24a"
+    }
+  ],
+  "previous_assets": [
+    {
+      "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
       "size": 2566370,
       "sha256": "af19a0f085fdaad507c4e8d7e7af73bf96e888a148173a3bb8e5ea68128f0b3e"
     },
     {
       "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
-      "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
       "size": 4033895,
       "sha256": "84b2cd13075a0084c683ed556eaa4e991b6905245e2f770ede5769876137f90f"
     }
