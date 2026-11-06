@@ -1957,6 +1957,25 @@
       }
     },
     {
+      "slug": "cehm-cordoba-hospital-memorial-1778",
+      "recordClass": "short-work",
+      "title": "コルドバ病院上申書",
+      "originalTitle": "Hypolitos de Cordova",
+      "author": "作者未詳",
+      "originalAuthor": "Anonymous",
+      "year": 1778,
+      "originalPublication": "手稿報告。Napalucan、1778年9月22日付。CEHM CARSO、Fondo XXVIII、Carpeta 10、Legajo 282、Documento 1、分類XXVIII.10.282.1（Clasificación 090）、目録番号39755。目録は34 fojasと記す。",
+      "sourceEdition": "Anonymous, “Hypolitos de Cordova” (as printed on the manuscript cover), manuscript report, Napalucan, 22 September 1778. Centro de Estudios de Historia de México Carso, Fondo XXVIII, Carpeta 10, Legajo 282, Documento 1, classification XXVIII.10.282.1 (Clasificación 090), catalogue record 39755. The catalogue lists 34 fojas (目録記載34葉); the CEHM digital viewer contains 130 images.",
+      "sourceProvider": "Centro de Estudios de Historia de México Carso, Fundación Carlos Slim（CEHM/CARSO）所蔵・デジタル公開。",
+      "rights": "本訳PDF・EPUBに原画像は収録していません。底本テキストの権利状態と公開デジタル画像の利用条件は区別して扱います。CEHM公式サイトには「Todos los Derechos Reservados」および©2026の表示があり、当該画像に適用される個別の自由利用ライセンス（CC等）は2026年11月6日時点で確認できませんでした。公式画像ビューアーに表示されるメキシコ連邦著作権法第148条V項に関する説明は、文書館・図書館の安全・保存目的の複製に関するもので、一般利用者への転載許諾ではありません。権利表示：https://www.cehm.org.mx/。",
+      "publishedDate": "2026-11-06",
+      "updatedDate": "2026-11-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cehm.org.mx/Buscador/FichaCompleta/39755?tipo=A"
+      }
+    },
+    {
       "slug": "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
       "recordClass": "document-collection",
       "title": "ベツレヘム会関係事件記録",

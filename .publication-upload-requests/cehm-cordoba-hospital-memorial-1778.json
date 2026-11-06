@@ -1,0 +1,36 @@
+{
+  "slug": "cehm-cordoba-hospital-memorial-1778",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "1ab25902f0f24ef77468b6fbe5374a757f55eb88",
+  "bundle": {
+    "size": 841643,
+    "sha256": "2506e9217ef3f797d4d7b78d3a0b34f3c769d08b25c44839925b521e696185e",
+    "chunks": [
+      "1cff9ffa76cd0689d7a875609b13be44636ada56",
+      "fbe6b7a3c9c930f5d3ce302fec28a26ff782c494",
+      "d9d8e894f6b5b35b76705724e4e669ab37ee9dc3",
+      "f98e2ae15c61c3e051e17077a03d56e0ab8959fa",
+      "e756fc7bf286213de90f722447ba82692982eca0",
+      "f3acbff8c36879a5126ff50745c4859007801d13",
+      "58e293ef22256c9ca69cbb908bdde861ff2329db",
+      "0ddcd0fd00050d02ad41a9da6022bb6c56e0a0c6",
+      "3496c9435fab7b50b0b6c1fb6ffd55e8b9eac0f6"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "path": "publications/cehm-cordoba-hospital-memorial-1778/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "size": 828148,
+      "sha256": "13b006c1f5cbede00dab7477dc1038f5dbecdb979e4eac7b1a5b552e23853e18"
+    },
+    {
+      "filename": "CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "path": "publications/cehm-cordoba-hospital-memorial-1778/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "size": 202252,
+      "sha256": "eeeb01a5cfc3765543cef11ffd759e4a869985df3e9cda18b4876a0f72602ef8"
+    }
+  ]
+}
