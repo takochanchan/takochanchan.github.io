@@ -3598,6 +3598,37 @@
       }
     },
     {
+      "slug": "galicia-manual-1766",
+      "recordClass": "major-work",
+      "title": "殉教者聖イポリト慈善修道会の手引書",
+      "originalTitle": "Manual, segun la reforma de nuestros santissimos padres Paulo V. y Urbano VIII. para el uso, y regimen de la Sagrada Religion de la Charidad, de S. Hypolito Martyr, provincia en esta Nueva-España, y para todos sus conventos, y hospitales.",
+      "author": "アントニオ・ミゲル・デ・ガリシア",
+      "originalAuthor": "Antonio Miguel de Galicia",
+      "year": 1766,
+      "originalPublication": "Madrid: Por Joachin Ibarra, 1766.",
+      "sourceEdition": "Antonio Miguel de Galicia, ed., Manual, segun la reforma de nuestros santissimos padres Paulo V. y Urbano VIII. para el uso, y regimen de la Sagrada Religion de la Charidad, de S. Hypolito Martyr, provincia en esta Nueva-España, y para todos sus conventos, y hospitales. Segunda impression. Madrid: Por Joachin Ibarra, 1766.",
+      "sourceProvider": "John Carter Brown Library所蔵本（BA766 .S229m）、Internet Archive公開。",
+      "rights": "1766年刊の原著は著作権保護期間を満了しています。底本画像はJohn Carter Brown Library所蔵本をInternet Archiveが公開したものです。同館は同館収録資料をCC BY 4.0で提供し、クレジット “Courtesy of the John Carter Brown Library” を推奨しています。本訳PDF・EPUBには底本の宗教的標章を含み、同館のクレジットとCC BY 4.0の表示を付しました。ライセンスは底本画像に適用され、訳文の利用条件とは区別されます。底本：https://archive.org/details/manualsegunlaref00sagr。所蔵館利用規定：https://jcblibrary.org/permissions/。ライセンス：https://creativecommons.org/licenses/by/4.0/",
+      "publishedDate": "2026-11-06",
+      "updatedDate": "2026-11-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/manualsegunlaref00sagr"
+      },
+      "assets": {
+        "pdf": {
+          "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+          "size": 2566370,
+          "sha256": "af19a0f085fdaad507c4e8d7e7af73bf96e888a148173a3bb8e5ea68128f0b3e"
+        },
+        "epub": {
+          "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+          "size": 4033895,
+          "sha256": "84b2cd13075a0084c683ed556eaa4e991b6905245e2f770ede5769876137f90f"
+        }
+      }
+    },
+    {
       "slug": "galindo-antiquities-peten-1834",
       "recordClass": "short-work",
       "title": "中央アメリカ、ペテン地方で発見された若干の古物についての短報",
@@ -4699,6 +4730,25 @@
       }
     },
     {
+      "slug": "heine-wanderbilder-central-amerika-1853",
+      "title": "中央アメリカ紀行",
+      "originalTitle": "Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers",
+      "author": "ヴィルヘルム・ハイネ",
+      "originalAuthor": "Wilhelm Heine",
+      "originalPublication": "ライプツィヒ、ヘルマン・コステノーブル、1853年。",
+      "year": 1853,
+      "sourceEdition": "Wilhelm Heine, Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers. Leipzig: Hermann Costenoble, 1853.",
+      "sourceProvider": "デューク大学図書館、Harold Jantz Collection所蔵本。Internet Archive公開。",
+      "rights": "原著および1853年刊本は著作権保護期間を満了しています。底本はデューク大学図書館所蔵本をInternet Archiveが公開するデジタル記録です。同記録のメタデータには個別のライセンスURLがありません。同じ所蔵本のWikimedia Commons掲載ファイルには米国でのパブリックドメイン表示があります。日本語版には底本画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/wanderbilderausc01hein"
+      }
+    },
+    {
       "slug": "henderson-british-honduras-1811",
       "recordClass": "major-work",
       "title": "英領ホンジュラス植民地誌",
@@ -4810,6 +4860,68 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://commons.wikimedia.org/wiki/File:Antonio_de_Herrera_D%C3%A9cadas_7_y_8.pdf"
+      }
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1718",
+      "recordClass": "major-work",
+      "title": "イポリト会則・会憲 1718年刊本",
+      "originalTitle": "Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España",
+      "author": "サン・イポリト慈善修道会",
+      "originalAuthor": "Hermanos de San Hipólito",
+      "originalPublication": "México: Francisco de Rivera Calderón, en la calle de San Agustín, 1718.",
+      "year": 1718,
+      "sourceEdition": "Hermanos de San Hipólito, Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España. Fundada en Mexico por el Venerable P. Bernardino Alvares, y confirmada por N. SS.mo P. Innocencio XII. Quien para su regimen, y govierno, diò dichas Constituciones. México: Francisco de Rivera Calderón, en la calle de San Augustin, 1718.",
+      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.unam.mx/contenidos/ficha/regla-y-constituciones-que-observa-la-sagrada-religion-de-la-charidad-titulo-del-gloriosos-martyr-san-hipolito-provin-4311?as=0&c=EaBa5y&d=false&i=2900&q=humanidades&t=search_0&v=1"
+      },
+      "rights": "1718年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "assets": {
+        "pdf": {
+          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+          "size": 819752,
+          "sha256": "690a03a7736ecc44125e42de8b4b4e0530bca3098688466107550c07b381bd4e"
+        },
+        "epub": {
+          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+          "size": 105514,
+          "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
+        }
+      }
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1749",
+      "recordClass": "major-work",
+      "title": "イポリト会憲 1749年刊本",
+      "originalTitle": "Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII.",
+      "author": "サン・イポリト慈善修道会",
+      "originalAuthor": "Hermanos de San Hipólito",
+      "originalPublication": "México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
+      "year": 1749,
+      "sourceEdition": "Hermanos de San Hipólito, Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII. México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
+      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.unam.mx/contenidos/ficha/constituciones-de-la-sagrada-religion-de-la-charidad-de-s-hypolyto-martyr-fundada-en-las-indias-occidentales-por-el-ven-413?as=0&c=NPoYA6&d=false&i=28&q=derecho&t=search_0&v=1"
+      },
+      "rights": "1749年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
+      "publishedDate": "2026-11-05",
+      "updatedDate": "2026-11-05",
+      "assets": {
+        "pdf": {
+          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
+          "size": 2514104,
+          "sha256": "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"
+        },
+        "epub": {
+          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
+          "size": 301970,
+          "sha256": "6a7048fb6371dff9bb81701da9545373238ac0d3e12b149cfeeb7f48f43eb574"
+        }
       }
     },
     {
@@ -9597,87 +9709,6 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://cd.dgb.uanl.mx/handle/201504211/13715"
-      }
-    },
-    {
-      "slug": "heine-wanderbilder-central-amerika-1853",
-      "title": "中央アメリカ紀行",
-      "originalTitle": "Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers",
-      "author": "ヴィルヘルム・ハイネ",
-      "originalAuthor": "Wilhelm Heine",
-      "originalPublication": "ライプツィヒ、ヘルマン・コステノーブル、1853年。",
-      "year": 1853,
-      "sourceEdition": "Wilhelm Heine, Wanderbilder aus Central-Amerika. Skizzen eines deutschen Malers. Leipzig: Hermann Costenoble, 1853.",
-      "sourceProvider": "デューク大学図書館、Harold Jantz Collection所蔵本。Internet Archive公開。",
-      "rights": "原著および1853年刊本は著作権保護期間を満了しています。底本はデューク大学図書館所蔵本をInternet Archiveが公開するデジタル記録です。同記録のメタデータには個別のライセンスURLがありません。同じ所蔵本のWikimedia Commons掲載ファイルには米国でのパブリックドメイン表示があります。日本語版には底本画像を転載していません。",
-      "publishedDate": "2026-11-05",
-      "updatedDate": "2026-11-05",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/wanderbilderausc01hein"
-      }
-    },
-    {
-      "slug": "hipolito-regla-constituciones-1718",
-      "recordClass": "major-work",
-      "title": "イポリト会則・会憲 1718年刊本",
-      "originalTitle": "Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España",
-      "author": "サン・イポリト慈善修道会",
-      "originalAuthor": "Hermanos de San Hipólito",
-      "originalPublication": "México: Francisco de Rivera Calderón, en la calle de San Agustín, 1718.",
-      "year": 1718,
-      "sourceEdition": "Hermanos de San Hipólito, Regla, y constituciones, que observa la sagrada religion de la Charidad, titulo del glorioso martyr San Hypolito, Provincia de la Nueva-España. Fundada en Mexico por el Venerable P. Bernardino Alvares, y confirmada por N. SS.mo P. Innocencio XII. Quien para su regimen, y govierno, diò dichas Constituciones. México: Francisco de Rivera Calderón, en la calle de San Augustin, 1718.",
-      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://repositorio.unam.mx/contenidos/ficha/regla-y-constituciones-que-observa-la-sagrada-religion-de-la-charidad-titulo-del-gloriosos-martyr-san-hipolito-provin-4311?as=0&c=EaBa5y&d=false&i=2900&q=humanidades&t=search_0&v=1"
-      },
-      "rights": "1718年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
-      "publishedDate": "2026-11-05",
-      "updatedDate": "2026-11-05",
-      "assets": {
-        "pdf": {
-          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
-          "size": 819752,
-          "sha256": "690a03a7736ecc44125e42de8b4b4e0530bca3098688466107550c07b381bd4e"
-        },
-        "epub": {
-          "path": "publications/hipolito-regla-constituciones-1718/Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
-          "size": 105514,
-          "sha256": "31f52b7fa22e560be56e3542801e783034113ea7605a0cfc11c85558da32fa6c"
-        }
-      }
-    },
-    {
-      "slug": "hipolito-regla-constituciones-1749",
-      "recordClass": "major-work",
-      "title": "イポリト会憲 1749年刊本",
-      "originalTitle": "Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII.",
-      "author": "サン・イポリト慈善修道会",
-      "originalAuthor": "Hermanos de San Hipólito",
-      "originalPublication": "México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
-      "year": 1749,
-      "sourceEdition": "Hermanos de San Hipólito, Constituciones de la sagrada religion de la charidad, de S. Hypolyto martyr: fundada en las Indias Occidentales por el venerable padre Bernardino Alvarez: confirmada por N. SS. P. Innocencio XII. México: Doña María de Ribera, Impressora del Nuevo Rezado, 1749.",
-      "sourceProvider": "Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México（UNAM）。",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://repositorio.unam.mx/contenidos/ficha/constituciones-de-la-sagrada-religion-de-la-charidad-de-s-hypolyto-martyr-fundada-en-las-indias-occidentales-por-el-ven-413?as=0&c=NPoYA6&d=false&i=28&q=derecho&t=search_0&v=1"
-      },
-      "rights": "1749年刊本の原著本文はパブリックドメインです。Biblioteca Nacional de México / Instituto de Investigaciones Bibliográficas（UNAM）はデジタル画像にCC BY-NC-ND 4.0 Internacional（2019年1月11日付）を表示しています。本訳はデジタル画像を転載していません。",
-      "publishedDate": "2026-11-05",
-      "updatedDate": "2026-11-05",
-      "assets": {
-        "pdf": {
-          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
-          "size": 2514104,
-          "sha256": "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"
-        },
-        "epub": {
-          "path": "publications/hipolito-regla-constituciones-1749/Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
-          "size": 301970,
-          "sha256": "6a7048fb6371dff9bb81701da9545373238ac0d3e12b149cfeeb7f48f43eb574"
-        }
       }
     }
   ],
