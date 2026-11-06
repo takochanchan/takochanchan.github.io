@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-04",
-  "updatedAt": "2026-11-05T00:54:47.463Z",
+  "endDate": "2026-11-05",
+  "updatedAt": "2026-11-06T00:58:00.596Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8199,6 +8199,70 @@
       "slug": "agn-hospitales-volume-45-1589-1645",
       "title": "病院文書集 第45巻",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e76f4d22dd34473b",
+      "name": "AGN_Hospitales_73_Japanese.pdf",
+      "slug": "agn-hospitales-volume-73-1649-1773",
+      "title": "病院文書集 第73巻",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7b236fc029b287dd",
+      "name": "AGN_Hospitales_73_Japanese_Translation.epub",
+      "slug": "agn-hospitales-volume-73-1649-1773",
+      "title": "病院文書集 第73巻",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_2e1593e021fe3781",
+      "name": "Wilhelm_Heine_Wanderbilder_1853_Japanese.pdf",
+      "slug": "heine-wanderbilder-central-amerika-1853",
+      "title": "中央アメリカ紀行",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_29db07755248cc3b",
+      "name": "Wilhelm_Heine_Wanderbilder_1853_Japanese.epub",
+      "slug": "heine-wanderbilder-central-amerika-1853",
+      "title": "中央アメリカ紀行",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_bc281d7bc300746d",
+      "name": "Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf",
+      "slug": "hipolito-regla-constituciones",
+      "title": "イポリト会則・会憲",
+      "volumeLabel": "イポリト会則・会憲 1718年刊本",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_da72bd9a96dc0d4f",
+      "name": "Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub",
+      "slug": "hipolito-regla-constituciones",
+      "title": "イポリト会則・会憲",
+      "volumeLabel": "イポリト会則・会憲 1718年刊本",
+      "format": "epub"
+    },
+    {
+      "key": "dl_106daadb68ace3e7",
+      "name": "Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf",
+      "slug": "hipolito-regla-constituciones",
+      "title": "イポリト会則・会憲",
+      "volumeLabel": "イポリト会憲 1749年刊本",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cda36e2c7e9f9b0d",
+      "name": "Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub",
+      "slug": "hipolito-regla-constituciones",
+      "title": "イポリト会則・会憲",
+      "volumeLabel": "イポリト会憲 1749年刊本",
       "format": "epub"
     }
   ],
