@@ -1,0 +1,31 @@
+name: Transfer checksum-pinned López testimony collection assets
+on:
+  push:
+    branches: [agent/gregorio-lopez-testimonies-mss-7819-publication-20261106]
+    paths: ['.publication-upload-requests/gregorio-lopez-testimonies-mss-7819.json']
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-gregorio-lopez-testimonies-mss-7819.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lopez-mss-7819-release-byte-verification
+          path: lopez7819-release-verification.json
+

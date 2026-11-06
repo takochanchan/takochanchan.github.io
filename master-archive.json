@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "ac868402189193f9fea61e43764cd094891696b5",
+  "archive_commit": "3b40be4f4b02c83721368c806b7d8cc1cf7e6b54",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -10,6 +10,7 @@
     "arce-libro-vida-proximo-evangelico-1762": "publications/arce-libro-vida-proximo-evangelico-1762/master.docx",
     "arce-memoria-presidency-1830": "publications/arce-memoria-presidency-1830/master.docx",
     "arevalo-documentos-antiguos-guatemala-1857": "publications/arevalo-documentos-antiguos-guatemala-1857/master.docx",
+    "argaiz-vida-escritos-1678": "publications/argaiz-vida-escritos-1678/master.docx",
     "arthes-peten-1893": "publications/arthes-peten-1893/master.md",
     "atkins-voyage-guinea-1735": "publications/atkins-voyage-guinea-1735/master.docx",
     "baily-central-america-1850": "publications/baily-central-america-1850/master.docx",
@@ -146,6 +147,7 @@
     "g59-romances-senores-nueva-espana": "publications/g59-romances-senores-nueva-espana/master.md",
     "gage-new-survey-west-indias-1655": "publications/gage-new-survey-west-indias-1655/master.docx",
     "gagini-marques-talamanca-obras-dramaticas-1905": "publications/gagini-marques-talamanca-obras-dramaticas-1905/master.docx",
+    "galicia-manual-1766": "publications/galicia-manual-1766/master.docx",
     "galindo-antiquities-peten-1834": "publications/galindo-antiquities-peten-1834/master.docx",
     "galindo-caribs-central-america-1833": "publications/galindo-caribs-central-america-1833/master.docx",
     "galindo-copan-full-report-1834": "publications/galindo-copan-full-report-1834/master.docx",
@@ -197,16 +199,19 @@
     "gonzalez-davila-teatro-eclesiastico-volume-ii-1655": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/master.docx",
     "gonzalez-obregon-mexico-viejo-1900": "publications/gonzalez-obregon-mexico-viejo-1900/master.docx",
     "gonzalez-ruinas-tehuacan-1892": "publications/gonzalez-ruinas-tehuacan-1892/master.md",
+    "gregorio-lopez-testimonies-mss-7819": "publications/gregorio-lopez-testimonies-mss-7819/master.md",
     "guijo-diario-sucesos-notables-1853-vol-1": "publications/guijo-diario-sucesos-notables-1853-vol-1/master.docx",
     "guzman-apuntamientos-topografia-salvador-1883": "publications/guzman-apuntamientos-topografia-salvador-1883/master.docx",
     "haefkens-centraal-amerika-1832": "publications/haefkens-centraal-amerika-1832/master.docx",
     "haefkens-reize-guatemala-1827-1828": "publications/haefkens-reize-guatemala-1827-1828/master.docx",
+    "heine-wanderbilder-central-amerika-1853": "publications/heine-wanderbilder-central-amerika-1853/master.docx",
     "henderson-british-honduras-1811": "publications/henderson-british-honduras-1811/master.docx",
     "henningsen-official-report-granada-1857": "publications/henningsen-official-report-granada-1857/master.md",
     "herrera-historia-general-decadas-1-2-1601": "publications/herrera-historia-general-decadas-1-2-1601/master.docx",
     "herrera-historia-general-decadas-3-4-1601": "publications/herrera-historia-general-decadas-3-4-1601/master.docx",
     "herrera-historia-general-decadas-5-6-1615": "publications/herrera-historia-general-decadas-5-6-1615/master.docx",
     "herrera-historia-general-decadas-7-8-1615": "publications/herrera-historia-general-decadas-7-8-1615/master.docx",
+    "hipolito-regla-constituciones-1718": "publications/hipolito-regla-constituciones-1718/master.docx",
     "honduras-slaves-correspondence-1823": "publications/honduras-slaves-correspondence-1823/master.docx",
     "how-james-b-eads-1900": "publications/how-james-b-eads-1900/master.docx",
     "humboldt-vues-cordilleres-1810-1813": "publications/humboldt-vues-cordilleres-1810-1813/master.docx",
@@ -437,11 +442,7 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
-    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
-    "heine-wanderbilder-central-amerika-1853": "publications/heine-wanderbilder-central-amerika-1853/master.docx",
-    "hipolito-regla-constituciones-1718": "publications/hipolito-regla-constituciones-1718/master.docx",
-    "galicia-manual-1766": "publications/galicia-manual-1766/master.docx",
-    "argaiz-vida-escritos-1678": "publications/argaiz-vida-escritos-1678/master.docx"
+    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

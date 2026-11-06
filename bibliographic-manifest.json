@@ -4685,6 +4685,37 @@
       "updatedDate": "2026-08-25"
     },
     {
+      "slug": "gregorio-lopez-testimonies-mss-7819",
+      "recordClass": "document-collection",
+      "title": "グレゴリオ・ロペス証言集",
+      "originalTitle": "Información sumaria que se hizo en México de las virtudes y milagros del venerable Gregorio López en el año 1620 y siguientes, a petición de Felipe III para su beatificación.",
+      "author": "各地の証言者・記録者",
+      "originalAuthor": "Various witnesses and notaries",
+      "year": 1620,
+      "originalPublication": "Manuscript, Biblioteca Nacional de España, MSS/7819; copy dated approximately to the 18th century.",
+      "sourceEdition": "Información sumaria que se hizo en México de las virtudes y milagros del venerable Gregorio López en el año 1620 y siguientes, a petición de Felipe III para su beatificación. Manuscript, MSS/7819, Biblioteca Nacional de España; copy dated approximately to the 18th century.",
+      "sourceProvider": "スペイン国立図書館（Biblioteca Nacional de España, BNE）",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bdh.bne.es/bnesearch/detalle/bdh0000056044"
+      },
+      "rights": "底本の本文はパブリックドメインである。スペイン国立図書館（BNE）のデジタル画像は、同館の一般利用条件に基づき、別段の指定がない限りCC BY 4.0または同等の条件で利用できる。出典：Imágenes procedentes de los fondos de la Biblioteca Nacional de España。",
+      "publishedDate": "2026-11-06",
+      "updatedDate": "2026-11-06",
+      "assets": {
+        "pdf": {
+          "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+          "size": 1939343,
+          "sha256": "a342be2872d116c76bb4aaae6f5f50d313c349e389e5f3bd3cb67e1d8818a0f9"
+        },
+        "epub": {
+          "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+          "size": 196196,
+          "sha256": "511de1eeb960f3e6f48e34ca9c896ca67e69806c86252e8476add8ddd2bb2f80"
+        }
+      }
+    },
+    {
       "slug": "guijo-diario-sucesos-notables-1853-vol-1",
       "title": "重要事件日誌",
       "originalTitle": "Diario de sucesos notables",

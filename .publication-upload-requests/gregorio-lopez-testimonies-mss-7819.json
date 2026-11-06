@@ -1,0 +1,52 @@
+{
+  "slug": "gregorio-lopez-testimonies-mss-7819",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "3b40be4f4b02c83721368c806b7d8cc1cf7e6b54",
+  "bundle": {
+    "chunks": [
+      "685cd592a18e24f47c00a323b98bda1168130641",
+      "4381f93fd700042292f4290b2f38e3687a0fdd4e",
+      "c29217a0ddfd9772a310c3079ef0bb8d72e4d0c4",
+      "544f58b686200657458d0a4c417c26c060bd88e2",
+      "d8a7ef60df63f63781b5c6c2cfdf1a269994012d",
+      "22486a36cf059f3f61af92144afc85f3ee606fb6",
+      "a46f1f3da902be51ebbbe135ea40e442049fbcf2",
+      "0a75623a8326cb5eb39775f4eefbaa149bc8a2d9",
+      "65f6c83d943bc4f7b1c757fb2b952bb07d259f73",
+      "054bf40c064f46511c118099a11ea374bd0bc8c3",
+      "54708b08736cbcc6ae93387d9bf3748eed35ac50",
+      "99c7373684a3bb7e622fe77b6609f9aa11b47483",
+      "1296916ad3cb9103e6cb858b5dacebc30fd9591a",
+      "b3fa68cfc0bd3962a6b15ac3861b8bd62f9b2264",
+      "8c7177cdffb3053ffe8dc705061d59f7fe6de81c",
+      "1b1a631e09a52beca67e08b3eb7206cd5acd5cdb",
+      "ce8e7a8ccf1169317b8c904ff0b96ee6c3a13a55",
+      "49595c8ebecf7e7726a95bb0e9524f081464c27b",
+      "876cfa971e9043b7abb2dc45d9a8b8258253a917",
+      "7c1d223dd35c3db4d36c2f295dc3892df40793ba",
+      "508794031b8e14b9b86fe25c3c66c9f6eeef6f73",
+      "2b194155605c65e578f62fbe83934f798eb9012e",
+      "16dc12ec15c1addcda9c860adc25e24ea473b798",
+      "0200927588c075f768ea9c2b135729407a268f2d"
+    ],
+    "sha256": "735fe2d3d58fdd5e555d7873ad65588a350822ec4c6c6a81298530dc120424cc",
+    "size": 1541245
+  },
+  "assets": [
+    {
+      "filename": "Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "size": 1939343,
+      "sha256": "a342be2872d116c76bb4aaae6f5f50d313c349e389e5f3bd3cb67e1d8818a0f9"
+    },
+    {
+      "filename": "Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "size": 196196,
+      "sha256": "511de1eeb960f3e6f48e34ca9c896ca67e69806c86252e8476add8ddd2bb2f80"
+    }
+  ],
+  "revalidation": "The final source-format PDF and EPUB bytes were verified against the approved artifacts; the short bibliographic description and detailed overview are recorded separately."
+}

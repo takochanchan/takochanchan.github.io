@@ -4520,6 +4520,18 @@
       "sha256": "0622266a945cfc4cdeb0b6fe77773aff05402967b1aa16f3697f7f198ee86daa"
     },
     {
+      "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "size": 196196,
+      "sha256": "511de1eeb960f3e6f48e34ca9c896ca67e69806c86252e8476add8ddd2bb2f80"
+    },
+    {
+      "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "size": 1939343,
+      "sha256": "a342be2872d116c76bb4aaae6f5f50d313c349e389e5f3bd3cb67e1d8818a0f9"
+    },
+    {
       "path": "publications/guijo-diario-sucesos-notables-1853-vol-1/cover.jpg",
       "url": "https://takochanchan.github.io/publications/guijo-diario-sucesos-notables-1853-vol-1/cover.jpg",
       "size": 82051,
