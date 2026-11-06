@@ -49,7 +49,7 @@ for blob in request["bundle"]["chunks"]:
     response = gh_json(f"repos/{REPO}/git/blobs/{blob}")
     assert response["sha"] == blob and response["encoding"] == "base64"
     data = base64.b64decode(response["content"])
-    assert hashlib.sha1(b"blob " + str(len(data)).encode() + b"\\0" + data).hexdigest() == blob
+    assert hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest() == blob
     bundle.extend(data)
 assert len(bundle) == request["bundle"]["size"] and sha(bundle) == request["bundle"]["sha256"]
 
