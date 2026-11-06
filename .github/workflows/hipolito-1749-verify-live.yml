@@ -1,0 +1,45 @@
+name: Verify live Hipolito 1749 publication
+on:
+  push:
+    branches: [agent/hipolito-1749-live-check-20261106]
+    paths: ['.github/workflows/hipolito-1749-verify-live.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify public page and download bytes
+        run: |
+          python3 - <<'PY'
+          import hashlib, html, time, urllib.request
+          url = "https://takochanchan.github.io/publications/hipolito-regla-constituciones/"
+          needed = ["1718年刊本", "1749年刊本", "Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.pdf", "Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation.epub", "Hipolito_Regla_Constituciones_1718_Japanese_Revised.pdf", "Hipolito_Regla_Constituciones_1718_Japanese_Revised.epub"]
+          for attempt in range(36):
+              try:
+                  with urllib.request.urlopen(url + "?verify=1749", timeout=30) as response:
+                      page = html.unescape(response.read().decode("utf-8"))
+                      assert response.status == 200
+                  missing = [s for s in needed if s not in page]
+                  if not missing:
+                      print("Public bibliography contains both editions and four links.")
+                      break
+                  print("Waiting for page:", missing)
+              except Exception as e:
+                  print("Waiting for page:", e)
+              time.sleep(10)
+          else:
+              raise SystemExit("Live bibliography did not contain expected editions and links")
+          base = "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/"
+          stem = "Hermanos_de_San_Hipolito_Constituciones_1749_Japanese_Complete_Translation."
+          for ext, size, sha in [
+              ("pdf", 2514104, "fe4f63d1da486f7ba64153608c5555c581a5ae5a825ad8023c07a50d240505f1"),
+              ("epub", 301970, "6a7048fb6371dff9bb81701da9545373238ac0d3e12b149cfeeb7f48f43eb574"),
+          ]:
+              with urllib.request.urlopen(base + stem + ext, timeout=90) as response:
+                  data = response.read()
+                  assert response.status == 200
+              assert len(data) == size and hashlib.sha256(data).hexdigest() == sha
+              print(ext, len(data), sha, "verified")
+          PY
