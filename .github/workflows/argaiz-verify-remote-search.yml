@@ -1,0 +1,22 @@
+name: Verify Argaiz remote search coverage
+on:
+  push:
+    branches: [agent/argaiz-search-verification-20261106]
+permissions:
+  contents: read
+concurrency:
+  group: argaiz-search-verification
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - name: Verify all remote search shards against this publication
+        run: npm run verify:remote-search
