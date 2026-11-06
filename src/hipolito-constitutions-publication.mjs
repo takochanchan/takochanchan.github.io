@@ -93,7 +93,7 @@ export const hipolitoConstitutionsPublicationRecords = [
   "originalPublication": "Madrid: Por Joachin Ibarra, 1766.",
   "year": 1766,
   "extent": "日本語版PDF 224頁",
-  "description": "アントニオ・ミゲル・デ・ガリシアが編んだ、ヌエバ・エスパーニャの殉教者聖イポリト慈善修道会の修道院と施療院で用いる儀礼書。1766年にマドリードのホアキン・イバラが刊行した第2刷を訳した。冒頭には聖ヨセフへの献辞と、修道会・教会当局による再版許可などを収める。本文はまず、修道者と施療院に入る貧しい病人それぞれに対する臨終の聖体拝領、終油、赦免、葬儀を扱い、死者の追悼、幼児の葬儀、死者のミサを続ける。次いで聖体や聖母の祝祭、聖週間の行列のほか、雨乞い、疫病、食糧不足、雷雨などの際の祈願を記す。教会・墓地・祭服などの祝福、病人のための祝福、悪魔祓いや蝗への祓いに続き、修練者の着衣、誓願、総長の選挙と巡察、院長・大司教・副王の迎接を定める。巻末には日曜日の聖水散布、荘厳ミサの奉仕の方式と内容索引を付す。病院における秘跡の執行から修道会の内部儀礼、災厄時の共同体の祈りに至る、当時の実践を知るための史料である。",
+  "description": "ヌエバ・エスパーニャの聖イポリト慈善修道会が、修道院と施療院で用いた儀礼書。修道者と病人への秘跡、葬儀、行列、祝福のほか、入会・誓願、総長の選挙と巡察などの式次第を収める。アントニオ・ミゲル・デ・ガリシア編、1766年マドリード刊第2刷の全訳。",
   "cover": "publications/galicia-manual-1766/cover.jpg",
   "pdf": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
   "epub": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
