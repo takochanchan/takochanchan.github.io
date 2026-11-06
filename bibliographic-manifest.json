@@ -159,6 +159,37 @@
       }
     },
     {
+      "slug": "argaiz-vida-escritos-1678",
+      "recordClass": "major-work",
+      "title": "尊者グレゴリオ・ロペスの生涯と著作",
+      "originalTitle": "Vida, y escritos del Venerable Varon Gregorio Lopez",
+      "author": "グレゴリオ・ロペス（著）／グレゴリオ・デ・アルガイス（編）",
+      "originalAuthor": "Gregorio López",
+      "year": 1678,
+      "originalPublication": "Madrid: en la imprenta de Antonio Francisco de Zafra, a costa de Gabriel de León, 1678.",
+      "sourceEdition": "Gregorio López, Vida, y escritos del Venerable Varon Gregorio Lopez. Madrid: en la imprenta de Antonio Francisco de Zafra, a costa de Gabriel de León, 1678.",
+      "sourceProvider": "Biblioteca Foral de Bizkaia（Lau Haizeetara）。資料番号70796、書誌ID .b11084315。",
+      "rights": "1678年刊本の原著は著作権保護期間を満了しています。ビスカヤ県立図書館（Biblioteca Foral de Bizkaia、Lau Haizeetara）資料番号70796／書誌ID .b11084315の公開機関レコードには、Public Domain Mark（PDM）が権利表示として記載されています（https://creativecommons.org/publicdomain/mark/1.0/）。",
+      "publishedDate": "2026-11-06",
+      "updatedDate": "2026-11-06",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://liburutegibiltegi.bizkaia.eus/handle/20.500.11938/70796"
+      },
+      "assets": {
+        "pdf": {
+          "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+          "size": 1591540,
+          "sha256": "905cd4e3770fb469071ab8b8516601dca98fe4f027eafca548bb0c9ac4a57109"
+        },
+        "epub": {
+          "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+          "size": 232607,
+          "sha256": "dc078eab36beacf3b49d32c08d9c83fa5b207a57d19a91e303a9cf5023bee054"
+        }
+      }
+    },
+    {
       "slug": "arthes-peten-1893",
       "recordClass": "short-work",
       "title": "ペテン県概説",
