@@ -1,0 +1,48 @@
+{
+  "slug": "argaiz-vida-escritos-1678",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "ac868402189193f9fea61e43764cd094891696b5",
+  "bundle": {
+    "size": 1337418,
+    "sha256": "3fe942fae14d2e41e5ac9a6a9319e41b18a36884dc4b98a44dc4e56e940c65a1",
+    "chunks": [
+      "b283c55558fc3473d5da6d88ae0896a4bcf4bb2d",
+      "8e459afa7e39be4c4320b00a42663585c046c70f",
+      "96a532075cd31854842259ed574f53ebdc878a8d",
+      "3f159a12e17a8c1b09e5e808c7d8d0a6e72a774f",
+      "b765e8fe1f87189d0854097124964c5fae164cff",
+      "2ba942c44605f2cf25954cfa78fdebb179ce2d04",
+      "73e7828f6e50f025493c5ad72a13291c845b3e1d",
+      "9032e77c778778cbfddd9906c85d40b8e0bcc920",
+      "d0d03a206cd1e909810700fe55d2c6d359ff1c81",
+      "90000644bdef289984b7eb7de7133cfcb41e3de7",
+      "c470cce8fcedcfe02bf22f87e3893395c1e51bb9",
+      "94e7247c371889632887eae9a1be6f39ab7378fa",
+      "9a48d7db75920f99ec5459d42eef2e9bd2d866c8",
+      "803745de8c650c565628158f5deaf2ff9a18b231",
+      "843034f67615bef69c9322e5d800f1651e5db2d5",
+      "be2bf5dca2943ad150eb3c1e2577583252455199",
+      "67f2111d5799987bf2a1d872f38d222404114670",
+      "e8cbeff64f977dcb6a0be92fafc7b09447cb93b5",
+      "50b3940c3ceeb244540bafae35ab53e5aec65a1d",
+      "da80cc0316454050f6d1884e595001c1cfd705ec",
+      "c0ff5fcd521165744ee5f1de94623e3e6eb9ff9f"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "size": 1591540,
+      "sha256": "905cd4e3770fb469071ab8b8516601dca98fe4f027eafca548bb0c9ac4a57109"
+    },
+    {
+      "filename": "Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "size": 232607,
+      "sha256": "dc078eab36beacf3b49d32c08d9c83fa5b207a57d19a91e303a9cf5023bee054"
+    }
+  ]
+}

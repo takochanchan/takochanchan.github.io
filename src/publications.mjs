@@ -118,6 +118,10 @@ import {
   arceLibroVidaPublicationRecords,
 } from "./arce-libro-vida-publication.mjs";
 import {
+  argaizVidaEscritosPublicationMetadata,
+  argaizVidaEscritosPublicationRecords,
+} from "./argaiz-vida-escritos-1678-publication.mjs";
+import {
   teatroMexicanoPublicationMetadata,
   teatroMexicanoPublicationRecords,
 } from "./teatro-mexicano-publication.mjs";
@@ -9367,6 +9371,7 @@ const publicationRecords = [
   ...perignyRemainingPublicationRecords,
   ...arceMemoriaPublicationRecords,
   ...arceLibroVidaPublicationRecords,
+  ...argaizVidaEscritosPublicationRecords,
   ...teatroMexicanoPublicationRecords,
   ...mezaPublicationRecords,
   ...doubledayPublicationRecords,
@@ -12013,6 +12018,7 @@ const publicationMetadata = {
   ...perignyRemainingPublicationMetadata,
   ...arceMemoriaPublicationMetadata,
   ...arceLibroVidaPublicationMetadata,
+  ...argaizVidaEscritosPublicationMetadata,
   ...teatroMexicanoPublicationMetadata,
   ...mezaPublicationMetadata,
   ...doubledayPublicationMetadata,

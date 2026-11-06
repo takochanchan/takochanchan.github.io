@@ -128,6 +128,24 @@
       "sha256": "ce2ab2793a6a53ed7eac82231db2191f11a3050e33994be1ccb43dcf35fc828a"
     },
     {
+      "path": "publications/argaiz-vida-escritos-1678/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/argaiz-vida-escritos-1678/cover.jpg",
+      "size": 118220,
+      "sha256": "4357fb862fc1cd928c39bd849c39efcc4bfc1db8ba18ce3fdd46ecf6e669d8f4"
+    },
+    {
+      "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "size": 232607,
+      "sha256": "dc078eab36beacf3b49d32c08d9c83fa5b207a57d19a91e303a9cf5023bee054"
+    },
+    {
+      "path": "publications/argaiz-vida-escritos-1678/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "size": 1591540,
+      "sha256": "905cd4e3770fb469071ab8b8516601dca98fe4f027eafca548bb0c9ac4a57109"
+    },
+    {
       "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/arthes_peten_1893_ja.epub",
       "size": 96542,
