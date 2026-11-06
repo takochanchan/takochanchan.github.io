@@ -1063,6 +1063,13 @@
       "author": "カルロス・ガヒニ"
     },
     {
+      "slug": "galicia-manual-1766",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アントニオ・ミゲル・デ・ガリシア",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "galindo-antiquities-peten-1834",
       "recordClass": "short-work",
       "searchShard": "001",
@@ -1440,6 +1447,12 @@
       "searchShard": "002"
     },
     {
+      "slug": "heine-wanderbilder-central-amerika-1853",
+      "releaseTag": "publications-002",
+      "recordClass": "major-work",
+      "searchShard": "003"
+    },
+    {
       "slug": "henderson-british-honduras-1811",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -1469,6 +1482,18 @@
       "slug": "herrera-historia-general-decadas-7-8-1615",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1718",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "hipolito-regla-constituciones-1749",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "historia-tolteca-chichimeca",
@@ -2804,24 +2829,6 @@
       "author": "フランシスコ・サルコ",
       "seriesVolumeNumber": 2,
       "originalAuthor": "Francisco Zarco"
-    },
-    {
-      "slug": "heine-wanderbilder-central-amerika-1853",
-      "releaseTag": "publications-002",
-      "recordClass": "major-work",
-      "searchShard": "003"
-    },
-    {
-      "slug": "hipolito-regla-constituciones-1718",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "hipolito-regla-constituciones-1749",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -2975,4 +2982,3 @@
   ],
   "shortAuthorCount": 48
 }
-
