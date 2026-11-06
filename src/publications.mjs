@@ -38,6 +38,7 @@ import { batresPublicationRecords, batresPublicationMetadata } from "./batres-pu
 import { salazarPublicationRecords, salazarPublicationMetadata } from "./salazar-publication.mjs";
 import { academiaGuatemaltecaPublicationRecords, academiaGuatemaltecaPublicationMetadata } from "./academia-guatemalteca-publication.mjs";
 import { cehmBetlemitasPublicationRecords, cehmBetlemitasPublicationMetadata } from "./cehm-betlemitas-publication.mjs";
+import { cehmCordobaPublicationRecords, cehmCordobaPublicationMetadata } from "./cehm-cordoba-publication.mjs";
 import { mexicoViejoPublicationRecords, mexicoViejoPublicationMetadata } from "./mexico-viejo-publication.mjs";
 import { espinosaPublicationRecords, espinosaPublicationMetadata } from "./espinosa-publication.mjs";
 import { siriaPublicationRecords, siriaPublicationMetadata } from "./siria-publication.mjs";
@@ -345,6 +346,7 @@ const publicationRecords = [
   ...salazarPublicationRecords,
   ...academiaGuatemaltecaPublicationRecords,
   ...cehmBetlemitasPublicationRecords,
+  ...cehmCordobaPublicationRecords,
   ...mexicoViejoPublicationRecords,
   ...proceresPublicationRecords,
   ...oviedoPublicationRecords,
@@ -9483,6 +9485,7 @@ const publicationMetadata = {
   ...roblesDiarioPublicationMetadata,
   ...academiaGuatemaltecaPublicationMetadata,
   ...cehmBetlemitasPublicationMetadata,
+  ...cehmCordobaPublicationMetadata,
   ...mexicoViejoPublicationMetadata,
   ...proceresPublicationMetadata,
   ...oviedoPublicationMetadata,
@@ -12067,6 +12070,7 @@ const shortWorkAuthorBySlug = {
   "cehm-manuscritos-betlemitas-xi-5": "cehm-betlemitas-documents",
   "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "cehm-betlemitas-documents",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "cehm-betlemitas-documents",
+  "cehm-cordoba-hospital-memorial-1778": "cehm-cordoba-anonymous",
   ...proceresShortWorkAuthors,
   "vle-panama-1831-article-1": "f-w-c",
   "vle-panama-1831-article-2": "f-w-c",

@@ -1892,6 +1892,18 @@
       "sha256": "e46f7db1efa86631db7ea488643db71df3bf056eb15194d93a90d4437733e790"
     },
     {
+      "path": "publications/cehm-cordoba-hospital-memorial-1778/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "size": 202252,
+      "sha256": "eeeb01a5cfc3765543cef11ffd759e4a869985df3e9cda18b4876a0f72602ef8"
+    },
+    {
+      "path": "publications/cehm-cordoba-hospital-memorial-1778/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "size": 828148,
+      "sha256": "13b006c1f5cbede00dab7477dc1038f5dbecdb979e4eac7b1a5b552e23853e18"
+    },
+    {
       "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
       "size": 417917,
