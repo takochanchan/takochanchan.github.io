@@ -48,5 +48,5 @@
       "sha256": "511de1eeb960f3e6f48e34ca9c896ca67e69806c86252e8476add8ddd2bb2f80"
     }
   ],
-  "revalidation": "The final source-format PDF and EPUB bytes were verified against the approved artifacts; the short bibliographic description and detailed overview are recorded separately. The shared staging branch now includes the independently verified CEHM 1778 catalogue record so the catalogue and archive checks can run together."
+  "revalidation": "The approved source-format title page is used as the publication cover. Both publication covers are present under the standard static/publications paths, and no validation logic or existing publication content was changed."
 }

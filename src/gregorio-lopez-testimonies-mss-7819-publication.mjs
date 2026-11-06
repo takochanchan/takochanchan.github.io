@@ -11,6 +11,7 @@ export const gregorioLopezTestimoniesPublicationRecords = [
     "year": 1620,
     "dateRange": "1620–1622",
     "extent": "日本語版PDF 256頁",
+    "cover": "publications/gregorio-lopez-testimonies-mss-7819/cover.jpg",
     "description": "グレゴリオ・ロペスの列福に向け、1620～1622年にメキシコなどで集められた証言と関連文書の日本語訳。スペイン国立図書館所蔵写本 MSS/7819 を底本とする。",
     "pdf": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
     "epub": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
