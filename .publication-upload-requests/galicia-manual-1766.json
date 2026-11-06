@@ -1,0 +1,36 @@
+{
+  "slug": "galicia-manual-1766",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "ba9a5a83d01ad610ebb54ef76dd997233b15a7b3",
+  "bundle": {
+    "chunks": [
+      "0d9f09b2074b5e57eb6df04967d04ee929e0ca15",
+      "fc9888364b42b2b6b3517bd516dc79525cc81212",
+      "ab59ac2e17337ddbdaf3c3e37301041cde57c978",
+      "27bc0de74f09778d8e885c9185410667b464ced1",
+      "6b71be6bc19a9038e7d19867060b3efbb9db52a8",
+      "eeefa9a10b35466e4b54723d626f7f96fe495027",
+      "f489e446a177c32d6598c2fe413f44fddfe93485",
+      "c9a7b94c80e164b4bb7892e9c6e610c034126701",
+      "9c1769ee355ae238bae4f2ffbc1adb6a166128b1"
+    ],
+    "sha256": "414898f82afc1781d403ab8693943a0a93db5284597392007f9125725ce2e77a",
+    "size": 5804138
+  },
+  "assets": [
+    {
+      "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+      "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+      "size": 2566370,
+      "sha256": "af19a0f085fdaad507c4e8d7e7af73bf96e888a148173a3bb8e5ea68128f0b3e"
+    },
+    {
+      "filename": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "path": "publications/galicia-manual-1766/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "size": 4033895,
+      "sha256": "84b2cd13075a0084c683ed556eaa4e991b6905245e2f770ede5769876137f90f"
+    }
+  ]
+}
