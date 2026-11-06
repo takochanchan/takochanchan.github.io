@@ -59,5 +59,10 @@
       "size": 4033895,
       "sha256": "84b2cd13075a0084c683ed556eaa4e991b6905245e2f770ede5769876137f90f"
     }
-  ]
+  ],
+  "fallback_verification": {
+    "archive_commit": "a83e8386bc839816bfbb541b365ebfee738c467c",
+    "release_assets_checked": 58,
+    "size_and_sha256_matches": 58
+  }
 }
