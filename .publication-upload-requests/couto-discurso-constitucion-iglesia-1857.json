@@ -1,0 +1,51 @@
+{
+  "slug": "couto-discurso-constitucion-iglesia-1857",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+  "bundle": {
+    "size": 1135717,
+    "sha256": "eb4cd49a3dbd22ecba60216c39e27641691491b25d4daa5870af936905e8d238",
+    "chunks": [
+      "9e5653389399a7c0b4e9dba772d063203485d773",
+      "87cbefcf368bc173bbc09bea537119a70a58320e",
+      "b06c0de4f7c343f6896e5dcfed5c37f10f29d878",
+      "2f1a6c08cd450ba7951c80bceaa6e7f87b43db98",
+      "e5a065abc2feb653551e23564af8d59f5c911e86",
+      "3888d8ab747832be0baa247aae77c9f88417b9a2",
+      "26c6e0fd943f816682df8d7c223ae857a7046000",
+      "009c90834d2bef8ba31a5d8cbbe86eb948fc034a",
+      "7596f6cd7a485543eb666f780b0f9e564b92c48d",
+      "4123bbdc1c5ea7d07efdf71318b44167b09142bd",
+      "dbc5d19a0eb0cc310afedc6fffcc8ac9a5d4f84d",
+      "54374e5ffbe03b346862a4f76e948f73258f0101",
+      "edc4c18267845785973a8149538d42c2e7823ae5",
+      "5aff3cd23edda21565544398a90480bc33ebce87",
+      "61711c9845aaa48f955833e4c07ebfbb64bb9daa",
+      "3ae59068b11aab7b28f2ffdd7dcb02cf93270f0f",
+      "2ef3f9d96cdda7de0aa014e5b4cd51dae3be2e5c",
+      "07d10c56bb6d1b11b76051d2cff7be019b3eaf30",
+      "f00c8cb7234e2d54e2f694ff694f48cd7b4d204d",
+      "426ad4c275e7ab4dd2c6bfade399a8df04f2db17",
+      "184a99ac9fef158e865a3eb6de52f59a7fc62bb1",
+      "a6aa0d748f5f55e94f64c32e16ecdb34f2a19792",
+      "01d330ab5cf6636b2979091723b4478b7be95bc2",
+      "f5a2191d2ea529071805d46649c3a7fd222095a8"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.pdf",
+      "path": "publications/couto-discurso-constitucion-iglesia-1857/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.pdf",
+      "size": 1326216,
+      "sha256": "f3106d118cad443c21ec2e0b50b18e58a9cb8493cdbdcf7a6484eca11c13ec3c"
+    },
+    {
+      "filename": "Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
+      "path": "publications/couto-discurso-constitucion-iglesia-1857/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
+      "size": 138652,
+      "sha256": "1b1a2851a9387794b68f04eb72082b25780e6fa776135f4efaab96b999ff6ab3"
+    }
+  ]
+}
