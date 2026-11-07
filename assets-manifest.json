@@ -5312,6 +5312,24 @@
       "sha256": "f2659a2a256ea411bf3cd3e84c8d2a670a9d2463a0b0186e368674899514345b"
     },
     {
+      "path": "publications/losa-vida-gregorio-lopez-1658/Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.epub",
+      "size": 376343,
+      "sha256": "062e6c637ade2edfad11bbc64ab1bdc5e9a9a343364319f8a400d5fb82fcbe15"
+    },
+    {
+      "path": "publications/losa-vida-gregorio-lopez-1658/Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.pdf",
+      "size": 2334911,
+      "sha256": "d662f8712bdaece86c89bc72ba0e4d462d9eb4b8f9e51dbab0c20c885c12aa75"
+    },
+    {
+      "path": "publications/losa-vida-gregorio-lopez-1658/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/losa-vida-gregorio-lopez-1658/cover.jpg",
+      "size": 190012,
+      "sha256": "2295f3917ff67a46c367e15dacaf5d8793a1630f412ae61a5c616c32d7adbb17"
+    },
+    {
       "path": "publications/lothrop-museum-central-american-expedition-1927/Samuel_K_Lothrop_Museum_Central_American_Expedition_1925_1926_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Samuel_K_Lothrop_Museum_Central_American_Expedition_1925_1926_Japanese_Complete_Translation.epub",
       "size": 58933,

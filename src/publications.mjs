@@ -1,6 +1,7 @@
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata } from "./agn-hospitales-volume-73-publication.mjs";
 import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
+import { losaVidaGregorioLopezPublicationRecords, losaVidaGregorioLopezPublicationMetadata } from "./losa-vida-gregorio-lopez-1658-publication.mjs";
 import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
@@ -330,6 +331,7 @@ const publicationRecords = [
   ...agnHospitales45PublicationRecords,
   ...agnHospitales73PublicationRecords,
   ...gregorioLopezTestimoniesPublicationRecords,
+  ...losaVidaGregorioLopezPublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9469,6 +9471,7 @@ const publicationMetadata = {
   ...agnHospitales45PublicationMetadata,
   ...agnHospitales73PublicationMetadata,
   ...gregorioLopezTestimoniesPublicationMetadata,
+  ...losaVidaGregorioLopezPublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
