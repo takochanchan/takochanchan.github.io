@@ -1,5 +1,6 @@
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata } from "./agn-hospitales-volume-73-publication.mjs";
+import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
 import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
@@ -328,6 +329,7 @@ const publicationRecords = [
   ...mencosPublicationRecords,
   ...agnHospitales45PublicationRecords,
   ...agnHospitales73PublicationRecords,
+  ...gregorioLopezTestimoniesPublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9466,6 +9468,7 @@ const publicationMetadata = {
   ...mencosPublicationMetadata,
   ...agnHospitales45PublicationMetadata,
   ...agnHospitales73PublicationMetadata,
+  ...gregorioLopezTestimoniesPublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
@@ -12067,7 +12070,6 @@ const shortWorkAuthorBySlug = {
   "cehm-manuscritos-betlemitas-xi-5": "cehm-betlemitas-documents",
   "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1": "cehm-betlemitas-documents",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810": "cehm-betlemitas-documents",
-  "cehm-cordoba-hospital-memorial-1778": "cehm-cordoba-anonymous",
   ...proceresShortWorkAuthors,
   "vle-panama-1831-article-1": "f-w-c",
   "vle-panama-1831-article-2": "f-w-c",
@@ -12267,6 +12269,7 @@ const documentCollectionSlugs = new Set([
   "cehm-manuscritos-betlemitas-xi-5",
   "cehm-expedientes-betlemitas-xcvii-1-1792-1810",
   "cehm-beatificacion-pedro-joseph-betancur-lxix-1-1-1",
+  "cehm-cordoba-hospital-memorial-1778",
   "proceso-contra-william-walker-1860",
   "egan-wyer-1930",
   "us-senate-central-america-correspondence-1853",
@@ -12274,6 +12277,7 @@ const documentCollectionSlugs = new Set([
   "foreign-office-mosquito-territory-1848",
   "agn-hospitales-volume-45-1589-1645",
   "agn-hospitales-volume-73-1649-1773",
+  "gregorio-lopez-testimonies-mss-7819",
 ]);
 
 export const publications = publicationRecords.map((item) => {

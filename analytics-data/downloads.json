@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-05",
-  "updatedAt": "2026-11-06T00:58:00.596Z",
+  "endDate": "2026-11-06",
+  "updatedAt": "2026-11-07T00:07:40.769Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8263,6 +8263,38 @@
       "slug": "hipolito-regla-constituciones",
       "title": "イポリト会則・会憲",
       "volumeLabel": "イポリト会憲 1749年刊本",
+      "format": "epub"
+    },
+    {
+      "key": "dl_79a68bc45109e855",
+      "name": "Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.pdf",
+      "slug": "argaiz-vida-escritos-1678",
+      "title": "尊者グレゴリオ・ロペスの生涯と著作",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_78942ae83e1534e7",
+      "name": "Gregorio_de_Argaiz_Vida_y_Escritos_1678_Japanese_Translation.epub",
+      "slug": "argaiz-vida-escritos-1678",
+      "title": "尊者グレゴリオ・ロペスの生涯と著作",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_2f8e5b5de0c95608",
+      "name": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.pdf",
+      "slug": "galicia-manual-1766",
+      "title": "殉教者聖イポリト慈善修道会の手引書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_fc6d8426937cea6c",
+      "name": "Antonio_Miguel_de_Galicia_Manual_1766_Japanese_Translation.epub",
+      "slug": "galicia-manual-1766",
+      "title": "殉教者聖イポリト慈善修道会の手引書",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
