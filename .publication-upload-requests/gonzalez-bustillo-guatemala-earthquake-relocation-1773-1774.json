@@ -3,20 +3,25 @@
   "release_tag": "publications-002",
   "verified_archive_commit": "f1edcde37e6af28822dba1363ccd76c9a4138c07",
   "bundle": {
-    "size": 118397,
-    "sha256": "2bb745795c71014344f2c7fc868ce3fd3489d28f8a5362ec9a5cdba1ea93429b",
+    "size": 350948,
+    "sha256": "58272e942a1615591fad3fecc4382d09f86b61e22affaba61dff92b3a91b2c65",
     "chunks": [
-      "58641f5f1244b3a373870f2ffa03901afe2d5add"
+      "8a578d5f29929968fe00bd0866e858f2e1ae97c2",
+      "81dec7b65add52cf2e4dfa115028598ba630d489",
+      "4819f2272621242ab72b53aa356965f99b2c12f5",
+      "d4c5e0d9749b56efbb5daf3df0bf174d8c1b3e85",
+      "80ca7383b692d1d9feffa7d824d1f0f9ea532081",
+      "a191e18e864439cc4617c29cb2c8cdf6f01fbd17"
     ]
   },
   "assets": [
     {
-      "filename": "Gonzalez_Bustillo_04_Xalapa_1774_Japanese_Translation.epub",
-      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa/Gonzalez_Bustillo_04_Xalapa_1774_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_04_Xalapa_1774_Japanese_Translation.epub",
-      "size": 119252,
-      "sha256": "bb1458fed3d64283e2e5fd23e9738444adea327d4ae42b96e34e3f8bd99bf358"
+      "filename": "Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
+      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
+      "size": 534842,
+      "sha256": "563488833ad11fe4dbebe4e987e756cd99d249cab6c14703153dbd2999a5333c"
     }
   ],
-  "transfer_attempt": 10
+  "transfer_attempt": 11
 }
