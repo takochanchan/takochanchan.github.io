@@ -1435,6 +1435,13 @@
       "author": "ダリオ・ゴンサレス"
     },
     {
+      "slug": "gregorio-lopez-testimonies-mss-7819",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "各地の証言者・記録者",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "guijo-diario-sucesos-notables-1853-vol-1",
       "recordClass": "major-work",
       "searchShard": "002"

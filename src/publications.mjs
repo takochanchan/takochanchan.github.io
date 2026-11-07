@@ -1,5 +1,6 @@
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata } from "./agn-hospitales-volume-73-publication.mjs";
+import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
 import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
@@ -327,6 +328,7 @@ const publicationRecords = [
   ...mencosPublicationRecords,
   ...agnHospitales45PublicationRecords,
   ...agnHospitales73PublicationRecords,
+  ...gregorioLopezTestimoniesPublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9464,6 +9466,7 @@ const publicationMetadata = {
   ...mencosPublicationMetadata,
   ...agnHospitales45PublicationMetadata,
   ...agnHospitales73PublicationMetadata,
+  ...gregorioLopezTestimoniesPublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
@@ -12270,6 +12273,7 @@ const documentCollectionSlugs = new Set([
   "foreign-office-mosquito-territory-1848",
   "agn-hospitales-volume-45-1589-1645",
   "agn-hospitales-volume-73-1649-1773",
+  "gregorio-lopez-testimonies-mss-7819",
 ]);
 
 export const publications = publicationRecords.map((item) => {
