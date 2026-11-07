@@ -1416,6 +1416,46 @@
       "searchShard": "001"
     },
     {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",
+      "releaseTag": "publications-002",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo"
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual",
+      "releaseTag": "publications-002",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo"
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular",
+      "releaseTag": "publications-002",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo"
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa",
+      "releaseTag": "publications-002",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo"
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita",
+      "releaseTag": "publications-002",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo"
+    },
+    {
       "slug": "gonzalez-compendio-geografia-centro-america-1881",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -2878,30 +2918,6 @@
   ],
   "groups": [
     {
-      "slug": "robles-diario-sucesos-notables-1853",
-      "memberSlugs": [
-        "robles-diario-sucesos-notables-1853-vol-1",
-        "robles-diario-sucesos-notables-1853-vol-2"
-      ]
-    },
-    {
-      "slug": "oviedo-historia-general-natural-indias-1851-1855",
-      "memberSlugs": [
-        "oviedo-historia-general-natural-indias-volume-i-1851",
-        "oviedo-historia-general-natural-indias-volume-ii-1852",
-        "oviedo-historia-general-natural-indias-volume-iii-1853",
-        "oviedo-historia-general-natural-indias-volume-iv-1855"
-      ]
-    },
-    {
-      "slug": "robertson-history-america-1777-1796",
-      "memberSlugs": [
-        "robertson-history-america-volume-i-1777",
-        "robertson-history-america-volume-ii-1777",
-        "robertson-history-america-books-ix-x-1796"
-      ]
-    },
-    {
       "slug": "bancroft-native-races-pacific-states-1883",
       "memberSlugs": [
         "bancroft-native-races-volume-i-1883",
@@ -2912,45 +2928,29 @@
       ]
     },
     {
-      "slug": "tribes-and-temples-1926-1927",
-      "memberSlugs": [
-        "tribes-and-temples-vol-1",
-        "tribes-and-temples-vol-2"
-      ]
-    },
-    {
-      "slug": "herrera-historia-general-1601-1615",
-      "memberSlugs": [
-        "herrera-historia-general-decadas-1-2-1601",
-        "herrera-historia-general-decadas-3-4-1601",
-        "herrera-historia-general-decadas-5-6-1615",
-        "herrera-historia-general-decadas-7-8-1615"
-      ]
-    },
-    {
-      "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
-      "memberSlugs": [
-        "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
-        "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
-      ]
-    },
-    {
-      "slug": "palma-tradiciones-peruanas",
-      "memberSlugs": [
-        "palma-tradiciones-peruanas-v01",
-        "palma-tradiciones-peruanas-v02",
-        "palma-tradiciones-peruanas-v03",
-        "palma-tradiciones-peruanas-v04",
-        "palma-tradiciones-peruanas-v05",
-        "palma-tradiciones-peruanas-v06"
-      ]
-    },
-    {
       "slug": "castro-santa-anna-diario-1854",
       "memberSlugs": [
         "castro-santa-anna-diario-1854-v4",
         "castro-santa-anna-diario-1854-v5",
         "castro-santa-anna-diario-1854-v6"
+      ]
+    },
+    {
+      "slug": "cuevas-historia-iglesia-mexico",
+      "memberSlugs": [
+        "cuevas-historia-iglesia-mexico-v01",
+        "cuevas-historia-iglesia-mexico-v02",
+        "cuevas-historia-iglesia-mexico-v03",
+        "cuevas-historia-iglesia-mexico-v04",
+        "cuevas-historia-iglesia-mexico-v05"
+      ]
+    },
+    {
+      "slug": "galindo-gran-decada-nacional-1904-1906",
+      "memberSlugs": [
+        "galindo-gran-decada-nacional-1904-vol-1",
+        "galindo-gran-decada-nacional-1905-vol-2",
+        "galindo-gran-decada-nacional-1906-vol-3"
       ]
     },
     {
@@ -2984,30 +2984,14 @@
       "seriesVolumeCount": 36
     },
     {
-      "slug": "cuevas-historia-iglesia-mexico",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
       "memberSlugs": [
-        "cuevas-historia-iglesia-mexico-v01",
-        "cuevas-historia-iglesia-mexico-v02",
-        "cuevas-historia-iglesia-mexico-v03",
-        "cuevas-historia-iglesia-mexico-v04",
-        "cuevas-historia-iglesia-mexico-v05"
+        "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",
+        "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual",
+        "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular",
+        "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa",
+        "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita"
       ]
-    },
-    {
-      "slug": "galindo-gran-decada-nacional-1904-1906",
-      "memberSlugs": [
-        "galindo-gran-decada-nacional-1904-vol-1",
-        "galindo-gran-decada-nacional-1905-vol-2",
-        "galindo-gran-decada-nacional-1906-vol-3"
-      ]
-    },
-    {
-      "slug": "zarco-historia-congreso-1856-1857",
-      "memberSlugs": [
-        "zarco-historia-congreso-1856-1857-volume-i-1857",
-        "zarco-historia-congreso-1856-1857-volume-ii-1857"
-      ],
-      "seriesVolumeCount": 2
     },
     {
       "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
@@ -3018,11 +3002,77 @@
       "seriesVolumeCount": 2
     },
     {
+      "slug": "herrera-historia-general-1601-1615",
+      "memberSlugs": [
+        "herrera-historia-general-decadas-1-2-1601",
+        "herrera-historia-general-decadas-3-4-1601",
+        "herrera-historia-general-decadas-5-6-1615",
+        "herrera-historia-general-decadas-7-8-1615"
+      ]
+    },
+    {
       "slug": "hipolito-regla-constituciones",
       "memberSlugs": [
         "hipolito-regla-constituciones-1718",
         "hipolito-regla-constituciones-1749"
       ]
+    },
+    {
+      "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
+      "memberSlugs": [
+        "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
+        "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
+      ]
+    },
+    {
+      "slug": "oviedo-historia-general-natural-indias-1851-1855",
+      "memberSlugs": [
+        "oviedo-historia-general-natural-indias-volume-i-1851",
+        "oviedo-historia-general-natural-indias-volume-ii-1852",
+        "oviedo-historia-general-natural-indias-volume-iii-1853",
+        "oviedo-historia-general-natural-indias-volume-iv-1855"
+      ]
+    },
+    {
+      "slug": "palma-tradiciones-peruanas",
+      "memberSlugs": [
+        "palma-tradiciones-peruanas-v01",
+        "palma-tradiciones-peruanas-v02",
+        "palma-tradiciones-peruanas-v03",
+        "palma-tradiciones-peruanas-v04",
+        "palma-tradiciones-peruanas-v05",
+        "palma-tradiciones-peruanas-v06"
+      ]
+    },
+    {
+      "slug": "robertson-history-america-1777-1796",
+      "memberSlugs": [
+        "robertson-history-america-volume-i-1777",
+        "robertson-history-america-volume-ii-1777",
+        "robertson-history-america-books-ix-x-1796"
+      ]
+    },
+    {
+      "slug": "robles-diario-sucesos-notables-1853",
+      "memberSlugs": [
+        "robles-diario-sucesos-notables-1853-vol-1",
+        "robles-diario-sucesos-notables-1853-vol-2"
+      ]
+    },
+    {
+      "slug": "tribes-and-temples-1926-1927",
+      "memberSlugs": [
+        "tribes-and-temples-vol-1",
+        "tribes-and-temples-vol-2"
+      ]
+    },
+    {
+      "slug": "zarco-historia-congreso-1856-1857",
+      "memberSlugs": [
+        "zarco-historia-congreso-1856-1857-volume-i-1857",
+        "zarco-historia-congreso-1856-1857-volume-ii-1857"
+      ],
+      "seriesVolumeCount": 2
     }
   ],
   "shortAuthorCount": 48

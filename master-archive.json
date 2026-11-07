@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+  "archive_commit": "f1edcde37e6af28822dba1363ccd76c9a4138c07",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -95,6 +95,7 @@
     "cook-balise-merida-1769": "publications/cook-balise-merida-1769/master.docx",
     "coronel-arte-maya-1620": "publications/coronel-arte-maya-1620/master.docx",
     "cortes-y-larraz-descripcion-geografico-moral-1771": "publications/cortes-y-larraz-descripcion-geografico-moral-1771/master.docx",
+    "couto-discurso-constitucion-iglesia-1857": "publications/couto-discurso-constitucion-iglesia-1857/master.docx",
     "crowe-gospel-central-america-1850": "publications/crowe-gospel-central-america-1850/master.docx",
     "cuevas-historia-iglesia-mexico-v01": "publications/cuevas-historia-iglesia-mexico-v01/master.docx",
     "cuevas-historia-iglesia-mexico-v02": "publications/cuevas-historia-iglesia-mexico-v02/master.docx",
@@ -197,6 +198,11 @@
     "garella-panama-canal-1845": "publications/garella-panama-canal-1845/master.docx",
     "gemelli-careri-giro-del-mondo-nuova-spagna-1700": "publications/gemelli-careri-giro-del-mondo-nuova-spagna-1700/master.docx",
     "gibbs-british-honduras-1883": "publications/gibbs-british-honduras-1883/master.docx",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto/master.md",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual/master.md",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular/master.md",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa/master.md",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita/master.md",
     "gonzalez-compendio-geografia-centro-america-1881": "publications/gonzalez-compendio-geografia-centro-america-1881/master.docx",
     "gonzalez-davila-teatro-eclesiastico-volume-i-1649": "publications/gonzalez-davila-teatro-eclesiastico-volume-i-1649/master.docx",
     "gonzalez-davila-teatro-eclesiastico-volume-ii-1655": "publications/gonzalez-davila-teatro-eclesiastico-volume-ii-1655/master.docx",
@@ -448,8 +454,7 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
-    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
-    "couto-discurso-constitucion-iglesia-1857": "publications/couto-discurso-constitucion-iglesia-1857/master.docx"
+    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

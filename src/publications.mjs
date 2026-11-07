@@ -1,3 +1,4 @@
+import { gonzalezBustilloPublicationRecords, gonzalezBustilloPublicationMetadata } from "./gonzalez-bustillo-publication.mjs";
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata } from "./agn-hospitales-volume-73-publication.mjs";
 import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
@@ -9415,6 +9416,7 @@ const publicationRecords = [
   ...nunezOrtegaPublicationRecords,
   ...heinePublicationRecords,
   ...hipolitoConstitutionsPublicationRecords,
+  ...gonzalezBustilloPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -12067,6 +12069,7 @@ const publicationMetadata = {
   ...nunezOrtegaPublicationMetadata,
   ...heinePublicationMetadata,
   ...hipolitoConstitutionsPublicationMetadata,
+  ...gonzalezBustilloPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
@@ -12287,6 +12290,11 @@ const documentCollectionSlugs = new Set([
   "agn-hospitales-volume-45-1589-1645",
   "agn-hospitales-volume-73-1649-1773",
   "gregorio-lopez-testimonies-mss-7819",
+  "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",
+  "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual",
+  "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular",
+  "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa",
+  "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita",
 ]);
 
 export const publications = publicationRecords.map((item) => {

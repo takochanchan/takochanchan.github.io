@@ -7,6 +7,41 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+  "memberSlugs": [
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa",
+    "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita"
+  ],
+  "volumeLabels": [
+    "文書1・実地調査記録の摘要",
+    "文書2・グアテマラ市の災害報告",
+    "文書3・首都グアテマラの個別報告",
+    "文書4・ハラパの適否に関する明細",
+    "文書5・エルミータの適否に関する明細"
+  ],
+  "groupType": "document-collection",
+  "title": "グアテマラ地震・都市移転関係史料集",
+  "originalTitle": "Cinco documentos sobre el terremoto de Guatemala y el traslado de la ciudad (título descriptivo)",
+  "author": "フアン・ゴンサレス・ブスティリョ",
+  "originalAuthor": "Juan González Bustillo",
+  "subtitle": "1773年地震と首都移転をめぐる5文書・日本語全訳",
+  "series": "DOCUMENTOS SOBRE EL TERREMOTO Y TRASLADO DE GUATEMALA · 1773–1774",
+  "year": 1774,
+  "originalPublication": "1774年に刊行または署名された関連5文書。各文書の原題・刊記・底本は個別項目に記載。",
+  "extent": "全5文書・PDF計182頁",
+  "description": "ゴンサレス・ブスティリョによる、1773年のグアテマラ地震と都市移転の検討に関する5文書。災害の歴史、建物と住民の被害、行政・教会の対応、ハラパとエルミータの候補地調査を収める。移転賛成の決議は、国王の最終裁可や移転完了を意味しない。底本はセビリア大学とフランシスコ・マロキン大学の所蔵本。",
+  "groupOverview": "1773年の地震後、グアテマラの旧都サンティアゴ・デ・グアテマラの被害と都市移転をめぐり、ゴンサレス・ブスティリョが行政記録を整理・報告した5文書を収める。地震直後の救援から、旧都の再建か移転かという審議、候補地の検分、導水・土地配分の計画までを追う。災害を受けた都市の状況だけでなく、行政機関、聖職者、技師らの意見がどのように記録され、比較されたかを読める史料群である。\n\n中心となる『摘要』は、1717年の先例と1773年の被害・候補地調査を集めた前半と、その後の審議を扱う続編からなる。前半は1773年末に署名され、1774年1月の総会議で朗読された。続編は再建と移転をまず別に問い、移転先としてハラパとラス・バカスを比較した議論、反対意見、同年5月の移転決議と土地配分の方針を記す。決議を王室の最終裁可や実際の移転完了と同一視するものではない。\n\nほかの4件は、1541年以来の災害を列挙する報告、教会・修道院・公共施設・家屋の被害を個別に記す報告、ハラパ候補地の難点を示す明細、エルミータ周辺の土地と導水案・費用を比較する明細である。家屋数などには聞き取りによる概数が含まれ、原刊の計算や日付に不一致も残る。各文書を別冊として全訳し、一つの書誌にまとめた。",
+  "sourceEdition": "Juan González Bustilloによる1774年刊・署名の5文書。各文書の書誌記述は収録単位ごとに記録。",
+  "sourceProvider": "セビリア大学図書館（第1–4文書）およびフランシスコ・マロキン大学ルートヴィヒ・フォン・ミーゼス図書館（第5文書）。",
+  "sourceUrl": "https://archive.org/details/A11214502",
+  "rights": "各文書の権利表示は個別の底本情報を参照してください。第1–4文書のInternet Archive記録はPublic Domain Mark 1.0を表示しますが、これは利用許諾ライセンスではありません。第5文書の公開記録は「NOT IN COPYRIGHT」と表示しますが、明示的な再利用ライセンスは確認されていません。翻訳版に所蔵画像は転載していません。",
+  "publishedDate": "2026-11-07",
+  "updatedDate": "2026-11-07"
+},
+{
   "slug": "gonzalez-davila-teatro-eclesiastico-1649-1655",
   "memberSlugs": [
     "gonzalez-davila-teatro-eclesiastico-volume-i-1649",
