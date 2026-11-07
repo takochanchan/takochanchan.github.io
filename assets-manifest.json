@@ -2264,6 +2264,12 @@
       "sha256": "f3106d118cad443c21ec2e0b50b18e58a9cb8493cdbdcf7a6484eca11c13ec3c"
     },
     {
+      "path": "publications/couto-discurso-constitucion-iglesia-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/couto-discurso-constitucion-iglesia-1857/cover.jpg",
+      "size": 63689,
+      "sha256": "ff9b648e8fc371b16106831855e060845c8c15acb15b4bf43c35c59b484e2691"
+    },
+    {
       "path": "publications/crawford-neolithic-man-nicaragua-1891/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/John_Crawford_Neolithic_Man_in_Nicaragua_1891_Japanese_Complete_Translation.epub",
       "size": 132038,
