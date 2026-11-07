@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-06",
-  "updatedAt": "2026-11-07T00:07:40.769Z",
+  "endDate": "2026-11-07",
+  "updatedAt": "2026-11-07T23:39:11.687Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8295,6 +8295,166 @@
       "slug": "galicia-manual-1766",
       "title": "殉教者聖イポリト慈善修道会の手引書",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_72454b44a1fc917c",
+      "name": "Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.pdf",
+      "slug": "gregorio-lopez-testimonies-mss-7819",
+      "title": "グレゴリオ・ロペス証言集",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_730624ff3fb18408",
+      "name": "Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
+      "slug": "gregorio-lopez-testimonies-mss-7819",
+      "title": "グレゴリオ・ロペス証言集",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fb83756d0fa1b904",
+      "name": "Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.pdf",
+      "slug": "losa-vida-gregorio-lopez-1658",
+      "title": "グレゴリオ・ロペス伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_5dedf0bcf02781e0",
+      "name": "Francisco_de_Losa_Gregorio_Lopez_1658_Japanese_Translation.epub",
+      "slug": "losa-vida-gregorio-lopez-1658",
+      "title": "グレゴリオ・ロペス伝",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f61f9ab9f786f93e",
+      "name": "Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.pdf",
+      "slug": "lopez-tesoro-medicinas-1674",
+      "title": "諸病のための薬の宝庫",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_1bfcd8adadc8711e",
+      "name": "Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.epub",
+      "slug": "lopez-tesoro-medicinas-1674",
+      "title": "諸病のための薬の宝庫",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8e6134d1612a9d98",
+      "name": "Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.pdf",
+      "slug": "couto-discurso-constitucion-iglesia-1857",
+      "title": "教会の構成に関する論考",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_92ed74751cdc0a7c",
+      "name": "Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
+      "slug": "couto-discurso-constitucion-iglesia-1857",
+      "title": "教会の構成に関する論考",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_b3b06bb77f28a457",
+      "name": "CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.pdf",
+      "slug": "cehm-cordoba-hospital-memorial-1778",
+      "title": "コルドバ病院上申書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_4934b320378baebd",
+      "name": "CEHM_090_XXVIII_10_282_1_Cordoba_1778_Japanese_Review.epub",
+      "slug": "cehm-cordoba-hospital-memorial-1778",
+      "title": "コルドバ病院上申書",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_385d049f9303bf35",
+      "name": "Gonzalez_Bustillo_01_Extracto_1774_Japanese_Translation.pdf",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書1・実地調査記録の摘要",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7f13a77956b8e447",
+      "name": "Gonzalez_Bustillo_01_Extracto_1774_Japanese_Translation.epub",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書1・実地調査記録の摘要",
+      "format": "epub"
+    },
+    {
+      "key": "dl_9dc51dadbec754f6",
+      "name": "Gonzalez_Bustillo_02_Razon_puntual_1774_Japanese_Translation.pdf",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書2・グアテマラ市の災害報告",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_117d54e8073962a6",
+      "name": "Gonzalez_Bustillo_02_Razon_puntual_1774_Japanese_Translation.epub",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書2・グアテマラ市の災害報告",
+      "format": "epub"
+    },
+    {
+      "key": "dl_22a94056969a16a7",
+      "name": "Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.pdf",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書3・首都グアテマラの個別報告",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_62f6ae80738f84cd",
+      "name": "Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.epub",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書3・首都グアテマラの個別報告",
+      "format": "epub"
+    },
+    {
+      "key": "dl_58e37d6326d30c0d",
+      "name": "Gonzalez_Bustillo_04_Xalapa_1774_Japanese_Translation.pdf",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書4・ハラパの適否に関する明細",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_02d413c938966e6f",
+      "name": "Gonzalez_Bustillo_04_Xalapa_1774_Japanese_Translation.epub",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書4・ハラパの適否に関する明細",
+      "format": "epub"
+    },
+    {
+      "key": "dl_2d4fa2b490951403",
+      "name": "Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書5・エルミータの適否に関する明細",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ef599766233bb471",
+      "name": "Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.epub",
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
+      "title": "グアテマラ地震・都市移転関係史料集",
+      "volumeLabel": "文書5・エルミータの適否に関する明細",
       "format": "epub"
     }
   ],
