@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "repository": "takochanchan/-archive-masters",
+  "fallbacks": {
+    "bancroft-history-central-america-1886-1887": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "99e8420b88e052beeb6aa05a6435f4892313147d8a83c8e3356575c22f5b21e0"
+    },
+    "baqueiro-ensayo-revoluciones-yucatan-1878-1887": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "f6e5282b5a882c510db46a1103308d229e93c5733ff8fd12ead8e47c98f47682"
+    },
+    "berendt-acasaguastlan-jilotepec-1878": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "32b5fc928253c46dbdd1772679e496bfaedb6ee7c16d3f777e396abcf8f127f1"
+    },
+    "berendt-analytical-alphabet-1869": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "42b2bd05f7e562f43bb3ae966bfb1c1715b9d7eb8497fb676a73d648f006de0e"
+    },
+    "berendt-ancient-central-american-civilization-1876": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "c5454c283c0e4b75372a9512b45a49467a564e5c2e78ce2271db3e2514661489"
+    },
+    "berendt-baumwollenbau-yucatan-1863": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "53d18f49e7dc2bec8fbd31a7e4d81e84eb61f0cfc391985cd5906690e72a5910"
+    },
+    "berendt-carib-karif-language-1873": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "5b2c403dbc9f4ab051ebd821cddf9d176235e4d8a5e9e7c4ff6564ed8fdd12be"
+    },
+    "berendt-cochenille-produktion-oaxaca-1862": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "c778c7564a5845d8212d03ffbb8feb855ec4ab6b07016bcd9a842d5bfc868894"
+    },
+    "berendt-darien-language-1874": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "c34406c1b7c56e79a63460d6751f29f65f3ce589e5a3336372d15dee3442dbed"
+    },
+    "berendt-drei-tage-cuba-1860": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "233754da47691c297b62a0b9e23c9d4a3e71dec082d299a2989a96f36e06acf8"
+    },
+    "berendt-el-ramie-1871": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "f93d655f337a9d0f2384e48da50618413c56d2e7ea7efc7f4f6de40fe3fa81e0"
+    },
+    "berendt-escritos-garcia-icazbalceta-1870": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "1650681f79b0082d5bf81eed80d0ab2270354a5a447e39a759fbfbd505d46d85"
+    },
+    "berendt-ethnologie-nicaragua-1874": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "6baf164337bba65e20f5786b3042d1851620753ee88b7de6dbc6dce489a8db57"
+    },
+    "berendt-ethnologie-nicaragua-1875": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "79bdcb60bee8ecc6da5c15e5d8f9cdc4f0e6895699a3b781c4143912b9bf9b5c"
+    },
+    "berendt-handel-veracruz-1862": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "c639b2a7057f46af99bfe2038ab7a8c17a7b76618d627a97665d4af7a8d3828a"
+    },
+    "berendt-historical-documents-guatemala-1877": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "827382b2fbccc801e6d47a8688e9c4982c40ce811940e49f72e51e8fd51b77a4"
+    },
+    "berendt-indianer-tehuantepec-1873": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "2602540f13d18acf67565fa9a84d00104d76157d50dbaa3b2a998319faa72d86"
+    },
+    "berendt-indigenas-america-central-1877": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "95af9cd5ede7c67e0a2b8d5b231cf15c29b892fa0f96e56ac1bdf56751867715"
+    },
+    "berendt-maasse-gewichte-mexiko-1862": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "993b6aead981e3079fd2c430a73754530161e9c04754021189c6b17d630187b1"
+    },
+    "berendt-mangue-subtiaba-dossier-1874": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "40890411167d829b31881466a93f5b33f463a59cbb9d91ef249f13b800c43916"
+    },
+    "berendt-mexico-1872": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "7d3180818e6a2693ffbe35ec113a0f06f6274916a231df60a721c65d4e4f26fa"
+    },
+    "berendt-mexikanische-geographische-literatur-1862-1": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "654a0e0200e3135faaf1a2f1dd5538985ddb67c23740e8435120eb83e464d0cf"
+    },
+    "berendt-palabras-modismos-nicaragua-1874": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "8ff8680df70e8c26a3e93db7da3ea57007daaff0a32c05ebd147b657f0377403"
+    },
+    "berendt-trabajos-linguisticos-juan-pio-perez-1871": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "7617f123d1c730466ade57f6ce92d91fa12e42e911d71e57af3f1f93fae69f5f"
+    },
+    "berendt-veracruz-correspondence-1861-1862": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "3e139e9da700270b8cfc5db987d34bd3108b3c6ea83a90f4fb28ed7e8c95d4e7"
+    },
+    "berendt-vermessungsarbeiten-mexiko-1862": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "2766316152031fa214f3450a76b4e39651b1bbaa736b930b2879bad143c2c619"
+    },
+    "boturini-idea-catalogo-1746": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "92f5e137001bc69a02387896a1cc374832c28b5bc597afeae827f2ce4b9edd52"
+    },
+    "brinton-ancient-human-footprint-nicaragua-1887": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "d53d554ba71c5d90adca579a77cea795bd080c2ed550be48da4b5a3f2ccb02d0"
+    },
+    "cervantes-salazar-mexico-en-1554-1875": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "78cc869fcb10b4070ab177ec454cea0c144018d1503e2a561b3da78e88ad2f73"
+    },
+    "crawford-neolithic-man-nicaragua-1891": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "b90e348ccd1a95668244085340b42f8b48c77830b6e2530ecb99e05a79737ad6"
+    },
+    "editorial-age-nicaragua-footprints-1889": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "0b11a73a5f480ddfca844e530be2c62cc525ab906a0095be920406620df18952"
+    },
+    "flint-antiquities-nicaragua-palenque-builders-1882": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "a67c4bbf39cc4a078070b9c08bb8116c8b9cbc923a9c978a1df0c7a063b23171"
+    },
+    "flint-human-foot-prints-nicaragua-1884": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "cd4f1949c73d6270a55c44ed7c01154f4b2e27cacc96b178902ff9a2718d3977"
+    },
+    "flint-human-foot-prints-nicaragua-1885": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "4f3326dcb96dbe87c298b9a8386c57e31560a897539658882c35de3ac85a794f"
+    },
+    "flint-human-footprints-eocene-1888": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "6a595784ba97eceae96b227070345c6ca865fb8b416aba658bd4172ddee44217"
+    },
+    "flint-nicaragua-foot-prints-1889": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "d7f344a0d1fd23a1194890edb7db43ba26a0bba1e30e2255a885602c69a93d85"
+    },
+    "flint-paleolithics-nicaragua-1888": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "61d43f28bb8080975274656ccd61205e2cac41be1d0a9a55220552e870ea2147"
+    },
+    "flint-pre-adamite-foot-prints-1886": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "cff7f74214e45c16a43a3f4d74d65bc96e11e0e85b20c0434832288e3f768d0c"
+    },
+    "flint-prehistoric-horse-america-1891": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "1ead27d4d25dfa306be5f00c6d01a74525ed9929dd3949c63c947e877c98cd56"
+    },
+    "flint-rainfall-central-western-nicaragua-1899": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "c2d63ac3ac5346715937e5f429a42d366947e56bd05aceed71df567166d4278e"
+    },
+    "flint-rainfall-rivas-nicaragua-1898": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "bdff715f13d15cf50498ed85bf07aab0676ac595a8f6e41ec8b7c69f18f994d5"
+    },
+    "flint-what-dr-flint-says-nicaragua-footprints-1890": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "09aae596b3f6c32e8f7a0b5e058288918a3534b685f676b6b1dd73fc0ea0fd11"
+    },
+    "fuentes-guzman-recordacion-florida-1882-1883": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "1deee26f9e91c32bafbc1d3816c68e8bce68ff878fdeeb082f02f8709a81628a"
+    },
+    "garcia-icazbalceta-apuntes-escritores-lenguas-indigenas-america-1866": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "090016461e56bf778d5765aa614b4219ccfe79fecfd87625def50badef678fbc"
+    },
+    "garcia-icazbalceta-bibliografia-mexicana-siglo-xvi-1886": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "6c6c101f9bda51d64f445496c82368312bd5b3d00ca804c4fa1834031d481fc7"
+    },
+    "hipolito-regla-constituciones-1749": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "8f4b72eb1cbd34a14dada33cd9bd6f7f14d4b591f8b9f54050c8f399e75d0a68"
+    },
+    "historia-tolteca-chichimeca": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "2560df4e37f4ccd0fdcc21067f758480257ecb36d9a3dcb01d753f114f36d2d5"
+    },
+    "mca-pre-adamite-track-1885": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "17c971e18179ef07ddb2a7ba3401cc367a78040d6b8c56a3bf5a82f12bf95335"
+    },
+    "putnam-antiquity-man-america-1884": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "661cb1db41441af533de76f147ef7a2056f6cbf8d2ae1ac32f210037228e32df"
+    },
+    "stoll-ethnographie-guatemala-1884": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "08f2f171c694162b88294c56db673e4ea7dfa96eea4dead9005a143531bbd34a"
+    },
+    "stoll-ixil-language-1887": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "7e047dd6cd72e384edb6576d73cbb5abb5e18cd22f11a2ff53cb1af035f264d2"
+    },
+    "stoll-pokom-languages-1888-1896": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "ecd8df3729ddf300f5c167c4c0239f056cd2b4645f40ca8dd816d98b88746368"
+    },
+    "unsigned-nicaragua-footprints-again-1886": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "acc91a111455b01b024a9927e7b0adba1655412d2f879760b5e1f24b0fd075eb"
+    },
+    "wafer-new-voyage-isthmus-america-1699": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "f59b1b42f6d3c3a12c4247e61758ff89d2bb8b308bcb2c603dc9ad243874fae8"
+    },
+    "ximenez-ayer-ms-1515-volume-2": {
+      "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
+      "fallback_sha256": "aa5c9bad43a0ce6201a9e69af8bd4bc954af850302af420200159c8154497b76"
+    }
+  }
+}
