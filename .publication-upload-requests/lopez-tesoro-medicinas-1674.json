@@ -1,0 +1,35 @@
+{
+  "slug": "lopez-tesoro-medicinas-1674",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "a411c143282aa4910e7394d0b042f6fac2a7ae10",
+  "bundle": {
+    "size": 1947560,
+    "sha256": "6afd1c69b6eb553ed21755a513c93033afdd1e221717664c671887dbea7fc6bf",
+    "chunks": [
+      "fdd14436a48730702fa8242dcd7e9caa5b060be9",
+      "4c6f8f1634d4f2dbc16530df7ac39b9f0b60696d",
+      "ebaa0dfc5f5238e2e20aa9f98a49f9069349c594",
+      "d174ff7b9055ea23959be77b341b01e0a826e65a",
+      "d61b2b837a6200d6c0aeddd4c21d251e1180f13e",
+      "705c08c35b5cbbc071b38bb1a06f4b3d6f80e6d6",
+      "d2ddb790cb72e9e7075515df771bb2137f671713",
+      "b6e54556547e123496c3a02a5cb12e042e11a85b"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.epub",
+      "path": "publications/lopez-tesoro-medicinas-1674/Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.epub",
+      "size": 448188,
+      "sha256": "bc814cddf06b0ae4e380792c5112e80a2f90477f25b3e9eae25e6d03ce9b1a37"
+    },
+    {
+      "filename": "Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.pdf",
+      "path": "publications/lopez-tesoro-medicinas-1674/Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gregorio_Lopez_Tesoro_de_medicinas_1674_Japanese_Translation.pdf",
+      "size": 2511383,
+      "sha256": "0745f1bad378984fad64f54663bf8d49e38288a8611ad45b069db5ae2358206d"
+    }
+  ]
+}
