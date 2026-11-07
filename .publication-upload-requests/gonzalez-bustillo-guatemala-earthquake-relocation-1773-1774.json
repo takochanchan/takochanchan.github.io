@@ -3,25 +3,22 @@
   "release_tag": "publications-002",
   "verified_archive_commit": "f1edcde37e6af28822dba1363ccd76c9a4138c07",
   "bundle": {
-    "size": 350948,
-    "sha256": "58272e942a1615591fad3fecc4382d09f86b61e22affaba61dff92b3a91b2c65",
+    "size": 127112,
+    "sha256": "3cf20eb135f01bf0b996acc3a7a8ca01b059efffc86b69e89702da718d6fb03d",
     "chunks": [
-      "8a578d5f29929968fe00bd0866e858f2e1ae97c2",
-      "81dec7b65add52cf2e4dfa115028598ba630d489",
-      "4819f2272621242ab72b53aa356965f99b2c12f5",
-      "d4c5e0d9749b56efbb5daf3df0bf174d8c1b3e85",
-      "80ca7383b692d1d9feffa7d824d1f0f9ea532081",
-      "a191e18e864439cc4617c29cb2c8cdf6f01fbd17"
+      "ddd2df3d76eb088fc98d8787a39e1ceacffb1274",
+      "d912927ec0fd91c22cf6f21e7241cafa33046368",
+      "fc438998898b59399476438f69f17bc76ac316a6"
     ]
   },
   "assets": [
     {
-      "filename": "Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
-      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.pdf",
-      "size": 534842,
-      "sha256": "563488833ad11fe4dbebe4e987e756cd99d249cab6c14703153dbd2999a5333c"
+      "filename": "Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.epub",
+      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_05_Hermita_1774_Japanese_Translation.epub",
+      "size": 127937,
+      "sha256": "9d250184b2139daf1e9c4bbc0b78ac46a428a839a096570af0b42d8e1da416e9"
     }
   ],
-  "transfer_attempt": 11
+  "transfer_attempt": 12
 }
