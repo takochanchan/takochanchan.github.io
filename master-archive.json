@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "6654a0ec0ae7b2e4e691b8fd456f5faef56fcaa6",
+  "archive_commit": "a411c143282aa4910e7394d0b042f6fac2a7ae10",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -243,6 +243,7 @@
     "lemoine-travers-peten-yucatan-1906": "publications/lemoine-travers-peten-yucatan-1906/master.docx",
     "leonard-don-carlos-de-siguenza-y-gongora-1929": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/master.docx",
     "lobo-pedro-betancur-1667": "publications/lobo-pedro-betancur-1667/master.docx",
+    "lopez-tesoro-medicinas-1674": "publications/lopez-tesoro-medicinas-1674/master.docx",
     "losa-vida-gregorio-lopez-1658": "publications/losa-vida-gregorio-lopez-1658/master.docx",
     "lothrop-museum-central-american-expedition-1927": "publications/lothrop-museum-central-american-expedition-1927/master.docx",
     "lothrop-pottery-types-el-salvador-1927": "publications/lothrop-pottery-types-el-salvador-1927/master.docx",
