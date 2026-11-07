@@ -681,6 +681,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "couto-discurso-constitucion-iglesia-1857",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ベルナルド・コウト（著）",
+      "originalAuthor": "Bernardo Couto",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "crawford-neolithic-man-nicaragua-1891",
       "recordClass": "short-work",
       "searchShard": "001",

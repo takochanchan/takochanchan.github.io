@@ -2337,6 +2337,37 @@
       "updatedDate": "2026-08-10"
     },
     {
+      "slug": "couto-discurso-constitucion-iglesia-1857",
+      "recordClass": "major-work",
+      "title": "教会の構成に関する論考",
+      "originalTitle": "Discurso sobre la constitución de la Iglesia",
+      "author": "ベルナルド・コウト（著）",
+      "originalAuthor": "Bernardo Couto",
+      "year": 1857,
+      "originalPublication": "México: Imprenta de Vicente Segura, 1857. Edición del Diario de Avisos.",
+      "sourceEdition": "Bernardo Couto, Discurso sobre la constitución de la Iglesia. México: Imprenta de Vicente Segura, 1857. Edición del Diario de Avisos.",
+      "sourceProvider": "Universidad Autónoma de Nuevo León（ヌエボ・レオン自治大学）, Capilla Alfonsina Biblioteca Universitaria, Fondo Emeterio Valverde y Téllez. 所蔵記号 BX1801 C6、資料番号 1080016069。",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://cdigital.dgb.uanl.mx/la/1080016069/1080016069.html"
+      },
+      "rights": "1857年刊の原著は著作権保護期間を満了しており、著者は1862年没である。底本はヌエボ・レオン自治大学所蔵の公開資料で、閲覧した公開記録に個別の画像ライセンス表示は確認していない。所蔵画像の利用条件は未確認のため、翻訳版に底本画像は転載していない。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "assets": {
+        "pdf": {
+          "path": "publications/couto-discurso-constitucion-iglesia-1857/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.pdf",
+          "size": 1326216,
+          "sha256": "f3106d118cad443c21ec2e0b50b18e58a9cb8493cdbdcf7a6484eca11c13ec3c"
+        },
+        "epub": {
+          "path": "publications/couto-discurso-constitucion-iglesia-1857/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
+          "size": 138652,
+          "sha256": "1b1a2851a9387794b68f04eb72082b25780e6fa776135f4efaab96b999ff6ab3"
+        }
+      }
+    },
+    {
       "slug": "crawford-neolithic-man-nicaragua-1891",
       "recordClass": "short-work",
       "title": "ニカラグアの新石器時代人",

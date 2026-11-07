@@ -3,6 +3,7 @@ import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata }
 import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
 import { losaVidaGregorioLopezPublicationRecords, losaVidaGregorioLopezPublicationMetadata } from "./losa-vida-gregorio-lopez-1658-publication.mjs";
 import { lopezTesoroMedicinasPublicationRecords, lopezTesoroMedicinasPublicationMetadata } from "./lopez-tesoro-medicinas-1674-publication.mjs";
+import { coutoDiscursoConstitucionIglesia1857PublicationRecords, coutoDiscursoConstitucionIglesia1857PublicationMetadata } from "./couto-discurso-constitucion-iglesia-1857-publication.mjs";
 import { nunezOrtegaPublicationRecords, nunezOrtegaPublicationMetadata } from "./nunez-ortega-publication.mjs";
 import { paynoPublicationRecords, paynoPublicationMetadata } from "./payno-publication.mjs";
 import { estradaPublicationRecords, estradaPublicationMetadata } from "./estrada-publication.mjs";
@@ -334,6 +335,7 @@ const publicationRecords = [
   ...gregorioLopezTestimoniesPublicationRecords,
   ...losaVidaGregorioLopezPublicationRecords,
   ...lopezTesoroMedicinasPublicationRecords,
+  ...coutoDiscursoConstitucionIglesia1857PublicationRecords,
   ...cuevasPublicationRecords,
   ...garciaDocumentosPublicationRecords,
   ...castroPublicationRecords,
@@ -9475,6 +9477,7 @@ const publicationMetadata = {
   ...gregorioLopezTestimoniesPublicationMetadata,
   ...losaVidaGregorioLopezPublicationMetadata,
   ...lopezTesoroMedicinasPublicationMetadata,
+  ...coutoDiscursoConstitucionIglesia1857PublicationMetadata,
   ...cuevasPublicationMetadata,
   ...garciaDocumentosPublicationMetadata,
   ...castroPublicationMetadata,
