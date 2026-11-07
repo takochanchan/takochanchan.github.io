@@ -1904,6 +1904,12 @@
       "sha256": "13b006c1f5cbede00dab7477dc1038f5dbecdb979e4eac7b1a5b552e23853e18"
     },
     {
+      "path": "publications/cehm-cordoba-hospital-memorial-1778/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cehm-cordoba-hospital-memorial-1778/cover.jpg",
+      "size": 157806,
+      "sha256": "18488f93771669ff57d7630a08f1ed000d71aa8ae3b5e9435c7c6b7f5e98b15a"
+    },
+    {
       "path": "publications/cehm-expedientes-betlemitas-xcvii-1-1792-1810/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/CEHM_XCVII_1_Expedientes_Betlemitas_1792_1810_Japanese_Complete_Translation_Revised_20261001_v5.epub",
       "size": 417917,
