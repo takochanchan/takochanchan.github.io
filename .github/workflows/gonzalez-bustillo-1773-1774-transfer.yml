@@ -1,0 +1,32 @@
+name: Transfer checksum-pinned González Bustillo 1774 assets
+
+on:
+  push:
+    branches: ["agent/gonzalez-bustillo-1773-1774-transfer-20261107"]
+    paths: [".publication-upload-requests/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774.json"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bustillo-release-verification
+          path: bustillo-release-verification.json
+
