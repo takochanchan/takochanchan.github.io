@@ -3,7 +3,7 @@ name: Transfer checksum-pinned Tesoro de medicinas 1674 assets
 on:
   push:
     branches: ["agent/lopez-tesoro-medicinas-1674-transfer-20261107"]
-    paths: [".publication-upload-requests/lopez-tesoro-medicinas-1674.json"]
+    paths: [".publication-upload-requests/lopez-tesoro-medicinas-1674.json", "tests/fixtures/publication-catalogue.json"]
 permissions:
   contents: write
 concurrency:
