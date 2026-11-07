@@ -224,8 +224,8 @@ const archivePublications = publications.map((item) => ({
 
 const publicationCardActions = (item) =>
   isMultiVolume(item)
-    ? `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・全巻</a>
-        <p class="record-card__volume-note">PDF・EPUBを${item.volumes.length}分冊で収録</p>`
+    ? `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">${item.groupType === "document-collection" ? "書誌・5文書" : "書誌・全巻"}</a>
+        <p class="record-card__volume-note">PDF・EPUBを${item.volumes.length}${item.groupType === "document-collection" ? "文書" : "分冊"}で収録</p>`
     : `<a class="button button--primary" href="/publications/${escapeHtml(item.slug)}/">書誌・本文</a>
         <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDF保存（${escapeHtml(item.pdfSize)}）</a>
         <a class="button button--quiet" href="${escapeHtml(item.epubUrl)}"
@@ -1084,7 +1084,7 @@ const seriesVolumeInventoryMarkup = (item) => {
 const volumeBibliographyMarkup = (item) =>
   isMultiVolume(item)
     ? `<div class="publication-info__wide">
-        <dt>各分冊の底本・公開条件</dt>
+        <dt>各${item.groupType === "document-collection" ? "文書" : "分冊"}の底本・公開条件</dt>
         <dd>
           <div class="volume-bibliography-list">
             ${item.volumes
@@ -1118,7 +1118,7 @@ const volumeBibliographyMarkup = (item) =>
 const heroFileActions = (item) =>
   isMultiVolume(item)
     ? `<div class="publication-actions publication-actions--multi">
-        <a class="button button--quiet" href="#reader">各分冊のPDF・EPUBを見る</a>
+        <a class="button button--quiet" href="#reader">各${item.groupType === "document-collection" ? "文書" : "分冊"}のPDF・EPUBを見る</a>
       </div>`
     : `<div class="publication-actions">
         <a class="button button--quiet" href="${escapeHtml(item.pdfUrl)}" download>PDFを保存（${escapeHtml(item.pdfSize)}）</a>
@@ -1138,7 +1138,7 @@ const overviewDisclosure = (item, label = "") => `
 
 const volumeFileControls = (item) =>
   isMultiVolume(item)
-    ? `<div class="volume-file-list" aria-label="分冊別ファイル">
+    ? `<div class="volume-file-list" aria-label="${item.groupType === "document-collection" ? "文書" : "分冊"}別ファイル">
         ${item.volumes
           .map((volume, index) => {
             const pdfViewerUrl =
@@ -1221,6 +1221,14 @@ ${header({
           ${catalogueAttributionMarkup(item, "publication-hero__attribution")}
           <p class="publication-hero__description">${escapeHtml(item.description)}</p>
           <div class="publication-overview-list">
+            ${item.groupOverview ? `<details class="publication-overview publication-overview--group" id="overview-${escapeHtml(item.slug)}">
+              <summary class="button button--quiet">
+                <span class="publication-overview__show">史料集全体の詳細概要</span>
+                <span class="publication-overview__hide">史料集全体の詳細概要を閉じる</span>
+                <span class="publication-overview__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="publication-overview__body">${item.groupOverview.split(/\n\s*\n/u).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
+            </details>` : ""}
             ${item.volumes.map(volume => overviewDisclosure(volume, isMultiVolume(item) ? `${volume.volumeLabel}の` : "")).join("")}
           </div>
           <div class="tag-list" aria-label="分類タグ">${tagList(item)}</div>
@@ -1306,8 +1314,8 @@ ${header({
         <div class="reader-heading">
           <div>
             <p class="eyebrow">DOCUMENT READER</p>
-            <h2>${isMultiVolume(item) ? (item.seriesVolumes ? `日本語翻訳版 PDF・EPUB（公開${item.volumes.length}巻）` : `日本語翻訳版 PDF・EPUB（全${item.volumes.length}分冊）`) : "日本語翻訳版 PDF"}</h2>
-            ${isMultiVolume(item) ? `<p class="reader-heading__current" data-pdf-current>読み込む分冊を選択してください。</p>` : ""}
+            <h2>${isMultiVolume(item) ? (item.seriesVolumes ? `日本語翻訳版 PDF・EPUB（公開${item.volumes.length}巻）` : `日本語翻訳版 PDF・EPUB（全${item.volumes.length}${item.groupType === "document-collection" ? "文書" : "分冊"}）`) : "日本語翻訳版 PDF"}</h2>
+            ${isMultiVolume(item) ? `<p class="reader-heading__current" data-pdf-current>読み込む${item.groupType === "document-collection" ? "文書" : "分冊"}を選択してください。</p>` : ""}
           </div>
         </div>
         ${volumeFileControls(item)}
@@ -1589,6 +1597,7 @@ if (localAssets) {
 console.log(
   `Built ${publications.length + Object.keys(bibliographicAliases).length + 3} pages in ${path.relative(projectRoot, dist)}`,
 );
+
 
 
 

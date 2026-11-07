@@ -4640,6 +4640,101 @@
       "updatedDate": "2026-07-30"
     },
     {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",
+      "recordClass": "document-collection",
+      "title": "実地調査記録の摘要",
+      "originalTitle": "Extracto, ò relacion methodica, y puntual de los autos de reconocimiento, practicado en virtud de comision del señor presidente de la Real Audiencia de este reyno de Guatemala",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo",
+      "year": 1774,
+      "originalPublication": "ミスコ、アントニオ・サンチェス・クビリャス印刷所、1774年。",
+      "sourceEdition": "Juan González Bustillo, Extracto, ò relacion methodica, y puntual de los autos de reconocimiento, practicado en virtud de comision del señor presidente de la Real Audiencia de este reyno de Guatemala. Misco: Imprenta de Antonio Sánchez Cubillas, 1774.",
+      "sourceProvider": "Biblioteca de la Universidad de Sevilla, Fondo Antiguo, signatura A 112/145(02), OCLC 928733272. Internet Archive公開記録 A11214502。",
+      "rights": "18世紀刊の原著はパブリックドメインです。底本はセビリア大学図書館所蔵本で、Internet Archiveの公開記録にPublic Domain Mark 1.0が表示されています。これは利用許諾ライセンスではなく、翻訳版に底本画像は転載していません。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A11214502"
+      }
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-02-razon-puntual",
+      "recordClass": "document-collection",
+      "title": "グアテマラ市の災害報告",
+      "originalTitle": "Razon puntual de los sucessos mas memorables, y de los extragos, y daños que ha padecido la ciudad de Guatemala, y su vecindario, desde que se fundò en el parage llamado Ciudad Vieja, ô Almolonga, y de donde se trasladò a el en que actualmente se halla",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo",
+      "year": 1774,
+      "originalPublication": "ミスコ、アントニオ・サンチェス・クビリャス印刷所、1774年。",
+      "sourceEdition": "Juan González Bustillo, Razon puntual de los sucessos mas memorables, y de los extragos, y daños que ha padecido la ciudad de Guatemala, y su vecindario, desde que se fundò en el parage llamado Ciudad Vieja, ô Almolonga, y de donde se trasladò a el en que actualmente se halla. Misco: Imprenta de Antonio Sánchez Cubillas, 1774.",
+      "sourceProvider": "Biblioteca de la Universidad de Sevilla, Fondo Antiguo, signatura A 112/145(03), OCLC 740403295. Internet Archive公開記録 A11214503。",
+      "rights": "18世紀刊の原著はパブリックドメインです。底本はセビリア大学図書館所蔵本で、Internet Archiveの公開記録にPublic Domain Mark 1.0が表示されています。これは利用許諾ライセンスではなく、翻訳版に底本画像は転載していません。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A11214503"
+      }
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular",
+      "recordClass": "document-collection",
+      "title": "首都グアテマラの個別報告",
+      "originalTitle": "Razon particular de los templos, casas de comunidades, y edificios publicos, y por mayor del numero de los vecinos de la capital Guatemala; y del deplorable estado a que se hallan reducidos por los terremotos de la tarde del veinte y nueve de julio, trece, y catorce de diciembre del año proximo passado de setenta y tres",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo",
+      "year": 1774,
+      "originalPublication": "エルミータ暫定居住地、アントニオ・サンチェス・クビリャス印刷所、1774年。",
+      "sourceEdition": "Juan González Bustillo, Razon particular de los templos, casas de comunidades, y edificios publicos, y por mayor del numero de los vecinos de la capital Guatemala; y del deplorable estado a que se hallan reducidos por los terremotos de la tarde del veinte y nueve de julio, trece, y catorce de diciembre del año proximo passado de setenta y tres. Eremita: Imprenta de Antonio Sánchez Cubillas, 1774.",
+      "sourceProvider": "Biblioteca de la Universidad de Sevilla, Fondo Antiguo, signatura A 112/145(03bis), OCLC 928733273. Internet Archive公開記録 A11214503bis。",
+      "rights": "18世紀刊の原著はパブリックドメインです。底本はセビリア大学図書館所蔵本で、Internet Archiveの公開記録にPublic Domain Mark 1.0が表示されています。これは利用許諾ライセンスではなく、翻訳版に底本画像は転載していません。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A11214503bis"
+      }
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-04-xalapa",
+      "recordClass": "document-collection",
+      "title": "ハラパの適否に関する明細",
+      "originalTitle": "Demonstracion de las proporciones ciertas, y dudosas, ê improporciones, ô defectos que ofrece el pueblo, ó Valle de Xalapa, segun el Quaderno de autos instruido con arreglo á la Instruccion comunicada con fecha de 13. de Agosto de 1773, reconocimientos, y demas actuado, para la mas perfecta, y clara inteligencia del assunto, y conforme á lo que se ofreció al final del extracto",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo",
+      "year": 1774,
+      "originalPublication": "刊記なし。本文末尾はエルミータ暫定居住地、1774年5月16日付。",
+      "sourceEdition": "Juan González Bustillo, Demonstracion de las proporciones ciertas, y dudosas, ê improporciones, ô defectos que ofrece el pueblo, ó Valle de Xalapa, segun el Quaderno de autos instruido con arreglo á la Instruccion comunicada con fecha de 13. de Agosto de 1773, reconocimientos, y demas actuado, para la mas perfecta, y clara inteligencia del assunto, y conforme á lo que se ofreció al final del extracto. [1774; signed at Eremita, 16 May 1774].",
+      "sourceProvider": "Biblioteca de la Universidad de Sevilla, Fondo Antiguo, signatura A 112/145(04), OCLC 928733270. Internet Archive公開記録 A11214504。",
+      "rights": "18世紀の原著はパブリックドメインです。底本はセビリア大学図書館所蔵本で、Internet Archiveの公開記録にPublic Domain Mark 1.0が表示されています。これは利用許諾ライセンスではなく、翻訳版に底本画像は転載していません。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A11214504"
+      }
+    },
+    {
+      "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-05-hermita",
+      "recordClass": "document-collection",
+      "title": "エルミータの適否に関する明細",
+      "originalTitle": "Demonstracion de las proporciones ciertas, y dudosas, ó defectos que ofrece el Pueblo ó Valle de la Hermita, segun el Quaderno de autos instruido con arreglo á la Instrucción comunicada con fecha de 13. de Agosto de 1773, reconocimientos, y demas actuado, para la mas perfecta, y clara inteligencia del assunto, y conforme á lo que se ofreció al final del Extracto, ó su primera parte",
+      "author": "フアン・ゴンサレス・ブスティリョ",
+      "originalAuthor": "Juan González Bustillo",
+      "year": 1774,
+      "originalPublication": "刊記なし。本文末尾はエルミータ暫定居住地、1774年5月16日付。",
+      "sourceEdition": "Juan González Bustillo, Demonstracion de las proporciones ciertas, y dudosas, ó defectos que ofrece el Pueblo ó Valle de la Hermita, segun el Quaderno de autos instruido con arreglo á la Instrucción comunicada con fecha de 13. de Agosto de 1773, reconocimientos, y demas actuado, para la mas perfecta, y clara inteligencia del assunto, y conforme á lo que se ofreció al final del Extracto, ó su primera parte. [1774; signed at Eremita, 16 May 1774].",
+      "sourceProvider": "Biblioteca Ludwig von Mises, Universidad Francisco Marroquín, Colección Carlos W. Elmenhorst, signatura CWE472, identificador RD2083. Internet Archive公開記録 demonstracin00gonzguat。",
+      "rights": "18世紀の原著は著作権保護期間を満了しています。Internet Archiveのメタデータは「NOT IN COPYRIGHT」と表示しますが、明示的なライセンスURLは確認されていません。翻訳版に所蔵画像を転載していません。",
+      "publishedDate": "2026-11-07",
+      "updatedDate": "2026-11-07",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/demonstracin00gonzguat"
+      }
+    },
+    {
       "slug": "gonzalez-compendio-geografia-centro-america-1881",
       "recordClass": "major-work",
       "title": "中央アメリカ地理要綱",

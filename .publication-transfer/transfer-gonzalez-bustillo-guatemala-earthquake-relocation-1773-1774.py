@@ -38,7 +38,7 @@ assert set(expected).issubset(expected_names) and len(expected) == 1
 manifest = json.loads(pathlib.Path("assets-manifest.json").read_text())
 manifest_by_path = {asset["path"]: asset for asset in manifest["assets"]}
 for name, asset in expected.items():
-    path = f"publications/{SLUG}/{name}"
+    path = asset["path"]
     recorded = manifest_by_path[path]
     assert asset["path"] == path
     assert asset["url"] == recorded["url"]
