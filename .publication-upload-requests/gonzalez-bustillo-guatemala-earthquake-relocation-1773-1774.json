@@ -3,20 +3,20 @@
   "release_tag": "publications-002",
   "verified_archive_commit": "f1edcde37e6af28822dba1363ccd76c9a4138c07",
   "bundle": {
-    "size": 376107,
-    "sha256": "2a2818763a317ac527217631951b713be48ac9013307a5815b8af1f9ba1facdf",
+    "size": 140257,
+    "sha256": "a3270b890b7cf7f0e4df038e39c05e151971273b8896f7a3723e792ac037f979",
     "chunks": [
-      "25c718dd742e03badd299ab0191f8ab3b294844b"
+      "b4ba81e02d63e464764da54f4da0cf281d1aa24b"
     ]
   },
   "assets": [
     {
-      "filename": "Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.pdf",
-      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular/Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.pdf",
-      "size": 494274,
-      "sha256": "5a4f9428e6949b2d0ea46af4ff67db7d6290370e51a11f392fda9e571ad1bca1"
+      "filename": "Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.epub",
+      "path": "publications/gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-03-razon-particular/Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Gonzalez_Bustillo_03_Razon_particular_1774_Japanese_Translation.epub",
+      "size": 141904,
+      "sha256": "606f39095afb25b37cc6718a60ef5f96aa6801d8ba55b025e294f213bf0833f4"
     }
   ],
-  "transfer_attempt": 7
+  "transfer_attempt": 8
 }
