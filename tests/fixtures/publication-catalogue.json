@@ -1676,6 +1676,14 @@
       "searchShard": "002"
     },
     {
+      "slug": "lopez-tesoro-medicinas-1674",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "グレゴリオ・ロペス（編）",
+      "originalAuthor": "Gregorio López (compiler), with annotations by Matías de Salcedo Mariaca and Josef Díaz Brisuela",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "losa-vida-gregorio-lopez-1658",
       "releaseTag": "publications-002",
       "recordClass": "major-work",
