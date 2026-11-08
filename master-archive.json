@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f1edcde37e6af28822dba1363ccd76c9a4138c07",
+  "archive_commit": "7b38a0d8c77ad7f679c9ea9b851b655be3d1b56f",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -141,6 +141,7 @@
     "estrada-descripcion-zapotitlan-suchitepeques-1579": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/master.docx",
     "fancourt-history-yucatan-1854": "publications/fancourt-history-yucatan-1854/master.docx",
     "fellechner-mueller-hesse-mosquitoland-1845": "publications/fellechner-mueller-hesse-mosquitoland-1845/master.docx",
+    "felipe-cadena-guatemala-earthquake-1774": "publications/felipe-cadena-guatemala-earthquake-1774/master.docx",
     "fernandez-historia-costa-rica-1889": "publications/fernandez-historia-costa-rica-1889/master.docx",
     "figueroa-album": "publications/figueroa-album/master.docx",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
@@ -766,6 +767,16 @@
       "master_filename": "master.docx",
       "master_size": 173126,
       "master_sha256": "f3211e6eab5ba30340019d929c4e3769ea4968d60716cf85f21e558180372f75"
+    },
+    "felipe-cadena-guatemala-earthquake-1774": {
+      "canonical_path": "publications/felipe-cadena-guatemala-earthquake-1774/master.docx",
+      "status": "pending_lfs",
+      "release_tag": "master-felipe-cadena-guatemala-earthquake-1774-20261107-v1",
+      "release_url": "https://github.com/takochanchan/-archive-masters/releases/tag/master-felipe-cadena-guatemala-earthquake-1774-20261107-v1",
+      "ledger_commit": "7b38a0d8c77ad7f679c9ea9b851b655be3d1b56f",
+      "master_filename": "master.docx",
+      "master_size": 72049,
+      "master_sha256": "a11d71ef05c97cd49c3f40df72b33ce1134938c6b4d636faf36e22fe0d96ba21"
     },
     "flint-antiquities-nicaragua-palenque-builders-1882": {
       "canonical_path": "publications/flint-antiquities-nicaragua-palenque-builders-1882/master.docx",
