@@ -9689,6 +9689,25 @@
       }
     },
     {
+      "slug": "victor-miguel-diaz-la-romantica-ciudad-colonial-1927",
+      "title": "詩情あふれる植民都市",
+      "originalTitle": "La romántica ciudad colonial: guía para conocer los monumentos históricos de la Antigua Guatemala",
+      "author": "ビクトル・ミゲル・ディアス",
+      "originalAuthor": "Víctor Miguel Díaz",
+      "originalPublication": "グアテマラ、サンチェス・イ・デ・ギセ印刷所、1927年。",
+      "year": 1927,
+      "sourceEdition": "Víctor Miguel Díaz, La romántica ciudad colonial: guía para conocer los monumentos históricos de la Antigua Guatemala. Guatemala: Tipografía Sánchez y de Guise, 1927.",
+      "sourceProvider": "Biblioteca Americanista de Sevilla（CSIC）所蔵本。Simurg（CSIC）公開。",
+      "rights": "ビクトル・ミゲル・ディアスの原著本文は日本では著作権保護期間を満了しています。底本デジタル画像：CC BY-NC-SA 4.0、Biblioteca Americanista de Sevilla. CSIC. 日本語翻訳・校訂版：CC BY-NC-SA 4.0。R・アレバロ・マルティネスによる序文は権利状態が異なるため収録していません。",
+      "publishedDate": "2026-11-08",
+      "updatedDate": "2026-11-08",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/990002485460204201/la-romantica-ciudad-colonial-guia-para-conocer-los-monumentos-historicos-de-la-antigua-guatemala"
+      }
+    },
+    {
       "slug": "villagutierre-itza-1701",
       "recordClass": "major-work",
       "title": "イツァ地方征服史",

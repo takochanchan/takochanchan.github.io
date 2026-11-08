@@ -1,3 +1,4 @@
+import { diazPublicationRecords, diazPublicationMetadata } from "./diaz-publication.mjs";
 import { gonzalezBustilloPublicationRecords, gonzalezBustilloPublicationMetadata } from "./gonzalez-bustillo-publication.mjs";
 import { felipeCadenaPublicationRecords, felipeCadenaPublicationMetadata } from "./felipe-cadena-guatemala-earthquake-1774-publication.mjs";
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
@@ -312,6 +313,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...diazPublicationRecords,
   ...paynoPublicationRecords,
   ...estradaPublicationRecords,
   ...dancerPublicationRecords,
@@ -9456,6 +9458,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
   ...estradaPublicationMetadata,
   ...dancerPublicationMetadata,

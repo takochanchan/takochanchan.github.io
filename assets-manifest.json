@@ -3134,12 +3134,6 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
-      "path": "publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
-      "size": 97960,
-      "sha256": "dac1ae0d2ff1a0232915fafc359504531a9fe3c7e2dcaf78eb4d204f440e6802"
-    },
-    {
       "path": "publications/felipe-cadena-guatemala-earthquake-1774/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.epub",
       "size": 128638,
@@ -3150,6 +3144,12 @@
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
       "size": 818539,
       "sha256": "bbe5b3b27d3ed0abb6834fde0f26d1bc6f4762df03298f8eab48f8e5445fc7d2"
+    },
+    {
+      "path": "publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
+      "size": 97960,
+      "sha256": "dac1ae0d2ff1a0232915fafc359504531a9fe3c7e2dcaf78eb4d204f440e6802"
     },
     {
       "path": "publications/fellechner-mueller-hesse-mosquitoland-1845/Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub",
@@ -9186,6 +9186,24 @@
       "url": "https://takochanchan.github.io/publications/vazquez-pedro-betancur-1962/cover.jpg",
       "size": 41546,
       "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
+    },
+    {
+      "path": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.epub",
+      "size": 54529670,
+      "sha256": "78844515b38d0bc932bd5fa4156b7bb717be1b3f6ed05faea177550dc38cd8cc"
+    },
+    {
+      "path": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.pdf",
+      "size": 32721635,
+      "sha256": "dcaabf8b928c6c82b735ca20fa01dbc34ed4fe26944f7156af576fe29b97e648"
+    },
+    {
+      "path": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/cover.jpg",
+      "size": 50317,
+      "sha256": "d46a5c48cf850af7837cb99c80c1af482d6c3cae544fb69bb31ef5e57d370c95"
     },
     {
       "path": "publications/villagutierre-itza-1701/cover.jpg",
