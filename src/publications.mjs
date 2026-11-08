@@ -1,4 +1,5 @@
 import { gonzalezBustilloPublicationRecords, gonzalezBustilloPublicationMetadata } from "./gonzalez-bustillo-publication.mjs";
+import { felipeCadenaPublicationRecords, felipeCadenaPublicationMetadata } from "./felipe-cadena-guatemala-earthquake-1774-publication.mjs";
 import { agnHospitales45PublicationRecords, agnHospitales45PublicationMetadata } from "./agn-hospitales-volume-45-publication.mjs";
 import { agnHospitales73PublicationRecords, agnHospitales73PublicationMetadata } from "./agn-hospitales-volume-73-publication.mjs";
 import { gregorioLopezTestimoniesPublicationRecords, gregorioLopezTestimoniesPublicationMetadata } from "./gregorio-lopez-testimonies-mss-7819-publication.mjs";
@@ -9417,6 +9418,7 @@ const publicationRecords = [
   ...heinePublicationRecords,
   ...hipolitoConstitutionsPublicationRecords,
   ...gonzalezBustilloPublicationRecords,
+  ...felipeCadenaPublicationRecords,
 ];
 
 const publicDomainRights =
@@ -12070,6 +12072,7 @@ const publicationMetadata = {
   ...heinePublicationMetadata,
   ...hipolitoConstitutionsPublicationMetadata,
   ...gonzalezBustilloPublicationMetadata,
+  ...felipeCadenaPublicationMetadata,
 };
 
 // Short works are assigned editorially from their original publication form.
