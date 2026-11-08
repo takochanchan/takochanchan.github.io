@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-07",
-  "updatedAt": "2026-11-07T23:39:11.687Z",
+  "endDate": "2026-11-08",
+  "updatedAt": "2026-11-08T23:45:21.884Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8455,6 +8455,54 @@
       "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
       "title": "グアテマラ地震・都市移転関係史料集",
       "volumeLabel": "文書5・エルミータの適否に関する明細",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d589aecc26673449",
+      "name": "Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "slug": "blanchard-dauzats-san-juan-de-ulua-1839",
+      "title": "サン・フアン・デ・ウルア",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ca02ce85bb9094d3",
+      "name": "Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "slug": "blanchard-dauzats-san-juan-de-ulua-1839",
+      "title": "サン・フアン・デ・ウルア",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0af01f87899570b3",
+      "name": "Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.pdf",
+      "slug": "victor-miguel-diaz-la-romantica-ciudad-colonial-1927",
+      "title": "詩情あふれる植民都市",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_f64702e9bdd17e21",
+      "name": "Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.epub",
+      "slug": "victor-miguel-diaz-la-romantica-ciudad-colonial-1927",
+      "title": "詩情あふれる植民都市",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e43d410c56527f4c",
+      "name": "Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "slug": "felipe-cadena-guatemala-earthquake-1774",
+      "title": "グアテマラ市略記",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2fb6b866f9c63a98",
+      "name": "Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.epub",
+      "slug": "felipe-cadena-guatemala-earthquake-1774",
+      "title": "グアテマラ市略記",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
