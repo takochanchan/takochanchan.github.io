@@ -3134,6 +3134,24 @@
       "sha256": "1db805029d24219f81c568aa5016d6e0c71ebb5fae11fec08d3d4fb110c99a20"
     },
     {
+      "path": "publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/felipe-cadena-guatemala-earthquake-1774/cover.jpg",
+      "size": 97960,
+      "sha256": "dac1ae0d2ff1a0232915fafc359504531a9fe3c7e2dcaf78eb4d204f440e6802"
+    },
+    {
+      "path": "publications/felipe-cadena-guatemala-earthquake-1774/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.epub",
+      "size": 128638,
+      "sha256": "a28965d40b71d176c50ef133fa562c01dd533b0a6fcc1b93b359fde8b7afc2ae"
+    },
+    {
+      "path": "publications/felipe-cadena-guatemala-earthquake-1774/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "size": 818539,
+      "sha256": "bbe5b3b27d3ed0abb6834fde0f26d1bc6f4762df03298f8eab48f8e5445fc7d2"
+    },
+    {
       "path": "publications/fellechner-mueller-hesse-mosquitoland-1845/Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Fellechner_Mueller_Hesse_Mosquitoland_1845_Japanese_Translation.epub",
       "size": 24918911,

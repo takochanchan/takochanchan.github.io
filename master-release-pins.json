@@ -126,6 +126,10 @@
       "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
       "fallback_sha256": "0b11a73a5f480ddfca844e530be2c62cc525ab906a0095be920406620df18952"
     },
+    "felipe-cadena-guatemala-earthquake-1774": {
+      "ledger_commit": "7b38a0d8c77ad7f679c9ea9b851b655be3d1b56f",
+      "fallback_sha256": "5e4e7bf5f1312689e55c80c3af887da4a27cbd7f482d3bf0905f6a2889027ff0"
+    },
     "flint-antiquities-nicaragua-palenque-builders-1882": {
       "ledger_commit": "8ca1004509812b0cbee7984fb38a55c8032e95d3",
       "fallback_sha256": "a67c4bbf39cc4a078070b9c08bb8116c8b9cbc923a9c978a1df0c7a063b23171"
