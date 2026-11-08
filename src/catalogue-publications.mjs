@@ -7,6 +7,59 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "author": "フランシスコ・バスケス",
+  "originalAuthor": "Francisco Vázquez",
+  "series": "CRÓNICA DE LA PROVINCIA DEL SANTÍSIMO NOMBRE DE JESÚS DE GUATEMALA · 1714–1716",
+  "types": [
+    "宗教史",
+    "年代記",
+    "伝記"
+  ],
+  "regions": [
+    "グアテマラ",
+    "中央アメリカ"
+  ],
+  "languages": [
+    "スペイン語"
+  ],
+  "tags": [
+    "フランシスコ会",
+    "宣教",
+    "管区史",
+    "修道院",
+    "第三会",
+    "植民地時代"
+  ],
+  "publishedDate": "2026-11-09",
+  "updatedDate": "2026-11-09",
+  "slug": "vazquez-cronica-guatemala-1714-1716",
+  "memberSlugs": [
+    "vazquez-cronica-guatemala-volume-i-1714",
+    "vazquez-cronica-guatemala-volume-ii-1714",
+    "vazquez-cronica-guatemala-volume-iii-1716",
+    "vazquez-cronica-guatemala-volume-iv-1716"
+  ],
+  "volumeLabels": [
+    "第1巻　前付、第1書・第2書",
+    "第2巻　第3書・正誤表・章目録・事項索引",
+    "第3巻　前付・第4書",
+    "第4巻　第5書・全3論"
+  ],
+  "title": "グアテマラ至聖名管区年代記",
+  "originalTitle": "Crónica de la Provincia del Santísimo Nombre de Jesús de Guatemala",
+  "subtitle": "全4巻",
+  "year": "1714–1716",
+  "originalPublication": "グアテマラ、Imprenta de San Francisco、1714年刊の第1部と標題紙に1716年を掲げる第2部。日本語訳は1937–1944年再刊版に対応する全4巻。",
+  "extent": "全4巻・日本語版PDF計2,310頁",
+  "description": "フランシスコ・バスケスによるグアテマラのフランシスコ会管区史を全4巻で日本語訳。宣教と修道院の成立、修道士の列伝、殉教・奇跡の伝承、管区統治と第三会を収める。第1・2巻は1714年原刊、第3・4巻は1940・1944年再刊が底本。後二巻の1716年原刊との個別照合は未了。",
+  "groupOverview": "フランシスコ会士フランシスコ・バスケスが、グアテマラの「イエズスの至聖なる御名」管区の成立と活動を記した年代記。原著は1714年刊の第1部と、標題紙に1716年を掲げる第2部からなる。日本語訳は1937～1944年再刊版の巻立てに対応する全4巻である。\n\n第1巻は刊行許可や序文などの前付と第1・2書を収め、1524年ごろからの宣教、先住民の集住と教化、修道院の創設、1565年の管区昇格から1600年までの統治をたどる。教理問答・文法書・文字の考案、洪水や地震、町や湖の記述も含む。第2巻の第3書は、ゴンサロ・メンデスら創立者と1630年までに活躍した修道士の列伝で、原刊の正誤表・章目録・事項索引を付す。第3巻の第4書はその人物史を引き継ぎ、苦行、祈り、病、死、葬儀や奇跡の伝承を詳しく記す。第4巻の第5書は三論からなり、トロガルパ・テグスガルパへの宣教と殉教、1600年以降の管区統治・司牧・諸施設、悔悛の第三会の成立と会員たちを扱う。\n\n全五書をモーセ五書になぞらえ、修道士の生涯を読者の模範として示す構成である。書簡や証言、規則などを収める一方、著者は征服と改宗を神の摂理のもとに捉え、神の栄光と修道会の誉れを伝えようとする。先住民への評価や奇跡の叙述も、この立場を踏まえて読む必要がある。\n\n第1・2巻は1714年原刊を底本とし、1937・1938年再刊を参照。第3・4巻は1940・1944年再刊を底本とし、1716年原刊第2部との個別照合は未了である。後代編者の序説・校注は対象外とし、他者の加筆や帰属未確定の追補を区別している。",
+  "sourceEdition": "第1・2巻：1714年原刊第1部。第3巻：1940年再刊第3巻。第4巻：1944年再刊第4巻。各巻の底本を参照。",
+  "sourceProvider": "John Carter Brown Library、Biblioteca de CIRMA、Biblioteca Ludwig von Mises（Universidad Francisco Marroquín）。Internet Archive公開。",
+  "sourceUrl": "https://archive.org/details/chronicadelaprov00vzqu",
+  "rights": "原著は著作権保護期間を満了している。底本・提供画像の権利と利用条件は各巻に記載。",
+  "visualLabel": "グアテマラのフランシスコ会管区史"
+},
+{
   "slug": "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774",
   "memberSlugs": [
     "gonzalez-bustillo-guatemala-earthquake-relocation-1773-1774-01-extracto",

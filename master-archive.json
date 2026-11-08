@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "62aed8e685c33f65370ca6019ba680d54f472173",
+  "archive_commit": "248d2790e5df79cc63d4ebbed98e370e24504976",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -440,6 +440,10 @@
     "valenzuela-lacandon-chol-1695": "publications/valenzuela-lacandon-chol-1695/master.md",
     "valle-anexion-centro-america-mexico-1924-1949": "publications/valle-anexion-centro-america-mexico-1924-1949/master.docx",
     "valle-george-ephraim-squier-1922": "publications/valle-george-ephraim-squier-1922/master.docx",
+    "vazquez-cronica-guatemala-volume-i-1714": "publications/vazquez-cronica-guatemala-volume-i-1714/master.docx",
+    "vazquez-cronica-guatemala-volume-ii-1714": "publications/vazquez-cronica-guatemala-volume-ii-1714/master.docx",
+    "vazquez-cronica-guatemala-volume-iii-1716": "publications/vazquez-cronica-guatemala-volume-iii-1716/master.docx",
+    "vazquez-cronica-guatemala-volume-iv-1716": "publications/vazquez-cronica-guatemala-volume-iv-1716/master.docx",
     "vazquez-pedro-betancur-1962": "publications/vazquez-pedro-betancur-1962/master.docx",
     "victor-miguel-diaz-la-romantica-ciudad-colonial-1927": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/master.docx",
     "villagutierre-itza-1701": "publications/villagutierre-itza-1701/master.docx",

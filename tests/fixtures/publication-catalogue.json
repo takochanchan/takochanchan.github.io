@@ -2829,6 +2829,34 @@
       "author": "ラファエル・エリオドロ・バリェ"
     },
     {
+      "slug": "vazquez-cronica-guatemala-volume-i-1714",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・バスケス",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "vazquez-cronica-guatemala-volume-ii-1714",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・バスケス",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "vazquez-cronica-guatemala-volume-iii-1716",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・バスケス",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "vazquez-cronica-guatemala-volume-iv-1716",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・バスケス",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "vazquez-pedro-betancur-1962",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -3086,6 +3114,15 @@
       "memberSlugs": [
         "tribes-and-temples-vol-1",
         "tribes-and-temples-vol-2"
+      ]
+    },
+    {
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "memberSlugs": [
+        "vazquez-cronica-guatemala-volume-i-1714",
+        "vazquez-cronica-guatemala-volume-ii-1714",
+        "vazquez-cronica-guatemala-volume-iii-1716",
+        "vazquez-cronica-guatemala-volume-iv-1716"
       ]
     },
     {

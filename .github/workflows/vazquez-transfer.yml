@@ -1,0 +1,32 @@
+name: Transfer checksum-pinned Vazquez four volumes assets
+
+on:
+  push:
+    branches: ["agent/vazquez-publish-20261109"]
+    paths: [".publication-upload-requests/vazquez-cronica-guatemala-1714-1716.json"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-vazquez.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vazquez-release-verification
+          path: vazquez-release-verification.json
+

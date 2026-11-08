@@ -9188,6 +9188,78 @@
       "sha256": "472e0529c2c2985745db4c8284fe00786a80b88871e0183c6e81b24a01f23394"
     },
     {
+      "path": "publications/vazquez-cronica-guatemala-volume-i-1714/Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.epub",
+      "size": 3895708,
+      "sha256": "3e6585be5f098cb21bb0fa43f6b63e7a9d97e55e9999f38cf5be679ccfc9b63c"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-i-1714/Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.pdf",
+      "size": 4703697,
+      "sha256": "3f9e798a6dd33e7e0ac784c8b7ab440d3eca7c4beb3e2820022d263f7b8863ff"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-i-1714/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-cronica-guatemala-volume-i-1714/cover.jpg",
+      "size": 55885,
+      "sha256": "4f989110ff7a61f80c658920037cec60aee16516684561f7fcaa812a9076bb21"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-ii-1714/Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.epub",
+      "size": 800040,
+      "sha256": "9d388c42828b69b284501fe55a74a0020a206b3366fc44e2a55db0ff15844f6d"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-ii-1714/Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.pdf",
+      "size": 4714667,
+      "sha256": "718e797ff8dc605526d4bfd73f9bf8d2fdc623768da0301dc097026a4f95c7d0"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-ii-1714/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-cronica-guatemala-volume-ii-1714/cover.jpg",
+      "size": 57102,
+      "sha256": "0698f175178e6f851002fcc18f1c80826ebac4314fc4fffa9cdb54c7e9661b4a"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iii-1716/Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.epub",
+      "size": 739219,
+      "sha256": "2724f737b7691cfb6ff8a11401ec7661b22bdebb641ae0126ea36700d1fcb9eb"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iii-1716/Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.pdf",
+      "size": 4409007,
+      "sha256": "1f57c1b508f0209bc87e4c1f9d4c4ae3c563f2c4237a1ff264bb2bcafb4c08a1"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iii-1716/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-cronica-guatemala-volume-iii-1716/cover.jpg",
+      "size": 54521,
+      "sha256": "a315c49c08626b4fa383e0f0f60febd9cc906fbd112b986f69ff5756df26d254"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iv-1716/Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.epub",
+      "size": 796068,
+      "sha256": "ceead209ede8e8474b79787ff07e53eb6af59a6d4ce64c12cecaa028cb6e4674"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iv-1716/Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.pdf",
+      "size": 5251743,
+      "sha256": "102ad9808ac26a6c8593cdefccf29b1808568aabdcb1e3c81e32ebbfef23116e"
+    },
+    {
+      "path": "publications/vazquez-cronica-guatemala-volume-iv-1716/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/vazquez-cronica-guatemala-volume-iv-1716/cover.jpg",
+      "size": 54640,
+      "sha256": "79818b13e4e2aa184cccac4e467ed46882fd74e75d1bb42dc403092bd41282d1"
+    },
+    {
       "path": "publications/vazquez-pedro-betancur-1962/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_Vazquez_Pedro_de_San_Jose_de_Betancur_Japanese_Translation.epub",
       "size": 681164,

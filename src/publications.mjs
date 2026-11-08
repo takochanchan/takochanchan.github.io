@@ -1,3 +1,4 @@
+import { vazquezCronicaPublicationRecords, vazquezCronicaPublicationMetadata } from "./vazquez-cronica-publication.mjs";
 import { sanJuanPublicationRecords, sanJuanPublicationMetadata } from "./san-juan-publication.mjs";
 import { diazPublicationRecords, diazPublicationMetadata } from "./diaz-publication.mjs";
 import { gonzalezBustilloPublicationRecords, gonzalezBustilloPublicationMetadata } from "./gonzalez-bustillo-publication.mjs";
@@ -314,6 +315,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...vazquezCronicaPublicationRecords,
   ...sanJuanPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
@@ -9460,6 +9462,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...vazquezCronicaPublicationMetadata,
   ...sanJuanPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
