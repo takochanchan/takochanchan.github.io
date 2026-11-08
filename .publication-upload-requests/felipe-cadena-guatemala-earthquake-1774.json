@@ -1,0 +1,31 @@
+{
+  "slug": "felipe-cadena-guatemala-earthquake-1774",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "7b38a0d8c77ad7f679c9ea9b851b655be3d1b56f",
+  "bundle": {
+    "size": 698731,
+    "sha256": "a80f6eb54fd2c112dda20656181b821610b054b38477192c845e17e685c6f629",
+    "chunks": [
+      "dca141555c6682231c36ad2a0c523b259ca968f7",
+      "232ccc2a23dbaaa0c754cb933af53b04093506a2",
+      "88d8bb36fda5882cec507eb3294de8d73091be59",
+      "e2185eb1b529ac3aaf522e83cbfaf20c1c5ba98a",
+      "294c8e2bc3c93ddadfc7e8d7793bac3392ce128f",
+      "6fa669523c13b49d46dab6d6a380b1138309d186",
+      "d6a0082929610d9b4290d0f933d1b63969ff0d2e",
+      "0c0de49f7a7884543b95e7542008802882a103b9",
+      "0a221977686f9f1b59185f9727f23ef5a63fca1d",
+      "99e45fe195705f673619b553191e55b5217944a0"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "path": "publications/felipe-cadena-guatemala-earthquake-1774/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Cadena_Breve_descripcion_de_Guatemala_1774_Japanese_Translation.pdf",
+      "size": 818539,
+      "sha256": "bbe5b3b27d3ed0abb6834fde0f26d1bc6f4762df03298f8eab48f8e5445fc7d2"
+    }
+  ],
+  "transfer_attempt": 1
+}
