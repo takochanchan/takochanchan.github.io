@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f7f3564183cf762de21f97fc8d8b19aa2adb0dd9",
+  "archive_commit": "62aed8e685c33f65370ca6019ba680d54f472173",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -32,6 +32,7 @@
     "benzoni-historia-mondo-nuovo-1565-ja": "publications/benzoni-historia-mondo-nuovo-1565-ja/master.docx",
     "berendt-central-america-explorations-1867": "publications/berendt-central-america-explorations-1867/master.md",
     "beteta-morazan-federacion-1887": "publications/beteta-morazan-federacion-1887/master.docx",
+    "blanchard-dauzats-san-juan-de-ulua-1839": "publications/blanchard-dauzats-san-juan-de-ulua-1839/master.docx",
     "bonaparte-nicaragua-canal-1846": "publications/bonaparte-nicaragua-canal-1846/master.docx",
     "bourbourg-palenque-1866": "publications/bourbourg-palenque-1866/master.docx",
     "brasseur-rabinal-achi-1862": "publications/brasseur-rabinal-achi-1862/master.docx",
@@ -440,6 +441,7 @@
     "valle-anexion-centro-america-mexico-1924-1949": "publications/valle-anexion-centro-america-mexico-1924-1949/master.docx",
     "valle-george-ephraim-squier-1922": "publications/valle-george-ephraim-squier-1922/master.docx",
     "vazquez-pedro-betancur-1962": "publications/vazquez-pedro-betancur-1962/master.docx",
+    "victor-miguel-diaz-la-romantica-ciudad-colonial-1927": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/master.docx",
     "villagutierre-itza-1701": "publications/villagutierre-itza-1701/master.docx",
     "villavicencio-luz-metodo-idolatras-1692": "publications/villavicencio-luz-metodo-idolatras-1692/master.docx",
     "virchow-graeberschaedel-guatemala-1897": "publications/virchow-graeberschaedel-guatemala-1897/master.docx",
@@ -454,8 +456,7 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
-    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
-    "victor-miguel-diaz-la-romantica-ciudad-colonial-1927": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/master.docx"
+    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

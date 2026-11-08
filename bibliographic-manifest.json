@@ -1083,6 +1083,25 @@
       }
     },
     {
+      "slug": "blanchard-dauzats-san-juan-de-ulua-1839",
+      "title": "サン・フアン・デ・ウルア",
+      "originalTitle": "San Juan de Ulùa, ou Relation de l’expédition française au Mexique, sous les ordres de M. le contre-amiral Baudin",
+      "author": "P・ブランシャール、A・ドーザ",
+      "originalAuthor": "P. Blanchard et A. Dauzats",
+      "originalPublication": "パリ、ジッド、1839年。",
+      "year": 1839,
+      "sourceEdition": "P. Blanchard et A. Dauzats, San Juan de Ulùa, ou Relation de l’expédition française au Mexique, sous les ordres de M. le contre-amiral Baudin; suivi des notes et documents par M. E. Maissin. Paris: Gide, 1839.",
+      "sourceProvider": "Getty Research Institute所蔵本、Internet Archive公開。原刊84–85頁はBibliothèque municipale de Lyon所蔵の同版（Internet Archive公開）で補完。",
+      "rights": "原著と図版は著作権保護期間を満了しています。画像の所蔵元はGetty Research Institute、公開元はInternet Archiveです。個別のCCライセンスが付与されているとは表示しません。Lyon補完元にはPublic Domain Markの表示があります。",
+      "publishedDate": "2026-11-09",
+      "updatedDate": "2026-11-09",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/sanjuandeuluaour00blan"
+      }
+    },
+    {
       "slug": "bonaparte-nicaragua-canal-1846",
       "recordClass": "major-work",
       "title": "ニカラグア運河――運河によって大西洋と太平洋を結ぶ計画",

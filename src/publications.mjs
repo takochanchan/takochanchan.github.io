@@ -1,3 +1,4 @@
+import { sanJuanPublicationRecords, sanJuanPublicationMetadata } from "./san-juan-publication.mjs";
 import { diazPublicationRecords, diazPublicationMetadata } from "./diaz-publication.mjs";
 import { gonzalezBustilloPublicationRecords, gonzalezBustilloPublicationMetadata } from "./gonzalez-bustillo-publication.mjs";
 import { felipeCadenaPublicationRecords, felipeCadenaPublicationMetadata } from "./felipe-cadena-guatemala-earthquake-1774-publication.mjs";
@@ -313,6 +314,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...sanJuanPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
   ...estradaPublicationRecords,
@@ -9458,6 +9460,7 @@ const gallicaPublicDomainRights =
   JapaneseEditionNoReuseRights;
 
 const publicationMetadata = {
+  ...sanJuanPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
   ...estradaPublicationMetadata,
@@ -12401,6 +12404,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

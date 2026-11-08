@@ -1064,6 +1064,24 @@
       "sha256": "c4a71629bad157801933b147ad8899834d1fc2f1e0e7cf445a7ea30ed8a0ff9b"
     },
     {
+      "path": "publications/blanchard-dauzats-san-juan-de-ulua-1839/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "size": 27043121,
+      "sha256": "d6ae23905a0e89eb2a0d7874ff1607e20b405447b7a377fbaf867b4e887006da"
+    },
+    {
+      "path": "publications/blanchard-dauzats-san-juan-de-ulua-1839/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "size": 23505049,
+      "sha256": "3e2128ce52810b5f8a37b511689b49d82387628df83d2f9156e9b7c3374444ff"
+    },
+    {
+      "path": "publications/blanchard-dauzats-san-juan-de-ulua-1839/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/blanchard-dauzats-san-juan-de-ulua-1839/cover.jpg",
+      "size": 128638,
+      "sha256": "fac085b75b82ce0d8bde3e48fe99999d26ea2f0f462382f55745df3270e84397"
+    },
+    {
       "path": "publications/bonaparte-nicaragua-canal-1846/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Louis_Napoleon_Bonaparte_Canal_of_Nicaragua_1846_Japanese_Complete_Translation.epub",
       "size": 234931,

@@ -1,0 +1,34 @@
+{
+  "slug": "blanchard-dauzats-san-juan-de-ulua-1839",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 48412659,
+    "sha256": "c50402381d592efe9e71ecf92f4b4f4c951ad4372a8a16a29fd0f0d683456ebb",
+    "chunks": [
+      "7ee531f10246f541a5ee02f30d837056745c0727",
+      "fef135fc53aea95ae6ba5f911381429906d6a52e",
+      "95a858f9f997099de372a829d2d607c72cc71659",
+      "bdb5258e1ccce3c8b6ecdde865f8b465b77bc4db",
+      "ddd610d9a8aa1cdb29d4663c68f1024a18342f95",
+      "f1ff0c9d61c4833347f76fdddb4891eaf735666e",
+      "16b49701ecc98a54d825a5b7281a4db43d626676"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "path": "publications/blanchard-dauzats-san-juan-de-ulua-1839/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.epub",
+      "size": 27043121,
+      "sha256": "d6ae23905a0e89eb2a0d7874ff1607e20b405447b7a377fbaf867b4e887006da"
+    },
+    {
+      "filename": "Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "path": "publications/blanchard-dauzats-san-juan-de-ulua-1839/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Blanchard_Dauzats_San_Juan_de_Ulua_1839_Japanese_Translation.pdf",
+      "size": 23505049,
+      "sha256": "3e2128ce52810b5f8a37b511689b49d82387628df83d2f9156e9b7c3374444ff"
+    }
+  ],
+  "verified_archive_commit": "62aed8e685c33f65370ca6019ba680d54f472173"
+}
