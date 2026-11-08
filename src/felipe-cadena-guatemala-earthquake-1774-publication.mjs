@@ -45,14 +45,12 @@ export const felipeCadenaPublicationRecords = [
 ];
 
 export const felipeCadenaPublicationMetadata = {
-  {
-    "felipe-cadena-guatemala-earthquake-1774": {
-      "sourceEdition": "Felipe Cadena, Breve descripcion de la noble ciudad de Santiago de los Caballeros de Guatemala; y puntual noticia de su lamentable ruina ocasionada de un violento terremoto el dia veinte y nueve de julio de mil setecientos setenta, y tres. Mixco: Oficina de Antonio Sanchez Cubillas, 1774.",
-      "sourceProvider": "John Carter Brown Library, shelfmark 1-SIZE B774 .C122b. Digital copy: Internet Archive, item brevedescripcion00cade.",
-      "sourceUrl": "https://archive.org/details/brevedescripcion00cade",
-      "rights": "1774年刊の原著はパブリックドメインです。底本のデジタル画像はジョン・カーター・ブラウン図書館のCC BY 4.0で提供され、所蔵館への出典表示と変更の明示が求められています。本訳では原画像を複製していません。Internet Archiveの個別書誌に独立したライセンス欄はなく、本訳にも別途ライセンスは付していません。",
-      "publishedDate": "2026-11-07",
-      "updatedDate": "2026-11-07"
-    }
+  "felipe-cadena-guatemala-earthquake-1774": {
+    "sourceEdition": "Felipe Cadena, Breve descripcion de la noble ciudad de Santiago de los Caballeros de Guatemala; y puntual noticia de su lamentable ruina ocasionada de un violento terremoto el dia veinte y nueve de julio de mil setecientos setenta, y tres. Mixco: Oficina de Antonio Sanchez Cubillas, 1774.",
+    "sourceProvider": "John Carter Brown Library, shelfmark 1-SIZE B774 .C122b. Digital copy: Internet Archive, item brevedescripcion00cade.",
+    "sourceUrl": "https://archive.org/details/brevedescripcion00cade",
+    "rights": "1774年刊の原著はパブリックドメインです。底本のデジタル画像はジョン・カーター・ブラウン図書館のCC BY 4.0で提供され、所蔵館への出典表示と変更の明示が求められています。本訳では原画像を複製していません。Internet Archiveの個別書誌に独立したライセンス欄はなく、本訳にも別途ライセンスは付していません。",
+    "publishedDate": "2026-11-07",
+    "updatedDate": "2026-11-07"
   }
 };
