@@ -24,6 +24,7 @@ import tempfile
 import unicodedata
 import zipfile
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from contextvars import ContextVar
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote
@@ -63,12 +64,31 @@ ORIGINAL_MARKER_RE = re.compile(
     r"クラウス\s*117\s*写本|出所|PMM\s*\d+\s*,|"
     r"主底本|補完底本|合成底本)"
     r"[^〕\r\n]{0,240})〕"
-    r"|〔\s*\d{4}\s*年再録誌面\s+p\.\s*(?:\d+|[ivxlcdm]+)(?:\s*[–-]\s*(?:\d+|[ivxlcdm]+))?(?:（下段）)?\s*〕"
     r"|〔\s*(?:" + MAP_LOCATION_MARKER_PATTERN + r")\s*〕"
     r"|\{\{\s*SOURCE\s*:\s*[^{}\r\n]{1,240}\s*\}\}"
     r")",
     re.IGNORECASE,
 )
+# Enable the newly supported position-only markers only for this publication.
+# Older works retain their exact established extraction and PDF mapping.
+VAZQUEZ_SOURCE_MARKER_SLUGS = frozenset({
+    "vazquez-cronica-guatemala-volume-i-1714",
+    "vazquez-cronica-guatemala-volume-ii-1714",
+    "vazquez-cronica-guatemala-volume-iii-1716",
+    "vazquez-cronica-guatemala-volume-iv-1716",
+})
+_VAZQUEZ_SOURCE_MARKERS = ContextVar("vazquez_source_markers", default=False)
+VAZQUEZ_ORIGINAL_MARKER_RE = re.compile(
+    r"(?:" + ORIGINAL_MARKER_RE.pattern
+    + r"|〔\s*\d{4}\s*年再録誌面\s+p\.\s*(?:\d+|[ivxlcdm]+)(?:\s*[–-]\s*(?:\d+|[ivxlcdm]+))?(?:（下段）)?\s*〕)",
+    re.IGNORECASE,
+)
+
+
+def active_original_marker_re() -> re.Pattern:
+    return VAZQUEZ_ORIGINAL_MARKER_RE if _VAZQUEZ_SOURCE_MARKERS.get() else ORIGINAL_MARKER_RE
+
+
 DEFAULT_SOURCE_LOCATION = "底本位置なし（前付）"
 DOCX_NON_LOCATION_SENTINEL = "\ue000"
 DOCX_STYLE_SENSITIVE_MARKER_RE = re.compile(
@@ -218,7 +238,7 @@ def original_marker_label(value: str) -> str:
     label = re.sub(r"\s+", " ", marker[1:-1]).strip()
     # Mark dated reprint pages explicitly as source-edition locations in the
     # index; the source text and PDF retain their year-qualified printed label.
-    if re.fullmatch(r"\d{4}\s*年再録誌面\s+p\.\s*(?:\d+|[ivxlcdm]+)(?:\s*[–-]\s*(?:\d+|[ivxlcdm]+))?(?:（下段）)?", label, re.IGNORECASE):
+    if _VAZQUEZ_SOURCE_MARKERS.get() and re.fullmatch(r"\d{4}\s*年再録誌面\s+p\.\s*(?:\d+|[ivxlcdm]+)(?:\s*[–-]\s*(?:\d+|[ivxlcdm]+))?(?:（下段）)?", label, re.IGNORECASE):
         return "底本 " + re.sub(r"^(\d{4})\s+年", r"\1年", label)
     if label in MAP_LOCATION_LABELS:
         return "原資料：" + label
@@ -260,7 +280,7 @@ def is_original_page_marker(value: str) -> bool:
     )
     # Match the strict position-only forms already accepted by the canonical
     # master archive policy: dated reprint pages and section-local counters.
-    if re.fullmatch(
+    if _VAZQUEZ_SOURCE_MARKERS.get() and re.fullmatch(
         r"(?:(?:底本 )?\d{4}\s*年再録誌面\s+p\.\s*(?:\d+|[ivxlcdm]+)"
         r"(?:\s*[–-]\s*(?:\d+|[ivxlcdm]+))?(?:（下段）)?|"
         r"原刊(?:\s+第\d+(?:冊|巻))?\s+(?:(?:前付第|後付第)\s*[1-9]\d*\s*頁|標題紙))",
@@ -348,7 +368,7 @@ def first_concrete_original_marker(value: str) -> re.Match[str] | None:
     return next(
         (
             marker
-            for marker in ORIGINAL_MARKER_RE.finditer(value)
+            for marker in active_original_marker_re().finditer(value)
             if is_original_page_marker(marker.group(0))
             and not is_placeholder_original_marker(marker.group(0))
         ),
@@ -399,7 +419,7 @@ def markdown_paragraphs(path: Path) -> list[str]:
             flush()
             paragraphs.append(line)
             continue
-        if ORIGINAL_MARKER_RE.search(line):
+        if active_original_marker_re().search(line):
             flush()
             paragraphs.append(line)
             continue
@@ -553,7 +573,7 @@ def epub_footnote_reference_pages(
     for member, body in documents:
         for block in epub_block_elements(body):
             value = re.sub(r"\s+", " ", "".join(block.itertext())).strip()
-            for marker in ORIGINAL_MARKER_RE.finditer(value):
+            for marker in active_original_marker_re().finditer(value):
                 if is_original_page_marker(marker.group(0)) and not (
                     is_placeholder_original_marker(marker.group(0))
                 ):
@@ -777,7 +797,7 @@ def paragraphs_with_original_pages(
             current_marker = re.sub(r"\s+", " ", paragraph.strip())
             output.append((current_marker, current_marker))
             continue
-        paragraph = ORIGINAL_MARKER_RE.sub(
+        paragraph = active_original_marker_re().sub(
             lambda match: ""
             if is_placeholder_original_marker(match.group(0))
             else match.group(0),
@@ -786,7 +806,7 @@ def paragraphs_with_original_pages(
         cursor = 0
         for marker in (
             match
-            for match in ORIGINAL_MARKER_RE.finditer(paragraph)
+            for match in active_original_marker_re().finditer(paragraph)
             if is_original_page_marker(match.group(0))
             and not is_placeholder_original_marker(match.group(0))
         ):
@@ -816,7 +836,7 @@ def original_labels_for_pdf_pages(pages: list[str]) -> list[list[str]]:
     output: list[list[str]] = []
     for page in pages:
         labels: list[str] = []
-        for marker in ORIGINAL_MARKER_RE.finditer(page):
+        for marker in active_original_marker_re().finditer(page):
             if not is_original_page_marker(marker.group(0)):
                 continue
             if is_placeholder_original_marker(marker.group(0)):
@@ -1268,6 +1288,14 @@ def resolve_path(manifest_path: Path, value: str) -> Path:
 
 
 def build_work(manifest_path: Path, spec: dict) -> dict:
+    token = _VAZQUEZ_SOURCE_MARKERS.set(spec["slug"] in VAZQUEZ_SOURCE_MARKER_SLUGS)
+    try:
+        return _build_work(manifest_path, spec)
+    finally:
+        _VAZQUEZ_SOURCE_MARKERS.reset(token)
+
+
+def _build_work(manifest_path: Path, spec: dict) -> dict:
     slug = spec["slug"]
     source = resolve_path(manifest_path, spec.get("source") or spec["master"])
     pdf = resolve_path(manifest_path, spec["pdf"])
