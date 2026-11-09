@@ -1,0 +1,45 @@
+name: Verify Vazquez detailed overview wording
+on:
+  push:
+    branches: ["agent/vazquez-overview-wording-20261109"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - run: npm test
+      - run: npm run verify:remote-search
+      - name: Check the three corrected detailed overviews
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { readFile } from 'node:fs/promises';
+          const source = await readFile('src/catalogue-publications.mjs','utf8');
+          const records = JSON.parse(await readFile('src/publication-overviews.json','utf8')).records;
+          const html = await readFile('dist/publications/vazquez-cronica-guatemala-1714-1716/index.html','utf8');
+          const group = source.split('\n').find(line => line.includes('"groupOverview":') && line.includes('フランシスコ会士フランシスコ・バスケス'));
+          assert.ok(group.includes('第1・2巻は1714年版を底本とし'));
+          assert.ok(!group.includes('1714年原刊'));
+          for (const slug of ['vazquez-cronica-guatemala-volume-i-1714','vazquez-cronica-guatemala-volume-ii-1714']) {
+            const overview = records[slug];
+            assert.ok(overview.includes('1714年版'));
+            assert.ok(!overview.includes('1714年原刊'));
+            assert.ok(!overview.includes('同原刊'));
+            const detail = [...html.matchAll(/<details\b[^>]*class="publication-overview"[^>]*>[\s\S]*?<\/details>/gu)].map(m => m[0]).find(body => body.includes('overview-' + slug));
+            assert.ok(detail, slug + ': disclosure exists');
+            assert.ok(detail.includes('1714年版'));
+            assert.ok(!detail.includes('1714年原刊'));
+            assert.ok(!detail.includes('同原刊'));
+          }
+          assert.ok(records['vazquez-cronica-guatemala-volume-ii-1714'].includes('同版を底本'));
+          assert.ok(html.includes('第1・2巻は1714年版を底本とし'));
+          console.log('Overall, volume I, and volume II detailed overview wording verified.');
+          JS
