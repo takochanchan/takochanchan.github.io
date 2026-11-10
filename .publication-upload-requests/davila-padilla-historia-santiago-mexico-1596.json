@@ -1,0 +1,41 @@
+{
+  "slug": "davila-padilla-historia-santiago-mexico-1596",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 9119149,
+    "sha256": "2a7bdc8fd115a55b66710de46dd1e19959e64841f09c390b0dcb45d9c72aab51",
+    "chunks": [
+      "2d50711620c723d769f84f8bb6693751161dd9d2",
+      "915daee8081e2dd1b19d3a0a8548b016be6010fc",
+      "ede430ba1646d45ffa574c0550b49561def97175",
+      "3fc5f173ada406a6c404ed0e6a8450f1b874d065",
+      "9f462c9390a63753049941d2cd810928f530a379",
+      "fb5ef15b197c537403a207895831de6e5a93e2fd",
+      "6863c613e3440ad87c6b5aedd3b39a268398055c",
+      "52cc5d1d3c1ae11a7cfe45c0a51335452bae739e",
+      "1f11c94fda428352e77d6aa2fa68b9ac0cab11ed",
+      "639baf42969668ad446057baa9268798aa16e342",
+      "4dea422eaa6316db397a3dd281acbe22243b3ae1",
+      "a567c3870febf155cd733312c3913dc9dc18dc31",
+      "4d1eafe2061c5ec39f12e17c22b8044210d56795",
+      "b7c1df7b32a7c9a3aa3243c412eb4afbd003a650"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "path": "publications/davila-padilla-historia-santiago-mexico-1596/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "size": 2925267,
+      "sha256": "0d9373fd4c2263ba0aed34f73fbf310473134f5a177ffff9e7b8c9bac02a9dcf"
+    },
+    {
+      "filename": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "path": "publications/davila-padilla-historia-santiago-mexico-1596/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "size": 9036262,
+      "sha256": "9c9bd285c810db9bd15f49007b627291b6dd06142a3e8544e915b1a70da7a548"
+    }
+  ],
+  "verified_archive_commit": "05ef755c2a350dbef3fd83229449b659bddb2d57"
+}

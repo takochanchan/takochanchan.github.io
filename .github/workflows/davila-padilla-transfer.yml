@@ -1,0 +1,31 @@
+name: Transfer checksum-pinned Davila Padilla 1596 assets
+
+on:
+  push:
+    branches: ["agent/davila-padilla-publish-20261111"]
+    paths: [".publication-upload-requests/davila-padilla-historia-santiago-mexico-1596.json"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-davila-padilla.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: davila-padilla-release-verification
+          path: davila-padilla-release-verification.json

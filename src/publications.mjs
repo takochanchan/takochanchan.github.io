@@ -1,3 +1,4 @@
+import { davilaPadillaPublicationRecords, davilaPadillaPublicationMetadata } from "./davila-padilla-publication.mjs";
 import { vazquezCronicaPublicationRecords, vazquezCronicaPublicationMetadata } from "./vazquez-cronica-publication.mjs";
 import { sanJuanPublicationRecords, sanJuanPublicationMetadata } from "./san-juan-publication.mjs";
 import { diazPublicationRecords, diazPublicationMetadata } from "./diaz-publication.mjs";
@@ -317,6 +318,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 const publicationRecords = [
   ...vazquezCronicaPublicationRecords,
   ...sanJuanPublicationRecords,
+  ...davilaPadillaPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
   ...estradaPublicationRecords,
@@ -9464,6 +9466,7 @@ const gallicaPublicDomainRights =
 const publicationMetadata = {
   ...vazquezCronicaPublicationMetadata,
   ...sanJuanPublicationMetadata,
+  ...davilaPadillaPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
   ...estradaPublicationMetadata,
@@ -12407,6 +12410,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 

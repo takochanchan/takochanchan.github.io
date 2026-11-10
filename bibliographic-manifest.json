@@ -2539,6 +2539,25 @@
       }
     },
     {
+      "slug": "davila-padilla-historia-santiago-mexico-1596",
+      "title": "メキシコ・サンティアゴ管区創設発展史",
+      "originalTitle": "Historia de la fundacion y discurso de la Prouincia de Santiago de Mexico, de la Orden de Predicadores, por las vidas de sus varones insignes, y casos notables de Nueua España",
+      "author": "アグスティン・ダビラ・パディリャ",
+      "originalAuthor": "Agustín Dávila Padilla",
+      "originalPublication": "マドリード、ペドロ・マドリガル工房、1596年。",
+      "year": 1596,
+      "sourceEdition": "Agustín Dávila Padilla, Historia de la fundacion y discurso de la Prouincia de Santiago de Mexico, de la Orden de Predicadores, por las vidas de sus varones insignes, y casos notables de Nueua España. Madrid: Pedro Madrigal, 1596.",
+      "sourceProvider": "ナバラ州政府 Biblioteca Navarra Digital（BiNaDi）公開の1596年版、登録番号00008389。正誤表はスペイン国立図書館所蔵の同版R/4337、471頁はGoogle Books公開の同版も参照。",
+      "rights": "1596年刊の原著本文は著作権保護期間を満了しています。本訳は原著本文の日本語訳であり、BiNaDiのスキャン画像・木版図は収録していません。原画像の利用条件は公開元の案内をご確認ください：https://binadi.navarra.es/inicio/contacto.php",
+      "publishedDate": "2026-11-11",
+      "updatedDate": "2026-11-11",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://binadi.navarra.es/registro/00008389"
+      }
+    },
+    {
       "slug": "de-guignes-navigations-chinois-amerique-1761",
       "title": "中国人のアメリカ方面への航海と、アジア東端に位置するいくつかの民族に関する研究",
       "originalTitle": "Recherches sur les navigations des Chinois du côté de l’Amérique, et sur quelques peuples situés à l’extrémité orientale de l’Asie",
