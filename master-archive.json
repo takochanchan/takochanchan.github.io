@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "248d2790e5df79cc63d4ebbed98e370e24504976",
+  "archive_commit": "05ef755c2a350dbef3fd83229449b659bddb2d57",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -460,7 +460,8 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
-    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx"
+    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
+    "davila-padilla-historia-santiago-mexico-1596": "publications/davila-padilla-historia-santiago-mexico-1596/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

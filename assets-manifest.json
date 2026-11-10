@@ -2432,6 +2432,24 @@
       "sha256": "ed87e8e4614d1483cc9a3eff825f9a4d7a27a14721d8a108d2f42c41913a7668"
     },
     {
+      "path": "publications/davila-padilla-historia-santiago-mexico-1596/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "size": 2925267,
+      "sha256": "0d9373fd4c2263ba0aed34f73fbf310473134f5a177ffff9e7b8c9bac02a9dcf"
+    },
+    {
+      "path": "publications/davila-padilla-historia-santiago-mexico-1596/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "size": 9036262,
+      "sha256": "9c9bd285c810db9bd15f49007b627291b6dd06142a3e8544e915b1a70da7a548"
+    },
+    {
+      "path": "publications/davila-padilla-historia-santiago-mexico-1596/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/davila-padilla-historia-santiago-mexico-1596/cover.jpg",
+      "size": 60462,
+      "sha256": "24b93c23546169f69d4d52bfb339e8e9a80a4fc2537eebf21408f73b4ef05ce6"
+    },
+    {
       "path": "publications/de-guignes-navigations-chinois-amerique-1761/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Joseph_de_Guignes_Recherches_Navigations_Chinois_1761_Japanese_Complete_Translation.epub",
       "size": 27397423,
