@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-08",
-  "updatedAt": "2026-11-08T23:45:21.884Z",
+  "endDate": "2026-11-09",
+  "updatedAt": "2026-11-10T02:45:16.798Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8503,6 +8503,70 @@
       "slug": "felipe-cadena-guatemala-earthquake-1774",
       "title": "グアテマラ市略記",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_44675ac8ccb06f85",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.pdf",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第1巻　前付、第1書・第2書",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_0ccb808cd33e7757",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol01_Japanese.epub",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第1巻　前付、第1書・第2書",
+      "format": "epub"
+    },
+    {
+      "key": "dl_c555a188c78aeafe",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.pdf",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第2巻　第3書・正誤表・章目録・事項索引",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_38bbaa19247b60de",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol02_Japanese.epub",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第2巻　第3書・正誤表・章目録・事項索引",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e41f39be3e0201db",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.pdf",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第3巻　前付・第4書",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_150d74d8710ba099",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol03_Japanese.epub",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第3巻　前付・第4書",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5b7e2bdc759ec7bc",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.pdf",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第4巻　第5書・全3論",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_06f68700c16e5b48",
+      "name": "Francisco_Vazquez_Cronica_Guatemala_Vol04_Japanese.epub",
+      "slug": "vazquez-cronica-guatemala-1714-1716",
+      "title": "グアテマラ至聖名管区年代記",
+      "volumeLabel": "第4巻　第5書・全3論",
       "format": "epub"
     }
   ],
