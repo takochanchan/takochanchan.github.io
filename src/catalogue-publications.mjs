@@ -1,3 +1,4 @@
+import { francoPublicationGroup } from "./franco-publication.mjs";
 import {
   publicationReleaseUrl,
   publications as publicationUnits,
@@ -6,6 +7,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  francoPublicationGroup,
 {
   "author": "フランシスコ・バスケス",
   "originalAuthor": "Francisco Vázquez",
@@ -1181,13 +1183,3 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
-
-
-
-
-
-
-
-
-
-

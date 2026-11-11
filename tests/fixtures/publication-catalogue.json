@@ -1070,6 +1070,13 @@
       "author": "イギリス外務省"
     },
     {
+      "slug": "franco-historia-santiago-mexico-segunda-parte-1900",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アロンソ・フランコ",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "frias-mexico-guatemala-boundary-1883",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -3000,6 +3007,13 @@
         "cuevas-historia-iglesia-mexico-v03",
         "cuevas-historia-iglesia-mexico-v04",
         "cuevas-historia-iglesia-mexico-v05"
+      ]
+    },
+    {
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "memberSlugs": [
+        "davila-padilla-historia-santiago-mexico-1596",
+        "franco-historia-santiago-mexico-segunda-parte-1900"
       ]
     },
     {

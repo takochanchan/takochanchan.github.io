@@ -1,0 +1,38 @@
+{
+  "slug": "franco-historia-santiago-mexico-segunda-parte-1900",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 7404949,
+    "sha256": "631557e0cf1bafb2d157053e2710354ef36d3caeae3a0083d3592aeadaa22e0b",
+    "chunks": [
+      "80250d0cdac6a339018639236f02a7672f9932ee",
+      "ce3f2cb5a33f16cebcee1c666c7ded4d4c5b1caf",
+      "e8c8aac1cae4c0ccb908e46083e102dacf31e252",
+      "19cb35f65c77f8a50bb4d3c63454fbb50a1a29e0",
+      "650a37e708595fc53984cb798d356a4251ca3610",
+      "72e7f9f34e16ea42f60f647eeb8922ed219e5881",
+      "694129b0a3bbf7fe76ad1d2f881e643b30ebb6f4",
+      "b2b92ca6b28f223285b0cecf3ef7fefb034c6ede",
+      "bfee8f60f0716af756cf7d45fe24376b477eaf90",
+      "a38614c09a1f463656ada52cac02da5e205ca623",
+      "752a21a47f95d40cc717b4839f333e99e02a562a"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "path": "publications/franco-historia-santiago-mexico-segunda-parte-1900/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "size": 2652915,
+      "sha256": "60dc63735732add332fda1ac502f3c35c7ba93b4d59ae696927fc49137792ac7"
+    },
+    {
+      "filename": "Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "path": "publications/franco-historia-santiago-mexico-segunda-parte-1900/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "size": 7304845,
+      "sha256": "6d6d67dd4869d107868bebb15508afa75a9fa3d1a6c95b4f6679d9efce29cfd1"
+    }
+  ],
+  "verified_archive_commit": "2d5b513adb98f289e22863dbab6ce38eaff65034"
+}

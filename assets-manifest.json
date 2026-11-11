@@ -3476,6 +3476,24 @@
       "sha256": "70b699dba3e2f76534bb145647aafca35bef767c478c647ec432f8afd4a8937d"
     },
     {
+      "path": "publications/franco-historia-santiago-mexico-segunda-parte-1900/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "size": 2652915,
+      "sha256": "60dc63735732add332fda1ac502f3c35c7ba93b4d59ae696927fc49137792ac7"
+    },
+    {
+      "path": "publications/franco-historia-santiago-mexico-segunda-parte-1900/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "size": 7304845,
+      "sha256": "6d6d67dd4869d107868bebb15508afa75a9fa3d1a6c95b4f6679d9efce29cfd1"
+    },
+    {
+      "path": "publications/franco-historia-santiago-mexico-segunda-parte-1900/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/franco-historia-santiago-mexico-segunda-parte-1900/cover.jpg",
+      "size": 49296,
+      "sha256": "2a566d265f1b7593521c90547f737498acabaa7ef197cb03a83914935af7aabb"
+    },
+    {
       "path": "publications/frias-mexico-guatemala-boundary-1883/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Frias_Cuestion_Limites_Mexico_Guatemala_1883_Japanese_Complete_Translation.epub",
       "size": 897600,
