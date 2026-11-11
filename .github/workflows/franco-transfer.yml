@@ -4,7 +4,7 @@ name: Transfer checksum-pinned Alonso Franco 1900 assets
 on:
   push:
     branches: ["agent/franco-publish-20261111"]
-    paths: [".publication-upload-requests/franco-historia-santiago-mexico-segunda-parte-1900.json"]
+    paths: [".publication-upload-requests/franco-historia-santiago-mexico-segunda-parte-1900.json", ".github/workflows/franco-transfer.yml"]
 permissions:
   contents: write
 concurrency:
