@@ -38,7 +38,7 @@ jobs:
           group='davila-padilla-franco-historia-santiago-mexico'
           url='https://takochanchan.github.io/publications/'+group+'/'
           html=urllib.request.urlopen(url,timeout=60).read().decode()
-          for text in ['メキシコ・サンティアゴ管区史','Agustín Dávila Padilla','Hernando Ojea','Alonso Franco','1608','1897','第三書','https://cdigital.cabu.uanl.mx/ffdr/1/1020000364.html','全3著作','2,340']:
+          for text in ['メキシコ・サンティアゴ管区史','Agustín Dávila Padilla','Hernando Ojea','Alonso Franco','1608','1897','第三書','https://cdigital.cabu.uanl.mx/ffdr/1/1020000364.html','日本語翻訳版 PDF・EPUB（全3分冊）','2340頁']:
               assert text in H.unescape(html), text
           names=['Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf','Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf','Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf']
           positions=[html.index(name) for name in names]
