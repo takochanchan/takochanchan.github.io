@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-09",
-  "updatedAt": "2026-11-10T02:45:16.798Z",
+  "endDate": "2026-11-10",
+  "updatedAt": "2026-11-11T00:40:57.951Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8568,12 +8568,33 @@
       "title": "グアテマラ至聖名管区年代記",
       "volumeLabel": "第4巻　第5書・全3論",
       "format": "epub"
+    },
+    {
+      "key": "dl_a2efa3991883801f",
+      "name": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
+      "slug": "davila-padilla-historia-santiago-mexico-1596",
+      "title": "メキシコ・サンティアゴ管区創設発展史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6cf8cf72473845b5",
+      "name": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
+      "slug": "davila-padilla-historia-santiago-mexico-1596",
+      "title": "メキシコ・サンティアゴ管区創設発展史",
+      "volumeLabel": "",
+      "format": "epub"
     }
   ],
   "records": [
     {
       "date": "2026-10-26",
       "key": "dl_90135e31bc32d0dc",
+      "count": 1
+    },
+    {
+      "date": "2026-11-10",
+      "key": "dl_7f7b5a73df7fd79b",
       "count": 1
     }
   ]
