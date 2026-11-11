@@ -3615,6 +3615,25 @@
       }
     },
     {
+      "slug": "franco-historia-santiago-mexico-segunda-parte-1900",
+      "title": "メキシコ・サンティアゴ管区史 第二部",
+      "originalTitle": "Segunda parte de la historia de la Provincia de Santiago de México, Orden de Predicadores en la Nueva España",
+      "author": "アロンソ・フランコ",
+      "originalAuthor": "Alonso Franco",
+      "originalPublication": "1645年成立。メキシコ、国立博物館印刷所（Imprenta del Museo Nacional）、1900年初刊。",
+      "year": 1900,
+      "sourceEdition": "Alonso Franco, Segunda parte de la historia de la Provincia de Santiago de México, Orden de Predicadores en la Nueva España. México: Imprenta del Museo Nacional, 1900. 1645年成立。José María de Ágreda y Sánchezによる序文を付す。",
+      "sourceProvider": "ヌエボ・レオン自治大学（UANL）デジタル図書館、Biblioteca Emeterio Valverde y Téllez所蔵、登録番号1080017668。",
+      "rights": "アロンソ・フランコの原著と1900年刊本の編集部分は著作権保護期間を満了しています。UANL公開スキャン画像の再利用ライセンスは確認されていないため、本訳には底本画像を収録していません。",
+      "publishedDate": "2026-11-11",
+      "updatedDate": "2026-11-11",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://cdigital.dgb.uanl.mx/la/1080017668/1080017668.html"
+      }
+    },
+    {
       "slug": "frias-mexico-guatemala-boundary-1883",
       "recordClass": "major-work",
       "title": "メキシコとグアテマラの国境問題",
