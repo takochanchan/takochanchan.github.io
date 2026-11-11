@@ -9636,6 +9636,24 @@
       "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
       "size": 44696,
       "sha256": "3286310436d86f971c57929bbe34a8bb7b104e5fba6218c95eb63832d68f7448"
+    },
+    {
+      "path": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "size": 268704,
+      "sha256": "543d667cb2da0fb9cd5ac10954079b5d9ae6fcbd7f4a9f5603fc8459e370b1d3"
+    },
+    {
+      "path": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "size": 2655854,
+      "sha256": "8fd09584d5c54360b143305d4e74e0d26ff2324c4d0d41a69a301019e7b3f017"
+    },
+    {
+      "path": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ojea-libro-tercero-historia-religiosa-mexico-1897/cover.jpg",
+      "size": 43228,
+      "sha256": "1a93b84aec18b19979e40b0171a9964ba4428ad9eb7b6f8e73c8c558fef6b433"
     }
   ]
 }

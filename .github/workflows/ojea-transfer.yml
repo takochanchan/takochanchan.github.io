@@ -1,0 +1,33 @@
+# Group overview is supplied by the catalogue definition; unit overview remains in the overview registry.
+name: Transfer checksum-pinned Hernando Ojea 1897 assets
+
+on:
+  push:
+    branches: ["agent/ojea-publish-20261112"]
+    paths: [".publication-upload-requests/ojea-libro-tercero-historia-religiosa-mexico-1897.json", ".github/workflows/franco-transfer.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-ojea.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ojea-release-verification
+          path: ojea-release-verification.json
+
