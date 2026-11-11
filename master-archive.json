@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "8d295c153ac0a7789ea4008edc9688ed29eee1a2",
+  "archive_commit": "743a00103eee05c359d12609715330198191b94b",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -463,7 +463,8 @@
     "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
     "davila-padilla-historia-santiago-mexico-1596": "publications/davila-padilla-historia-santiago-mexico-1596/master.docx",
     "franco-historia-santiago-mexico-segunda-parte-1900": "publications/franco-historia-santiago-mexico-segunda-parte-1900/master.docx",
-    "ojea-libro-tercero-historia-religiosa-mexico-1897": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/master.md"
+    "ojea-libro-tercero-historia-religiosa-mexico-1897": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/master.md",
+    "sosa-el-episcopado-mexicano-1877-1879": "publications/sosa-el-episcopado-mexicano-1877-1879/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

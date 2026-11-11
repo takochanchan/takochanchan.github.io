@@ -9654,6 +9654,24 @@
       "url": "https://takochanchan.github.io/publications/ojea-libro-tercero-historia-religiosa-mexico-1897/cover.jpg",
       "size": 43228,
       "sha256": "1a93b84aec18b19979e40b0171a9964ba4428ad9eb7b6f8e73c8c558fef6b433"
+    },
+    {
+      "path": "publications/sosa-el-episcopado-mexicano-1877-1879/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
+      "size": 510326,
+      "sha256": "855a3bbf41a3c8bcd30fea3e8ee05e2b1c2a26b5961fe06d817aa5960e426765"
+    },
+    {
+      "path": "publications/sosa-el-episcopado-mexicano-1877-1879/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf",
+      "size": 5938098,
+      "sha256": "884da2ca635b94164521ef3f2b52804d452b292941a693e65d023348eeb490ca"
+    },
+    {
+      "path": "publications/sosa-el-episcopado-mexicano-1877-1879/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sosa-el-episcopado-mexicano-1877-1879/cover.jpg",
+      "size": 63021,
+      "sha256": "05d4d1654965e8c13e64e372313ff43c428de085de358d91530fa111b08708e1"
     }
   ]
 }

@@ -1,0 +1,34 @@
+{
+  "slug": "sosa-el-episcopado-mexicano-1877-1879",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "743a00103eee05c359d12609715330198191b94b",
+  "bundle": {
+    "size": 4424921,
+    "sha256": "e2774c4af1ef9352e526ade3ed54429de5e626d5ef4db7ed98245af23c052997",
+    "chunks": [
+      "8cb7b555ae8008d05579eae55b7170fb6bee0a48",
+      "72578c5301b16ea4b273f0db60f7e762ad67cf4e",
+      "3dc2d6a70d8ac22664700289d80c2257b4d532e0",
+      "002d45cd211fb2bcc5460e12893b967f404ac982",
+      "f9174f40c4acbcafaa95592f7d0e3fec8d67368e",
+      "3e56dc9263d25cde25bfe7c4f79810c0ae520bb2",
+      "dfe1d73a4d9f783ab17451bbca1536e96ce7da49"
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/sosa-el-episcopado-mexicano-1877-1879/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
+      "size": 510326,
+      "sha256": "855a3bbf41a3c8bcd30fea3e8ee05e2b1c2a26b5961fe06d817aa5960e426765",
+      "filename": "Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub"
+    },
+    {
+      "path": "publications/sosa-el-episcopado-mexicano-1877-1879/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf",
+      "size": 5938098,
+      "sha256": "884da2ca635b94164521ef3f2b52804d452b292941a693e65d023348eeb490ca",
+      "filename": "Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf"
+    }
+  ]
+}
