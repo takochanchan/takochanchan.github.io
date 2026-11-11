@@ -10162,6 +10162,25 @@
         "status": "online",
         "url": "https://cd.dgb.uanl.mx/handle/201504211/13715"
       }
+    },
+    {
+      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
+      "title": "ドミニコ会メキシコ管区宗教史 第三書",
+      "originalTitle": "Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo",
+      "author": "エルナンド・オヘア",
+      "originalAuthor": "Hernando Ojea",
+      "originalPublication": "1608年成立。メキシコ、国立博物館印刷所（Imprenta del Museo Nacional）、1897年初刊。",
+      "year": 1897,
+      "sourceEdition": "Hernando Ojea, Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo. México: Imprenta del Museo Nacional, 1897. 1608年成立。José M. de Ágreda y Sánchezによる序論と、1578年のメキシコのドミニコ会士を弁明する調書を付す。",
+      "sourceProvider": "ヌエボ・レオン自治大学（UANL）デジタル図書館、登録番号1020000364。",
+      "rights": "エルナンド・オヘアの原著と1897年版の序論は著作権保護期間を満了しています。UANL公開スキャン画像の再利用ライセンスは確認されていないため、本訳には底本画像を収録していません。",
+      "publishedDate": "2026-11-12",
+      "updatedDate": "2026-11-12",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://cdigital.cabu.uanl.mx/ffdr/1/1020000364.html"
+      }
     }
   ],
   "works": [

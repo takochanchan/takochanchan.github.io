@@ -1070,6 +1070,13 @@
       "author": "イギリス外務省"
     },
     {
+      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "エルナンド・オヘア",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "franco-historia-santiago-mexico-segunda-parte-1900",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3013,6 +3020,7 @@
       "slug": "davila-padilla-franco-historia-santiago-mexico",
       "memberSlugs": [
         "davila-padilla-historia-santiago-mexico-1596",
+        "ojea-libro-tercero-historia-religiosa-mexico-1897",
         "franco-historia-santiago-mexico-segunda-parte-1900"
       ]
     },

@@ -3225,3 +3225,27 @@ test("AGN Hospitales vol. 45 catalogue card shows its confirmed extent", async (
   assert.ok(card.includes("<dt>構成</dt><dd>日本語版PDF 825頁・原資料586葉</dd>"));
   assert.ok(!card.includes("<dt>構成</dt><dd>undefined</dd>"));
 });
+
+test("Ojea is between Padilla and Franco in one bibliography with distinct sequel labels", async () => {
+  const slug = "ojea-libro-tercero-historia-religiosa-mexico-1897";
+  const group = cataloguePublications.find(item => item.slug === "davila-padilla-franco-historia-santiago-mexico");
+  assert.ok(group);
+  assert.deepEqual(group.volumes.map(item => item.slug), [
+    "davila-padilla-historia-santiago-mexico-1596", slug,
+    "franco-historia-santiago-mexico-segunda-parte-1900",
+  ]);
+  assert.equal(group.pageCount, 2340);
+  assert.equal(group.volumes[1].pageCount, 245);
+  for (const author of ["Agustín Dávila Padilla", "Hernando Ojea", "Alonso Franco"]) {
+    assert.ok(group.originalAuthor.includes(author));
+  }
+  assert.ok(group.volumes[1].volumeLabel.includes("第三書"));
+  assert.ok(group.volumes[2].volumeLabel.includes("第二部"));
+  assert.ok(group.groupOverview.includes("第三部を意味しない"));
+  assert.equal(cataloguePublications.filter(item => item.volumes.some(volume => volume.slug === slug)).length, 1);
+  const overviews = JSON.parse(await readFile(new URL("../src/publication-overviews.json", import.meta.url), "utf8"));
+  assert.ok(Array.from(overviews.records[slug]).length >= 900);
+  assert.ok(Array.from(overviews.records[slug]).length <= 1000);
+  for (const text of ["サント・ドミンゴ修道院", "助修士", "1578年", "財産"]) assert.ok(overviews.records[slug].includes(text));
+});
+

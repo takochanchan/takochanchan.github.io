@@ -1,0 +1,30 @@
+{
+  "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
+  "release_tag": "publications-002",
+  "bundle": {
+    "size": 1936231,
+    "sha256": "44ef4fe10afc67f99c0c4bb1fb50bf4368354e6af9281b0f5f4faba3ec4dbbbf",
+    "chunks": [
+      "5b7d2094b1ccbba9d0c640e26312db62a12a5731",
+      "0be3f8e983f1f33ade0f8c44321731d0d56a0692",
+      "95495a2837aff896920d349b17dd8786ce37b4e1"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "path": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "size": 268704,
+      "sha256": "543d667cb2da0fb9cd5ac10954079b5d9ae6fcbd7f4a9f5603fc8459e370b1d3"
+    },
+    {
+      "filename": "Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "path": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "size": 2655854,
+      "sha256": "8fd09584d5c54360b143305d4e74e0d26ff2324c4d0d41a69a301019e7b3f017"
+    }
+  ],
+  "verified_archive_commit": "8d295c153ac0a7789ea4008edc9688ed29eee1a2"
+}
