@@ -1,7 +1,7 @@
 name: Verify remote search for Salvatierra 1754
 on:
   push:
-    branches: ["agent/salvatierra-publish-20261112"]
+    branches: ["agent/salvatierra-title-fix-20261112"]
     paths: [".github/workflows/salvatierra-verify-remote.yml"]
 permissions:
   contents: read
@@ -21,12 +21,12 @@ jobs:
         run: |
           python3 - <<'CHECK'
           import json, os, time, urllib.request
-          url = "https://api.github.com/repos/takochanchan/takochan-search-index-003/actions/runs/43204774962"
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-003/actions/runs/43208614807"
           for attempt in range(120):
               request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
               with urllib.request.urlopen(request, timeout=30) as response:
                   run = json.load(response)
-              assert run["head_sha"] == "839427ed5f309e8de15a309412954659c65a0bca"
+              assert run["head_sha"] == "44df64a13cd5a0e22adc9cc0c72903491baeb08a"
               if run["status"] == "completed":
                   assert run["conclusion"] == "success", run["conclusion"]
                   print("Pinned search deployment succeeded.")
