@@ -1,18 +1,34 @@
 {
   "slug": "salvatierra-el-apostol-mariano-1754",
   "release_tag": "publications-002",
-  "verified_archive_commit": "58f9188d62356777486dbeab9e15edba836012c2",
+  "verified_archive_commit": "225ae11d8c4573782f1c6596aa0efadcc0f49b04",
   "bundle": {
-    "size": 1775699,
-    "sha256": "fd0fc849f859124d90663851d6ad02c411756c2b99686e92d50b5416793a36a4",
+    "size": 1779670,
+    "sha256": "987c59c60ef5e165b2ea11fef17de1160a115a6df3b0371d6a0eb0877b911c39",
     "chunks": [
-      "e50eef9111f0d12e47e2229d911bf2f26897ed4c",
-      "d1f2ce82b87e22356b90bef44c023d0fe0894466",
-      "48c637bf7793f339f68a286eefba75d7277c7e28",
-      "4e124876fc9b46c49ccff3fd54df661cfd0a7b33"
+      "65ff5d5d381976e7b58b473d947c6b0d9499adf9",
+      "3feb067c8d33c98d877f13b9cf5ee059adfd2bed",
+      "9056c4e06514a514b1e0632bb3cd93de42172e25",
+      "9b8969d2ca9b6571134ee461829c8c16c53f693c"
     ]
   },
   "assets": [
+    {
+      "path": "publications/salvatierra-el-apostol-mariano-1754/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",
+      "size": 319913,
+      "sha256": "7c4733c183b86a77115a95ae45e5714bf08b3b90d5422dd1f046d33bd8467c9b",
+      "filename": "Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub"
+    },
+    {
+      "path": "publications/salvatierra-el-apostol-mariano-1754/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.pdf",
+      "size": 2078984,
+      "sha256": "bc42b947db91e4decf14bac0acd53053af5e8826bed6dc156ae19ba671047828",
+      "filename": "Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.pdf"
+    }
+  ],
+  "previous_assets": [
     {
       "path": "publications/salvatierra-el-apostol-mariano-1754/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",

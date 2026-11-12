@@ -2,7 +2,7 @@ name: Transfer checksum-pinned Salvatierra 1754 assets
 
 on:
   push:
-    branches: ["agent/salvatierra-publish-20261112"]
+    branches: ["agent/salvatierra-title-fix-20261112"]
     paths: ["bibliographic-manifest.json", ".publication-upload-requests/salvatierra-el-apostol-mariano-1754.json", ".github/workflows/salvatierra-transfer.yml"]
 permissions:
   contents: write

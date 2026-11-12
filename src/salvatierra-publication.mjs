@@ -1,7 +1,7 @@
 export const salvatierraPublicationRecords = [
   {
     "slug": "salvatierra-el-apostol-mariano-1754",
-    "title": "マリアの使徒の生涯 フアン・マリア・デ・サルバティエラ",
+    "title": "マリアの使徒　フアン・マリア・デ・サルバティエラの生涯",
     "originalTitle": "El apostol Mariano representado en la vida del V. P. Juan Maria de Salvatierra, de la Compañia de Jesus, fervoroso Missionero en la Provincia de Nueva-España, y Conquistador Apostolico de las Californias",
     "subtitle": "カリフォルニアの宣教とロレトの聖母への信心を記した伝記",
     "author": "ミゲル・ベネガス 著／フアン・アントニオ・デ・オビエド 抄録",

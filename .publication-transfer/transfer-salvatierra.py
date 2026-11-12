@@ -73,8 +73,18 @@ with tempfile.TemporaryDirectory() as tmp:
     existing = {item["name"] for page in asset_pages for item in page}
     projected = len(existing) + sum(name not in existing for name in expected) + ("SHA256SUMS.txt" not in existing)
     assert projected <= 1000, f"Projected release asset count exceeds limit: {projected}"
-    for name in expected:
-        if name not in existing:
+    prior = {item["filename"]: item for item in request["previous_assets"]}
+    old_dir = root / "previous"
+    old_dir.mkdir()
+    for name, asset in expected.items():
+        if name in existing:
+            subprocess.run(["gh", "release", "download", request["release_tag"], "--repo", REPO, "--pattern", name, "--dir", str(old_dir)], check=True)
+            current = (old_dir / name).read_bytes()
+            if sha(current) == asset["sha256"] and len(current) == asset["size"]:
+                continue
+            assert sha(current) == prior[name]["sha256"] and len(current) == prior[name]["size"], "Unexpected existing edition; refusing replacement"
+            subprocess.run(["gh", "release", "upload", request["release_tag"], "--repo", REPO, "--clobber", str(root / name)], check=True)
+        else:
             subprocess.run(["gh", "release", "upload", request["release_tag"], "--repo", REPO, str(root / name)], check=True)
 
     verify = root / "verify"
