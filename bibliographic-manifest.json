@@ -6498,6 +6498,25 @@
       }
     },
     {
+      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
+      "title": "ドミニコ会メキシコ管区宗教史 第三書",
+      "originalTitle": "Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo",
+      "author": "エルナンド・オヘア",
+      "originalAuthor": "Hernando Ojea",
+      "originalPublication": "1608年成立。メキシコ、国立博物館印刷所（Imprenta del Museo Nacional）、1897年初刊。",
+      "year": 1897,
+      "sourceEdition": "Hernando Ojea, Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo. México: Imprenta del Museo Nacional, 1897. 1608年成立。José M. de Ágreda y Sánchezによる序論と、1578年のメキシコのドミニコ会士を弁明する調書を付す。",
+      "sourceProvider": "ヌエボ・レオン自治大学（UANL）デジタル図書館、登録番号1020000364。",
+      "rights": "エルナンド・オヘアの原著と1897年版の序論は著作権保護期間を満了しています。UANL公開スキャン画像の再利用ライセンスは確認されていないため、本訳には底本画像を収録していません。",
+      "publishedDate": "2026-11-12",
+      "updatedDate": "2026-11-12",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://cdigital.cabu.uanl.mx/ffdr/1/1020000364.html"
+      }
+    },
+    {
       "slug": "ordonez-creation-1907",
       "recordClass": "major-work",
       "title": "アメリカ異教体系による天地創造史",
@@ -8546,6 +8565,25 @@
       }
     },
     {
+      "slug": "salvatierra-el-apostol-mariano-1754",
+      "title": "マリアの使徒の生涯 フアン・マリア・デ・サルバティエラ",
+      "originalTitle": "El apostol Mariano representado en la vida del V. P. Juan Maria de Salvatierra, de la Compañia de Jesus, fervoroso Missionero en la Provincia de Nueva-España, y Conquistador Apostolico de las Californias",
+      "author": "ミゲル・ベネガス 著／フアン・アントニオ・デ・オビエド 抄録",
+      "originalAuthor": "Miguel Venegas; Juan Antonio de Oviedo",
+      "originalPublication": "メキシコ、Imprenta de Doña María de Ribera, Impressora del Nuevo Rezado、1754年。",
+      "year": 1754,
+      "sourceEdition": "Miguel Venegas, El apostol Mariano representado en la vida del V. P. Juan Maria de Salvatierra, compendiado por Juan Antonio de Oviedo. México: Imprenta de Doña María de Ribera, Impressora del Nuevo Rezado, 1754.",
+      "sourceProvider": "ミゲル・デ・セルバンテス電子図書館（2008年電子版）。欠落原刊101頁および不鮮明な177・203頁は、マドリード・コンプルテンセ大学所蔵同年刊本（BH FG 3732、HathiTrust掲載）で補充・照合。",
+      "rights": "1754年刊の原著本文は著作権保護期間を満了しています。参照したデジタル画像の利用条件とは区別し、本訳には原本画像を転載していません。底本と補充頁には肖像・挿絵・地図は確認されず、扉枠・巻頭飾り・頭文字などの装飾のみです。Cervantesの利用条件：https://www.cervantesvirtual.com/marco-legal/。補充・照合資料：https://babel.hathitrust.org/cgi/pt?id=ucm.5323541308&seq=117",
+      "publishedDate": "2026-11-12",
+      "updatedDate": "2026-11-12",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmch70g1"
+      }
+    },
+    {
       "slug": "san-buenaventura-arte-lengua-maya-1684",
       "recordClass": "major-work",
       "title": "マヤ語文法",
@@ -8886,6 +8924,25 @@
       "rights": "1836年原刊本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。",
       "publishedDate": "2026-08-01",
       "updatedDate": "2026-08-01"
+    },
+    {
+      "slug": "sosa-el-episcopado-mexicano-1877-1879",
+      "title": "メキシコ大司教列伝",
+      "originalTitle": "El episcopado mexicano. Galería biográfica ilustrada de los Illmos. señores arzobispos de México desde la época colonial hasta nuestros días",
+      "author": "フランシスコ・ソサ",
+      "originalAuthor": "Francisco Sosa",
+      "originalPublication": "メキシコ、Hesiquio Iriarte y Santiago Hernández刊、Jens y Zapiain印刷、1877–1879年。標題裏は1877年、付録献呈書簡は1879年3月24日付。",
+      "year": 1877,
+      "sourceEdition": "Francisco Sosa, El episcopado mexicano. México: Hesiquio Iriarte y Santiago Hernández刊、Jens y Zapiain印刷、1877–1879. 標題裏は1877年、末尾列伝は1878年の出来事を含み、付録献呈書簡は1879年3月24日付。",
+      "sourceProvider": "ヌエボ・レオン自治大学（UANL）、ラウル・ランヘル・フリアス大学図書館、エメテリオ・バルベルデ・イ・テリェス文庫。登録番号1080016568。",
+      "rights": "フランシスコ・ソサの原著は著作権保護期間を満了しています。UANL公開スキャン画像の利用条件はCC BY-NC-ND 2.5 MXです。適切な利用条件で差し替えられる全図版を確認できなかったため、本訳には口絵1葉・肖像30葉のスキャン画像を収録していません。図題・肖像銘文の日本語訳は収録しています。利用条件：https://rediab.uanl.mx/Record/cd-201504211-12541/Details ／ https://creativecommons.org/licenses/by-nc-nd/2.5/mx/",
+      "publishedDate": "2026-11-12",
+      "updatedDate": "2026-11-12",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "http://cdigital.dgb.uanl.mx/la/1080016568/1080016568.html"
+      }
     },
     {
       "slug": "southey-chronological-history-west-indies-1827",
@@ -10161,44 +10218,6 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://cd.dgb.uanl.mx/handle/201504211/13715"
-      }
-    },
-    {
-      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
-      "title": "ドミニコ会メキシコ管区宗教史 第三書",
-      "originalTitle": "Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo",
-      "author": "エルナンド・オヘア",
-      "originalAuthor": "Hernando Ojea",
-      "originalPublication": "1608年成立。メキシコ、国立博物館印刷所（Imprenta del Museo Nacional）、1897年初刊。",
-      "year": 1897,
-      "sourceEdition": "Hernando Ojea, Libro tercero de la historia religiosa de la prouincia de México de la Orden de Sto. Domingo. México: Imprenta del Museo Nacional, 1897. 1608年成立。José M. de Ágreda y Sánchezによる序論と、1578年のメキシコのドミニコ会士を弁明する調書を付す。",
-      "sourceProvider": "ヌエボ・レオン自治大学（UANL）デジタル図書館、登録番号1020000364。",
-      "rights": "エルナンド・オヘアの原著と1897年版の序論は著作権保護期間を満了しています。UANL公開スキャン画像の再利用ライセンスは確認されていないため、本訳には底本画像を収録していません。",
-      "publishedDate": "2026-11-12",
-      "updatedDate": "2026-11-12",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://cdigital.cabu.uanl.mx/ffdr/1/1020000364.html"
-      }
-    },
-    {
-      "slug": "sosa-el-episcopado-mexicano-1877-1879",
-      "title": "メキシコ大司教列伝",
-      "originalTitle": "El episcopado mexicano. Galería biográfica ilustrada de los Illmos. señores arzobispos de México desde la época colonial hasta nuestros días",
-      "author": "フランシスコ・ソサ",
-      "originalAuthor": "Francisco Sosa",
-      "originalPublication": "メキシコ、Hesiquio Iriarte y Santiago Hernández刊、Jens y Zapiain印刷、1877–1879年。標題裏は1877年、付録献呈書簡は1879年3月24日付。",
-      "year": 1877,
-      "sourceEdition": "Francisco Sosa, El episcopado mexicano. México: Hesiquio Iriarte y Santiago Hernández刊、Jens y Zapiain印刷、1877–1879. 標題裏は1877年、末尾列伝は1878年の出来事を含み、付録献呈書簡は1879年3月24日付。",
-      "sourceProvider": "ヌエボ・レオン自治大学（UANL）、ラウル・ランヘル・フリアス大学図書館、エメテリオ・バルベルデ・イ・テリェス文庫。登録番号1080016568。",
-      "rights": "フランシスコ・ソサの原著は著作権保護期間を満了しています。UANL公開スキャン画像の利用条件はCC BY-NC-ND 2.5 MXです。適切な利用条件で差し替えられる全図版を確認できなかったため、本訳には口絵1葉・肖像30葉のスキャン画像を収録していません。図題・肖像銘文の日本語訳は収録しています。利用条件：https://rediab.uanl.mx/Record/cd-201504211-12541/Details ／ https://creativecommons.org/licenses/by-nc-nd/2.5/mx/",
-      "publishedDate": "2026-11-12",
-      "updatedDate": "2026-11-12",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "http://cdigital.dgb.uanl.mx/la/1080016568/1080016568.html"
       }
     }
   ],
