@@ -1,0 +1,33 @@
+name: Transfer checksum-pinned Salvatierra 1754 assets
+
+on:
+  push:
+    branches: ["agent/salvatierra-publish-20261112"]
+    paths: [".publication-upload-requests/salvatierra-el-apostol-mariano-1754.json", ".github/workflows/salvatierra-transfer.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-salvatierra.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: salvatierra-release-verification
+          path: salvatierra-release-verification.json
+
+

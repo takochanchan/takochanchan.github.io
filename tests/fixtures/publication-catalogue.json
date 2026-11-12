@@ -1070,13 +1070,6 @@
       "author": "イギリス外務省"
     },
     {
-      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "エルナンド・オヘア",
-      "releaseTag": "publications-002"
-    },
-    {
       "slug": "franco-historia-santiago-mexico-segunda-parte-1900",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -1965,6 +1958,13 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "ojea-libro-tercero-historia-religiosa-mexico-1897",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "エルナンド・オヘア",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "ordonez-creation-1907",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -2519,6 +2519,14 @@
       "searchShard": "002"
     },
     {
+      "slug": "salvatierra-el-apostol-mariano-1754",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス 著／フアン・アントニオ・デ・オビエド 抄録",
+      "originalAuthor": "Miguel Venegas; Juan Antonio de Oviedo",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-buenaventura-arte-lengua-maya-1684",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -2612,6 +2620,13 @@
       "recordClass": "short-work",
       "searchShard": "001",
       "author": "フランス地理学会委員会"
+    },
+    {
+      "slug": "sosa-el-episcopado-mexicano-1877-1879",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ソサ",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "southey-chronological-history-west-indies-1827",
@@ -2985,13 +3000,6 @@
       "author": "フランシスコ・サルコ",
       "seriesVolumeNumber": 2,
       "originalAuthor": "Francisco Zarco"
-    },
-    {
-      "slug": "sosa-el-episcopado-mexicano-1877-1879",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ソサ",
-      "releaseTag": "publications-002"
     }
   ],
   "groups": [

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "743a00103eee05c359d12609715330198191b94b",
+  "archive_commit": "58f9188d62356777486dbeab9e15edba836012c2",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -104,6 +104,7 @@
     "cuevas-historia-iglesia-mexico-v04": "publications/cuevas-historia-iglesia-mexico-v04/master.docx",
     "cuevas-historia-iglesia-mexico-v05": "publications/cuevas-historia-iglesia-mexico-v05/master.docx",
     "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx",
+    "davila-padilla-historia-santiago-mexico-1596": "publications/davila-padilla-historia-santiago-mexico-1596/master.docx",
     "de-guignes-navigations-chinois-amerique-1761": "publications/de-guignes-navigations-chinois-amerique-1761/master.docx",
     "defence-settlers-honduras-1824": "publications/defence-settlers-honduras-1824/master.docx",
     "del-rio-palenque": "publications/del-rio-palenque/master.docx",
@@ -146,6 +147,7 @@
     "figueroa-album": "publications/figueroa-album/master.docx",
     "figueroa-color-notebooks": "publications/figueroa-color-notebooks/master.docx",
     "foreign-office-mosquito-territory-1848": "publications/foreign-office-mosquito-territory-1848/master.docx",
+    "franco-historia-santiago-mexico-segunda-parte-1900": "publications/franco-historia-santiago-mexico-segunda-parte-1900/master.docx",
     "frias-mexico-guatemala-boundary-1883": "publications/frias-mexico-guatemala-boundary-1883/master.docx",
     "friedrichsthal-yucatan-1841": "publications/friedrichsthal-yucatan-1841/master.md",
     "frus-nicaragua-mosquito-territory-1894": "publications/frus-nicaragua-mosquito-territory-1894/master.docx",
@@ -286,6 +288,7 @@
     "munoz-camargo-historia-tlaxcala-ms210": "publications/munoz-camargo-historia-tlaxcala-ms210/master.md",
     "nuix-reflexiones-imparciales-1783-ja": "publications/nuix-reflexiones-imparciales-1783-ja/master.docx",
     "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx",
+    "ojea-libro-tercero-historia-religiosa-mexico-1897": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/master.md",
     "ordonez-creation-1907": "publications/ordonez-creation-1907/master.docx",
     "otis-isthmus-panama-railroad-1867": "publications/otis-isthmus-panama-railroad-1867/master.docx",
     "oviedo-historia-general-natural-indias-volume-i-1851": "publications/oviedo-historia-general-natural-indias-volume-i-1851/master.docx",
@@ -383,6 +386,7 @@
     "roys-chilam-balam-chumayel-1933": "publications/roys-chilam-balam-chumayel-1933/master.docx",
     "sahagun-historia-general-nueva-espana": "publications/sahagun-historia-general-nueva-espana/master.docx",
     "salazar-historia-desenvolvimiento-intelectual-guatemala-1897": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/master.docx",
+    "salvatierra-el-apostol-mariano-1754": "publications/salvatierra-el-apostol-mariano-1754/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
     "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
@@ -401,6 +405,7 @@
     "siria-anna-guerra-1716": "publications/siria-anna-guerra-1716/master.docx",
     "societe-americanistes-maler-tozzer-tikal-1912": "publications/societe-americanistes-maler-tozzer-tikal-1912/master.md",
     "societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx",
+    "sosa-el-episcopado-mexicano-1877-1879": "publications/sosa-el-episcopado-mexicano-1877-1879/master.md",
     "southey-chronological-history-west-indies-1827": "publications/southey-chronological-history-west-indies-1827/master.docx",
     "squier-ancient-peru-1853": "publications/squier-ancient-peru-1853/master.docx",
     "squier-british-encroachments-mosquito-question-1850": "publications/squier-british-encroachments-mosquito-question-1850/master.docx",
@@ -460,11 +465,7 @@
     "young-black-charaibs-st-vincent-1795": "publications/young-black-charaibs-st-vincent-1795/master.docx",
     "young-mosquito-shore-1847": "publications/young-mosquito-shore-1847/master.md",
     "zarco-historia-congreso-1856-1857-volume-i-1857": "publications/zarco-historia-congreso-1856-1857-volume-i-1857/master.docx",
-    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx",
-    "davila-padilla-historia-santiago-mexico-1596": "publications/davila-padilla-historia-santiago-mexico-1596/master.docx",
-    "franco-historia-santiago-mexico-segunda-parte-1900": "publications/franco-historia-santiago-mexico-segunda-parte-1900/master.docx",
-    "ojea-libro-tercero-historia-religiosa-mexico-1897": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/master.md",
-    "sosa-el-episcopado-mexicano-1877-1879": "publications/sosa-el-episcopado-mexicano-1877-1879/master.md"
+    "zarco-historia-congreso-1856-1857-volume-ii-1857": "publications/zarco-historia-congreso-1856-1857-volume-ii-1857/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

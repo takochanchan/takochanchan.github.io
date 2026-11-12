@@ -1,3 +1,4 @@
+import { salvatierraPublicationRecords, salvatierraPublicationMetadata } from "./salvatierra-publication.mjs";
 import { sosaPublicationRecords, sosaPublicationMetadata } from "./sosa-publication.mjs";
 import { ojeaPublicationRecords, ojeaPublicationMetadata } from "./ojea-publication.mjs";
 import { francoPublicationRecords, francoPublicationMetadata } from "./franco-publication.mjs";
@@ -323,6 +324,7 @@ const publicationRecords = [
   ...sanJuanPublicationRecords,
   ...davilaPadillaPublicationRecords,
   ...ojeaPublicationRecords,
+  ...salvatierraPublicationRecords,
   ...sosaPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9474,6 +9476,7 @@ const publicationMetadata = {
   ...sanJuanPublicationMetadata,
   ...davilaPadillaPublicationMetadata,
   ...ojeaPublicationMetadata,
+  ...salvatierraPublicationMetadata,
   ...sosaPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
