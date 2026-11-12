@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-10",
-  "updatedAt": "2026-11-11T00:40:57.951Z",
+  "endDate": "2026-11-11",
+  "updatedAt": "2026-11-12T01:55:36.747Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8572,16 +8572,64 @@
     {
       "key": "dl_a2efa3991883801f",
       "name": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.pdf",
-      "slug": "davila-padilla-historia-santiago-mexico-1596",
-      "title": "メキシコ・サンティアゴ管区創設発展史",
-      "volumeLabel": "",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第一部　ダビラ・パディリャ著（1596年刊）",
       "format": "pdf"
     },
     {
       "key": "dl_6cf8cf72473845b5",
       "name": "Agustin_Davila_Padilla_Historia_Santiago_Mexico_1596_Japanese_Translation.epub",
-      "slug": "davila-padilla-historia-santiago-mexico-1596",
-      "title": "メキシコ・サンティアゴ管区創設発展史",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第一部　ダビラ・パディリャ著（1596年刊）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_bb40d85d63d81f4a",
+      "name": "Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.pdf",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第三書　エルナンド・オヘア著（1608年成立・1897年初刊）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6ac3f80f93296ab2",
+      "name": "Hernando_Ojea_Libro_Tercero_Historia_Religiosa_1897_Japanese_Translation.epub",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第三書　エルナンド・オヘア著（1608年成立・1897年初刊）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_3820c6dd58aa926c",
+      "name": "Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.pdf",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第二部　アロンソ・フランコ著（1645年成立・1900年初刊）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6685fa890a8e2c38",
+      "name": "Alonso_Franco_Historia_Provincia_Santiago_Mexico_Segunda_Parte_1900_Japanese_Translation.epub",
+      "slug": "davila-padilla-franco-historia-santiago-mexico",
+      "title": "メキシコ・サンティアゴ管区史",
+      "volumeLabel": "第二部　アロンソ・フランコ著（1645年成立・1900年初刊）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_deb721f65353547d",
+      "name": "Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.pdf",
+      "slug": "sosa-el-episcopado-mexicano-1877-1879",
+      "title": "メキシコ大司教列伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_feaf0ae93aa5be1f",
+      "name": "Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
+      "slug": "sosa-el-episcopado-mexicano-1877-1879",
+      "title": "メキシコ大司教列伝",
       "volumeLabel": "",
       "format": "epub"
     }
