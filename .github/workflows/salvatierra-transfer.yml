@@ -31,3 +31,5 @@ jobs:
           path: salvatierra-release-verification.json
 
 
+
+# Verify recovered cover at the required static path.
