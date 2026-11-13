@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "225ae11d8c4573782f1c6596aa0efadcc0f49b04",
+  "archive_commit": "d13719b9ce924b4b6c859d3c142159369c05fa7b",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -388,6 +388,7 @@
     "salazar-historia-desenvolvimiento-intelectual-guatemala-1897": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/master.docx",
     "salvatierra-el-apostol-mariano-1754": "publications/salvatierra-el-apostol-mariano-1754/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
+    "san-roman-consuelo-penitentes-1585": "publications/san-roman-consuelo-penitentes-1585/master.md",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
     "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
     "sapper-alta-verapaz-1901": "publications/sapper-alta-verapaz-1901/master.docx",

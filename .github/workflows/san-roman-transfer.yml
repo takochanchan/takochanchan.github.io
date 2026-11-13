@@ -1,0 +1,34 @@
+name: Transfer checksum-pinned Antonio de San Roman 1585 assets
+
+on:
+  push:
+    branches: ["agent/san-roman-publish-20261113"]
+    paths: [".publication-upload-requests/san-roman-consuelo-penitentes-1585.json", ".github/workflows/san-roman-transfer.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-san-roman.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: san-roman-release-verification
+          path: san-roman-release-verification.json
+
+
+

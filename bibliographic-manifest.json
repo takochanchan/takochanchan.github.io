@@ -8603,6 +8603,25 @@
       "updatedDate": "2026-08-11"
     },
     {
+      "slug": "san-roman-consuelo-penitentes-1585",
+      "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
+      "originalTitle": "Consuelo de penitentes, o Mesa franca de spirituales manjares",
+      "author": "アントニオ・デ・サン・ロマン",
+      "originalAuthor": "Antonio de San Román",
+      "originalPublication": "セビーリャ、Andrea PescioniおよびJuan de León印刷、書籍商Antonio Sagete費用負担、1585年。著者訂正第2版。",
+      "year": 1585,
+      "sourceEdition": "Antonio de San Román, Consuelo de penitentes, o Mesa franca de spirituales manjares. Segunda impresión, corregida por el autor. Sevilla: Andrea Pescioni y Juan de León, a costa de Antonio Sagete, 1585. [8], 491, [37] 葉。",
+      "sourceProvider": "マドリード・コンプルテンセ大学、Biblioteca Histórica Marqués de Valdecilla所蔵本（BH FLL 3150）。Google Books／HathiTrust公開画像。",
+      "rights": "1585年刊の原著本文は著作権保護期間を満了しています。Google BooksおよびHathiTrustの公開画像の利用条件とは区別し、本訳には原刊画像を転載していません。公開元の注意書きは非商用利用、帰属表示の保持等を定めています。書誌：https://catalog.hathitrust.org/Record/009340552 ／ 画像利用条件：https://www.hathitrust.org/the-collection/search-access/access-use-policy/#pd-us-google",
+      "publishedDate": "2026-11-13",
+      "updatedDate": "2026-11-13",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.es/books?id=h4ni3LxLl14C"
+      }
+    },
+    {
       "slug": "santibanez-geografia-regional-chiapas-1907",
       "recordClass": "major-work",
       "title": "チアパス地方地理",

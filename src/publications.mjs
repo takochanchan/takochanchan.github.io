@@ -1,3 +1,4 @@
+import { sanRomanPublicationRecords, sanRomanPublicationMetadata } from "./san-roman-publication.mjs";
 import { salvatierraPublicationRecords, salvatierraPublicationMetadata } from "./salvatierra-publication.mjs";
 import { sosaPublicationRecords, sosaPublicationMetadata } from "./sosa-publication.mjs";
 import { ojeaPublicationRecords, ojeaPublicationMetadata } from "./ojea-publication.mjs";
@@ -324,6 +325,7 @@ const publicationRecords = [
   ...sanJuanPublicationRecords,
   ...davilaPadillaPublicationRecords,
   ...ojeaPublicationRecords,
+  ...sanRomanPublicationRecords,
   ...salvatierraPublicationRecords,
   ...sosaPublicationRecords,
   ...francoPublicationRecords,
@@ -9476,6 +9478,7 @@ const publicationMetadata = {
   ...sanJuanPublicationMetadata,
   ...davilaPadillaPublicationMetadata,
   ...ojeaPublicationMetadata,
+  ...sanRomanPublicationMetadata,
   ...salvatierraPublicationMetadata,
   ...sosaPublicationMetadata,
   ...francoPublicationMetadata,
@@ -12422,5 +12425,6 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 

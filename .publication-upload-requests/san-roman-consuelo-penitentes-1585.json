@@ -1,0 +1,38 @@
+{
+  "slug": "san-roman-consuelo-penitentes-1585",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "d13719b9ce924b4b6c859d3c142159369c05fa7b",
+  "assets": [
+    {
+      "path": "publications/san-roman-consuelo-penitentes-1585/San_Roman_Consuelo_1585_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/San_Roman_Consuelo_1585_Japanese_Translation.epub",
+      "size": 628167,
+      "sha256": "6da9ce90ced8370d169a6c4715bab9c08767404e7761761feae6e774592aca1d",
+      "filename": "San_Roman_Consuelo_1585_Japanese_Translation.epub"
+    },
+    {
+      "path": "publications/san-roman-consuelo-penitentes-1585/San_Roman_Consuelo_1585_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/San_Roman_Consuelo_1585_Japanese_Translation.pdf",
+      "size": 6033476,
+      "sha256": "cba52d3c3ac4bc181039a3249644b397904eb26c9f4ab6be28121968fe0a1c72",
+      "filename": "San_Roman_Consuelo_1585_Japanese_Translation.pdf"
+    }
+  ],
+  "bundle": {
+    "size": 4605190,
+    "sha256": "547ff08a2200460c6a8705cd4d9131eb02650d375968a218544ecbc00ae2622c",
+    "chunks": [
+      "9507f5b9f16f5538d359f4b09ef846261d92d9bb",
+      "5629d0aaab03019a562a23d76b1d06ec137cf3da",
+      "672c5d075e4aa6f0cd94180eb5e60e3f4332f547",
+      "078e9c717b5ab1ca3b32588aadb7729e5060cde5",
+      "81340798033e08b48f26d54fad0906c06022c147",
+      "ee7c39b2a0ccc3737ffef3cd78b167ddf0bf81aa",
+      "f0694d9987b9fb51f1a2fd67ffe62ef6177f17dc",
+      "635da790774da36c706e6fbb419457f7bbba84a6",
+      "04881274052b38b9f76b80e0bdc7777a93e9b0ac",
+      "fd5b1c900edceaf575354b40f8156d1ae4d4e248",
+      "398d50a27ecab3fd8e36e981ced846379a888b64"
+    ]
+  }
+}
