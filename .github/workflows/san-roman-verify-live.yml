@@ -1,0 +1,78 @@
+name: Verify live San Roman publication
+on:
+  push:
+    branches: [main]
+    paths: [src/san-roman-publication.mjs, .github/workflows/san-roman-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+os.environ['GITHUB_SHA']]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify live bibliography, overview and exact final assets
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess,re,html as H
+          slug='san-roman-consuelo-penitentes-1585'
+          url='https://takochanchan.github.io/publications/'+slug+'/'
+          html=urllib.request.urlopen(url,timeout=60).read().decode()
+          for text in ['悔悛者の慰め','Antonio de San Román','1585','761','h4ni3LxLl14C']:
+              assert text in H.unescape(html), text
+          overview=json.load(open('src/publication-overviews.json'))['records'][slug]
+          assert len(overview)==902
+          for para in overview.split('\n\n'): assert para in H.unescape(html), para
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          root=pathlib.Path(tempfile.mkdtemp())
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              with urllib.request.urlopen(a['url'],timeout=120) as response,p.open('wb') as f:
+                  while chunk:=response.read(1024*1024): f.write(chunk)
+              assert p.stat().st_size==a['size']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+                      xhtml=''.join(z.read(n).decode() for n in z.namelist() if n.endswith('.xhtml'))
+                      assert '本訳について' in xhtml and '底本画像' in xhtml
+                      assert len([n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))])==1
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  assert any(line.split()==['Pages:','761'] for line in info.splitlines())
+                  images=subprocess.check_output(['pdfimages','-list',str(p)],text=True)
+                  assert not any(re.match(r'^\s*\d+\s+\d+\s+',line) for line in images.splitlines())
+                  text=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
+                  compact=re.sub(r'\s+','',text)
+                  assert 'LITERATURAESPIRITUAL' in compact
+                  assert '底本画像' in compact
+                  assert '確認用版' not in compact and '私的確認用' not in compact
+              print('VERIFIED',p.name,a['size'],a['sha256'])
+          sums=urllib.request.urlopen('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/SHA256SUMS.txt',timeout=120).read().decode()
+          for a in assets:
+              if a['path'].endswith(('.pdf','.epub')):
+                  name=pathlib.PurePosixPath(a['path']).name
+                  assert any(line.split()==[a['sha256'],name] for line in sums.splitlines())
+          assert len(assets)==3
+          print('Live San Roman bibliography, 902-character overview, image-free 761-page PDF, EPUB and cover verified.')
+          PY
