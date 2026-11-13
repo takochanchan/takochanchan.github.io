@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-11",
-  "updatedAt": "2026-11-12T01:55:36.747Z",
+  "endDate": "2026-11-12",
+  "updatedAt": "2026-11-13T01:07:36.638Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8630,6 +8630,22 @@
       "name": "Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
       "slug": "sosa-el-episcopado-mexicano-1877-1879",
       "title": "メキシコ大司教列伝",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_98aa6f04719f7892",
+      "name": "Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.pdf",
+      "slug": "salvatierra-el-apostol-mariano-1754",
+      "title": "マリアの使徒　フアン・マリア・デ・サルバティエラの生涯",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_bfc1fef936e4aa2a",
+      "name": "Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",
+      "slug": "salvatierra-el-apostol-mariano-1754",
+      "title": "マリアの使徒　フアン・マリア・デ・サルバティエラの生涯",
       "volumeLabel": "",
       "format": "epub"
     }
