@@ -2,7 +2,7 @@ name: Transfer checksum-pinned Patrignani volume I assets
 on:
   push:
     branches: ["agent/patrignani-v1-publish-20261114"]
-    paths: [".publication-upload-requests/patrignani-menologio-volume-i-1730.json", ".github/workflows/patrignani-transfer.yml"]
+    paths: [".publication-upload-requests/patrignani-menologio-volume-i-1730.json", ".github/workflows/patrignani-transfer.yml", "static/publications/patrignani-menologio-volume-i-1730/cover.jpg"]
 permissions:
   contents: write
 concurrency:
