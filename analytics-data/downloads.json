@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-12",
-  "updatedAt": "2026-11-13T01:07:36.638Z",
+  "endDate": "2026-11-13",
+  "updatedAt": "2026-11-14T00:54:33.216Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8646,6 +8646,22 @@
       "name": "Miguel_Venegas_Juan_Antonio_de_Oviedo_El_Apostol_Mariano_1754_Japanese_Translation.epub",
       "slug": "salvatierra-el-apostol-mariano-1754",
       "title": "マリアの使徒　フアン・マリア・デ・サルバティエラの生涯",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8b464175d93c6604",
+      "name": "San_Roman_Consuelo_1585_Japanese_Translation.pdf",
+      "slug": "san-roman-consuelo-penitentes-1585",
+      "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_409ba3ab81fb78e0",
+      "name": "San_Roman_Consuelo_1585_Japanese_Translation.epub",
+      "slug": "san-roman-consuelo-penitentes-1585",
+      "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
       "volumeLabel": "",
       "format": "epub"
     }
