@@ -278,6 +278,19 @@ def is_original_page_marker(value: str) -> bool:
         if value.lstrip().startswith(("〔", "{{"))
         else value.strip()
     )
+    # Patrignani volume I uses a separate printed pagination for each month.
+    # Keep its approved labels verbatim and enforce the actual volume bounds.
+    month = re.fullmatch(r"原刊 第1巻 ([123])月([1-9][0-9]*)頁", label)
+    if month and int(month[2]) <= {"1": 312, "2": 256, "3": 224}[month[1]]:
+        return True
+    if label in {"原刊 第1巻 前付 a1r", "原刊 第1巻 前付 a2r"} or re.fullmatch(r"原刊 第1巻 前付 a[3-8][rv]", label):
+        return True
+    if label in {
+        "原刊 第1巻 2月146頁、補本の印字46頁",
+        "原刊 第1巻 2月154頁、同版補本",
+        "原刊 第1巻 2月155頁、印字551頁",
+    }:
+        return True
     # Match the strict position-only forms already accepted by the canonical
     # master archive policy: dated reprint pages and section-local counters.
     if _VAZQUEZ_SOURCE_MARKERS.get() and re.fullmatch(
@@ -1443,4 +1456,5 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 

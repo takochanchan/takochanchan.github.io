@@ -3007,6 +3007,15 @@
       "author": "フランシスコ・サルコ",
       "seriesVolumeNumber": 2,
       "originalAuthor": "Francisco Zarco"
+    },
+    {
+      "slug": "patrignani-menologio-volume-i-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
     }
   ],
   "groups": [
@@ -3183,6 +3192,13 @@
         "zarco-historia-congreso-1856-1857-volume-ii-1857"
       ],
       "seriesVolumeCount": 2
+    },
+    {
+      "slug": "patrignani-menologio-1730",
+      "memberSlugs": [
+        "patrignani-menologio-volume-i-1730"
+      ],
+      "seriesVolumeCount": 4
     }
   ],
   "shortAuthorCount": 48

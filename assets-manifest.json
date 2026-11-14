@@ -9708,6 +9708,24 @@
       "url": "https://takochanchan.github.io/publications/zarco-historia-congreso-1856-1857-volume-ii-1857/cover.jpg",
       "size": 44696,
       "sha256": "3286310436d86f971c57929bbe34a8bb7b104e5fba6218c95eb63832d68f7448"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
+      "size": 11120411,
+      "sha256": "4214d11213f5b7de7d1c3f42141525d62de23f35f6f04058061c0781d6b537f7"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
+      "size": 16616514,
+      "sha256": "95f0ed2268b0a668a42374e7099ce44665bd95a411cddd82971165e0714cc782"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-i-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-i-1730/cover.jpg",
+      "size": 51534,
+      "sha256": "a3e10c15cd2ca2ac537c6830ee5d5cb562c946144cf52ff35b6fefc3af791171"
     }
   ]
 }

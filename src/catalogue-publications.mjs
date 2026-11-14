@@ -7,6 +7,58 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+{
+  "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+  "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728.",
+  "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+  "originalAuthor": "Giuseppe Antonio Patrignani",
+  "series": "MENOLOGIO · 1730",
+  "year": 1730,
+  "sourceProvider": "ナポリ国立図書館所蔵本、Google Books経由Internet Archive公開。欠頁補充：ボストン・カレッジ所蔵同年版。",
+  "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+  "sourceUrl": "https://archive.org/details/bub_gb_v8tdoPVsIjIC",
+  "publishedDate": "2026-11-14",
+  "updatedDate": "2026-11-14",
+  "slug": "patrignani-menologio-1730",
+  "memberSlugs": [
+    "patrignani-menologio-volume-i-1730"
+  ],
+  "plannedMemberSlugs": [
+    "patrignani-menologio-volume-ii-1730",
+    "patrignani-menologio-volume-iii-1730",
+    "patrignani-menologio-volume-iv-1730"
+  ],
+  "volumeLabels": [
+    "第1巻（1月・2月・3月）"
+  ],
+  "seriesVolumeCount": 4,
+  "subtitle": "全4巻",
+  "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻。",
+  "description": "イエズス会修道者たちの生涯と信仰、宣教、殉教の記憶を命日ごとに一年の各日に配した全4巻の年中日録。1538年から1728年までに没した人々を扱う。1730年ヴェネツィア版。",
+  "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomi I–IV. Venezia: Niccolò Pezzana, 1730.",
+  "seriesVolumes": [
+    {
+      "number": 1,
+      "originalTitle": "Tomo I: Gennajo, Febbrajo, Marzo",
+      "sourceUrl": "https://archive.org/details/bub_gb_v8tdoPVsIjIC"
+    },
+    {
+      "number": 2,
+      "originalTitle": "Tomo II: Aprile, Maggio, Giugno",
+      "sourceUrl": "https://archive.org/details/bub_gb_X3WpCf8bSfoC"
+    },
+    {
+      "number": 3,
+      "originalTitle": "Tomo III: Luglio, Agosto, Settembre",
+      "sourceUrl": "https://archive.org/details/bub_gb_ad3szyKTjowC"
+    },
+    {
+      "number": 4,
+      "originalTitle": "Tomo IV: Ottobre, Novembre, Dicembre",
+      "sourceUrl": "https://archive.org/details/bub_gb_YmE6Y2MxURUC"
+    }
+  ]
+},
   francoPublicationGroup,
 {
   "author": "フランシスコ・バスケス",
@@ -1183,3 +1235,4 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+

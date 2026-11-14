@@ -1,3 +1,4 @@
+import { patrignaniPublicationRecords, patrignaniPublicationMetadata } from "./patrignani-menologio-publication.mjs";
 import { sanRomanPublicationRecords, sanRomanPublicationMetadata } from "./san-roman-publication.mjs";
 import { salvatierraPublicationRecords, salvatierraPublicationMetadata } from "./salvatierra-publication.mjs";
 import { sosaPublicationRecords, sosaPublicationMetadata } from "./sosa-publication.mjs";
@@ -321,6 +322,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...patrignaniPublicationRecords,
   ...vazquezCronicaPublicationRecords,
   ...sanJuanPublicationRecords,
   ...davilaPadillaPublicationRecords,
@@ -9479,6 +9481,7 @@ const publicationMetadata = {
   ...davilaPadillaPublicationMetadata,
   ...ojeaPublicationMetadata,
   ...sanRomanPublicationMetadata,
+  ...patrignaniPublicationMetadata,
   ...salvatierraPublicationMetadata,
   ...sosaPublicationMetadata,
   ...francoPublicationMetadata,
@@ -12425,6 +12428,7 @@ export const taxonomy = {
     ...new Set(publications.flatMap((item) => item.languages)),
   ].sort((a, b) => a.localeCompare(b, "ja")),
 };
+
 
 
 
