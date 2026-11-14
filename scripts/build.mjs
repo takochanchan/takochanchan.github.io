@@ -177,7 +177,7 @@ const catalogueAttributionMarkup = (item, className) =>
     ? `<p class="${className}">後世の暫定帰属：${escapeHtml(item.attributedTo)}</p>`
     : "";
 
-const isMultiVolume = (item) => item.volumes.length > 1 || (item.seriesVolumes?.length ?? 0) > 1;
+const isMultiVolume = (item) => item.volumes.length > 1;
 
 const archivePublications = publications.map((item) => ({
   slug: item.slug,
@@ -1082,7 +1082,7 @@ const seriesVolumeInventoryMarkup = (item) => {
 };
 
 const volumeBibliographyMarkup = (item) =>
-  isMultiVolume(item)
+  (isMultiVolume(item) || (item.seriesVolumes?.length ?? 0) > 1)
     ? `<div class="publication-info__wide">
         <dt>各${item.groupType === "document-collection" ? "文書" : "分冊"}の底本・公開条件</dt>
         <dd>
