@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-13",
-  "updatedAt": "2026-11-14T00:54:33.216Z",
+  "endDate": "2026-11-14",
+  "updatedAt": "2026-11-14T23:56:49.668Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8662,6 +8662,22 @@
       "name": "San_Roman_Consuelo_1585_Japanese_Translation.epub",
       "slug": "san-roman-consuelo-penitentes-1585",
       "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_160532531bc35d2f",
+      "name": "Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7e0746926e6c5285",
+      "name": "Patrignani_Menologio_1730_Volume_1_Japanese.epub",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
       "volumeLabel": "",
       "format": "epub"
     }
