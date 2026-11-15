@@ -3016,6 +3016,33 @@
       "originalAuthor": "Giuseppe Antonio Patrignani",
       "releaseTag": "publications-002",
       "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "venegas-noticia-california-volume-1-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "venegas-noticia-california-volume-2-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "venegas-noticia-california-volume-3-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
     }
   ],
   "groups": [
@@ -3199,6 +3226,15 @@
         "patrignani-menologio-volume-i-1730"
       ],
       "seriesVolumeCount": 4
+    },
+    {
+      "slug": "venegas-noticia-california-1757",
+      "memberSlugs": [
+        "venegas-noticia-california-volume-1-1757",
+        "venegas-noticia-california-volume-2-1757",
+        "venegas-noticia-california-volume-3-1757"
+      ],
+      "seriesVolumeCount": 3
     }
   ],
   "shortAuthorCount": 48

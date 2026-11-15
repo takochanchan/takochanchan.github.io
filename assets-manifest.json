@@ -9726,6 +9726,60 @@
       "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-i-1730/cover.jpg",
       "size": 51534,
       "sha256": "a3e10c15cd2ca2ac537c6830ee5d5cb562c946144cf52ff35b6fefc3af791171"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.pdf",
+      "size": 3275650,
+      "sha256": "80590440f45011a45d65348addb87544cb9bedf8dae20ea171e1089daa646e8c"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.epub",
+      "size": 16807848,
+      "sha256": "8e86ffa72134cdced5912aabd91a4c634bc479e8aaffe497ec00200e6a1a4b65"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-1-1757/cover.jpg",
+      "size": 71979,
+      "sha256": "2f854490e915fac0fad1cb02a42b175ed6058311a61090bbdb3afb6fcfe7da07"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.pdf",
+      "size": 3028347,
+      "sha256": "b0ed4f8376c612904464933711f0dd60a154f8ec7a2d2d378a63d0ff4e9d2313"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.epub",
+      "size": 15375576,
+      "sha256": "3012e6003ef1439ccccf64b9a06a5bc48a9bebce69d439f6d38cc0cfcc247976"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-2-1757/cover.jpg",
+      "size": 70396,
+      "sha256": "ee0e21f99574bd956998bb2f2e7e56d153135e10fc8fa991cd6d5fecfd44f45a"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.pdf",
+      "size": 4937499,
+      "sha256": "00e323ccb735bca39bc42d526dbdd9e0da2806c7165b2ad895f04a800cc35fc9"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.epub",
+      "size": 23367271,
+      "sha256": "774e7b0ebc66726d2565c411d12235aa3362c5d72cfcfd45ab83473e674f59d3"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-3-1757/cover.jpg",
+      "size": 71936,
+      "sha256": "d29c03e243636f3edc757a13ce2b308f606e6695ebe8632b456b9798773940f3"
     }
   ]
 }

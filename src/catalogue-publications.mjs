@@ -8,6 +8,53 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
 {
+  "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
+  "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+  "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+  "series": "NOTICIA DE LA CALIFORNIA · 1757",
+  "year": 1757,
+  "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
+  "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
+  "sourceUrl": "https://archive.org/details/noticiadelacalif01vene_0",
+  "publishedDate": "2026-11-15",
+  "updatedDate": "2026-11-15",
+  "groupOverview": "1757年にマドリードで刊行された、カリフォルニアの地理・住民・探検とイエズス会の宣教を扱う全3巻の歴史書。ミゲル・ベネガスが1739年にメキシコで編んだ手稿を基に、アンドレス・マルコス・ブリエルが古今の報告や記録、地図を加えて編訂した。本書の中心となる「カリフォルニア」は今日の米国カリフォルニア州だけを指す名称ではなく、バハ・カリフォルニア半島とその周辺海域、さらに北方へ広がる地理的関心を含む。\n\n第1巻は土地と住民の記述から始まる。湾・島・海岸、地勢や気候、生物・植物・鉱物・真珠などの産物、民族と言語、生活慣習や宗教を取り上げ、続いてコルテス以来、イエズス会士の入域以前までの航海と征服の試みをたどる。自然環境と人間社会をどのように捉え、それが探検や植民の計画と結び付いたかを読むための巻である。\n\n第2巻は宣教地の創設と維持を中心に、サルバティエラ、ピッコロ、キノ、ウガルテらの活動を詳述する。ロレトを拠点とする内陸進出、食料と資金の確保、船舶と駐屯兵の管理、メキシコの当局や王権との交渉を重ねて描く。先住民との関係やペリクエスの蜂起、宣教師の死と布教地の再建、湾岸の調査、ソノラ・ピメリアとの連絡も扱い、記述は1752年までの報告に及ぶ。\n\n第3巻は七つの付録を収める史料集である。ゴマラの外岸記述、トルケマダによる1602年のビスカイノ航海、1746年のコンサグの探検記録に加え、ロジャーズ、アンソン、エリスに関する記録を収録する。北西航路の探索、北太平洋の地図作成、ドリールの論考とフォンテ名義の航海記録をめぐる考察まで視野を広げ、異なる国や立場の報告を編者がどう比較し評価したかも示す。\n\n本訳の底本はジョン・カーター・ブラウン図書館所蔵の1757年版。本文計1,240頁と前付計40頁から成り、自然誌、宣教の年代記、航海記録、地理学上の議論を一つの叢書にまとめている。第1巻の地図1点、第3巻の地図3点と図中文字も収める。原刊の宗教的評価や先住民への呼称は当時の著者の叙述として読む必要があり、現代の見解として支持するものではない。判読・同定を確定できない文字や地名には保留表示を残し、装飾は収録していない。",
+  "slug": "venegas-noticia-california-1757",
+  "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+  "memberSlugs": [
+    "venegas-noticia-california-volume-1-1757",
+    "venegas-noticia-california-volume-2-1757",
+    "venegas-noticia-california-volume-3-1757"
+  ],
+  "volumeLabels": [
+    "第1巻",
+    "第2巻",
+    "第3巻"
+  ],
+  "seriesVolumeCount": 3,
+  "subtitle": "全3巻",
+  "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻。",
+  "description": "カリフォルニアの土地と住民、探検・征服の試み、イエズス会の宣教を記し、航海記録と地図を付した1757年刊の全3巻。ベネガスの手稿をブリエルが編訂。",
+  "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomos I–III. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
+  "seriesVolumes": [
+    {
+      "number": 1,
+      "originalTitle": "Tomo 1",
+      "sourceUrl": "https://archive.org/details/noticiadelacalif01vene_0"
+    },
+    {
+      "number": 2,
+      "originalTitle": "Tomo 2",
+      "sourceUrl": "https://archive.org/details/noticiadelacalif02vene_0"
+    },
+    {
+      "number": 3,
+      "originalTitle": "Tomo 3",
+      "sourceUrl": "https://archive.org/details/noticiadelacalif03vene_0"
+    }
+  ]
+},
+{
   "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
   "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728.",
   "author": "ジュゼッペ・アントニオ・パトリニャーニ",
@@ -1235,4 +1282,5 @@ export const shortCataloguePublications = cataloguePublications.filter(
 export const documentCataloguePublications = cataloguePublications.filter(
   (publication) => publication.recordClass === "document-collection",
 );
+
 
