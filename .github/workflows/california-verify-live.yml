@@ -40,9 +40,10 @@ jobs:
           html=H.unescape(urllib.request.urlopen(url,timeout=60).read().decode())
           for text in ['カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告','Miguel Venegas','1757','CC BY 4.0','noticiadelacalif01vene_0','noticiadelacalif02vene_0','noticiadelacalif03vene_0']:
               assert text in html,text
-          overview=json.load(open('src/publication-overviews.json'))['records'][slugs[0]]
-          assert 0 < len(overview) <= 1000
-          for para in overview.split('\n\n'): assert para in html,para
+          for slug in slugs:
+              overview=json.load(open('src/publication-overviews.json'))['records'][slug]
+              assert 0 < len(overview) <= 1000
+              for para in overview.split('\n\n'): assert para in html,para
           assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if any(a['path'].startswith('publications/'+slug+'/') for slug in slugs)]
           root=pathlib.Path(tempfile.mkdtemp())
           for a in assets:

@@ -2,7 +2,7 @@ name: Transfer checksum-pinned California volumes I–III assets
 on:
   push:
     branches: ["agent/california-publish-20261115"]
-    paths: [".publication-upload-requests/venegas-noticia-california-1757.json", ".github/workflows/california-transfer.yml", "static/publications/venegas-noticia-california-volume-*/cover.jpg", "scripts/build.mjs"]
+    paths: [".publication-upload-requests/venegas-noticia-california-1757.json", ".github/workflows/california-transfer.yml", "static/publications/venegas-noticia-california-volume-*/cover.jpg", "scripts/build.mjs", "src/publication-overviews.json"]
 permissions:
   contents: write
 concurrency:
