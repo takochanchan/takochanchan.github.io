@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-14",
-  "updatedAt": "2026-11-14T23:56:49.668Z",
+  "endDate": "2026-11-15",
+  "updatedAt": "2026-11-15T23:58:58.432Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8679,6 +8679,54 @@
       "slug": "patrignani-menologio-1730",
       "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a9fdc4c6f2346cd5",
+      "name": "Noticia_California_1757_Vol01_Japanese.pdf",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c74e8a6019545a67",
+      "name": "Noticia_California_1757_Vol01_Japanese.epub",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8f7fad60884037ce",
+      "name": "Noticia_California_1757_Vol02_Japanese.pdf",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_3276f8a8f9076dae",
+      "name": "Noticia_California_1757_Vol02_Japanese.epub",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f4fc56d3a61692ab",
+      "name": "Noticia_California_1757_Vol03_Japanese.pdf",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第3巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_3cce113ec81419e9",
+      "name": "Noticia_California_1757_Vol03_Japanese.epub",
+      "slug": "venegas-noticia-california-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
+      "volumeLabel": "第3巻",
       "format": "epub"
     }
   ],
