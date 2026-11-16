@@ -1169,6 +1169,7 @@ const volumeFileControls = (item) =>
 
 const detailPage = (item) => {
   const related = relatedFor(item);
+  const groupOverviewLabel = escapeHtml(item.groupOverviewLabel ?? "史料集全体の詳細概要");
   const visualTotal = item.figureCount + item.plateCount;
   const visualLabel = item.visualLabel ?? "図版・挿図";
   const isShortWork = item.recordClass === "short-work";
@@ -1223,8 +1224,8 @@ ${header({
           <div class="publication-overview-list">
             ${item.groupOverview ? `<details class="publication-overview publication-overview--group" id="overview-${escapeHtml(item.slug)}">
               <summary class="button button--quiet">
-                <span class="publication-overview__show">史料集全体の詳細概要</span>
-                <span class="publication-overview__hide">史料集全体の詳細概要を閉じる</span>
+                <span class="publication-overview__show">${groupOverviewLabel}</span>
+                <span class="publication-overview__hide">${groupOverviewLabel}を閉じる</span>
                 <span class="publication-overview__icon" aria-hidden="true"></span>
               </summary>
               <div class="publication-overview__body">${item.groupOverview.split(/\n\s*\n/u).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("")}</div>
