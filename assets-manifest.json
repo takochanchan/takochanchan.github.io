@@ -9780,6 +9780,24 @@
       "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-3-1757/cover.jpg",
       "size": 71936,
       "sha256": "d29c03e243636f3edc757a13ce2b308f606e6695ebe8632b456b9798773940f3"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+      "size": 9251362,
+      "sha256": "9b1cabd15b39108aae0835b9f91f44d16dedb855ec904a0ebd17ab839d6977c2"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+      "size": 16435288,
+      "sha256": "918b9473cb91a0063c08e87917b92003590993af61971e676f7bfd9833203689"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-ii-1730/cover.jpg",
+      "size": 35935,
+      "sha256": "4ad5372b385a5199dda1efd0b1e1e044a0327db86dad50f5f29d18505665496f"
     }
   ]
 }

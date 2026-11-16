@@ -46,6 +46,56 @@ export const patrignaniPublicationRecords = [
     "updatedDate": "2026-11-14",
     "recordClass": "major-work",
     "seriesVolumeNumber": 1
+  },
+  {
+    "slug": "patrignani-menologio-volume-ii-1730",
+    "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第2巻（4月・5月・6月）",
+    "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno.",
+    "subtitle": "第2巻：4月・5月・6月",
+    "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+    "originalAuthor": "Giuseppe Antonio Patrignani",
+    "series": "MENOLOGIO · 1730",
+    "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第2巻。",
+    "year": 1730,
+    "extent": "第2巻・日本語版PDF 1,382頁",
+    "description": "4月から6月に没したイエズス会員の伝記を命日順に収める。エヴォラでの疫病看護、パラグアイとマリアナ諸島での宣教、マッテオ・リッチの中国伝道、イングランドで訴追された司祭、日本を訪れた助修士の生涯を伝える。",
+    "cover": "publications/patrignani-menologio-volume-ii-1730/cover.jpg",
+    "pdf": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+    "epub": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+    "pageCount": 1382,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "宗教",
+      "伝記"
+    ],
+    "regions": [
+      "ヨーロッパ",
+      "アジア",
+      "アメリカ",
+      "アフリカ",
+      "オセアニア"
+    ],
+    "languages": [
+      "イタリア語"
+    ],
+    "tags": [
+      "イエズス会",
+      "宣教",
+      "殉教",
+      "修道者",
+      "18世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno. In Venezia: presso Niccolò Pezzana, 1730. 4月292頁、5月220頁、6月220頁。",
+    "sourceProvider": "ナポリ国立図書館所蔵本。Google Books経由でInternet Archiveが公開。6月213頁の欠損語句はボストン・カレッジ所蔵の同年版による。",
+    "sourceUrl": "https://archive.org/details/bub_gb_X3WpCf8bSfoC",
+    "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+    "publishedDate": "2026-11-16",
+    "updatedDate": "2026-11-16",
+    "recordClass": "major-work",
+    "seriesVolumeNumber": 2
   }
 ];
 
@@ -57,5 +107,13 @@ export const patrignaniPublicationMetadata = {
     "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
     "publishedDate": "2026-11-14",
     "updatedDate": "2026-11-14"
+  },
+  "patrignani-menologio-volume-ii-1730": {
+    "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno. In Venezia: presso Niccolò Pezzana, 1730. 4月292頁、5月220頁、6月220頁。",
+    "sourceProvider": "ナポリ国立図書館所蔵本。Google Books経由でInternet Archiveが公開。6月213頁の欠損語句はボストン・カレッジ所蔵の同年版による。",
+    "sourceUrl": "https://archive.org/details/bub_gb_X3WpCf8bSfoC",
+    "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+    "publishedDate": "2026-11-16",
+    "updatedDate": "2026-11-16"
   }
 };

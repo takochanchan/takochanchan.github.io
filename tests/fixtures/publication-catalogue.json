@@ -3043,6 +3043,15 @@
       "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
       "releaseTag": "publications-002",
       "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "patrignani-menologio-volume-ii-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
     }
   ],
   "groups": [
@@ -3223,7 +3232,8 @@
     {
       "slug": "patrignani-menologio-1730",
       "memberSlugs": [
-        "patrignani-menologio-volume-i-1730"
+        "patrignani-menologio-volume-i-1730",
+        "patrignani-menologio-volume-ii-1730"
       ],
       "seriesVolumeCount": 4
     },

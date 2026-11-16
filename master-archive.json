@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "053524c1e350b002780635f6de8baf4cb0c48491",
+  "archive_commit": "9761caa3399d6be3d8ffb9ec0262d65f9baea7e7",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -470,7 +470,8 @@
     "patrignani-menologio-volume-i-1730": "publications/patrignani-menologio-volume-i-1730/master.docx",
     "venegas-noticia-california-volume-1-1757": "publications/venegas-noticia-california-volume-1-1757/master.docx",
     "venegas-noticia-california-volume-2-1757": "publications/venegas-noticia-california-volume-2-1757/master.docx",
-    "venegas-noticia-california-volume-3-1757": "publications/venegas-noticia-california-volume-3-1757/master.docx"
+    "venegas-noticia-california-volume-3-1757": "publications/venegas-noticia-california-volume-3-1757/master.docx",
+    "patrignani-menologio-volume-ii-1730": "publications/patrignani-menologio-volume-ii-1730/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
