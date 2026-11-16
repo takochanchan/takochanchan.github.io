@@ -10333,6 +10333,82 @@
         "status": "online",
         "url": "https://archive.org/details/bub_gb_X3WpCf8bSfoC"
       }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第1巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1857年。全4巻の第1巻。",
+      "year": 1857,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome I. Paris, Arthus Bertrand, 1857.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio01bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第2巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第2巻。",
+      "year": 1858,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome II. Paris, Arthus Bertrand, 1858.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio02bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第3巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第3巻。",
+      "year": 1858,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome III. Paris, Arthus Bertrand, 1858.",
+      "sourceProvider": "Getty Research Institute／Internet Archive、附図：Bibliothèque nationale de France／Gallica",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。附図の画像はフランス国立図書館（BnF）所蔵、Gallica公開。出典： https://gallica.bnf.fr/ark:/12148/btv1b8491040c 。画像の再利用条件はGallicaの利用規定による。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio03bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第4巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1859年。全4巻の第4巻。",
+      "year": 1859,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome IV. Paris, Arthus Bertrand, 1859.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio04bras"
+      }
     }
   ],
   "works": [

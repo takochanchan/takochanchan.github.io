@@ -3052,6 +3052,42 @@
       "originalAuthor": "Giuseppe Antonio Patrignani",
       "releaseTag": "publications-002",
       "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 4
     }
   ],
   "groups": [
@@ -3245,6 +3281,16 @@
         "venegas-noticia-california-volume-3-1757"
       ],
       "seriesVolumeCount": 3
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "memberSlugs": [
+        "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-4-1857-1859"
+      ],
+      "seriesVolumeCount": 4
     }
   ],
   "shortAuthorCount": 48

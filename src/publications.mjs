@@ -1,3 +1,4 @@
+import { brasseurRecords, brasseurMetadata } from "./brasseur-histoire-publication.mjs";
 import { californiaPublicationRecords, californiaPublicationMetadata } from "./venegas-noticia-california-publication.mjs";
 import { patrignaniPublicationRecords, patrignaniPublicationMetadata } from "./patrignani-menologio-publication.mjs";
 import { sanRomanPublicationRecords, sanRomanPublicationMetadata } from "./san-roman-publication.mjs";
@@ -323,6 +324,7 @@ if (canonicalBibliography.size !== bibliographicManifest.records.length) {
 }
 
 const publicationRecords = [
+  ...brasseurRecords,
   ...californiaPublicationRecords,
   ...patrignaniPublicationRecords,
   ...vazquezCronicaPublicationRecords,
@@ -9483,6 +9485,7 @@ const publicationMetadata = {
   ...davilaPadillaPublicationMetadata,
   ...ojeaPublicationMetadata,
   ...sanRomanPublicationMetadata,
+  ...brasseurMetadata,
   ...californiaPublicationMetadata,
   ...patrignaniPublicationMetadata,
   ...salvatierraPublicationMetadata,

@@ -1,3 +1,4 @@
+import { brasseurGroup } from "./brasseur-histoire-publication.mjs";
 import { francoPublicationGroup } from "./franco-publication.mjs";
 import {
   publicationReleaseUrl,
@@ -7,6 +8,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  brasseurGroup,
 {
   "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
   "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",

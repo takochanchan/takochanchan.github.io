@@ -9798,6 +9798,78 @@
       "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-ii-1730/cover.jpg",
       "size": 35935,
       "sha256": "4ad5372b385a5199dda1efd0b1e1e044a0327db86dad50f5f29d18505665496f"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.pdf",
+      "size": 7798525,
+      "sha256": "cf281bc1f87fc1e44ad611af5f9a57abcfaa6277323c444720d9ef7f92a88b92"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.epub",
+      "size": 3926463,
+      "sha256": "7242b96b854f650b1c19a37b10497fac4ad0178ca02e6d3e68798acbd8f22705"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
+      "size": 59349,
+      "sha256": "24fd74641c80ee4f469b9b630be609f29752d50a0144fa831701189892137bb1"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.pdf",
+      "size": 7978312,
+      "sha256": "5183a122d4e631c0c9dea8a368fc0c52df12c1b299fe93d37ae879a81c0e0916"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.epub",
+      "size": 3932253,
+      "sha256": "f28f0c5d69e67033a8705320374d6362f794f8ec3a2868744ba689c76db2bd23"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
+      "size": 59415,
+      "sha256": "74a4b87fa1a45521c38f922f4d46751a906af934b4d455caf6bce612c8175917"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.pdf",
+      "size": 14525270,
+      "sha256": "4e54530f26122b5589ffdaf699c76ddbe40f2476e6294980e3050fa28e542cf2"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.epub",
+      "size": 36004702,
+      "sha256": "76bc015d81d517db931e790cb19afe686f74026d4fffeaaf952c869db20cbb5a"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
+      "size": 59412,
+      "sha256": "c0748fc22a3e16eb3247ad9bdb40c7a7c7a47c18490b7fb4864fb429be45a1c1"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.pdf",
+      "size": 7004679,
+      "sha256": "fe4fba9bb4780381639899ce486f24392a60eeacfce3eec345c404808afb5632"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.epub",
+      "size": 758878,
+      "sha256": "9a4895143a84433e9098026102e4d61fa6d0d0a1d52cbb1a3f1ca495ab09cbb3"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
+      "size": 59399,
+      "sha256": "3df1dd6f77a83300352b2bc402d6b199bd3e95f67e89a45c43329bb3453705af"
     }
   ]
 }
