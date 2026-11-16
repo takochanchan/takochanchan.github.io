@@ -40,6 +40,9 @@ jobs:
           html=H.unescape(urllib.request.urlopen(url,timeout=60).read().decode())
           for text in ['メキシコおよび中央アメリカの文明諸国史', 'Brasseur', '1857', '1859', 'Gallica', 'histoiredesnatio01bras', 'histoiredesnatio02bras', 'histoiredesnatio03bras', 'histoiredesnatio04bras']:
               assert text in html,text
+          assert '全4巻の詳細概要' in html
+          assert 'ボタンの伝承' not in html
+          assert 'ヴォタン' in html
           for slug in slugs:
               overview=json.load(open('src/publication-overviews.json'))['records'][slug]
               assert 0 < len(overview) <= 1000
@@ -59,6 +62,7 @@ jobs:
                       xhtml=''.join(z.read(n).decode() for n in z.namelist() if n.endswith('.xhtml'))
                       assert '原刊' in xhtml and 'メキシコ' in xhtml
                       volume=int(re.search(r'Volume_(\d+)',p.name).group(1))
+                      assert 'ボタン' not in xhtml and xhtml.count('ヴォタン') == [79,8,7,2][volume-1]
                       assert len([n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))]) >= [163,4,1,0][volume-1]
               if p.suffix=='.pdf':
                   info=subprocess.check_output(['pdfinfo',str(p)],text=True)
@@ -67,6 +71,9 @@ jobs:
                   assert len([line for line in images.splitlines() if re.match(r'^\s*\d+\s+\d+\s+',line)]) >= [163,4,1,0][v-1]
                   text=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
                   compact=re.sub(r'\s+','',text)
+                  raw = subprocess.check_output(['pdftotext','-raw',str(p),'-'],text=True)
+                  flat = re.sub(r'\s+','',raw).replace('\u2060','')
+                  assert 'ボタン' not in flat and flat.count('ヴォタン') == [79,8,7,2][v-1]
                   assert 'メキシコ' in compact
                   assert '原刊' in compact and 'メキシコ' in compact
                   assert '確認用版' not in compact and '私的確認用' not in compact
@@ -80,3 +87,45 @@ jobs:
           print('Live Brasseur bibliography, full-title overview, all four PDF and EPUB volumes and covers verified.')
           PY
 
+      - name: Check live full-text results and their page references
+        run: |
+          node --input-type=module <<'JS'
+          import assert from "node:assert/strict";
+          import { readFile, writeFile } from "node:fs/promises";
+          import { join } from "node:path";
+          import { pathToFileURL } from "node:url";
+          import { literalPagefindSearch, snippetsFor } from "./src/fulltext-search-core.mjs";
+          import { createPrefixSearch } from "./src/fulltext-prefix-search.mjs";
+          const config = JSON.parse(await readFile("search-shards.json", "utf8"));
+          const base = config.shards.find(shard => shard.id === "003").baseUrl;
+          const get = async path => {
+            const response = await fetch(new URL(path, base));
+            assert(response.ok, path + " returned " + response.status);
+            return response;
+          };
+          const moduleFile = join(process.env.RUNNER_TEMP, "brasseur-pagefind.mjs");
+          await writeFile(moduleFile, await (await get("pagefind/pagefind.js")).text());
+          const { createInstance } = await import(pathToFileURL(moduleFile));
+          const engine = createInstance({ basePath: new URL("pagefind/", base).href, noWorker: true, exactDiacritics: true });
+          engine.expandLiteralQueries = createPrefixSearch([new URL("pagefind/", base).href]);
+          const documents = await (await get("document-map.json")).json();
+          const slugs = [1,2,3,4].map(i => "brasseur-histoire-nations-civilisees-volume-" + i + "-1857-1859");
+          for (const term of ["ヴォタン", "ボタン"]) {
+            const result = await literalPagefindSearch(engine, term, documents);
+            for (const slug of slugs) {
+              const ref = result.results.find(work => work.id === slug);
+              if (term === "ボタン" && !ref) continue;
+              assert(ref, slug + " has no result for " + term);
+              const preview = await ref.data();
+              const full = preview.__partialSearch ? await preview.__loadFull() : preview;
+              const map = await (await get("maps/" + slug + ".json")).json();
+              const pages = snippetsFor(full, map);
+              if (term === "ボタン") {
+                assert.equal(pages.length, 0, slug + " still contains the old spelling");
+              } else {
+                assert(pages.length > 0 && pages.every(p => Number.isInteger(p.pdfPage) && p.pdfPage > 0 && p.originalPage.includes("原刊")), slug);
+                console.log(slug, term, pages.length, "matching pages", pages[0].originalPage, "PDF", pages[0].pdfPage);
+              }
+            }
+          }
+          JS
