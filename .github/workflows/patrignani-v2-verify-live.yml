@@ -62,7 +62,7 @@ jobs:
           mapping=json.load(urllib.request.urlopen(shard+'document-map.json',timeout=120))
           assert any(isinstance(v,list) and v[0]==slug for v in mapping['fragments'].values())
           work_map=json.load(urllib.request.urlopen(shard+'maps/'+slug+'.json',timeout=120))
-          assert work_map['canonicalUrl']=='/publications/patrignani-menologio-1730/'
+          assert work_map['canonicalUrl']=='/publications/'+slug+'/', work_map['canonicalUrl']
           for ext, field in [('pdf','pdfSha256'),('epub','sourceSha256')]:
               assert work_map[field]==next(a['sha256'] for a in assets if a['path'].endswith('.'+ext))
           blocks=work_map['blocks']
@@ -70,9 +70,10 @@ jobs:
           for section, original_page, pdf_page in [('b00511','原刊 p. 2',32),('b05603','原刊 p. 64',685),('b10767','原刊 p. 194',1330)]:
               assert blocks[section][:2]==[original_page,pdf_page], (section,blocks[section])
           print('Verified all',len(blocks),'search block links and April, May and June page samples.')
-          volume_url='https://takochanchan.github.io/publications/'+slug+'/'
+          volume_url='https://takochanchan.github.io'+work_map['canonicalUrl']
           redirect=urllib.request.urlopen(volume_url,timeout=60).read().decode()
-          assert '/publications/patrignani-menologio-1730/' in redirect
+          assert '<meta http-equiv="refresh" content="0;url=/publications/patrignani-menologio-1730/">' in redirect
+          assert '<link rel="canonical" href="https://takochanchan.github.io/publications/patrignani-menologio-1730/">' in redirect
           sums=urllib.request.urlopen('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/SHA256SUMS.txt',timeout=120).read().decode()
           for a in assets:
               if a['path'].endswith(('.pdf','.epub')):
