@@ -1,0 +1,84 @@
+name: Verify live Patrignani publication
+on:
+  push:
+    branches: ["agent/patrignani-v2-live-20261116"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify live bibliography, overview and exact final assets
+        run: |
+          python3 - <<'PY'
+          import json,hashlib,urllib.request,tempfile,pathlib,zipfile,subprocess,re,html as H
+          slug='patrignani-menologio-volume-ii-1730'
+          url='https://takochanchan.github.io/publications/patrignani-menologio-1730/?v=patrignani-ii-20261116'
+          html=urllib.request.urlopen(url,timeout=60).read().decode()
+          for text in ['イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録','Giuseppe Antonio Patrignani','1730','1,382','X3WpCf8bSfoC','それぞれの命日に当たる一年の各日に配列したもの']:
+              assert text in H.unescape(html), text
+          assert 'Patrignani_Menologio_1730_Volume_1_Japanese.pdf' in html
+          assert 'Patrignani_Menologio_1730_Volume_2_Japanese.pdf' in html
+          assert 'overview-patrignani-menologio-volume-i-1730' in html and 'overview-'+slug in html
+          overview=json.load(open('src/publication-overviews.json'))['records'][slug]
+          assert 0 < len(overview) <= 1000
+          for para in overview.split('\n\n'): assert para in H.unescape(html), para
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          root=pathlib.Path(tempfile.mkdtemp())
+          for a in assets:
+              p=root/pathlib.PurePosixPath(a['path']).name
+              with urllib.request.urlopen(a['url'],timeout=120) as response,p.open('wb') as f:
+                  while chunk:=response.read(1024*1024): f.write(chunk)
+              assert p.stat().st_size==a['size']
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256']
+              if p.suffix=='.epub':
+                  with zipfile.ZipFile(p) as z:
+                      assert z.testzip() is None
+                      assert z.read('mimetype')==b'application/epub+zip'
+                      xhtml=''.join(z.read(n).decode() for n in z.namelist() if n.endswith('.xhtml'))
+                      assert '原刊' in xhtml and '年中日録' in xhtml
+                      assert len([n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))])==1
+              if p.suffix=='.pdf':
+                  info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                  assert any(line.split()==['Pages:','1382'] for line in info.splitlines())
+                  images=subprocess.check_output(['pdfimages','-list',str(p)],text=True)
+                  assert not any(re.match(r'^\s*\d+\s+\d+\s+',line) for line in images.splitlines())
+                  text=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
+                  compact=re.sub(r'\s+','',text)
+                  assert 'MENOLOGIO' in compact
+                  assert '原刊' in compact and '年中日録' in compact
+                  assert '確認用版' not in compact and '私的確認用' not in compact
+                  normalized=re.sub(r'\s|\u2060','',text)
+                  for marker in ['〔原刊前付f.1r〕','〔原刊p.129［125］〕','〔原刊p.187［189］〕','〔主底本原刊p.213／補完底本原刊p.213〕']: assert marker in normalized, marker
+              print('VERIFIED',p.name,a['size'],a['sha256'])
+          shard='https://takochanchan.github.io/takochan-search-index-003/'
+          meta=json.load(urllib.request.urlopen(shard+'search-meta.json',timeout=120))
+          assert slug in meta['workSlugs']
+          mapping=json.load(urllib.request.urlopen(shard+'document-map.json',timeout=120))
+          assert any(isinstance(v,list) and v[0]==slug for v in mapping['fragments'].values())
+          work_map=json.load(urllib.request.urlopen(shard+'maps/'+slug+'.json',timeout=120))
+          assert work_map['canonicalUrl']=='/publications/patrignani-menologio-1730/'
+          for ext, field in [('pdf','pdfSha256'),('epub','sourceSha256')]:
+              assert work_map[field]==next(a['sha256'] for a in assets if a['path'].endswith('.'+ext))
+          blocks=work_map['blocks']
+          assert len(blocks)==11187 and all(1 <= block[1] <= 1382 for block in blocks.values())
+          for section, original_page, pdf_page in [('b00511','原刊 p. 2',32),('b05603','原刊 p. 64',685),('b10767','原刊 p. 194',1330)]:
+              assert blocks[section][:2]==[original_page,pdf_page], (section,blocks[section])
+          print('Verified all',len(blocks),'search block links and April, May and June page samples.')
+          volume_url='https://takochanchan.github.io/publications/'+slug+'/'
+          redirect=urllib.request.urlopen(volume_url,timeout=60).read().decode()
+          assert '/publications/patrignani-menologio-1730/' in redirect
+          sums=urllib.request.urlopen('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/SHA256SUMS.txt',timeout=120).read().decode()
+          for a in assets:
+              if a['path'].endswith(('.pdf','.epub')):
+                  name=pathlib.PurePosixPath(a['path']).name
+                  assert any(line.split()==[a['sha256'],name] for line in sums.splitlines())
+          assert len(assets)==3
+          print('Live Patrignani bibliography, full-title overview, image-free 1382-page PDF, EPUB and cover verified.')
+          PY
+
