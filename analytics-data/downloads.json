@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-15",
-  "updatedAt": "2026-11-15T23:58:58.432Z",
+  "endDate": "2026-11-16",
+  "updatedAt": "2026-11-17T02:57:23.218Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8670,7 +8670,7 @@
       "name": "Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
       "slug": "patrignani-menologio-1730",
       "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
-      "volumeLabel": "",
+      "volumeLabel": "第1巻（1月・2月・3月）",
       "format": "pdf"
     },
     {
@@ -8678,7 +8678,7 @@
       "name": "Patrignani_Menologio_1730_Volume_1_Japanese.epub",
       "slug": "patrignani-menologio-1730",
       "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
-      "volumeLabel": "",
+      "volumeLabel": "第1巻（1月・2月・3月）",
       "format": "epub"
     },
     {
@@ -8727,6 +8727,86 @@
       "slug": "venegas-noticia-california-1757",
       "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告",
       "volumeLabel": "第3巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_379e5c3083943b61",
+      "name": "Brasseur_Histoire_Volume_1_Japanese.pdf",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_a02c88100f13a29b",
+      "name": "Brasseur_Histoire_Volume_1_Japanese.epub",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8f5bc51d18f9d10a",
+      "name": "Brasseur_Histoire_Volume_2_Japanese.pdf",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_9fb181d54369f872",
+      "name": "Brasseur_Histoire_Volume_2_Japanese.epub",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_c0b7bc555a6889d7",
+      "name": "Brasseur_Histoire_Volume_3_Japanese.pdf",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第3巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ac882f5bc51ea73d",
+      "name": "Brasseur_Histoire_Volume_3_Japanese.epub",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第3巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_73ad872f36651bb0",
+      "name": "Brasseur_Histoire_Volume_4_Japanese.pdf",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第4巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ed0940df55cfcaa4",
+      "name": "Brasseur_Histoire_Volume_4_Japanese.epub",
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史",
+      "volumeLabel": "第4巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_bfe189485478941c",
+      "name": "Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "volumeLabel": "第2巻（4月・5月・6月）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cc1fe54785866428",
+      "name": "Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "volumeLabel": "第2巻（4月・5月・6月）",
       "format": "epub"
     }
   ],
