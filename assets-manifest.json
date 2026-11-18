@@ -9870,6 +9870,24 @@
       "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
       "size": 59399,
       "sha256": "3df1dd6f77a83300352b2bc402d6b199bd3e95f67e89a45c43329bb3453705af"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "size": 12112834,
+      "sha256": "f88770ef783cab688207b1e093341d5814fe49ecd882194c373c384ed9233eda"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "size": 1419716,
+      "sha256": "96441e7efd62bd8923d40604290caab1e475db819b9fbf524a4012c2c8b78f9b"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iii-1730/cover.jpg",
+      "size": 80984,
+      "sha256": "f688ed57bfb6813d9207608422a3292a37277f8a86ed8009597eef99e6cd35af"
     }
   ]
 }

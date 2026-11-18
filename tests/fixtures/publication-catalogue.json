@@ -3088,6 +3088,15 @@
       "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
       "releaseTag": "publications-002",
       "seriesVolumeNumber": 4
+    },
+    {
+      "slug": "patrignani-menologio-volume-iii-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
     }
   ],
   "groups": [
@@ -3269,7 +3278,8 @@
       "slug": "patrignani-menologio-1730",
       "memberSlugs": [
         "patrignani-menologio-volume-i-1730",
-        "patrignani-menologio-volume-ii-1730"
+        "patrignani-menologio-volume-ii-1730",
+        "patrignani-menologio-volume-iii-1730"
       ],
       "seriesVolumeCount": 4
     },

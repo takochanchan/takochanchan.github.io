@@ -63,23 +63,24 @@ export const publicationGroupDefinitions = [
   "originalAuthor": "Giuseppe Antonio Patrignani",
   "series": "MENOLOGIO · 1730",
   "year": 1730,
-  "sourceProvider": "ナポリ国立図書館所蔵本、Google Books経由Internet Archive公開。欠頁補充：ボストン・カレッジ所蔵同年版。",
+  "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。欠損箇所はボストン・カレッジおよびチェコ国立図書館の所蔵本による。",
   "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
   "sourceUrl": "https://archive.org/details/bub_gb_v8tdoPVsIjIC",
   "publishedDate": "2026-11-14",
-  "updatedDate": "2026-11-16",
+  "updatedDate": "2026-11-18",
   "slug": "patrignani-menologio-1730",
   "memberSlugs": [
     "patrignani-menologio-volume-i-1730",
-    "patrignani-menologio-volume-ii-1730"
+    "patrignani-menologio-volume-ii-1730",
+    "patrignani-menologio-volume-iii-1730"
   ],
   "plannedMemberSlugs": [
-    "patrignani-menologio-volume-iii-1730",
     "patrignani-menologio-volume-iv-1730"
   ],
   "volumeLabels": [
     "第1巻（1月・2月・3月）",
-    "第2巻（4月・5月・6月）"
+    "第2巻（4月・5月・6月）",
+    "第3巻（7月・8月・9月）"
   ],
   "seriesVolumeCount": 4,
   "subtitle": "全4巻",
