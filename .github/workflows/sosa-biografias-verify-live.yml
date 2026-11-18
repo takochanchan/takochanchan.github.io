@@ -2,7 +2,7 @@ name: Verify live Sosa 1884 biography catalogue and downloads
 on:
   push:
     branches: ["agent/sosa-biografias-transfer-20261119"]
-    paths: [".github/workflows/sosa-biografias-verify-live.yml"]
+    paths: [".github/workflows/sosa-biografias-verify-live.yml", ".publication-transfer/verify-sosa-biografias-live.py"]
 permissions:
   contents: read
 jobs:

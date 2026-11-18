@@ -4,7 +4,7 @@ slug='sosa-biografias-de-mexicanos-distinguidos-1884'
 url='https://takochanchan.github.io/publications/'+slug+'/'
 raw=urllib.request.urlopen(url,timeout=90).read().decode()
 decoded=html.unescape(raw)
-for s in ['著名メキシコ人伝','Francisco Sosa','Biografías de mexicanos distinguidos','1884','294','1,075','https://archive.org/details/biografasdemexic00sosa','スマザーズ','個別の利用許諾表示がありません']:
+for s in ['著名メキシコ人伝','Francisco Sosa','Biografías de mexicanos distinguidos','1884','294','1075頁','https://archive.org/details/biografasdemexic00sosa','スマザーズ','個別の利用許諾表示がありません']:
  assert s in decoded,s
 for para in json.load(open('src/publication-overviews.json'))['records'][slug].split('\n\n'):assert para in decoded,para
 assets=[r for r in json.load(open('assets-manifest.json'))['assets'] if r['path'].startswith('publications/'+slug+'/')]
