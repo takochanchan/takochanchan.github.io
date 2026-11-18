@@ -1,0 +1,16 @@
+name: Verify live Sosa 1884 biography catalogue and downloads
+on:
+  push:
+    branches: ["agent/sosa-biografias-transfer-20261119"]
+    paths: [".github/workflows/sosa-biografias-verify-live.yml"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check live bibliography, public files, checksums and search map
+        run: |
+          if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+          python3 .publication-transfer/verify-sosa-biografias-live.py
