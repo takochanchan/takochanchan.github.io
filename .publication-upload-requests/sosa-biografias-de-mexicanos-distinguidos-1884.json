@@ -1,0 +1,35 @@
+{
+  "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "e15bbc142b26d916cf126bf4d4fc6404bded397f",
+  "bundle": {
+    "size": 6791530,
+    "sha256": "3dfabd44bcebd31b623fe31af975c36b6664afd7c4c9753d39ca55562bfa757d",
+    "chunks": [
+      "3eff7d153ed190f8fabbddd985ba19c9081f0022",
+      "485a46c72e903f8f428a7c9fee3c0bbdbf6acdc0",
+      "7ad9d04aa7ad7f86886e6bfc7657bee54901459c",
+      "ef5cb03077e11c2880f932a4605f4a8e5aa55444",
+      "3e995af6faa864ffbf82cbc28039872e64dbf994",
+      "a89ee773ffecdc1bb62b080ddbfabc3f8e57989f",
+      "62edcdb227d3104c168566950cd628b0956113fb",
+      "ec01ec41362463d15829e9872991f03e7b1f34fd"
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "size": 1364220,
+      "sha256": "f810e81dcfbaa0d70a6ee4b30110bb2e58904067c1f3785ab05b697de57eedec",
+      "filename": "Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "size": 9376874,
+      "sha256": "f5bff2191a03bbe78e997f38b176801cb0cb33ca2bc883eed2e41889d8a6d5c0",
+      "filename": "Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf"
+    }
+  ]
+}
