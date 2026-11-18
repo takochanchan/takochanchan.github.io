@@ -9874,20 +9874,38 @@
     {
       "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
-      "size": 12112834,
-      "sha256": "f88770ef783cab688207b1e093341d5814fe49ecd882194c373c384ed9233eda"
+      "size": 12112066,
+      "sha256": "f250ed677b7dd7da907d200e61b57e7ba2ab08ac242568575a7bd007599ed472"
     },
     {
       "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
-      "size": 1419716,
-      "sha256": "96441e7efd62bd8923d40604290caab1e475db819b9fbf524a4012c2c8b78f9b"
+      "size": 1418688,
+      "sha256": "1fb8e40d3c7697183d3b86b9bab2306f852cb1502691bc5817641db3bf1ddbc4"
     },
     {
       "path": "publications/patrignani-menologio-volume-iii-1730/cover.jpg",
       "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iii-1730/cover.jpg",
-      "size": 80984,
-      "sha256": "f688ed57bfb6813d9207608422a3292a37277f8a86ed8009597eef99e6cd35af"
+      "size": 80000,
+      "sha256": "65181b061093d5a5ae0e65657096838432946163ab7b37f8c0d94b121c92c7c5"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+      "size": 19662518,
+      "sha256": "4091ef2bb89c4fe6405dbc8f6d9a32c72d484a367f32242e78f2ec08c1c78262"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+      "size": 1531442,
+      "sha256": "123d46beda17fa93f018667fa92ccfa3f336435b4f564124286744171a592cf7"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iv-1730/cover.jpg",
+      "size": 81038,
+      "sha256": "e7120d00ea19ca75f73d5f42ec31fdc8347399f194c978145f28b35c87ccae6c"
     }
   ]
 }

@@ -72,15 +72,15 @@ export const publicationGroupDefinitions = [
   "memberSlugs": [
     "patrignani-menologio-volume-i-1730",
     "patrignani-menologio-volume-ii-1730",
-    "patrignani-menologio-volume-iii-1730"
-  ],
-  "plannedMemberSlugs": [
+    "patrignani-menologio-volume-iii-1730",
     "patrignani-menologio-volume-iv-1730"
   ],
+  "plannedMemberSlugs": [],
   "volumeLabels": [
     "第1巻（1月・2月・3月）",
     "第2巻（4月・5月・6月）",
-    "第3巻（7月・8月・9月）"
+    "第3巻（7月・8月・9月）",
+    "第4巻（10月・11月・12月）"
   ],
   "seriesVolumeCount": 4,
   "subtitle": "全4巻",

@@ -146,6 +146,56 @@ export const patrignaniPublicationRecords = [
     "updatedDate": "2026-11-18",
     "recordClass": "major-work",
     "seriesVolumeNumber": 3
+  },
+  {
+    "slug": "patrignani-menologio-volume-iv-1730",
+    "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第4巻（10月・11月・12月）",
+    "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre.",
+    "subtitle": "第4巻：10月・11月・12月",
+    "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+    "originalAuthor": "Giuseppe Antonio Patrignani",
+    "series": "MENOLOGIO · 1730",
+    "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第4巻。",
+    "year": 1730,
+    "extent": "第4巻・日本語版PDF 1,770頁",
+    "description": "10月から12月に没した会員の伝記を命日順に収める。第3代総長フランシスコ・ボルジア、修練者スタニスラオ・コストカ、フランシスコ・ザビエル、日本で殉教した会員らを取り上げる。巻末には全4巻にわたる事項索引と人名索引がある。",
+    "cover": "publications/patrignani-menologio-volume-iv-1730/cover.jpg",
+    "pdf": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+    "epub": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+    "pageCount": 1770,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "宗教",
+      "伝記"
+    ],
+    "regions": [
+      "ヨーロッパ",
+      "アジア",
+      "アメリカ",
+      "アフリカ",
+      "オセアニア"
+    ],
+    "languages": [
+      "イタリア語"
+    ],
+    "tags": [
+      "イエズス会",
+      "宣教",
+      "殉教",
+      "修道者",
+      "18世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre. In Venezia: presso Niccolò Pezzana, 1730. 10月244頁、11月216頁、12月260頁、事項索引i–lxxiv頁、人名索引、巻末聖書引用。",
+    "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。ボストン・カレッジ所蔵本とプロスペロ・イントルチェッタ財団公開本を欠損箇所の補充・照合に用いた。",
+    "sourceUrl": "https://archive.org/details/bub_gb_YmE6Y2MxURUC",
+    "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+    "publishedDate": "2026-11-18",
+    "updatedDate": "2026-11-18",
+    "recordClass": "major-work",
+    "seriesVolumeNumber": 4
   }
 ];
 
@@ -170,6 +220,14 @@ export const patrignaniPublicationMetadata = {
     "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo terzo, che contiene Luglio, Agosto, e Settembre. In Venezia: presso Niccolò Pezzana, 1730. 7月256頁、8月256頁、9月260頁。",
     "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。7月160頁はチェコ国立図書館所蔵本、7月232頁はボストン・カレッジ所蔵本（印字132頁）で補った。",
     "sourceUrl": "https://archive.org/details/bub_gb_ad3szyKTjowC",
+    "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+    "publishedDate": "2026-11-18",
+    "updatedDate": "2026-11-18"
+  },
+  "patrignani-menologio-volume-iv-1730": {
+    "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre. In Venezia: presso Niccolò Pezzana, 1730. 10月244頁、11月216頁、12月260頁、事項索引i–lxxiv頁、人名索引、巻末聖書引用。",
+    "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。ボストン・カレッジ所蔵本とプロスペロ・イントルチェッタ財団公開本を欠損箇所の補充・照合に用いた。",
+    "sourceUrl": "https://archive.org/details/bub_gb_YmE6Y2MxURUC",
     "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
     "publishedDate": "2026-11-18",
     "updatedDate": "2026-11-18"

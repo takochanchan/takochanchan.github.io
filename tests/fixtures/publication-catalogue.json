@@ -3097,6 +3097,15 @@
       "originalAuthor": "Giuseppe Antonio Patrignani",
       "releaseTag": "publications-002",
       "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "patrignani-menologio-volume-iv-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 4
     }
   ],
   "groups": [
@@ -3279,7 +3288,8 @@
       "memberSlugs": [
         "patrignani-menologio-volume-i-1730",
         "patrignani-menologio-volume-ii-1730",
-        "patrignani-menologio-volume-iii-1730"
+        "patrignani-menologio-volume-iii-1730",
+        "patrignani-menologio-volume-iv-1730"
       ],
       "seriesVolumeCount": 4
     },
