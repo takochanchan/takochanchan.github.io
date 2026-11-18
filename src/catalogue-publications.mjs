@@ -57,7 +57,7 @@ export const publicationGroupDefinitions = [
   ]
 },
 {
-  "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+  "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
   "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728.",
   "author": "ジュゼッペ・アントニオ・パトリニャーニ",
   "originalAuthor": "Giuseppe Antonio Patrignani",
