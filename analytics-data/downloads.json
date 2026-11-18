@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-16",
-  "updatedAt": "2026-11-17T02:57:23.218Z",
+  "endDate": "2026-11-17",
+  "updatedAt": "2026-11-18T02:26:58.042Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8807,6 +8807,22 @@
       "slug": "patrignani-menologio-1730",
       "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
       "volumeLabel": "第2巻（4月・5月・6月）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_15f7957d9c64bc39",
+      "name": "Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "volumeLabel": "第3巻（7月・8月・9月）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_81501d00eb20e1c3",
+      "name": "Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "volumeLabel": "第3巻（7月・8月・9月）",
       "format": "epub"
     }
   ],
