@@ -1,0 +1,32 @@
+name: Transfer checksum-pinned Patrignani volume III assets
+on:
+  push:
+    branches: ["agent/patrignani-v3-publish-20261118"]
+    paths: [".publication-upload-requests/patrignani-menologio-volume-iii-1730.json", ".github/workflows/patrignani-v3-transfer.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Install EPUBCheck
+        run: sudo apt-get update -qq && sudo apt-get install -y epubcheck
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-patrignani-v3.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: patrignani-release-verification
+          path: patrignani-release-verification.json

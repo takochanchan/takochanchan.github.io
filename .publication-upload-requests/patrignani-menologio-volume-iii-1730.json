@@ -1,0 +1,57 @@
+{
+  "slug": "patrignani-menologio-volume-iii-1730",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "5b3ea5913ac3afccaf47b1eb162e1847eeed7db2",
+  "assets": [
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "size": 12112834,
+      "sha256": "f88770ef783cab688207b1e093341d5814fe49ecd882194c373c384ed9233eda",
+      "filename": "Patrignani_Menologio_1730_Volume_3_Japanese.pdf"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "size": 1419716,
+      "sha256": "96441e7efd62bd8923d40604290caab1e475db819b9fbf524a4012c2c8b78f9b",
+      "filename": "Patrignani_Menologio_1730_Volume_3_Japanese.epub"
+    }
+  ],
+  "bundle": {
+    "size": 8729376,
+    "sha256": "cc0fbaa5997b50cd873de37ad508be062024bec8d8a7ba8469c63967d429ad1d",
+    "chunks": [
+      "ca1c20027cc628ce88c2a39e3ddf4ad398126202",
+      "1a326d613471f5caa973e06ddbe684522bfe6e8d",
+      "d79020e8406bd7663de4f502e5b83679f9f18d9b",
+      "c26302921c83b944cfaa42cbf303cebe26cc2bc2",
+      "d385b7d0b3ccc14bb7b4dd9e90d71269a5ea7b89",
+      "f0b484b3fde60dfeac99038f850d1f82ced7ace5",
+      "4c12f075bd9c6cf37eae37408a2f8cd8320bbb49",
+      "b12e6dbf983484fac5b85bb2acac6b467a510c5d",
+      "3ed713ca0449ca64a3bd9025f184127e64d0af84",
+      "e5449fb1a3369f392bf7785e845c6c3467072279",
+      "d1b00f899a4046d5c84c12dfd56ff062fadf5112",
+      "f1f6771b4f61b9036cb5e5f1625aa0e21d2fbbd9",
+      "bba58b8ca9371bef858c3938ebdbe99180678efb",
+      "adc849d565fd121b649daf58ec3b647c73cc28e6",
+      "e27aa30be1941c9d8e2bd26a3114c185b043b541",
+      "8d729c56181d951f9b3f59559b1795b262974431",
+      "c08c6e0813aac5cb9c52353caa5a7b62df9eb1cb",
+      "3244c36b4d98b9d6e639c93b791734aed131ec9c",
+      "01403de2a03fada541f2781cfb03056f403f202f",
+      "cfd24ecd483a94bdb05b051e4f1751955b930344",
+      "eb7c21e95b8182e9c9c1b63edf6d58813c7db472",
+      "e1c742a33b5ffddbc126c7ff8efeacf2b6255411",
+      "e94662b571df4d16793f55e9dcbb3a6ec9e16b3c",
+      "b130287f9fe5d542a96dacc64502c2d1fba6d3d3",
+      "d8d005d6fae7c6fe66e3a945a56041cac4397c5a",
+      "826b4fb111f229503e718a47d29e1b3d4693cd19",
+      "9bf2e0552b868ea773801c2c7f6750dcd9d65111",
+      "454a744e34b3aa884c1801344582b0bae49f89bd",
+      "2a7bb6e6799c79459c5bf1e2a2fe25834d14a87a",
+      "434e74e1b92c2cb5fefba73fcf8e5145b61b4155"
+    ]
+  }
+}
