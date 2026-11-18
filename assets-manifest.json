@@ -9906,6 +9906,24 @@
       "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iv-1730/cover.jpg",
       "size": 81038,
       "sha256": "e7120d00ea19ca75f73d5f42ec31fdc8347399f194c978145f28b35c87ccae6c"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "size": 1364220,
+      "sha256": "f810e81dcfbaa0d70a6ee4b30110bb2e58904067c1f3785ab05b697de57eedec"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "size": 9376874,
+      "sha256": "f5bff2191a03bbe78e997f38b176801cb0cb33ca2bc883eed2e41889d8a6d5c0"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
+      "size": 31491,
+      "sha256": "a4dcb6d5d46a53199e12e008672b09faa131d1e441309d785fab658b3bb91f11"
     }
   ]
 }

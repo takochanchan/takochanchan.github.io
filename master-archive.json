@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "a67e53773f9c3925885535a31fb8ceb20957260d",
+  "archive_commit": "e15bbc142b26d916cf126bf4d4fc6404bded397f",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -477,7 +477,8 @@
     "brasseur-histoire-nations-civilisees-volume-3-1857-1859": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/master.docx",
     "brasseur-histoire-nations-civilisees-volume-4-1857-1859": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/master.docx",
     "patrignani-menologio-volume-iii-1730": "publications/patrignani-menologio-volume-iii-1730/master.docx",
-    "patrignani-menologio-volume-iv-1730": "publications/patrignani-menologio-volume-iv-1730/master.docx"
+    "patrignani-menologio-volume-iv-1730": "publications/patrignani-menologio-volume-iv-1730/master.docx",
+    "sosa-biografias-de-mexicanos-distinguidos-1884": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

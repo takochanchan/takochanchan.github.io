@@ -49,6 +49,53 @@ export const sosaPublicationRecords = [
     "publishedDate": "2026-11-12",
     "updatedDate": "2026-11-12",
     "recordClass": "major-work"
+  },
+  {
+    "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+    "title": "著名メキシコ人伝",
+    "originalTitle": "Biografías de mexicanos distinguidos",
+    "subtitle": "征服期から19世紀までのメキシコの人物伝294篇",
+    "author": "フランシスコ・ソサ",
+    "originalAuthor": "Francisco Sosa",
+    "series": "BIOGRAFÍAS DE MEXICANOS DISTINGUIDOS · 1884",
+    "originalPublication": "メキシコ市、勧業省印刷局、1884年。",
+    "year": 1884,
+    "extent": "全1巻、日本語版PDF 1,075頁",
+    "description": "フランシスコ・ソサがメキシコの歴史に名を残した294人を姓の順に紹介した伝記集。征服期の先住民の武将、植民地期の修道女・学者・画家、独立運動の担い手、共和国の政治家・文人を取り上げる。フロリダ大学所蔵の1884年メキシコ市刊本を底本とする。",
+    "cover": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
+    "pdf": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+    "epub": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+    "pageCount": 1075,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歴史",
+      "伝記"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "人名辞典",
+      "メキシコ独立",
+      "ヌエバ・エスパーニャ",
+      "文学",
+      "美術",
+      "宗教",
+      "19世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "sourceEdition": "Francisco Sosa, Biografías de mexicanos distinguidos. México: Oficina Tipográfica de la Secretaría de Fomento, 1884.",
+    "sourceProvider": "フロリダ大学ジョージ・A・スマザーズ図書館所蔵・提供。Internet Archive公開（biografasdemexic00sosa）。",
+    "sourceUrl": "https://archive.org/details/biografasdemexic00sosa",
+    "rights": "1884年刊の原著本文は日本で著作権の保護期間を満了しています。Internet Archiveの当該資料の公開記録には、デジタル画像に対する個別の利用許諾表示がありません。日本語版には蔵書票・蔵書印・装飾罫の画像を収録していません。公開機関の権利案内：https://help.archive.org/help/rights/ ／ 所蔵機関の複製案内：https://sasc.uflib.ufl.edu/resources-policies/digital-reproductions/",
+    "publishedDate": "2026-11-19",
+    "updatedDate": "2026-11-19",
+    "recordClass": "major-work"
   }
 ];
 
@@ -60,5 +107,13 @@ export const sosaPublicationMetadata = {
     "rights": "フランシスコ・ソサの原著は著作権保護期間を満了しています。UANL公開スキャン画像の利用条件はCC BY-NC-ND 2.5 MXです。適切な利用条件で差し替えられる全図版を確認できなかったため、本訳には口絵1葉・肖像30葉のスキャン画像を収録していません。図題・肖像銘文の日本語訳は収録しています。利用条件：https://rediab.uanl.mx/Record/cd-201504211-12541/Details ／ https://creativecommons.org/licenses/by-nc-nd/2.5/mx/",
     "publishedDate": "2026-11-12",
     "updatedDate": "2026-11-12"
+  },
+  "sosa-biografias-de-mexicanos-distinguidos-1884": {
+    "sourceEdition": "Francisco Sosa, Biografías de mexicanos distinguidos. México: Oficina Tipográfica de la Secretaría de Fomento, 1884.",
+    "sourceProvider": "フロリダ大学ジョージ・A・スマザーズ図書館所蔵・提供。Internet Archive公開（biografasdemexic00sosa）。",
+    "sourceUrl": "https://archive.org/details/biografasdemexic00sosa",
+    "rights": "1884年刊の原著本文は日本で著作権の保護期間を満了しています。Internet Archiveの当該資料の公開記録には、デジタル画像に対する個別の利用許諾表示がありません。日本語版には蔵書票・蔵書印・装飾罫の画像を収録していません。公開機関の権利案内：https://help.archive.org/help/rights/ ／ 所蔵機関の複製案内：https://sasc.uflib.ufl.edu/resources-policies/digital-reproductions/",
+    "publishedDate": "2026-11-19",
+    "updatedDate": "2026-11-19"
   }
 };

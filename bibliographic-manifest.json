@@ -10447,6 +10447,25 @@
         "status": "online",
         "url": "https://archive.org/details/bub_gb_YmE6Y2MxURUC"
       }
+    },
+    {
+      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+      "title": "著名メキシコ人伝",
+      "originalTitle": "Biografías de mexicanos distinguidos",
+      "author": "フランシスコ・ソサ",
+      "originalAuthor": "Francisco Sosa",
+      "originalPublication": "メキシコ市、勧業省印刷局、1884年。",
+      "year": 1884,
+      "sourceEdition": "Francisco Sosa, Biografías de mexicanos distinguidos. México: Oficina Tipográfica de la Secretaría de Fomento, 1884.",
+      "sourceProvider": "フロリダ大学ジョージ・A・スマザーズ図書館所蔵・提供。Internet Archive公開（biografasdemexic00sosa）。",
+      "rights": "1884年刊の原著本文は日本で著作権の保護期間を満了しています。Internet Archiveの当該資料の公開記録には、デジタル画像に対する個別の利用許諾表示がありません。日本語版には蔵書票・蔵書印・装飾罫の画像を収録していません。公開機関の権利案内：https://help.archive.org/help/rights/ ／ 所蔵機関の複製案内：https://sasc.uflib.ufl.edu/resources-policies/digital-reproductions/",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/biografasdemexic00sosa"
+      }
     }
   ],
   "works": [
