@@ -9978,6 +9978,24 @@
       "url": "https://takochanchan.github.io/publications/leon-y-gama-dos-piedras-1792/cover.jpg",
       "size": 33846,
       "sha256": "e067f3201c253218fc43a3fae22f2badcdca41c9317dc8bccbe5b972e6e88685"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.pdf",
+      "size": 2537980,
+      "sha256": "ba9edff45cca6a29d90669e1d8c060717b5f5141eed1848f2eeb82fbd2fa564a"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.epub",
+      "size": 216515,
+      "sha256": "757121bab3cd70e5a0e860268e0ee8cd833e102f9c5c0289d476f92b458c1dbd"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
+      "size": 31297,
+      "sha256": "35b432533d92c6679e2ec7a0246c2ce8424d1e8526d0a359afac7e5a83c84c39"
     }
   ]
 }

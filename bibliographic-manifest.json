@@ -10523,6 +10523,25 @@
         "status": "online",
         "url": "https://americana.jcblibrary.org/search/object/jcbcap-991004331519706966/"
       }
+    },
+    {
+      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+      "recordClass": "major-work",
+      "title": "ユカタン司教区の偶像礼拝者に対する報告書",
+      "originalTitle": "Informe contra idolorum cultores del obispado de Yucatan",
+      "author": "ペドロ・サンチェス・デ・アギラル",
+      "originalAuthor": "Pedro Sánchez de Aguilar",
+      "year": 1639,
+      "originalPublication": "マドリード、フアン・ゴンサレス未亡人刊、1639年。",
+      "sourceEdition": "Pedro Sánchez de Aguilar, Informe contra idolorum cultores del obispado de Yucatan. Madrid: viuda de Juan González, 1639 (primera edición).",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵の初版本（BA639 S311i、受入番号0736）。Internet Archive配信。",
+      "rights": "1639年刊の原著本文はパブリックドメイン。John Carter Brown Libraryが公開する底本画像の利用条件はCC BY 4.0。原刊の画像は掲載していない。 所蔵館の利用条件：https://jcblibrary.org/permissions/ ／ https://creativecommons.org/licenses/by/4.0/ 。底本PDF：https://archive.org/download/informecontraido00snch/informecontraido00snch.pdf",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/informecontraido00snch"
+      }
     }
   ],
   "works": [

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "89512e6fa2e78f60ade674a0d8a89b09d018784a",
+  "archive_commit": "abd571b0fd98056f52cb44ef964e53f95e5b802f",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -481,7 +481,8 @@
     "sosa-biografias-de-mexicanos-distinguidos-1884": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/master.docx",
     "bellido-vida-maria-ana-agueda-de-san-ignacio-1758": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/master.md",
     "maria-ana-agueda-devociones-varias-1791": "publications/maria-ana-agueda-devociones-varias-1791/master.docx",
-    "leon-y-gama-dos-piedras-1792": "publications/leon-y-gama-dos-piedras-1792/master.docx"
+    "leon-y-gama-dos-piedras-1792": "publications/leon-y-gama-dos-piedras-1792/master.docx",
+    "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
