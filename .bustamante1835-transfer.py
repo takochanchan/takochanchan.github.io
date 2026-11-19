@@ -16,12 +16,12 @@ from tempfile import TemporaryDirectory
 REPO = "takochanchan/takochanchan.github.io"
 SLUG = "bustamante-mananas-de-la-alameda-de-mexico-1835-1836"
 TAG = "publications-002"
-ARCHIVE = "638ddf421bbfd03ca9f9d9daed640ab7fcb59b11"
-REQ_SHA = "e2434dc2a7b62956d38d5cad160f4a28a5044cfb79151379d09cdbcd9da91bb0"
+ARCHIVE = "e55890d7c3f4e2c48db92ac8bf9df57255e411c5"
+REQ_SHA = "75f1d49905a952f0d6ff630e6992f66c05b63e3e3b3e2d7e1e903cbceb67e834"
 STEM = "Alzate_1794_Cochineal_Article_Japanese"
 CHECKSUM = "SHA256SUMS.txt"
 ROOT = f"https://github.com/{REPO}/releases/download/{TAG}"
-NAMES = {'Bustamante_Mexico_Alameda_I_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.epub', 'Bustamante_Mexico_Alameda_I_Japanese.pdf', 'Bustamante_Mexico_Alameda_II_Japanese.pdf'}
+NAMES = {'Bustamante_Mexico_Alameda_I_Japanese.pdf', 'Bustamante_Mexico_Alameda_I_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.pdf'}
 
 def need(cond, explanation):
     if not cond:
