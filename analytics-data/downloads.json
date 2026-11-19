@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-17",
-  "updatedAt": "2026-11-18T02:26:58.042Z",
+  "endDate": "2026-11-18",
+  "updatedAt": "2026-11-19T01:53:37.732Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8669,7 +8669,7 @@
       "key": "dl_160532531bc35d2f",
       "name": "Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第1巻（1月・2月・3月）",
       "format": "pdf"
     },
@@ -8677,7 +8677,7 @@
       "key": "dl_7e0746926e6c5285",
       "name": "Patrignani_Menologio_1730_Volume_1_Japanese.epub",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第1巻（1月・2月・3月）",
       "format": "epub"
     },
@@ -8797,7 +8797,7 @@
       "key": "dl_bfe189485478941c",
       "name": "Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第2巻（4月・5月・6月）",
       "format": "pdf"
     },
@@ -8805,7 +8805,7 @@
       "key": "dl_cc1fe54785866428",
       "name": "Patrignani_Menologio_1730_Volume_2_Japanese.epub",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第2巻（4月・5月・6月）",
       "format": "epub"
     },
@@ -8813,7 +8813,7 @@
       "key": "dl_15f7957d9c64bc39",
       "name": "Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第3巻（7月・8月・9月）",
       "format": "pdf"
     },
@@ -8821,8 +8821,40 @@
       "key": "dl_81501d00eb20e1c3",
       "name": "Patrignani_Menologio_1730_Volume_3_Japanese.epub",
       "slug": "patrignani-menologio-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
       "volumeLabel": "第3巻（7月・8月・9月）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_bbfda160088b7b5e",
+      "name": "Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
+      "volumeLabel": "第4巻（10月・11月・12月）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_023f04e1806fcbbe",
+      "name": "Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+      "slug": "patrignani-menologio-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録",
+      "volumeLabel": "第4巻（10月・11月・12月）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_23ab77877440636f",
+      "name": "Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+      "title": "著名メキシコ人伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d2a99e89aff899c5",
+      "name": "Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+      "title": "著名メキシコ人伝",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
