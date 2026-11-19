@@ -1,0 +1,62 @@
+name: Transfer approved Bustamante 1835–1836 publication files
+on:
+  push:
+    branches: [agent/bustamante1835-1836-publish-20261120]
+    paths: [.bustamante1835-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 3286c3b0159c5f6a254ba5237b7f3627f5803e89
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .bustamante1835-transfer.py stage "$RUNNER_TEMP/bustamante1835-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/bustamante1835-assets/Bustamante_Mexico_Alameda_I_Japanese.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835
+          target=dist/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/bustamante1835-assets/Bustamante_Mexico_Alameda_II_Japanese.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .bustamante1835-transfer.py transfer "$RUNNER_TEMP/bustamante1835-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bustamante1835-public-verification
+          path: transfer/bustamante1835-public-verification.json
+          if-no-files-found: error

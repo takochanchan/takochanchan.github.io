@@ -1,0 +1,65 @@
+{
+  "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "638ddf421bbfd03ca9f9d9daed640ab7fcb59b11",
+  "verified_candidate_commit": "3286c3b0159c5f6a254ba5237b7f3627f5803e89",
+  "bundle": {
+    "size": 11029985,
+    "sha256": "3fd33fa7758633d6c506b13da9a5eae22260353c7fcfe774203d249a3a4e2a2d",
+    "chunks": [
+      "e9b4c561745858d2f38bf717a76d6c9cf56a36dd",
+      "581e6867add3bdbf6c055929a1867f48cc298035",
+      "9c9357f5c43f6137aaff2ac4ca1f02b7c08118de",
+      "b61f2b4939c4d9c33165959e6d1dbc6ab69306e0",
+      "698a363907ada59e490b53eaab5836d3cfd986f3",
+      "e9e82745a6fa2a4cc799286284d888bac875d5e2",
+      "57ebe281d2948b4011ecf626a61355521f64737f",
+      "34df2847e85e9fdef6c09c639cfec88d4eafdc40",
+      "71dfe99e96e2a740c00279522fda33023f0fc21b",
+      "051bee5658e684b1461c4b846cd5cf98cae01004",
+      "2d104c49fd8f1debcaf28b4982534955d103c775",
+      "97cc6c0a05721ad78e0f2091ea2fed935bd3dde2",
+      "ef121a05f3dab79872a65a5765b0705674174c10",
+      "325279b1016b08c392594ba80f04aa22c746dfb4",
+      "7b7f3f71def45328aa595b97a7ad0cea3a6bf6c7",
+      "7cd214e75027a08d06470b7f99060afd283dc269",
+      "554b5b7482453e687e31137f725cce83858a0035",
+      "e29eff14d0382fae833aabeb7ad2aac4d9e8a806",
+      "36fbcde029795c9b89d1424079334aed7ff41571",
+      "82cc667e784b8d96653ffa23e04cd166d3a4a136",
+      "0f5938f4fae8b8e11b87b1d5265244d4bf6e24bb",
+      "831d4ccdf0c4b2a03b9c2935fcaff160fd6ce65f",
+      "c00ba26c83023605b7a696a71e34685c0ba93462"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "size": 4580050,
+      "sha256": "335a8d38b65df17699d83e74fc9df0136a6ae4570e2b325b09425e1a1d6faef3",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835"
+    },
+    {
+      "filename": "Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "size": 3105669,
+      "sha256": "afa3acaaf6bb0907d27a0c53cbb695e328706558fad883e0c5d247b6051b59a1",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835"
+    },
+    {
+      "filename": "Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "size": 3642069,
+      "sha256": "138bd1a0aaf5bbbb8298a01d15989421d56a3fa2e17e2d0b46cefa3502088184",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
+    },
+    {
+      "filename": "Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "size": 1408125,
+      "sha256": "10778dcbc56653c849d858c31d743077eaf7fd30decc85d36bb2bd443f713b43",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
+    }
+  ]
+}
