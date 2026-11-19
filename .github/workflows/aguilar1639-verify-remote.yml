@@ -1,0 +1,61 @@
+name: Verify remote search and printed leaf locations for Aguilar 1639
+on:
+  push:
+    branches: ["agent/aguilar1639-remote-20261119"]
+    paths: [".github/workflows/aguilar1639-verify-remote.yml"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Wait for the pinned search shard deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'CHECK'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-003/actions/runs/44517972781"
+          for attempt in range(120):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              assert run["head_sha"] == "35a365bc4e7439d07dcd51a3226b77ff636c562b"
+              if run["status"] == "completed":
+                  assert run["conclusion"] == "success", run["conclusion"]
+                  print("Pinned search deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Pinned search deployment has not completed within 20 minutes")
+          CHECK
+      - run: npm run verify:remote-search
+
+
+
+      - name: Verify actual public search map and manuscript-to-PDF coordinates
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request
+          slug="pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639"
+          base="https://takochanchan.github.io/takochan-search-index-003/"
+          with urllib.request.urlopen(base+"maps/"+slug+".json",timeout=60) as f:
+              data=json.load(f)
+          assert data["slug"]==slug
+          assert data["canonicalUrl"]=="/publications/"+slug+"/"
+          assert data["pdfSha256"]=="ba9edff45cca6a29d90669e1d8c060717b5f5141eed1848f2eeb82fbd2fa564a"
+          assert data["sourceSha256"] in {"757121bab3cd70e5a0e860268e0ee8cd833e102f9c5c0289d476f92b458c1dbd","ae92b6cb31d526d4c6ed3eec68a60b8e058b7a7df1d1af19a063495b1f440e98"}
+          assert all(1<=int(a[1])<=205 for a in data["blocks"].values())
+          found={(label,int(a[1])) for a in data["blocks"].values() for label in a[0].split("／")}
+          expected={f"原刊 前付 f. {i}{s}" for i in range(1,9) for s in "rv"} | {f"原刊 f. {i}{s}" for i in range(1,125) for s in "rv"} - {"原刊 f. 124v"}
+          assert len(expected)==263 and expected<={item[0] for item in found}
+          for page,location in [(4,"原刊 前付 f. 1r"),(18,"原刊 f. 1r"),(112,"原刊 f. 62r"),(181,"原刊 f. 107r"),(205,"原刊 f. 124r")]:
+              assert (location,page) in found,(location,page)
+          print("All 263 printed leaf labels and all five fixed physical-page samples agreed.")
+          PY
