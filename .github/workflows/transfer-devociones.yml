@@ -1,0 +1,58 @@
+name: Transfer approved Devociones publication files
+on:
+  push:
+    branches: [agent/devociones-publish-20261119]
+    paths: [.devociones-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 7d4e0818fa4cfedb7f2131afa39586baf411c9df
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .devociones-transfer.py stage "$RUNNER_TEMP/devociones-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/maria-ana-agueda-devociones-varias-1791
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/devociones-assets/"*.epub "$target/"
+          python3 scripts/validate-epubs.py dist --slug maria-ana-agueda-devociones-varias-1791
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .devociones-transfer.py transfer "$RUNNER_TEMP/devociones-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: devociones-public-verification
+          path: transfer/devociones-public-verification.json
+          if-no-files-found: error

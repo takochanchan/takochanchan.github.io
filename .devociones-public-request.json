@@ -1,0 +1,37 @@
+{
+  "slug": "maria-ana-agueda-devociones-varias-1791",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "e12da0b0934d142587348afedcaadb749f62f032",
+  "verified_candidate_commit": "7d4e0818fa4cfedb7f2131afa39586baf411c9df",
+  "bundle": {
+    "size": 4978809,
+    "sha256": "86433b366cc7134b452cf2f39174d03aec84d82b284285aa9d3e7735e30ff86d",
+    "chunks": [
+      "5c7792f37b28b7388cb586507caa8d2f6515fe49",
+      "a1722d90ae0cd83502c25dc09890a4845d633898",
+      "fcd4c563b9d8074731618178deb3daa69e596294",
+      "088def634a8d0bdf0c2d1181c39214c7c5fa0c47",
+      "9897b27391e7d58f5fc4775a76fcdf0d89093949",
+      "e66a018086dc5e531fb0eea79b5e73640dbd9011",
+      "1ede12e89940af2e4ce9c38a8e5a45a9823d3549",
+      "6dddf8000fd2c8e784232eba3a8ef4227bc6bc99",
+      "755ce9ccf7d1a393745415a841dc494edfa7be0c",
+      "ba0b0d640a51d0f181439cdc493fcc1d384ce059",
+      "7d9cc2db4f9811b1899d8ffadf27a60ea751b2e5"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "size": 3243009,
+      "sha256": "91e0b2168598d69d82a4524806f220e780a382607a43bee3ff5b5fa723e60e5f"
+    },
+    {
+      "filename": "Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "size": 2088359,
+      "sha256": "238194ff92a126e30fa9917bc51075a268d0dddfc79fb616c72dbe86eddb440f"
+    }
+  ]
+}
