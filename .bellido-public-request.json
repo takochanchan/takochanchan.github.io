@@ -1,0 +1,30 @@
+{
+  "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "44a75b758aac425062877729f6a884fdfd6a702a",
+  "bundle": {
+    "size": 2224511,
+    "sha256": "994ac86bb64877621d293cca80577b206977104d02335b662720390808e8e832",
+    "chunks": [
+      "64176170c208af68dd3a78fcece3644a4cd27ba7",
+      "f0d1f46303048400ff475f189b06b0db67808a50",
+      "25b248938dcf7745c0e341b9bab94512f9a172b9",
+      "2220ef34e479ab2b1c3722eefb830dd921f76c99",
+      "64ecca7418459f791127d1e7cc54aedd3a55d2cb"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "size": 2384689,
+      "sha256": "393063b858bcfc7a2d11c7f2200ef0dbb2d0cbda10197a145593fa8b799b4f1a"
+    },
+    {
+      "filename": "Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "size": 413947,
+      "sha256": "832932bc72fd63d826843a5ac630cc6e22c4f4669d8fba15a0812af0769e7989"
+    }
+  ]
+}

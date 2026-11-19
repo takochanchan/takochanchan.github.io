@@ -1,0 +1,58 @@
+name: Transfer approved Bellido publication files
+on:
+  push:
+    branches: [agent/bellido-publish-20261119]
+    paths: [.bellido-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 3cf171259f8bfde5f5ecb09aa2f20b29ce70ec91
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .bellido-transfer.py stage "$RUNNER_TEMP/bellido-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/bellido-assets/"*.epub "$target/"
+          python3 scripts/validate-epubs.py dist --slug bellido-vida-maria-ana-agueda-de-san-ignacio-1758
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .bellido-transfer.py transfer "$RUNNER_TEMP/bellido-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bellido-public-verification
+          path: transfer/bellido-public-verification.json
+          if-no-files-found: error
