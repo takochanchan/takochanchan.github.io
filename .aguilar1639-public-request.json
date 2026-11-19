@@ -1,0 +1,30 @@
+{
+  "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "abd571b0fd98056f52cb44ef964e53f95e5b802f",
+  "verified_candidate_commit": "9c542e60abee51114319394a83d91cda8ba58ba5",
+  "bundle": {
+    "size": 1835479,
+    "sha256": "6567fa65c16298f773ca2b495180fd72e679f03c0455d37164bf7aef4b01cbb0",
+    "chunks": [
+      "64438a796aad26a08d3efa786f83eda6f580f731",
+      "9c8794227f490269cd17dbf358135fafb7d8ef20",
+      "95bce1618dd6873f0a9761670b582d49f7c0c959",
+      "600457c705e44d2821ad9aa05a5c2495ee723b8f"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Aguilar_1639_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.pdf",
+      "size": 2537980,
+      "sha256": "ba9edff45cca6a29d90669e1d8c060717b5f5141eed1848f2eeb82fbd2fa564a"
+    },
+    {
+      "filename": "Aguilar_1639_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.epub",
+      "size": 216515,
+      "sha256": "757121bab3cd70e5a0e860268e0ee8cd833e102f9c5c0289d476f92b458c1dbd"
+    }
+  ]
+}

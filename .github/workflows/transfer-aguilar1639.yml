@@ -1,0 +1,58 @@
+name: Transfer approved Aguilar 1639 publication files
+on:
+  push:
+    branches: [agent/aguilar1639-publish-20261119]
+    paths: [.aguilar1639-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 9c542e60abee51114319394a83d91cda8ba58ba5
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .aguilar1639-transfer.py stage "$RUNNER_TEMP/aguilar1639-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/aguilar1639-assets/"*.epub "$target/"
+          python3 scripts/validate-epubs.py dist --slug pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .aguilar1639-transfer.py transfer "$RUNNER_TEMP/aguilar1639-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aguilar1639-public-verification
+          path: transfer/aguilar1639-public-verification.json
+          if-no-files-found: error
