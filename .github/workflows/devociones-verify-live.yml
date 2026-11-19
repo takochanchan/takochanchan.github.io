@@ -1,0 +1,76 @@
+name: Verify live Devociones publication
+on:
+  push:
+    branches: [agent/devociones-live-verify-20261119]
+    paths: [.github/workflows/devociones-verify-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+"7d4e0818fa4cfedb7f2131afa39586baf411c9df"]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Verify the two separate bibliographies and final Devociones assets
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,pathlib,re,subprocess,tempfile,time,urllib.request,zipfile
+          slug='maria-ana-agueda-devociones-varias-1791'
+          bellido='bellido-vida-maria-ana-agueda-de-san-ignacio-1758'
+          site='https://takochanchan.github.io/publications/'
+          records=json.load(open('src/publication-overviews.json'))['records']
+          for attempt in range(18):
+              try:
+                  page=html.unescape(urllib.request.urlopen(site+slug+'/',timeout=30).read().decode())
+                  bio=html.unescape(urllib.request.urlopen(site+bellido+'/',timeout=30).read().decode())
+                  break
+              except OSError:
+                  if attempt == 17: raise
+                  time.sleep(10)
+          assert '諸信心集' in page and 'Devociones varias' in page and '1791' in page and 'Getty Research Institute' in page
+          assert 'マリア・アナ・アゲダ・デ・サン・イグナシオ伝' in bio and 'José Bellido' in bio
+          for key,content in [(slug,page),(bellido,bio)]:
+              for paragraph in records[key].split('\n\n'):
+                  assert paragraph in content, paragraph
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          with tempfile.TemporaryDirectory() as td:
+              for a in assets:
+                  p=pathlib.Path(td,pathlib.PurePosixPath(a['path']).name)
+                  p.write_bytes(urllib.request.urlopen(a['url'],timeout=120).read())
+                  assert p.stat().st_size==a['size'] and hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256'],p.name
+                  if p.suffix=='.epub':
+                      with zipfile.ZipFile(p) as z:
+                          assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                          xhtml=''.join(z.read(n).decode() for n in z.namelist() if n.endswith('.xhtml'))
+                          assert len(re.findall(r'epub:type="footnote"',xhtml))==10
+                          assert len([n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))])==6
+                  if p.suffix=='.pdf':
+                      info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                      assert 'Pages: 138' in re.sub(r' +',' ',info)
+                      images=subprocess.check_output(['pdfimages','-list',str(p)],text=True)
+                      assert len([l for l in images.splitlines() if re.match(r'^\s*\d+\s+\d+\s+image\b',l)])==5
+                      txt=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
+                      assert '諸信心集' in txt and '童貞' not in txt
+                  print(p.name,a['sha256'])
+          print('Both distinct pages and complete overviews; Devociones exact assets verified.')
+          PY
