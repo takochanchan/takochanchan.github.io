@@ -1,0 +1,58 @@
+name: Transfer approved Alzate 1794 publication files
+on:
+  push:
+    branches: [agent/alzate1794-publish-20261119]
+    paths: [.alzate1794-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: c48eacd19fba97416fcc03e5a5430facf84d3876
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .alzate1794-transfer.py stage "$RUNNER_TEMP/alzate1794-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/alzate-memoria-grana-cochinilla-1794
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/alzate1794-assets/"*.epub "$target/"
+          python3 scripts/validate-epubs.py dist --slug alzate-memoria-grana-cochinilla-1794
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .alzate1794-transfer.py transfer "$RUNNER_TEMP/alzate1794-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: alzate1794-public-verification
+          path: transfer/alzate1794-public-verification.json
+          if-no-files-found: error
