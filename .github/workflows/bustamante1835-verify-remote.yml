@@ -42,7 +42,8 @@ jobs:
       - name: Verify both public search maps and printed-page coordinates
         run: |
           python3 - <<'PY'
-          import json, urllib.request
+          import json, re, urllib.request
+          from pathlib import Path
           base="https://takochanchan.github.io/takochan-search-index-003/"
           prefix="bustamante-mananas-de-la-alameda-de-mexico"
           parent="/publications/"+prefix+"-1835-1836/"
@@ -54,7 +55,13 @@ jobs:
               slug=prefix+"-"+suffix
               with urllib.request.urlopen(base+"maps/"+slug+".json",timeout=60) as f:
                   obj=json.load(f)
-              assert obj["slug"]==slug and obj["canonicalUrl"]==parent,(slug,obj.get("canonicalUrl"))
+              assert obj["slug"]==slug and obj["canonicalUrl"]=="/publications/"+slug+"/",(slug,obj.get("canonicalUrl"))
+              homepage=Path("dist/index.html").read_text()
+              match=re.search(r"window\.BIBLIOGRAPHIC_ALIASES=(\{[^;]+\});",homepage)
+              assert match and "/publications/"+json.loads(match.group(1))[slug]+"/"==parent,slug
+              redirect=Path("dist/publications",slug,"index.html").read_text()
+              assert parent in redirect,slug
+              assert "bibliographyUrlFor(result.meta?.slug)" in Path("src/fulltext-search.js").read_text()
               assert obj["pdfSha256"]==pdf and obj["sourceSha256"] in source,slug
               assert len(obj["blocks"])>100 and all(1<=int(a[1])<=pages for a in obj["blocks"].values())
               found={(label,int(a[1])) for a in obj["blocks"].values() for label in a[0].split("／")}
