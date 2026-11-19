@@ -3120,6 +3120,14 @@
       "searchShard": "003",
       "author": "ホセ・ベリード",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
+      "originalAuthor": "María Ana Águeda de San Ignacio"
     }
   ],
   "groups": [

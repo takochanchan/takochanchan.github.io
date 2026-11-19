@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "44a75b758aac425062877729f6a884fdfd6a702a",
+  "archive_commit": "e12da0b0934d142587348afedcaadb749f62f032",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -479,7 +479,8 @@
     "patrignani-menologio-volume-iii-1730": "publications/patrignani-menologio-volume-iii-1730/master.docx",
     "patrignani-menologio-volume-iv-1730": "publications/patrignani-menologio-volume-iv-1730/master.docx",
     "sosa-biografias-de-mexicanos-distinguidos-1884": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/master.docx",
-    "bellido-vida-maria-ana-agueda-de-san-ignacio-1758": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/master.md"
+    "bellido-vida-maria-ana-agueda-de-san-ignacio-1758": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/master.md",
+    "maria-ana-agueda-devociones-varias-1791": "publications/maria-ana-agueda-devociones-varias-1791/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

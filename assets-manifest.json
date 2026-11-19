@@ -9942,6 +9942,24 @@
       "url": "https://takochanchan.github.io/publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
       "size": 27128,
       "sha256": "ed6a67002e5685feccad8e0c2685696d5a0a5bfed862c5db2ec8fe64a526e194"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "size": 3243009,
+      "sha256": "91e0b2168598d69d82a4524806f220e780a382607a43bee3ff5b5fa723e60e5f"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "size": 2088359,
+      "sha256": "238194ff92a126e30fa9917bc51075a268d0dddfc79fb616c72dbe86eddb440f"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
+      "size": 24185,
+      "sha256": "97984666e2f9dac3ae4c48e379cd70a5f3fd50da467da5178409111dbb00ef43"
     }
   ]
 }

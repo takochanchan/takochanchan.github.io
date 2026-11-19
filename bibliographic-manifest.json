@@ -10485,6 +10485,25 @@
         "status": "online",
         "url": "https://repositorioinstitucional.buap.mx/items/ed0375a7-8b46-46fe-b975-e115bf5c90de/full"
       }
+    },
+    {
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "recordClass": "major-work",
+      "title": "諸信心集",
+      "originalTitle": "Devociones varias",
+      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
+      "originalAuthor": "María Ana Águeda de San Ignacio",
+      "year": 1791,
+      "originalPublication": "プエブラ、王立パラフォクス神学校印刷所、1791年再版",
+      "sourceEdition": "María Ana Águeda de San Ignacio, Devociones varias. Puebla: Oficina del Real Seminario Palafoxiano, 1791.",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute, Los Angeles、請求番号366097）所蔵・提供。インターネット・アーカイブ公開。",
+      "rights": "1791年刊本の本文と銅版画は日本で保護期間満了。所蔵本デジタル画像の公開目録等に追加の利用制限表示なし。ゲティによる当該画像のCC0指定を意味しない。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/devocionesvarias00mara"
+      }
     }
   ],
   "works": [
