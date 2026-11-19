@@ -1,0 +1,80 @@
+name: Verify live Alzate 1794 journal translation
+on:
+  push:
+    branches: ["agent/alzate1794-live-20261119"]
+    paths: [".github/workflows/alzate1794-verify-live.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(90):
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=c48eacd19fba97416fcc03e5a5430facf84d3876']))
+              runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify journal classification, bibliography, assets and checksum ledger
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,pathlib,re,subprocess,tempfile,time,urllib.request,zipfile
+          slug='alzate-memoria-grana-cochinilla-1794'
+          def get(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as stream:
+                          return stream.read()
+                  except OSError:
+                      if i==11: raise
+                      time.sleep(4)
+          site='https://takochanchan.github.io/publications/'
+          page=html.unescape(get(site+slug+'/').decode())
+          title='グラナ、またの名をコチニールという虫についての覚書'
+          for v in (title,'論文','ScholarlyArticle','José Antonio de Alzate y Ramírez','1794','60頁','2172035R','Courtesy of the National Library of Medicine.'):
+              assert v in page,v
+          overview=json.load(open('src/publication-overviews.json'))['records'][slug]
+          assert all(p in page for p in overview.split('\n\n'))
+          R='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/'
+          ledger=get(R+'SHA256SUMS.txt').decode().splitlines()
+          assets=[x for x in json.load(open('assets-manifest.json'))['assets'] if x['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          with tempfile.TemporaryDirectory() as work:
+              for x in assets:
+                  f=pathlib.Path(work,pathlib.PurePosixPath(x['path']).name);v=get(x['url']);f.write_bytes(v)
+                  assert len(v)==x['size'] and hashlib.sha256(v).hexdigest()==x['sha256'],f.name
+                  if f.suffix in ('.pdf','.epub'):
+                      assert x['url'] in page and any(a.split()==[x['sha256'],f.name] for a in ledger),f.name
+                  if f.suffix=='.pdf':
+                      s=subprocess.check_output(['pdfinfo',str(f)],text=True)
+                      assert re.search(r'^Pages:\s+60$',s,re.M) and re.search(r'^Tagged:\s+yes$',s,re.M),s
+                      im=subprocess.check_output(['pdfimages','-list',str(f)],text=True)
+                      assert sum(bool(re.search(r'^\s*\d+\s+\d+\s+image\b',a)) for a in im.splitlines())==3
+                      p=subprocess.check_output(['pdftotext',str(f),'-'],text=True)
+                      results=[int(n) for n in re.findall(r'〔原刊p\.(\d+)〕',re.sub(r'\s+','',p))]
+                      assert results==list(range(199,260))
+                      links=subprocess.check_output(['pdfinfo','-url',str(f)],text=True)
+                      assert 'https://archive.org/details/2172035R.nlm.nih.gov' in links
+                      assert 'https://archive.org/details/gazetadeliteratu03unkn/page/n244/mode/1up' in links
+                  if f.suffix=='.epub':
+                      with zipfile.ZipFile(f) as z:
+                          assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                          assert sum(bool(re.search(r'\.(?:png|jpe?g)$',n,re.I)) for n in z.namelist())==4
+          print('Verified ScholarlyArticle, 60-page tagged PDF with 61 source locations and three plates, exact EPUB, cover and shared release checksum list.')
+          PY
