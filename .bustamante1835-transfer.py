@@ -17,11 +17,11 @@ REPO = "takochanchan/takochanchan.github.io"
 SLUG = "bustamante-mananas-de-la-alameda-de-mexico-1835-1836"
 TAG = "publications-002"
 ARCHIVE = "638ddf421bbfd03ca9f9d9daed640ab7fcb59b11"
-REQ_SHA = "ceba9557ab854b45605d2bb6d771984e57e7b3d20e3e1e45d3f6433e2c351d96"
+REQ_SHA = "e2434dc2a7b62956d38d5cad160f4a28a5044cfb79151379d09cdbcd9da91bb0"
 STEM = "Alzate_1794_Cochineal_Article_Japanese"
 CHECKSUM = "SHA256SUMS.txt"
 ROOT = f"https://github.com/{REPO}/releases/download/{TAG}"
-NAMES = {'Bustamante_Mexico_Alameda_I_Japanese.pdf', 'Bustamante_Mexico_Alameda_I_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.pdf'}
+NAMES = {'Bustamante_Mexico_Alameda_I_Japanese.epub', 'Bustamante_Mexico_Alameda_II_Japanese.epub', 'Bustamante_Mexico_Alameda_I_Japanese.pdf', 'Bustamante_Mexico_Alameda_II_Japanese.pdf'}
 
 def need(cond, explanation):
     if not cond:
