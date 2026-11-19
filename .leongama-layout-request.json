@@ -1,0 +1,30 @@
+{
+  "slug": "leon-y-gama-dos-piedras-1792",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "89512e6fa2e78f60ade674a0d8a89b09d018784a",
+  "verified_candidate_commit": "3406b6d173e6c7903d536f9dfb20b5f6a429e101",
+  "bundle": {
+    "size": 4592078,
+    "sha256": "d96f647a68593d3c4842c25813e415d48fae03eab172ed7738dbe7ba1e2d1596",
+    "chunks": [
+      "7e451aefe52877be7f30bf9aaa0958746f893da7",
+      "8a8957262b35533c1627a85bc7b59063d7874503",
+      "cc63c591dc37b44369703b413eb35e8fed40e551",
+      "c53772ca3c385893c9a1000f671cc4c3f2859d95",
+      "c4cf29dd9bf07ff9638d6c2730200c39f970a40a",
+      "87e15dfd85ae01062c879a0ac13bb38d7f79e163",
+      "37a88709f9d50ced3e9ca1bd419f5bd3a7f05e37",
+      "f464c748e4e5bac91507dd14d002cf6b12918efd",
+      "b30c6f23dc7f9a6e8e835945f21e169af91d7eda",
+      "7b57fc7959c459b367d967745837bf4542f58f30"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Leon_y_Gama_1792_Japanese_layout_revised.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_layout_revised.pdf",
+      "size": 5916527,
+      "sha256": "a31da32878aac0cb151fce9964f9b8ebfa9076876f62984bdeba5f8b9b47795d"
+    }
+  ]
+}

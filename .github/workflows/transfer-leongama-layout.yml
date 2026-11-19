@@ -1,0 +1,60 @@
+name: Transfer approved 140-page León y Gama PDF
+on:
+  push:
+    branches: [agent/leongama-layout-transfer-140]
+    paths: [.leongama-layout-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 3406b6d173e6c7903d536f9dfb20b5f6a429e101
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .leongama-layout-transfer.py stage "$RUNNER_TEMP/leongama-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/leon-y-gama-dos-piedras-1792
+          mkdir -p "$target"
+          name=Leon_y_Gama_1792_Japanese_Master.epub
+          curl --fail --location --retry 4 --silent --show-error "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/$name" --output "$target/$name"
+          printf '%s  %s\n' 20e459de309792cfa9873fe155866bd5473d5282a3de61a6281a1631e8711071 "$target/$name" | sha256sum --check
+          python3 scripts/validate-epubs.py dist --slug leon-y-gama-dos-piedras-1792
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .leongama-layout-transfer.py transfer "$RUNNER_TEMP/leongama-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leongama-public-verification
+          path: transfer/leongama-public-verification.json
+          if-no-files-found: error
