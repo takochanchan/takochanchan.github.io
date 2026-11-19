@@ -1,0 +1,61 @@
+name: Verify remote search and printed page locations for Alzate 1794
+on:
+  push:
+    branches: ["agent/alzate1794-remote-20261119"]
+    paths: [".github/workflows/alzate1794-verify-remote.yml"]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Wait for the pinned search shard deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'CHECK'
+          import json, os, time, urllib.request
+          url = "https://api.github.com/repos/takochanchan/takochan-search-index-003/actions/runs/44529745651"
+          for attempt in range(120):
+              request = urllib.request.Request(url, headers={"Authorization": "Bearer " + os.environ["GH_TOKEN"], "Accept": "application/vnd.github+json"})
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  run = json.load(response)
+              assert run["head_sha"] == "17dc44c7d4c3a3181a009f951286c86947c7d51a"
+              if run["status"] == "completed":
+                  assert run["conclusion"] == "success", run["conclusion"]
+                  print("Pinned search deployment succeeded.")
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit("Pinned search deployment has not completed within 20 minutes")
+          CHECK
+      - run: npm run verify:remote-search
+
+
+
+      - name: Verify actual public search map and manuscript-to-PDF coordinates
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request
+          slug="alzate-memoria-grana-cochinilla-1794"
+          base="https://takochanchan.github.io/takochan-search-index-003/"
+          with urllib.request.urlopen(base+"maps/"+slug+".json",timeout=60) as f:
+              data=json.load(f)
+          assert data["slug"]==slug
+          assert data["canonicalUrl"]=="/publications/"+slug+"/"
+          assert data["pdfSha256"]=="4c9dd539aeec19883a3cfc4b3f01cb9305c6aee54562c23b251235ae6c3c867d"
+          assert data["sourceSha256"] in {"a8673edd132bbfa5040a8813377d3001deba7b59e21160855b231807ad9394af","cf6b9c7aca539b577d3f9723c0fc650a1cc19561752db69d070e3d7e3088d956"}
+          assert all(1<=int(a[1])<=60 for a in data["blocks"].values())
+          found={(label,int(a[1])) for a in data["blocks"].values() for label in a[0].split("／")}
+          expected={f"原刊 p. {i}" for i in range(199,260)}
+          assert len(expected)==61 and expected<={item[0] for item in found}
+          for page,location in [[3,"原刊 p. 199"],[31,"原刊 p. 229"],[37,"原刊 p. 235"],[60,"原刊 p. 259"]]:
+              assert (location,page) in found,(location,page)
+          print("All 61 original page labels and four independent physical coordinates agreed.")
+          PY
