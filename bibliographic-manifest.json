@@ -10542,6 +10542,25 @@
         "status": "online",
         "url": "https://archive.org/details/informecontraido00snch"
       }
+    },
+    {
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "recordClass": "short-work",
+      "title": "グラナ、またの名をコチニールという虫についての覚書",
+      "originalTitle": "Memoria, en que se trata del insecto grana ó cochinilla, de su naturaleza y série de su vida, como tambien del método para propagarla y reducirla al estado en que forma uno de los ramos mas útiles de Comercio",
+      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
+      "originalAuthor": "José Antonio de Alzate y Ramírez",
+      "year": 1794,
+      "originalPublication": "メキシコ、『Gazeta de Literatura』第3巻第26–33号、1794年、199–259頁",
+      "sourceEdition": "José Antonio de Alzate y Ramírez, Memoria, en que se trata del insecto grana ó cochinilla, Gazeta de Literatura, tomo III, núms. 26–33, México, 1794, pp. 199–259（1777年執筆）。",
+      "sourceProvider": "米国国立医学図書館（National Library of Medicine）所蔵の手彩色本（2172035R）。Internet Archive配信。原刊235頁末の判読できない箇所はジョン・カーター・ブラウン図書館所蔵の同版別個体で補った。",
+      "rights": "1794年刊の原著本文・原図はパブリックドメイン。米国国立医学図書館は本コレクションの電子ファイルに著作権を主張せず、画像・テキストの配布に同館の許可は不要です。Courtesy of the National Library of Medicine. 利用方針：https://www.nlm.nih.gov/hmd/collections/books/digitized/americas/index.html",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/2172035R.nlm.nih.gov"
+      }
     }
   ],
   "works": [

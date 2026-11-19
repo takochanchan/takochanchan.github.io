@@ -8,6 +8,7 @@ import { bellidoPublicationRecords, bellidoPublicationMetadata } from "./bellido
 import { devocionesPublicationRecords, devocionesPublicationMetadata } from "./devociones-publication.mjs";
 import { leonYGamaPublicationRecords, leonYGamaPublicationMetadata } from "./leon-y-gama-publication.mjs";
 import { aguilar1639PublicationRecords, aguilar1639PublicationMetadata } from "./aguilar-1639-publication.mjs";
+import { alzate1794PublicationRecords, alzate1794PublicationMetadata } from "./alzate-cochinilla-1794-publication.mjs";
 import { ojeaPublicationRecords, ojeaPublicationMetadata } from "./ojea-publication.mjs";
 import { francoPublicationRecords, francoPublicationMetadata } from "./franco-publication.mjs";
 import { davilaPadillaPublicationRecords, davilaPadillaPublicationMetadata } from "./davila-padilla-publication.mjs";
@@ -342,6 +343,7 @@ const publicationRecords = [
   ...devocionesPublicationRecords,
   ...leonYGamaPublicationRecords,
   ...aguilar1639PublicationRecords,
+  ...alzate1794PublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
@@ -9502,6 +9504,7 @@ const publicationMetadata = {
   ...devocionesPublicationMetadata,
   ...leonYGamaPublicationMetadata,
   ...aguilar1639PublicationMetadata,
+  ...alzate1794PublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
@@ -12128,6 +12131,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "alzate-memoria-grana-cochinilla-1794": "jose-antonio-de-alzate-y-ramirez",
   ...paraveyFouSangShortWorkAuthors,
   "de-guignes-navigations-chinois-amerique-1761": "joseph-de-guignes",
   "cehm-manuscritos-betlemitas-xi-5": "cehm-betlemitas-documents",

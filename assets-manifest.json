@@ -9996,6 +9996,24 @@
       "url": "https://takochanchan.github.io/publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
       "size": 31297,
       "sha256": "35b432533d92c6679e2ec7a0246c2ce8424d1e8526d0a359afac7e5a83c84c39"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.pdf",
+      "size": 13573203,
+      "sha256": "4c9dd539aeec19883a3cfc4b3f01cb9305c6aee54562c23b251235ae6c3c867d"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.epub",
+      "size": 12696816,
+      "sha256": "a8673edd132bbfa5040a8813377d3001deba7b59e21160855b231807ad9394af"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
+      "size": 189534,
+      "sha256": "336a5c3383d4094a6abdc30daca5d896e33acab372e478d3598230bd3ca55dd9"
     }
   ]
 }

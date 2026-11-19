@@ -3144,6 +3144,14 @@
       "releaseTag": "publications-002",
       "author": "ペドロ・サンチェス・デ・アギラル",
       "originalAuthor": "Pedro Sánchez de Aguilar"
+    },
+    {
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "recordClass": "short-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
+      "originalAuthor": "José Antonio de Alzate y Ramírez"
     }
   ],
   "groups": [
@@ -3351,5 +3359,5 @@
       "seriesVolumeCount": 4
     }
   ],
-  "shortAuthorCount": 48
+  "shortAuthorCount": 49
 }

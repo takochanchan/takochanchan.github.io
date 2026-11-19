@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "abd571b0fd98056f52cb44ef964e53f95e5b802f",
+  "archive_commit": "e72566d39cc9dba5750dc1e194a5ef9737d8561d",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -482,7 +482,8 @@
     "bellido-vida-maria-ana-agueda-de-san-ignacio-1758": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/master.md",
     "maria-ana-agueda-devociones-varias-1791": "publications/maria-ana-agueda-devociones-varias-1791/master.docx",
     "leon-y-gama-dos-piedras-1792": "publications/leon-y-gama-dos-piedras-1792/master.docx",
-    "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/master.docx"
+    "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/master.docx",
+    "alzate-memoria-grana-cochinilla-1794": "publications/alzate-memoria-grana-cochinilla-1794/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
