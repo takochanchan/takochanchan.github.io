@@ -1,0 +1,43 @@
+{
+  "slug": "leon-y-gama-dos-piedras-1792",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "31d9cd56c9c428a526a9c4125eafaa8214464f3e",
+  "verified_candidate_commit": "9be7be88e2383f62e172d4b52cc30d8c328c2162",
+  "bundle": {
+    "size": 7909850,
+    "sha256": "c043cd06e570a6b3331367cdb2291ac25db7883403968d69be4bfe588d1bf520",
+    "chunks": [
+      "e53eb0d13927bd7acf0ee9b997311e3e0a864034",
+      "d079867c788db4ba27a21bcac9e0fb7d19ad925a",
+      "a3015577ad8248c8986e52a5601ec120f9211b8e",
+      "09d39b133b901355a160ab8ffb7c65682049838e",
+      "107747a8518105f125755c5e39c7ea2ec32d9dc0",
+      "4c25a49418ed2912582f85f2c4374b33d91bb0c2",
+      "9ecdd143a6a521ebe213508a12758b3cae626f5c",
+      "4555dbdc9707a2f074bc9674dd2b6a91fa631c36",
+      "04ea2a0525c33b4f5b6e518c965ca6a7feeb7d96",
+      "e909649e553c95d8f259560cda02ccbdf46ecd1f",
+      "ca26c2ae41570c8b0a2306831981308b898c16c5",
+      "41ec2d8816823a71642b12c475c256966c209b6c",
+      "e8589b8086466841ce1b97bad7a9efd697ecae06",
+      "d189e4af925aa45dae119eadb21787a5753a2d59",
+      "8fa6a6deb0ff09e61b81948d4d7f43b5d5f7ce0e",
+      "45c23cc1180f07c08907efa0ae6140c1c1100541",
+      "074fbe3141e12d37a98e6b410655441c9813c633"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Leon_y_Gama_1792_Japanese_Master.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.pdf",
+      "size": 5908784,
+      "sha256": "ae10d36640ff278c02cc17be26ca1577f59e9e17b297f69d54ffe7ae03559d0c"
+    },
+    {
+      "filename": "Leon_y_Gama_1792_Japanese_Master.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.epub",
+      "size": 3319598,
+      "sha256": "20e459de309792cfa9873fe155866bd5473d5282a3de61a6281a1631e8711071"
+    }
+  ]
+}

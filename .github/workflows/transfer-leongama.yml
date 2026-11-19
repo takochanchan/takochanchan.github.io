@@ -1,0 +1,58 @@
+name: Transfer approved León y Gama publication files
+on:
+  push:
+    branches: [agent/leongama-publish-20261119]
+    paths: [.leongama-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 9be7be88e2383f62e172d4b52cc30d8c328c2162
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .leongama-transfer.py stage "$RUNNER_TEMP/leongama-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/leon-y-gama-dos-piedras-1792
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/leongama-assets/"*.epub "$target/"
+          python3 scripts/validate-epubs.py dist --slug leon-y-gama-dos-piedras-1792
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .leongama-transfer.py transfer "$RUNNER_TEMP/leongama-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: leongama-public-verification
+          path: transfer/leongama-public-verification.json
+          if-no-files-found: error
