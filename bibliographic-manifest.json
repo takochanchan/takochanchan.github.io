@@ -10561,6 +10561,44 @@
         "status": "online",
         "url": "https://archive.org/details/2172035R.nlm.nih.gov"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+      "title": "メキシコのアラメダの朝 第1巻",
+      "originalTitle": "Mañanas de la Alameda de México, tomo I",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1835年。",
+      "year": 1835,
+      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo I. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1835. 初版。",
+      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
+      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
+      "title": "メキシコのアラメダの朝 第2巻",
+      "originalTitle": "Mañanas de la Alameda de México, tomo II",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1836年。",
+      "year": 1836,
+      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo II. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1836. 初版。",
+      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
+      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
+      }
     }
   ],
   "works": [

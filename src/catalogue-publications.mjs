@@ -1,3 +1,4 @@
+import { bustamantePublicationGroup } from "./bustamante-alameda-publication.mjs";
 import { brasseurGroup } from "./brasseur-histoire-publication.mjs";
 import { francoPublicationGroup } from "./franco-publication.mjs";
 import {
@@ -8,6 +9,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  bustamantePublicationGroup,
   brasseurGroup,
 {
   "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",

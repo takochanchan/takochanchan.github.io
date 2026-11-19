@@ -10014,6 +10014,42 @@
       "url": "https://takochanchan.github.io/publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
       "size": 189534,
       "sha256": "336a5c3383d4094a6abdc30daca5d896e33acab372e478d3598230bd3ca55dd9"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "size": 4580050,
+      "sha256": "335a8d38b65df17699d83e74fc9df0136a6ae4570e2b325b09425e1a1d6faef3"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "size": 3105669,
+      "sha256": "afa3acaaf6bb0907d27a0c53cbb695e328706558fad883e0c5d247b6051b59a1"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
+      "size": 47047,
+      "sha256": "53fe5a2ca7abd6d1edac850377f4d9e8fe32379ccfadde4279d3be9f7876063c"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "size": 3642069,
+      "sha256": "138bd1a0aaf5bbbb8298a01d15989421d56a3fa2e17e2d0b46cefa3502088184"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "size": 1408125,
+      "sha256": "10778dcbc56653c849d858c31d743077eaf7fd30decc85d36bb2bd443f713b43"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
+      "size": 47780,
+      "sha256": "e8fc05a584535a53af0086d9e968c36621a6f0aeb726dd862e30c8af0b086a0e"
     }
   ]
 }

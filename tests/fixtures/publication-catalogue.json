@@ -3152,6 +3152,24 @@
       "releaseTag": "publications-002",
       "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
       "originalAuthor": "José Antonio de Alzate y Ramírez"
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3357,6 +3375,14 @@
         "brasseur-histoire-nations-civilisees-volume-4-1857-1859"
       ],
       "seriesVolumeCount": 4
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "memberSlugs": [
+        "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+        "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
+      ],
+      "seriesVolumeCount": 2
     }
   ],
   "shortAuthorCount": 49

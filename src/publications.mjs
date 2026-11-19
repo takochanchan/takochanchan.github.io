@@ -1,3 +1,4 @@
+import { bustamantePublicationRecords, bustamantePublicationMetadata } from "./bustamante-alameda-publication.mjs";
 import { brasseurRecords, brasseurMetadata } from "./brasseur-histoire-publication.mjs";
 import { californiaPublicationRecords, californiaPublicationMetadata } from "./venegas-noticia-california-publication.mjs";
 import { patrignaniPublicationRecords, patrignaniPublicationMetadata } from "./patrignani-menologio-publication.mjs";
@@ -344,6 +345,7 @@ const publicationRecords = [
   ...leonYGamaPublicationRecords,
   ...aguilar1639PublicationRecords,
   ...alzate1794PublicationRecords,
+  ...bustamantePublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
@@ -9505,6 +9507,7 @@ const publicationMetadata = {
   ...leonYGamaPublicationMetadata,
   ...aguilar1639PublicationMetadata,
   ...alzate1794PublicationMetadata,
+  ...bustamantePublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,
