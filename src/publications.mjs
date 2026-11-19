@@ -4,6 +4,7 @@ import { patrignaniPublicationRecords, patrignaniPublicationMetadata } from "./p
 import { sanRomanPublicationRecords, sanRomanPublicationMetadata } from "./san-roman-publication.mjs";
 import { salvatierraPublicationRecords, salvatierraPublicationMetadata } from "./salvatierra-publication.mjs";
 import { sosaPublicationRecords, sosaPublicationMetadata } from "./sosa-publication.mjs";
+import { bellidoPublicationRecords, bellidoPublicationMetadata } from "./bellido-publication.mjs";
 import { ojeaPublicationRecords, ojeaPublicationMetadata } from "./ojea-publication.mjs";
 import { francoPublicationRecords, francoPublicationMetadata } from "./franco-publication.mjs";
 import { davilaPadillaPublicationRecords, davilaPadillaPublicationMetadata } from "./davila-padilla-publication.mjs";
@@ -334,6 +335,7 @@ const publicationRecords = [
   ...sanRomanPublicationRecords,
   ...salvatierraPublicationRecords,
   ...sosaPublicationRecords,
+  ...bellidoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
   ...paynoPublicationRecords,
@@ -9490,6 +9492,7 @@ const publicationMetadata = {
   ...patrignaniPublicationMetadata,
   ...salvatierraPublicationMetadata,
   ...sosaPublicationMetadata,
+  ...bellidoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
   ...paynoPublicationMetadata,

@@ -9924,6 +9924,24 @@
       "url": "https://takochanchan.github.io/publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
       "size": 31491,
       "sha256": "a4dcb6d5d46a53199e12e008672b09faa131d1e441309d785fab658b3bb91f11"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "size": 413947,
+      "sha256": "832932bc72fd63d826843a5ac630cc6e22c4f4669d8fba15a0812af0769e7989"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "size": 2384689,
+      "sha256": "393063b858bcfc7a2d11c7f2200ef0dbb2d0cbda10197a145593fa8b799b4f1a"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
+      "size": 27128,
+      "sha256": "ed6a67002e5685feccad8e0c2685696d5a0a5bfed862c5db2ec8fe64a526e194"
     }
   ]
 }

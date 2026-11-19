@@ -10466,6 +10466,25 @@
         "status": "online",
         "url": "https://archive.org/details/biografasdemexic00sosa"
       }
+    },
+    {
+      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+      "title": "マリア・アナ・アゲダ・デ・サン・イグナシオ伝",
+      "originalTitle": "Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles",
+      "author": "ホセ・ベリード",
+      "originalAuthor": "José Bellido",
+      "originalPublication": "メキシコ市、ビブリオテカ・メヒカナ印刷所、1758年",
+      "year": 1758,
+      "sourceEdition": "José Bellido, Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles. México: Imprenta de la Bibliotheca Mexicana, 1758.",
+      "sourceProvider": "プエブラ自治大学ラフラグア歴史図書館（BUAP）；補完・対校：メキシコ国立図書館（IIB・UNAM）",
+      "rights": "原著本文はパブリックドメイン。BUAP公開画像はPublic Domain Mark 1.0。補完・対校に使用したIIB・UNAM公開画像はCC BY-NC-ND 4.0（画像の転載なし）。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorioinstitucional.buap.mx/items/ed0375a7-8b46-46fe-b975-e115bf5c90de/full"
+      }
     }
   ],
   "works": [
