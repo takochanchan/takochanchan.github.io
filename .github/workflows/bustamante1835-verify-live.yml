@@ -1,0 +1,86 @@
+name: Verify live Bustamante’s two-volume translation
+on:
+  push:
+    branches: ["agent/bustamante1835-live-20261120"]
+    paths: [".github/workflows/bustamante1835-verify-live.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(90):
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=ce8c03f9ff36a03f0793f4618dd0c185fc75d900']))
+              runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify the single live catalogue and all six files
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,pathlib,re,subprocess,tempfile,time,urllib.request,zipfile
+          from html.parser import HTMLParser
+          slug='bustamante-mananas-de-la-alameda-de-mexico-1835-1836'
+          root='bustamante-mananas-de-la-alameda-de-mexico'
+          def get(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as stream:
+                          return stream.read()
+                  except OSError:
+                      if i==11: raise
+                      time.sleep(4)
+          class Visible(HTMLParser):
+              def __init__(self):super().__init__();self.text=[]
+              def handle_data(self,d):self.text.append(d)
+          site='https://takochanchan.github.io/publications/'
+          pg=html.unescape(get(site+slug+'/').decode())
+          for v in ('メキシコのアラメダの朝','Carlos María de Bustamante','全2巻・PDF計787頁','第1巻（1835年）','第2巻（1836年）','R 972.0081 BUS.m.20'):
+              assert v in pg,v
+          vis=Visible();vis.feed(pg);visible=re.sub(r'\s+','', ''.join(vis.text))
+          overview="独立後のメキシコで、若い女性が自国の歴史を学べるようにとカルロス・マリア・デ・ブスタマンテが刊行した対話篇。メキシコ市のアラメダを舞台に、ドニャ・マルガリータが英国人の夫妻と語り合う。夫妻の質問や異論に応じて話題が移り、古代の出来事と、独立後の社会で著者が目にしたこととが同じ対話のなかで結びつく。\n\n第I巻（1835年）は、先住諸民族の起源や移動、トルテカの伝承、メシカの都市の成立をたどりながら、暦・年の数え方、祭礼、婚礼、身分や教育などを取り上げる。ミチョアカンのタラスコ人にも話が及ぶ。十八の月と五つの余日を配した暦輪と、二十の日名を絵で表した折込図は、同時代以前の別資料や後代の異版と照合し、図中の語釈と日名を訳した。異版の綴りや図像で1835年版を置き換えず、相違は区別して示した。\n\n第II巻（1836年）は、テスココのネツァワルコヨトルが追放から王位回復に至る経緯、トラシュカラとの関係、テスココの法・裁判・貢納制度を扱う。後半ではメシカ諸王の治世、メキシコ市への導水と洪水、モクテウソマ二世の治世からスペイン人の到来に至る。征服そのものと副王統治の話は、続篇の構想として語られるにとどまる。キングズバラ子爵への献辞と巻頭の序では、古い絵文書や手稿が国外に流出したことを嘆く一方、それらを刊行した子爵の仕事を評価する。巻末には対話ごとの詳細目次、予約購読者名簿と刊行の付記を収める。\n\nサアグン、アコスタ、ベイティアらを引いて先住諸社会の制度や学識を論じる本書は、古代の記録であると同時に、独立直後のメキシコで征服以前の過去がどう読み直され、教育に用いられたかを知る史料でもある。底本はメキシコ国立図書館所蔵の初版本。暦図二点と家屋図は同館の画像を無加工で収録した。具体的な加害手順の細部を省いた箇所は訳注に明記した。"
+          for p in overview.split('\n\n'):
+              assert re.sub(r'\s+','',p) in visible,p[:100]
+          R='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/'
+          ledger=get(R+'SHA256SUMS.txt').decode().splitlines()
+          manifest=json.load(open('assets-manifest.json'))['assets']
+          for i,year,many,images in ((1,1835,395,2),(2,1836,392,1)):
+              member=root+f'-volume-{i}-{year}'
+              assets=[x for x in manifest if x['path'].startswith('publications/'+member+'/')]
+              assert len(assets)==3
+              with tempfile.TemporaryDirectory() as work:
+                  for x in assets:
+                      f=pathlib.Path(work,pathlib.PurePosixPath(x['path']).name); data=get(x['url']);f.write_bytes(data)
+                      assert len(data)==x['size'] and hashlib.sha256(data).hexdigest()==x['sha256'],f.name
+                      if f.suffix in ('.pdf','.epub'):
+                          assert x['url'] in pg and any(a.split()==[x['sha256'],f.name] for a in ledger),f.name
+                      if f.suffix=='.pdf':
+                          pdfinfo=subprocess.check_output(['pdfinfo',str(f)],text=True)
+                          assert re.search(r'^Pages:\s+'+str(many)+r'$',pdfinfo,re.M),pdfinfo
+                          pdfimg=subprocess.check_output(['pdfimages','-list',str(f)],text=True)
+                          assert sum(bool(re.search(r'^\s*\d+\s+\d+\s+image\b',a)) for a in pdfimg.splitlines())==images
+                      if f.suffix=='.epub':
+                          with zipfile.ZipFile(f) as z:
+                              assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                              assert sum(bool(re.search(r'\.(?:png|jpe?g)$',n,re.I)) for n in z.namelist())==images+1
+              legacy=html.unescape(get(site+member+'/').decode())
+              assert '/publications/'+slug+'/' in legacy,member
+          print('Verified one group, both detailed overviews, four editions, covers and release checksums.')
+          PY
+
