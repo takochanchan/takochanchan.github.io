@@ -1,0 +1,82 @@
+name: Verify live León y Gama revised 140-page publication
+on:
+  push:
+    branches: [agent/leongama-layout-live-140]
+    paths: [.github/workflows/leongama-layout-live.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for this catalogue deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          for attempt in range(90):
+              result=json.loads(subprocess.check_output(['gh','api','repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?head_sha='+"3406b6d173e6c7903d536f9dfb20b5f6a429e101"]))
+              runs=[r for r in result['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success', runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection dependency
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify live bibliography and assets
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,pathlib,re,subprocess,tempfile,time,urllib.request,zipfile
+          slug='leon-y-gama-dos-piedras-1792'
+          site='https://takochanchan.github.io/publications/'
+          exact=json.load(open('src/publication-overviews.json'))['records'][slug]
+          for attempt in range(18):
+              try:
+                  page=html.unescape(urllib.request.urlopen(site+slug+'/',timeout=30).read().decode())
+                  if 'Leon_y_Gama_1792_Japanese_layout_revised.pdf' in page:
+                      break
+                  if attempt==17: raise AssertionError('Public page does not yet link the revised PDF')
+                  time.sleep(10)
+              except OSError:
+                  if attempt==17: raise
+                  time.sleep(10)
+          assert '140頁' in page and 'Leon_y_Gama_1792_Japanese_Master.pdf' not in page
+          for word in ['二つの石の歴史的・年代学的記述','Antonio de León y Gama','1792','CC BY 4.0','https://archive.org/details/descripcionhistr00leny']:
+              assert word in page,word
+          for p in exact.split('\n\n'):
+              assert p in page,p
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          with tempfile.TemporaryDirectory() as td:
+              previous='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.pdf'
+              original=urllib.request.urlopen(previous,timeout=120).read()
+              assert len(original)==5908784 and hashlib.sha256(original).hexdigest()=='ae10d36640ff278c02cc17be26ca1577f59e9e17b297f69d54ffe7ae03559d0c'
+              for a in assets:
+                  p=pathlib.Path(td,pathlib.PurePosixPath(a['path']).name)
+                  p.write_bytes(urllib.request.urlopen(a['url'],timeout=120).read())
+                  assert p.stat().st_size==a['size'] and hashlib.sha256(p.read_bytes()).hexdigest()==a['sha256'],p.name
+                  if p.suffix=='.epub':
+                      with zipfile.ZipFile(p) as z:
+                          assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                          xhtml=''.join(z.read(n).decode() for n in z.namelist() if n.endswith('.xhtml'))
+                          assert len(re.findall(r'epub:type="footnote"',xhtml))==103
+                          assert len([n for n in z.namelist() if n.lower().endswith(('.jpg','.jpeg','.png','.svg','.gif'))])==4
+                  if p.suffix=='.pdf':
+                      assert a['sha256']=='a31da32878aac0cb151fce9964f9b8ebfa9076876f62984bdeba5f8b9b47795d'
+                      info=subprocess.check_output(['pdfinfo',str(p)],text=True)
+                      assert 'Pages: 140' in re.sub(r' +',' ',info)
+                      im=subprocess.check_output(['pdfimages','-list',str(p)],text=True)
+                      assert len([l for l in im.splitlines() if re.match(r'^\s*\d+\s+\d+\s+image\b',l)])==3
+                      text=subprocess.check_output(['pdftotext',str(p),'-'],text=True)
+                      assert 'Courtesy of the John Carter Brown Library' in text
+                      compact=re.sub(r'\s+','',text)
+                      assert '〔原刊前付第1頁〕' in compact and '〔原刊前付第6頁〕' in compact and '原注・原刊' not in compact
+              print('Live separate León y Gama bibliography, full synopsis, verified 140-page PDF, EPUB, and cover.')
+          PY
