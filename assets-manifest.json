@@ -9960,6 +9960,24 @@
       "url": "https://takochanchan.github.io/publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
       "size": 24185,
       "sha256": "97984666e2f9dac3ae4c48e379cd70a5f3fd50da467da5178409111dbb00ef43"
+    },
+    {
+      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_Master.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.pdf",
+      "size": 5908784,
+      "sha256": "ae10d36640ff278c02cc17be26ca1577f59e9e17b297f69d54ffe7ae03559d0c"
+    },
+    {
+      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_Master.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.epub",
+      "size": 3319598,
+      "sha256": "20e459de309792cfa9873fe155866bd5473d5282a3de61a6281a1631e8711071"
+    },
+    {
+      "path": "publications/leon-y-gama-dos-piedras-1792/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/leon-y-gama-dos-piedras-1792/cover.jpg",
+      "size": 33846,
+      "sha256": "e067f3201c253218fc43a3fae22f2badcdca41c9317dc8bccbe5b972e6e88685"
     }
   ]
 }

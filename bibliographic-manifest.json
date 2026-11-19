@@ -10504,6 +10504,25 @@
         "status": "online",
         "url": "https://archive.org/details/devocionesvarias00mara"
       }
+    },
+    {
+      "slug": "leon-y-gama-dos-piedras-1792",
+      "recordClass": "major-work",
+      "title": "二つの石の歴史的・年代学的記述",
+      "originalTitle": "Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790",
+      "author": "アントニオ・デ・レオン・イ・ガマ",
+      "originalAuthor": "Antonio de León y Gama",
+      "year": 1792,
+      "originalPublication": "メキシコ市、フェリペ・デ・スニガ・イ・オンティベロス印刷所、1792年。",
+      "sourceEdition": "Antonio de León y Gama, Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790. México: Imprenta de don Felipe de Zúñiga y Ontiveros, 1792. 初版。1832年増補版は使用せず。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵、請求記号 B792 .L579d。Internet Archive閲覧版：https://archive.org/details/descripcionhistr00leny",
+      "rights": "1792年刊の原著本文はパブリックドメイン。掲載の原刊折込図版3枚はジョン・カーター・ブラウン図書館所蔵本（B792 .L579d）による。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://americana.jcblibrary.org/search/object/jcbcap-991004331519706966/"
+      }
     }
   ],
   "works": [
