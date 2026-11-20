@@ -1,0 +1,30 @@
+{
+  "slug": "garcia-leona-vicario-1910",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "a23c827635557742388c81fb23e3a05266ceb6d9",
+  "verified_candidate_commit": "aa803e0cf2a74d6a56815f397c0716b121b890e5",
+  "bundle": {
+    "sha256": "0f26e7b98240bb9efdb11c5fbcc37949711ba26dc1707d7919b3de1013fb447d",
+    "size": 2033994,
+    "chunks": [
+      "3695bc48bcaf432eba2194909b85a46648bf0fdf",
+      "bb411f44c16c201f4b2c63b074809a726d63c5b5"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.pdf",
+      "size": 2859177,
+      "sha256": "ea098096cec1a53778a4b2c0bbd8aae08be8081ea9cb2236d7f3aa1a6cb4e57d",
+      "filename": "garcia-leona-vicario-1910.pdf",
+      "slug": "garcia-leona-vicario-1910"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.epub",
+      "size": 297563,
+      "sha256": "c51bff752c03edb48cefad7386636522f78f6f0f76d5e9c917efa25a4530c095",
+      "filename": "garcia-leona-vicario-1910.epub",
+      "slug": "garcia-leona-vicario-1910"
+    }
+  ]
+}
