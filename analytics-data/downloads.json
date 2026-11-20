@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-18",
-  "updatedAt": "2026-11-19T01:53:37.732Z",
+  "endDate": "2026-11-19",
+  "updatedAt": "2026-11-20T01:47:18.364Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8855,6 +8855,118 @@
       "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
       "title": "著名メキシコ人伝",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_b0c07f19ec80fb5e",
+      "name": "Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+      "title": "マリア・アナ・アゲダ・デ・サン・イグナシオ伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_deddc7bfda984bbe",
+      "name": "Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+      "title": "マリア・アナ・アゲダ・デ・サン・イグナシオ伝",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ec430b70d9f04a14",
+      "name": "Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "title": "諸信心集",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2de8c825ff0534f0",
+      "name": "Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "title": "諸信心集",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ef15684a9ac6adde",
+      "name": "Leon_y_Gama_1792_Japanese_layout_revised.pdf",
+      "slug": "leon-y-gama-dos-piedras-1792",
+      "title": "二つの石の歴史的・年代学的記述",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_dbc29e4090bedfdf",
+      "name": "Leon_y_Gama_1792_Japanese_Master.epub",
+      "slug": "leon-y-gama-dos-piedras-1792",
+      "title": "二つの石の歴史的・年代学的記述",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f68b8e5219b67ada",
+      "name": "Aguilar_1639_Japanese.pdf",
+      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+      "title": "ユカタン司教区の偶像礼拝者に対する報告書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_493cd7ed3acbaec2",
+      "name": "Aguilar_1639_Japanese.epub",
+      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+      "title": "ユカタン司教区の偶像礼拝者に対する報告書",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e6882df6aecdcc56",
+      "name": "Alzate_1794_Cochineal_Article_Japanese.pdf",
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "title": "グラナ、またの名をコチニールという虫についての覚書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b803a0d7df537e86",
+      "name": "Alzate_1794_Cochineal_Article_Japanese.epub",
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "title": "グラナ、またの名をコチニールという虫についての覚書",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_633046e4f29935eb",
+      "name": "Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "title": "メキシコのアラメダの朝",
+      "volumeLabel": "第1巻（1835年）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ab2cbea8b20d5129",
+      "name": "Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "title": "メキシコのアラメダの朝",
+      "volumeLabel": "第1巻（1835年）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ef57d7ab399860e8",
+      "name": "Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "title": "メキシコのアラメダの朝",
+      "volumeLabel": "第2巻（1836年）",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ab6fdb947867f5cc",
+      "name": "Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "title": "メキシコのアラメダの朝",
+      "volumeLabel": "第2巻（1836年）",
       "format": "epub"
     }
   ],
