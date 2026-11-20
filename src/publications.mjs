@@ -1,3 +1,4 @@
+import { clavijeroPublicationRecords, clavijeroPublicationMetadata } from "./clavijero-storia-della-california-publication.mjs";
 import { ramirezAparicio1861PublicationRecords, ramirezAparicio1861PublicationMetadata } from "./ramirez-aparicio-conventos-1861-publication.mjs";
 import { nuevoBernalPublicationRecords, nuevoBernalPublicationMetadata } from "./bustamante-nuevo-bernal-publication.mjs";
 import { solorzanoPublicationRecords, solorzanoPublicationMetadata } from "./solorzano-politica-indiana-publication.mjs";
@@ -351,6 +352,7 @@ const publicationRecords = [
   ...bustamantePublicationRecords,
   ...nuevoBernalPublicationRecords,
   ...ramirezAparicio1861PublicationRecords,
+  ...clavijeroPublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9516,6 +9518,7 @@ const publicationMetadata = {
   ...bustamantePublicationMetadata,
   ...nuevoBernalPublicationMetadata,
   ...ramirezAparicio1861PublicationMetadata,
+  ...clavijeroPublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,

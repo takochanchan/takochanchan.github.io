@@ -3214,6 +3214,24 @@
       "releaseTag": "publications-002",
       "author": "マヌエル・ラミレス・アパリシオ",
       "originalAuthor": "Manuel Ramírez Aparicio"
+    },
+    {
+      "slug": "clavijero-storia-della-california-tomo-1-1789",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "clavijero-storia-della-california-tomo-2-1789",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3441,6 +3459,14 @@
       "memberSlugs": [
         "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
         "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "clavijero-storia-della-california-1789",
+      "memberSlugs": [
+        "clavijero-storia-della-california-tomo-1-1789",
+        "clavijero-storia-della-california-tomo-2-1789"
       ],
       "seriesVolumeCount": 2
     }

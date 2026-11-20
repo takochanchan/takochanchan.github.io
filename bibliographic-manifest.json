@@ -10694,6 +10694,44 @@
         "status": "online",
         "url": "https://archive.org/details/losconventossupr00rami"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "clavijero-storia-della-california-tomo-1-1789",
+      "title": "カリフォルニア史 第1巻",
+      "originalTitle": "Storia della California, tomo I",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "year": 1789,
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo I. Venezia: Modesto Fenzo, 1789. イタリア語初版第1巻。前付、第一書・第二書、補遺および採用底本の正誤表。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "rights": "原著本文は保護期間満了。第1巻には原著の所蔵館デジタル画像を転載していない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/storiadellacalif00clav"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "clavijero-storia-della-california-tomo-2-1789",
+      "title": "カリフォルニア史 第2巻",
+      "originalTitle": "Storia della California, tomo II",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "year": 1789,
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo II. Venezia: Modesto Fenzo, 1789. イタリア語初版第2巻。ライムンド・タロースが1788年に製図、J・ザンベッリが彫版した原刊折込地図1点。原撮影全体と10点の部分拡大は同一地図の画像。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "rights": "原著本文と原刊地図は保護期間満了。地図画像：Courtesy of the John Carter Brown Library. CC BY 4.0. 同館所蔵本の原撮影の全体と、同じ原撮影をトリミングした部分拡大。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/storiadellacalif00clav"
+      }
     }
   ],
   "works": [

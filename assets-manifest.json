@@ -10140,6 +10140,42 @@
       "url": "https://takochanchan.github.io/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
       "size": 92917,
       "sha256": "9b3c684676c5c01ef57f209bc5e8937e4b6d9314b82577bb1a2b2fa1fad06f59"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "size": 1945612,
+      "sha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.epub",
+      "size": 318167,
+      "sha256": "97512d749028825954b84f108a0a1a92d13677bc8b86c6c883161560d802207e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "size": 111280,
+      "sha256": "e17095e1231914c46ee4334a005aa3d79c17e581087a8071f363a7f2d75fe9f2"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "size": 80352021,
+      "sha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.epub",
+      "size": 53457487,
+      "sha256": "17d28b1c7917a2e8d9baa818fdcc336a019baa36722671bc2a266c0cc8253777"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "size": 116244,
+      "sha256": "f583761f61ae9fdf8ab9c3d66e10847b0adbb87e63afbd57b8c86ae5ad77b802"
     }
   ]
 }
