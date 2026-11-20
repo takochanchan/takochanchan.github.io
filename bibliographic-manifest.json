@@ -10637,6 +10637,44 @@
         "status": "online",
         "url": "https://archive.org/details/A052260029"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+      "title": "新ベルナル・ディアス・デル・カスティリョ 第1巻",
+      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo I",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
+      "year": 1847,
+      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第1巻。",
+      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
+      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
+      "title": "新ベルナル・ディアス・デル・カスティリョ 第2巻",
+      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo II",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
+      "year": 1847,
+      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第2巻。ハーバード本に欠ける原刊162–163頁を対校本で補い、対校本に欠ける234頁・巻末目次中間二面はハーバード本による。",
+      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
+      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
+      }
     }
   ],
   "works": [

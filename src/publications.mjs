@@ -1,3 +1,4 @@
+import { nuevoBernalPublicationRecords, nuevoBernalPublicationMetadata } from "./bustamante-nuevo-bernal-publication.mjs";
 import { solorzanoPublicationRecords, solorzanoPublicationMetadata } from "./solorzano-politica-indiana-publication.mjs";
 import { bustamantePublicationRecords, bustamantePublicationMetadata } from "./bustamante-alameda-publication.mjs";
 import { brasseurRecords, brasseurMetadata } from "./brasseur-histoire-publication.mjs";
@@ -347,6 +348,7 @@ const publicationRecords = [
   ...aguilar1639PublicationRecords,
   ...alzate1794PublicationRecords,
   ...bustamantePublicationRecords,
+  ...nuevoBernalPublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9510,6 +9512,7 @@ const publicationMetadata = {
   ...aguilar1639PublicationMetadata,
   ...alzate1794PublicationMetadata,
   ...bustamantePublicationMetadata,
+  ...nuevoBernalPublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,

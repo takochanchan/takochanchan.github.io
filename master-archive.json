@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "951500b4217e8d50f941c0bb53bc8c69a1f49357",
+  "archive_commit": "c49ef0ae0c04684edfea967710e0887ae113a041",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -487,7 +487,9 @@
     "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/master.docx",
     "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/master.docx",
     "solorzano-pereira-politica-indiana-volume-1-1648": "publications/solorzano-pereira-politica-indiana-volume-1-1648/master.docx",
-    "solorzano-pereira-politica-indiana-volume-2-1648": "publications/solorzano-pereira-politica-indiana-volume-2-1648/master.docx"
+    "solorzano-pereira-politica-indiana-volume-2-1648": "publications/solorzano-pereira-politica-indiana-volume-2-1648/master.docx",
+    "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/master.docx",
+    "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

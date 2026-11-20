@@ -3188,6 +3188,24 @@
       "seriesVolumeNumber": 2,
       "originalAuthor": "Juan de Solórzano Pereira",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3407,6 +3425,14 @@
       "memberSlugs": [
         "solorzano-pereira-politica-indiana-volume-1-1648",
         "solorzano-pereira-politica-indiana-volume-2-1648"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "memberSlugs": [
+        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847"
       ],
       "seriesVolumeCount": 2
     }

@@ -1,3 +1,4 @@
+import { nuevoBernalPublicationGroup } from "./bustamante-nuevo-bernal-publication.mjs";
 import { solorzanoPublicationGroup } from "./solorzano-politica-indiana-publication.mjs";
 import { bustamantePublicationGroup } from "./bustamante-alameda-publication.mjs";
 import { brasseurGroup } from "./brasseur-histoire-publication.mjs";
@@ -10,6 +11,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  nuevoBernalPublicationGroup,
   solorzanoPublicationGroup,
   bustamantePublicationGroup,
   brasseurGroup,
