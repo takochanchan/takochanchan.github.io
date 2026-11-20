@@ -1,0 +1,585 @@
+{
+  "base": "c4ae178f3d19c9d31d8f936aff65f6b19e3c2a59",
+  "tree": "7ef09638b9405046900b036f8a7dcf6c6173b83b",
+  "verified_blobs": {
+    "assets-manifest.json": "d9f903b1b072abb60a6167969ebe39c6086775bc",
+    "bibliographic-manifest.json": "b0d32f609b1b41b06e9099f273aabce48689c9d1",
+    "master-archive.json": "1edec2c8d4e97db222213a07bfdface1802ebeb6",
+    "src/catalogue-publications.mjs": "3cb62191048f4aea0e96ff50ffe198e28395e001",
+    "src/publication-overviews.json": "e06b07b85091ee501375413913a6b212a98d9689",
+    "src/publications.mjs": "360c5b9b4dbf7fd6cda3707431bb0c77ac88e03f",
+    "tests/fixtures/publication-catalogue.json": "264571e64a5773deefe0a7fb74865185f1f8cfb5"
+  },
+  "archive": "69dd742424c0c18b86245481aa50acd268a86d37",
+  "group": {
+    "slug": "clavijero-storia-della-california-1789",
+    "memberSlugs": [
+      "clavijero-storia-della-california-tomo-1-1789",
+      "clavijero-storia-della-california-tomo-2-1789"
+    ],
+    "volumeLabels": [
+      "第1巻",
+      "第2巻"
+    ],
+    "title": "カリフォルニア史",
+    "originalTitle": "Storia della California",
+    "author": "フランシスコ・ハビエル・クラビヘロ",
+    "originalAuthor": "Francesco Saverio Clavigero",
+    "subtitle": "",
+    "series": "STORIA DELLA CALIFORNIA · 1789",
+    "year": 1789,
+    "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。全2巻。",
+    "extent": "全2巻・PDF計351頁",
+    "description": "バハ・カリフォルニア半島の自然・先住諸民族の暮らしから、スペインの探航、イエズス会布教所の建設と拡大、追放までを描く。1789年初版による日本語訳。コチミ語三方言の祈りと原刊折込地図を収録。",
+    "sourceEdition": "Francesco Saverio Clavigero, Storia della California. Venezia: Modesto Fenzo, 1789. イタリア語初版、全2巻。",
+    "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+    "sourceUrl": "https://archive.org/details/storiadellacalif00clav",
+    "rights": "原著本文と原刊地図は保護期間満了。第2巻の地図画像：Courtesy of the John Carter Brown Library. CC BY 4.0. 同館所蔵本の原撮影の全体と、同じ原撮影をトリミングした部分拡大。",
+    "publishedDate": "2026-11-20",
+    "updatedDate": "2026-11-20",
+    "seriesVolumeCount": 2
+  },
+  "volumes": [
+    {
+      "slug": "clavijero-storia-della-california-tomo-1-1789",
+      "title": "カリフォルニア史 第1巻",
+      "originalTitle": "Storia della California, tomo I",
+      "subtitle": "",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "series": "STORIA DELLA CALIFORNIA · 1789",
+      "year": 1789,
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "extent": "日本語版PDF 183頁",
+      "visualLabel": "原刊折込地図",
+      "description": "半島の地勢・動植物と、先住諸民族の言語・暮らしを記す。コルテスの探航からイエズス会ロレト布教所の開設、キノの死までをたどり、補遺にコチミ語三方言の祈りを収める。",
+      "cover": "publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "pdf": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "epub": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.epub",
+      "pageCount": 183,
+      "figureCount": 0,
+      "plateCount": 0,
+      "types": [
+        "歴史書"
+      ],
+      "regions": [
+        "メキシコ"
+      ],
+      "languages": [
+        "イタリア語"
+      ],
+      "tags": [
+        "バハ・カリフォルニア",
+        "イエズス会",
+        "布教史",
+        "先住民",
+        "18世紀"
+      ],
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1,
+      "recordClass": "major-work",
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo I. Venezia: Modesto Fenzo, 1789. イタリア語初版第1巻。前付、第一書・第二書、補遺および採用底本の正誤表。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "sourceUrl": "https://archive.org/details/storiadellacalif00clav",
+      "rights": "原著本文は保護期間満了。第1巻には原著の所蔵館デジタル画像を転載していない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "search": [
+        {
+          "sourceFormat": "docx",
+          "sourceSha256": "5211e4ac553b6c3eab76e45265e9ae4222c8c52bf9219abb7871a05de213b3b0",
+          "pdfSha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e",
+          "pdfPageCount": 183,
+          "mappingSummary": {
+            "exact": 1250,
+            "fingerprint": 98,
+            "fuzzy": 0,
+            "sourcePage": 28,
+            "inherited": 0,
+            "unmapped": 0,
+            "verifiedRate": 1.0,
+            "pdfTextMode": "embedded"
+          },
+          "chunks": 1376,
+          "errata_results": 46
+        },
+        {
+          "sourceFormat": "epub",
+          "sourceSha256": "97512d749028825954b84f108a0a1a92d13677bc8b86c6c883161560d802207e",
+          "pdfSha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e",
+          "pdfPageCount": 183,
+          "mappingSummary": {
+            "exact": 1257,
+            "fingerprint": 98,
+            "fuzzy": 0,
+            "sourcePage": 28,
+            "inherited": 0,
+            "unmapped": 0,
+            "verifiedRate": 1.0,
+            "pdfTextMode": "embedded"
+          },
+          "chunks": 1383,
+          "errata_results": 45
+        }
+      ],
+      "master_sha256": "5211e4ac553b6c3eab76e45265e9ae4222c8c52bf9219abb7871a05de213b3b0"
+    },
+    {
+      "slug": "clavijero-storia-della-california-tomo-2-1789",
+      "title": "カリフォルニア史 第2巻",
+      "originalTitle": "Storia della California, tomo II",
+      "subtitle": "",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "series": "STORIA DELLA CALIFORNIA · 1789",
+      "year": 1789,
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "extent": "日本語版PDF 168頁",
+      "visualLabel": "原刊折込地図",
+      "description": "カリフォルニア湾の調査、布教所の拡大とペリク人の蜂起、イエズス会の追放と後継者を描く。原刊折込地図と原刻字・和訳の対照を収録。",
+      "cover": "publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "pdf": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "epub": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.epub",
+      "pageCount": 168,
+      "figureCount": 0,
+      "plateCount": 1,
+      "types": [
+        "歴史書"
+      ],
+      "regions": [
+        "メキシコ"
+      ],
+      "languages": [
+        "イタリア語"
+      ],
+      "tags": [
+        "バハ・カリフォルニア",
+        "イエズス会",
+        "布教史",
+        "先住民",
+        "18世紀"
+      ],
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2,
+      "recordClass": "major-work",
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo II. Venezia: Modesto Fenzo, 1789. イタリア語初版第2巻。ライムンド・タロースが1788年に製図、J・ザンベッリが彫版した原刊折込地図1点。原撮影全体と10点の部分拡大は同一地図の画像。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "sourceUrl": "https://archive.org/details/storiadellacalif00clav",
+      "rights": "原著本文と原刊地図は保護期間満了。地図画像：Courtesy of the John Carter Brown Library. CC BY 4.0. 同館所蔵本の原撮影の全体と、同じ原撮影をトリミングした部分拡大。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "search": [
+        {
+          "sourceFormat": "docx",
+          "sourceSha256": "a0ffafe03a153b9e228b5f3d9d2d89aa6c6a6c5a68a9ba409b4199f945efbcc0",
+          "pdfSha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff",
+          "pdfPageCount": 168,
+          "mappingSummary": {
+            "exact": 1296,
+            "fingerprint": 73,
+            "fuzzy": 0,
+            "sourcePage": 33,
+            "inherited": 0,
+            "unmapped": 0,
+            "verifiedRate": 1.0,
+            "pdfTextMode": "embedded"
+          },
+          "chunks": 1402,
+          "map_results": 324,
+          "map_checks": {
+            "折込地図：原撮影の全体": [
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              }
+            ],
+            "折込地図：図域全体の拡大": [
+              {
+                "pdfPage": 142,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=142"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から1列目": [
+              {
+                "pdfPage": 143,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=143"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から2列目": [
+              {
+                "pdfPage": 144,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=144"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から3列目": [
+              {
+                "pdfPage": 145,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=145"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から1列目": [
+              {
+                "pdfPage": 146,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=146"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から2列目": [
+              {
+                "pdfPage": 147,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=147"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から3列目": [
+              {
+                "pdfPage": 148,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=148"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から1列目": [
+              {
+                "pdfPage": 149,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=149"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から2列目": [
+              {
+                "pdfPage": 150,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=150"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から3列目": [
+              {
+                "pdfPage": 151,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=151"
+              }
+            ],
+            "Tepiche": [
+              {
+                "pdfPage": 168,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=168"
+              }
+            ],
+            "Valle delle Bandiere": [
+              {
+                "pdfPage": 168,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=168"
+              }
+            ],
+            "Courtesy of the John Carter Brown Library": [
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "sourcePage",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "sourcePage",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "sourcePage",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              }
+            ]
+          }
+        },
+        {
+          "sourceFormat": "epub",
+          "sourceSha256": "17d28b1c7917a2e8d9baa818fdcc336a019baa36722671bc2a266c0cc8253777",
+          "pdfSha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff",
+          "pdfPageCount": 168,
+          "mappingSummary": {
+            "exact": 1304,
+            "fingerprint": 73,
+            "fuzzy": 0,
+            "sourcePage": 32,
+            "inherited": 0,
+            "unmapped": 0,
+            "verifiedRate": 1.0,
+            "pdfTextMode": "embedded"
+          },
+          "chunks": 1409,
+          "map_results": 323,
+          "map_checks": {
+            "折込地図：原撮影の全体": [
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              }
+            ],
+            "折込地図：図域全体の拡大": [
+              {
+                "pdfPage": 142,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=142"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から1列目": [
+              {
+                "pdfPage": 143,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=143"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から2列目": [
+              {
+                "pdfPage": 144,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=144"
+              }
+            ],
+            "折込地図の細部：上から1段目、左から3列目": [
+              {
+                "pdfPage": 145,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=145"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から1列目": [
+              {
+                "pdfPage": 146,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=146"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から2列目": [
+              {
+                "pdfPage": 147,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=147"
+              }
+            ],
+            "折込地図の細部：上から2段目、左から3列目": [
+              {
+                "pdfPage": 148,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=148"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から1列目": [
+              {
+                "pdfPage": 149,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=149"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から2列目": [
+              {
+                "pdfPage": 150,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=150"
+              }
+            ],
+            "折込地図の細部：上から3段目、左から3列目": [
+              {
+                "pdfPage": 151,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=151"
+              }
+            ],
+            "Tepiche": [
+              {
+                "pdfPage": 168,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=168"
+              }
+            ],
+            "Valle delle Bandiere": [
+              {
+                "pdfPage": 168,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=168"
+              }
+            ],
+            "Courtesy of the John Carter Brown Library": [
+              {
+                "pdfPage": 2,
+                "originalPage": "底本位置なし（前付）",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=2"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "exact",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "sourcePage",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              },
+              {
+                "pdfPage": 141,
+                "originalPage": "原刊 巻末折込",
+                "alignment": "sourcePage",
+                "href": "/publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf#page=141"
+              }
+            ]
+          }
+        }
+      ],
+      "master_sha256": "a0ffafe03a153b9e228b5f3d9d2d89aa6c6a6c5a68a9ba409b4199f945efbcc0"
+    }
+  ],
+  "assets": [
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "size": 1945612,
+      "sha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.epub",
+      "size": 318167,
+      "sha256": "97512d749028825954b84f108a0a1a92d13677bc8b86c6c883161560d802207e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "size": 111280,
+      "sha256": "e17095e1231914c46ee4334a005aa3d79c17e581087a8071f363a7f2d75fe9f2"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "size": 80352021,
+      "sha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.epub",
+      "size": 53457487,
+      "sha256": "17d28b1c7917a2e8d9baa818fdcc336a019baa36722671bc2a266c0cc8253777"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "size": 116244,
+      "sha256": "f583761f61ae9fdf8ab9c3d66e10847b0adbb87e63afbd57b8c86ae5ad77b802"
+    }
+  ],
+  "masters": {
+    "clavijero-storia-della-california-tomo-1-1789": {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/master.docx",
+      "size": 187473,
+      "sha256": "5211e4ac553b6c3eab76e45265e9ae4222c8c52bf9219abb7871a05de213b3b0",
+      "declared_figures_and_plates": 0,
+      "noncover_embedded_images": 0
+    },
+    "clavijero-storia-della-california-tomo-2-1789": {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/master.docx",
+      "size": 53316578,
+      "sha256": "a0ffafe03a153b9e228b5f3d9d2d89aa6c6a6c5a68a9ba409b4199f945efbcc0",
+      "declared_figures_and_plates": 1,
+      "noncover_embedded_images": 11
+    }
+  },
+  "fixture": {
+    "records": [
+      {
+        "slug": "clavijero-storia-della-california-tomo-1-1789",
+        "recordClass": "major-work",
+        "searchShard": "003",
+        "author": "フランシスコ・ハビエル・クラビヘロ",
+        "seriesVolumeNumber": 1,
+        "originalAuthor": "Francesco Saverio Clavigero",
+        "releaseTag": "publications-002"
+      },
+      {
+        "slug": "clavijero-storia-della-california-tomo-2-1789",
+        "recordClass": "major-work",
+        "searchShard": "003",
+        "author": "フランシスコ・ハビエル・クラビヘロ",
+        "seriesVolumeNumber": 2,
+        "originalAuthor": "Francesco Saverio Clavigero",
+        "releaseTag": "publications-002"
+      }
+    ],
+    "group": {
+      "slug": "clavijero-storia-della-california-1789",
+      "memberSlugs": [
+        "clavijero-storia-della-california-tomo-1-1789",
+        "clavijero-storia-della-california-tomo-2-1789"
+      ],
+      "seriesVolumeCount": 2
+    }
+  },
+  "overview_sha256": {
+    "clavijero-storia-della-california-tomo-1-1789": "9dd1201cc2a0618096289221e81285ae121350784c7cec9746489e7e6708dd63",
+    "clavijero-storia-della-california-tomo-2-1789": "d65c5e4aaa6f2ad788607f13ab7c4f9df4d7ae53c7f4c9c33cbffe55b22fdf8e"
+  },
+  "rightsEvidence": {
+    "source": "https://archive.org/details/storiadellacalif00clav",
+    "map_fragment": "https://archive.org/download/storiadellacalif00clav/storiadellacalif00clav.pdf#page=497",
+    "permissions": "https://jcblibrary.org/permissions/",
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "limited_translation_scope": "加害などに転用できる具体的な手順に限り両巻計24箇所で訳出を留保し、各箇所に明示した。出来事・関係者・結果は訳出。実物の不鮮明による不読とは区別した。",
+  "files": [
+    "assets-manifest.json",
+    "bibliographic-manifest.json",
+    "master-archive.json",
+    "src/catalogue-publications.mjs",
+    "src/clavijero-storia-della-california-publication.mjs",
+    "src/publication-overviews.json",
+    "src/publications.mjs",
+    "static/publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+    "static/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+    "tests/fixtures/publication-catalogue.json"
+  ]
+}
