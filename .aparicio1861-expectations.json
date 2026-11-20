@@ -1,0 +1,196 @@
+{
+  "base": "22059ee57f5b47e57305ce1e19776c8f60360c41",
+  "base_tree": "370c99c4f2231cb26cbc931b81d4097af2afbe1f",
+  "archive": "664bdbc2478303f517e0974de1355f0f1eef07a9",
+  "publication": {
+    "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+    "title": "メキシコの廃止修道院",
+    "originalTitle": "Los conventos suprimidos en Méjico",
+    "subtitle": "",
+    "author": "マヌエル・ラミレス・アパリシオ",
+    "originalAuthor": "Manuel Ramírez Aparicio",
+    "series": "LOS CONVENTOS SUPRIMIDOS EN MÉJICO · 1861",
+    "year": 1861,
+    "originalPublication": "メキシコ、J・M・アギラル商会印刷所・書肆、1861年。",
+    "extent": "日本語版PDF 630頁",
+    "visualLabel": "原刊図版（彩色石版扉を含む）",
+    "description": "レフォルマによる閉鎖・取り壊しが進むメキシコ市とその周辺で、十一の修道院を訪ね、その建築、創設者や修道者の伝記、街との関わりをたどる。彩色石版扉を含む原刊図版33点を収録。",
+    "cover": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+    "pdf": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+    "epub": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+    "pageCount": 630,
+    "figureCount": 0,
+    "plateCount": 33,
+    "types": [
+      "歴史書"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "メキシコ市",
+      "修道院",
+      "レフォルマ",
+      "建築史",
+      "19世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work",
+    "sourceEdition": "Manuel Ramírez Aparicio, Los conventos suprimidos en Méjico: estudios biográficos, históricos y arqueológicos. Méjico: Imprenta y Librería de J. M. Aguilar y Cía., 1861. 初版、全1冊。活字扉は1861年、同じ個体の彩色石版扉は1862年銘。",
+    "sourceProvider": "ゲティ研究所（Getty Research Institute、書誌番号9921747760001551）所蔵本。Internet Archive公開（ARK: ark:/13960/t3vt5m24t）。",
+    "sourceUrl": "https://archive.org/details/losconventossupr00rami",
+    "rights": "1861年刊の原著本文はパブリックドメイン。収録図版33点はゲティ研究所所蔵本の忠実複製のみ。Wikimedia Commonsの同一個体のファイルはPublic domain、HathiTrustの同一個体はpd／Full viewと表示。Getty独自のCC0指定を意味しない。他機関所蔵本の画像は転載していない。",
+    "publishedDate": "2026-11-20",
+    "updatedDate": "2026-11-20"
+  },
+  "assets": [
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "size": 52134681,
+      "sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "size": 48241764,
+      "sha256": "817da8f562ffda5896b9dc708552595eaede4f73fe6f6db3f4dd17072af6fc3d"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "size": 92917,
+      "sha256": "9b3c684676c5c01ef57f209bc5e8937e4b6d9314b82577bb1a2b2fa1fad06f59"
+    }
+  ],
+  "master": {
+    "filename": "master.docx",
+    "size": 48098127,
+    "sha256": "c3c667b2943ac925e76e67cd0b53803e76be05774cabe7acd57245ffb42322d5"
+  },
+  "rightsEvidence": {
+    "original": "https://archive.org/details/losconventossupr00rami",
+    "commons": "https://commons.wikimedia.org/wiki/File:Los_conventos_suprimidos_en_M%C3%A9jico_-_estudios_biogr%C3%A1ficos,_hist%C3%B3ricos_y_arqueol%C3%B3gicos_(IA_losconventossupr00rami).pdf",
+    "hathi": "https://babel.hathitrust.org/cgi/pt?id=gri.ark:/13960/t3vt5m24t"
+  },
+  "overviewCharacters": 823,
+  "fixture": {
+    "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+    "recordClass": "major-work",
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "author": "マヌエル・ラミレス・アパリシオ",
+    "originalAuthor": "Manuel Ramírez Aparicio"
+  },
+  "files": [
+    "assets-manifest.json",
+    "bibliographic-manifest.json",
+    "master-archive.json",
+    "src/publication-overviews.json",
+    "src/publications.mjs",
+    "src/ramirez-aparicio-conventos-1861-publication.mjs",
+    "static/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+    "tests/fixtures/publication-catalogue.json"
+  ],
+  "overview_sha256": "37a5486099a1507ec601c5ce52adb107b02f837a99df2debb58527d4ef607607",
+  "search": {
+    "docx": {
+      "asset": "Ramirez_Aparicio_Mexico_1861_JA.docx",
+      "sha256": "c3c667b2943ac925e76e67cd0b53803e76be05774cabe7acd57245ffb42322d5",
+      "actual_chunk_count": 4995,
+      "pdf_sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28",
+      "physical_page_count": 630,
+      "summary": {
+        "exact": 4645,
+        "fingerprint": 208,
+        "fuzzy": 0,
+        "sourcePage": 142,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "same_number_page_samples": {
+        "P433a": {
+          "anchor_text": "厳めしい姿の丘が現れる",
+          "expected_physical_page": 519,
+          "original_label": "原刊 p. 433",
+          "exact_proof": "exact",
+          "chunk_id": "b04003"
+        },
+        "P434a": {
+          "anchor_text": "その形が疑いなくもっと整い",
+          "expected_physical_page": 520,
+          "original_label": "原刊 p. 434",
+          "exact_proof": "exact",
+          "chunk_id": "b04014"
+        },
+        "P433b": {
+          "anchor_text": "そして右の高官たちに先立ち",
+          "expected_physical_page": 521,
+          "original_label": "原刊 p. 433",
+          "exact_proof": "exact",
+          "chunk_id": "b04022"
+        },
+        "P434b": {
+          "anchor_text": "わが民に初めて福音を伝えた",
+          "expected_physical_page": 522,
+          "original_label": "原刊 p. 434",
+          "exact_proof": "exact",
+          "chunk_id": "b04030"
+        }
+      }
+    },
+    "epub": {
+      "asset": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "sha256": "817da8f562ffda5896b9dc708552595eaede4f73fe6f6db3f4dd17072af6fc3d",
+      "actual_chunk_count": 4980,
+      "pdf_sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28",
+      "physical_page_count": 630,
+      "summary": {
+        "exact": 4629,
+        "fingerprint": 208,
+        "fuzzy": 1,
+        "sourcePage": 140,
+        "inherited": 2,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "same_number_page_samples": {
+        "P433a": {
+          "anchor_text": "厳めしい姿の丘が現れる",
+          "expected_physical_page": 519,
+          "original_label": "原刊 p. 433",
+          "exact_proof": "exact",
+          "chunk_id": "b03994"
+        },
+        "P434a": {
+          "anchor_text": "その形が疑いなくもっと整い",
+          "expected_physical_page": 520,
+          "original_label": "原刊 p. 434",
+          "exact_proof": "exact",
+          "chunk_id": "b04005"
+        },
+        "P433b": {
+          "anchor_text": "そして右の高官たちに先立ち",
+          "expected_physical_page": 521,
+          "original_label": "原刊 p. 433",
+          "exact_proof": "exact",
+          "chunk_id": "b04013"
+        },
+        "P434b": {
+          "anchor_text": "わが民に初めて福音を伝えた",
+          "expected_physical_page": 522,
+          "original_label": "原刊 p. 434",
+          "exact_proof": "exact",
+          "chunk_id": "b04021"
+        }
+      }
+    }
+  }
+}

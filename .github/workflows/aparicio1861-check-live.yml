@@ -1,0 +1,59 @@
+name: Verify published Aparicio 1861 catalogue and index
+on:
+  push:
+    branches: [agent/ramirez-aparicio1861-live-20261120]
+    paths: [.aparicio1861-live-request.json]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify current external map before site publication
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3 4; do
+            if python3 .aparicio1861-readback.py --expect .aparicio1861-expectations.json --live --maps-only; then exit 0; fi
+            sleep 12
+          done
+          exit 1
+      - name: Wait for the two pinned successful Pages deployments
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PYBLOCK'
+          import json,subprocess,time
+          pins=json.load(open('.aparicio1861-live-request.json'))
+          assert pins=={'site':'c4ae178f3d19c9d31d8f936aff65f6b19e3c2a59','search':'5bb03d0d67c0ab54d3671684a4f74bebd01d4f7b'}
+          checks=[('takochanchan/takochanchan.github.io',pins['site'],'Deploy archive to GitHub Pages'),('takochanchan/takochan-search-index-003',pins['search'],'Deploy full-text search shard to GitHub Pages')]
+          for _ in range(110):
+            ok=0
+            for repo,sha,title in checks:
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha={sha}&per_page=100']))
+              runs=[r for r in data['workflow_runs'] if r['name']==title and r['head_branch']=='main' and r['head_sha']==sha]
+              if runs:
+                latest=max(runs,key=lambda r:r['id'])
+                if latest['status']=='completed':
+                  if latest['conclusion']!='success':raise RuntimeError((title,latest['html_url'],latest['conclusion']))
+                  ok+=1
+            if ok==2:break
+            time.sleep(12)
+          else:raise RuntimeError('Timed out waiting for pinned deployment')
+          PYBLOCK
+      - name: Verify exact public titles, shared checksum rows, live bytes and index fragment metadata
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if python3 .aparicio1861-readback.py --expect .aparicio1861-expectations.json --live | tee readback.json; then exit 0; fi
+            sleep 20
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aparicio1861-live-readback
+          path: readback.json
