@@ -10122,6 +10122,24 @@
       "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
       "size": 51903,
       "sha256": "8bfd59c40b4721473be0249e7bb92b5f8057208fb32a7ac25a0ee8fe05531c83"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "size": 52134681,
+      "sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "size": 48241764,
+      "sha256": "817da8f562ffda5896b9dc708552595eaede4f73fe6f6db3f4dd17072af6fc3d"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "size": 92917,
+      "sha256": "9b3c684676c5c01ef57f209bc5e8937e4b6d9314b82577bb1a2b2fa1fad06f59"
     }
   ]
 }

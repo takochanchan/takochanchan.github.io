@@ -3206,6 +3206,14 @@
       "seriesVolumeNumber": 2,
       "originalAuthor": "Carlos María de Bustamante",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "マヌエル・ラミレス・アパリシオ",
+      "originalAuthor": "Manuel Ramírez Aparicio"
     }
   ],
   "groups": [

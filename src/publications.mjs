@@ -1,3 +1,4 @@
+import { ramirezAparicio1861PublicationRecords, ramirezAparicio1861PublicationMetadata } from "./ramirez-aparicio-conventos-1861-publication.mjs";
 import { nuevoBernalPublicationRecords, nuevoBernalPublicationMetadata } from "./bustamante-nuevo-bernal-publication.mjs";
 import { solorzanoPublicationRecords, solorzanoPublicationMetadata } from "./solorzano-politica-indiana-publication.mjs";
 import { bustamantePublicationRecords, bustamantePublicationMetadata } from "./bustamante-alameda-publication.mjs";
@@ -349,6 +350,7 @@ const publicationRecords = [
   ...alzate1794PublicationRecords,
   ...bustamantePublicationRecords,
   ...nuevoBernalPublicationRecords,
+  ...ramirezAparicio1861PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9513,6 +9515,7 @@ const publicationMetadata = {
   ...alzate1794PublicationMetadata,
   ...bustamantePublicationMetadata,
   ...nuevoBernalPublicationMetadata,
+  ...ramirezAparicio1861PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
