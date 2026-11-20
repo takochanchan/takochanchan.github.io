@@ -10732,6 +10732,25 @@
         "status": "online",
         "url": "https://archive.org/details/storiadellacalif00clav"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "garcia-leona-vicario-1910",
+      "title": "独立の志士レオナ・ビカリオ",
+      "originalTitle": "Leona Vicario: heroína insurgente",
+      "author": "ヘナロ・ガルシア",
+      "originalAuthor": "Genaro García",
+      "originalPublication": "メキシコ、国立考古学・歴史・民族学博物館、1910年。",
+      "year": 1910,
+      "sourceEdition": "Genaro García, Leona Vicario: heroína insurgente. México: Museo Nacional de Arqueología, Historia y Etnología, 1910. 初単行本。",
+      "sourceProvider": "ヌエボ・レオン自治大学 Capilla Alfonsina Biblioteca Universitaria、Fondo Fernando Díaz Ramírez 所蔵本（同大学デジタル公開）。1909年の先行掲載版は照合に用いた。",
+      "rights": "1910年刊の原著本文は著作権保護期間満了。ヌエボ・レオン自治大学の底本デジタル画像は利用条件未確認のため転載していない。原刊の図題と判読できた図中の文字を日本語で収録。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://cdigital.cabu.uanl.mx/ffdr/7/1020002389.html"
+      }
     }
   ],
   "works": [

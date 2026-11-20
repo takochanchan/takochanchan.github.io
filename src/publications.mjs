@@ -1,3 +1,4 @@
+import { garciaLeonaVicario1910PublicationRecords, garciaLeonaVicario1910PublicationMetadata } from "./garcia-leona-vicario-1910-publication.mjs";
 import { clavijeroPublicationRecords, clavijeroPublicationMetadata } from "./clavijero-storia-della-california-publication.mjs";
 import { ramirezAparicio1861PublicationRecords, ramirezAparicio1861PublicationMetadata } from "./ramirez-aparicio-conventos-1861-publication.mjs";
 import { nuevoBernalPublicationRecords, nuevoBernalPublicationMetadata } from "./bustamante-nuevo-bernal-publication.mjs";
@@ -353,6 +354,7 @@ const publicationRecords = [
   ...nuevoBernalPublicationRecords,
   ...ramirezAparicio1861PublicationRecords,
   ...clavijeroPublicationRecords,
+  ...garciaLeonaVicario1910PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9519,6 +9521,7 @@ const publicationMetadata = {
   ...nuevoBernalPublicationMetadata,
   ...ramirezAparicio1861PublicationMetadata,
   ...clavijeroPublicationMetadata,
+  ...garciaLeonaVicario1910PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,

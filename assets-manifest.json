@@ -10176,6 +10176,24 @@
       "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
       "size": 116244,
       "sha256": "f583761f61ae9fdf8ab9c3d66e10847b0adbb87e63afbd57b8c86ae5ad77b802"
+    },
+    {
+      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.pdf",
+      "size": 2859177,
+      "sha256": "ea098096cec1a53778a4b2c0bbd8aae08be8081ea9cb2236d7f3aa1a6cb4e57d"
+    },
+    {
+      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.epub",
+      "size": 297563,
+      "sha256": "c51bff752c03edb48cefad7386636522f78f6f0f76d5e9c917efa25a4530c095"
+    },
+    {
+      "path": "publications/garcia-leona-vicario-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-leona-vicario-1910/cover.jpg",
+      "size": 34750,
+      "sha256": "b6d1732c1ebaef81fa277e37d9cee775eb35af109400ae198af2a53b57c50686"
     }
   ]
 }

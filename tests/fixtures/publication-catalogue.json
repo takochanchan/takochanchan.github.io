@@ -3232,6 +3232,13 @@
       "seriesVolumeNumber": 2,
       "originalAuthor": "Francesco Saverio Clavigero",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "garcia-leona-vicario-1910",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
