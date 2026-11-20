@@ -10090,38 +10090,38 @@
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
-      "size": 1870491,
-      "sha256": "938dbb3eb15787caa96ea52c6cc180b94590b8ac8511063a5db6df62fc9478c3"
+      "size": 1871410,
+      "sha256": "07c6278ce6928c594bba5a45acd453d530f82d1e53a00a9cf9c7466a55d9aa3e"
     },
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
-      "size": 307027,
-      "sha256": "c8e132781677da0e2d3526e929014fbc7935b419eef2720bd253de60575edd05"
+      "size": 311316,
+      "sha256": "1534e5108832563f4e0db66d0df8f67f350e4b1d6e7c238cb65ba4f4c7393966"
     },
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
-      "size": 49625,
-      "sha256": "c6f10f2e68f20a66f07d29c57430c2450a9cf25594da00ca36cecd6386623a42"
+      "size": 51510,
+      "sha256": "0bfb86fa07979a690b6c808c40320c99874745bf2d4ba9259e30152e8e8dc297"
     },
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
-      "size": 2467133,
-      "sha256": "291471a0063638d160b8555f04b4129ebe5d74ed00ec7844726fdef6ca39bdb0"
+      "size": 2468840,
+      "sha256": "d70a10894252b62c6cfd3a8843d9ffcbeb17c955a8041daa0b3e7811e13b6c9b"
     },
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
-      "size": 365734,
-      "sha256": "fc14e5bf13e10fdec3f76e61bd96426c12b494658a5ae94b99ef817112da6d25"
+      "size": 370996,
+      "sha256": "b3f112d3c6b85f353013b7026ba491fcd49a0390416c86ae7526b6935abef1f2"
     },
     {
       "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
       "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
-      "size": 50008,
-      "sha256": "76f655b68e2b52e04cf8d18751b57b7ebf2907f348c8c2cb9c5c2b204fe505b3"
+      "size": 51903,
+      "sha256": "8bfd59c40b4721473be0249e7bb92b5f8057208fb32a7ac25a0ee8fe05531c83"
     }
   ]
 }

@@ -1,7 +1,7 @@
 export const nuevoBernalPublicationRecords = [
   {
     "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
-    "title": "新ベルナル・ディアス・デル・カスティリョ 第1巻",
+    "title": "新たなベルナル・ディアス・デル・カスティリョ 第1巻",
     "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo I",
     "subtitle": "",
     "author": "カルロス・マリア・デ・ブスタマンテ",
@@ -41,7 +41,7 @@ export const nuevoBernalPublicationRecords = [
   },
   {
     "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
-    "title": "新ベルナル・ディアス・デル・カスティリョ 第2巻",
+    "title": "新たなベルナル・ディアス・デル・カスティリョ 第2巻",
     "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo II",
     "subtitle": "",
     "author": "カルロス・マリア・デ・ブスタマンテ",
@@ -108,7 +108,7 @@ export const nuevoBernalPublicationGroup = {
     "第1巻",
     "第2巻"
   ],
-  "title": "新ベルナル・ディアス・デル・カスティリョ",
+  "title": "新たなベルナル・ディアス・デル・カスティリョ",
   "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México",
   "author": "カルロス・マリア・デ・ブスタマンテ",
   "originalAuthor": "Carlos María de Bustamante",
