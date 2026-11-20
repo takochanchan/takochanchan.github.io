@@ -1,0 +1,63 @@
+name: Transfer approved Clavijero 1789 publication files
+on:
+  push:
+    branches: [agent/clavijero1789-publish-20261120]
+    paths: [.clavijero1789-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 09fd7a4c878486124560a87d220aa83813b8e1ee
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .clavijero1789-transfer.py stage "$RUNNER_TEMP/clavijero1789-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.clavijero1789-verify-group-html.py dist/publications/clavijero-storia-della-california-1789/index.html ../transfer/.clavijero1789-expectations.json
+          target=dist/publications/clavijero-storia-della-california-tomo-1-1789
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/clavijero1789-assets/clavijero-storia-della-california-tomo-1-1789.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug clavijero-storia-della-california-tomo-1-1789
+          target=dist/publications/clavijero-storia-della-california-tomo-2-1789
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/clavijero1789-assets/clavijero-storia-della-california-tomo-2-1789.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug clavijero-storia-della-california-tomo-2-1789
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .clavijero1789-transfer.py transfer "$RUNNER_TEMP/clavijero1789-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clavijero1789-public-verification
+          path: transfer/clavijero1789-public-verification.json
+          if-no-files-found: error
