@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "a23c827635557742388c81fb23e3a05266ceb6d9",
+  "archive_commit": "cf1418be69d52be5e18a83de3954ad56418d43a4",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -493,7 +493,8 @@
     "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/master.docx",
     "clavijero-storia-della-california-tomo-1-1789": "publications/clavijero-storia-della-california-tomo-1-1789/master.docx",
     "clavijero-storia-della-california-tomo-2-1789": "publications/clavijero-storia-della-california-tomo-2-1789/master.docx",
-    "garcia-leona-vicario-1910": "publications/garcia-leona-vicario-1910/master.docx"
+    "garcia-leona-vicario-1910": "publications/garcia-leona-vicario-1910/master.docx",
+    "venegas-juan-bautista-zappa-1754": "publications/venegas-juan-bautista-zappa-1754/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

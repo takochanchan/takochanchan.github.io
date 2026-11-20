@@ -10751,6 +10751,25 @@
         "status": "online",
         "url": "https://cdigital.cabu.uanl.mx/ffdr/7/1020002389.html"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "venegas-juan-bautista-zappa-1754",
+      "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
+      "originalTitle": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús",
+      "author": "ミゲル・ベネガス",
+      "originalAuthor": "Miguel Venegas",
+      "originalPublication": "バルセロナ、パブロ・ナダル、1754年。",
+      "year": 1754,
+      "sourceEdition": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús. Barcelona: Pablo Nadal, 1754. ミゲル・ベネガス原著、同会の別の神父による編纂。",
+      "sourceProvider": "Biblioteca Americanista de Sevilla 所蔵本。スペイン国立研究評議会（CSIC）の Simurg でデジタル公開。",
+      "rights": "1754年刊の原著本文はパブリックドメイン。CSICによるデジタル複製は CC BY-NC-SA 4.0。収録の巻頭肖像も同条件で、Biblioteca Americanista de Sevilla（所蔵）・CSIC（公開）を明記し、原画像の余白のみを切り出した。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/1722441"
+      }
     }
   ],
   "works": [

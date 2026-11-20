@@ -1,3 +1,4 @@
+import { venegasZappa1754PublicationRecords, venegasZappa1754PublicationMetadata } from "./venegas-juan-bautista-zappa-1754-publication.mjs";
 import { garciaLeonaVicario1910PublicationRecords, garciaLeonaVicario1910PublicationMetadata } from "./garcia-leona-vicario-1910-publication.mjs";
 import { clavijeroPublicationRecords, clavijeroPublicationMetadata } from "./clavijero-storia-della-california-publication.mjs";
 import { ramirezAparicio1861PublicationRecords, ramirezAparicio1861PublicationMetadata } from "./ramirez-aparicio-conventos-1861-publication.mjs";
@@ -355,6 +356,7 @@ const publicationRecords = [
   ...ramirezAparicio1861PublicationRecords,
   ...clavijeroPublicationRecords,
   ...garciaLeonaVicario1910PublicationRecords,
+  ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
   ...diazPublicationRecords,
@@ -9522,6 +9524,7 @@ const publicationMetadata = {
   ...ramirezAparicio1861PublicationMetadata,
   ...clavijeroPublicationMetadata,
   ...garciaLeonaVicario1910PublicationMetadata,
+  ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
   ...diazPublicationMetadata,
