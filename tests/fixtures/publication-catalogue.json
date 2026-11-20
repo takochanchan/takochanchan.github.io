@@ -3170,6 +3170,24 @@
       "seriesVolumeNumber": 2,
       "originalAuthor": "Carlos María de Bustamante",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3381,6 +3399,14 @@
       "memberSlugs": [
         "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
         "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "memberSlugs": [
+        "solorzano-pereira-politica-indiana-volume-1-1648",
+        "solorzano-pereira-politica-indiana-volume-2-1648"
       ],
       "seriesVolumeCount": 2
     }

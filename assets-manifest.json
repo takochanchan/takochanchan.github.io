@@ -10050,6 +10050,42 @@
       "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
       "size": 47780,
       "sha256": "e8fc05a584535a53af0086d9e968c36621a6f0aeb726dd862e30c8af0b086a0e"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "size": 17550283,
+      "sha256": "d11e59209647cbb73809b1cdaabb10ab8d96b566d2f745f86985864de78ac5c9"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "size": 1539653,
+      "sha256": "887e021305edffa3a4c699c2f71554ba8c96a8806ad64228a40e5e2dbdccafd6"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
+      "size": 41001,
+      "sha256": "630cb49a521c6058a8fdf38525cadf2e2d51c49f0a8add30109655db5c9eedc3"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "size": 18042126,
+      "sha256": "43b333bba70ecd901f2a816f9407ad12d5e008a4fec38a4811f94ebe7295849e"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "size": 1540171,
+      "sha256": "ae067b1b82504f5b947db0c9bf2551ab5f4c841032034e9b432bc56f74cd0e55"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
+      "size": 43345,
+      "sha256": "7b08d7099a497fcdb041fcebd751d29d9fe37e426f5d947569fecaee9a93b9db"
     }
   ]
 }

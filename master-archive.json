@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "e55890d7c3f4e2c48db92ac8bf9df57255e411c5",
+  "archive_commit": "951500b4217e8d50f941c0bb53bc8c69a1f49357",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -485,7 +485,9 @@
     "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/master.docx",
     "alzate-memoria-grana-cochinilla-1794": "publications/alzate-memoria-grana-cochinilla-1794/master.docx",
     "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/master.docx",
-    "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/master.docx"
+    "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/master.docx",
+    "solorzano-pereira-politica-indiana-volume-1-1648": "publications/solorzano-pereira-politica-indiana-volume-1-1648/master.docx",
+    "solorzano-pereira-politica-indiana-volume-2-1648": "publications/solorzano-pereira-politica-indiana-volume-2-1648/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

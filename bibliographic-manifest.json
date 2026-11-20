@@ -10599,6 +10599,44 @@
         "status": "online",
         "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
+      "title": "インディアス政策論 第1冊",
+      "originalTitle": "Política indiana（第I冊）",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
+      "year": 1648,
+      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第1冊。",
+      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
+      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A052260028"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
+      "title": "インディアス政策論 第2冊",
+      "originalTitle": "Política indiana（第II冊）",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
+      "year": 1648,
+      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第2冊。",
+      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
+      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A052260029"
+      }
     }
   ],
   "works": [
