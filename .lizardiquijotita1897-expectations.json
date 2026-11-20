@@ -1,0 +1,104 @@
+{
+  "publication": {
+    "slug": "lizardi-la-quijotita-y-su-prima-1897",
+    "title": "キホティータとそのいとこ",
+    "originalTitle": "La educación de las mujeres, ó La Quijotita y su prima",
+    "subtitle": "",
+    "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
+    "originalAuthor": "José Joaquín Fernández de Lizardi",
+    "series": "LA QUIJOTITA Y SU PRIMA · 1897",
+    "year": 1897,
+    "originalPublication": "メキシコ、J・バリェスカ商会後継社、1897年（バルセロナ、ホセ・エスパサ印刷所、1898年6月印刷完了）。",
+    "extent": "日本語版PDF 591頁",
+    "description": "育てられ方の異なる二人のいとこ、ポンポサとプデンシアナを軸に、女子の学びと手職、信仰、結婚、金銭をめぐる家庭の議論を描く。全39章と原刊の別丁図版6点を収録。",
+    "cover": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+    "pdf": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.pdf",
+    "epub": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.epub",
+    "pageCount": 591,
+    "figureCount": 0,
+    "plateCount": 6,
+    "types": [
+      "小説"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "女子教育",
+      "メキシコ文学",
+      "家族史",
+      "結婚",
+      "信仰",
+      "19世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "size": 5841488,
+      "sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911",
+      "filename": "lizardi-la-quijotita-y-su-prima-1897.pdf"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "size": 10132772,
+      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b",
+      "filename": "lizardi-la-quijotita-y-su-prima-1897.epub"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "size": 30389,
+      "sha256": "81a9bc588cdc7b92d786d9444a1cedaa9fcdf0fe019e7d821c4d8ae0920ad6f9",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "96afc7110cf245590974f97e73a4d8b7379d2da8d3396737566a9c7662652728"
+  },
+  "overview_sha256": "eec60ecd1ada298e06318e89c3c009820b4a41171d80b74032aef22fa5a748e5",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "96afc7110cf245590974f97e73a4d8b7379d2da8d3396737566a9c7662652728",
+      "pdf_sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911",
+      "block_count": 4502,
+      "pdf_pages": 591,
+      "ordered_map_sha256": "236f268350e64dee64231a29d1dca9e049ca133bc0484f16e4b468a323494b15",
+      "mappingSummary": {
+        "exact": 4167,
+        "fingerprint": 243,
+        "fuzzy": 2,
+        "sourcePage": 90,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    },
+    "epub": {
+      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b",
+      "pdf_sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911",
+      "block_count": 4490,
+      "pdf_pages": 591,
+      "ordered_map_sha256": "282d253fb55772728389482b2c80cc000d6417b292015a785aa336b5ec30f338",
+      "mappingSummary": {
+        "exact": 4155,
+        "fingerprint": 243,
+        "fuzzy": 2,
+        "sourcePage": 90,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    }
+  }
+}
