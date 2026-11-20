@@ -1,0 +1,12 @@
+{
+  "search": {
+    "repo": "takochanchan/takochan-search-index-003",
+    "sha": "9aa0bf099ce41220d0a03a93656946a40b999a8b",
+    "workflow": "Deploy full-text search shard to GitHub Pages"
+  },
+  "site": {
+    "repo": "takochanchan/takochanchan.github.io",
+    "sha": "45f23e44ca4e69928c2ecf8c12e5ea49a0bd6504",
+    "workflow": "Deploy archive to GitHub Pages"
+  }
+}
