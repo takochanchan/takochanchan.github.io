@@ -1,0 +1,38 @@
+{
+  "slug": "lizardi-la-quijotita-y-su-prima-1897",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "d75dcd605ecd6a5d4f05c1c2334d78f8115b0d69",
+  "verified_candidate_commit": "5e6be02bca5239fc6c52cc496365bd25cfb55e35",
+  "bundle": {
+    "sha256": "efed746206e20099c8d859db7100e9d4cbd6fa2274991456f62b2dc5d284a133",
+    "size": 14429978,
+    "chunks": [
+      "27ccf6189d9c83f329c1e476de8cdb455a9c6723",
+      "9de1cc8a23b2d778e28d2ac33579569c81734968",
+      "f139fdb3c1d7d47b6f1058367df7e01a6eb96932",
+      "9f0567ff36d50bce7a179f3e29b7cbd6ec717e31",
+      "45b325971541b255b184e3b202a89adab6032484",
+      "4fdb899a06f4f0d38927106b8e6047bd610285cc",
+      "77854dc55091bc5fa46b760764c1c2b80b9e6c11",
+      "44ff99d9ec1dcdd8141179ad93e316b623d2b97d",
+      "131930ec1dc16ff6cb47bbacb536fb6fa8ce47c3",
+      "4ffbd7bcb1792389d77927f4adedc25581e9081a"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "size": 5841488,
+      "sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911",
+      "filename": "lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "size": 10132772,
+      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b",
+      "filename": "lizardi-la-quijotita-y-su-prima-1897.epub",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897"
+    }
+  ]
+}
