@@ -1,0 +1,103 @@
+{
+  "publication": {
+    "slug": "venegas-juan-bautista-zappa-1754",
+    "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
+    "originalTitle": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús",
+    "subtitle": "",
+    "author": "ミゲル・ベネガス",
+    "originalAuthor": "Miguel Venegas",
+    "series": "VIDA Y VIRTUDES DEL V. P. JUAN BAUTISTA ZAPPA · 1754",
+    "year": 1754,
+    "originalPublication": "バルセロナ、パブロ・ナダル、1754年。",
+    "description": "ミラノ出身のイエズス会士サッパがヌエバ・エスパーニャで修練院や学院を運営し、メキシコ各地を巡って伝道するまでをたどる。第三巻は祈り・誓願・聖母への信心などを主題別に描く。",
+    "cover": "publications/venegas-juan-bautista-zappa-1754/cover.jpg",
+    "pdf": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.pdf",
+    "epub": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.epub",
+    "figureCount": 0,
+    "plateCount": 1,
+    "types": [
+      "伝記"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "フアン・バウティスタ・サッパ",
+      "イエズス会",
+      "ヌエバ・エスパーニャ",
+      "ロレトの聖母",
+      "ワステカ"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work",
+    "pageCount": 231,
+    "extent": "日本語版PDF 231頁"
+  },
+  "assets": [
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.pdf",
+      "size": 9476783,
+      "sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66",
+      "filename": "venegas-juan-bautista-zappa-1754.pdf"
+    },
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.epub",
+      "size": 6800369,
+      "sha256": "bda6ecafeaf46a6c132a221e7e070f070f2517341775013a2b6a1dd57f5c0329",
+      "filename": "venegas-juan-bautista-zappa-1754.epub"
+    },
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-juan-bautista-zappa-1754/cover.jpg",
+      "size": 37193,
+      "sha256": "b7679332f6e2734d328ee2e9f9b2cbd678ff4a6d2359a48d228210795d15ace6",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "f5a19fb6703e9161c4843964af34d5ea86e69b2a1f2af3bf55e9cec35c1693bb"
+  },
+  "overview_sha256": "f0b1c835063e925057ea5202eb5d79025bf3fdd39a0589715dd930e3686279f9",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "f5a19fb6703e9161c4843964af34d5ea86e69b2a1f2af3bf55e9cec35c1693bb",
+      "pdf_sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66",
+      "block_count": 1684,
+      "pdf_pages": 231,
+      "ordered_map_sha256": "89527fb22eaff2dd2ee237cf2b76018832a5f03899c5aa26daf34b760aab355d",
+      "mappingSummary": {
+        "exact": 1543,
+        "fingerprint": 129,
+        "fuzzy": 2,
+        "sourcePage": 5,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    },
+    "epub": {
+      "sha256": "bda6ecafeaf46a6c132a221e7e070f070f2517341775013a2b6a1dd57f5c0329",
+      "pdf_sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66",
+      "block_count": 1673,
+      "pdf_pages": 231,
+      "ordered_map_sha256": "a6605af5ca860dc30dc9df0ba2c44ec9089c5f43c59d515965d30be2dfd635c4",
+      "mappingSummary": {
+        "exact": 1531,
+        "fingerprint": 129,
+        "fuzzy": 4,
+        "sourcePage": 4,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    }
+  }
+}

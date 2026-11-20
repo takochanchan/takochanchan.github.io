@@ -1,0 +1,60 @@
+name: Transfer approved Venegas 1754 publication files
+on:
+  push:
+    branches: [agent/venegas-zappa1754-publish-20261121]
+    paths: [.venegaszappa1754-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: d6b4591fb760dcb35783176438d533f2e001911d
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .venegaszappa1754-transfer.py stage "$RUNNER_TEMP/venegaszappa1754-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.venegaszappa1754-readback.py --expect ../transfer/.venegaszappa1754-expectations.json --html dist/publications/venegas-juan-bautista-zappa-1754/index.html
+          target=dist/publications/venegas-juan-bautista-zappa-1754
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/venegaszappa1754-assets/venegas-juan-bautista-zappa-1754.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug venegas-juan-bautista-zappa-1754
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .venegaszappa1754-transfer.py transfer "$RUNNER_TEMP/venegaszappa1754-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: venegaszappa1754-public-verification
+          path: transfer/venegaszappa1754-public-verification.json
+          if-no-files-found: error
+
