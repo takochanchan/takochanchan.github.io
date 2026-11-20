@@ -1,0 +1,62 @@
+name: Transfer approved Solórzano 1648 publication files
+on:
+  push:
+    branches: [agent/solorzano1648-publish-20261120]
+    paths: [.solorzano1648-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: bfb197705dd81e1d40f0181799f8b5b603c66772
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .solorzano1648-transfer.py stage "$RUNNER_TEMP/solorzano1648-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          target=dist/publications/solorzano-pereira-politica-indiana-volume-1-1648
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/solorzano1648-assets/Solorzano_Politica_Indiana_Japanese_Vol1.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug solorzano-pereira-politica-indiana-volume-1-1648
+          target=dist/publications/solorzano-pereira-politica-indiana-volume-2-1648
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/solorzano1648-assets/Solorzano_Politica_Indiana_Japanese_Vol2.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug solorzano-pereira-politica-indiana-volume-2-1648
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .solorzano1648-transfer.py transfer "$RUNNER_TEMP/solorzano1648-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: solorzano1648-public-verification
+          path: transfer/solorzano1648-public-verification.json
+          if-no-files-found: error
