@@ -1,0 +1,39 @@
+{
+  "slug": "venegas-juan-bautista-zappa-1754",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "cf1418be69d52be5e18a83de3954ad56418d43a4",
+  "verified_candidate_commit": "d6b4591fb760dcb35783176438d533f2e001911d",
+  "bundle": {
+    "sha256": "026254b2431a946cd83f8909b19102d95e7c64e5e58148665ec3129882d5f75f",
+    "size": 15741495,
+    "chunks": [
+      "e373c5c872ff0599b85a614bb23a81535db8af9d",
+      "f80e21267f54df1574139bcd16ef1616c43c9078",
+      "c347a16d4c2d56ef328d8500046650ce9d809009",
+      "ee23a64cf78c6815bbf5e68b78d5d4f2a5e5276d",
+      "f7d4a9aa7c6bb9199906b39a1fafd4d3de0f3d3c",
+      "9c866d9f109f6d816db247079c13000b55b932b7",
+      "27af766190176b63baf6fd81bc65bc33a970f9f1",
+      "21a77b59226803b5683ad406f87821a910b1e2f6",
+      "1d2d1788a988eb7fe5ede00697f4e37805ed8722",
+      "0d5de2b4daef0cec34758b67c43e0940449411e8",
+      "b18b5e377c291a01a6a2dd02b874dde0bc388afe"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.pdf",
+      "size": 9476783,
+      "sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66",
+      "filename": "venegas-juan-bautista-zappa-1754.pdf",
+      "slug": "venegas-juan-bautista-zappa-1754"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.epub",
+      "size": 6800369,
+      "sha256": "bda6ecafeaf46a6c132a221e7e070f070f2517341775013a2b6a1dd57f5c0329",
+      "filename": "venegas-juan-bautista-zappa-1754.epub",
+      "slug": "venegas-juan-bautista-zappa-1754"
+    }
+  ]
+}
