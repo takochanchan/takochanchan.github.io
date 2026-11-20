@@ -1,0 +1,88 @@
+{
+  "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847": {
+    "epub": {
+      "chunks": 1410,
+      "pages": 184,
+      "alignment": {
+        "exact": 1275,
+        "fingerprint": 104,
+        "fuzzy": 2,
+        "sourcePage": 27,
+        "inherited": 2,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "checks": {
+        "4": true,
+        "90": true,
+        "162": true
+      }
+    },
+    "docx": {
+      "chunks": 1374,
+      "pages": 184,
+      "alignment": {
+        "exact": 1245,
+        "fingerprint": 101,
+        "fuzzy": 0,
+        "sourcePage": 28,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "checks": {
+        "4": true,
+        "90": true,
+        "162": true
+      }
+    }
+  },
+  "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847": {
+    "epub": {
+      "chunks": 2110,
+      "pages": 257,
+      "alignment": {
+        "exact": 1894,
+        "fingerprint": 119,
+        "fuzzy": 1,
+        "sourcePage": 93,
+        "inherited": 3,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "checks": {
+        "4": true,
+        "86": true,
+        "162": true,
+        "163": true,
+        "234": true,
+        "235": true
+      }
+    },
+    "docx": {
+      "chunks": 2086,
+      "pages": 257,
+      "alignment": {
+        "exact": 1874,
+        "fingerprint": 118,
+        "fuzzy": 0,
+        "sourcePage": 94,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "checks": {
+        "4": true,
+        "86": true,
+        "162": true,
+        "163": true,
+        "234": true,
+        "235": true
+      }
+    }
+  }
+}
