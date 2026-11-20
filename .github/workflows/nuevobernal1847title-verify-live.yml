@@ -1,0 +1,32 @@
+name: Verify retitled Nuevo Bernal and its public index
+on:
+  push:
+    branches: ["agent/nuevo-bernal1847-title-live-20261120"]
+    paths: [".nuevo-bernal1847-title-verify/request.json"]
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned search deployment
+        working-directory: .nuevo-bernal1847-title-verify
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 wait_deploy.py search
+      - name: Verify map hashes and page locations before site publication
+        working-directory: .nuevo-bernal1847-title-verify
+        run: python3 check_live.py maps-only
+      - name: Wait for the pinned main-site deployment
+        working-directory: .nuevo-bernal1847-title-verify
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 wait_deploy.py site
+      - name: Verify live bibliography, aliases, search and four downloads
+        working-directory: .nuevo-bernal1847-title-verify
+        run: python3 check_live.py
