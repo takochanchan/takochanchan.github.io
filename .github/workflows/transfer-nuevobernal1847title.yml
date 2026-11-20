@@ -1,0 +1,69 @@
+name: Replace approved Bustamante 1847 title revision
+on:
+  push:
+    branches: [agent/nuevo-bernal1847-title-revision-20261120]
+    paths: [.nuevobernal1847title-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 22059ee57f5b47e57305ce1e19776c8f60360c41
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .nuevobernal1847title-transfer.py stage "$RUNNER_TEMP/nuevobernal1847title-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.nuevobernal1847title-verify-html.py dist/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-1847/index.html
+          target=dist/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/nuevobernal1847title-assets/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847
+          target=dist/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/nuevobernal1847title-assets/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847
+      - name: Replace four known assets, re-download and verify revised checksum
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .nuevobernal1847title-transfer.py transfer "$RUNNER_TEMP/nuevobernal1847title-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nuevobernal1847title-public-verification
+          path: transfer/nuevobernal1847title-public-verification.json
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: nuevobernal1847title-rollback
+          path: transfer/nuevobernal1847title-rollback.json
+          if-no-files-found: ignore
