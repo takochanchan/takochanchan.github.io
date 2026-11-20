@@ -1,0 +1,61 @@
+name: Verify the revised Bustamante overviews on the live catalogue
+on:
+  push:
+    branches: [agent/bustamante1835-overviews-verify-20261120]
+    paths: [.github/workflows/bustamante1835-overviews-verify.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deployed headings and paragraph text
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json, subprocess, time, urllib.request, re, html
+          from pathlib import Path
+          site='https://takochanchan.github.io'
+          parent='bustamante-mananas-de-la-alameda-de-mexico-1835-1836'
+          repo='takochanchan/takochanchan.github.io'
+          target='f6c2d517da69b74e09bf0925554c274090e30243'
+          for i in range(55):
+              reply=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha={target}']))
+              r=next((x for x in reply['workflow_runs'] if x['name']=='Deploy archive to GitHub Pages'),None)
+              if r and r['status']=='completed':
+                  assert r['conclusion']=='success',r
+                  break
+              time.sleep(8)
+          else: raise RuntimeError('Pages not deployed')
+          def by_id(document,slug):
+              m=re.search(r'<details[^>]+id="overview-'+slug+r'">(.+?)</details>',document,re.S)
+              assert m,slug
+              return m.group(1)
+          saved=json.loads(Path('src/publication-overviews.json').read_text())['records']
+          module=Path('src/bustamante-alameda-publication.mjs').read_text()
+          whole=json.loads(re.search(r'^  "groupOverview": (.+),$',module,re.M).group(1))
+          for i in range(20):
+              request=urllib.request.Request(f'{site}/publications/{parent}/?verify={target}',headers={'Cache-Control':'no-cache'})
+              with urllib.request.urlopen(request,timeout=30) as response:
+                  doc=html.unescape(response.read().decode())
+              group=by_id(doc,parent)
+              if '全体の詳細概要' in group and '史料集全体' not in group: break
+              time.sleep(5)
+          else: raise AssertionError('new heading not present')
+          assert re.search(r'__show">全体の詳細概要</span>',group)
+          assert all(('<p>'+p+'</p>') in group for p in whole.split('\n\n'))
+          for n,y in ((1,1835),(2,1836)):
+              slug=f'bustamante-mananas-de-la-alameda-de-mexico-volume-{n}-{y}'
+              pane=by_id(doc,slug)
+              text=saved[slug]
+              assert 750<=len(text)<=1000 and text.count('\n\n')==3
+              assert all(('<p>'+p+'</p>') in pane for p in text.split('\n\n')),slug
+              print('Verified volume', n, len(text),'characters')
+          assert doc.count('Bustamante_Mexico_Alameda_I_Japanese.pdf')>0 and doc.count('Bustamante_Mexico_Alameda_II_Japanese.pdf')>0
+          print('Verified the unchanged overall text and corrected heading, both full overviews and both PDF links.')
+          PY
+
