@@ -1,0 +1,87 @@
+{
+  "slug": "solorzano-pereira-politica-indiana-1648",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "951500b4217e8d50f941c0bb53bc8c69a1f49357",
+  "verified_candidate_commit": "bfb197705dd81e1d40f0181799f8b5b603c66772",
+  "bundle": {
+    "size": 21314733,
+    "sha256": "ffe333df3803dfdaf63243f577c5ada7cbd5129a9bf0f77a7498c6455d1cbf77",
+    "chunks": [
+      "79fdcd28a2d6181016920c12750279800d2de170",
+      "8cf4b46e8d2a72e22ee208fa1b02fb0eb5fa240b",
+      "d6f675e6b34d8ff2cf35a481b191718bc75f0ec7",
+      "c12a7c624b4d821398b2a168fe6aef45d39dae21",
+      "a41b21b17e1938bed3bf692ca32517e6a0ab3429",
+      "57ca0b5434586449374fd196e1870880c2a4521a",
+      "d5bda0228cc40689eca971d7cb9cf4559981da1b",
+      "335bb707c28dd747d1b537304bb824a788c7a597",
+      "80e8b4fd74770204a691e7b0fc4c785ba89b2089",
+      "41580c1c374e9420d5de7aaf450bdb79f48625b3",
+      "f08bc42c2d043b9e8a0f1e11deec533f0076bf31",
+      "3ebe7dd65baa0a704ff04904c01f4e591cae862b",
+      "1c9163c3815e78ebe59d87df5e2663048ba04819",
+      "324a5121f434c12f7d38e9816dd4d605eea6bb69",
+      "666267624823e10ed09fddbab64b361138fcaea6",
+      "92f232828b3b440cf4859e7d0cf247184603b786",
+      "170d407c446e77f6518b4d9c1ad0cdf1578571f2",
+      "fda2b85e8f8f53bb3928b78952065bd5dfb11459",
+      "a005d4028a000d2a7efa3e1dd0af8ac66506ef70",
+      "6feab89927b8e4a2a72a5790e524beddc5ff4148",
+      "fd9b662269c1f2067d802f73907c04c0f181bc0a",
+      "bc3bce8b69f85d0c884290eb6bb3477089938978",
+      "22cf2eb0f83cff84037dc86519d4378bb346f552",
+      "31925606640d64c6977195a7b1cac31de0a8ff35",
+      "849628a6929255cab1fd64d5ca285f01c87b4984",
+      "099444a05e05b496c47bdd46a1171a29b5c0ab9c",
+      "d3e6f9e4f102af04d611f15807d1401d670ba890",
+      "ae7c6fc7ceff976473ee5240556adedc8ed63802",
+      "e70fa3ba1e97c52bf51cd815e4ec697581819995",
+      "425cf1579116a0fa5ba4e51cbe505a4dd3f69c7e",
+      "ce9fe5762421dc32c1b149be05813ca4cd5c5539",
+      "4a5fb6aedba91b42710d1e3996ee8d12112a6b3e",
+      "1a24154816157ec55d6a9f9ee3bb809cfd6e5018",
+      "68b33040e4f08f4e327684b90873ecda05803ec8",
+      "ecaaae1ab99aa2cb22a6c123a83dddacdd51596d",
+      "4a630280b10c5a993f61fcaf96cbb736d0ce28dc",
+      "fb951c2ba00794931009c52bf480a26da3ce6f2b",
+      "5ad1a2843e638989ea4420feb2359c6ce5bfce69",
+      "079a624eb313b0ad19f7fff0dd5aa598c13a134f",
+      "23edcfaabc6f15ef154dac263cdf695ca92f6569",
+      "d1a8e46edf0b33a821da7d2d3b7b5627f6a8a6d5",
+      "3ef425467644b86280a749e0cacc7957b296f841",
+      "0c5029778f04de34da18ec3d84c0dd9b6a0c7574",
+      "5279f989da187596d03aead45cb4f33d09099e03",
+      "82fe5b791dcd58507a45d8c6e100aea170ce017f"
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "size": 17550283,
+      "sha256": "d11e59209647cbb73809b1cdaabb10ab8d96b566d2f745f86985864de78ac5c9",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648"
+    },
+    {
+      "filename": "Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "size": 1539653,
+      "sha256": "887e021305edffa3a4c699c2f71554ba8c96a8806ad64228a40e5e2dbdccafd6",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648"
+    },
+    {
+      "filename": "Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "size": 18042126,
+      "sha256": "43b333bba70ecd901f2a816f9407ad12d5e008a4fec38a4811f94ebe7295849e",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648"
+    },
+    {
+      "filename": "Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "size": 1540171,
+      "sha256": "ae067b1b82504f5b947db0c9bf2551ab5f4c841032034e9b432bc56f74cd0e55",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648"
+    }
+  ]
+}
