@@ -10770,6 +10770,25 @@
         "status": "online",
         "url": "https://simurg.csic.es/view/1722441"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897",
+      "title": "キホティータとそのいとこ",
+      "originalTitle": "La educación de las mujeres, ó La Quijotita y su prima",
+      "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
+      "originalAuthor": "José Joaquín Fernández de Lizardi",
+      "originalPublication": "メキシコ、J・バリェスカ商会後継社、1897年（バルセロナ、ホセ・エスパサ印刷所、1898年6月印刷完了）。",
+      "year": 1897,
+      "sourceEdition": "José Joaquín Fernández de Lizardi, La educación de las mujeres, ó La Quijotita y su prima. México: J. Ballescá y Compañía, Sucesor, 1897（標題紙）。Barcelona: José Espasa, 1898年6月（奥付）。",
+      "sourceProvider": "イリノイ大学アーバナ・シャンペーン校提供（Internet Archive公開）。",
+      "rights": "底本の本文と本訳に収録した別丁図版は、著作権の保護期間が満了している。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/3674623"
+      }
     }
   ],
   "works": [

@@ -10212,6 +10212,24 @@
       "url": "https://takochanchan.github.io/publications/venegas-juan-bautista-zappa-1754/cover.jpg",
       "size": 37193,
       "sha256": "b7679332f6e2734d328ee2e9f9b2cbd678ff4a6d2359a48d228210795d15ace6"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "size": 5841488,
+      "sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "size": 10132772,
+      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "size": 30389,
+      "sha256": "81a9bc588cdc7b92d786d9444a1cedaa9fcdf0fe019e7d821c4d8ae0920ad6f9"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { lizardiLaQuijotita1897PublicationRecords, lizardiLaQuijotita1897PublicationMetadata } from "./lizardi-la-quijotita-y-su-prima-1897-publication.mjs";
 import { venegasZappa1754PublicationRecords, venegasZappa1754PublicationMetadata } from "./venegas-juan-bautista-zappa-1754-publication.mjs";
 import { garciaLeonaVicario1910PublicationRecords, garciaLeonaVicario1910PublicationMetadata } from "./garcia-leona-vicario-1910-publication.mjs";
 import { clavijeroPublicationRecords, clavijeroPublicationMetadata } from "./clavijero-storia-della-california-publication.mjs";
@@ -356,6 +357,7 @@ const publicationRecords = [
   ...ramirezAparicio1861PublicationRecords,
   ...clavijeroPublicationRecords,
   ...garciaLeonaVicario1910PublicationRecords,
+  ...lizardiLaQuijotita1897PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
@@ -9524,6 +9526,7 @@ const publicationMetadata = {
   ...ramirezAparicio1861PublicationMetadata,
   ...clavijeroPublicationMetadata,
   ...garciaLeonaVicario1910PublicationMetadata,
+  ...lizardiLaQuijotita1897PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
