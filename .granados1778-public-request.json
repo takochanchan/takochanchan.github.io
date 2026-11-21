@@ -1,0 +1,44 @@
+{
+  "slug": "granados-tardes-americanas-1778",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "f99d41d57f99f90284d45e1424308d7e8cb6cb3f",
+  "verified_candidate_commit": "f8db481069958b706b2c1a90f2b0037fac76bdb6",
+  "bundle": {
+    "sha256": "d2902acc38130c1d781aac3ba3132f9f7895f0c071caf79d7baa4f69edb155db",
+    "size": 23009584,
+    "chunks": [
+      "de8384bde58b03ba0c0cde2c3b5ff236207d2ffe",
+      "1ff4ac486fe6804d1c650df2f8a79ce6c8a94092",
+      "e937e23e0c3e5a4aad0e6725cf4b179ab5051c0f",
+      "4715b811fa71c8cc40d54b9dfe81285e0722529e",
+      "edc50e686ff0db50e798a1d89adb3a6244c1df2a",
+      "8130643d57350f9ed02c0e77444fb3d032e80e4f",
+      "74742c81a5986d53e1f363ab4fa26d1392635888",
+      "f89345626d048254a967808d53d8b4b01281a525",
+      "636f546ab7e468082817a3b2ca3345d24271b97c",
+      "a3ebefe2d2f10cde82c7ccfd99315b9484c876e8",
+      "4364bbf780c84521178963896847b3bd716fddb2",
+      "fdd4ebff6fd604f91c5954df9d0a429b177292b2",
+      "57859caad43bd19a5861795b281eff4577a217aa",
+      "ee9d51eb0039d8080632add81dcea6f7b6c936a8",
+      "c3c59375b72d2fa360ae343f5e2ef27f1f5c4ef3",
+      "845d94695c1bf6b9c51308e4211f669e0804553c"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.pdf",
+      "size": 15056254,
+      "sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5",
+      "filename": "granados-tardes-americanas-1778-ja.pdf",
+      "slug": "granados-tardes-americanas-1778"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.epub",
+      "size": 8961382,
+      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9",
+      "filename": "granados-tardes-americanas-1778-ja.epub",
+      "slug": "granados-tardes-americanas-1778"
+    }
+  ]
+}
