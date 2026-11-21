@@ -1,0 +1,60 @@
+name: Transfer approved Granados 1778 publication files
+on:
+  push:
+    branches: [agent/granados1778-publish-20261122]
+    paths: [.granados1778-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: f8db481069958b706b2c1a90f2b0037fac76bdb6
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .granados1778-transfer.py stage "$RUNNER_TEMP/granados1778-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.granados1778-readback.py --expect ../transfer/.granados1778-expectations.json --html dist/publications/granados-tardes-americanas-1778/index.html
+          target=dist/publications/granados-tardes-americanas-1778
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/granados1778-assets/granados-tardes-americanas-1778-ja.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug granados-tardes-americanas-1778
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .granados1778-transfer.py transfer "$RUNNER_TEMP/granados1778-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: granados1778-public-verification
+          path: transfer/granados1778-public-verification.json
+          if-no-files-found: error
+
