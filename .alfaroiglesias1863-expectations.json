@@ -1,0 +1,103 @@
+{
+  "publication": {
+    "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+    "title": "メキシコの教会・修道院誌",
+    "originalTitle": "Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez",
+    "author": "ルイス・アルファロ・イ・ピニャ",
+    "originalAuthor": "Luis Alfaro y Piña",
+    "series": "RELACIÓN DESCRIPTIVA DE LAS IGLESIAS Y CONVENTOS DE MÉXICO · 1863",
+    "year": 1863,
+    "originalPublication": "メキシコ、M・ビリャヌエバ印刷所、1863年。",
+    "extent": "日本語版PDF 374頁",
+    "description": "メキシコ各地の教会・修道院の創設と奉献から、フアレス政権下の財産没収や建物の転用までを記した沿革誌。",
+    "cover": "publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+    "pdf": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+    "epub": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+    "pageCount": 374,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "教会史",
+      "建築史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "教会",
+      "修道院",
+      "ベニート・フアレス",
+      "レフォルマ",
+      "19世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "size": 3922588,
+      "sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a",
+      "filename": "alfaro-pina-iglesias-conventos-mexico-1863.pdf"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "size": 371438,
+      "sha256": "65d92504715fce9704407a275537bdb240bb359471aea43842c2785ca3d5e47e",
+      "filename": "alfaro-pina-iglesias-conventos-mexico-1863.epub"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "size": 47252,
+      "sha256": "48d3712b6fa7e179f13e1ca7188278dd53a862621358fcffaf61bf4c80c28ddf",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "ee0c7d053e64012b309756e3fe0805ca6282be5b58e9b1d53c50ea07474c4067"
+  },
+  "overview_sha256": "d986576d310c83c1b7f7c8acfe850aabdafa0c2d9878a722b599926819a3e873",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "ee0c7d053e64012b309756e3fe0805ca6282be5b58e9b1d53c50ea07474c4067",
+      "pdf_sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a",
+      "block_count": 3549,
+      "pdf_pages": 374,
+      "ordered_map_sha256": "d123bd8595ff51f60442af3ae67cb661a32e2cb56b76c208930732798d4d816f",
+      "mappingSummary": {
+        "exact": 3033,
+        "fingerprint": 165,
+        "fuzzy": 1,
+        "sourcePage": 348,
+        "inherited": 2,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    },
+    "epub": {
+      "sha256": "65d92504715fce9704407a275537bdb240bb359471aea43842c2785ca3d5e47e",
+      "pdf_sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a",
+      "block_count": 3548,
+      "pdf_pages": 374,
+      "ordered_map_sha256": "d85ee97fdc6485dc3a94e683996ffd40ea97b9b2451bd9d7bdabeb628fa37878",
+      "mappingSummary": {
+        "exact": 3032,
+        "fingerprint": 165,
+        "fuzzy": 1,
+        "sourcePage": 348,
+        "inherited": 2,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    }
+  }
+}
