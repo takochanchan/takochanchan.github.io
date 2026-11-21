@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "d4f971cff80ee35645330c00d5bfca7d8ad87ec4",
+  "archive_commit": "8b410131c935cf9e8d9728c65923e7574d6c945f",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -498,7 +498,8 @@
     "lizardi-la-quijotita-y-su-prima-1897": "publications/lizardi-la-quijotita-y-su-prima-1897/master.docx",
     "arroniz-ensayo-historia-de-orizaba-1867": "publications/arroniz-ensayo-historia-de-orizaba-1867/master.docx",
     "lazcano-juan-antonio-de-oviedo-1760": "publications/lazcano-juan-antonio-de-oviedo-1760/master.docx",
-    "zelaa-glorias-de-queretaro-1803": "publications/zelaa-glorias-de-queretaro-1803/master.docx"
+    "zelaa-glorias-de-queretaro-1803": "publications/zelaa-glorias-de-queretaro-1803/master.docx",
+    "alfaro-pina-iglesias-conventos-mexico-1863": "publications/alfaro-pina-iglesias-conventos-mexico-1863/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

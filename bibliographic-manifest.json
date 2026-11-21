@@ -10846,6 +10846,25 @@
         "status": "online",
         "url": "https://archive.org/details/gloriasdequereta00zela"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+      "title": "メキシコの教会・修道院誌",
+      "originalTitle": "Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez",
+      "author": "ルイス・アルファロ・イ・ピニャ",
+      "originalAuthor": "Luis Alfaro y Piña",
+      "originalPublication": "メキシコ、M・ビリャヌエバ印刷所、1863年。",
+      "year": 1863,
+      "sourceEdition": "Luis Alfaro y Piña, Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez. México: Tipografía de M. Villanueva, 1863.",
+      "sourceProvider": "ミシガン大学図書館所蔵、Googleデジタル化、Internet Archive公開。",
+      "rights": "原著はパブリックドメイン。公開画像のメタデータは米国での著作権状態を NOT_IN_COPYRIGHT と表示する。翻訳版に底本画像は転載していない。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/relaciondescrip00pigoog"
+      }
     }
   ],
   "works": [

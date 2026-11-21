@@ -10284,6 +10284,24 @@
       "url": "https://takochanchan.github.io/publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
       "size": 44662,
       "sha256": "77fa47db1e6487e9c1ad65f7821eddd718939075c1c0603e666c2d2622ee9d9b"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "size": 3922588,
+      "sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "size": 371438,
+      "sha256": "65d92504715fce9704407a275537bdb240bb359471aea43842c2785ca3d5e47e"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "size": 47252,
+      "sha256": "48d3712b6fa7e179f13e1ca7188278dd53a862621358fcffaf61bf4c80c28ddf"
     }
   ]
 }
