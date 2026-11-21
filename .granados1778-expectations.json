@@ -1,0 +1,151 @@
+{
+  "overview_paragraph_count": 4,
+  "public_facts": [
+    "389頁",
+    "4点",
+    "1778年",
+    "ジョン・カーター・ブラウン図書館",
+    "CC BY 4.0",
+    "パブリックドメイン"
+  ],
+  "publication": {
+    "slug": "granados-tardes-americanas-1778",
+    "title": "アメリカの午後",
+    "originalTitle": "Tardes americanas",
+    "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
+    "originalAuthor": "José Joaquín Granados y Gálvez",
+    "series": "TARDES AMERICANAS · 1778",
+    "year": 1778,
+    "originalPublication": "メキシコ、フェリペ・デ・スニガ・イ・オンティベロスのヌエバ・インプレンタ・マトリテンセ、1778年（扉の刊年）。",
+    "extent": "日本語版PDF 389頁",
+    "description": "先住民とスペイン人の十七回の対話を通じ、征服前のアナワクの諸社会・暦・宮廷文化から、ヌエバ・エスパーニャの統治、宣教、病院事業までを論じる歴史書。",
+    "cover": "publications/granados-tardes-americanas-1778/cover.jpg",
+    "pdf": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.pdf",
+    "epub": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.epub",
+    "pageCount": 389,
+    "figureCount": 1,
+    "plateCount": 3,
+    "types": [
+      "歴史書",
+      "教会史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "オトミ語"
+    ],
+    "tags": [
+      "ヌエバ・エスパーニャ",
+      "アナワク",
+      "暦法",
+      "先住民",
+      "植民地統治"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.pdf",
+      "size": 15056254,
+      "sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5",
+      "filename": "granados-tardes-americanas-1778-ja.pdf"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.epub",
+      "size": 8961382,
+      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9",
+      "filename": "granados-tardes-americanas-1778-ja.epub"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/granados-tardes-americanas-1778/cover.jpg",
+      "size": 83017,
+      "sha256": "c1752e944b61070e84044facfbb12fce7c17a9873354bffdf635fcbc0dbb39a5",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "9aab3e7b96c898e45ae218d6dd6d942788c512f435812fc80b699eb0aa75eab6"
+  },
+  "overview_sha256": "9c39eeb757d9c0b875c7d81edf8bb9145ad9440f9ce6924cca3d1c3b94d03f14",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "9aab3e7b96c898e45ae218d6dd6d942788c512f435812fc80b699eb0aa75eab6",
+      "pdf_sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5",
+      "block_count": 2928,
+      "pdf_pages": 389,
+      "distinct_numbered_locators": 612,
+      "front_locators": 72,
+      "printed_locators": 540,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 2681,
+        "fingerprint": 222,
+        "fuzzy": 9,
+        "sourcePage": 11,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "b65539afca8b5b600a15153211deb238a291abda2053fadd37a98feb2f90ada6",
+      "folio_sample_physical_pages": {
+        "原刊p.[1]": 3,
+        "原刊p.[36]": 23,
+        "原刊p.[72]": 47,
+        "原刊p.1": 48,
+        "原刊p.56": 83,
+        "原刊p.271［172］": 155,
+        "原刊p.271": 218,
+        "原刊p.526": 380,
+        "原刊p.527": 381,
+        "原刊p.536［539］": 389,
+        "原刊p.540": 389
+      },
+      "ordered_map_sha256": "15697e496477e677b7773d1a52b4d445e3ed0160e1d09d908aae36bddf57eeb8"
+    },
+    "epub": {
+      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9",
+      "pdf_sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5",
+      "block_count": 2927,
+      "pdf_pages": 389,
+      "distinct_numbered_locators": 612,
+      "front_locators": 72,
+      "printed_locators": 540,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 2680,
+        "fingerprint": 222,
+        "fuzzy": 9,
+        "sourcePage": 11,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "1354a9098611c409497bef31c90bda9863b123ae85e716fac999fd755ab83a81",
+      "folio_sample_physical_pages": {
+        "原刊p.[1]": 3,
+        "原刊p.[36]": 23,
+        "原刊p.[72]": 47,
+        "原刊p.1": 48,
+        "原刊p.56": 83,
+        "原刊p.271［172］": 155,
+        "原刊p.271": 218,
+        "原刊p.526": 380,
+        "原刊p.527": 381,
+        "原刊p.536［539］": 389,
+        "原刊p.540": 389
+      },
+      "ordered_map_sha256": "ee76365f5dc0e838f1b1191070455fb7f2aee528d9bbf1853cc01a2fe239d332"
+    }
+  }
+}
