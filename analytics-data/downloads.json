@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-19",
-  "updatedAt": "2026-11-20T01:47:18.364Z",
+  "endDate": "2026-11-20",
+  "updatedAt": "2026-11-21T01:33:38.235Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -8967,6 +8967,166 @@
       "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
       "title": "メキシコのアラメダの朝",
       "volumeLabel": "第2巻（1836年）",
+      "format": "epub"
+    },
+    {
+      "key": "dl_3f26eea65f2ca360",
+      "name": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_07fda161557db914",
+      "name": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_74740d2c136d57a3",
+      "name": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_0102e07490b78591",
+      "name": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1b10470d8fda0efa",
+      "name": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+      "title": "メキシコの廃止修道院",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7a569e76f93ff462",
+      "name": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+      "title": "メキシコの廃止修道院",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_eafeb2e5e870ff0f",
+      "name": "clavijero-storia-della-california-tomo-1-1789.pdf",
+      "slug": "clavijero-storia-della-california-1789",
+      "title": "カリフォルニア史",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_0c37e0043691f2e5",
+      "name": "clavijero-storia-della-california-tomo-1-1789.epub",
+      "slug": "clavijero-storia-della-california-1789",
+      "title": "カリフォルニア史",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7aeacb81c43c1834",
+      "name": "clavijero-storia-della-california-tomo-2-1789.pdf",
+      "slug": "clavijero-storia-della-california-1789",
+      "title": "カリフォルニア史",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_374704df35d55d90",
+      "name": "clavijero-storia-della-california-tomo-2-1789.epub",
+      "slug": "clavijero-storia-della-california-1789",
+      "title": "カリフォルニア史",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_77df3b28c62441a8",
+      "name": "garcia-leona-vicario-1910.pdf",
+      "slug": "garcia-leona-vicario-1910",
+      "title": "独立の志士レオナ・ビカリオ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e24029ef34f9898c",
+      "name": "garcia-leona-vicario-1910.epub",
+      "slug": "garcia-leona-vicario-1910",
+      "title": "独立の志士レオナ・ビカリオ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_cb300e0902e178a8",
+      "name": "lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897",
+      "title": "キホティータとそのいとこ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_31cd7cf66a7dfe8c",
+      "name": "lizardi-la-quijotita-y-su-prima-1897.epub",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897",
+      "title": "キホティータとそのいとこ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7f87afbccd87ffaa",
+      "name": "venegas-juan-bautista-zappa-1754.pdf",
+      "slug": "venegas-juan-bautista-zappa-1754",
+      "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_487f8f351102c592",
+      "name": "venegas-juan-bautista-zappa-1754.epub",
+      "slug": "venegas-juan-bautista-zappa-1754",
+      "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_02d18e622b314d3c",
+      "name": "Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "title": "インディアス政策論",
+      "volumeLabel": "第1冊 前付・第I〜III書",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ec2c7034496733c8",
+      "name": "Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "title": "インディアス政策論",
+      "volumeLabel": "第1冊 前付・第I〜III書",
+      "format": "epub"
+    },
+    {
+      "key": "dl_3eefd67d3314a709",
+      "name": "Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "title": "インディアス政策論",
+      "volumeLabel": "第2冊 第IV〜VI書・増補・巻末索引",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e32980595b67e393",
+      "name": "Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "title": "インディアス政策論",
+      "volumeLabel": "第2冊 第IV〜VI書・増補・巻末索引",
       "format": "epub"
     }
   ],
