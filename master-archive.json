@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f99d41d57f99f90284d45e1424308d7e8cb6cb3f",
+  "archive_commit": "0f76b2be0094c04ec5ba29a15901afc3fb288994",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -502,7 +502,8 @@
     "alfaro-pina-iglesias-conventos-mexico-1863": "publications/alfaro-pina-iglesias-conventos-mexico-1863/master.docx",
     "de-la-cruz-badiano-libellus-1552": "publications/de-la-cruz-badiano-libellus-1552/master.docx",
     "florencia-estrella-norte-mexico-1688": "publications/florencia-estrella-norte-mexico-1688/master.docx",
-    "granados-tardes-americanas-1778": "publications/granados-tardes-americanas-1778/master.docx"
+    "granados-tardes-americanas-1778": "publications/granados-tardes-americanas-1778/master.docx",
+    "mota-padilla-conquista-nueva-galicia-1870": "publications/mota-padilla-conquista-nueva-galicia-1870/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

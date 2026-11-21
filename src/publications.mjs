@@ -1,3 +1,4 @@
+import { motaPadillaConquistaNuevaGalicia1870PublicationRecords, motaPadillaConquistaNuevaGalicia1870PublicationMetadata } from "./mota-padilla-conquista-nueva-galicia-1870-publication.mjs";
 import { granadosTardesAmericanas1778PublicationRecords, granadosTardesAmericanas1778PublicationMetadata } from "./granados-tardes-americanas-1778-publication.mjs";
 import { florenciaEstrellaNorteMexico1688PublicationRecords, florenciaEstrellaNorteMexico1688PublicationMetadata } from "./florencia-estrella-norte-mexico-1688-publication.mjs";
 import { deLaCruzBadianoLibellus1552PublicationRecords, deLaCruzBadianoLibellus1552PublicationMetadata } from "./de-la-cruz-badiano-libellus-1552-publication.mjs";
@@ -371,6 +372,7 @@ const publicationRecords = [
   ...alfaroPinaIglesiasConventos1863PublicationRecords,
   ...deLaCruzBadianoLibellus1552PublicationRecords,
   ...florenciaEstrellaNorteMexico1688PublicationRecords,
+  ...motaPadillaConquistaNuevaGalicia1870PublicationRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
@@ -9547,6 +9549,7 @@ const publicationMetadata = {
   ...alfaroPinaIglesiasConventos1863PublicationMetadata,
   ...deLaCruzBadianoLibellus1552PublicationMetadata,
   ...florenciaEstrellaNorteMexico1688PublicationMetadata,
+  ...motaPadillaConquistaNuevaGalicia1870PublicationMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,

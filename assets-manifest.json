@@ -10356,6 +10356,24 @@
       "url": "https://takochanchan.github.io/publications/granados-tardes-americanas-1778/cover.jpg",
       "size": 83017,
       "sha256": "c1752e944b61070e84044facfbb12fce7c17a9873354bffdf635fcbc0dbb39a5"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "size": 5473419,
+      "sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "size": 1814265,
+      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "size": 86590,
+      "sha256": "17f0374879723f76271fa9b95af4d7d3edcf530f317816e4741dad383aa81992"
     }
   ]
 }
