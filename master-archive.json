@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "0bb69080a6899ad6641dc4857e40d5ccaeebb59b",
+  "archive_commit": "a3f6e76bf2a787c431163667f121f04a210d8892",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -500,7 +500,8 @@
     "lazcano-juan-antonio-de-oviedo-1760": "publications/lazcano-juan-antonio-de-oviedo-1760/master.docx",
     "zelaa-glorias-de-queretaro-1803": "publications/zelaa-glorias-de-queretaro-1803/master.docx",
     "alfaro-pina-iglesias-conventos-mexico-1863": "publications/alfaro-pina-iglesias-conventos-mexico-1863/master.docx",
-    "de-la-cruz-badiano-libellus-1552": "publications/de-la-cruz-badiano-libellus-1552/master.docx"
+    "de-la-cruz-badiano-libellus-1552": "publications/de-la-cruz-badiano-libellus-1552/master.docx",
+    "florencia-estrella-norte-mexico-1688": "publications/florencia-estrella-norte-mexico-1688/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

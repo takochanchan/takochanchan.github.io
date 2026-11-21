@@ -10320,6 +10320,24 @@
       "url": "https://takochanchan.github.io/publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
       "size": 51911,
       "sha256": "876168575366a37b5b52e3e262af71c29f9a61d94066807ffc990950f5dc090d"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.pdf",
+      "size": 8152481,
+      "sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.epub",
+      "size": 5040464,
+      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "size": 46717,
+      "sha256": "69d59f1bffd35f752a0cd76774646968b1eeb99ef0a265589ee5a345a85963c1"
     }
   ]
 }

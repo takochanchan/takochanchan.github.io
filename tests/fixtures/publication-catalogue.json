@@ -3288,6 +3288,13 @@
       "searchShard": "003",
       "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "florencia-estrella-norte-mexico-1688",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・フロレンシア",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [

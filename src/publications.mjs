@@ -1,3 +1,4 @@
+import { florenciaEstrellaNorteMexico1688PublicationRecords, florenciaEstrellaNorteMexico1688PublicationMetadata } from "./florencia-estrella-norte-mexico-1688-publication.mjs";
 import { deLaCruzBadianoLibellus1552PublicationRecords, deLaCruzBadianoLibellus1552PublicationMetadata } from "./de-la-cruz-badiano-libellus-1552-publication.mjs";
 import { alfaroPinaIglesiasConventos1863PublicationRecords, alfaroPinaIglesiasConventos1863PublicationMetadata } from "./alfaro-pina-iglesias-conventos-mexico-1863-publication.mjs";
 import { zelaaGloriasDeQueretaro1803PublicationRecords, zelaaGloriasDeQueretaro1803PublicationMetadata } from "./zelaa-glorias-de-queretaro-1803-publication.mjs";
@@ -368,6 +369,7 @@ const publicationRecords = [
   ...zelaaGloriasDeQueretaro1803PublicationRecords,
   ...alfaroPinaIglesiasConventos1863PublicationRecords,
   ...deLaCruzBadianoLibellus1552PublicationRecords,
+  ...florenciaEstrellaNorteMexico1688PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
@@ -9542,6 +9544,7 @@ const publicationMetadata = {
   ...zelaaGloriasDeQueretaro1803PublicationMetadata,
   ...alfaroPinaIglesiasConventos1863PublicationMetadata,
   ...deLaCruzBadianoLibellus1552PublicationMetadata,
+  ...florenciaEstrellaNorteMexico1688PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,
