@@ -1,0 +1,104 @@
+{
+  "publication": {
+    "slug": "zelaa-glorias-de-queretaro-1803",
+    "title": "ケレタロの栄光",
+    "originalTitle": "Glorias de Querétaro",
+    "author": "ホセ・マリア・セラア・エ・イダルゴ",
+    "originalAuthor": "José María Zelaá e Hidalgo",
+    "series": "GLORIAS DE QUERÉTARO · 1803",
+    "year": 1803,
+    "originalPublication": "メキシコ、マリアノ・ホセ・デ・スニガ・イ・オンティベロス印刷所、1803年。",
+    "extent": "日本語版PDF 193頁",
+    "description": "ケレタロの街と宗教施設、グアダルーペの聖母に奉仕する聖職者会の沿革を描く都市誌。1802年の市街図とグアダルーペ聖堂の平面・立面図を収録。",
+    "cover": "publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+    "pdf": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.pdf",
+    "epub": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.epub",
+    "pageCount": 193,
+    "figureCount": 0,
+    "plateCount": 2,
+    "types": [
+      "都市史",
+      "教会史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "ケレタロ",
+      "グアダルーペの聖母",
+      "聖イポリト会",
+      "植民地都市",
+      "19世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.pdf",
+      "size": 24233309,
+      "sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014",
+      "filename": "zelaa-glorias-de-queretaro-1803.pdf"
+    },
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.epub",
+      "size": 22109995,
+      "sha256": "7965f44de3746297a69fb5bea971eb28670741e56bff51edddb57fcb164259a5",
+      "filename": "zelaa-glorias-de-queretaro-1803.epub"
+    },
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "size": 44662,
+      "sha256": "77fa47db1e6487e9c1ad65f7821eddd718939075c1c0603e666c2d2622ee9d9b",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "ef9818e56e4e5339d386b746aec03ce66f65080e22debfed994cdbc1674830a6"
+  },
+  "overview_sha256": "dcdb1b6e436e3b630d8dd859a9d74c43af2534086e14a85c033d87d71ecd9267",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "ef9818e56e4e5339d386b746aec03ce66f65080e22debfed994cdbc1674830a6",
+      "pdf_sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014",
+      "block_count": 1481,
+      "pdf_pages": 193,
+      "mappingSummary": {
+        "exact": 1349,
+        "fingerprint": 118,
+        "fuzzy": 1,
+        "sourcePage": 9,
+        "inherited": 4,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "ordered_map_sha256": "118af141ab6e1d9788db4267505c4b375fdd70566c66901989dd1984f56c67c6"
+    },
+    "epub": {
+      "sha256": "7965f44de3746297a69fb5bea971eb28670741e56bff51edddb57fcb164259a5",
+      "pdf_sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014",
+      "block_count": 1480,
+      "pdf_pages": 193,
+      "mappingSummary": {
+        "exact": 1348,
+        "fingerprint": 118,
+        "fuzzy": 1,
+        "sourcePage": 9,
+        "inherited": 4,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "ordered_map_sha256": "5d57f34387bdb9788d5c246bcc735e3a4ee5d43143fbe682e8152b821fbce78f"
+    }
+  }
+}
