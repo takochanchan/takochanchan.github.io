@@ -1,3 +1,4 @@
+import { deLaCruzBadianoLibellus1552PublicationRecords, deLaCruzBadianoLibellus1552PublicationMetadata } from "./de-la-cruz-badiano-libellus-1552-publication.mjs";
 import { alfaroPinaIglesiasConventos1863PublicationRecords, alfaroPinaIglesiasConventos1863PublicationMetadata } from "./alfaro-pina-iglesias-conventos-mexico-1863-publication.mjs";
 import { zelaaGloriasDeQueretaro1803PublicationRecords, zelaaGloriasDeQueretaro1803PublicationMetadata } from "./zelaa-glorias-de-queretaro-1803-publication.mjs";
 import { lazcanoJuanAntonioOviedo1760PublicationRecords, lazcanoJuanAntonioOviedo1760PublicationMetadata } from "./lazcano-juan-antonio-de-oviedo-1760-publication.mjs";
@@ -366,6 +367,7 @@ const publicationRecords = [
   ...lazcanoJuanAntonioOviedo1760PublicationRecords,
   ...zelaaGloriasDeQueretaro1803PublicationRecords,
   ...alfaroPinaIglesiasConventos1863PublicationRecords,
+  ...deLaCruzBadianoLibellus1552PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
@@ -9539,6 +9541,7 @@ const publicationMetadata = {
   ...lazcanoJuanAntonioOviedo1760PublicationMetadata,
   ...zelaaGloriasDeQueretaro1803PublicationMetadata,
   ...alfaroPinaIglesiasConventos1863PublicationMetadata,
+  ...deLaCruzBadianoLibellus1552PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,

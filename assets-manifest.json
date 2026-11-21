@@ -10302,6 +10302,24 @@
       "url": "https://takochanchan.github.io/publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
       "size": 47252,
       "sha256": "48d3712b6fa7e179f13e1ca7188278dd53a862621358fcffaf61bf4c80c28ddf"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.pdf",
+      "size": 23710229,
+      "sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.epub",
+      "size": 22408837,
+      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "size": 51911,
+      "sha256": "876168575366a37b5b52e3e262af71c29f9a61d94066807ffc990950f5dc090d"
     }
   ]
 }
