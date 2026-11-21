@@ -1,0 +1,45 @@
+{
+  "slug": "lazcano-juan-antonio-de-oviedo-1760",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "53e8148b92e749a6b7b12fc12f0c316fe63c482d",
+  "verified_candidate_commit": "52e4daca3869aa2fce7ce7c17080c20c8269149a",
+  "bundle": {
+    "sha256": "7c88fddae1d380517e6a5fd8aae89d9b41c70618ebaa1609b60d5baef88fa7f4",
+    "size": 24666716,
+    "chunks": [
+      "25a4b419960d8038a3041348865e60d271df6cbf",
+      "4fa2a61a1a3b6a992d00b757dbec0399dd9213aa",
+      "636c460edc1ee184114f0b20fef95ad61e081971",
+      "c1ff84ac5b846576b8a400feb36a123ec7da9c17",
+      "7d137380e92ae0f46357bc4bcea68b4ddd2e007a",
+      "710e8a5f12fcba38e7ac1a0d0e9f26631d7f4456",
+      "69165866468528835ed210ed5a7a4fc01bd53eb9",
+      "e938ed177afad084d0e17583b94743644276a4d2",
+      "da901a06695239dcb2ad95b4a580d2f2245379b3",
+      "f12be35d71708cbd062faeb0aecb3252752816d2",
+      "0ab48824292ae7a82605aa36ffdf8fd84257c82e",
+      "adc47fe5b44889d369b2a58f54092714375db279",
+      "82b0822dea16ee161d086b3a79fd731326a11175",
+      "caad1196d6a21660253fa1182a910a458f4105b2",
+      "4bde404e830ff75743b3e0f39c675a42d38a0710",
+      "5a8141966c8cd6849b1e196ced9e77e2c4b0f365",
+      "eb3eafc4a829aadc02972237a3a2233ae91f440f"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "size": 14934709,
+      "sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d",
+      "filename": "lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "size": 10923235,
+      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90",
+      "filename": "lazcano-juan-antonio-de-oviedo-1760.epub",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760"
+    }
+  ]
+}
