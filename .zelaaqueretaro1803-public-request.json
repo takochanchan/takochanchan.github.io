@@ -1,0 +1,59 @@
+{
+  "slug": "zelaa-glorias-de-queretaro-1803",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "d4f971cff80ee35645330c00d5bfca7d8ad87ec4",
+  "verified_candidate_commit": "d0635b95585205a3e21469872ff8b9faa779b717",
+  "bundle": {
+    "sha256": "e28b9dfcfe0406178168b1e73ac90c1944299adbc5d3122e69eef6414c9f9b38",
+    "size": 45702796,
+    "chunks": [
+      "86a1492259a674afeaf33c039563c5aa39ca4e4a",
+      "d78d6ca3e94c7a52d4905bd4ad5564f8e37d62cb",
+      "449e1c201fbefae00d933de91fb07a0a7f54a4e1",
+      "3f6035d456f258b5ac64bfe6333af6c46ab734be",
+      "2725c3139ef1b08c2aa90819d4c0a13f93b8883e",
+      "b39e6a1e17f40d35dabb7fccf64c461d238ffb13",
+      "fe7231b92f17dacd9b56a028c1bc4518a098b95a",
+      "2af56da6fe09366734ef329e8539ff21288413cd",
+      "6284a2abef9823d5bc8ba54a1be15e66fb37b7f9",
+      "3012f44758163a317cf1b2b9bbb805b902221f31",
+      "f0ed213bd6933f483709482b2765dfc7b310985d",
+      "46d1c208923c5afb24a13cea59b880af56e3ea13",
+      "d133e1a64e979a3a659e859e76c15fc665a0c416",
+      "888029485a0e95bb3f6c5a03930578fd3978ab21",
+      "bc5d59d2ec48921d1f73a0d9a2aa5758083de565",
+      "3c0a0b1807e829a8bed6c9c06404fdf0b93a6b5e",
+      "e3e4792c2143a579729ee8c9895df8f4c07d5e77",
+      "4eb400734af5458bc802117216feff3ca5f12bf7",
+      "9564f3d76e208a4682b0edfd25dec3fd5572ca8a",
+      "85f8fe8bebd6504579bc7cd2b7e8e4be57f3cd7c",
+      "24f1a76fa3c9b3640d16fe3fdb85be3020452667",
+      "f1cf5d765f73cb1b962b1f6ef15b6b1c6503c7d5",
+      "81a63b49dc5019152cbb105d7014aa570429fd0d",
+      "982c189485a426c99dfdecf2f2e990faccd5de69",
+      "19cf16391e11a5d2551875abdf9602220fd882df",
+      "ac3e0d7cd2f3d714b27bbe4434bb496828e38f3c",
+      "768659fba08b748e02b1b07cb85131ef00a30dc6",
+      "d012a07aebba65b6d758808890076155f127b453",
+      "821f57b0233aef22085337a6074da86e01fcd637",
+      "5232ee4a4aa664de6d616721367188dab19329a3",
+      "0cb2728880258f1df8b03d0803b90ce06fe41653"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.pdf",
+      "size": 24233309,
+      "sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014",
+      "filename": "zelaa-glorias-de-queretaro-1803.pdf",
+      "slug": "zelaa-glorias-de-queretaro-1803"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.epub",
+      "size": 22109995,
+      "sha256": "7965f44de3746297a69fb5bea971eb28670741e56bff51edddb57fcb164259a5",
+      "filename": "zelaa-glorias-de-queretaro-1803.epub",
+      "slug": "zelaa-glorias-de-queretaro-1803"
+    }
+  ]
+}
