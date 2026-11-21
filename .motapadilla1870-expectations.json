@@ -1,0 +1,182 @@
+{
+  "overview_paragraph_count": 3,
+  "public_facts": [
+    "765頁",
+    "3点",
+    "1870年",
+    "トロント大学ロバーツ図書館",
+    "パブリック・ドメイン・マーク1.0",
+    "セルバンテス仮想図書館"
+  ],
+  "publication": {
+    "slug": "mota-padilla-conquista-nueva-galicia-1870",
+    "title": "ヌエバ・ガリシア征服史",
+    "originalTitle": "Historia de la conquista de la provincia de la Nueva-Galicia",
+    "author": "マティアス・デ・ラ・モタ・パディリャ",
+    "originalAuthor": "Matías de la Mota Padilla",
+    "series": "HISTORIA DE LA CONQUISTA DE LA NUEVA-GALICIA · 1870",
+    "year": 1870,
+    "originalPublication": "メキシコ、メキシコ地理統計学会刊、政府印刷所（ホセ・マリア・サンドバル担当）。扉は1870年、実刊は1871年2月～1872年6月。",
+    "extent": "日本語版PDF 765頁",
+    "description": "メキシコ西部の征服と先住民の抵抗から、グアダラハラの統治・教会・病院、ナヤリト征服、北方諸地域の地誌までを記す全96章。1742年著述。1870年刊記の学会版に拠る。",
+    "cover": "publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+    "pdf": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+    "epub": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+    "pageCount": 765,
+    "figureCount": 0,
+    "plateCount": 3,
+    "types": [
+      "歴史書",
+      "教会史"
+    ],
+    "regions": [
+      "メキシコ",
+      "アメリカ合衆国"
+    ],
+    "languages": [
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "ヌエバ・ガリシア",
+      "グアダラハラ",
+      "ヌエバ・エスパーニャ",
+      "ナヤリト",
+      "先住民",
+      "植民地統治",
+      "ベツレヘム会"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "size": 5473419,
+      "sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382",
+      "filename": "mota-padilla-conquista-nueva-galicia-1870-ja.pdf"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "size": 1814265,
+      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b",
+      "filename": "mota-padilla-conquista-nueva-galicia-1870-ja.epub"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "size": 86590,
+      "sha256": "17f0374879723f76271fa9b95af4d7d3edcf530f317816e4741dad383aa81992",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "59a8c4fe23cc4a0249fb3fc96cdacaf22c56d39f36584dd0fa6d8eadbd7945c0"
+  },
+  "overview_sha256": "c41366262470eb03522125b506039644ca620a8b2cd89fde6ee7d88ac54d7d52",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "59a8c4fe23cc4a0249fb3fc96cdacaf22c56d39f36584dd0fa6d8eadbd7945c0",
+      "pdf_sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382",
+      "block_count": 6140,
+      "pdf_pages": 765,
+      "distinct_numbered_locators": 539,
+      "archival_numbered_locators": 540,
+      "roman_x_physical_verification": [
+        {
+          "id": "b00086",
+          "pdfPage": 13,
+          "originalPage": "原刊 p. IX",
+          "alignment": "exact"
+        },
+        {
+          "id": "b00088",
+          "pdfPage": 14,
+          "originalPage": "原刊 p. IX",
+          "alignment": "exact"
+        }
+      ],
+      "original_labels_not_assigned_to_chunks": [
+        "原刊p.X"
+      ],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 5401,
+        "fingerprint": 516,
+        "fuzzy": 0,
+        "sourcePage": 222,
+        "inherited": 1,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "60e11cd3b8a1b79763592dd5c9f556cc7d2e3a21f2cfcc1033a07d446971323b",
+      "folio_sample_physical_pages": {
+        "原刊p.I": 3,
+        "原刊p.XIII": 18,
+        "原刊p.1": 27,
+        "原刊p.188": 285,
+        "原刊p.189": 288,
+        "原刊p.237": 353,
+        "原刊p.293": 428,
+        "原刊p.470": 672,
+        "原刊p.518": 736,
+        "原刊p.523": 742
+      },
+      "ordered_map_sha256": "ce4d2b0aa0a4856800ad8bdb364a438b538deb5fd588da05b04c3d1cd5d019d3"
+    },
+    "epub": {
+      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b",
+      "pdf_sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382",
+      "block_count": 6141,
+      "pdf_pages": 765,
+      "distinct_numbered_locators": 539,
+      "archival_numbered_locators": 540,
+      "roman_x_physical_verification": [
+        {
+          "id": "b00085",
+          "pdfPage": 13,
+          "originalPage": "原刊 p. IX",
+          "alignment": "exact"
+        },
+        {
+          "id": "b00087",
+          "pdfPage": 14,
+          "originalPage": "原刊 p. IX",
+          "alignment": "exact"
+        }
+      ],
+      "original_labels_not_assigned_to_chunks": [
+        "原刊p.X"
+      ],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 5401,
+        "fingerprint": 516,
+        "fuzzy": 0,
+        "sourcePage": 223,
+        "inherited": 1,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "c30b8744d2b2cfc9cad842c44c842ed6f0d18663707fd57f777b13b2a206b312",
+      "folio_sample_physical_pages": {
+        "原刊p.I": 3,
+        "原刊p.XIII": 18,
+        "原刊p.1": 27,
+        "原刊p.188": 285,
+        "原刊p.189": 288,
+        "原刊p.237": 353,
+        "原刊p.293": 428,
+        "原刊p.470": 672,
+        "原刊p.518": 736,
+        "原刊p.523": 742
+      },
+      "ordered_map_sha256": "6217bd997dcc9443a33a3badac7846e3912c320654be38404d03a3e6321f4155"
+    }
+  }
+}
