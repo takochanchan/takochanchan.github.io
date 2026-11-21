@@ -1,0 +1,59 @@
+{
+  "slug": "de-la-cruz-badiano-libellus-1552",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "0bb69080a6899ad6641dc4857e40d5ccaeebb59b",
+  "verified_candidate_commit": "506fcb046b94e10afef93125ea2422e5a2071dba",
+  "bundle": {
+    "sha256": "4c4d3b2c0552c51d62ce1ed7bf351a3e863accc5d6c4b2c9d302eefd01b829a0",
+    "size": 45726945,
+    "chunks": [
+      "7ee1152d31efa0bdfceffb3c767587c22a39a733",
+      "1f625c5d5ae5a74028870eb6f9ffa4e4d6d3361d",
+      "704e8cef9cbd16f3993b591703aad93667c810cf",
+      "2fc41dd8faf10eacb2afa95a0b0d16616de0790e",
+      "18d00e4fccaee22d6c22402e782665591f5c0e63",
+      "0a6c1df4bf0e76389f707c22d032292bb9cee531",
+      "3f1f8e6e98821e4f360142e01041bb201d3c5f5d",
+      "75e3f665d1d00888764f53bbbf506aed0e0947b8",
+      "d5e07b1c245879a487182a32c3417ac1c92acc4c",
+      "4c69f173fcbfb47aed2b86306f691f4d35ae2449",
+      "d78a37e6230978ebe93b81549dd0f0912eb99454",
+      "56827d3c00c50f4b4f5a0930be0efc2971bdc7ba",
+      "8bade55276b01323eba48850d60310ae0fb51c24",
+      "18c64e9ede0f12f99a7f7c34a82ccd1bdeb17379",
+      "331b54c93d3e1b4139623045d1d452ec1cac0a21",
+      "e13e4c25fb4f4711a32e1bdd8ba5e9f28980067a",
+      "68f5b242fc2ea1267dbbbdbdd0e4a9be6f1095a7",
+      "079dcfb858d976afb5d845b68bc4e36d9d17c694",
+      "e1b691cd78bb88a159970201853b05be793486b7",
+      "7f51af59aba13b5f83444839a05ffd5f2401147d",
+      "accc08bd354e13116b36803b3b876c8927c0ac45",
+      "eba49f12d7471588b80039b3b8cdea3d6db55a0e",
+      "7993fcb013041b305898962d8b1c40673b42c66b",
+      "00b06ba7020ad83db07dcf78fe4c2efc11599ea2",
+      "9b2b43d7f9afa17e5328a0581348700e5961875f",
+      "b4a17aac638e9a54392b63d2c21aeb1e8d5f7417",
+      "65df36d728aa9092b84b84c690f4623fcd6d77bb",
+      "00c9f1135e0d72aacaa927487737f1351e573dea",
+      "8cd93bd1efca2c57a224ef00398bd39ca374b87b",
+      "2088ec5c4d1ff19edbc627fbe58f3754f6985eb9",
+      "2a53513a0e347cdec03a11f5b3408ab9e58c5b05"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.pdf",
+      "size": 23710229,
+      "sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb",
+      "filename": "de-la-cruz-badiano-libellus-1552.pdf",
+      "slug": "de-la-cruz-badiano-libellus-1552"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.epub",
+      "size": 22408837,
+      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf",
+      "filename": "de-la-cruz-badiano-libellus-1552.epub",
+      "slug": "de-la-cruz-badiano-libellus-1552"
+    }
+  ]
+}
