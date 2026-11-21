@@ -1,0 +1,108 @@
+{
+  "publication": {
+    "slug": "lazcano-juan-antonio-de-oviedo-1760",
+    "title": "フアン・アントニオ・デ・オビエド神父伝",
+    "originalTitle": "Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús",
+    "subtitle": "模範とすべき生涯",
+    "author": "フランシスコ・ハビエル・ラスカノ",
+    "originalAuthor": "Francisco Javier Lazcano",
+    "series": "VIDA EXEMPLAR DE JUAN ANTONIO DE OVIEDO · 1760",
+    "year": 1760,
+    "originalPublication": "メキシコ、王立最古のサン・イルデフォンソ学院印刷所、1760年。",
+    "extent": "日本語版PDF 562頁",
+    "description": "グアテマラでの入会、ヨーロッパへの派遣、フィリピン巡察、ヌエバ・エスパーニャ管区長時代とマリア崇敬を描くイエズス会士の伝記。全5巻64章。",
+    "cover": "publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+    "pdf": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.pdf",
+    "epub": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.epub",
+    "pageCount": 562,
+    "figureCount": 0,
+    "plateCount": 2,
+    "types": [
+      "伝記",
+      "教会史"
+    ],
+    "regions": [
+      "メキシコ",
+      "グアテマラ",
+      "フィリピン"
+    ],
+    "languages": [
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "イエズス会",
+      "ヌエバ・エスパーニャ",
+      "グアダルーペの聖母",
+      "フィリピン",
+      "グアテマラ",
+      "18世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "size": 14934709,
+      "sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d",
+      "filename": "lazcano-juan-antonio-de-oviedo-1760.pdf"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "size": 10923235,
+      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90",
+      "filename": "lazcano-juan-antonio-de-oviedo-1760.epub"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "size": 51901,
+      "sha256": "1b573907196a0887d2a8ef05e98495e3cf72724fce376b3537cd75cb8e99148c",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "0c47ec967d02044d42e928257bb800d26c73b989db982aff14d7d6f4fc799369"
+  },
+  "overview_sha256": "9644ffc71eceead82baa51a6e884ff6937a8440f629fdf39947b41a78950fadf",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "0c47ec967d02044d42e928257bb800d26c73b989db982aff14d7d6f4fc799369",
+      "pdf_sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d",
+      "block_count": 4563,
+      "pdf_pages": 562,
+      "ordered_map_sha256": "c1bd120271a9a938f75c9d71f54bad11b33991aff36635320af0d0c7021d5aa2",
+      "mappingSummary": {
+        "exact": 3821,
+        "fingerprint": 353,
+        "fuzzy": 0,
+        "sourcePage": 384,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    },
+    "epub": {
+      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90",
+      "pdf_sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d",
+      "block_count": 4564,
+      "pdf_pages": 562,
+      "ordered_map_sha256": "4e86b86d1f70104c04659099106ce3aaeec674644c3b01f95a71b03b406e756f",
+      "mappingSummary": {
+        "exact": 3822,
+        "fingerprint": 353,
+        "fuzzy": 0,
+        "sourcePage": 384,
+        "inherited": 5,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    }
+  }
+}
