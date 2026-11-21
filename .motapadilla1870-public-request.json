@@ -1,0 +1,33 @@
+{
+  "slug": "mota-padilla-conquista-nueva-galicia-1870",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "0f76b2be0094c04ec5ba29a15901afc3fb288994",
+  "verified_candidate_commit": "aad63ddd38f79f240bb94ad32759b3084c598ee6",
+  "bundle": {
+    "sha256": "ca7947ac6a52e22a85cac15f6ba801644900f09fa4af07d8cc98ff1b6ad08299",
+    "size": 7173645,
+    "chunks": [
+      "6e4e1b6e631cbe35ccda132af5127e46c1f1df6f",
+      "547f916c9998cdbb119532b7e97426928bf59837",
+      "b3cc08114a5399add558c0126be0664dbaa51b20",
+      "30c456ad849010328b3db06b446bd593b059ce9e",
+      "bc3ee3548646e702baada9264ddb353534b70771"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "size": 5473419,
+      "sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382",
+      "filename": "mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "slug": "mota-padilla-conquista-nueva-galicia-1870"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "size": 1814265,
+      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b",
+      "filename": "mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "slug": "mota-padilla-conquista-nueva-galicia-1870"
+    }
+  ]
+}
