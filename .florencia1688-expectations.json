@@ -1,0 +1,128 @@
+{
+  "publication": {
+    "slug": "florencia-estrella-norte-mexico-1688",
+    "title": "メキシコの北の星",
+    "originalTitle": "La estrella de el norte de Mexico",
+    "author": "フランシスコ・デ・フロレンシア",
+    "originalAuthor": "Francisco de Florencia",
+    "series": "LA ESTRELLA DE EL NORTE DE MEXICO · 1688",
+    "year": 1688,
+    "originalPublication": "メキシコ、エンペドラディリョ、ドニャ・マリア・デ・ベナビデス（フアン・デ・リベラの寡婦）、1688年。",
+    "extent": "日本語版PDF 381頁",
+    "description": "グアダルーペの聖母像の顕現伝承を、証言調査と先住民の記録から論じ、奇跡譚、聖堂への寄進や信心会、九日祈願を記した1688年刊の著作。",
+    "cover": "publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+    "pdf": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.pdf",
+    "epub": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.epub",
+    "pageCount": 381,
+    "figureCount": 0,
+    "plateCount": 1,
+    "types": [
+      "宗教史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "グアダルーペの聖母",
+      "フアン・ディエゴ",
+      "イエズス会",
+      "テペヤカク",
+      "顕現伝承"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.pdf",
+      "size": 8152481,
+      "sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9",
+      "filename": "florencia-estrella-norte-mexico-1688.pdf"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.epub",
+      "size": 5040464,
+      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7",
+      "filename": "florencia-estrella-norte-mexico-1688.epub"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "size": 46717,
+      "sha256": "69d59f1bffd35f752a0cd76774646968b1eeb99ef0a265589ee5a345a85963c1",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "3f508667da567cb0cb5e86bf28c94d1f2abdd0f508a4bd23880de12f1da64ed8"
+  },
+  "overview_sha256": "db04612fed444c647ef5729c4d5c2a2eb87851071d769d72c7dc0a1cad15f8c0",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "3f508667da567cb0cb5e86bf28c94d1f2abdd0f508a4bd23880de12f1da64ed8",
+      "pdf_sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9",
+      "block_count": 3122,
+      "pdf_pages": 381,
+      "distinct_numbered_locators": 530,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 2874,
+        "fingerprint": 211,
+        "fuzzy": 0,
+        "sourcePage": 37,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "48224b617a3d3e66d021a9a10bf7e51a80043512c5d3a39ea62a07381386e003",
+      "folio_sample_physical_pages": {
+        "原刊f.1r": 39,
+        "原刊f.32v": 85,
+        "原刊f.75r": 142,
+        "原刊f.118v": 202,
+        "原刊f.156r": 254,
+        "原刊f.200r": 314,
+        "原刊f.240r": 371
+      },
+      "ordered_map_sha256": "d0cd4b29b922b74c0ae4da121023f1ffbfcc080bf9c5cd22ad13249391719537"
+    },
+    "epub": {
+      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7",
+      "pdf_sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9",
+      "block_count": 3121,
+      "pdf_pages": 381,
+      "distinct_numbered_locators": 530,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 2873,
+        "fingerprint": 211,
+        "fuzzy": 0,
+        "sourcePage": 37,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "432f4132c12b3a63ce9aea1865b113967a4afbc7ee43ad493b442e18c1761cb9",
+      "folio_sample_physical_pages": {
+        "原刊f.1r": 39,
+        "原刊f.32v": 85,
+        "原刊f.75r": 142,
+        "原刊f.118v": 202,
+        "原刊f.156r": 254,
+        "原刊f.200r": 314,
+        "原刊f.240r": 371
+      },
+      "ordered_map_sha256": "de22f53698149b620d281ff462c797a78564523386fe35f96746f4ec2aa5d3ae"
+    }
+  }
+}
