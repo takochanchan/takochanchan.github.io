@@ -10827,6 +10827,25 @@
         "status": "online",
         "url": "https://archive.org/details/vidaexemplaryvir00lazc"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "zelaa-glorias-de-queretaro-1803",
+      "title": "ケレタロの栄光",
+      "originalTitle": "Glorias de Querétaro",
+      "author": "ホセ・マリア・セラア・エ・イダルゴ",
+      "originalAuthor": "José María Zelaá e Hidalgo",
+      "originalPublication": "メキシコ、マリアノ・ホセ・デ・スニガ・イ・オンティベロス印刷所、1803年。",
+      "year": 1803,
+      "sourceEdition": "José María Zelaá e Hidalgo, Glorias de Querétaro. México: Mariano Joseph de Zúñiga y Ontiveros, 1803.",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（BA803 .Z49g、Internet Archive公開）。",
+      "rights": "原著はパブリックドメイン。掲載図版2点はジョン・カーター・ブラウン図書館提供（Courtesy of the John Carter Brown Library）、CC BY 4.0。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/gloriasdequereta00zela"
+      }
     }
   ],
   "works": [

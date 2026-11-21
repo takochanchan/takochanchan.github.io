@@ -1,3 +1,4 @@
+import { zelaaGloriasDeQueretaro1803PublicationRecords, zelaaGloriasDeQueretaro1803PublicationMetadata } from "./zelaa-glorias-de-queretaro-1803-publication.mjs";
 import { lazcanoJuanAntonioOviedo1760PublicationRecords, lazcanoJuanAntonioOviedo1760PublicationMetadata } from "./lazcano-juan-antonio-de-oviedo-1760-publication.mjs";
 import { arronizEnsayoOrizaba1867PublicationRecords, arronizEnsayoOrizaba1867PublicationMetadata } from "./arroniz-ensayo-historia-de-orizaba-1867-publication.mjs";
 import { lizardiLaQuijotita1897PublicationRecords, lizardiLaQuijotita1897PublicationMetadata } from "./lizardi-la-quijotita-y-su-prima-1897-publication.mjs";
@@ -362,6 +363,7 @@ const publicationRecords = [
   ...lizardiLaQuijotita1897PublicationRecords,
   ...arronizEnsayoOrizaba1867PublicationRecords,
   ...lazcanoJuanAntonioOviedo1760PublicationRecords,
+  ...zelaaGloriasDeQueretaro1803PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
@@ -9533,6 +9535,7 @@ const publicationMetadata = {
   ...lizardiLaQuijotita1897PublicationMetadata,
   ...arronizEnsayoOrizaba1867PublicationMetadata,
   ...lazcanoJuanAntonioOviedo1760PublicationMetadata,
+  ...zelaaGloriasDeQueretaro1803PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,

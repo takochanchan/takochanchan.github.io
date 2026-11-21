@@ -10266,6 +10266,24 @@
       "url": "https://takochanchan.github.io/publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
       "size": 51901,
       "sha256": "1b573907196a0887d2a8ef05e98495e3cf72724fce376b3537cd75cb8e99148c"
+    },
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.pdf",
+      "size": 24233309,
+      "sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014"
+    },
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.epub",
+      "size": 22109995,
+      "sha256": "7965f44de3746297a69fb5bea971eb28670741e56bff51edddb57fcb164259a5"
+    },
+    {
+      "path": "publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "size": 44662,
+      "sha256": "77fa47db1e6487e9c1ad65f7821eddd718939075c1c0603e666c2d2622ee9d9b"
     }
   ]
 }
