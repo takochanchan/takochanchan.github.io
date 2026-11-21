@@ -10903,6 +10903,25 @@
         "status": "online",
         "url": "https://archive.org/details/laestrelladeelno00flor"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "granados-tardes-americanas-1778",
+      "title": "アメリカの午後",
+      "originalTitle": "Tardes americanas",
+      "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
+      "originalAuthor": "José Joaquín Granados y Gálvez",
+      "originalPublication": "メキシコ、フェリペ・デ・スニガ・イ・オンティベロスのヌエバ・インプレンタ・マトリテンセ、1778年（扉の刊年）。",
+      "year": 1778,
+      "sourceEdition": "José Joaquín Granados y Gálvez, Tardes americanas. México, en la nueva Imprenta Matritense de D. Felipe de Zúñiga y Ontiveros, calle de la Palma, 1778（初版・扉年）。ミゲル・デ・ガルベス宛献辞は1779年1月28日付。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（[R] B778 .G748t）、Internet Archive公開。原刊526–527頁はジョージ・ピーボディ図書館（ジョンズ・ホプキンズ大学シェリダン図書館）所蔵の同版別個体（https://archive.org/details/gpl_1727693）で補完。",
+      "rights": "1778年刊の原著本文はパブリックドメイン。収録した本文の暦輪と別葉3点はジョン・カーター・ブラウン図書館提供画像（CC BY 4.0、https://creativecommons.org/licenses/by/4.0/）。Courtesy of the John Carter Brown Library. 図柄を切り出し、縮尺を調整した。補完に用いた所蔵本の画像は使用していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/tardesamericanas00gran"
+      }
     }
   ],
   "works": [

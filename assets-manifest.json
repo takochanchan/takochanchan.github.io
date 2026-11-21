@@ -10338,6 +10338,24 @@
       "url": "https://takochanchan.github.io/publications/florencia-estrella-norte-mexico-1688/cover.jpg",
       "size": 46717,
       "sha256": "69d59f1bffd35f752a0cd76774646968b1eeb99ef0a265589ee5a345a85963c1"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.pdf",
+      "size": 15056254,
+      "sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.epub",
+      "size": 8961382,
+      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/granados-tardes-americanas-1778/cover.jpg",
+      "size": 83017,
+      "sha256": "c1752e944b61070e84044facfbb12fce7c17a9873354bffdf635fcbc0dbb39a5"
     }
   ]
 }
