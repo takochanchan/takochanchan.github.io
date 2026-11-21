@@ -1,0 +1,60 @@
+name: Transfer approved Zelaa 1803 publication files
+on:
+  push:
+    branches: [agent/zelaa-queretaro1803-publish-20261121]
+    paths: [.zelaaqueretaro1803-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: d0635b95585205a3e21469872ff8b9faa779b717
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .zelaaqueretaro1803-transfer.py stage "$RUNNER_TEMP/zelaaqueretaro1803-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.zelaaqueretaro1803-readback.py --expect ../transfer/.zelaaqueretaro1803-expectations.json --html dist/publications/zelaa-glorias-de-queretaro-1803/index.html
+          target=dist/publications/zelaa-glorias-de-queretaro-1803
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/zelaaqueretaro1803-assets/zelaa-glorias-de-queretaro-1803.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug zelaa-glorias-de-queretaro-1803
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .zelaaqueretaro1803-transfer.py transfer "$RUNNER_TEMP/zelaaqueretaro1803-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zelaaqueretaro1803-public-verification
+          path: transfer/zelaaqueretaro1803-public-verification.json
+          if-no-files-found: error
+
