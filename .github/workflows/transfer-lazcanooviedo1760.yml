@@ -1,0 +1,60 @@
+name: Transfer approved Lazcano 1760 publication files
+on:
+  push:
+    branches: [agent/lazcano-oviedo1760-publish-20261121]
+    paths: [.lazcanooviedo1760-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 52e4daca3869aa2fce7ce7c17080c20c8269149a
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .lazcanooviedo1760-transfer.py stage "$RUNNER_TEMP/lazcanooviedo1760-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.lazcanooviedo1760-readback.py --expect ../transfer/.lazcanooviedo1760-expectations.json --html dist/publications/lazcano-juan-antonio-de-oviedo-1760/index.html
+          target=dist/publications/lazcano-juan-antonio-de-oviedo-1760
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/lazcanooviedo1760-assets/lazcano-juan-antonio-de-oviedo-1760.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug lazcano-juan-antonio-de-oviedo-1760
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .lazcanooviedo1760-transfer.py transfer "$RUNNER_TEMP/lazcanooviedo1760-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lazcanooviedo1760-public-verification
+          path: transfer/lazcanooviedo1760-public-verification.json
+          if-no-files-found: error
+
