@@ -1,0 +1,60 @@
+name: Transfer approved Florencia 1688 publication files
+on:
+  push:
+    branches: [agent/florencia1688-publish-20261121]
+    paths: [.florencia1688-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 27b35a7a26e69b25e8bdf1421a9901dcc0def3e5
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .florencia1688-transfer.py stage "$RUNNER_TEMP/florencia1688-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.florencia1688-readback.py --expect ../transfer/.florencia1688-expectations.json --html dist/publications/florencia-estrella-norte-mexico-1688/index.html
+          target=dist/publications/florencia-estrella-norte-mexico-1688
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/florencia1688-assets/florencia-estrella-norte-mexico-1688.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug florencia-estrella-norte-mexico-1688
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .florencia1688-transfer.py transfer "$RUNNER_TEMP/florencia1688-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: florencia1688-public-verification
+          path: transfer/florencia1688-public-verification.json
+          if-no-files-found: error
+
