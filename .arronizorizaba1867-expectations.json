@@ -1,0 +1,106 @@
+{
+  "publication": {
+    "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+    "title": "オリサバ史試論",
+    "originalTitle": "Ensayo de una historia de Orizaba",
+    "subtitle": "",
+    "author": "ホアキン・アロニス",
+    "originalAuthor": "Joaquín Arróniz",
+    "series": "ENSAYO DE UNA HISTORIA DE ORIZABA · 1867",
+    "year": 1867,
+    "originalPublication": "オリサバ、J・B・アブルト印刷所、1867年。",
+    "extent": "日本語版PDF 332頁",
+    "description": "谷の自然地誌、アウイアリサパンと征服、街道・病院・町政の形成、独立戦争と独立後を描くオリサバの地方史。年表・付録と原刊図版6点を収録。",
+    "cover": "publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+    "pdf": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+    "epub": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.epub",
+    "pageCount": 332,
+    "figureCount": 0,
+    "plateCount": 6,
+    "types": [
+      "歴史書",
+      "地方史",
+      "地誌"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "オリサバ",
+      "ベラクルス",
+      "地方史",
+      "ヤンガ",
+      "病院史",
+      "メキシコ独立戦争"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "size": 13466055,
+      "sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270",
+      "filename": "arroniz-ensayo-historia-de-orizaba-1867.pdf"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "size": 7688025,
+      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90",
+      "filename": "arroniz-ensayo-historia-de-orizaba-1867.epub"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "size": 39343,
+      "sha256": "8ed9ae2e8d03b52f9f76f221cf955acd071705919b55783c7debb0441da22e19",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "62c49b4533cf24bd9ce7591954eaf6fa394a624ce83521597673f9dbfb28d7e9"
+  },
+  "overview_sha256": "cf156b3820924fb330319cdd0592d200d5e8674f37d701d360d39ce9d7166512",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "62c49b4533cf24bd9ce7591954eaf6fa394a624ce83521597673f9dbfb28d7e9",
+      "pdf_sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270",
+      "block_count": 3703,
+      "pdf_pages": 332,
+      "ordered_map_sha256": "20ffd3efc1d4d79872527289131ed0230b2d33416894ee1cfbb85e3a57b3bd2e",
+      "mappingSummary": {
+        "exact": 2990,
+        "fingerprint": 101,
+        "fuzzy": 4,
+        "sourcePage": 540,
+        "inherited": 68,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    },
+    "epub": {
+      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90",
+      "pdf_sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270",
+      "block_count": 3702,
+      "pdf_pages": 332,
+      "ordered_map_sha256": "7d227ea71b069848f8eeecb9bd577c3d1d8b317c10c5545d73e6cc703dcfbdd0",
+      "mappingSummary": {
+        "exact": 2989,
+        "fingerprint": 101,
+        "fuzzy": 4,
+        "sourcePage": 540,
+        "inherited": 68,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      }
+    }
+  }
+}

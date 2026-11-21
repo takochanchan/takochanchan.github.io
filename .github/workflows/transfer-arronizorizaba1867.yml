@@ -1,0 +1,60 @@
+name: Transfer approved Arroniz 1867 publication files
+on:
+  push:
+    branches: [agent/arroniz-orizaba1867-publish-20261121]
+    paths: [.arronizorizaba1867-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: fd533237c70ca510074d6b89778fa733b8195322
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .arronizorizaba1867-transfer.py stage "$RUNNER_TEMP/arronizorizaba1867-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.arronizorizaba1867-readback.py --expect ../transfer/.arronizorizaba1867-expectations.json --html dist/publications/arroniz-ensayo-historia-de-orizaba-1867/index.html
+          target=dist/publications/arroniz-ensayo-historia-de-orizaba-1867
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/arronizorizaba1867-assets/arroniz-ensayo-historia-de-orizaba-1867.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug arroniz-ensayo-historia-de-orizaba-1867
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .arronizorizaba1867-transfer.py transfer "$RUNNER_TEMP/arronizorizaba1867-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: arronizorizaba1867-public-verification
+          path: transfer/arronizorizaba1867-public-verification.json
+          if-no-files-found: error
+
