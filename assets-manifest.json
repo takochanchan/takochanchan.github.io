@@ -10248,6 +10248,24 @@
       "url": "https://takochanchan.github.io/publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
       "size": 39343,
       "sha256": "8ed9ae2e8d03b52f9f76f221cf955acd071705919b55783c7debb0441da22e19"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "size": 14934709,
+      "sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "size": 10923235,
+      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "size": 51901,
+      "sha256": "1b573907196a0887d2a8ef05e98495e3cf72724fce376b3537cd75cb8e99148c"
     }
   ]
 }

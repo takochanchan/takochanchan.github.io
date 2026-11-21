@@ -10808,6 +10808,25 @@
         "status": "online",
         "url": "https://archive.org/details/ensayodeunahisto00arro"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760",
+      "title": "フアン・アントニオ・デ・オビエド神父伝",
+      "originalTitle": "Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús",
+      "author": "フランシスコ・ハビエル・ラスカノ",
+      "originalAuthor": "Francisco Javier Lazcano",
+      "originalPublication": "メキシコ、王立最古のサン・イルデフォンソ学院印刷所、1760年。",
+      "year": 1760,
+      "sourceEdition": "Francisco Javier Lazcano, Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús. México: Imprenta del Real y Más Antiguo Colegio de San Ildefonso, 1760.",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（BA760 .L431V、Internet Archive公開）。",
+      "rights": "原著の著作権保護期間は満了している。掲載画像はジョン・カーター・ブラウン図書館提供（Courtesy of the John Carter Brown Library）、CC BY 4.0。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidaexemplaryvir00lazc"
+      }
     }
   ],
   "works": [
