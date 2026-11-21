@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "0f76b2be0094c04ec5ba29a15901afc3fb288994",
+  "archive_commit": "040157a8085950e8881120e70b47c86856bb7b57",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -503,7 +503,8 @@
     "de-la-cruz-badiano-libellus-1552": "publications/de-la-cruz-badiano-libellus-1552/master.docx",
     "florencia-estrella-norte-mexico-1688": "publications/florencia-estrella-norte-mexico-1688/master.docx",
     "granados-tardes-americanas-1778": "publications/granados-tardes-americanas-1778/master.docx",
-    "mota-padilla-conquista-nueva-galicia-1870": "publications/mota-padilla-conquista-nueva-galicia-1870/master.docx"
+    "mota-padilla-conquista-nueva-galicia-1870": "publications/mota-padilla-conquista-nueva-galicia-1870/master.docx",
+    "pimentel-memoria-situacion-indigena-1864": "publications/pimentel-memoria-situacion-indigena-1864/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

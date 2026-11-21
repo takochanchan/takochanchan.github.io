@@ -10374,6 +10374,24 @@
       "url": "https://takochanchan.github.io/publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
       "size": 86590,
       "sha256": "17f0374879723f76271fa9b95af4d7d3edcf530f317816e4741dad383aa81992"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "size": 2393444,
+      "sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "size": 265543,
+      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "size": 100639,
+      "sha256": "5784040dab2b21a87e9c62359584c4a3a30f94f2303fe728da069269ff698438"
     }
   ]
 }

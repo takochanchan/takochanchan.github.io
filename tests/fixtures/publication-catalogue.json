@@ -3309,6 +3309,13 @@
       "searchShard": "003",
       "author": "マティアス・デ・ラ・モタ・パディリャ",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-memoria-situacion-indigena-1864",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
