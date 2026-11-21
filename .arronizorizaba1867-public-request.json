@@ -1,0 +1,41 @@
+{
+  "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "7d100c7ba38657f6562e30be151009db39f1b36a",
+  "verified_candidate_commit": "fd533237c70ca510074d6b89778fa733b8195322",
+  "bundle": {
+    "sha256": "c56ca9aa7256debfb8cb67e14fda23497f9e9d50074d4c76a674896a35cf90a8",
+    "size": 19244090,
+    "chunks": [
+      "9b2317787f43bdd70602a429777e89a5ef742106",
+      "2cda9d48bf6ff144fbdf21c25db858a2e520556b",
+      "20e8383f4f35e57a908c4e46b94aa26b7b194b1f",
+      "fc45ef91a508cd53b97800007a22c0d9dc5f3185",
+      "37a29fb1a5b62a9a1c9835d6efacfc24d2d7f32b",
+      "d8653b7a1b6d19038b2c4871376a99608594996d",
+      "1fe2a9df2f3c3b2b2af8cb8c7f1db183dc492c62",
+      "92487612e8b311d83f37e94fcd833bc2ccc4b4aa",
+      "1ae4527314cd7d4353a0a12f1730ba1c7806b4d5",
+      "0b6478f526d0dd5e781584815d2ccd00bab58828",
+      "74f15356a8d8d5502a224bccb821d8b7ece7e570",
+      "772ac867aba9896eed8c8914eb9ec2b8519b91fc",
+      "5c5d6402a2d6bf34a422bbaa83c724f316cb0f92"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "size": 13466055,
+      "sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270",
+      "filename": "arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "size": 7688025,
+      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90",
+      "filename": "arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867"
+    }
+  ]
+}
