@@ -1,0 +1,37 @@
+{
+  "slug": "florencia-estrella-norte-mexico-1688",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "a3f6e76bf2a787c431163667f121f04a210d8892",
+  "verified_candidate_commit": "27b35a7a26e69b25e8bdf1421a9901dcc0def3e5",
+  "bundle": {
+    "sha256": "e39c9b8958c1722e40a30217b051287f6a07291d8be1df6d05917f887e4e71e0",
+    "size": 12182195,
+    "chunks": [
+      "48ba3219b4a8f86c237a9f396724edab80e1a911",
+      "6a9a1f98d3f894650dbd739dccfadfd46f6642e6",
+      "80c9835aa35ebdb11bd433b747dd0422b18f848b",
+      "ca46f0764752ff05b1b15784f92bfef39f139208",
+      "ad4869907127437cfc863b83b0719c94ebfcfa5d",
+      "5106c8cfedee68daaaa073aba546c565a01de945",
+      "408f3baf734677602090dcacbe917663b68061d8",
+      "0511d76042216a0dc1f48c22f2dfc6c5bcb7928d",
+      "49faa01f4dabc91f18b0151acec09c70a9eaccec"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.pdf",
+      "size": 8152481,
+      "sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9",
+      "filename": "florencia-estrella-norte-mexico-1688.pdf",
+      "slug": "florencia-estrella-norte-mexico-1688"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.epub",
+      "size": 5040464,
+      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7",
+      "filename": "florencia-estrella-norte-mexico-1688.epub",
+      "slug": "florencia-estrella-norte-mexico-1688"
+    }
+  ]
+}
