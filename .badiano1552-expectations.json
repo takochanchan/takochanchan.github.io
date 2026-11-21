@@ -1,0 +1,138 @@
+{
+  "publication": {
+    "slug": "de-la-cruz-badiano-libellus-1552",
+    "title": "先住民の薬草の小冊子",
+    "originalTitle": "Libellus de medicinalibus Indorum herbis",
+    "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
+    "originalAuthor": "Martín de la Cruz (autor) / Juan Badiano (traductor al latín)",
+    "series": "LIBELLUS DE MEDICINALIBUS INDORUM HERBIS · 1552",
+    "year": 1552,
+    "originalPublication": "メキシコ、トラテロルコのサンタ・クルス学院、1552年成立（写本）。",
+    "extent": "日本語版PDF 79頁",
+    "description": "マルティン・デ・ラ・クルスが著し、フアン・バディアーノがラテン語に訳した、16世紀メキシコの薬草書。",
+    "cover": "publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+    "pdf": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.pdf",
+    "epub": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.epub",
+    "pageCount": 79,
+    "figureCount": 0,
+    "plateCount": 89,
+    "types": [
+      "医学史",
+      "本草学"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "ラテン語",
+      "ナワトル語"
+    ],
+    "tags": [
+      "薬草",
+      "ナワトル語",
+      "トラテロルコ",
+      "サンタ・クルス学院",
+      "16世紀"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.pdf",
+      "size": 23710229,
+      "sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb",
+      "filename": "de-la-cruz-badiano-libellus-1552.pdf"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.epub",
+      "size": 22408837,
+      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf",
+      "filename": "de-la-cruz-badiano-libellus-1552.epub"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "size": 51911,
+      "sha256": "876168575366a37b5b52e3e262af71c29f9a61d94066807ffc990950f5dc090d",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "0e48ed3aff6e898a4d15733112692493fa9f7dca8043776171e94231bce426ae"
+  },
+  "overview_sha256": "622bdd420b73249abbb7c2717288eed2c5c19af6a35668bfdb94d00bc3a6604b",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "0e48ed3aff6e898a4d15733112692493fa9f7dca8043776171e94231bce426ae",
+      "pdf_sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb",
+      "block_count": 490,
+      "pdf_pages": 79,
+      "distinct_numbered_locators": 119,
+      "original_labels_not_assigned_to_chunks": [
+        "写本f.39v"
+      ],
+      "extractor_sha256": "f069f07854545d96f7bbfbe1e59c209cee799d1bb02d0f08dca68b942f25052a",
+      "mappingSummary": {
+        "exact": 414,
+        "fingerprint": 15,
+        "fuzzy": 20,
+        "sourcePage": 0,
+        "inherited": 41,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "ccd098b36f3a028247d7b0e32cf3f588ad1f50ff4147b41b0b6669c7bb6d4d3c",
+      "folio_sample_physical_pages": {
+        "写本f.1r": 3,
+        "写本f.6r": 6,
+        "写本f.15r": 12,
+        "写本f.22r": 19,
+        "写本f.32v": 26,
+        "写本f.40v": 33,
+        "写本f.51r": 43,
+        "写本f.57r": 48,
+        "写本f.62r": 52
+      },
+      "ordered_map_sha256": "e55efa8c0880b3f3453628dc4401cc9accae01a2ae4b3d176fb2e5294462f8e1"
+    },
+    "epub": {
+      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf",
+      "pdf_sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb",
+      "block_count": 694,
+      "pdf_pages": 79,
+      "distinct_numbered_locators": 119,
+      "original_labels_not_assigned_to_chunks": [
+        "写本f.39v"
+      ],
+      "extractor_sha256": "f069f07854545d96f7bbfbe1e59c209cee799d1bb02d0f08dca68b942f25052a",
+      "mappingSummary": {
+        "exact": 512,
+        "fingerprint": 14,
+        "fuzzy": 20,
+        "sourcePage": 0,
+        "inherited": 148,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "fc92046a6140145e01dfeae44a354cbe08d9b2ad35eef84b8ba9eeb0020f5d6d",
+      "folio_sample_physical_pages": {
+        "写本f.1r": 3,
+        "写本f.6r": 6,
+        "写本f.15r": 12,
+        "写本f.22r": 19,
+        "写本f.32v": 26,
+        "写本f.40v": 33,
+        "写本f.51r": 43,
+        "写本f.57r": 48,
+        "写本f.62r": 52
+      },
+      "ordered_map_sha256": "9692e70e57bfbcf4c380a6ff89c3ad7752f17ca30a0ac8d6580fca8496e7d599"
+    }
+  }
+}

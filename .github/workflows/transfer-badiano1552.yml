@@ -1,0 +1,60 @@
+name: Transfer approved Badiano 1552 publication files
+on:
+  push:
+    branches: [agent/de-la-cruz-badiano1552-publish-20261121]
+    paths: [.badiano1552-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 506fcb046b94e10afef93125ea2422e5a2071dba
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .badiano1552-transfer.py stage "$RUNNER_TEMP/badiano1552-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.badiano1552-readback.py --expect ../transfer/.badiano1552-expectations.json --html dist/publications/de-la-cruz-badiano-libellus-1552/index.html
+          target=dist/publications/de-la-cruz-badiano-libellus-1552
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/badiano1552-assets/de-la-cruz-badiano-libellus-1552.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug de-la-cruz-badiano-libellus-1552
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .badiano1552-transfer.py transfer "$RUNNER_TEMP/badiano1552-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: badiano1552-public-verification
+          path: transfer/badiano1552-public-verification.json
+          if-no-files-found: error
+
