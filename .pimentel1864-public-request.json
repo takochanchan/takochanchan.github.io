@@ -1,0 +1,30 @@
+{
+  "slug": "pimentel-memoria-situacion-indigena-1864",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "040157a8085950e8881120e70b47c86856bb7b57",
+  "verified_candidate_commit": "d9216975402fcf85c1cccf9c6e408cbab8acd457",
+  "bundle": {
+    "sha256": "fff8be03c2e590358dc01dcf92548f37259743c63fa2de05b35ca224324ea3ed",
+    "size": 1670039,
+    "chunks": [
+      "7b02210ac347f650c5b383d89c1ac8c3b9a2bb54",
+      "26bd66aba07c99ed6f34741fc093f4fb3e05f2d0"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "size": 2393444,
+      "sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8",
+      "filename": "pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "slug": "pimentel-memoria-situacion-indigena-1864"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "size": 265543,
+      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976",
+      "filename": "pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "slug": "pimentel-memoria-situacion-indigena-1864"
+    }
+  ]
+}
