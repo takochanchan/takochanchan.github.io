@@ -1,0 +1,60 @@
+name: Transfer approved Pimentel 1864 publication files
+on:
+  push:
+    branches: [agent/pimentel1864-publish-20261122]
+    paths: [.pimentel1864-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: d9216975402fcf85c1cccf9c6e408cbab8acd457
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .pimentel1864-transfer.py stage "$RUNNER_TEMP/pimentel1864-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.pimentel1864-readback.py --expect ../transfer/.pimentel1864-expectations.json --html dist/publications/pimentel-memoria-situacion-indigena-1864/index.html
+          target=dist/publications/pimentel-memoria-situacion-indigena-1864
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/pimentel1864-assets/pimentel-memoria-situacion-indigena-1864-ja.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug pimentel-memoria-situacion-indigena-1864
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .pimentel1864-transfer.py transfer "$RUNNER_TEMP/pimentel1864-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pimentel1864-public-verification
+          path: transfer/pimentel1864-public-verification.json
+          if-no-files-found: error
+

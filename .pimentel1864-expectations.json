@@ -1,0 +1,176 @@
+{
+  "overview_paragraph_count": 4,
+  "public_facts": [
+    "172頁",
+    "1864年",
+    "オックスフォード大学ボドリアン図書館",
+    "NOT_IN_COPYRIGHT"
+  ],
+  "publication": {
+    "slug": "pimentel-memoria-situacion-indigena-1864",
+    "title": "メキシコ先住民の現状をもたらした原因とその改善策に関する論考",
+    "originalTitle": "Memoria sobre las causas que han originado la situación actual de la raza indígena de México, y medios de remediarla",
+    "author": "フランシスコ・ピメンテル",
+    "originalAuthor": "Francisco Pimentel",
+    "series": "MEMORIA SOBRE LA SITUACIÓN DE LA RAZA INDÍGENA · 1864",
+    "year": 1864,
+    "originalPublication": "メキシコ、アンドラデ・イ・エスカランテ印刷所、ティブルシオ通り19番地、1864年。皇帝マクシミリアノ一世宛の献辞は同年7月付。",
+    "extent": "日本語版PDF 172頁",
+    "description": "征服以前の先住諸社会、スペインの征服と宣教、インディアス諸法をたどり、独立後のメキシコで先住民の貧困と隷属が続いた理由を論じる全四部。借地料免除を求める住民の嘆願書を収める。",
+    "cover": "publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+    "pdf": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+    "epub": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.epub",
+    "pageCount": 172,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "歴史論考",
+      "政治論"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "先住民",
+      "メシカ",
+      "ヌエバ・エスパーニャ",
+      "インディアス法",
+      "エンコミエンダ",
+      "土地所有",
+      "メキシコ第二帝政"
+    ],
+    "searchShard": "003",
+    "releaseTag": "publications-002",
+    "recordClass": "major-work"
+  },
+  "assets": [
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "size": 2393444,
+      "sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8",
+      "filename": "pimentel-memoria-situacion-indigena-1864-ja.pdf"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "size": 265543,
+      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976",
+      "filename": "pimentel-memoria-situacion-indigena-1864-ja.epub"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "size": 100639,
+      "sha256": "5784040dab2b21a87e9c62359584c4a3a30f94f2303fe728da069269ff698438",
+      "filename": "cover.jpg"
+    }
+  ],
+  "master": {
+    "sha256": "c7500f2d26731e0ca7d62b2978e5192cb3a65f1fa42f9be124a6a722c5d94dcb"
+  },
+  "overview_sha256": "7bd471739e7446db480cf96a4af6f2159a1a1d5044be424b6746c8c260dcafc3",
+  "local_search_proofs": {
+    "docx": {
+      "sha256": "c7500f2d26731e0ca7d62b2978e5192cb3a65f1fa42f9be124a6a722c5d94dcb",
+      "pdf_sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8",
+      "block_count": 1647,
+      "pdf_pages": 172,
+      "distinct_numbered_locators": 245,
+      "archival_numbered_locators": 245,
+      "bracketed_locators": 12,
+      "printed_locators": 233,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_git_blob": "d1b67bf5ae67d808343eb25272231fd4c36df584",
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 1476,
+        "fingerprint": 69,
+        "fuzzy": 1,
+        "sourcePage": 101,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "213891d09e4ecb5ba7c8498f12bba93edc945af66b7f23dda4f3e75243ca550e",
+      "folio_sample_physical_pages": {
+        "原刊p.[1]": 4,
+        "原刊p.[5]": 4,
+        "原刊p.[8]": 5,
+        "原刊p.9": 5,
+        "原刊p.14": 9,
+        "原刊p.15": 9,
+        "原刊p.85": 59,
+        "原刊p.86": 59,
+        "原刊p.87": 60,
+        "原刊p.98": 68,
+        "原刊p.149": 105,
+        "原刊p.151": 106,
+        "原刊p.172": 123,
+        "原刊p.179": 128,
+        "原刊p.180": 129,
+        "原刊p.189": 134,
+        "原刊p.191": 135,
+        "原刊p.241": 169,
+        "原刊p.[242]": 169,
+        "原刊p.[243]": 170,
+        "原刊p.[244]": 171,
+        "原刊p.[245]": 172
+      },
+      "ordered_map_sha256": "164e62c1d83c7e2d39f618e06df36c335adbe8cf9c5a124de1d4e6f7b8e77602"
+    },
+    "epub": {
+      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976",
+      "pdf_sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8",
+      "block_count": 1631,
+      "pdf_pages": 172,
+      "distinct_numbered_locators": 245,
+      "archival_numbered_locators": 245,
+      "bracketed_locators": 12,
+      "printed_locators": 233,
+      "original_labels_not_assigned_to_chunks": [],
+      "extractor_git_blob": "d1b67bf5ae67d808343eb25272231fd4c36df584",
+      "extractor_sha256": "0c58af69a41105e74a968930a0922343d5121ba6ca76b9bf4885fc040e1b09e2",
+      "mappingSummary": {
+        "exact": 1460,
+        "fingerprint": 70,
+        "fuzzy": 1,
+        "sourcePage": 100,
+        "inherited": 0,
+        "unmapped": 0,
+        "verifiedRate": 1.0,
+        "pdfTextMode": "embedded"
+      },
+      "corpus_sha256": "d5a2fc1733774561132a39a2310adc4cc115042ec74a37eb6a2edd2bc86d352f",
+      "folio_sample_physical_pages": {
+        "原刊p.[1]": 4,
+        "原刊p.[5]": 4,
+        "原刊p.[8]": 5,
+        "原刊p.9": 5,
+        "原刊p.14": 9,
+        "原刊p.15": 9,
+        "原刊p.85": 59,
+        "原刊p.86": 59,
+        "原刊p.87": 60,
+        "原刊p.98": 68,
+        "原刊p.149": 105,
+        "原刊p.151": 106,
+        "原刊p.172": 123,
+        "原刊p.179": 128,
+        "原刊p.180": 129,
+        "原刊p.189": 134,
+        "原刊p.191": 135,
+        "原刊p.241": 169,
+        "原刊p.[242]": 169,
+        "原刊p.[243]": 170,
+        "原刊p.[244]": 171,
+        "原刊p.[245]": 172
+      },
+      "ordered_map_sha256": "43ea82ae8e7945fbd6a756719047aa6b9f1045638d91844a2da94299bf462bdd"
+    }
+  }
+}
