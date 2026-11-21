@@ -1,3 +1,4 @@
+import { arronizEnsayoOrizaba1867PublicationRecords, arronizEnsayoOrizaba1867PublicationMetadata } from "./arroniz-ensayo-historia-de-orizaba-1867-publication.mjs";
 import { lizardiLaQuijotita1897PublicationRecords, lizardiLaQuijotita1897PublicationMetadata } from "./lizardi-la-quijotita-y-su-prima-1897-publication.mjs";
 import { venegasZappa1754PublicationRecords, venegasZappa1754PublicationMetadata } from "./venegas-juan-bautista-zappa-1754-publication.mjs";
 import { garciaLeonaVicario1910PublicationRecords, garciaLeonaVicario1910PublicationMetadata } from "./garcia-leona-vicario-1910-publication.mjs";
@@ -358,6 +359,7 @@ const publicationRecords = [
   ...clavijeroPublicationRecords,
   ...garciaLeonaVicario1910PublicationRecords,
   ...lizardiLaQuijotita1897PublicationRecords,
+  ...arronizEnsayoOrizaba1867PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
   ...francoPublicationRecords,
@@ -9527,6 +9529,7 @@ const publicationMetadata = {
   ...clavijeroPublicationMetadata,
   ...garciaLeonaVicario1910PublicationMetadata,
   ...lizardiLaQuijotita1897PublicationMetadata,
+  ...arronizEnsayoOrizaba1867PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
   ...francoPublicationMetadata,

@@ -10789,6 +10789,25 @@
         "status": "online",
         "url": "https://archive.org/details/3674623"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+      "title": "オリサバ史試論",
+      "originalTitle": "Ensayo de una historia de Orizaba",
+      "author": "ホアキン・アロニス",
+      "originalAuthor": "Joaquín Arróniz",
+      "originalPublication": "オリサバ、J・B・アブルト印刷所、1867年。",
+      "year": 1867,
+      "sourceEdition": "Joaquín Arróniz (hijo), Ensayo de una historia de Orizaba. Orizaba: Imprenta de J. B. Aburto, 1867.",
+      "sourceProvider": "米国議会図書館所蔵（F1391.O6 A7、Internet Archive公開）。",
+      "rights": "原著の著作権保護期間は満了している。収録図版は米国議会図書館所蔵本（Library of Congress）。同館は当該資料をパブリックドメインと案内している（https://www.loc.gov/item/13014095/）。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/ensayodeunahisto00arro"
+      }
     }
   ],
   "works": [

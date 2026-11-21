@@ -10230,6 +10230,24 @@
       "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
       "size": 30389,
       "sha256": "81a9bc588cdc7b92d786d9444a1cedaa9fcdf0fe019e7d821c4d8ae0920ad6f9"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "size": 13466055,
+      "sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "size": 7688025,
+      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "size": 39343,
+      "sha256": "8ed9ae2e8d03b52f9f76f221cf955acd071705919b55783c7debb0441da22e19"
     }
   ]
 }
