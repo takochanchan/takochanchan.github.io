@@ -18,7 +18,16 @@ for i,slug in enumerate(slugs,1):
     for para in overview.split("\n\n"):
         assert para in body, slug
 assert f'{base}/publications/{group}/' in page
-sitemap=read(f"{base}/sitemap.xml").decode()
+home=read(base+'/').decode("utf-8")
+m=re.search(r"window\.BIBLIOGRAPHIC_ALIASES=(\{.*?\});</script>",home)
+assert m is not None
+aliases=json.loads(m.group(1))
+for slug in slugs:
+    assert aliases[slug]==group, slug
+    alias_page=read(f"{base}/publications/{slug}/").decode("utf-8")
+    assert f"/publications/{group}/" in alias_page, slug
+
+sitemap=read(f"{base}/sitemap-books.xml").decode()
 assert sitemap.count(url)==1, "one canonical bibliography only"
 assert not any(f"{base}/publications/{slug}/" in sitemap for slug in slugs)
 assets=[a for a in json.loads(pathlib.Path("assets-manifest.json").read_text())["assets"] if a["path"].split("/")[1] in slugs]
