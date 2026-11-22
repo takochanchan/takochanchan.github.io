@@ -1,4 +1,5 @@
 import hashlib, html, json, pathlib, re, subprocess, tempfile, urllib.request, zipfile
+from xml.etree import ElementTree as ET
 def read(url):
     with urllib.request.urlopen(urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"takochan-pimentel-release-verifier"}),timeout=120) as response:
         return response.read()
@@ -28,8 +29,10 @@ for slug in slugs:
     assert f"/publications/{group}/" in alias_page, slug
 
 sitemap=read(f"{base}/sitemap-books.xml").decode()
-assert sitemap.count(url)==1, "one canonical bibliography only"
-assert not any(f"{base}/publications/{slug}/" in sitemap for slug in slugs)
+site_ns={"s":"http://www.sitemaps.org/schemas/sitemap/0.9"}
+locs=[node.text for node in ET.fromstring(sitemap).findall("s:url/s:loc",site_ns)]
+assert locs.count(url)==1, "one canonical bibliography only"
+assert not any(f"{base}/publications/{slug}/" in locs for slug in slugs)
 assets=[a for a in json.loads(pathlib.Path("assets-manifest.json").read_text())["assets"] if a["path"].split("/")[1] in slugs]
 assert len(assets)==9
 tag="https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002"

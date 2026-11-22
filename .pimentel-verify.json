@@ -2,5 +2,6 @@
   "mode": "live",
   "repo": "takochanchan/takochanchan.github.io",
   "id": 45019718294,
-  "head": "216509e034b152984f4c84c26d9ef8de1c2e7e5b"
+  "head": "216509e034b152984f4c84c26d9ef8de1c2e7e5b",
+  "check": "parse publication URL entries, excluding embedded image URLs"
 }
