@@ -12367,6 +12367,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "cano-manche-y-peten-1696",
   "garcia-documentos-ineditos-mexico-v16-1908",
   "garcia-documentos-ineditos-mexico-v17-1908",
   "garcia-documentos-ineditos-mexico-v18-1908",

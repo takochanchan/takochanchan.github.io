@@ -33,7 +33,7 @@ export const canoManchePetenRecords = [
     ],
     "searchShard": "003",
     "releaseTag": "publications-002",
-    "recordClass": "major-work",
+    "recordClass": "document-collection",
     "pdf": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.pdf",
     "epub": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.epub",
     "cover": "publications/cano-manche-y-peten-1696/cover.jpg",
