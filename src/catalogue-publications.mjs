@@ -1,3 +1,4 @@
+import { cabreraEscudoGroup } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroGroup } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { clavijeroPublicationGroup } from "./clavijero-storia-della-california-publication.mjs";
 import { nuevoBernalPublicationGroup } from "./bustamante-nuevo-bernal-publication.mjs";
@@ -15,6 +16,7 @@ const unique = (values) => [...new Set(values)];
 export const publicationGroupDefinitions = [
   clavijeroPublicationGroup,
   pimentelCuadroGroup,
+  cabreraEscudoGroup,
   nuevoBernalPublicationGroup,
   solorzanoPublicationGroup,
   bustamantePublicationGroup,

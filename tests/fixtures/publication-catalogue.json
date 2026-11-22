@@ -3350,6 +3350,42 @@
       "seriesVolumeNumber": 3,
       "originalAuthor": "Francisco Pimentel",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 4,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3596,6 +3632,16 @@
         "pimentel-cuadro-lenguas-indigenas-1874-1875-v3"
       ],
       "seriesVolumeCount": 3
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "memberSlugs": [
+        "cabrera-escudo-de-armas-de-mexico-1746-v1",
+        "cabrera-escudo-de-armas-de-mexico-1746-v2",
+        "cabrera-escudo-de-armas-de-mexico-1746-v3",
+        "cabrera-escudo-de-armas-de-mexico-1746-v4"
+      ],
+      "seriesVolumeCount": 4
     }
   ],
   "shortAuthorCount": 49

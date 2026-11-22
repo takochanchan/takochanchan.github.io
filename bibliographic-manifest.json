@@ -11036,6 +11036,82 @@
         "status": "online",
         "url": "https://archive.org/details/cuadrodescriptiv03pime"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
+      "title": "メキシコの紋章 第一巻",
+      "originalTitle": "Escudo de armas de Mexico, libro I",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第1巻（前付および本文1–96頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
+      "title": "メキシコの紋章 第二巻",
+      "originalTitle": "Escudo de armas de Mexico, libro II",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第2巻（本文97–203頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
+      "title": "メキシコの紋章 第三巻",
+      "originalTitle": "Escudo de armas de Mexico, libro III",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第3巻（本文204–394頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
+      "title": "メキシコの紋章 第四巻",
+      "originalTitle": "Escudo de armas de Mexico, libro IV",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第4巻（本文395–522頁および巻末索引）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
     }
   ],
   "works": [

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "b8fcbc675e730285005cce0dcea514ae25d9d37b",
+  "archive_commit": "f92b6d0c815017b28a8bef06a56e009f6462a257",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -508,7 +508,11 @@
     "velasco-exaltacion-divina-misericordia-1810": "publications/velasco-exaltacion-divina-misericordia-1810/master.docx",
     "pimentel-cuadro-lenguas-indigenas-1874-1875-v1": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/master.docx",
     "pimentel-cuadro-lenguas-indigenas-1874-1875-v2": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/master.docx",
-    "pimentel-cuadro-lenguas-indigenas-1874-1875-v3": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/master.docx"
+    "pimentel-cuadro-lenguas-indigenas-1874-1875-v3": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/master.docx",
+    "cabrera-escudo-de-armas-de-mexico-1746-v1": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/master.docx",
+    "cabrera-escudo-de-armas-de-mexico-1746-v2": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/master.docx",
+    "cabrera-escudo-de-armas-de-mexico-1746-v3": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/master.docx",
+    "cabrera-escudo-de-armas-de-mexico-1746-v4": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

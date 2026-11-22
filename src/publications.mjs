@@ -1,3 +1,4 @@
+import { cabreraEscudoRecords, cabreraEscudoMetadata } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroRecords, pimentelCuadroMetadata } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { velascoExaltacionDivinaMisericordia1810PublicationRecords, velascoExaltacionDivinaMisericordia1810PublicationMetadata } from "./velasco-exaltacion-divina-misericordia-1810-publication.mjs";
 import { pimentelMemoriaSituacionIndigena1864PublicationRecords, pimentelMemoriaSituacionIndigena1864PublicationMetadata } from "./pimentel-memoria-situacion-indigena-1864-publication.mjs";
@@ -379,6 +380,7 @@ const publicationRecords = [
   ...pimentelMemoriaSituacionIndigena1864PublicationRecords,
   ...velascoExaltacionDivinaMisericordia1810PublicationRecords,
   ...pimentelCuadroRecords,
+  ...cabreraEscudoRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
@@ -9559,6 +9561,7 @@ const publicationMetadata = {
   ...pimentelMemoriaSituacionIndigena1864PublicationMetadata,
   ...velascoExaltacionDivinaMisericordia1810PublicationMetadata,
   ...pimentelCuadroMetadata,
+  ...cabreraEscudoMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,

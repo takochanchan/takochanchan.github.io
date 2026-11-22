@@ -10464,6 +10464,78 @@
       "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
       "size": 103771,
       "sha256": "a785af5e1b6c1303d9f6d08155ebf4d46d3276190f95049aeb41c2608c77e4cb"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "size": 2317421,
+      "sha256": "d2d80df67859e9eee43c8163f5b7a3e819a82b230d4aa81f1edcadf842ac5962"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "size": 320897,
+      "sha256": "846ad15f1b0aba3643cb547c9724b81b2f195121087c3d1a19d2c6914838a653"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
+      "size": 50029,
+      "sha256": "db5f02f5a5065778ce23887b6ebbe6314396650494abd5758ce04115b307458b"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "size": 1924051,
+      "sha256": "addba93cad6a1f9a3d6ab237dcc4671d5cbc99effd5dcd9148a2c48d6c45abd6"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "size": 277472,
+      "sha256": "67b6ee0eeb640ea49e65352d127d9de27cb56d0a23da68fa942fd65840165121"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
+      "size": 49480,
+      "sha256": "018a11e5d86c0440e27f7785f64e8bf7b21c4350e665f95b2dd0c95dc8cd8470"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "size": 3007911,
+      "sha256": "b4039093c1e6228088810a96fb0fabb8dc77363e49529cf3558a5c25a1601797"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "size": 433640,
+      "sha256": "f38cee960f28c2804b1b3083d69121ecffe8ebd42dd0a09bfbfbd3db4fd6cdfe"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
+      "size": 49736,
+      "sha256": "966cfeea630af18c4d6c193639bc5c9c47ac678a7e2af794ccc92352ffadab5f"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "size": 3186314,
+      "sha256": "696b56cefd734625449a3fb2cafac0fde55c91ab3e42c984710732d3967020ac"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "size": 385911,
+      "sha256": "ebada066968e4068a5778973f3a919473eb44ba1ada70a7cf7c16247a99c6b60"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
+      "size": 52185,
+      "sha256": "74ab819085a1930d82f5a979746bac358a932c3bd98fd16ef35c96c47e5687dd"
     }
   ]
 }
