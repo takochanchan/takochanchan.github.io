@@ -1,0 +1,26 @@
+name: Pimentel Cuadro separate remote search proofs
+on:
+  push:
+    branches: ["agent/pimentel-cuadro-search-proof-20261122"]
+    paths: [".pimentel-bounded-query.mjs"]
+permissions:
+  contents: read
+jobs:
+  remote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run verify:remote-search
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node .pimentel-bounded-query.mjs
