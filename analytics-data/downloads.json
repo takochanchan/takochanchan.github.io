@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-20",
-  "updatedAt": "2026-11-21T01:33:38.235Z",
+  "endDate": "2026-11-21",
+  "updatedAt": "2026-11-22T00:22:08.786Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9127,6 +9127,150 @@
       "slug": "solorzano-pereira-politica-indiana-1648",
       "title": "インディアス政策論",
       "volumeLabel": "第2冊 第IV〜VI書・増補・巻末索引",
+      "format": "epub"
+    },
+    {
+      "key": "dl_831150212ddac528",
+      "name": "arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+      "title": "オリサバ史試論",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_9edd4c07701afc0c",
+      "name": "arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+      "title": "オリサバ史試論",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_631fda047ff770d9",
+      "name": "lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760",
+      "title": "フアン・アントニオ・デ・オビエド神父伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d8ebee3a85680be3",
+      "name": "lazcano-juan-antonio-de-oviedo-1760.epub",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760",
+      "title": "フアン・アントニオ・デ・オビエド神父伝",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5332f5f1eebbf056",
+      "name": "zelaa-glorias-de-queretaro-1803.pdf",
+      "slug": "zelaa-glorias-de-queretaro-1803",
+      "title": "ケレタロの栄光",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_4c5970c580faaa86",
+      "name": "zelaa-glorias-de-queretaro-1803.epub",
+      "slug": "zelaa-glorias-de-queretaro-1803",
+      "title": "ケレタロの栄光",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_07cd08513b281684",
+      "name": "alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+      "title": "メキシコの教会・修道院誌",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c5500a72e5786260",
+      "name": "alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+      "title": "メキシコの教会・修道院誌",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fff1eabdcede7185",
+      "name": "de-la-cruz-badiano-libellus-1552.pdf",
+      "slug": "de-la-cruz-badiano-libellus-1552",
+      "title": "先住民の薬草の小冊子",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e7401ddf876bdd57",
+      "name": "de-la-cruz-badiano-libellus-1552.epub",
+      "slug": "de-la-cruz-badiano-libellus-1552",
+      "title": "先住民の薬草の小冊子",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ef5bbf4605e28cba",
+      "name": "florencia-estrella-norte-mexico-1688.pdf",
+      "slug": "florencia-estrella-norte-mexico-1688",
+      "title": "メキシコの北の星",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_3f12266789ae7b22",
+      "name": "florencia-estrella-norte-mexico-1688.epub",
+      "slug": "florencia-estrella-norte-mexico-1688",
+      "title": "メキシコの北の星",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_173a77eab53c61be",
+      "name": "mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "slug": "mota-padilla-conquista-nueva-galicia-1870",
+      "title": "ヌエバ・ガリシア征服史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_120b32800909029e",
+      "name": "mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "slug": "mota-padilla-conquista-nueva-galicia-1870",
+      "title": "ヌエバ・ガリシア征服史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_892404b7dd7ea836",
+      "name": "pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "slug": "pimentel-memoria-situacion-indigena-1864",
+      "title": "メキシコ先住民の現状をもたらした原因とその改善策に関する論考",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_6127ab1f1dd680e6",
+      "name": "pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "slug": "pimentel-memoria-situacion-indigena-1864",
+      "title": "メキシコ先住民の現状をもたらした原因とその改善策に関する論考",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7a08523693f3febd",
+      "name": "granados-tardes-americanas-1778-ja.pdf",
+      "slug": "granados-tardes-americanas-1778",
+      "title": "アメリカの午後",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_3062c81bf0c1b15f",
+      "name": "granados-tardes-americanas-1778-ja.epub",
+      "slug": "granados-tardes-americanas-1778",
+      "title": "アメリカの午後",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
