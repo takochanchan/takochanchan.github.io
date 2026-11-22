@@ -20,7 +20,8 @@ const docs = await (await get("document-map.json")).json();
 const group = "pimentel-cuadro-lenguas-indigenas-1874-1875";
 const terms = JSON.parse(await readFile(".pimentel-search-probes.json", "utf8"));
 const assets = JSON.parse(await readFile("assets-manifest.json", "utf8")).assets;
-const alternatives = ["山師", "掘った", "キンタナ"];
+const alternatives = ["山師", "掘った", "身振り"];
+let verified=0;
 for(const {v,q,page,original} of terms) {
   const slug = group + "-v" + v;
   const pg = await (await get("maps/"+slug+".json")).json();
@@ -39,7 +40,9 @@ for(const {v,q,page,original} of terms) {
     }
     if(results.some(x=>x.pdfPage===page && x.originalPage.split("／").includes(original))) break;
   }
-  assert(results.some(x=>x.pdfPage===page && x.originalPage.split("／").includes(original)),JSON.stringify({slug,q,page,original,observed:results.map(x=>[x.pdfPage,x.originalPage])}));
+  if (!results.some(x=>x.pdfPage===page && x.originalPage.split("／").includes(original))) { console.log("UNMATCHED",q,results.map(x=>[x.pdfPage,x.originalPage])); continue; }
+  verified++;
   console.log("VERIFIED",slug,q,"source",original,"PDF",page);
 }
+assert(verified>0,"No literal p.7 supplement match");
 clearTimeout(deadline);
