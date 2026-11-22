@@ -36,7 +36,10 @@ export const pimentelCuadroRecords = [
     "searchShard": "003",
     "releaseTag": "publications-002",
     "seriesVolumeNumber": 1,
-    "recordClass": "major-work"
+    "recordClass": "major-work",
+    "searchSourceMarkerPlacement": "end",
+    "searchSourcePrefaceHeading": "前文",
+    "searchSourceTextStartHeading": "メキシコ先住民諸語の記述と比較、またはメキシコ言語学論"
   },
   {
     "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
@@ -75,7 +78,10 @@ export const pimentelCuadroRecords = [
     "searchShard": "003",
     "releaseTag": "publications-002",
     "seriesVolumeNumber": 2,
-    "recordClass": "major-work"
+    "recordClass": "major-work",
+    "searchSourceMarkerPlacement": "end",
+    "searchSourcePrefaceHeading": "前文",
+    "searchSourceTextStartHeading": "メキシコ先住民諸語の記述と比較、またはメキシコ言語学論"
   },
   {
     "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
@@ -114,7 +120,10 @@ export const pimentelCuadroRecords = [
     "searchShard": "003",
     "releaseTag": "publications-002",
     "seriesVolumeNumber": 3,
-    "recordClass": "major-work"
+    "recordClass": "major-work",
+    "searchSourceMarkerPlacement": "end",
+    "searchSourcePrefaceHeading": "前文",
+    "searchSourceTextStartHeading": "メキシコ先住民諸語の記述と比較、またはメキシコ言語学論"
   }
 ];
 export const pimentelCuadroMetadata = {

@@ -498,11 +498,16 @@ def docx_part_paragraphs(archive: zipfile.ZipFile, name: str) -> list[str]:
     return paragraphs
 
 
-def docx_paragraphs(path: Path) -> list[str]:
+def docx_paragraphs(path: Path, *, preserve_frontmatter: bool = False) -> list[str]:
     with zipfile.ZipFile(path) as archive:
         main = docx_part_paragraphs(archive, "word/document.xml")
         notes = docx_part_paragraphs(archive, "word/footnotes.xml")
         notes.extend(docx_part_paragraphs(archive, "word/endnotes.xml"))
+
+    if preserve_frontmatter:
+        # Explicit page-end editions preserve their title page and front matter.
+        # Their own configured anchors below distinguish the new and source text.
+        return [*main, *(["原注", *notes] if notes else [])]
 
     heading_index = next(
         (
@@ -843,6 +848,130 @@ def paragraphs_with_original_pages(
                 current_marker = map_source_location
                 local_map_marker_pending = False
     return output
+
+
+# This narrower standalone syntax is used only for explicitly enabled editions.
+# It includes unpaginated source opening/closing leaves as distinct real locations.
+PAGE_END_MARKER_RE = re.compile(
+    r"^〔原刊\s+(?:p\.\s+(?:[1-9][0-9]*|[IVXLCDM]+)|"
+    r"(?:前|後)付第\s*[1-9][0-9]*\s*頁)〕$"
+)
+
+
+def page_end_chunks(
+    paragraphs: list[str], *, preface_heading: str, source_heading: str
+) -> tuple[list[dict], list[str]]:
+    """Attribute source paragraphs to their closing marker, occurrence by occurrence."""
+    preface_at = next((i for i, text in enumerate(paragraphs) if text == preface_heading), None)
+    if preface_at is None:
+        raise ValueError(f"page-end edition: preface heading not found: {preface_heading!r}")
+    source_at = next(
+        (i for i in range(preface_at + 1, len(paragraphs)) if paragraphs[i] == source_heading),
+        None,
+    )
+    if source_at is None:
+        raise ValueError(f"page-end edition: original title leaf not found: {source_heading!r}")
+
+    chunks: list[dict] = []
+    marks: list[str] = []
+
+    def emit(parts: list[str], label: str, occurrence: int):
+        annotated = [(label, clean_markdown_inline(text)) for text in parts]
+        for item in searchable_chunks(annotated):
+            # A printed label can restart (e.g. the commission report and the
+            # body share 1–7). Keep the occurrence until physical QA is complete.
+            item["sourceOccurrence"] = occurrence
+            item["id"] = f"b{len(chunks) + 1:05d}"
+            chunks.append(item)
+
+    emit(paragraphs[preface_at:source_at], DEFAULT_SOURCE_LOCATION, 0)
+    pending: list[str] = []
+    for paragraph in paragraphs[source_at:]:
+        if not PAGE_END_MARKER_RE.fullmatch(paragraph.strip()):
+            pending.append(paragraph)
+            continue
+        label = original_marker_label(paragraph.strip())
+        marks.append(label)
+        emit(pending, label, len(marks))
+        pending.clear()
+    if pending or not marks:
+        raise ValueError("page-end edition: original body must finish at a verified standalone marker")
+    # The global policy treats X as a placeholder. Only a literal X between
+    # contiguous Roman IX and XI is admissible in an explicitly enabled edition.
+    # The whole ordered PDF witness still has to match the unmodified raw X.
+    roman_tenth = set()
+    for i, label in enumerate(marks):
+        if is_placeholder_original_marker(label):
+            if label == "原刊 p. X" and i > 0 and marks[i - 1:i + 2] == [
+                "原刊 p. IX", "原刊 p. X", "原刊 p. XI"
+            ]:
+                roman_tenth.add(i + 1)
+            else:
+                raise ValueError(f"page-end edition: unsupported placeholder {label!r}")
+    for chunk in chunks:
+        if chunk["sourceOccurrence"] in roman_tenth:
+            chunk["originalPage"] = "原刊 p. X（ローマ数字）"
+    return chunks, marks
+
+
+def align_page_end_chunks(chunks: list[dict], marks: list[str], pages: list[str]) -> None:
+    """Require the full ordered marker witness; never conflate duplicate labels."""
+    pdf_marks = [
+        (page_number, original_marker_label(line.strip()))
+        for page_number, page in enumerate(pages, start=1)
+        for line in page.splitlines()
+        if PAGE_END_MARKER_RE.fullmatch(line.strip())
+    ]
+    if [normalize_for_match(label) for _, label in pdf_marks] != [
+        normalize_for_match(label) for label in marks
+    ]:
+        raise ValueError("page-end edition: source and final PDF marker sequences differ")
+
+    # Closing markers are physical bounds, not substitutes for matching the
+    # actual string: an original page can occupy more than one physical page.
+    ranges = [(1, pdf_marks[0][0])]
+    ranges.extend((pdf_marks[i - 1][0] if i else 1, p) for i, (p, _) in enumerate(pdf_marks))
+    align_chunks_to_pdf(chunks, pages)
+    texts = [normalize_for_match(page) for page in pages]
+    grams = [ngrams(text) for text in texts]
+    last_by_occurrence: dict[int, int] = {}
+    for chunk in chunks:
+        occurrence = chunk.pop("sourceOccurrence")
+        lo, hi = ranges[occurrence]
+        prior = chunk["pdfPage"]
+        old = chunk["alignment"]
+        in_range = prior is not None and lo <= prior <= hi
+        target = prior if in_range else last_by_occurrence.get(occurrence, lo)
+        needle = normalize_for_match(chunk["text"])
+        if in_range and old in {"exact", "fingerprint"}:
+            # An existing direct hit on the first physical page of a split
+            # printed page must not be pulled to its later marker page.
+            pass
+        else:
+            direct = [pi for pi in range(lo, hi + 1) if needle and needle in texts[pi - 1]]
+            if direct:
+                chosen = min(direct, key=lambda pi: (abs(pi - target), pi))
+                # Short repeated words are not promoted without a unique match
+                # or a one-page source bound, matching the existing strictness.
+                method = "exact" if len(direct) == 1 or len(needle) >= 12 else "inherited"
+                chunk["pdfPage"], chunk["alignment"] = chosen, method
+            elif in_range and old == "fuzzy":
+                pass
+            elif lo == hi and occurrence:
+                # Every word of this source segment is physically bounded by
+                # its surrounding consecutive labels on one page.
+                chunk["pdfPage"], chunk["alignment"] = lo, "sourcePage"
+            else:
+                ngram = ngrams(needle)
+                confidence, chosen = 0.0, target
+                if len(needle) >= 12:
+                    for pi in range(lo, hi + 1):
+                        score = len(ngram & grams[pi - 1]) / len(ngram)
+                        if score > confidence or (score == confidence and abs(pi - target) < abs(chosen - target)):
+                            confidence, chosen = score, pi
+                chunk["pdfPage"] = chosen
+                chunk["alignment"] = "fuzzy" if confidence >= 0.24 else "inherited"
+        last_by_occurrence[occurrence] = chunk["pdfPage"]
 
 
 def original_labels_for_pdf_pages(pages: list[str]) -> list[list[str]]:
@@ -1313,11 +1442,16 @@ def _build_work(manifest_path: Path, spec: dict) -> dict:
     source = resolve_path(manifest_path, spec.get("source") or spec["master"])
     pdf = resolve_path(manifest_path, spec["pdf"])
     source_format = spec.get("format") or source.suffix.lstrip(".").lower()
+    placement = spec.get("sourceMarkerPlacement", "start")
+    if placement not in {"start", "end"}:
+        raise ValueError(f"{slug}: unsupported source marker placement {placement!r}")
+    if placement == "end" and source_format not in {"docx", "epub"}:
+        raise ValueError(f"{slug}: explicitly marked page-end editions require DOCX or EPUB input")
     if source_format in {"md", "markdown"}:
         paragraphs = markdown_paragraphs(source)
         source_format = "markdown"
     elif source_format == "docx":
-        paragraphs = docx_paragraphs(source)
+        paragraphs = docx_paragraphs(source, preserve_frontmatter=placement == "end")
     elif source_format == "epub":
         paragraphs = epub_paragraphs(source)
     else:
@@ -1330,10 +1464,15 @@ def _build_work(manifest_path: Path, spec: dict) -> dict:
     if spec.get("pdfSha256") and pdf_sha256 != spec["pdfSha256"]:
         raise ValueError(f"{slug}: PDF SHA-256 mismatch")
 
-    annotated = paragraphs_with_original_pages(
-        paragraphs, publication_slug=slug
-    )
-    chunks = searchable_chunks(annotated)
+    if placement == "end":
+        chunks, end_marks = page_end_chunks(
+            paragraphs, preface_heading=spec["sourcePrefaceHeading"], source_heading=spec["sourceTextStartHeading"]
+        )
+    else:
+        annotated = paragraphs_with_original_pages(
+            paragraphs, publication_slug=slug
+        )
+        chunks = searchable_chunks(annotated)
     if not chunks:
         raise ValueError(f"{slug}: no searchable chunks")
     if any(is_placeholder_original_marker(chunk["originalPage"]) for chunk in chunks):
@@ -1348,26 +1487,29 @@ def _build_work(manifest_path: Path, spec: dict) -> dict:
             )
         pages = ocr_pdf_pages(pdf, len(pages), int(page_limit))
         pdf_text_mode = "japanese-ocr"
-    align_chunks_to_pdf(chunks, pages)
-    pdf_original_labels = original_labels_for_pdf_pages(pages)
-    apply_source_page_alignment(chunks, pdf_original_labels)
+    if placement == "end":
+        align_page_end_chunks(chunks, end_marks, pages)
+    else:
+        align_chunks_to_pdf(chunks, pages)
+        pdf_original_labels = original_labels_for_pdf_pages(pages)
+        apply_source_page_alignment(chunks, pdf_original_labels)
+        for chunk in chunks:
+            labels = pdf_original_labels[chunk["pdfPage"] - 1]
+            if (
+                slug == "estrada-descripcion-zapotitlan-suchitepeques-1579"
+                and chunk["originalPage"]
+                in {
+                    "原資料：付属地図",
+                    *{"原資料：" + label for label in MAP_LOCATION_LABELS},
+                }
+            ):
+                # Preserve explicit map scope and local map-position markers. A
+                # preceding manuscript image marker on the same PDF page must not
+                # replace them, and the table must not inherit its final map note.
+                continue
+            if labels:
+                chunk["originalPage"] = "／".join(labels)
     alignment = alignment_summary(chunks)
-    for chunk in chunks:
-        labels = pdf_original_labels[chunk["pdfPage"] - 1]
-        if (
-            slug == "estrada-descripcion-zapotitlan-suchitepeques-1579"
-            and chunk["originalPage"]
-            in {
-                "原資料：付属地図",
-                *{"原資料：" + label for label in MAP_LOCATION_LABELS},
-            }
-        ):
-            # Preserve explicit map scope and local map-position markers. A
-            # preceding manuscript image marker on the same PDF page must not
-            # replace them, and the table must not inherit its final map note.
-            continue
-        if labels:
-            chunk["originalPage"] = "／".join(labels)
     substantive = sum(
         1 for chunk in chunks if len(normalize_for_match(chunk["text"])) >= 12
     )
@@ -1456,5 +1598,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
-

@@ -104,6 +104,11 @@ for (const publication of selectedPublications) {
     pdf: path.join(assetsRoot, pdfAsset.path),
     pdfSha256: pdfAsset.sha256,
     ocrPageLimit: publication.searchOcrPageLimit,
+    ...(publication.searchSourceMarkerPlacement === "end" ? {
+      sourceMarkerPlacement: "end",
+      sourcePrefaceHeading: publication.searchSourcePrefaceHeading,
+      sourceTextStartHeading: publication.searchSourceTextStartHeading,
+    } : {}),
   });
 }
 
@@ -127,4 +132,3 @@ process.stdout.write(
     `${works.length} works (${direct} canonical masters, ` +
     `${works.length - direct} approved EPUB mirrors).\n`,
 );
-
