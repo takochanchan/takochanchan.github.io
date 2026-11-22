@@ -1,0 +1,28 @@
+{
+  "slug": "viana-relacion-de-vera-paz-1574",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "535d6d71295be6e461b76354f71ad3930f69ebf3",
+  "assets": [
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.pdf",
+      "filename": "Viana_Relacion_de_Vera_Paz.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.pdf",
+      "size": 713674,
+      "sha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.epub",
+      "filename": "Viana_Relacion_de_Vera_Paz.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.epub",
+      "size": 122663,
+      "sha256": "f8b64b99867fe4e96bdaed8ab9cb54ac28ea87cb5834c398267ed663b36f02eb"
+    }
+  ],
+  "bundle": {
+    "size": 643412,
+    "sha256": "b42184d5b5e2428d87d6af08e6cc5e63afc69bd0fdbadb45881cc902b7b1bd09",
+    "chunks": [
+      "6f1addcf350aba0d30d0146621a35a943cc47f02"
+    ]
+  }
+}
