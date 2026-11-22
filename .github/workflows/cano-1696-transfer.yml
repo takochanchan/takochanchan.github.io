@@ -1,0 +1,30 @@
+name: Transfer checksum-pinned Cano Manche y Peten assets
+on:
+  push:
+    branches: ["agent/cano-1696-transfer"]
+    paths: [".publication-upload-requests/cano-manche-y-peten-1696.json"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-cano-1696.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cano-1696-release-verification
+          path: cano-1696-release-verification.json
