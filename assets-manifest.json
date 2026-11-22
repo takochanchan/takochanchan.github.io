@@ -10392,6 +10392,24 @@
       "url": "https://takochanchan.github.io/publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
       "size": 100639,
       "sha256": "5784040dab2b21a87e9c62359584c4a3a30f94f2303fe728da069269ff698438"
+    },
+    {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
+      "size": 1164440,
+      "sha256": "bfadd005eba81979915dc20c45d42dca5b46b2b0d7b711abebaf5e17404a2f09"
+    },
+    {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.epub",
+      "size": 210088,
+      "sha256": "effc5b348973ef218587a669ec4ddb3429438dbf78ea022ee61e7a84ba173a19"
+    },
+    {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
+      "size": 91529,
+      "sha256": "b4832d97c168cf3df675f995e9e3e072207e8a48826376b0c882395ec7e2a9c7"
     }
   ]
 }
