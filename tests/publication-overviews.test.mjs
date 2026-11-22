@@ -74,3 +74,25 @@ test("original descriptions remain visible and unchanged, with volume disclosure
     }
   }
 });
+
+test("Pimentel is a linguistic study, not a source collection, on its bibliography and card", async () => {
+  const slug = "pimentel-cuadro-lenguas-indigenas-1874-1875";
+  const item = cataloguePublications.find(publication => publication.slug === slug);
+  assert.ok(item);
+  assert.equal(item.recordClass, "major-work");
+  assert.ok(item.types.includes("言語学研究"));
+  assert.equal(item.groupOverviewLabel, "全3巻の詳細概要");
+  const detail = await readFile(new URL(`../dist/publications/${slug}/index.html`, import.meta.url), "utf8");
+  const hero = detail.match(/<section class="publication-hero">[\s\S]*?<\/section>/u)?.[0];
+  assert.ok(hero);
+  assert.match(hero, /<span class="publication-overview__show">全3巻の詳細概要<\/span>/u);
+  for (const i of [1, 2, 3]) {
+    assert.ok(hero.includes(`<span class="publication-overview__show">第${i}巻の詳細概要</span>`));
+  }
+  assert.doesNotMatch(hero, /史料集/u);
+  const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
+  const card = [...home.matchAll(/<article class="record-card">[\s\S]*?<\/article>/gu)]
+    .find(([html]) => html.includes(`href="/publications/${slug}/"`))?.[0];
+  assert.ok(card, "Pimentel card is in the book catalogue");
+  assert.doesNotMatch(card, /史料集/u);
+});
