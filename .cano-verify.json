@@ -1,1 +1,7 @@
-{"mode":"build"}
+{
+  "mode": "search",
+  "repo": "takochanchan/takochan-search-index-003",
+  "head": "46725299d7f9a5c990266e211784fb8f380fcaf8",
+  "id": 45059413742,
+  "pdfSha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
+}
