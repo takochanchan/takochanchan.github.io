@@ -1,0 +1,73 @@
+{
+  "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "f92b6d0c815017b28a8bef06a56e009f6462a257",
+  "assets": [
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "size": 2317421,
+      "sha256": "d2d80df67859e9eee43c8163f5b7a3e819a82b230d4aa81f1edcadf842ac5962"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "size": 320897,
+      "sha256": "846ad15f1b0aba3643cb547c9724b81b2f195121087c3d1a19d2c6914838a653"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "size": 1924051,
+      "sha256": "addba93cad6a1f9a3d6ab237dcc4671d5cbc99effd5dcd9148a2c48d6c45abd6"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "size": 277472,
+      "sha256": "67b6ee0eeb640ea49e65352d127d9de27cb56d0a23da68fa942fd65840165121"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "size": 3007911,
+      "sha256": "b4039093c1e6228088810a96fb0fabb8dc77363e49529cf3558a5c25a1601797"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "size": 433640,
+      "sha256": "f38cee960f28c2804b1b3083d69121ecffe8ebd42dd0a09bfbfbd3db4fd6cdfe"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "size": 3186314,
+      "sha256": "696b56cefd734625449a3fb2cafac0fde55c91ab3e42c984710732d3967020ac"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "filename": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "size": 385911,
+      "sha256": "ebada066968e4068a5778973f3a919473eb44ba1ada70a7cf7c16247a99c6b60"
+    }
+  ],
+  "bundle": {
+    "size": 9459164,
+    "sha256": "fbe8f5a7617037c506fb5ccef0fffd8f454a6c68545722dbf75aaca8ff92de68",
+    "chunks": [
+      "99aebc8c4cf0ec40459ef5731149e9dd8bf55f63",
+      "fda35a6d4f597e48c563522c8ad0db84b8ae5a52",
+      "37e876d7539feeac80f46e4d69988ba416300165",
+      "33f6ea58ebdc9f83bd6620cd610f341f52300def"
+    ]
+  }
+}
