@@ -81,11 +81,11 @@ test("Pimentel is a linguistic study, not a source collection, on its bibliograp
   assert.ok(item);
   assert.equal(item.recordClass, "major-work");
   assert.ok(item.types.includes("言語学研究"));
-  assert.equal(item.groupOverviewLabel, "全3巻の詳細概要");
+  assert.equal(item.groupOverviewLabel, "全体の詳細概要");
   const detail = await readFile(new URL(`../dist/publications/${slug}/index.html`, import.meta.url), "utf8");
   const hero = detail.match(/<section class="publication-hero">[\s\S]*?<\/section>/u)?.[0];
   assert.ok(hero);
-  assert.match(hero, /<span class="publication-overview__show">全3巻の詳細概要<\/span>/u);
+  assert.match(hero, /<span class="publication-overview__show">全体の詳細概要<\/span>/u);
   for (const i of [1, 2, 3]) {
     assert.ok(hero.includes(`<span class="publication-overview__show">第${i}巻の詳細概要</span>`));
   }
