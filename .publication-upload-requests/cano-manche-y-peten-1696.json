@@ -1,0 +1,28 @@
+{
+  "slug": "cano-manche-y-peten-1696",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "454304436aef5fbd901ae438c8c8448f818f64fd",
+  "assets": [
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.pdf",
+      "filename": "Cano_Manche_y_Peten.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.pdf",
+      "size": 525136,
+      "sha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.epub",
+      "filename": "Cano_Manche_y_Peten.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.epub",
+      "size": 73114,
+      "sha256": "74632746b340d205d25c27c2587d09c14f84b0c8cb0bccd97d700eaf48e24d3d"
+    }
+  ],
+  "bundle": {
+    "size": 504372,
+    "sha256": "9e72bb744d5704466693aaee02f5deff3e59010832b2519271463e41ed61bb47",
+    "chunks": [
+      "b1493c9eddd1e67356cb5ceb260149e6046229b4"
+    ]
+  }
+}
