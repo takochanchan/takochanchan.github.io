@@ -1,7 +1,10 @@
 {
-  "mode": "search",
-  "repo": "takochanchan/takochan-search-index-003",
-  "head": "09f745bd5a2778b51becad90833237e32aa423f0",
-  "id": 45056667241,
-  "pdfSha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
+  "mode": "live",
+  "repo": "takochanchan/takochanchan.github.io",
+  "head": "75d4755c8b1fbe74223679bc25578efc63b67438",
+  "id": 45057345890,
+  "pdfSha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c",
+  "pdfPages": 30,
+  "recordClass": "major-work",
+  "description": "ドミニコ会士アグスティン・カノが、1695〜1697年のペテン湖方面への遠征、チョル人・モパン人・アヒツァ人との交渉、宣教と集住をめぐる判断を国王に報告した文書。ペンシルヴェニア大学所蔵写本に基づく。"
 }
