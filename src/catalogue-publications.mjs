@@ -1,3 +1,4 @@
+import { pimentelCuadroGroup } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { clavijeroPublicationGroup } from "./clavijero-storia-della-california-publication.mjs";
 import { nuevoBernalPublicationGroup } from "./bustamante-nuevo-bernal-publication.mjs";
 import { solorzanoPublicationGroup } from "./solorzano-politica-indiana-publication.mjs";
@@ -13,6 +14,7 @@ const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
   clavijeroPublicationGroup,
+  pimentelCuadroGroup,
   nuevoBernalPublicationGroup,
   solorzanoPublicationGroup,
   bustamantePublicationGroup,

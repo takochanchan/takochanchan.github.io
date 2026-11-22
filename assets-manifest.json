@@ -10410,6 +10410,60 @@
       "url": "https://takochanchan.github.io/publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
       "size": 91529,
       "sha256": "b4832d97c168cf3df675f995e9e3e072207e8a48826376b0c882395ec7e2a9c7"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
+      "size": 7670526,
+      "sha256": "f12fecd22d60ba0ea52204812e6230e1910df38b39a2e3ea6995e5f0ecd7f700"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
+      "size": 393524,
+      "sha256": "e570208826d1b75a3c060fd9db5fea447b3033d4e6d04e829b2be0bcbc988c18"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
+      "size": 100694,
+      "sha256": "6cb3119d10cd120bea1fbaafaf8cf1e4f0bbbaa7f7aeda29144cb3e6667c0ba5"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
+      "size": 7752536,
+      "sha256": "c8f739e5a15742d58a18d716f716105feaf21f831a51508bb232441e56ae96d9"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
+      "size": 384210,
+      "sha256": "b20123ae9725a52baf1469c6a795bd9315488a17ba507873bf9ac58ca7b4b4d6"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
+      "size": 100714,
+      "sha256": "0d02b03f2248f8e65b257c5109d4925e2951b9c18174ea00a9f8fcf717e0dc7f"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
+      "size": 9197590,
+      "sha256": "5a2534e462eae3a9954ab3dda094d05094793846ddb1d0e62624976fac9f6597"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
+      "size": 444492,
+      "sha256": "554b5dd7ddd7c85a7e38acbeb11cb5f9ea0dd15019414bde52e523734683ad89"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
+      "size": 103771,
+      "sha256": "a785af5e1b6c1303d9f6d08155ebf4d46d3276190f95049aeb41c2608c77e4cb"
     }
   ]
 }

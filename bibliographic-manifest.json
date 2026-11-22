@@ -10979,6 +10979,63 @@
         "status": "online",
         "url": "https://archive.org/details/gri_000033125008506681"
       }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+      "title": "メキシコ先住民諸語の記述と比較 第1巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1874,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I. México: Imprenta de Isidoro Epstein, 1874. 第二版、第1巻（本文426頁まで、第1–15章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti00estagoog）で照合。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv01pime"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+      "title": "メキシコ先住民諸語の記述と比較 第2巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1875,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II. México: Imprenta de Isidoro Epstein, 1875. 第二版、第2巻（本文472頁まで、第16–37章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti01estagoog）で照合。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv02pime"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
+      "title": "メキシコ先住民諸語の記述と比較 第3巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1875,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III. México: Imprenta de Isidoro Epstein, 1875. 第二版、第3巻（本文570頁まで、第38–58章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti03pimegoog）で照合。 底本の第6・7頁は、ハーバード大学図書館所蔵の同版（https://archive.org/details/cuadrodescripti03pimegoog）で補った。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv03pime"
+      }
     }
   ],
   "works": [

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5b9a3d6bff71f52dc13c34e1de8428ceb9ee72b8",
+  "archive_commit": "b8fcbc675e730285005cce0dcea514ae25d9d37b",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -505,7 +505,10 @@
     "granados-tardes-americanas-1778": "publications/granados-tardes-americanas-1778/master.docx",
     "mota-padilla-conquista-nueva-galicia-1870": "publications/mota-padilla-conquista-nueva-galicia-1870/master.docx",
     "pimentel-memoria-situacion-indigena-1864": "publications/pimentel-memoria-situacion-indigena-1864/master.docx",
-    "velasco-exaltacion-divina-misericordia-1810": "publications/velasco-exaltacion-divina-misericordia-1810/master.docx"
+    "velasco-exaltacion-divina-misericordia-1810": "publications/velasco-exaltacion-divina-misericordia-1810/master.docx",
+    "pimentel-cuadro-lenguas-indigenas-1874-1875-v1": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/master.docx",
+    "pimentel-cuadro-lenguas-indigenas-1874-1875-v2": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/master.docx",
+    "pimentel-cuadro-lenguas-indigenas-1874-1875-v3": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

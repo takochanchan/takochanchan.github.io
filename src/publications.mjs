@@ -1,3 +1,4 @@
+import { pimentelCuadroRecords, pimentelCuadroMetadata } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { velascoExaltacionDivinaMisericordia1810PublicationRecords, velascoExaltacionDivinaMisericordia1810PublicationMetadata } from "./velasco-exaltacion-divina-misericordia-1810-publication.mjs";
 import { pimentelMemoriaSituacionIndigena1864PublicationRecords, pimentelMemoriaSituacionIndigena1864PublicationMetadata } from "./pimentel-memoria-situacion-indigena-1864-publication.mjs";
 import { motaPadillaConquistaNuevaGalicia1870PublicationRecords, motaPadillaConquistaNuevaGalicia1870PublicationMetadata } from "./mota-padilla-conquista-nueva-galicia-1870-publication.mjs";
@@ -377,6 +378,7 @@ const publicationRecords = [
   ...motaPadillaConquistaNuevaGalicia1870PublicationRecords,
   ...pimentelMemoriaSituacionIndigena1864PublicationRecords,
   ...velascoExaltacionDivinaMisericordia1810PublicationRecords,
+  ...pimentelCuadroRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
@@ -9556,6 +9558,7 @@ const publicationMetadata = {
   ...motaPadillaConquistaNuevaGalicia1870PublicationMetadata,
   ...pimentelMemoriaSituacionIndigena1864PublicationMetadata,
   ...velascoExaltacionDivinaMisericordia1810PublicationMetadata,
+  ...pimentelCuadroMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,

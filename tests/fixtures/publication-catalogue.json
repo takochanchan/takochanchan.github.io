@@ -3323,6 +3323,33 @@
       "searchShard": "003",
       "author": "アロンソ・アルベルト・デ・ベラスコ",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3560,6 +3587,15 @@
         "clavijero-storia-della-california-tomo-2-1789"
       ],
       "seriesVolumeCount": 2
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "memberSlugs": [
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v3"
+      ],
+      "seriesVolumeCount": 3
     }
   ],
   "shortAuthorCount": 49
