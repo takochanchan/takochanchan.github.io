@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
+import { bibliographicAliases } from "./src/catalogue-publications.mjs";
 import { exactSubResultsFor, snippetsFor } from "./src/fulltext-search-core.mjs";
 const deadline = setTimeout(() => { console.error("Search query deadline reached"); process.exit(1); }, 110000);
 const cfg = JSON.parse(await readFile("search-shards.json", "utf8"));
@@ -25,7 +26,9 @@ for(const {v,q,page,original} of terms) {
   const pg = await (await get("maps/"+slug+".json")).json();
   const pdf=assets.find(a => a.path.startsWith("publications/"+slug+"/") && a.path.endsWith(".pdf"));
   assert.equal(pg.pdfSha256,pdf.sha256);
-  assert.equal(pg.canonicalUrl,"/publications/"+group+"/");
+  assert.equal(pg.canonicalUrl,"/publications/"+slug+"/");
+  assert.equal(bibliographicAliases[slug],group);
+  assert.equal("/publications/"+(bibliographicAliases[slug]||slug)+"/","/publications/"+group+"/");
   let results=[];
   for (const search of ['"'+q+'"', alternatives[v-1]]) {
     const response = await engine.search(search);
