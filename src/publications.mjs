@@ -1,3 +1,4 @@
+import { vianaRelacionVeraPazRecords, vianaRelacionVeraPazMetadata } from "./viana-relacion-de-vera-paz-1574-publication.mjs";
 import { canoManchePetenRecords, canoManchePetenMetadata } from "./cano-manche-y-peten-1696-publication.mjs";
 import { cabreraEscudoRecords, cabreraEscudoMetadata } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroRecords, pimentelCuadroMetadata } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
@@ -383,6 +384,7 @@ const publicationRecords = [
   ...pimentelCuadroRecords,
   ...cabreraEscudoRecords,
   ...canoManchePetenRecords,
+  ...vianaRelacionVeraPazRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
@@ -9565,6 +9567,7 @@ const publicationMetadata = {
   ...pimentelCuadroMetadata,
   ...cabreraEscudoMetadata,
   ...canoManchePetenMetadata,
+  ...vianaRelacionVeraPazMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,
@@ -12367,6 +12370,7 @@ const comparePublicationYears = (left, right) => {
 // Administrative, judicial, diplomatic, and institutional records retain this
 // class even when the source documents were issued as an official compilation.
 const documentCollectionSlugs = new Set([
+  "viana-relacion-de-vera-paz-1574",
   "cano-manche-y-peten-1696",
   "garcia-documentos-ineditos-mexico-v16-1908",
   "garcia-documentos-ineditos-mexico-v17-1908",

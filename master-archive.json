@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "07bd5efbcffe46cd641032025961ccb16014cab1",
+  "archive_commit": "535d6d71295be6e461b76354f71ad3930f69ebf3",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -513,7 +513,8 @@
     "cabrera-escudo-de-armas-de-mexico-1746-v2": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/master.docx",
     "cabrera-escudo-de-armas-de-mexico-1746-v3": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/master.docx",
     "cabrera-escudo-de-armas-de-mexico-1746-v4": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/master.docx",
-    "cano-manche-y-peten-1696": "publications/cano-manche-y-peten-1696/master.md"
+    "cano-manche-y-peten-1696": "publications/cano-manche-y-peten-1696/master.md",
+    "viana-relacion-de-vera-paz-1574": "publications/viana-relacion-de-vera-paz-1574/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

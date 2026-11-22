@@ -10554,6 +10554,24 @@
       "url": "https://takochanchan.github.io/publications/cano-manche-y-peten-1696/cover.jpg",
       "size": 67878,
       "sha256": "74e80fe4dac1f5e75cd4300f2fcade2c8c4bf97142736847e8823e8c40780a30"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.pdf",
+      "size": 713674,
+      "sha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.epub",
+      "size": 122663,
+      "sha256": "f8b64b99867fe4e96bdaed8ab9cb54ac28ea87cb5834c398267ed663b36f02eb"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/viana-relacion-de-vera-paz-1574/cover.jpg",
+      "size": 108326,
+      "sha256": "90d91d70a4f37bd4c9b281f462230611ad1e011b335de34f340c14800e6a922f"
     }
   ]
 }

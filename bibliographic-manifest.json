@@ -11131,6 +11131,25 @@
         "status": "online",
         "url": "https://www.famsi.org/research/mltdp/item193/"
       }
+    },
+    {
+      "slug": "viana-relacion-de-vera-paz-1574",
+      "recordClass": "document-collection",
+      "title": "ベラパス地方報告",
+      "originalTitle": "Relación de la provincia i tierra de la Vera Paz",
+      "author": "フランシスコ・デ・ビアナ／ルカス・ガリェゴ／ギリェム・カデナ",
+      "originalAuthor": "Francisco de Viana / Lucas Gallego / Guillem Cadena",
+      "year": 1574,
+      "originalPublication": "1574年12月7日、グアテマラ、コバンのサント・ドミンゴ修道院で署名された報告。底本は1872年のベレント写本。",
+      "sourceEdition": "Francisco de Viana, Lucas Gallego y Guillem Cadena, Relación de la provincia i tierra de la Vera Paz（1574年12月7日署名）。University of Pennsylvania Libraries, Ms. Coll. 700, Item 212（1872年のC・ヘルマン・ベレントによる転写。1857年のバッキンガム・スミスの写しに由来）。1878年の転写地図は別資料。",
+      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター、Berendt-Brinton Linguistic Collection。所蔵目録：https://colenda.library.upenn.edu/catalog/81431-p3599zb5j。底本画像はFAMSI掲載。",
+      "rights": "ペンシルヴェニア大学図書館の所蔵資料の権利表示は「米国内で著作権なし」（NoC-US 1.0、https://rightsstatements.org/vocab/NoC-US/1.0/）。FAMSIが掲載する写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を転載しない。FAMSI画像利用条件：https://www.famsi.org/research/copyright.htm",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.famsi.org/research/mltdp/item212/"
+      }
     }
   ],
   "works": [
