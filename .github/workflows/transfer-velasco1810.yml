@@ -1,0 +1,60 @@
+name: Transfer approved Velasco 1810 publication files
+on:
+  push:
+    branches: [agent/velasco1810-publish-20261122]
+    paths: [.velasco1810-public-request.json]
+
+permissions:
+  contents: read
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+
+jobs:
+  test-and-transfer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: transfer
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: 509dd169a87d1c70f5ca5c140a9182daef0d9a3a
+          path: candidate
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate candidate ledgers and reconstruct approved bytes
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .velasco1810-transfer.py stage "$RUNNER_TEMP/velasco1810-assets" ../candidate
+      - name: Publication build, regression tests and EPUB format check
+        working-directory: candidate
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build
+          npm test
+          python3 ../transfer/.velasco1810-readback.py --expect ../transfer/.velasco1810-expectations.json --html dist/publications/velasco-exaltacion-divina-misericordia-1810/index.html
+          target=dist/publications/velasco-exaltacion-divina-misericordia-1810
+          mkdir -p "$target"
+          cp "$RUNNER_TEMP/velasco1810-assets/velasco-exaltacion-divina-misericordia-1810-ja.epub" "$target/"
+          python3 scripts/validate-epubs.py dist --slug velasco-exaltacion-divina-misericordia-1810
+      - name: Upload and re-download approved PDF, EPUB and checksum list
+        working-directory: transfer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .velasco1810-transfer.py transfer "$RUNNER_TEMP/velasco1810-assets" ../candidate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: velasco1810-public-verification
+          path: transfer/velasco1810-public-verification.json
+          if-no-files-found: error
+
