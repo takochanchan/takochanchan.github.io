@@ -1,57 +1,20 @@
-import hashlib, html, json, pathlib, re, subprocess, tempfile, urllib.request, zipfile
-from xml.etree import ElementTree as ET
-def read(url):
-    with urllib.request.urlopen(urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"takochan-pimentel-release-verifier"}),timeout=120) as response:
-        return response.read()
-group="pimentel-cuadro-lenguas-indigenas-1874-1875"
-slugs=[f"{group}-v{i}" for i in range(1,4)]
+import html,json,re,urllib.request
 base="https://takochanchan.github.io"
-url=f"{base}/publications/{group}/"
-page=read(url).decode("utf-8")
-body=html.unescape(page)
-for text in ["メキシコ先住民諸語の記述と比較", "フランシスコ・ピメンテル", "ジョン・カーター・ブラウン図書館", "CC BY 4.0", "ハーバード大学図書館", *[f"cuadrodescriptiv0{i}pime" for i in range(1,4)]]:
-    assert text in body, text
-overviews=json.loads(pathlib.Path("src/publication-overviews.json").read_text())["records"]
-for i,slug in enumerate(slugs,1):
-    overview=overviews[slug]
-    assert f'id="overview-{slug}"' in page
-    assert f'第{i}巻の詳細概要' in body
-    for para in overview.split("\n\n"):
-        assert para in body, slug
-assert f'{base}/publications/{group}/' in page
-home=read(base+'/').decode("utf-8")
-m=re.search(r"window\.BIBLIOGRAPHIC_ALIASES=(\{.*?\});</script>",home)
-assert m is not None
-aliases=json.loads(m.group(1))
-for slug in slugs:
-    assert aliases[slug]==group, slug
-    alias_page=read(f"{base}/publications/{slug}/").decode("utf-8")
-    assert f"/publications/{group}/" in alias_page, slug
-
-sitemap=read(f"{base}/sitemap-books.xml").decode()
-site_ns={"s":"http://www.sitemaps.org/schemas/sitemap/0.9"}
-locs=[node.text for node in ET.fromstring(sitemap).findall("s:url/s:loc",site_ns)]
-assert locs.count(url)==1, "one canonical bibliography only"
-assert not any(f"{base}/publications/{slug}/" in locs for slug in slugs)
-assets=[a for a in json.loads(pathlib.Path("assets-manifest.json").read_text())["assets"] if a["path"].split("/")[1] in slugs]
-assert len(assets)==9
-tag="https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002"
-checksums={tuple(line.split()) for line in read(f"{tag}/SHA256SUMS.txt").decode().splitlines() if line.strip()}
-with tempfile.TemporaryDirectory() as d:
-    for a in assets:
-        p=pathlib.Path(d)/pathlib.PurePosixPath(a["path"]).name
-        p.write_bytes(read(a["url"]))
-        assert p.stat().st_size==a["size"]
-        assert hashlib.sha256(p.read_bytes()).hexdigest()==a["sha256"]
-        if p.suffix in (".pdf",".epub"):
-            assert (a["sha256"],p.name) in checksums
-            assert a["url"] in body
-        if p.suffix==".pdf":
-            i=int(p.stem.rsplit("_",1)[1]); pg=[409,402,485][i-1]
-            assert re.search(rf"^Pages:\s+{pg}$",subprocess.check_output(["pdfinfo",str(p)],text=True),re.M)
-        elif p.suffix==".epub":
-            with zipfile.ZipFile(p) as z:
-                assert z.testzip() is None and z.read("mimetype")==b"application/epub+zip"
-        print("VERIFIED",a["path"],a["size"],a["sha256"])
-print("VERIFIED",url,"one canonical bibliography, all three complete detailed overviews, nine assets")
-
+slug="pimentel-cuadro-lenguas-indigenas-1874-1875"
+def get(url):
+    req=urllib.request.Request(url,headers={"Cache-Control":"no-cache","User-Agent":"takochan-live-label-verifier"})
+    with urllib.request.urlopen(req,timeout=30) as res:
+        assert res.status==200
+        return res.read().decode("utf-8")
+url=f"{base}/publications/{slug}/"
+page=get(url+"?heading-check="+json.load(open(".pimentel-verify.json"))["head"][:10])
+hero=re.search(r'<section class="publication-hero">[\s\S]*?</section>',page).group()
+assert '<span class="publication-overview__show">全体の詳細概要</span>' in hero
+assert '史料集' not in hero and '全3巻の詳細概要' not in hero
+for i in range(1,4):
+    assert f'<span class="publication-overview__show">第{i}巻の詳細概要</span>' in hero
+home=get(base+"/")
+cards=re.findall(r'<article class="record-card">[\s\S]*?</article>',home)
+card,=[x for x in cards if f'href="/publications/{slug}/"' in x]
+assert "史料集" not in card
+print("VERIFIED",url, "全体の詳細概要 plus 3 per-volume headings; no 史料集 in the bibliography heading section or its card")
