@@ -3386,6 +3386,14 @@
       "seriesVolumeNumber": 4,
       "originalAuthor": "Cayetano de Cabrera y Quintero",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cano-manche-y-peten-1696",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アグスティン・カノ",
+      "originalAuthor": "Agustín Cano",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [

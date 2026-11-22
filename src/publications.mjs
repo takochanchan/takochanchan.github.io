@@ -1,3 +1,4 @@
+import { canoManchePetenRecords, canoManchePetenMetadata } from "./cano-manche-y-peten-1696-publication.mjs";
 import { cabreraEscudoRecords, cabreraEscudoMetadata } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroRecords, pimentelCuadroMetadata } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { velascoExaltacionDivinaMisericordia1810PublicationRecords, velascoExaltacionDivinaMisericordia1810PublicationMetadata } from "./velasco-exaltacion-divina-misericordia-1810-publication.mjs";
@@ -381,6 +382,7 @@ const publicationRecords = [
   ...velascoExaltacionDivinaMisericordia1810PublicationRecords,
   ...pimentelCuadroRecords,
   ...cabreraEscudoRecords,
+  ...canoManchePetenRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
   ...solorzanoPublicationRecords,
@@ -9562,6 +9564,7 @@ const publicationMetadata = {
   ...velascoExaltacionDivinaMisericordia1810PublicationMetadata,
   ...pimentelCuadroMetadata,
   ...cabreraEscudoMetadata,
+  ...canoManchePetenMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
   ...solorzanoPublicationMetadata,

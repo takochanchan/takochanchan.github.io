@@ -10536,6 +10536,24 @@
       "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
       "size": 52185,
       "sha256": "74ab819085a1930d82f5a979746bac358a932c3bd98fd16ef35c96c47e5687dd"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.pdf",
+      "size": 525136,
+      "sha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.epub",
+      "size": 73114,
+      "sha256": "74632746b340d205d25c27c2587d09c14f84b0c8cb0bccd97d700eaf48e24d3d"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cano-manche-y-peten-1696/cover.jpg",
+      "size": 67878,
+      "sha256": "74e80fe4dac1f5e75cd4300f2fcade2c8c4bf97142736847e8823e8c40780a30"
     }
   ]
 }

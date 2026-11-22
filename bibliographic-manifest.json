@@ -11112,6 +11112,25 @@
         "status": "online",
         "url": "https://archive.org/details/escudodearmasdem00cabr_1"
       }
+    },
+    {
+      "slug": "cano-manche-y-peten-1696",
+      "recordClass": "major-work",
+      "title": "マンチェとペテン",
+      "originalTitle": "Manche y Peten",
+      "author": "アグスティン・カノ",
+      "originalAuthor": "Agustín Cano",
+      "year": 1696,
+      "originalPublication": "グアテマラ、17世紀末の写本。扉・目録は1696年、報告本文は1697年を当年とする。",
+      "sourceEdition": "Agustín Cano, Manche y Peten. University of Pennsylvania Libraries, Ms. Coll. 700, Item 193。扉の年記は1696年。本文は1697年の出来事に及び、巻頭にC・ヘルマン・ベレントによる1877年の前置資料がある。",
+      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター所蔵、Berendt-Brinton Linguistic Collection。ペンシルヴェニア大学図書館とFAMSIの共同デジタル化。",
+      "rights": "カノおよびベレントの原文は著作権保護期間満了。FAMSIの写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を収録しない。画像の利用条件：https://www.famsi.org/research/copyright.htm",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.famsi.org/research/mltdp/item193/"
+      }
     }
   ],
   "works": [
