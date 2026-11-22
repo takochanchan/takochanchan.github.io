@@ -1,7 +1,10 @@
 {
-  "mode": "search",
-  "repo": "takochanchan/takochan-search-index-003",
-  "head": "36b60279fd9f16dda721a1fab59cd7d8a244deab",
-  "id": 45075986137,
-  "pdfSha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6"
+  "mode": "live",
+  "repo": "takochanchan/takochanchan.github.io",
+  "head": "a5a3583681514e10f9cd85a4a392f2fd617fd5a1",
+  "id": 45076718128,
+  "pdfSha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6",
+  "pdfPages": 39,
+  "recordClass": "document-collection",
+  "description": "1574年、コバンのドミニコ会士3人が記したベラパスの地誌。15の村と教会をたどり、教理教育に使った言語、貢納者の減少、疫病と食糧難、道普請の未払い賃金を報告する。1872年のベレント写本に基づく。"
 }
