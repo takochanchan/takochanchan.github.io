@@ -1,0 +1,54 @@
+name: Verify Viana Relación de Vera Paz search and live catalogue
+on:
+  push:
+    branches: ["agent/viana-1574-verify"]
+    paths: [".viana-verify.json"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Await exact pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,time
+          v=json.load(open(".viana-verify.json"))
+          import re
+          assert v["mode"] in ("search", "live")
+          assert v["repo"] == (
+              "takochanchan/takochan-search-index-003" if v["mode"] == "search" else
+              "takochanchan/takochanchan.github.io"
+          )
+          assert re.fullmatch(r"[0-9a-f]{40}", v["head"]) and type(v["id"]) is int and v["id"] > 0
+          endpoint=f"repos/{v['repo']}/actions/runs/{v['id']}"
+          for attempt in range(90):
+              run=json.loads(subprocess.check_output(["gh","api",endpoint]))
+              assert run["head_sha"]==v["head"], (run["head_sha"],v["head"])
+              if run["status"]=="completed":
+                  assert run["conclusion"]=="success", run["conclusion"]
+                  print("Pages input verified:",run["html_url"])
+                  break
+              time.sleep(10)
+          else: raise SystemExit("Pinned Pages deployment was not verified")
+          PY
+      - name: Verify total search shard coverage
+        run: |
+          if [ "$(jq -r .mode .viana-verify.json)" = search ]; then npm run verify:remote-search; fi
+      - name: Verify Viana literal search hits with physical pages and manuscript folia
+        run: |
+          if [ "$(jq -r .mode .viana-verify.json)" = search ]; then node .viana-search-live.mjs; fi
+      - name: Check live bibliography and every exact file
+        run: |
+          if [ "$(jq -r .mode .viana-verify.json)" = live ]; then
+            if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+            python3 .viana-verify-live.py
+          fi
