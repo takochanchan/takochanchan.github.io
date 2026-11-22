@@ -1,0 +1,59 @@
+name: Verify published Velasco 1810 catalogue and index
+on:
+  push:
+    branches: [agent/velasco1810-live-20261122]
+    paths: [.velasco1810-live-request.json]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  readback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify current external map before site publication
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3 4; do
+            if python3 .velasco1810-readback.py --expect .velasco1810-expectations.json --live --maps-only; then exit 0; fi
+            sleep 12
+          done
+          exit 1
+      - name: Wait for the two pinned successful Pages deployments
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PYBLOCK'
+          import json,subprocess,time
+          pins=json.load(open('.velasco1810-live-request.json'))
+          assert pins=={'site':'509dd169a87d1c70f5ca5c140a9182daef0d9a3a','search':'d87304571a2cd801bc1b1af46c9aed9f6fd5f3a6'}
+          checks=[('takochanchan/takochanchan.github.io',pins['site'],'Deploy archive to GitHub Pages'),('takochanchan/takochan-search-index-003',pins['search'],'Deploy full-text search shard to GitHub Pages')]
+          for _ in range(110):
+            ok=0
+            for repo,sha,title in checks:
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha={sha}&per_page=100']))
+              runs=[r for r in data['workflow_runs'] if r['name']==title and r['head_branch']=='main' and r['head_sha']==sha]
+              if runs:
+                latest=max(runs,key=lambda r:r['id'])
+                if latest['status']=='completed':
+                  if latest['conclusion']!='success':raise RuntimeError((title,latest['html_url'],latest['conclusion']))
+                  ok+=1
+            if ok==2:break
+            time.sleep(12)
+          else:raise RuntimeError('Timed out waiting for pinned deployment')
+          PYBLOCK
+      - name: Verify exact public titles, shared checksum rows, live bytes and index fragment metadata
+        run: |
+          set -o pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if python3 .velasco1810-readback.py --expect .velasco1810-expectations.json --live | tee readback.json; then exit 0; fi
+            sleep 20
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: velasco1810-live-readback
+          path: readback.json
