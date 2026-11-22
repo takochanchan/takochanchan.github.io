@@ -1,0 +1,52 @@
+name: Verify Pimentel Cuadro search and publication
+on:
+  push:
+    branches: ["agent/pimentel-cuadro-verify-20261122"]
+    paths: [".pimentel-verify.json"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run unchanged public regression suite before deployment
+        run: |
+          if [ "$(jq -r .mode .pimentel-verify.json)" = search ]; then
+            npm ci --no-audit --no-fund
+            npm run build
+            npm test
+          fi
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,time
+          v=json.load(open(".pimentel-verify.json"))
+          endpoint=f"repos/{v['repo']}/actions/runs/{v['id']}"
+          for attempt in range(110):
+              run=json.loads(subprocess.check_output(["gh","api",endpoint]))
+              assert run["head_sha"]==v["head"], (run["head_sha"],v["head"])
+              if run["status"]=="completed":
+                  assert run["conclusion"]=="success", run["conclusion"]
+                  print("Pages input verified:",run["html_url"])
+                  break
+              time.sleep(10)
+          else: raise SystemExit("Pinned deployment not verified in time")
+          PY
+      - name: Verify remote full-text registers and exact original page mappings
+        run: |
+          npm run verify:remote-search
+          node .pimentel-search-live.mjs
+      - name: Re-download and inspect deployed bibliography and all exact assets
+        run: |
+          if [ "$(jq -r .mode .pimentel-verify.json)" = live ]; then
+            if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+            python3 .pimentel-verify-live.py
+          fi
