@@ -1,0 +1,47 @@
+name: Verify Cabrera 1746 search and live catalogue
+on:
+  push:
+    branches: ["agent/cabrera-1746-verify-20261122"]
+    paths: [".cabrera-verify.json"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Await exact pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,subprocess,time
+          v=json.load(open(".cabrera-verify.json"))
+          endpoint=f"repos/{v['repo']}/actions/runs/{v['id']}"
+          for attempt in range(90):
+              run=json.loads(subprocess.check_output(["gh","api",endpoint]))
+              assert run["head_sha"]==v["head"], (run["head_sha"],v["head"])
+              if run["status"]=="completed":
+                  assert run["conclusion"]=="success", run["conclusion"]
+                  print("Pages input verified:",run["html_url"])
+                  break
+              time.sleep(10)
+          else: raise SystemExit("Pinned Pages deployment was not verified")
+          PY
+      - name: Verify total search shard coverage
+        run: |
+          if [ "$(jq -r .mode .cabrera-verify.json)" = search ]; then npm run verify:remote-search; fi
+      - name: Verify four literal search queries with physical and original page references
+        run: |
+          if [ "$(jq -r .mode .cabrera-verify.json)" = search ]; then node .cabrera-search-live.mjs; fi
+      - name: Check live bibliography and every exact file
+        run: |
+          if [ "$(jq -r .mode .cabrera-verify.json)" = live ]; then
+            if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+            python3 .cabrera-verify-live.py
+          fi
