@@ -1,11 +1,10 @@
 {
-  "mode": "search",
-  "repo": "takochanchan/takochan-search-index-003",
-  "head": "629f526101b83f8abf8577a08d2222ee80ddfcbc",
-  "id": 45167729373,
+  "mode": "live",
+  "repo": "takochanchan/takochanchan.github.io",
+  "head": "edfe6d2077db2bfb0b304600baaaf57fd77a76f6",
+  "id": 45170076380,
   "description": "フロレンシアの遺稿をオビエドが抄録・増補した、ヌエバ・エスパーニャとグアテマラの聖母像・聖地誌。像の来歴と崇敬、行列、奇跡の語りを五部でたどる。",
   "pdfPages": 341,
   "pdfSha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3",
-  "recordClass": "major-work",
-  "attempt": 5
+  "recordClass": "major-work"
 }
