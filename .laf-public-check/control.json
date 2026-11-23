@@ -1,6 +1,5 @@
 {
-  "mode": "search",
-  "head": "6f5abf0242e3c6d1a850ee36219f4e8d6fcc5e16",
-  "run": 45238610533,
-  "verification_variant": "site-literal-adapter"
+  "mode": "live",
+  "head": "01589dfe0f7d30e2a22fe54fd2cfec3b87db7040",
+  "run": 45240603612
 }
