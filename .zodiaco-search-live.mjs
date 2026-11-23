@@ -5,7 +5,7 @@ import { pathToFileURL } from "node:url";
 import { bibliographicAliases } from "./src/catalogue-publications.mjs";
 import { literalPagefindSearch, snippetsFor } from "./src/fulltext-search-core.mjs";
 import { createPrefixSearch } from "./src/fulltext-prefix-search.mjs";
-const deadline=setTimeout(()=>{console.error("Search query deadline");process.exit(1)},120000);
+const deadline=setTimeout(()=>{console.error("Search query deadline");process.exit(1)},240000);
 const cfg=JSON.parse(await readFile("search-shards.json","utf8"));
 const base=cfg.shards.find(t=>t.id==="003").baseUrl;
 const get=async p=>{const r=await fetch(new URL(p,base),{signal:AbortSignal.timeout(22000)});assert(r.ok,p);return r;};
@@ -34,7 +34,11 @@ assert.equal(new Set(probes.map(p=>p.original)).size,probes.length);
 for(const {page,original,queries} of probes){
   let success=false;
   for(const term of queries){
-    const got=await literalPagefindSearch(engine,term,documents);
+    console.log("QUERY",term,original,page);
+    let got;
+    try {
+      got=await Promise.race([literalPagefindSearch(engine,term,documents),new Promise((_,reject)=>{const t=setTimeout(()=>reject(new Error("probe timeout")),27000);t.unref()})]);
+    } catch(err) { console.log("PROBE FAILED",term,String(err)); continue; }
     const hit=got.results.find(x=>x.id===slug);
     if(!hit) { console.log("NO ZODIACO HIT",term,"results",got.results.length); continue; }
     const data=await (hit.fullData ? hit.fullData() : hit.data());

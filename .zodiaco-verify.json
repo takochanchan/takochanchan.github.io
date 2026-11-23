@@ -6,5 +6,6 @@
   "description": "フロレンシアの遺稿をオビエドが抄録・増補した、ヌエバ・エスパーニャとグアテマラの聖母像・聖地誌。像の来歴と崇敬、行列、奇跡の語りを五部でたどる。",
   "pdfPages": 341,
   "pdfSha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3",
-  "recordClass": "major-work"
+  "recordClass": "major-work",
+  "attempt": 2
 }
