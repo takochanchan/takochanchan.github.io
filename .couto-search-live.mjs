@@ -14,7 +14,7 @@ await writeFile(file,await(await get("pagefind/pagefind.js")).text());
 const {createInstance}=await import(pathToFileURL(file));
 const engine=createInstance({basePath:new URL("pagefind/",base).href,noWorker:true,exactDiacritics:true});
 engine.expandLiteralQueries=createPrefixSearch([new URL("pagefind/",base).href],url=>fetch(url,{signal:AbortSignal.timeout(22000)}));
-await engine.init();
+console.log('Pagefind created; initializing on first search');
 const documents=await(await get("document-map.json")).json();
 const slug="couto-dialogo-pintura-mexico-1889";
 const assets=JSON.parse(await readFile("assets-manifest.json","utf8")).assets;
@@ -34,10 +34,10 @@ assert.equal(new Set(probes.map(p=>p.original)).size,probes.length);
 for(const {page,original,queries} of probes){
   let success=false;
   for(const term of queries){
-    const got=await literalPagefindSearch(engine,term,documents);
-    const hit=got.results.find(x=>x.id===slug);
+    console.log('Trying literal query',term);\n    const got=await literalPagefindSearch(engine,term,documents);
+    console.log('Literal query complete',term);\n    const hit=got.results.find(x=>x.id===slug);
     if(!hit) { console.log("NO COUTO HIT",term,"results",got.results.length); continue; }
-    const data=await (hit.fullData ? hit.fullData() : hit.data());
+    let data=await hit.data();\n    if(data.__loadFull) data=await data.__loadFull();
     const targets=snippetsFor(data,map);
     if(targets.some(x=>x.pdfPage===page&&x.originalPage.split("／").includes(original))){
       console.log("VERIFIED",slug,term,original,"PDF",page,"bibliography",canonical);
