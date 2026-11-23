@@ -86,6 +86,9 @@ with tempfile.TemporaryDirectory() as d:
             assert a["url"] in body
         if p.suffix == ".pdf":
             assert a["sha256"] == cfg["pdfSha256"]
+            links = subprocess.check_output(["pdfinfo", "-url", str(p)], text=True).splitlines()
+            for expected_url in ("https://www.cervantesvirtual.com/nd/ark:/59851/bmc5m6b4", "https://www.cervantesvirtual.com/marco-legal/"):
+                assert any(re.match(r"^\s+2\s", line) and expected_url in line for line in links), expected_url
             images = subprocess.check_output(["pdfimages", "-list", str(p)], text=True)
             assert len(images.splitlines()) == 2, "The PDFs must not reproduce original images"
             assert re.search(

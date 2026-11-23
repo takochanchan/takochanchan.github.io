@@ -45,7 +45,9 @@ jobs:
           if [ "$(jq -r .mode .zodiaco-verify.json)" = search ]; then npm run verify:remote-search; fi
       - name: Verify Zodiaco literal search hits with physical pages and printed pages
         run: |
-          if [ "$(jq -r .mode .zodiaco-verify.json)" = search ]; then node .zodiaco-search-live.mjs; fi
+          for i in 0 1 2 3 4 5; do
+            timeout 110s node .zodiaco-search-live.mjs "$i"
+          done
       - name: Check live bibliography and every exact file
         run: |
           if [ "$(jq -r .mode .zodiaco-verify.json)" = live ]; then
