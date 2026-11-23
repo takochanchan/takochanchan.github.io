@@ -10860,6 +10860,24 @@
       "url": "https://takochanchan.github.io/publications/laferriere-paris-guatemala-1877/cover.jpg",
       "size": 59852,
       "sha256": "270ab69779b70e4bc36838997dab215944eed3dc3693c47a8a360813c74c88bb"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "size": 3343643,
+      "sha256": "e6223ca2135314f195ab7df9a8f6d6257cca032e3aa40053766780e620deeeda"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "size": 514861,
+      "sha256": "c1f9b8ba959a70e03436220c833d3ccfc221be4672d521922c059c4bfacf7b2b"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "size": 70637,
+      "sha256": "6a35860cd50b3260fbf9dd610e6c4894eefe140ce7b8325d01a72e9d0ea60df3"
     }
   ]
 }
