@@ -34,10 +34,13 @@ assert.equal(new Set(probes.map(p=>p.original)).size,probes.length);
 for(const {page,original,queries} of probes){
   let success=false;
   for(const term of queries){
-    console.log('Trying literal query',term);\n    const got=await literalPagefindSearch(engine,term,documents);
-    console.log('Literal query complete',term);\n    const hit=got.results.find(x=>x.id===slug);
+    console.log('Trying literal query',term);
+    const got=await literalPagefindSearch(engine,term,documents);
+    console.log('Literal query complete',term);
+    const hit=got.results.find(x=>x.id===slug);
     if(!hit) { console.log("NO COUTO HIT",term,"results",got.results.length); continue; }
-    let data=await hit.data();\n    if(data.__loadFull) data=await data.__loadFull();
+    let data=await hit.data();
+    if(data.__loadFull) data=await data.__loadFull();
     const targets=snippetsFor(data,map);
     if(targets.some(x=>x.pdfPage===page&&x.originalPage.split("／").includes(original))){
       console.log("VERIFIED",slug,term,original,"PDF",page,"bibliography",canonical);
