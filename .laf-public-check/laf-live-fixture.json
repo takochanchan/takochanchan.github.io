@@ -1,0 +1,67 @@
+{
+  "slug": "laferriere-paris-guatemala-1877",
+  "title": "パリからグアテマラへ",
+  "originalTitle": "De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875",
+  "author": "ジョゼフ・ラフェリエール",
+  "originalAuthor": "Joseph Laferrière",
+  "sourceUrl": "https://archive.org/details/deparisguatemala00lafe",
+  "sourceProvider": "Getty Research Institute蔵（請求記号9924486970001551）。Internet Archiveが2018年に電子化した個体と、Wikimedia Commonsに再配布された同じ撮影個体を使用。",
+  "rights": "1877年刊の原著本文と図版は米国でパブリックドメイン。収録図版は、Wikimedia Commonsが米国でのパブリックドメインを明示する同じ撮影個体から採った。https://commons.wikimedia.org/wiki/File:De_Paris_%C3%A0_Guat%C3%A9mala-_notes_de_voyages_au_Centre-Am%C3%A9rique,_1866-1875;_(IA_deparisguatemala00lafe).pdf",
+  "rightsUrl": "https://commons.wikimedia.org/wiki/File:De_Paris_%C3%A0_Guat%C3%A9mala-_notes_de_voyages_au_Centre-Am%C3%A9rique,_1866-1875;_(IA_deparisguatemala00lafe).pdf",
+  "pages": 351,
+  "plates": 35,
+  "releaseTag": "publications-002",
+  "searchShard": "003",
+  "overview": "フランスのジョゼフ・ラフェリエールが、1866年、1870年、1874年に出発した三度の渡航をもとにまとめた旅行記。アンティル諸島を経てコロンから鉄道でパナマ地峡を横断し、太平洋側からコスタリカ、ニカラグア、ホンジュラス、エルサルバドル、グアテマラをたどる。コスタリカのコーヒー栽培、ニカラグアの湖と河川、ホンジュラスの両洋連絡鉄道構想など、現地の地理と通商の結びつきに目を向ける。\n\n最も多くの章を割くエルサルバドルでは、ラ・ウニオン港からサン・ミゲルやサンサルバドルへ向かい、町並み、市場、宿、農園、港の仕事を描く。コーヒーや藍、バルサムなどの産物と輸出のほか、政権の交代、道路や鉄道の計画を論じ、フランスとの友好通商航海条約とエルサルバドル共和国憲法も収める。巻末には中米の度量衡、港の取扱料金、船舶の入出港・貨物・運賃、プンタレナス管区の気象観測、コスタリカの死因統計が並ぶ。先住民の起源や植民をめぐる議論には、当時の著者の見方が表れている。",
+  "assets": [
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "size": 23130065,
+      "sha256": "9622d5fa1292cbe4fb5fb8c64edc6522aca0948b74b31361ba434196d8ed9f7b"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "size": 20060589,
+      "sha256": "042d7239a387b40e6c0f9f474e1928a6b0a3d1818ffda20bc5fcf44bfc3f45d2"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "size": 59852,
+      "sha256": "270ab69779b70e4bc36838997dab215944eed3dc3693c47a8a360813c74c88bb"
+    }
+  ],
+  "probes": [
+    {
+      "term": "この種の取引を伸ばせる産物",
+      "pdfPage": 67,
+      "originalPage": "原刊 p. 81",
+      "alignment": "fingerprint"
+    },
+    {
+      "term": "フランスとエルサルバドル共和国との友好通商航海条約",
+      "pdfPage": 254,
+      "originalPage": "原刊 p. 319",
+      "alignment": "exact"
+    },
+    {
+      "term": "収録の有無は未判定",
+      "pdfPage": 325,
+      "originalPage": "原刊 p. 429",
+      "alignment": "exact"
+    }
+  ],
+  "sourceMode": "approved EPUB mirror",
+  "mappingSummary": {
+    "exact": 2769,
+    "fingerprint": 93,
+    "fuzzy": 2,
+    "sourcePage": 55,
+    "inherited": 4,
+    "unmapped": 0,
+    "verifiedRate": 1.0,
+    "pdfTextMode": "embedded"
+  }
+}
