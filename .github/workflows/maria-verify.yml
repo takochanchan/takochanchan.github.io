@@ -20,13 +20,20 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           python3 - <<'PY'
-          import json,re,subprocess
+          import json,re,subprocess,time
           v=json.load(open('.maria-public-check/control.json'))
           assert v['mode'] in ('search','live')
           repo={'search':'takochanchan/takochan-search-index-003','live':'takochanchan/takochanchan.github.io'}[v['mode']]
           assert re.fullmatch(r'[a-f0-9]{40}',v['head']) and type(v['run']) is int
-          run=json.loads(subprocess.check_output(['gh','api',f"repos/{repo}/actions/runs/{v['run']}"]))
-          assert run['head_sha']==v['head'] and run['status']=='completed' and run['conclusion']=='success',run.get('html_url')
+          for attempt in range(80):
+              run=json.loads(subprocess.check_output(['gh','api',f"repos/{repo}/actions/runs/{v['run']}"]))
+              assert run['head_sha']==v['head'],run.get('html_url')
+              if run['status']=='completed':
+                  assert run['conclusion']=='success',run.get('html_url')
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit('Pinned Pages run did not finish before verification')
           print('Verified pinned run',run['html_url'])
           PY
       - name: Check search or the live bibliography and files
