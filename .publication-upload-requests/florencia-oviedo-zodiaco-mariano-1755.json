@@ -1,0 +1,31 @@
+{
+  "slug": "florencia-oviedo-zodiaco-mariano-1755",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "7e07568de0b57e77d4c41218c5c74ae0d3aae1d2",
+  "assets": [
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "filename": "Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "size": 2609129,
+      "sha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "filename": "Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "size": 374637,
+      "sha256": "c1eb3e89274a49fd42c03486b8c0ee83458337e3512c6b89c661b2a8abeb6339"
+    }
+  ],
+  "bundle": {
+    "size": 2345827,
+    "sha256": "99c1d008b0b78c24789a0f4866954800ac7f8e6024b74ffcdcd8f47455a6c5c5",
+    "chunks": [
+      "fd56613f5e41340416a5228b9d9ca48b96b060a7",
+      "65655d2c71614944f1dd9e5c4b5863bda579fcfb",
+      "4aa0e156014c49ce22663d2acfa4df2a2f9fb314",
+      "b3a25872dbd799914776ca8ac4c629b200f781e7"
+    ]
+  }
+}
