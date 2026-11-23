@@ -10608,6 +10608,24 @@
       "url": "https://takochanchan.github.io/publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
       "size": 87380,
       "sha256": "8597fcdcf22c37af58d601388350414cebe50de9d7f2a15915ba2ed128737452"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "size": 2609129,
+      "sha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "size": 374637,
+      "sha256": "c1eb3e89274a49fd42c03486b8c0ee83458337e3512c6b89c661b2a8abeb6339"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
+      "size": 84342,
+      "sha256": "d363fecb35a6c1971259eda0be03cb3daf5e3a6ad9b39c98481acb0bdff6d378"
     }
   ]
 }

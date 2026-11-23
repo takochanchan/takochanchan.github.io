@@ -1,3 +1,4 @@
+import { zodiacoMarianoRecords, zodiacoMarianoMetadata } from "./florencia-oviedo-zodiaco-mariano-1755-publication.mjs";
 import { coutoDialogo1889Records, coutoDialogo1889Metadata } from "./couto-dialogo-pintura-mexico-1889-publication.mjs";
 import { romeroMichoacan1862Records, romeroMichoacan1862Metadata } from "./romero-michoacan-diocesan-history-1862-publication.mjs";
 import { vianaRelacionVeraPazRecords, vianaRelacionVeraPazMetadata } from "./viana-relacion-de-vera-paz-1574-publication.mjs";
@@ -386,6 +387,7 @@ const publicationRecords = [
   ...pimentelCuadroRecords,
   ...cabreraEscudoRecords,
   ...canoManchePetenRecords,
+  ...zodiacoMarianoRecords,
   ...coutoDialogo1889Records,
   ...romeroMichoacan1862Records,
   ...vianaRelacionVeraPazRecords,
@@ -9571,6 +9573,7 @@ const publicationMetadata = {
   ...pimentelCuadroMetadata,
   ...cabreraEscudoMetadata,
   ...canoManchePetenMetadata,
+  ...zodiacoMarianoMetadata,
   ...coutoDialogo1889Metadata,
   ...romeroMichoacan1862Metadata,
   ...vianaRelacionVeraPazMetadata,

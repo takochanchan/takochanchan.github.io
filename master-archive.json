@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "9b991fc1be5c0a1a41b3042dbe40d0f4cacd1f87",
+  "archive_commit": "7e07568de0b57e77d4c41218c5c74ae0d3aae1d2",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -516,7 +516,8 @@
     "cano-manche-y-peten-1696": "publications/cano-manche-y-peten-1696/master.md",
     "viana-relacion-de-vera-paz-1574": "publications/viana-relacion-de-vera-paz-1574/master.md",
     "romero-michoacan-diocesan-history-1862": "publications/romero-michoacan-diocesan-history-1862/master.docx",
-    "couto-dialogo-pintura-mexico-1889": "publications/couto-dialogo-pintura-mexico-1889/master.md"
+    "couto-dialogo-pintura-mexico-1889": "publications/couto-dialogo-pintura-mexico-1889/master.md",
+    "florencia-oviedo-zodiaco-mariano-1755": "publications/florencia-oviedo-zodiaco-mariano-1755/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
