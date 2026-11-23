@@ -3,5 +3,6 @@
   "repo": "takochanchan/takochan-search-index-003",
   "head": "e7eef66beb4332051fefc35d6f9b18289f900410",
   "id": 45119613327,
-  "pdfSha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271"
+  "pdfSha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271",
+  "check": "production-literal-query-path"
 }
