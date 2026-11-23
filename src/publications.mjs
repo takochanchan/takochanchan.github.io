@@ -1,3 +1,4 @@
+import { coutoDialogo1889Records, coutoDialogo1889Metadata } from "./couto-dialogo-pintura-mexico-1889-publication.mjs";
 import { romeroMichoacan1862Records, romeroMichoacan1862Metadata } from "./romero-michoacan-diocesan-history-1862-publication.mjs";
 import { vianaRelacionVeraPazRecords, vianaRelacionVeraPazMetadata } from "./viana-relacion-de-vera-paz-1574-publication.mjs";
 import { canoManchePetenRecords, canoManchePetenMetadata } from "./cano-manche-y-peten-1696-publication.mjs";
@@ -385,6 +386,7 @@ const publicationRecords = [
   ...pimentelCuadroRecords,
   ...cabreraEscudoRecords,
   ...canoManchePetenRecords,
+  ...coutoDialogo1889Records,
   ...romeroMichoacan1862Records,
   ...vianaRelacionVeraPazRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
@@ -9569,6 +9571,7 @@ const publicationMetadata = {
   ...pimentelCuadroMetadata,
   ...cabreraEscudoMetadata,
   ...canoManchePetenMetadata,
+  ...coutoDialogo1889Metadata,
   ...romeroMichoacan1862Metadata,
   ...vianaRelacionVeraPazMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,

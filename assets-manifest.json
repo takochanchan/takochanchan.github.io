@@ -10590,6 +10590,24 @@
       "url": "https://takochanchan.github.io/publications/romero-michoacan-diocesan-history-1862/cover.jpg",
       "size": 99823,
       "sha256": "08195b5f28460a720f101f5e43eeb0176a19b868d57133ab0b3a3838132b308f"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
+      "size": 911339,
+      "sha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
+      "size": 146027,
+      "sha256": "cea3becda76dba38228ebb06aae6b0aaca8f0e915017a7a65667b8ae1b965358"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
+      "size": 87380,
+      "sha256": "8597fcdcf22c37af58d601388350414cebe50de9d7f2a15915ba2ed128737452"
     }
   ]
 }

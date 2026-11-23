@@ -11169,6 +11169,25 @@
         "status": "online",
         "url": "https://archive.org/details/noticiasparaform00rome"
       }
+    },
+    {
+      "slug": "couto-dialogo-pintura-mexico-1889",
+      "recordClass": "major-work",
+      "title": "メキシコ絵画史対話",
+      "originalTitle": "Diálogo sobre la historia de la pintura en México",
+      "author": "ホセ・ベルナルド・コウト",
+      "originalAuthor": "José Bernardo Couto",
+      "year": 1889,
+      "originalPublication": "初刊1872年、メキシコ市。底本は1889年、メキシコ市、勧業省印刷所刊。",
+      "sourceEdition": "Bernardo Couto, Diálogo sobre la historia de la pintura en México. México: Oficina Tipográfica de la Secretaría de Fomento, 1889. 初刊は1872年。",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute）所蔵。Internet Archiveが電子化・公開。1872年初刊に基づくセルバンテス電子図書館の翻刻も照合に使用。",
+      "rights": "原著の著作権保護期間は満了。Internet Archive掲載の底本個体データに、個別のライセンス表示はない。日本語版に底本のスキャン画像は転載していない。初刊準拠の電子翻刻：https://www.cervantesvirtual.com/obra/dialogo-sobre-la-historia-de-la-pintura-en-mexico--0/ 。",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/dialogosobrelahi00cout"
+      }
     }
   ],
   "works": [
