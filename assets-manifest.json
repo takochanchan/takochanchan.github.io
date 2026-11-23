@@ -10572,6 +10572,24 @@
       "url": "https://takochanchan.github.io/publications/viana-relacion-de-vera-paz-1574/cover.jpg",
       "size": 108326,
       "sha256": "90d91d70a4f37bd4c9b281f462230611ad1e011b335de34f340c14800e6a922f"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "size": 6130501,
+      "sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "size": 10915765,
+      "sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "size": 99823,
+      "sha256": "08195b5f28460a720f101f5e43eeb0176a19b868d57133ab0b3a3838132b308f"
     }
   ]
 }

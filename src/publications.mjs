@@ -1,3 +1,4 @@
+import { romeroMichoacan1862Records, romeroMichoacan1862Metadata } from "./romero-michoacan-diocesan-history-1862-publication.mjs";
 import { vianaRelacionVeraPazRecords, vianaRelacionVeraPazMetadata } from "./viana-relacion-de-vera-paz-1574-publication.mjs";
 import { canoManchePetenRecords, canoManchePetenMetadata } from "./cano-manche-y-peten-1696-publication.mjs";
 import { cabreraEscudoRecords, cabreraEscudoMetadata } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
@@ -384,6 +385,7 @@ const publicationRecords = [
   ...pimentelCuadroRecords,
   ...cabreraEscudoRecords,
   ...canoManchePetenRecords,
+  ...romeroMichoacan1862Records,
   ...vianaRelacionVeraPazRecords,
   ...granadosTardesAmericanas1778PublicationRecords,
   ...venegasZappa1754PublicationRecords,
@@ -9567,6 +9569,7 @@ const publicationMetadata = {
   ...pimentelCuadroMetadata,
   ...cabreraEscudoMetadata,
   ...canoManchePetenMetadata,
+  ...romeroMichoacan1862Metadata,
   ...vianaRelacionVeraPazMetadata,
   ...granadosTardesAmericanas1778PublicationMetadata,
   ...venegasZappa1754PublicationMetadata,
