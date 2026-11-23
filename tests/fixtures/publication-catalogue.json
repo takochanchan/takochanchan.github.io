@@ -3426,6 +3426,114 @@
       "author": "フランシスコ・デ・フロレンシア／フアン・アントニオ・デ・オビエド",
       "originalAuthor": "Francisco de Florencia / Juan Antonio de Oviedo",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 4,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 5,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 6,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 7,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 8,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 9,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 10,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 11,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 12,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3682,6 +3790,24 @@
         "cabrera-escudo-de-armas-de-mexico-1746-v4"
       ],
       "seriesVolumeCount": 4
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "memberSlugs": [
+        "maria-de-san-jose-spiritual-autobiography-part-01",
+        "maria-de-san-jose-spiritual-autobiography-part-02",
+        "maria-de-san-jose-spiritual-autobiography-part-03",
+        "maria-de-san-jose-spiritual-autobiography-part-04",
+        "maria-de-san-jose-spiritual-autobiography-part-05",
+        "maria-de-san-jose-spiritual-autobiography-part-06",
+        "maria-de-san-jose-spiritual-autobiography-part-07",
+        "maria-de-san-jose-spiritual-autobiography-part-08",
+        "maria-de-san-jose-spiritual-autobiography-part-09",
+        "maria-de-san-jose-spiritual-autobiography-part-10",
+        "maria-de-san-jose-spiritual-autobiography-part-11",
+        "maria-de-san-jose-spiritual-autobiography-part-12"
+      ],
+      "seriesVolumeCount": 12
     }
   ],
   "shortAuthorCount": 49

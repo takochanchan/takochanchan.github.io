@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "7e07568de0b57e77d4c41218c5c74ae0d3aae1d2",
+  "archive_commit": "41589651082cbc872e43cc27f780aa3999e6cc64",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -517,7 +517,19 @@
     "viana-relacion-de-vera-paz-1574": "publications/viana-relacion-de-vera-paz-1574/master.md",
     "romero-michoacan-diocesan-history-1862": "publications/romero-michoacan-diocesan-history-1862/master.docx",
     "couto-dialogo-pintura-mexico-1889": "publications/couto-dialogo-pintura-mexico-1889/master.md",
-    "florencia-oviedo-zodiaco-mariano-1755": "publications/florencia-oviedo-zodiaco-mariano-1755/master.md"
+    "florencia-oviedo-zodiaco-mariano-1755": "publications/florencia-oviedo-zodiaco-mariano-1755/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-01": "publications/maria-de-san-jose-spiritual-autobiography-part-01/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-02": "publications/maria-de-san-jose-spiritual-autobiography-part-02/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-03": "publications/maria-de-san-jose-spiritual-autobiography-part-03/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-04": "publications/maria-de-san-jose-spiritual-autobiography-part-04/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-05": "publications/maria-de-san-jose-spiritual-autobiography-part-05/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-06": "publications/maria-de-san-jose-spiritual-autobiography-part-06/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-07": "publications/maria-de-san-jose-spiritual-autobiography-part-07/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-08": "publications/maria-de-san-jose-spiritual-autobiography-part-08/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-09": "publications/maria-de-san-jose-spiritual-autobiography-part-09/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-10": "publications/maria-de-san-jose-spiritual-autobiography-part-10/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-11": "publications/maria-de-san-jose-spiritual-autobiography-part-11/master.md",
+    "maria-de-san-jose-spiritual-autobiography-part-12": "publications/maria-de-san-jose-spiritual-autobiography-part-12/master.md"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

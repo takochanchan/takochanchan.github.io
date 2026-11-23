@@ -1,3 +1,4 @@
+import { mariaSanJoseGroup } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { cabreraEscudoGroup } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroGroup } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
 import { clavijeroPublicationGroup } from "./clavijero-storia-della-california-publication.mjs";
@@ -17,6 +18,7 @@ export const publicationGroupDefinitions = [
   clavijeroPublicationGroup,
   pimentelCuadroGroup,
   cabreraEscudoGroup,
+  mariaSanJoseGroup,
   nuevoBernalPublicationGroup,
   solorzanoPublicationGroup,
   bustamantePublicationGroup,
