@@ -1,5 +1,6 @@
 {
   "mode": "live",
   "head": "01589dfe0f7d30e2a22fe54fd2cfec3b87db7040",
-  "run": 45240603612
+  "run": 45240603612,
+  "verification_variant": "rendered-fact-grid-label"
 }

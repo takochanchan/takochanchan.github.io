@@ -24,7 +24,7 @@ class Page(HTMLParser):
  def handle_data(self,s):self.parts.append(s)
 page=Page(read(URL))
 assert page.canon==[URL],page.canon
-for s in (F['title'],F['originalTitle'],F['author'],F['originalAuthor'],F['sourceProvider'],F['rights'].split('https://')[0],f'日本語版PDF {F["pages"]}頁','詳細概要'):
+for s in (F['title'],F['originalTitle'],F['author'],F['originalAuthor'],F['sourceProvider'],F['rights'].split('https://')[0],f'翻訳版 {F["pages"]}頁',f'{F["plates"]}点','詳細概要'):
  assert ' '.join(s.split()) in page.body,s
 for paragraph in F['overview'].split('\n\n'):
  assert ' '.join(paragraph.split()) in page.body,'published detailed overview'
