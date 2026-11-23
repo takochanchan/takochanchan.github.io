@@ -1,8 +1,10 @@
 {
-  "mode": "search",
-  "repo": "takochanchan/takochan-search-index-003",
-  "head": "e7eef66beb4332051fefc35d6f9b18289f900410",
-  "id": 45119613327,
+  "mode": "live",
+  "repo": "takochanchan/takochanchan.github.io",
+  "head": "361bd642eaffc2e481fcf8cf9c4da9b73d95b564",
+  "id": 45120836507,
   "pdfSha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271",
-  "check": "production-literal-query-in-node-validated"
+  "pdfPages": 81,
+  "recordClass": "major-work",
+  "description": "サン・カルロス美術アカデミーの画廊を舞台に、画家の署名や年記を読み解きながら、メキシコの宗教画と絵画教育の歴史をたどる対話。"
 }
