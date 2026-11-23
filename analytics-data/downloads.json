@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-21",
-  "updatedAt": "2026-11-22T00:22:08.786Z",
+  "endDate": "2026-11-22",
+  "updatedAt": "2026-11-23T00:55:37.669Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9272,6 +9272,166 @@
       "title": "アメリカの午後",
       "volumeLabel": "",
       "format": "epub"
+    },
+    {
+      "key": "dl_fa49723119e87952",
+      "name": "velasco-exaltacion-divina-misericordia-1810-ja.pdf",
+      "slug": "velasco-exaltacion-divina-misericordia-1810",
+      "title": "神の慈悲の称揚",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e9f5a3db2af1c9ea",
+      "name": "velasco-exaltacion-divina-misericordia-1810-ja.epub",
+      "slug": "velasco-exaltacion-divina-misericordia-1810",
+      "title": "神の慈悲の称揚",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1c8ac369ef960c3f",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cefcbf54a69dc755",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_144fd2511e4e6276",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_063bc68359b55326",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_75455f6e961fb525",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第3巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_88b8c6421e348277",
+      "name": "Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "title": "メキシコ先住民諸語の記述と比較",
+      "volumeLabel": "第3巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_03c6b594c2ffd89b",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_330122578461b759",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a38f768f09877832",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2e532f7958fec34a",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5c81519969898181",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第3巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_96386949e3f78a3b",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第3巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ad7d859aaa5a3e80",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第4巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_5f9d0281fedf6ab4",
+      "name": "Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "title": "メキシコの紋章",
+      "volumeLabel": "第4巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_00f38f8cc84fa3f8",
+      "name": "Cano_Manche_y_Peten.pdf",
+      "slug": "cano-manche-y-peten-1696",
+      "title": "マンチェとペテン",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_66a440e560c64c5c",
+      "name": "Cano_Manche_y_Peten.epub",
+      "slug": "cano-manche-y-peten-1696",
+      "title": "マンチェとペテン",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7fbbf3e52634536f",
+      "name": "Viana_Relacion_de_Vera_Paz.pdf",
+      "slug": "viana-relacion-de-vera-paz-1574",
+      "title": "ベラパス地方報告",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_369cf1bf117969c5",
+      "name": "Viana_Relacion_de_Vera_Paz.epub",
+      "slug": "viana-relacion-de-vera-paz-1574",
+      "title": "ベラパス地方報告",
+      "volumeLabel": "",
+      "format": "epub"
     }
   ],
   "records": [
@@ -9283,6 +9443,11 @@
     {
       "date": "2026-11-10",
       "key": "dl_7f7b5a73df7fd79b",
+      "count": 1
+    },
+    {
+      "date": "2026-11-22",
+      "key": "dl_9ac3b2b43f13f395",
       "count": 1
     }
   ]
