@@ -1,7 +1,10 @@
 {
-  "mode": "search",
-  "repo": "takochanchan/takochan-search-index-003",
-  "head": "79a88f2e9080737927924389523360f3ab9ad928",
-  "id": 45108791226,
-  "pdfSha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+  "mode": "live",
+  "repo": "takochanchan/takochanchan.github.io",
+  "head": "11ee786b9357fe386d30e78a56ac45660afd4059",
+  "id": 45109456788,
+  "pdfSha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468",
+  "pdfPages": 414,
+  "recordClass": "major-work",
+  "description": "バスコ・デ・キロガ以来の司教列伝と、19世紀半ばのミチョアカン司教区の町村・人口・産業を記した歴史地誌。1863年の折込地図3点を収録。"
 }
