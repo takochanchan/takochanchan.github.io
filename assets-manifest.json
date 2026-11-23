@@ -10878,6 +10878,24 @@
       "url": "https://takochanchan.github.io/publications/florencia-provincia-nueva-espana-1694/cover.jpg",
       "size": 70637,
       "sha256": "6a35860cd50b3260fbf9dd610e6c4894eefe140ce7b8325d01a72e9d0ea60df3"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "size": 70666846,
+      "sha256": "04602ffa121c0401f1728f286dcac8bf631be72677df857046ff94ca21b5c43c"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "size": 64463227,
+      "sha256": "77e1335ba2e1bae73da03b9dbbd69efc14ca4725f87a044de25b040784b4871f"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "size": 69115,
+      "sha256": "abd83b499f1075e7a627c2cabb39d2c97737b728886cef7070486e272fa8529f"
     }
   ]
 }

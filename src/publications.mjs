@@ -1,5 +1,6 @@
 import { laferriereRecords, laferriereMetadata } from "./laferriere-paris-guatemala-1877-publication.mjs";
 import { florenciaProvinciaNuevaEspana1694Records, florenciaProvinciaNuevaEspana1694Metadata } from "./florencia-provincia-nueva-espana-1694-publication.mjs";
+import { wellsExplorationsAndAdventuresInHonduras1857Records, wellsExplorationsAndAdventuresInHonduras1857Metadata } from "./wells-explorations-and-adventures-in-honduras-1857-publication.mjs";
 import { mariaSanJoseRecords, mariaSanJoseMetadata } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { zodiacoMarianoRecords, zodiacoMarianoMetadata } from "./florencia-oviedo-zodiaco-mariano-1755-publication.mjs";
 import { coutoDialogo1889Records, coutoDialogo1889Metadata } from "./couto-dialogo-pintura-mexico-1889-publication.mjs";
@@ -393,6 +394,7 @@ const publicationRecords = [
   ...zodiacoMarianoRecords,
   ...laferriereRecords,
   ...florenciaProvinciaNuevaEspana1694Records,
+  ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...mariaSanJoseRecords,
   ...coutoDialogo1889Records,
   ...romeroMichoacan1862Records,
@@ -9582,6 +9584,7 @@ const publicationMetadata = {
   ...zodiacoMarianoMetadata,
   ...laferriereMetadata,
   ...florenciaProvinciaNuevaEspana1694Metadata,
+  ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...mariaSanJoseMetadata,
   ...coutoDialogo1889Metadata,
   ...romeroMichoacan1862Metadata,
