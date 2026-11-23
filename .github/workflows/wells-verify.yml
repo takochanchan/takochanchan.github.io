@@ -1,0 +1,53 @@
+name: Verify Wells search and live delivery
+on:
+  push:
+    branches: ["agent/wells-verify-20261124"]
+    paths: [".wells-public-check/control.json"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Confirm checksum-pinned stage and deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,re,subprocess,time
+          v=json.load(open('.wells-public-check/control.json'))
+          assert v['mode'] in ('search','live')
+          repo={'search':'takochanchan/takochan-search-index-003','live':'takochanchan/takochanchan.github.io'}[v['mode']]
+          assert re.fullmatch(r'[a-f0-9]{40}',v['head']) and type(v['run']) is int and v['run'] > 0
+          for attempt in range(80):
+              run=json.loads(subprocess.check_output(['gh','api',f"repos/{repo}/actions/runs/{v['run']}"]))
+              assert run['head_sha']==v['head'],run.get('html_url')
+              if run['status']=='completed':
+                  assert run['conclusion']=='success',run.get('html_url')
+                  break
+              time.sleep(10)
+          else:
+              raise SystemExit('Pinned Pages run did not finish before verification')
+          print('Verified pinned run',run['html_url'])
+          PY
+      - name: Check search or the live bibliography and files
+        run: |
+          case "$(jq -r .mode .wells-public-check/control.json)" in
+            search)
+              npm ci --no-audit --no-fund
+              npm run verify:remote-search
+              timeout 120s node .wells-public-check/search-live.mjs .
+              ;;
+            live)
+              if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
+              python3 .wells-public-check/verify-live.py .
+              ;;
+            *) exit 2 ;;
+          esac
+

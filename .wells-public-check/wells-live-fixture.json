@@ -1,0 +1,43 @@
+{
+  "slug": "wells-explorations-and-adventures-in-honduras-1857",
+  "title": "ホンジュラス探検と冒険",
+  "originalTitle": "Explorations and Adventures in Honduras",
+  "author": "ウィリアム・V・ウェルズ",
+  "originalAuthor": "William V. Wells",
+  "sourceUrl": "https://archive.org/details/explorationsadve00well",
+  "sourceProvider": "本文・口絵・挿絵・本文中の地図等：米国議会図書館所蔵本（LCCN 03020914）、Internet Archive公開画像。巻頭のホンジュラス東部折図のみオーバーン大学図書館所蔵の同版別個体（https://archive.org/details/explorationsadve00inwell）。",
+  "rights": "1857年刊の原著・原刊図版は著作権保護期間満了。米国議会図書館の資料記録では当該個体の著作権上の制約を把握していないとし、巻頭折図に用いたオーバーン大学本のInternet Archive個体記録は「public domain」と表示する。",
+  "rightsUrl": "https://archive.org/details/explorationsadve00inwell",
+  "pages": 647,
+  "images": 66,
+  "releaseTag": "publications-002",
+  "searchShard": "003",
+  "overview": "オランチョの産金地帯を目指した米国人ウィリアム・V・ウェルズが、1850年代のニカラグアとホンジュラスを描いた1857年刊の旅行記。前半では太平洋岸のサン・フアン・デル・スルからニカラグア湖畔のリバス、チナンデガ、レオンへと進み、内戦下の人の往来や交易、町の宗教行事を記す。フォンセカ湾を渡ってアマパラに入り、ナカオメから山道をたどってテグシガルパへ向かう。そこではトリニダード・カバニャス大統領に会い、オランチョ行きを交渉する一方、市場や学校、造幣局にも足を運ぶ。\n\n中盤はグアヤペ川流域が舞台となる。農園や牧場を訪ね、女たちが川で砂金を洗う様子、フテカルパの祭礼と闘牛、マホガニーの伐採と川を使った運搬、カタカマス近辺の暮らしを伝える。帰路のサンタ・ルシアでは銀山に入り、採掘の実情を記録する。こうした見聞には住民の聞き書きが交じり、金銀や木材の事業化を目指す旅行者としての視点も色濃い。\n\n後半ではスペインの征服と植民地統治から、独立、フランシスコ・モラサンと中米連邦の解体、ラファエル・カレーラの台頭、カバニャス政権と近隣国との戦争までをたどる。さらに鉱業、気候、教育と宗教、人口と行政区画、貿易・歳入、貨幣・度量衡を取り上げ、グアヤペ川の舟運と流域の産物を論じる。巻頭のホンジュラス東部折図にはオランチョとテグシガルパ周辺の金銀産地が描かれ、本文の旅行経路や鉱山の記述と照らし合わせて読める。",
+  "assets": [
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "size": 70666846,
+      "sha256": "04602ffa121c0401f1728f286dcac8bf631be72677df857046ff94ca21b5c43c"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "size": 64463227,
+      "sha256": "77e1335ba2e1bae73da03b9dbbd69efc14ca4725f87a044de25b040784b4871f"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "size": 69115,
+      "sha256": "abd83b499f1075e7a627c2cabb39d2c97737b728886cef7070486e272fa8529f"
+    }
+  ],
+  "probes": [
+    {
+      "term": "アルメンダレス川は県内の金の川",
+      "pdfPage": 289,
+      "originalPage": "原刊 p. 270"
+    }
+  ]
+}
