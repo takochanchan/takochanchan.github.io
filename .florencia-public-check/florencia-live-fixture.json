@@ -1,0 +1,55 @@
+{
+  "slug": "florencia-provincia-nueva-espana-1694",
+  "title": "ヌエバ・エスパーニャ・イエズス会管区史",
+  "originalTitle": "Historia de la provincia de la Compañía de Jesús de Nueva España, dividida en ocho libros",
+  "author": "フランシスコ・デ・フロレンシア",
+  "originalAuthor": "Francisco de Florencia",
+  "sourceUrl": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232647",
+  "sourceProvider": "フランシスコ・デ・ブルゴア図書館（オアハカ）蔵、BFFB-002220。ミゲル・デ・セルバンテス仮想図書館の2024年公開デジタル版。",
+  "rights": "1694年初刊の原著は著作権保護期間満了（パブリックドメイン）。底本のデジタル画像は公開元の利用条件（https://www.cervantesvirtual.com/marco-legal/）を参照。日本語版にはデジタル画像を転載していない。",
+  "rightsUrl": "https://www.cervantesvirtual.com/marco-legal/",
+  "pages": 505,
+  "plates": 0,
+  "releaseTag": "publications-002",
+  "searchShard": "003",
+  "overview": "イエズス会士フランシスコ・デ・フロレンシアが、16世紀後半の宣教と教育活動を中心に、ヌエバ・エスパーニャ管区の成立を描いた1694年刊の歴史書。第一書は管区成立に先立つフロリダ布教を扱い、ペドロ・マルティネスやフアン・バウティスタ・デ・セグラらの宣教と死、ハバナでの活動をたどる。第二・第三書では、メキシコ側の招聘とスペインからの派遣、ベラクルス経由の到着、首都での教会・修練院の設立を追う。ラテン語・人文学の教育、寄宿学院の設置と王立サン・イルデフォンソ学院への統合、王立大学との取り決めも記す。\n\n第四書はグアダラハラやサカテカスへの巡回、パツクアロとオアハカの学院創設、大疫病下の救護とレメディオスの聖母像の移送を描く。第五書はアロンソ・デ・ビリャセカによるメキシコのサン・ペドロ・イ・サン・パブロ本学院の支援を、銀の寄進とその使途にまで立ち入って述べる。第六書では、教皇が送った聖遺物の受け入れと市中の行列を、通りの装飾や祝祭の様子とともに描く。第七・第八書は初代管区長ペドロ・サンチェスと、初代巡察使・第二代管区長フアン・デ・ラ・プラサの生涯を中心とする。宣教史であると同時に、都市社会と学院教育、寄進、聖遺物崇敬の結びつきを伝える。",
+  "assets": [
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "size": 3343643,
+      "sha256": "e6223ca2135314f195ab7df9a8f6d6257cca032e3aa40053766780e620deeeda"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "size": 514861,
+      "sha256": "c1f9b8ba959a70e03436220c833d3ccfc221be4672d521922c059c4bfacf7b2b"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "size": 70637,
+      "sha256": "6a35860cd50b3260fbf9dd610e6c4894eefe140ce7b8325d01a72e9d0ea60df3"
+    }
+  ],
+  "probes": [
+    {
+      "term": "聖イポリトの二つの聖遺物",
+      "pdfPage": 396,
+      "originalPage": "原刊 p. 337",
+      "alignment": "exact"
+    }
+  ],
+  "mappingSummary": {
+    "exact": 3910,
+    "fingerprint": 301,
+    "fuzzy": 2,
+    "sourcePage": 23,
+    "inherited": 5,
+    "unmapped": 0,
+    "verifiedRate": 1.0,
+    "pdfTextMode": "embedded"
+  },
+  "sourceMode": "approved EPUB mirror"
+}
