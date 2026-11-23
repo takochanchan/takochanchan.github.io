@@ -1,0 +1,708 @@
+{
+  "group": "maria-de-san-jose-spiritual-autobiography",
+  "search_shard": "003",
+  "overall": "マリア・デ・サン・ホセは、幼い頃の家族との暮らし、プエブラのサンタ・モニカ修道院への入会、オアハカへの出立と新しい修道院の創立を、聴罪司祭に宛てて一人称で書き綴った。共同体のなかでは修練女を迎え、誓願に至るまでの指導を任される。志願者が去るときの判断や、病床の修道女を見守る日々も記される。聖体拝領や念祷の体験に加え、自分の目で見たことと「魂の目」で見たと語ること、人から聞いたことが、それぞれ異なる仕方で記されている。導きを受けた司祭の死や手帳の散逸を経て、何を書いたかを思い出しながら書き直す過程までが、自叙伝の一部となっている。底本はジョン・カーター・ブラウン図書館蔵の現存写本 Codex Sp 39–41。全12部は一続きの年譜ではなく、同じ出来事への回想や、受難各留の手帳、別の修道女についての短い記録、断簡を含む。",
+  "parts": [
+    {
+      "part": 1,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
+      "pages": 136,
+      "source_url": "https://archive.org/details/spiritualautobio01mara",
+      "short": "執筆を命じられた事情を述べ、家族と信仰、修道院へ入る前の生活を振り返る。",
+      "overview": "聴罪司祭マヌエル・デ・バリオスに生涯を書くよう命じられたマリアは、先に書いた手帳を司教に預け、その一部が見当たらなくなってから、もう一度筆を執ることになったと語る。両親の信仰、兄弟姉妹と過ごした幼年期にさかのぼり、入会を望みながら家族と離れることをためらった気持ちにも触れる。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 1r〕",
+          "queries": [
+            "それは私の聴罪司祭",
+            "修道院の付司祭でした",
+            "この修道院はインディ"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 2r〕",
+          "queries": [
+            "私のような卑しく取るに足りない者",
+            "力ある御手が成し遂げられた大いな",
+            "私たちの主がお喜びになるのも",
+            "私には分かっていました"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "お調べになれるよう",
+            "お手もとに置いてきました",
+            "司教さまは実際にそうなさいました"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
+          "sha256": "59b7baa2e2c356220e15efb2763596f2769c03c9c5b8bde3df45d12a3d151442",
+          "size": 1245654
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
+          "sha256": "9af63e9bcbb1e7755a587bce7740de96647da3ba9a7944e311a21254594abdfe",
+          "size": 156000
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "d74a6f033cafd44101d3164b99f915b37c0c9e25dd933207e699506d63f4c56c",
+          "size": 71989
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
+      "pages": 162,
+      "source_url": "https://archive.org/details/spiritualautobio02mara",
+      "short": "プエブラのサンタ・モニカ修道院での着衣、修練、誓願を中心に語る。",
+      "overview": "家族に別れを告げ、プエブラのサンタ・モニカ修道院で修道服を受け取る場面から始まる。共同体の喜びのなかにも、誓願に必要な教皇文書がまだ届かないという不安があった。修練期の祈りと霊的な導き、悪魔の幻、煉獄の魂をめぐる経験を述べ、入会の外面的な手続と、家族への愛着が変化していく内面を並べて描く。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2r〕",
+          "queries": [
+            "外の格子の向こうにいる方々に聞こ",
+            "神の家に入ったのをあなたが",
+            "悔やんでいると思って",
+            "どれほど悲しまれることでしょう"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3r〕",
+          "queries": [
+            "私はもう感じたことがありません",
+            "このことをもっと詳しく語る言い方",
+            "がどれほど自由に生きてきたか",
+            "今も生きているかを言える言葉があ"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 4r〕",
+          "queries": [
+            "見つけたいとこがれていた修道院が",
+            "かつて見たままの姿で見つかったの",
+            "その時の魂の喜びの大きさを",
+            "どう言葉にしたらよいのか分かりま"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
+          "sha256": "bd4f080ec25a6e5bbb405b61f2e93f23c03f8466f58c011398a0d56e8af17e4e",
+          "size": 1338809
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
+          "sha256": "f10d9377864fd8b8f61fc4e9a6488fadcafdd6da7b7c57b4cee9673fbfb9db2f",
+          "size": 169793
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "2b7459bafdd996add42410ca056bb610bc3b1e3a362026d1d464caf07037c430",
+          "size": 72186
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
+      "pages": 141,
+      "source_url": "https://archive.org/details/spiritualautobio03mara",
+      "short": "母や姉妹との関わり、オアハカ行きの準備、霊的な父バリオスの死を振り返る。",
+      "overview": "母の死と、グアダラハラの跣足カルメル会修道院の創立に赴いた姉妹との関わりが語られる。やがて視点はオアハカへ向かう支度と、プエブラで得た霊的な指導へ移る。聴罪司祭バリオスの死は、その指導を失う出来事であると同時に、自分の身に起きたことを新たに書き継いでいく節目となる。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "神父さまに告解場でこうしたことを",
+            "神父さまはなおさらだったからです",
+            "主がこの恵みをお与えになるあいだ"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 4r〕",
+          "queries": [
+            "外に現れていたことはすべてやみま",
+            "主からいただいていた魂の飛翔",
+            "換えれば脱魂の恵みも",
+            "悪魔どもによって身に受けていた苦"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 5r〕",
+          "queries": [
+            "書き記せるようなものではありませ",
+            "近づく者に主がどれほど優しく",
+            "愛情深く接してくだ"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
+          "sha256": "bd71a056243ee373a0995f893c6b66b228af133fef7a988e8d69a4a984de97af",
+          "size": 1238175
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
+          "sha256": "dddf7324a1d14f49a3db8e1791b78114e1af057a47acb4c950445ec0954fa756",
+          "size": 159865
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "705a3f867139b4d400121c1cf6296530bfe2e6e6bbf982350b99629ae3768eac",
+          "size": 72167
+        }
+      ]
+    },
+    {
+      "part": 4,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
+      "pages": 139,
+      "source_url": "https://archive.org/details/spiritualautobio04mara",
+      "short": "プエブラで抱いた創立への予感から、オアハカで新修道院を受け取るまでをたどる。",
+      "overview": "まだプエブラにいたマリアが、祈りと霊操のなかで、のちに加わる修道院の創立を思い描いたことを述べる。オアハカでは、創立に赴いた五人が新しい修道院を正式に受け取る。創立は一度の儀礼で完結せず、その後も聖体拝領や聴罪、修練女を教える日々の務めのなかで共同体を形づくる仕事として描かれる。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2r〕",
+          "queries": [
+            "魂の奥で起こることで",
+            "いつも申し上げているように",
+            "外に何か現れるわけではありません"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3r〕",
+          "queries": [
+            "どうしても言わなくてはならないこ",
+            "私は一足先に行って",
+            "いつものように聖母に祝福をお願い"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 3v〕",
+          "queries": [
+            "聖母像の手におさまるのが見えまし",
+            "聖母は両手を合わせておられました",
+            "私の心をお受け取りになりました"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
+          "sha256": "823fb0c474853e4bc1d038dc6a6a0eb7b7d5aef344277fdf953eab1e82c936f1",
+          "size": 1238222
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
+          "sha256": "386f7f1277691b916a1db3e52b7f1f28f5b0be94914e96d1bf60f665241745e9",
+          "size": 159872
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "b16fc84fb83b5f841e665c7385dc8e5e66ff88e23ab2896ea397be269a0a9e8f",
+          "size": 72000
+        }
+      ]
+    },
+    {
+      "part": 5,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
+      "pages": 88,
+      "source_url": "https://archive.org/details/spiritualautobio05mara",
+      "short": "聴罪司祭を失った後の不安、記録の再整理、病む修道女と死者のための祈りを記す。",
+      "overview": "自分の書付を集め直した経緯と、聴罪司祭の死によって指導を失った心細さが書かれる。一七〇九年の苦悩と死者のための祈りに加え、プエブラのカルメル会修道女ウルスラや、創立まもない修道院に入ったマリア・ロサの死にも触れる。病と臨終の記憶は、共同生活の経験と、祈りのうちに出来事をどう受け止めたかを結びつけている。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "胸を痛めている悩みや",
+            "人皆にとっての敵が仕掛けてくる誘",
+            "神は神父さまが生きておられた最後"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3v〕",
+          "queries": [
+            "そうさせてくださいますようにと",
+            "神なる主に熱心にお願いしていまし",
+            "ほかに私にできることがおありでし",
+            "喜んで何でもいたしますと"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 4v〕",
+          "queries": [
+            "以前の聴罪司祭から別れを告げられ",
+            "私は少なからず心を",
+            "その日のうちに聖歌隊席へ行き",
+            "この胸の痛みにどうかお助けく"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
+          "sha256": "bb973691e3b8192afb80622ede474cdddda34bc731a2e919eab525aaf4650070",
+          "size": 885477
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
+          "sha256": "43deff04e193c9217925d39aabaa1fad896ad994d5466719ec3e3c9fed143e1a",
+          "size": 119437
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "6bf1cae4f6cdfd17603e2ea1a8c72b00b5ca130f58fd5d9f631abd6773a4e38a",
+          "size": 72033
+        }
+      ]
+    },
+    {
+      "part": 6,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
+      "pages": 92,
+      "source_url": "https://archive.org/details/spiritualautobio06mara",
+      "short": "プエブラ出立の年記を記し、創立後に修練長を務めた経験を振り返る。",
+      "overview": "旧表紙の内側には手帳の送付についての書付があり、マリアは一六九七年一月十四日にプエブラを出たと記す。オアハカで創立後の十年間を振り返り、修練長として志願者を迎え、院長や聴罪司祭と相談しながら修練の行方を決めたことを語る。祈り、清貧、共同体への従順は、入会後の日々の具体的な判断にも関わっている。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 1v〕",
+          "queries": [
+            "主は私たちをお分けにならず",
+            "二人一緒にこちらへお連れになりま",
+            "これから申し上げよ"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "まさに聖歌隊席の格子の上におられ",
+            "に院長におかけになるのです",
+            "主は大層うれしそうに",
+            "満足なさってそれをしておられまし"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 3v〕",
+          "queries": [
+            "そのとおりなのは目に見えています",
+            "る大きな苦しみは別にしても",
+            "一刻たりとも健やかでいられること"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
+          "sha256": "b5149047fc98c5304cafb87853630e089158152f627727dd90d20b29a06ead92",
+          "size": 876392
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
+          "sha256": "b85fd434785cda11dfb51121bf375f4c5258edb04d539be0d419af00727beed1",
+          "size": 118829
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "1b7ec4ba3fc9eb18d1ca534cd0bc3e73017ae252a64b75a8a9bafcc3cf2bb9e3",
+          "size": 72077
+        }
+      ]
+    },
+    {
+      "part": 7,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
+      "pages": 91,
+      "source_url": "https://archive.org/details/spiritualautobio07mara",
+      "short": "一七〇四〜〇五年のオアハカで、修練女を迎え、共同体を維持する苦労を描く。",
+      "overview": "病に伏した司祭との面会や、プエブラから来た二人の志願者のうち一人が退くまでの経緯を記す。院長と修練長が別々の務めを負いながら共同生活を保つ様子が語られ、耕された土地と未開墾の丘の対比に、修道院を立ち上げる仕事の難しさが重ねられる。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2r〕",
+          "queries": [
+            "その聖職禄を持つ司祭が告解所にお",
+            "病状はたいそう重く",
+            "もはや寝ているほかないお体で",
+            "ただ私と話すために出てこられたの"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3r〕",
+          "queries": [
+            "その無限の力によるのだ",
+            "司祭は私が言ったことにすべて同意",
+            "も遅れることなくそうすると約束し"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 4r〕",
+          "queries": [
+            "ここへ来た理由を伝えたいときのた",
+            "戸をたたくのが聞こえたそのと",
+            "私は主から光を頂き",
+            "それが今お話ししている魂なのだと"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
+          "sha256": "de1c3218b60dfa6fb3820f402762ec737b191c54ed6ec56baf0a23c112b67cb6",
+          "size": 922893
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
+          "sha256": "5da0b18d887d3b50b12dfb9e818dd359d8306cd3106f8e0c67cf023edc41251b",
+          "size": 118332
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "bb85ba0e6041020ca4f2e26dd05002774ed0838b937667cd5aa2e4796d4d1902",
+          "size": 71938
+        }
+      ]
+    },
+    {
+      "part": 8,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
+      "pages": 72,
+      "source_url": "https://archive.org/details/spiritualautobio08mara",
+      "short": "修道女セバスティアナの病、臨終、埋葬と、死後に見たと語る幻を中心に収める。",
+      "overview": "誓願を立てたセバスティアナが病み、亡くなって埋葬されるまでを記し、その後の祈りのなかで彼女を見たと語る。マリア自身が見守った病床の出来事と、「魂の目」で見たとする経験が区別される。叙述は一七〇八〜〇九年の間を行き来しながら、孤独の聖母や、創立に加わった修道女たちの回想にも及ぶ。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "必要なだけの世話ができないのをご",
+            "病室に移すことになさいました",
+            "護係のほかに手を貸す人もいて",
+            "必要な看護を受けられます"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 4r〕",
+          "queries": [
+            "荒々しくどよめく大勢の足音がしま",
+            "おびただしい悪魔が階段をのぼり",
+            "病人のいる病室へ通じる廊下を行く"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 5r〕",
+          "queries": [
+            "口から飛び出すかと思うほどでした",
+            "私のいる寝台の近くに二人の悪魔が",
+            "恐ろしい誘惑をしかけてきたのです"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
+          "sha256": "267c224ecfcc89658b2f9457b1614faafc3e85aa897285f3885b55ad49a10422",
+          "size": 749951
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
+          "sha256": "1a8dddd6dda203ba0f653362ec49448a4e24191d8126c6186082eaaf54a1a819",
+          "size": 107668
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "ad07914c8d4deea0062bb4256a588b8f804b52134705f6689c1161217dad8a87",
+          "size": 72046
+        }
+      ]
+    },
+    {
+      "part": 9,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
+      "pages": 88,
+      "source_url": "https://archive.org/details/spiritualautobio09mara",
+      "short": "司教巡察を挟む修練所の日常と、志願者の着衣、試し、退会を語る。",
+      "overview": "一七〇五〜〇六年を中心に、司教の巡察、志願者を迎えてからの見定め、着衣と退会の経緯を記す。共同体の務めの合間に姉の死を悼み、煉獄の魂に祈り、地震の経験も書き留める。六月十八日に記録を再開する場面は、書く時間を確保しにくかった修道院の日常も伝えている。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2v〕",
+          "queries": [
+            "私の頭のつくりごとがあったのかも",
+            "そのあとに残った働",
+            "神父さまが告解場においでになりま"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3v〕",
+          "queries": [
+            "聴罪司祭たちはおまえを救い出して",
+            "あれほど望んだことをかなえるため",
+            "残らず出口を与えてくださったので"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 4v〕",
+          "queries": [
+            "述べたのが最大のもので",
+            "私をもっとも思い悩ませ",
+            "眠れなくさせていたものでした"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
+          "sha256": "d0b623ed0e816cfc2a505f4d1a394bab230f1ed619edd521ab41daca3162964f",
+          "size": 895413
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
+          "sha256": "556f17a6587d3e14fd1627d7a02c99014fe731a381e954cb43f4aa279dacf598",
+          "size": 116920
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "8de5da0c6345245264d9f6e739693d458dbeff4f02ebd54c5684ea53d829b28d",
+          "size": 71981
+        }
+      ]
+    },
+    {
+      "part": 10,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
+      "pages": 79,
+      "source_url": "https://archive.org/details/spiritualautobio10mara",
+      "short": "創立期と地震を回顧し、別記では手帳の回収・散逸と書き直しを述べる。",
+      "overview": "一七一二年の書き出しから、先年の地震とオアハカ修道院の創立期へさかのぼる。創立組と後から来た修道女たち、院を支えた寄進、聴罪司祭との関係を描く。別記では手帳の回収に努めたこと、一部が焼かれたという伝聞と、実際に残っていた手帳を見たことを区別し、自分の叙述が途切れては書き直された経緯を語る。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔写本 f. 2r〕",
+          "queries": [
+            "偉大な女主人である聖母が初めて同",
+            "その折のもっと多くの事情とともに",
+            "覚えているかぎりではもう書きまし"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔写本 f. 3r〕",
+          "queries": [
+            "トマス神父に告解に入り",
+            "いま申したような良心のと",
+            "がめを打ち明けました",
+            "神父さまはしばらくお聞きになって"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔写本 f. 3v〕",
+          "queries": [
+            "私には神がおられないとでもいうよ",
+            "これこそ手厳しい試練です",
+            "うになりながら聖体拝領に行きまし",
+            "神をお迎えしたとたん"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
+          "sha256": "3fd58cda9b908445bc62cd9291718a5799add3cf720e301cf25c7fd36439091b",
+          "size": 906192
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
+          "sha256": "7b679e4d5c38e3ed543a67e132ac261ff2526b0e96d6136a5e0a943d897bcd94",
+          "size": 112885
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "9ba73ce0c9da3d64f7f47ace38b399770b926b47fc868746fff63ba393f8615b",
+          "size": 72113
+        }
+      ]
+    },
+    {
+      "part": 11,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
+      "pages": 60,
+      "source_url": "https://archive.org/details/spiritualautobio11mara",
+      "short": "オアハカの司教座をめぐる記事と、受難各留を記した別の手帳を収める。",
+      "overview": "オアハカの司教座に関わる出来事、聖体と従順についての覚え書き、一七一七年の記事が並ぶ。別の手帳ではキリストの受難を各留に沿ってたどり、パオラの聖フランシスコとアッシジの聖フランシスコにも触れる。記述を刊行してほしいとの願いが書かれているが、刊行されたという記録ではない。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔底本画像 7〕",
+          "queries": [
+            "あまりにかたくなで",
+            "どうしても聞き入れてくれないのが",
+            "のない思いで彼女から離れました",
+            "彼女のすることに苦労しながら時が"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔底本画像 8〕",
+          "queries": [
+            "たいへんな勢いで院長さまの頭に振",
+            "まことに父である神が彼女をお止め",
+            "もし敵の望みどおりと"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔底本画像 10〕",
+          "queries": [
+            "けれどもそれらをお責めになること",
+            "御自分に代わる院長を軽んじ",
+            "だけをおとがめになり",
+            "ほかのことにはお触れにならなかっ"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
+          "sha256": "9736ef6d6281482e15b8c4d6ce23a84f2fd3c1c863a5fd9b440944ec2cb11cb0",
+          "size": 744806
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
+          "sha256": "725c3e00be2ee0cb419c35a9ee6fb75c83db7b0c3030cf44e753a698572ccbdb",
+          "size": 98232
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "2804611fd7a0b796e10df0a7e42cacb73e96d8b89ff12bad084b802a9a2c3f99",
+          "size": 71862
+        }
+      ]
+    },
+    {
+      "part": 12,
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
+      "pages": 44,
+      "source_url": "https://archive.org/details/spiritualautobio12mara",
+      "short": "修道院選択を語る小冊子、修道女カタリナの記録、教皇と創立をめぐる断簡を収める。",
+      "overview": "小冊子は、マリアがどの修道院へ入るかを考えた時期を振り返る。カタリナ・マリア・デル・サクラメントについての短い記録は、修練、着衣、病と最期をたどる。これとは別に、新任の司祭に宛てた断簡、教皇についての覚え書き、オアハカの創立や入会年記に触れる断簡が続き、長い本文とは異なる書きかけの形で残っている。",
+      "probes": [
+        {
+          "page": 4,
+          "original": "〔底本画像 8〕",
+          "queries": [
+            "それまでの私は無知と闇の中におり",
+            "階段を通りかかると",
+            "裸の人間の姿をした悪魔が"
+          ]
+        },
+        {
+          "page": 5,
+          "original": "〔底本画像 10〕",
+          "queries": [
+            "けれども霊的な父がいないこと",
+            "これからそのような方に巡り会う",
+            "見込みもないことは",
+            "たいそう心細く思われました"
+          ]
+        },
+        {
+          "page": 6,
+          "original": "〔底本画像 12〕",
+          "queries": [
+            "冊子にある要点や助言に従って",
+            "朝は四時か五時に起き",
+            "十字架にならって腕を広げ",
+            "主が御血をお流しになった七度を記"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "role": "pdf",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
+          "sha256": "be003f116d70533ce65f2867af1af870a1675eebe9974d7512144152dcba46b1",
+          "size": 630470
+        },
+        {
+          "role": "epub",
+          "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
+          "sha256": "57a79786ae7c1df0c3993b0a6bbfef5e07305a0cc8378218c8aeceb121bfaf82",
+          "size": 86273
+        },
+        {
+          "role": "cover",
+          "name": "cover.jpg",
+          "sha256": "440dff35d52795c0c5eebd7085b7c3219106f49955828403b1ad32034ff2ea27",
+          "size": 72151
+        }
+      ]
+    }
+  ]
+}
