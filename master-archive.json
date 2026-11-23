@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "41589651082cbc872e43cc27f780aa3999e6cc64",
+  "archive_commit": "82ca4180d989607e452d12c8c236b2351cf28cb3",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -529,7 +529,8 @@
     "maria-de-san-jose-spiritual-autobiography-part-09": "publications/maria-de-san-jose-spiritual-autobiography-part-09/master.md",
     "maria-de-san-jose-spiritual-autobiography-part-10": "publications/maria-de-san-jose-spiritual-autobiography-part-10/master.md",
     "maria-de-san-jose-spiritual-autobiography-part-11": "publications/maria-de-san-jose-spiritual-autobiography-part-11/master.md",
-    "maria-de-san-jose-spiritual-autobiography-part-12": "publications/maria-de-san-jose-spiritual-autobiography-part-12/master.md"
+    "maria-de-san-jose-spiritual-autobiography-part-12": "publications/maria-de-san-jose-spiritual-autobiography-part-12/master.md",
+    "laferriere-paris-guatemala-1877": "publications/laferriere-paris-guatemala-1877/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {

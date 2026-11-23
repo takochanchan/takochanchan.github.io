@@ -10842,6 +10842,24 @@
       "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-12/cover.jpg",
       "size": 72151,
       "sha256": "440dff35d52795c0c5eebd7085b7c3219106f49955828403b1ad32034ff2ea27"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "size": 23130065,
+      "sha256": "9622d5fa1292cbe4fb5fb8c64edc6522aca0948b74b31361ba434196d8ed9f7b"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "size": 20060589,
+      "sha256": "042d7239a387b40e6c0f9f474e1928a6b0a3d1818ffda20bc5fcf44bfc3f45d2"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "size": 59852,
+      "sha256": "270ab69779b70e4bc36838997dab215944eed3dc3693c47a8a360813c74c88bb"
     }
   ]
 }

@@ -3534,6 +3534,14 @@
       "seriesVolumeNumber": 12,
       "originalAuthor": "Madre María de San José",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "laferriere-paris-guatemala-1877",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジョゼフ・ラフェリエール",
+      "originalAuthor": "Joseph Laferrière",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [

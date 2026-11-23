@@ -1,3 +1,4 @@
+import { laferriereRecords, laferriereMetadata } from "./laferriere-paris-guatemala-1877-publication.mjs";
 import { mariaSanJoseRecords, mariaSanJoseMetadata } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { zodiacoMarianoRecords, zodiacoMarianoMetadata } from "./florencia-oviedo-zodiaco-mariano-1755-publication.mjs";
 import { coutoDialogo1889Records, coutoDialogo1889Metadata } from "./couto-dialogo-pintura-mexico-1889-publication.mjs";
@@ -389,6 +390,7 @@ const publicationRecords = [
   ...cabreraEscudoRecords,
   ...canoManchePetenRecords,
   ...zodiacoMarianoRecords,
+  ...laferriereRecords,
   ...mariaSanJoseRecords,
   ...coutoDialogo1889Records,
   ...romeroMichoacan1862Records,
@@ -9576,6 +9578,7 @@ const publicationMetadata = {
   ...cabreraEscudoMetadata,
   ...canoManchePetenMetadata,
   ...zodiacoMarianoMetadata,
+  ...laferriereMetadata,
   ...mariaSanJoseMetadata,
   ...coutoDialogo1889Metadata,
   ...romeroMichoacan1862Metadata,

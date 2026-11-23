@@ -11435,6 +11435,25 @@
         "status": "online",
         "url": "https://archive.org/details/spiritualautobio12mara"
       }
+    },
+    {
+      "slug": "laferriere-paris-guatemala-1877",
+      "recordClass": "major-work",
+      "title": "パリからグアテマラへ",
+      "originalTitle": "De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875",
+      "author": "ジョゼフ・ラフェリエール",
+      "originalAuthor": "Joseph Laferrière",
+      "year": 1877,
+      "originalPublication": "1877年、パリ、ガルニエ兄弟書店。",
+      "sourceEdition": "Joseph Laferrière, De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875. Paris : Garnier frères, 1877.",
+      "sourceProvider": "Getty Research Institute蔵（請求記号9924486970001551）。Internet Archiveが2018年に電子化した個体と、Wikimedia Commonsに再配布された同じ撮影個体を使用。",
+      "rights": "1877年刊の原著本文と図版は米国でパブリックドメイン。収録図版は、Wikimedia Commonsが米国でのパブリックドメインを明示する同じ撮影個体から採った。https://commons.wikimedia.org/wiki/File:De_Paris_%C3%A0_Guat%C3%A9mala-_notes_de_voyages_au_Centre-Am%C3%A9rique,_1866-1875;_(IA_deparisguatemala00lafe).pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/deparisguatemala00lafe"
+      }
     }
   ],
   "works": [
