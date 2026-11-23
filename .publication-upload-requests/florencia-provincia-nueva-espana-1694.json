@@ -1,0 +1,34 @@
+{
+  "slug": "florencia-provincia-nueva-espana-1694",
+  "release_tag": "publications-002",
+  "assets": [
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "size": 3343643,
+      "sha256": "e6223ca2135314f195ab7df9a8f6d6257cca032e3aa40053766780e620deeeda",
+      "filename": "Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "size": 514861,
+      "sha256": "c1f9b8ba959a70e03436220c833d3ccfc221be4672d521922c059c4bfacf7b2b",
+      "filename": "Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub"
+    }
+  ],
+  "bundle": {
+    "size": 3674124,
+    "sha256": "c56b01d45d34eb62dfa3c725a663e13fd696af2dc4512597257aa845a742e212",
+    "chunks": [
+      "6a72e6913baaca4aa60b6d3e93637b39b87b2257",
+      "1b62993d128d5fdd6ef8629bb143531a8a516f14",
+      "8e57d22199522782136efbebda74a842c73be48f",
+      "26a3079e8cd7bc926ee52b62b38d546ba94a08f2",
+      "d77ae574a74ae2168a33da1f45ec7fc73ff056a3",
+      "e4978004bf69afffd239d1882cbfb57be6960fe8",
+      "421724206e1e2a901276fa3800ea08206fbad5ff"
+    ]
+  },
+  "verified_archive_commit": "0f20db7a2f1b901377373d2ba9672ffe773eba4a"
+}
