@@ -1,0 +1,54 @@
+{
+  "slug": "romero-michoacan-diocesan-history-1862",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "e0c641239dc55ed18c4b320c6d5ec305b78e8d60",
+  "assets": [
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "size": 6130501,
+      "sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "size": 10915765,
+      "sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
+    }
+  ],
+  "bundle": {
+    "size": 15663660,
+    "sha256": "a18d3a76ba632d36e2252be1e67dd86a788d0bbe61400344f79120d871dab2e4",
+    "chunks": [
+      "96aea1babd17a1fbbe56a5cfe718a666ff79a05f",
+      "54c0286b956a37ee68222935c8df15e1dbe48a94",
+      "3fcc8d3295f80bbbf55bd563a4cc001b3a6758d7",
+      "6d228eee75c7408991030f334913aee9069b401f",
+      "03b6dc86e503ec80d587f27b60be26146f5a2eee",
+      "9e44b45bcea47249865fc0997f66f080e269adcc",
+      "1be0d7d3016f413859533043bf91705b58dffeb7",
+      "ff094f4c45ef495f00356221413583fc48248ba2",
+      "4853deecbcbeb7520351875dc72d18c85704a09b",
+      "175a03764cbaa051f4c8028ce770559c75ce662f",
+      "0fdc884558ec06dbd1edf0a4442361681b7665a3",
+      "4f3ab3bd5ff27ec2959f495841d738d1d96a1fcb",
+      "c17eda91077289f219e802328d823761ffb29f9f",
+      "b8f980801c33a391992697a7bd694657bbb6a030",
+      "80f9614c5ba813eea149911cdf201017313dfdb1",
+      "afe36d753453a5e4dab043f17884e79858f16847",
+      "0ff4d5d1bb6633e4c61a299587be656aad22d1f4",
+      "512d8b57c3323d8923d909a74377145197d72116",
+      "9cbc812799c4b558265214c335088ad52f8d88ab",
+      "2118083c869fea50190d3cd65a3e94ec8f2e56fd",
+      "b94e357b7e73a1f4ac0c8cf8f86f829237154488",
+      "e319181bfdb7b9e692afce6668c4b457fadce5f5",
+      "47b42738427c637d9bd90b1c3116caf1df67678c",
+      "4fdf2bb8e53c47f7a40e4fbbcd71f45e6d60c02d",
+      "7a4a46e5ca0d359648f0183594e6680d3c8a0cfe",
+      "ff41217676a91383d9a05f7f91ff217a617eb7d7",
+      "23c4cc3168a0600a34ad1d12fefd9e8ba925095a"
+    ]
+  }
+}
