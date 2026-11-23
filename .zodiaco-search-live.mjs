@@ -26,6 +26,7 @@ assert.equal(pdf.sha256,request.pdfSha256,"probes are pinned to the exact proofe
 const canonical="/publications/"+slug+"/";
 assert.equal(map.pdfSha256,pdf.sha256);
 assert.equal(map.canonicalUrl,canonical);
+assert(Object.values(map.blocks).some(([original,page])=>original.split("／").includes("原刊 p. 259")&&page===275),"Fifth part opening must retain its physical page mapping");
 assert(!Object.hasOwn(bibliographicAliases,slug));
 assert(!Object.values(bibliographicAliases).includes(slug));
 const probes=JSON.parse(await readFile(".zodiaco-search-probes.json","utf8"));
