@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-22",
-  "updatedAt": "2026-11-23T00:55:37.669Z",
+  "endDate": "2026-11-23",
+  "updatedAt": "2026-11-24T04:49:07.958Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9430,6 +9430,310 @@
       "name": "Viana_Relacion_de_Vera_Paz.epub",
       "slug": "viana-relacion-de-vera-paz-1574",
       "title": "ベラパス地方報告",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_bd2bd58f66b1b3f0",
+      "name": "Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "slug": "florencia-oviedo-zodiaco-mariano-1755",
+      "title": "聖母の黄道帯",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_71c52e4c7ff6fae4",
+      "name": "Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "slug": "florencia-oviedo-zodiaco-mariano-1755",
+      "title": "聖母の黄道帯",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_287d693c0080feba",
+      "name": "Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "slug": "laferriere-paris-guatemala-1877",
+      "title": "パリからグアテマラへ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_f1b7f36064ea3122",
+      "name": "Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "slug": "laferriere-paris-guatemala-1877",
+      "title": "パリからグアテマラへ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0f589152637a19d6",
+      "name": "Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "slug": "florencia-provincia-nueva-espana-1694",
+      "title": "ヌエバ・エスパーニャ・イエズス会管区史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_be69f5abe01b2f06",
+      "name": "Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "slug": "florencia-provincia-nueva-espana-1694",
+      "title": "ヌエバ・エスパーニャ・イエズス会管区史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_71fa102fcd87f89f",
+      "name": "William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "slug": "wells-explorations-and-adventures-in-honduras-1857",
+      "title": "ホンジュラス探検と冒険",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_4027d387ddd10735",
+      "name": "William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "slug": "wells-explorations-and-adventures-in-honduras-1857",
+      "title": "ホンジュラス探検と冒険",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_17d904a31885f153",
+      "name": "Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+      "title": "ソコヌスコ史とメキシコ共和国への編入",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_7c99b0c285972341",
+      "name": "Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+      "title": "ソコヌスコ史とメキシコ共和国への編入",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_70ef7b77b4190d15",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第1部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b8a7b8b990cfcda7",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第1部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_16c10e5a712c8a0e",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第2部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_9fc28154ad79ddee",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第2部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_39c767fe741a37eb",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第3部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cefbfcffc043b729",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第3部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_886ba650db32db4c",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第4部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_0ae8cbd4c3028e98",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第4部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_2a0275befdcb99e9",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第5部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b43c3d29b845adf3",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第5部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_9e88f13a0a3832b2",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第6部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_54f9200b854baaca",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第6部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e3a2b33e23208a9f",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第7部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_fa46e4e350111d35",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第7部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_532ea8d070d31770",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第8部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_79f5a5d0b6b30d64",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第8部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_8b6189c81317164d",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第9部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b921e34b954e81af",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第9部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_9f220e8bc9039a57",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第10部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_364261d9b69bb0bd",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第10部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_6dc617538794e18a",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第11部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_296bb45334e701f2",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第11部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_1608ae66f22f4be1",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第12部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_29e6ba8e0090ac1b",
+      "name": "Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "title": "霊的自叙伝",
+      "volumeLabel": "第12部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7ab1aff6b100c1f0",
+      "name": "Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
+      "slug": "couto-dialogo-pintura-mexico-1889",
+      "title": "メキシコ絵画史対話",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cb454bcfc44bc4e4",
+      "name": "Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
+      "slug": "couto-dialogo-pintura-mexico-1889",
+      "title": "メキシコ絵画史対話",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0310877cf18bb2ef",
+      "name": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "slug": "romero-michoacan-diocesan-history-1862",
+      "title": "ミチョアカン司教区の歴史と統計のための資料",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b6b33cad96f0b045",
+      "name": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "slug": "romero-michoacan-diocesan-history-1862",
+      "title": "ミチョアカン司教区の歴史と統計のための資料",
       "volumeLabel": "",
       "format": "epub"
     }
