@@ -22,9 +22,24 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ルイス・アルファロ・イ・ピニャ",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "alva-confessionario-mayor-menor-1634",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "recordClass": "short-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
+      "originalAuthor": "José Antonio de Alzate y Ramírez"
     },
     {
       "slug": "arce-libro-vida-proximo-evangelico-1762",
@@ -51,6 +66,13 @@
       "searchShard": "003",
       "author": "グレゴリオ・ロペス（著）／グレゴリオ・デ・アルガイス（編）",
       "originalAuthor": "Gregorio López"
+    },
+    {
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホアキン・アロニス",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "arthes-peten-1893",
@@ -137,6 +159,13 @@
       "slug": "baz-gallo-historia-ferrocarril-mexicano-1874",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・ベリード",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "belly-a-travers-amerique-centrale-1867",
@@ -337,6 +366,42 @@
       "searchShard": "001"
     },
     {
+      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 4
+    },
+    {
       "slug": "brasseur-rabinal-achi-1862",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -517,6 +582,24 @@
       "author": "フィリップ・ビュノー＝ヴァリーヤ"
     },
     {
+      "slug": "burgoa-geografica-descripcion-1674-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・ブルゴア",
+      "originalAuthor": "Francisco de Burgoa",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "burgoa-geografica-descripcion-1674-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・ブルゴア",
+      "originalAuthor": "Francisco de Burgoa",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
       "slug": "bury-bishop-amongst-bananas-1911",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -528,15 +611,95 @@
       "author": "ホセ・デ・ブスタマンテ"
     },
     {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Carlos María de Bustamante",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "byam-chiapas-1897",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "seriesVolumeNumber": 4,
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "cambre-guerra-tres-anos-1904",
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "マヌエル・カンブレ"
+    },
+    {
+      "slug": "cano-manche-y-peten-1696",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "アグスティン・カノ",
+      "originalAuthor": "Agustín Cano",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "cantares-mexicanos-ms-1628-bis",
@@ -641,6 +804,24 @@
       "author": "ディオニシオ・ホセ・チョナイ"
     },
     {
+      "slug": "clavijero-storia-della-california-tomo-1-1789",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "clavijero-storia-della-california-tomo-2-1789",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "codex-perez-pmm9-1877",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -686,6 +867,14 @@
       "slug": "cortes-y-larraz-descripcion-geografico-moral-1771",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "couto-dialogo-pintura-mexico-1889",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・ベルナルド・コウト",
+      "originalAuthor": "José Bernardo Couto",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "couto-discurso-constitucion-iglesia-1857",
@@ -755,6 +944,13 @@
       "recordClass": "short-work",
       "searchShard": "002",
       "author": "ジョゼフ・ド・ギーニュ"
+    },
+    {
+      "slug": "de-la-cruz-badiano-libellus-1552",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "defence-settlers-honduras-1824",
@@ -1062,6 +1258,29 @@
       "recordClass": "short-work",
       "searchShard": "001",
       "author": "アール・フリント"
+    },
+    {
+      "slug": "florencia-estrella-norte-mexico-1688",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・フロレンシア",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "florencia-oviedo-zodiaco-mariano-1755",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・フロレンシア／フアン・アントニオ・デ・オビエド",
+      "originalAuthor": "Francisco de Florencia / Juan Antonio de Oviedo",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "florencia-provincia-nueva-espana-1694",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・フロレンシア",
+      "originalAuthor": "Francisco de Florencia",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "foreign-office-mosquito-territory-1848",
@@ -1425,6 +1644,13 @@
       "searchShard": "001"
     },
     {
+      "slug": "garcia-leona-vicario-1910",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ヘナロ・ガルシア",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "garcia-pelaez-memorias-guatemala-1851-1852",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -1517,6 +1743,13 @@
       "recordClass": "short-work",
       "searchShard": "001",
       "author": "ダリオ・ゴンサレス"
+    },
+    {
+      "slug": "granados-tardes-americanas-1778",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "gregorio-lopez-testimonies-mss-7819",
@@ -1656,6 +1889,14 @@
       "searchShard": "002"
     },
     {
+      "slug": "laferriere-paris-guatemala-1877",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジョゼフ・ラフェリエール",
+      "originalAuthor": "Joseph Laferrière",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "larde-arqueologia-cuzcatleca-1924",
       "recordClass": "short-work",
       "searchShard": "002",
@@ -1724,11 +1965,26 @@
       "searchShard": "002"
     },
     {
+      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マヌエル・ララインサル",
+      "originalAuthor": "Manuel Larráinzar",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "larrainzar-revolucion-guatemala-1873",
       "recordClass": "major-work",
       "searchShard": "002",
       "author": "フェデリコ・ララインサル",
       "originalAuthor": "Federico Larraínzar",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "lazcano-juan-antonio-de-oviedo-1760",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・ラスカノ",
       "releaseTag": "publications-002"
     },
     {
@@ -1743,9 +1999,24 @@
       "author": "フレデリック・ルモワーヌ"
     },
     {
+      "slug": "leon-y-gama-dos-piedras-1792",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "アントニオ・デ・レオン・イ・ガマ",
+      "originalAuthor": "Antonio de León y Gama"
+    },
+    {
       "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "lizardi-la-quijotita-y-su-prima-1897",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "lobo-pedro-betancur-1667",
@@ -1799,6 +2070,122 @@
       "slug": "maler-usumacinta",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
+      "originalAuthor": "María Ana Águeda de San Ignacio"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 4,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 5,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 6,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 7,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 8,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 9,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 10,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 11,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マリア・デ・サン・ホセ",
+      "seriesVolumeNumber": 12,
+      "originalAuthor": "Madre María de San José",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "marimon-lacandones-1695",
@@ -1876,6 +2263,14 @@
       "author": "ホセ・ミリャ（サロメ・ヒル）"
     },
     {
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フェリペ・モリーナ",
+      "originalAuthor": "Felipe Molina",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "molina-costa-rica-new-granada-1853",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -1938,6 +2333,13 @@
       "slug": "morris-colony-british-honduras-1883",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "mota-padilla-conquista-nueva-galicia-1870",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マティアス・デ・ラ・モタ・パディリャ",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "munoz-camargo-historia-tlaxcala-ms210",
@@ -2056,12 +2458,56 @@
       "searchShard": "001"
     },
     {
+      "slug": "patrignani-menologio-volume-i-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "patrignani-menologio-volume-ii-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "patrignani-menologio-volume-iii-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "patrignani-menologio-volume-iv-1730",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 4
+    },
+    {
       "slug": "payno-mexico-financial-questions-1862",
       "recordClass": "major-work",
       "searchShard": "003",
       "author": "マヌエル・パイノ",
       "originalAuthor": "Manuel Payno",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "ペドロ・サンチェス・デ・アギラル",
+      "originalAuthor": "Pedro Sánchez de Aguilar"
     },
     {
       "slug": "peinado-san-salvador-insurreccion-1814-1911",
@@ -2367,6 +2813,40 @@
       "searchShard": "002"
     },
     {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "seriesVolumeNumber": 3,
+      "originalAuthor": "Francisco Pimentel",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "pimentel-memoria-situacion-indigena-1864",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ピメンテル",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "pineda-chiapas-soconusco-1845",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -2412,6 +2892,14 @@
       "slug": "rabasa-estado-chiapas-1895",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "releaseTag": "publications-002",
+      "author": "マヌエル・ラミレス・アパリシオ",
+      "originalAuthor": "Manuel Ramírez Aparicio"
     },
     {
       "slug": "rau-palenque-tablet-1879",
@@ -2504,6 +2992,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "romero-michoacan-diocesan-history-1862",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・グアダルーペ・ロメロ",
+      "originalAuthor": "José Guadalupe Romero",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "roys-chilam-balam-chumayel-1933",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -2576,6 +3072,24 @@
       "author": "パウル・シェルハス、ルドルフ・ヴィルヒョウ"
     },
     {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
       "slug": "seitz-parkman-squier-letters-1911",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -2627,6 +3141,31 @@
       "recordClass": "short-work",
       "searchShard": "001",
       "author": "フランス地理学会委員会"
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "seriesVolumeNumber": 1,
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "seriesVolumeNumber": 2,
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ソサ",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "sosa-el-episcopado-mexicano-1877-1879",
@@ -2905,6 +3444,55 @@
       "searchShard": "002"
     },
     {
+      "slug": "velasco-exaltacion-divina-misericordia-1810",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アロンソ・アルベルト・デ・ベラスコ",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "venegas-juan-bautista-zappa-1754",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "venegas-noticia-california-volume-1-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "venegas-noticia-california-volume-2-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "venegas-noticia-california-volume-3-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
+    },
+    {
+      "slug": "viana-relacion-de-vera-paz-1574",
+      "recordClass": "document-collection",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・ビアナ／ルカス・ガリェゴ／ギリェム・カデナ",
+      "originalAuthor": "Francisco de Viana / Lucas Gallego / Guillem Cadena",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "victor-miguel-diaz-la-romantica-ciudad-colonial-1927",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -2954,6 +3542,14 @@
       "slug": "walker-war-nicaragua-1860",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "wells-explorations-and-adventures-in-honduras-1857",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ウィリアム・V・ウェルズ",
+      "originalAuthor": "William V. Wells",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "wells-walkers-expedition-nicaragua-1856",
@@ -3009,588 +3605,10 @@
       "originalAuthor": "Francisco Zarco"
     },
     {
-      "slug": "patrignani-menologio-volume-i-1730",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 1
-    },
-    {
-      "slug": "venegas-noticia-california-volume-1-1757",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 1
-    },
-    {
-      "slug": "venegas-noticia-california-volume-2-1757",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 2
-    },
-    {
-      "slug": "venegas-noticia-california-volume-3-1757",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 3
-    },
-    {
-      "slug": "patrignani-menologio-volume-ii-1730",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 2
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 1
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 2
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 3
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 4
-    },
-    {
-      "slug": "patrignani-menologio-volume-iii-1730",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 3
-    },
-    {
-      "slug": "patrignani-menologio-volume-iv-1730",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 4
-    },
-    {
-      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ソサ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホセ・ベリード",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-ana-agueda-devociones-varias-1791",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002",
-      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
-      "originalAuthor": "María Ana Águeda de San Ignacio"
-    },
-    {
-      "slug": "leon-y-gama-dos-piedras-1792",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002",
-      "author": "アントニオ・デ・レオン・イ・ガマ",
-      "originalAuthor": "Antonio de León y Gama"
-    },
-    {
-      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002",
-      "author": "ペドロ・サンチェス・デ・アギラル",
-      "originalAuthor": "Pedro Sánchez de Aguilar"
-    },
-    {
-      "slug": "alzate-memoria-grana-cochinilla-1794",
-      "recordClass": "short-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002",
-      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
-      "originalAuthor": "José Antonio de Alzate y Ramírez"
-    },
-    {
-      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Carlos María de Bustamante",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Carlos María de Bustamante",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フアン・デ・ソロルサノ・ペレイラ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Juan de Solórzano Pereira",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フアン・デ・ソロルサノ・ペレイラ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Juan de Solórzano Pereira",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Carlos María de Bustamante",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Carlos María de Bustamante",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "releaseTag": "publications-002",
-      "author": "マヌエル・ラミレス・アパリシオ",
-      "originalAuthor": "Manuel Ramírez Aparicio"
-    },
-    {
-      "slug": "clavijero-storia-della-california-tomo-1-1789",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ハビエル・クラビヘロ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Francesco Saverio Clavigero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "clavijero-storia-della-california-tomo-2-1789",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ハビエル・クラビヘロ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Francesco Saverio Clavigero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "garcia-leona-vicario-1910",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ヘナロ・ガルシア",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "venegas-juan-bautista-zappa-1754",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ミゲル・ベネガス",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "lizardi-la-quijotita-y-su-prima-1897",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホアキン・アロニス",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "lazcano-juan-antonio-de-oviedo-1760",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ハビエル・ラスカノ",
-      "releaseTag": "publications-002"
-    },
-    {
       "slug": "zelaa-glorias-de-queretaro-1803",
       "recordClass": "major-work",
       "searchShard": "003",
       "author": "ホセ・マリア・セラア・エ・イダルゴ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ルイス・アルファロ・イ・ピニャ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "de-la-cruz-badiano-libellus-1552",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "florencia-estrella-norte-mexico-1688",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・デ・フロレンシア",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "granados-tardes-americanas-1778",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "mota-padilla-conquista-nueva-galicia-1870",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マティアス・デ・ラ・モタ・パディリャ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "pimentel-memoria-situacion-indigena-1864",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ピメンテル",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "velasco-exaltacion-divina-misericordia-1810",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "アロンソ・アルベルト・デ・ベラスコ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ピメンテル",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Francisco Pimentel",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ピメンテル",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Francisco Pimentel",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・ピメンテル",
-      "seriesVolumeNumber": 3,
-      "originalAuthor": "Francisco Pimentel",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "seriesVolumeNumber": 3,
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "seriesVolumeNumber": 4,
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cano-manche-y-peten-1696",
-      "recordClass": "document-collection",
-      "searchShard": "003",
-      "author": "アグスティン・カノ",
-      "originalAuthor": "Agustín Cano",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "viana-relacion-de-vera-paz-1574",
-      "recordClass": "document-collection",
-      "searchShard": "003",
-      "author": "フランシスコ・デ・ビアナ／ルカス・ガリェゴ／ギリェム・カデナ",
-      "originalAuthor": "Francisco de Viana / Lucas Gallego / Guillem Cadena",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "romero-michoacan-diocesan-history-1862",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホセ・グアダルーペ・ロメロ",
-      "originalAuthor": "José Guadalupe Romero",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "couto-dialogo-pintura-mexico-1889",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ホセ・ベルナルド・コウト",
-      "originalAuthor": "José Bernardo Couto",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "florencia-oviedo-zodiaco-mariano-1755",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・デ・フロレンシア／フアン・アントニオ・デ・オビエド",
-      "originalAuthor": "Francisco de Florencia / Juan Antonio de Oviedo",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 1,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 2,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 3,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 4,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 5,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 6,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 7,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 8,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 9,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 10,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 11,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マリア・デ・サン・ホセ",
-      "seriesVolumeNumber": 12,
-      "originalAuthor": "Madre María de San José",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "laferriere-paris-guatemala-1877",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ジョゼフ・ラフェリエール",
-      "originalAuthor": "Joseph Laferrière",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "florencia-provincia-nueva-espana-1694",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フランシスコ・デ・フロレンシア",
-      "originalAuthor": "Francisco de Florencia",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "wells-explorations-and-adventures-in-honduras-1857",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ウィリアム・V・ウェルズ",
-      "originalAuthor": "William V. Wells",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "マヌエル・ララインサル",
-      "originalAuthor": "Manuel Larráinzar",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カール・シェルツァー",
-      "originalAuthor": "Carl Scherzer",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 1
-    },
-    {
-      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "カール・シェルツァー",
-      "originalAuthor": "Carl Scherzer",
-      "releaseTag": "publications-002",
-      "seriesVolumeNumber": 2
-    },
-    {
-      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フェリペ・モリーナ",
-      "originalAuthor": "Felipe Molina",
       "releaseTag": "publications-002"
     }
   ],
@@ -3606,12 +3624,64 @@
       ]
     },
     {
+      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "memberSlugs": [
+        "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+        "brasseur-histoire-nations-civilisees-volume-4-1857-1859"
+      ],
+      "seriesVolumeCount": 4
+    },
+    {
+      "slug": "burgoa-geografica-descripcion-1674",
+      "memberSlugs": [
+        "burgoa-geografica-descripcion-1674-vol-1",
+        "burgoa-geografica-descripcion-1674-vol-2"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
+      "memberSlugs": [
+        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
+      "memberSlugs": [
+        "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+        "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
+      "memberSlugs": [
+        "cabrera-escudo-de-armas-de-mexico-1746-v1",
+        "cabrera-escudo-de-armas-de-mexico-1746-v2",
+        "cabrera-escudo-de-armas-de-mexico-1746-v3",
+        "cabrera-escudo-de-armas-de-mexico-1746-v4"
+      ],
+      "seriesVolumeCount": 4
+    },
+    {
       "slug": "castro-santa-anna-diario-1854",
       "memberSlugs": [
         "castro-santa-anna-diario-1854-v4",
         "castro-santa-anna-diario-1854-v5",
         "castro-santa-anna-diario-1854-v6"
       ]
+    },
+    {
+      "slug": "clavijero-storia-della-california-1789",
+      "memberSlugs": [
+        "clavijero-storia-della-california-tomo-1-1789",
+        "clavijero-storia-della-california-tomo-2-1789"
+      ],
+      "seriesVolumeCount": 2
     },
     {
       "slug": "cuevas-historia-iglesia-mexico",
@@ -3704,6 +3774,24 @@
       ]
     },
     {
+      "slug": "maria-de-san-jose-spiritual-autobiography",
+      "memberSlugs": [
+        "maria-de-san-jose-spiritual-autobiography-part-01",
+        "maria-de-san-jose-spiritual-autobiography-part-02",
+        "maria-de-san-jose-spiritual-autobiography-part-03",
+        "maria-de-san-jose-spiritual-autobiography-part-04",
+        "maria-de-san-jose-spiritual-autobiography-part-05",
+        "maria-de-san-jose-spiritual-autobiography-part-06",
+        "maria-de-san-jose-spiritual-autobiography-part-07",
+        "maria-de-san-jose-spiritual-autobiography-part-08",
+        "maria-de-san-jose-spiritual-autobiography-part-09",
+        "maria-de-san-jose-spiritual-autobiography-part-10",
+        "maria-de-san-jose-spiritual-autobiography-part-11",
+        "maria-de-san-jose-spiritual-autobiography-part-12"
+      ],
+      "seriesVolumeCount": 12
+    },
+    {
       "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
       "memberSlugs": [
         "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
@@ -3731,6 +3819,25 @@
       ]
     },
     {
+      "slug": "patrignani-menologio-1730",
+      "memberSlugs": [
+        "patrignani-menologio-volume-i-1730",
+        "patrignani-menologio-volume-ii-1730",
+        "patrignani-menologio-volume-iii-1730",
+        "patrignani-menologio-volume-iv-1730"
+      ],
+      "seriesVolumeCount": 4
+    },
+    {
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
+      "memberSlugs": [
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+        "pimentel-cuadro-lenguas-indigenas-1874-1875-v3"
+      ],
+      "seriesVolumeCount": 3
+    },
+    {
       "slug": "robertson-history-america-1777-1796",
       "memberSlugs": [
         "robertson-history-america-volume-i-1777",
@@ -3744,6 +3851,22 @@
         "robles-diario-sucesos-notables-1853-vol-1",
         "robles-diario-sucesos-notables-1853-vol-2"
       ]
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "memberSlugs": [
+        "scherzer-travels-free-states-central-america-1857-vol-1",
+        "scherzer-travels-free-states-central-america-1857-vol-2"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
+      "slug": "solorzano-pereira-politica-indiana-1648",
+      "memberSlugs": [
+        "solorzano-pereira-politica-indiana-volume-1-1648",
+        "solorzano-pereira-politica-indiana-volume-2-1648"
+      ],
+      "seriesVolumeCount": 2
     },
     {
       "slug": "tribes-and-temples-1926-1927",
@@ -3762,24 +3885,6 @@
       ]
     },
     {
-      "slug": "zarco-historia-congreso-1856-1857",
-      "memberSlugs": [
-        "zarco-historia-congreso-1856-1857-volume-i-1857",
-        "zarco-historia-congreso-1856-1857-volume-ii-1857"
-      ],
-      "seriesVolumeCount": 2
-    },
-    {
-      "slug": "patrignani-menologio-1730",
-      "memberSlugs": [
-        "patrignani-menologio-volume-i-1730",
-        "patrignani-menologio-volume-ii-1730",
-        "patrignani-menologio-volume-iii-1730",
-        "patrignani-menologio-volume-iv-1730"
-      ],
-      "seriesVolumeCount": 4
-    },
-    {
       "slug": "venegas-noticia-california-1757",
       "memberSlugs": [
         "venegas-noticia-california-volume-1-1757",
@@ -3789,89 +3894,10 @@
       "seriesVolumeCount": 3
     },
     {
-      "slug": "brasseur-histoire-nations-civilisees-1857-1859",
+      "slug": "zarco-historia-congreso-1856-1857",
       "memberSlugs": [
-        "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
-        "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
-        "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
-        "brasseur-histoire-nations-civilisees-volume-4-1857-1859"
-      ],
-      "seriesVolumeCount": 4
-    },
-    {
-      "slug": "bustamante-mananas-de-la-alameda-de-mexico-1835-1836",
-      "memberSlugs": [
-        "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
-        "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836"
-      ],
-      "seriesVolumeCount": 2
-    },
-    {
-      "slug": "solorzano-pereira-politica-indiana-1648",
-      "memberSlugs": [
-        "solorzano-pereira-politica-indiana-volume-1-1648",
-        "solorzano-pereira-politica-indiana-volume-2-1648"
-      ],
-      "seriesVolumeCount": 2
-    },
-    {
-      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-1847",
-      "memberSlugs": [
-        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
-        "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847"
-      ],
-      "seriesVolumeCount": 2
-    },
-    {
-      "slug": "clavijero-storia-della-california-1789",
-      "memberSlugs": [
-        "clavijero-storia-della-california-tomo-1-1789",
-        "clavijero-storia-della-california-tomo-2-1789"
-      ],
-      "seriesVolumeCount": 2
-    },
-    {
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875",
-      "memberSlugs": [
-        "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
-        "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
-        "pimentel-cuadro-lenguas-indigenas-1874-1875-v3"
-      ],
-      "seriesVolumeCount": 3
-    },
-    {
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746",
-      "memberSlugs": [
-        "cabrera-escudo-de-armas-de-mexico-1746-v1",
-        "cabrera-escudo-de-armas-de-mexico-1746-v2",
-        "cabrera-escudo-de-armas-de-mexico-1746-v3",
-        "cabrera-escudo-de-armas-de-mexico-1746-v4"
-      ],
-      "seriesVolumeCount": 4
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography",
-      "memberSlugs": [
-        "maria-de-san-jose-spiritual-autobiography-part-01",
-        "maria-de-san-jose-spiritual-autobiography-part-02",
-        "maria-de-san-jose-spiritual-autobiography-part-03",
-        "maria-de-san-jose-spiritual-autobiography-part-04",
-        "maria-de-san-jose-spiritual-autobiography-part-05",
-        "maria-de-san-jose-spiritual-autobiography-part-06",
-        "maria-de-san-jose-spiritual-autobiography-part-07",
-        "maria-de-san-jose-spiritual-autobiography-part-08",
-        "maria-de-san-jose-spiritual-autobiography-part-09",
-        "maria-de-san-jose-spiritual-autobiography-part-10",
-        "maria-de-san-jose-spiritual-autobiography-part-11",
-        "maria-de-san-jose-spiritual-autobiography-part-12"
-      ],
-      "seriesVolumeCount": 12
-    },
-    {
-      "slug": "scherzer-travels-free-states-central-america-1857",
-      "memberSlugs": [
-        "scherzer-travels-free-states-central-america-1857-vol-1",
-        "scherzer-travels-free-states-central-america-1857-vol-2"
+        "zarco-historia-congreso-1856-1857-volume-i-1857",
+        "zarco-historia-congreso-1856-1857-volume-ii-1857"
       ],
       "seriesVolumeCount": 2
     }

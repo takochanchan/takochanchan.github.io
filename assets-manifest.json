@@ -56,6 +56,24 @@
       "sha256": "1840516597aa845f6c2fef54c47a39f1d94200b5e670e1862082bb25fbaa7efc"
     },
     {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.epub",
+      "size": 371438,
+      "sha256": "65d92504715fce9704407a275537bdb240bb359471aea43842c2785ca3d5e47e"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
+      "size": 3922588,
+      "sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a"
+    },
+    {
+      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
+      "size": 47252,
+      "sha256": "48d3712b6fa7e179f13e1ca7188278dd53a862621358fcffaf61bf4c80c28ddf"
+    },
+    {
       "path": "publications/alva-confessionario-mayor-menor-1634/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Bartolome_de_Alva_Confessionario_1634_Japanese_Complete_Translation.epub",
       "size": 4113148,
@@ -72,6 +90,24 @@
       "url": "https://takochanchan.github.io/publications/alva-confessionario-mayor-menor-1634/cover.jpg",
       "size": 68454,
       "sha256": "65228c4c6080339315fbf8c465042146d05110e527a938826d538223bb17cdba"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.epub",
+      "size": 12696816,
+      "sha256": "a8673edd132bbfa5040a8813377d3001deba7b59e21160855b231807ad9394af"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.pdf",
+      "size": 13573203,
+      "sha256": "4c9dd539aeec19883a3cfc4b3f01cb9305c6aee54562c23b251235ae6c3c867d"
+    },
+    {
+      "path": "publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
+      "size": 189534,
+      "sha256": "336a5c3383d4094a6abdc30daca5d896e33acab372e478d3598230bd3ca55dd9"
     },
     {
       "path": "publications/arce-libro-vida-proximo-evangelico-1762/Juan_Diaz_de_Arce_Bernardino_Alvarez_1762_Japanese_Translation.epub",
@@ -144,6 +180,24 @@
       "url": "https://takochanchan.github.io/publications/argaiz-vida-escritos-1678/cover.jpg",
       "size": 118220,
       "sha256": "4357fb862fc1cd928c39bd849c39efcc4bfc1db8ba18ce3fdd46ecf6e669d8f4"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.epub",
+      "size": 7688025,
+      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.pdf",
+      "size": 13466055,
+      "sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270"
+    },
+    {
+      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
+      "size": 39343,
+      "sha256": "8ed9ae2e8d03b52f9f76f221cf955acd071705919b55783c7debb0441da22e19"
     },
     {
       "path": "publications/arthes-peten-1893/arthes_peten_1893_ja.epub",
@@ -522,6 +576,24 @@
       "url": "https://takochanchan.github.io/publications/baz-gallo-historia-ferrocarril-mexicano-1874/cover.jpg",
       "size": 93090,
       "sha256": "016195b9e851348a34a714cfe8d2cc3aa2ca789437fa5f59913490e9f36fc50e"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
+      "size": 413947,
+      "sha256": "832932bc72fd63d826843a5ac630cc6e22c4f4669d8fba15a0812af0769e7989"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
+      "size": 2384689,
+      "sha256": "393063b858bcfc7a2d11c7f2200ef0dbb2d0cbda10197a145593fa8b799b4f1a"
+    },
+    {
+      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
+      "size": 27128,
+      "sha256": "ed6a67002e5685feccad8e0c2685696d5a0a5bfed862c5db2ec8fe64a526e194"
     },
     {
       "path": "publications/belly-a-travers-amerique-centrale-1867/Felix_Belly_A_Travers_Amerique_Centrale_1867_Japanese_Complete_Translation.epub",
@@ -1136,6 +1208,78 @@
       "sha256": "75324d1ca166448eb106cedb6ed398fa83c89316d5fb9ad32070ba87c528220b"
     },
     {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.epub",
+      "size": 3926504,
+      "sha256": "94b899b255bc3e8caf3434f5a652afbd4bd209407800c749e9e22ff657288f05"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.pdf",
+      "size": 7799094,
+      "sha256": "a2766abebe335dccec78506dd43b6a695d5e656c5147122415abff382c290e84"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
+      "size": 59349,
+      "sha256": "24fd74641c80ee4f469b9b630be609f29752d50a0144fa831701189892137bb1"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.epub",
+      "size": 3932266,
+      "sha256": "5b438183134f1e5c4f8f428d469f49b8dd4f241edd929b96ffe641676f623d44"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.pdf",
+      "size": 7978311,
+      "sha256": "769efc80ceb4c42734347c9b97c40cc84936267f3a9b509b19d37b95479eb2a4"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
+      "size": 59415,
+      "sha256": "74a4b87fa1a45521c38f922f4d46751a906af934b4d455caf6bce612c8175917"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.epub",
+      "size": 36004708,
+      "sha256": "cdb90da95f87eb69a8038863bfce9521f890062345a5aca8c02753f8433396c2"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.pdf",
+      "size": 14525219,
+      "sha256": "2d6b0576610550bcf85f71d5a083113f3fb122bbca8eec6e683fbf8080ef6ba1"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
+      "size": 59412,
+      "sha256": "c0748fc22a3e16eb3247ad9bdb40c7a7c7a47c18490b7fb4864fb429be45a1c1"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.epub",
+      "size": 758882,
+      "sha256": "3d53afadf3f29679ce46d6df75ddc5c8ab24e237e6114f09ad1dca2ae1647609"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.pdf",
+      "size": 7004726,
+      "sha256": "3fd60d537f7c9cbba0cfad3ff77ca757a51c49690ab4b74fe7b01d7ffe7e5d5a"
+    },
+    {
+      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
+      "size": 59399,
+      "sha256": "3df1dd6f77a83300352b2bc402d6b199bd3e95f67e89a45c43329bb3453705af"
+    },
+    {
       "path": "publications/brasseur-rabinal-achi-1862/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_Etienne_Brasseur_de_Bourbourg_Grammaire_de_la_langue_quichee_Rabinal_Achi_1862_Japanese_Complete_Translation.epub",
       "size": 1680399,
@@ -1694,6 +1838,42 @@
       "sha256": "c1872595edbefcdbe8e9ce5af7f3b5034238a2538cfd48dbed084070e7a088c4"
     },
     {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+      "size": 5178974,
+      "sha256": "86570d44885b0a86e24131492c23c7034ad1e4514e37a81ab101df1876967ed7"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+      "size": 4290942,
+      "sha256": "e0ce2693ef662514f0870b547bafcef1a192a3b54ae97cacf55443fcb601c619"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/burgoa-geografica-descripcion-1674-vol-1/cover.jpg",
+      "size": 67394,
+      "sha256": "6d75cc3e24ccab5032b057b43b0d23119105182e63bd0f6edc33756499b41d1a"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+      "size": 5316783,
+      "sha256": "8421173d6cd05c1780cad9dc4ca4d8e815d37e4ff8dc2d418829f73bb9acea21"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+      "size": 5247770,
+      "sha256": "7cd1a6ad07078ff593ef5f28765781b247941413c33b1efb2d00470bceecefd8"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/burgoa-geografica-descripcion-1674-vol-2/cover.jpg",
+      "size": 67943,
+      "sha256": "0c58027500751b079853087e598e1a8574f83cd1e2602c970e0c2e0e12d71b58"
+    },
+    {
       "path": "publications/bury-bishop-amongst-bananas-1911/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Herbert_Bury_A_Bishop_amongst_Bananas_1911_Japanese_Complete_Translation.epub",
       "size": 36657592,
@@ -1730,6 +1910,78 @@
       "sha256": "1a499a4a072c0fcb8173dc1484c450bc341d1e8b3d93c3ec60fc4ddbd4a4080e"
     },
     {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
+      "size": 311316,
+      "sha256": "1534e5108832563f4e0db66d0df8f67f350e4b1d6e7c238cb65ba4f4c7393966"
+    },
+    {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
+      "size": 1871410,
+      "sha256": "07c6278ce6928c594bba5a45acd453d530f82d1e53a00a9cf9c7466a55d9aa3e"
+    },
+    {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
+      "size": 51510,
+      "sha256": "0bfb86fa07979a690b6c808c40320c99874745bf2d4ba9259e30152e8e8dc297"
+    },
+    {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
+      "size": 370996,
+      "sha256": "b3f112d3c6b85f353013b7026ba491fcd49a0390416c86ae7526b6935abef1f2"
+    },
+    {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
+      "size": 2468840,
+      "sha256": "d70a10894252b62c6cfd3a8843d9ffcbeb17c955a8041daa0b3e7811e13b6c9b"
+    },
+    {
+      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
+      "size": 51903,
+      "sha256": "8bfd59c40b4721473be0249e7bb92b5f8057208fb32a7ac25a0ee8fe05531c83"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.epub",
+      "size": 3135564,
+      "sha256": "510a7a509d93d21389551eab9147346d75efe12f801599eed9316d7fa8f59373"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.pdf",
+      "size": 4580050,
+      "sha256": "335a8d38b65df17699d83e74fc9df0136a6ae4570e2b325b09425e1a1d6faef3"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
+      "size": 47047,
+      "sha256": "53fe5a2ca7abd6d1edac850377f4d9e8fe32379ccfadde4279d3be9f7876063c"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.epub",
+      "size": 1438768,
+      "sha256": "b60b4b736cfc44b496fcdcd0d00dca2a4efcdd5131b5d9fc9f2b33e10782afe5"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.pdf",
+      "size": 3642069,
+      "sha256": "138bd1a0aaf5bbbb8298a01d15989421d56a3fa2e17e2d0b46cefa3502088184"
+    },
+    {
+      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
+      "size": 47780,
+      "sha256": "e8fc05a584535a53af0086d9e968c36621a6f0aeb726dd862e30c8af0b086a0e"
+    },
+    {
       "path": "publications/byam-chiapas-1897/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Byam_A_Sketch_of_the_State_of_Chiapas_Mexico_1897_Japanese_Complete_Translation.epub",
       "size": 35544632,
@@ -1748,6 +2000,78 @@
       "sha256": "f185aade4635409a2162efbc701d2d1a68a002353469b7e61acc0cab35fcacc0"
     },
     {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
+      "size": 320897,
+      "sha256": "846ad15f1b0aba3643cb547c9724b81b2f195121087c3d1a19d2c6914838a653"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
+      "size": 2317421,
+      "sha256": "d2d80df67859e9eee43c8163f5b7a3e819a82b230d4aa81f1edcadf842ac5962"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
+      "size": 50029,
+      "sha256": "db5f02f5a5065778ce23887b6ebbe6314396650494abd5758ce04115b307458b"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
+      "size": 277472,
+      "sha256": "67b6ee0eeb640ea49e65352d127d9de27cb56d0a23da68fa942fd65840165121"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
+      "size": 1924051,
+      "sha256": "addba93cad6a1f9a3d6ab237dcc4671d5cbc99effd5dcd9148a2c48d6c45abd6"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
+      "size": 49480,
+      "sha256": "018a11e5d86c0440e27f7785f64e8bf7b21c4350e665f95b2dd0c95dc8cd8470"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
+      "size": 433640,
+      "sha256": "f38cee960f28c2804b1b3083d69121ecffe8ebd42dd0a09bfbfbd3db4fd6cdfe"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
+      "size": 3007911,
+      "sha256": "b4039093c1e6228088810a96fb0fabb8dc77363e49529cf3558a5c25a1601797"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
+      "size": 49736,
+      "sha256": "966cfeea630af18c4d6c193639bc5c9c47ac678a7e2af794ccc92352ffadab5f"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
+      "size": 385911,
+      "sha256": "ebada066968e4068a5778973f3a919473eb44ba1ada70a7cf7c16247a99c6b60"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
+      "size": 3186314,
+      "sha256": "696b56cefd734625449a3fb2cafac0fde55c91ab3e42c984710732d3967020ac"
+    },
+    {
+      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
+      "size": 52185,
+      "sha256": "74ab819085a1930d82f5a979746bac358a932c3bd98fd16ef35c96c47e5687dd"
+    },
+    {
       "path": "publications/cambre-guerra-tres-anos-1904/Manuel_Cambre_1904_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Manuel_Cambre_1904_Japanese_Translation.epub",
       "size": 1037380,
@@ -1764,6 +2088,24 @@
       "url": "https://takochanchan.github.io/publications/cambre-guerra-tres-anos-1904/cover.jpg",
       "size": 25625,
       "sha256": "971fad10c6e1385de914d6a80fe961dafc5fcc8179b2206bc9b2dd4160407aa6"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.epub",
+      "size": 73114,
+      "sha256": "74632746b340d205d25c27c2587d09c14f84b0c8cb0bccd97d700eaf48e24d3d"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.pdf",
+      "size": 525136,
+      "sha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
+    },
+    {
+      "path": "publications/cano-manche-y-peten-1696/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cano-manche-y-peten-1696/cover.jpg",
+      "size": 67878,
+      "sha256": "74e80fe4dac1f5e75cd4300f2fcade2c8c4bf97142736847e8823e8c40780a30"
     },
     {
       "path": "publications/cantares-mexicanos-ms-1628-bis/Cantares_Mexicanos_Japanese_Complete_Translation.epub",
@@ -2108,6 +2450,42 @@
       "sha256": "054affa42e646310d3de457548fe2716d3dcd28555bc87f8aa7aed1ff1dd7118"
     },
     {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.epub",
+      "size": 318167,
+      "sha256": "97512d749028825954b84f108a0a1a92d13677bc8b86c6c883161560d802207e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.pdf",
+      "size": 1945612,
+      "sha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
+      "size": 111280,
+      "sha256": "e17095e1231914c46ee4334a005aa3d79c17e581087a8071f363a7f2d75fe9f2"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.epub",
+      "size": 53457487,
+      "sha256": "17d28b1c7917a2e8d9baa818fdcc336a019baa36722671bc2a266c0cc8253777"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.pdf",
+      "size": 80352021,
+      "sha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff"
+    },
+    {
+      "path": "publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
+      "size": 116244,
+      "sha256": "f583761f61ae9fdf8ab9c3d66e10847b0adbb87e63afbd57b8c86ae5ad77b802"
+    },
+    {
       "path": "publications/codex-perez-pmm9-1877/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codex_Perez_Mani_Chilam_Balam_Yucatec_Maya_Sources_Japanese_Complete_Translation.epub",
       "size": 9263022,
@@ -2268,6 +2646,24 @@
       "url": "https://takochanchan.github.io/publications/cortes-y-larraz-descripcion-geografico-moral-1771/cover.jpg",
       "size": 73957,
       "sha256": "fdf4256587c9a982f2968646599e66f233cc32fbca565be177a982be0cd8dc5c"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
+      "size": 146027,
+      "sha256": "cea3becda76dba38228ebb06aae6b0aaca8f0e915017a7a65667b8ae1b965358"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
+      "size": 911339,
+      "sha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271"
+    },
+    {
+      "path": "publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
+      "size": 87380,
+      "sha256": "8597fcdcf22c37af58d601388350414cebe50de9d7f2a15915ba2ed128737452"
     },
     {
       "path": "publications/couto-discurso-constitucion-iglesia-1857/Bernardo_Couto_Discurso_sobre_la_constitucion_de_la_Iglesia_1857_Japanese_Translation.epub",
@@ -2466,6 +2862,24 @@
       "url": "https://takochanchan.github.io/publications/de-guignes-navigations-chinois-amerique-1761/cover.jpg",
       "size": 123980,
       "sha256": "6d0826c02eacd057c0d49b0a0e299b75783cdb8d81c40a2ab39d1775c8fc5ed5"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
+      "size": 51911,
+      "sha256": "876168575366a37b5b52e3e262af71c29f9a61d94066807ffc990950f5dc090d"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.epub",
+      "size": 22408837,
+      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf"
+    },
+    {
+      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.pdf",
+      "size": 23710229,
+      "sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb"
     },
     {
       "path": "publications/defence-settlers-honduras-1824/The_Defence_of_the_Settlers_of_Honduras_1824_Japanese_Complete_Translation.epub",
@@ -3458,6 +3872,60 @@
       "sha256": "4bacea6d56e8dba47d251119a1eb0d97e5064deb33639dfdaa1e73537ccce5ab"
     },
     {
+      "path": "publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-estrella-norte-mexico-1688/cover.jpg",
+      "size": 46717,
+      "sha256": "69d59f1bffd35f752a0cd76774646968b1eeb99ef0a265589ee5a345a85963c1"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.epub",
+      "size": 5040464,
+      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7"
+    },
+    {
+      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.pdf",
+      "size": 8152481,
+      "sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
+      "size": 374637,
+      "sha256": "c1eb3e89274a49fd42c03486b8c0ee83458337e3512c6b89c661b2a8abeb6339"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
+      "size": 2609129,
+      "sha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3"
+    },
+    {
+      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
+      "size": 84342,
+      "sha256": "d363fecb35a6c1971259eda0be03cb3daf5e3a6ad9b39c98481acb0bdff6d378"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
+      "size": 514861,
+      "sha256": "c1f9b8ba959a70e03436220c833d3ccfc221be4672d521922c059c4bfacf7b2b"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
+      "size": 3343643,
+      "sha256": "e6223ca2135314f195ab7df9a8f6d6257cca032e3aa40053766780e620deeeda"
+    },
+    {
+      "path": "publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/florencia-provincia-nueva-espana-1694/cover.jpg",
+      "size": 70637,
+      "sha256": "6a35860cd50b3260fbf9dd610e6c4894eefe140ce7b8325d01a72e9d0ea60df3"
+    },
+    {
       "path": "publications/foreign-office-mosquito-territory-1848/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Great_Britain_Foreign_Office_Mosquito_Territory_1848_Japanese_Complete_Translation.epub",
       "size": 8296084,
@@ -4430,6 +4898,24 @@
       "sha256": "9871b13149522a656ff1118982ccbd814d50f7404ac371ad4c4b3fd2b2d3e0b1"
     },
     {
+      "path": "publications/garcia-leona-vicario-1910/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/garcia-leona-vicario-1910/cover.jpg",
+      "size": 34750,
+      "sha256": "b6d1732c1ebaef81fa277e37d9cee775eb35af109400ae198af2a53b57c50686"
+    },
+    {
+      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.epub",
+      "size": 297563,
+      "sha256": "c51bff752c03edb48cefad7386636522f78f6f0f76d5e9c917efa25a4530c095"
+    },
+    {
+      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.pdf",
+      "size": 2859177,
+      "sha256": "ea098096cec1a53778a4b2c0bbd8aae08be8081ea9cb2236d7f3aa1a6cb4e57d"
+    },
+    {
       "path": "publications/garcia-pelaez-memorias-guatemala-1851-1852/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Francisco_de_Paula_Garcia_Pelaez_Memorias_1851_1852_Japanese_Complete_Translation.epub",
       "size": 1164384,
@@ -4716,6 +5202,24 @@
       "url": "https://takochanchan.github.io/publications/gonzalez-ruinas-tehuacan-1892/cover.jpg",
       "size": 153181,
       "sha256": "6b8c91c2a80b393ccd587ff9799789285dcfdceeac39072ecccb397e7e524bcb"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/granados-tardes-americanas-1778/cover.jpg",
+      "size": 83017,
+      "sha256": "c1752e944b61070e84044facfbb12fce7c17a9873354bffdf635fcbc0dbb39a5"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.epub",
+      "size": 8961382,
+      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9"
+    },
+    {
+      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.pdf",
+      "size": 15056254,
+      "sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5"
     },
     {
       "path": "publications/gregorio-lopez-testimonies-mss-7819/Gregorio_Lopez_Testimonies_MSS7819_Japanese_Translation_Source_Format.epub",
@@ -5186,6 +5690,24 @@
       "sha256": "932421497e66d6eb7d7046274dfd2e92b9d2f4e878d4bf1671ca14490a18bc23"
     },
     {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
+      "size": 20060589,
+      "sha256": "042d7239a387b40e6c0f9f474e1928a6b0a3d1818ffda20bc5fcf44bfc3f45d2"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
+      "size": 23130065,
+      "sha256": "9622d5fa1292cbe4fb5fb8c64edc6522aca0948b74b31361ba434196d8ed9f7b"
+    },
+    {
+      "path": "publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/laferriere-paris-guatemala-1877/cover.jpg",
+      "size": 59852,
+      "sha256": "270ab69779b70e4bc36838997dab215944eed3dc3693c47a8a360813c74c88bb"
+    },
+    {
       "path": "publications/larde-arqueologia-cuzcatleca-1924/Jorge_Larde_Arqueologia_cuzcatleca_1924_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jorge_Larde_Arqueologia_cuzcatleca_1924_Japanese_Complete_Translation.epub",
       "size": 306391,
@@ -5402,6 +5924,24 @@
       "sha256": "f14b3a7652ad6788c318f2f98b38cd75a6d92abab42874b5acaa77af80d6c86c"
     },
     {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "size": 210724,
+      "sha256": "fb33317193e2b43a9f65123f05c71e8a0ce502d9e8503ee76c6722db23a373f9"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "size": 1730611,
+      "sha256": "2c2656fb9d27824f7e8c5bac7d1c9b03b70190fa16fce718b4648f87e8c1326f"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "size": 81632,
+      "sha256": "fbe3d158e6d359bcbfebc83f61fa295ba0fbc06c2f8280022011f50c76ec3e04"
+    },
+    {
       "path": "publications/larrainzar-revolucion-guatemala-1873/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Federico_Larrainzar_La_Revolucion_de_Guatemala_1873_Japanese_Translation.epub",
       "size": 137750,
@@ -5418,6 +5958,24 @@
       "url": "https://takochanchan.github.io/publications/larrainzar-revolucion-guatemala-1873/cover.jpg",
       "size": 94001,
       "sha256": "cd834d9b382f4cf35200d01d87ca5173084fb15350f222ea4cf98ef19f602427"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
+      "size": 51901,
+      "sha256": "1b573907196a0887d2a8ef05e98495e3cf72724fce376b3537cd75cb8e99148c"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.epub",
+      "size": 10923235,
+      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90"
+    },
+    {
+      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.pdf",
+      "size": 14934709,
+      "sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d"
     },
     {
       "path": "publications/le-plongeon-yucatan-1889/Alice_D_Le_Plongeon_Here_and_There_in_Yucatan_Miscellanies_1889_Japanese_Complete_Translation.epub",
@@ -5456,6 +6014,24 @@
       "sha256": "f20651f2a26c5c2c42de86beab80596dcc8feb2f82cf037c6df581f444cc236c"
     },
     {
+      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_Master.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.epub",
+      "size": 3319598,
+      "sha256": "20e459de309792cfa9873fe155866bd5473d5282a3de61a6281a1631e8711071"
+    },
+    {
+      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_layout_revised.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_layout_revised.pdf",
+      "size": 5916527,
+      "sha256": "a31da32878aac0cb151fce9964f9b8ebfa9076876f62984bdeba5f8b9b47795d"
+    },
+    {
+      "path": "publications/leon-y-gama-dos-piedras-1792/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/leon-y-gama-dos-piedras-1792/cover.jpg",
+      "size": 33846,
+      "sha256": "e067f3201c253218fc43a3fae22f2badcdca41c9317dc8bccbe5b972e6e88685"
+    },
+    {
       "path": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Irving_A_Leonard_Don_Carlos_de_Siguenza_y_Gongora_1929_Japanese_Complete_Translation.epub",
       "size": 3260342,
@@ -5472,6 +6048,24 @@
       "url": "https://takochanchan.github.io/publications/leonard-don-carlos-de-siguenza-y-gongora-1929/cover.jpg",
       "size": 64472,
       "sha256": "23d9cde6c3a2a13bb507c295e2a4e7c0ea7351f2baa437022777fd36218c3ad5"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
+      "size": 30389,
+      "sha256": "81a9bc588cdc7b92d786d9444a1cedaa9fcdf0fe019e7d821c4d8ae0920ad6f9"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.epub",
+      "size": 10132772,
+      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b"
+    },
+    {
+      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.pdf",
+      "size": 5841488,
+      "sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911"
     },
     {
       "path": "publications/lobo-pedro-betancur-1667/Manuel_Lobo_Pedro_de_San_Joseph_Betancur_1667_Japanese_Translation.epub",
@@ -5634,6 +6228,240 @@
       "url": "https://takochanchan.github.io/publications/maler-usumacinta/cover.jpg",
       "size": 48305,
       "sha256": "5caabfed168e96fc3ec1638c73792d042f744523c319f121f0b6084d87923833"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
+      "size": 2088359,
+      "sha256": "238194ff92a126e30fa9917bc51075a268d0dddfc79fb616c72dbe86eddb440f"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
+      "size": 3243009,
+      "sha256": "91e0b2168598d69d82a4524806f220e780a382607a43bee3ff5b5fa723e60e5f"
+    },
+    {
+      "path": "publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
+      "size": 24185,
+      "sha256": "97984666e2f9dac3ae4c48e379cd70a5f3fd50da467da5178409111dbb00ef43"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
+      "size": 156000,
+      "sha256": "9af63e9bcbb1e7755a587bce7740de96647da3ba9a7944e311a21254594abdfe"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
+      "size": 1245654,
+      "sha256": "59b7baa2e2c356220e15efb2763596f2769c03c9c5b8bde3df45d12a3d151442"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-01/cover.jpg",
+      "size": 71989,
+      "sha256": "d74a6f033cafd44101d3164b99f915b37c0c9e25dd933207e699506d63f4c56c"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
+      "size": 169793,
+      "sha256": "f10d9377864fd8b8f61fc4e9a6488fadcafdd6da7b7c57b4cee9673fbfb9db2f"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
+      "size": 1338809,
+      "sha256": "bd4f080ec25a6e5bbb405b61f2e93f23c03f8466f58c011398a0d56e8af17e4e"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-02/cover.jpg",
+      "size": 72186,
+      "sha256": "2b7459bafdd996add42410ca056bb610bc3b1e3a362026d1d464caf07037c430"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
+      "size": 159865,
+      "sha256": "dddf7324a1d14f49a3db8e1791b78114e1af057a47acb4c950445ec0954fa756"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
+      "size": 1238175,
+      "sha256": "bd71a056243ee373a0995f893c6b66b228af133fef7a988e8d69a4a984de97af"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-03/cover.jpg",
+      "size": 72167,
+      "sha256": "705a3f867139b4d400121c1cf6296530bfe2e6e6bbf982350b99629ae3768eac"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
+      "size": 159872,
+      "sha256": "386f7f1277691b916a1db3e52b7f1f28f5b0be94914e96d1bf60f665241745e9"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
+      "size": 1238222,
+      "sha256": "823fb0c474853e4bc1d038dc6a6a0eb7b7d5aef344277fdf953eab1e82c936f1"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-04/cover.jpg",
+      "size": 72000,
+      "sha256": "b16fc84fb83b5f841e665c7385dc8e5e66ff88e23ab2896ea397be269a0a9e8f"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
+      "size": 119437,
+      "sha256": "43deff04e193c9217925d39aabaa1fad896ad994d5466719ec3e3c9fed143e1a"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
+      "size": 885477,
+      "sha256": "bb973691e3b8192afb80622ede474cdddda34bc731a2e919eab525aaf4650070"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-05/cover.jpg",
+      "size": 72033,
+      "sha256": "6bf1cae4f6cdfd17603e2ea1a8c72b00b5ca130f58fd5d9f631abd6773a4e38a"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
+      "size": 118829,
+      "sha256": "b85fd434785cda11dfb51121bf375f4c5258edb04d539be0d419af00727beed1"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
+      "size": 876392,
+      "sha256": "b5149047fc98c5304cafb87853630e089158152f627727dd90d20b29a06ead92"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-06/cover.jpg",
+      "size": 72077,
+      "sha256": "1b7ec4ba3fc9eb18d1ca534cd0bc3e73017ae252a64b75a8a9bafcc3cf2bb9e3"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
+      "size": 118332,
+      "sha256": "5da0b18d887d3b50b12dfb9e818dd359d8306cd3106f8e0c67cf023edc41251b"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
+      "size": 922893,
+      "sha256": "de1c3218b60dfa6fb3820f402762ec737b191c54ed6ec56baf0a23c112b67cb6"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-07/cover.jpg",
+      "size": 71938,
+      "sha256": "bb85ba0e6041020ca4f2e26dd05002774ed0838b937667cd5aa2e4796d4d1902"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
+      "size": 107668,
+      "sha256": "1a8dddd6dda203ba0f653362ec49448a4e24191d8126c6186082eaaf54a1a819"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
+      "size": 749951,
+      "sha256": "267c224ecfcc89658b2f9457b1614faafc3e85aa897285f3885b55ad49a10422"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-08/cover.jpg",
+      "size": 72046,
+      "sha256": "ad07914c8d4deea0062bb4256a588b8f804b52134705f6689c1161217dad8a87"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
+      "size": 116920,
+      "sha256": "556f17a6587d3e14fd1627d7a02c99014fe731a381e954cb43f4aa279dacf598"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
+      "size": 895413,
+      "sha256": "d0b623ed0e816cfc2a505f4d1a394bab230f1ed619edd521ab41daca3162964f"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-09/cover.jpg",
+      "size": 71981,
+      "sha256": "8de5da0c6345245264d9f6e739693d458dbeff4f02ebd54c5684ea53d829b28d"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
+      "size": 112885,
+      "sha256": "7b679e4d5c38e3ed543a67e132ac261ff2526b0e96d6136a5e0a943d897bcd94"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
+      "size": 906192,
+      "sha256": "3fd58cda9b908445bc62cd9291718a5799add3cf720e301cf25c7fd36439091b"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-10/cover.jpg",
+      "size": 72113,
+      "sha256": "9ba73ce0c9da3d64f7f47ace38b399770b926b47fc868746fff63ba393f8615b"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
+      "size": 98232,
+      "sha256": "725c3e00be2ee0cb419c35a9ee6fb75c83db7b0c3030cf44e753a698572ccbdb"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
+      "size": 744806,
+      "sha256": "9736ef6d6281482e15b8c4d6ce23a84f2fd3c1c863a5fd9b440944ec2cb11cb0"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-11/cover.jpg",
+      "size": 71862,
+      "sha256": "2804611fd7a0b796e10df0a7e42cacb73e96d8b89ff12bad084b802a9a2c3f99"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
+      "size": 86273,
+      "sha256": "57a79786ae7c1df0c3993b0a6bbfef5e07305a0cc8378218c8aeceb121bfaf82"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
+      "size": 630470,
+      "sha256": "be003f116d70533ce65f2867af1af870a1675eebe9974d7512144152dcba46b1"
+    },
+    {
+      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-12/cover.jpg",
+      "size": 72151,
+      "sha256": "440dff35d52795c0c5eebd7085b7c3219106f49955828403b1ad32034ff2ea27"
     },
     {
       "path": "publications/marimon-lacandones-1695/Marimon_Fr_Antonio_Margil_Lacandones_1695_Japanese_Complete_Translation.epub",
@@ -5948,6 +6776,24 @@
       "sha256": "da5620a50f9ea6e01eda593bcfd2b645ac6af0475aa5b1ebaa827875b1b8488b"
     },
     {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+      "size": 44504983,
+      "sha256": "13b9b254241eaa78904bc1980cac56ba8cfaae485f259d5e92ff7cbce85d6881"
+    },
+    {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+      "size": 7868700,
+      "sha256": "e738c650265684082692f7a27164271a885b3340c30062eb54337ec71fd6c077"
+    },
+    {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+      "size": 79803,
+      "sha256": "b2df3f2d690a08e8ae263d4c0b9112aa93a03b8b7dcda92ace27124ea7a62905"
+    },
+    {
       "path": "publications/molina-costa-rica-new-granada-1853/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Felipe_Molina_Costa_Rica_and_New_Granada_1853_Japanese_Complete_Translation.epub",
       "size": 3026853,
@@ -6162,6 +7008,24 @@
       "url": "https://takochanchan.github.io/publications/morris-colony-british-honduras-1883/cover.jpg",
       "size": 57910,
       "sha256": "d0d500d53bf618e5681f254073d7ed7b086156c51671f1399c34cdfb4991263d"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
+      "size": 86590,
+      "sha256": "17f0374879723f76271fa9b95af4d7d3edcf530f317816e4741dad383aa81992"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
+      "size": 1814265,
+      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b"
+    },
+    {
+      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
+      "size": 5473419,
+      "sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382"
     },
     {
       "path": "publications/munoz-camargo-historia-tlaxcala-ms210/Historia_de_Tlaxcala_Ms210_JA.epub",
@@ -6542,6 +7406,78 @@
       "sha256": "33b2d2f222bb3c0182426a6f0ff08471e8f547bcf3c7fac0e8186ed15d7b545d"
     },
     {
+      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
+      "size": 16616514,
+      "sha256": "95f0ed2268b0a668a42374e7099ce44665bd95a411cddd82971165e0714cc782"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
+      "size": 11120411,
+      "sha256": "4214d11213f5b7de7d1c3f42141525d62de23f35f6f04058061c0781d6b537f7"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-i-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-i-1730/cover.jpg",
+      "size": 51534,
+      "sha256": "a3e10c15cd2ca2ac537c6830ee5d5cb562c946144cf52ff35b6fefc3af791171"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
+      "size": 16435288,
+      "sha256": "918b9473cb91a0063c08e87917b92003590993af61971e676f7bfd9833203689"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
+      "size": 9251362,
+      "sha256": "9b1cabd15b39108aae0835b9f91f44d16dedb855ec904a0ebd17ab839d6977c2"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-ii-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-ii-1730/cover.jpg",
+      "size": 35935,
+      "sha256": "4ad5372b385a5199dda1efd0b1e1e044a0327db86dad50f5f29d18505665496f"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
+      "size": 1418688,
+      "sha256": "1fb8e40d3c7697183d3b86b9bab2306f852cb1502691bc5817641db3bf1ddbc4"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
+      "size": 12112066,
+      "sha256": "f250ed677b7dd7da907d200e61b57e7ba2ab08ac242568575a7bd007599ed472"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iii-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iii-1730/cover.jpg",
+      "size": 80000,
+      "sha256": "65181b061093d5a5ae0e65657096838432946163ab7b37f8c0d94b121c92c7c5"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
+      "size": 1531442,
+      "sha256": "123d46beda17fa93f018667fa92ccfa3f336435b4f564124286744171a592cf7"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
+      "size": 19662518,
+      "sha256": "4091ef2bb89c4fe6405dbc8f6d9a32c72d484a367f32242e78f2ec08c1c78262"
+    },
+    {
+      "path": "publications/patrignani-menologio-volume-iv-1730/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iv-1730/cover.jpg",
+      "size": 81038,
+      "sha256": "e7120d00ea19ca75f73d5f42ec31fdc8347399f194c978145f28b35c87ccae6c"
+    },
+    {
       "path": "publications/payno-mexico-financial-questions-1862/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Payno_Mexico_Financial_Questions_1862_Japanese_Translation.epub",
       "size": 466290,
@@ -6558,6 +7494,24 @@
       "url": "https://takochanchan.github.io/publications/payno-mexico-financial-questions-1862/cover.jpg",
       "size": 153768,
       "sha256": "c8dded29fc760c9a02c47fb03cc0430e0b3a69f80c6448d4ba972409f8dfc569"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.epub",
+      "size": 216515,
+      "sha256": "757121bab3cd70e5a0e860268e0ee8cd833e102f9c5c0289d476f92b458c1dbd"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.pdf",
+      "size": 2537980,
+      "sha256": "ba9edff45cca6a29d90669e1d8c060717b5f5141eed1848f2eeb82fbd2fa564a"
+    },
+    {
+      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
+      "size": 31297,
+      "sha256": "35b432533d92c6679e2ec7a0246c2ce8424d1e8526d0a359afac7e5a83c84c39"
     },
     {
       "path": "publications/peinado-san-salvador-insurreccion-1814-1911/Jose_Maria_Peinado_Comunicacion_al_Capitan_General_del_Reino_1911_Japanese_Complete_Translation.epub",
@@ -7478,6 +8432,78 @@
       "sha256": "cd331aee204d05f659f40cf097f539370040682f43c51c83c75e231badfa93d7"
     },
     {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
+      "size": 393524,
+      "sha256": "e570208826d1b75a3c060fd9db5fea447b3033d4e6d04e829b2be0bcbc988c18"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
+      "size": 7670526,
+      "sha256": "f12fecd22d60ba0ea52204812e6230e1910df38b39a2e3ea6995e5f0ecd7f700"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
+      "size": 100694,
+      "sha256": "6cb3119d10cd120bea1fbaafaf8cf1e4f0bbbaa7f7aeda29144cb3e6667c0ba5"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
+      "size": 384210,
+      "sha256": "b20123ae9725a52baf1469c6a795bd9315488a17ba507873bf9ac58ca7b4b4d6"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
+      "size": 7752536,
+      "sha256": "c8f739e5a15742d58a18d716f716105feaf21f831a51508bb232441e56ae96d9"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
+      "size": 100714,
+      "sha256": "0d02b03f2248f8e65b257c5109d4925e2951b9c18174ea00a9f8fcf717e0dc7f"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
+      "size": 444492,
+      "sha256": "554b5dd7ddd7c85a7e38acbeb11cb5f9ea0dd15019414bde52e523734683ad89"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
+      "size": 9197590,
+      "sha256": "5a2534e462eae3a9954ab3dda094d05094793846ddb1d0e62624976fac9f6597"
+    },
+    {
+      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
+      "size": 103771,
+      "sha256": "a785af5e1b6c1303d9f6d08155ebf4d46d3276190f95049aeb41c2608c77e4cb"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
+      "size": 100639,
+      "sha256": "5784040dab2b21a87e9c62359584c4a3a30f94f2303fe728da069269ff698438"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.epub",
+      "size": 265543,
+      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976"
+    },
+    {
+      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.pdf",
+      "size": 2393444,
+      "sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8"
+    },
+    {
       "path": "publications/pineda-chiapas-soconusco-1845/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pineda_Descripcion_geografica_del_Departamento_de_Chiapas_y_Soconusco_1845_Japanese_Complete_Translation.epub",
       "size": 344089,
@@ -7638,6 +8664,24 @@
       "url": "https://takochanchan.github.io/publications/rabasa-estado-chiapas-1895/cover.jpg",
       "size": 46764,
       "sha256": "b2fb3f8a9f5386f4cde4435d2a74a64eaa9068bb442b91ce2be01e46c9cc0b08"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
+      "size": 92917,
+      "sha256": "9b3c684676c5c01ef57f209bc5e8937e4b6d9314b82577bb1a2b2fa1fad06f59"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
+      "size": 48241764,
+      "sha256": "817da8f562ffda5896b9dc708552595eaede4f73fe6f6db3f4dd17072af6fc3d"
+    },
+    {
+      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
+      "size": 52134681,
+      "sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28"
     },
     {
       "path": "publications/rau-palenque-tablet-1879/Charles_Rau_The_Palenque_Tablet_in_the_United_States_National_Museum_1879_Japanese_Complete_Translation.epub",
@@ -7946,6 +8990,24 @@
       "sha256": "4f9c26f8003435e1c2c40c0569163312babf5a5937b156b790e99d1dff4447e0"
     },
     {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "size": 10915765,
+      "sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "size": 6130501,
+      "sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "size": 99823,
+      "sha256": "08195b5f28460a720f101f5e43eeb0176a19b868d57133ab0b3a3838132b308f"
+    },
+    {
       "path": "publications/roys-chilam-balam-chumayel-1933/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Ralph_L_Roys_The_Book_of_Chilam_Balam_of_Chumayel_1933_Japanese_Complete_Translation.epub",
       "size": 33720843,
@@ -8180,6 +9242,42 @@
       "sha256": "43d6ac4f1439f016b98bef57108b7db6bf00c79f32f6b40fbd0e325c026b8679"
     },
     {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+      "size": 1036553,
+      "sha256": "14c29df71b5445f9e9c2197cdfcedbfb63421e3ff601dfa612d145b04f7380a8"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+      "size": 2321422,
+      "sha256": "3a4520a8c4b2cb57c874498c9b73e951a6c0276378b159268eb430a063a31d5f"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+      "size": 78822,
+      "sha256": "3eb0cba249e3c082beaa909661e8c735c4efd9a7143be9c0eadcda8a6126e4e8"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+      "size": 793622,
+      "sha256": "dae53ca240d00c90309c2f6063b3be38ec8091b70bebf0795c5cabdb7ba78e3e"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+      "size": 1857498,
+      "sha256": "393cb77ff3d9b02ed96af39fffc0cd5deac2a161f4c4e10d0b7a122ca69b70a7"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+      "size": 79413,
+      "sha256": "21999023c016192ddeef29b150538194b5776aeee058e368809a49059d372b9b"
+    },
+    {
       "path": "publications/seitz-parkman-squier-letters-1911/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
       "size": 108322,
@@ -8358,6 +9456,60 @@
       "url": "https://takochanchan.github.io/publications/societe-geographie-central-america-report-1836/cover.jpg",
       "size": 143432,
       "sha256": "206c716ba50a6cb485dbc8e35eea0e67878e6be3d56a9461557d8db3c551aacd"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
+      "size": 1539653,
+      "sha256": "887e021305edffa3a4c699c2f71554ba8c96a8806ad64228a40e5e2dbdccafd6"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
+      "size": 17550283,
+      "sha256": "d11e59209647cbb73809b1cdaabb10ab8d96b566d2f745f86985864de78ac5c9"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
+      "size": 41001,
+      "sha256": "630cb49a521c6058a8fdf38525cadf2e2d51c49f0a8add30109655db5c9eedc3"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
+      "size": 1540171,
+      "sha256": "ae067b1b82504f5b947db0c9bf2551ab5f4c841032034e9b432bc56f74cd0e55"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
+      "size": 18042126,
+      "sha256": "43b333bba70ecd901f2a816f9407ad12d5e008a4fec38a4811f94ebe7295849e"
+    },
+    {
+      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
+      "size": 43345,
+      "sha256": "7b08d7099a497fcdb041fcebd751d29d9fe37e426f5d947569fecaee9a93b9db"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
+      "size": 1364220,
+      "sha256": "f810e81dcfbaa0d70a6ee4b30110bb2e58904067c1f3785ab05b697de57eedec"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
+      "size": 9376874,
+      "sha256": "f5bff2191a03bbe78e997f38b176801cb0cb33ca2bc883eed2e41889d8a6d5c0"
+    },
+    {
+      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
+      "size": 31491,
+      "sha256": "a4dcb6d5d46a53199e12e008672b09faa131d1e441309d785fab658b3bb91f11"
     },
     {
       "path": "publications/sosa-el-episcopado-mexicano-1877-1879/Francisco_Sosa_El_Episcopado_Mexicano_1877_1879_Japanese_Translation.epub",
@@ -9386,6 +10538,114 @@
       "sha256": "bf6b1b960781e205add197e205a66789e53d89bad94eadc9a36b5429491d9eea"
     },
     {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
+      "size": 91529,
+      "sha256": "b4832d97c168cf3df675f995e9e3e072207e8a48826376b0c882395ec7e2a9c7"
+    },
+    {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.epub",
+      "size": 210088,
+      "sha256": "effc5b348973ef218587a669ec4ddb3429438dbf78ea022ee61e7a84ba173a19"
+    },
+    {
+      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
+      "size": 1164440,
+      "sha256": "bfadd005eba81979915dc20c45d42dca5b46b2b0d7b711abebaf5e17404a2f09"
+    },
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-juan-bautista-zappa-1754/cover.jpg",
+      "size": 37193,
+      "sha256": "b7679332f6e2734d328ee2e9f9b2cbd678ff4a6d2359a48d228210795d15ace6"
+    },
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.epub",
+      "size": 6800369,
+      "sha256": "bda6ecafeaf46a6c132a221e7e070f070f2517341775013a2b6a1dd57f5c0329"
+    },
+    {
+      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.pdf",
+      "size": 9476783,
+      "sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.epub",
+      "size": 16807848,
+      "sha256": "8e86ffa72134cdced5912aabd91a4c634bc479e8aaffe497ec00200e6a1a4b65"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.pdf",
+      "size": 3275650,
+      "sha256": "80590440f45011a45d65348addb87544cb9bedf8dae20ea171e1089daa646e8c"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-1-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-1-1757/cover.jpg",
+      "size": 71979,
+      "sha256": "2f854490e915fac0fad1cb02a42b175ed6058311a61090bbdb3afb6fcfe7da07"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.epub",
+      "size": 15375576,
+      "sha256": "3012e6003ef1439ccccf64b9a06a5bc48a9bebce69d439f6d38cc0cfcc247976"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.pdf",
+      "size": 3028347,
+      "sha256": "b0ed4f8376c612904464933711f0dd60a154f8ec7a2d2d378a63d0ff4e9d2313"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-2-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-2-1757/cover.jpg",
+      "size": 70396,
+      "sha256": "ee0e21f99574bd956998bb2f2e7e56d153135e10fc8fa991cd6d5fecfd44f45a"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.epub",
+      "size": 23367271,
+      "sha256": "774e7b0ebc66726d2565c411d12235aa3362c5d72cfcfd45ab83473e674f59d3"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.pdf",
+      "size": 4937499,
+      "sha256": "00e323ccb735bca39bc42d526dbdd9e0da2806c7165b2ad895f04a800cc35fc9"
+    },
+    {
+      "path": "publications/venegas-noticia-california-volume-3-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-3-1757/cover.jpg",
+      "size": 71936,
+      "sha256": "d29c03e243636f3edc757a13ce2b308f606e6695ebe8632b456b9798773940f3"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.epub",
+      "size": 122663,
+      "sha256": "f8b64b99867fe4e96bdaed8ab9cb54ac28ea87cb5834c398267ed663b36f02eb"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.pdf",
+      "size": 713674,
+      "sha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6"
+    },
+    {
+      "path": "publications/viana-relacion-de-vera-paz-1574/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/viana-relacion-de-vera-paz-1574/cover.jpg",
+      "size": 108326,
+      "sha256": "90d91d70a4f37bd4c9b281f462230611ad1e011b335de34f340c14800e6a922f"
+    },
+    {
       "path": "publications/victor-miguel-diaz-la-romantica-ciudad-colonial-1927/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Victor_Miguel_Diaz_La_romantica_ciudad_colonial_1927_Japanese_Translation.epub",
       "size": 54529670,
@@ -9546,6 +10806,24 @@
       "url": "https://takochanchan.github.io/publications/walker-war-nicaragua-1860/cover.jpg",
       "size": 75890,
       "sha256": "31a9d6c5fad647a00cb8d07022b9a57f27010703e2a08605446f54abdb14695a"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
+      "size": 64463227,
+      "sha256": "77e1335ba2e1bae73da03b9dbbd69efc14ca4725f87a044de25b040784b4871f"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
+      "size": 70666846,
+      "sha256": "04602ffa121c0401f1728f286dcac8bf631be72677df857046ff94ca21b5c43c"
+    },
+    {
+      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
+      "size": 69115,
+      "sha256": "abd83b499f1075e7a627c2cabb39d2c97737b728886cef7070486e272fa8529f"
     },
     {
       "path": "publications/wells-walkers-expedition-nicaragua-1856/William_V_Wells_Walkers_Expedition_to_Nicaragua_1856_Japanese_Complete_Translation.epub",
@@ -9710,568 +10988,10 @@
       "sha256": "3286310436d86f971c57929bbe34a8bb7b104e5fba6218c95eb63832d68f7448"
     },
     {
-      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.pdf",
-      "size": 11120411,
-      "sha256": "4214d11213f5b7de7d1c3f42141525d62de23f35f6f04058061c0781d6b537f7"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-i-1730/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_1_Japanese.epub",
-      "size": 16616514,
-      "sha256": "95f0ed2268b0a668a42374e7099ce44665bd95a411cddd82971165e0714cc782"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-i-1730/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-i-1730/cover.jpg",
-      "size": 51534,
-      "sha256": "a3e10c15cd2ca2ac537c6830ee5d5cb562c946144cf52ff35b6fefc3af791171"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.pdf",
-      "size": 3275650,
-      "sha256": "80590440f45011a45d65348addb87544cb9bedf8dae20ea171e1089daa646e8c"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-1-1757/Noticia_California_1757_Vol01_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol01_Japanese.epub",
-      "size": 16807848,
-      "sha256": "8e86ffa72134cdced5912aabd91a4c634bc479e8aaffe497ec00200e6a1a4b65"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-1-1757/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-1-1757/cover.jpg",
-      "size": 71979,
-      "sha256": "2f854490e915fac0fad1cb02a42b175ed6058311a61090bbdb3afb6fcfe7da07"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.pdf",
-      "size": 3028347,
-      "sha256": "b0ed4f8376c612904464933711f0dd60a154f8ec7a2d2d378a63d0ff4e9d2313"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-2-1757/Noticia_California_1757_Vol02_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol02_Japanese.epub",
-      "size": 15375576,
-      "sha256": "3012e6003ef1439ccccf64b9a06a5bc48a9bebce69d439f6d38cc0cfcc247976"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-2-1757/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-2-1757/cover.jpg",
-      "size": 70396,
-      "sha256": "ee0e21f99574bd956998bb2f2e7e56d153135e10fc8fa991cd6d5fecfd44f45a"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.pdf",
-      "size": 4937499,
-      "sha256": "00e323ccb735bca39bc42d526dbdd9e0da2806c7165b2ad895f04a800cc35fc9"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-3-1757/Noticia_California_1757_Vol03_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Noticia_California_1757_Vol03_Japanese.epub",
-      "size": 23367271,
-      "sha256": "774e7b0ebc66726d2565c411d12235aa3362c5d72cfcfd45ab83473e674f59d3"
-    },
-    {
-      "path": "publications/venegas-noticia-california-volume-3-1757/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/venegas-noticia-california-volume-3-1757/cover.jpg",
-      "size": 71936,
-      "sha256": "d29c03e243636f3edc757a13ce2b308f606e6695ebe8632b456b9798773940f3"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.pdf",
-      "size": 9251362,
-      "sha256": "9b1cabd15b39108aae0835b9f91f44d16dedb855ec904a0ebd17ab839d6977c2"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-ii-1730/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_2_Japanese.epub",
-      "size": 16435288,
-      "sha256": "918b9473cb91a0063c08e87917b92003590993af61971e676f7bfd9833203689"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-ii-1730/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-ii-1730/cover.jpg",
-      "size": 35935,
-      "sha256": "4ad5372b385a5199dda1efd0b1e1e044a0327db86dad50f5f29d18505665496f"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.pdf",
-      "size": 7799094,
-      "sha256": "a2766abebe335dccec78506dd43b6a695d5e656c5147122415abff382c290e84"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/Brasseur_Histoire_Volume_1_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_1_Japanese.epub",
-      "size": 3926504,
-      "sha256": "94b899b255bc3e8caf3434f5a652afbd4bd209407800c749e9e22ff657288f05"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-1-1857-1859/cover.jpg",
-      "size": 59349,
-      "sha256": "24fd74641c80ee4f469b9b630be609f29752d50a0144fa831701189892137bb1"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.pdf",
-      "size": 7978311,
-      "sha256": "769efc80ceb4c42734347c9b97c40cc84936267f3a9b509b19d37b95479eb2a4"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/Brasseur_Histoire_Volume_2_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_2_Japanese.epub",
-      "size": 3932266,
-      "sha256": "5b438183134f1e5c4f8f428d469f49b8dd4f241edd929b96ffe641676f623d44"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-2-1857-1859/cover.jpg",
-      "size": 59415,
-      "sha256": "74a4b87fa1a45521c38f922f4d46751a906af934b4d455caf6bce612c8175917"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.pdf",
-      "size": 14525219,
-      "sha256": "2d6b0576610550bcf85f71d5a083113f3fb122bbca8eec6e683fbf8080ef6ba1"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/Brasseur_Histoire_Volume_3_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_3_Japanese.epub",
-      "size": 36004708,
-      "sha256": "cdb90da95f87eb69a8038863bfce9521f890062345a5aca8c02753f8433396c2"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-3-1857-1859/cover.jpg",
-      "size": 59412,
-      "sha256": "c0748fc22a3e16eb3247ad9bdb40c7a7c7a47c18490b7fb4864fb429be45a1c1"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.pdf",
-      "size": 7004726,
-      "sha256": "3fd60d537f7c9cbba0cfad3ff77ca757a51c49690ab4b74fe7b01d7ffe7e5d5a"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/Brasseur_Histoire_Volume_4_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Brasseur_Histoire_Volume_4_Japanese.epub",
-      "size": 758882,
-      "sha256": "3d53afadf3f29679ce46d6df75ddc5c8ab24e237e6114f09ad1dca2ae1647609"
-    },
-    {
-      "path": "publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/brasseur-histoire-nations-civilisees-volume-4-1857-1859/cover.jpg",
-      "size": 59399,
-      "sha256": "3df1dd6f77a83300352b2bc402d6b199bd3e95f67e89a45c43329bb3453705af"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.pdf",
-      "size": 12112066,
-      "sha256": "f250ed677b7dd7da907d200e61b57e7ba2ab08ac242568575a7bd007599ed472"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iii-1730/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_3_Japanese.epub",
-      "size": 1418688,
-      "sha256": "1fb8e40d3c7697183d3b86b9bab2306f852cb1502691bc5817641db3bf1ddbc4"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iii-1730/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iii-1730/cover.jpg",
-      "size": 80000,
-      "sha256": "65181b061093d5a5ae0e65657096838432946163ab7b37f8c0d94b121c92c7c5"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.pdf",
-      "size": 19662518,
-      "sha256": "4091ef2bb89c4fe6405dbc8f6d9a32c72d484a367f32242e78f2ec08c1c78262"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iv-1730/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Patrignani_Menologio_1730_Volume_4_Japanese.epub",
-      "size": 1531442,
-      "sha256": "123d46beda17fa93f018667fa92ccfa3f336435b4f564124286744171a592cf7"
-    },
-    {
-      "path": "publications/patrignani-menologio-volume-iv-1730/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/patrignani-menologio-volume-iv-1730/cover.jpg",
-      "size": 81038,
-      "sha256": "e7120d00ea19ca75f73d5f42ec31fdc8347399f194c978145f28b35c87ccae6c"
-    },
-    {
-      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.epub",
-      "size": 1364220,
-      "sha256": "f810e81dcfbaa0d70a6ee4b30110bb2e58904067c1f3785ab05b697de57eedec"
-    },
-    {
-      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Sosa_Biografias_de_mexicanos_distinguidos_1884_Japanese_Complete_Translation.pdf",
-      "size": 9376874,
-      "sha256": "f5bff2191a03bbe78e997f38b176801cb0cb33ca2bc883eed2e41889d8a6d5c0"
-    },
-    {
-      "path": "publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/sosa-biografias-de-mexicanos-distinguidos-1884/cover.jpg",
-      "size": 31491,
-      "sha256": "a4dcb6d5d46a53199e12e008672b09faa131d1e441309d785fab658b3bb91f11"
-    },
-    {
-      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.epub",
-      "size": 413947,
-      "sha256": "832932bc72fd63d826843a5ac630cc6e22c4f4669d8fba15a0812af0769e7989"
-    },
-    {
-      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bellido_Maria_Ana_Agueda_de_San_Ignacio_1758_Japanese_Translation.pdf",
-      "size": 2384689,
-      "sha256": "393063b858bcfc7a2d11c7f2200ef0dbb2d0cbda10197a145593fa8b799b4f1a"
-    },
-    {
-      "path": "publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bellido-vida-maria-ana-agueda-de-san-ignacio-1758/cover.jpg",
-      "size": 27128,
-      "sha256": "ed6a67002e5685feccad8e0c2685696d5a0a5bfed862c5db2ec8fe64a526e194"
-    },
-    {
-      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.pdf",
-      "size": 3243009,
-      "sha256": "91e0b2168598d69d82a4524806f220e780a382607a43bee3ff5b5fa723e60e5f"
-    },
-    {
-      "path": "publications/maria-ana-agueda-devociones-varias-1791/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_Ana_Agueda_de_San_Ignacio_Devociones_varias_1791_Japanese_Translation_Plates.epub",
-      "size": 2088359,
-      "sha256": "238194ff92a126e30fa9917bc51075a268d0dddfc79fb616c72dbe86eddb440f"
-    },
-    {
-      "path": "publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-ana-agueda-devociones-varias-1791/cover.jpg",
-      "size": 24185,
-      "sha256": "97984666e2f9dac3ae4c48e379cd70a5f3fd50da467da5178409111dbb00ef43"
-    },
-    {
-      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_layout_revised.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_layout_revised.pdf",
-      "size": 5916527,
-      "sha256": "a31da32878aac0cb151fce9964f9b8ebfa9076876f62984bdeba5f8b9b47795d"
-    },
-    {
-      "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_Master.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.epub",
-      "size": 3319598,
-      "sha256": "20e459de309792cfa9873fe155866bd5473d5282a3de61a6281a1631e8711071"
-    },
-    {
-      "path": "publications/leon-y-gama-dos-piedras-1792/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/leon-y-gama-dos-piedras-1792/cover.jpg",
-      "size": 33846,
-      "sha256": "e067f3201c253218fc43a3fae22f2badcdca41c9317dc8bccbe5b972e6e88685"
-    },
-    {
-      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.pdf",
-      "size": 2537980,
-      "sha256": "ba9edff45cca6a29d90669e1d8c060717b5f5141eed1848f2eeb82fbd2fa564a"
-    },
-    {
-      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/Aguilar_1639_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Aguilar_1639_Japanese.epub",
-      "size": 216515,
-      "sha256": "757121bab3cd70e5a0e860268e0ee8cd833e102f9c5c0289d476f92b458c1dbd"
-    },
-    {
-      "path": "publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639/cover.jpg",
-      "size": 31297,
-      "sha256": "35b432533d92c6679e2ec7a0246c2ce8424d1e8526d0a359afac7e5a83c84c39"
-    },
-    {
-      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.pdf",
-      "size": 13573203,
-      "sha256": "4c9dd539aeec19883a3cfc4b3f01cb9305c6aee54562c23b251235ae6c3c867d"
-    },
-    {
-      "path": "publications/alzate-memoria-grana-cochinilla-1794/Alzate_1794_Cochineal_Article_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alzate_1794_Cochineal_Article_Japanese.epub",
-      "size": 12696816,
-      "sha256": "a8673edd132bbfa5040a8813377d3001deba7b59e21160855b231807ad9394af"
-    },
-    {
-      "path": "publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/alzate-memoria-grana-cochinilla-1794/cover.jpg",
-      "size": 189534,
-      "sha256": "336a5c3383d4094a6abdc30daca5d896e33acab372e478d3598230bd3ca55dd9"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.pdf",
-      "size": 4580050,
-      "sha256": "335a8d38b65df17699d83e74fc9df0136a6ae4570e2b325b09425e1a1d6faef3"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/Bustamante_Mexico_Alameda_I_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_I_Japanese.epub",
-      "size": 3135564,
-      "sha256": "510a7a509d93d21389551eab9147346d75efe12f801599eed9316d7fa8f59373"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835/cover.jpg",
-      "size": 47047,
-      "sha256": "53fe5a2ca7abd6d1edac850377f4d9e8fe32379ccfadde4279d3be9f7876063c"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.pdf",
-      "size": 3642069,
-      "sha256": "138bd1a0aaf5bbbb8298a01d15989421d56a3fa2e17e2d0b46cefa3502088184"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/Bustamante_Mexico_Alameda_II_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Bustamante_Mexico_Alameda_II_Japanese.epub",
-      "size": 1438768,
-      "sha256": "b60b4b736cfc44b496fcdcd0d00dca2a4efcdd5131b5d9fc9f2b33e10782afe5"
-    },
-    {
-      "path": "publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836/cover.jpg",
-      "size": 47780,
-      "sha256": "e8fc05a584535a53af0086d9e968c36621a6f0aeb726dd862e30c8af0b086a0e"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.pdf",
-      "size": 17550283,
-      "sha256": "d11e59209647cbb73809b1cdaabb10ab8d96b566d2f745f86985864de78ac5c9"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol1.epub",
-      "size": 1539653,
-      "sha256": "887e021305edffa3a4c699c2f71554ba8c96a8806ad64228a40e5e2dbdccafd6"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-1-1648/cover.jpg",
-      "size": 41001,
-      "sha256": "630cb49a521c6058a8fdf38525cadf2e2d51c49f0a8add30109655db5c9eedc3"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.pdf",
-      "size": 18042126,
-      "sha256": "43b333bba70ecd901f2a816f9407ad12d5e008a4fec38a4811f94ebe7295849e"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Solorzano_Politica_Indiana_Japanese_Vol2.epub",
-      "size": 1540171,
-      "sha256": "ae067b1b82504f5b947db0c9bf2551ab5f4c841032034e9b432bc56f74cd0e55"
-    },
-    {
-      "path": "publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/solorzano-pereira-politica-indiana-volume-2-1648/cover.jpg",
-      "size": 43345,
-      "sha256": "7b08d7099a497fcdb041fcebd751d29d9fe37e426f5d947569fecaee9a93b9db"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.pdf",
-      "size": 1871410,
-      "sha256": "07c6278ce6928c594bba5a45acd453d530f82d1e53a00a9cf9c7466a55d9aa3e"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847.epub",
-      "size": 311316,
-      "sha256": "1534e5108832563f4e0db66d0df8f67f350e4b1d6e7c238cb65ba4f4c7393966"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847/cover.jpg",
-      "size": 51510,
-      "sha256": "0bfb86fa07979a690b6c808c40320c99874745bf2d4ba9259e30152e8e8dc297"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.pdf",
-      "size": 2468840,
-      "sha256": "d70a10894252b62c6cfd3a8843d9ffcbeb17c955a8041daa0b3e7811e13b6c9b"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847.epub",
-      "size": 370996,
-      "sha256": "b3f112d3c6b85f353013b7026ba491fcd49a0390416c86ae7526b6935abef1f2"
-    },
-    {
-      "path": "publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847/cover.jpg",
-      "size": 51903,
-      "sha256": "8bfd59c40b4721473be0249e7bb92b5f8057208fb32a7ac25a0ee8fe05531c83"
-    },
-    {
-      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.pdf",
-      "size": 52134681,
-      "sha256": "032d2e24f0929e086ca22230c0b59de883abbaa6c4e3bf35288c7cb4ecae0c28"
-    },
-    {
-      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861.epub",
-      "size": 48241764,
-      "sha256": "817da8f562ffda5896b9dc708552595eaede4f73fe6f6db3f4dd17072af6fc3d"
-    },
-    {
-      "path": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/cover.jpg",
-      "size": 92917,
-      "sha256": "9b3c684676c5c01ef57f209bc5e8937e4b6d9314b82577bb1a2b2fa1fad06f59"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.pdf",
-      "size": 1945612,
-      "sha256": "525af149adde257b68ab956c77a17fa28d83b5a0a5a8f69dba7405f8b01be90e"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-1-1789/clavijero-storia-della-california-tomo-1-1789.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-1-1789.epub",
-      "size": 318167,
-      "sha256": "97512d749028825954b84f108a0a1a92d13677bc8b86c6c883161560d802207e"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-1-1789/cover.jpg",
-      "size": 111280,
-      "sha256": "e17095e1231914c46ee4334a005aa3d79c17e581087a8071f363a7f2d75fe9f2"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.pdf",
-      "size": 80352021,
-      "sha256": "beeb1edf3d34691c801ba99a648cb481567bff8e4706c5c26f5235a295d3abff"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-2-1789/clavijero-storia-della-california-tomo-2-1789.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/clavijero-storia-della-california-tomo-2-1789.epub",
-      "size": 53457487,
-      "sha256": "17d28b1c7917a2e8d9baa818fdcc336a019baa36722671bc2a266c0cc8253777"
-    },
-    {
-      "path": "publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/clavijero-storia-della-california-tomo-2-1789/cover.jpg",
-      "size": 116244,
-      "sha256": "f583761f61ae9fdf8ab9c3d66e10847b0adbb87e63afbd57b8c86ae5ad77b802"
-    },
-    {
-      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.pdf",
-      "size": 2859177,
-      "sha256": "ea098096cec1a53778a4b2c0bbd8aae08be8081ea9cb2236d7f3aa1a6cb4e57d"
-    },
-    {
-      "path": "publications/garcia-leona-vicario-1910/garcia-leona-vicario-1910.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/garcia-leona-vicario-1910.epub",
-      "size": 297563,
-      "sha256": "c51bff752c03edb48cefad7386636522f78f6f0f76d5e9c917efa25a4530c095"
-    },
-    {
-      "path": "publications/garcia-leona-vicario-1910/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/garcia-leona-vicario-1910/cover.jpg",
-      "size": 34750,
-      "sha256": "b6d1732c1ebaef81fa277e37d9cee775eb35af109400ae198af2a53b57c50686"
-    },
-    {
-      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.pdf",
-      "size": 9476783,
-      "sha256": "4d4356a6a5cf3bb19a9b890bcc16c0fd253a9f16c780e2d5fc5431980ae28a66"
-    },
-    {
-      "path": "publications/venegas-juan-bautista-zappa-1754/venegas-juan-bautista-zappa-1754.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/venegas-juan-bautista-zappa-1754.epub",
-      "size": 6800369,
-      "sha256": "bda6ecafeaf46a6c132a221e7e070f070f2517341775013a2b6a1dd57f5c0329"
-    },
-    {
-      "path": "publications/venegas-juan-bautista-zappa-1754/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/venegas-juan-bautista-zappa-1754/cover.jpg",
-      "size": 37193,
-      "sha256": "b7679332f6e2734d328ee2e9f9b2cbd678ff4a6d2359a48d228210795d15ace6"
-    },
-    {
-      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.pdf",
-      "size": 5841488,
-      "sha256": "c2e520e162e8c56d29d5a1a16f9cfd18e2cce59f466c9ab815142ec31882d911"
-    },
-    {
-      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/lizardi-la-quijotita-y-su-prima-1897.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lizardi-la-quijotita-y-su-prima-1897.epub",
-      "size": 10132772,
-      "sha256": "9e89030708b975df8cc96237238be85036ee020b1dfd4ac2e2c852605ba0458b"
-    },
-    {
-      "path": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
-      "size": 30389,
-      "sha256": "81a9bc588cdc7b92d786d9444a1cedaa9fcdf0fe019e7d821c4d8ae0920ad6f9"
-    },
-    {
-      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.pdf",
-      "size": 13466055,
-      "sha256": "261c2e5e6182b4346c548f2f4ffddbb048787d7ba18bf600ee45c00790247270"
-    },
-    {
-      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/arroniz-ensayo-historia-de-orizaba-1867.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/arroniz-ensayo-historia-de-orizaba-1867.epub",
-      "size": 7688025,
-      "sha256": "cc74d45d370bfa30c0bb98fc915ce2672edb25ddda655cb1c14baa09473a1d90"
-    },
-    {
-      "path": "publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/arroniz-ensayo-historia-de-orizaba-1867/cover.jpg",
-      "size": 39343,
-      "sha256": "8ed9ae2e8d03b52f9f76f221cf955acd071705919b55783c7debb0441da22e19"
-    },
-    {
-      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.pdf",
-      "size": 14934709,
-      "sha256": "7847269d88d19144e29921f56790aee136ed7d8d6268bed2e6d59d661e9a340d"
-    },
-    {
-      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/lazcano-juan-antonio-de-oviedo-1760.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/lazcano-juan-antonio-de-oviedo-1760.epub",
-      "size": 10923235,
-      "sha256": "571c3005e2a12a367038b9da7b3ddd97c5595d27603667723dbeb00436fc3c90"
-    },
-    {
-      "path": "publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/lazcano-juan-antonio-de-oviedo-1760/cover.jpg",
-      "size": 51901,
-      "sha256": "1b573907196a0887d2a8ef05e98495e3cf72724fce376b3537cd75cb8e99148c"
-    },
-    {
-      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.pdf",
-      "size": 24233309,
-      "sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014"
+      "path": "publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
+      "size": 44662,
+      "sha256": "77fa47db1e6487e9c1ad65f7821eddd718939075c1c0603e666c2d2622ee9d9b"
     },
     {
       "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.epub",
@@ -10280,694 +11000,10 @@
       "sha256": "7965f44de3746297a69fb5bea971eb28670741e56bff51edddb57fcb164259a5"
     },
     {
-      "path": "publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/zelaa-glorias-de-queretaro-1803/cover.jpg",
-      "size": 44662,
-      "sha256": "77fa47db1e6487e9c1ad65f7821eddd718939075c1c0603e666c2d2622ee9d9b"
-    },
-    {
-      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.pdf",
-      "size": 3922588,
-      "sha256": "b6f365593d61e17daf98921b2291c18ba5c022d023d2d616251d8fabbd52ab0a"
-    },
-    {
-      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.epub",
-      "size": 371438,
-      "sha256": "65d92504715fce9704407a275537bdb240bb359471aea43842c2785ca3d5e47e"
-    },
-    {
-      "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/alfaro-pina-iglesias-conventos-mexico-1863/cover.jpg",
-      "size": 47252,
-      "sha256": "48d3712b6fa7e179f13e1ca7188278dd53a862621358fcffaf61bf4c80c28ddf"
-    },
-    {
-      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.pdf",
-      "size": 23710229,
-      "sha256": "8ba31a431a60f1581fa67c2893eeba8ce1ce6919d37adfdd35f14963cb1167bb"
-    },
-    {
-      "path": "publications/de-la-cruz-badiano-libellus-1552/de-la-cruz-badiano-libellus-1552.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/de-la-cruz-badiano-libellus-1552.epub",
-      "size": 22408837,
-      "sha256": "17d535eb1bec2c4138cbaf3b4d684bd7e891f1211974f0167c785577d630f2bf"
-    },
-    {
-      "path": "publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/de-la-cruz-badiano-libellus-1552/cover.jpg",
-      "size": 51911,
-      "sha256": "876168575366a37b5b52e3e262af71c29f9a61d94066807ffc990950f5dc090d"
-    },
-    {
-      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.pdf",
-      "size": 8152481,
-      "sha256": "207dbcbe5a1fd9616f95f8375bb4db608392466dc350c61896dc9fa468e092d9"
-    },
-    {
-      "path": "publications/florencia-estrella-norte-mexico-1688/florencia-estrella-norte-mexico-1688.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/florencia-estrella-norte-mexico-1688.epub",
-      "size": 5040464,
-      "sha256": "2aa851638b5742f864f2c37cb0158251f6c48f359e3f03969d8725c9351190e7"
-    },
-    {
-      "path": "publications/florencia-estrella-norte-mexico-1688/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/florencia-estrella-norte-mexico-1688/cover.jpg",
-      "size": 46717,
-      "sha256": "69d59f1bffd35f752a0cd76774646968b1eeb99ef0a265589ee5a345a85963c1"
-    },
-    {
-      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.pdf",
-      "size": 15056254,
-      "sha256": "b8b17b530ba95b0b197ea394b3f7c839e9167e0692bf6871ba1365e9745d89d5"
-    },
-    {
-      "path": "publications/granados-tardes-americanas-1778/granados-tardes-americanas-1778-ja.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/granados-tardes-americanas-1778-ja.epub",
-      "size": 8961382,
-      "sha256": "e68f104e94d2755c3ce9d31a36b4d519c101e79451787be2655e4dc5dd3787b9"
-    },
-    {
-      "path": "publications/granados-tardes-americanas-1778/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/granados-tardes-americanas-1778/cover.jpg",
-      "size": 83017,
-      "sha256": "c1752e944b61070e84044facfbb12fce7c17a9873354bffdf635fcbc0dbb39a5"
-    },
-    {
-      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.pdf",
-      "size": 5473419,
-      "sha256": "2342fabd3e778382040bded6f1f4c75021580166620fa59e56203e43b9b95382"
-    },
-    {
-      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/mota-padilla-conquista-nueva-galicia-1870-ja.epub",
-      "size": 1814265,
-      "sha256": "20b61186f0b096c6f3aecf3abb12e0e7a29267f3cad57263ba09d663eb21992b"
-    },
-    {
-      "path": "publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/mota-padilla-conquista-nueva-galicia-1870/cover.jpg",
-      "size": 86590,
-      "sha256": "17f0374879723f76271fa9b95af4d7d3edcf530f317816e4741dad383aa81992"
-    },
-    {
-      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.pdf",
-      "size": 2393444,
-      "sha256": "35c622f321d86e2468b1abedb57ad7bc75298e64d5549a152d53d30759accbd8"
-    },
-    {
-      "path": "publications/pimentel-memoria-situacion-indigena-1864/pimentel-memoria-situacion-indigena-1864-ja.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/pimentel-memoria-situacion-indigena-1864-ja.epub",
-      "size": 265543,
-      "sha256": "91e16ef321d84cb162bbdad28666d06c3f4211ced635cced34344c847f8ea976"
-    },
-    {
-      "path": "publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pimentel-memoria-situacion-indigena-1864/cover.jpg",
-      "size": 100639,
-      "sha256": "5784040dab2b21a87e9c62359584c4a3a30f94f2303fe728da069269ff698438"
-    },
-    {
-      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.pdf",
-      "size": 1164440,
-      "sha256": "bfadd005eba81979915dc20c45d42dca5b46b2b0d7b711abebaf5e17404a2f09"
-    },
-    {
-      "path": "publications/velasco-exaltacion-divina-misericordia-1810/velasco-exaltacion-divina-misericordia-1810-ja.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/velasco-exaltacion-divina-misericordia-1810-ja.epub",
-      "size": 210088,
-      "sha256": "effc5b348973ef218587a669ec4ddb3429438dbf78ea022ee61e7a84ba173a19"
-    },
-    {
-      "path": "publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/velasco-exaltacion-divina-misericordia-1810/cover.jpg",
-      "size": 91529,
-      "sha256": "b4832d97c168cf3df675f995e9e3e072207e8a48826376b0c882395ec7e2a9c7"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.pdf",
-      "size": 7670526,
-      "sha256": "f12fecd22d60ba0ea52204812e6230e1910df38b39a2e3ea6995e5f0ecd7f700"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_1.epub",
-      "size": 393524,
-      "sha256": "e570208826d1b75a3c060fd9db5fea447b3033d4e6d04e829b2be0bcbc988c18"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v1/cover.jpg",
-      "size": 100694,
-      "sha256": "6cb3119d10cd120bea1fbaafaf8cf1e4f0bbbaa7f7aeda29144cb3e6667c0ba5"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.pdf",
-      "size": 7752536,
-      "sha256": "c8f739e5a15742d58a18d716f716105feaf21f831a51508bb232441e56ae96d9"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_2.epub",
-      "size": 384210,
-      "sha256": "b20123ae9725a52baf1469c6a795bd9315488a17ba507873bf9ac58ca7b4b4d6"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v2/cover.jpg",
-      "size": 100714,
-      "sha256": "0d02b03f2248f8e65b257c5109d4925e2951b9c18174ea00a9f8fcf717e0dc7f"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.pdf",
-      "size": 9197590,
-      "sha256": "5a2534e462eae3a9954ab3dda094d05094793846ddb1d0e62624976fac9f6597"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pimentel_Cuadro_descriptivo_Japanese_Vol_3.epub",
-      "size": 444492,
-      "sha256": "554b5dd7ddd7c85a7e38acbeb11cb5f9ea0dd15019414bde52e523734683ad89"
-    },
-    {
-      "path": "publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/pimentel-cuadro-lenguas-indigenas-1874-1875-v3/cover.jpg",
-      "size": 103771,
-      "sha256": "a785af5e1b6c1303d9f6d08155ebf4d46d3276190f95049aeb41c2608c77e4cb"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.pdf",
-      "size": 2317421,
-      "sha256": "d2d80df67859e9eee43c8163f5b7a3e819a82b230d4aa81f1edcadf842ac5962"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_1.epub",
-      "size": 320897,
-      "sha256": "846ad15f1b0aba3643cb547c9724b81b2f195121087c3d1a19d2c6914838a653"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v1/cover.jpg",
-      "size": 50029,
-      "sha256": "db5f02f5a5065778ce23887b6ebbe6314396650494abd5758ce04115b307458b"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.pdf",
-      "size": 1924051,
-      "sha256": "addba93cad6a1f9a3d6ab237dcc4671d5cbc99effd5dcd9148a2c48d6c45abd6"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_2.epub",
-      "size": 277472,
-      "sha256": "67b6ee0eeb640ea49e65352d127d9de27cb56d0a23da68fa942fd65840165121"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v2/cover.jpg",
-      "size": 49480,
-      "sha256": "018a11e5d86c0440e27f7785f64e8bf7b21c4350e665f95b2dd0c95dc8cd8470"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.pdf",
-      "size": 3007911,
-      "sha256": "b4039093c1e6228088810a96fb0fabb8dc77363e49529cf3558a5c25a1601797"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_3.epub",
-      "size": 433640,
-      "sha256": "f38cee960f28c2804b1b3083d69121ecffe8ebd42dd0a09bfbfbd3db4fd6cdfe"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v3/cover.jpg",
-      "size": 49736,
-      "sha256": "966cfeea630af18c4d6c193639bc5c9c47ac678a7e2af794ccc92352ffadab5f"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.pdf",
-      "size": 3186314,
-      "sha256": "696b56cefd734625449a3fb2cafac0fde55c91ab3e42c984710732d3967020ac"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cabrera_Escudo_de_armas_de_Mexico_1746_Vol_4.epub",
-      "size": 385911,
-      "sha256": "ebada066968e4068a5778973f3a919473eb44ba1ada70a7cf7c16247a99c6b60"
-    },
-    {
-      "path": "publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cabrera-escudo-de-armas-de-mexico-1746-v4/cover.jpg",
-      "size": 52185,
-      "sha256": "74ab819085a1930d82f5a979746bac358a932c3bd98fd16ef35c96c47e5687dd"
-    },
-    {
-      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.pdf",
-      "size": 525136,
-      "sha256": "e3303314e898632ae67a2b5cbb121d3c46db58a14e5ba0e71f8f7e051607400c"
-    },
-    {
-      "path": "publications/cano-manche-y-peten-1696/Cano_Manche_y_Peten.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cano_Manche_y_Peten.epub",
-      "size": 73114,
-      "sha256": "74632746b340d205d25c27c2587d09c14f84b0c8cb0bccd97d700eaf48e24d3d"
-    },
-    {
-      "path": "publications/cano-manche-y-peten-1696/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/cano-manche-y-peten-1696/cover.jpg",
-      "size": 67878,
-      "sha256": "74e80fe4dac1f5e75cd4300f2fcade2c8c4bf97142736847e8823e8c40780a30"
-    },
-    {
-      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.pdf",
-      "size": 713674,
-      "sha256": "d52a69a1d933e5c8e98480b2f6db131b02daf0b2cc319fe570e4aed4d14a0cf6"
-    },
-    {
-      "path": "publications/viana-relacion-de-vera-paz-1574/Viana_Relacion_de_Vera_Paz.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Viana_Relacion_de_Vera_Paz.epub",
-      "size": 122663,
-      "sha256": "f8b64b99867fe4e96bdaed8ab9cb54ac28ea87cb5834c398267ed663b36f02eb"
-    },
-    {
-      "path": "publications/viana-relacion-de-vera-paz-1574/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/viana-relacion-de-vera-paz-1574/cover.jpg",
-      "size": 108326,
-      "sha256": "90d91d70a4f37bd4c9b281f462230611ad1e011b335de34f340c14800e6a922f"
-    },
-    {
-      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
-      "size": 6130501,
-      "sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
-    },
-    {
-      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
-      "size": 10915765,
-      "sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
-    },
-    {
-      "path": "publications/romero-michoacan-diocesan-history-1862/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/romero-michoacan-diocesan-history-1862/cover.jpg",
-      "size": 99823,
-      "sha256": "08195b5f28460a720f101f5e43eeb0176a19b868d57133ab0b3a3838132b308f"
-    },
-    {
-      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.pdf",
-      "size": 911339,
-      "sha256": "930e4b313c9202f385e4bf7803dafa9c3caa33abf5bc4c3465b1a82f11b3f271"
-    },
-    {
-      "path": "publications/couto-dialogo-pintura-mexico-1889/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Couto_Dialogo_Pintura_Mexico_1889_Japanese.epub",
-      "size": 146027,
-      "sha256": "cea3becda76dba38228ebb06aae6b0aaca8f0e915017a7a65667b8ae1b965358"
-    },
-    {
-      "path": "publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/couto-dialogo-pintura-mexico-1889/cover.jpg",
-      "size": 87380,
-      "sha256": "8597fcdcf22c37af58d601388350414cebe50de9d7f2a15915ba2ed128737452"
-    },
-    {
-      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.pdf",
-      "size": 2609129,
-      "sha256": "c34fad5fd6a7ac854be8a6c1885976823a2b5d812b2c9765bdb38fc2515892c3"
-    },
-    {
-      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Florencia_Oviedo_Zodiaco_Mariano_1755_Japanese.epub",
-      "size": 374637,
-      "sha256": "c1eb3e89274a49fd42c03486b8c0ee83458337e3512c6b89c661b2a8abeb6339"
-    },
-    {
-      "path": "publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/florencia-oviedo-zodiaco-mariano-1755/cover.jpg",
-      "size": 84342,
-      "sha256": "d363fecb35a6c1971259eda0be03cb3daf5e3a6ad9b39c98481acb0bdff6d378"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.pdf",
-      "size": 1245654,
-      "sha256": "59b7baa2e2c356220e15efb2763596f2769c03c9c5b8bde3df45d12a3d151442"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_01_Japanese.epub",
-      "size": 156000,
-      "sha256": "9af63e9bcbb1e7755a587bce7740de96647da3ba9a7944e311a21254594abdfe"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-01/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-01/cover.jpg",
-      "size": 71989,
-      "sha256": "d74a6f033cafd44101d3164b99f915b37c0c9e25dd933207e699506d63f4c56c"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.pdf",
-      "size": 1338809,
-      "sha256": "bd4f080ec25a6e5bbb405b61f2e93f23c03f8466f58c011398a0d56e8af17e4e"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_02_Japanese.epub",
-      "size": 169793,
-      "sha256": "f10d9377864fd8b8f61fc4e9a6488fadcafdd6da7b7c57b4cee9673fbfb9db2f"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-02/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-02/cover.jpg",
-      "size": 72186,
-      "sha256": "2b7459bafdd996add42410ca056bb610bc3b1e3a362026d1d464caf07037c430"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.pdf",
-      "size": 1238175,
-      "sha256": "bd71a056243ee373a0995f893c6b66b228af133fef7a988e8d69a4a984de97af"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_03_Japanese.epub",
-      "size": 159865,
-      "sha256": "dddf7324a1d14f49a3db8e1791b78114e1af057a47acb4c950445ec0954fa756"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-03/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-03/cover.jpg",
-      "size": 72167,
-      "sha256": "705a3f867139b4d400121c1cf6296530bfe2e6e6bbf982350b99629ae3768eac"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.pdf",
-      "size": 1238222,
-      "sha256": "823fb0c474853e4bc1d038dc6a6a0eb7b7d5aef344277fdf953eab1e82c936f1"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_04_Japanese.epub",
-      "size": 159872,
-      "sha256": "386f7f1277691b916a1db3e52b7f1f28f5b0be94914e96d1bf60f665241745e9"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-04/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-04/cover.jpg",
-      "size": 72000,
-      "sha256": "b16fc84fb83b5f841e665c7385dc8e5e66ff88e23ab2896ea397be269a0a9e8f"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.pdf",
-      "size": 885477,
-      "sha256": "bb973691e3b8192afb80622ede474cdddda34bc731a2e919eab525aaf4650070"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_05_Japanese.epub",
-      "size": 119437,
-      "sha256": "43deff04e193c9217925d39aabaa1fad896ad994d5466719ec3e3c9fed143e1a"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-05/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-05/cover.jpg",
-      "size": 72033,
-      "sha256": "6bf1cae4f6cdfd17603e2ea1a8c72b00b5ca130f58fd5d9f631abd6773a4e38a"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.pdf",
-      "size": 876392,
-      "sha256": "b5149047fc98c5304cafb87853630e089158152f627727dd90d20b29a06ead92"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_06_Japanese.epub",
-      "size": 118829,
-      "sha256": "b85fd434785cda11dfb51121bf375f4c5258edb04d539be0d419af00727beed1"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-06/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-06/cover.jpg",
-      "size": 72077,
-      "sha256": "1b7ec4ba3fc9eb18d1ca534cd0bc3e73017ae252a64b75a8a9bafcc3cf2bb9e3"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.pdf",
-      "size": 922893,
-      "sha256": "de1c3218b60dfa6fb3820f402762ec737b191c54ed6ec56baf0a23c112b67cb6"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_07_Japanese.epub",
-      "size": 118332,
-      "sha256": "5da0b18d887d3b50b12dfb9e818dd359d8306cd3106f8e0c67cf023edc41251b"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-07/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-07/cover.jpg",
-      "size": 71938,
-      "sha256": "bb85ba0e6041020ca4f2e26dd05002774ed0838b937667cd5aa2e4796d4d1902"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.pdf",
-      "size": 749951,
-      "sha256": "267c224ecfcc89658b2f9457b1614faafc3e85aa897285f3885b55ad49a10422"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_08_Japanese.epub",
-      "size": 107668,
-      "sha256": "1a8dddd6dda203ba0f653362ec49448a4e24191d8126c6186082eaaf54a1a819"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-08/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-08/cover.jpg",
-      "size": 72046,
-      "sha256": "ad07914c8d4deea0062bb4256a588b8f804b52134705f6689c1161217dad8a87"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.pdf",
-      "size": 895413,
-      "sha256": "d0b623ed0e816cfc2a505f4d1a394bab230f1ed619edd521ab41daca3162964f"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_09_Japanese.epub",
-      "size": 116920,
-      "sha256": "556f17a6587d3e14fd1627d7a02c99014fe731a381e954cb43f4aa279dacf598"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-09/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-09/cover.jpg",
-      "size": 71981,
-      "sha256": "8de5da0c6345245264d9f6e739693d458dbeff4f02ebd54c5684ea53d829b28d"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.pdf",
-      "size": 906192,
-      "sha256": "3fd58cda9b908445bc62cd9291718a5799add3cf720e301cf25c7fd36439091b"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_10_Japanese.epub",
-      "size": 112885,
-      "sha256": "7b679e4d5c38e3ed543a67e132ac261ff2526b0e96d6136a5e0a943d897bcd94"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-10/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-10/cover.jpg",
-      "size": 72113,
-      "sha256": "9ba73ce0c9da3d64f7f47ace38b399770b926b47fc868746fff63ba393f8615b"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.pdf",
-      "size": 744806,
-      "sha256": "9736ef6d6281482e15b8c4d6ce23a84f2fd3c1c863a5fd9b440944ec2cb11cb0"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_11_Japanese.epub",
-      "size": 98232,
-      "sha256": "725c3e00be2ee0cb419c35a9ee6fb75c83db7b0c3030cf44e753a698572ccbdb"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-11/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-11/cover.jpg",
-      "size": 71862,
-      "sha256": "2804611fd7a0b796e10df0a7e42cacb73e96d8b89ff12bad084b802a9a2c3f99"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.pdf",
-      "size": 630470,
-      "sha256": "be003f116d70533ce65f2867af1af870a1675eebe9974d7512144152dcba46b1"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Maria_de_San_Jose_Spiritual_Autobiography_Part_12_Japanese.epub",
-      "size": 86273,
-      "sha256": "57a79786ae7c1df0c3993b0a6bbfef5e07305a0cc8378218c8aeceb121bfaf82"
-    },
-    {
-      "path": "publications/maria-de-san-jose-spiritual-autobiography-part-12/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/maria-de-san-jose-spiritual-autobiography-part-12/cover.jpg",
-      "size": 72151,
-      "sha256": "440dff35d52795c0c5eebd7085b7c3219106f49955828403b1ad32034ff2ea27"
-    },
-    {
-      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.pdf",
-      "size": 23130065,
-      "sha256": "9622d5fa1292cbe4fb5fb8c64edc6522aca0948b74b31361ba434196d8ed9f7b"
-    },
-    {
-      "path": "publications/laferriere-paris-guatemala-1877/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Joseph_Laferriere_De_Paris_a_Guatemala_1877_Japanese.epub",
-      "size": 20060589,
-      "sha256": "042d7239a387b40e6c0f9f474e1928a6b0a3d1818ffda20bc5fcf44bfc3f45d2"
-    },
-    {
-      "path": "publications/laferriere-paris-guatemala-1877/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/laferriere-paris-guatemala-1877/cover.jpg",
-      "size": 59852,
-      "sha256": "270ab69779b70e4bc36838997dab215944eed3dc3693c47a8a360813c74c88bb"
-    },
-    {
-      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.pdf",
-      "size": 3343643,
-      "sha256": "e6223ca2135314f195ab7df9a8f6d6257cca032e3aa40053766780e620deeeda"
-    },
-    {
-      "path": "publications/florencia-provincia-nueva-espana-1694/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Florencia_Historia_de_la_Provincia_1694_Japanese.epub",
-      "size": 514861,
-      "sha256": "c1f9b8ba959a70e03436220c833d3ccfc221be4672d521922c059c4bfacf7b2b"
-    },
-    {
-      "path": "publications/florencia-provincia-nueva-espana-1694/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/florencia-provincia-nueva-espana-1694/cover.jpg",
-      "size": 70637,
-      "sha256": "6a35860cd50b3260fbf9dd610e6c4894eefe140ce7b8325d01a72e9d0ea60df3"
-    },
-    {
-      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.pdf",
-      "size": 70666846,
-      "sha256": "04602ffa121c0401f1728f286dcac8bf631be72677df857046ff94ca21b5c43c"
-    },
-    {
-      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/William_V_Wells_Explorations_and_Adventures_in_Honduras_1857_Japanese.epub",
-      "size": 64463227,
-      "sha256": "77e1335ba2e1bae73da03b9dbbd69efc14ca4725f87a044de25b040784b4871f"
-    },
-    {
-      "path": "publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
-      "size": 69115,
-      "sha256": "abd83b499f1075e7a627c2cabb39d2c97737b728886cef7070486e272fa8529f"
-    },
-    {
-      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
-      "size": 1730611,
-      "sha256": "2c2656fb9d27824f7e8c5bac7d1c9b03b70190fa16fce718b4648f87e8c1326f"
-    },
-    {
-      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
-      "size": 210724,
-      "sha256": "fb33317193e2b43a9f65123f05c71e8a0ce502d9e8503ee76c6722db23a373f9"
-    },
-    {
-      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
-      "size": 81632,
-      "sha256": "fbe3d158e6d359bcbfebc83f61fa295ba0fbc06c2f8280022011f50c76ec3e04"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
-      "size": 2321422,
-      "sha256": "3a4520a8c4b2cb57c874498c9b73e951a6c0276378b159268eb430a063a31d5f"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
-      "size": 1036553,
-      "sha256": "14c29df71b5445f9e9c2197cdfcedbfb63421e3ff601dfa612d145b04f7380a8"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
-      "size": 78822,
-      "sha256": "3eb0cba249e3c082beaa909661e8c735c4efd9a7143be9c0eadcda8a6126e4e8"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
-      "size": 1857498,
-      "sha256": "393cb77ff3d9b02ed96af39fffc0cd5deac2a161f4c4e10d0b7a122ca69b70a7"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
-      "size": 793622,
-      "sha256": "dae53ca240d00c90309c2f6063b3be38ec8091b70bebf0795c5cabdb7ba78e3e"
-    },
-    {
-      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
-      "size": 79413,
-      "sha256": "21999023c016192ddeef29b150538194b5776aeee058e368809a49059d372b9b"
-    },
-    {
-      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
-      "size": 7868700,
-      "sha256": "e738c650265684082692f7a27164271a885b3340c30062eb54337ec71fd6c077"
-    },
-    {
-      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
-      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
-      "size": 44504983,
-      "sha256": "13b9b254241eaa78904bc1980cac56ba8cfaae485f259d5e92ff7cbce85d6881"
-    },
-    {
-      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
-      "url": "https://takochanchan.github.io/publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
-      "size": 79803,
-      "sha256": "b2df3f2d690a08e8ae263d4c0b9112aa93a03b8b7dcda92ace27124ea7a62905"
+      "path": "publications/zelaa-glorias-de-queretaro-1803/zelaa-glorias-de-queretaro-1803.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/zelaa-glorias-de-queretaro-1803.pdf",
+      "size": 24233309,
+      "sha256": "538ec4e87a610787637f85b9fea96011834b88bed680fdf6252127c98ff62014"
     }
   ]
 }

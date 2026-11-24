@@ -83,6 +83,25 @@
       }
     },
     {
+      "recordClass": "major-work",
+      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
+      "title": "メキシコの教会・修道院誌",
+      "originalTitle": "Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez",
+      "author": "ルイス・アルファロ・イ・ピニャ",
+      "originalAuthor": "Luis Alfaro y Piña",
+      "originalPublication": "メキシコ、M・ビリャヌエバ印刷所、1863年。",
+      "year": 1863,
+      "sourceEdition": "Luis Alfaro y Piña, Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez. México: Tipografía de M. Villanueva, 1863.",
+      "sourceProvider": "ミシガン大学図書館所蔵、Googleデジタル化、Internet Archive公開。",
+      "rights": "原著はパブリックドメイン。公開画像のメタデータは米国での著作権状態を NOT_IN_COPYRIGHT と表示する。翻訳版に底本画像は転載していない。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/relaciondescrip00pigoog"
+      }
+    },
+    {
       "slug": "alva-confessionario-mayor-menor-1634",
       "recordClass": "major-work",
       "title": "ナワトル語大・小告解問答",
@@ -100,6 +119,25 @@
       "rights": "1634年刊の原著はパブリックドメインです。底本画像はジョン・カーター・ブラウン図書館がクリエイティブ・コモンズ表示4.0国際（CC BY 4.0）で公開しており、本版では Courtesy of the John Carter Brown Library と表示しています。",
       "publishedDate": "2026-08-22",
       "updatedDate": "2026-08-22"
+    },
+    {
+      "slug": "alzate-memoria-grana-cochinilla-1794",
+      "recordClass": "short-work",
+      "title": "グラナ、またの名をコチニールという虫についての覚書",
+      "originalTitle": "Memoria, en que se trata del insecto grana ó cochinilla, de su naturaleza y série de su vida, como tambien del método para propagarla y reducirla al estado en que forma uno de los ramos mas útiles de Comercio",
+      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
+      "originalAuthor": "José Antonio de Alzate y Ramírez",
+      "year": 1794,
+      "originalPublication": "メキシコ、『Gazeta de Literatura』第3巻第26–33号、1794年、199–259頁",
+      "sourceEdition": "José Antonio de Alzate y Ramírez, Memoria, en que se trata del insecto grana ó cochinilla, Gazeta de Literatura, tomo III, núms. 26–33, México, 1794, pp. 199–259（1777年執筆）。",
+      "sourceProvider": "米国国立医学図書館（National Library of Medicine）所蔵の手彩色本（2172035R）。Internet Archive配信。原刊235頁末の判読できない箇所はジョン・カーター・ブラウン図書館所蔵の同版別個体で補った。",
+      "rights": "1794年刊の原著本文・原図はパブリックドメイン。米国国立医学図書館は本コレクションの電子ファイルに著作権を主張せず、画像・テキストの配布に同館の許可は不要です。Courtesy of the National Library of Medicine. 利用方針：https://www.nlm.nih.gov/hmd/collections/books/digitized/americas/index.html",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/2172035R.nlm.nih.gov"
+      }
     },
     {
       "slug": "arce-libro-vida-proximo-evangelico-1762",
@@ -187,6 +225,25 @@
           "size": 232607,
           "sha256": "dc078eab36beacf3b49d32c08d9c83fa5b207a57d19a91e303a9cf5023bee054"
         }
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
+      "title": "オリサバ史試論",
+      "originalTitle": "Ensayo de una historia de Orizaba",
+      "author": "ホアキン・アロニス",
+      "originalAuthor": "Joaquín Arróniz",
+      "originalPublication": "オリサバ、J・B・アブルト印刷所、1867年。",
+      "year": 1867,
+      "sourceEdition": "Joaquín Arróniz (hijo), Ensayo de una historia de Orizaba. Orizaba: Imprenta de J. B. Aburto, 1867.",
+      "sourceProvider": "米国議会図書館所蔵（F1391.O6 A7、Internet Archive公開）。",
+      "rights": "原著の著作権保護期間は満了している。収録図版は米国議会図書館所蔵本（Library of Congress）。同館は当該資料をパブリックドメインと案内している（https://www.loc.gov/item/13014095/）。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/ensayodeunahisto00arro"
       }
     },
     {
@@ -511,6 +568,25 @@
       "rights": "1874年刊の原著本文・図版はパブリックドメインです。主底本はHathiTrustでPublic Domain〔pd〕／Full view、補助版はGoogle BooksでPublic domain／Full viewと表示されています。公開機関による別個のライセンス付与は確認していません。",
       "publishedDate": "2026-08-26",
       "updatedDate": "2026-08-26"
+    },
+    {
+      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
+      "title": "マリア・アナ・アゲダ・デ・サン・イグナシオ伝",
+      "originalTitle": "Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles",
+      "author": "ホセ・ベリード",
+      "originalAuthor": "José Bellido",
+      "originalPublication": "メキシコ市、ビブリオテカ・メヒカナ印刷所、1758年",
+      "year": 1758,
+      "sourceEdition": "José Bellido, Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles. México: Imprenta de la Bibliotheca Mexicana, 1758.",
+      "sourceProvider": "プエブラ自治大学ラフラグア歴史図書館（BUAP）；補完・対校：メキシコ国立図書館（IIB・UNAM）",
+      "rights": "原著本文はパブリックドメイン。BUAP公開画像はPublic Domain Mark 1.0。補完・対校に使用したIIB・UNAM公開画像はCC BY-NC-ND 4.0（画像の転載なし）。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorioinstitucional.buap.mx/items/ed0375a7-8b46-46fe-b975-e115bf5c90de/full"
+      }
     },
     {
       "slug": "belly-a-travers-amerique-centrale-1867",
@@ -1159,6 +1235,82 @@
       "updatedDate": "2026-07-26"
     },
     {
+      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第1巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1857年。全4巻の第1巻。",
+      "year": 1857,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome I. Paris, Arthus Bertrand, 1857.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio01bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第2巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第2巻。",
+      "year": 1858,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome II. Paris, Arthus Bertrand, 1858.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio02bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第3巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第3巻。",
+      "year": 1858,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome III. Paris, Arthus Bertrand, 1858.",
+      "sourceProvider": "Getty Research Institute／Internet Archive、附図：Bibliothèque nationale de France／Gallica",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。附図の画像はフランス国立図書館（BnF）所蔵、Gallica公開。出典： https://gallica.bnf.fr/ark:/12148/btv1b8491040c 。画像の再利用条件はGallicaの利用規定による。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio03bras"
+      }
+    },
+    {
+      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
+      "title": "メキシコおよび中央アメリカの文明諸国史 第4巻",
+      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
+      "author": "ブラッスール・ド・ブールブール",
+      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
+      "originalPublication": "パリ、アルテュス・ベルトラン、1859年。全4巻の第4巻。",
+      "year": 1859,
+      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome IV. Paris, Arthus Bertrand, 1859.",
+      "sourceProvider": "Getty Research Institute／Internet Archive",
+      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/histoiredesnatio04bras"
+      }
+    },
+    {
       "slug": "brasseur-rabinal-achi-1862",
       "recordClass": "major-work",
       "title": "キチェ語文法・語彙と『ラビナル・アチ』",
@@ -1748,6 +1900,44 @@
       }
     },
     {
+      "slug": "burgoa-geografica-descripcion-1674-vol-1",
+      "recordClass": "major-work",
+      "title": "オアハカの地理・教会史 第1巻",
+      "originalTitle": "Geográfica descripción, Vol. I",
+      "author": "フランシスコ・デ・ブルゴア",
+      "originalAuthor": "Francisco de Burgoa",
+      "year": 1674,
+      "originalPublication": "1674年、メキシコ市、フアン・ルイス刊。",
+      "sourceEdition": "Francisco de Burgoa, Geográfica descripción. México: Juan Ruiz, 1674. 第1巻。",
+      "sourceProvider": "フランシスコ・デ・ブルゴア図書館所蔵本をミゲル・デ・セルバンテス電子図書館が公開。 本文底本：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668",
+      "rights": "1674年原刊本文はパブリックドメイン。本文底本のデジタル画像は読解に使用し、転載していない。 両巻の銅版口絵はジョン・カーター・ブラウン図書館所蔵の原刊別個体から採録。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。綴じ目と周囲の余白のみを切り抜いた。出典：https://archive.org/details/geograficadescri12burg/page/n4/mode/1up",
+      "publishedDate": "2026-11-25",
+      "updatedDate": "2026-11-25",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668"
+      }
+    },
+    {
+      "slug": "burgoa-geografica-descripcion-1674-vol-2",
+      "recordClass": "major-work",
+      "title": "オアハカの地理・教会史 第2巻",
+      "originalTitle": "Geográfica descripción, Vol. II",
+      "author": "フランシスコ・デ・ブルゴア",
+      "originalAuthor": "Francisco de Burgoa",
+      "year": 1674,
+      "originalPublication": "1674年、メキシコ市、フアン・ルイス刊。",
+      "sourceEdition": "Francisco de Burgoa, Geográfica descripción. México: Juan Ruiz, 1674. 第2巻。",
+      "sourceProvider": "フランシスコ・デ・ブルゴア図書館所蔵本をミゲル・デ・セルバンテス電子図書館が公開。 本文底本：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686",
+      "rights": "1674年原刊本文はパブリックドメイン。本文底本のデジタル画像は読解に使用し、転載していない。 両巻の銅版口絵はジョン・カーター・ブラウン図書館所蔵の原刊別個体から採録。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。綴じ目と周囲の余白のみを切り抜いた。出典：https://archive.org/details/geograficadescri12burg/page/n4/mode/1up",
+      "publishedDate": "2026-11-25",
+      "updatedDate": "2026-11-25",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686"
+      }
+    },
+    {
       "slug": "bury-bishop-amongst-bananas-1911",
       "recordClass": "major-work",
       "title": "バナナの中の主教",
@@ -1786,6 +1976,82 @@
       }
     },
     {
+      "recordClass": "major-work",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ 第1巻",
+      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo I",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
+      "year": 1847,
+      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第1巻。",
+      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
+      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
+      "title": "新たなベルナル・ディアス・デル・カスティリョ 第2巻",
+      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo II",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
+      "year": 1847,
+      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第2巻。ハーバード本に欠ける原刊162–163頁を対校本で補い、対校本に欠ける234頁・巻末目次中間二面はハーバード本による。",
+      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
+      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
+      "title": "メキシコのアラメダの朝 第1巻",
+      "originalTitle": "Mañanas de la Alameda de México, tomo I",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1835年。",
+      "year": 1835,
+      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo I. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1835. 初版。",
+      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
+      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
+      "title": "メキシコのアラメダの朝 第2巻",
+      "originalTitle": "Mañanas de la Alameda de México, tomo II",
+      "author": "カルロス・マリア・デ・ブスタマンテ",
+      "originalAuthor": "Carlos María de Bustamante",
+      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1836年。",
+      "year": 1836,
+      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo II. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1836. 初版。",
+      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
+      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
+      }
+    },
+    {
       "slug": "byam-chiapas-1897",
       "recordClass": "major-work",
       "title": "メキシコ・チアパス州概説",
@@ -1805,6 +2071,82 @@
       "updatedDate": "2026-07-29"
     },
     {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
+      "title": "メキシコの紋章 第一巻",
+      "originalTitle": "Escudo de armas de Mexico, libro I",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第1巻（前付および本文1–96頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
+      "title": "メキシコの紋章 第二巻",
+      "originalTitle": "Escudo de armas de Mexico, libro II",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第2巻（本文97–203頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
+      "title": "メキシコの紋章 第三巻",
+      "originalTitle": "Escudo de armas de Mexico, libro III",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第3巻（本文204–394頁）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
+      "title": "メキシコの紋章 第四巻",
+      "originalTitle": "Escudo de armas de Mexico, libro IV",
+      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
+      "originalAuthor": "Cayetano de Cabrera y Quintero",
+      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
+      "year": 1746,
+      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第4巻（本文395–522頁および巻末索引）。",
+      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
+      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
+      }
+    },
+    {
       "slug": "cambre-guerra-tres-anos-1904",
       "title": "三年戦争",
       "originalTitle": "La guerra de tres años: apuntes para la historia de la Reforma",
@@ -1821,6 +2163,25 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://archive.org/details/laguerradetres00camb"
+      }
+    },
+    {
+      "slug": "cano-manche-y-peten-1696",
+      "recordClass": "document-collection",
+      "title": "マンチェとペテン",
+      "originalTitle": "Manche y Peten",
+      "author": "アグスティン・カノ",
+      "originalAuthor": "Agustín Cano",
+      "year": 1696,
+      "originalPublication": "グアテマラ、17世紀末の写本。扉・目録は1696年、報告本文は1697年を当年とする。",
+      "sourceEdition": "Agustín Cano, Manche y Peten. University of Pennsylvania Libraries, Ms. Coll. 700, Item 193。扉の年記は1696年。本文は1697年の出来事に及び、巻頭にC・ヘルマン・ベレントによる1877年の前置資料がある。",
+      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター所蔵、Berendt-Brinton Linguistic Collection。ペンシルヴェニア大学図書館とFAMSIの共同デジタル化。",
+      "rights": "カノおよびベレントの原文は著作権保護期間満了。FAMSIの写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を収録しない。画像の利用条件：https://www.famsi.org/research/copyright.htm",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.famsi.org/research/mltdp/item193/"
       }
     },
     {
@@ -2185,6 +2546,44 @@
       "updatedDate": "2026-07-31"
     },
     {
+      "recordClass": "major-work",
+      "slug": "clavijero-storia-della-california-tomo-1-1789",
+      "title": "カリフォルニア史 第1巻",
+      "originalTitle": "Storia della California, tomo I",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "year": 1789,
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo I. Venezia: Modesto Fenzo, 1789. イタリア語初版第1巻。前付、第一書・第二書、補遺および採用底本の正誤表。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "rights": "原著本文は保護期間満了。第1巻には原著の所蔵館デジタル画像を転載していない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/storiadellacalif00clav"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "clavijero-storia-della-california-tomo-2-1789",
+      "title": "カリフォルニア史 第2巻",
+      "originalTitle": "Storia della California, tomo II",
+      "author": "フランシスコ・ハビエル・クラビヘロ",
+      "originalAuthor": "Francesco Saverio Clavigero",
+      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
+      "year": 1789,
+      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo II. Venezia: Modesto Fenzo, 1789. イタリア語初版第2巻。ライムンド・タロースが1788年に製図、J・ザンベッリが彫版した原刊折込地図1点。原撮影全体と10点の部分拡大は同一地図の画像。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
+      "rights": "原著本文と原刊地図は保護期間満了。地図画像：Courtesy of the John Carter Brown Library. CC BY 4.0. 同館所蔵本の原撮影の全体と、同じ原撮影をトリミングした部分拡大。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/storiadellacalif00clav"
+      }
+    },
+    {
       "slug": "codex-perez-pmm9-1877",
       "recordClass": "major-work",
       "title": "コデックス・ペレス",
@@ -2354,6 +2753,25 @@
       "rights": "1771年原著本文はパブリックドメインです。掲載画像はPARESの再利用条件に基づき、スペイン文化省、インディアス総合文書館、請求記号およびPARES URLを表示して利用しています。画像自体に本版独自のCreative Commonsライセンスは設定していません。1958年版独自の序文・校訂・注・編集物は収録していません。",
       "publishedDate": "2026-08-10",
       "updatedDate": "2026-08-10"
+    },
+    {
+      "slug": "couto-dialogo-pintura-mexico-1889",
+      "recordClass": "major-work",
+      "title": "メキシコ絵画史対話",
+      "originalTitle": "Diálogo sobre la historia de la pintura en México",
+      "author": "ホセ・ベルナルド・コウト",
+      "originalAuthor": "José Bernardo Couto",
+      "year": 1889,
+      "originalPublication": "初刊1872年、メキシコ市。底本は1889年、メキシコ市、勧業省印刷所刊。",
+      "sourceEdition": "Bernardo Couto, Diálogo sobre la historia de la pintura en México. México: Oficina Tipográfica de la Secretaría de Fomento, 1889. 初刊は1872年。",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute）所蔵。Internet Archiveが電子化・公開。1872年初刊に基づくセルバンテス電子図書館の翻刻も照合に使用。",
+      "rights": "原著の著作権保護期間は満了。Internet Archive掲載の底本個体データに、個別のライセンス表示はない。日本語版に底本のスキャン画像は転載していない。初刊準拠の電子翻刻：https://www.cervantesvirtual.com/obra/dialogo-sobre-la-historia-de-la-pintura-en-mexico--0/ 。",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/dialogosobrelahi00cout"
+      }
     },
     {
       "slug": "couto-discurso-constitucion-iglesia-1857",
@@ -2574,6 +2992,25 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://archive.org/details/histoiredelac28acad"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "de-la-cruz-badiano-libellus-1552",
+      "title": "先住民の薬草の小冊子",
+      "originalTitle": "Libellus de medicinalibus Indorum herbis",
+      "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
+      "originalAuthor": "Martín de la Cruz (autor) / Juan Badiano (traductor al latín)",
+      "originalPublication": "メキシコ、トラテロルコのサンタ・クルス学院、1552年成立（写本）。",
+      "year": 1552,
+      "sourceEdition": "Martín de la Cruz, Libellus de medicinalibus Indorum herbis, Juan Badiano ラテン語訳、トラテロルコ、1552年。メキシコ国立人類学歴史図書館蔵（旧バチカン使徒図書館 Barb. lat. 241）。",
+      "sourceProvider": "メキシコ国立人類学歴史図書館（BNAH／INAH）所蔵。原写本を撮影した影印を読解に使用。図版は別系統の1939年ゲイツ版から採録。",
+      "rights": "1552年のラテン語原文はパブリックドメイン。巻末には、Wikimedia Commonsが米国で著作権更新なしのパブリックドメインと表示するゲイツ版（マヤ協会第23号、米国ボルティモア、1939年）の白黒植物図のみを抜粋・切り出して収録。図版の原撮影資料・撮影者は未詳。現代の原写本写真・色彩影印、現代刊本の訳文・解説・注は転載していない。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bnah.inah.gob.mx/publico/de_la_cruz_badiano/"
       }
     },
     {
@@ -3594,6 +4031,63 @@
       "rights": "原著本文は1890年に米国で公刊されたパブリックドメイン資料です。JSTOR Early Journal Contentの利用表示および現行利用規約は、同コンテンツの全部または一部を非商用目的で複製・使用・再配布でき、JSTORの出典表示を求めています。本版は非商用公開です。Courtesy of JSTOR。https://www.about.jstor.org/terms/ Science／AAASのDOIページは書誌確認だけに用い、AAASのPDF画像は転載していません。",
       "publishedDate": "2026-08-14",
       "updatedDate": "2026-08-14"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "florencia-estrella-norte-mexico-1688",
+      "title": "メキシコの北の星",
+      "originalTitle": "La estrella de el norte de Mexico",
+      "author": "フランシスコ・デ・フロレンシア",
+      "originalAuthor": "Francisco de Florencia",
+      "originalPublication": "メキシコ、エンペドラディリョ、ドニャ・マリア・デ・ベナビデス（フアン・デ・リベラの寡婦）、1688年。",
+      "year": 1688,
+      "sourceEdition": "Francisco de Florencia, La estrella de el norte de Mexico, México, en el Empedradillo, por Doña María de Benavides, viuda de Juan de Ribera, 1688（初版）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library、BA688 .F632e、06404）所蔵。Internet Archive 公開画像を使用。補読にはメキシコ国立図書館所蔵の同版を参照。",
+      "rights": "1688年刊の原文はパブリックドメイン。ジョン・カーター・ブラウン図書館が提供する底本の口絵1点は CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。Courtesy of the John Carter Brown Library. 原スキャンから口絵の範囲を切り出し、組版時に縮尺を調整した。補読に用いたメキシコ国立図書館本の画像は転載していない。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/laestrelladeelno00flor"
+      }
+    },
+    {
+      "slug": "florencia-oviedo-zodiaco-mariano-1755",
+      "recordClass": "major-work",
+      "title": "聖母の黄道帯",
+      "originalTitle": "Zodiaco Mariano",
+      "author": "フランシスコ・デ・フロレンシア／フアン・アントニオ・デ・オビエド",
+      "originalAuthor": "Francisco de Florencia / Juan Antonio de Oviedo",
+      "year": 1755,
+      "originalPublication": "1755年、メキシコ、王立サン・イルデフォンソ学院新印刷所。",
+      "sourceEdition": "Francisco de Florencia / Juan Antonio de Oviedo, Zodiaco Mariano. México: Nueva Imprenta del Real Colegio de San Ildefonso, 1755.",
+      "sourceProvider": "ミゲル・デ・セルバンテス電子図書館（Biblioteca Virtual Miguel de Cervantes）公開、2010年。底本の欠葉二面は、同年版別個体に由来する公開OCRで補った。",
+      "rights": "1755年刊の原著は著作権保護期間満了。ミゲル・デ・セルバンテス電子図書館は電子版の複製、頒布、公衆送信に関する権利を留保（利用規約第4.3.4項・第5節：https://www.cervantesvirtual.com/marco-legal/）。補完OCR掲載先は「All Rights Reserved」表示（https://es.scribd.com/document/716268288/Zodiaco-Mariano）。利用したのはいずれも原著文字情報のみ。電子版画像は転載していない。",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc5m6b4"
+      }
+    },
+    {
+      "slug": "florencia-provincia-nueva-espana-1694",
+      "recordClass": "major-work",
+      "title": "ヌエバ・エスパーニャ・イエズス会管区史",
+      "originalTitle": "Historia de la provincia de la Compañía de Jesús de Nueva España, dividida en ocho libros",
+      "author": "フランシスコ・デ・フロレンシア",
+      "originalAuthor": "Francisco de Florencia",
+      "year": 1694,
+      "originalPublication": "1694年、メキシコ、フアン・ホセ・ギリェナ・カラスコソ印行。",
+      "sourceEdition": "Francisco de Florencia, Historia de la provincia de la Compañía de Jesús de Nueva España, dividida en ocho libros. Tomo primero. México: Juan Joseph Guillena Carrascoso, 1694.",
+      "sourceProvider": "フランシスコ・デ・ブルゴア図書館（オアハカ）蔵、BFFB-002220。ミゲル・デ・セルバンテス仮想図書館の2024年公開デジタル版。",
+      "rights": "1694年初刊の原著は著作権保護期間満了（パブリックドメイン）。底本のデジタル画像は公開元の利用条件（https://www.cervantesvirtual.com/marco-legal/）を参照。日本語版にはデジタル画像を転載していない。",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232647"
+      }
     },
     {
       "slug": "foreign-office-mosquito-territory-1848",
@@ -4652,6 +5146,25 @@
       "updatedDate": "2026-08-15"
     },
     {
+      "recordClass": "major-work",
+      "slug": "garcia-leona-vicario-1910",
+      "title": "独立の志士レオナ・ビカリオ",
+      "originalTitle": "Leona Vicario: heroína insurgente",
+      "author": "ヘナロ・ガルシア",
+      "originalAuthor": "Genaro García",
+      "originalPublication": "メキシコ、国立考古学・歴史・民族学博物館、1910年。",
+      "year": 1910,
+      "sourceEdition": "Genaro García, Leona Vicario: heroína insurgente. México: Museo Nacional de Arqueología, Historia y Etnología, 1910. 初単行本。",
+      "sourceProvider": "ヌエボ・レオン自治大学 Capilla Alfonsina Biblioteca Universitaria、Fondo Fernando Díaz Ramírez 所蔵本（同大学デジタル公開）。1909年の先行掲載版は照合に用いた。",
+      "rights": "1910年刊の原著本文は著作権保護期間満了。ヌエボ・レオン自治大学の底本デジタル画像は利用条件未確認のため転載していない。原刊の図題と判読できた図中の文字を日本語で収録。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://cdigital.cabu.uanl.mx/ffdr/7/1020002389.html"
+      }
+    },
+    {
       "slug": "garcia-pelaez-memorias-guatemala-1851-1852",
       "recordClass": "major-work",
       "title": "グアテマラ旧王国史のための覚書",
@@ -4916,6 +5429,25 @@
       "rights": "1892年刊の原著本文はパブリックドメインです。著者ダリオ・ゴンサレスは1911年に没しています。Internet Archiveの当該項目には個別のCreative Commonsライセンスは表示されていません。本版は底本画像を閲覧・校合にのみ用い、画像そのものは転載していません。",
       "publishedDate": "2026-08-25",
       "updatedDate": "2026-08-25"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "granados-tardes-americanas-1778",
+      "title": "アメリカの午後",
+      "originalTitle": "Tardes americanas",
+      "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
+      "originalAuthor": "José Joaquín Granados y Gálvez",
+      "originalPublication": "メキシコ、フェリペ・デ・スニガ・イ・オンティベロスのヌエバ・インプレンタ・マトリテンセ、1778年（扉の刊年）。",
+      "year": 1778,
+      "sourceEdition": "José Joaquín Granados y Gálvez, Tardes americanas. México, en la nueva Imprenta Matritense de D. Felipe de Zúñiga y Ontiveros, calle de la Palma, 1778（初版・扉年）。ミゲル・デ・ガルベス宛献辞は1779年1月28日付。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（[R] B778 .G748t）、Internet Archive公開。原刊526–527頁はジョージ・ピーボディ図書館（ジョンズ・ホプキンズ大学シェリダン図書館）所蔵の同版別個体（https://archive.org/details/gpl_1727693）で補完。",
+      "rights": "1778年刊の原著本文はパブリックドメイン。収録した本文の暦輪と別葉3点はジョン・カーター・ブラウン図書館提供画像（CC BY 4.0、https://creativecommons.org/licenses/by/4.0/）。Courtesy of the John Carter Brown Library. 図柄を切り出し、縮尺を調整した。補完に用いた所蔵本の画像は使用していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/tardesamericanas00gran"
+      }
     },
     {
       "slug": "gregorio-lopez-testimonies-mss-7819",
@@ -5448,6 +5980,25 @@
       "updatedDate": "2026-08-29"
     },
     {
+      "slug": "laferriere-paris-guatemala-1877",
+      "recordClass": "major-work",
+      "title": "パリからグアテマラへ",
+      "originalTitle": "De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875",
+      "author": "ジョゼフ・ラフェリエール",
+      "originalAuthor": "Joseph Laferrière",
+      "year": 1877,
+      "originalPublication": "1877年、パリ、ガルニエ兄弟書店。",
+      "sourceEdition": "Joseph Laferrière, De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875. Paris : Garnier frères, 1877.",
+      "sourceProvider": "Getty Research Institute蔵（請求記号9924486970001551）。Internet Archiveが2018年に電子化した個体と、Wikimedia Commonsに再配布された同じ撮影個体を使用。",
+      "rights": "1877年刊の原著本文と図版は米国でパブリックドメイン。収録図版は、Wikimedia Commonsが米国でのパブリックドメインを明示する同じ撮影個体から採った。https://commons.wikimedia.org/wiki/File:De_Paris_%C3%A0_Guat%C3%A9mala-_notes_de_voyages_au_Centre-Am%C3%A9rique,_1866-1875;_(IA_deparisguatemala00lafe).pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/deparisguatemala00lafe"
+      }
+    },
+    {
       "slug": "larde-arqueologia-cuzcatleca-1924",
       "recordClass": "short-work",
       "title": "クスカトラン考古学",
@@ -5676,6 +6227,25 @@
       "updatedDate": "2026-08-30"
     },
     {
+      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+      "recordClass": "major-work",
+      "title": "ソコヌスコ史とメキシコ共和国への編入",
+      "originalTitle": "Noticia histórica de Soconusco, y su incorporación á la República Mexicana",
+      "author": "マヌエル・ララインサル",
+      "originalAuthor": "Manuel Larráinzar",
+      "year": 1843,
+      "originalPublication": "1843年、メキシコ市、J・M・ララ印刷所刊。",
+      "sourceEdition": "Manuel Larráinzar, Noticia histórica de Soconusco, y su incorporación á la República Mexicana. México: Imprenta de J. M. Lara, 1843.",
+      "sourceProvider": "底本はハーバード大学所蔵本をGoogleが電子化し、Internet Archiveで公開したデータ。底本（ハーバード大学）：https://archive.org/details/noticiahistrica00larrgoog 。同版照合本（ミシガン大学）：https://archive.org/details/noticiahistrica01larrgoog 。照合本は字句と頁付の確認にのみ使用。",
+      "rights": "1843年刊の原著は著作権保護期間満了。Internet Archiveの両個体の記録は米国で著作権保護外と表示する。日本語版に原刊画像の転載はない。",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiahistrica00larrgoog"
+      }
+    },
+    {
       "slug": "larrainzar-revolucion-guatemala-1873",
       "title": "グアテマラ革命",
       "originalTitle": "La revolución de Guatemala",
@@ -5692,6 +6262,25 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://archive.org/details/larevoluciondeg00herngoog"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "lazcano-juan-antonio-de-oviedo-1760",
+      "title": "フアン・アントニオ・デ・オビエド神父伝",
+      "originalTitle": "Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús",
+      "author": "フランシスコ・ハビエル・ラスカノ",
+      "originalAuthor": "Francisco Javier Lazcano",
+      "originalPublication": "メキシコ、王立最古のサン・イルデフォンソ学院印刷所、1760年。",
+      "year": 1760,
+      "sourceEdition": "Francisco Javier Lazcano, Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús. México: Imprenta del Real y Más Antiguo Colegio de San Ildefonso, 1760.",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（BA760 .L431V、Internet Archive公開）。",
+      "rights": "原著の著作権保護期間は満了している。掲載画像はジョン・カーター・ブラウン図書館提供（Courtesy of the John Carter Brown Library）、CC BY 4.0。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidaexemplaryvir00lazc"
       }
     },
     {
@@ -5733,6 +6322,25 @@
       "updatedDate": "2026-08-10"
     },
     {
+      "slug": "leon-y-gama-dos-piedras-1792",
+      "recordClass": "major-work",
+      "title": "二つの石の歴史的・年代学的記述",
+      "originalTitle": "Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790",
+      "author": "アントニオ・デ・レオン・イ・ガマ",
+      "originalAuthor": "Antonio de León y Gama",
+      "year": 1792,
+      "originalPublication": "メキシコ市、フェリペ・デ・スニガ・イ・オンティベロス印刷所、1792年。",
+      "sourceEdition": "Antonio de León y Gama, Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790. México: Imprenta de don Felipe de Zúñiga y Ontiveros, 1792. 初版。1832年増補版は使用せず。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵、請求記号 B792 .L579d。Internet Archive閲覧版：https://archive.org/details/descripcionhistr00leny",
+      "rights": "1792年刊の原著本文はパブリックドメイン。掲載の原刊折込図版3枚はジョン・カーター・ブラウン図書館所蔵本（B792 .L579d）による。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://americana.jcblibrary.org/search/object/jcbcap-991004331519706966/"
+      }
+    },
+    {
       "slug": "leonard-don-carlos-de-siguenza-y-gongora-1929",
       "recordClass": "major-work",
       "title": "ドン・カルロス・デ・シグエンサ・イ・ゴンゴラ",
@@ -5750,6 +6358,25 @@
       "rights": "米国で1929年に初出した原著は2025年1月1日から米国のパブリックドメインに属します。日本では短期保護の相互主義および戦前の日米間で翻訳が相互に自由とされた取扱いに基づき翻訳公開します。シグエンサ作メキシコ盆地図の原図および1929年掲載版も保護期間を満了しています。",
       "publishedDate": "2026-08-25",
       "updatedDate": "2026-08-25"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "lizardi-la-quijotita-y-su-prima-1897",
+      "title": "キホティータとそのいとこ",
+      "originalTitle": "La educación de las mujeres, ó La Quijotita y su prima",
+      "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
+      "originalAuthor": "José Joaquín Fernández de Lizardi",
+      "originalPublication": "メキシコ、J・バリェスカ商会後継社、1897年（バルセロナ、ホセ・エスパサ印刷所、1898年6月印刷完了）。",
+      "year": 1897,
+      "sourceEdition": "José Joaquín Fernández de Lizardi, La educación de las mujeres, ó La Quijotita y su prima. México: J. Ballescá y Compañía, Sucesor, 1897（標題紙）。Barcelona: José Espasa, 1898年6月（奥付）。",
+      "sourceProvider": "イリノイ大学アーバナ・シャンペーン校提供（Internet Archive公開）。",
+      "rights": "底本の本文と本訳に収録した別丁図版は、著作権の保護期間が満了している。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/3674623"
+      }
     },
     {
       "slug": "lobo-pedro-betancur-1667",
@@ -5945,6 +6572,253 @@
       "rights": "原刊本文はパブリックドメインです。Internet Archiveの当該項目は「Possible copyright status: NOT_IN_COPYRIGHT」と表示しています。公開画像には当該項目と提供館の条件が適用されます。",
       "publishedDate": "2026-07-24",
       "updatedDate": "2026-07-26"
+    },
+    {
+      "slug": "maria-ana-agueda-devociones-varias-1791",
+      "recordClass": "major-work",
+      "title": "諸信心集",
+      "originalTitle": "Devociones varias",
+      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
+      "originalAuthor": "María Ana Águeda de San Ignacio",
+      "year": 1791,
+      "originalPublication": "プエブラ、王立パラフォクス神学校印刷所、1791年再版",
+      "sourceEdition": "María Ana Águeda de San Ignacio, Devociones varias. Puebla: Oficina del Real Seminario Palafoxiano, 1791.",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute, Los Angeles、請求番号366097）所蔵・提供。インターネット・アーカイブ公開。",
+      "rights": "1791年刊本の本文と銅版画は日本で保護期間満了。所蔵本デジタル画像の公開目録等に追加の利用制限表示なし。ゲティによる当該画像のCC0指定を意味しない。",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/devocionesvarias00mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第1部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 1",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第1部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio01mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第2部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 2",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第2部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio02mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第3部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 3",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第3部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio03mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第4部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 4",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第4部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio04mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第5部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 5",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第5部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio05mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第6部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 6",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第6部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio06mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第7部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 7",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第7部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio07mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第8部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 8",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第8部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio08mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第9部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 9",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第9部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio09mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第10部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 10",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第10部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio10mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第11部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 11",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第11部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio11mara"
+      }
+    },
+    {
+      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
+      "recordClass": "major-work",
+      "title": "霊的自叙伝 第12部",
+      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 12",
+      "author": "マリア・デ・サン・ホセ",
+      "originalAuthor": "Madre María de San José",
+      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
+      "year": "刊年不詳",
+      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第12部。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
+      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/spiritualautobio12mara"
+      }
     },
     {
       "slug": "marimon-lacandones-1695",
@@ -6213,6 +7087,25 @@
       }
     },
     {
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "recordClass": "major-work",
+      "title": "コスタリカ共和国概説・歴史覚書",
+      "originalTitle": "Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos",
+      "author": "フェリペ・モリーナ",
+      "originalAuthor": "Felipe Molina",
+      "year": 1851,
+      "originalPublication": "1851年、ニューヨーク、S・W・ベネディクト印刷所刊。",
+      "sourceEdition": "Felipe Molina, Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos. Nueva York: Imprenta de S. W. Benedict, 1851.",
+      "sourceProvider": "本文底本（ミシガン大学蔵本）：https://archive.org/details/bosquejodelarep01moligoog 。原刊4・5頁の補完（スタンフォード大学蔵の同版）：https://archive.org/details/bosquejodelarep00moligoog 。両本はGoogle撮影・Internet Archive公開。書誌照合（スペイン国立図書館蔵本、セルバンテス仮想図書館）：https://www.cervantesvirtual.com/portales/portal_nacional_costa_rica/obra/bosquejo-de-la-republica-de-costa-rica-seguido-de-apuntamientos-para-su-historia-con-varios-mapas-vistas-y-retratos-931977/ 。図版底本（英国図書館蔵の同版、10480.d.6）：https://commons.wikimedia.org/wiki/Category:Bosquejo_de_la_republica_de_Costa_Rica,_seguido_de_apuntamientos_par_su_historia._(1851)_by_Felipe_Molina 。",
+      "rights": "1851年刊の原著は著作権保護期間満了。Google撮影の本文画像は転載していない。原刊図版14点は英国図書館蔵本から採り、Wikimedia Commons公開の12点、英国図書館のFlickr Commons公開の2点を収録。個別の出典と権利表示（Public Domain Mark 1.0または「既知の著作権制限なし」）は前文に記載。",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bosquejodelarep01moligoog"
+      }
+    },
+    {
       "slug": "molina-costa-rica-new-granada-1853",
       "recordClass": "major-work",
       "title": "コスタリカとヌエバ・グラナダ",
@@ -6439,6 +7332,25 @@
       "rights": "原刊本文はパブリックドメインです。Internet Archiveの当該項目は「Biodiversity Heritage Library: Public domain」と表示しています。公開画像には当該項目と提供館の条件が適用されます。",
       "publishedDate": "2026-07-29",
       "updatedDate": "2026-07-29"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "mota-padilla-conquista-nueva-galicia-1870",
+      "title": "ヌエバ・ガリシア征服史",
+      "originalTitle": "Historia de la conquista de la provincia de la Nueva-Galicia",
+      "author": "マティアス・デ・ラ・モタ・パディリャ",
+      "originalAuthor": "Matías de la Mota Padilla",
+      "originalPublication": "メキシコ、メキシコ地理統計学会刊、政府印刷所（ホセ・マリア・サンドバル担当）。扉は1870年、実刊は1871年2月～1872年6月。",
+      "year": 1870,
+      "sourceEdition": "Matías de la Mota Padilla, Historia de la conquista de la provincia de la Nueva-Galicia, escrita por el Lic. D. Matías de la Mota Padilla en 1742, publicada por la Sociedad Mexicana de Geografía y Estadística. México: Imprenta del Gobierno, en Palacio, á cargo de José María Sandoval, 1870（扉の刊年）。巻末刊記による実刊は1871年2月–1872年6月、学会会報第2期第2～4巻の17分冊。1855–56年の『エル・パイス』連載と1856年版が先行。",
+      "sourceProvider": "トロント大学ロバーツ図書館所蔵（AGT-7162）、Internet Archive公開。底本にない著者原扉は、ミゲル・デ・セルバンテス仮想図書館の同版別個体（https://www.cervantesvirtual.com/nd/ark:/59851/bmcqn870）で文字を補った。",
+      "rights": "原著本文および同版の前後付は著作権保護期間満了。トロント大学蔵本から紋章4点を3葉に切り出して収録。同個体のウィキメディア・コモンズ掲載画像にはパブリック・ドメイン・マーク1.0（https://creativecommons.org/publicdomain/mark/1.0/）。セルバンテス仮想図書館の補完個体の画像は転載していない。挿入表の自筆複製は、確認した個体には図葉がなく未収録。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelaconq00mota"
+      }
     },
     {
       "slug": "munoz-camargo-historia-tlaxcala-ms210",
@@ -7026,6 +7938,82 @@
       "updatedDate": "2026-07-29"
     },
     {
+      "slug": "patrignani-menologio-volume-i-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第1巻（1月・2月・3月）",
+      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo primo, che contiene Gennajo, Febbrajo, e Marzo.",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第1巻。",
+      "year": 1730,
+      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo primo, che contiene Gennajo, Febbrajo, e Marzo. In Venezia: presso Niccolò Pezzana, 1730. 1月312頁、2月256頁、3月224頁。",
+      "sourceProvider": "ナポリ国立図書館所蔵本、Google Books経由Internet Archive公開。欠頁補充：ボストン・カレッジ所蔵同年版。",
+      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-11-14",
+      "updatedDate": "2026-11-14",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_v8tdoPVsIjIC"
+      }
+    },
+    {
+      "slug": "patrignani-menologio-volume-ii-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第2巻（4月・5月・6月）",
+      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno.",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第2巻。",
+      "year": 1730,
+      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno. In Venezia: presso Niccolò Pezzana, 1730. 4月292頁、5月220頁、6月220頁。",
+      "sourceProvider": "ナポリ国立図書館所蔵本。Google Books経由でInternet Archiveが公開。6月213頁の欠損語句はボストン・カレッジ所蔵の同年版による。",
+      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-11-16",
+      "updatedDate": "2026-11-16",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_X3WpCf8bSfoC"
+      }
+    },
+    {
+      "slug": "patrignani-menologio-volume-iii-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第3巻（7月・8月・9月）",
+      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo terzo, che contiene Luglio, Agosto, e Settembre.",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第3巻。",
+      "year": 1730,
+      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo terzo, che contiene Luglio, Agosto, e Settembre. In Venezia: presso Niccolò Pezzana, 1730. 7月256頁、8月256頁、9月260頁。",
+      "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。7月160頁はチェコ国立図書館所蔵本、7月232頁はボストン・カレッジ所蔵本（印字132頁）で補った。",
+      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-11-18",
+      "updatedDate": "2026-11-18",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_ad3szyKTjowC"
+      }
+    },
+    {
+      "slug": "patrignani-menologio-volume-iv-1730",
+      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第4巻（10月・11月・12月）",
+      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre.",
+      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
+      "originalAuthor": "Giuseppe Antonio Patrignani",
+      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第4巻。",
+      "year": 1730,
+      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre. In Venezia: presso Niccolò Pezzana, 1730. 10月244頁、11月216頁、12月260頁、事項索引i–lxxiv頁、人名索引、巻末聖書引用。",
+      "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。ボストン・カレッジ所蔵本とプロスペロ・イントルチェッタ財団公開本を欠損箇所の補充・照合に用いた。",
+      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
+      "publishedDate": "2026-11-18",
+      "updatedDate": "2026-11-18",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_YmE6Y2MxURUC"
+      }
+    },
+    {
       "slug": "payno-mexico-financial-questions-1862",
       "title": "メキシコとイギリス・スペイン・フランスとの財政問題",
       "originalTitle": "México y sus cuestiones financieras con la Inglaterra, la España y la Francia",
@@ -7042,6 +8030,25 @@
       "sourceAccess": {
         "status": "online",
         "url": "http://cdigital.dgb.uanl.mx/la/1080013505/1080013505.html"
+      }
+    },
+    {
+      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
+      "recordClass": "major-work",
+      "title": "ユカタン司教区の偶像礼拝者に対する報告書",
+      "originalTitle": "Informe contra idolorum cultores del obispado de Yucatan",
+      "author": "ペドロ・サンチェス・デ・アギラル",
+      "originalAuthor": "Pedro Sánchez de Aguilar",
+      "year": 1639,
+      "originalPublication": "マドリード、フアン・ゴンサレス未亡人刊、1639年。",
+      "sourceEdition": "Pedro Sánchez de Aguilar, Informe contra idolorum cultores del obispado de Yucatan. Madrid: viuda de Juan González, 1639 (primera edición).",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵の初版本（BA639 S311i、受入番号0736）。Internet Archive配信。",
+      "rights": "1639年刊の原著本文はパブリックドメイン。John Carter Brown Libraryが公開する底本画像の利用条件はCC BY 4.0。原刊の画像は掲載していない。 所蔵館の利用条件：https://jcblibrary.org/permissions/ ／ https://creativecommons.org/licenses/by/4.0/ 。底本PDF：https://archive.org/download/informecontraido00snch/informecontraido00snch.pdf",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/informecontraido00snch"
       }
     },
     {
@@ -8014,6 +9021,82 @@
       "updatedDate": "2026-08-30"
     },
     {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
+      "title": "メキシコ先住民諸語の記述と比較 第1巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1874,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I. México: Imprenta de Isidoro Epstein, 1874. 第二版、第1巻（本文426頁まで、第1–15章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti00estagoog）で照合。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv01pime"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
+      "title": "メキシコ先住民諸語の記述と比較 第2巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1875,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II. México: Imprenta de Isidoro Epstein, 1875. 第二版、第2巻（本文472頁まで、第16–37章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti01estagoog）で照合。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv02pime"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
+      "title": "メキシコ先住民諸語の記述と比較 第3巻",
+      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
+      "year": 1875,
+      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III. México: Imprenta de Isidoro Epstein, 1875. 第二版、第3巻（本文570頁まで、第38–58章）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti03pimegoog）で照合。 底本の第6・7頁は、ハーバード大学図書館所蔵の同版（https://archive.org/details/cuadrodescripti03pimegoog）で補った。",
+      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/cuadrodescriptiv03pime"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "pimentel-memoria-situacion-indigena-1864",
+      "title": "メキシコ先住民の現状をもたらした原因とその改善策に関する論考",
+      "originalTitle": "Memoria sobre las causas que han originado la situación actual de la raza indígena de México, y medios de remediarla",
+      "author": "フランシスコ・ピメンテル",
+      "originalAuthor": "Francisco Pimentel",
+      "originalPublication": "メキシコ、アンドラデ・イ・エスカランテ印刷所、ティブルシオ通り19番地、1864年。皇帝マクシミリアノ一世宛の献辞は同年7月付。",
+      "year": 1864,
+      "sourceEdition": "Francisco Pimentel, Memoria sobre las causas que han originado la situación actual de la raza indígena de México, y medios de remediarla. México: Imprenta de Andrade y Escalante, calle de Tiburcio núm. 19, 1864（原刊）。前付8面、本文9–241頁、後付4面（白面を含む）。",
+      "sourceProvider": "オックスフォード大学ボドリアン図書館所蔵（233. e. 214）、Google電子化、Internet Archive公開。同年同版のハーバード大学所蔵本（https://archive.org/details/memoriasobrelas01pimegoog）で、主底本の綴じ際や裁断で判読しにくい文字・原注を照合した。",
+      "rights": "1864年刊の原著本文および原刊の前後付は著作権保護期間満了。底本・照合本ともGoogleが電子化し、Internet Archiveのメタデータは米国で「NOT_IN_COPYRIGHT」と表示する。両電子資料に個別のCCライセンス表示はない。Googleのスキャン冒頭には非商用・個人用途等に関する利用案内があるが、これは1864年刊の原著本文に新たな著作権が生じたことを示すものではない。底本・照合本の画像および電子化時の付加物は転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/memoriasobrelas00pimegoog"
+      }
+    },
+    {
       "slug": "pineda-chiapas-soconusco-1845",
       "recordClass": "major-work",
       "title": "チアパスおよびソコヌスコ県地理誌",
@@ -8183,6 +9266,25 @@
       "rights": "1895年刊の原著本文は刊行年により米国でパブリックドメインです。Google Books／Google Play Booksの当該公開頁は本巻を無料取得、DRMフリー、エクスポート可能と表示しますが、Creative Commonsその他のオープンライセンスは表示していません。本版は米国外の著作権状態について判断しません。半扉・標題紙画像は、底本に収録された1895年原刊頁の機械的複製を使用しています。",
       "publishedDate": "2026-08-31",
       "updatedDate": "2026-08-31"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
+      "title": "メキシコの廃止修道院",
+      "originalTitle": "Los conventos suprimidos en Méjico",
+      "author": "マヌエル・ラミレス・アパリシオ",
+      "originalAuthor": "Manuel Ramírez Aparicio",
+      "originalPublication": "メキシコ、J・M・アギラル商会印刷所・書肆、1861年。",
+      "year": 1861,
+      "sourceEdition": "Manuel Ramírez Aparicio, Los conventos suprimidos en Méjico: estudios biográficos, históricos y arqueológicos. Méjico: Imprenta y Librería de J. M. Aguilar y Cía., 1861. 初版、全1冊。活字扉は1861年、同じ個体の彩色石版扉は1862年銘。",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute、書誌番号9921747760001551）所蔵本。Internet Archive公開（ARK: ark:/13960/t3vt5m24t）。",
+      "rights": "1861年刊の原著本文はパブリックドメイン。収録図版33点はゲティ研究所所蔵本の忠実複製のみ。Wikimedia Commonsの同一個体のファイルはPublic domain、HathiTrustの同一個体はpd／Full viewと表示。Getty独自のCC0指定を意味しない。他機関所蔵本の画像は転載していない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/losconventossupr00rami"
+      }
     },
     {
       "slug": "rau-palenque-tablet-1879",
@@ -8508,6 +9610,25 @@
       "updatedDate": "2026-08-21"
     },
     {
+      "slug": "romero-michoacan-diocesan-history-1862",
+      "recordClass": "major-work",
+      "title": "ミチョアカン司教区の歴史と統計のための資料",
+      "originalTitle": "Noticias para formar la historia y la estadística del obispado de Michoacán",
+      "author": "ホセ・グアダルーペ・ロメロ",
+      "originalAuthor": "José Guadalupe Romero",
+      "year": 1862,
+      "originalPublication": "メキシコ市、ビセンテ・ガルシア・トレス印刷所、1862年。",
+      "sourceEdition": "José Guadalupe Romero, Noticias para formar la historia y la estadística del obispado de Michoacán, presentadas a la Sociedad Mexicana de Geografía y Estadística en 1860. México: Imprenta de Vicente García Torres, 1862（折込地図は1863年作製）。",
+      "sourceProvider": "米国議会図書館所蔵（LCCN 02007371、Internet Archive公開）。ヌエボ・レオン自治大学所蔵本とハーバード大学所蔵本を照合。 所蔵目録：https://www.loc.gov/item/02007371/",
+      "rights": "原著および1863年の原図は米国でパブリックドメイン。司教区図・ミチョアカン州図は、米国議会図書館所蔵本の公開画像（同館が認識する著作権上の制限なし）。グアナフアト州図はヌエボ・レオン自治大学所蔵本の全開図（個別のライセンス表示は確認できず）。画像出典：司教区図 https://archive.org/details/noticiasparaform00rome/page/n8/mode/1up 、ミチョアカン州図 https://archive.org/details/noticiasparaform00rome/page/n165/mode/1up 、グアナフアト州図 https://cdigital.cabu.uanl.mx/ffdr/1/1020000296/1020000296_024.pdf#page=5 。",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiasparaform00rome"
+      }
+    },
+    {
       "slug": "roys-chilam-balam-chumayel-1933",
       "recordClass": "major-work",
       "title": "チュマイェルのチラム・バラムの書",
@@ -8755,6 +9876,44 @@
       "updatedDate": "2026-08-11"
     },
     {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
+      "recordClass": "major-work",
+      "title": "中央アメリカ自由諸国旅行記 第1巻",
+      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. I",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "year": 1857,
+      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
+      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第1巻。",
+      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta01sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
+      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した旅行経路図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta01sche%29.pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/travelsinfreesta01sche"
+      }
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
+      "recordClass": "major-work",
+      "title": "中央アメリカ自由諸国旅行記 第2巻",
+      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. II",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "year": 1857,
+      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
+      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第2巻。",
+      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta02sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
+      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した両洋間運河候補四案の断面図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta02sche%29.pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/travelsinfreesta02sche"
+      }
+    },
+    {
       "slug": "seitz-parkman-squier-letters-1911",
       "recordClass": "major-work",
       "title": "フランシス・パークマンからE・G・スクワイアへの書簡",
@@ -8943,6 +10102,63 @@
       "rights": "1836年原刊本文は米国・日本ともに著作権保護期間を満了しています。デジタル画像には公開元および所蔵館の利用条件が適用される場合があります。",
       "publishedDate": "2026-08-01",
       "updatedDate": "2026-08-01"
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
+      "title": "インディアス政策論 第1冊",
+      "originalTitle": "Política indiana（第I冊）",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
+      "year": 1648,
+      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第1冊。",
+      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
+      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A052260028"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
+      "title": "インディアス政策論 第2冊",
+      "originalTitle": "Política indiana（第II冊）",
+      "author": "フアン・デ・ソロルサノ・ペレイラ",
+      "originalAuthor": "Juan de Solórzano Pereira",
+      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
+      "year": 1648,
+      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第2冊。",
+      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
+      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
+      "publishedDate": "2026-11-20",
+      "updatedDate": "2026-11-20",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/A052260029"
+      }
+    },
+    {
+      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
+      "title": "著名メキシコ人伝",
+      "originalTitle": "Biografías de mexicanos distinguidos",
+      "author": "フランシスコ・ソサ",
+      "originalAuthor": "Francisco Sosa",
+      "originalPublication": "メキシコ市、勧業省印刷局、1884年。",
+      "year": 1884,
+      "sourceEdition": "Francisco Sosa, Biografías de mexicanos distinguidos. México: Oficina Tipográfica de la Secretaría de Fomento, 1884.",
+      "sourceProvider": "フロリダ大学ジョージ・A・スマザーズ図書館所蔵・提供。Internet Archive公開（biografasdemexic00sosa）。",
+      "rights": "1884年刊の原著本文は日本で著作権の保護期間を満了しています。Internet Archiveの当該資料の公開記録には、デジタル画像に対する個別の利用許諾表示がありません。日本語版には蔵書票・蔵書印・装飾罫の画像を収録していません。公開機関の権利案内：https://help.archive.org/help/rights/ ／ 所蔵機関の複製案内：https://sasc.uflib.ufl.edu/resources-policies/digital-reproductions/",
+      "publishedDate": "2026-11-19",
+      "updatedDate": "2026-11-19",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/biografasdemexic00sosa"
+      }
     },
     {
       "slug": "sosa-el-episcopado-mexicano-1877-1879",
@@ -9898,6 +11114,120 @@
       }
     },
     {
+      "recordClass": "major-work",
+      "slug": "velasco-exaltacion-divina-misericordia-1810",
+      "title": "神の慈悲の称揚",
+      "originalTitle": "Exaltación de la divina misericordia en la milagrosa renovación de la soberana imágen de Cristo Señor Nuestro crucificado, que se venera en la iglesia del convento de Señor San Josef de religiosas Carmelitas descalzas de la antigua fundación de esta ciudad de México",
+      "author": "アロンソ・アルベルト・デ・ベラスコ",
+      "originalAuthor": "Alonso Alberto de Velasco",
+      "originalPublication": "メキシコ、エスピリトゥ・サント通り、ドン・マリアノ・デ・スニガ・イ・オンティベロス印刷所、1810年再版。初版はメキシコのマリア・デ・ベナビデスから1699年に刊行。",
+      "year": 1810,
+      "sourceEdition": "Alonso Alberto de Velasco（標題紙では Alfonso Alberto de Velasco）, Exaltación de la divina misericordia en la milagrosa renovación de la soberana imágen de Cristo Señor Nuestro crucificado, que se venera en la iglesia del convento de Señor San Josef de religiosas Carmelitas descalzas de la antigua fundación de esta ciudad de México. México: Reimpresa en la oficina de Don Mariano de Zúñiga y Ontiveros, calle del Espíritu Santo, 1810. 無番号の前付16面、本文1–112頁、巻末目次2面。本文には原注と信仰上の宣言を含む。",
+      "sourceProvider": "主底本はゲティ研究所（Getty Research Institute）所蔵本（請求記号294921）。同研究所が電子化し、Internet Archiveで公開。同年同版のトロント大学トーマス・フィッシャー稀覯本図書館所蔵本（B-14 00691、https://archive.org/details/exaltacindeladiv00vela）を照合に用いた。照合本はトロント大学の資金でInternet Archiveが2023年に電子化・公開したもの。主底本にない銅版画の銘文のみ、照合本から補った。",
+      "rights": "1810年版の原著本文は著作権保護期間満了。ゲティ研究所所蔵の主底本について、Internet Archiveの書誌メタデータの著作権状態欄（possible-copyright-status）には「NOT_IN_COPYRIGHT」とある。この表示は電子画像へのライセンス付与ではなく、個別のクリエイティブ・コモンズ（CC）ライセンス表示はない。トロント大学所蔵の照合本は個別の著作権状態・CCライセンスとも表示されていない。これらの表示は原著本文の権利状態とは区別される。両個体の画像は、照合本にある銅版画を含め転載していない。",
+      "publishedDate": "2026-11-22",
+      "updatedDate": "2026-11-22",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/gri_000033125008506681"
+      }
+    },
+    {
+      "recordClass": "major-work",
+      "slug": "venegas-juan-bautista-zappa-1754",
+      "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
+      "originalTitle": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús",
+      "author": "ミゲル・ベネガス",
+      "originalAuthor": "Miguel Venegas",
+      "originalPublication": "バルセロナ、パブロ・ナダル、1754年。",
+      "year": 1754,
+      "sourceEdition": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús. Barcelona: Pablo Nadal, 1754. ミゲル・ベネガス原著、同会の別の神父による編纂。",
+      "sourceProvider": "Biblioteca Americanista de Sevilla 所蔵本。スペイン国立研究評議会（CSIC）の Simurg でデジタル公開。",
+      "rights": "1754年刊の原著本文はパブリックドメイン。CSICによるデジタル複製は CC BY-NC-SA 4.0。収録の巻頭肖像も同条件で、Biblioteca Americanista de Sevilla（所蔵）・CSIC（公開）を明記し、原画像の余白のみを切り出した。",
+      "publishedDate": "2026-11-21",
+      "updatedDate": "2026-11-21",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://simurg.csic.es/view/1722441"
+      }
+    },
+    {
+      "slug": "venegas-noticia-california-volume-1-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第1巻",
+      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第1巻。",
+      "year": 1757,
+      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 1. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
+      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
+      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
+      "publishedDate": "2026-11-15",
+      "updatedDate": "2026-11-15",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiadelacalif01vene_0"
+      }
+    },
+    {
+      "slug": "venegas-noticia-california-volume-2-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第2巻",
+      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第2巻。",
+      "year": 1757,
+      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 2. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
+      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
+      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
+      "publishedDate": "2026-11-15",
+      "updatedDate": "2026-11-15",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiadelacalif02vene_0"
+      }
+    },
+    {
+      "slug": "venegas-noticia-california-volume-3-1757",
+      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第3巻",
+      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
+      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
+      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
+      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第3巻。",
+      "year": 1757,
+      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 3. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
+      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
+      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
+      "publishedDate": "2026-11-15",
+      "updatedDate": "2026-11-15",
+      "recordClass": "major-work",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/noticiadelacalif03vene_0"
+      }
+    },
+    {
+      "slug": "viana-relacion-de-vera-paz-1574",
+      "recordClass": "document-collection",
+      "title": "ベラパス地方報告",
+      "originalTitle": "Relación de la provincia i tierra de la Vera Paz",
+      "author": "フランシスコ・デ・ビアナ／ルカス・ガリェゴ／ギリェム・カデナ",
+      "originalAuthor": "Francisco de Viana / Lucas Gallego / Guillem Cadena",
+      "year": 1574,
+      "originalPublication": "1574年12月7日、グアテマラ、コバンのサント・ドミンゴ修道院で署名された報告。底本は1872年のベレント写本。",
+      "sourceEdition": "Francisco de Viana, Lucas Gallego y Guillem Cadena, Relación de la provincia i tierra de la Vera Paz（1574年12月7日署名）。University of Pennsylvania Libraries, Ms. Coll. 700, Item 212（1872年のC・ヘルマン・ベレントによる転写。1857年のバッキンガム・スミスの写しに由来）。1878年の転写地図は別資料。",
+      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター、Berendt-Brinton Linguistic Collection。所蔵目録：https://colenda.library.upenn.edu/catalog/81431-p3599zb5j。底本画像はFAMSI掲載。",
+      "rights": "ペンシルヴェニア大学図書館の所蔵資料の権利表示は「米国内で著作権なし」（NoC-US 1.0、https://rightsstatements.org/vocab/NoC-US/1.0/）。FAMSIが掲載する写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を転載しない。FAMSI画像利用条件：https://www.famsi.org/research/copyright.htm",
+      "publishedDate": "2026-11-23",
+      "updatedDate": "2026-11-23",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.famsi.org/research/mltdp/item212/"
+      }
+    },
+    {
       "slug": "victor-miguel-diaz-la-romantica-ciudad-colonial-1927",
       "title": "詩情あふれる植民都市",
       "originalTitle": "La romántica ciudad colonial: guía para conocer los monumentos históricos de la Antigua Guatemala",
@@ -10067,6 +11397,25 @@
       "rights": "1860年刊の原著本文・原刊図版はパブリックドメインです。Brandeis University Libraries所蔵本はInternet Archiveから公開されています。当該Internet Archive項目に個別のCreative Commons等のライセンス表示はなく、利用には同館の利用規約が適用されます。Project Gutenberg eBook no. 76898は米国でパブリックドメインとして公開されています。",
       "publishedDate": "2026-09-02",
       "updatedDate": "2026-09-02"
+    },
+    {
+      "slug": "wells-explorations-and-adventures-in-honduras-1857",
+      "recordClass": "major-work",
+      "title": "ホンジュラス探検と冒険",
+      "originalTitle": "Explorations and Adventures in Honduras",
+      "author": "ウィリアム・V・ウェルズ",
+      "originalAuthor": "William V. Wells",
+      "year": 1857,
+      "originalPublication": "1857年、ニューヨーク、ハーパー・アンド・ブラザーズ刊。",
+      "sourceEdition": "William V. Wells, Explorations and Adventures in Honduras: Comprising Sketches of Travel in the Gold Regions of Olancho, and a Review of the History and General Resources of Central America. With Original Maps, and Numerous Illustrations. New York: Harper & Brothers, 1857.",
+      "sourceProvider": "本文・口絵・挿絵・本文中の地図等：米国議会図書館所蔵本（LCCN 03020914）、Internet Archive公開画像。巻頭のホンジュラス東部折図のみオーバーン大学図書館所蔵の同版別個体（https://archive.org/details/explorationsadve00inwell）。",
+      "rights": "1857年刊の原著・原刊図版は著作権保護期間満了。米国議会図書館の資料記録では当該個体の著作権上の制約を把握していないとし、巻頭折図に用いたオーバーン大学本のInternet Archive個体記録は「public domain」と表示する。",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/explorationsadve00well"
+      }
     },
     {
       "slug": "wells-walkers-expedition-nicaragua-1856",
@@ -10240,595 +11589,6 @@
       }
     },
     {
-      "slug": "patrignani-menologio-volume-i-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第1巻（1月・2月・3月）",
-      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo primo, che contiene Gennajo, Febbrajo, e Marzo.",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第1巻。",
-      "year": 1730,
-      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo primo, che contiene Gennajo, Febbrajo, e Marzo. In Venezia: presso Niccolò Pezzana, 1730. 1月312頁、2月256頁、3月224頁。",
-      "sourceProvider": "ナポリ国立図書館所蔵本、Google Books経由Internet Archive公開。欠頁補充：ボストン・カレッジ所蔵同年版。",
-      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
-      "publishedDate": "2026-11-14",
-      "updatedDate": "2026-11-14",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/bub_gb_v8tdoPVsIjIC"
-      }
-    },
-    {
-      "slug": "venegas-noticia-california-volume-1-1757",
-      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第1巻",
-      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第1巻。",
-      "year": 1757,
-      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 1. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
-      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
-      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
-      "publishedDate": "2026-11-15",
-      "updatedDate": "2026-11-15",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/noticiadelacalif01vene_0"
-      }
-    },
-    {
-      "slug": "venegas-noticia-california-volume-2-1757",
-      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第2巻",
-      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第2巻。",
-      "year": 1757,
-      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 2. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
-      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
-      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
-      "publishedDate": "2026-11-15",
-      "updatedDate": "2026-11-15",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/noticiadelacalif02vene_0"
-      }
-    },
-    {
-      "slug": "venegas-noticia-california-volume-3-1757",
-      "title": "カリフォルニア、および現在に至るまでのその世俗的・霊的征服についての報告 第3巻",
-      "originalTitle": "Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente",
-      "author": "ミゲル・ベネガス（原著）、アンドレス・マルコス・ブリエル（編訂）",
-      "originalAuthor": "Miguel Venegas; Andrés Marcos Burriel",
-      "originalPublication": "マドリード、マヌエル・フェルナンデス未亡人刊、1757年。全3巻の第3巻。",
-      "year": 1757,
-      "sourceEdition": "Miguel Venegas / Andrés Marcos Burriel, Noticia de la California, y de su conquista temporal, y espiritual hasta el tiempo presente. Tomo 3. Madrid: Imprenta de la Viuda de Manuel Fernández, 1757.",
-      "sourceProvider": "John Carter Brown Library, B757 .V455n; Internet Archive",
-      "rights": "1757年刊の原著本文は著作権保護期間を満了しています。掲載地図はジョン・カーター・ブラウン図書館のデジタル画像です。Courtesy of the John Carter Brown Library. CC BY 4.0。画像は形式・表示寸法を変更しています。画像利用条件：https://jcblibrary.org/permissions/ ライセンス：https://creativecommons.org/licenses/by/4.0/。照合に用いたジョンズ・ホプキンズ大学所蔵本の画像は転載していません。",
-      "publishedDate": "2026-11-15",
-      "updatedDate": "2026-11-15",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/noticiadelacalif03vene_0"
-      }
-    },
-    {
-      "slug": "patrignani-menologio-volume-ii-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第2巻（4月・5月・6月）",
-      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno.",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第2巻。",
-      "year": 1730,
-      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo secondo, che contiene Aprile, Maggio, e Giugno. In Venezia: presso Niccolò Pezzana, 1730. 4月292頁、5月220頁、6月220頁。",
-      "sourceProvider": "ナポリ国立図書館所蔵本。Google Books経由でInternet Archiveが公開。6月213頁の欠損語句はボストン・カレッジ所蔵の同年版による。",
-      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
-      "publishedDate": "2026-11-16",
-      "updatedDate": "2026-11-16",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/bub_gb_X3WpCf8bSfoC"
-      }
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-1-1857-1859",
-      "title": "メキシコおよび中央アメリカの文明諸国史 第1巻",
-      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "originalPublication": "パリ、アルテュス・ベルトラン、1857年。全4巻の第1巻。",
-      "year": 1857,
-      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome I. Paris, Arthus Bertrand, 1857.",
-      "sourceProvider": "Getty Research Institute／Internet Archive",
-      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
-      "publishedDate": "2026-11-16",
-      "updatedDate": "2026-11-16",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/histoiredesnatio01bras"
-      }
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-2-1857-1859",
-      "title": "メキシコおよび中央アメリカの文明諸国史 第2巻",
-      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第2巻。",
-      "year": 1858,
-      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome II. Paris, Arthus Bertrand, 1858.",
-      "sourceProvider": "Getty Research Institute／Internet Archive",
-      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
-      "publishedDate": "2026-11-16",
-      "updatedDate": "2026-11-16",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/histoiredesnatio02bras"
-      }
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-3-1857-1859",
-      "title": "メキシコおよび中央アメリカの文明諸国史 第3巻",
-      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "originalPublication": "パリ、アルテュス・ベルトラン、1858年。全4巻の第3巻。",
-      "year": 1858,
-      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome III. Paris, Arthus Bertrand, 1858.",
-      "sourceProvider": "Getty Research Institute／Internet Archive、附図：Bibliothèque nationale de France／Gallica",
-      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。附図の画像はフランス国立図書館（BnF）所蔵、Gallica公開。出典： https://gallica.bnf.fr/ark:/12148/btv1b8491040c 。画像の再利用条件はGallicaの利用規定による。",
-      "publishedDate": "2026-11-16",
-      "updatedDate": "2026-11-16",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/histoiredesnatio03bras"
-      }
-    },
-    {
-      "slug": "brasseur-histoire-nations-civilisees-volume-4-1857-1859",
-      "title": "メキシコおよび中央アメリカの文明諸国史 第4巻",
-      "originalTitle": "Histoire des nations civilisées du Mexique et de l’Amérique-Centrale",
-      "author": "ブラッスール・ド・ブールブール",
-      "originalAuthor": "Charles-Étienne Brasseur de Bourbourg",
-      "originalPublication": "パリ、アルテュス・ベルトラン、1859年。全4巻の第4巻。",
-      "year": 1859,
-      "sourceEdition": "Charles-Étienne Brasseur de Bourbourg, Histoire des nations civilisées du Mexique et de l’Amérique-Centrale, tome IV. Paris, Arthus Bertrand, 1859.",
-      "sourceProvider": "Getty Research Institute／Internet Archive",
-      "rights": "原著は著作権保護期間満了。原刊画像はゲティ研究所所蔵本で、Internet Archiveでは著作権保護期間満了の資料として公開されている。",
-      "publishedDate": "2026-11-16",
-      "updatedDate": "2026-11-16",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/histoiredesnatio04bras"
-      }
-    },
-    {
-      "slug": "patrignani-menologio-volume-iii-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第3巻（7月・8月・9月）",
-      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo terzo, che contiene Luglio, Agosto, e Settembre.",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第3巻。",
-      "year": 1730,
-      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo terzo, che contiene Luglio, Agosto, e Settembre. In Venezia: presso Niccolò Pezzana, 1730. 7月256頁、8月256頁、9月260頁。",
-      "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。7月160頁はチェコ国立図書館所蔵本、7月232頁はボストン・カレッジ所蔵本（印字132頁）で補った。",
-      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
-      "publishedDate": "2026-11-18",
-      "updatedDate": "2026-11-18",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/bub_gb_ad3szyKTjowC"
-      }
-    },
-    {
-      "slug": "patrignani-menologio-volume-iv-1730",
-      "title": "イエズス会の幾人かの修道者たちの敬虔な追憶を収める年中日録。同会の司祭ジュゼッペ・アントニオ・パトリニャーニが収集し、それぞれの命日に当たる一年の各日に配列したもの。1538年から1728年まで。 第4巻（10月・11月・12月）",
-      "originalTitle": "Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre.",
-      "author": "ジュゼッペ・アントニオ・パトリニャーニ",
-      "originalAuthor": "Giuseppe Antonio Patrignani",
-      "originalPublication": "ヴェネツィア、Niccolò Pezzana、1730年。全4巻の第4巻。",
-      "year": 1730,
-      "sourceEdition": "Giuseppe Antonio Patrignani, Menologio di pie memorie d’alcuni Religiosi della Compagnia di Gesù, raccolte dal Padre Giuseppe Antonio Patrignani della medesima Compagnia, e distribuite per quei giorni dell’anno, ne’ quali morirono. Dall’Anno 1538. sino all’Anno 1728. Tomo quarto, che contiene Ottobre, Novembre, e Dicembre. In Venezia: presso Niccolò Pezzana, 1730. 10月244頁、11月216頁、12月260頁、事項索引i–lxxiv頁、人名索引、巻末聖書引用。",
-      "sourceProvider": "ナポリ国立図書館所蔵本。Googleがデジタル化し、Internet Archiveが公開。ボストン・カレッジ所蔵本とプロスペロ・イントルチェッタ財団公開本を欠損箇所の補充・照合に用いた。",
-      "rights": "1730年刊の原著本文は著作権保護期間を満了しています。Internet ArchiveはPublic Domain Mark 1.0を表示していますが、Googleによるデジタル画像の利用条件とは区別しています。本訳には原刊画像を転載していません。権利表示：https://creativecommons.org/publicdomain/mark/1.0/",
-      "publishedDate": "2026-11-18",
-      "updatedDate": "2026-11-18",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/bub_gb_YmE6Y2MxURUC"
-      }
-    },
-    {
-      "slug": "sosa-biografias-de-mexicanos-distinguidos-1884",
-      "title": "著名メキシコ人伝",
-      "originalTitle": "Biografías de mexicanos distinguidos",
-      "author": "フランシスコ・ソサ",
-      "originalAuthor": "Francisco Sosa",
-      "originalPublication": "メキシコ市、勧業省印刷局、1884年。",
-      "year": 1884,
-      "sourceEdition": "Francisco Sosa, Biografías de mexicanos distinguidos. México: Oficina Tipográfica de la Secretaría de Fomento, 1884.",
-      "sourceProvider": "フロリダ大学ジョージ・A・スマザーズ図書館所蔵・提供。Internet Archive公開（biografasdemexic00sosa）。",
-      "rights": "1884年刊の原著本文は日本で著作権の保護期間を満了しています。Internet Archiveの当該資料の公開記録には、デジタル画像に対する個別の利用許諾表示がありません。日本語版には蔵書票・蔵書印・装飾罫の画像を収録していません。公開機関の権利案内：https://help.archive.org/help/rights/ ／ 所蔵機関の複製案内：https://sasc.uflib.ufl.edu/resources-policies/digital-reproductions/",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/biografasdemexic00sosa"
-      }
-    },
-    {
-      "slug": "bellido-vida-maria-ana-agueda-de-san-ignacio-1758",
-      "title": "マリア・アナ・アゲダ・デ・サン・イグナシオ伝",
-      "originalTitle": "Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles",
-      "author": "ホセ・ベリード",
-      "originalAuthor": "José Bellido",
-      "originalPublication": "メキシコ市、ビブリオテカ・メヒカナ印刷所、1758年",
-      "year": 1758,
-      "sourceEdition": "José Bellido, Vida de la V. M. R. M. Maria Anna Agueda de S. Ignacio, primera priora del Religiosissimo Convento de Dominicas Recoletas de Santa Rosa de la Puebla de los Angeles. México: Imprenta de la Bibliotheca Mexicana, 1758.",
-      "sourceProvider": "プエブラ自治大学ラフラグア歴史図書館（BUAP）；補完・対校：メキシコ国立図書館（IIB・UNAM）",
-      "rights": "原著本文はパブリックドメイン。BUAP公開画像はPublic Domain Mark 1.0。補完・対校に使用したIIB・UNAM公開画像はCC BY-NC-ND 4.0（画像の転載なし）。",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "recordClass": "major-work",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://repositorioinstitucional.buap.mx/items/ed0375a7-8b46-46fe-b975-e115bf5c90de/full"
-      }
-    },
-    {
-      "slug": "maria-ana-agueda-devociones-varias-1791",
-      "recordClass": "major-work",
-      "title": "諸信心集",
-      "originalTitle": "Devociones varias",
-      "author": "マリア・アナ・アゲダ・デ・サン・イグナシオ",
-      "originalAuthor": "María Ana Águeda de San Ignacio",
-      "year": 1791,
-      "originalPublication": "プエブラ、王立パラフォクス神学校印刷所、1791年再版",
-      "sourceEdition": "María Ana Águeda de San Ignacio, Devociones varias. Puebla: Oficina del Real Seminario Palafoxiano, 1791.",
-      "sourceProvider": "ゲティ研究所（Getty Research Institute, Los Angeles、請求番号366097）所蔵・提供。インターネット・アーカイブ公開。",
-      "rights": "1791年刊本の本文と銅版画は日本で保護期間満了。所蔵本デジタル画像の公開目録等に追加の利用制限表示なし。ゲティによる当該画像のCC0指定を意味しない。",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/devocionesvarias00mara"
-      }
-    },
-    {
-      "slug": "leon-y-gama-dos-piedras-1792",
-      "recordClass": "major-work",
-      "title": "二つの石の歴史的・年代学的記述",
-      "originalTitle": "Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790",
-      "author": "アントニオ・デ・レオン・イ・ガマ",
-      "originalAuthor": "Antonio de León y Gama",
-      "year": 1792,
-      "originalPublication": "メキシコ市、フェリペ・デ・スニガ・イ・オンティベロス印刷所、1792年。",
-      "sourceEdition": "Antonio de León y Gama, Descripción histórica y cronológica de las dos piedras que con ocasión del nuevo empedrado que se está formando en la Plaza Principal de México, se hallaron en ella el año de 1790. México: Imprenta de don Felipe de Zúñiga y Ontiveros, 1792. 初版。1832年増補版は使用せず。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵、請求記号 B792 .L579d。Internet Archive閲覧版：https://archive.org/details/descripcionhistr00leny",
-      "rights": "1792年刊の原著本文はパブリックドメイン。掲載の原刊折込図版3枚はジョン・カーター・ブラウン図書館所蔵本（B792 .L579d）による。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://americana.jcblibrary.org/search/object/jcbcap-991004331519706966/"
-      }
-    },
-    {
-      "slug": "pedro-sanchez-de-aguilar-informe-contra-idolorum-cultores-1639",
-      "recordClass": "major-work",
-      "title": "ユカタン司教区の偶像礼拝者に対する報告書",
-      "originalTitle": "Informe contra idolorum cultores del obispado de Yucatan",
-      "author": "ペドロ・サンチェス・デ・アギラル",
-      "originalAuthor": "Pedro Sánchez de Aguilar",
-      "year": 1639,
-      "originalPublication": "マドリード、フアン・ゴンサレス未亡人刊、1639年。",
-      "sourceEdition": "Pedro Sánchez de Aguilar, Informe contra idolorum cultores del obispado de Yucatan. Madrid: viuda de Juan González, 1639 (primera edición).",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵の初版本（BA639 S311i、受入番号0736）。Internet Archive配信。",
-      "rights": "1639年刊の原著本文はパブリックドメイン。John Carter Brown Libraryが公開する底本画像の利用条件はCC BY 4.0。原刊の画像は掲載していない。 所蔵館の利用条件：https://jcblibrary.org/permissions/ ／ https://creativecommons.org/licenses/by/4.0/ 。底本PDF：https://archive.org/download/informecontraido00snch/informecontraido00snch.pdf",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/informecontraido00snch"
-      }
-    },
-    {
-      "slug": "alzate-memoria-grana-cochinilla-1794",
-      "recordClass": "short-work",
-      "title": "グラナ、またの名をコチニールという虫についての覚書",
-      "originalTitle": "Memoria, en que se trata del insecto grana ó cochinilla, de su naturaleza y série de su vida, como tambien del método para propagarla y reducirla al estado en que forma uno de los ramos mas útiles de Comercio",
-      "author": "ホセ・アントニオ・デ・アルサテ・イ・ラミレス",
-      "originalAuthor": "José Antonio de Alzate y Ramírez",
-      "year": 1794,
-      "originalPublication": "メキシコ、『Gazeta de Literatura』第3巻第26–33号、1794年、199–259頁",
-      "sourceEdition": "José Antonio de Alzate y Ramírez, Memoria, en que se trata del insecto grana ó cochinilla, Gazeta de Literatura, tomo III, núms. 26–33, México, 1794, pp. 199–259（1777年執筆）。",
-      "sourceProvider": "米国国立医学図書館（National Library of Medicine）所蔵の手彩色本（2172035R）。Internet Archive配信。原刊235頁末の判読できない箇所はジョン・カーター・ブラウン図書館所蔵の同版別個体で補った。",
-      "rights": "1794年刊の原著本文・原図はパブリックドメイン。米国国立医学図書館は本コレクションの電子ファイルに著作権を主張せず、画像・テキストの配布に同館の許可は不要です。Courtesy of the National Library of Medicine. 利用方針：https://www.nlm.nih.gov/hmd/collections/books/digitized/americas/index.html",
-      "publishedDate": "2026-11-19",
-      "updatedDate": "2026-11-19",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/2172035R.nlm.nih.gov"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-1-1835",
-      "title": "メキシコのアラメダの朝 第1巻",
-      "originalTitle": "Mañanas de la Alameda de México, tomo I",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "originalAuthor": "Carlos María de Bustamante",
-      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1835年。",
-      "year": 1835,
-      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo I. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1835. 初版。",
-      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
-      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "bustamante-mananas-de-la-alameda-de-mexico-volume-2-1836",
-      "title": "メキシコのアラメダの朝 第2巻",
-      "originalTitle": "Mañanas de la Alameda de México, tomo II",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "originalAuthor": "Carlos María de Bustamante",
-      "originalPublication": "メキシコ、バルデス遺産管理印刷所（ホセ・マリア・ガリェゴス担当）、1836年。",
-      "year": 1836,
-      "sourceEdition": "Carlos María de Bustamante, Mañanas de la Alameda de México, tomo II. México: Imprenta de la Testamentaría de Valdés, á cargo de José María Gallegos, 1836. 初版。",
-      "sourceProvider": "メキシコ国立図書館（Biblioteca Nacional de México）、メキシコ国立自治大学書誌研究所（IIB UNAM）、ホセ・マリア・ラフラグア・コレクション（R 972.0081 BUS.m.20）。",
-      "rights": "1835–1836年刊の原著本文・原図はパブリックドメインです。収録したメキシコ国立デジタル図書館の画像は、当該デジタル資料の権利表示に従い、非営利で原頁・透かしを改変せず、出典を明示して使用しています。出典：Biblioteca Nacional de México, Instituto de Investigaciones Bibliográficas, Universidad Nacional Autónoma de México, Fondo Reservado, Colección José María Lafragua, R 972.0081 BUS.m.20（BNDM 000373522）。https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://catalogo.iib.unam.mx/F/?func=direct&local_base=BNDM&doc_number=000373522"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "solorzano-pereira-politica-indiana-volume-1-1648",
-      "title": "インディアス政策論 第1冊",
-      "originalTitle": "Política indiana（第I冊）",
-      "author": "フアン・デ・ソロルサノ・ペレイラ",
-      "originalAuthor": "Juan de Solórzano Pereira",
-      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
-      "year": 1648,
-      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第1冊。",
-      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
-      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/A052260028"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "solorzano-pereira-politica-indiana-volume-2-1648",
-      "title": "インディアス政策論 第2冊",
-      "originalTitle": "Política indiana（第II冊）",
-      "author": "フアン・デ・ソロルサノ・ペレイラ",
-      "originalAuthor": "Juan de Solórzano Pereira",
-      "originalPublication": "マドリード、ディエゴ・ディアス・デ・ラ・カレラ、1648年。",
-      "year": 1648,
-      "sourceEdition": "Juan de Solórzano Pereira, Política indiana. Madrid: Diego Díaz de la Carrera, 1648. セビリア大学図書館本第2冊。",
-      "sourceProvider": "セビリア大学図書館。欠落する原刊1010–1011頁はリエージュ大学図書館。同版の参照翻刻は The School of Salamanca。",
-      "rights": "原著は著作権保護期間満了。照合したセビリア大学図書館所蔵初版デジタル画像（第I冊・第II冊）は Public Domain Mark 1.0。原刊1010–1011頁の補完に用いたリエージュ大学図書館所蔵同版（XXIII.154.003）は Open Access／Public domain。参照した電子翻刻 The School of Salamanca W0010 v1.0.0 の権利表示は Akademie der Wissenschaften und der Literatur Mainz、CC BY 4.0。底本の画像は本訳に転載しない。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/A052260029"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-1-1847",
-      "title": "新たなベルナル・ディアス・デル・カスティリョ 第1巻",
-      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo I",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "originalAuthor": "Carlos María de Bustamante",
-      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
-      "year": 1847,
-      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第1巻。",
-      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
-      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "bustamante-el-nuevo-bernal-diaz-del-castillo-tomo-2-1847",
-      "title": "新たなベルナル・ディアス・デル・カスティリョ 第2巻",
-      "originalTitle": "El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México, tomo II",
-      "author": "カルロス・マリア・デ・ブスタマンテ",
-      "originalAuthor": "Carlos María de Bustamante",
-      "originalPublication": "メキシコ、ビセンテ・ガルシア・トレス印刷所、1847年。",
-      "year": 1847,
-      "sourceEdition": "Carlos María de Bustamante, El nuevo Bernal Díaz del Castillo, ó sea Historia de la invasión de los anglo-americanos en México. México: Imprenta de Vicente García Torres, 1847. 初版。第2巻。ハーバード本に欠ける原刊162–163頁を対校本で補い、対校本に欠ける234頁・巻末目次中間二面はハーバード本による。",
-      "sourceProvider": "ハーバード大学図書館（Google撮影、Internet Archive公開）。対校本はメキシコ国立図書館所蔵の同年刊本（Biblioteca Virtual Miguel de Cervantes公開）。",
-      "rights": "1847年原刊のスペイン語本文はパブリックドメイン（著者は1848年没）。日本語版は原著からの独自訳。底本はハーバード大学図書館所蔵本（Google撮影、Internet Archive公開）、対校本はメキシコ国立図書館所蔵の同年版（Biblioteca Virtual Miguel de Cervantes公開）。Google撮影本の利用案内とBVMCの電子版利用条件はデジタル複製に関するもので、日本語訳のライセンスを示すものではない。底本・対校本のスキャン、OCR、扉画像および第2巻の著者肖像は転載しない。肖像については原刊の銘文と説明を訳した。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/elnuevobernalda00bustgoog"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861",
-      "title": "メキシコの廃止修道院",
-      "originalTitle": "Los conventos suprimidos en Méjico",
-      "author": "マヌエル・ラミレス・アパリシオ",
-      "originalAuthor": "Manuel Ramírez Aparicio",
-      "originalPublication": "メキシコ、J・M・アギラル商会印刷所・書肆、1861年。",
-      "year": 1861,
-      "sourceEdition": "Manuel Ramírez Aparicio, Los conventos suprimidos en Méjico: estudios biográficos, históricos y arqueológicos. Méjico: Imprenta y Librería de J. M. Aguilar y Cía., 1861. 初版、全1冊。活字扉は1861年、同じ個体の彩色石版扉は1862年銘。",
-      "sourceProvider": "ゲティ研究所（Getty Research Institute、書誌番号9921747760001551）所蔵本。Internet Archive公開（ARK: ark:/13960/t3vt5m24t）。",
-      "rights": "1861年刊の原著本文はパブリックドメイン。収録図版33点はゲティ研究所所蔵本の忠実複製のみ。Wikimedia Commonsの同一個体のファイルはPublic domain、HathiTrustの同一個体はpd／Full viewと表示。Getty独自のCC0指定を意味しない。他機関所蔵本の画像は転載していない。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/losconventossupr00rami"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "clavijero-storia-della-california-tomo-1-1789",
-      "title": "カリフォルニア史 第1巻",
-      "originalTitle": "Storia della California, tomo I",
-      "author": "フランシスコ・ハビエル・クラビヘロ",
-      "originalAuthor": "Francesco Saverio Clavigero",
-      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
-      "year": 1789,
-      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo I. Venezia: Modesto Fenzo, 1789. イタリア語初版第1巻。前付、第一書・第二書、補遺および採用底本の正誤表。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
-      "rights": "原著本文は保護期間満了。第1巻には原著の所蔵館デジタル画像を転載していない。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/storiadellacalif00clav"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "clavijero-storia-della-california-tomo-2-1789",
-      "title": "カリフォルニア史 第2巻",
-      "originalTitle": "Storia della California, tomo II",
-      "author": "フランシスコ・ハビエル・クラビヘロ",
-      "originalAuthor": "Francesco Saverio Clavigero",
-      "originalPublication": "ヴェネツィア、モデスト・フェンツォ、1789年。",
-      "year": 1789,
-      "sourceEdition": "Francesco Saverio Clavigero, Storia della California, tomo II. Venezia: Modesto Fenzo, 1789. イタリア語初版第2巻。ライムンド・タロースが1788年に製図、J・ザンベッリが彫版した原刊折込地図1点。原撮影全体と10点の部分拡大は同一地図の画像。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵の初版合冊本（B789 .C617s、ARK: ark:/13960/t3vt2pk9n）。",
-      "rights": "原著本文と原刊地図は保護期間満了。地図画像：Courtesy of the John Carter Brown Library. CC BY 4.0. 同館所蔵本の原撮影の全体と、同じ原撮影をトリミングした部分拡大。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/storiadellacalif00clav"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "garcia-leona-vicario-1910",
-      "title": "独立の志士レオナ・ビカリオ",
-      "originalTitle": "Leona Vicario: heroína insurgente",
-      "author": "ヘナロ・ガルシア",
-      "originalAuthor": "Genaro García",
-      "originalPublication": "メキシコ、国立考古学・歴史・民族学博物館、1910年。",
-      "year": 1910,
-      "sourceEdition": "Genaro García, Leona Vicario: heroína insurgente. México: Museo Nacional de Arqueología, Historia y Etnología, 1910. 初単行本。",
-      "sourceProvider": "ヌエボ・レオン自治大学 Capilla Alfonsina Biblioteca Universitaria、Fondo Fernando Díaz Ramírez 所蔵本（同大学デジタル公開）。1909年の先行掲載版は照合に用いた。",
-      "rights": "1910年刊の原著本文は著作権保護期間満了。ヌエボ・レオン自治大学の底本デジタル画像は利用条件未確認のため転載していない。原刊の図題と判読できた図中の文字を日本語で収録。",
-      "publishedDate": "2026-11-20",
-      "updatedDate": "2026-11-20",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://cdigital.cabu.uanl.mx/ffdr/7/1020002389.html"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "venegas-juan-bautista-zappa-1754",
-      "title": "イエズス会の尊き神父フアン・バウティスタ・サッパの生涯と諸徳",
-      "originalTitle": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús",
-      "author": "ミゲル・ベネガス",
-      "originalAuthor": "Miguel Venegas",
-      "originalPublication": "バルセロナ、パブロ・ナダル、1754年。",
-      "year": 1754,
-      "sourceEdition": "Vida, y virtudes del V. P. Juan Bautista Zappa, de la Compañía de Jesús. Barcelona: Pablo Nadal, 1754. ミゲル・ベネガス原著、同会の別の神父による編纂。",
-      "sourceProvider": "Biblioteca Americanista de Sevilla 所蔵本。スペイン国立研究評議会（CSIC）の Simurg でデジタル公開。",
-      "rights": "1754年刊の原著本文はパブリックドメイン。CSICによるデジタル複製は CC BY-NC-SA 4.0。収録の巻頭肖像も同条件で、Biblioteca Americanista de Sevilla（所蔵）・CSIC（公開）を明記し、原画像の余白のみを切り出した。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://simurg.csic.es/view/1722441"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "lizardi-la-quijotita-y-su-prima-1897",
-      "title": "キホティータとそのいとこ",
-      "originalTitle": "La educación de las mujeres, ó La Quijotita y su prima",
-      "author": "ホセ・ホアキン・フェルナンデス・デ・リサルディ",
-      "originalAuthor": "José Joaquín Fernández de Lizardi",
-      "originalPublication": "メキシコ、J・バリェスカ商会後継社、1897年（バルセロナ、ホセ・エスパサ印刷所、1898年6月印刷完了）。",
-      "year": 1897,
-      "sourceEdition": "José Joaquín Fernández de Lizardi, La educación de las mujeres, ó La Quijotita y su prima. México: J. Ballescá y Compañía, Sucesor, 1897（標題紙）。Barcelona: José Espasa, 1898年6月（奥付）。",
-      "sourceProvider": "イリノイ大学アーバナ・シャンペーン校提供（Internet Archive公開）。",
-      "rights": "底本の本文と本訳に収録した別丁図版は、著作権の保護期間が満了している。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/3674623"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "arroniz-ensayo-historia-de-orizaba-1867",
-      "title": "オリサバ史試論",
-      "originalTitle": "Ensayo de una historia de Orizaba",
-      "author": "ホアキン・アロニス",
-      "originalAuthor": "Joaquín Arróniz",
-      "originalPublication": "オリサバ、J・B・アブルト印刷所、1867年。",
-      "year": 1867,
-      "sourceEdition": "Joaquín Arróniz (hijo), Ensayo de una historia de Orizaba. Orizaba: Imprenta de J. B. Aburto, 1867.",
-      "sourceProvider": "米国議会図書館所蔵（F1391.O6 A7、Internet Archive公開）。",
-      "rights": "原著の著作権保護期間は満了している。収録図版は米国議会図書館所蔵本（Library of Congress）。同館は当該資料をパブリックドメインと案内している（https://www.loc.gov/item/13014095/）。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/ensayodeunahisto00arro"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "lazcano-juan-antonio-de-oviedo-1760",
-      "title": "フアン・アントニオ・デ・オビエド神父伝",
-      "originalTitle": "Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús",
-      "author": "フランシスコ・ハビエル・ラスカノ",
-      "originalAuthor": "Francisco Javier Lazcano",
-      "originalPublication": "メキシコ、王立最古のサン・イルデフォンソ学院印刷所、1760年。",
-      "year": 1760,
-      "sourceEdition": "Francisco Javier Lazcano, Vida exemplar y virtudes heroicas del venerable padre Juan Antonio de Oviedo de la Compañía de Jesús. México: Imprenta del Real y Más Antiguo Colegio de San Ildefonso, 1760.",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（BA760 .L431V、Internet Archive公開）。",
-      "rights": "原著の著作権保護期間は満了している。掲載画像はジョン・カーター・ブラウン図書館提供（Courtesy of the John Carter Brown Library）、CC BY 4.0。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/vidaexemplaryvir00lazc"
-      }
-    },
-    {
       "recordClass": "major-work",
       "slug": "zelaa-glorias-de-queretaro-1803",
       "title": "ケレタロの栄光",
@@ -10845,728 +11605,6 @@
       "sourceAccess": {
         "status": "online",
         "url": "https://archive.org/details/gloriasdequereta00zela"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
-      "title": "メキシコの教会・修道院誌",
-      "originalTitle": "Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez",
-      "author": "ルイス・アルファロ・イ・ピニャ",
-      "originalAuthor": "Luis Alfaro y Piña",
-      "originalPublication": "メキシコ、M・ビリャヌエバ印刷所、1863年。",
-      "year": 1863,
-      "sourceEdition": "Luis Alfaro y Piña, Relación descriptiva de la fundación, dedicación, etc. de las iglesias y conventos de México, con una reseña de la variacion que han sufrido durante el gobierno de D. Benito Juárez. México: Tipografía de M. Villanueva, 1863.",
-      "sourceProvider": "ミシガン大学図書館所蔵、Googleデジタル化、Internet Archive公開。",
-      "rights": "原著はパブリックドメイン。公開画像のメタデータは米国での著作権状態を NOT_IN_COPYRIGHT と表示する。翻訳版に底本画像は転載していない。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/relaciondescrip00pigoog"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "de-la-cruz-badiano-libellus-1552",
-      "title": "先住民の薬草の小冊子",
-      "originalTitle": "Libellus de medicinalibus Indorum herbis",
-      "author": "マルティン・デ・ラ・クルス 著／フアン・バディアーノ ラテン語訳",
-      "originalAuthor": "Martín de la Cruz (autor) / Juan Badiano (traductor al latín)",
-      "originalPublication": "メキシコ、トラテロルコのサンタ・クルス学院、1552年成立（写本）。",
-      "year": 1552,
-      "sourceEdition": "Martín de la Cruz, Libellus de medicinalibus Indorum herbis, Juan Badiano ラテン語訳、トラテロルコ、1552年。メキシコ国立人類学歴史図書館蔵（旧バチカン使徒図書館 Barb. lat. 241）。",
-      "sourceProvider": "メキシコ国立人類学歴史図書館（BNAH／INAH）所蔵。原写本を撮影した影印を読解に使用。図版は別系統の1939年ゲイツ版から採録。",
-      "rights": "1552年のラテン語原文はパブリックドメイン。巻末には、Wikimedia Commonsが米国で著作権更新なしのパブリックドメインと表示するゲイツ版（マヤ協会第23号、米国ボルティモア、1939年）の白黒植物図のみを抜粋・切り出して収録。図版の原撮影資料・撮影者は未詳。現代の原写本写真・色彩影印、現代刊本の訳文・解説・注は転載していない。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://bnah.inah.gob.mx/publico/de_la_cruz_badiano/"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "florencia-estrella-norte-mexico-1688",
-      "title": "メキシコの北の星",
-      "originalTitle": "La estrella de el norte de Mexico",
-      "author": "フランシスコ・デ・フロレンシア",
-      "originalAuthor": "Francisco de Florencia",
-      "originalPublication": "メキシコ、エンペドラディリョ、ドニャ・マリア・デ・ベナビデス（フアン・デ・リベラの寡婦）、1688年。",
-      "year": 1688,
-      "sourceEdition": "Francisco de Florencia, La estrella de el norte de Mexico, México, en el Empedradillo, por Doña María de Benavides, viuda de Juan de Ribera, 1688（初版）。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library、BA688 .F632e、06404）所蔵。Internet Archive 公開画像を使用。補読にはメキシコ国立図書館所蔵の同版を参照。",
-      "rights": "1688年刊の原文はパブリックドメイン。ジョン・カーター・ブラウン図書館が提供する底本の口絵1点は CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。Courtesy of the John Carter Brown Library. 原スキャンから口絵の範囲を切り出し、組版時に縮尺を調整した。補読に用いたメキシコ国立図書館本の画像は転載していない。",
-      "publishedDate": "2026-11-21",
-      "updatedDate": "2026-11-21",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/laestrelladeelno00flor"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "granados-tardes-americanas-1778",
-      "title": "アメリカの午後",
-      "originalTitle": "Tardes americanas",
-      "author": "ホセ・ホアキン・グラナドス・イ・ガルベス",
-      "originalAuthor": "José Joaquín Granados y Gálvez",
-      "originalPublication": "メキシコ、フェリペ・デ・スニガ・イ・オンティベロスのヌエバ・インプレンタ・マトリテンセ、1778年（扉の刊年）。",
-      "year": 1778,
-      "sourceEdition": "José Joaquín Granados y Gálvez, Tardes americanas. México, en la nueva Imprenta Matritense de D. Felipe de Zúñiga y Ontiveros, calle de la Palma, 1778（初版・扉年）。ミゲル・デ・ガルベス宛献辞は1779年1月28日付。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵（[R] B778 .G748t）、Internet Archive公開。原刊526–527頁はジョージ・ピーボディ図書館（ジョンズ・ホプキンズ大学シェリダン図書館）所蔵の同版別個体（https://archive.org/details/gpl_1727693）で補完。",
-      "rights": "1778年刊の原著本文はパブリックドメイン。収録した本文の暦輪と別葉3点はジョン・カーター・ブラウン図書館提供画像（CC BY 4.0、https://creativecommons.org/licenses/by/4.0/）。Courtesy of the John Carter Brown Library. 図柄を切り出し、縮尺を調整した。補完に用いた所蔵本の画像は使用していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/tardesamericanas00gran"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "mota-padilla-conquista-nueva-galicia-1870",
-      "title": "ヌエバ・ガリシア征服史",
-      "originalTitle": "Historia de la conquista de la provincia de la Nueva-Galicia",
-      "author": "マティアス・デ・ラ・モタ・パディリャ",
-      "originalAuthor": "Matías de la Mota Padilla",
-      "originalPublication": "メキシコ、メキシコ地理統計学会刊、政府印刷所（ホセ・マリア・サンドバル担当）。扉は1870年、実刊は1871年2月～1872年6月。",
-      "year": 1870,
-      "sourceEdition": "Matías de la Mota Padilla, Historia de la conquista de la provincia de la Nueva-Galicia, escrita por el Lic. D. Matías de la Mota Padilla en 1742, publicada por la Sociedad Mexicana de Geografía y Estadística. México: Imprenta del Gobierno, en Palacio, á cargo de José María Sandoval, 1870（扉の刊年）。巻末刊記による実刊は1871年2月–1872年6月、学会会報第2期第2～4巻の17分冊。1855–56年の『エル・パイス』連載と1856年版が先行。",
-      "sourceProvider": "トロント大学ロバーツ図書館所蔵（AGT-7162）、Internet Archive公開。底本にない著者原扉は、ミゲル・デ・セルバンテス仮想図書館の同版別個体（https://www.cervantesvirtual.com/nd/ark:/59851/bmcqn870）で文字を補った。",
-      "rights": "原著本文および同版の前後付は著作権保護期間満了。トロント大学蔵本から紋章4点を3葉に切り出して収録。同個体のウィキメディア・コモンズ掲載画像にはパブリック・ドメイン・マーク1.0（https://creativecommons.org/publicdomain/mark/1.0/）。セルバンテス仮想図書館の補完個体の画像は転載していない。挿入表の自筆複製は、確認した個体には図葉がなく未収録。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/historiadelaconq00mota"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "pimentel-memoria-situacion-indigena-1864",
-      "title": "メキシコ先住民の現状をもたらした原因とその改善策に関する論考",
-      "originalTitle": "Memoria sobre las causas que han originado la situación actual de la raza indígena de México, y medios de remediarla",
-      "author": "フランシスコ・ピメンテル",
-      "originalAuthor": "Francisco Pimentel",
-      "originalPublication": "メキシコ、アンドラデ・イ・エスカランテ印刷所、ティブルシオ通り19番地、1864年。皇帝マクシミリアノ一世宛の献辞は同年7月付。",
-      "year": 1864,
-      "sourceEdition": "Francisco Pimentel, Memoria sobre las causas que han originado la situación actual de la raza indígena de México, y medios de remediarla. México: Imprenta de Andrade y Escalante, calle de Tiburcio núm. 19, 1864（原刊）。前付8面、本文9–241頁、後付4面（白面を含む）。",
-      "sourceProvider": "オックスフォード大学ボドリアン図書館所蔵（233. e. 214）、Google電子化、Internet Archive公開。同年同版のハーバード大学所蔵本（https://archive.org/details/memoriasobrelas01pimegoog）で、主底本の綴じ際や裁断で判読しにくい文字・原注を照合した。",
-      "rights": "1864年刊の原著本文および原刊の前後付は著作権保護期間満了。底本・照合本ともGoogleが電子化し、Internet Archiveのメタデータは米国で「NOT_IN_COPYRIGHT」と表示する。両電子資料に個別のCCライセンス表示はない。Googleのスキャン冒頭には非商用・個人用途等に関する利用案内があるが、これは1864年刊の原著本文に新たな著作権が生じたことを示すものではない。底本・照合本の画像および電子化時の付加物は転載していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/memoriasobrelas00pimegoog"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "velasco-exaltacion-divina-misericordia-1810",
-      "title": "神の慈悲の称揚",
-      "originalTitle": "Exaltación de la divina misericordia en la milagrosa renovación de la soberana imágen de Cristo Señor Nuestro crucificado, que se venera en la iglesia del convento de Señor San Josef de religiosas Carmelitas descalzas de la antigua fundación de esta ciudad de México",
-      "author": "アロンソ・アルベルト・デ・ベラスコ",
-      "originalAuthor": "Alonso Alberto de Velasco",
-      "originalPublication": "メキシコ、エスピリトゥ・サント通り、ドン・マリアノ・デ・スニガ・イ・オンティベロス印刷所、1810年再版。初版はメキシコのマリア・デ・ベナビデスから1699年に刊行。",
-      "year": 1810,
-      "sourceEdition": "Alonso Alberto de Velasco（標題紙では Alfonso Alberto de Velasco）, Exaltación de la divina misericordia en la milagrosa renovación de la soberana imágen de Cristo Señor Nuestro crucificado, que se venera en la iglesia del convento de Señor San Josef de religiosas Carmelitas descalzas de la antigua fundación de esta ciudad de México. México: Reimpresa en la oficina de Don Mariano de Zúñiga y Ontiveros, calle del Espíritu Santo, 1810. 無番号の前付16面、本文1–112頁、巻末目次2面。本文には原注と信仰上の宣言を含む。",
-      "sourceProvider": "主底本はゲティ研究所（Getty Research Institute）所蔵本（請求記号294921）。同研究所が電子化し、Internet Archiveで公開。同年同版のトロント大学トーマス・フィッシャー稀覯本図書館所蔵本（B-14 00691、https://archive.org/details/exaltacindeladiv00vela）を照合に用いた。照合本はトロント大学の資金でInternet Archiveが2023年に電子化・公開したもの。主底本にない銅版画の銘文のみ、照合本から補った。",
-      "rights": "1810年版の原著本文は著作権保護期間満了。ゲティ研究所所蔵の主底本について、Internet Archiveの書誌メタデータの著作権状態欄（possible-copyright-status）には「NOT_IN_COPYRIGHT」とある。この表示は電子画像へのライセンス付与ではなく、個別のクリエイティブ・コモンズ（CC）ライセンス表示はない。トロント大学所蔵の照合本は個別の著作権状態・CCライセンスとも表示されていない。これらの表示は原著本文の権利状態とは区別される。両個体の画像は、照合本にある銅版画を含め転載していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/gri_000033125008506681"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v1",
-      "title": "メキシコ先住民諸語の記述と比較 第1巻",
-      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I",
-      "author": "フランシスコ・ピメンテル",
-      "originalAuthor": "Francisco Pimentel",
-      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
-      "year": 1874,
-      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo I. México: Imprenta de Isidoro Epstein, 1874. 第二版、第1巻（本文426頁まで、第1–15章）。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti00estagoog）で照合。",
-      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/cuadrodescriptiv01pime"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v2",
-      "title": "メキシコ先住民諸語の記述と比較 第2巻",
-      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II",
-      "author": "フランシスコ・ピメンテル",
-      "originalAuthor": "Francisco Pimentel",
-      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
-      "year": 1875,
-      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo II. México: Imprenta de Isidoro Epstein, 1875. 第二版、第2巻（本文472頁まで、第16–37章）。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti01estagoog）で照合。",
-      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/cuadrodescriptiv02pime"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "pimentel-cuadro-lenguas-indigenas-1874-1875-v3",
-      "title": "メキシコ先住民諸語の記述と比較 第3巻",
-      "originalTitle": "Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III",
-      "author": "フランシスコ・ピメンテル",
-      "originalAuthor": "Francisco Pimentel",
-      "originalPublication": "メキシコ市、イシドロ・エプスタイン印刷所、ヌエボ・メヒコ通り6番地。第二版（扉に「唯一の完本」）。第1巻1874年、第2・第3巻1875年。メキシコ地理統計学会の費用で刊行。",
-      "year": 1875,
-      "sourceEdition": "Francisco Pimentel, Cuadro descriptivo y comparativo de las lenguas indígenas de México, ó tratado de filología mexicana, tomo III. México: Imprenta de Isidoro Epstein, 1875. 第二版、第3巻（本文570頁まで、第38–58章）。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本（同館が電子化、Internet Archiveで公開）。 同版のハーバード大学図書館所蔵本は、Googleの電子化データ（https://archive.org/details/cuadrodescripti03pimegoog）で照合。 底本の第6・7頁は、ハーバード大学図書館所蔵の同版（https://archive.org/details/cuadrodescripti03pimegoog）で補った。",
-      "rights": "1874〜75年刊の原著は著作権保護期間満了。ジョン・カーター・ブラウン図書館所蔵の底本は同館とInternet Archiveによるデジタル複製。同館のデジタル資料の利用条件はCC BY 4.0（https://jcblibrary.org/permissions/、Courtesy of the John Carter Brown Library）。Googleが電子化したハーバード大学図書館所蔵の同版照合本には、ジョン・カーター・ブラウン図書館のCC BY 4.0は適用されない。底本・補入本・照合本の画像は転載していない。",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/cuadrodescriptiv03pime"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v1",
-      "title": "メキシコの紋章 第一巻",
-      "originalTitle": "Escudo de armas de Mexico, libro I",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
-      "year": 1746,
-      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第1巻（前付および本文1–96頁）。",
-      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
-      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v2",
-      "title": "メキシコの紋章 第二巻",
-      "originalTitle": "Escudo de armas de Mexico, libro II",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
-      "year": 1746,
-      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第2巻（本文97–203頁）。",
-      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
-      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v3",
-      "title": "メキシコの紋章 第三巻",
-      "originalTitle": "Escudo de armas de Mexico, libro III",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
-      "year": 1746,
-      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第3巻（本文204–394頁）。",
-      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
-      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
-      }
-    },
-    {
-      "recordClass": "major-work",
-      "slug": "cabrera-escudo-de-armas-de-mexico-1746-v4",
-      "title": "メキシコの紋章 第四巻",
-      "originalTitle": "Escudo de armas de Mexico, libro IV",
-      "author": "カエタノ・デ・カブレラ・イ・キンテロ",
-      "originalAuthor": "Cayetano de Cabrera y Quintero",
-      "originalPublication": "メキシコ市、ドン・ホセフ・ベルナルド・デ・オガル未亡人印刷所、1746年。",
-      "year": 1746,
-      "sourceEdition": "Cayetano de Cabrera y Quintero, Escudo de armas de Mexico. México, 1746. 第4巻（本文395–522頁および巻末索引）。",
-      "sourceProvider": "トロント大学トマス・フィッシャー稀覯書図書館所蔵本（請求記号 E-10 09106）。同館提供の本を Internet Archive が撮影・公開。",
-      "rights": "1746年刊の原著本文は著作権保護期間満了。底本の公開書誌にはデジタル画像の個別ライセンス表示がない。原刊の複製画像は転載していない。公開元の利用条件：https://archive.org/about/terms",
-      "publishedDate": "2026-11-22",
-      "updatedDate": "2026-11-22",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/escudodearmasdem00cabr_1"
-      }
-    },
-    {
-      "slug": "cano-manche-y-peten-1696",
-      "recordClass": "document-collection",
-      "title": "マンチェとペテン",
-      "originalTitle": "Manche y Peten",
-      "author": "アグスティン・カノ",
-      "originalAuthor": "Agustín Cano",
-      "year": 1696,
-      "originalPublication": "グアテマラ、17世紀末の写本。扉・目録は1696年、報告本文は1697年を当年とする。",
-      "sourceEdition": "Agustín Cano, Manche y Peten. University of Pennsylvania Libraries, Ms. Coll. 700, Item 193。扉の年記は1696年。本文は1697年の出来事に及び、巻頭にC・ヘルマン・ベレントによる1877年の前置資料がある。",
-      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター所蔵、Berendt-Brinton Linguistic Collection。ペンシルヴェニア大学図書館とFAMSIの共同デジタル化。",
-      "rights": "カノおよびベレントの原文は著作権保護期間満了。FAMSIの写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を収録しない。画像の利用条件：https://www.famsi.org/research/copyright.htm",
-      "publishedDate": "2026-11-23",
-      "updatedDate": "2026-11-23",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://www.famsi.org/research/mltdp/item193/"
-      }
-    },
-    {
-      "slug": "viana-relacion-de-vera-paz-1574",
-      "recordClass": "document-collection",
-      "title": "ベラパス地方報告",
-      "originalTitle": "Relación de la provincia i tierra de la Vera Paz",
-      "author": "フランシスコ・デ・ビアナ／ルカス・ガリェゴ／ギリェム・カデナ",
-      "originalAuthor": "Francisco de Viana / Lucas Gallego / Guillem Cadena",
-      "year": 1574,
-      "originalPublication": "1574年12月7日、グアテマラ、コバンのサント・ドミンゴ修道院で署名された報告。底本は1872年のベレント写本。",
-      "sourceEdition": "Francisco de Viana, Lucas Gallego y Guillem Cadena, Relación de la provincia i tierra de la Vera Paz（1574年12月7日署名）。University of Pennsylvania Libraries, Ms. Coll. 700, Item 212（1872年のC・ヘルマン・ベレントによる転写。1857年のバッキンガム・スミスの写しに由来）。1878年の転写地図は別資料。",
-      "sourceProvider": "ペンシルヴェニア大学図書館キスラック・センター、Berendt-Brinton Linguistic Collection。所蔵目録：https://colenda.library.upenn.edu/catalog/81431-p3599zb5j。底本画像はFAMSI掲載。",
-      "rights": "ペンシルヴェニア大学図書館の所蔵資料の権利表示は「米国内で著作権なし」（NoC-US 1.0、https://rightsstatements.org/vocab/NoC-US/1.0/）。FAMSIが掲載する写本画像は研究利用可、刊行・転載には許可が必要。本版は写本画像を転載しない。FAMSI画像利用条件：https://www.famsi.org/research/copyright.htm",
-      "publishedDate": "2026-11-23",
-      "updatedDate": "2026-11-23",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://www.famsi.org/research/mltdp/item212/"
-      }
-    },
-    {
-      "slug": "romero-michoacan-diocesan-history-1862",
-      "recordClass": "major-work",
-      "title": "ミチョアカン司教区の歴史と統計のための資料",
-      "originalTitle": "Noticias para formar la historia y la estadística del obispado de Michoacán",
-      "author": "ホセ・グアダルーペ・ロメロ",
-      "originalAuthor": "José Guadalupe Romero",
-      "year": 1862,
-      "originalPublication": "メキシコ市、ビセンテ・ガルシア・トレス印刷所、1862年。",
-      "sourceEdition": "José Guadalupe Romero, Noticias para formar la historia y la estadística del obispado de Michoacán, presentadas a la Sociedad Mexicana de Geografía y Estadística en 1860. México: Imprenta de Vicente García Torres, 1862（折込地図は1863年作製）。",
-      "sourceProvider": "米国議会図書館所蔵（LCCN 02007371、Internet Archive公開）。ヌエボ・レオン自治大学所蔵本とハーバード大学所蔵本を照合。 所蔵目録：https://www.loc.gov/item/02007371/",
-      "rights": "原著および1863年の原図は米国でパブリックドメイン。司教区図・ミチョアカン州図は、米国議会図書館所蔵本の公開画像（同館が認識する著作権上の制限なし）。グアナフアト州図はヌエボ・レオン自治大学所蔵本の全開図（個別のライセンス表示は確認できず）。画像出典：司教区図 https://archive.org/details/noticiasparaform00rome/page/n8/mode/1up 、ミチョアカン州図 https://archive.org/details/noticiasparaform00rome/page/n165/mode/1up 、グアナフアト州図 https://cdigital.cabu.uanl.mx/ffdr/1/1020000296/1020000296_024.pdf#page=5 。",
-      "publishedDate": "2026-11-23",
-      "updatedDate": "2026-11-23",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/noticiasparaform00rome"
-      }
-    },
-    {
-      "slug": "couto-dialogo-pintura-mexico-1889",
-      "recordClass": "major-work",
-      "title": "メキシコ絵画史対話",
-      "originalTitle": "Diálogo sobre la historia de la pintura en México",
-      "author": "ホセ・ベルナルド・コウト",
-      "originalAuthor": "José Bernardo Couto",
-      "year": 1889,
-      "originalPublication": "初刊1872年、メキシコ市。底本は1889年、メキシコ市、勧業省印刷所刊。",
-      "sourceEdition": "Bernardo Couto, Diálogo sobre la historia de la pintura en México. México: Oficina Tipográfica de la Secretaría de Fomento, 1889. 初刊は1872年。",
-      "sourceProvider": "ゲティ研究所（Getty Research Institute）所蔵。Internet Archiveが電子化・公開。1872年初刊に基づくセルバンテス電子図書館の翻刻も照合に使用。",
-      "rights": "原著の著作権保護期間は満了。Internet Archive掲載の底本個体データに、個別のライセンス表示はない。日本語版に底本のスキャン画像は転載していない。初刊準拠の電子翻刻：https://www.cervantesvirtual.com/obra/dialogo-sobre-la-historia-de-la-pintura-en-mexico--0/ 。",
-      "publishedDate": "2026-11-23",
-      "updatedDate": "2026-11-23",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/dialogosobrelahi00cout"
-      }
-    },
-    {
-      "slug": "florencia-oviedo-zodiaco-mariano-1755",
-      "recordClass": "major-work",
-      "title": "聖母の黄道帯",
-      "originalTitle": "Zodiaco Mariano",
-      "author": "フランシスコ・デ・フロレンシア／フアン・アントニオ・デ・オビエド",
-      "originalAuthor": "Francisco de Florencia / Juan Antonio de Oviedo",
-      "year": 1755,
-      "originalPublication": "1755年、メキシコ、王立サン・イルデフォンソ学院新印刷所。",
-      "sourceEdition": "Francisco de Florencia / Juan Antonio de Oviedo, Zodiaco Mariano. México: Nueva Imprenta del Real Colegio de San Ildefonso, 1755.",
-      "sourceProvider": "ミゲル・デ・セルバンテス電子図書館（Biblioteca Virtual Miguel de Cervantes）公開、2010年。底本の欠葉二面は、同年版別個体に由来する公開OCRで補った。",
-      "rights": "1755年刊の原著は著作権保護期間満了。ミゲル・デ・セルバンテス電子図書館は電子版の複製、頒布、公衆送信に関する権利を留保（利用規約第4.3.4項・第5節：https://www.cervantesvirtual.com/marco-legal/）。補完OCR掲載先は「All Rights Reserved」表示（https://es.scribd.com/document/716268288/Zodiaco-Mariano）。利用したのはいずれも原著文字情報のみ。電子版画像は転載していない。",
-      "publishedDate": "2026-11-23",
-      "updatedDate": "2026-11-23",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc5m6b4"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-01",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第1部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 1",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第1部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio01mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-02",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第2部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 2",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第2部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio02mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-03",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第3部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 3",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 39, 第3部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio03mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-04",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第4部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 4",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第4部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio04mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-05",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第5部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 5",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第5部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio05mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-06",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第6部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 6",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第6部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio06mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-07",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第7部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 7",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 40, 第7部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio07mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-08",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第8部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 8",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第8部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio08mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-09",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第9部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 9",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第9部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio09mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-10",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第10部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 10",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第10部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio10mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-11",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第11部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 11",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第11部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio11mara"
-      }
-    },
-    {
-      "slug": "maria-de-san-jose-spiritual-autobiography-part-12",
-      "recordClass": "major-work",
-      "title": "霊的自叙伝 第12部",
-      "originalTitle": "Spiritual autobiography of Madre María de San José, Part 12",
-      "author": "マリア・デ・サン・ホセ",
-      "originalAuthor": "Madre María de San José",
-      "originalPublication": "ジョン・カーター・ブラウン図書館蔵の原写本（Codex Sp 39–41）。刊行年は付さない。",
-      "year": "刊年不詳",
-      "sourceEdition": "Madre María de San José, Spiritual autobiography of Madre María de San José. Codex Sp 41, 第12部。",
-      "sourceProvider": "ジョン・カーター・ブラウン図書館（John Carter Brown Library）所蔵。同館がInternet Archiveで写本画像を公開。",
-      "rights": "原写本は著作権保護期間満了。図書館は公開画像にCC BY 4.0を適用。この日本語版に底本画像は掲載していない。公開機関の利用条件：https://jcblibrary.org/permissions/",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/spiritualautobio12mara"
-      }
-    },
-    {
-      "slug": "laferriere-paris-guatemala-1877",
-      "recordClass": "major-work",
-      "title": "パリからグアテマラへ",
-      "originalTitle": "De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875",
-      "author": "ジョゼフ・ラフェリエール",
-      "originalAuthor": "Joseph Laferrière",
-      "year": 1877,
-      "originalPublication": "1877年、パリ、ガルニエ兄弟書店。",
-      "sourceEdition": "Joseph Laferrière, De Paris à Guatémala. Notes de voyages au Centre-Amérique, 1866–1875. Paris : Garnier frères, 1877.",
-      "sourceProvider": "Getty Research Institute蔵（請求記号9924486970001551）。Internet Archiveが2018年に電子化した個体と、Wikimedia Commonsに再配布された同じ撮影個体を使用。",
-      "rights": "1877年刊の原著本文と図版は米国でパブリックドメイン。収録図版は、Wikimedia Commonsが米国でのパブリックドメインを明示する同じ撮影個体から採った。https://commons.wikimedia.org/wiki/File:De_Paris_%C3%A0_Guat%C3%A9mala-_notes_de_voyages_au_Centre-Am%C3%A9rique,_1866-1875;_(IA_deparisguatemala00lafe).pdf",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/deparisguatemala00lafe"
-      }
-    },
-    {
-      "slug": "florencia-provincia-nueva-espana-1694",
-      "recordClass": "major-work",
-      "title": "ヌエバ・エスパーニャ・イエズス会管区史",
-      "originalTitle": "Historia de la provincia de la Compañía de Jesús de Nueva España, dividida en ocho libros",
-      "author": "フランシスコ・デ・フロレンシア",
-      "originalAuthor": "Francisco de Florencia",
-      "year": 1694,
-      "originalPublication": "1694年、メキシコ、フアン・ホセ・ギリェナ・カラスコソ印行。",
-      "sourceEdition": "Francisco de Florencia, Historia de la provincia de la Compañía de Jesús de Nueva España, dividida en ocho libros. Tomo primero. México: Juan Joseph Guillena Carrascoso, 1694.",
-      "sourceProvider": "フランシスコ・デ・ブルゴア図書館（オアハカ）蔵、BFFB-002220。ミゲル・デ・セルバンテス仮想図書館の2024年公開デジタル版。",
-      "rights": "1694年初刊の原著は著作権保護期間満了（パブリックドメイン）。底本のデジタル画像は公開元の利用条件（https://www.cervantesvirtual.com/marco-legal/）を参照。日本語版にはデジタル画像を転載していない。",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232647"
-      }
-    },
-    {
-      "slug": "wells-explorations-and-adventures-in-honduras-1857",
-      "recordClass": "major-work",
-      "title": "ホンジュラス探検と冒険",
-      "originalTitle": "Explorations and Adventures in Honduras",
-      "author": "ウィリアム・V・ウェルズ",
-      "originalAuthor": "William V. Wells",
-      "year": 1857,
-      "originalPublication": "1857年、ニューヨーク、ハーパー・アンド・ブラザーズ刊。",
-      "sourceEdition": "William V. Wells, Explorations and Adventures in Honduras: Comprising Sketches of Travel in the Gold Regions of Olancho, and a Review of the History and General Resources of Central America. With Original Maps, and Numerous Illustrations. New York: Harper & Brothers, 1857.",
-      "sourceProvider": "本文・口絵・挿絵・本文中の地図等：米国議会図書館所蔵本（LCCN 03020914）、Internet Archive公開画像。巻頭のホンジュラス東部折図のみオーバーン大学図書館所蔵の同版別個体（https://archive.org/details/explorationsadve00inwell）。",
-      "rights": "1857年刊の原著・原刊図版は著作権保護期間満了。米国議会図書館の資料記録では当該個体の著作権上の制約を把握していないとし、巻頭折図に用いたオーバーン大学本のInternet Archive個体記録は「public domain」と表示する。",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/explorationsadve00well"
-      }
-    },
-    {
-      "slug": "larrainzar-noticia-historica-de-soconusco-1843",
-      "recordClass": "major-work",
-      "title": "ソコヌスコ史とメキシコ共和国への編入",
-      "originalTitle": "Noticia histórica de Soconusco, y su incorporación á la República Mexicana",
-      "author": "マヌエル・ララインサル",
-      "originalAuthor": "Manuel Larráinzar",
-      "year": 1843,
-      "originalPublication": "1843年、メキシコ市、J・M・ララ印刷所刊。",
-      "sourceEdition": "Manuel Larráinzar, Noticia histórica de Soconusco, y su incorporación á la República Mexicana. México: Imprenta de J. M. Lara, 1843.",
-      "sourceProvider": "底本はハーバード大学所蔵本をGoogleが電子化し、Internet Archiveで公開したデータ。底本（ハーバード大学）：https://archive.org/details/noticiahistrica00larrgoog 。同版照合本（ミシガン大学）：https://archive.org/details/noticiahistrica01larrgoog 。照合本は字句と頁付の確認にのみ使用。",
-      "rights": "1843年刊の原著は著作権保護期間満了。Internet Archiveの両個体の記録は米国で著作権保護外と表示する。日本語版に原刊画像の転載はない。",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/noticiahistrica00larrgoog"
-      }
-    },
-    {
-      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
-      "recordClass": "major-work",
-      "title": "中央アメリカ自由諸国旅行記 第1巻",
-      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. I",
-      "author": "カール・シェルツァー",
-      "originalAuthor": "Carl Scherzer",
-      "year": 1857,
-      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
-      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第1巻。",
-      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta01sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
-      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した旅行経路図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta01sche%29.pdf",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/travelsinfreesta01sche"
-      }
-    },
-    {
-      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
-      "recordClass": "major-work",
-      "title": "中央アメリカ自由諸国旅行記 第2巻",
-      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. II",
-      "author": "カール・シェルツァー",
-      "originalAuthor": "Carl Scherzer",
-      "year": 1857,
-      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
-      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第2巻。",
-      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta02sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
-      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した両洋間運河候補四案の断面図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta02sche%29.pdf",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/travelsinfreesta02sche"
-      }
-    },
-    {
-      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
-      "recordClass": "major-work",
-      "title": "コスタリカ共和国概説・歴史覚書",
-      "originalTitle": "Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos",
-      "author": "フェリペ・モリーナ",
-      "originalAuthor": "Felipe Molina",
-      "year": 1851,
-      "originalPublication": "1851年、ニューヨーク、S・W・ベネディクト印刷所刊。",
-      "sourceEdition": "Felipe Molina, Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos. Nueva York: Imprenta de S. W. Benedict, 1851.",
-      "sourceProvider": "本文底本（ミシガン大学蔵本）：https://archive.org/details/bosquejodelarep01moligoog 。原刊4・5頁の補完（スタンフォード大学蔵の同版）：https://archive.org/details/bosquejodelarep00moligoog 。両本はGoogle撮影・Internet Archive公開。書誌照合（スペイン国立図書館蔵本、セルバンテス仮想図書館）：https://www.cervantesvirtual.com/portales/portal_nacional_costa_rica/obra/bosquejo-de-la-republica-de-costa-rica-seguido-de-apuntamientos-para-su-historia-con-varios-mapas-vistas-y-retratos-931977/ 。図版底本（英国図書館蔵の同版、10480.d.6）：https://commons.wikimedia.org/wiki/Category:Bosquejo_de_la_republica_de_Costa_Rica,_seguido_de_apuntamientos_par_su_historia._(1851)_by_Felipe_Molina 。",
-      "rights": "1851年刊の原著は著作権保護期間満了。Google撮影の本文画像は転載していない。原刊図版14点は英国図書館蔵本から採り、Wikimedia Commons公開の12点、英国図書館のFlickr Commons公開の2点を収録。個別の出典と権利表示（Public Domain Mark 1.0または「既知の著作権制限なし」）は前文に記載。",
-      "publishedDate": "2026-11-24",
-      "updatedDate": "2026-11-24",
-      "sourceAccess": {
-        "status": "online",
-        "url": "https://archive.org/details/bosquejodelarep01moligoog"
       }
     }
   ],

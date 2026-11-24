@@ -1,3 +1,4 @@
+import { burgoaGeograficaDescripcion1674Group } from "./burgoa-geografica-descripcion-1674-publication.mjs";
 import { scherzerTravelsFreeStatesCentralAmerica1857Group } from "./scherzer-travels-free-states-central-america-1857-publication.mjs";
 import { mariaSanJoseGroup } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { cabreraEscudoGroup } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
@@ -16,6 +17,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  burgoaGeograficaDescripcion1674Group,
   scherzerTravelsFreeStatesCentralAmerica1857Group,
   clavijeroPublicationGroup,
   pimentelCuadroGroup,
