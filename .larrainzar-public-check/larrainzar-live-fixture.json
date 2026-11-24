@@ -1,0 +1,43 @@
+{
+  "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+  "title": "ソコヌスコ史とメキシコ共和国への編入",
+  "originalTitle": "Noticia histórica de Soconusco, y su incorporación á la República Mexicana",
+  "author": "マヌエル・ララインサル",
+  "originalAuthor": "Manuel Larráinzar",
+  "sourceUrl": "https://archive.org/details/noticiahistrica00larrgoog",
+  "sourceProvider": "底本はハーバード大学所蔵本をGoogleが電子化し、Internet Archiveで公開したデータ。底本（ハーバード大学）：https://archive.org/details/noticiahistrica00larrgoog 。同版照合本（ミシガン大学）：https://archive.org/details/noticiahistrica01larrgoog 。照合本は字句と頁付の確認にのみ使用。",
+  "rights": "1843年刊の原著は著作権保護期間満了。Internet Archiveの両個体の記録は米国で著作権保護外と表示する。日本語版に原刊画像の転載はない。",
+  "rightsUrl": "https://archive.org/details/noticiahistrica01larrgoog",
+  "pages": 151,
+  "images": 0,
+  "releaseTag": "publications-002",
+  "searchShard": "003",
+  "overview": "チアパス南西部のソコヌスコをめぐり、メキシコとグアテマラが帰属を争った経緯を、チアパス出身の法学者マヌエル・ララインサルがメキシコ側の立場から論じた1843年刊の歴史書。第一・第二章では、太平洋岸の地勢と産物、カカオで知られた征服以前の社会を述べ、スペイン支配下のアウディエンシアと司教区の管轄の変化、暴風の被害、1778年の人口調査と1796年の司教区報告などを通じて、この地方の変遷をたどる。\n\n第三～第六章は独立後の政治過程を追う。チアパスがグアテマラを離れてメキシコに加わり、イトゥルビデ失脚後に帰属の選択が再び問題となるなかで、「自由チアパ綱領」と最高評議会の判断、町村ごとの意思表明、タパチュラの反対宣言がどう交錯したかを記す。メキシコとグアテマラ双方の軍の進出と撤収、いわゆる中立期を経て、1842年にメキシコ政府がソコヌスコの編入を命じるまでを描く。諸集落の人口、町村相互の距離を掲げた表は、論争の舞台を具体的に伝える。\n\n巻の後半を占める第七章は、アレハンドロ・マルレの中米革命史、フアン・ホセ・アイシネナによるグアテマラ側の抗議書、軍事占領を批判する小冊子への反論である。旧植民地の管轄が独立後の帰属を拘束するか、町村が自らの帰属を決められるかをめぐり、法令、投票数、公文書を引いて編入を正当化する。編入の経緯だけでなく、同じ法令や出来事に両国が異なる意味を与えたことを読み取れる。",
+  "assets": [
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "size": 1730611,
+      "sha256": "2c2656fb9d27824f7e8c5bac7d1c9b03b70190fa16fce718b4648f87e8c1326f"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "size": 210724,
+      "sha256": "fb33317193e2b43a9f65123f05c71e8a0ce502d9e8503ee76c6722db23a373f9"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "size": 81632,
+      "sha256": "fbe3d158e6d359bcbfebc83f61fa295ba0fbc06c2f8280022011f50c76ec3e04"
+    }
+  ],
+  "probes": [
+    {
+      "term": "全地方を揺るがした自由チアパ綱領",
+      "pdfPage": 41,
+      "originalPage": "原刊 p. 43"
+    }
+  ]
+}
