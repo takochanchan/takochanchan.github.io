@@ -1,0 +1,32 @@
+name: Transfer checksum-pinned Larráinzar 1843 assets
+on:
+  push:
+    branches: ["agent/larrainzar-transfer-20261124"]
+    paths: [".publication-upload-requests/larrainzar-noticia-historica-de-soconusco-1843.json"]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install build dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build and test the publication catalogue
+        run: npm run build && npm test
+      - name: Reconstruct, upload, and verify publication PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .publication-transfer/transfer-larrainzar-noticia-historica-de-soconusco-1843.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: larrainzar-transfer-release-verification
+          path: larrainzar-transfer-release-verification.json
+
