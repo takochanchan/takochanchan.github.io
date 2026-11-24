@@ -10896,6 +10896,24 @@
       "url": "https://takochanchan.github.io/publications/wells-explorations-and-adventures-in-honduras-1857/cover.jpg",
       "size": 69115,
       "sha256": "abd83b499f1075e7a627c2cabb39d2c97737b728886cef7070486e272fa8529f"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "size": 1730611,
+      "sha256": "2c2656fb9d27824f7e8c5bac7d1c9b03b70190fa16fce718b4648f87e8c1326f"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "size": 210724,
+      "sha256": "fb33317193e2b43a9f65123f05c71e8a0ce502d9e8503ee76c6722db23a373f9"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
+      "size": 81632,
+      "sha256": "fbe3d158e6d359bcbfebc83f61fa295ba0fbc06c2f8280022011f50c76ec3e04"
     }
   ]
 }
