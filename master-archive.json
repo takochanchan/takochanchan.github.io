@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "09838da6f8a4012817c0b4002b2e987bff54ac1d",
+  "archive_commit": "dfc1c4ed28601af42be23bca3d3efca5ae85ef8e",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -533,7 +533,10 @@
     "laferriere-paris-guatemala-1877": "publications/laferriere-paris-guatemala-1877/master.docx",
     "florencia-provincia-nueva-espana-1694": "publications/florencia-provincia-nueva-espana-1694/master.docx",
     "wells-explorations-and-adventures-in-honduras-1857": "publications/wells-explorations-and-adventures-in-honduras-1857/master.docx",
-    "larrainzar-noticia-historica-de-soconusco-1843": "publications/larrainzar-noticia-historica-de-soconusco-1843/master.docx"
+    "larrainzar-noticia-historica-de-soconusco-1843": "publications/larrainzar-noticia-historica-de-soconusco-1843/master.docx",
+    "scherzer-travels-free-states-central-america-1857-vol-1": "publications/scherzer-travels-free-states-central-america-1857-vol-1/master.docx",
+    "scherzer-travels-free-states-central-america-1857-vol-2": "publications/scherzer-travels-free-states-central-america-1857-vol-2/master.docx",
+    "molina-bosquejo-de-la-republica-de-costa-rica-1851": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/master.docx"
   },
   "release_fallbacks": {
     "bancroft-history-central-america-1886-1887": {
