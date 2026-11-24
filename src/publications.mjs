@@ -2,6 +2,8 @@ import { laferriereRecords, laferriereMetadata } from "./laferriere-paris-guatem
 import { florenciaProvinciaNuevaEspana1694Records, florenciaProvinciaNuevaEspana1694Metadata } from "./florencia-provincia-nueva-espana-1694-publication.mjs";
 import { wellsExplorationsAndAdventuresInHonduras1857Records, wellsExplorationsAndAdventuresInHonduras1857Metadata } from "./wells-explorations-and-adventures-in-honduras-1857-publication.mjs";
 import { larrainzarNoticiaHistoricaDeSoconusco1843Records, larrainzarNoticiaHistoricaDeSoconusco1843Metadata } from "./larrainzar-noticia-historica-de-soconusco-1843-publication.mjs";
+import { scherzerTravelsFreeStatesCentralAmerica1857Records, scherzerTravelsFreeStatesCentralAmerica1857Metadata } from "./scherzer-travels-free-states-central-america-1857-publication.mjs";
+import { molinaBosquejoDeLaRepublicaDeCostaRica1851Records, molinaBosquejoDeLaRepublicaDeCostaRica1851Metadata } from "./molina-bosquejo-de-la-republica-de-costa-rica-1851-publication.mjs";
 import { mariaSanJoseRecords, mariaSanJoseMetadata } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { zodiacoMarianoRecords, zodiacoMarianoMetadata } from "./florencia-oviedo-zodiaco-mariano-1755-publication.mjs";
 import { coutoDialogo1889Records, coutoDialogo1889Metadata } from "./couto-dialogo-pintura-mexico-1889-publication.mjs";
@@ -397,6 +399,8 @@ const publicationRecords = [
   ...florenciaProvinciaNuevaEspana1694Records,
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
+  ...scherzerTravelsFreeStatesCentralAmerica1857Records,
+  ...molinaBosquejoDeLaRepublicaDeCostaRica1851Records,
   ...mariaSanJoseRecords,
   ...coutoDialogo1889Records,
   ...romeroMichoacan1862Records,
@@ -9588,6 +9592,8 @@ const publicationMetadata = {
   ...florenciaProvinciaNuevaEspana1694Metadata,
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
+  ...scherzerTravelsFreeStatesCentralAmerica1857Metadata,
+  ...molinaBosquejoDeLaRepublicaDeCostaRica1851Metadata,
   ...mariaSanJoseMetadata,
   ...coutoDialogo1889Metadata,
   ...romeroMichoacan1862Metadata,

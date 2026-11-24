@@ -3566,6 +3566,32 @@
       "author": "マヌエル・ララインサル",
       "originalAuthor": "Manuel Larráinzar",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フェリペ・モリーナ",
+      "originalAuthor": "Felipe Molina",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -3840,6 +3866,14 @@
         "maria-de-san-jose-spiritual-autobiography-part-12"
       ],
       "seriesVolumeCount": 12
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "memberSlugs": [
+        "scherzer-travels-free-states-central-america-1857-vol-1",
+        "scherzer-travels-free-states-central-america-1857-vol-2"
+      ],
+      "seriesVolumeCount": 2
     }
   ],
   "shortAuthorCount": 49

@@ -1,3 +1,4 @@
+import { scherzerTravelsFreeStatesCentralAmerica1857Group } from "./scherzer-travels-free-states-central-america-1857-publication.mjs";
 import { mariaSanJoseGroup } from "./maria-de-san-jose-spiritual-autobiography-publication.mjs";
 import { cabreraEscudoGroup } from "./cabrera-escudo-de-armas-de-mexico-1746-publication.mjs";
 import { pimentelCuadroGroup } from "./pimentel-cuadro-lenguas-indigenas-1874-1875-publication.mjs";
@@ -15,6 +16,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  scherzerTravelsFreeStatesCentralAmerica1857Group,
   clavijeroPublicationGroup,
   pimentelCuadroGroup,
   cabreraEscudoGroup,
