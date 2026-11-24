@@ -1,0 +1,30 @@
+{
+  "slug": "larrainzar-noticia-historica-de-soconusco-1843",
+  "release_tag": "publications-002",
+  "assets": [
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf",
+      "size": 1730611,
+      "sha256": "2c2656fb9d27824f7e8c5bac7d1c9b03b70190fa16fce718b4648f87e8c1326f",
+      "filename": "Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.pdf"
+    },
+    {
+      "path": "publications/larrainzar-noticia-historica-de-soconusco-1843/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub",
+      "size": 210724,
+      "sha256": "fb33317193e2b43a9f65123f05c71e8a0ce502d9e8503ee76c6722db23a373f9",
+      "filename": "Manuel_Larrainzar_Noticia_historica_de_Soconusco_1843_Japanese.epub"
+    }
+  ],
+  "bundle": {
+    "size": 1468814,
+    "sha256": "afe0e69a31b864e72feb829d27a3fb2febd376dc70daf882f312e194fb0e164b",
+    "chunks": [
+      "0c36aad1e165efa74b51a2cedfbfd3cdde9ea96d",
+      "0006dbea3f11a05450ab547958b9535c7b5645ef",
+      "8aca44b84d848468b3a97f4e4fae123937824771"
+    ]
+  },
+  "verified_archive_commit": "09838da6f8a4012817c0b4002b2e987bff54ac1d"
+}
