@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "burgoa-geografica-descripcion-1674-vol-1",
+    "canonicalSlug": "burgoa-geografica-descripcion-1674",
+    "title": "オアハカの地理・教会史 第1巻",
+    "originalTitle": "Geográfica descripción",
+    "author": "フランシスコ・デ・ブルゴア",
+    "originalAuthor": "Francisco de Burgoa",
+    "sourceProvider": "フランシスコ・デ・ブルゴア図書館所蔵本をミゲル・デ・セルバンテス電子図書館が公開。 第1巻：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668 。第2巻：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686 。",
+    "rights": "1674年原刊本文はパブリックドメイン。本文底本のデジタル画像は読解に使用し、転載していない。 両巻の銅版口絵はジョン・カーター・ブラウン図書館所蔵の原刊別個体から採録。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。綴じ目と周囲の余白のみを切り抜いた。出典：https://archive.org/details/geograficadescri12burg/page/n4/mode/1up",
+    "overview": "アンテケラ（現オアハカ市）のドミニコ会修道院を起点に、管区の形成と運営をたどる。ホルダンが修練者を育てた方法やビリャ・アルタでの務め、ベルナルド・デ・アルブルケルケが司祭として渡航し、修道院長を経てアンテケラ司教となった経緯を記す。シエナの聖カタリナ女子修道院の創設、ドミニコ会士が移った新修道院の建設も扱う。後半はミシュテカに移り、ヤンギトランの修道院、トラヒアコ周辺の小村、アチウトラの初代説教師ベニト・エルナンデス、往時のノチストランなどを順に描く。クイラパでは村の移転と住民による古い建造物を、新しい修道院の創設とは分けて記録する。最後にサポテカの王権と領域を述べ、次巻につなぐ。",
+    "groupOverview": "オアハカのドミニコ会士フランシスコ・デ・ブルゴアが、アンテケラを拠点に広がった修道院と教化区の歴史を、その土地の記述と結び付けた地誌・教会史。第1巻ではアンテケラの修道院とシエナの聖カタリナ女子修道院の創設をたどり、修練長を務めたホルダンや司教ベルナルド・デ・アルブルケルケの生涯を描く。続いてヤンギトラン、トラヒアコ、アチウトラ、クイラパなどを巡り、ミシュテカの集落の移転、気候、住民と修道院の関わりを記し、サポテカの王権と領域へ話を進める。\n\n第2巻はエトラなどの谷の教化区からビリャ・アルタの山地へ進み、一つの教化区が六つの共同修道院に分かれた経緯を追う。チナントラ、ミヘの村々、チョンタル地域を経てグアトゥルコ港に至り、木の十字架にまつわる伝承とその崇敬を伝える。テワンテペケでは、町と教化区の広がり、土地の産物、先住民に対する布教の進め方を述べる。巻末には原刊の補遺としてロハスの伝記と索引を収める。\n\n各章の視点はドミニコ会士である著者のものだが、修道会の沿革だけでなく、地域ごとの地名、言語、土地の生産、古い建造物、住民の移住や教化区の分立も記録する。スペイン統治下のオアハカで、村々のまとまりと教会の管轄がどう重なり、またどう変わったかを読み取れる。",
+    "requiredSiteStrings": [
+      "全体の詳細概要",
+      "Courtesy of the John Carter Brown Library",
+      "CC BY 4.0"
+    ],
+    "literalSourceUrls": [
+      "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668",
+      "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686"
+    ],
+    "pages": 484,
+    "images": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "assets": [
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+        "size": 4290942,
+        "sha256": "e0ce2693ef662514f0870b547bafcef1a192a3b54ae97cacf55443fcb601c619"
+      },
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+        "size": 5178974,
+        "sha256": "86570d44885b0a86e24131492c23c7034ad1e4514e37a81ab101df1876967ed7"
+      },
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-1/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/burgoa-geografica-descripcion-1674-vol-1/cover.jpg",
+        "size": 67394,
+        "sha256": "6d75cc3e24ccab5032b057b43b0d23119105182e63bd0f6edc33756499b41d1a"
+      }
+    ],
+    "probes": [
+      {
+        "term": "舌という絵筆",
+        "pdfPage": 20,
+        "originalPage": "原刊 f. 1r"
+      }
+    ]
+  },
+  {
+    "slug": "burgoa-geografica-descripcion-1674-vol-2",
+    "canonicalSlug": "burgoa-geografica-descripcion-1674",
+    "title": "オアハカの地理・教会史 第2巻",
+    "originalTitle": "Geográfica descripción",
+    "author": "フランシスコ・デ・ブルゴア",
+    "originalAuthor": "Francisco de Burgoa",
+    "sourceProvider": "フランシスコ・デ・ブルゴア図書館所蔵本をミゲル・デ・セルバンテス電子図書館が公開。 第1巻：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668 。第2巻：https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686 。",
+    "rights": "1674年原刊本文はパブリックドメイン。本文底本のデジタル画像は読解に使用し、転載していない。 両巻の銅版口絵はジョン・カーター・ブラウン図書館所蔵の原刊別個体から採録。Courtesy of the John Carter Brown Library. CC BY 4.0（https://creativecommons.org/licenses/by/4.0/）。綴じ目と周囲の余白のみを切り抜いた。出典：https://archive.org/details/geograficadescri12burg/page/n4/mode/1up",
+    "overview": "エトラの教化区と土地の豊かさから始まり、ワショロティトラン、シマトラン、オコトランなど谷の村々をたどる。山地のビリャ・アルタでは、修道士が定住するまでの経緯と、広大な教化区が六つの共同修道院へ分かれる過程を記す。チナントラに赴いたフランシスコ・デ・サラビア、ミヘの人々の中心トトンテペケ、山地サポテカのチュアパ、チョンタル人の教化区を取り上げ、住民の言語と教会の管轄が入り組む地域を描く。沿岸に出るとグアトゥルコ港の十字架の発見譚と崇敬を伝え、テワンテペケの風土、産物、教化の経緯を述べる。終盤ではアンテケラ修道院から司教に就いた人物らを振り返り、補遺のロハス伝と原刊索引に至る。",
+    "groupOverview": "オアハカのドミニコ会士フランシスコ・デ・ブルゴアが、アンテケラを拠点に広がった修道院と教化区の歴史を、その土地の記述と結び付けた地誌・教会史。第1巻ではアンテケラの修道院とシエナの聖カタリナ女子修道院の創設をたどり、修練長を務めたホルダンや司教ベルナルド・デ・アルブルケルケの生涯を描く。続いてヤンギトラン、トラヒアコ、アチウトラ、クイラパなどを巡り、ミシュテカの集落の移転、気候、住民と修道院の関わりを記し、サポテカの王権と領域へ話を進める。\n\n第2巻はエトラなどの谷の教化区からビリャ・アルタの山地へ進み、一つの教化区が六つの共同修道院に分かれた経緯を追う。チナントラ、ミヘの村々、チョンタル地域を経てグアトゥルコ港に至り、木の十字架にまつわる伝承とその崇敬を伝える。テワンテペケでは、町と教化区の広がり、土地の産物、先住民に対する布教の進め方を述べる。巻末には原刊の補遺としてロハスの伝記と索引を収める。\n\n各章の視点はドミニコ会士である著者のものだが、修道会の沿革だけでなく、地域ごとの地名、言語、土地の生産、古い建造物、住民の移住や教化区の分立も記録する。スペイン統治下のオアハカで、村々のまとまりと教会の管轄がどう重なり、またどう変わったかを読み取れる。",
+    "requiredSiteStrings": [
+      "全体の詳細概要",
+      "Courtesy of the John Carter Brown Library",
+      "CC BY 4.0"
+    ],
+    "literalSourceUrls": [
+      "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232668",
+      "https://www.cervantesvirtual.com/nd/ark:/59851/bmc1232686"
+    ],
+    "pages": 605,
+    "images": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "assets": [
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+        "size": 5247770,
+        "sha256": "7cd1a6ad07078ff593ef5f28765781b247941413c33b1efb2d00470bceecefd8"
+      },
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+        "size": 5316783,
+        "sha256": "8421173d6cd05c1780cad9dc4ca4d8e815d37e4ff8dc2d418829f73bb9acea21"
+      },
+      {
+        "path": "publications/burgoa-geografica-descripcion-1674-vol-2/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/burgoa-geografica-descripcion-1674-vol-2/cover.jpg",
+        "size": 67943,
+        "sha256": "0c58027500751b079853087e598e1a8574f83cd1e2602c970e0c2e0e12d71b58"
+      }
+    ],
+    "probes": [
+      {
+        "term": "ほどけた水晶の糸",
+        "pdfPage": 4,
+        "originalPage": "原刊 f. 199r"
+      }
+    ]
+  }
+]
