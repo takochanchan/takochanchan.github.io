@@ -42,12 +42,17 @@ jobs:
             search)
               npm ci --no-audit --no-fund
               npm run verify:remote-search
-              for slug in $(jq -r '[].slug' .nov24-public-check/fixtures.json); do timeout 120s node .nov24-public-check/search-live.mjs . "$slug" || exit "$?"; done
+              slugs=$(jq -er '.[].slug' .nov24-public-check/fixtures.json)
+              test "$(printf '%s\n' "$slugs" | wc -l)" -eq 3
+              for slug in $slugs; do timeout 120s node .nov24-public-check/search-live.mjs . "$slug" || exit "$?"; done
               ;;
             live)
               if ! command -v pdfinfo >/dev/null; then sudo apt-get update && sudo apt-get install -y poppler-utils; fi
-              for slug in $(jq -r '[].slug' .nov24-public-check/fixtures.json); do python3 .nov24-public-check/verify-live.py . "$slug" || exit "$?"; done
+              slugs=$(jq -er '.[].slug' .nov24-public-check/fixtures.json)
+              test "$(printf '%s\n' "$slugs" | wc -l)" -eq 3
+              for slug in $slugs; do python3 .nov24-public-check/verify-live.py . "$slug" || exit "$?"; done
               ;;
             *) exit 2 ;;
           esac
+
 
