@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "slug": "burgoa-1674",
+  "release_tag": "publications-002",
+  "verified_archive_commit": "f2f299b98c1f283b1afaa5096eb2ae41355a2ac9",
+  "publications": [
+    "burgoa-geografica-descripcion-1674-vol-1",
+    "burgoa-geografica-descripcion-1674-vol-2"
+  ],
+  "assets": [
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+      "size": 5178974,
+      "sha256": "86570d44885b0a86e24131492c23c7034ad1e4514e37a81ab101df1876967ed7",
+      "filename": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-1/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+      "size": 4290942,
+      "sha256": "e0ce2693ef662514f0870b547bafcef1a192a3b54ae97cacf55443fcb601c619",
+      "filename": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+      "size": 5316783,
+      "sha256": "8421173d6cd05c1780cad9dc4ca4d8e815d37e4ff8dc2d418829f73bb9acea21",
+      "filename": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub"
+    },
+    {
+      "path": "publications/burgoa-geografica-descripcion-1674-vol-2/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+      "size": 5247770,
+      "sha256": "7cd1a6ad07078ff593ef5f28765781b247941413c33b1efb2d00470bceecefd8",
+      "filename": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf"
+    }
+  ],
+  "bundle": {
+    "size": 18626011,
+    "sha256": "b546bbb96f1a0ead8b284edef635c3b8da1d3c2a1a1522b432c82db1e4c91741",
+    "chunks": [
+      "58b3a88bdd5723de71b7fea83299074d92431473",
+      "3c50c1635ee05cb48a7b378b55ecd182ae73b3ce",
+      "a2ed7d621139d20d0368b560f0c619852d2cf89f",
+      "71ada168910badb4d95c9cb5e544acc7166a416e",
+      "9b0eb749f1f8d189e3c38a203e5ee374fcb5f280",
+      "dc51c5d51c7eaa8b4b63d064ccf0f1580eff4a94",
+      "2cb77e049d4ba24a0bb1087c8234ce61e318f4dd",
+      "71272d4e50a53b3cd8db89ce677e2cf8aa4b7d75",
+      "ee4baa0f19dce9493e181bd591e8dc9a479c8a53",
+      "72f25d06f2e5803bb4bc49512855aee2c3b828f4",
+      "8e7c05a82168839760d996c931e9a8f2d77087f7",
+      "87f44ca7b93e6f7e72d0daa82c29fc97aaab0af2",
+      "d3f132c83b34157d0a7231bb917256546d481f3e",
+      "131fa4840d89de86b76c2750d43f4bd4f2d7e5d6",
+      "78af82ce69b8c62adcb3739b49f0e66fd21205cc",
+      "5c3c2b84121d4d6f966321c2701cb1a4d45553ae",
+      "75e7f85c131ce1707f10f9430fa9f3265fe2bf69",
+      "ee782add5da45743b257c2dd4fc03c79b049661d",
+      "2ed4fc88004a3c44e815f8da366fa1e0ad2f3538",
+      "ba1e5f707f2c81b9f643ffbe2fabefe439e8aada",
+      "2812e5e178bbb229c44b1cdadbb0b9dd6bb6897d",
+      "2423b1c2c2e332b31105c83de3687b5158919544",
+      "5e6fea9a8d532a08ecbf2b7c8ebfe6db0e35d55d",
+      "dd014da578eb8e9282a4f11bea6033d52d8a1190",
+      "d230d9a141c55bfdaa35ebf61dcd13603cf3d98f",
+      "77c3d105264eb535a286924aa56c964b7b60e6b1",
+      "3991b1e4c76791c02c3e57a671c8b124ecdbb7b1",
+      "93ddf685e78af2439301393077e987944a7ce4ac",
+      "12d2731353f9cba99535841cb8fa900d78bedc1d",
+      "946c9afcf66c894459c60982282f032e2ad8decf",
+      "f151d0c1a8b519ac5052ef84b5a5bdc8ccc015df",
+      "9d355ba10b76cd2613cece2fe3e1a254afb3b292"
+    ]
+  }
+}
