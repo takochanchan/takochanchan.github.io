@@ -1,0 +1,151 @@
+[
+  {
+    "title": "中央アメリカ自由諸国旅行記",
+    "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador",
+    "author": "カール・シェルツァー",
+    "originalAuthor": "Carl Scherzer",
+    "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
+    "canonicalSlug": "scherzer-travels-free-states-central-america-1857",
+    "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが電子化）。第1巻：https://archive.org/details/travelsinfreesta01sche 。第2巻：https://archive.org/details/travelsinfreesta02sche 。折込図は同じ所蔵本のWikimedia Commons公開画像。",
+    "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 第1巻の地図・第2巻の断面図は、Wikimedia Commonsの個別ファイルに米国のパブリックドメインの表示がある。",
+    "overview": "ニカラグアがカリフォルニアへ向かう船客の通り道になっていた時代から説き起こす。サン・フアン川、ニカラグア湖と周囲の火山を概観し、リバス、グラナダ、マサヤ、マナグアを経てレオンへ進む。市の教会や市場、乾季の水不足、先住民の婚礼などを描き、レオンを中心とする党派の争い、教育や財政、カカオ・タバコなどの生産と輸出入を論じる。\n\nマタガルパからセゴビア高地に入ると、住民の暮らしや病気、金銀鉱山と鉱夫、移住の可能性に記述が移る。ディピルトでは銀山の産出額を挙げ、地峡横断の章ではテワンテペク、ニカラグア、パナマ、ダリエンの諸案とホンジュラスの鉄道案を比較する。後半はホンジュラスに入り、ユスカランの銀山を経てテグシガルパに至る。モラサンとグアルディオラの人物像には、独立後の中米連邦をどのように見たかが表れる。折込地図には著者の旅行経路を示す。",
+    "requiredSiteStrings": [
+      "第1巻"
+    ],
+    "literalSourceUrls": [
+      "https://archive.org/details/travelsinfreesta01sche",
+      "https://archive.org/details/travelsinfreesta02sche"
+    ],
+    "pages": 186,
+    "images": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "assets": [
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+        "size": 2321422,
+        "sha256": "3a4520a8c4b2cb57c874498c9b73e951a6c0276378b159268eb430a063a31d5f"
+      },
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+        "size": 1036553,
+        "sha256": "14c29df71b5445f9e9c2197cdfcedbfb63421e3ff601dfa612d145b04f7380a8"
+      },
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+        "size": 78822,
+        "sha256": "3eb0cba249e3c082beaa909661e8c735c4efd9a7143be9c0eadcda8a6126e4e8"
+      }
+    ],
+    "probes": [
+      {
+        "term": "ニカラグア湖畔のバイア",
+        "pdfPage": 11,
+        "originalPage": "原刊 p. 4"
+      }
+    ],
+    "groupOverview": "オーストリアの旅行者カール・シェルツァーが、1850年代のニカラグア、ホンジュラス、エルサルバドルを訪れた記録。1857年ロンドン刊の英語版全2巻を訳した。徒歩や騎行で町・村・鉱山を巡った見聞に、各国の地形や産業、独立後の政情の概説を織り込む。サン・フアン川とニカラグア湖を経由する船客の往来から、ホンジュラスの銀山、エルサルバドルの藍栽培と港湾貿易まで、移動を通じて諸地域の結びつきが見える。\n\n特に関心を寄せるのが、大西洋と太平洋を結ぶ交通路である。ニカラグア経由の運河に加え、メキシコやパナマ方面の諸案、ホンジュラス横断鉄道の構想を取り上げる。第1巻の折込地図と第2巻の四つの運河候補の断面図は、交易と通過交通に寄せられた当時の期待を伝える。第2巻には同行者モーリッツ・ワーグナーによる1854年のサン・サルバドル地震の目撃記も収める。政治・経済の調査と、街道や宿での人々の暮らし、災害に遭った都市の記録が交差する旅行記である。"
+  },
+  {
+    "title": "中央アメリカ自由諸国旅行記",
+    "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador",
+    "author": "カール・シェルツァー",
+    "originalAuthor": "Carl Scherzer",
+    "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
+    "canonicalSlug": "scherzer-travels-free-states-central-america-1857",
+    "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが電子化）。第1巻：https://archive.org/details/travelsinfreesta01sche 。第2巻：https://archive.org/details/travelsinfreesta02sche 。折込図は同じ所蔵本のWikimedia Commons公開画像。",
+    "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 第1巻の地図・第2巻の断面図は、Wikimedia Commonsの個別ファイルに米国のパブリックドメインの表示がある。",
+    "overview": "テグシガルパを発ち、コマヤグアで大統領や政界の関係者を訪ね、政権交代の頻発、聖職者の政治参加、教育、財政、横断鉄道の計画を記す。グラシアス・ア・ディオス、サンタ・ロサを経て西へ進む道中では、タバコ産地の商いと暮らしを描く一方、グアテマラからの侵攻を恐れて商人や守備隊が備える様子を伝える。\n\nエルサルバドルでは、藍やバルサムの生産と港の貿易を概観したのち、地震直後のサン・サルバドルを訪れる。同行者ワーグナーの寄稿は1854年の復活祭の夜、地震で市街が崩壊した際の目撃記である。続いてソンソナテ、アカフトラ、ラ・ウニオンを巡り、新首都の候補地サンタ・テクラに言及し、フォンセカ湾からコシグイナ火山に登った記録を経てグアテマラに至る。折込図は両洋間の運河候補四案の断面を示し、巻末には行程の距離と度量衡・貨幣の表を収める。",
+    "requiredSiteStrings": [
+      "第2巻"
+    ],
+    "literalSourceUrls": [
+      "https://archive.org/details/travelsinfreesta01sche",
+      "https://archive.org/details/travelsinfreesta02sche"
+    ],
+    "pages": 142,
+    "images": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "assets": [
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+        "size": 1857498,
+        "sha256": "393cb77ff3d9b02ed96af39fffc0cd5deac2a161f4c4e10d0b7a122ca69b70a7"
+      },
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+        "size": 793622,
+        "sha256": "dae53ca240d00c90309c2f6063b3be38ec8091b70bebf0795c5cabdb7ba78e3e"
+      },
+      {
+        "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+        "size": 79413,
+        "sha256": "21999023c016192ddeef29b150538194b5776aeee058e368809a49059d372b9b"
+      }
+    ],
+    "probes": [
+      {
+        "term": "著者フェリペ・モリーナ",
+        "pdfPage": 12,
+        "originalPage": "原刊 p. 11"
+      }
+    ],
+    "groupOverview": "オーストリアの旅行者カール・シェルツァーが、1850年代のニカラグア、ホンジュラス、エルサルバドルを訪れた記録。1857年ロンドン刊の英語版全2巻を訳した。徒歩や騎行で町・村・鉱山を巡った見聞に、各国の地形や産業、独立後の政情の概説を織り込む。サン・フアン川とニカラグア湖を経由する船客の往来から、ホンジュラスの銀山、エルサルバドルの藍栽培と港湾貿易まで、移動を通じて諸地域の結びつきが見える。\n\n特に関心を寄せるのが、大西洋と太平洋を結ぶ交通路である。ニカラグア経由の運河に加え、メキシコやパナマ方面の諸案、ホンジュラス横断鉄道の構想を取り上げる。第1巻の折込地図と第2巻の四つの運河候補の断面図は、交易と通過交通に寄せられた当時の期待を伝える。第2巻には同行者モーリッツ・ワーグナーによる1854年のサン・サルバドル地震の目撃記も収める。政治・経済の調査と、街道や宿での人々の暮らし、災害に遭った都市の記録が交差する旅行記である。"
+  },
+  {
+    "title": "コスタリカ共和国概説・歴史覚書",
+    "originalTitle": "Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos",
+    "author": "フェリペ・モリーナ",
+    "originalAuthor": "Felipe Molina",
+    "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+    "canonicalSlug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+    "sourceProvider": "本文底本（ミシガン大学蔵本）：https://archive.org/details/bosquejodelarep01moligoog 。原刊4・5頁の補完（スタンフォード大学蔵の同版）：https://archive.org/details/bosquejodelarep00moligoog 。両本はGoogle撮影・Internet Archive公開。書誌照合（スペイン国立図書館蔵本、セルバンテス仮想図書館）：https://www.cervantesvirtual.com/portales/portal_nacional_costa_rica/obra/bosquejo-de-la-republica-de-costa-rica-seguido-de-apuntamientos-para-su-historia-con-varios-mapas-vistas-y-retratos-931977/ 。図版底本（英国図書館蔵の同版、10480.d.6）：https://commons.wikimedia.org/wiki/Category:Bosquejo_de_la_republica_de_Costa_Rica,_seguido_de_apuntamientos_par_su_historia._(1851)_by_Felipe_Molina 。",
+    "rights": "1851年刊の原著は著作権保護期間満了。Google撮影の本文画像は転載していない。原刊図版14点は英国図書館蔵本から採り、Wikimedia Commons公開の12点、英国図書館のFlickr Commons公開の2点を収録。個別の出典と権利表示（Public Domain Mark 1.0または「既知の著作権制限なし」）は前文に記載。",
+    "overview": "ニューヨークで刊行された1851年のスペイン語原著。外交官フェリペ・モリーナは、独立後のコスタリカ共和国を国外に紹介するため、地理・統計・制度の概説と歴史覚書を一冊にまとめた。第一部は、人口・集落・産物の分布に加え、道路と運賃、郵便、財政、学校、移住政策を記す。輸入品を仕入先と品目に分けた記述、人口と出生・死亡の表、サン・フアン川からニカラグア湖へ進む行程などから、当時の流通や交通を具体的にたどれる。\n\n第二部は、教育に尽力したゴイコチェア神父、ブラウリオ・カリーリョ、ホセ・マリア・サモラ、フアン・モラの小伝に始まり、スペイン支配期と独立後に分けて共和国成立までの経緯をたどる。付録には、スペインとの平和友好条約、中米とコロンビアの条約抜粋、フアン・モラの公歴に関する補記、ディエス・ナバロによる旧グアテマラ王国の報告抜粋、ミラバジェス入植地の説明を収める。\n\n巻頭一覧に載る全14点の地図・図版を収録。コスタリカ全図、国章と国旗、三人の肖像、サン・フアン港（グレイタウン）の平面図・風景・港図、ニコヤ湾・ボカ・トロ湾などの測量図を掲載する。サン・フアンやボカ・トロをめぐる領有の記述と地図の境界は、刊行当時の事情や著者の主張を伝えるもので、現行の国境を示すものではない。",
+    "requiredSiteStrings": [
+      "図版14点"
+    ],
+    "literalSourceUrls": [
+      "https://archive.org/details/bosquejodelarep01moligoog",
+      "https://archive.org/details/bosquejodelarep00moligoog"
+    ],
+    "pages": 151,
+    "images": 14,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "assets": [
+      {
+        "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+        "size": 7868700,
+        "sha256": "e738c650265684082692f7a27164271a885b3340c30062eb54337ec71fd6c077"
+      },
+      {
+        "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+        "size": 44504983,
+        "sha256": "13b9b254241eaa78904bc1980cac56ba8cfaae485f259d5e92ff7cbce85d6881"
+      },
+      {
+        "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+        "size": 79803,
+        "sha256": "b2df3f2d690a08e8ae263d4c0b9112aa93a03b8b7dcda92ace27124ea7a62905"
+      }
+    ],
+    "probes": [
+      {
+        "term": "ガリタ・デル・リオ・グランデ",
+        "pdfPage": 40,
+        "originalPage": "原刊 p. 37"
+      }
+    ]
+  }
+]
