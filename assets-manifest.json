@@ -10914,6 +10914,60 @@
       "url": "https://takochanchan.github.io/publications/larrainzar-noticia-historica-de-soconusco-1843/cover.jpg",
       "size": 81632,
       "sha256": "fbe3d158e6d359bcbfebc83f61fa295ba0fbc06c2f8280022011f50c76ec3e04"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+      "size": 2321422,
+      "sha256": "3a4520a8c4b2cb57c874498c9b73e951a6c0276378b159268eb430a063a31d5f"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+      "size": 1036553,
+      "sha256": "14c29df71b5445f9e9c2197cdfcedbfb63421e3ff601dfa612d145b04f7380a8"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-1/cover.jpg",
+      "size": 78822,
+      "sha256": "3eb0cba249e3c082beaa909661e8c735c4efd9a7143be9c0eadcda8a6126e4e8"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+      "size": 1857498,
+      "sha256": "393cb77ff3d9b02ed96af39fffc0cd5deac2a161f4c4e10d0b7a122ca69b70a7"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+      "size": 793622,
+      "sha256": "dae53ca240d00c90309c2f6063b3be38ec8091b70bebf0795c5cabdb7ba78e3e"
+    },
+    {
+      "path": "publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/scherzer-travels-free-states-central-america-1857-vol-2/cover.jpg",
+      "size": 79413,
+      "sha256": "21999023c016192ddeef29b150538194b5776aeee058e368809a49059d372b9b"
+    },
+    {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+      "size": 7868700,
+      "sha256": "e738c650265684082692f7a27164271a885b3340c30062eb54337ec71fd6c077"
+    },
+    {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+      "size": 44504983,
+      "sha256": "13b9b254241eaa78904bc1980cac56ba8cfaae485f259d5e92ff7cbce85d6881"
+    },
+    {
+      "path": "publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/molina-bosquejo-de-la-republica-de-costa-rica-1851/cover.jpg",
+      "size": 79803,
+      "sha256": "b2df3f2d690a08e8ae263d4c0b9112aa93a03b8b7dcda92ace27124ea7a62905"
     }
   ]
 }

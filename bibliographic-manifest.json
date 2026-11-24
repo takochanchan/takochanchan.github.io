@@ -11511,6 +11511,63 @@
         "status": "online",
         "url": "https://archive.org/details/noticiahistrica00larrgoog"
       }
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-1",
+      "recordClass": "major-work",
+      "title": "中央アメリカ自由諸国旅行記 第1巻",
+      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. I",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "year": 1857,
+      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
+      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第1巻。",
+      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta01sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
+      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した旅行経路図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta01sche%29.pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/travelsinfreesta01sche"
+      }
+    },
+    {
+      "slug": "scherzer-travels-free-states-central-america-1857-vol-2",
+      "recordClass": "major-work",
+      "title": "中央アメリカ自由諸国旅行記 第2巻",
+      "originalTitle": "Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador, Vol. II",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Carl Scherzer",
+      "year": 1857,
+      "originalPublication": "1857年、ロンドン、ロングマン、ブラウン、グリーン、ロングマンズ、ロバーツ刊。",
+      "sourceEdition": "Carl Scherzer, Travels in the Free States of Central America: Nicaragua, Honduras, and San Salvador. London: Longman, Brown, Green, Longmans, & Roberts, 1857. 第2巻。",
+      "sourceProvider": "ゲティ研究所図書館蔵（Internet Archiveが2011年に電子化）。本文底本：https://archive.org/details/travelsinfreesta02sche 。折込図は同一所蔵本のWikimedia Commons公開画像。",
+      "rights": "1857年刊の英語版本文はパブリックドメイン。Internet Archiveの底本メタデータにはライセンスURLの記載がない。 掲載した両洋間運河候補四案の断面図は同じゲティ研究所図書館所蔵本のWikimedia Commons再配布画像に由来し、同ファイルは米国のパブリックドメインと表示される。https://commons.wikimedia.org/wiki/File:Travels_in_the_free_states_of_Central_America-_Nicaragua,_Honduras,_and_San_Salvador_%28IA_travelsinfreesta02sche%29.pdf",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/travelsinfreesta02sche"
+      }
+    },
+    {
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "recordClass": "major-work",
+      "title": "コスタリカ共和国概説・歴史覚書",
+      "originalTitle": "Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos",
+      "author": "フェリペ・モリーナ",
+      "originalAuthor": "Felipe Molina",
+      "year": 1851,
+      "originalPublication": "1851年、ニューヨーク、S・W・ベネディクト印刷所刊。",
+      "sourceEdition": "Felipe Molina, Bosquejo de la República de Costa Rica, seguido de apuntamientos para su historia. Con varios mapas, vistas y retratos. Nueva York: Imprenta de S. W. Benedict, 1851.",
+      "sourceProvider": "本文底本（ミシガン大学蔵本）：https://archive.org/details/bosquejodelarep01moligoog 。原刊4・5頁の補完（スタンフォード大学蔵の同版）：https://archive.org/details/bosquejodelarep00moligoog 。両本はGoogle撮影・Internet Archive公開。書誌照合（スペイン国立図書館蔵本、セルバンテス仮想図書館）：https://www.cervantesvirtual.com/portales/portal_nacional_costa_rica/obra/bosquejo-de-la-republica-de-costa-rica-seguido-de-apuntamientos-para-su-historia-con-varios-mapas-vistas-y-retratos-931977/ 。図版底本（英国図書館蔵の同版、10480.d.6）：https://commons.wikimedia.org/wiki/Category:Bosquejo_de_la_republica_de_Costa_Rica,_seguido_de_apuntamientos_par_su_historia._(1851)_by_Felipe_Molina 。",
+      "rights": "1851年刊の原著は著作権保護期間満了。Google撮影の本文画像は転載していない。原刊図版14点は英国図書館蔵本から採り、Wikimedia Commons公開の12点、英国図書館のFlickr Commons公開の2点を収録。個別の出典と権利表示（Public Domain Mark 1.0または「既知の著作権制限なし」）は前文に記載。",
+      "publishedDate": "2026-11-24",
+      "updatedDate": "2026-11-24",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bosquejodelarep01moligoog"
+      }
     }
   ],
   "works": [
