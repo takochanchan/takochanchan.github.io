@@ -1,3 +1,4 @@
+import { levyNotAS1873Overviews } from "./levy-notas-nicaragua-1873-publication.mjs";
 import { mexicoSiglosOverviews } from "./mexico-a-traves-de-los-siglos-publication.mjs";
 import { ximenezScherzerLasHistoriasOverviews } from "./ximenez-scherzer-las-historias-1857-publication.mjs";
 import { wagnerScherzerCostaRicaOverviews } from "./wagner-scherzer-die-republik-costa-rica-1856-publication.mjs";
@@ -6,7 +7,7 @@ import { espinosaArricivitaChronicaOverviews } from "./espinosa-arricivita-chron
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(readFileSync(new URL("./publication-overviews.json", import.meta.url), "utf8"));
-export const publicationOverviews = Object.freeze({ ...data.records, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
+export const publicationOverviews = Object.freeze({ ...data.records, ...levyNotAS1873Overviews, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
 export const overviewUpdatedDate = data.updatedDate;
 
 export function validatePublicationOverviews(publications, records = publicationOverviews) {

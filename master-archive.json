@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "b4928c7f77fa4f28577e84180d0ca2e22b8868f3",
+  "archive_commit": "268f9ebafc8accc898511abc52af1768b8a7ce65",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -285,6 +285,7 @@
     "lemoine-travers-peten-yucatan-1906": "publications/lemoine-travers-peten-yucatan-1906/master.docx",
     "leon-y-gama-dos-piedras-1792": "publications/leon-y-gama-dos-piedras-1792/master.docx",
     "leonard-don-carlos-de-siguenza-y-gongora-1929": "publications/leonard-don-carlos-de-siguenza-y-gongora-1929/master.docx",
+    "levy-notas-nicaragua-1873": "publications/levy-notas-nicaragua-1873/master.docx",
     "lizardi-la-quijotita-y-su-prima-1897": "publications/lizardi-la-quijotita-y-su-prima-1897/master.docx",
     "lobo-pedro-betancur-1667": "publications/lobo-pedro-betancur-1667/master.docx",
     "lopez-tesoro-medicinas-1674": "publications/lopez-tesoro-medicinas-1674/master.docx",

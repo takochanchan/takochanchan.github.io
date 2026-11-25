@@ -1,3 +1,4 @@
+import { levyNotAS1873Records, levyNotAS1873Metadata } from "./levy-notas-nicaragua-1873-publication.mjs";
 import { mexicoSiglosRecords, mexicoSiglosMetadata } from "./mexico-a-traves-de-los-siglos-publication.mjs";
 import { ximenezScherzerLasHistoriasRecords, ximenezScherzerLasHistoriasMetadata } from "./ximenez-scherzer-las-historias-1857-publication.mjs";
 import { wagnerScherzerCostaRicaRecords, wagnerScherzerCostaRicaMetadata } from "./wagner-scherzer-die-republik-costa-rica-1856-publication.mjs";
@@ -406,6 +407,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
+  ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
   ...scherzerXimenezHandschriftlicheWerkeRecords,
@@ -9605,6 +9607,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
+  ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,
   ...scherzerXimenezHandschriftlicheWerkeMetadata,

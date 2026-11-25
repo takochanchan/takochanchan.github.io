@@ -6398,6 +6398,25 @@
       "updatedDate": "2026-08-25"
     },
     {
+      "slug": "levy-notas-nicaragua-1873",
+      "recordClass": "major-work",
+      "title": "ニカラグア共和国地理・経済誌",
+      "originalTitle": "Notas geográficas y económicas sobre la República de Nicaragua",
+      "author": "パブロ〔ポール〕・レヴィ",
+      "originalAuthor": "Pablo (Paul) Lévy",
+      "year": 1873,
+      "originalPublication": "1873年、パリ、E・デネ・シュミッツのスペイン語書店刊。",
+      "sourceEdition": "Pablo Lévy, Notas geográficas y económicas sobre la República de Nicaragua. Paris: Librería Española de E. Denné Schmitz, 1873.",
+      "sourceProvider": "Harvard College Library 所蔵。Google が電子化し、Latin American Studies が公開。本文底本のPDFには付図がなく、1873年の同時代付図はフランス国立図書館所蔵の別個体による。",
+      "rights": "1873年原刊本文はパブリックドメイン。底本PDFに個別ライセンス表示はなく、その本文・前付のスキャン画像は転載していない。掲載図はフランス国立図書館所蔵 GE C-9501。Wikimedia Commons にフランス・米国のパブリックドメイン表示。地図データ：https://gallica.bnf.fr/ark:/12148/btv1b53098818s 。画像の権利表示：https://commons.wikimedia.org/w/index.php?oldid=1196644230 。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.latinamericanstudies.org/nicaragua/Notas_Nicaragua.pdf"
+      }
+    },
+    {
       "recordClass": "major-work",
       "slug": "lizardi-la-quijotita-y-su-prima-1897",
       "title": "キホティータとそのいとこ",

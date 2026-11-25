@@ -6086,6 +6086,24 @@
       "sha256": "23d9cde6c3a2a13bb507c295e2a4e7c0ea7351f2baa437022777fd36218c3ad5"
     },
     {
+      "path": "publications/levy-notas-nicaragua-1873/Levy_Notas_Nicaragua_1873_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Levy_Notas_Nicaragua_1873_Japanese.epub",
+      "size": 17874281,
+      "sha256": "622e6abff5e0fc8be8e7804c581d9acc2698d14261a669c51cd98f58014daa46"
+    },
+    {
+      "path": "publications/levy-notas-nicaragua-1873/Levy_Notas_Nicaragua_1873_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Levy_Notas_Nicaragua_1873_Japanese.pdf",
+      "size": 25636997,
+      "sha256": "540dbb72bdd3e6499ca0cc79d2c93914583c404e950fe457628fb03f1b0f1762"
+    },
+    {
+      "path": "publications/levy-notas-nicaragua-1873/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/levy-notas-nicaragua-1873/cover.jpg",
+      "size": 64193,
+      "sha256": "721690e9018e3cd086037b4d94a386e0ac697e4a2a78770eab5a313c3f33da32"
+    },
+    {
       "path": "publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
       "url": "https://takochanchan.github.io/publications/lizardi-la-quijotita-y-su-prima-1897/cover.jpg",
       "size": 30389,
