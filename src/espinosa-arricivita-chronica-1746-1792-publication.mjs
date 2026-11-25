@@ -117,6 +117,7 @@ export const espinosaArricivitaChronicaGroup = {
   "series": "ヌエバ・エスパーニャ布教学院年代記",
   "year": 1746,
   "seriesVolumeCount": 2,
+  "multiAuthorSeries": true,
   "originalPublication": "メキシコ市、1746年（第1部）・1792年（第2部）。",
   "extent": "全2部・PDF計1952頁",
   "description": "ケレタロのサンタ・クルス学院の創設から、グアテマラ、テハス、コロラド川流域に及んだフランシスコ会の布教を記す年代記。",
