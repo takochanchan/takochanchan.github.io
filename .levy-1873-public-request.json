@@ -1,0 +1,65 @@
+{
+  "verified_archive_commit": "268f9ebafc8accc898511abc52af1768b8a7ce65",
+  "bundle": {
+    "size": 39613387,
+    "sha256": "cd12c39e5b81a9bf950f12970d898a87594a8df7a52805b65f7a912b0a8b73a6",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 8000000,
+        "start": 0,
+        "sha1": "e9321125d67a320abd1b7cb4ae5258d27bde5c18",
+        "sha256": "41237f904d998522a8f6de1cf750f2c55662176118bb6f0560a7c1d83a21dd5b"
+      },
+      {
+        "index": 1,
+        "part": "001.bin",
+        "size": 8000000,
+        "start": 8000000,
+        "sha1": "640cadee326e7b34e2c2e6f2f1f642da7ba93bd7",
+        "sha256": "f9b986171eb097546bb69bcc14630ea4f2d059152dfec402e67c0f6d05d4589b"
+      },
+      {
+        "index": 2,
+        "part": "002.bin",
+        "size": 8000000,
+        "start": 16000000,
+        "sha1": "c09e2e73c324859d35d239dc85bdd2acbb18f56c",
+        "sha256": "f34a292bdeecdd004170a8fec468e7493b86f323595ab2e3f04dea3761d1ff7a"
+      },
+      {
+        "index": 3,
+        "part": "003.bin",
+        "size": 8000000,
+        "start": 24000000,
+        "sha1": "6b15ba8fc5cb26649262f3467932becb7c69f8b7",
+        "sha256": "73555648bdfc40d7e4ed4c26d807d22bf8437c8b2ce79a32ac44c9f17427411e"
+      },
+      {
+        "index": 4,
+        "part": "004.bin",
+        "size": 7613387,
+        "start": 32000000,
+        "sha1": "5e8939ae953d1ba28419bb8412a8d5722d6be822",
+        "sha256": "6a514521546f5252f271d27317f34e71bf97e59dfc6042f35c121f7bcb50f8d4"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/levy-notas-nicaragua-1873/Levy_Notas_Nicaragua_1873_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Levy_Notas_Nicaragua_1873_Japanese.pdf",
+      "size": 25636997,
+      "sha256": "540dbb72bdd3e6499ca0cc79d2c93914583c404e950fe457628fb03f1b0f1762",
+      "filename": "Levy_Notas_Nicaragua_1873_Japanese.pdf"
+    },
+    {
+      "path": "publications/levy-notas-nicaragua-1873/Levy_Notas_Nicaragua_1873_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Levy_Notas_Nicaragua_1873_Japanese.epub",
+      "size": 17874281,
+      "sha256": "622e6abff5e0fc8be8e7804c581d9acc2698d14261a669c51cd98f58014daa46",
+      "filename": "Levy_Notas_Nicaragua_1873_Japanese.epub"
+    }
+  ]
+}
