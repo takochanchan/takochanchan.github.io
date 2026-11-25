@@ -1,0 +1,28 @@
+name: Transfer approved Espinosa–Arricivita chronicle
+on:
+  push:
+    branches: [agent/transfer-espinosa-arricivita-chronica-20261125]
+    paths: [.chronica-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Upload and verify final PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .chronica-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chronica-public-verification
+          path: chronica-public-verification.json

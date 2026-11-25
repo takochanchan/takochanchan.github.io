@@ -1,0 +1,54 @@
+{
+  "bundle": {
+    "size": 11131827,
+    "sha256": "15d891c0dc2174b27a1d7d6e5f195cdc87fec5118b8a0b26ea43e2bf313e2b11",
+    "chunks": [
+      "a5643539d0bbb5dbea93b5597ff705b0302648c0",
+      "b22d198c82198b2492f5981883b14125d3ad59a2",
+      "157425172cb0a024489e9ecb3ebae61867d5cdc1",
+      "6042c1f0ebb9be21474a69de6ee526b3f04da1ac",
+      "63ff9564276dde5c5e21f29989ded06fb2451eeb",
+      "f43bc65d58e42936ea8f16f581b79b9a88c3e0ed",
+      "ccf5ff00e65bc0291c5df09f2310aff639ec6319",
+      "e7cceeacc585080ced151413b4fe2e11bc88c9fc",
+      "03a15ad986929d4416c8bbe20c5459b05012f1ac",
+      "0dc25e223343d28a016390cc4ddea739d54bf1f2",
+      "d28588186c905654d6ede002770a994f5680662d",
+      "f439cf44ae6eedfba226f5d8708e69f9ce49c6e0",
+      "ed1cb2b7117a8fbdd179a24642cae9f1094ea39b",
+      "353794d0710db6a03c3d8a7de29ba4adebef47f7",
+      "3fbeaf1f6cff889ead9f14fadcbd451ff8fd7a79",
+      "a3e69206e62775c9205fce6be4e6b98d3f8e05d8",
+      "0c3fa3c5a165993d0a42ce938bad228982ea3fc0",
+      "5f8f3f930ef0ffda29f5e445b69c198ae3e48113",
+      "7ce3e6dcdd623e446dc84c4dc79ab7b3a4ba771f"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.pdf",
+      "size": 6916257,
+      "sha256": "7f1804f1e2306afdd705bf23730244fdffc6a83af4917a49fc2061027e0ef518",
+      "filename": "Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.epub",
+      "size": 1072036,
+      "sha256": "973a22c7b8e6c6244febd0694a2d1d213253d19c2f4796b4be7882c8bb5e196d",
+      "filename": "Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.epub"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.pdf",
+      "size": 5447323,
+      "sha256": "6d54ab4381c36f3cefd34b7b723c30e11dd578a1b467132d869aab66dae3be51",
+      "filename": "Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.epub",
+      "size": 850139,
+      "sha256": "df661668dffdcc27120156584699275d0ca94320edbbf3850fffafc8d10fd1a3",
+      "filename": "Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.epub"
+    }
+  ],
+  "verified_archive_commit": "f7724f88280e35b337b5fefdcbab80f79e14b1c2"
+}
