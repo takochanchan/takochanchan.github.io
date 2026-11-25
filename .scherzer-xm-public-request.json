@@ -1,0 +1,25 @@
+{
+  "bundle": {
+    "size": 666403,
+    "sha256": "c7d3ad90c02b5828108fcc4a6e15cb94f6b64345af3506dc8c65e59c80e7fdf1",
+    "chunks": [
+      "295c6ec19f12efbdb52e7871472a5fe6b13d2670",
+      "0e459742053719ecfd74df14df076025cb6c5a43"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.pdf",
+      "size": 537471,
+      "sha256": "924ac22fba16088418084fefe82df272338dd8903e460cfc435b91f8bda2de51",
+      "filename": "Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.epub",
+      "size": 199089,
+      "sha256": "6b022bcd205fdee81ba4942c03b6dc8e597924ab8d862626ee526be51548ce9c",
+      "filename": "Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.epub"
+    }
+  ],
+  "verified_archive_commit": "c407a2bb2fc48edec0f1d0c1685b5f67b66365ba"
+}
