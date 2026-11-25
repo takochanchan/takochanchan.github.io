@@ -7030,6 +7030,25 @@
       }
     },
     {
+      "slug": "mexico-a-traves-de-los-siglos-vol-1",
+      "recordClass": "major-work",
+      "title": "幾世紀を通じたメキシコ 第1巻 古代および征服の歴史",
+      "originalTitle": "México a través de los siglos. Tomo I: Historia antigua y de la conquista",
+      "author": "アルフレード・チャベロ",
+      "originalAuthor": "Alfredo Chavero",
+      "year": 1888,
+      "originalPublication": "メキシコ市、J. Ballescá y Compañía／バルセロナ、Espasa y Compañía。底本デジタル書誌では1888年。",
+      "sourceEdition": "Alfredo Chavero, Historia antigua y de la conquista, tomo I de México á través de los siglos, dirigido por Vicente Riva Palacio. México: J. Ballescá y Compañía; Barcelona: Espasa y Compañía, [1888; Getty/Internet Archive digital catalogue].",
+      "sourceProvider": "ゲティ研究所（Getty Research Institute）所蔵本、Internet Archive公開。",
+      "rights": "19世紀刊行の原著はパブリックドメイン。掲載した挿図・折込図は底本と同じゲティ研究所所蔵本による。ウィキメディア・コモンズに収録された同一デジタル個体はPublic Domain Mark 1.0および米国パブリックドメイン表示。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/mexicotravesdelo01riva"
+      }
+    },
+    {
       "slug": "meza-centro-america-campana-nacional-1885-1911",
       "recordClass": "major-work",
       "title": "中央アメリカ――1885年国民戦役",
