@@ -20,7 +20,7 @@ jobs:
           import json,os,subprocess,time
           repo=os.environ['GITHUB_REPOSITORY']
           for _ in range(90):
-              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=8244e3ef781fd00015f6e39f7589dcec285955fe']))
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=277870ba4245da971c72350ce4cc17b245b2884a']))
               runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
               if runs and runs[0]['status']=='completed':
                   assert runs[0]['conclusion']=='success',runs[0]['conclusion']
