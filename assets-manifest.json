@@ -9314,6 +9314,24 @@
       "sha256": "21999023c016192ddeef29b150538194b5776aeee058e368809a49059d372b9b"
     },
     {
+      "path": "publications/scherzer-ximenez-handschriftliche-werke-1856/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.epub",
+      "size": 199092,
+      "sha256": "cb6e21fc94aef189662f76db2f31090dea132ab3ffcf0452b22732dc4b6a3caa"
+    },
+    {
+      "path": "publications/scherzer-ximenez-handschriftliche-werke-1856/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.pdf",
+      "size": 537471,
+      "sha256": "924ac22fba16088418084fefe82df272338dd8903e460cfc435b91f8bda2de51"
+    },
+    {
+      "path": "publications/scherzer-ximenez-handschriftliche-werke-1856/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/scherzer-ximenez-handschriftliche-werke-1856/cover.jpg",
+      "size": 178673,
+      "sha256": "9fc8012b71c83972870d973df80b641357683438b265ad3b1ddfe960e8d9d4c8"
+    },
+    {
       "path": "publications/seitz-parkman-squier-letters-1911/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Don_C_Seitz_Letters_from_Francis_Parkman_to_E_G_Squier_1911_Japanese_Complete_Translation.epub",
       "size": 108322,

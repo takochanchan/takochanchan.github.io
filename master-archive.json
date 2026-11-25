@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f7724f88280e35b337b5fefdcbab80f79e14b1c2",
+  "archive_commit": "e721f3635e17c8ba25733df051dc27dcc65b7ac8",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -459,6 +459,7 @@
     "schellhas-virchow-deformierter-schaedel-ulpan-1894": "publications/schellhas-virchow-deformierter-schaedel-ulpan-1894/master.docx",
     "scherzer-travels-free-states-central-america-1857-vol-1": "publications/scherzer-travels-free-states-central-america-1857-vol-1/master.docx",
     "scherzer-travels-free-states-central-america-1857-vol-2": "publications/scherzer-travels-free-states-central-america-1857-vol-2/master.docx",
+    "scherzer-ximenez-handschriftliche-werke-1856": "publications/scherzer-ximenez-handschriftliche-werke-1856/master.docx",
     "seitz-parkman-squier-letters-1911": "publications/seitz-parkman-squier-letters-1911/master.docx",
     "seler-sachs-auf-alten-wegen-1900": "publications/seler-sachs-auf-alten-wegen-1900/master.docx",
     "selfridge-darien-ship-canal-1874": "publications/selfridge-darien-ship-canal-1874/master.docx",

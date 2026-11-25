@@ -9952,6 +9952,25 @@
       }
     },
     {
+      "slug": "scherzer-ximenez-handschriftliche-werke-1856",
+      "recordClass": "short-work",
+      "title": "グアテマラ大学図書館所蔵のフランシスコ・ヒメネス神父の写本著作について",
+      "originalTitle": "Über die handschriftlichen Werke des Padre Francisco Ximenez in der Universitäts-Bibliothek zu Guatemala",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Karl Scherzer",
+      "year": 1856,
+      "originalPublication": "ウィーン、帝国科学アカデミー哲学・歴史部門会報 第19巻第2分冊、1856年、166–186頁。",
+      "sourceEdition": "Karl Scherzer, „Über die handschriftlichen Werke des Padre Francisco Ximenez in der Universitäts-Bibliothek zu Guatemala“, Sitzungsberichte der philosophisch-historischen Classe der Kaiserlichen Akademie der Wissenschaften, Bd. 19, Heft 2, Wien, 1856, S. 166–186.",
+      "sourceProvider": "Internet Archive公開の原誌第19巻（ARLIMA収録、Googleデジタル化）。Wayeb公開の同論文画像は照合用。",
+      "rights": "原著本文はパブリックドメイン。Internet Archiveの底本画像はPublic Domain Mark 1.0。本訳に底本画像は掲載していない。",
+      "publishedDate": "2026-11-25",
+      "updatedDate": "2026-11-25",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/SitzungsberichteOsterreichischeAkademiePHC19"
+      }
+    },
+    {
       "slug": "seitz-parkman-squier-letters-1911",
       "recordClass": "major-work",
       "title": "フランシス・パークマンからE・G・スクワイアへの書簡",

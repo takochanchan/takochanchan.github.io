@@ -1,3 +1,4 @@
+import { scherzerXimenezHandschriftlicheWerkeRecords, scherzerXimenezHandschriftlicheWerkeMetadata } from "./scherzer-ximenez-handschriftliche-werke-1856-publication.mjs";
 import { espinosaArricivitaChronicaRecords, espinosaArricivitaChronicaMetadata } from "./espinosa-arricivita-chronica-1746-1792-publication.mjs";
 import { burgoaGeograficaDescripcion1674Records, burgoaGeograficaDescripcion1674Metadata } from "./burgoa-geografica-descripcion-1674-publication.mjs";
 import { laferriereRecords, laferriereMetadata } from "./laferriere-paris-guatemala-1877-publication.mjs";
@@ -401,6 +402,7 @@ const publicationRecords = [
   ...florenciaProvinciaNuevaEspana1694Records,
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
+  ...scherzerXimenezHandschriftlicheWerkeRecords,
   ...espinosaArricivitaChronicaRecords,
   ...burgoaGeograficaDescripcion1674Records,
   ...scherzerTravelsFreeStatesCentralAmerica1857Records,
@@ -9596,6 +9598,7 @@ const publicationMetadata = {
   ...florenciaProvinciaNuevaEspana1694Metadata,
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
+  ...scherzerXimenezHandschriftlicheWerkeMetadata,
   ...espinosaArricivitaChronicaMetadata,
   ...burgoaGeograficaDescripcion1674Metadata,
   ...scherzerTravelsFreeStatesCentralAmerica1857Metadata,
@@ -12233,6 +12236,7 @@ const publicationMetadata = {
 // main catalogue, while concise journal, annual-report, newspaper, and source
 // excerpts can be accumulated under a stable author key here.
 const shortWorkAuthorBySlug = {
+  "scherzer-ximenez-handschriftliche-werke-1856": "karl-scherzer",
   "alzate-memoria-grana-cochinilla-1794": "jose-antonio-de-alzate-y-ramirez",
   ...paraveyFouSangShortWorkAuthors,
   "de-guignes-navigations-chinois-amerique-1761": "joseph-de-guignes",

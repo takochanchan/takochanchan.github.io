@@ -3108,6 +3108,14 @@
       "seriesVolumeNumber": 2
     },
     {
+      "slug": "scherzer-ximenez-handschriftliche-werke-1856",
+      "recordClass": "short-work",
+      "searchShard": "003",
+      "author": "カール・シェルツァー",
+      "originalAuthor": "Karl Scherzer",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "seitz-parkman-squier-letters-1911",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -3928,5 +3936,5 @@
       "seriesVolumeCount": 2
     }
   ],
-  "shortAuthorCount": 49
+  "shortAuthorCount": 50
 }
