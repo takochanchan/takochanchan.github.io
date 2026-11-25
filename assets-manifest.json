@@ -10988,6 +10988,24 @@
       "sha256": "ea8ea3db9adc6ebb6eeaf3aa2d694f26caea6344b288da34fe13bcb03a59949c"
     },
     {
+      "path": "publications/ximenez-scherzer-las-historias-1857/Ximenez_Scherzer_Las_historias_1857_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ximenez_Scherzer_Las_historias_1857_Japanese.epub",
+      "size": 194672,
+      "sha256": "a628022223a82ff5440e99399f412bb4ea13a2e058f971af13fd78b57cc1f16a"
+    },
+    {
+      "path": "publications/ximenez-scherzer-las-historias-1857/Ximenez_Scherzer_Las_historias_1857_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ximenez_Scherzer_Las_historias_1857_Japanese.pdf",
+      "size": 1707289,
+      "sha256": "0650d1d3eadfaf716322896b1d9768b21b237318e0628156340a83881a0f451e"
+    },
+    {
+      "path": "publications/ximenez-scherzer-las-historias-1857/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/ximenez-scherzer-las-historias-1857/cover.jpg",
+      "size": 67623,
+      "sha256": "90f64204b483602a3d1c93d0d56769da5fe27986a88f42afc6f050a98033c8be"
+    },
+    {
       "path": "publications/young-black-charaibs-st-vincent-1795/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Sir_William_Young_Black_Charaibs_1795_Japanese_Complete_Translation.epub",
       "size": 3479421,

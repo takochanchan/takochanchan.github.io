@@ -1,3 +1,4 @@
+import { ximenezScherzerLasHistoriasRecords, ximenezScherzerLasHistoriasMetadata } from "./ximenez-scherzer-las-historias-1857-publication.mjs";
 import { wagnerScherzerCostaRicaRecords, wagnerScherzerCostaRicaMetadata } from "./wagner-scherzer-die-republik-costa-rica-1856-publication.mjs";
 import { scherzerXimenezHandschriftlicheWerkeRecords, scherzerXimenezHandschriftlicheWerkeMetadata } from "./scherzer-ximenez-handschriftliche-werke-1856-publication.mjs";
 import { espinosaArricivitaChronicaRecords, espinosaArricivitaChronicaMetadata } from "./espinosa-arricivita-chronica-1746-1792-publication.mjs";
@@ -404,6 +405,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
+  ...ximenezScherzerLasHistoriasRecords,
   ...scherzerXimenezHandschriftlicheWerkeRecords,
   ...espinosaArricivitaChronicaRecords,
   ...burgoaGeograficaDescripcion1674Records,
@@ -9601,6 +9603,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
+  ...ximenezScherzerLasHistoriasMetadata,
   ...scherzerXimenezHandschriftlicheWerkeMetadata,
   ...espinosaArricivitaChronicaMetadata,
   ...burgoaGeograficaDescripcion1674Metadata,

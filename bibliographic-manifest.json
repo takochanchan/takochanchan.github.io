@@ -11589,6 +11589,25 @@
       "updatedDate": "2026-08-13"
     },
     {
+      "slug": "ximenez-scherzer-las-historias-1857",
+      "recordClass": "major-work",
+      "title": "グアテマラ地方の先住民の起源に関する諸史",
+      "originalTitle": "Las historias del origen de los indios de esta provincia de Guatemala",
+      "author": "フランシスコ・ヒメネス／カール・シェルツァー",
+      "originalAuthor": "Francisco Ximénez / Karl von Scherzer",
+      "year": 1857,
+      "originalPublication": "1857年、ウィーン、カルロス・ゲロルト父子商会刊、帝国科学アカデミー刊行助成。",
+      "sourceEdition": "Francisco Ximénez, Las historias del origen de los indios de esta provincia de Guatemala, edición de C. Scherzer. Viena: C. Gerold e hijo, 1857. xvi, 215, [1] pp.",
+      "sourceProvider": "米国議会図書館（Library of Congress）所蔵・公開の1857年初刊。照合にニューベリー図書館蔵 Ayer MS 1515（米国議会図書館公開、https://www.loc.gov/item/2021668226/）と、ミシガン大学提供・Internet Archive公開のロマン1897年刊第2巻（https://archive.org/details/agz9126.0002.001.umich.edu）を使用。",
+      "rights": "1857年原刊はパブリックドメイン。米国議会図書館は所蔵・公開する底本をパブリックドメインと表示している。照合資料のうちAyer MS 1515は既知の著作権等による制限なしと表示され、1897年刊ロマンの本文はパブリックドメイン。本訳では底本・照合資料ともに画像を転載していない。",
+      "publishedDate": "2026-11-25",
+      "updatedDate": "2026-11-25",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.loc.gov/item/05009885/"
+      }
+    },
+    {
       "slug": "young-black-charaibs-st-vincent-1795",
       "recordClass": "major-work",
       "title": "セント・ヴィンセント島の黒カリブ人に関する報告",
