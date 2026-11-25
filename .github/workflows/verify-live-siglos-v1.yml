@@ -1,0 +1,83 @@
+name: Verify published siglos-v1
+on:
+  push:
+    branches: ["agent/verify-live-siglos-v1-20261126"]
+    paths: [".github/workflows/verify-live-siglos-v1.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(90):
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=0134c1e8921052a03909c4f6d9b1088caf7157e9']))
+              runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify the public catalogue and artifacts
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,re,shutil,subprocess,tempfile,urllib.request,time,zipfile
+          from pathlib import Path, PurePosixPath
+          from xml.etree import ElementTree as ET
+          root='https://takochanchan.github.io/'
+          group='mexico-a-traves-de-los-siglos'; slug=group+'-vol-1'
+          def read(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as r:return r.read()
+                  except OSError:
+                      if i==11:raise
+                      time.sleep(4)
+          p=html.unescape(read(root+'publications/'+group+'/').decode())
+          for v in ('幾世紀を通じたメキシコ','全体の詳細概要','第1巻の詳細概要','フアン・デ・ディオス・アリアス','アルフレード・チャベロ','https://archive.org/details/mexicotravesdelo01riva','id="volume-1"'):
+              assert v in p,v
+          assert '史料集全体の詳細概要' not in p
+          rows=re.findall(r'<tr data-series-volume="(\d+)">([\s\S]+?)</tr>',p)
+          assert [n for n,_ in rows]==list('12345')
+          assert 'href="#volume-1">公開済み' in rows[0][1]
+          assert all('<td>未公開</td>' in row for n,row in rows[1:])
+          assert root+'publications/'+group+'/' in read(root+'publications/'+slug+'/').decode()
+          assets=[a for a in json.load(open('assets-manifest.json'))['assets'] if a['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          ledger=read('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/SHA256SUMS.txt').decode()
+          mapfile=json.loads(read(root+'takochan-search-index-003/maps/'+slug+'.json'))
+          assert len(mapfile['blocks'])>500
+          with tempfile.TemporaryDirectory() as wd:
+              for a in assets:
+                  name=PurePosixPath(a['path']).name; target=Path(wd,name)
+                  with urllib.request.urlopen(a['url'],timeout=200) as i,target.open('wb') as o: shutil.copyfileobj(i,o)
+                  with target.open('rb') as f: h=hashlib.file_digest(f,'sha256').hexdigest()
+                  assert target.stat().st_size==a['size'] and h==a['sha256'],name
+                  if name.endswith(('.pdf','.epub')):
+                      assert a['url'] in p and any(l.split()==[h,name] for l in ledger.splitlines()),name
+                  if name.endswith('.pdf'):
+                      assert mapfile['pdfSha256']==h
+                      info=subprocess.check_output(['pdfinfo',str(target)],text=True)
+                      assert re.search(r'^Pages:\s+2542$',info,re.M),info
+                      assert all(1<=item[1]<=2542 for item in mapfile['blocks'].values() if len(item)>1 and isinstance(item[1],int))
+                  if name.endswith('.epub'):
+                      with zipfile.ZipFile(target) as z:
+                          assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                          assert len([n for n in z.namelist() if n.startswith('EPUB/media/')])==1052
+                          n=ET.fromstring(z.read('EPUB/notes.xhtml'))
+                          assert len(n.findall('.//{http://www.w3.org/1999/xhtml}aside'))==36
+          print('Live bibliographic page, 5 volume statuses, 2 overviews, 3 asset hashes, PDF 2542 pages, EPUB and shard 003 map:', len(mapfile['blocks']))
+          PY
