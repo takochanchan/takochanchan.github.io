@@ -1,3 +1,4 @@
+import { espinosaArricivitaChronicaRecords, espinosaArricivitaChronicaMetadata } from "./espinosa-arricivita-chronica-1746-1792-publication.mjs";
 import { burgoaGeograficaDescripcion1674Records, burgoaGeograficaDescripcion1674Metadata } from "./burgoa-geografica-descripcion-1674-publication.mjs";
 import { laferriereRecords, laferriereMetadata } from "./laferriere-paris-guatemala-1877-publication.mjs";
 import { florenciaProvinciaNuevaEspana1694Records, florenciaProvinciaNuevaEspana1694Metadata } from "./florencia-provincia-nueva-espana-1694-publication.mjs";
@@ -400,6 +401,7 @@ const publicationRecords = [
   ...florenciaProvinciaNuevaEspana1694Records,
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
+  ...espinosaArricivitaChronicaRecords,
   ...burgoaGeograficaDescripcion1674Records,
   ...scherzerTravelsFreeStatesCentralAmerica1857Records,
   ...molinaBosquejoDeLaRepublicaDeCostaRica1851Records,
@@ -9594,6 +9596,7 @@ const publicationMetadata = {
   ...florenciaProvinciaNuevaEspana1694Metadata,
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
+  ...espinosaArricivitaChronicaMetadata,
   ...burgoaGeograficaDescripcion1674Metadata,
   ...scherzerTravelsFreeStatesCentralAmerica1857Metadata,
   ...molinaBosquejoDeLaRepublicaDeCostaRica1851Metadata,

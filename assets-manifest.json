@@ -3512,6 +3512,42 @@
       "sha256": "8e7db6ba8033cb7c81966b1e9bd89b1e0b9f5d1b0b14d900f27936f58d0456ae"
     },
     {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-1/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.epub",
+      "size": 1072036,
+      "sha256": "973a22c7b8e6c6244febd0694a2d1d213253d19c2f4796b4be7882c8bb5e196d"
+    },
+    {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-1/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.pdf",
+      "size": 6916257,
+      "sha256": "7f1804f1e2306afdd705bf23730244fdffc6a83af4917a49fc2061027e0ef518"
+    },
+    {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/espinosa-arricivita-chronica-1746-1792-part-1/cover.jpg",
+      "sha256": "415809f419f506153f031195f2dce0ee9b0019af9545a1850b90e648224a1203",
+      "size": 67368
+    },
+    {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-2/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.epub",
+      "size": 850139,
+      "sha256": "df661668dffdcc27120156584699275d0ca94320edbbf3850fffafc8d10fd1a3"
+    },
+    {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-2/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.pdf",
+      "size": 5447323,
+      "sha256": "6d54ab4381c36f3cefd34b7b723c30e11dd578a1b467132d869aab66dae3be51"
+    },
+    {
+      "path": "publications/espinosa-arricivita-chronica-1746-1792-part-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/espinosa-arricivita-chronica-1746-1792-part-2/cover.jpg",
+      "sha256": "ca7463c6852720af36106b76dcc160a80e190b3b00cfffc70160a06c4e36db11",
+      "size": 66333
+    },
+    {
       "path": "publications/espinosa-peregrino-septentrional-atlante-1737/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Espinosa_El_Peregrino_Septentrional_Atlante_1737_Japanese_Translation.epub",
       "size": 2296059,
