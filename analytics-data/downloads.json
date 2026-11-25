@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-23",
-  "updatedAt": "2026-11-24T04:49:07.958Z",
+  "endDate": "2026-11-24",
+  "updatedAt": "2026-11-25T03:33:41.441Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9736,6 +9736,86 @@
       "title": "ミチョアカン司教区の歴史と統計のための資料",
       "volumeLabel": "",
       "format": "epub"
+    },
+    {
+      "key": "dl_37dbbcc3aef60f4b",
+      "name": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.pdf",
+      "slug": "burgoa-geografica-descripcion-1674",
+      "title": "オアハカの地理・教会史",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_bde4a81ddbd47109",
+      "name": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol1_Japanese.epub",
+      "slug": "burgoa-geografica-descripcion-1674",
+      "title": "オアハカの地理・教会史",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f18cfd2d87116098",
+      "name": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.pdf",
+      "slug": "burgoa-geografica-descripcion-1674",
+      "title": "オアハカの地理・教会史",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_fd15e90983f9637c",
+      "name": "Francisco_de_Burgoa_Geografica_Descripcion_1674_Vol2_Japanese.epub",
+      "slug": "burgoa-geografica-descripcion-1674",
+      "title": "オアハカの地理・教会史",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f099ef25eb416138",
+      "name": "Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.pdf",
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "title": "中央アメリカ自由諸国旅行記",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_362b7220a6a73b9c",
+      "name": "Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol1_Japanese.epub",
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "title": "中央アメリカ自由諸国旅行記",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_3d5c77226522316b",
+      "name": "Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.pdf",
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "title": "中央アメリカ自由諸国旅行記",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_ed3e371250d0aba9",
+      "name": "Carl_Scherzer_Travels_Free_States_Central_America_1857_Vol2_Japanese.epub",
+      "slug": "scherzer-travels-free-states-central-america-1857",
+      "title": "中央アメリカ自由諸国旅行記",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_4f4f243fecbd329f",
+      "name": "Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.pdf",
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "title": "コスタリカ共和国概説・歴史覚書",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_8cf2eaece5429535",
+      "name": "Felipe_Molina_Bosquejo_Costa_Rica_1851_Japanese.epub",
+      "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
+      "title": "コスタリカ共和国概説・歴史覚書",
+      "volumeLabel": "",
+      "format": "epub"
     }
   ],
   "records": [
@@ -9752,6 +9832,11 @@
     {
       "date": "2026-11-22",
       "key": "dl_9ac3b2b43f13f395",
+      "count": 1
+    },
+    {
+      "date": "2026-11-24",
+      "key": "dl_7f7b5a73df7fd79b",
       "count": 1
     }
   ]
