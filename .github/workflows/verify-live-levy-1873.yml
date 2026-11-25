@@ -1,0 +1,69 @@
+name: Verify live Lévy 1873 full translation
+on:
+  push:
+    branches: ["agent/verify-live-levy-1873-20261126"]
+    paths: [".github/workflows/verify-live-levy-1873.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact deployed public files and bibliography
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path,PurePosixPath
+          from xml.etree import ElementTree as ET
+          import hashlib,html,json,os,re,shutil,subprocess,tempfile,time,urllib.request,zipfile
+          repo=os.environ['GITHUB_REPOSITORY']
+          target='f5908620a2d5d72cb8da0617572934e3c048e3a6'
+          for _ in range(135):
+              j=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha={target}&branch=main']))
+              d=[r for r in j['workflow_runs'] if r['name']=='Deploy archive to GitHub Pages']
+              if d and d[0]['status']=='completed':
+                  assert d[0]['conclusion']=='success'
+                  break
+              time.sleep(8)
+          else: raise SystemExit('Pages did not deploy exact candidate')
+          def get(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as c:return c.read()
+                  except OSError:
+                      if i==11:raise
+                      time.sleep(4)
+          slug='levy-notas-nicaragua-1873'
+          root='https://takochanchan.github.io/'
+          page=html.unescape(get(root+'publications/'+slug+'/?v='+target[:12]).decode())
+          check=['ニカラグア共和国地理・経済誌','パブロ〔ポール〕・レヴィ','詳細概要','1858年憲法','シダ類125項','地図','Harvard College Library','GE C-9501','gallica.bnf.fr/ark:/12148/btv1b53098818s','756頁']
+          for s in check:assert s in page,s
+          assets=[v for v in json.load(open('assets-manifest.json'))['assets'] if v['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          pdfsha=next(v['sha256'] for v in assets if v['path'].endswith('.pdf'))
+          ref=json.loads(get(root+'takochan-search-index-003/maps/'+slug+'.json'))
+          assert ref['pdfSha256']==pdfsha and len(ref['blocks'])>300
+          cs=get('https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/SHA256SUMS.txt').decode().splitlines()
+          with tempfile.TemporaryDirectory() as wd:
+              for v in assets:
+                  nm=PurePosixPath(v['path']).name; data=get(v['url']); d=Path(wd,nm); d.write_bytes(data)
+                  assert len(data)==v['size'] and hashlib.sha256(data).hexdigest()==v['sha256'],nm
+                  if nm.endswith(('.pdf','.epub')):
+                      assert v['url'] in page and any(l.split()==[v['sha256'],nm] for l in cs)
+                  if nm.endswith('.epub'):
+                      with zipfile.ZipFile(d) as a:
+                          assert a.testzip() is None and a.read('mimetype')==b'application/epub+zip'
+                          pic=[n for n in a.namelist() if n.startswith('EPUB/media/')]
+                          assert len(pic)==1 and hashlib.sha256(a.read(pic[0])).hexdigest()=='9eb13b79887a1beb0dfc5b4e551fb747812d49139de81742795394e94607554d'
+                  if nm.endswith('.pdf'):
+                      if not shutil.which('pdfinfo'):
+                          subprocess.run(['sudo','apt-get','update'],check=True)
+                          subprocess.run(['sudo','apt-get','install','-y','poppler-utils'],check=True)
+                      out=subprocess.check_output(['pdfinfo',str(d)],text=True)
+                      assert re.search(r'^Pages:\s+756$',out,re.M)
+          print('Live bibliography, PDF, EPUB, map, cover, ledger and search shard 003 verified.')
+          PY
