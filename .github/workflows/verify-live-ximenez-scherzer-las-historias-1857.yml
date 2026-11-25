@@ -1,0 +1,81 @@
+name: Verify published ximenez-scherzer-las-historias-1857
+on:
+  push:
+    branches: ["agent/verify-live-ximenez-scherzer-las-historias-1857-20261125"]
+    paths: [".github/workflows/verify-live-ximenez-scherzer-las-historias-1857.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(90):
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=11beb01809300fe3a177b4b19256d7dd6faafed6']))
+              runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify the public catalogue and artifacts
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,io,json,os,re,subprocess,tempfile,time,urllib.request,zipfile
+          from pathlib import Path,PurePosixPath
+          slug="ximenez-scherzer-las-historias-1857"
+          expected=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,139,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215]
+          check=["グアテマラ地方の先住民の起源に関する諸史","フランシスコ・ヒメネス／カール・シェルツァー","Francisco Ximénez / Karl von Scherzer","https://www.loc.gov/item/05009885/","150頁","キチェに伝わる天地創造と王国の起源を、ドミニコ会士フランシスコ・ヒメネスがキチェ語からスペイン語に訳し、注解を付した著作。1857年にウィーンで刊行したカール・シェルツァーの序論は、修道院廃止後のグアテマラでヒメネスの写本を調べた経緯、写本の残存状況と、管区史・文法・語彙集などの内容を記す。"]
+          def get(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as stream:return stream.read()
+                  except OSError:
+                      if i==11:raise
+                      time.sleep(4)
+          root='https://takochanchan.github.io/'
+          release='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/'
+          page=html.unescape(get(root+'publications/'+slug+'/').decode())
+          for v in check: assert v in page, v
+          ledger=get(release+'SHA256SUMS.txt').decode().splitlines()
+          assets=[x for x in json.load(open('assets-manifest.json'))['assets'] if x['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3,len(assets)
+          pdfsha=next(x['sha256'] for x in assets if x['url'].endswith('.pdf'))
+          pm=json.loads(get(root+'takochan-search-index-003/maps/'+slug+'.json'))
+          assert pm['pdfSha256']==pdfsha and pm['blocks']
+          numbers=set()
+          for a in pm['blocks'].values():
+              for n in re.findall(r'原刊 p\.\s*(\d+)',str(a[0])):numbers.add(int(n))
+          assert set(expected)<=numbers, sorted(set(expected)-numbers)
+          for x in assets:
+              v=get(x['url']);name=PurePosixPath(x['path']).name
+              assert len(v)==x['size'] and hashlib.sha256(v).hexdigest()==x['sha256'],name
+              if name.endswith(('.pdf','.epub')):
+                  assert x['url'] in page and any(l.split()==[x['sha256'],name] for l in ledger),name
+              if name.endswith('.pdf'):
+                  with tempfile.TemporaryDirectory() as wd:
+                      f=Path(wd,name);f.write_bytes(v)
+                      info=subprocess.check_output(['pdfinfo',str(f)],text=True)
+                      assert re.search(r'^Pages:\s+150$',info,re.M) and re.search(r'^Tagged:\s+yes$',info,re.M),info
+                      core=re.sub(r'\s+','',subprocess.check_output(['pdftotext','-raw',str(f),'-'],text=True))
+                      pages=list(map(int,re.findall(r'〔原刊p\.(\d+)〕',core)))
+                      assert pages==expected,(len(pages),len(expected),[(a,b) for a,b in zip(pages,expected) if a!=b][:10])
+              if name.endswith('.epub'):
+                  with zipfile.ZipFile(io.BytesIO(v)) as z:
+                      assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                      assert sum(bool(re.search(r'\.(?:png|jpe?g)$',n,re.I)) for n in z.namelist())==1
+          print('Live bibliography, PDF, EPUB, checksum ledger, cover and search page map verified',slug,len(expected))
+          PY
