@@ -1,0 +1,44 @@
+name: Verify revised Siglos volume I overview
+on:
+  push:
+    branches: ["agent/verify-siglos-v1-overview-20261126"]
+    paths: [".github/workflows/verify-siglos-v1-expanded-overview.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Verify live page after the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import html, json, os, re, subprocess, time, urllib.request
+          sha='1aef593c53806a092cf63e2c41e354982626a5ed'
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(60):
+              j=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha={sha}&branch=main']))
+              p=[x for x in j['workflow_runs'] if x['name']=='Deploy archive to GitHub Pages']
+              if p and p[0]['status']=='completed':
+                  assert p[0]['conclusion']=='success'
+                  break
+              time.sleep(8)
+          else: raise SystemExit('Waited for exact Pages deployment')
+          url='https://takochanchan.github.io/publications/mexico-a-traves-de-los-siglos/'
+          for _ in range(18):
+              with urllib.request.urlopen(url+'?rev='+sha[:12],timeout=40) as response:
+                  s=html.unescape(response.read().decode())
+              if all(v in s for v in ['家族と都市の成り立ち','王の権力が諸集団の上にどう成り立っていたか','商人の規律にも目を向ける','クアウテモクの捕縛']):
+                  break
+              time.sleep(4)
+          else: raise SystemExit('Revised overview not served')
+          assert '全体の詳細概要' in s and '第1巻の詳細概要' in s
+          assert 'フアン・デ・ディオス・アリアス' in s
+          assert [int(x) for x in re.findall(r'<tr data-series-volume="(\d+)">',s)]==[1,2,3,4,5]
+          assert s.count('<td>未公開</td>')==4
+          assert 'Mexico_a_traves_de_los_siglos_I_Japanese.pdf' in s and 'Mexico_a_traves_de_los_siglos_I_Japanese.epub' in s
+          print('Expanded five-book overview verified on live page')
+          PY
