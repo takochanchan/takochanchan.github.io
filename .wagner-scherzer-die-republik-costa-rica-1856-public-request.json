@@ -1,0 +1,43 @@
+{
+  "bundle": {
+    "size": 6370149,
+    "sha256": "f1b7251cae8a29739a1375f5041b36e49c4bd0a48132c08417e0862d1b393165",
+    "chunks": [
+      "214cfdcf7a69fdb3e41e82beba0a8d8e3d6e2fba",
+      "5ae5bfb9f8017e20a22bed2291809a9df4ff76a3",
+      "62372d7985bdd6b991a2da2f6fe23f7038942541",
+      "77c9aa1531a965e83e08793a6c0c911ccc644c9a",
+      "764e3719986dc6bc8062ac3361c320d947c91d33",
+      "cad90c2ddfbef6aed86dd801c6aadeb7e6c1c783",
+      "2526c76549438abf3e6ed4d519fc4c2a3919dc05",
+      "b0ad890ae1e2e6ddd49470348135cf6bbf68ecf8",
+      "23cb65d63b461bfd65ba207770f1f12d662c7e8d",
+      "72b97d1cf3c9f8808f5b771a200b0122cd077319",
+      "4918ea472865bfb82eba3c63846e4791fc7727fb",
+      "81f9e35fa9020a0fc3493821418696e5457a4e69",
+      "4dd9cb4bf19c3329fe334728c185d78708d535ee",
+      "364f6d3bae3711227f2432cac00f0e366f29664b",
+      "523fb0b515a473623a4fb70c259887d558dd166b",
+      "b832ae06a63cb163df873243a78f2ca7c74b7c93",
+      "510b6afdd1b67ef912535a5b7a7c1753fb610a43",
+      "037b767321b8b8ad1011dbb57837af3f82202dca",
+      "9a4743092806d97408d709f85b08c2462dbcade9",
+      "b92589c993cff25488266c8aeebae70a98ff5b88"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.pdf",
+      "size": 4755293,
+      "sha256": "5f8ebbbb574831d0988a654319d62c7fbf42de4696f76d515f1da3caec86925d",
+      "filename": "Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.epub",
+      "size": 2946962,
+      "sha256": "215f88fa94d44e0a11390c74045ff6e36b44e085d58f8b968e6563ba37dc8b7b",
+      "filename": "Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.epub"
+    }
+  ],
+  "verified_archive_commit": "8432bee4f4db21bff013fec4de74242b7e0f8ede"
+}
