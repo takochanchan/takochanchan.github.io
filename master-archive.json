@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f2f299b98c1f283b1afaa5096eb2ae41355a2ac9",
+  "archive_commit": "f7724f88280e35b337b5fefdcbab80f79e14b1c2",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -161,6 +161,8 @@
     "duran-historia-indias-nueva-espana-1581": "publications/duran-historia-indias-nueva-espana-1581/master.docx",
     "egan-wyer-1930": "publications/egan-wyer-1930/master.docx",
     "elorza-conquista-ytza-1714": "publications/elorza-conquista-ytza-1714/master.docx",
+    "espinosa-arricivita-chronica-1746-1792-part-1": "publications/espinosa-arricivita-chronica-1746-1792-part-1/master.md",
+    "espinosa-arricivita-chronica-1746-1792-part-2": "publications/espinosa-arricivita-chronica-1746-1792-part-2/master.md",
     "espinosa-peregrino-septentrional-atlante-1737": "publications/espinosa-peregrino-septentrional-atlante-1737/master.docx",
     "esquinca-usumacinta": "publications/esquinca-usumacinta/master.md",
     "estrada-descripcion-zapotitlan-suchitepeques-1579": "publications/estrada-descripcion-zapotitlan-suchitepeques-1579/master.docx",
