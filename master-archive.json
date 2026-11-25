@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "600fbdc60af0100982d31d4fc617f27eeb741225",
+  "archive_commit": "b4928c7f77fa4f28577e84180d0ca2e22b8868f3",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -316,6 +316,7 @@
     "mencos-cronicas-antigua-guatemala-1894": "publications/mencos-cronicas-antigua-guatemala-1894/master.docx",
     "mencos-rasgos-biograficos-morazan-1893": "publications/mencos-rasgos-biograficos-morazan-1893/master.docx",
     "mendieta-historia-eclesiastica-indiana-1870": "publications/mendieta-historia-eclesiastica-indiana-1870/master.docx",
+    "mexico-a-traves-de-los-siglos-vol-1": "publications/mexico-a-traves-de-los-siglos-vol-1/master.docx",
     "meza-centro-america-campana-nacional-1885-1911": "publications/meza-centro-america-campana-nacional-1885-1911/master.docx",
     "milla-cuadros-costumbres-guatemaltecas-volume-i-1882": "publications/milla-cuadros-costumbres-guatemaltecas-volume-i-1882/master.docx",
     "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882": "publications/milla-cuadros-costumbres-guatemaltecas-volume-ii-1882/master.docx",

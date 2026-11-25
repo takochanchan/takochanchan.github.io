@@ -3249,3 +3249,28 @@ test("Ojea is between Padilla and Franco in one bibliography with distinct seque
   for (const text of ["サント・ドミンゴ修道院", "助修士", "1578年", "財産"]) assert.ok(overviews.records[slug].includes(text));
 });
 
+
+
+test("Mexico a traves de los siglos keeps five original volumes in one bibliography", async () => {
+  const group = cataloguePublications.find(item => item.slug === "mexico-a-traves-de-los-siglos");
+  const member = "mexico-a-traves-de-los-siglos-vol-1";
+  assert.ok(group);
+  assert.equal(group.recordClass, "major-work");
+  assert.equal(group.seriesVolumeCount, 5);
+  assert.deepEqual(group.seriesVolumes.map(volume => volume.number), [1, 2, 3, 4, 5]);
+  assert.equal(group.memberSlugs[0], member);
+  assert.equal(bibliographicAliases[member], group.slug);
+  const page = await readFile(path.join(dist, "publications", group.slug, "index.html"), "utf8");
+  assert.match(page, /全体の詳細概要/);
+  assert.match(page, /第1巻の詳細概要/);
+  assert.match(page, /フアン・デ・ディオス・アリアス/);
+  assert.match(page, /メシカ/);
+  const rows = [...page.matchAll(/<tr data-series-volume="(\d+)">([\s\S]*?)<\/tr>/g)];
+  assert.deepEqual(rows.map(row => Number(row[1])), [1, 2, 3, 4, 5]);
+  assert.match(rows[0][2], /href="#volume-1">公開済み/);
+  for (const row of rows.slice(group.volumes.length)) assert.match(row[2], /<td>未公開<\/td>/);
+  assert.match(page, /id="volume-1"/);
+  assert.match(page, /Mexico_a_traves_de_los_siglos_I_Japanese\.pdf/);
+  assert.match(page, /Mexico_a_traves_de_los_siglos_I_Japanese\.epub/);
+  assert.doesNotMatch(page, /史料集全体の詳細概要/);
+});

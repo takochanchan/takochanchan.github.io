@@ -6662,6 +6662,18 @@
       "sha256": "0458c29f61e65020d424fcf34e5a741082c0cf952f3449d4bea4fba65dfbcf19"
     },
     {
+      "path": "publications/mexico-a-traves-de-los-siglos-vol-1/Mexico_a_traves_de_los_siglos_I_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Mexico_a_traves_de_los_siglos_I_Japanese.epub",
+      "size": 244641469,
+      "sha256": "3a1b6c5c4891893ed4a2efbc0bec6dfaa7895cf22add56ca62c1d99cc662a32a"
+    },
+    {
+      "path": "publications/mexico-a-traves-de-los-siglos-vol-1/Mexico_a_traves_de_los_siglos_I_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Mexico_a_traves_de_los_siglos_I_Japanese.pdf",
+      "size": 144754948,
+      "sha256": "57cc889ca091715adf45fbef7cb3b39e3fe83bec18972c05bc14c1ad4cfbe114"
+    },
+    {
       "path": "publications/meza-centro-america-campana-nacional-1885-1911/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Rafael_Meza_Centro_America_1885_Japanese_Complete_Translation.epub",
       "size": 5652920,

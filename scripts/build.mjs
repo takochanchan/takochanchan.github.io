@@ -177,7 +177,7 @@ const catalogueAttributionMarkup = (item, className) =>
     ? `<p class="${className}">後世の暫定帰属：${escapeHtml(item.attributedTo)}</p>`
     : "";
 
-const isMultiVolume = (item) => item.volumes.length > 1;
+const isMultiVolume = (item) => item.volumes.length > 1 || (item.seriesVolumes?.length ?? 0) > 1;
 
 const archivePublications = publications.map((item) => ({
   slug: item.slug,

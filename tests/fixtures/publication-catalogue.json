@@ -2255,6 +2255,15 @@
       "searchShard": "002"
     },
     {
+      "slug": "mexico-a-traves-de-los-siglos-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アルフレード・チャベロ",
+      "originalAuthor": "Alfredo Chavero",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
       "slug": "meza-centro-america-campana-nacional-1885-1911",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -3840,6 +3849,13 @@
         "maria-de-san-jose-spiritual-autobiography-part-12"
       ],
       "seriesVolumeCount": 12
+    },
+    {
+      "slug": "mexico-a-traves-de-los-siglos",
+      "memberSlugs": [
+        "mexico-a-traves-de-los-siglos-vol-1"
+      ],
+      "seriesVolumeCount": 5
     },
     {
       "slug": "milla-cuadros-costumbres-guatemaltecas-1882",
