@@ -11437,6 +11437,25 @@
       "updatedDate": "2026-08-13"
     },
     {
+      "slug": "wagner-scherzer-die-republik-costa-rica-1856",
+      "recordClass": "major-work",
+      "title": "中央アメリカのコスタリカ共和国",
+      "originalTitle": "Die Republik Costa Rica in Central-Amerika",
+      "author": "モーリッツ・ワーグナー／カール・シェルツァー",
+      "originalAuthor": "Moritz Wagner / Carl Scherzer",
+      "year": 1856,
+      "originalPublication": "1856年、ライプツィヒ、アルノルト書店刊。",
+      "sourceEdition": "Moritz Wagner und Carl Scherzer, Die Republik Costa Rica in Central-Amerika, mit besonderer Berücksichtigung der Naturverhältnisse und der Frage über deutsche Auswanderung und Colonisation. Leipzig: Arnoldische Buchhandlung, 1856.",
+      "sourceProvider": "本文と折込地図の底本：ゲティ研究所図書館所蔵、Internet Archive公開。照合本：1857年第2版、バイエルン州立図書館所蔵・公開（https://www.digitale-sammlungen.de/en/view/bsb10253655）。地図と同一個体の画像：Wikimedia Commons（https://commons.wikimedia.org/wiki/File:Die_republik_Costa_Rica_in_Central-Amerika_(IA_dierepublikcosta00wagn).pdf）。",
+      "rights": "1856年の原著本文はパブリックドメイン。掲載した巻末折込地図はゲティ研究所図書館所蔵本の画像で、同一個体を公開するWikimedia Commonsが米国パブリックドメインと表示。照合に用いた1857年第2版の画像（No Copyright – Non-Commercial Use Only）は転載していない。",
+      "publishedDate": "2026-11-25",
+      "updatedDate": "2026-11-25",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/dierepublikcosta00wagn"
+      }
+    },
+    {
       "slug": "walker-war-nicaragua-1860",
       "recordClass": "major-work",
       "title": "ニカラグア戦争",

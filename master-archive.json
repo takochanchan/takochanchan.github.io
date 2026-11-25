@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "c407a2bb2fc48edec0f1d0c1685b5f67b66365ba",
+  "archive_commit": "8432bee4f4db21bff013fec4de74242b7e0f8ede",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -531,6 +531,7 @@
     "vle-interoceanic-1832-article-3": "publications/vle-interoceanic-1832-article-3/master.docx",
     "vle-panama-1831-article-1": "publications/vle-panama-1831-article-1/master.docx",
     "vle-panama-1831-article-2": "publications/vle-panama-1831-article-2/master.docx",
+    "wagner-scherzer-die-republik-costa-rica-1856": "publications/wagner-scherzer-die-republik-costa-rica-1856/master.docx",
     "walker-war-nicaragua-1860": "publications/walker-war-nicaragua-1860/master.docx",
     "wells-explorations-and-adventures-in-honduras-1857": "publications/wells-explorations-and-adventures-in-honduras-1857/master.docx",
     "wells-walkers-expedition-nicaragua-1856": "publications/wells-walkers-expedition-nicaragua-1856/master.docx",

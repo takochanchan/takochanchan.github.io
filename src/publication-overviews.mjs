@@ -1,9 +1,10 @@
+import { wagnerScherzerCostaRicaOverviews } from "./wagner-scherzer-die-republik-costa-rica-1856-publication.mjs";
 import { scherzerXimenezHandschriftlicheWerkeOverviews } from "./scherzer-ximenez-handschriftliche-werke-1856-publication.mjs";
 import { espinosaArricivitaChronicaOverviews } from "./espinosa-arricivita-chronica-1746-1792-publication.mjs";
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(readFileSync(new URL("./publication-overviews.json", import.meta.url), "utf8"));
-export const publicationOverviews = Object.freeze({ ...data.records, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
+export const publicationOverviews = Object.freeze({ ...data.records, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
 export const overviewUpdatedDate = data.updatedDate;
 
 export function validatePublicationOverviews(publications, records = publicationOverviews) {

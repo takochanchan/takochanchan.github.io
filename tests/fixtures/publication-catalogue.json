@@ -3565,6 +3565,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "wagner-scherzer-die-republik-costa-rica-1856",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "モーリッツ・ワーグナー／カール・シェルツァー",
+      "originalAuthor": "Moritz Wagner / Carl Scherzer",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "walker-war-nicaragua-1860",
       "recordClass": "major-work",
       "searchShard": "002"

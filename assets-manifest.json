@@ -10844,6 +10844,24 @@
       "sha256": "5e4a51fc5c140a69407344df623e20516aabc9e0d0f2ed364443e913f7e7c13a"
     },
     {
+      "path": "publications/wagner-scherzer-die-republik-costa-rica-1856/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.epub",
+      "size": 2946962,
+      "sha256": "215f88fa94d44e0a11390c74045ff6e36b44e085d58f8b968e6563ba37dc8b7b"
+    },
+    {
+      "path": "publications/wagner-scherzer-die-republik-costa-rica-1856/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.pdf",
+      "size": 4755293,
+      "sha256": "5f8ebbbb574831d0988a654319d62c7fbf42de4696f76d515f1da3caec86925d"
+    },
+    {
+      "path": "publications/wagner-scherzer-die-republik-costa-rica-1856/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/wagner-scherzer-die-republik-costa-rica-1856/cover.jpg",
+      "size": 69777,
+      "sha256": "cbc177008905b38f0fad205b6781782abb50580d6c4172c9d40660b0b02bb27c"
+    },
+    {
       "path": "publications/walker-war-nicaragua-1860/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/William_Walker_The_War_in_Nicaragua_1860_Japanese_Complete_Translation.epub",
       "size": 4435074,
