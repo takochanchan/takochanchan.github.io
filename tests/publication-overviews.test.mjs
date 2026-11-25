@@ -60,7 +60,7 @@ test("original descriptions remain visible and unchanged, with volume disclosure
       assert.match(body, /^\s*<summary\b[\s\S]*?<\/summary>/u, `${slug}: native keyboard control`);
       const paragraphs = publicationOverviews[slug].split(/\n\s*\n/u).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join("");
       assert.ok(body.includes(`<div class="publication-overview__body">${paragraphs}</div>`), `${slug}: full text in initial HTML`);
-      const label = `${entries.length > 1 ? entries[i].volumeLabel + "の" : ""}詳細概要`;
+      const label = `${entries.length > 1 || (item.seriesVolumes?.length ?? 0) > 1 ? entries[i].volumeLabel + "の" : ""}詳細概要`;
       assert.ok(body.includes(`<span class="publication-overview__show">${escapeHtml(label)}</span>`), `${slug}: volume-specific button`);
     }
     const structured = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gu)]
