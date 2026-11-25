@@ -1,0 +1,83 @@
+name: Verify the live Scherzer manuscript study
+on:
+  push:
+    branches: ["agent/verify-live-scherzer-ximenez-1856-20261125"]
+    paths: [".github/workflows/verify-live-scherzer-ximenez-1856.yml"]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for the pinned Pages deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess,time
+          repo=os.environ['GITHUB_REPOSITORY']
+          for _ in range(90):
+              data=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/actions/runs?head_sha=ad930f4727f60f1664087ff03d862873ed311964']))
+              runs=[run for run in data['workflow_runs'] if run['name']=='Deploy archive to GitHub Pages']
+              if runs and runs[0]['status']=='completed':
+                  assert runs[0]['conclusion']=='success',runs[0]['conclusion']
+                  print('Pages succeeded',runs[0]['id'])
+                  break
+              time.sleep(10)
+          else: raise SystemExit('Pages deployment timed out')
+          PY
+      - name: Install PDF inspection
+        run: command -v pdftotext >/dev/null || (sudo apt-get update && sudo apt-get install -y poppler-utils)
+      - name: Verify article class, sources, PDF, EPUB and the live search map
+        run: |
+          python3 - <<'PY'
+          import hashlib,html,json,pathlib,re,subprocess,tempfile,time,urllib.request,zipfile
+          slug='scherzer-ximenez-handschriftliche-werke-1856'
+          def get(url):
+              for i in range(12):
+                  try:
+                      with urllib.request.urlopen(url,timeout=120) as stream:
+                          return stream.read()
+                  except OSError:
+                      if i==11: raise
+                      time.sleep(4)
+          R='https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/'
+          root='https://takochanchan.github.io/'
+          page=html.unescape(get(root+'publications/'+slug+'/').decode())
+          for v in ('グアテマラ大学図書館所蔵のフランシスコ・ヒメネス神父の写本著作について','論文','ScholarlyArticle','Karl Scherzer','1856','16頁','SitzungsberichteOsterreichischeAkademiePHC19'):
+              assert v in page,v
+          overview="1856年2月20日にウィーンの帝国科学アカデミーで朗読された論文。カール・シェルツァーは1854年のグアテマラ滞在をもとに、修道院の廃止後に散逸した文献の状況を述べ、大学図書館に移ったドミニコ会士フランシスコ・ヒメネスの写本を報告する。管区史の現存巻と欠巻、三言語の辞書、文法・教理問答・告解書などを記載し、著者が現地で抜き書きしたものと筆写を依頼したものを区別している。\n\n後半ではキチェの起源譚のスペイン語訳を取り上げ、世界の創造、双子の物語、キチェ諸氏族の分立と王統を紹介する。シェルツァーは伝承に描かれた出来事の順序や食い違いにも触れ、ヒメネスの訳と注解が宣教師の言語学習や布教にどのような意味を持つと考えられたかを論じる。翌1857年に刊行されたスペイン語版に先立つ報告で、同書の序論とは別の文章である。"
+          assert all(x in page for x in overview.split('\n\n'))
+          ledger=get(R+'SHA256SUMS.txt').decode().splitlines()
+          assets=[x for x in json.load(open('assets-manifest.json'))['assets'] if x['path'].startswith('publications/'+slug+'/')]
+          assert len(assets)==3
+          pdfsha=next(x['sha256'] for x in assets if x['url'].endswith('.pdf'))
+          pm=json.loads(get(root+'takochan-search-index-003/maps/'+slug+'.json'))
+          assert pm['pdfSha256']==pdfsha and pm['blocks']
+          markers=set()
+          for a in pm['blocks'].values():
+              for n in re.findall(r'原刊 p\.\s*(\d+)',str(a[0])):markers.add(int(n))
+          assert sorted(markers)==list(range(166,187)),sorted(markers)
+          with tempfile.TemporaryDirectory() as work:
+              for x in assets:
+                  f=pathlib.Path(work,pathlib.PurePosixPath(x['path']).name);v=get(x['url']);f.write_bytes(v)
+                  assert len(v)==x['size'] and hashlib.sha256(v).hexdigest()==x['sha256'],f.name
+                  if f.suffix in ('.pdf','.epub'):
+                      assert x['url'] in page and any(a.split()==[x['sha256'],f.name] for a in ledger),f.name
+                  if f.suffix=='.pdf':
+                      p=subprocess.check_output(['pdfinfo',str(f)],text=True)
+                      assert re.search(r'^Pages:\s+16$',p,re.M) and re.search(r'^Tagged:\s+yes$',p,re.M),p
+                      result=re.sub(r'\s+','',subprocess.check_output(['pdftotext','-raw',str(f),'-'],text=True))
+                      assert list(map(int,re.findall(r'〔原刊p\.(\d+)〕',result)))==list(range(166,187))
+                      links=subprocess.check_output(['pdfinfo','-url',str(f)],text=True)
+                      assert 'https://archive.org/details/SitzungsberichteOsterreichischeAkademiePHC19' in links,links
+                      assert 'https://www.wayeb.org/download/resources/scherzer02.pdf' in links,links
+                  if f.suffix=='.epub':
+                      with zipfile.ZipFile(f) as z:
+                          assert z.testzip() is None and z.read('mimetype')==b'application/epub+zip'
+                          assert sum(bool(re.search(r'\.(?:png|jpe?g)$',n,re.I)) for n in z.namelist())==1
+          print('Live article, 16-page PDF, EPUB, 21 original markers, and exact search map verified.')
+          PY
