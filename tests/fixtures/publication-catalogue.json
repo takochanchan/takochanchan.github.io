@@ -1142,6 +1142,24 @@
       "searchShard": "001"
     },
     {
+      "slug": "espinosa-arricivita-chronica-1746-1792-part-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "イシドロ・フェリス・デ・エスピノサ",
+      "originalAuthor": "Isidro Félix de Espinosa",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "espinosa-arricivita-chronica-1746-1792-part-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・ドミンゴ・アリシビタ",
+      "originalAuthor": "Juan Domingo de Arricivita",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
       "slug": "espinosa-peregrino-septentrional-atlante-1737",
       "recordClass": "major-work",
       "searchShard": "002"
@@ -3700,6 +3718,14 @@
         "ojea-libro-tercero-historia-religiosa-mexico-1897",
         "franco-historia-santiago-mexico-segunda-parte-1900"
       ]
+    },
+    {
+      "slug": "espinosa-arricivita-chronica-1746-1792",
+      "memberSlugs": [
+        "espinosa-arricivita-chronica-1746-1792-part-1",
+        "espinosa-arricivita-chronica-1746-1792-part-2"
+      ],
+      "seriesVolumeCount": 2
     },
     {
       "slug": "galindo-gran-decada-nacional-1904-1906",
