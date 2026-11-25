@@ -1,0 +1,29 @@
+name: Transfer verified Siglos volume I publication assets
+on:
+  push:
+    branches: [agent/siglos-v1-public-transfer-57cc889ca091]
+    paths: [.siglos-v1-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Transfer and read back the approved PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .siglos-v1-public-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: siglos-volume-i-public-verification
+          path: siglos-v1-public-verification.json
