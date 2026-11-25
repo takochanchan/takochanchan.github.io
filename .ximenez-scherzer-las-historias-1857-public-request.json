@@ -1,0 +1,28 @@
+{
+  "bundle": {
+    "size": 1518197,
+    "sha256": "3ecb0f1edd45079afba5680dec5e1579499304fc40c0ed6a4035a0390aa10790",
+    "chunks": [
+      "1458f0de61d64de0c1949fd5980a8775083659cb",
+      "7212a46befce736dbbc513fdcf34af7f11b0770b",
+      "dd90d39a93a7076ce860c0ecc8a90ea4a624fbaa",
+      "60e9894f4434966f423137dbf27ecb533d4cf72e",
+      "d26bef95fb57347df5cae20e5b1a6d0167e92eb3"
+    ]
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ximenez_Scherzer_Las_historias_1857_Japanese.pdf",
+      "size": 1707289,
+      "sha256": "0650d1d3eadfaf716322896b1d9768b21b237318e0628156340a83881a0f451e",
+      "filename": "Ximenez_Scherzer_Las_historias_1857_Japanese.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ximenez_Scherzer_Las_historias_1857_Japanese.epub",
+      "size": 194672,
+      "sha256": "a628022223a82ff5440e99399f412bb4ea13a2e058f971af13fd78b57cc1f16a",
+      "filename": "Ximenez_Scherzer_Las_historias_1857_Japanese.epub"
+    }
+  ],
+  "verified_archive_commit": "600fbdc60af0100982d31d4fc617f27eeb741225"
+}
