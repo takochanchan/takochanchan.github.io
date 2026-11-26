@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "size": 6541906,
+      "sha256": "61711fa8dfe4b50a1acead0f713a22da47e43e4f50f1c61b51313ad2d778c99d"
+    },
+    {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "size": 555857,
+      "sha256": "3118d5a24196009856c406f6b759ab9b07fdf0871d926ec45e56a35c9a849710"
+    },
+    {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuggio-bullarium-hospitalaris-1724/cover.jpg",
+      "size": 37680,
+      "sha256": "0ff06d2a9ac692f86b5c3fdf5c30e20601a6ff83342e6f29ffa3e75c1d655ebe"
+    }
+  ],
+  "record": {
+    "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+    "originalTitle": "Bullarium totius Ordinis hospitalaris S. Joannis de Deo",
+    "author": "ニコロ・アントニオ・クッジョ（編注）",
+    "originalAuthor": "Nicola Antonio Cuggiò",
+    "originalPublication": "Romae: Ex Typographia Reverendae Camerae Apostolicae, 1724.",
+    "description": "病院修道会に関わる教皇文書とローマ教皇庁の諸聖省の教令を、イタリア語の要録・注解とともに編んだ1724年ローマ刊本。病院一覧、追補、正誤表、事項索引も収める。",
+    "sourceEdition": "Bullarium totius Ordinis hospitalaris S. Joannis de Deo. Romae: Ex Typographia Reverendae Camerae Apostolicae, 1724. リヨン市立図書館所蔵本（レ・フォンテーヌ旧蔵）。",
+    "sourceProvider": "リヨン市立図書館（電子化・公開：Google Books）",
+    "sourceUrl": "https://play.google.com/books/reader?id=2n2J3eehXMcC",
+    "rights": "1724年刊の原著は著作権保護期間満了。底本画像の個別CCライセンスは確認できていない。底本画像は掲載せず、病院一覧と正誤表は訳文を表組みにした。",
+    "overview": "クッジョが聖フアン・デ・ディオス病院修道会のために編んだ教皇文書集。教皇の勅書・小勅書や、司教・修道者聖省、公会議聖省、典礼聖省などの教令を収める。会憲そのものとは異なり、修道会や各地の病院にどの権限や義務が認められ、個別の争いに教皇庁がどう裁定したかを伝える。ラテン語の正文にイタリア語の要録や注解を添え、文書の日付や節番号、適用条件が正文と要録で食い違う箇所は、訳文でも区別した。\n前付には、病院の所在地・院名・病床数・病者数・修道者数・創立年を掲げる一覧がある。本文は会祖フアン・デ・ディオスの列聖とその典礼に始まり、病人看護の誓願、叙階や告解・免償、教区裁治権者と修道会の管轄、十分の一税・会計、総会議と院長の選出、巡察、規律違反に科す処分などを扱う。イタリア系とスペイン系に共通する定めばかりでなく、一方の会衆や特定の病院だけを対象とする認可・裁定もあり、規定の適用範囲を比較できる。\n訳文は原扉・前付・本文から追補・正誤表・事項索引の末尾までを収める。巻末正誤表が明示する訂正と、訂正されていない原刊の異同を区別し、原刊自体が収録しなかった十八章は補わず訳注に示した。"
+  }
+}
