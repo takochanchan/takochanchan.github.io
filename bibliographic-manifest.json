@@ -5576,6 +5576,25 @@
       }
     },
     {
+      "slug": "grijalva-cronica-san-augustin-nueva-espana-1624",
+      "recordClass": "major-work",
+      "title": "ヌエバ・エスパーニャのアウグスティヌス会年代記",
+      "originalTitle": "Crónica de la orden de N. P. S. Augustín",
+      "author": "フアン・デ・グリハルバ",
+      "originalAuthor": "Juan de Grijalva",
+      "year": 1624,
+      "originalPublication": "1624年、メキシコ、フアン・ルイス印刷所刊。",
+      "sourceEdition": "Juan de Grijalva, Crónica de la orden de N. P. S. Augustín en las provincias de la Nueva España. México: Juan Ruiz, 1624.",
+      "sourceProvider": "本文底本はジョン・カーター・ブラウン図書館所蔵、Internet Archive公開。同館別本のCommons配布画像で原扉および第70葉などを照合し、欄外はフライ・フランシスコ・デ・ブルゴア図書館所蔵本（BFFB-002123、セルバンテス仮想図書館公開）で補読。",
+      "rights": "1624年の原刊はパブリックドメイン。ジョン・カーター・ブラウン図書館公開画像は CC BY 4.0。掲載画像は同館別本の原扉銅版の切り抜き1点。Courtesy of the John Carter Brown Library。照合本：https://archive.org/details/croncadelaordend00grij 。画像配布元：https://upload.wikimedia.org/wikipedia/commons/2/2e/Cron%C3%ADca_de_la_orden_de_N._P._S._August%C3%ADn_en_las_prouincias_de_la_Nueua_Espa%C3%B1a_-_en_quatro_edades_desde_el_a%C3%B1o_de_.1533_hasta_el_de_.1592_(IA_croncadelaordend00grij).pdf 。同館の利用案内：https://jcblibrary.org/permissions/ 。オアハカ本（https://www.cervantesvirtual.com/nd/ark:/59851/bmc1214187）は欄外の照合にのみ使用し、画像は転載していない。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/croncadelaordend00grij_0"
+      }
+    },
+    {
       "slug": "guijo-diario-sucesos-notables-1853-vol-1",
       "title": "重要事件日誌",
       "originalTitle": "Diario de sucesos notables",

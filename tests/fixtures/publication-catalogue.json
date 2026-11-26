@@ -1804,6 +1804,14 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "grijalva-cronica-san-augustin-nueva-espana-1624",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・デ・グリハルバ",
+      "originalAuthor": "Juan de Grijalva",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "guijo-diario-sucesos-notables-1853-vol-1",
       "recordClass": "major-work",
       "searchShard": "002"

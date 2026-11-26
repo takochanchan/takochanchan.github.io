@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5824ed193fb33a1cc9f04d26beb795f7eb0330ae",
+  "archive_commit": "842fef0e79e01167a5e15aea1fd9428d75a55e4b",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -245,6 +245,7 @@
     "gonzalez-ruinas-tehuacan-1892": "publications/gonzalez-ruinas-tehuacan-1892/master.md",
     "granados-tardes-americanas-1778": "publications/granados-tardes-americanas-1778/master.docx",
     "gregorio-lopez-testimonies-mss-7819": "publications/gregorio-lopez-testimonies-mss-7819/master.md",
+    "grijalva-cronica-san-augustin-nueva-espana-1624": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/master.docx",
     "guijo-diario-sucesos-notables-1853-vol-1": "publications/guijo-diario-sucesos-notables-1853-vol-1/master.docx",
     "guzman-apuntamientos-topografia-salvador-1883": "publications/guzman-apuntamientos-topografia-salvador-1883/master.docx",
     "haefkens-centraal-amerika-1832": "publications/haefkens-centraal-amerika-1832/master.docx",

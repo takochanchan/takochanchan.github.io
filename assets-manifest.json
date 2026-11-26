@@ -5330,6 +5330,24 @@
       "sha256": "1815681539d689d486b3e9e0f7fd6e51950a07eea7386265d2c08a93079909d7"
     },
     {
+      "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+      "size": 2366166,
+      "sha256": "65f6227ce2b27724a417f386ddaa5f24ddbe2ad3bd8ba2dab37511a4142bf31a"
+    },
+    {
+      "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+      "size": 4625292,
+      "sha256": "845b9cffa87971ac0be1285d548eb4131f655e6b1b05ba3c139f6d6c4bf2bac9"
+    },
+    {
+      "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/grijalva-cronica-san-augustin-nueva-espana-1624/cover.jpg",
+      "size": 115686,
+      "sha256": "1770ec2f5417fe00f74d64fc4e0bd0eabd8488f9d8fa82a6b96389008486e51a"
+    },
+    {
       "path": "publications/guijo-diario-sucesos-notables-1853-vol-1/Gregorio_Martin_de_Guijo_Diario_1853_Vol1_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Gregorio_Martin_de_Guijo_Diario_1853_Vol1_Japanese_Complete_Translation.epub",
       "size": 394101,
