@@ -3106,6 +3106,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-mexico-1774",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-roman-consuelo-penitentes-1585",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3716,6 +3724,15 @@
   ],
   "groups": [
     {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "memberSlugs": [
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3"
+      ],
+      "seriesVolumeCount": 3
+    },
+    {
       "slug": "bancroft-native-races-pacific-states-1883",
       "memberSlugs": [
         "bancroft-native-races-volume-i-1883",
@@ -3902,15 +3919,6 @@
       "seriesVolumeCount": 12
     },
     {
-      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
-      "memberSlugs": [
-        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
-        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
-        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3"
-      ],
-      "seriesVolumeCount": 3
-    },
-    {
       "slug": "mexico-a-traves-de-los-siglos",
       "memberSlugs": [
         "mexico-a-traves-de-los-siglos-vol-1"
@@ -3976,6 +3984,12 @@
       "memberSlugs": [
         "robles-diario-sucesos-notables-1853-vol-1",
         "robles-diario-sucesos-notables-1853-vol-2"
+      ]
+    },
+    {
+      "slug": "san-juan-de-dios-constituciones",
+      "memberSlugs": [
+        "san-juan-de-dios-constituciones-mexico-1774"
       ]
     },
     {

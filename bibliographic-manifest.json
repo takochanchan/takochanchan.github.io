@@ -9895,6 +9895,25 @@
       "updatedDate": "2026-08-11"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-mexico-1774",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "originalTitle": "Regla de N. P. S. Agustin, obispo, y doctor de la Iglesia. Constituciones de la Orden y Hospitalidad de N. P. S. Juan de Dios",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
+      "year": 1774,
+      "originalPublication": "México: Imprenta del Lic. D. Joseph de Jáuregui, 1774.",
+      "sourceEdition": "Orden Hospitalaria de San Juan de Dios, Regla de N. P. S. Agustin, obispo, y doctor de la Iglesia. Constituciones de la Orden y Hospitalidad de N. P. S. Juan de Dios. México: Imprenta del Lic. D. Joseph de Jáuregui, 1774. Biblioteca Nacional de México, RSM 1774 M4AGU.",
+      "sourceProvider": "底本：Biblioteca Nacional de México / UNAM。統計表照合：Wellcome Collection（EPB/AM/M.26）。",
+      "rights": "1774年刊の原著は著作権保護期間満了。UNAM公開の底本デジタル画像はCC BY-NC-ND 4.0。付録統計の照合本はWellcome Collectionの同版（Public Domain Mark 1.0）：https://wellcomecollection.org/works/qdzwnjg9 。底本・照合本の画像は転載していない。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://repositorio.unam.mx/contenidos/163"
+      }
+    },
+    {
       "slug": "san-roman-consuelo-penitentes-1585",
       "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
       "originalTitle": "Consuelo de penitentes, o Mesa franca de spirituales manjares",

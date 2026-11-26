@@ -921,6 +921,29 @@ export const publicationGroupDefinitions = [
     "year": 1718,
     "originalPublication": "México: Francisco de Rivera Calderón, en la calle de San Agustín, 1718."
   },
+  {
+    "slug": "san-juan-de-dios-constituciones",
+    "groupType": "edition",
+    "groupOverviewLabel": "全体の詳細概要",
+    "groupOverview": "病者の看護を誓願に掲げた聖フアン・デ・ディオス病院修道会の会憲を、刊行地・刊年を区別して収める。会の統治、各院の職務や病者の世話、入会・誓願、巡察・会計・規律の定めを通じて、病院が修道院としても施療施設としても運営された仕組みをたどることができる。刊本によって本文の改定・増補、教皇による認可や特権、地域ごとの付載資料が異なる。現在収録する1774年メキシコ版は、スペインで整えられた会憲とメキシコでの再刊文書のほか、ヌエバ・エスパーニャ、グアテマラ、カリブ海、フィリピンなどの病院統計を収める。書誌を共通にしながら、個々の訳文と底本情報は版ごとに分けて示す。",
+    "extent": "公開1版・日本語版PDF 265頁",
+    "memberSlugs": [
+      "san-juan-de-dios-constituciones-mexico-1774"
+    ],
+    "plannedMemberSlugs": [
+      "san-juan-de-dios-constituciones-granada-1744"
+    ],
+    "volumeLabels": [
+      "1774年メキシコ版"
+    ],
+    "title": "聖フアン・デ・ディオス病院修道会の会憲",
+    "subtitle": "",
+    "originalTitle": "Regla de N. P. S. Agustin, obispo, y doctor de la Iglesia. Constituciones de la Orden y Hospitalidad de N. P. S. Juan de Dios",
+    "author": "聖フアン・デ・ディオス病院修道会",
+    "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
+    "year": 1774,
+    "originalPublication": "México: Imprenta del Lic. D. Joseph de Jáuregui, 1774."
+  },
 ];
 
 const releaseAsset = (filename) =>

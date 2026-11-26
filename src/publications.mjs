@@ -1,3 +1,4 @@
+import { sjdConstitucionesRecords, sjdConstitucionesMetadata } from "./san-juan-de-dios-constituciones-mexico-1774-publication.mjs";
 import { orozco1853Records, orozco1853Metadata } from "./orozco-conjuracion-marques-del-valle-1853-publication.mjs";
 import { alegreRecords, alegreMetadata } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { grijalva1624Records, grijalva1624Metadata } from "./grijalva-cronica-san-augustin-nueva-espana-1624-publication.mjs";
@@ -413,6 +414,7 @@ const publicationRecords = [
   ...alegreRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
+  ...sjdConstitucionesRecords,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9616,6 +9618,7 @@ const publicationMetadata = {
   ...alegreMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
+  ...sjdConstitucionesMetadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,

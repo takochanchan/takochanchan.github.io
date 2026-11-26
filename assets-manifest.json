@@ -9260,6 +9260,24 @@
       "sha256": "34de8aa51180f4eb39e244e8c9cacbc519268478593139972fa301ad2e208aaa"
     },
     {
+      "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
+      "size": 289265,
+      "sha256": "dceb895e93ec8e312628136e965f266c16f443748a02b9d64c9c5093749753c8"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf",
+      "size": 2287832,
+      "sha256": "75505c2dfc15372d29ca91813a977ba32607b784136059704eced4fcc5acf3e3"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-mexico-1774/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-juan-de-dios-constituciones-mexico-1774/cover.jpg",
+      "size": 103542,
+      "sha256": "df06e6b1327479d0714fe794fc52e5a8c0159840c8119216f2aa0acc9ddb3c05"
+    },
+    {
       "path": "publications/san-roman-consuelo-penitentes-1585/San_Roman_Consuelo_1585_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/San_Roman_Consuelo_1585_Japanese_Translation.epub",
       "size": 628167,
