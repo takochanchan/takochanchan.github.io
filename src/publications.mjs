@@ -1,4 +1,5 @@
 import { sjdMadrid1612Records, sjdMadrid1612Metadata } from "./san-juan-de-dios-constituciones-madrid-1612-publication.mjs";
+import { sjdRome1617Records, sjdRome1617Metadata } from "./san-juan-de-dios-constituciones-rome-1617-publication.mjs";
 import { sjdGranada1585Records, sjdGranada1585Metadata } from "./san-juan-de-dios-constituciones-granada-1585-publication.mjs";
 import { sjdConstitucionesRecords, sjdConstitucionesMetadata } from "./san-juan-de-dios-constituciones-mexico-1774-publication.mjs";
 import { orozco1853Records, orozco1853Metadata } from "./orozco-conjuracion-marques-del-valle-1853-publication.mjs";
@@ -417,7 +418,7 @@ const publicationRecords = [
   ...alegreRecords, ...santosHospitalariaRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
-  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...sjdMadrid1612Records,
+  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9621,7 +9622,7 @@ const publicationMetadata = {
   ...alegreMetadata, ...santosHospitalariaMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
-  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...sjdMadrid1612Metadata,
+  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,

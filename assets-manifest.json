@@ -9314,6 +9314,24 @@
       "sha256": "df06e6b1327479d0714fe794fc52e5a8c0159840c8119216f2aa0acc9ddb3c05"
     },
     {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1617/Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.epub",
+      "size": 1064507,
+      "sha256": "027dad03417f5c4baa1cc878aeb3278de9e0c0ea47c56160110cfb124378ccd8"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1617/Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.pdf",
+      "size": 1447810,
+      "sha256": "00c47d746001d3c0d1025ddec7ad272b7bcc4fdf8be5f178f7dcee38c96c61fc"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1617/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-juan-de-dios-constituciones-rome-1617/cover.jpg",
+      "size": 36731,
+      "sha256": "b0d85aa1e4ea49caf83584c30d8e677ff0e5a498e43ca02db6a29a8e34e3de84"
+    },
+    {
       "path": "publications/san-roman-consuelo-penitentes-1585/San_Roman_Consuelo_1585_Japanese_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/San_Roman_Consuelo_1585_Japanese_Translation.epub",
       "size": 628167,

@@ -9952,6 +9952,25 @@
       }
     },
     {
+      "slug": "san-juan-de-dios-constituciones-rome-1617",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "originalTitle": "Regola di S.to Agostino con l’espositione di Ugone da S. Vittore. Et Constitutioni della Religione del divoto Giovanni di Dio",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Religione di Giovanni di Dio",
+      "year": 1617,
+      "originalPublication": "Roma: Stamperia della Camera Apostolica, 1617.",
+      "sourceEdition": "Regola di S.to Agostino con l’espositione di Ugone da S. Vittore. Et Constitutioni della Religione del divoto Giovanni di Dio. Roma: Stamperia della Camera Apostolica, 1617. ローマ国立中央図書館所蔵本。",
+      "sourceProvider": "ローマ国立中央図書館（電子化：Google、配布：Internet Archive）",
+      "rights": "1617年刊の原著本文・木版は著作権保護期間満了。底本画像の個別CCライセンスは確認できていない。図版2点は同版の木版部分のみを掲載し、所蔵館と電子化元を明記。扉下の装飾紋章は掲載していない。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_rysM9Rzitf4C"
+      }
+    },
+    {
       "slug": "san-roman-consuelo-penitentes-1585",
       "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
       "originalTitle": "Consuelo de penitentes, o Mesa franca de spirituales manjares",

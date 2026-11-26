@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "85136c9d94b764e60fb58c289a8202e238c04132",
+  "archive_commit": "30b9f8dede126dd473d73f45cabaaa8ca85f9868",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -459,6 +459,7 @@
     "san-juan-de-dios-constituciones-granada-1585": "publications/san-juan-de-dios-constituciones-granada-1585/master.docx",
     "san-juan-de-dios-constituciones-madrid-1612": "publications/san-juan-de-dios-constituciones-madrid-1612/master.docx",
     "san-juan-de-dios-constituciones-mexico-1774": "publications/san-juan-de-dios-constituciones-mexico-1774/master.docx",
+    "san-juan-de-dios-constituciones-rome-1617": "publications/san-juan-de-dios-constituciones-rome-1617/master.docx",
     "san-roman-consuelo-penitentes-1585": "publications/san-roman-consuelo-penitentes-1585/master.md",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
     "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
