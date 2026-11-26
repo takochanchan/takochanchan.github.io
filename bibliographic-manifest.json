@@ -9895,6 +9895,25 @@
       "updatedDate": "2026-08-11"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-granada-1585",
+      "recordClass": "major-work",
+      "title": "フアン・デ・ディオス病院のための会則と会憲",
+      "originalTitle": "Regla y constituciones para el Hospital de Ioan de Dios desta ciudad de Granada",
+      "author": "フアン・メンデス・デ・サルバティエラ",
+      "originalAuthor": "Juan Méndez de Salvatierra",
+      "year": 1585,
+      "originalPublication": "Granada: Hugo de Mena, 1585.",
+      "sourceEdition": "Juan Méndez de Salvatierra, Regla y constituciones para el Hospital de Ioan de Dios desta ciudad de Granada. Granada: Hugo de Mena, 1585. BHR/Caja IMP-1-047.",
+      "sourceProvider": "グラナダ大学王立病院図書館（Biblioteca del Hospital Real）",
+      "rights": "1585年刊の原著は著作権保護期間満了。グラナダ大学が公開する底本画像はCC BY-NC-ND 3.0。底本画像は転載していない。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://hdl.handle.net/10481/16392"
+      }
+    },
+    {
       "slug": "san-juan-de-dios-constituciones-mexico-1774",
       "recordClass": "major-work",
       "title": "聖フアン・デ・ディオス病院修道会の会憲",

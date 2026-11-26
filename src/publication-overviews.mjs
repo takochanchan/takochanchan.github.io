@@ -1,3 +1,4 @@
+import { sjdGranada1585Overviews } from "./san-juan-de-dios-constituciones-granada-1585-publication.mjs";
 import { sjdConstitucionesOverviews } from "./san-juan-de-dios-constituciones-mexico-1774-publication.mjs";
 import { orozco1853Overviews } from "./orozco-conjuracion-marques-del-valle-1853-publication.mjs";
 import { alegreOverviews } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
@@ -11,7 +12,7 @@ import { espinosaArricivitaChronicaOverviews } from "./espinosa-arricivita-chron
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(readFileSync(new URL("./publication-overviews.json", import.meta.url), "utf8"));
-export const publicationOverviews = Object.freeze({ ...data.records, ...alegreOverviews, ...grijalva1624Overviews, ...orozco1853Overviews, ...sjdConstitucionesOverviews, ...levyNotAS1873Overviews, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
+export const publicationOverviews = Object.freeze({ ...data.records, ...alegreOverviews, ...grijalva1624Overviews, ...orozco1853Overviews, ...sjdConstitucionesOverviews, ...sjdGranada1585Overviews, ...levyNotAS1873Overviews, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
 export const overviewUpdatedDate = data.updatedDate;
 
 export function validatePublicationOverviews(publications, records = publicationOverviews) {

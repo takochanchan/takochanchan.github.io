@@ -925,16 +925,18 @@ export const publicationGroupDefinitions = [
     "slug": "san-juan-de-dios-constituciones",
     "groupType": "edition",
     "groupOverviewLabel": "全体の詳細概要",
-    "groupOverview": "病者の看護を誓願に掲げた聖フアン・デ・ディオス病院修道会の会憲を、刊行地・刊年を区別して収める。会の統治、各院の職務や病者の世話、入会・誓願、巡察・会計・規律の定めを通じて、病院が修道院としても施療施設としても運営された仕組みをたどることができる。刊本によって本文の改定・増補、教皇による認可や特権、地域ごとの付載資料が異なる。現在収録する1774年メキシコ版は、スペインで整えられた会憲とメキシコでの再刊文書のほか、ヌエバ・エスパーニャ、グアテマラ、カリブ海、フィリピンなどの病院統計を収める。書誌を共通にしながら、個々の訳文と底本情報は版ごとに分けて示す。",
-    "extent": "公開1版・日本語版PDF 265頁",
+    "groupOverview": "聖フアン・デ・ディオス病院と、そこに始まる病院修道会の規程を、時代・地域・適用範囲を区別して収める。1585年グラナダ版は大司教が市内の一病院に与えた会則と会憲で、院の兄弟の受入れから、看護・看取り、病院職員の分担、食料や寝具の管理、喜捨の会計までを定める。一方、1774年メキシコ版は修道会と各院の統治、誓願と規律、巡察等を扱う。さらに教皇文書、ヌエバ・エスパーニャ、グアテマラ、カリブ海、フィリピンなど36院の統計を含む。同じ書誌に並べるが、二つの刊本は同一内容の異版ではなく、適用範囲も、本文・付載資料も異なる。",
+    "extent": "公開2版・日本語版PDF計328頁",
     "memberSlugs": [
-      "san-juan-de-dios-constituciones-mexico-1774"
+      "san-juan-de-dios-constituciones-mexico-1774",
+      "san-juan-de-dios-constituciones-granada-1585"
     ],
     "plannedMemberSlugs": [
       "san-juan-de-dios-constituciones-granada-1744"
     ],
     "volumeLabels": [
-      "1774年メキシコ版"
+      "1774年メキシコ版",
+      "1585年グラナダ版"
     ],
     "title": "聖フアン・デ・ディオス病院修道会の会憲",
     "subtitle": "",
@@ -942,7 +944,8 @@ export const publicationGroupDefinitions = [
     "author": "聖フアン・デ・ディオス病院修道会",
     "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
     "year": 1774,
-    "originalPublication": "México: Imprenta del Lic. D. Joseph de Jáuregui, 1774."
+    "originalPublication": "México: Imprenta del Lic. D. Joseph de Jáuregui, 1774.",
+    "multiAuthorSeries": true
   },
 ];
 

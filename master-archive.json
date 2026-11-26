@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "5d42801dce668c24206dae6663075ab64817c0bd",
+  "archive_commit": "f470485d89d82c212a8c18c1e7d7868b82b99149",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -456,6 +456,7 @@
     "salazar-historia-desenvolvimiento-intelectual-guatemala-1897": "publications/salazar-historia-desenvolvimiento-intelectual-guatemala-1897/master.docx",
     "salvatierra-el-apostol-mariano-1754": "publications/salvatierra-el-apostol-mariano-1754/master.md",
     "san-buenaventura-arte-lengua-maya-1684": "publications/san-buenaventura-arte-lengua-maya-1684/master.docx",
+    "san-juan-de-dios-constituciones-granada-1585": "publications/san-juan-de-dios-constituciones-granada-1585/master.docx",
     "san-juan-de-dios-constituciones-mexico-1774": "publications/san-juan-de-dios-constituciones-mexico-1774/master.docx",
     "san-roman-consuelo-penitentes-1585": "publications/san-roman-consuelo-penitentes-1585/master.md",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",

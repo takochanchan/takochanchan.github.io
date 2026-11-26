@@ -3106,6 +3106,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-granada-1585",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・メンデス・デ・サルバティエラ",
+      "originalAuthor": "Juan Méndez de Salvatierra",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-juan-de-dios-constituciones-mexico-1774",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3989,7 +3997,8 @@
     {
       "slug": "san-juan-de-dios-constituciones",
       "memberSlugs": [
-        "san-juan-de-dios-constituciones-mexico-1774"
+        "san-juan-de-dios-constituciones-mexico-1774",
+        "san-juan-de-dios-constituciones-granada-1585"
       ]
     },
     {

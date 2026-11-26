@@ -9260,6 +9260,24 @@
       "sha256": "34de8aa51180f4eb39e244e8c9cacbc519268478593139972fa301ad2e208aaa"
     },
     {
+      "path": "publications/san-juan-de-dios-constituciones-granada-1585/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub",
+      "size": 121783,
+      "sha256": "265f5b06bfce4bd134f59f103d6bf621da7457633f8f4de406720814f46e7adb"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-granada-1585/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf",
+      "size": 879002,
+      "sha256": "7daa7677e38f6626c39a27581020f4742b7114a44c89276f63af449c779ee3ae"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-granada-1585/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-juan-de-dios-constituciones-granada-1585/cover.jpg",
+      "size": 102284,
+      "sha256": "9efd318b1c1372ea5f1762c34fb539971edbcb1db18697d2469ce96634e86380"
+    },
+    {
       "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
       "size": 289265,
