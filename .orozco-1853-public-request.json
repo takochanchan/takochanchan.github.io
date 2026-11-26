@@ -1,0 +1,33 @@
+{
+  "verified_archive_commit": "81d81e6372b0137d325fd2699b2124e427164d37",
+  "bundle": {
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 3057129,
+        "start": 0,
+        "sha1": "c55857f58cf422ea5c7a2af0a3c9e60e2dfc554e",
+        "sha256": "7fd0bdca7666625ecf13c6fa3483f7e1f4d1498f4bf8628f00f0ef3f86ad6ba2"
+      }
+    ],
+    "size": 3057129,
+    "sha256": "7fd0bdca7666625ecf13c6fa3483f7e1f4d1498f4bf8628f00f0ef3f86ad6ba2"
+  },
+  "assets": [
+    {
+      "path": "publications/orozco-conjuracion-marques-del-valle-1853/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf",
+      "size": 3727336,
+      "sha256": "16b3b8c124359713dcac807f5030d6cc474bdf8f015cb981e9e490ef85c2c3c1",
+      "filename": "Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf"
+    },
+    {
+      "path": "publications/orozco-conjuracion-marques-del-valle-1853/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub",
+      "size": 448289,
+      "sha256": "a4dd1ca81b86c860f107c0bdab9c3208b1cd8f6da583b274ec84325480a8c9d2",
+      "filename": "Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub"
+    }
+  ]
+}
