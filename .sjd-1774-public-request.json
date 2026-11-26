@@ -1,0 +1,33 @@
+{
+  "verified_archive_commit": "5d42801dce668c24206dae6663075ab64817c0bd",
+  "bundle": {
+    "size": 1841660,
+    "sha256": "abc17cd879597f80c5a6a5ac5b75b8133f5f704bdd983ba51a8d5a8e07e5b822",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 1841660,
+        "start": 0,
+        "sha1": "094fdc3cfdd1c133755f1e7a7009482e2ac37d2d",
+        "sha256": "abc17cd879597f80c5a6a5ac5b75b8133f5f704bdd983ba51a8d5a8e07e5b822"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf",
+      "size": 2287832,
+      "sha256": "75505c2dfc15372d29ca91813a977ba32607b784136059704eced4fcc5acf3e3",
+      "filename": "Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
+      "size": 289265,
+      "sha256": "dceb895e93ec8e312628136e965f266c16f443748a02b9d64c9c5093749753c8",
+      "filename": "Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub"
+    }
+  ]
+}

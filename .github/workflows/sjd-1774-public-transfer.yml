@@ -1,0 +1,29 @@
+name: Transfer verified San Juan de Dios Mexico 1774 publication assets
+on:
+  push:
+    branches: [agent/sjd-1774-public-transfer-20261126]
+    paths: [.sjd-1774-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Transfer and read back the approved PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .sjd-1774-public-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sjd-1774-public-verification
+          path: sjd-1774-public-verification.json
