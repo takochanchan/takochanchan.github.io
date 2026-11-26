@@ -1,0 +1,74 @@
+{
+  "verified_archive_commit": "5824ed193fb33a1cc9f04d26beb795f7eb0330ae",
+  "bundle": {
+    "size": 13957648,
+    "sha256": "ccc2842ed56bb4d74e37bc9ed9dc55328498fb049f994012127f132c93e0709c",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 8000000,
+        "start": 0,
+        "sha1": "d7d9806434d40bbbcd91f6f04d50b95ed46c234f",
+        "sha256": "fec5a7d7450e5e6bcd82081cd4f8f17dd732c22c7dd3adb14d6c05c5108b4690"
+      },
+      {
+        "index": 1,
+        "part": "001.bin",
+        "size": 5957648,
+        "start": 8000000,
+        "sha1": "2b036348fd8b6af5267d06df69f37acff9e07867",
+        "sha256": "65f47ed2cc9246491853b16211af2a2831dca57141e6a7d8a5faeafad207eeb7"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf",
+      "size": 4409020,
+      "sha256": "0b8ea1484199d91da01e7971adfcfd8975ecf1bee8ab448ffb93a90120766bc4",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf"
+    },
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub",
+      "size": 2292888,
+      "sha256": "576beed65a716ffcb1766f38f433eb3a925e08ca52c4d2918e02fed06028e2e5",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub"
+    },
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf",
+      "size": 4660331,
+      "sha256": "a51e485101eae9187daae4002e214317e0466ff1f19e8efdc5908f403a6e15d8",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf"
+    },
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub",
+      "size": 2090440,
+      "sha256": "711fce55de6871bdc1e76cd384d7e634063914f18607bcb863fed75c23d8f1c3",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub"
+    },
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf",
+      "size": 3210407,
+      "sha256": "e458edd182de50a5e5c329713fdf1c7444e4a8c3b00b9480f0d2c45c504a405b",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf"
+    },
+    {
+      "filename": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub",
+      "size": 420773,
+      "sha256": "7396bdaa7aff0d388201aab46316347a61f321b1d253004ff39eb4ffbb4c96ab",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub",
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub"
+    }
+  ],
+  "slugs": [
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3"
+  ]
+}
