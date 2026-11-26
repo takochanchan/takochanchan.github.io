@@ -1,0 +1,52 @@
+{
+  "verified_archive_commit": "12cceb9d79d8738e6ef2805bc6c5549bc7a17978",
+  "slugs": [
+    "san-juan-de-dios-constituciones-rome-1785"
+  ],
+  "bundle": {
+    "size": 2693101,
+    "sha256": "a29f91ebe97e0375f4b1da4f291010e4da8ad2af33ad1e6d00aa9e34ab55f960",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "size": 690000,
+        "sha256": "585fdcecfe5fe7c8af4843a1b0d9ad436c46ec302fcee255d61481acb177ecfa"
+      },
+      {
+        "index": 1,
+        "start": 690000,
+        "part": "001.bin",
+        "size": 690000,
+        "sha256": "d96a741222e20d987f5a6cac3699962b5c979769b54033c075f01b8c9058246c"
+      },
+      {
+        "index": 2,
+        "start": 1380000,
+        "part": "002.bin",
+        "size": 690000,
+        "sha256": "fcc553e34437977475caca8b03ffe5cc00a08fc373c3f5a3f30d507cd568a262"
+      },
+      {
+        "index": 3,
+        "start": 2070000,
+        "part": "003.bin",
+        "size": 623101,
+        "sha256": "620e0748e369048700dbe3bbdcdb61e65886086fafe3073745e007f08445a519"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.pdf",
+      "size": 2832740,
+      "sha256": "fa7ed3b259f1b2e3d0a4c0700488695609af013fb73cf437ecf57c07e230161e"
+    },
+    {
+      "filename": "Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.epub",
+      "size": 967554,
+      "sha256": "c906e88d49840d2c5bccd6c613f6d03f462b5eec817b46d17a0c016b9a5893f5"
+    }
+  ]
+}
