@@ -1,0 +1,33 @@
+{
+  "verified_archive_commit": "f470485d89d82c212a8c18c1e7d7868b82b99149",
+  "bundle": {
+    "size": 796989,
+    "sha256": "b14284046c1f5cf44015f57e85e2e5f78ee46e3b39dee0122b5bcec373ef610f",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 796989,
+        "start": 0,
+        "sha1": "024bfb08a94c5915d72121c356304495f73bddd3",
+        "sha256": "b14284046c1f5cf44015f57e85e2e5f78ee46e3b39dee0122b5bcec373ef610f"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/san-juan-de-dios-constituciones-granada-1585/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf",
+      "size": 879002,
+      "sha256": "7daa7677e38f6626c39a27581020f4742b7114a44c89276f63af449c779ee3ae",
+      "filename": "Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-granada-1585/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub",
+      "size": 121783,
+      "sha256": "265f5b06bfce4bd134f59f103d6bf621da7457633f8f4de406720814f46e7adb",
+      "filename": "Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub"
+    }
+  ]
+}
