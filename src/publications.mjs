@@ -1,3 +1,4 @@
+import { alegreRecords, alegreMetadata } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { levyNotAS1873Records, levyNotAS1873Metadata } from "./levy-notas-nicaragua-1873-publication.mjs";
 import { mexicoSiglosRecords, mexicoSiglosMetadata } from "./mexico-a-traves-de-los-siglos-publication.mjs";
 import { ximenezScherzerLasHistoriasRecords, ximenezScherzerLasHistoriasMetadata } from "./ximenez-scherzer-las-historias-1857-publication.mjs";
@@ -407,6 +408,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
+  ...alegreRecords,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9607,6 +9609,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
+  ...alegreMetadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,

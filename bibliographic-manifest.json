@@ -83,6 +83,63 @@
       }
     },
     {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
+      "recordClass": "major-work",
+      "title": "ヌエバ・エスパーニャのイエズス会史 第1巻",
+      "originalTitle": "Historia de la Compañía de Jesús en Nueva-España. Tomo I",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "year": 1841,
+      "originalPublication": "1841年、メキシコ市、J・M・ララ印刷所刊。",
+      "sourceEdition": "Francisco Javier Alegre; Carlos María de Bustamante (ed.), Historia de la Compañía de Jesús en Nueva-España. México: Imprenta de J. M. Lara, 1841. Tomo I.",
+      "sourceProvider": "ボストン・カレッジ図書館所蔵。Internet Archive公開の同一個体の画像と照合したフォンダツィオーネ・イントルチェッタ公開PDFを使用。",
+      "rights": "1841～1842年原刊の本文・肖像はパブリックドメイン。ボストン・カレッジ図書館所蔵本の公開スキャンに個別ライセンス表示はない。第1・2巻は原刊肖像を切り抜いて掲載。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelacomp01aleg"
+      }
+    },
+    {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
+      "recordClass": "major-work",
+      "title": "ヌエバ・エスパーニャのイエズス会史 第2巻",
+      "originalTitle": "Historia de la Compañía de Jesús en Nueva-España. Tomo II",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "year": 1842,
+      "originalPublication": "1842年、メキシコ市、J・M・ララ印刷所刊。",
+      "sourceEdition": "Francisco Javier Alegre; Carlos María de Bustamante (ed.), Historia de la Compañía de Jesús en Nueva-España. México: Imprenta de J. M. Lara, 1842. Tomo II.",
+      "sourceProvider": "ボストン・カレッジ図書館所蔵。Internet Archive公開の同一個体の画像と照合したフォンダツィオーネ・イントルチェッタ公開PDFを使用。",
+      "rights": "1841～1842年原刊の本文・肖像はパブリックドメイン。ボストン・カレッジ図書館所蔵本の公開スキャンに個別ライセンス表示はない。第1・2巻は原刊肖像を切り抜いて掲載。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelacomp02aleg"
+      }
+    },
+    {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3",
+      "recordClass": "major-work",
+      "title": "ヌエバ・エスパーニャのイエズス会史 第3巻",
+      "originalTitle": "Historia de la Compañía de Jesús en Nueva-España. Tomo III",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "year": 1842,
+      "originalPublication": "1842年、メキシコ市、J・M・ララ印刷所刊。巻末の編者署名は1843年9月19日。",
+      "sourceEdition": "Francisco Javier Alegre; Carlos María de Bustamante (ed.), Historia de la Compañía de Jesús en Nueva-España. México: Imprenta de J. M. Lara, 1842. Tomo III.",
+      "sourceProvider": "ボストン・カレッジ図書館所蔵。Internet Archive公開の同一個体の画像と照合したフォンダツィオーネ・イントルチェッタ公開PDFを使用。",
+      "rights": "1842年原刊本文はパブリックドメイン。公開画像に個別ライセンス表示はなく、第3巻では底本画像を転載していない。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/historiadelacomp03aleg"
+      }
+    },
+    {
       "recordClass": "major-work",
       "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
       "title": "メキシコの教会・修道院誌",

@@ -1,3 +1,4 @@
+import { alegreGroup } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { mexicoSiglosGroup } from "./mexico-a-traves-de-los-siglos-publication.mjs";
 import { espinosaArricivitaChronicaGroup } from "./espinosa-arricivita-chronica-1746-1792-publication.mjs";
 import { burgoaGeograficaDescripcion1674Group } from "./burgoa-geografica-descripcion-1674-publication.mjs";
@@ -19,6 +20,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  alegreGroup,
   mexicoSiglosGroup,
   espinosaArricivitaChronicaGroup,
   burgoaGeograficaDescripcion1674Group,

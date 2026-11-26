@@ -1,11 +1,14 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "268f9ebafc8accc898511abc52af1768b8a7ce65",
+  "archive_commit": "5824ed193fb33a1cc9f04d26beb795f7eb0330ae",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
     "agn-hospitales-volume-73-1649-1773": "publications/agn-hospitales-volume-73-1649-1773/master.docx",
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/master.docx",
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/master.docx",
+    "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/master.docx",
     "alfaro-pina-iglesias-conventos-mexico-1863": "publications/alfaro-pina-iglesias-conventos-mexico-1863/master.docx",
     "alva-confessionario-mayor-menor-1634": "publications/alva-confessionario-mayor-menor-1634/master.docx",
     "alzate-memoria-grana-cochinilla-1794": "publications/alzate-memoria-grana-cochinilla-1794/master.docx",

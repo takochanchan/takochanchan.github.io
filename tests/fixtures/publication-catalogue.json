@@ -22,6 +22,33 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・ハビエル・アレグレ著、カルロス・マリア・デ・ブスタマンテ編",
+      "originalAuthor": "Francisco Javier Alegre; Carlos María de Bustamante (ed.)",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 3
+    },
+    {
       "slug": "alfaro-pina-iglesias-conventos-mexico-1863",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3857,6 +3884,15 @@
         "maria-de-san-jose-spiritual-autobiography-part-12"
       ],
       "seriesVolumeCount": 12
+    },
+    {
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "memberSlugs": [
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1",
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2",
+        "alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3"
+      ],
+      "seriesVolumeCount": 3
     },
     {
       "slug": "mexico-a-traves-de-los-siglos",

@@ -56,6 +56,60 @@
       "sha256": "1840516597aa845f6c2fef54c47a39f1d94200b5e670e1862082bb25fbaa7efc"
     },
     {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub",
+      "size": 2292888,
+      "sha256": "576beed65a716ffcb1766f38f433eb3a925e08ca52c4d2918e02fed06028e2e5"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf",
+      "size": 4409020,
+      "sha256": "0b8ea1484199d91da01e7971adfcfd8975ecf1bee8ab448ffb93a90120766bc4"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-1/cover.jpg",
+      "size": 114569,
+      "sha256": "d5ab2b70fb476d21fbf37fd56946265fc06c67728bf2e102107c330db6d348d3"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub",
+      "size": 2090440,
+      "sha256": "711fce55de6871bdc1e76cd384d7e634063914f18607bcb863fed75c23d8f1c3"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf",
+      "size": 4660331,
+      "sha256": "a51e485101eae9187daae4002e214317e0466ff1f19e8efdc5908f403a6e15d8"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-2/cover.jpg",
+      "size": 114631,
+      "sha256": "45558219c8462b60013a129c1e396b7ca7c56dedb08f8cc8c8115348d2b52515"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub",
+      "size": 420773,
+      "sha256": "7396bdaa7aff0d388201aab46316347a61f321b1d253004ff39eb4ffbb4c96ab"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf",
+      "size": 3210407,
+      "sha256": "e458edd182de50a5e5c329713fdf1c7444e4a8c3b00b9480f0d2c45c504a405b"
+    },
+    {
+      "path": "publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/alegre-historia-compania-jesus-nueva-espana-1841-1842-vol-3/cover.jpg",
+      "size": 114633,
+      "sha256": "5d676cf6be10362b95f6c3084eb1fac0bf227faf220fe0988891312ca379a228"
+    },
+    {
       "path": "publications/alfaro-pina-iglesias-conventos-mexico-1863/alfaro-pina-iglesias-conventos-mexico-1863.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/alfaro-pina-iglesias-conventos-mexico-1863.epub",
       "size": 371438,
