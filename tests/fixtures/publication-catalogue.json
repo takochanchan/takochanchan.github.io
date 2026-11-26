@@ -3114,6 +3114,14 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-madrid-1612",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-juan-de-dios-constituciones-mexico-1774",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3998,7 +4006,8 @@
       "slug": "san-juan-de-dios-constituciones",
       "memberSlugs": [
         "san-juan-de-dios-constituciones-mexico-1774",
-        "san-juan-de-dios-constituciones-granada-1585"
+        "san-juan-de-dios-constituciones-granada-1585",
+        "san-juan-de-dios-constituciones-madrid-1612"
       ]
     },
     {

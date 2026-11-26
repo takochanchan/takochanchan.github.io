@@ -9278,6 +9278,24 @@
       "sha256": "9efd318b1c1372ea5f1762c34fb539971edbcb1db18697d2469ce96634e86380"
     },
     {
+      "path": "publications/san-juan-de-dios-constituciones-madrid-1612/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub",
+      "size": 758342,
+      "sha256": "3c12a4bc3304fa24fb82e27cf3834f31e9862711fd86dab3a65f7f12b1fdc6f2"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-madrid-1612/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf",
+      "size": 1445444,
+      "sha256": "a4c15cfd71bf70e46bda9feefd8d4ef80caf86f5a29adbfb8410e4be170376f4"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-madrid-1612/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-juan-de-dios-constituciones-madrid-1612/cover.jpg",
+      "size": 40698,
+      "sha256": "89bb3f1c60959f00f909651eda433cbcf3d7a46d20bc988b02bc1eb760c7898a"
+    },
+    {
       "path": "publications/san-juan-de-dios-constituciones-mexico-1774/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
       "size": 289265,

@@ -925,18 +925,20 @@ export const publicationGroupDefinitions = [
     "slug": "san-juan-de-dios-constituciones",
     "groupType": "edition",
     "groupOverviewLabel": "全体の詳細概要",
-    "groupOverview": "聖フアン・デ・ディオス病院と、そこに始まる病院修道会の規程を、時代・地域・適用範囲を区別して収める。1585年グラナダ版は大司教が市内の一病院に与えた会則と会憲で、院の兄弟の受入れから、看護・看取り、病院職員の分担、食料や寝具の管理、喜捨の会計までを定める。一方、1774年メキシコ版は修道会と各院の統治、誓願と規律、巡察等を扱う。さらに教皇文書、ヌエバ・エスパーニャ、グアテマラ、カリブ海、フィリピンなど36院の統計を含む。同じ書誌に並べるが、二つの刊本は同一内容の異版ではなく、適用範囲も、本文・付載資料も異なる。",
-    "extent": "公開2版・日本語版PDF計328頁",
+    "groupOverview": "グラナダのフアン・デ・ディオス病院と、そこに始まる病院修道会の規程を、刊年と適用範囲を区別して収める。1585年グラナダ版は大司教が市内の一病院に与え、兄弟の受入れや病人の看護・看取り、職務、寝具や食料、喜捨の会計を定めたもの。1612年マドリード版はパウルス五世が前年に認可したスペイン系会憲で、聖アウグスティヌスの会則とともに、病人看護を含む四つの誓願、総会・選挙・巡察と各院の規律を収める。1774年メキシコ版は病院修道会の統治と看護の規程に加え、教皇文書や新スペイン・中米・カリブ海・フィリピンなど36院の統計を掲げる。三版は単なる再版ではなく、対象となる施設と組織、認可の主体、付載資料を分けて読む必要がある。",
+    "extent": "公開3版・日本語版PDF計385頁",
     "memberSlugs": [
       "san-juan-de-dios-constituciones-mexico-1774",
-      "san-juan-de-dios-constituciones-granada-1585"
+      "san-juan-de-dios-constituciones-granada-1585",
+      "san-juan-de-dios-constituciones-madrid-1612"
     ],
     "plannedMemberSlugs": [
       "san-juan-de-dios-constituciones-granada-1744"
     ],
     "volumeLabels": [
       "1774年メキシコ版",
-      "1585年グラナダ版"
+      "1585年グラナダ版",
+      "1612年マドリード版"
     ],
     "title": "聖フアン・デ・ディオス病院修道会の会憲",
     "subtitle": "",
