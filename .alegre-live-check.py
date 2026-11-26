@@ -1,0 +1,57 @@
+import hashlib, html, json, re, os, subprocess, sys, time, urllib.parse, urllib.request, zipfile
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from html.parser import HTMLParser
+assert os.environ.get('GITHUB_ACTIONS')=='true'
+plan=json.loads(Path('.alegre-live-manifest.json').read_text())
+site='https://takochanchan.github.io'
+repo='takochanchan/takochanchan.github.io'
+assert os.environ['GITHUB_REPOSITORY']==repo
+def get(url,timeout=50):
+ assert url.startswith(('https://takochanchan.github.io/','https://github.com/takochanchan/'))
+ req=urllib.request.Request(url,headers={'User-Agent':'takochan-publication-verification','Cache-Control':'no-cache'})
+ with urllib.request.urlopen(req,timeout=timeout) as r:
+  assert r.status==200
+  return r.read()
+def verify():
+ g=plan['group'];pub=site+'/publications/'+g['slug']+'/'
+ body=get(pub+'?verify=alegre-20261126').decode()
+ clean=html.unescape(body)
+ assert g['title'] in clean and g['groupOverviewLabel'] in clean
+ norm=lambda s:re.sub(r'\s+','',s)
+ flat=norm(re.sub(r'<[^>]*>','',clean))
+ ov=[g['groupOverview']]+[plan['meta'][s]['overview'] for s in plan['slugs']]
+ for item in ov:
+  s=norm(item)
+  assert s in flat, s[:80]
+ shared='https://github.com/'+repo+'/releases/download/publications-002/'
+ cs=get(shared+'SHA256SUMS.txt').decode()
+ dm=get(site+'/takochan-search-index-003/document-map.json?verify=alegre-20261126').decode()
+ out=[]
+ for sl,rec in zip(plan['slugs'],plan['records']):
+  assert sl in dm,(sl,'index')
+  assert str(rec['pageCount']) in flat
+  for key,a in plan['assets'][sl].items():
+   u=a['url']; assert u in clean or urllib.parse.urlsplit(u).path in clean or a['filename'] in clean,(sl,key,'link')
+   raw=get(u)
+   assert len(raw)==a['size'] and hashlib.sha256(raw).hexdigest()==a['sha256'],(sl,key,'hash')
+   if key in ('pdf','epub'):
+    assert re.search(r'^'+a['sha256']+r'\s+\*?'+re.escape(a['filename'])+'$',cs,re.M)
+   if key=='pdf':
+    with TemporaryDirectory() as f:
+     q=Path(f)/'output.pdf';q.write_bytes(raw)
+     a1=subprocess.check_output(['pdfinfo',str(q)],text=True)
+     assert re.search(r'^Pages:\s+'+str(rec['pageCount'])+r'$',a1,re.M)
+   if key=='epub':
+    from io import BytesIO
+    with zipfile.ZipFile(BytesIO(raw)) as z:assert z.read('mimetype')==b'application/epub+zip' and z.testzip() is None
+   out.append(dict(slug=sl,file=key,sha256=a['sha256'],bytes=a['size']))
+ return dict(publication=pub,match=True,overview_count=4,fulltext_index='003',readback=out)
+for i in range(65):
+ try: result=verify();break
+ except (OSError,AssertionError) as e:
+  print(f'waiting for publication {i+1}: {str(e)[:400]}',flush=True)
+  if i==64:raise
+  time.sleep(24)
+Path('alegre-live-verification.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+print(json.dumps(result,ensure_ascii=False),flush=True)

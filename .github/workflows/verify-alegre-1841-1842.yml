@@ -1,0 +1,21 @@
+name: Verify the live Alegre–Bustamante publication
+on:
+  push:
+    branches: [agent/verify-alegre-1841-1842-20261126]
+    paths: [.alegre-live-manifest.json]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live catalogue, 3 PDF files, 3 EPUB files, covers and search
+        run: |
+          command -v pdfinfo || { sudo apt-get update && sudo apt-get install -y poppler-utils; }
+          python3 .alegre-live-check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: alegre-live-verification
+          path: alegre-live-verification.json
