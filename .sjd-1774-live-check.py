@@ -37,7 +37,7 @@ def verify():
   alias=get(site+'/publications/'+sl+'/?verify=sjd-1774').decode()
   assert '/publications/'+g['slug']+'/' in alias
   m=json.loads(get(site+'/takochan-search-index-003/maps/'+sl+'.json?verify=sjd-1774'))
-  assert m['canonicalUrl']=='/publications/'+g['slug']+'/' and m['pdfSha256']==plan['assets'][sl]['pdf']['sha256']
+  assert m['canonicalUrl']=='/publications/'+sl+'/' and m['pdfSha256']==plan['assets'][sl]['pdf']['sha256']
   assert str(rec['pageCount']) in flat
   for key,a in plan['assets'][sl].items():
    u=a['url']; assert u in clean or urllib.parse.urlsplit(u).path in clean or a['filename'] in clean,(sl,key,'link')
