@@ -1,0 +1,158 @@
+{
+  "verified_archive_commit": "85136c9d94b764e60fb58c289a8202e238c04132",
+  "slugs": [
+    "santos-chronologia-hospitalaria-part-i-1715",
+    "santos-chronologia-hospitalaria-part-ii-1716"
+  ],
+  "bundle": {
+    "size": 12114643,
+    "sha256": "afe2fde6b4bd042d53a762ce58eea4bd97fbf57224abee8805bebb02f026001c",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "size": 750000,
+        "sha256": "59e56213195a8f67d097ad8e031b7660357b387854a0e8589f1aac740fc0bdd3",
+        "part": "000.bin"
+      },
+      {
+        "index": 1,
+        "start": 750000,
+        "size": 750000,
+        "sha256": "e2441742a2916a1f5201d24d1014b5967206e8ba19d012cfe68295d5dc74ec25",
+        "part": "001.bin"
+      },
+      {
+        "index": 2,
+        "start": 1500000,
+        "size": 750000,
+        "sha256": "a7a789a2824d724b6c33df8e85926eb2e56a6c628fe7cb614fd9af737fcce8d3",
+        "part": "002.bin"
+      },
+      {
+        "index": 3,
+        "start": 2250000,
+        "size": 750000,
+        "sha256": "ff51f4ab9be7f9e9fc3f40d06c9d62f137df7635e28035e721ad2e94bed07750",
+        "part": "003.bin"
+      },
+      {
+        "index": 4,
+        "start": 3000000,
+        "size": 750000,
+        "sha256": "4ab3138fe09bd93c2ed060a7656892a41c1b053c78d7431abd25cbc524c4e55a",
+        "part": "004.bin"
+      },
+      {
+        "index": 5,
+        "start": 3750000,
+        "size": 750000,
+        "sha256": "1b4a5a6fee0fd3010bc5e21baac62b8c1de26e530dc6ee695a3bad29a6a0dd1e",
+        "part": "005.bin"
+      },
+      {
+        "index": 6,
+        "start": 4500000,
+        "size": 750000,
+        "sha256": "13e4a80d65bb714e6ed7d17ec56daa52b31df234ad81648f56d6255f1f4c4cac",
+        "part": "006.bin"
+      },
+      {
+        "index": 7,
+        "start": 5250000,
+        "size": 750000,
+        "sha256": "ea7dc872d0938f63437316911aa7e49b66e56bf8a54401959bb94abf2c2c835c",
+        "part": "007.bin"
+      },
+      {
+        "index": 8,
+        "start": 6000000,
+        "size": 750000,
+        "sha256": "2764f87a0125b1664a5da63ff4f74aa53f3f40512278d8f487cdcc19d30d662c",
+        "part": "008.bin"
+      },
+      {
+        "index": 9,
+        "start": 6750000,
+        "size": 750000,
+        "sha256": "0da36ee669437c10d7b622df87847c27e01530952daf5cd52121885555185920",
+        "part": "009.bin"
+      },
+      {
+        "index": 10,
+        "start": 7500000,
+        "size": 750000,
+        "sha256": "b0db087203922721d4b7f965708f80950e49654db4280e2d94b2d96c5111cbee",
+        "part": "010.bin"
+      },
+      {
+        "index": 11,
+        "start": 8250000,
+        "size": 750000,
+        "sha256": "a73255e5f2d44e2b462cb5e9a6af4ff645c58ce07f4c12c4b666f30e583db15d",
+        "part": "011.bin"
+      },
+      {
+        "index": 12,
+        "start": 9000000,
+        "size": 750000,
+        "sha256": "3fbd1d208f613f63f86502acbd6da0c2b3be63e8bdab29357b23c213dfae847e",
+        "part": "012.bin"
+      },
+      {
+        "index": 13,
+        "start": 9750000,
+        "size": 750000,
+        "sha256": "6db6e68702bfbbd1f87757f7d2a37cf3819d607839d760da35ad834b752b27d5",
+        "part": "013.bin"
+      },
+      {
+        "index": 14,
+        "start": 10500000,
+        "size": 750000,
+        "sha256": "e05daa42e4968e26a19c37ac5459666634b7b48d63438764550ee079466ed5f7",
+        "part": "014.bin"
+      },
+      {
+        "index": 15,
+        "start": 11250000,
+        "size": 750000,
+        "sha256": "82e802b5a62bc9e3920acf47536b30f7eb707bbad85a7b8b46fd351491b0b665",
+        "part": "015.bin"
+      },
+      {
+        "index": 16,
+        "start": 12000000,
+        "size": 114643,
+        "sha256": "fadbec41b100cfe7e3e604fe3fc17e4cb3e2a441a0f03a7f922d751b8c2ac1df",
+        "part": "016.bin"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf",
+      "size": 6729912,
+      "sha256": "9b0b933ce703644a6130aac1f467fcb631da4db7a5c1d6b351011ffa7f131d78",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf"
+    },
+    {
+      "filename": "Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub",
+      "size": 1585644,
+      "sha256": "ff52bd192f0c47abbb6f1e983de9bd2b0fa04b9f226bbc595c9121178f610c91",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub"
+    },
+    {
+      "filename": "Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf",
+      "size": 6820212,
+      "sha256": "f4abdeadf9c06a3a313138014be0774feef4e93383be9e95c7ea102f5b212bed",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf"
+    },
+    {
+      "filename": "Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub",
+      "size": 1234468,
+      "sha256": "c1039e62807cf227ca4086fa5119a6ce4b436c81fc6fb1579535297272b38699",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub"
+    }
+  ]
+}
