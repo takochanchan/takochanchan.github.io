@@ -927,22 +927,24 @@ export const publicationGroupDefinitions = [
     "slug": "san-juan-de-dios-constituciones",
     "groupType": "edition",
     "groupOverviewLabel": "全体の詳細概要",
-    "groupOverview": "同じ病院修道会に関わる四つの規程を、成立時期と適用範囲を分けて収める。1585年グラナダ版は大司教が市内のフアン・デ・ディオス病院に与えた規程で、兄弟の受入れ、病人の看護と看取り、寝具・食料・喜捨の会計を定める。1612年マドリード版は前年にパウルス五世が認可したスペイン系会憲で、聖アウグスティヌスの会則、病人看護を含む四つの誓願、総会・選挙・巡察を収める。\n1617年ローマ版は1616年の総会で採択されたイタリア系会憲で、会則とその解説、総長・管区長・院長の職務、貧しい病人の受入れから回診・給食・看取りまでの手順、着衣・誓願の祈りを収める。1774年メキシコ版では修道会の統治と看護の規程に加え、教皇文書と、新スペイン・中米・カリブ海・フィリピンなど36院の統計を読める。四版は単なる再版ではない。一病院の規程、スペイン系とイタリア系の規律、18世紀のメキシコ刊本を比べ、どこまでが規則で、どの部分が病院の実情を伝える記録なのかを区別できる。",
-    "extent": "公開4版・日本語版PDF計524頁",
+    "groupOverview": "1585年グラナダ版は、大司教が市内のフアン・デ・ディオス病院に与えた規程で、兄弟の受入れ、看護と看取り、寝具・食料、喜捨の会計を定める。1612年マドリード版は前年に教皇が認可したスペイン系会憲で、聖アウグスティヌスの会則とともに、病人看護を含む四つの誓願、総会や選挙、巡察を収める。1617年ローマ版は、1616年の総会で採択されたイタリア系会憲。会則とその解説、役職の分担、病人の受入れから回診、給食、看取りまでの手順、着衣・誓願の祈りを収める。\n1774年メキシコ版は会の統治と看護の規程、教皇文書に加え、新スペイン・中米・カリブ海・フィリピンなど36院の統計を伝える。1785年ローマ版はイタリア系会憲の注解付き再刊で、使徒座や総会の決定に基づく条文の解釈と緩和、巡察の具体的手順、イタリア系・スペイン系両会衆の病院目録、事項索引と食卓の祈りを収める。二つのローマ版を比較すると、後の注解が初期の規定をどのように具体化したかを読める。グラナダの一病院の規程と会全体・各会衆の規程を区別し、病院の目録や統計はその対象地域と記録時点を確かめて利用する必要がある。",
+    "extent": "公開5版・日本語版PDF計755頁",
     "memberSlugs": [
-      "san-juan-de-dios-constituciones-mexico-1774",
       "san-juan-de-dios-constituciones-granada-1585",
       "san-juan-de-dios-constituciones-madrid-1612",
-      "san-juan-de-dios-constituciones-rome-1617"
+      "san-juan-de-dios-constituciones-rome-1617",
+      "san-juan-de-dios-constituciones-mexico-1774",
+      "san-juan-de-dios-constituciones-rome-1785"
     ],
     "plannedMemberSlugs": [
       "san-juan-de-dios-constituciones-granada-1744"
     ],
     "volumeLabels": [
-      "1774年メキシコ版",
       "1585年グラナダ版",
       "1612年マドリード版",
-      "1617年ローマ版"
+      "1617年ローマ版",
+      "1774年メキシコ版",
+      "1785年ローマ版"
     ],
     "title": "聖フアン・デ・ディオス病院修道会の会憲",
     "subtitle": "",
@@ -951,7 +953,8 @@ export const publicationGroupDefinitions = [
     "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
     "year": 1774,
     "originalPublication": "México: Imprenta del Lic. D. Joseph de Jáuregui, 1774.",
-    "multiAuthorSeries": true
+    "multiAuthorSeries": true,
+    "description": "聖フアン・デ・ディオス病院と病院修道会の会憲5版を収録。1585年グラナダの一病院の規程から、17世紀のスペイン系・イタリア系の会憲、1774年メキシコ版、1785年ローマの注解付き版まで、刊年順に比較できる。"
   },
 ];
 

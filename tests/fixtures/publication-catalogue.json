@@ -3130,6 +3130,14 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-rome-1785",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Religione di S. Giovanni di Dio",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-juan-de-dios-constituciones-mexico-1774",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -4029,10 +4037,11 @@
     {
       "slug": "san-juan-de-dios-constituciones",
       "memberSlugs": [
-        "san-juan-de-dios-constituciones-mexico-1774",
         "san-juan-de-dios-constituciones-granada-1585",
         "san-juan-de-dios-constituciones-madrid-1612",
-        "san-juan-de-dios-constituciones-rome-1617"
+        "san-juan-de-dios-constituciones-rome-1617",
+        "san-juan-de-dios-constituciones-mexico-1774",
+        "san-juan-de-dios-constituciones-rome-1785"
       ]
     },
     {

@@ -9971,6 +9971,25 @@
       }
     },
     {
+      "slug": "san-juan-de-dios-constituciones-rome-1785",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "originalTitle": "Regola del P. S. Agostino e costituzioni della Religione di S. Gio. di Dio",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Religione di S. Giovanni di Dio",
+      "year": 1785,
+      "originalPublication": "Roma: Stamperia di Paolo Giunchi, 1785.",
+      "sourceEdition": "Regola del P. S. Agostino e costituzioni della Religione di S. Gio. di Dio. Roma: Stamperia di Paolo Giunchi, 1785. ローマ国立中央図書館所蔵本。",
+      "sourceProvider": "ローマ国立中央図書館（電子化・公開：Google Books）",
+      "rights": "1785年刊の原著本文・口絵は著作権保護期間満了。底本画像の個別CCライセンスは確認できていない。原刊の口絵のみを掲げ、所蔵館および電子化元を明記。扉の装飾紋章は掲載していない。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://books.google.com/books?id=4LzXWQNSjr0C"
+      }
+    },
+    {
       "slug": "san-roman-consuelo-penitentes-1585",
       "title": "悔悛者の慰め、あるいは霊の糧の開かれた食卓",
       "originalTitle": "Consuelo de penitentes, o Mesa franca de spirituales manjares",
