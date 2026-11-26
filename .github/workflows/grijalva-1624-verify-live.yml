@@ -1,0 +1,21 @@
+name: Verify the live Grijalva publication
+on:
+  push:
+    branches: [agent/verify-grijalva-1624-20261126]
+    paths: [.grijalva-live-manifest.json]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live catalogue, PDF, EPUB, cover and search
+        run: |
+          command -v pdfinfo || { sudo apt-get update && sudo apt-get install -y poppler-utils; }
+          python3 .grijalva-live-check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grijalva-live-verification
+          path: grijalva-live-verification.json

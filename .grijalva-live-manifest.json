@@ -1,0 +1,44 @@
+{
+  "group": {
+    "slug": "grijalva-cronica-san-augustin-nueva-espana-1624",
+    "title": "ヌエバ・エスパーニャのアウグスティヌス会年代記"
+  },
+  "meta": {
+    "grijalva-cronica-san-augustin-nueva-espana-1624": {
+      "overview": "メキシコ市の聖アウグスティヌス修道院長フアン・デ・グリハルバが、ヌエバ・エスパーニャの同会管区の歩みを四つの時代に分けて記した1624年刊の年代記。管区長の選出や修道院の創建を軸としながら、先住民の町で行われた説教・看護、大学や学院の設立、太平洋を渡った修道士たちの活動までを描く。修道士の生涯や奇跡譚とともに、教皇勅書、王令、書簡などの文書本文を採録しており、修道会自身がその権限や役割をどう説明したかも読める。\n\n第1編は1533年の七人の修道士の渡航から始まる。メキシコ市を拠点にチラパ、メキシコ市近郊のサンタ・フェ、高地のオトミ人の村々へ活動を広げた経緯を追い、洗礼や聖体拝領をめぐる初期の議論を伝える。西方諸島に向かい、モルッカ諸島に至った遠征にも章を割く。第2編は管区が自らを治めるようになった時期を扱う。ココリストリと呼ばれた大疫病と看護、教会建築と諸言語による説教、アロンソ・デ・ラ・ベラクルスの管区運営とメキシコ王立大学の創設、レメディオスの聖像発見を取り上げる。\n\n第3編ではヌエバ・エスパーニャとフィリピンを往復するように叙述が進む。レガスピの遠征に同行したウルダネタによる帰航路の発見、セブでの幼子イエス像の発見と修道院設立、トゥパスの受洗、マニラと中国商人の通商、リマオンの来襲が記される。一方、メキシコではベラクルスが設立したサン・パブロ学院の諸規則を掲げ、管区を支える教育の仕組みを伝える。\n\n第4編では、先住民の町の布教区を修道士と在俗司祭のどちらが担うべきかが争点となる。王令に対して三修道会がスペインへ代理人を送った際の訓令や、修道士が退いた場合の不利益を述べた意見書を収録する。フィリピン管区の人事や修道士の伝記も続き、1602年のミチョアカン管区の分離で本編を結ぶ。原扉に掲げる年代は1533–1592年だが、本文はその先まで及ぶ。日本語版は原扉銅版、前付、原注、章目録、主要事項索引、刊記を収める。"
+    }
+  },
+  "slugs": [
+    "grijalva-cronica-san-augustin-nueva-espana-1624"
+  ],
+  "records": [
+    {
+      "pageCount": 586
+    }
+  ],
+  "assets": {
+    "grijalva-cronica-san-augustin-nueva-espana-1624": {
+      "pdf": {
+        "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+        "size": 4625292,
+        "sha256": "845b9cffa87971ac0be1285d548eb4131f655e6b1b05ba3c139f6d6c4bf2bac9",
+        "filename": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf"
+      },
+      "epub": {
+        "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+        "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+        "size": 2366166,
+        "sha256": "65f6227ce2b27724a417f386ddaa5f24ddbe2ad3bd8ba2dab37511a4142bf31a",
+        "filename": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub"
+      },
+      "cover": {
+        "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/cover.jpg",
+        "url": "https://takochanchan.github.io/publications/grijalva-cronica-san-augustin-nueva-espana-1624/cover.jpg",
+        "size": 115686,
+        "sha256": "1770ec2f5417fe00f74d64fc4e0bd0eabd8488f9d8fa82a6b96389008486e51a",
+        "filename": "cover.jpg"
+      }
+    }
+  }
+}
