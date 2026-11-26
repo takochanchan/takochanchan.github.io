@@ -7600,6 +7600,25 @@
       "updatedDate": "2026-07-28"
     },
     {
+      "slug": "orozco-conjuracion-marques-del-valle-1853",
+      "recordClass": "major-work",
+      "title": "バジェ侯爵の陰謀",
+      "originalTitle": "Noticia histórica de la conjuración del Marqués del Valle",
+      "author": "マヌエル・オロスコ・イ・ベラ",
+      "originalAuthor": "Manuel Orozco y Berra",
+      "year": 1853,
+      "originalPublication": "1853年、メキシコ、R・ラファエル印刷所、『エル・ウニベルサル』刊行。",
+      "sourceEdition": "Manuel Orozco y Berra, Noticia histórica de la conjuración del Marqués del Valle. Años de 1565–1568. México: Tipografía de R. Rafael, Edición del Universal, 1853.",
+      "sourceProvider": "本文底本：Biblioteca Virtual Miguel de Cervantes。照合本：Northwestern University所蔵本およびNew York Public Library所蔵本（いずれもInternet Archive公開）。",
+      "rights": "1853年刊の原著本文は著作権保護期間満了。ミゲル・デ・セルバンテス電子図書館の底本画像には個別の再利用許諾表示なし。電子版の権利に関する同館の利用条件：https://www.cervantesvirtual.com/marco-legal/ 。照合本はノースウェスタン大学所蔵本（Internet Archive目録にPublic Domain Mark 1.0）：https://archive.org/details/bub_gb_-RUzAQAAMAAJ 、ニューヨーク公共図書館所蔵本（同目録に個別権利表示なし）：https://archive.org/details/noticiahistrica00berrgoog 。刊本・論文画像の転載なし。",
+      "publishedDate": "2026-11-26",
+      "updatedDate": "2026-11-26",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/nd/ark:/59851/bmc0998268"
+      }
+    },
+    {
       "slug": "otis-isthmus-panama-railroad-1867",
       "recordClass": "major-work",
       "title": "パナマ地峡　パナマ鉄道史",

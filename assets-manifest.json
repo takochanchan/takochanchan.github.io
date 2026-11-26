@@ -7262,6 +7262,24 @@
       "sha256": "ca47fe972c64df85f369a1d4485fa4b424c563b2a085342cdf92e05a9c891f30"
     },
     {
+      "path": "publications/orozco-conjuracion-marques-del-valle-1853/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub",
+      "size": 448289,
+      "sha256": "a4dd1ca81b86c860f107c0bdab9c3208b1cd8f6da583b274ec84325480a8c9d2"
+    },
+    {
+      "path": "publications/orozco-conjuracion-marques-del-valle-1853/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf",
+      "size": 3727336,
+      "sha256": "16b3b8c124359713dcac807f5030d6cc474bdf8f015cb981e9e490ef85c2c3c1"
+    },
+    {
+      "path": "publications/orozco-conjuracion-marques-del-valle-1853/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/orozco-conjuracion-marques-del-valle-1853/cover.jpg",
+      "size": 106740,
+      "sha256": "dec6ec09cdf8c4fb7ee33608d9163bc306acae7d93312f38b2fe4ce9c6a9103a"
+    },
+    {
       "path": "publications/otis-isthmus-panama-railroad-1867/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/F_N_Otis_Isthmus_of_Panama_1867_Japanese_Complete_Translation.epub",
       "size": 25795157,

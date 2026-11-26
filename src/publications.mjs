@@ -1,3 +1,4 @@
+import { orozco1853Records, orozco1853Metadata } from "./orozco-conjuracion-marques-del-valle-1853-publication.mjs";
 import { alegreRecords, alegreMetadata } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { grijalva1624Records, grijalva1624Metadata } from "./grijalva-cronica-san-augustin-nueva-espana-1624-publication.mjs";
 import { levyNotAS1873Records, levyNotAS1873Metadata } from "./levy-notas-nicaragua-1873-publication.mjs";
@@ -411,6 +412,7 @@ const publicationRecords = [
   ...wagnerScherzerCostaRicaRecords,
   ...alegreRecords,
   ...grijalva1624Records,
+  ...orozco1853Records,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9613,6 +9615,7 @@ const publicationMetadata = {
   ...wagnerScherzerCostaRicaMetadata,
   ...alegreMetadata,
   ...grijalva1624Metadata,
+  ...orozco1853Metadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,

@@ -2442,6 +2442,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "orozco-conjuracion-marques-del-valle-1853",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "マヌエル・オロスコ・イ・ベラ",
+      "originalAuthor": "Manuel Orozco y Berra",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "otis-isthmus-panama-railroad-1867",
       "recordClass": "major-work",
       "searchShard": "001"

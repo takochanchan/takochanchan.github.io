@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "e49118a0a29537cc0484c16917fcf436783170c9",
+  "archive_commit": "81d81e6372b0137d325fd2699b2124e427164d37",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -346,6 +346,7 @@
     "nunez-ortega-mexico-japon-1923": "publications/nunez-ortega-mexico-japon-1923/master.docx",
     "ojea-libro-tercero-historia-religiosa-mexico-1897": "publications/ojea-libro-tercero-historia-religiosa-mexico-1897/master.md",
     "ordonez-creation-1907": "publications/ordonez-creation-1907/master.docx",
+    "orozco-conjuracion-marques-del-valle-1853": "publications/orozco-conjuracion-marques-del-valle-1853/master.docx",
     "otis-isthmus-panama-railroad-1867": "publications/otis-isthmus-panama-railroad-1867/master.docx",
     "oviedo-historia-general-natural-indias-volume-i-1851": "publications/oviedo-historia-general-natural-indias-volume-i-1851/master.docx",
     "oviedo-historia-general-natural-indias-volume-ii-1852": "publications/oviedo-historia-general-natural-indias-volume-ii-1852/master.docx",
