@@ -1,0 +1,73 @@
+{
+  "verified_archive_commit": "58c930cc6bddd0b59092613d8cd85a87ddb7e1a9",
+  "slugs": [
+    "cuggio-bullarium-hospitalaris-1724"
+  ],
+  "bundle": {
+    "size": 4197550,
+    "sha256": "edffff5831e8dec7668aad8c5ec2ebee00544d500a67cc587d858286e5145b24",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "size": 690000,
+        "sha256": "8e59b762965e662f1f6c87843f7dcf98dbc02af26b0fbfa5f48e861ed82881d1"
+      },
+      {
+        "index": 1,
+        "start": 690000,
+        "part": "001.bin",
+        "size": 690000,
+        "sha256": "f98aa22e01bab18f0bd889b661b400efd7f733afc5d09c5c4d74ace860718955"
+      },
+      {
+        "index": 2,
+        "start": 1380000,
+        "part": "002.bin",
+        "size": 690000,
+        "sha256": "59927789f38dc60e933565d5d13f6c7bb732494f29e5dd3c89e8be2968adcc80"
+      },
+      {
+        "index": 3,
+        "start": 2070000,
+        "part": "003.bin",
+        "size": 690000,
+        "sha256": "7628f0901ac5a8a0107c561c4d389c0c5f02b2a3f8c6a7d79353662387440eb1"
+      },
+      {
+        "index": 4,
+        "start": 2760000,
+        "part": "004.bin",
+        "size": 690000,
+        "sha256": "2c804e703aa0919d3a2f9409c0480059afa4e07e25b904ea1169a49339e1c579"
+      },
+      {
+        "index": 5,
+        "start": 3450000,
+        "part": "005.bin",
+        "size": 690000,
+        "sha256": "3bbd85ea5dd34e1e568ef840a862ffde0affbdbc5fbac5eb41700b3fb6e93325"
+      },
+      {
+        "index": 6,
+        "start": 4140000,
+        "part": "006.bin",
+        "size": 57550,
+        "sha256": "639204820f2e4040d509a7103d6b279f3fa94a404efbb3c12e574d36cca9fe30"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "size": 6541906,
+      "sha256": "61711fa8dfe4b50a1acead0f713a22da47e43e4f50f1c61b51313ad2d778c99d"
+    },
+    {
+      "filename": "Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "size": 555857,
+      "sha256": "3118d5a24196009856c406f6b759ab9b07fdf0871d926ec45e56a35c9a849710"
+    }
+  ]
+}
