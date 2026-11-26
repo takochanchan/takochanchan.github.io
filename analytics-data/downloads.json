@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-24",
-  "updatedAt": "2026-11-25T03:33:41.441Z",
+  "endDate": "2026-11-25",
+  "updatedAt": "2026-11-26T02:52:51.221Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9815,6 +9815,118 @@
       "slug": "molina-bosquejo-de-la-republica-de-costa-rica-1851",
       "title": "コスタリカ共和国概説・歴史覚書",
       "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_25c8248c182f26fa",
+      "name": "Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.pdf",
+      "slug": "wagner-scherzer-die-republik-costa-rica-1856",
+      "title": "中央アメリカのコスタリカ共和国",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_05dbfc78a1d7bc62",
+      "name": "Wagner_Scherzer_Die_Republik_Costa_Rica_1856_Japanese.epub",
+      "slug": "wagner-scherzer-die-republik-costa-rica-1856",
+      "title": "中央アメリカのコスタリカ共和国",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0b55ad4aefbf91f1",
+      "name": "Levy_Notas_Nicaragua_1873_Japanese.pdf",
+      "slug": "levy-notas-nicaragua-1873",
+      "title": "ニカラグア共和国地理・経済誌",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_487186e93b07752b",
+      "name": "Levy_Notas_Nicaragua_1873_Japanese.epub",
+      "slug": "levy-notas-nicaragua-1873",
+      "title": "ニカラグア共和国地理・経済誌",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ed89bbba194b3f2b",
+      "name": "Mexico_a_traves_de_los_siglos_I_Japanese.pdf",
+      "slug": "mexico-a-traves-de-los-siglos",
+      "title": "幾世紀を通じたメキシコ",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c9bd04d48a953769",
+      "name": "Mexico_a_traves_de_los_siglos_I_Japanese.epub",
+      "slug": "mexico-a-traves-de-los-siglos",
+      "title": "幾世紀を通じたメキシコ",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a6a1bc88461af71e",
+      "name": "Ximenez_Scherzer_Las_historias_1857_Japanese.pdf",
+      "slug": "ximenez-scherzer-las-historias-1857",
+      "title": "グアテマラ地方の先住民の起源に関する諸史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_9d196a3d333f8e7e",
+      "name": "Ximenez_Scherzer_Las_historias_1857_Japanese.epub",
+      "slug": "ximenez-scherzer-las-historias-1857",
+      "title": "グアテマラ地方の先住民の起源に関する諸史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0b23b14658e6f088",
+      "name": "Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.pdf",
+      "slug": "scherzer-ximenez-handschriftliche-werke-1856",
+      "title": "グアテマラ大学図書館所蔵のフランシスコ・ヒメネス神父の写本著作について",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_38c8fe2aadca71ec",
+      "name": "Karl_Scherzer_1856_Ximenez_Manuscripts_Japanese.epub",
+      "slug": "scherzer-ximenez-handschriftliche-werke-1856",
+      "title": "グアテマラ大学図書館所蔵のフランシスコ・ヒメネス神父の写本著作について",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7fff30e502596baf",
+      "name": "Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.pdf",
+      "slug": "espinosa-arricivita-chronica-1746-1792",
+      "title": "ヌエバ・エスパーニャ布教学院年代記",
+      "volumeLabel": "第1部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_27e1587d3f66f605",
+      "name": "Isidro_Felix_de_Espinosa_Chronica_Apostolica_1746_Part1_Japanese.epub",
+      "slug": "espinosa-arricivita-chronica-1746-1792",
+      "title": "ヌエバ・エスパーニャ布教学院年代記",
+      "volumeLabel": "第1部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_a1802f55e85ca0ac",
+      "name": "Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.pdf",
+      "slug": "espinosa-arricivita-chronica-1746-1792",
+      "title": "ヌエバ・エスパーニャ布教学院年代記",
+      "volumeLabel": "第2部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_25b23f65361b8978",
+      "name": "Juan_Domingo_de_Arricivita_Cronica_1792_Part2_Japanese.epub",
+      "slug": "espinosa-arricivita-chronica-1746-1792",
+      "title": "ヌエバ・エスパーニャ布教学院年代記",
+      "volumeLabel": "第2部",
       "format": "epub"
     }
   ],
