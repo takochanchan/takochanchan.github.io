@@ -1,0 +1,33 @@
+{
+  "verified_archive_commit": "842fef0e79e01167a5e15aea1fd9428d75a55e4b",
+  "bundle": {
+    "size": 5786124,
+    "sha256": "39a0fd4ad09d6a9d47ac51f3a655d4dada62d1ed84ac4b5931ee4ed044579bb9",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 5786124,
+        "start": 0,
+        "sha1": "08088c2ee67b01df1d8e2cb8802786fea818067f",
+        "sha256": "39a0fd4ad09d6a9d47ac51f3a655d4dada62d1ed84ac4b5931ee4ed044579bb9"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+      "size": 4625292,
+      "sha256": "845b9cffa87971ac0be1285d548eb4131f655e6b1b05ba3c139f6d6c4bf2bac9",
+      "filename": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf"
+    },
+    {
+      "path": "publications/grijalva-cronica-san-augustin-nueva-espana-1624/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+      "size": 2366166,
+      "sha256": "65f6227ce2b27724a417f386ddaa5f24ddbe2ad3bd8ba2dab37511a4142bf31a",
+      "filename": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub"
+    }
+  ]
+}
