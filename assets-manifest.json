@@ -2864,6 +2864,24 @@
       "sha256": "b77722dd433e98a577fc0d90b1fbdf3cb17d39913c44f342018d8697bc780f23"
     },
     {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "size": 555857,
+      "sha256": "3118d5a24196009856c406f6b759ab9b07fdf0871d926ec45e56a35c9a849710"
+    },
+    {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "size": 6541906,
+      "sha256": "61711fa8dfe4b50a1acead0f713a22da47e43e4f50f1c61b51313ad2d778c99d"
+    },
+    {
+      "path": "publications/cuggio-bullarium-hospitalaris-1724/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/cuggio-bullarium-hospitalaris-1724/cover.jpg",
+      "size": 37680,
+      "sha256": "0ff06d2a9ac692f86b5c3fdf5c30e20601a6ff83342e6f29ffa3e75c1d655ebe"
+    },
+    {
       "path": "publications/dancer-fort-san-juan-1781/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Thomas_Dancer_San_Juan_1781_Japanese_Complete_Translation.epub",
       "size": 110115,

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "12cceb9d79d8738e6ef2805bc6c5549bc7a17978",
+  "archive_commit": "58c930cc6bddd0b59092613d8cd85a87ddb7e1a9",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -128,6 +128,7 @@
     "cuevas-historia-iglesia-mexico-v03": "publications/cuevas-historia-iglesia-mexico-v03/master.docx",
     "cuevas-historia-iglesia-mexico-v04": "publications/cuevas-historia-iglesia-mexico-v04/master.docx",
     "cuevas-historia-iglesia-mexico-v05": "publications/cuevas-historia-iglesia-mexico-v05/master.docx",
+    "cuggio-bullarium-hospitalaris-1724": "publications/cuggio-bullarium-hospitalaris-1724/master.docx",
     "dancer-fort-san-juan-1781": "publications/dancer-fort-san-juan-1781/master.docx",
     "davila-padilla-historia-santiago-mexico-1596": "publications/davila-padilla-historia-santiago-mexico-1596/master.docx",
     "de-guignes-navigations-chinois-amerique-1761": "publications/de-guignes-navigations-chinois-amerique-1761/master.docx",
