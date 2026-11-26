@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 const q=JSON.parse(await readFile(".sjd-1774-search-expected.json","utf8"));
+const {bibliographicAliases}=await import("./src/catalogue-publications.mjs");
+assert.equal("/publications/"+bibliographicAliases[q.slug]+"/",q.catalogueUrl);
 const base="https://takochanchan.github.io/takochan-search-index-003/";
 const nap=ms=>new Promise(r=>setTimeout(r,ms));
 for(let tryNo=1;tryNo<=35;tryNo++){
