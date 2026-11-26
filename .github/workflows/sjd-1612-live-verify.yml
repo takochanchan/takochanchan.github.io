@@ -1,0 +1,21 @@
+name: Verify the live 1612 Madrid constitutions
+on:
+  push:
+    branches: [agent/sjd-1612-live-verify-20261127]
+    paths: [.sjd-1612-live-manifest.json]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify live catalogue, PDF, EPUB, cover and search
+        run: |
+          command -v pdfinfo || { sudo apt-get update && sudo apt-get install -y poppler-utils; }
+          python3 .sjd-1612-live-check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sjd-1612-live-verification
+          path: sjd-1612-live-verification.json
