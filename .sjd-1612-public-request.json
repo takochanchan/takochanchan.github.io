@@ -1,0 +1,49 @@
+{
+  "verified_archive_commit": "b7e8b51561ac5cb2b896a517308d67d5b8b629c6",
+  "bundle": {
+    "size": 1985927,
+    "sha256": "4cf6002637dfb5d7fa63d831b9e25526f859d7be5b14776ad017abd45ef693e1",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "size": 750000,
+        "start": 0,
+        "sha1": "18e955527186c2cf53a9d5fcada33b07a85e0a15",
+        "sha256": "ccf1ae13c328c894e6a004d9fe5b1be6a8f94dc4ba55940dc9944825042f6a64"
+      },
+      {
+        "index": 1,
+        "part": "001.bin",
+        "size": 750000,
+        "start": 750000,
+        "sha1": "a9f57c76c1d85b73c1f8cc50bf934a82160b1df6",
+        "sha256": "8e241d3fa1238debbd90129524b70f8945d1e9980d624d26917788926468faa0"
+      },
+      {
+        "index": 2,
+        "part": "002.bin",
+        "size": 485927,
+        "start": 1500000,
+        "sha1": "a536a3835e39e8a1240252276fd5cd406fdea7d5",
+        "sha256": "1e9cfeeac0d8a4056c34dc812baadda73a14d73952958d70a3b80000b4cce387"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/san-juan-de-dios-constituciones-madrid-1612/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf",
+      "size": 1445444,
+      "sha256": "a4c15cfd71bf70e46bda9feefd8d4ef80caf86f5a29adbfb8410e4be170376f4",
+      "filename": "Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-madrid-1612/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub",
+      "size": 758342,
+      "sha256": "3c12a4bc3304fa24fb82e27cf3834f31e9862711fd86dab3a65f7f12b1fdc6f2",
+      "filename": "Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub"
+    }
+  ]
+}
