@@ -194,5 +194,6 @@
         "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940305"
       }
     ]
-  }
+  },
+  "verificationRun": "Read back the deployed series cover, downloadable files, and search index"
 }
