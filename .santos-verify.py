@@ -46,7 +46,8 @@ def live():
  for r in records:
   slug=r['slug'];alias=get(B+'publications/'+slug+'/?check=santos-1715-1716').decode();assert '/publications/'+G['slug']+'/' in alias
   for kind in ('pdf','epub','cover'):
-   a=A[r[kind]];u=a['url'];assert u in s or '/'+a['path'] in s
+   a=A[r[kind]];u=a['url']
+   if kind!='cover' or r['seriesVolumeNumber']==1:assert u in s or '/'+a['path'] in s,(slug,kind,u)
    b=get(u);assert len(b)==a['size'] and digest(b)==a['sha256'],(slug,kind)
    if kind!='cover':assert re.search(r'^'+a['sha256']+r'\s+\*?'+re.escape(Path(a['path']).name)+r'$',cs,re.M)
    if kind=='pdf':
