@@ -3736,6 +3736,22 @@
       "searchShard": "003",
       "author": "ホセ・マリア・セラア・エ・イダルゴ",
       "releaseTag": "publications-002"
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-part-i-1715",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-part-ii-1716",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "releaseTag": "publications-002"
     }
   ],
   "groups": [
@@ -4058,6 +4074,13 @@
         "zarco-historia-congreso-1856-1857-volume-ii-1857"
       ],
       "seriesVolumeCount": 2
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "memberSlugs": [
+        "santos-chronologia-hospitalaria-part-i-1715",
+        "santos-chronologia-hospitalaria-part-ii-1716"
+      ]
     }
   ],
   "shortAuthorCount": 50

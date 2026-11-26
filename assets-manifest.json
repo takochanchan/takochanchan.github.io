@@ -9368,6 +9368,42 @@
       "sha256": "780d4726f9f51d8838a63af5a8237476ae648644ddfe45d4efc3f243a2f27c23"
     },
     {
+      "path": "publications/santos-chronologia-hospitalaria-part-i-1715/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub",
+      "size": 1585644,
+      "sha256": "ff52bd192f0c47abbb6f1e983de9bd2b0fa04b9f226bbc595c9121178f610c91"
+    },
+    {
+      "path": "publications/santos-chronologia-hospitalaria-part-i-1715/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf",
+      "size": 6729912,
+      "sha256": "9b0b933ce703644a6130aac1f467fcb631da4db7a5c1d6b351011ffa7f131d78"
+    },
+    {
+      "path": "publications/santos-chronologia-hospitalaria-part-i-1715/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santos-chronologia-hospitalaria-part-i-1715/cover.jpg",
+      "size": 35836,
+      "sha256": "44058b488117f1115a3e6ccc0fda67172a516152301af671418f46f154cb24d2"
+    },
+    {
+      "path": "publications/santos-chronologia-hospitalaria-part-ii-1716/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub",
+      "size": 1234468,
+      "sha256": "c1039e62807cf227ca4086fa5119a6ce4b436c81fc6fb1579535297272b38699"
+    },
+    {
+      "path": "publications/santos-chronologia-hospitalaria-part-ii-1716/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf",
+      "size": 6820212,
+      "sha256": "f4abdeadf9c06a3a313138014be0774feef4e93383be9e95c7ea102f5b212bed"
+    },
+    {
+      "path": "publications/santos-chronologia-hospitalaria-part-ii-1716/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/santos-chronologia-hospitalaria-part-ii-1716/cover.jpg",
+      "size": 35847,
+      "sha256": "f50a6588696ab9c2a6be2aab50ae587be096899de7597571e8194ecddbc815d0"
+    },
+    {
       "path": "publications/sapper-alta-verapaz-1901/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Karl_Sapper_Die_Alta_Verapaz_Guatemala_1901_Japanese_Complete_Translation.epub",
       "size": 15523382,

@@ -2,6 +2,7 @@ import { sjdMadrid1612Records, sjdMadrid1612Metadata } from "./san-juan-de-dios-
 import { sjdGranada1585Records, sjdGranada1585Metadata } from "./san-juan-de-dios-constituciones-granada-1585-publication.mjs";
 import { sjdConstitucionesRecords, sjdConstitucionesMetadata } from "./san-juan-de-dios-constituciones-mexico-1774-publication.mjs";
 import { orozco1853Records, orozco1853Metadata } from "./orozco-conjuracion-marques-del-valle-1853-publication.mjs";
+import { santosHospitalariaRecords, santosHospitalariaMetadata } from "./santos-chronologia-hospitalaria-1715-1716-publication.mjs";
 import { alegreRecords, alegreMetadata } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { grijalva1624Records, grijalva1624Metadata } from "./grijalva-cronica-san-augustin-nueva-espana-1624-publication.mjs";
 import { levyNotAS1873Records, levyNotAS1873Metadata } from "./levy-notas-nicaragua-1873-publication.mjs";
@@ -413,7 +414,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
-  ...alegreRecords,
+  ...alegreRecords, ...santosHospitalariaRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
   ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...sjdMadrid1612Records,
@@ -9617,7 +9618,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
-  ...alegreMetadata,
+  ...alegreMetadata, ...santosHospitalariaMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
   ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...sjdMadrid1612Metadata,

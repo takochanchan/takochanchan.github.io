@@ -1,0 +1,161 @@
+export const santosHospitalariaRecords = [
+  {
+    "slug": "santos-chronologia-hospitalaria-part-i-1715",
+    "title": "聖フアン・デ・ディオス病院修道会年代記 第1部",
+    "subtitle": "",
+    "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte I",
+    "author": "フアン・サントス",
+    "originalAuthor": "Juan Santos",
+    "year": 1715,
+    "series": "CHRONOLOGIA HOSPITALARIA · 1715",
+    "originalPublication": "マドリード、フランシスコ・アントニオ・デ・ビリャディエゴ印刷所、1715年。",
+    "description": "病人と旅人を迎える務めを説き、聖フアン・デ・ディオスの生涯、グラナダ本院とマドリードのアントン・マルティン病院、初期会士の活動をたどる。",
+    "types": [
+      "宗教史",
+      "修道会",
+      "医療史"
+    ],
+    "regions": [
+      "スペイン",
+      "ポルトガル",
+      "イタリア"
+    ],
+    "languages": [
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "聖フアン・デ・ディオス病院修道会",
+      "病人看護",
+      "病院史",
+      "グラナダ",
+      "マドリード"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/santos-chronologia-hospitalaria-part-i-1715/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf",
+    "epub": "publications/santos-chronologia-hospitalaria-part-i-1715/Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub",
+    "cover": "publications/santos-chronologia-hospitalaria-part-i-1715/cover.jpg",
+    "pageCount": 979,
+    "extent": "第1部、日本語版PDF 979頁",
+    "figureCount": 0,
+    "plateCount": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "seriesVolumeNumber": 1
+  },
+  {
+    "slug": "santos-chronologia-hospitalaria-part-ii-1716",
+    "title": "聖フアン・デ・ディオス病院修道会年代記 第2部",
+    "subtitle": "",
+    "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte II",
+    "author": "フアン・サントス",
+    "originalAuthor": "Juan Santos",
+    "year": 1716,
+    "series": "CHRONOLOGIA HOSPITALARIA · 1716",
+    "originalPublication": "マドリード、フランシスコ・アントニオ・デ・ビリャディエゴ印刷所、1716年。",
+    "description": "イベリア半島・西インディアス・フィリピンとイタリア会衆の病院網、総会、看護奉仕、教皇の特権をたどり、巻末に病院の統計を収める。",
+    "types": [
+      "宗教史",
+      "修道会",
+      "医療史"
+    ],
+    "regions": [
+      "スペイン",
+      "ポルトガル",
+      "イタリア",
+      "メキシコ",
+      "中央アメリカ",
+      "カリブ海",
+      "南アメリカ",
+      "フィリピン"
+    ],
+    "languages": [
+      "スペイン語",
+      "ラテン語"
+    ],
+    "tags": [
+      "聖フアン・デ・ディオス病院修道会",
+      "病人看護",
+      "病院史",
+      "グラナダ",
+      "ヌエバ・エスパーニャ"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/santos-chronologia-hospitalaria-part-ii-1716/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf",
+    "epub": "publications/santos-chronologia-hospitalaria-part-ii-1716/Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub",
+    "cover": "publications/santos-chronologia-hospitalaria-part-ii-1716/cover.jpg",
+    "pageCount": 898,
+    "extent": "第2部、日本語版PDF 898頁",
+    "figureCount": 0,
+    "plateCount": 0,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "seriesVolumeNumber": 2
+  }
+];
+
+export const santosHospitalariaMetadata = {
+  "santos-chronologia-hospitalaria-part-i-1715": {
+    "sourceEdition": "Juan Santos, Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte I. Madrid: Imprenta de Francisco Antonio de Villadiego, 1715.",
+    "sourceProvider": "バイエルン州立図書館、2 H.mon. 197 r-1（電子化：Google）。第1部照合：ムルシア大学図書館（S-B 122-A1）。https://hdl.handle.net/11169/23829",
+    "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940304",
+    "rights": "原著本文・原刊の図版は著作権保護期間を満了しています。底本のデジタル画像の表示は No Copyright – Non-Commercial Use Only（https://rightsstatements.org/vocab/NoC-NC/1.0/）。口絵：Bayerische Staatsbibliothek München, 2 H.mon. 197 r-1, 原刊無番号頁（画像5、bsb10940304）, digitized by Google。ムルシア大学図書館の照合版画像は転載していません。",
+    "publishedDate": "2026-11-27",
+    "updatedDate": "2026-11-27"
+  },
+  "santos-chronologia-hospitalaria-part-ii-1716": {
+    "sourceEdition": "Juan Santos, Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte II. Madrid: Imprenta de Francisco Antonio de Villadiego, 1716.",
+    "sourceProvider": "バイエルン州立図書館、2 H.mon. 197 r-2（電子化：Google）。",
+    "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940305",
+    "rights": "原著本文・原刊の図版は著作権保護期間を満了しています。底本のデジタル画像の表示は No Copyright – Non-Commercial Use Only（https://rightsstatements.org/vocab/NoC-NC/1.0/）。第2部の底本画像は転載せず、巻末統計を日本語の表として収録。",
+    "publishedDate": "2026-11-27",
+    "updatedDate": "2026-11-27"
+  }
+};
+
+export const santosHospitalariaOverviews = {
+  "santos-chronologia-hospitalaria-part-i-1715": "全四編のうち、第一編は病人と旅人を迎える務めの起源と意義を聖書、教父、先行する宗教共同体の事例によって説く。第二・第三編は創設者フアン・デ・ディオスの生涯。牧童、兵役、セウタでの滞在を経てグラナダに至り、フアン・デ・アビラの説教を聞いたのち、自ら病院に収容された経験が、病人を受け入れる側へ回る転機として描かれる。病人や貧しい人々に食事と寝床を用意し、街や宮廷で喜捨を求めた歩みをたどり、フアン・デ・アビラの三通の書簡や、死と埋葬、その後に伝えられた奇跡を収める。\n\n第四編ではグラナダの本院を軸に、後継者たちによる病院の運営、病室の整備、各地への展開を記す。セバスティアン・アリアスのローマ行きと教皇の認可、イタリアでも活動したペドロ・ソリアノらの生涯を通じ、一つの病院から、会則と誓願をもつ修道会が成立する過程を描く。マドリードの「神の愛の聖母」病院については、通称にもなった創設者アントン・マルティンの事業と、後代の施設・会士を取り上げる。創設者の聖人伝だけでなく、それを継いだ人々が看護を続けるため、拠点と資金をどう確保したかが読み取れる。",
+  "santos-chronologia-hospitalaria-part-ii-1716": "全五編。第一・第二編はイベリア半島の病院創設を引き継ぎ、セビーリャ、ヘレス、カディス、ポルトガル諸院の来歴と会士の生涯を記す。1608年にマドリードで開かれたスペイン会衆の総会とペドロ・エヒプシアコの選出、後続する総会やポルトガル管区の戦時の統治を扱う。第三編は西インディアスへ移り、ティエラ・フィルメの聖ベルナルド管区、ペルー・チリ、ヌエバ・エスパーニャの聖霊管区を順に扱う。フアン・ポブレに関する記述には海を渡った修道士の巡察と司教の裁治権をめぐる争いが現れる。パナマのナタ、ハバナ、メキシコ市、グアテマラなどの病院を個別に取り上げ、フィリピンへの派遣をヌエバ・エスパーニャの管区史の中に位置づける。\n\n第四編は17世紀末以降のイベリアでの設立、スペイン会衆の総会、艦隊・陸軍や流行病での奉仕、教皇が与えた特権と免除を扱う。第五編はイタリア会衆の成立とスペイン会衆との分離を述べ、ローマ、ナポリ、ロンバルディア、バーリ、シチリア、フランス、ドイツ、ポーランド、サルデーニャ各管区の病院と歴代総長を記す。巻末では年代順・管区別の病院一覧を掲げ、所在地、奉献名、病床数、年間病人数、会士数、創設年を伝える。グアテマラのサンティアゴと聖ラザロを別院として読むなど、本国の会史だけでは把握しにくい各地の病院網をたどれる。"
+};
+
+export const santosHospitalariaGroup = {
+  "slug": "santos-chronologia-hospitalaria-1715-1716",
+  "title": "聖フアン・デ・ディオス病院修道会年代記",
+  "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios",
+  "author": "フアン・サントス",
+  "originalAuthor": "Juan Santos",
+  "memberSlugs": [
+    "santos-chronologia-hospitalaria-part-i-1715",
+    "santos-chronologia-hospitalaria-part-ii-1716"
+  ],
+  "seriesVolumeCount": 2,
+  "groupOverviewLabel": "全体の詳細概要",
+  "volumeLabels": [
+    "第1部",
+    "第2部"
+  ],
+  "subtitle": "",
+  "series": "CHRONOLOGIA HOSPITALARIA",
+  "year": 1715,
+  "originalPublication": "マドリード、フランシスコ・アントニオ・デ・ビリャディエゴ印刷所、1715～1716年（全2部）。",
+  "description": "聖フアン・デ・ディオスの生涯と病院修道会の成立から、イベリア半島、インディアス、イタリア会衆の病院網までを描く全2部の年代記。",
+  "sourceEdition": "Juan Santos, Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Madrid: Imprenta de Francisco Antonio de Villadiego, 1715–1716, dos partes.",
+  "sourceProvider": "バイエルン州立図書館、2 H.mon. 197 r-1・r-2（電子化：Google）。第1部のみムルシア大学図書館所蔵の同版を照合。",
+  "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940304",
+  "rights": "原著本文・原刊の図版は著作権保護期間を満了しています。底本のデジタル画像の表示は No Copyright – Non-Commercial Use Only（https://rightsstatements.org/vocab/NoC-NC/1.0/）。口絵：Bayerische Staatsbibliothek München, 2 H.mon. 197 r-1, 原刊無番号頁（画像5、bsb10940304）, digitized by Google。ムルシア大学図書館の照合版画像は転載していません。 第2部の底本画像は転載していません。",
+  "groupOverview": "フアン・サントスが、聖フアン・デ・ディオスの創めた看護の事業から、スペインとイタリアに別個の会衆をもつ病院修道会の形成までを記した全2部の年代記。著者はマドリードのアントン・マルティン病院に属した同会司祭で、創設者と会士の生涯を信仰の模範として語る一方、病院の開設、寄進、総会、管区の編成、教皇の認可や特権を文書や証言に即して記した。創設者の奇跡や会士の聖性をめぐる叙述には、修道会内部から書かれた会史としての視点がある。\n\n第1部は病人や旅人を迎える営みを聖書と教会史にさかのぼって論じ、グラナダでフアン・デ・ディオスが病人や貧しい人々を受け入れた経緯、その死後に仲間が病院を支えた過程をたどる。第2部は各地の病院の創設を追い、イベリア半島に加えてティエラ・フィルメ、ペルー・チリ、ヌエバ・エスパーニャ、フィリピン、イタリア会衆の諸管区を扱う。各地で王権や司教、市参事会、寄進者との関係が異なり、看護の事業と修道会の統治がどう結びついたかを比較して読める。第2部末の一覧は、病院ごとの病床数、年間の病人数、会士数、創設年を掲げる。個別章と一覧の記載が食い違う場合もあり、統計と創設記事を照らし合わせて使える。",
+  "publishedDate": "2026-11-27",
+  "updatedDate": "2026-11-27",
+  "seriesVolumes": [
+    {
+      "number": 1,
+      "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte I",
+      "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940304"
+    },
+    {
+      "number": 2,
+      "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte II",
+      "sourceUrl": "https://www.digitale-sammlungen.de/en/view/bsb10940305"
+    }
+  ]
+};

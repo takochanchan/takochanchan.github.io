@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "b7e8b51561ac5cb2b896a517308d67d5b8b629c6",
+  "archive_commit": "85136c9d94b764e60fb58c289a8202e238c04132",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -462,6 +462,8 @@
     "san-roman-consuelo-penitentes-1585": "publications/san-roman-consuelo-penitentes-1585/master.md",
     "santibanez-geografia-regional-chiapas-1907": "publications/santibanez-geografia-regional-chiapas-1907/master.docx",
     "santo-thomas-colonisation-1844": "publications/santo-thomas-colonisation-1844/master.docx",
+    "santos-chronologia-hospitalaria-part-i-1715": "publications/santos-chronologia-hospitalaria-part-i-1715/master.docx",
+    "santos-chronologia-hospitalaria-part-ii-1716": "publications/santos-chronologia-hospitalaria-part-ii-1716/master.docx",
     "sapper-alta-verapaz-1901": "publications/sapper-alta-verapaz-1901/master.docx",
     "sapper-eastern-lacandons-1891": "publications/sapper-eastern-lacandons-1891/master.docx",
     "sapper-mittelamerikanische-reisen-studien-1902": "publications/sapper-mittelamerikanische-reisen-studien-1902/master.docx",

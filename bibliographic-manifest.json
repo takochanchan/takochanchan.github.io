@@ -10009,6 +10009,44 @@
       "updatedDate": "2026-07-31"
     },
     {
+      "slug": "santos-chronologia-hospitalaria-part-i-1715",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会年代記 第1部",
+      "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte I",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "year": 1715,
+      "originalPublication": "マドリード、フランシスコ・アントニオ・デ・ビリャディエゴ印刷所、1715年。",
+      "sourceEdition": "Juan Santos, Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte I. Madrid: Imprenta de Francisco Antonio de Villadiego, 1715.",
+      "sourceProvider": "バイエルン州立図書館、2 H.mon. 197 r-1（電子化：Google）。第1部照合：ムルシア大学図書館（S-B 122-A1）。https://hdl.handle.net/11169/23829",
+      "rights": "原著本文・原刊の図版は著作権保護期間を満了しています。底本のデジタル画像の表示は No Copyright – Non-Commercial Use Only（https://rightsstatements.org/vocab/NoC-NC/1.0/）。口絵：Bayerische Staatsbibliothek München, 2 H.mon. 197 r-1, 原刊無番号頁（画像5、bsb10940304）, digitized by Google。ムルシア大学図書館の照合版画像は転載していません。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.digitale-sammlungen.de/en/view/bsb10940304"
+      }
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-part-ii-1716",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会年代記 第2部",
+      "originalTitle": "Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte II",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "year": 1716,
+      "originalPublication": "マドリード、フランシスコ・アントニオ・デ・ビリャディエゴ印刷所、1716年。",
+      "sourceEdition": "Juan Santos, Chronologia hospitalaria, y resumen historial de la sagrada religión del glorioso patriarca San Juan de Dios. Parte II. Madrid: Imprenta de Francisco Antonio de Villadiego, 1716.",
+      "sourceProvider": "バイエルン州立図書館、2 H.mon. 197 r-2（電子化：Google）。",
+      "rights": "原著本文・原刊の図版は著作権保護期間を満了しています。底本のデジタル画像の表示は No Copyright – Non-Commercial Use Only（https://rightsstatements.org/vocab/NoC-NC/1.0/）。第2部の底本画像は転載せず、巻末統計を日本語の表として収録。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.digitale-sammlungen.de/en/view/bsb10940305"
+      }
+    },
+    {
       "slug": "sapper-alta-verapaz-1901",
       "recordClass": "major-work",
       "title": "アルタ・ベラパス（グアテマラ）",
