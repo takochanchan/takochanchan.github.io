@@ -1,0 +1,20 @@
+name: Verify Mexico 1774 search before catalogue deployment
+on:
+  push:
+    branches: [agent/sjd-1774-search-verify-20261126]
+    paths: [.sjd-1774-search-expected.json]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - name: Wait for the exact new search shard and verify its page map
+        run: node .sjd-1774-check-search.mjs
+      - run: npm run verify:remote-search
