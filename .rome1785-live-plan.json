@@ -1,0 +1,53 @@
+{
+  "assets": [
+    {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1785/Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.pdf",
+      "size": 2832740,
+      "sha256": "fa7ed3b259f1b2e3d0a4c0700488695609af013fb73cf437ecf57c07e230161e"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1785/Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.epub",
+      "size": 967554,
+      "sha256": "c906e88d49840d2c5bccd6c613f6d03f462b5eec817b46d17a0c016b9a5893f5"
+    },
+    {
+      "path": "publications/san-juan-de-dios-constituciones-rome-1785/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/san-juan-de-dios-constituciones-rome-1785/cover.jpg",
+      "size": 36814,
+      "sha256": "d40db0b01e4ca5d2f6e13e366287a81f0caa4ae4e3800cd3802fa8b28776bc93"
+    }
+  ],
+  "record": {
+    "title": "聖フアン・デ・ディオス病院修道会の会憲",
+    "originalTitle": "Regola del P. S. Agostino e costituzioni della Religione di S. Gio. di Dio",
+    "author": "聖フアン・デ・ディオス病院修道会",
+    "originalAuthor": "Religione di S. Giovanni di Dio",
+    "originalPublication": "Roma: Stamperia di Paolo Giunchi, 1785.",
+    "description": "イタリア系の会憲と、使徒座や総会の諸決定を引いて条文を解釈する注解の1785年ローマ刊本。巡察の手順、修道会の沿革、伊西両会衆の病院目録、事項索引を併収する。",
+    "sourceEdition": "Regola del P. S. Agostino e costituzioni della Religione di S. Gio. di Dio. Roma: Stamperia di Paolo Giunchi, 1785. ローマ国立中央図書館所蔵本。",
+    "sourceProvider": "ローマ国立中央図書館（電子化・公開：Google Books）",
+    "sourceUrl": "https://books.google.com/books?id=4LzXWQNSjr0C",
+    "rights": "1785年刊の原著本文・口絵は著作権保護期間満了。底本画像の個別CCライセンスは確認できていない。原刊の口絵のみを掲げ、所蔵館および電子化元を明記。扉の装飾紋章は掲載していない。",
+    "overview": "1616年にローマの総会で採択され、翌年パウルス五世の認可を受けたイタリア系会憲の注解付き再刊本。1785年の扉に続いて、1718年の保護枢機卿と総長の前付を収める。聖アウグスティヌスの会則と会憲を並べ、兄弟の受入れ・修練、病人看護の誓願、選挙、財務、規律と処分を定める。注解は使徒座や総会が後に示した決定を引き、条文をどう適用し、どのような場合に緩和を認めたかを伝える。1617年版の規定と対照して読むことができる。\n後半には着衣・誓願の祈りと、総巡察・管区巡察の手順を収める。聖堂・聖具室の点検、会士への個別の聞き取り、病院や共同体の財産・会計の検査を分けて述べ、記録と是正措置を誰が担うかを示す。会の沿革、歴代総長、イタリア系・スペイン系両会衆の病院・修道院の所在地と院名を記す目録、諸特典、事項索引、年間の食卓の祈りが続く。目録には異なる年代の数字が引用されるため、いずれも1785年同時点の施設数とは扱えない。\n訳文では病院目録を原刊の行に沿って組み、索引は主項目と子項目を分けた。底本で画像を欠く原刊142頁は補わず、原刊143頁相当（印字は183）の直前に訳注を置いた。"
+  },
+  "group": {
+    "slugs": [
+      "san-juan-de-dios-constituciones-granada-1585",
+      "san-juan-de-dios-constituciones-madrid-1612",
+      "san-juan-de-dios-constituciones-rome-1617",
+      "san-juan-de-dios-constituciones-mexico-1774",
+      "san-juan-de-dios-constituciones-rome-1785"
+    ],
+    "labels": [
+      "1585年グラナダ版",
+      "1612年マドリード版",
+      "1617年ローマ版",
+      "1774年メキシコ版",
+      "1785年ローマ版"
+    ],
+    "short": "聖フアン・デ・ディオス病院と病院修道会の会憲5版を収録。1585年グラナダの一病院の規程から、17世紀のスペイン系・イタリア系の会憲、1774年メキシコ版、1785年ローマの注解付き版まで、刊年順に比較できる。",
+    "detail": "1585年グラナダ版は、大司教が市内のフアン・デ・ディオス病院に与えた規程で、兄弟の受入れ、看護と看取り、寝具・食料、喜捨の会計を定める。1612年マドリード版は前年に教皇が認可したスペイン系会憲で、聖アウグスティヌスの会則とともに、病人看護を含む四つの誓願、総会や選挙、巡察を収める。1617年ローマ版は、1616年の総会で採択されたイタリア系会憲。会則とその解説、役職の分担、病人の受入れから回診、給食、看取りまでの手順、着衣・誓願の祈りを収める。\n1774年メキシコ版は会の統治と看護の規程、教皇文書に加え、新スペイン・中米・カリブ海・フィリピンなど36院の統計を伝える。1785年ローマ版はイタリア系会憲の注解付き再刊で、使徒座や総会の決定に基づく条文の解釈と緩和、巡察の具体的手順、イタリア系・スペイン系両会衆の病院目録、事項索引と食卓の祈りを収める。二つのローマ版を比較すると、後の注解が初期の規定をどのように具体化したかを読める。グラナダの一病院の規程と会全体・各会衆の規程を区別し、病院の目録や統計はその対象地域と記録時点を確かめて利用する必要がある。"
+  }
+}
