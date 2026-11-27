@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "86491c13ec7788e6c1885fed3f65c03c1d0eba5c",
+  "archive_commit": "cd0aa9f1901c7e26d279dceb7c7959a8443134e4",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -95,6 +95,7 @@
     "carranza-un-pueblo-los-altos-1897": "publications/carranza-un-pueblo-los-altos-1897/master.docx",
     "carrera-memorias-1837-1840-1906": "publications/carrera-memorias-1837-1840-1906/master.docx",
     "castillo-historias-mexicanos-conquista-1908": "publications/castillo-historias-mexicanos-conquista-1908/master.docx",
+    "castro-juan-de-dios-1588": "publications/castro-juan-de-dios-1588/master.docx",
     "castro-santa-anna-diario-1854-v4": "publications/castro-santa-anna-diario-1854-v4/master.docx",
     "castro-santa-anna-diario-1854-v5": "publications/castro-santa-anna-diario-1854-v5/master.docx",
     "castro-santa-anna-diario-1854-v6": "publications/castro-santa-anna-diario-1854-v6/master.docx",

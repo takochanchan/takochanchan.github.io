@@ -1,3 +1,4 @@
+import { castro1588Records, castro1588Metadata } from "./castro-juan-de-dios-1588-publication.mjs";
 import { sjdDecreti1785Records, sjdDecreti1785Metadata } from "./sjd-decreti-apostolici-rome-1785-publication.mjs";
 import { sjdMadrid1612Records, sjdMadrid1612Metadata } from "./san-juan-de-dios-constituciones-madrid-1612-publication.mjs";
 import { sjdRome1785Records, sjdRome1785Metadata } from "./san-juan-de-dios-constituciones-rome-1785-publication.mjs";
@@ -421,7 +422,7 @@ const publicationRecords = [
   ...alegreRecords, ...santosHospitalariaRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
-  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
+  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...castro1588Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9625,7 +9626,7 @@ const publicationMetadata = {
   ...alegreMetadata, ...santosHospitalariaMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
-  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,
+  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...castro1588Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,
