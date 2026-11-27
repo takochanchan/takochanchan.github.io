@@ -1,3 +1,4 @@
+import { parraBularioRecords, parraBularioMetadata } from "./parra-bulario-1756-1757-publication.mjs";
 import { lemus1683Records, lemus1683Metadata } from "./lemus-maria-de-jesus-1683-publication.mjs";
 import { castro1588Records, castro1588Metadata } from "./castro-juan-de-dios-1588-publication.mjs";
 import { sjdDecreti1785Records, sjdDecreti1785Metadata } from "./sjd-decreti-apostolici-rome-1785-publication.mjs";
@@ -420,7 +421,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
-  ...alegreRecords, ...santosHospitalariaRecords,
+  ...alegreRecords, ...santosHospitalariaRecords, ...parraBularioRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
   ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...castro1588Records, ...lemus1683Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
@@ -9624,7 +9625,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
-  ...alegreMetadata, ...santosHospitalariaMetadata,
+  ...alegreMetadata, ...santosHospitalariaMetadata, ...parraBularioMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
   ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...castro1588Metadata, ...lemus1683Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,

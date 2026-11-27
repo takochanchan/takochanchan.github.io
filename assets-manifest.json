@@ -7604,6 +7604,42 @@
       "sha256": "da43954b239a4560512d54640ba84e5145e6912f62e01ed2f14685393156c3b3"
     },
     {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "size": 5181224,
+      "sha256": "7e806fe4034b636265274ea8d835c3439fd853b5a864d588bee208d92a1e9342"
+    },
+    {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "size": 5694981,
+      "sha256": "6fed3f963bdd44c9bcefe0b185a146ad8046ebfa2aaac6ff36d164a345d2e4d0"
+    },
+    {
+      "path": "publications/parra-bulario-volume-1-1756/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/parra-bulario-volume-1-1756/cover.jpg",
+      "size": 42212,
+      "sha256": "7fd50516dafc9b12974f4a176ae79a04f4dcacbe2f468890e953e7abe6faee37"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "size": 551595,
+      "sha256": "3b5e21730eb2c0b8e56ef023b8e4fd6c841bfdf2f07cbc377009d90230a5b700"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "size": 5411376,
+      "sha256": "303e53516dc815ddd6c2152a4d9a5a13ff09b3dc3c48c1677678e0d1ba4cf707"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/parra-bulario-volume-2-1757/cover.jpg",
+      "size": 42175,
+      "sha256": "b73e56fbb3bb59f6dbf78865dc63fededfa3c569ca4b4a233fd7758579cdc6cd"
+    },
+    {
       "path": "publications/pastrana-mexico-guatemala-boundary-1897/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Pastrana_Informe_Comision_Mexicana_Limites_Guatemala_1897_Japanese_Complete_Translation.epub",
       "size": 116109,

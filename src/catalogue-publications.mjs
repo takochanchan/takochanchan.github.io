@@ -1,3 +1,4 @@
+import { parraBularioGroup } from "./parra-bulario-1756-1757-publication.mjs";
 import { santosHospitalariaGroup } from "./santos-chronologia-hospitalaria-1715-1716-publication.mjs";
 import { alegreGroup } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
 import { mexicoSiglosGroup } from "./mexico-a-traves-de-los-siglos-publication.mjs";
@@ -23,6 +24,7 @@ const unique = (values) => [...new Set(values)];
 export const publicationGroupDefinitions = [
   alegreGroup,
   santosHospitalariaGroup,
+  parraBularioGroup,
   mexicoSiglosGroup,
   espinosaArricivitaChronicaGroup,
   burgoaGeograficaDescripcion1674Group,

@@ -8147,6 +8147,44 @@
       }
     },
     {
+      "slug": "parra-bulario-volume-1-1756",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集 第1巻",
+      "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 1.",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "year": 1756,
+      "originalPublication": "マドリード、フランシスコ・ハビエル・ガルシア印刷所、1756年。",
+      "sourceEdition": "Alonso Parra y Cote. Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 1. Madrid: Francisco Xavier García, 1756.",
+      "sourceProvider": "ウェルカム・コレクション所蔵本。電子画像はInternet Archiveで公開。",
+      "rights": "原著本文・原刊図版の著作権保護期間は満了。ウェルカム・コレクション所蔵の底本公開画像はパブリック・ドメイン・マーク1.0。 第1巻の口絵はこの公開画像を使用。",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/b30414490_0001"
+      }
+    },
+    {
+      "slug": "parra-bulario-volume-2-1757",
+      "recordClass": "major-work",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集 第2巻",
+      "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 2.",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "year": 1757,
+      "originalPublication": "マドリード、フランシスコ・ハビエル・ガルシア印刷所、扉1757年。底本は1760年の追加文書を含む。",
+      "sourceEdition": "Alonso Parra y Cote. Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 2. Madrid: Francisco Xavier García, 1757. 底本には1760年の小勅書などの追加文書がある。",
+      "sourceProvider": "ウェルカム・コレクション所蔵本。電子画像はInternet Archiveで公開。",
+      "rights": "原著本文・原刊図版の著作権保護期間は満了。ウェルカム・コレクション所蔵の底本公開画像はパブリック・ドメイン・マーク1.0。 第2巻には底本画像の転載なし。",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/b30414490_0002"
+      }
+    },
+    {
       "slug": "pastrana-mexico-guatemala-boundary-1897",
       "recordClass": "major-work",
       "title": "グアテマラとの国境画定メキシコ委員会委員長報告書",

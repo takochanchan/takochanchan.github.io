@@ -2555,6 +2555,24 @@
       "searchShard": "002"
     },
     {
+      "slug": "parra-bulario-volume-1-1756",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "parra-bulario-volume-2-1757",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
       "slug": "pastrana-mexico-guatemala-boundary-1897",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -4033,6 +4051,14 @@
       ]
     },
     {
+      "slug": "parra-bulario-1756-1757",
+      "memberSlugs": [
+        "parra-bulario-volume-1-1756",
+        "parra-bulario-volume-2-1757"
+      ],
+      "seriesVolumeCount": 2
+    },
+    {
       "slug": "patrignani-menologio-1730",
       "memberSlugs": [
         "patrignani-menologio-volume-i-1730",
@@ -4074,6 +4100,13 @@
         "san-juan-de-dios-constituciones-rome-1617",
         "san-juan-de-dios-constituciones-mexico-1774",
         "san-juan-de-dios-constituciones-rome-1785"
+      ]
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "memberSlugs": [
+        "santos-chronologia-hospitalaria-part-i-1715",
+        "santos-chronologia-hospitalaria-part-ii-1716"
       ]
     },
     {
@@ -4124,13 +4157,6 @@
         "zarco-historia-congreso-1856-1857-volume-ii-1857"
       ],
       "seriesVolumeCount": 2
-    },
-    {
-      "slug": "santos-chronologia-hospitalaria-1715-1716",
-      "memberSlugs": [
-        "santos-chronologia-hospitalaria-part-i-1715",
-        "santos-chronologia-hospitalaria-part-ii-1716"
-      ]
     }
   ],
   "shortAuthorCount": 50

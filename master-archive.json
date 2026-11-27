@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "2123599c31ac662e1b45f709c1b8f3ada9d049f0",
+  "archive_commit": "bc7ec1b4d4dbb0ac8737eb6a5234339e1a14619a",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -365,6 +365,8 @@
     "paniagua-catecismo-chiapas-1876": "publications/paniagua-catecismo-chiapas-1876/master.docx",
     "paravey-fou-sang-1844": "publications/paravey-fou-sang-1844/master.docx",
     "paravey-fou-sang-supplement-1847": "publications/paravey-fou-sang-supplement-1847/master.docx",
+    "parra-bulario-volume-1-1756": "publications/parra-bulario-volume-1-1756/master.docx",
+    "parra-bulario-volume-2-1757": "publications/parra-bulario-volume-2-1757/master.docx",
     "pastrana-mexico-guatemala-boundary-1897": "publications/pastrana-mexico-guatemala-boundary-1897/master.md",
     "patrignani-menologio-volume-i-1730": "publications/patrignani-menologio-volume-i-1730/master.docx",
     "patrignani-menologio-volume-ii-1730": "publications/patrignani-menologio-volume-ii-1730/master.docx",
