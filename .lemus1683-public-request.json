@@ -1,0 +1,189 @@
+{
+  "verified_archive_commit": "2123599c31ac662e1b45f709c1b8f3ada9d049f0",
+  "slugs": [
+    "lemus-maria-de-jesus-1683"
+  ],
+  "bundle": {
+    "size": 8110390,
+    "sha256": "14c09431acdf7d97fa55e6ca8f4a0b433da095adf5128b6449dbc9045b83ce94",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "size": 360000,
+        "part": "000.bin",
+        "sha256": "7aeb082abd11c64314f5c06eb1f4bd292535ccb05c030b3d32d26c86a52a835e"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "size": 360000,
+        "part": "001.bin",
+        "sha256": "270a2a12e23cefbf6757bfef974f16f7aadd1376243b638ba9e81f445cd70ed2"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "size": 360000,
+        "part": "002.bin",
+        "sha256": "6e0a53afaae3d60bd390dc8dea45f898e1d1b1cd844ba3baf75ac4782012ea8d"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "size": 360000,
+        "part": "003.bin",
+        "sha256": "4ccdcceb4ff5e7f875345fee1e8e36fea5c82a5fd05de0ad7f31e499db27994c"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "size": 360000,
+        "part": "004.bin",
+        "sha256": "b7d7a5cbaab1da872010f340647dd7fef368816dbfc771da23202379cf65d740"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "size": 360000,
+        "part": "005.bin",
+        "sha256": "6604cdf6acdc27e2a63be50e35bb31bc345e06d17a87ea1de372df2aef8c52e9"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "size": 360000,
+        "part": "006.bin",
+        "sha256": "27e0544778d3c0fb0232112612e9fc7db2a6bd85e0ce6b07a0300808928a6e96"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "size": 360000,
+        "part": "007.bin",
+        "sha256": "1da8087b4614d87edc3d8fc9e7645493ae39aaff7a4426ce1347c5594f2d6711"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "size": 360000,
+        "part": "008.bin",
+        "sha256": "9b18c28ff82bab919cf146fad4c1f7d2317cc235ad160048ee221884038ab9f7"
+      },
+      {
+        "index": 9,
+        "start": 3240000,
+        "size": 360000,
+        "part": "009.bin",
+        "sha256": "5801f27870b2a79646d4cff33aa2127fb0500c01a590712b5a57377a69ab7eeb"
+      },
+      {
+        "index": 10,
+        "start": 3600000,
+        "size": 360000,
+        "part": "010.bin",
+        "sha256": "aa0b5e11a03f58e10d1ec525ae26c6c37d4ec153af8a0a16c2033ca71d6530ba"
+      },
+      {
+        "index": 11,
+        "start": 3960000,
+        "size": 360000,
+        "part": "011.bin",
+        "sha256": "a1e76ee386a3661100cb8b1aea575da3f50b0cb347981cf232800f632a3b4356"
+      },
+      {
+        "index": 12,
+        "start": 4320000,
+        "size": 360000,
+        "part": "012.bin",
+        "sha256": "2978ef398e87cf624776b801caae83b82e6aa9012baf2e2e5a039b244f18acd3"
+      },
+      {
+        "index": 13,
+        "start": 4680000,
+        "size": 360000,
+        "part": "013.bin",
+        "sha256": "39f9490121708e6854f21439eae8a4df3c2d7dab5aff3e76c20f3a188d5f657a"
+      },
+      {
+        "index": 14,
+        "start": 5040000,
+        "size": 360000,
+        "part": "014.bin",
+        "sha256": "e69d6c6cf2a8814f4db83d75d62cd2ab5ba130e41dee9aa390eca6169cd938de"
+      },
+      {
+        "index": 15,
+        "start": 5400000,
+        "size": 360000,
+        "part": "015.bin",
+        "sha256": "d3c1e7bb8888eef52b53772c6776644fce4252e50ff7dfdcc4b568aed33e000d"
+      },
+      {
+        "index": 16,
+        "start": 5760000,
+        "size": 360000,
+        "part": "016.bin",
+        "sha256": "695ba137b6512262bd0d1c500358a3f611c51d5ce7db290ad00954082c0f9757"
+      },
+      {
+        "index": 17,
+        "start": 6120000,
+        "size": 360000,
+        "part": "017.bin",
+        "sha256": "37fec78418317807e11248f99652072429bf8d5a7e25a5d425787e2eff057044"
+      },
+      {
+        "index": 18,
+        "start": 6480000,
+        "size": 360000,
+        "part": "018.bin",
+        "sha256": "2fb3c54a874940b3c1a55892c5039a822bc5f67ced02e223564808431547fe2d"
+      },
+      {
+        "index": 19,
+        "start": 6840000,
+        "size": 360000,
+        "part": "019.bin",
+        "sha256": "a05aa9640ad4f0d96fda4e0767fd2eec3d5746e7bf05ad996c8f68116d00867f"
+      },
+      {
+        "index": 20,
+        "start": 7200000,
+        "size": 360000,
+        "part": "020.bin",
+        "sha256": "be71187d92671354048c43af02d979935b05da46833bd6637c67e197d9273368"
+      },
+      {
+        "index": 21,
+        "start": 7560000,
+        "size": 360000,
+        "part": "021.bin",
+        "sha256": "170af7cd97e90e78610af585bec80483d1020f31173d15c32ac2bf4253d71631"
+      },
+      {
+        "index": 22,
+        "start": 7920000,
+        "size": 190390,
+        "part": "022.bin",
+        "sha256": "1fb515926e1dcd7fe402d6da0550c27ed832c17c054db27c7227d05608b13e39"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/lemus-maria-de-jesus-1683/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf",
+      "size": 3588751,
+      "sha256": "e3663f2988367623245819ac902f4337a23e9592d14ec22b8d6fef490910ce58",
+      "filename": "Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf"
+    },
+    {
+      "path": "publications/lemus-maria-de-jesus-1683/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub",
+      "size": 5328779,
+      "sha256": "cdd80ddbde2b7d36ddd41e9bb7468964b670ae8afefa9eea13e442b56045dbf9",
+      "filename": "Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub"
+    }
+  ]
+}
