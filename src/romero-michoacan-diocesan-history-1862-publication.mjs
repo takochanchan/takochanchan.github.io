@@ -52,6 +52,6 @@ export const romeroMichoacan1862Metadata = {
     "sourceUrl": "https://archive.org/details/noticiasparaform00rome",
     "rights": "原著および1863年の原図は米国でパブリックドメイン。司教区図・ミチョアカン州図は、米国議会図書館所蔵本の公開画像（同館が認識する著作権上の制限なし）。グアナフアト州図はヌエボ・レオン自治大学所蔵本の全開図（個別のライセンス表示は確認できず）。画像出典：司教区図 https://archive.org/details/noticiasparaform00rome/page/n8/mode/1up 、ミチョアカン州図 https://archive.org/details/noticiasparaform00rome/page/n165/mode/1up 、グアナフアト州図 https://cdigital.cabu.uanl.mx/ffdr/1/1020000296/1020000296_024.pdf#page=5 。",
     "publishedDate": "2026-11-23",
-    "updatedDate": "2026-11-23"
+    "updatedDate": "2026-11-28"
   }
 };
