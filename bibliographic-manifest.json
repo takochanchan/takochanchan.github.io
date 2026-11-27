@@ -6474,6 +6474,25 @@
       "updatedDate": "2026-08-10"
     },
     {
+      "slug": "lemus-maria-de-jesus-1683",
+      "recordClass": "major-work",
+      "title": "プエブラの修道女マリア・デ・ヘスス伝",
+      "originalTitle": "Vida, virtudes, trabajos, favores y milagros de la Ven. M. sor María de Jesús Angelopolitana",
+      "author": "ディエゴ・デ・レムス",
+      "originalAuthor": "Diego de Lemus",
+      "year": 1683,
+      "originalPublication": "En León [Lyon]: a costa de Anisson y Posuel, 1683.",
+      "sourceEdition": "1683年リヨン刊。ジョン・カーター・ブラウン図書館所蔵本を底本とし、同本にない略表題とM・オジエの口絵はボストン公共図書館所蔵の同版（39999066733179）で補った。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館、ボストン公共図書館。デジタル画像はInternet Archiveで公開。",
+      "rights": "原著と口絵の原図はパブリックドメイン。底本の公開データは「No copyright」と表示する。口絵はボストン公共図書館所蔵本の公開画像（https://archive.org/details/vidavirtudestrab00lemu）。同館はパブリックドメイン資料の複製画像に独自の利用制限を設けていない（https://www.bpl.org/special-collections/use/）。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidavirtudestrab00lemu_0"
+      }
+    },
+    {
       "slug": "leon-y-gama-dos-piedras-1792",
       "recordClass": "major-work",
       "title": "二つの石の歴史的・年代学的記述",

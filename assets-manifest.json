@@ -6158,6 +6158,24 @@
       "sha256": "f20651f2a26c5c2c42de86beab80596dcc8feb2f82cf037c6df581f444cc236c"
     },
     {
+      "path": "publications/lemus-maria-de-jesus-1683/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub",
+      "size": 5328779,
+      "sha256": "cdd80ddbde2b7d36ddd41e9bb7468964b670ae8afefa9eea13e442b56045dbf9"
+    },
+    {
+      "path": "publications/lemus-maria-de-jesus-1683/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf",
+      "size": 3588751,
+      "sha256": "e3663f2988367623245819ac902f4337a23e9592d14ec22b8d6fef490910ce58"
+    },
+    {
+      "path": "publications/lemus-maria-de-jesus-1683/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/lemus-maria-de-jesus-1683/cover.jpg",
+      "size": 38442,
+      "sha256": "08895ca4cb6dd7ad7e48123dec791d8976f68e10ea5077aaa305b3e4fa937db5"
+    },
+    {
       "path": "publications/leon-y-gama-dos-piedras-1792/Leon_y_Gama_1792_Japanese_Master.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Leon_y_Gama_1792_Japanese_Master.epub",
       "size": 3319598,
