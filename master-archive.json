@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "58c930cc6bddd0b59092613d8cd85a87ddb7e1a9",
+  "archive_commit": "86491c13ec7788e6c1885fed3f65c03c1d0eba5c",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -483,6 +483,7 @@
     "siguenza-obras-1928": "publications/siguenza-obras-1928/master.docx",
     "siguenza-parayso-occidental-1684": "publications/siguenza-parayso-occidental-1684/master.md",
     "siria-anna-guerra-1716": "publications/siria-anna-guerra-1716/master.docx",
+    "sjd-decreti-apostolici-rome-1785": "publications/sjd-decreti-apostolici-rome-1785/master.md",
     "societe-americanistes-maler-tozzer-tikal-1912": "publications/societe-americanistes-maler-tozzer-tikal-1912/master.md",
     "societe-geographie-central-america-report-1836": "publications/societe-geographie-central-america-report-1836/master.docx",
     "solorzano-pereira-politica-indiana-volume-1-1648": "publications/solorzano-pereira-politica-indiana-volume-1-1648/master.docx",

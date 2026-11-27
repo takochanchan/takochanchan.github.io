@@ -9746,6 +9746,24 @@
       "sha256": "2528e12e267b3dbb43491fe57f7081f3addc8ecf362a04affa34db4d6921ce3e"
     },
     {
+      "path": "publications/sjd-decreti-apostolici-rome-1785/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
+      "size": 99991,
+      "sha256": "9c55687a910562d92f11b0b951399ff17baec16e2ca17673890dc75c1391ccd7"
+    },
+    {
+      "path": "publications/sjd-decreti-apostolici-rome-1785/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf",
+      "size": 760384,
+      "sha256": "078319d1a0af8530e5d46d910c0cf855eb9b1904012a03a72183342552af98e3"
+    },
+    {
+      "path": "publications/sjd-decreti-apostolici-rome-1785/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/sjd-decreti-apostolici-rome-1785/cover.jpg",
+      "size": 31046,
+      "sha256": "81308206274555ac49c67d0e1d9e937469e4f3b79225733af3e9172a1a4c3934"
+    },
+    {
       "path": "publications/societe-americanistes-maler-tozzer-tikal-1912/Societe_des_Americanistes_Maler_Tozzer_Tikal_Received_Books_1912_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Societe_des_Americanistes_Maler_Tozzer_Tikal_Received_Books_1912_Japanese_Complete_Translation.epub",
       "size": 135888,

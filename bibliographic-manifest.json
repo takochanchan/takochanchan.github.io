@@ -10408,6 +10408,25 @@
       "updatedDate": "2026-09-27"
     },
     {
+      "slug": "sjd-decreti-apostolici-rome-1785",
+      "recordClass": "major-work",
+      "title": "使徒座憲令・教令集",
+      "originalTitle": "Costituzioni e decreti apostolici",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Religione di S. Giovanni di Dio",
+      "year": 1785,
+      "originalPublication": "Roma: nella stamperia di Paolo Giunchi, 1785.",
+      "sourceEdition": "Costituzioni e decreti apostolici. Roma: Paolo Giunchi, 1785. ローマ国立中央図書館所蔵本。",
+      "sourceProvider": "ローマ国立中央図書館所蔵、Google電子化、Internet Archive公開",
+      "rights": "1785年刊の原著は著作権保護期間満了。Internet Archiveの底本データはパブリックドメイン・マーク1.0表示。底本画像は掲載していない。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/bub_gb_ZMWnR1MJU2MC"
+      }
+    },
+    {
       "slug": "societe-americanistes-maler-tozzer-tikal-1912",
       "recordClass": "short-work",
       "title": "ティカル遺跡に関するマレル／トッツァー二著の受贈記録",

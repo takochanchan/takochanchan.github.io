@@ -953,6 +953,14 @@
       "author": "マリアーノ・クエバス"
     },
     {
+      "slug": "cuggio-bullarium-hospitalaris-1724",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ニコロ・アントニオ・クッジョ（編注）",
+      "originalAuthor": "Nicola Antonio Cuggiò",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "dancer-fort-san-juan-1781",
       "recordClass": "major-work",
       "searchShard": "002",
@@ -3122,6 +3130,14 @@
       "releaseTag": "publications-002"
     },
     {
+      "slug": "san-juan-de-dios-constituciones-mexico-1774",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "san-juan-de-dios-constituciones-rome-1617",
       "recordClass": "major-work",
       "searchShard": "003",
@@ -3135,22 +3151,6 @@
       "searchShard": "003",
       "author": "聖フアン・デ・ディオス病院修道会",
       "originalAuthor": "Religione di S. Giovanni di Dio",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "cuggio-bullarium-hospitalaris-1724",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "ニコロ・アントニオ・クッジョ（編注）",
-      "originalAuthor": "Nicola Antonio Cuggiò",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "san-juan-de-dios-constituciones-mexico-1774",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "聖フアン・デ・ディオス病院修道会",
-      "originalAuthor": "Orden Hospitalaria de San Juan de Dios",
       "releaseTag": "publications-002"
     },
     {
@@ -3169,6 +3169,22 @@
       "slug": "santo-thomas-colonisation-1844",
       "recordClass": "major-work",
       "searchShard": "001"
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-part-i-1715",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "releaseTag": "publications-002"
+    },
+    {
+      "slug": "santos-chronologia-hospitalaria-part-ii-1716",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フアン・サントス",
+      "originalAuthor": "Juan Santos",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "sapper-alta-verapaz-1901",
@@ -3263,6 +3279,14 @@
       "slug": "siria-anna-guerra-1716",
       "recordClass": "major-work",
       "searchShard": "002"
+    },
+    {
+      "slug": "sjd-decreti-apostolici-rome-1785",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "聖フアン・デ・ディオス病院修道会",
+      "originalAuthor": "Religione di S. Giovanni di Dio",
+      "releaseTag": "publications-002"
     },
     {
       "slug": "societe-americanistes-maler-tozzer-tikal-1912",
@@ -3759,22 +3783,6 @@
       "recordClass": "major-work",
       "searchShard": "003",
       "author": "ホセ・マリア・セラア・エ・イダルゴ",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "santos-chronologia-hospitalaria-part-i-1715",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フアン・サントス",
-      "originalAuthor": "Juan Santos",
-      "releaseTag": "publications-002"
-    },
-    {
-      "slug": "santos-chronologia-hospitalaria-part-ii-1716",
-      "recordClass": "major-work",
-      "searchShard": "003",
-      "author": "フアン・サントス",
-      "originalAuthor": "Juan Santos",
       "releaseTag": "publications-002"
     }
   ],
