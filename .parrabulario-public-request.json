@@ -1,0 +1,288 @@
+{
+  "verified_archive_commit": "bc7ec1b4d4dbb0ac8737eb6a5234339e1a14619a",
+  "slugs": [
+    "parra-bulario-volume-1-1756",
+    "parra-bulario-volume-2-1757"
+  ],
+  "assets": [
+    {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "size": 5694981,
+      "sha256": "6fed3f963bdd44c9bcefe0b185a146ad8046ebfa2aaac6ff36d164a345d2e4d0",
+      "filename": "Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf"
+    },
+    {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "size": 5181224,
+      "sha256": "7e806fe4034b636265274ea8d835c3439fd853b5a864d588bee208d92a1e9342",
+      "filename": "Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "size": 5411376,
+      "sha256": "303e53516dc815ddd6c2152a4d9a5a13ff09b3dc3c48c1677678e0d1ba4cf707",
+      "filename": "Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "size": 551595,
+      "sha256": "3b5e21730eb2c0b8e56ef023b8e4fd6c841bfdf2f07cbc377009d90230a5b700",
+      "filename": "Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub"
+    }
+  ],
+  "bundle": {
+    "size": 12525401,
+    "sha256": "93f3f89c4f433e22f1f9ce5d87b147fc3e7759df32c98c0d4fa9c93f1352af73",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "start": 0,
+        "size": 360000,
+        "sha256": "c0ef28d3273abb4e6a5424efa63e35cb1d5e5028fbfbf9a4bbeb85c5da3a8d7b"
+      },
+      {
+        "index": 1,
+        "part": "001.bin",
+        "start": 360000,
+        "size": 360000,
+        "sha256": "baae512aa7a6f157bc1ebd6575675a35463fb6f94359653c40c4cd89dff36923"
+      },
+      {
+        "index": 2,
+        "part": "002.bin",
+        "start": 720000,
+        "size": 360000,
+        "sha256": "20e888598e713e9c02f72a0427ca1628352aa04c4d1997cf140c869b25854537"
+      },
+      {
+        "index": 3,
+        "part": "003.bin",
+        "start": 1080000,
+        "size": 360000,
+        "sha256": "2e44877261cb1d844548a052dec7c14fddb59d1f8d07bd88bb2dab61590c6ec7"
+      },
+      {
+        "index": 4,
+        "part": "004.bin",
+        "start": 1440000,
+        "size": 360000,
+        "sha256": "f212dcfd034fceb2bae8938f07d38906d4ce462907b38e80c3de8a696887dab0"
+      },
+      {
+        "index": 5,
+        "part": "005.bin",
+        "start": 1800000,
+        "size": 360000,
+        "sha256": "fe9b6274ed008a39c02e34b7a72845a9d464df9a6cb254a75fb045a92d5f6d06"
+      },
+      {
+        "index": 6,
+        "part": "006.bin",
+        "start": 2160000,
+        "size": 360000,
+        "sha256": "26a4cbce1c7d90490ec9a45b4049aae4b7afe1f31464ad51f57621246cd4b673"
+      },
+      {
+        "index": 7,
+        "part": "007.bin",
+        "start": 2520000,
+        "size": 360000,
+        "sha256": "a466d9bfd93785bad100286d8b45b468a811f38df65c058c490c36baed5e8c46"
+      },
+      {
+        "index": 8,
+        "part": "008.bin",
+        "start": 2880000,
+        "size": 360000,
+        "sha256": "3e8ada5485b0ad55dcae96ea5615064268dcc984fbed701f52ca1a8fb0ded3bf"
+      },
+      {
+        "index": 9,
+        "part": "009.bin",
+        "start": 3240000,
+        "size": 360000,
+        "sha256": "c84793fb638b3e5e7326d17ecdad6efb24668a1380003ea633981f108c94ee45"
+      },
+      {
+        "index": 10,
+        "part": "010.bin",
+        "start": 3600000,
+        "size": 360000,
+        "sha256": "a969a098e86c1c3906d0ad6ad7ef33087049623c8d438565771f33bc8d28cf15"
+      },
+      {
+        "index": 11,
+        "part": "011.bin",
+        "start": 3960000,
+        "size": 360000,
+        "sha256": "5444e60a64a7dbd8fcb2f8fa57eea1b97c0f2dc27a7ac671b0bc781f12908d66"
+      },
+      {
+        "index": 12,
+        "part": "012.bin",
+        "start": 4320000,
+        "size": 360000,
+        "sha256": "1a7c831bbed90687a474bf03689c04c3447d0a51d71d7148cc1c1d9708f8eb1a"
+      },
+      {
+        "index": 13,
+        "part": "013.bin",
+        "start": 4680000,
+        "size": 360000,
+        "sha256": "ca217a7f0e9d05b5b7d237cf8842022c74b85cf2ef80fad3924319dd53c3cc39"
+      },
+      {
+        "index": 14,
+        "part": "014.bin",
+        "start": 5040000,
+        "size": 360000,
+        "sha256": "fdef1a9b05e2750ba11960220e2c44b695254db6da5136ba0a9960f8acfc69cb"
+      },
+      {
+        "index": 15,
+        "part": "015.bin",
+        "start": 5400000,
+        "size": 360000,
+        "sha256": "127f7aedb199e664980657fc86b1c337af7b8ef6f55c55d6e59e8a9a2e59fb51"
+      },
+      {
+        "index": 16,
+        "part": "016.bin",
+        "start": 5760000,
+        "size": 360000,
+        "sha256": "e0723fabc456ede12685609eb5d86e2bb3d731d850c2de6a201c0bde04ea8f89"
+      },
+      {
+        "index": 17,
+        "part": "017.bin",
+        "start": 6120000,
+        "size": 360000,
+        "sha256": "8c9419779bcf80b5b276c942cac43efb4188a52d6773b30c1c1d970f265d0c51"
+      },
+      {
+        "index": 18,
+        "part": "018.bin",
+        "start": 6480000,
+        "size": 360000,
+        "sha256": "91adbbb073dd10d1ab617d24612abca34c447ff62533c0a4bcd002fcb6adeed4"
+      },
+      {
+        "index": 19,
+        "part": "019.bin",
+        "start": 6840000,
+        "size": 360000,
+        "sha256": "8b1ab62ebd2f64fa4a3fb21894f305d070f4b90d144f0a9badc9e1e3df5d960a"
+      },
+      {
+        "index": 20,
+        "part": "020.bin",
+        "start": 7200000,
+        "size": 360000,
+        "sha256": "c8c25becd7375e8ef2b8bb13092c90c05597bb03d3dbe8be9c02add14bd50e03"
+      },
+      {
+        "index": 21,
+        "part": "021.bin",
+        "start": 7560000,
+        "size": 360000,
+        "sha256": "a379bed866331d40d515191fff9d2344beea6ca89bac46b563a44f4a0a1aacb4"
+      },
+      {
+        "index": 22,
+        "part": "022.bin",
+        "start": 7920000,
+        "size": 360000,
+        "sha256": "813fd189406222f419f1befb5c3e1a0aa1f4cf26c580367f404da7427a348a7d"
+      },
+      {
+        "index": 23,
+        "part": "023.bin",
+        "start": 8280000,
+        "size": 360000,
+        "sha256": "91d6057e8050ecaf19c0b85b021d3aeef81e7005fbbc40fcb6d1dfbfe71232a5"
+      },
+      {
+        "index": 24,
+        "part": "024.bin",
+        "start": 8640000,
+        "size": 360000,
+        "sha256": "c4d83266e6a761bc49d3e796ae7ee04b7bd61154d64498d90a4023e1d4052275"
+      },
+      {
+        "index": 25,
+        "part": "025.bin",
+        "start": 9000000,
+        "size": 360000,
+        "sha256": "9a4451fa76f2ca42e9e36759f76712287e8b3bd4edf3bee7c8db804d21f6b806"
+      },
+      {
+        "index": 26,
+        "part": "026.bin",
+        "start": 9360000,
+        "size": 360000,
+        "sha256": "a34f5596f771475b25159dfa82623001a435c207d3205d8181df50581c5c05e9"
+      },
+      {
+        "index": 27,
+        "part": "027.bin",
+        "start": 9720000,
+        "size": 360000,
+        "sha256": "c037c9c871c5eafe577e1f04ff11bf7bfa5110dcb90c7918fcc72bfdf5e3e53a"
+      },
+      {
+        "index": 28,
+        "part": "028.bin",
+        "start": 10080000,
+        "size": 360000,
+        "sha256": "a241be82dd087000e60ba197b06b3187e35e7bbb6fee1bb4f34d59e7824688b9"
+      },
+      {
+        "index": 29,
+        "part": "029.bin",
+        "start": 10440000,
+        "size": 360000,
+        "sha256": "b349e53055795ade9ff17ff66ff201ea1e07336072cf9864472afe1cfb301034"
+      },
+      {
+        "index": 30,
+        "part": "030.bin",
+        "start": 10800000,
+        "size": 360000,
+        "sha256": "5e370c2151153030ba9357a8c82b942b7a58f1b4d7d8d1792c43eac4d2a028d2"
+      },
+      {
+        "index": 31,
+        "part": "031.bin",
+        "start": 11160000,
+        "size": 360000,
+        "sha256": "55c0c3312d7619ad03f6cde77e7a185552da7ebe0b4a578e86de119efea65b6e"
+      },
+      {
+        "index": 32,
+        "part": "032.bin",
+        "start": 11520000,
+        "size": 360000,
+        "sha256": "95a4dbe3e377e98a84f846df71eb123b3da52cefaea7e5b0a4878bcf6a48de57"
+      },
+      {
+        "index": 33,
+        "part": "033.bin",
+        "start": 11880000,
+        "size": 360000,
+        "sha256": "933498bf48bd6d3cefbb1659e0c49e959a45a6c80d11c7cc1926924306ff66e9"
+      },
+      {
+        "index": 34,
+        "part": "034.bin",
+        "start": 12240000,
+        "size": 285401,
+        "sha256": "13339fe1bf6b4eb20b22128fe67b48a161f02de82c54d30760db20afdee27c47"
+      }
+    ]
+  }
+}
