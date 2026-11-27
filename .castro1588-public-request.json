@@ -1,0 +1,49 @@
+{
+  "verified_archive_commit": "3d47f28cec00c197680947e296e5ee3005276525",
+  "slugs": [
+    "castro-juan-de-dios-1588"
+  ],
+  "bundle": {
+    "size": 939541,
+    "sha256": "f133e5e62ad3def3f04b8561d50ad7e49f684c43cff0820c4dec68988eaa6640",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "size": 360000,
+        "sha256": "dc0c85e2eb27fd9daf79743bcd6e258144bce133938424418a07d1dbacc232da"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "size": 360000,
+        "sha256": "5b128941b102394db8accf3572af44ec0cf41ff6ee22825fd96839a3cc577b9e"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "size": 219541,
+        "sha256": "82af9172197aead55871286f556e2ccf704f6e073ff1a2013585bb7df6b1ac34"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/castro-juan-de-dios-1588/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf",
+      "size": 1034160,
+      "sha256": "167fb7d3f353b5e3c7e76a0165d6d31a713340a20226c81d609d3e3c0196deeb",
+      "filename": "Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf"
+    },
+    {
+      "path": "publications/castro-juan-de-dios-1588/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub",
+      "size": 140468,
+      "sha256": "a1d03add859b51855fe4ed71fca60a47b0ef2cf15ddf82cd72175db99a09d187",
+      "filename": "Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub"
+    }
+  ]
+}
