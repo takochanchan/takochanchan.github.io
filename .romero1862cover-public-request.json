@@ -1,0 +1,338 @@
+{
+  "verified_archive_commit": "f9ac7b0c79d7b75526e60b86469e2fa000ed4d38",
+  "slugs": [
+    "romero-michoacan-diocesan-history-1862"
+  ],
+  "assets": [
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "size": 6132762,
+      "sha256": "e680960bd760f10b3ad0e307316e1b6a5799a0325ab4cbc1019c562bff09f3a4",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "old_sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "size": 10910471,
+      "sha256": "f534ffaabf60669558eb6913715c7859a0474ea2c80a8a3b70339d7ecb7b7b46",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "old_sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
+    }
+  ],
+  "bundle": {
+    "size": 15674309,
+    "sha256": "b3169b54b6f096d22845106f3220f68c2695a50d8171bfe4631eb226933ab920",
+    "parts": [
+      {
+        "index": 0,
+        "part": "000.bin",
+        "start": 0,
+        "size": 360000,
+        "sha256": "a29015f6057817d672e723d77b4df5d37c23b3fd652fc8e591df5adf4e96d069"
+      },
+      {
+        "index": 1,
+        "part": "001.bin",
+        "start": 360000,
+        "size": 360000,
+        "sha256": "ece11352b68b05e9a2da33bcf5703d7537121e61873c242c6aaf7db3d3d6798f"
+      },
+      {
+        "index": 2,
+        "part": "002.bin",
+        "start": 720000,
+        "size": 360000,
+        "sha256": "a3d2debf274e8cfbce388d6d61ef6d4a5f20be9fb106767c02e8af45a686fe25"
+      },
+      {
+        "index": 3,
+        "part": "003.bin",
+        "start": 1080000,
+        "size": 360000,
+        "sha256": "8bfd7717f183a584c1ab3db22bac19e7b7ef04febc18d2a6551fb094bcee3070"
+      },
+      {
+        "index": 4,
+        "part": "004.bin",
+        "start": 1440000,
+        "size": 360000,
+        "sha256": "46e1b36f6deabaf06705c44d3bd820069ae0943507da54aa04b27c4a78389386"
+      },
+      {
+        "index": 5,
+        "part": "005.bin",
+        "start": 1800000,
+        "size": 360000,
+        "sha256": "b34398d0b992260162a31be8486a52ee2ff6b41fe9e2179c2cbd15f1e007bdfb"
+      },
+      {
+        "index": 6,
+        "part": "006.bin",
+        "start": 2160000,
+        "size": 360000,
+        "sha256": "fdefbae2e7b0bafcc6b2df11818467ac2ce996dc5e439b8d3eeabe7452fd743c"
+      },
+      {
+        "index": 7,
+        "part": "007.bin",
+        "start": 2520000,
+        "size": 360000,
+        "sha256": "0da8f484bc0580caa453cdf0b88d5a692d6da1dc66ca46a520bc093b0ad7f273"
+      },
+      {
+        "index": 8,
+        "part": "008.bin",
+        "start": 2880000,
+        "size": 360000,
+        "sha256": "3f7678c3b643f6d8b94ef570c665982f09b39cc9b7a983f8cd19cce23a0d1fb6"
+      },
+      {
+        "index": 9,
+        "part": "009.bin",
+        "start": 3240000,
+        "size": 360000,
+        "sha256": "54a99732def45a2724bcea2ed7a9ec467f918e202b3bc827c8c4e77b2495d2cc"
+      },
+      {
+        "index": 10,
+        "part": "010.bin",
+        "start": 3600000,
+        "size": 360000,
+        "sha256": "2eb1f9cafb910475a312352c205401fadb8ebe9cea5dcf2e430ddde30222b084"
+      },
+      {
+        "index": 11,
+        "part": "011.bin",
+        "start": 3960000,
+        "size": 360000,
+        "sha256": "bf8c91f9c74bad18090f6104d1ab1cd2e059cc7ddfdb4179196aea2069d96cf2"
+      },
+      {
+        "index": 12,
+        "part": "012.bin",
+        "start": 4320000,
+        "size": 360000,
+        "sha256": "ad8828af22d3387b8e9c832d1eb893dda406c4947511d25764d533d689b2dcd6"
+      },
+      {
+        "index": 13,
+        "part": "013.bin",
+        "start": 4680000,
+        "size": 360000,
+        "sha256": "422d1ed4152abf9bf7fecdf6ca4e49544458035a17301112c4a72d6fc76042cf"
+      },
+      {
+        "index": 14,
+        "part": "014.bin",
+        "start": 5040000,
+        "size": 360000,
+        "sha256": "b4e92357b38987c71091ffeae6e1bba1aba9d767206e8c9b13585995de69990f"
+      },
+      {
+        "index": 15,
+        "part": "015.bin",
+        "start": 5400000,
+        "size": 360000,
+        "sha256": "69ac5ec5a9bd7efe2c56a5c9f6746496d53d1b105ea7ad0b66ff963d766f03ed"
+      },
+      {
+        "index": 16,
+        "part": "016.bin",
+        "start": 5760000,
+        "size": 360000,
+        "sha256": "d170ffe4e7d13e3a1aacf1e9140a4f36e345cf7bb6109b825f8d2fd2bf31a43f"
+      },
+      {
+        "index": 17,
+        "part": "017.bin",
+        "start": 6120000,
+        "size": 360000,
+        "sha256": "7e735e30d6cf4e06eefced7c3f73e3df94f71443f7811e46522ffcfac6b2d599"
+      },
+      {
+        "index": 18,
+        "part": "018.bin",
+        "start": 6480000,
+        "size": 360000,
+        "sha256": "18276ea7097e043860cbf2500456c60738a8df3b2dd631eef2876317e3bedaa4"
+      },
+      {
+        "index": 19,
+        "part": "019.bin",
+        "start": 6840000,
+        "size": 360000,
+        "sha256": "822c70e1bc03c13015d79fa0da18c12ec2662ea22d31e2f29b6403e3b960101b"
+      },
+      {
+        "index": 20,
+        "part": "020.bin",
+        "start": 7200000,
+        "size": 360000,
+        "sha256": "083afd36074f12e5668a9ba62e5e2ea8e6151231af25ce74c40165c529be3f9a"
+      },
+      {
+        "index": 21,
+        "part": "021.bin",
+        "start": 7560000,
+        "size": 360000,
+        "sha256": "0ee6c833be15660f3f1e1245e9db8c41a2b5abb48c5ec6471da0cdb880b8a49c"
+      },
+      {
+        "index": 22,
+        "part": "022.bin",
+        "start": 7920000,
+        "size": 360000,
+        "sha256": "8f5bdbb38554698b8067b6564f5b113b5ef8bb7321d78b283df14b575820ce69"
+      },
+      {
+        "index": 23,
+        "part": "023.bin",
+        "start": 8280000,
+        "size": 360000,
+        "sha256": "9128a3276f1b8dc589d713fc5b749dd29ab4660409b68be1e63d48c6c30acf47"
+      },
+      {
+        "index": 24,
+        "part": "024.bin",
+        "start": 8640000,
+        "size": 360000,
+        "sha256": "9d2fdf1f8f191cc41eb2c1b8a210dd126c1ccc45128991f0e4e850816a2e4bd2"
+      },
+      {
+        "index": 25,
+        "part": "025.bin",
+        "start": 9000000,
+        "size": 360000,
+        "sha256": "7d19c00aa5611954788488eb928d1302dfbf95723b7cc53b045d583426aa13f6"
+      },
+      {
+        "index": 26,
+        "part": "026.bin",
+        "start": 9360000,
+        "size": 360000,
+        "sha256": "3b90a28923cc8b297683d8b0a59990a0e235d291c41cd1997f7cab9a0da3ae63"
+      },
+      {
+        "index": 27,
+        "part": "027.bin",
+        "start": 9720000,
+        "size": 360000,
+        "sha256": "9743d405a8d32de30baaf1d46590f06ebaf9c691c9131843990f5be3cd4e4e31"
+      },
+      {
+        "index": 28,
+        "part": "028.bin",
+        "start": 10080000,
+        "size": 360000,
+        "sha256": "8f44a35e4855944f9a9516f6893c6161a2221d6563575b7b8ed62dd5eddade81"
+      },
+      {
+        "index": 29,
+        "part": "029.bin",
+        "start": 10440000,
+        "size": 360000,
+        "sha256": "42eac9d125b182265ed59f50ee049e1ab3e4fe76db029e0a836fc405b93f5eb2"
+      },
+      {
+        "index": 30,
+        "part": "030.bin",
+        "start": 10800000,
+        "size": 360000,
+        "sha256": "e7e2a7c3fb2e42d0217e79924fa839eb3affa5da082cba8c38ea278e58d31db5"
+      },
+      {
+        "index": 31,
+        "part": "031.bin",
+        "start": 11160000,
+        "size": 360000,
+        "sha256": "100baba65548baac6f994af03bab0f71e77e77268660d6b90a4538b1baa7427b"
+      },
+      {
+        "index": 32,
+        "part": "032.bin",
+        "start": 11520000,
+        "size": 360000,
+        "sha256": "f702709682bc6a3594d60f1a63134894604fda7347b478cdfb2ba5e82b913f8e"
+      },
+      {
+        "index": 33,
+        "part": "033.bin",
+        "start": 11880000,
+        "size": 360000,
+        "sha256": "0a331ce17117f5948cf14a32ce6dc3ea36c5cb9d786a285630032f61245a0ad0"
+      },
+      {
+        "index": 34,
+        "part": "034.bin",
+        "start": 12240000,
+        "size": 360000,
+        "sha256": "6f185e1410f02d4a634363064e1036d016da4382103a9b37e04b4c6fa19b6c31"
+      },
+      {
+        "index": 35,
+        "part": "035.bin",
+        "start": 12600000,
+        "size": 360000,
+        "sha256": "a8e29a69ea73894b08a324cd2387fcece14afe83f8ac22fbeb2c3c130b05c40f"
+      },
+      {
+        "index": 36,
+        "part": "036.bin",
+        "start": 12960000,
+        "size": 360000,
+        "sha256": "03493f3f6d673af19060fac4c82ab74f7181a0ff8f64699108177c01fce6e2ee"
+      },
+      {
+        "index": 37,
+        "part": "037.bin",
+        "start": 13320000,
+        "size": 360000,
+        "sha256": "0fc29d0796451d63264b838427e86a470652691d459af5671899f03897be3702"
+      },
+      {
+        "index": 38,
+        "part": "038.bin",
+        "start": 13680000,
+        "size": 360000,
+        "sha256": "272a3742bda6192c797ae86ba551e19e70bbc1e7317049bd1b67197d561b9564"
+      },
+      {
+        "index": 39,
+        "part": "039.bin",
+        "start": 14040000,
+        "size": 360000,
+        "sha256": "c0f7ad64f68a90990f9f5c71a38e21bc68a22a57227c3a2139087881432926bf"
+      },
+      {
+        "index": 40,
+        "part": "040.bin",
+        "start": 14400000,
+        "size": 360000,
+        "sha256": "f65eb52f74a9f478d6fda7e25aed42760e83aeac804d3e475c05c1c92a22fdae"
+      },
+      {
+        "index": 41,
+        "part": "041.bin",
+        "start": 14760000,
+        "size": 360000,
+        "sha256": "93695f49f0729f46247e2cf7eb39d37f1131b89162dc3959fc14b02ad36fbdfd"
+      },
+      {
+        "index": 42,
+        "part": "042.bin",
+        "start": 15120000,
+        "size": 360000,
+        "sha256": "7d585a28be182b1867ce07f73aa64c7067ceb4341b9d4a307fdb058e0c9baf88"
+      },
+      {
+        "index": 43,
+        "part": "043.bin",
+        "start": 15480000,
+        "size": 194309,
+        "sha256": "cd07157f0c2533223d0809143ee368973274d50087a14260c1bb2d870975eaae"
+      }
+    ]
+  }
+}
