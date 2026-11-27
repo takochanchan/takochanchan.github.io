@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-25",
-  "updatedAt": "2026-11-26T02:52:51.221Z",
+  "endDate": "2026-11-26",
+  "updatedAt": "2026-11-27T02:53:14.549Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -9927,6 +9927,230 @@
       "slug": "espinosa-arricivita-chronica-1746-1792",
       "title": "ヌエバ・エスパーニャ布教学院年代記",
       "volumeLabel": "第2部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5ef3d9a6a530a13d",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.pdf",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_693c6b893ac9d0df",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_1_Japanese.epub",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_47225d4170c5b056",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.pdf",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d5e5fcdf778bea86",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_2_Japanese.epub",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_5d0000902b606b53",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.pdf",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第3巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_d851c4998ed47141",
+      "name": "Alegre_Bustamante_Jesuit_History_New_Spain_Vol_3_Japanese.epub",
+      "slug": "alegre-historia-compania-jesus-nueva-espana-1841-1842",
+      "title": "ヌエバ・エスパーニャのイエズス会史",
+      "volumeLabel": "第3巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7e4a92efe830d7f8",
+      "name": "Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.pdf",
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "title": "聖フアン・デ・ディオス病院修道会年代記",
+      "volumeLabel": "第1部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_42b302548c71a85c",
+      "name": "Santos_Chronologia_Hospitalaria_1715_Part_I_Japanese.epub",
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "title": "聖フアン・デ・ディオス病院修道会年代記",
+      "volumeLabel": "第1部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_c405e898c20437c6",
+      "name": "Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.pdf",
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "title": "聖フアン・デ・ディオス病院修道会年代記",
+      "volumeLabel": "第2部",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e3db91380c5205f6",
+      "name": "Santos_Chronologia_Hospitalaria_1716_Part_II_Japanese.epub",
+      "slug": "santos-chronologia-hospitalaria-1715-1716",
+      "title": "聖フアン・デ・ディオス病院修道会年代記",
+      "volumeLabel": "第2部",
+      "format": "epub"
+    },
+    {
+      "key": "dl_d83472c1246ef900",
+      "name": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.pdf",
+      "slug": "grijalva-cronica-san-augustin-nueva-espana-1624",
+      "title": "ヌエバ・エスパーニャのアウグスティヌス会年代記",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_092c7ae370185234",
+      "name": "Grijalva_Augustinian_History_New_Spain_1624_Japanese.epub",
+      "slug": "grijalva-cronica-san-augustin-nueva-espana-1624",
+      "title": "ヌエバ・エスパーニャのアウグスティヌス会年代記",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fb0ff102bbd9ad37",
+      "name": "Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.pdf",
+      "slug": "orozco-conjuracion-marques-del-valle-1853",
+      "title": "バジェ侯爵の陰謀",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_981251f3705f851d",
+      "name": "Orozco_Conjuracion_Marques_del_Valle_1853_Japanese.epub",
+      "slug": "orozco-conjuracion-marques-del-valle-1853",
+      "title": "バジェ侯爵の陰謀",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_4c4ba41d2a114e2a",
+      "name": "Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.pdf",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1585年グラナダ版",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_c2c64ef24e532912",
+      "name": "Constituciones_San_Juan_de_Dios_Granada_1585_Japanese.epub",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1585年グラナダ版",
+      "format": "epub"
+    },
+    {
+      "key": "dl_e5dc9bb25fe26eaa",
+      "name": "Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.pdf",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1612年マドリード版",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_853b817cc0ad6292",
+      "name": "Constituciones_San_Juan_de_Dios_Madrid_1612_Japanese.epub",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1612年マドリード版",
+      "format": "epub"
+    },
+    {
+      "key": "dl_33216a10b0b32f61",
+      "name": "Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.pdf",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1617年ローマ版",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_1ed11bfcbaac3e9b",
+      "name": "Constitutioni_San_Giovanni_di_Dio_Rome_1617_Japanese.epub",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1617年ローマ版",
+      "format": "epub"
+    },
+    {
+      "key": "dl_6ba46ef309b6c80f",
+      "name": "Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.pdf",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1774年メキシコ版",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_eb9f6a53c0267de5",
+      "name": "Regla_Constituciones_San_Juan_de_Dios_Mexico_1774_Japanese.epub",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1774年メキシコ版",
+      "format": "epub"
+    },
+    {
+      "key": "dl_6a19b628d7d6bc47",
+      "name": "Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.pdf",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1785年ローマ版",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_03b442c54d9c86ed",
+      "name": "Costituzioni_San_Giovanni_di_Dio_Rome_1785_Japanese.epub",
+      "slug": "san-juan-de-dios-constituciones",
+      "title": "聖フアン・デ・ディオス病院修道会の会憲",
+      "volumeLabel": "1785年ローマ版",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fb991923244fe8c8",
+      "name": "Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.pdf",
+      "slug": "cuggio-bullarium-hospitalaris-1724",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_e2bb3a5d3926182c",
+      "name": "Cuggio_Bullarium_Hospitalaris_Rome_1724_Japanese.epub",
+      "slug": "cuggio-bullarium-hospitalaris-1724",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_f90f227a8df96536",
+      "name": "Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf",
+      "slug": "sjd-decreti-apostolici-rome-1785",
+      "title": "使徒座憲令・教令集",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_08683cf0fe65a7e6",
+      "name": "Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
+      "slug": "sjd-decreti-apostolici-rome-1785",
+      "title": "使徒座憲令・教令集",
+      "volumeLabel": "",
       "format": "epub"
     }
   ],
