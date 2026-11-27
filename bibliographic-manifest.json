@@ -2318,6 +2318,25 @@
       "updatedDate": "2026-08-13"
     },
     {
+      "slug": "castro-juan-de-dios-1588",
+      "recordClass": "major-work",
+      "title": "フアン・デ・ディオスの生涯と病院創設史",
+      "originalTitle": "Historia de la vida y sanctas obras de Ioan de Dios, y de la institucion de su orden y principio de su hospital",
+      "author": "フランシスコ・デ・カストロ",
+      "originalAuthor": "Francisco de Castro",
+      "year": 1588,
+      "originalPublication": "Granada: en casa de Rene Rabut, 1588.",
+      "sourceEdition": "グラナダ、ルネ・ラビュ刊、1588年版。ランベルト・マタ図書館所蔵（FONS MATA 668）。第7章の原刊第18葉裏・第19葉表は底本画像にないため、同年刊の別個体の公開OCRに基づく補訳を巻末に収録。補記の原画像は未照合で、一部欠読。",
+      "sourceProvider": "リポイ、ランベルト・マタ図書館所蔵。ジローナ県図書館サービス公開。",
+      "rights": "原刊本文は著作権保護期間満了。ジローナ県図書館サービスが公開する底本画像はパブリック・ドメイン・マーク1.0。扉の木版はこの画像から採った。",
+      "publishedDate": "2026-11-27",
+      "updatedDate": "2026-11-27",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://bibgirona.cat/pandora/details.vm?lang=ca&q=id:0000000850"
+      }
+    },
+    {
       "slug": "castro-santa-anna-diario-1854-v4",
       "recordClass": "major-work",
       "title": "注目すべき出来事の日誌（第4巻）",

@@ -749,6 +749,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "castro-juan-de-dios-1588",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "フランシスコ・デ・カストロ",
+      "originalAuthor": "Francisco de Castro",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "castro-santa-anna-diario-1854-v4",
       "recordClass": "major-work",
       "searchShard": "002",

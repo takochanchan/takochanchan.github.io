@@ -2234,6 +2234,24 @@
       "sha256": "8bf92a18cebf47832f0a5e2a5cefd5ace08d69279c1379082665a05db92a5b7d"
     },
     {
+      "path": "publications/castro-juan-de-dios-1588/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub",
+      "size": 140468,
+      "sha256": "a1d03add859b51855fe4ed71fca60a47b0ef2cf15ddf82cd72175db99a09d187"
+    },
+    {
+      "path": "publications/castro-juan-de-dios-1588/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf",
+      "size": 1034160,
+      "sha256": "167fb7d3f353b5e3c7e76a0165d6d31a713340a20226c81d609d3e3c0196deeb"
+    },
+    {
+      "path": "publications/castro-juan-de-dios-1588/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/castro-juan-de-dios-1588/cover.jpg",
+      "size": 42581,
+      "sha256": "e569c891b6ab13b81811ca8af77d1e7df8fc69089989f0d44a86b57aa4ec1c4b"
+    },
+    {
       "path": "publications/castro-santa-anna-diario-1854-v4/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Jose_Manuel_de_Castro_Santa_Anna_Diario_1854_Vol4_Japanese_Complete_Translation.epub",
       "size": 250328,
