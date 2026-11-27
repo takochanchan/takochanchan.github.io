@@ -1,0 +1,198 @@
+{
+  "records": [
+    {
+      "slug": "parra-bulario-volume-1-1756",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集 第1巻",
+      "subtitle": "",
+      "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 1.",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "year": 1756,
+      "series": "BULARIO DE LA SAGRADA RELIGIÓN DE HOSPITALIDAD · 1756",
+      "originalPublication": "マドリード、フランシスコ・ハビエル・ガルシア印刷所、1756年。",
+      "description": "病者看護を担う修道会の初期認可から、会憲と両会衆の統治、病院の巡察・免除までを集めた教皇文書集。",
+      "types": [
+        "宗教史",
+        "修道会",
+        "医療史"
+      ],
+      "regions": [
+        "スペイン",
+        "イタリア",
+        "ポルトガル"
+      ],
+      "languages": [
+        "ラテン語",
+        "スペイン語"
+      ],
+      "tags": [
+        "聖フアン・デ・ディオス病院修道会",
+        "教皇文書",
+        "教会法",
+        "病人看護"
+      ],
+      "recordClass": "major-work",
+      "pdf": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "epub": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "cover": "publications/parra-bulario-volume-1-1756/cover.jpg",
+      "pageCount": 545,
+      "extent": "第1巻、日本語版PDF 545頁",
+      "figureCount": 0,
+      "plateCount": 1,
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "parra-bulario-volume-2-1757",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集 第2巻",
+      "subtitle": "",
+      "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 2.",
+      "author": "アロンソ・パラ・イ・コテ",
+      "originalAuthor": "Alonso Parra y Cote",
+      "year": 1757,
+      "series": "BULARIO DE LA SAGRADA RELIGIÓN DE HOSPITALIDAD · 1757",
+      "originalPublication": "マドリード、フランシスコ・ハビエル・ガルシア印刷所、扉1757年。底本は1760年の追加文書を含む。",
+      "description": "18世紀の選挙・管区統治、病者への秘跡、インディアスとフィリピンの病院をめぐる教令・総会議決。",
+      "types": [
+        "宗教史",
+        "修道会",
+        "医療史"
+      ],
+      "regions": [
+        "スペイン",
+        "イタリア",
+        "ポルトガル",
+        "メキシコ",
+        "中央アメリカ",
+        "カリブ海",
+        "南アメリカ",
+        "フィリピン",
+        "インド"
+      ],
+      "languages": [
+        "ラテン語",
+        "スペイン語"
+      ],
+      "tags": [
+        "聖フアン・デ・ディオス病院修道会",
+        "教皇文書",
+        "教会法",
+        "病人看護"
+      ],
+      "recordClass": "major-work",
+      "pdf": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "epub": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "cover": "publications/parra-bulario-volume-2-1757/cover.jpg",
+      "pageCount": 609,
+      "extent": "第2巻、日本語版PDF 609頁",
+      "figureCount": 0,
+      "plateCount": 0,
+      "releaseTag": "publications-002",
+      "searchShard": "003",
+      "seriesVolumeNumber": 2
+    }
+  ],
+  "metadata": {
+    "parra-bulario-volume-1-1756": {
+      "sourceEdition": "Alonso Parra y Cote. Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 1. Madrid: Francisco Xavier García, 1756.",
+      "sourceProvider": "ウェルカム・コレクション所蔵本。電子画像はInternet Archiveで公開。",
+      "sourceUrl": "https://archive.org/details/b30414490_0001",
+      "rights": "原著本文・原刊図版の著作権保護期間は満了。ウェルカム・コレクション所蔵の底本公開画像はパブリック・ドメイン・マーク1.0。 第1巻の口絵はこの公開画像を使用。",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28"
+    },
+    "parra-bulario-volume-2-1757": {
+      "sourceEdition": "Alonso Parra y Cote. Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 2. Madrid: Francisco Xavier García, 1757. 底本には1760年の小勅書などの追加文書がある。",
+      "sourceProvider": "ウェルカム・コレクション所蔵本。電子画像はInternet Archiveで公開。",
+      "sourceUrl": "https://archive.org/details/b30414490_0002",
+      "rights": "原著本文・原刊図版の著作権保護期間は満了。ウェルカム・コレクション所蔵の底本公開画像はパブリック・ドメイン・マーク1.0。 第2巻には底本画像の転載なし。",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28"
+    }
+  },
+  "overviews": {
+    "parra-bulario-volume-1-1756": "第1～36憲令。ピウス5世による病人看護の共同体の認可から、インノケンティウス12世期までの大勅書、小勅書、教令を収める。冒頭の献辞、刊行許可、文書目次とともに、教皇・国王らの在位年をたどる表も置かれる。初期の承認と会憲に続き、パウルス5世によるスペインとイタリアの会衆への措置、司祭の役職就任、修道規律の監督をめぐる決定が並ぶ。\n\nウルバヌス8世期の文書では、裁治権者が病院を巡察し会計を検査する際に手数料を取らないこと、すでに授けられた特権や他の修道会に認められた恩典との関係が論じられる。勅書本文だけでなく、執行を求める後続の文書や編者の注を収めており、許可が与えられたことと、その後どのような形で適用を求めたかを分けて読める。底本の口絵を掲載。本文の後で原刊索引の頁番号が309頁に戻るため、参照時は本文と索引を区別する。",
+    "parra-bulario-volume-2-1757": "第37～91憲令。18世紀の管区会議・総会・選挙、病者の告解と埋葬、免償などを扱う。ベネディクトゥス14世期の文書の一つは、禁域内の病棟や棄児養育所を訪れる条件を定める。1747年の総会議決とその追認は、監督が空席のときにリマ・メキシコ・パナマ・ゴアの四本院長が代理を務める手順を記す。1757年の総会ではマニラでの会士採用を認める措置と、財政をヌエバ・エスパーニャ側の管轄に残す扱いとが分かれる。受託病院への特権適用についても、使徒座の文書とインディアス評議会による施行の条件を区別できる。\n\n巻末にはラテラノ聖堂との連合の対象となった各地の病院・聖堂を掲げ、次の文書でアンテケラの誤記を除き、オアハカ、シウダー・レアル、ニカラグアのレオンなどを加える。この一覧は免償の対象を示すもので、運営中の病院すべての統計ではない。扉は1757年刊とするが、底本には1760年の証明・価格査定、マニラの礼拝に関する同年の小勅書と、編者の「末尾注意」まで残る。"
+  },
+  "assets": [
+    {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "size": 5694981,
+      "sha256": "6fed3f963bdd44c9bcefe0b185a146ad8046ebfa2aaac6ff36d164a345d2e4d0"
+    },
+    {
+      "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "size": 5181224,
+      "sha256": "7e806fe4034b636265274ea8d835c3439fd853b5a864d588bee208d92a1e9342"
+    },
+    {
+      "path": "publications/parra-bulario-volume-1-1756/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/parra-bulario-volume-1-1756/cover.jpg",
+      "size": 42212,
+      "sha256": "7fd50516dafc9b12974f4a176ae79a04f4dcacbe2f468890e953e7abe6faee37"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "size": 5411376,
+      "sha256": "303e53516dc815ddd6c2152a4d9a5a13ff09b3dc3c48c1677678e0d1ba4cf707"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "size": 551595,
+      "sha256": "3b5e21730eb2c0b8e56ef023b8e4fd6c841bfdf2f07cbc377009d90230a5b700"
+    },
+    {
+      "path": "publications/parra-bulario-volume-2-1757/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/parra-bulario-volume-2-1757/cover.jpg",
+      "size": 42175,
+      "sha256": "b73e56fbb3bb59f6dbf78865dc63fededfa3c569ca4b4a233fd7758579cdc6cd"
+    }
+  ],
+  "group": {
+    "slug": "parra-bulario-1756-1757",
+    "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+    "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias",
+    "author": "アロンソ・パラ・イ・コテ",
+    "originalAuthor": "Alonso Parra y Cote",
+    "memberSlugs": [
+      "parra-bulario-volume-1-1756",
+      "parra-bulario-volume-2-1757"
+    ],
+    "seriesVolumeCount": 2,
+    "groupOverviewLabel": "全体の詳細概要",
+    "volumeLabels": [
+      "第1巻",
+      "第2巻"
+    ],
+    "subtitle": "",
+    "series": "BULARIO DE LA SAGRADA RELIGIÓN DE HOSPITALIDAD",
+    "year": 1756,
+    "originalPublication": "マドリード、フランシスコ・ハビエル・ガルシア印刷所、1756–1757年（全2巻）。",
+    "description": "聖フアン・デ・ディオス病院修道会の認可、病院運営と管区統治に関わる教皇文書・教令集。",
+    "sourceEdition": "Alonso Parra y Cote, Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Madrid: Francisco Xavier García, 1756–1757, 2 tomos.",
+    "sourceProvider": "ウェルカム・コレクション所蔵本。電子画像はInternet Archiveで公開。",
+    "sourceUrl": "https://archive.org/details/b30414490_0001",
+    "rights": "原著本文・原刊図版の著作権保護期間は満了。ウェルカム・コレクション所蔵の底本公開画像はパブリック・ドメイン・マーク1.0。 第1巻の口絵を掲載。",
+    "groupOverview": "アロンソ・パラ・イ・コテが、聖フアン・デ・ディオス病院修道会に関わる使徒座の文書を集成し、ラテン語正文とスペイン語訳に編者の注を添えた全2巻。病者看護を担う共同体がどのように修道会として認められ、病院と聖堂を運営する権限を得たかが、教皇の文書、聖省の決定、総会議事録などからたどれる。創設者や会士の生涯を語る年代記とは異なり、司教・小教区・在俗の病院管理者との間で、巡察、会計、告解、葬儀などの権限がどう分けられたかを記す。\n\n第1巻はピウス5世による初期の認可から始まり、会憲、スペイン・イタリア両会衆、病院の巡察や免除の法的な枠組みを示す。第2巻はそれを継ぎ、会内の選挙と管区統治を扱う。リマ・メキシコ・パナマ・ゴアの本院をめぐる規定や、マニラでの会士採用と財政管轄を区別する議決には、同じ会でも地域により統治が異なることが表れる。両巻でラテン語と原刊スペイン語をそれぞれ訳し、食い違いを残した。第2巻の扉には1757年とあるが、底本は製本前に加えられた1760年の小勅書も収める。",
+    "publishedDate": "2026-11-28",
+    "updatedDate": "2026-11-28",
+    "seriesVolumes": [
+      {
+        "number": 1,
+        "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 1.",
+        "sourceUrl": "https://archive.org/details/b30414490_0001"
+      },
+      {
+        "number": 2,
+        "originalTitle": "Bulario de la sagrada Religión de Hospitalidad de N. P. S. Juan de Dios, con utilísimas reflexiones y advertencias. Parte 2.",
+        "sourceUrl": "https://archive.org/details/b30414490_0002"
+      }
+    ]
+  },
+  "archive_commit": "bc7ec1b4d4dbb0ac8737eb6a5234339e1a14619a"
+}
