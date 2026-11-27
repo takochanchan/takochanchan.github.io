@@ -1,0 +1,49 @@
+{
+  "verified_archive_commit": "86491c13ec7788e6c1885fed3f65c03c1d0eba5c",
+  "slugs": [
+    "sjd-decreti-apostolici-rome-1785"
+  ],
+  "bundle": {
+    "size": 810184,
+    "sha256": "fa4a847b42ee26577448ab6e24b1f956cb595ba4c61a8ad2b9caf056a61d321b",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "size": 360000,
+        "sha256": "bd91aa677b644920e277dc8e9f2125928ae006ad18d3a48ce95898d67ff1564d"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "size": 360000,
+        "sha256": "ed853745121bae61e51ef9836dba197955ea8a886d1cf944d19056121b7ee436"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "size": 90184,
+        "sha256": "bddb4a8fae091397e876502399ae9a1f860f3c6e2e99692cefa5ac1d195b8e05"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/sjd-decreti-apostolici-rome-1785/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf",
+      "size": 760384,
+      "sha256": "078319d1a0af8530e5d46d910c0cf855eb9b1904012a03a72183342552af98e3",
+      "filename": "Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.pdf"
+    },
+    {
+      "path": "publications/sjd-decreti-apostolici-rome-1785/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
+      "size": 99991,
+      "sha256": "9c55687a910562d92f11b0b951399ff17baec16e2ca17673890dc75c1391ccd7",
+      "filename": "Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub"
+    }
+  ]
+}
