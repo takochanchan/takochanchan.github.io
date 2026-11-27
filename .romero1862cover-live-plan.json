@@ -1,0 +1,49 @@
+{
+  "archive_commit": "f9ac7b0c79d7b75526e60b86469e2fa000ed4d38",
+  "group": {
+    "slug": "romero-michoacan-diocesan-history-1862",
+    "title": "ミチョアカン司教区の歴史と統計のための資料",
+    "author": "ホセ・グアダルーペ・ロメロ",
+    "originalTitle": "Noticias para formar la historia y la estadística del obispado de Michoacán",
+    "rights": "原著および1863年の原図は米国でパブリックドメイン。司教区図・ミチョアカン州図は、米国議会図書館所蔵本の公開画像（同館が認識する著作権上の制限なし）。グアナフアト州図はヌエボ・レオン自治大学所蔵本の全開図（個別のライセンス表示は確認できず）。画像出典：司教区図 https://archive.org/details/noticiasparaform00rome/page/n8/mode/1up 、ミチョアカン州図 https://archive.org/details/noticiasparaform00rome/page/n165/mode/1up 、グアナフアト州図 https://cdigital.cabu.uanl.mx/ffdr/1/1020000296/1020000296_024.pdf#page=5 。"
+  },
+  "records": [
+    {
+      "slug": "romero-michoacan-diocesan-history-1862",
+      "pageCount": 414,
+      "pdf": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf"
+    }
+  ],
+  "assets": [
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "size": 10910471,
+      "sha256": "f534ffaabf60669558eb6913715c7859a0474ea2c80a8a3b70339d7ecb7b7b46",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.epub",
+      "old_sha256": "973039d0b3a287716c5d0e7331611ae054849055b16dcac2584fb2f8a95fa74c"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "size": 6132762,
+      "sha256": "e680960bd760f10b3ad0e307316e1b6a5799a0325ab4cbc1019c562bff09f3a4",
+      "filename": "Romero_Michoacan_Diocesan_History_and_Statistics_1862_Japanese.pdf",
+      "old_sha256": "aa9a107b71fc70d644e3765a7cb8e756ec3c22de5c4c0644427aabeee7bb6468"
+    },
+    {
+      "path": "publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/romero-michoacan-diocesan-history-1862/cover.jpg",
+      "size": 90361,
+      "sha256": "1873333f32f34b73033b3f643f57c467cbdfdaaf234b992c9fa13b6e18d55c14",
+      "filename": "cover.jpg"
+    }
+  ],
+  "metadata": {
+    "romero-michoacan-diocesan-history-1862": {
+      "sourceUrl": "https://archive.org/details/noticiasparaform00rome",
+      "rights": "原著および1863年の原図は米国でパブリックドメイン。司教区図・ミチョアカン州図は、米国議会図書館所蔵本の公開画像（同館が認識する著作権上の制限なし）。グアナフアト州図はヌエボ・レオン自治大学所蔵本の全開図（個別のライセンス表示は確認できず）。画像出典：司教区図 https://archive.org/details/noticiasparaform00rome/page/n8/mode/1up 、ミチョアカン州図 https://archive.org/details/noticiasparaform00rome/page/n165/mode/1up 、グアナフアト州図 https://cdigital.cabu.uanl.mx/ffdr/1/1020000296/1020000296_024.pdf#page=5 。"
+    }
+  },
+  "cover_sha256": "1873333f32f34b73033b3f643f57c467cbdfdaaf234b992c9fa13b6e18d55c14"
+}
