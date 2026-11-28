@@ -50,7 +50,10 @@ const prefixScriptVersion = createHash("sha256")
   .update(await readFile(path.join(projectRoot, "src/fulltext-prefix-search.mjs")))
   .digest("hex")
   .slice(0, 12);
-const catalogueScriptVersion = `${assetVersion}-spelling-20261014`;
+const catalogueScriptVersion = createHash("sha256")
+  .update(await readFile(path.join(projectRoot, "src/archive.js")))
+  .digest("hex")
+  .slice(0, 12);
 const analyticsVersion = "20261014-ga4-v1";
 catalogueFiles(publications); // Validate stable analytics IDs before publishing.
 validatePublicationOverviews(publications);
@@ -498,6 +501,8 @@ ${header()}
             <label for="filter-era">年代</label>
             <select id="filter-era">
               <option value="">すべての年代</option>
+              <option value="15世紀以前">15世紀以前</option>
+              <option value="16世紀">16世紀</option>
               <option value="17世紀">17世紀</option>
               <option value="18世紀">18世紀</option>
               <option value="19世紀前半">19世紀前半</option>

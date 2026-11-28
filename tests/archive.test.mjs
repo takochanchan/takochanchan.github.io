@@ -3274,3 +3274,41 @@ test("Mexico a traves de los siglos keeps five original volumes in one bibliogra
   assert.match(page, /Mexico_a_traves_de_los_siglos_I_Japanese\.epub/);
   assert.doesNotMatch(page, /史料集全体の詳細概要/);
 });
+
+test("catalogue era filter separates sixteenth-century material from the seventeenth century", async () => {
+  const source = await readFile(path.join(dist, "archive.js"), "utf8");
+  const yearStart = source.indexOf("const catalogueYearForSort =");
+  const eraStart = source.indexOf("const eraFor =", yearStart);
+  const eraEnd = source.indexOf("\n  };", eraStart);
+  assert.ok(yearStart >= 0 && eraStart > yearStart && eraEnd > eraStart);
+  const eraFor = Function(source.slice(yearStart, eraEnd + 5) + "\nreturn eraFor;")();
+
+  const expected = [
+    ["de-la-cruz-badiano-libellus-1552", 1552],
+    ["galvao-tratado-descobrimentos-1563", 1563],
+    ["benzoni-historia-mondo-nuovo-1565-ja", 1565],
+    ["historia-tolteca-chichimeca", "16世紀"],
+  ];
+  for (const [slug, year] of expected) {
+    const item = cataloguePublications.find((record) => record.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.year, year);
+    assert.equal(eraFor(item.year), "16世紀");
+    assert.notEqual(eraFor(item.year), "17世紀");
+  }
+  assert.equal(eraFor(1499), "15世紀以前");
+  assert.equal(eraFor(1500), "16世紀");
+  assert.equal(eraFor(1599), "16世紀");
+  assert.equal(eraFor(1600), "17世紀");
+  assert.equal(eraFor("1601–1615"), "17世紀");
+  assert.equal(eraFor(1619), "17世紀");
+  assert.equal(eraFor(1700), "18世紀");
+  assert.equal(eraFor("年代不明"), "");
+
+  const html = await readFile(path.join(dist, "index.html"), "utf8");
+  const control = html.match(/<select id="filter-era">([\s\S]*?)<\/select>/u);
+  assert.ok(control);
+  assert.match(control[1], /<option value="16世紀">16世紀<\/option>\s*<option value="17世紀">17世紀<\/option>/u);
+  const hash = createHash("sha256").update(source).digest("hex").slice(0, 12);
+  assert.ok(html.includes(`/archive.js?v=${hash}`), "filter script cache key includes the source hash");
+});

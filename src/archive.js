@@ -191,11 +191,14 @@
   };
 
   const eraFor = (year) => {
-    if (!Number.isInteger(year)) return "";
-    if (year < 1700) return "17世紀";
-    if (year < 1800) return "18世紀";
-    if (year < 1850) return "19世紀前半";
-    if (year < 1900) return "19世紀後半";
+    const catalogueYear = catalogueYearForSort(year);
+    if (!Number.isInteger(catalogueYear)) return "";
+    if (catalogueYear < 1500) return "15世紀以前";
+    if (catalogueYear < 1600) return "16世紀";
+    if (catalogueYear < 1700) return "17世紀";
+    if (catalogueYear < 1800) return "18世紀";
+    if (catalogueYear < 1850) return "19世紀前半";
+    if (catalogueYear < 1900) return "19世紀後半";
     return "20世紀初頭";
   };
 
