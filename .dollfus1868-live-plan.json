@@ -1,0 +1,72 @@
+{
+  "archive_commit": "671c3532c1c4a231cee489cb1b86a961620f2627",
+  "record": {
+    "slug": "dollfus-mont-serrat-voyage-geologique-1868",
+    "title": "グアテマラ・エルサルバドル地質踏査",
+    "originalTitle": "Voyage géologique dans les républiques de Guatemala et de Salvador",
+    "author": "オーギュスト・ドルフュス、ウジェーヌ・ド・モン＝セラ",
+    "originalAuthor": "Auguste Dollfus, Eugène de Mont-Serrat",
+    "year": 1868,
+    "series": "",
+    "originalPublication": "1868年、パリ、帝国印刷局刊。",
+    "description": "ラ・ウニオンからグアテマラ高地までの踏査をもとに、地形・気候、岩石の分布、火山活動と地震を調べた報告書。",
+    "types": [
+      "地理",
+      "地質",
+      "旅行記"
+    ],
+    "regions": [
+      "グアテマラ",
+      "エルサルバドル"
+    ],
+    "languages": [
+      "フランス語"
+    ],
+    "tags": [
+      "中央アメリカ",
+      "火山",
+      "地震",
+      "気象",
+      "地質図",
+      "イサルコ火山",
+      "フエゴ火山"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.pdf",
+    "epub": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.epub",
+    "cover": "publications/dollfus-mont-serrat-voyage-geologique-1868/cover.jpg",
+    "pageCount": 592,
+    "extent": "1冊、日本語版PDF 592頁",
+    "figureCount": 0,
+    "plateCount": 18,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "sourceEdition": "Auguste Dollfus et Eugène de Mont-Serrat, Voyage géologique dans les républiques de Guatemala et de Salvador. Paris: Imprimerie impériale, 1868. Naturalis 生物多様性センター所蔵本 NAT117926949。",
+    "sourceProvider": "Naturalis 生物多様性センター所蔵本を Biodiversity Heritage Library（BHL Europe）が公開。同一個体は Internet Archive と Wikimedia Commons でも閲覧可能。",
+    "sourceUrl": "https://field.biodiversitylibrary.org/bibliography/120007",
+    "rights": "1868年刊の原著本文と図版はパブリックドメイン。BHLはこの所蔵本を Public domain と表示し、パブリックドメイン原本のデジタル化に新たな著作権を主張していない。図版は同じ個体による。利用条件：https://about.biodiversitylibrary.org/help/copyright-and-reuse/　画像出典：https://archive.org/details/voyagegeologiqu00doll",
+    "publishedDate": "2026-11-28",
+    "updatedDate": "2026-11-28",
+    "overview": "フランスのメキシコ・中央アメリカ科学調査の一環として、ドルフュスとモン＝セラがエルサルバドルとグアテマラで行った調査をまとめた報告書。第1編ではラ・ウニオンからサン・ミゲル、サン・サルバドル、ソンソナテを経てグアテマラへ進み、首都、アンティグア、ベラパスのコバン、ロス・アルトスのケツァルテナンゴを訪れる。地質の観察だけでなく、街道、町の暮らしや産業についても記す。\n\n第2編は、中央山脈の太平洋側と大西洋側を比べ、分水界、河川、湖沼の位置を整理する。標高に応じた暑熱地・温暖地・寒冷地の相違を述べ、気温、降雨、風、気圧の変動などを観測値で示す。第3編では地域別の踏査に基づき、火成岩と堆積岩の分布、年代や形成過程を論じる。地層や地形の観察から地域の隆起史を組み立てる議論には、19世紀当時の地質学の用語と推論が反映されている。\n\n第4編はコスタリカとニカラグアの火山を概観した後、調査対象の二国に戻る。サン・ミゲル、イサルコ、パカヤ、アグア、フエゴ、アティトランなどを取り上げ、噴火の記録、溶岩や火口の観察、温泉や噴気地帯の分析を並べる。地震については頻度と被害を検討し、噴火との関係も論じる。巻末の経路表は地点間の道のりや標高を整理しており、図版の地質図・断面図・火山景観とともに、観測した場所と本文の議論をたどる手がかりになる。"
+  },
+  "assets": [
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.pdf",
+      "size": 43782717,
+      "sha256": "48bca694dbc1ce3ba1942f9f2a189773f3478b9c0d8ea22e9ebabb57beacb9ad",
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.epub",
+      "size": 40462521,
+      "sha256": "fa8b2a76e09c2a93dd78960eac93d40d658db3c6db5d8ce7c71b26772a615a00",
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.epub"
+    },
+    {
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dollfus-mont-serrat-voyage-geologique-1868/cover.jpg",
+      "size": 52561,
+      "sha256": "fcfd3dee37190c95e73771ed211225766eeb8aa6f17d9883598c83010286f032"
+    }
+  ]
+}
