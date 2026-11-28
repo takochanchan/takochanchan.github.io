@@ -3027,6 +3027,14 @@
       "searchShard": "001"
     },
     {
+      "slug": "rea-michoacan-1643",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "アロンソ・デ・ラ・レア",
+      "originalAuthor": "Alonso de la Rea",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "reclus-panama-darien-1881",
       "recordClass": "major-work",
       "searchShard": "002"

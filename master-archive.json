@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "f9ac7b0c79d7b75526e60b86469e2fa000ed4d38",
+  "archive_commit": "e95971a2d2978715d5e8fc4734b7dc65c52235a8",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -439,6 +439,7 @@
     "rabasa-estado-chiapas-1895": "publications/rabasa-estado-chiapas-1895/master.docx",
     "ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861": "publications/ramirez-aparicio-los-conventos-suprimidos-en-mejico-1861/master.docx",
     "rau-palenque-tablet-1879": "publications/rau-palenque-tablet-1879/master.docx",
+    "rea-michoacan-1643": "publications/rea-michoacan-1643/master.docx",
     "reclus-panama-darien-1881": "publications/reclus-panama-darien-1881/master.docx",
     "remesal-historia-general-1619": "publications/remesal-historia-general-1619/master.md",
     "reynaud-perigny-honnorat-interets-mexique-1914": "publications/reynaud-perigny-honnorat-interets-mexique-1914/master.md",

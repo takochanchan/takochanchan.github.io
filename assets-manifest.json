@@ -8954,6 +8954,24 @@
       "sha256": "3906db1c7557b94ee94c9d831c268a55e999f20e58ba20a9e7147b2834640618"
     },
     {
+      "path": "publications/rea-michoacan-1643/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.epub",
+      "size": 3869819,
+      "sha256": "dba2209552cceecfe6e6c8abbc262f54f7e6cba9c0d585a1b718a4c32679044d"
+    },
+    {
+      "path": "publications/rea-michoacan-1643/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.pdf",
+      "size": 3454499,
+      "sha256": "3b6294298f546e627ff836ee65f92f7a922866bd9de6891bc9d311b19f92c880"
+    },
+    {
+      "path": "publications/rea-michoacan-1643/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/rea-michoacan-1643/cover.jpg",
+      "size": 41106,
+      "sha256": "cfb1050bf2fce04b68f8afebf534ae47a06e5af66c7e13d62fc00083c28ec1c7"
+    },
+    {
       "path": "publications/reclus-panama-darien-1881/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Armand_Reclus_Panama_et_Darien_1881_Japanese_Complete_Translation.epub",
       "size": 26685416,

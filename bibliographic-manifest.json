@@ -9572,6 +9572,25 @@
       "updatedDate": "2026-07-28"
     },
     {
+      "slug": "rea-michoacan-1643",
+      "recordClass": "major-work",
+      "title": "ミチョアカンのフランシスコ会年代記",
+      "originalTitle": "Chronica de la Orden de N. seraphico P. S. Francisco, provincia de S. Pedro y S. Pablo de Mechoacan en la Nueva España",
+      "author": "アロンソ・デ・ラ・レア",
+      "originalAuthor": "Alonso de la Rea",
+      "year": 1643,
+      "originalPublication": "メキシコ、ベルナルド・カルデロンの未亡人の印刷所、1643年（標題紙の1639年は献辞の年）。",
+      "sourceEdition": "México: Viuda de Bernardo Calderón, 1643. ジョン・カーター・ブラウン図書館所蔵 [R] BA643 .R281c。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本をInternet Archiveで公開。メキシコ国立図書館所蔵の同版（RSM 1643 M4REA、https://repositorio.unam.mx/368）は本文照合のみ。",
+      "rights": "原刊本文はパブリックドメイン。標題と巻末紋章の木版2点は底本から切り抜き。公開機関の画像利用条件はCC BY 4.0（https://jcblibrary.org/permissions/）。Courtesy of the John Carter Brown Library. 照合版の公開画像（CC BY-NC-ND 4.0）は不使用。",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/chronicadelaorde00reaa"
+      }
+    },
+    {
       "slug": "reclus-panama-darien-1881",
       "recordClass": "major-work",
       "title": "パナマとダリエン",
