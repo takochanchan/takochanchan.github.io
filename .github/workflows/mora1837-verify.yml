@@ -1,0 +1,34 @@
+name: Verify Mora 1837 search and publication
+on:
+  push:
+    branches: [agent/mora1837-verify-20261128]
+    paths: [.mora1837-live-plan.json]
+permissions:
+  contents: read
+jobs:
+  search-maps:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - run: python3 .mora1837-verify.py maps && npm run verify:remote-search
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mora1837-map-verification
+          path: mora1837-verification.json
+  live-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: python3 .mora1837-verify.py live
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mora1837-live-readback
+          path: mora1837-verification.json
