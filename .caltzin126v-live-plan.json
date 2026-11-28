@@ -1,0 +1,87 @@
+{
+  "archive_commit": "e3e79e480527ad367930ba5614316fea55751028",
+  "record": {
+    "slug": "codice-chimalpahin-volumen-3",
+    "title": "コーデックス・チマルパイン 第3巻――歴史史料集",
+    "originalTitle": "Códice Chimalpahin, volumen 3",
+    "subtitle": "原冊 f.1r–202v・全15史料 日本語全訳・訳注版",
+    "author": "ドミンゴ・デ・サン・アントン・ムニョン・チマルパイン（編）",
+    "series": "CÓDICE CHIMALPAHIN · VOLUMEN 3",
+    "originalPublication": "ヌエバ・エスパーニャ、16–17世紀、写本集成（未刊）",
+    "year": 1600,
+    "extent": "PDF 416頁・原冊 f.1r–202v（404本文面）・全15史料・原冊葉標識251件・第15史料紙面 p.50–77併記28件",
+    "description": "チマルパインが編纂した『コーデックス・チマルパイン』第3巻の全15史料の日本語訳。メシカの移住・建都・王統・征服、諸都市の歴史と系譜を中心に、ミチュアカンの法務文書、カルツィンのプルペチャ語覚書、書簡、神学・霊修断片を原冊順に収録する。",
+    "cover": "publications/codice-chimalpahin-volumen-3/cover.jpg",
+    "pdf": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+    "epub": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+    "pageCount": 416,
+    "figureCount": 0,
+    "plateCount": 0,
+    "types": [
+      "史料集",
+      "年代記",
+      "写本",
+      "一次史料"
+    ],
+    "regions": [
+      "メキシコ",
+      "新スペイン",
+      "メキシコ盆地",
+      "ミチュアカン"
+    ],
+    "languages": [
+      "ナワトル語",
+      "スペイン語",
+      "ラテン語",
+      "プルペチャ語"
+    ],
+    "tags": [
+      "メシカ",
+      "テノチティトラン",
+      "テツココ",
+      "系譜",
+      "法務文書",
+      "Códice Chimalpahin",
+      "写本集成",
+      "16世紀",
+      "17世紀",
+      "メルチョル・カルツィン",
+      "プルペチャ語"
+    ],
+    "sourceEdition": "Instituto Nacional de Antropología e Historia, Biblioteca Nacional de Antropología e Historia所蔵『Códice Chimalpahin』第3巻、原冊 f.1r–203r、デジタル画像418点。翻訳対象本文は f.1r–202vの404面。",
+    "sourceProvider": "Instituto Nacional de Antropología e Historia（INAH）公式サイトが公開する第3巻原本画像を本文底本とし、現行綴じの全15史料を原冊順に転記・校合した。後代写本・近代校訂版・既刊外国語訳は、判読不能箇所、欠葉、異綴り、移配、異読の照合に限って用い、日本語本文の重訳元にはしていない。INAH原本画像は日本語版へ転載していない。",
+    "sourceUrl": "https://www.codicechimalpahin.inah.gob.mx/visualizador/volumen_3/index.php",
+    "rights": "16–17世紀の原著本文は著作権保護期間を満了したパブリックドメイン資料です。本文の転記・校合に用いたINAH公開のCódice Chimalpahin原本画像はCC BY-NC-ND 4.0で提供されていますが、本版には当該画像を転載していません。日本語翻訳・校訂・組版には再利用ライセンスを設定していません。",
+    "publishedDate": "2026-08-14",
+    "updatedDate": "2026-11-28",
+    "overview": "『コーデックス・チマルパイン』第3巻の全15史料を、メキシコ国立人類学歴史学研究所（INAH）所蔵原冊の綴じ順に収める。ナワトル語・スペイン語を中心に、プルペチャ語の覚書、スペイン語とラテン語を含む神学・霊修断片もある。チマルパインだけが書いた通史ではなく、異なる書き手と用途の文書を含む。\n\n冒頭の年代記群と『メシカヨトル年代記』では、アストランやチコモストクからの出立、神々を担う一行、各地での滞在や対立、コルワカンへの庇護の要請、テノチティトラン建設をたどる。王統記事と系譜は、モテクソマ、トラカエレル、アウィツォトルらの継承だけでなく、婚姻・出産・養育を通してテノチティトラン、トラテロルコ、テツココ、コルワカンの支配家が結びつく様子を伝える。ガブリエル・デ・アヤラの記事を写したことの明記や、チマルパインが挙げる異説・異なる年数えからは、語りの出所を比べながら書き留める過程が見える。\n\n法務文書ではミチュアカンのウィツィメンガリ家が王令の履行と年金を求める手続、貢納者数や鉱山向けの扶養配賦を読むことができる。第9史料は1543年のメルチョル・カルツィンのプルペチャ語覚書である。現存するのはツィンツンツァンの絵文書そのものではなく、それに基づく文字記録であり、領主の家の由来と証言の手続を語る。これは第11史料のテツココ征服関係記録とは別の文書である。フアン・デ・サン・アントニオの書簡、巻末の別筆の霊修ノートも、それぞれの語り手と残存範囲を明示して収める。"
+  },
+  "assets": [
+    {
+      "path": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "size": 313829,
+      "sha256": "2d43f997dc56d220337356c1e52061badbeb9d43247e8330780c0b87e9955195",
+      "filename": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "old_sha256": "382cc41506de5f8eb5909f16862be2cb6d1b2f3b5f19c80b573233d188225873"
+    },
+    {
+      "path": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "size": 4778973,
+      "sha256": "5b10690242cbd6c4477cbd5e2aa7fab64232560c8ae8ab35b3901dc86dfbfeae",
+      "filename": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "old_sha256": "58831a7d6724ac96c45f96d29ba315125422340501bc49fec029ec16ab6c7bf5"
+    },
+    {
+      "path": "publications/codice-chimalpahin-volumen-3/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/codice-chimalpahin-volumen-3/cover.jpg",
+      "size": 36479,
+      "sha256": "3760cc1810dbb44ea6a0c77496907662caa0db134f3618b956181780e453706d",
+      "filename": "cover.jpg"
+    }
+  ],
+  "overview": "『コーデックス・チマルパイン』第3巻の全15史料を、メキシコ国立人類学歴史学研究所（INAH）所蔵原冊の綴じ順に収める。ナワトル語・スペイン語を中心に、プルペチャ語の覚書、スペイン語とラテン語を含む神学・霊修断片もある。チマルパインだけが書いた通史ではなく、異なる書き手と用途の文書を含む。\n\n冒頭の年代記群と『メシカヨトル年代記』では、アストランやチコモストクからの出立、神々を担う一行、各地での滞在や対立、コルワカンへの庇護の要請、テノチティトラン建設をたどる。王統記事と系譜は、モテクソマ、トラカエレル、アウィツォトルらの継承だけでなく、婚姻・出産・養育を通してテノチティトラン、トラテロルコ、テツココ、コルワカンの支配家が結びつく様子を伝える。ガブリエル・デ・アヤラの記事を写したことの明記や、チマルパインが挙げる異説・異なる年数えからは、語りの出所を比べながら書き留める過程が見える。\n\n法務文書ではミチュアカンのウィツィメンガリ家が王令の履行と年金を求める手続、貢納者数や鉱山向けの扶養配賦を読むことができる。第9史料は1543年のメルチョル・カルツィンのプルペチャ語覚書である。現存するのはツィンツンツァンの絵文書そのものではなく、それに基づく文字記録であり、領主の家の由来と証言の手続を語る。これは第11史料のテツココ征服関係記録とは別の文書である。フアン・デ・サン・アントニオの書簡、巻末の別筆の霊修ノートも、それぞれの語り手と残存範囲を明示して収める。",
+  "leaf": "9　メルチョル・カルツィンの覚書（原冊 f. 126v／プルペチャ語）",
+  "shard": "001"
+}
