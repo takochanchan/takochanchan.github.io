@@ -3919,6 +3919,25 @@
       }
     },
     {
+      "slug": "fernandez-guardia-talamanca-1918",
+      "recordClass": "major-work",
+      "title": "タラマンカ史概説",
+      "originalTitle": "Reseña histórica de Talamanca",
+      "author": "リカルド・フェルナンデス・グアルディア",
+      "originalAuthor": "Ricardo Fernández Guardia",
+      "year": 1918,
+      "originalPublication": "1918年、サン・ホセ、アルシナ印刷・書籍・製本所刊。",
+      "sourceEdition": "Ricardo Fernández Guardia, Reseña histórica de Talamanca. San José: Imprenta, Librería y Encuadernación Alsina, 1918. コスタリカ国立図書館所蔵本。",
+      "sourceProvider": "コスタリカ全国図書館システム（SINABI）。",
+      "rights": "1918年刊の原著本文はパブリックドメイン。SINABI公開のデジタル本には画像固有の利用許諾表示がなく、日本語版に底本画像は転載していない。",
+      "publishedDate": "2026-11-29",
+      "updatedDate": "2026-11-29",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.sinabi.go.cr/biblioteca%20digital/libros%20completos/fernandez%20guardia%20ricardo/Resena%20historica%20de%20Talamanca_Fernandez%20Guardia%2C%20Ricardo.pdf"
+      }
+    },
+    {
       "slug": "fernandez-historia-costa-rica-1889",
       "recordClass": "major-work",
       "title": "スペイン統治下のコスタリカ史",

@@ -1248,6 +1248,14 @@
       "searchShard": "002"
     },
     {
+      "slug": "fernandez-guardia-talamanca-1918",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "リカルド・フェルナンデス・グアルディア",
+      "originalAuthor": "Ricardo Fernández Guardia",
+      "releaseTag": "publications-002"
+    },
+    {
       "slug": "fernandez-historia-costa-rica-1889",
       "recordClass": "major-work",
       "searchShard": "001"

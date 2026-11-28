@@ -1,0 +1,58 @@
+export const talamanca1918Records = [
+  {
+    "slug": "fernandez-guardia-talamanca-1918",
+    "title": "タラマンカ史概説",
+    "originalTitle": "Reseña histórica de Talamanca",
+    "author": "リカルド・フェルナンデス・グアルディア",
+    "originalAuthor": "Ricardo Fernández Guardia",
+    "year": 1918,
+    "series": "",
+    "originalPublication": "1918年、サン・ホセ、アルシナ印刷・書籍・製本所刊。",
+    "description": "コスタリカ南東部のタラマンカを中心に、先住諸民族の暮らしと抵抗、スペインの植民・布教、独立後の統治と国境紛争をたどる地域史。",
+    "types": [
+      "歴史書",
+      "地誌"
+    ],
+    "regions": [
+      "コスタリカ",
+      "パナマ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "中央アメリカ",
+      "タラマンカ",
+      "ブリブリ",
+      "カベカル",
+      "フランシスコ会",
+      "先住民",
+      "国境"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/fernandez-guardia-talamanca-1918/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.pdf",
+    "epub": "publications/fernandez-guardia-talamanca-1918/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.epub",
+    "cover": "publications/fernandez-guardia-talamanca-1918/cover.jpg",
+    "pageCount": 144,
+    "extent": "1冊、日本語版PDF 144頁",
+    "figureCount": 0,
+    "plateCount": 0,
+    "releaseTag": "publications-002",
+    "searchShard": "003"
+  }
+];
+
+export const talamanca1918Metadata = {
+  "fernandez-guardia-talamanca-1918": {
+    "sourceEdition": "Ricardo Fernández Guardia, Reseña histórica de Talamanca. San José: Imprenta, Librería y Encuadernación Alsina, 1918. コスタリカ国立図書館所蔵本。",
+    "sourceProvider": "コスタリカ全国図書館システム（SINABI）。",
+    "sourceUrl": "https://www.sinabi.go.cr/biblioteca%20digital/libros%20completos/fernandez%20guardia%20ricardo/Resena%20historica%20de%20Talamanca_Fernandez%20Guardia%2C%20Ricardo.pdf",
+    "rights": "1918年刊の原著本文はパブリックドメイン。SINABI公開のデジタル本には画像固有の利用許諾表示がなく、日本語版に底本画像は転載していない。",
+    "publishedDate": "2026-11-29",
+    "updatedDate": "2026-11-29"
+  }
+};
+
+export const talamanca1918Overviews = {
+  "fernandez-guardia-talamanca-1918": "コスタリカ南東部から今日のパナマ北西部にまたがっていたタラマンカについて、コスタリカの歴史家リカルド・フェルナンデス・グアルディアが1918年に刊行した地域史。第1章は旧来と刊行当時の境界を比べ、ビセイタ、カベカル、テルビなどの居住地、交易、葬送、信仰を、主に宣教師の記録を引いて描く。第2〜4章では、コロンの来航からバダホスやバスケス・デ・コロナドの進出、グアイミ谷への植民、1605年のサンティアゴ・デ・タラマンカ建設と1610年の破壊をたどる。スペイン側の計画が、先住諸集団の抵抗だけでなく、管轄や支援をめぐる対立にも阻まれた経緯が分かる。\n\n第5〜7章は、再征服計画とタラマンカ侯爵位の授与、マンスフィールドやモーガンらの海賊活動、カリブ海沿岸でのイギリス人とモスキト勢力の動き、フランシスコ会の布教を扱う。とくに1709年の総蜂起を軸に、宣教拠点が築かれては失われる過程と、改宗した先住民の集落を含む地域内の対立を追う。金や交易品、捕虜、布教といった異なる動機が重なり、植民地行政が地域を一貫して支配できなかったことが示される。\n\n第8・9章は独立後に移り、ビセイタとテルビの戦い、ティシンガル鉱山をめぐる探検、ボカス・デル・トロの帰属と国境交渉を記す。19世紀後半には、王と呼ばれた現地の首長、ジョン・H・ライオン、博物学者ウィリアム・M・ギャブ、ティエル司教らが登場する。ギャブの人口調査では、テルビ、ウレン、ブリブリ、カベカル、谷の5地区を合わせて1,226人と記録する。終盤ではサン・ベルナルド入植の挫折、鉄道の進入、ルーベ裁定と1914年のホワイト裁定までを取り上げる。宣教師や官吏の記録を通して見える先住諸民族の動きと、コスタリカ側からの国境史の叙述を、区別しながら読める。"
+};

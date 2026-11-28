@@ -3764,6 +3764,24 @@
       "sha256": "48235f7cf4d8159507f87472c02091251d18c7a8c41d1e461991ed8e49b0c8ae"
     },
     {
+      "path": "publications/fernandez-guardia-talamanca-1918/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.epub",
+      "size": 158265,
+      "sha256": "fbc28896ac08301ab2fd193ca8300a4d26141aec19a72bd798ca56d95a3059f5"
+    },
+    {
+      "path": "publications/fernandez-guardia-talamanca-1918/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.pdf",
+      "size": 2358741,
+      "sha256": "096a714cd7d584fb315e6d0e793768a641b677257bce95aa38d4b63baf2c149d"
+    },
+    {
+      "path": "publications/fernandez-guardia-talamanca-1918/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/fernandez-guardia-talamanca-1918/cover.jpg",
+      "size": 35078,
+      "sha256": "935c87d7fa5b7ea6b922cb4d8fe0f89874c4c52dbc2f16ee9b9faff801870c39"
+    },
+    {
       "path": "publications/fernandez-historia-costa-rica-1889/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Leon_Fernandez_Historia_de_Costa_Rica_1889_Japanese_Complete_Translation.epub",
       "size": 2271836,
