@@ -3422,6 +3422,24 @@
       "sha256": "4fa9d46da78fa68251d25e968fc741fe0934fccece9588551b8807602f43eb88"
     },
     {
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.epub",
+      "size": 40462521,
+      "sha256": "fa8b2a76e09c2a93dd78960eac93d40d658db3c6db5d8ce7c71b26772a615a00"
+    },
+    {
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Dollfus_Mont_Serrat_Voyage_Geologique_1868_Japanese_Complete_Translation.pdf",
+      "size": 43782717,
+      "sha256": "48bca694dbc1ce3ba1942f9f2a189773f3478b9c0d8ea22e9ebabb57beacb9ad"
+    },
+    {
+      "path": "publications/dollfus-mont-serrat-voyage-geologique-1868/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/dollfus-mont-serrat-voyage-geologique-1868/cover.jpg",
+      "size": 52561,
+      "sha256": "fcfd3dee37190c95e73771ed211225766eeb8aa6f17d9883598c83010286f032"
+    },
+    {
       "path": "publications/doubleday-filibuster-war-nicaragua-1886/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Charles_W_Doubleday_Reminiscences_Filibuster_War_Nicaragua_1886_Japanese_Complete_Translation.epub",
       "size": 1523845,

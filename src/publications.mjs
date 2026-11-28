@@ -1,3 +1,4 @@
+import { dollfus1868Records, dollfus1868Metadata } from "./dollfus-mont-serrat-voyage-geologique-1868-publication.mjs";
 import { moraRecords, moraMetadata } from "./mora-obras-sueltas-1837-publication.mjs";
 import { marquez1804Records, marquez1804Metadata } from "./marquez-due-antichi-monumenti-1804-publication.mjs";
 import { pardo1676Records, pardo1676Metadata } from "./pardo-maria-de-jesus-1676-publication.mjs";
@@ -425,7 +426,7 @@ const publicationRecords = [
   ...wellsExplorationsAndAdventuresInHonduras1857Records,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Records,
   ...wagnerScherzerCostaRicaRecords,
-  ...moraRecords, ...alegreRecords, ...santosHospitalariaRecords, ...parraBularioRecords,
+  ...dollfus1868Records, ...moraRecords, ...alegreRecords, ...santosHospitalariaRecords, ...parraBularioRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
   ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...castro1588Records, ...lemus1683Records, ...pardo1676Records, ...rea1643Records, ...marquez1804Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
@@ -9632,7 +9633,7 @@ const publicationMetadata = {
   ...wellsExplorationsAndAdventuresInHonduras1857Metadata,
   ...larrainzarNoticiaHistoricaDeSoconusco1843Metadata,
   ...wagnerScherzerCostaRicaMetadata,
-  ...moraMetadata, ...alegreMetadata, ...santosHospitalariaMetadata, ...parraBularioMetadata,
+  ...dollfus1868Metadata, ...moraMetadata, ...alegreMetadata, ...santosHospitalariaMetadata, ...parraBularioMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
   ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...castro1588Metadata, ...lemus1683Metadata, ...pardo1676Metadata, ...rea1643Metadata, ...marquez1804Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,

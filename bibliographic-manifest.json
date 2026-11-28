@@ -3584,6 +3584,25 @@
       }
     },
     {
+      "slug": "dollfus-mont-serrat-voyage-geologique-1868",
+      "recordClass": "major-work",
+      "title": "グアテマラ・エルサルバドル地質踏査",
+      "originalTitle": "Voyage géologique dans les républiques de Guatemala et de Salvador",
+      "author": "オーギュスト・ドルフュス、ウジェーヌ・ド・モン＝セラ",
+      "originalAuthor": "Auguste Dollfus, Eugène de Mont-Serrat",
+      "year": 1868,
+      "originalPublication": "1868年、パリ、帝国印刷局刊。",
+      "sourceEdition": "Auguste Dollfus et Eugène de Mont-Serrat, Voyage géologique dans les républiques de Guatemala et de Salvador. Paris: Imprimerie impériale, 1868. Naturalis 生物多様性センター所蔵本 NAT117926949。",
+      "sourceProvider": "Naturalis 生物多様性センター所蔵本を Biodiversity Heritage Library（BHL Europe）が公開。同一個体は Internet Archive と Wikimedia Commons でも閲覧可能。",
+      "rights": "1868年刊の原著本文と図版はパブリックドメイン。BHLはこの所蔵本を Public domain と表示し、パブリックドメイン原本のデジタル化に新たな著作権を主張していない。図版は同じ個体による。利用条件：https://about.biodiversitylibrary.org/help/copyright-and-reuse/　画像出典：https://archive.org/details/voyagegeologiqu00doll",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://field.biodiversitylibrary.org/bibliography/120007"
+      }
+    },
+    {
       "slug": "doubleday-filibuster-war-nicaragua-1886",
       "recordClass": "major-work",
       "title": "ニカラグア「フィリバスター」戦争回想録",
