@@ -1,0 +1,57 @@
+export const pardo1676Records = [
+  {
+    "title": "マリア・デ・ヘススの生涯と英雄的な諸徳",
+    "originalTitle": "Vida, y virtudes heroycas de la Madre María de Jesús, religiosa professa en el Convento de la Limpia Concepción",
+    "author": "フランシスコ・パルド",
+    "originalAuthor": "Francisco Pardo",
+    "originalPublication": "メキシコ、ベルナルド・カルデロンの未亡人の印刷所、1676年。",
+    "description": "プエブラの無原罪の御宿り修道院のマリア・デ・ヘススについて、司教が集めた証言をもとに生涯、修道生活、死後の崇敬を描いた1676年刊の伝記。",
+    "slug": "pardo-maria-de-jesus-1676",
+    "subtitle": "",
+    "year": 1676,
+    "series": "",
+    "types": [
+      "宗教史",
+      "伝記",
+      "修道院史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "スペイン語"
+    ],
+    "tags": [
+      "プエブラ",
+      "マリア・デ・ヘスス",
+      "無原罪の御宿り修道院",
+      "修道女",
+      "列福"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/pardo-maria-de-jesus-1676/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf",
+    "epub": "publications/pardo-maria-de-jesus-1676/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub",
+    "cover": "publications/pardo-maria-de-jesus-1676/cover.jpg",
+    "pageCount": 641,
+    "extent": "1冊、日本語版PDF 641頁",
+    "figureCount": 0,
+    "plateCount": 1,
+    "releaseTag": "publications-002",
+    "searchShard": "003"
+  }
+];
+
+export const pardo1676Metadata = {
+  "pardo-maria-de-jesus-1676": {
+    "sourceEdition": "México: Viuda de Bernardo Calderón, 1676. ジョン・カーター・ブラウン図書館所蔵 BA676 .P226v（94-50）。",
+    "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本をInternet Archiveで公開。",
+    "sourceUrl": "https://archive.org/details/vidayvirtudesher00pard",
+    "rights": "原刊本文はパブリックドメイン。献辞の聖母木版は底本の図版部分を使用。公開機関の画像利用条件はCC BY 4.0（https://jcblibrary.org/permissions/）。Courtesy of the John Carter Brown Library.",
+    "publishedDate": "2026-11-28",
+    "updatedDate": "2026-11-28"
+  }
+};
+
+export const pardo1676Overviews = {
+  "pardo-maria-de-jesus-1676": "フランシスコ・パルドが、プエブラの無原罪の御宿り修道院で誓願を立てたマリア・デ・ヘススの生涯を、司教ディエゴ・オソリオ・デ・エスコバル・イ・リャマスによる正式の証言調査をもとに叙述した。本人の自伝ではなく、証言を編み直して修道者としての徳を示す伝記であり、出来事とその宗教的な解釈が重なる。\n\n第1部は出生から修道院への入会と誓願を経て修道生活に至る歩みをたどる。第2部は、戒律と誓願の実践、良心の吟味、病苦や屈辱への対し方を取り上げ、神への愛と修道生活との結びつきを説く。第3部は聖体や聖母への信心、祈りが聞き届けられたとする話、啓示・預言・人の心を知ったとする逸話を集める。マリア本人だけでなく、親しい修道女たちやロザリオの信心会をめぐる記述もあり、幻視の報告を伝える人々の関係がうかがえる。第4部は臨終、遺体や形見をめぐる人々の振る舞い、その死後に病気や事故から救われたとされる事例を扱う。\n\n巻末にはロス・アンヘレス市の案件、関係者の書簡や報告・請願を載せ、現地の崇敬を根拠づけようとした働きと、教会による審査の手続を伝える。1674年の決定を列福そのものと混同しないようにし、著者の宣言も本文と区別して収録した。日本語版は前付、全四部48章、付録・宣言・原刊の索引までを収め、献辞の聖母木版を掲載した。"
+};

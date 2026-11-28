@@ -7604,6 +7604,24 @@
       "sha256": "da43954b239a4560512d54640ba84e5145e6912f62e01ed2f14685393156c3b3"
     },
     {
+      "path": "publications/pardo-maria-de-jesus-1676/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub",
+      "size": 2216901,
+      "sha256": "ac4814213a17fac9a0ecd18def5be8c81a16f4b173b7d2fc245208e6b98ecde4"
+    },
+    {
+      "path": "publications/pardo-maria-de-jesus-1676/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf",
+      "size": 5703008,
+      "sha256": "b29f2c02fc6db80d3f11fea453dd37476bc06d97ee51c31edc8070001fd4fbca"
+    },
+    {
+      "path": "publications/pardo-maria-de-jesus-1676/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/pardo-maria-de-jesus-1676/cover.jpg",
+      "size": 41737,
+      "sha256": "688f606cb09fbaa2522e32fab308dd120c42c708ff67129f358e112c78203aee"
+    },
+    {
       "path": "publications/parra-bulario-volume-1-1756/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
       "size": 5181224,

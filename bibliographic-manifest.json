@@ -8147,6 +8147,25 @@
       }
     },
     {
+      "slug": "pardo-maria-de-jesus-1676",
+      "recordClass": "major-work",
+      "title": "マリア・デ・ヘススの生涯と英雄的な諸徳",
+      "originalTitle": "Vida, y virtudes heroycas de la Madre María de Jesús, religiosa professa en el Convento de la Limpia Concepción",
+      "author": "フランシスコ・パルド",
+      "originalAuthor": "Francisco Pardo",
+      "year": 1676,
+      "originalPublication": "メキシコ、ベルナルド・カルデロンの未亡人の印刷所、1676年。",
+      "sourceEdition": "México: Viuda de Bernardo Calderón, 1676. ジョン・カーター・ブラウン図書館所蔵 BA676 .P226v（94-50）。",
+      "sourceProvider": "ジョン・カーター・ブラウン図書館所蔵本をInternet Archiveで公開。",
+      "rights": "原刊本文はパブリックドメイン。献辞の聖母木版は底本の図版部分を使用。公開機関の画像利用条件はCC BY 4.0（https://jcblibrary.org/permissions/）。Courtesy of the John Carter Brown Library.",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/vidayvirtudesher00pard"
+      }
+    },
+    {
       "slug": "parra-bulario-volume-1-1756",
       "recordClass": "major-work",
       "title": "聖フアン・デ・ディオス病院修道会教皇文書集 第1巻",
