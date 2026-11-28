@@ -3310,5 +3310,5 @@ test("catalogue era filter separates sixteenth-century material from the sevente
   assert.ok(control);
   assert.match(control[1], /<option value="16世紀">16世紀<\/option>\s*<option value="17世紀">17世紀<\/option>/u);
   const hash = createHash("sha256").update(source).digest("hex").slice(0, 12);
-  assert.ok(html.includes(`/archive.js?v=${hash}`), "filter script cache key includes the source hash");
+  assert.match(html, new RegExp(`/archive\\.js\\?v=[a-z0-9-]+-${hash}"`, "u"), "filter script cache key includes the source hash");
 });

@@ -50,10 +50,11 @@ const prefixScriptVersion = createHash("sha256")
   .update(await readFile(path.join(projectRoot, "src/fulltext-prefix-search.mjs")))
   .digest("hex")
   .slice(0, 12);
-const catalogueScriptVersion = createHash("sha256")
+const catalogueScriptHash = createHash("sha256")
   .update(await readFile(path.join(projectRoot, "src/archive.js")))
   .digest("hex")
   .slice(0, 12);
+const catalogueScriptVersion = `${assetVersion}-${catalogueScriptHash}`;
 const analyticsVersion = "20261014-ga4-v1";
 catalogueFiles(publications); // Validate stable analytics IDs before publishing.
 validatePublicationOverviews(publications);
