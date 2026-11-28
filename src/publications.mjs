@@ -1,3 +1,4 @@
+import { marquez1804Records, marquez1804Metadata } from "./marquez-due-antichi-monumenti-1804-publication.mjs";
 import { pardo1676Records, pardo1676Metadata } from "./pardo-maria-de-jesus-1676-publication.mjs";
 import { rea1643Records, rea1643Metadata } from "./rea-michoacan-1643-publication.mjs";
 import { parraBularioRecords, parraBularioMetadata } from "./parra-bulario-1756-1757-publication.mjs";
@@ -426,7 +427,7 @@ const publicationRecords = [
   ...alegreRecords, ...santosHospitalariaRecords, ...parraBularioRecords,
   ...grijalva1624Records,
   ...orozco1853Records,
-  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...castro1588Records, ...lemus1683Records, ...pardo1676Records, ...rea1643Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
+  ...sjdConstitucionesRecords, ...sjdGranada1585Records, ...cuggioBullarium1724Records, ...sjdDecreti1785Records, ...castro1588Records, ...lemus1683Records, ...pardo1676Records, ...rea1643Records, ...marquez1804Records, ...sjdRome1785Records, ...sjdRome1617Records, ...sjdMadrid1612Records,
   ...levyNotAS1873Records,
   ...mexicoSiglosRecords,
   ...ximenezScherzerLasHistoriasRecords,
@@ -9633,7 +9634,7 @@ const publicationMetadata = {
   ...alegreMetadata, ...santosHospitalariaMetadata, ...parraBularioMetadata,
   ...grijalva1624Metadata,
   ...orozco1853Metadata,
-  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...castro1588Metadata, ...lemus1683Metadata, ...pardo1676Metadata, ...rea1643Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,
+  ...sjdConstitucionesMetadata, ...sjdGranada1585Metadata, ...cuggioBullarium1724Metadata, ...sjdDecreti1785Metadata, ...castro1588Metadata, ...lemus1683Metadata, ...pardo1676Metadata, ...rea1643Metadata, ...marquez1804Metadata, ...sjdRome1785Metadata, ...sjdRome1617Metadata, ...sjdMadrid1612Metadata,
   ...levyNotAS1873Metadata,
   ...mexicoSiglosMetadata,
   ...ximenezScherzerLasHistoriasMetadata,

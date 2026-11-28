@@ -7030,6 +7030,25 @@
       "updatedDate": "2026-08-03"
     },
     {
+      "slug": "marquez-due-antichi-monumenti-1804",
+      "recordClass": "major-work",
+      "title": "メキシコ古代建築の二つの遺跡",
+      "originalTitle": "Due antichi monumenti di architettura messicana",
+      "author": "ペドロ・ホセ・マルケス",
+      "originalAuthor": "Pedro José Márquez",
+      "year": 1804,
+      "originalPublication": "ローマ、サロモーニ刊、1804年。",
+      "sourceEdition": "Roma: Presso il Salomoni, 1804. Getty Research Institute 所蔵本。",
+      "sourceProvider": "Getty Research Institute 所蔵本を Internet Archive で公開。Wikimedia Commons に同一個体の画像を収録。",
+      "rights": "1804年刊の原著本文と折込図版はパブリックドメイン。図版4葉は Getty Research Institute 所蔵本の Internet Archive 撮影画像による。Wikimedia Commons の同一画像は米国パブリックドメイン表示。 画像出典：https://commons.wikimedia.org/wiki/File:Due_antichi_monumenti_di_architettura_messicana_-_illustrati_(IA_dueantichimonume00marq).pdf",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://archive.org/details/dueantichimonume00marq"
+      }
+    },
+    {
       "slug": "marure-bosquejo-revoluciones-centro-america-1837-1878",
       "recordClass": "major-work",
       "title": "中央アメリカ革命史概説",

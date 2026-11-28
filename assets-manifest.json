@@ -6662,6 +6662,24 @@
       "sha256": "ec63f9373a571952d657e1cc84c4b4809a757d4c37b4e5e3357605a091ea96d1"
     },
     {
+      "path": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+      "size": 7655349,
+      "sha256": "f3eac651fae5e1d0b52f73dd919090205deace97a76ad2c09d42b632c7ac6bed"
+    },
+    {
+      "path": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+      "size": 2093178,
+      "sha256": "0a5f72c0ceaa297cc2ba69b5de92ab5463b97a013222f00256b0702306c5d990"
+    },
+    {
+      "path": "publications/marquez-due-antichi-monumenti-1804/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/marquez-due-antichi-monumenti-1804/cover.jpg",
+      "size": 55696,
+      "sha256": "8aa2ee93669ce61a2942d70eceb562064d078e77578f438b03c886545b9bdfca"
+    },
+    {
       "path": "publications/marure-bosquejo-revoluciones-centro-america-1837-1878/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Alejandro_Marure_Bosquejo_historico_de_las_revoluciones_de_Centro_America_1837_1878_Japanese_Complete_Translation.epub",
       "size": 4235486,
