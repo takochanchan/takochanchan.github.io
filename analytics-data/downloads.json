@@ -3,8 +3,8 @@
   "status": "ready",
   "source": "GA4 archive_download",
   "startDate": "2026-10-14",
-  "endDate": "2026-11-26",
-  "updatedAt": "2026-11-27T02:53:14.549Z",
+  "endDate": "2026-11-27",
+  "updatedAt": "2026-11-28T02:43:36.973Z",
   "timezone": "Asia/Tokyo",
   "metric": "site_download_requests",
   "botFiltering": "known-bots-and-client-signals; not guaranteed human-only",
@@ -4669,7 +4669,7 @@
       "key": "dl_29ecba9368223a04",
       "name": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
       "slug": "codice-chimalpahin-volumen-3",
-      "title": "コーデックス・チマルパイン 第3巻――ナワトル語・スペイン語歴史史料集",
+      "title": "コーデックス・チマルパイン 第3巻――歴史史料集",
       "volumeLabel": "",
       "format": "pdf"
     },
@@ -4677,7 +4677,7 @@
       "key": "dl_bb4f70e55282b4e0",
       "name": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
       "slug": "codice-chimalpahin-volumen-3",
-      "title": "コーデックス・チマルパイン 第3巻――ナワトル語・スペイン語歴史史料集",
+      "title": "コーデックス・チマルパイン 第3巻――歴史史料集",
       "volumeLabel": "",
       "format": "epub"
     },
@@ -10150,6 +10150,102 @@
       "name": "Costituzioni_Decreti_Apostolici_Rome_1785_Japanese.epub",
       "slug": "sjd-decreti-apostolici-rome-1785",
       "title": "使徒座憲令・教令集",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_438a650a3ba92e36",
+      "name": "Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.pdf",
+      "slug": "parra-bulario-1756-1757",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "第1巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_47a35715201832e6",
+      "name": "Alonso_Parra_y_Cote_Bulario_1756_Volume_1_Japanese.epub",
+      "slug": "parra-bulario-1756-1757",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "第1巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_7b5ad3eaf68b729a",
+      "name": "Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.pdf",
+      "slug": "parra-bulario-1756-1757",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "第2巻",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_707d5ab15dc90582",
+      "name": "Alonso_Parra_y_Cote_Bulario_1757_Volume_2_Japanese.epub",
+      "slug": "parra-bulario-1756-1757",
+      "title": "聖フアン・デ・ディオス病院修道会教皇文書集",
+      "volumeLabel": "第2巻",
+      "format": "epub"
+    },
+    {
+      "key": "dl_97ef7d00b82803ec",
+      "name": "Francisco_de_Castro_Juan_de_Dios_1588_Japanese.pdf",
+      "slug": "castro-juan-de-dios-1588",
+      "title": "フアン・デ・ディオスの生涯と病院創設史",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_b036f8a44cb608b8",
+      "name": "Francisco_de_Castro_Juan_de_Dios_1588_Japanese.epub",
+      "slug": "castro-juan-de-dios-1588",
+      "title": "フアン・デ・ディオスの生涯と病院創設史",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_fb141aa8550578c1",
+      "name": "Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.pdf",
+      "slug": "lemus-maria-de-jesus-1683",
+      "title": "プエブラの修道女マリア・デ・ヘスス伝",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_2f15cda8ef9a7d7b",
+      "name": "Diego_de_Lemus_Maria_de_Jesus_1683_Japanese.epub",
+      "slug": "lemus-maria-de-jesus-1683",
+      "title": "プエブラの修道女マリア・デ・ヘスス伝",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_0304111a573c5d17",
+      "name": "Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf",
+      "slug": "pardo-maria-de-jesus-1676",
+      "title": "マリア・デ・ヘススの生涯と英雄的な諸徳",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_81f9fa107bf2417d",
+      "name": "Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub",
+      "slug": "pardo-maria-de-jesus-1676",
+      "title": "マリア・デ・ヘススの生涯と英雄的な諸徳",
+      "volumeLabel": "",
+      "format": "epub"
+    },
+    {
+      "key": "dl_ce909b93705dfc3b",
+      "name": "Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.pdf",
+      "slug": "rea-michoacan-1643",
+      "title": "ミチョアカンのフランシスコ会年代記",
+      "volumeLabel": "",
+      "format": "pdf"
+    },
+    {
+      "key": "dl_cfb1521d03567e79",
+      "name": "Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.epub",
+      "slug": "rea-michoacan-1643",
+      "title": "ミチョアカンのフランシスコ会年代記",
       "volumeLabel": "",
       "format": "epub"
     }
