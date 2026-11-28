@@ -2404,6 +2404,24 @@
       "searchShard": "002"
     },
     {
+      "slug": "mora-obras-sueltas-1837-vol-1",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・マリア・ルイス・モラ",
+      "originalAuthor": "José María Luis Mora",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 1
+    },
+    {
+      "slug": "mora-obras-sueltas-1837-vol-2",
+      "recordClass": "major-work",
+      "searchShard": "003",
+      "author": "ホセ・マリア・ルイス・モラ",
+      "originalAuthor": "José María Luis Mora",
+      "releaseTag": "publications-002",
+      "seriesVolumeNumber": 2
+    },
+    {
       "slug": "moran-cholti-1695",
       "recordClass": "major-work",
       "searchShard": "001"
@@ -4053,6 +4071,14 @@
         "milla-cuadros-costumbres-guatemaltecas-volume-i-1882",
         "milla-cuadros-costumbres-guatemaltecas-volume-ii-1882"
       ]
+    },
+    {
+      "slug": "mora-obras-sueltas-1837",
+      "memberSlugs": [
+        "mora-obras-sueltas-1837-vol-1",
+        "mora-obras-sueltas-1837-vol-2"
+      ],
+      "seriesVolumeCount": 2
     },
     {
       "slug": "oviedo-historia-general-natural-indias-1851-1855",

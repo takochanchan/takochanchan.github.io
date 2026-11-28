@@ -1,3 +1,4 @@
+import { moraOverviews } from "./mora-obras-sueltas-1837-publication.mjs";
 import { marquez1804Overviews } from "./marquez-due-antichi-monumenti-1804-publication.mjs";
 import { pardo1676Overviews } from "./pardo-maria-de-jesus-1676-publication.mjs";
 import { rea1643Overviews } from "./rea-michoacan-1643-publication.mjs";
@@ -24,7 +25,7 @@ import { espinosaArricivitaChronicaOverviews } from "./espinosa-arricivita-chron
 import { readFileSync } from "node:fs";
 
 const data = JSON.parse(readFileSync(new URL("./publication-overviews.json", import.meta.url), "utf8"));
-export const publicationOverviews = Object.freeze({ ...data.records, ...alegreOverviews, ...santosHospitalariaOverviews, ...parraBularioOverviews, ...grijalva1624Overviews, ...orozco1853Overviews, ...sjdConstitucionesOverviews, ...sjdGranada1585Overviews, ...sjdRome1617Overviews, ...cuggioBullarium1724Overviews, ...sjdDecreti1785Overviews, ...castro1588Overviews, ...lemus1683Overviews, ...pardo1676Overviews, ...rea1643Overviews, ...marquez1804Overviews, ...sjdRome1785Overviews, ...sjdMadrid1612Overviews, ...levyNotAS1873Overviews, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
+export const publicationOverviews = Object.freeze({ ...data.records, ...moraOverviews, ...alegreOverviews, ...santosHospitalariaOverviews, ...parraBularioOverviews, ...grijalva1624Overviews, ...orozco1853Overviews, ...sjdConstitucionesOverviews, ...sjdGranada1585Overviews, ...sjdRome1617Overviews, ...cuggioBullarium1724Overviews, ...sjdDecreti1785Overviews, ...castro1588Overviews, ...lemus1683Overviews, ...pardo1676Overviews, ...rea1643Overviews, ...marquez1804Overviews, ...sjdRome1785Overviews, ...sjdMadrid1612Overviews, ...levyNotAS1873Overviews, ...mexicoSiglosOverviews, ...ximenezScherzerLasHistoriasOverviews, ...wagnerScherzerCostaRicaOverviews, ...espinosaArricivitaChronicaOverviews, ...scherzerXimenezHandschriftlicheWerkeOverviews });
 export const overviewUpdatedDate = data.updatedDate;
 
 export function validatePublicationOverviews(publications, records = publicationOverviews) {

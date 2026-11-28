@@ -7118,6 +7118,42 @@
       "sha256": "8257487ba01d10cd116c94388ef85669fddd516e57ceef458e6f6243b9345b7f"
     },
     {
+      "path": "publications/mora-obras-sueltas-1837-vol-1/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.epub",
+      "size": 680469,
+      "sha256": "93ae3a91aff677fbce060c63913e54a28c335b59ca2fa2216676db04827dc0f2"
+    },
+    {
+      "path": "publications/mora-obras-sueltas-1837-vol-1/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.pdf",
+      "size": 8934142,
+      "sha256": "cabfffefad06752aeb6cf59e81638bd31872ea8cad56825cb51d8f761aa3dc0c"
+    },
+    {
+      "path": "publications/mora-obras-sueltas-1837-vol-1/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mora-obras-sueltas-1837-vol-1/cover.jpg",
+      "size": 50716,
+      "sha256": "724c30c3672924a4ce5660eb0dc5314eb81b30699d591f4bd57de0934a8ec56a"
+    },
+    {
+      "path": "publications/mora-obras-sueltas-1837-vol-2/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.epub",
+      "size": 402063,
+      "sha256": "df3bc7f6f8795a4cce222c9ee4b22fd7eb5e28e1240614774e2f11186441e503"
+    },
+    {
+      "path": "publications/mora-obras-sueltas-1837-vol-2/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.pdf",
+      "size": 2700098,
+      "sha256": "9f9b25e220f47aa960e231a71bcb05ba5c54e6d534fc049022403b58af481d32"
+    },
+    {
+      "path": "publications/mora-obras-sueltas-1837-vol-2/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/mora-obras-sueltas-1837-vol-2/cover.jpg",
+      "size": 49584,
+      "sha256": "1ee82cb39b4ac3392e12a65c2e25ce7996ac5046596c5b91c41b4020cc36a6ab"
+    },
+    {
       "path": "publications/moran-cholti-1695/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
       "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Moran_Arte_y_vocabulario_Cholti_1695_Japanese_Complete_Translation.epub",
       "size": 2352148,

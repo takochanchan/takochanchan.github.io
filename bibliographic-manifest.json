@@ -7448,6 +7448,44 @@
       "updatedDate": "2026-09-12"
     },
     {
+      "slug": "mora-obras-sueltas-1837-vol-1",
+      "recordClass": "major-work",
+      "title": "政治論集 第1巻",
+      "originalTitle": "Obras sueltas. Tomo I",
+      "author": "ホセ・マリア・ルイス・モラ",
+      "originalAuthor": "José María Luis Mora",
+      "year": 1837,
+      "originalPublication": "1837年、パリ、ロサ書店刊。",
+      "sourceEdition": "José María Luis Mora, Obras sueltas. París: Librería de Rosa, 1837. Tomo I.",
+      "sourceProvider": "ミゲル・デ・セルバンテス・バーチャル図書館公開の1837年原刊デジタル画像。",
+      "rights": "1837年刊の原著本文はパブリックドメイン。ミゲル・デ・セルバンテス・バーチャル図書館の利用規定第4.3.4節は、デジタル版の複製・頒布・公衆送信の著作隣接権を留保している。原刊画像は転載していない。利用規定：https://www.cervantesvirtual.com/marco-legal/",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/obra/obras-sueltas-tomo-primero-847023/"
+      }
+    },
+    {
+      "slug": "mora-obras-sueltas-1837-vol-2",
+      "recordClass": "major-work",
+      "title": "政治論集 第2巻",
+      "originalTitle": "Obras sueltas. Tomo II",
+      "author": "ホセ・マリア・ルイス・モラ",
+      "originalAuthor": "José María Luis Mora",
+      "year": 1837,
+      "originalPublication": "1837年、パリ、ロサ書店刊。",
+      "sourceEdition": "José María Luis Mora, Obras sueltas. París: Librería de Rosa, 1837. Tomo II.",
+      "sourceProvider": "ミゲル・デ・セルバンテス・バーチャル図書館公開の1837年原刊デジタル画像。",
+      "rights": "1837年刊の原著本文はパブリックドメイン。ミゲル・デ・セルバンテス・バーチャル図書館の利用規定第4.3.4節は、デジタル版の複製・頒布・公衆送信の著作隣接権を留保している。原刊画像は転載していない。利用規定：https://www.cervantesvirtual.com/marco-legal/",
+      "publishedDate": "2026-11-28",
+      "updatedDate": "2026-11-28",
+      "sourceAccess": {
+        "status": "online",
+        "url": "https://www.cervantesvirtual.com/obra/obras-sueltas-tomo-segundo-847035/"
+      }
+    },
+    {
       "slug": "moran-cholti-1695",
       "recordClass": "major-work",
       "title": "チョルティ語文法・語彙集",

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "repository": "takochanchan/-archive-masters",
-  "archive_commit": "4974d14d6577ad214f81c3b84838544c4382515e",
+  "archive_commit": "fdad8b9fad6e666f52bc3cff6cde1b57f860ea85",
   "publications": {
     "academia-guatemalteca-biografias-literatos-nacionales-1889": "publications/academia-guatemalteca-biografias-literatos-nacionales-1889/master.docx",
     "agn-hospitales-volume-45-1589-1645": "publications/agn-hospitales-volume-45-1589-1645/master.docx",
@@ -338,6 +338,8 @@
     "montufar-memorias-prision-1917": "publications/montufar-memorias-prision-1917/master.docx",
     "montufar-memorias-revolucion-centro-america-1832": "publications/montufar-memorias-revolucion-centro-america-1832/master.docx",
     "montufar-walker-centro-america-1887": "publications/montufar-walker-centro-america-1887/master.docx",
+    "mora-obras-sueltas-1837-vol-1": "publications/mora-obras-sueltas-1837-vol-1/master.docx",
+    "mora-obras-sueltas-1837-vol-2": "publications/mora-obras-sueltas-1837-vol-2/master.docx",
     "moran-cholti-1695": "publications/moran-cholti-1695/master.docx",
     "morelet-1857": "publications/morelet-1857/master.docx",
     "morelet-exploration-guatemala-1850": "publications/morelet-exploration-guatemala-1850/master.md",

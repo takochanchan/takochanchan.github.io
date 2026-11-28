@@ -1,3 +1,4 @@
+import { moraGroup } from "./mora-obras-sueltas-1837-publication.mjs";
 import { parraBularioGroup } from "./parra-bulario-1756-1757-publication.mjs";
 import { santosHospitalariaGroup } from "./santos-chronologia-hospitalaria-1715-1716-publication.mjs";
 import { alegreGroup } from "./alegre-historia-compania-jesus-nueva-espana-1841-1842-publication.mjs";
@@ -22,6 +23,7 @@ import {
 const unique = (values) => [...new Set(values)];
 
 export const publicationGroupDefinitions = [
+  moraGroup,
   alegreGroup,
   santosHospitalariaGroup,
   parraBularioGroup,
