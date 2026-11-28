@@ -26,7 +26,8 @@ def maps():
   assert m['canonicalUrl'] in ('/publications/'+slug+'/','/publications/'+group['slug']+'/'),m['canonicalUrl']
   assert m['pdfSha256']==next(a['sha256'] for a in A if a['path']==rd['pdf']),slug
   rows=list(m['blocks'].values());pages={v[1] for v in rows if isinstance(v[1],int)}
-  assert len(rows)>=300 and min(pages)<=3 and max(pages)>=rd['pageCount']-8,(slug,len(rows),min(pages),max(pages))
+  # The first printed numbered page is on PDF page 11, after unnumbered front matter.
+  assert len(rows)>=300 and min(pages)<=11 and max(pages)>=rd['pageCount']-8,(slug,len(rows),min(pages),max(pages))
   result.append(dict(slug=slug,blocks=len(rows),first=min(pages),last=max(pages),verified_sha=m['pdfSha256']))
  return result
 def live():
