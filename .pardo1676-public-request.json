@@ -1,0 +1,197 @@
+{
+  "verified_archive_commit": "54549725e4933d194d2d64a59c2dd8d266893516",
+  "slugs": [
+    "pardo-maria-de-jesus-1676"
+  ],
+  "bundle": {
+    "size": 6527136,
+    "sha256": "aaab2a2933c6138a94093ea6e000dc6920b6c4c0437b6c07ee5c64045473554b",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "f1a64d54b6215e91fdb39bb71e1e5508c2480faa02e898af84235506b5eec3d0",
+        "oid": "7d897693e510309dc4746c35a1d796eac7bf1819"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "152bbe4ad828e993260e0d5ac482f15a6d5c2dccb5d1efb6fc4a2cb356132f56",
+        "oid": "73f964fbd1d68ffe2ec574350599d4074f90449c"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "67bec26d7b6d6510d76e62e3a344b0204d1d85dc633e2bae11682319e2539309",
+        "oid": "9c6a28dec158004f750a9f885143e06b413e0183"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 360000,
+        "sha256": "2dd118f220867d47f745b25d2ff54c1fe34611b5c9784c347fea16e3c65f9c02",
+        "oid": "75080c9f775f593436dae12873b6ef8881ca81fe"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "part": "004.bin",
+        "path": "chunks/public/004.bin",
+        "size": 360000,
+        "sha256": "503fd8a50629931cc7c9d8db6c2ccbc9c1a719d455c23c3182b50f95e5295de3",
+        "oid": "831ab334aafd8eea5b713cd42a485a0886d397f7"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "part": "005.bin",
+        "path": "chunks/public/005.bin",
+        "size": 360000,
+        "sha256": "1088601ab907ceabc24150a4cb75bf4b629893390a82f35fac4ca802a5f18c00",
+        "oid": "17aab2cc2a1a21e3379616bcafce1b83db686a8b"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "part": "006.bin",
+        "path": "chunks/public/006.bin",
+        "size": 360000,
+        "sha256": "f4f49ba9fe84de990551a20a81faed80d07f1bf20e2a5d11d8845a73d2299d77",
+        "oid": "48c86c9f4fc5f1b1b6d280b15977c96d65220378"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "part": "007.bin",
+        "path": "chunks/public/007.bin",
+        "size": 360000,
+        "sha256": "f5f7704f3aa3f30fbb215494521a4afef9c72a4664d123e75531fd10a87c167b",
+        "oid": "6276699ce47064cda71e709b43026a535f8e5c06"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "part": "008.bin",
+        "path": "chunks/public/008.bin",
+        "size": 360000,
+        "sha256": "7f09b952e6bfd6ea9b5d8f4102276a0ef7d5131295c43a0066109d6876809749",
+        "oid": "b5877665dd77f42461b52a0335b48cb0821958a7"
+      },
+      {
+        "index": 9,
+        "start": 3240000,
+        "part": "009.bin",
+        "path": "chunks/public/009.bin",
+        "size": 360000,
+        "sha256": "a5d6d765e676afcb2e4e655844bc678060b5fa5f43a8f46390d77b37357ad97f",
+        "oid": "0b197711cf05160b7269702b4232d5d91efafc3f"
+      },
+      {
+        "index": 10,
+        "start": 3600000,
+        "part": "010.bin",
+        "path": "chunks/public/010.bin",
+        "size": 360000,
+        "sha256": "462ed463c30212dc20586072db198389c214d1c79467e9c6167513d266d7f10b",
+        "oid": "5fc6d2cc112206b7b1f3ce5f3a78d1796ef1525b"
+      },
+      {
+        "index": 11,
+        "start": 3960000,
+        "part": "011.bin",
+        "path": "chunks/public/011.bin",
+        "size": 360000,
+        "sha256": "78c72e7e65c8e8f3e13a7cf6d02fd4646821fdf8162d24f7b6b6317e9acab693",
+        "oid": "24547defe0b8e0b8535323164c673827de259e0a"
+      },
+      {
+        "index": 12,
+        "start": 4320000,
+        "part": "012.bin",
+        "path": "chunks/public/012.bin",
+        "size": 360000,
+        "sha256": "15d2a08fa736ed8d14086110338e4eae374992869883fb74961c60bfad313d81",
+        "oid": "d01b33c4ac100ad92fb1753bda3abf90d1e9e0bd"
+      },
+      {
+        "index": 13,
+        "start": 4680000,
+        "part": "013.bin",
+        "path": "chunks/public/013.bin",
+        "size": 360000,
+        "sha256": "204bf6a5f76bb535269f897f3c56886e46df736c7a285cba3823d7203775ad49",
+        "oid": "c21ca89b888987c9d33a6881f147ddc034d49448"
+      },
+      {
+        "index": 14,
+        "start": 5040000,
+        "part": "014.bin",
+        "path": "chunks/public/014.bin",
+        "size": 360000,
+        "sha256": "6f6424ba7a0a20b43ffbf826134d26f5470a4a3318e418e1a7805e66fe0a1937",
+        "oid": "6cc4b5745e2b9a2b4cdf6ec85400cabe2716f465"
+      },
+      {
+        "index": 15,
+        "start": 5400000,
+        "part": "015.bin",
+        "path": "chunks/public/015.bin",
+        "size": 360000,
+        "sha256": "26d8405fec10520c677af36e15be013b5be409dc2c01355b2391932d062c6677",
+        "oid": "560f0a1f25f952c9828e6b0bae041c5ed2f1ee87"
+      },
+      {
+        "index": 16,
+        "start": 5760000,
+        "part": "016.bin",
+        "path": "chunks/public/016.bin",
+        "size": 360000,
+        "sha256": "978fa81b8e88dc7ace8cca9cd3059b181de0b3d501d4af88fc6be20113d6dfa9",
+        "oid": "5f17818e4a2b81df89fa9caffd0e951b730f953b"
+      },
+      {
+        "index": 17,
+        "start": 6120000,
+        "part": "017.bin",
+        "path": "chunks/public/017.bin",
+        "size": 360000,
+        "sha256": "1c4b99c875e5bbd789a8d3cc002d088a715bc0655c1861febf476f1b00c71f5d",
+        "oid": "c7a441facea0ab04f869a590cf2bfcf90c88f7f0"
+      },
+      {
+        "index": 18,
+        "start": 6480000,
+        "part": "018.bin",
+        "path": "chunks/public/018.bin",
+        "size": 47136,
+        "sha256": "e0bfb7f13441b28896df74b2a3d3f47851aea191f7c0d0dcc62984e30de8eddd",
+        "oid": "6603ae8f0bd6f9bfbfe33a54e835b22ea3221c1b"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf",
+      "size": 5703008,
+      "sha256": "b29f2c02fc6db80d3f11fea453dd37476bc06d97ee51c31edc8070001fd4fbca",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.pdf"
+    },
+    {
+      "filename": "Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub",
+      "size": 2216901,
+      "sha256": "ac4814213a17fac9a0ecd18def5be8c81a16f4b173b7d2fc245208e6b98ecde4",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Francisco_Pardo_Maria_de_Jesus_1676_Japanese.epub"
+    }
+  ]
+}
