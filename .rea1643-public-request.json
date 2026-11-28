@@ -1,0 +1,197 @@
+{
+  "verified_archive_commit": "e95971a2d2978715d5e8fc4734b7dc65c52235a8",
+  "slugs": [
+    "rea-michoacan-1643"
+  ],
+  "bundle": {
+    "size": 6720622,
+    "sha256": "25bbff75cd89264fa72796939a5e5dbe79ab6d72df8b1e896d6c82af9f048c61",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "f6e0d8720bcff377a6fa1c9ab53e7b598601930f204a83b36acf989c1b9e942f",
+        "oid": "b41273cfea4d9db91500278347c1d648cd724e6b"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "ffa5cbba6ab86e4d663d74e7d92fcff5f170ac23cf187f43d41590a7e2d856e0",
+        "oid": "1001ff3eba4408376a8d3dc6b16d9203f45e9096"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "ec45e47c0e19f10bf42fbf0797623136e1f5a301ecdfe7fc00ee61e07220954b",
+        "oid": "cad8f2893f79b2151bfffed299a1d2bc5d9c1feb"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 360000,
+        "sha256": "e1b0a7a19f0ca4b0979b24b97625918fd2218326f7f077115026f7ae77718a57",
+        "oid": "5c387423d0ffdbea138bea39f17a15b910726d73"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "part": "004.bin",
+        "path": "chunks/public/004.bin",
+        "size": 360000,
+        "sha256": "28ddc726fa66b9672736617e314d197506dec00dfd595103c046a727ad5e358a",
+        "oid": "f1cda74dcadbb016319ac237d5837a897a1a41fa"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "part": "005.bin",
+        "path": "chunks/public/005.bin",
+        "size": 360000,
+        "sha256": "910849525f8957dd5cfb62e3e57d5cb5003c72abc74e38b5ebbcd7c932456497",
+        "oid": "371a91e25be1e816635b0cf310813ac62d303c00"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "part": "006.bin",
+        "path": "chunks/public/006.bin",
+        "size": 360000,
+        "sha256": "6c7ad5f711d6e864135febb0661a82d67bce100b519943115dbab40c8f13d40c",
+        "oid": "16bf259448d7da2aa40df9b276ad3f3c92805f91"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "part": "007.bin",
+        "path": "chunks/public/007.bin",
+        "size": 360000,
+        "sha256": "f869e7191016e78cbfd65904a30d5d17fbba4ecafc37d1e97621ff46954d8cd7",
+        "oid": "33eec68c42499a1a05bf81665c07a125a29a56b6"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "part": "008.bin",
+        "path": "chunks/public/008.bin",
+        "size": 360000,
+        "sha256": "ed6a7248d04eb01570c5d315232a66ef7525bdf62fc436e90a58eda2d099d87e",
+        "oid": "654645226adb1a58889033b4d8a9cbb20103a310"
+      },
+      {
+        "index": 9,
+        "start": 3240000,
+        "part": "009.bin",
+        "path": "chunks/public/009.bin",
+        "size": 360000,
+        "sha256": "07ffa5cc30686cb29793fdcafb7bd776324d98749336a2d5325e9cbe18dc1f77",
+        "oid": "72c920992d3a0ba0069499901aced1a537ac9183"
+      },
+      {
+        "index": 10,
+        "start": 3600000,
+        "part": "010.bin",
+        "path": "chunks/public/010.bin",
+        "size": 360000,
+        "sha256": "1f9e445519c19591b18515bfe2873769e9e2e3e1e615c39f1c566e69bdb67207",
+        "oid": "c7031a3257fc88632d0fd2ebe6778388f1983417"
+      },
+      {
+        "index": 11,
+        "start": 3960000,
+        "part": "011.bin",
+        "path": "chunks/public/011.bin",
+        "size": 360000,
+        "sha256": "6cfb18fdad55b38fe8bff111e885f01119bb0583c42e7ab436a45783ef30b39b",
+        "oid": "3a8bafd60e678edf37d288213af442e47479ad11"
+      },
+      {
+        "index": 12,
+        "start": 4320000,
+        "part": "012.bin",
+        "path": "chunks/public/012.bin",
+        "size": 360000,
+        "sha256": "2043d6d06674a0c5958f01377306ee31e9840cc8ec840666ff9bdaa24fc6eb49",
+        "oid": "c95ec6e8cb37d597cc05a209df1e2dec357b815a"
+      },
+      {
+        "index": 13,
+        "start": 4680000,
+        "part": "013.bin",
+        "path": "chunks/public/013.bin",
+        "size": 360000,
+        "sha256": "fb7494166c3c4bbab59ff74ae73049f7af926836066d5406c63201448e9ae22b",
+        "oid": "9191efeb42b0a4a205da5f9188cef1945681a226"
+      },
+      {
+        "index": 14,
+        "start": 5040000,
+        "part": "014.bin",
+        "path": "chunks/public/014.bin",
+        "size": 360000,
+        "sha256": "61c56e19492166b8e6c5dc72cdb94c5dbf705547b09c3b6e245edd473a80e52d",
+        "oid": "d3c60df579c98ddc89593ea478e8866c7f37aef4"
+      },
+      {
+        "index": 15,
+        "start": 5400000,
+        "part": "015.bin",
+        "path": "chunks/public/015.bin",
+        "size": 360000,
+        "sha256": "ba9cb29bab0447ee1a4f965c704d7f0516307ceae005514f7ffd77eb063baa03",
+        "oid": "a615551b34d06c18c0b83741570b253a27eb4750"
+      },
+      {
+        "index": 16,
+        "start": 5760000,
+        "part": "016.bin",
+        "path": "chunks/public/016.bin",
+        "size": 360000,
+        "sha256": "d3f1598d2a5a5696af98c6a2c1f76318e6ec22254b708c7f608b3585859c08c0",
+        "oid": "815e35c8c995484d365c63bbc2a5d3e3c823df73"
+      },
+      {
+        "index": 17,
+        "start": 6120000,
+        "part": "017.bin",
+        "path": "chunks/public/017.bin",
+        "size": 360000,
+        "sha256": "6eae9ed2b415cab90c0060dc504fe567fa45543ff502609a2f79f2e8541532dc",
+        "oid": "b42e108b3dc6a049a2e03f0a811ae6af5b08804e"
+      },
+      {
+        "index": 18,
+        "start": 6480000,
+        "part": "018.bin",
+        "path": "chunks/public/018.bin",
+        "size": 240622,
+        "sha256": "87867c30462f6e2b5ba1a2b03dba21029ac0e7e7cd670267370fffba2f62403a",
+        "oid": "e549cc24c7f2dbb69bdb13bd3c6fd9292947352c"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.pdf",
+      "size": 3454499,
+      "sha256": "3b6294298f546e627ff836ee65f92f7a922866bd9de6891bc9d311b19f92c880",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.pdf"
+    },
+    {
+      "filename": "Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.epub",
+      "size": 3869819,
+      "sha256": "dba2209552cceecfe6e6c8abbc262f54f7e6cba9c0d585a1b718a4c32679044d",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Alonso_de_la_Rea_Chronica_de_Michoacan_1643_Japanese.epub"
+    }
+  ]
+}

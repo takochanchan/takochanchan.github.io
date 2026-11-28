@@ -1,0 +1,29 @@
+name: Transfer verified La Rea 1643 publication assets
+on:
+  push:
+    branches: [agent/rea1643-public-transfer-20261128]
+    paths: [.rea1643-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Transfer and read back the approved PDF and EPUB
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .rea1643-public-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rea1643-public-verification
+          path: rea1643-public-verification.json
