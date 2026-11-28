@@ -1,0 +1,269 @@
+{
+  "verified_archive_commit": "4974d14d6577ad214f81c3b84838544c4382515e",
+  "slugs": [
+    "marquez-due-antichi-monumenti-1804"
+  ],
+  "bundle": {
+    "size": 9571734,
+    "sha256": "b8d0f9982ee158a3a4a3df5552b6974f9b86b6a8f13c5be22e3f607b2635aff6",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "12469d7a9fb252650344bed1eaa0bca65d9eaf8ea89b03c1801b7e9bf0d7a085",
+        "oid": "e6dd42d7125f9a56d9084812fbe95c441d163000"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "f672821d1d4348f4f2193b147827ec308d8354b2c0cb33698ce86caf889516e6",
+        "oid": "3d660b9f8f100f7b56968fa3f3b0d42ba52bb65f"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "99c769790a04975d1a28128d1137feba03a7257e0df95dde98c7646891d691c1",
+        "oid": "f4c883c58e6d2297331e8668cc23f8054c239352"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 360000,
+        "sha256": "a71ccbce3d785fe30e8638b3853be190c21e3dc2fc76cf08a1e7be151bb161aa",
+        "oid": "ebea02cb6a67d5810f71547c0725e2b82007879c"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "part": "004.bin",
+        "path": "chunks/public/004.bin",
+        "size": 360000,
+        "sha256": "baaad9d17ddcd270f2005bac3a3ea5922fa9d5af27efa185c28b110935ba3d4d",
+        "oid": "b7817a21d7fa7c744ddd48550b653e52ff8f5e8c"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "part": "005.bin",
+        "path": "chunks/public/005.bin",
+        "size": 360000,
+        "sha256": "2df3147762bccf17d2e1623cfa460a5aaa425df27135f7cb7f099d91ac681ac6",
+        "oid": "4f9e9d531789670acdff91a2fa092307f2e909ed"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "part": "006.bin",
+        "path": "chunks/public/006.bin",
+        "size": 360000,
+        "sha256": "0d4a667d42aa72995b55ddf4951e59879726dc6fdb4861c38a02b1da641fc24e",
+        "oid": "b03c586806ad80169ca451f1ec3c43cc15b2fcec"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "part": "007.bin",
+        "path": "chunks/public/007.bin",
+        "size": 360000,
+        "sha256": "b78ac8bb9717841c9869d9ff1dabbb533f673e12aa1731864c2dc90f43548ab8",
+        "oid": "83e208698ab04557bb9bc8831d8dae37c3d5d025"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "part": "008.bin",
+        "path": "chunks/public/008.bin",
+        "size": 360000,
+        "sha256": "59dfc4af1ea4140f43c8d08c8c75994f7fa1de225000ab944b0f4e0b23e4b270",
+        "oid": "2fde4f7f52ab83987339c558cc85a0c19569ac86"
+      },
+      {
+        "index": 9,
+        "start": 3240000,
+        "part": "009.bin",
+        "path": "chunks/public/009.bin",
+        "size": 360000,
+        "sha256": "4b4889996e2ee65d39bdb0123bc8861d78dab414d09d61279fa48d907b27fcc0",
+        "oid": "b47bf1ed1ee6efd99da8d676d105bf2ab4a79a8c"
+      },
+      {
+        "index": 10,
+        "start": 3600000,
+        "part": "010.bin",
+        "path": "chunks/public/010.bin",
+        "size": 360000,
+        "sha256": "250783c00eaac66b982c989b209a9cb52eb4d8f520858bf08991e4813cb7a96d",
+        "oid": "ffc687962c08f58845d8f9cdb12f16195f5f6a5f"
+      },
+      {
+        "index": 11,
+        "start": 3960000,
+        "part": "011.bin",
+        "path": "chunks/public/011.bin",
+        "size": 360000,
+        "sha256": "6b3f1af3f094a837669e1c129be5ab430ac0d462e083d05b7e43018f3d263504",
+        "oid": "feb1c32b0725afdf30004134a0ae47df22f3f3a9"
+      },
+      {
+        "index": 12,
+        "start": 4320000,
+        "part": "012.bin",
+        "path": "chunks/public/012.bin",
+        "size": 360000,
+        "sha256": "3324387bd568ff645f61075624bbfc6f598186c1c9be857f4e7a3221853bd4f1",
+        "oid": "da13b9d92c90ee8dce6ca75eb70a242eb32bfac3"
+      },
+      {
+        "index": 13,
+        "start": 4680000,
+        "part": "013.bin",
+        "path": "chunks/public/013.bin",
+        "size": 360000,
+        "sha256": "916f8c57323b1aaf38a7293166fac5bd142e04e45b608ad79c4fe99eb48507ff",
+        "oid": "67727f84dad03ae2166979d98eb1079bb4da7b68"
+      },
+      {
+        "index": 14,
+        "start": 5040000,
+        "part": "014.bin",
+        "path": "chunks/public/014.bin",
+        "size": 360000,
+        "sha256": "e54d2b2521e19c96846d23b2ab68b92545ae8d8ae4574b740c8bc245545ed994",
+        "oid": "093e211d409ce352cb1df26742fbcb626efe1d29"
+      },
+      {
+        "index": 15,
+        "start": 5400000,
+        "part": "015.bin",
+        "path": "chunks/public/015.bin",
+        "size": 360000,
+        "sha256": "55e6aefcb1f111caa1bcc2e744302665960ef1a51fdab401b33c2d62c9cddd06",
+        "oid": "a122ea32983f85fc9891a180041d4c43f380f20f"
+      },
+      {
+        "index": 16,
+        "start": 5760000,
+        "part": "016.bin",
+        "path": "chunks/public/016.bin",
+        "size": 360000,
+        "sha256": "28fc815d4c723944644804ee15609c1135b7b3da6a378913f6583668716af4f8",
+        "oid": "c361066c512a4bb9f80e0c8785936221d13f15f4"
+      },
+      {
+        "index": 17,
+        "start": 6120000,
+        "part": "017.bin",
+        "path": "chunks/public/017.bin",
+        "size": 360000,
+        "sha256": "04c9b062c35dcc338ecb507f888d04f7d39ddb9cc08af2f086a170ae0859c31f",
+        "oid": "a7653eedb4ae22a9722893213135c1114614e686"
+      },
+      {
+        "index": 18,
+        "start": 6480000,
+        "part": "018.bin",
+        "path": "chunks/public/018.bin",
+        "size": 360000,
+        "sha256": "fa193ce9a547197bf42474c535b5ee8dc9019529cf1f099c87939b3491c761bc",
+        "oid": "e2d46734969c1dcafae5ba697ae4e7b2f50492f1"
+      },
+      {
+        "index": 19,
+        "start": 6840000,
+        "part": "019.bin",
+        "path": "chunks/public/019.bin",
+        "size": 360000,
+        "sha256": "7fe6c0aa6f1b095c33dccdfac49a4782d2219dcc5eb70d60c06ea98a990ba406",
+        "oid": "e7d315789f874a86dded7cf92a2e60773d718e52"
+      },
+      {
+        "index": 20,
+        "start": 7200000,
+        "part": "020.bin",
+        "path": "chunks/public/020.bin",
+        "size": 360000,
+        "sha256": "bb75fb2a728479c5658404c01cdfac18a2164759deae791b50564f5027df415a",
+        "oid": "a4378d73ef9f80c417ab0ee494e31c664036ec0c"
+      },
+      {
+        "index": 21,
+        "start": 7560000,
+        "part": "021.bin",
+        "path": "chunks/public/021.bin",
+        "size": 360000,
+        "sha256": "042854b98a20f02420fe33aac8514796b87bd08de2822cba97747e588782b488",
+        "oid": "808789c65043ba9353515dab5e2f0a484ca63ec6"
+      },
+      {
+        "index": 22,
+        "start": 7920000,
+        "part": "022.bin",
+        "path": "chunks/public/022.bin",
+        "size": 360000,
+        "sha256": "bf6a2ded574acd14f8a66f117a146e9dfa810bd26d15f9689d6a6363d5f0bb5f",
+        "oid": "627d59569049ad5847578664b389493ed6b69d98"
+      },
+      {
+        "index": 23,
+        "start": 8280000,
+        "part": "023.bin",
+        "path": "chunks/public/023.bin",
+        "size": 360000,
+        "sha256": "4cc69dead6fe9213e404b1254cee8086c69bcdf947750511525b380880738a68",
+        "oid": "47ddf1ee612c1d15bdd49db66b8304b5570181d7"
+      },
+      {
+        "index": 24,
+        "start": 8640000,
+        "part": "024.bin",
+        "path": "chunks/public/024.bin",
+        "size": 360000,
+        "sha256": "c56c2b1890f7801f5908a21f8794d8f1970bd85d4c899ce8e354b80332d2d9c4",
+        "oid": "3d1e07b5da27a6ce3c61102b4dca6b240d5c92d6"
+      },
+      {
+        "index": 25,
+        "start": 9000000,
+        "part": "025.bin",
+        "path": "chunks/public/025.bin",
+        "size": 360000,
+        "sha256": "354039d26ee51c31f945b0afdbef5e022688d49f99f9c79a7a4ab6b5eada2846",
+        "oid": "06a82654e58df9c1f8e5f354f90459ca8682f1c1"
+      },
+      {
+        "index": 26,
+        "start": 9360000,
+        "part": "026.bin",
+        "path": "chunks/public/026.bin",
+        "size": 211734,
+        "sha256": "82cd2479bef520ff8f3bf3684a0cd5a27504e843727744f1cab752bf5f8ae452",
+        "oid": "89d2a4e6d0369233ba541c2787d55b4f2b2bc735"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+      "size": 2093178,
+      "sha256": "0a5f72c0ceaa297cc2ba69b5de92ab5463b97a013222f00256b0702306c5d990",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+      "size": 7655349,
+      "sha256": "f3eac651fae5e1d0b52f73dd919090205deace97a76ad2c09d42b632c7ac6bed",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub"
+    }
+  ]
+}
