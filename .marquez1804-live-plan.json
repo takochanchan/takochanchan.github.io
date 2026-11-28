@@ -1,0 +1,70 @@
+{
+  "archive_commit": "4974d14d6577ad214f81c3b84838544c4382515e",
+  "record": {
+    "title": "メキシコ古代建築の二つの遺跡",
+    "originalTitle": "Due antichi monumenti di architettura messicana",
+    "author": "ペドロ・ホセ・マルケス",
+    "originalAuthor": "Pedro José Márquez",
+    "originalPublication": "ローマ、サロモーニ刊、1804年。",
+    "description": "エル・タヒンとソチカルコの遺構を図版とともに解説し、古代メキシコの建築・天文学と都市文化を論じたペドロ・ホセ・マルケスの著作。",
+    "slug": "marquez-due-antichi-monumenti-1804",
+    "subtitle": "",
+    "year": 1804,
+    "series": "",
+    "types": [
+      "歴史",
+      "考古学",
+      "建築史"
+    ],
+    "regions": [
+      "メキシコ"
+    ],
+    "languages": [
+      "イタリア語"
+    ],
+    "tags": [
+      "エル・タヒン",
+      "ソチカルコ",
+      "ピラミッド",
+      "メキシコ市",
+      "ヌエバ・エスパーニャ"
+    ],
+    "recordClass": "major-work",
+    "pdf": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+    "epub": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+    "cover": "publications/marquez-due-antichi-monumenti-1804/cover.jpg",
+    "pageCount": 48,
+    "extent": "1冊、日本語版PDF 48頁、折込図版4葉。",
+    "figureCount": 0,
+    "plateCount": 4,
+    "releaseTag": "publications-002",
+    "searchShard": "003",
+    "sourceEdition": "Roma: Presso il Salomoni, 1804. Getty Research Institute 所蔵本。",
+    "sourceProvider": "Getty Research Institute 所蔵本を Internet Archive で公開。Wikimedia Commons に同一個体の画像を収録。",
+    "sourceUrl": "https://archive.org/details/dueantichimonume00marq",
+    "rights": "1804年刊の原著本文と折込図版はパブリックドメイン。図版4葉は Getty Research Institute 所蔵本の Internet Archive 撮影画像による。Wikimedia Commons の同一画像は米国パブリックドメイン表示。 画像出典：https://commons.wikimedia.org/wiki/File:Due_antichi_monumenti_di_architettura_messicana_-_illustrati_(IA_dueantichimonume00marq).pdf",
+    "publishedDate": "2026-11-28",
+    "updatedDate": "2026-11-28",
+    "overview": "ペドロ・ホセ・マルケスが1804年にローマで刊行した、エル・タヒンとソチカルコの比較建築論。古代メキシコの社会に政治・法・商業だけでなく天文学と建築の知識があったと論じ、言語や気候の違いで人間の能力に優劣をつける見方を退ける。メキシコ市への献辞では、地元の研究者に遺跡の調査と記録を呼びかける。\n\n第一の遺跡は、パパントラ近郊のエル・タヒンにある階段状のピラミッドである。1785年の『メキシコ・ガセタ』の記事をもとに、各層の壁龕や正面階段を数え、寸法とともに示す。ローマの劇場の階段や四面のヤヌスと比較し、階段や壁龕の用途を考察する。壁龕の数と暦を結びつける議論は、遺跡の記載とは区別すべき著者の解釈である。\n\n第二の遺跡は、クエルナバカ近郊のソチカルコ。アルサテが1791年に発表した調査をもとに、丘の造成、周囲の溝や壁、斜面の通路、岩を掘った地下施設をたどり、頂上の建物の石積みや浮彫を説明する。壁の寸法や石材、赤色顔料の痕跡を挙げ、こうした観察を踏まえ、建物の防御上の役割や祭祀との関係を推論する。折込図版は、遺構の形状に加え、建物の細部や羽毛のある蛇などの浮彫を伝える。\n\n巻末にはコルテスらの征服期の記録をイタリア語で抜粋し、首都の市場、橋と水道、神殿、宮殿、動植物を集めた施設などの描写を引く。二つの遺跡の紹介と都市の記録を並べ、先住民の建築技術を当時のヨーロッパの読者に伝えようとした著作である。"
+  },
+  "assets": [
+    {
+      "path": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.pdf",
+      "size": 2093178,
+      "sha256": "0a5f72c0ceaa297cc2ba69b5de92ab5463b97a013222f00256b0702306c5d990"
+    },
+    {
+      "path": "publications/marquez-due-antichi-monumenti-1804/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Pedro_Jose_Marquez_Due_Antichi_Monumenti_1804_Japanese_Complete_Translation.epub",
+      "size": 7655349,
+      "sha256": "f3eac651fae5e1d0b52f73dd919090205deace97a76ad2c09d42b632c7ac6bed"
+    },
+    {
+      "path": "publications/marquez-due-antichi-monumenti-1804/cover.jpg",
+      "url": "https://takochanchan.github.io/publications/marquez-due-antichi-monumenti-1804/cover.jpg",
+      "size": 55696,
+      "sha256": "8aa2ee93669ce61a2942d70eceb562064d078e77578f438b03c886545b9bdfca"
+    }
+  ]
+}
