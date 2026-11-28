@@ -1,0 +1,62 @@
+{
+  "verified_archive_commit": "ab79a8caa7aade92d37f5c827aeb1be8a3b60fad",
+  "slugs": [
+    "fernandez-guardia-talamanca-1918"
+  ],
+  "bundle": {
+    "size": 1422909,
+    "sha256": "6c678956d4039d94f4e5e9909bc1699283b1e7f321522d090106087f36a726a3",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "1ee4924f64a5579e870dfd99bc710fa06ff0c5001ec9fae2afaa446e8baf71d8",
+        "oid": "c1a1ce35c24097676afdb7ed807770857c5c3626"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "2e51e938fad2e56b12420ce71f03f24f268b2f57e9d88d9c7a168c08cdad73f8",
+        "oid": "b30848e646b66bb82f6b8023516de554315ccaad"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "0a95308a3799f27be2f52ae4a823eab4285706af2f9a291adb24fe4fda6e542e",
+        "oid": "b54e2606a0057915f7a66e952985d736574635e7"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 342909,
+        "sha256": "f6151c853c8dd9fa91d72112ec9af5ab5a4ee4a0e6956eddd215aeae41ce9879",
+        "oid": "0be5dfe47f640e5618341efbb4f14c04d83c3078"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.pdf",
+      "size": 2358741,
+      "sha256": "096a714cd7d584fb315e6d0e793768a641b677257bce95aa38d4b63baf2c149d",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.pdf"
+    },
+    {
+      "filename": "Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.epub",
+      "size": 158265,
+      "sha256": "fbc28896ac08301ab2fd193ca8300a4d26141aec19a72bd798ca56d95a3059f5",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Ricardo_Fernandez_Guardia_Resena_Historica_de_Talamanca_1918_Japanese_Complete_Translation.epub"
+    }
+  ]
+}
