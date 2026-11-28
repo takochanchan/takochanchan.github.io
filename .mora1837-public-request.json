@@ -1,0 +1,237 @@
+{
+  "verified_archive_commit": "fdad8b9fad6e666f52bc3cff6cde1b57f860ea85",
+  "slugs": [
+    "mora-obras-sueltas-1837-vol-1",
+    "mora-obras-sueltas-1837-vol-2"
+  ],
+  "bundle": {
+    "size": 7603191,
+    "sha256": "be68e27ca1784bdedc3d7ba4f5815eba3d515f396dfbc867684e68e88fae86da",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "302b2e6b708fea5902ed073006e0717fd975c3a16aed85ad03a60eb1ceaf4bb2",
+        "oid": "0c8be8195d0865834989bfa37589d551d3e826f8"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "1f35bc697e7b91437948d2cddf05a991671d77af695a2f35d3404aa658e48435",
+        "oid": "88395ce416d23deb8830b21b6b6bbeaedc161f41"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "374c54c4f7ce445432a645cecadac5abbdf681876d231c92e64ed38eb9fc53ce",
+        "oid": "cba0022dc1640526aef122632d5703dfb6cddb03"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 360000,
+        "sha256": "1a755b60fb9549ac287c70cc34327a98f04d2baa089183a84e67da8e026ed433",
+        "oid": "1d92e3e70149aa4e663860be91497dc85a4ab9f8"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "part": "004.bin",
+        "path": "chunks/public/004.bin",
+        "size": 360000,
+        "sha256": "28bdc0485331145fd032237c5994c0f3df49750a14579a217319066c76f721bd",
+        "oid": "d41ea6039cf881622bd3732497fb610c2ce74bc9"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "part": "005.bin",
+        "path": "chunks/public/005.bin",
+        "size": 360000,
+        "sha256": "33c35f5295337f0279969610503545e00b0590d5aff552f6d74b0895c9c4dbf1",
+        "oid": "954542c345a86b3d2b169e9cbd32cd5f62daa1b5"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "part": "006.bin",
+        "path": "chunks/public/006.bin",
+        "size": 360000,
+        "sha256": "b2757ef6da4c4fd43201587ea43ce30e708bfbbb5eb7547b4ce15e6ecb68bcbf",
+        "oid": "0cb36271c9fd2519bb3d9353ddeed44d5c4ecd78"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "part": "007.bin",
+        "path": "chunks/public/007.bin",
+        "size": 360000,
+        "sha256": "d386dcf5a1f74ae724a2fb7a5deee9b071d993a45afc8829ef9ee5413786e50e",
+        "oid": "12ca8efdbb4a9844ba9c21152889d67ab24261c7"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "part": "008.bin",
+        "path": "chunks/public/008.bin",
+        "size": 360000,
+        "sha256": "96efa1c25d1fea8563880955a2b84b1b5ff054c95e231ea2fd3588b5946e3ae8",
+        "oid": "b90bc3db7d96ebd0c62f239f75db32d4f06dd2b8"
+      },
+      {
+        "index": 9,
+        "start": 3240000,
+        "part": "009.bin",
+        "path": "chunks/public/009.bin",
+        "size": 360000,
+        "sha256": "339e34ea01b36c6719831d5b40141cac45030850f0d7179f4c8c40f48e824080",
+        "oid": "08b3358b74943b45fd60d39783316c1cedcc397d"
+      },
+      {
+        "index": 10,
+        "start": 3600000,
+        "part": "010.bin",
+        "path": "chunks/public/010.bin",
+        "size": 360000,
+        "sha256": "6f9e2531d42c634f7a36c3d2db11a70ce9ad2ec00161fb78216b5bddcf4b377e",
+        "oid": "26921986a46aa8c8a1eb8cf0624c7580218c2bc4"
+      },
+      {
+        "index": 11,
+        "start": 3960000,
+        "part": "011.bin",
+        "path": "chunks/public/011.bin",
+        "size": 360000,
+        "sha256": "d9201c8f0123c9a6b087ec8925ecf2a55546aec64777af88f558736c1a950dba",
+        "oid": "79af48dc396bee1b3faad6492c98620272e6bf13"
+      },
+      {
+        "index": 12,
+        "start": 4320000,
+        "part": "012.bin",
+        "path": "chunks/public/012.bin",
+        "size": 360000,
+        "sha256": "473528824d2c95a489d5ec0c23321ddd0a1cbcabc900829a00d10fe1d03f949d",
+        "oid": "3a531a6b7b017d045fde68735aaded062f31ff47"
+      },
+      {
+        "index": 13,
+        "start": 4680000,
+        "part": "013.bin",
+        "path": "chunks/public/013.bin",
+        "size": 360000,
+        "sha256": "5b27df99771d33d9e4d127307b1ca9b2696a9785782f0d82f941e06f25c3c565",
+        "oid": "f3f136a61194abd5e94273f9c10199d5cebcaa36"
+      },
+      {
+        "index": 14,
+        "start": 5040000,
+        "part": "014.bin",
+        "path": "chunks/public/014.bin",
+        "size": 360000,
+        "sha256": "5796efb10d8118cc7010f382db4ec898e3c3d6bb09077bb4af9462dfd12f0eb9",
+        "oid": "f8505662c757a297c082425ff7ea74bc40f98baa"
+      },
+      {
+        "index": 15,
+        "start": 5400000,
+        "part": "015.bin",
+        "path": "chunks/public/015.bin",
+        "size": 360000,
+        "sha256": "860c674a437f29b2d51786689af0a9a11680f47047430a81e16965fe94af5240",
+        "oid": "225a79748e3f12fd43f37e85fd2fefa5ab6edaa1"
+      },
+      {
+        "index": 16,
+        "start": 5760000,
+        "part": "016.bin",
+        "path": "chunks/public/016.bin",
+        "size": 360000,
+        "sha256": "8b5fd769ce1e7d352c8887e077d2b86d7b5b915c3d9c5debe27e878038b92f79",
+        "oid": "030021e0ce84bd1aa9505f472b9450c45146df07"
+      },
+      {
+        "index": 17,
+        "start": 6120000,
+        "part": "017.bin",
+        "path": "chunks/public/017.bin",
+        "size": 360000,
+        "sha256": "053cc92cd52991245af058559fdc2cb5f40b8652aaf74f35fd5ba42499baf77c",
+        "oid": "b58d9b22cad12e65d3388223460fdbc8c772a1c1"
+      },
+      {
+        "index": 18,
+        "start": 6480000,
+        "part": "018.bin",
+        "path": "chunks/public/018.bin",
+        "size": 360000,
+        "sha256": "10c37b6d959fb3722271f9822e3847831af95f0cc88362ed09063fe146340df2",
+        "oid": "6693766aac6d842ed59e1237713d59d510e9decd"
+      },
+      {
+        "index": 19,
+        "start": 6840000,
+        "part": "019.bin",
+        "path": "chunks/public/019.bin",
+        "size": 360000,
+        "sha256": "27a5c28172e78a4bcdf2fc24eefc2996422a3fccccd21ef17533f295d75bed20",
+        "oid": "1fe89181f7681bfbc47d0c3540e077f5ea53fbb1"
+      },
+      {
+        "index": 20,
+        "start": 7200000,
+        "part": "020.bin",
+        "path": "chunks/public/020.bin",
+        "size": 360000,
+        "sha256": "1e6c79a5d42f6cf2578406ae709e888d97af23b0f18175eeb316a7ac5d28f115",
+        "oid": "89743ca67917f1ca739e7259c3a5493d416f9953"
+      },
+      {
+        "index": 21,
+        "start": 7560000,
+        "part": "021.bin",
+        "path": "chunks/public/021.bin",
+        "size": 43191,
+        "sha256": "ae3eb6c695f984fafba9f4f74cfcc91a910aa18272b7b244fc406f247a66dea4",
+        "oid": "73a4d98b72887b0a556b8bb6dd7457d68ab669f3"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "filename": "Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.pdf",
+      "size": 8934142,
+      "sha256": "cabfffefad06752aeb6cf59e81638bd31872ea8cad56825cb51d8f761aa3dc0c",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.pdf"
+    },
+    {
+      "filename": "Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.epub",
+      "size": 680469,
+      "sha256": "93ae3a91aff677fbce060c63913e54a28c335b59ca2fa2216676db04827dc0f2",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_1.epub"
+    },
+    {
+      "filename": "Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.pdf",
+      "size": 2700098,
+      "sha256": "9f9b25e220f47aa960e231a71bcb05ba5c54e6d534fc049022403b58af481d32",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.pdf"
+    },
+    {
+      "filename": "Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.epub",
+      "size": 402063,
+      "sha256": "df3bc7f6f8795a4cce222c9ee4b22fd7eb5e28e1240614774e2f11186441e503",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-002/Jose_Maria_Luis_Mora_Obras_Sueltas_1837_Volume_2.epub"
+    }
+  ]
+}
