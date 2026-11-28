@@ -1,0 +1,111 @@
+{
+  "verified_archive_commit": "e3e79e480527ad367930ba5614316fea55751028",
+  "slugs": [
+    "codice-chimalpahin-volumen-3"
+  ],
+  "bundle": {
+    "size": 3026685,
+    "sha256": "e9e537215c7a8202d858556156d1fad8c3e7f8af4bbb7493f10909788c0f1b73",
+    "parts": [
+      {
+        "index": 0,
+        "start": 0,
+        "part": "000.bin",
+        "path": "chunks/public/000.bin",
+        "size": 360000,
+        "sha256": "8e8c4147b8050fae0f6e8e3b409bd1c3d27d8558a99882e29ad833bb5dd6ee84",
+        "oid": "4422731daae2ed1ef373131c0dd958fa74e0dbc1"
+      },
+      {
+        "index": 1,
+        "start": 360000,
+        "part": "001.bin",
+        "path": "chunks/public/001.bin",
+        "size": 360000,
+        "sha256": "b9c6f74d495bed025728470dc240d3cf1327af2051d65d7c6c55d99d83850622",
+        "oid": "974adca62d690244c708e28df91bc8860b540543"
+      },
+      {
+        "index": 2,
+        "start": 720000,
+        "part": "002.bin",
+        "path": "chunks/public/002.bin",
+        "size": 360000,
+        "sha256": "6fcbf76cb33a8dc47e259eb1d64f3d494f7f8f38f32120e582bb2964e7bd710a",
+        "oid": "da650800c27ca82376b7621a91ebc139393d9a79"
+      },
+      {
+        "index": 3,
+        "start": 1080000,
+        "part": "003.bin",
+        "path": "chunks/public/003.bin",
+        "size": 360000,
+        "sha256": "5ec2398f6689306a5c9c9a4b89c2ec4b848b4e839721130079780fb1b36ce926",
+        "oid": "e3e8d517a9769a2c7de25601101837ffb8cb23b3"
+      },
+      {
+        "index": 4,
+        "start": 1440000,
+        "part": "004.bin",
+        "path": "chunks/public/004.bin",
+        "size": 360000,
+        "sha256": "40c855a616589ca7e1576545ef015805c084b470941d974e2631554676a4a184",
+        "oid": "0eb10bb77212bb9db8896f390fb330f912c9e8e0"
+      },
+      {
+        "index": 5,
+        "start": 1800000,
+        "part": "005.bin",
+        "path": "chunks/public/005.bin",
+        "size": 360000,
+        "sha256": "88f7ac0808af77864dab5cbfaeccefbe79184592fc7f94da2d0981daf047d93f",
+        "oid": "79f18126261b0c70d47e43faca73c7ad5cf517a0"
+      },
+      {
+        "index": 6,
+        "start": 2160000,
+        "part": "006.bin",
+        "path": "chunks/public/006.bin",
+        "size": 360000,
+        "sha256": "f5ad8eca94498893089c16af59d61decb9bb6cf0260ebc326a35f5f42ad189ee",
+        "oid": "148d57508a10fcf0065d3cd54aa98f7cc40cc6ed"
+      },
+      {
+        "index": 7,
+        "start": 2520000,
+        "part": "007.bin",
+        "path": "chunks/public/007.bin",
+        "size": 360000,
+        "sha256": "f1a96dfc562b19e0cbf9cda2a77f98ae0d9f17d65710a5924860b8b16245e1aa",
+        "oid": "7f8832aaa03bf468e5bb630f283cb417d83c4a4f"
+      },
+      {
+        "index": 8,
+        "start": 2880000,
+        "part": "008.bin",
+        "path": "chunks/public/008.bin",
+        "size": 146685,
+        "sha256": "0692e5fc0d2c74c7c2c86cdc3bed31bb021d544e35603e53f97bd9ed742fd084",
+        "oid": "3e2423821f163448c4e6ada19b21a8728aa8d87a"
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "size": 313829,
+      "sha256": "2d43f997dc56d220337356c1e52061badbeb9d43247e8330780c0b87e9955195",
+      "filename": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.epub",
+      "old_sha256": "382cc41506de5f8eb5909f16862be2cb6d1b2f3b5f19c80b573233d188225873"
+    },
+    {
+      "path": "publications/codice-chimalpahin-volumen-3/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "url": "https://github.com/takochanchan/takochanchan.github.io/releases/download/publications-current/Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "size": 4778973,
+      "sha256": "5b10690242cbd6c4477cbd5e2aa7fab64232560c8ae8ab35b3901dc86dfbfeae",
+      "filename": "Codice_Chimalpahin_Volumen_3_Japanese_Complete_Translation.pdf",
+      "old_sha256": "58831a7d6724ac96c45f96d29ba315125422340501bc49fec029ec16ab6c7bf5"
+    }
+  ]
+}

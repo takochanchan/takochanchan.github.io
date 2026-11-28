@@ -1,0 +1,29 @@
+name: Transfer verified Caltzin f.126v publication assets
+on:
+  push:
+    branches: [agent/caltzin126v-public-transfer-20261128]
+    paths: [.caltzin126v-public-request.json]
+permissions:
+  contents: write
+concurrency:
+  group: publication-release-transfer
+  cancel-in-progress: false
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build && npm test
+      - name: Transfer and read back the two approved PDF and EPUB files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .caltzin126v-public-transfer.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: caltzin126v-public-verification
+          path: caltzin126v-public-verification.json
